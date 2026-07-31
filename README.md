@@ -12,7 +12,7 @@ resources for the military community.
 
 ## Projects
 
-### Dead Air — XPLabs Games
+### The Last Station — XPLabs Games
 
 Our debut title. A dark science-fiction deck-building survival game: assemble
 tactical loadouts from salvaged tech, push into hostile territory, and get out.
