@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Games — XPLabs</title>
+<meta name="description" content="Games built at XPLabs: The Last Station, Space Glyph, Life XP, and Hearth &amp; Hunt. Four titles across Unreal Engine, native iOS, and Roblox.">
+<meta name="theme-color" content="#07090A">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="https://xplabs.us/games/">
+<meta property="og:title" content="Games — XPLabs">
+<meta property="og:description" content="Four titles across Unreal Engine, native iOS, and Roblox.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xplabs.us/games/">
+<meta property="og:image" content="https://xplabs.us/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* =====================================================================
+   XPLabs — Games index
+   Design tokens are identical to games/the-last-station/index.html.
+   To restyle both pages, change the values in BOTH :root blocks.
+   ===================================================================== */
+:root {
+  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;
+  --line:#1E2527; --line-soft:#161C1D;
+  --paper:#E9EFEC; --muted:#9BA8A3; --muted-dim:#7E8B86;
+  --signal:#3DE38A; --amber:#F5A524;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --t-micro:0.6875rem; --t-small:0.8125rem; --t-body:1.0625rem;
+  --t-lead: clamp(1.125rem, 1.02rem + 0.42vw, 1.375rem);
+  --t-h3:   clamp(1.1875rem, 1.12rem + 0.3vw, 1.4375rem);
+  --t-h2:   clamp(2.0625rem, 1.55rem + 2.35vw, 3.375rem);
+  --gap:1.5rem; --section-y: clamp(4rem, 7vw, 7rem);
+  --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1180px;
+  --radius:3px; --header-h:60px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--ink); color:var(--paper);
+  font-family:var(--sans); font-size:var(--t-body); line-height:1.62;
+  -webkit-font-smoothing:antialiased; overflow-x:clip;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:var(--gutter);top:0.5rem;z-index:99;background:var(--signal);color:#04140C;padding:.6rem 1rem;border-radius:var(--radius)}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(7,9,10,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--header-h)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;font-weight:600}
+.nav-links{display:none;gap:1.75rem}
+@media (min-width:820px){.nav-links{display:flex}}
+.nav-links a{font-size:.9375rem;color:var(--muted);text-decoration:none;transition:color .16s}
+.nav-links a:hover{color:var(--paper)}
+.tick{display:inline-flex;align-items:flex-end;gap:2px;height:11px}
+.tick i{width:2px;background:var(--signal);border-radius:1px;display:block}
+.tick i:nth-child(1){height:35%}.tick i:nth-child(2){height:65%}
+.tick i:nth-child(3){height:100%}.tick i:nth-child(4){height:50%}
+
+/* ---------- page head ---------- */
+.page-head{padding-block:calc(var(--section-y) * .8) calc(var(--section-y) * .5)}
+.eyebrow{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin:0 0 1.25rem}
+h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25rem;max-width:17ch;text-wrap:balance}
+.lead{font-size:var(--t-lead);color:var(--muted);max-width:58ch;margin:0}
+
+/* ---------- game cards ---------- */
+.games{padding-bottom:var(--section-y);display:grid;gap:1.25rem}
+.game{
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
+  padding:clamp(1.5rem,3.5vw,2.5rem);
+  display:grid;gap:1.5rem;
+}
+@media (min-width:900px){.game{grid-template-columns:1fr 300px;gap:2.5rem}}
+.game__num{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.2em;color:var(--muted-dim);margin:0 0 .75rem}
+.game__title{font-size:var(--t-h3);margin:0 0 .25rem;letter-spacing:-.014em}
+.game__kind{font-family:var(--mono);font-size:var(--t-small);color:var(--amber);margin:0 0 1rem;letter-spacing:.06em}
+.game__body{color:var(--muted);margin:0 0 1.25rem;max-width:58ch}
+.game__body strong{color:var(--paper);font-weight:600}
+.game__link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;color:var(--signal);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .16s}
+.game__link:hover{border-bottom-color:var(--signal)}
+
+/* spec table — the card's right column */
+.spec{border:1px solid var(--line-soft);border-radius:var(--radius);background:var(--ink-2);align-self:start}
+.spec dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+.spec dt,.spec dd{margin:0;padding:.6rem .9rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.08em;border-bottom:1px solid var(--line-soft)}
+.spec dt{color:var(--muted-dim);text-transform:uppercase;white-space:nowrap}
+.spec dd{color:var(--paper);text-align:right}
+.spec dl>:nth-last-child(1),.spec dl>:nth-last-child(2){border-bottom:0}
+.status{display:inline-flex;align-items:center;gap:.45rem}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--signal);flex:none}
+.dot--amber{background:var(--amber)}
+.dot--dim{background:var(--muted-dim)}
+
+/* ---------- footer ---------- */
+.site-footer{border-top:1px solid var(--line-soft);padding-block:2.5rem;color:var(--muted-dim);font-size:var(--t-small)}
+.site-footer a{color:var(--muted);text-decoration:none}
+.site-footer a:hover{color:var(--paper)}
+.foot-row{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:baseline}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="/">
+      <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      XPLabs Games
+    </a>
+    <div class="nav-links">
+      <a href="/games/">Games</a>
+      <a href="/engineering/">Engineering</a>
+      <a href="/military-benefits/">Military benefits</a>
+      <a href="/personal/">Personal</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="wrap page-head">
+  <p class="eyebrow">
+    <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    Catalog · four titles
+  </p>
+  <h1>Four games. Four stacks.</h1>
+  <p class="lead">XPLabs builds sharply scoped games and ships them. Unreal Engine on mobile,
+  native Swift on iPhone, and Roblox — each title chosen to be finishable by a small team
+  rather than impressive on a roadmap.</p>
+</section>
+
+<section class="wrap games">
+
+  <!-- ===================== 01 — THE LAST STATION ===================== -->
+  <article class="game">
+    <div>
+      <p class="game__num">TITLE 001</p>
+      <h2 class="game__title">The Last Station</h2>
+      <p class="game__kind">Mobile survivors · Unreal Engine 5</p>
+      <p class="game__body">A free-to-play survivors game built for one thumb. You only steer —
+      your equipped cards fire on tap, and aim is automatic. All the depth lives in the loadout:
+      a deck of <strong>five part cards</strong> across Power, Weapons, Sensors, Jammers and Drones,
+      plus five stat medallions. Kinetic weapons break jam-immune brutes; energy weapons melt
+      shields. That is the whole pre-mission read.</p>
+      <p class="game__body">You play <strong>C</strong>, the last operator of a dying signal station
+      on a refurbished offshore rig. Expeditions run about three minutes, campaign levels about
+      ninety seconds, and a restart takes under two.</p>
+      <a class="game__link" href="/games/the-last-station/">View the title page <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="spec">
+      <dl>
+        <dt>Status</dt><dd><span class="status"><span class="dot" aria-hidden="true"></span>In development</span></dd>
+        <dt>Engine</dt><dd>Unreal Engine 5</dd>
+        <dt>Platform</dt><dd>Mobile</dd>
+        <dt>Cards</dt><dd>26 + 8 medallions</dd>
+        <dt>Session</dt><dd>~3 min</dd>
+        <dt>Model</dt><dd>Free to play</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- ===================== 02 — SPACE GLYPH ===================== -->
+  <article class="game">
+    <div>
+      <p class="game__num">TITLE 002</p>
+      <h2 class="game__title">Space Glyph</h2>
+      <p class="game__kind">Puzzle defense · Swift 6 · iPhone</p>
+      <p class="game__body">A puzzle-defense game where matching and shooting are the same act.
+      Your first match locks the board and starts a short <strong>Match Phase</strong>; every
+      follow-up match refills the timer, so the whole formation resolves together and a good
+      chain is something you extend under pressure. Larger connected matches forge stronger
+      gems — the only attack that crosses lanes — while a separate threat advances on its own
+      real-time clock.</p>
+      <p class="game__body">A <strong>100-mission campaign</strong> across four sectors, with a
+      commander encounter every twenty-five. No ads, no subscriptions, no loot boxes, no forced
+      accounts, and no tracking. Purchases are cosmetic and never gate progress.</p>
+    </div>
+    <div class="spec">
+      <dl>
+        <dt>Status</dt><dd><span class="status"><span class="dot dot--amber" aria-hidden="true"></span>Release prep</span></dd>
+        <dt>Built with</dt><dd>Swift 6 · SpriteKit</dd>
+        <dt>Platform</dt><dd>iPhone</dd>
+        <dt>Missions</dt><dd>100</dd>
+        <dt>Sectors</dt><dd>4</dd>
+        <dt>Model</dt><dd>Premium</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- ===================== 03 — LIFE XP ===================== -->
+  <article class="game">
+    <div>
+      <p class="game__num">TITLE 003</p>
+      <h2 class="game__title">Life XP</h2>
+      <p class="game__kind">Life simulation · SceneKit · iPhone</p>
+      <p class="game__body">An offline third-person life simulator. You walk a small 3D town and
+      step through the door of any building — homes, workplaces, schools, banks, shops, clinics,
+      a courthouse — into a full-screen interior where you use the station that belongs there:
+      a bed, a desk, a teller window, a weight rack, a gig board.</p>
+      <p class="game__body">Underneath is a <strong>deterministic hour-by-hour simulation</strong>
+      that connects employment, education, banking, investing, housing, transport, health,
+      relationships and legal consequences. Every Monday the world settles up in a fixed order:
+      paychecks, then tuition, then living costs, then interest, then health, then consequences.
+      Money is tracked in whole cents so nothing drifts, and a stored seed makes any run
+      reproducible.</p>
+    </div>
+    <div class="spec">
+      <dl>
+        <dt>Status</dt><dd><span class="status"><span class="dot" aria-hidden="true"></span>Playable</span></dd>
+        <dt>Built with</dt><dd>SwiftUI · SceneKit</dd>
+        <dt>Platform</dt><dd>iPhone</dd>
+        <dt>Locations</dt><dd>17</dd>
+        <dt>Jobs</dt><dd>12</dd>
+        <dt>Rating</dt><dd>Mature toggle</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- ===================== 04 — HEARTH & HUNT ===================== -->
+  <article class="game">
+    <div>
+      <p class="game__num">TITLE 004</p>
+      <h2 class="game__title">Hearth &amp; Hunt</h2>
+      <p class="game__kind">PvPvE · Roblox</p>
+      <p class="game__body">A server-authoritative PvPvE game built for two-player teams who want
+      something relaxed and solo players who want something competitive — in the same match.
+      <strong>Keepers</strong> stay home, grow magical crops and upgrade the homestead.
+      <strong>Hunters</strong> go out into the wilds, fight creatures, contest objectives and
+      haul rare materials back. Roles switch freely.</p>
+      <p class="game__body">Three terrain bands — meadow, highland and summit — pay 1×, 2× and 3×,
+      so the risk you take is the reward you get. PvP is deliberately non-destructive and
+      low-punishment. Everything resolves in a fifteen-minute match ending in the Grand Bloom.</p>
+    </div>
+    <div class="spec">
+      <dl>
+        <dt>Status</dt><dd><span class="status"><span class="dot" aria-hidden="true"></span>Live build</span></dd>
+        <dt>Platform</dt><dd>Roblox</dd>
+        <dt>Match</dt><dd>15 min</dd>
+        <dt>Team</dt><dd>Solo or duo</dd>
+        <dt>Roles</dt><dd>Keeper · Hunter</dd>
+        <dt>Bands</dt><dd>3</dd>
+      </dl>
+    </div>
+  </article>
+
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-row">
+    <div>
+      <strong style="color:var(--paper)">XPLabs Games</strong><br>
+      Independent games. Persistent worlds. Strong signals.
+    </div>
+    <div>
+      <a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a><br>
+      © 2026 XPLabs LLC · Honolulu, HI
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
