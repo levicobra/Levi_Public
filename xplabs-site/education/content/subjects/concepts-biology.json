@@ -1,0 +1,1333 @@
+{
+ "id": "concepts-biology",
+ "title": "Concepts of Biology",
+ "domain": "life",
+ "level": "Intro college",
+ "description": "A friendlier, one-semester tour of biology built for non-majors: how science works, how cells run on chemistry, how traits pass from parent to offspring, how evolution explains life's diversity, and how your own body and the living world around you actually function. No prior science background assumed.",
+ "outcomes": [
+  "You can describe the steps of the scientific method and explain why a claim needs to be testable to count as science.",
+  "You can explain how cells get energy from food and sunlight, and identify the main organelles inside a cell by function.",
+  "You can use a Punnett square to predict the odds of a genetic trait, and describe in plain terms how DNA becomes a protein.",
+  "You can explain natural selection with a real example and place any organism into the broad tree of life.",
+  "You can describe how the human body's major organ systems keep it stable, and explain the basics of population growth and ecosystems."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "The Science of Biology and the Chemistry of Life",
+   "summary": "What separates science from other ways of knowing, and the atoms, water, and molecules that every living thing is built from.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Is Science? The Process of Biology",
+     "minutes": 12,
+     "intro": "Biology is often taught as a pile of facts to memorize, but at its heart it is a method: a disciplined way of asking questions about the living world and only trusting answers that survive testing. Understanding that method is more useful than memorizing any single fact in this course.",
+     "sections": [
+      {
+       "heading": "The Scientific Method",
+       "body": [
+        "Science starts with an **observation**, something noticed about the world, followed by a **hypothesis**, a proposed explanation that can be tested and could, in principle, be shown wrong. Scientists then design an **experiment** with a **control group** (kept unchanged) and one or more **experimental groups** (with exactly one variable changed) to isolate whether that one variable causes the observed effect.",
+        "If the results support the hypothesis, confidence in it grows, but it is never declared permanently 'proven'; new evidence can always refine or overturn it. If independent scientists repeat the experiment many times with consistent results, the explanation may eventually be elevated to a **theory**, a well-supported, unifying explanation for a broad set of observations, not a guess."
+       ]
+      },
+      {
+       "heading": "Why Controls and Variables Matter",
+       "body": [
+        "The **independent variable** is the one factor a scientist deliberately changes; the **dependent variable** is the outcome being measured, which may or may not respond to that change. Everything else that could affect the outcome should be held constant, so any difference between the control and experimental groups can be confidently attributed to the one variable that changed.",
+        "Skipping a control group is one of the most common ways an experiment goes wrong: without something to compare against, there is no way to know whether an observed result was caused by the variable being tested or by something else entirely, like normal variation or an unrelated environmental change."
+       ],
+       "example": {
+        "problem": "A student wants to test whether fertilizer makes bean plants grow taller. She plants 20 bean seeds in identical pots with identical soil and sunlight; 10 pots receive fertilizer weekly and 10 receive plain water only. After a month she measures plant height. Identify the independent variable, the dependent variable, and the control group.",
+        "steps": [
+         "The independent variable is the one thing being deliberately changed between groups: presence or absence of fertilizer.",
+         "The dependent variable is what is measured as an outcome: plant height after one month.",
+         "The control group is the group that did not receive the treatment being tested, used as a baseline for comparison: the 10 pots receiving plain water only."
+        ],
+        "answer": "Independent variable: fertilizer (present or absent). Dependent variable: plant height. Control group: the 10 unfertilized pots."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "hypothesis",
+       "def": "A proposed, testable explanation for an observation."
+      },
+      {
+       "term": "control group",
+       "def": "A group in an experiment that does not receive the treatment being tested, used as a baseline."
+      },
+      {
+       "term": "independent variable",
+       "def": "The single factor a scientist deliberately changes in an experiment."
+      },
+      {
+       "term": "dependent variable",
+       "def": "The outcome measured in an experiment, which may respond to the independent variable."
+      },
+      {
+       "term": "theory",
+       "def": "A well-supported, broadly unifying scientific explanation, backed by extensive repeated evidence."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main purpose of a control group in an experiment?",
+       "choices": [
+        "To make the experiment take longer",
+        "To provide a baseline for comparison so results can be attributed to the tested variable",
+        "To guarantee the hypothesis is correct",
+        "To replace the need for a hypothesis"
+       ],
+       "answer": 1,
+       "explain": "A control group is kept unchanged so that any difference seen in the experimental group can be confidently linked to the one variable that was deliberately changed."
+      },
+      {
+       "q": "In everyday scientific usage, what does the word 'theory' mean, as opposed to its casual use meaning 'a guess'?",
+       "choices": [
+        "An untested hunch",
+        "A well-supported explanation backed by extensive, repeated evidence",
+        "A fact that can never be revised",
+        "A single unconfirmed observation"
+       ],
+       "answer": 1,
+       "explain": "In science, a theory is a thoroughly tested and broadly supported explanation for a wide range of observations, quite different from the casual meaning of an unproven guess."
+      },
+      {
+       "q": "A researcher tests whether a new plant food increases tomato yield by giving it to every plant in the greenhouse, with no untreated plants for comparison. What is the main flaw in this design?",
+       "choices": [
+        "Too many variables were tested at once",
+        "There is no control group, so any yield change cannot be confidently attributed to the plant food",
+        "The hypothesis was not testable",
+        "The dependent variable was not measured"
+       ],
+       "answer": 1,
+       "explain": "Without an untreated control group, there is no baseline to compare against, so the researcher cannot rule out that yield changed for some other reason entirely."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Atoms, Molecules, and Water",
+     "minutes": 13,
+     "intro": "Before biology can explain how a cell works, it has to borrow a little chemistry: atoms, bonds, and above all water, the substance every living cell is mostly made of and utterly dependent on.",
+     "sections": [
+      {
+       "heading": "Atoms and Bonds",
+       "body": [
+        "All matter, living and non-living, is made of **atoms**, and atoms bond together to form **molecules**. A **covalent bond** forms when two atoms share electrons; an **ionic bond** forms when one atom gives up an electron to another, creating charged ions that attract each other, as in table salt (sodium chloride).",
+        "Carbon is the backbone element of biology because each carbon atom can form four covalent bonds, letting it link into long chains, branches, and rings that become the skeleton of every important biological molecule, from sugars to DNA."
+       ]
+      },
+      {
+       "heading": "Water: The Molecule Life Runs On",
+       "body": [
+        "Water is a **polar** molecule, meaning it has a slightly negative end (near its oxygen) and a slightly positive end (near its hydrogens). This polarity lets water molecules form weak, temporary **hydrogen bonds** with each other, which explains why water sticks to itself (cohesion), sticks to other surfaces (adhesion), resists rapid temperature swings, and expands rather than contracts when it freezes.",
+        "Because water is polar, it dissolves other polar and charged substances easily, making it an excellent **solvent** for the sugars, salts, and proteins dissolved in blood, sap, and every cell's interior. Without water's solvent properties, none of the chemical reactions that keep you alive could happen efficiently."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "covalent bond",
+       "def": "A bond formed when two atoms share a pair of electrons."
+      },
+      {
+       "term": "ionic bond",
+       "def": "A bond formed by the attraction between oppositely charged ions."
+      },
+      {
+       "term": "polar molecule",
+       "def": "A molecule with an uneven charge distribution, giving it a slightly positive end and a slightly negative end."
+      },
+      {
+       "term": "hydrogen bond",
+       "def": "A weak attraction between a slightly positive hydrogen atom on one polar molecule and a slightly negative atom on another."
+      },
+      {
+       "term": "solvent",
+       "def": "A substance, like water, that dissolves other substances."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can carbon form the long, complex chains found in biological molecules like sugars and DNA?",
+       "choices": [
+        "Carbon is radioactive",
+        "Carbon can form four covalent bonds, letting it link into chains, branches, and rings",
+        "Carbon only forms ionic bonds",
+        "Carbon repels other carbon atoms"
+       ],
+       "answer": 1,
+       "explain": "With four bonding sites, a carbon atom can connect to up to four other atoms, including other carbons, allowing the long backbones seen throughout biology."
+      },
+      {
+       "q": "Water's ability to dissolve salts and sugars is mainly due to which property?",
+       "choices": [
+        "Its ionic bonds",
+        "Its polarity, which lets it interact with other charged and polar substances",
+        "Its low boiling point",
+        "Its lack of hydrogen bonds"
+       ],
+       "answer": 1,
+       "explain": "Water's polar charge distribution lets it surround and separate charged ions and polar molecules, making it an effective solvent."
+      },
+      {
+       "q": "Ice floats on liquid water rather than sinking. What property of water explains this unusual behavior?",
+       "choices": [
+        "Ice is a different chemical from liquid water",
+        "Hydrogen bonds arrange water molecules into a spaced-out lattice when frozen, making ice less dense than liquid water",
+        "Water has no hydrogen bonds when frozen",
+        "Ice contains air bubbles only"
+       ],
+       "answer": 1,
+       "explain": "When water freezes, hydrogen bonds lock molecules into a rigid, spaced-out crystal structure that takes up more volume than the same mass of liquid water, making ice less dense and able to float."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Building Blocks of Life",
+     "minutes": 14,
+     "intro": "Four families of large molecules build every living structure on Earth: the sugars that give you quick energy, the fats that store it long-term, the proteins that do almost all of a cell's work, and the DNA that stores the instructions for making all of it.",
+     "sections": [
+      {
+       "heading": "Carbohydrates and Lipids",
+       "body": [
+        "**Carbohydrates** are built from sugar units; single sugars like glucose provide quick energy, while long chains store energy (starch in plants, glycogen in animals) or provide structure (cellulose in plant cell walls). **Lipids**, including fats and oils, do not dissolve in water and are used for long-term energy storage, insulation, and cell membranes.",
+        "Cells build these larger molecules by linking smaller building blocks together through a reaction called **dehydration synthesis**, which releases a water molecule each time it forms a new bond; digestion reverses this process through **hydrolysis**, breaking bonds by adding water back in."
+       ],
+       "example": {
+        "problem": "Three glucose molecules are linked end to end into a single short chain through dehydration synthesis. How many water molecules are released?",
+        "steps": [
+         "Linking 3 monomers into one chain requires forming 2 bonds (one between each adjacent pair).",
+         "Each bond-forming reaction releases exactly one water molecule."
+        ],
+        "answer": "2 water molecules are released."
+       }
+      },
+      {
+       "heading": "Proteins and DNA",
+       "body": [
+        "**Proteins** are built from **amino acids** linked in a specific order, and that order determines how the protein folds into a precise shape, which in turn determines its job, whether as an enzyme speeding up a reaction, a structural fiber, or a transporter like hemoglobin carrying oxygen in blood. Proteins do more of the actual physical work in a cell than any other molecule class.",
+        "**DNA** is built from repeating units called **nucleotides**, and the specific order of its four types (abbreviated A, T, G, C) stores the instructions for building every protein an organism needs. A gene is simply a specific stretch of that DNA sequence that codes for one particular protein."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "carbohydrate",
+       "def": "A macromolecule built from sugar units, used for quick energy, energy storage, or structure."
+      },
+      {
+       "term": "lipid",
+       "def": "A nonpolar macromolecule, including fats and oils, used for long-term energy storage and membranes."
+      },
+      {
+       "term": "dehydration synthesis",
+       "def": "A reaction that links two molecular building blocks and releases a water molecule."
+      },
+      {
+       "term": "protein",
+       "def": "A macromolecule built from amino acids, whose shape determines its specific function in the cell."
+      },
+      {
+       "term": "DNA",
+       "def": "The nucleic acid that stores an organism's genetic instructions as a sequence of four nucleotide types."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main function of cellulose in plants?",
+       "choices": [
+        "Quick energy storage",
+        "Providing structural rigidity in cell walls",
+        "Carrying oxygen in sap",
+        "Storing genetic information"
+       ],
+       "answer": 1,
+       "explain": "Cellulose is a tough polysaccharide that forms the rigid cell walls giving plant cells (and the whole plant) structural support."
+      },
+      {
+       "q": "Six amino acids are linked end to end via dehydration synthesis into a single short protein chain. How many water molecules are released?",
+       "choices": [
+        "4",
+        "5",
+        "6",
+        "7"
+       ],
+       "answer": 1,
+       "explain": "Linking 6 monomers requires 5 bonds (n − 1), and each bond releases one water molecule, for 5 total."
+      },
+      {
+       "q": "What ultimately determines a protein's specific function in a cell?",
+       "choices": [
+        "The number of water molecules released when it was built",
+        "The specific sequence of amino acids, which determines how it folds",
+        "Whether it is a carbohydrate or lipid",
+        "Its exposure to sunlight"
+       ],
+       "answer": 1,
+       "explain": "The order of amino acids in the chain dictates the protein's folded 3D shape, and that shape is what allows it to perform its specific job."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Cell Biology",
+   "summary": "The structures inside a cell, how cells get energy from food and sunlight, and how a single cell becomes two through division.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Cell Structure",
+     "minutes": 13,
+     "intro": "Every living thing, from a single bacterium to the trillions of cells that make up you, is built from cells: the basic unit of life. Some cells are simple, and some pack in an impressive amount of internal organization.",
+     "sections": [
+      {
+       "heading": "Simple and Complex Cells",
+       "body": [
+        "**Prokaryotic** cells, like bacteria, are small and simple, with no nucleus and no internal membrane-bound compartments; their DNA floats freely in the cytoplasm. **Eukaryotic** cells, found in plants, animals, fungi, and protists, are larger and more organized, with a **nucleus** enclosing their DNA and a set of specialized internal compartments called **organelles**.",
+        "This extra organization in eukaryotic cells lets different chemical processes run separately and efficiently in their own dedicated spaces, rather than mixing together in one shared compartment the way they must in a simpler prokaryotic cell."
+       ]
+      },
+      {
+       "heading": "Key Organelles",
+       "body": [
+        "The **nucleus** stores and protects the cell's DNA. **Mitochondria** break down food molecules to produce usable energy (ATP), earning the nickname 'the powerhouse of the cell.' Plant cells additionally contain **chloroplasts**, which capture sunlight to make food through photosynthesis, a feature animal cells lack.",
+        "**Ribosomes** build proteins from instructions copied out of the DNA, and every cell, prokaryotic or eukaryotic, has them. The **cell membrane** encloses the entire cell and controls what substances move in and out, letting some small molecules pass freely while requiring specific channels for others."
+       ],
+       "example": {
+        "problem": "A biology student examines two unlabeled cells under a microscope. Cell A has a nucleus, mitochondria, and chloroplasts. Cell B has a nucleus and mitochondria but no chloroplasts. What kind of organism does each cell most likely come from?",
+        "steps": [
+         "Chloroplasts are found only in cells that carry out photosynthesis, which occurs in plants and algae.",
+         "A nucleus and mitochondria but no chloroplasts is characteristic of animal or fungal cells.",
+         "Match each observed organelle combination to the organism type that matches."
+        ],
+        "answer": "Cell A is most likely a plant (or algal) cell because of its chloroplasts; Cell B is most likely an animal (or fungal) cell, since it lacks chloroplasts."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "prokaryotic cell",
+       "def": "A simple cell without a nucleus or membrane-bound organelles, as in bacteria."
+      },
+      {
+       "term": "eukaryotic cell",
+       "def": "A cell with a true nucleus and membrane-bound organelles."
+      },
+      {
+       "term": "nucleus",
+       "def": "The organelle that stores and protects a eukaryotic cell's DNA."
+      },
+      {
+       "term": "mitochondrion",
+       "def": "The organelle that breaks down food molecules to produce usable cellular energy (ATP)."
+      },
+      {
+       "term": "chloroplast",
+       "def": "The organelle in plant and algal cells that captures sunlight to produce food through photosynthesis."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the key structural feature that distinguishes a eukaryotic cell from a prokaryotic cell?",
+       "choices": [
+        "Only eukaryotic cells have DNA",
+        "Eukaryotic cells have a true nucleus and membrane-bound organelles",
+        "Prokaryotic cells are always larger",
+        "Only prokaryotic cells have ribosomes"
+       ],
+       "answer": 1,
+       "explain": "The defining eukaryotic feature is a membrane-enclosed nucleus and additional membrane-bound organelles, both absent in prokaryotic cells."
+      },
+      {
+       "q": "Why do animal cells lack chloroplasts?",
+       "choices": [
+        "Animal cells cannot make any proteins",
+        "Animal cells do not perform photosynthesis, so they have no need for the organelle that carries it out",
+        "Chloroplasts only exist in prokaryotes",
+        "Chloroplasts are toxic to animal cells"
+       ],
+       "answer": 1,
+       "explain": "Chloroplasts are the site of photosynthesis, a process animals do not perform, so animal cells rely entirely on obtaining energy by eating other organisms instead."
+      },
+      {
+       "q": "Which organelle is responsible for producing most of a cell's usable energy from food molecules?",
+       "choices": [
+        "Nucleus",
+        "Ribosome",
+        "Mitochondrion",
+        "Cell membrane"
+       ],
+       "answer": 2,
+       "explain": "Mitochondria break down glucose and other fuel molecules to generate ATP, the cell's main energy currency, which is why they are called the powerhouse of the cell."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "How Cells Get Energy",
+     "minutes": 15,
+     "intro": "Nearly every living thing runs on the same energy currency, ATP, produced either by breaking down food (cellular respiration) or by capturing sunlight (photosynthesis). These two processes are the reason you breathe and the reason plants make oxygen.",
+     "sections": [
+      {
+       "heading": "Cellular Respiration",
+       "body": [
+        "**Cellular respiration** breaks down glucose using oxygen, releasing carbon dioxide, water, and usable energy in the form of **ATP**. This happens in three connected stages, glycolysis in the cytoplasm followed by two mitochondrial stages, and altogether one glucose molecule yields roughly 30 to 32 ATP molecules.",
+        "When oxygen is scarce, such as during intense exercise, cells can briefly fall back on **fermentation**, which only uses the first stage and produces far less ATP (about 2 per glucose), along with lactic acid that contributes to the burning feeling in overworked muscles."
+       ]
+      },
+      {
+       "heading": "Photosynthesis",
+       "body": [
+        "**Photosynthesis** runs in the opposite direction: plants, algae, and some bacteria use light energy captured by **chlorophyll** to convert carbon dioxide and water into glucose, releasing oxygen as a byproduct. This single process is the ultimate source of both the food and the oxygen that almost every other organism on Earth depends on.",
+        "Photosynthesis happens inside chloroplasts, using light energy in an initial stage to produce ATP and electron carriers, which are then used in a second stage, the Calvin cycle, to actually build sugar molecules from carbon dioxide."
+       ],
+       "example": {
+        "problem": "Compare the inputs and outputs of photosynthesis and cellular respiration. What does each process consume and release?",
+        "steps": [
+         "List photosynthesis's inputs (carbon dioxide, water, light energy) and outputs (glucose, oxygen).",
+         "List respiration's inputs (glucose, oxygen) and outputs (carbon dioxide, water, ATP).",
+         "Notice that each process's outputs are the other process's inputs."
+        ],
+        "answer": "Photosynthesis consumes CO2 and water to release glucose and O2; cellular respiration consumes glucose and O2 to release CO2 and water, making the two processes near mirror images of each other."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ATP",
+       "def": "Adenosine triphosphate, the molecule cells use as their main energy currency."
+      },
+      {
+       "term": "cellular respiration",
+       "def": "The process of breaking down glucose with oxygen to release usable energy as ATP."
+      },
+      {
+       "term": "fermentation",
+       "def": "An anaerobic energy pathway that produces a small amount of ATP without oxygen."
+      },
+      {
+       "term": "photosynthesis",
+       "def": "The process by which plants and algae use light energy to convert CO2 and water into glucose and oxygen."
+      },
+      {
+       "term": "chlorophyll",
+       "def": "The green pigment in chloroplasts that absorbs light energy for photosynthesis."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main advantage of aerobic cellular respiration over fermentation?",
+       "choices": [
+        "It produces far more ATP per glucose molecule",
+        "It does not require glucose at all",
+        "It only happens in plants",
+        "It releases oxygen as a waste product"
+       ],
+       "answer": 0,
+       "explain": "Aerobic respiration yields roughly 30-32 ATP per glucose by using oxygen in later stages, compared to only about 2 ATP from fermentation alone."
+      },
+      {
+       "q": "Where does photosynthesis's oxygen byproduct actually come from?",
+       "choices": [
+        "Carbon dioxide",
+        "The splitting of water molecules during the light-capturing stage",
+        "Glucose breakdown",
+        "Chlorophyll itself"
+       ],
+       "answer": 1,
+       "explain": "During the light-dependent stage of photosynthesis, water molecules are split apart to supply electrons, releasing oxygen gas as a byproduct."
+      },
+      {
+       "q": "Which statement correctly compares photosynthesis and cellular respiration?",
+       "choices": [
+        "They are identical processes with different names",
+        "Photosynthesis stores energy in glucose; respiration releases that energy back out as ATP",
+        "Only respiration occurs in living cells",
+        "Photosynthesis requires oxygen as its main input"
+       ],
+       "answer": 1,
+       "explain": "Photosynthesis captures light energy and stores it in the chemical bonds of glucose, while respiration breaks those bonds back down to release usable energy as ATP, making the two processes complementary opposites."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Cell Division and Cancer",
+     "minutes": 12,
+     "intro": "Your body replaces worn-out and damaged cells constantly through a carefully controlled process of division. When the controls on that process break down, the result is uncontrolled growth: cancer.",
+     "sections": [
+      {
+       "heading": "The Cell Cycle and Mitosis",
+       "body": [
+        "A cell's life follows the **cell cycle**: a growth phase, a phase where its DNA is copied, and finally **mitosis**, division of the nucleus into two identical nuclei, followed by division of the whole cell into two identical daughter cells. This is how your body grows during development and replaces damaged or worn-out cells, such as skin and blood cells, throughout life.",
+        "Because each daughter cell receives a full, identical copy of the parent cell's DNA, mitosis produces genetically identical cells, which is exactly what is needed for growth and repair, as opposed to producing new genetic combinations."
+       ]
+      },
+      {
+       "heading": "When Cell Division Goes Wrong",
+       "body": [
+        "Normal cells only divide when signaled to and stop when they receive a stop signal or run out of space, a control system enforced partly by genes that either promote division (proto-oncogenes) or suppress it (tumor suppressor genes). **Cancer** develops when mutations disable these controls, letting a cell divide uncontrollably and ignore the normal stop signals.",
+        "A mass of these abnormally dividing cells forms a **tumor**; a **benign tumor** stays contained in one location, while a **malignant tumor** can invade nearby tissue and spread to distant parts of the body, a process called **metastasis**, which is what makes cancer dangerous and often difficult to treat."
+       ],
+       "example": {
+        "problem": "A tumor is found to be contained within a thin capsule and has not invaded any surrounding tissue or spread elsewhere in the body. Is this tumor more likely benign or malignant, and why?",
+        "steps": [
+         "Recall that a benign tumor stays localized and does not invade nearby tissue.",
+         "A malignant tumor, by contrast, invades surrounding tissue and can metastasize to distant sites.",
+         "Match the tumor's described behavior, staying contained, to the correct category."
+        ],
+        "answer": "The tumor is more likely benign, since it remains contained and has not invaded or spread, unlike a malignant tumor."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "mitosis",
+       "def": "Cell division producing two genetically identical daughter cells, used for growth and repair."
+      },
+      {
+       "term": "cell cycle",
+       "def": "The repeating sequence of growth, DNA replication, and division a cell goes through."
+      },
+      {
+       "term": "tumor suppressor gene",
+       "def": "A gene whose normal function helps stop uncontrolled cell division; its loss can contribute to cancer."
+      },
+      {
+       "term": "tumor",
+       "def": "A mass of abnormally dividing cells."
+      },
+      {
+       "term": "metastasis",
+       "def": "The spread of cancer cells from their original site to other parts of the body."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main purpose of mitosis in the human body?",
+       "choices": [
+        "To create genetically varied offspring",
+        "To grow tissue and replace damaged or worn-out cells with identical copies",
+        "To halve the chromosome number",
+        "To produce sperm and egg cells"
+       ],
+       "answer": 1,
+       "explain": "Mitosis produces two cells genetically identical to the parent cell, exactly what is needed for growth and for replacing damaged tissue, unlike meiosis, which produces varied gametes."
+      },
+      {
+       "q": "What genetic change is most directly responsible for a normal cell becoming cancerous?",
+       "choices": [
+        "Gaining an extra mitochondrion",
+        "Mutations that disable the normal controls on cell division",
+        "A decrease in ribosome number",
+        "An increase in chlorophyll production"
+       ],
+       "answer": 1,
+       "explain": "Cancer arises when mutations disable genes that normally regulate cell division, such as tumor suppressor genes, allowing the cell to divide uncontrollably."
+      },
+      {
+       "q": "What distinguishes a malignant tumor from a benign one?",
+       "choices": [
+        "Malignant tumors are always smaller",
+        "Malignant tumors can invade nearby tissue and spread (metastasize) to distant sites",
+        "Benign tumors contain no cells at all",
+        "There is no meaningful difference"
+       ],
+       "answer": 1,
+       "explain": "A malignant tumor's ability to invade surrounding tissue and metastasize to other body sites is what makes it dangerous, unlike a benign tumor, which stays contained."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Genetics and Heredity",
+   "summary": "How traits are inherited according to Mendel's rules, how DNA's code becomes a protein, and the basics of the biotechnology built on that knowledge.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Mendelian Genetics",
+     "minutes": 15,
+     "intro": "Long before anyone had seen a chromosome, Gregor Mendel figured out the basic rules of inheritance just by carefully counting pea plants. A Punnett square turns his discovery into a tool you can use to predict the odds of any simple genetic trait.",
+     "sections": [
+      {
+       "heading": "Genes, Alleles, and Traits",
+       "body": [
+        "A **gene** is a segment of DNA that codes for a specific trait, and most genes come in different versions called **alleles**. An organism's **genotype** is the specific pair of alleles it carries; its **phenotype** is the physical trait that pair produces. A **dominant** allele's trait appears whenever at least one copy is present, while a **recessive** allele's trait only appears when two copies are present.",
+        "An organism with two identical alleles for a gene is **homozygous**; one with two different alleles is **heterozygous**. Because a dominant allele masks a recessive one in a heterozygote, two individuals with the same visible trait can still carry different genotypes underneath."
+       ]
+      },
+      {
+       "heading": "Punnett Squares",
+       "body": [
+        "A **Punnett square** is a simple grid that lists all possible combinations of alleles two parents can pass to their offspring, letting you calculate the probability of each possible genotype and phenotype. For a cross between two heterozygous parents at a single gene, the classic result is a 3:1 ratio of dominant to recessive phenotypes in the offspring.",
+        "This tool works because each parent contributes exactly one allele per gene to each offspring, and the Punnett square simply lays out every combination those two contributions can produce, each combination being equally likely."
+       ],
+       "example": {
+        "problem": "In humans, unattached earlobes (E) are dominant over attached earlobes (e). Two heterozygous (Ee) parents have a child. What is the probability the child has attached earlobes?",
+        "steps": [
+         "Each Ee parent passes either E or e to the child, each with 50% probability.",
+         "The 2×2 Punnett square gives four equally likely combinations: EE, Ee, Ee, ee.",
+         "Attached earlobes require the recessive ee genotype, which is 1 of the 4 combinations."
+        ],
+        "answer": "There is a 1 in 4 (25%) chance the child has attached earlobes."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "allele",
+       "def": "A specific version of a gene."
+      },
+      {
+       "term": "genotype",
+       "def": "The pair of alleles an organism carries for a gene."
+      },
+      {
+       "term": "phenotype",
+       "def": "The observable trait produced by a genotype."
+      },
+      {
+       "term": "dominant allele",
+       "def": "An allele whose trait shows up whenever at least one copy is present."
+      },
+      {
+       "term": "recessive allele",
+       "def": "An allele whose trait only shows up when two copies are present."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In pea plants, round seeds (R) are dominant over wrinkled seeds (r). A homozygous round (RR) plant is crossed with a homozygous wrinkled (rr) plant. What phenotype do all the offspring have?",
+       "choices": [
+        "All wrinkled",
+        "All round",
+        "Half round, half wrinkled",
+        "3/4 round, 1/4 wrinkled"
+       ],
+       "answer": 1,
+       "explain": "Every offspring receives one R and one r allele, making them all Rr heterozygotes; since R is dominant, all offspring show the round phenotype."
+      },
+      {
+       "q": "Two heterozygous (Rr) pea plants are crossed. What fraction of offspring is expected to have wrinkled seeds?",
+       "choices": [
+        "1/4",
+        "1/2",
+        "3/4",
+        "0"
+       ],
+       "answer": 0,
+       "explain": "The Punnett square gives RR, Rr, Rr, rr; only the rr combination (1 of 4) produces the recessive wrinkled phenotype."
+      },
+      {
+       "q": "Two people both have unattached earlobes (dominant) but are both heterozygous (Ee). What is the probability their child has unattached earlobes?",
+       "choices": [
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+       ],
+       "answer": 2,
+       "explain": "Of the four Punnett square combinations (EE, Ee, Ee, ee), three carry at least one dominant E allele and therefore show the dominant unattached-earlobe phenotype, giving a 3/4, or 75%, probability."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "DNA and Genes",
+     "minutes": 14,
+     "intro": "DNA does not build a protein directly; instead, its code is copied and then read, three letters at a time, by machinery inside every cell. Following that two-step process in plain language explains how a single molecule can direct the construction of your entire body.",
+     "sections": [
+      {
+       "heading": "The Structure of the Genetic Code",
+       "body": [
+        "DNA is a double helix made of two strands, held together by pairing between four bases: adenine (A) pairs with thymine (T), and guanine (G) pairs with cytosine (C). This strict pairing rule allows DNA to be copied precisely: each strand serves as a template that guides the construction of a new complementary strand.",
+        "A **gene** is a specific stretch of DNA sequence that contains the instructions for building one particular protein. The order of the four bases along that stretch is, quite literally, a code, no different in principle from letters spelling out a word."
+       ]
+      },
+      {
+       "heading": "From DNA to Protein",
+       "body": [
+        "To build a protein, a cell first copies a gene's DNA sequence into a related molecule called messenger RNA, in a process called **transcription**. That messenger RNA then travels to a ribosome, where it is read three bases at a time; each three-base unit, a **codon**, specifies one particular amino acid, in a process called **translation**.",
+        "The ribosome links the specified amino acids together in the exact order the codons dictate, building a chain that folds into the finished protein. A change in even one base of the original DNA sequence can change one amino acid in the final protein, sometimes enough to alter or destroy its function entirely."
+       ],
+       "example": {
+        "problem": "A short gene sequence controls eye pigment production. A single mutation changes one base in that gene, which changes one amino acid in the resulting protein, disabling the enzyme that produces pigment. What is the likely visible effect, and what does this reveal about the relationship between DNA sequence and protein function?",
+        "steps": [
+         "Identify that the enzyme responsible for pigment production is now nonfunctional due to the mutation.",
+         "Without functional pigment-producing enzyme, pigment cannot be made normally.",
+         "Connect the molecular change (one wrong amino acid) to the visible outcome (altered or absent pigment, such as albinism-like coloring)."
+        ],
+        "answer": "The organism would likely show reduced or absent pigment in that structure, illustrating that even a single-base DNA change can alter a protein enough to change a visible trait."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "gene",
+       "def": "A segment of DNA that contains the instructions for building one specific protein."
+      },
+      {
+       "term": "base pairing",
+       "def": "The rule that adenine pairs with thymine and guanine pairs with cytosine in DNA."
+      },
+      {
+       "term": "transcription",
+       "def": "The copying of a gene's DNA sequence into a messenger RNA molecule."
+      },
+      {
+       "term": "translation",
+       "def": "The reading of messenger RNA codons by a ribosome to build a chain of amino acids."
+      },
+      {
+       "term": "codon",
+       "def": "A three-base sequence in mRNA that specifies one amino acid or a stop signal."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the direct product of transcription?",
+       "choices": [
+        "A finished protein",
+        "A messenger RNA copy of a gene's DNA sequence",
+        "A new DNA double helix",
+        "An amino acid"
+       ],
+       "answer": 1,
+       "explain": "Transcription copies a gene's DNA sequence into a complementary messenger RNA molecule, which is then used in translation to build a protein."
+      },
+      {
+       "q": "During translation, what does each three-base mRNA codon specify?",
+       "choices": [
+        "An entire protein",
+        "One specific amino acid (or a stop signal)",
+        "One DNA nucleotide",
+        "A ribosome"
+       ],
+       "answer": 1,
+       "explain": "Each codon corresponds to one amino acid (or signals the end of translation), and the ribosome adds amino acids to the growing protein chain in the order the codons specify."
+      },
+      {
+       "q": "Why can a single-base change in a gene sometimes alter an organism's visible trait?",
+       "choices": [
+        "Because DNA bases have no effect on protein structure",
+        "Because it can change one amino acid in the resulting protein, potentially altering the protein's shape and function",
+        "Because ribosomes ignore mutated genes",
+        "Because RNA cannot be affected by DNA changes"
+       ],
+       "answer": 1,
+       "explain": "Since the DNA sequence determines the mRNA codons and therefore the amino acid sequence, a single-base change can substitute one amino acid, which is sometimes enough to disrupt the protein's shape and function."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Biotechnology Basics",
+     "minutes": 12,
+     "intro": "Understanding DNA has let scientists move genes between organisms, screen for disease-causing mutations, and identify individuals from a single hair or drop of blood. These tools now show up in medicine, agriculture, and criminal investigations alike.",
+     "sections": [
+      {
+       "heading": "Genetic Engineering",
+       "body": [
+        "**Genetic engineering** is the direct manipulation of an organism's DNA, often by inserting a gene from one species into another. A well-known example is inserting the human insulin gene into bacteria, which then mass-produce human insulin for diabetes treatment far more cheaply and safely than earlier methods using animal-extracted insulin.",
+        "Crops can also be genetically modified, for example to resist a specific pest or tolerate an herbicide, letting farmers reduce chemical pesticide use or protect yield against a specific threat, though such modifications remain a subject of ongoing public debate and regulation."
+       ]
+      },
+      {
+       "heading": "DNA Fingerprinting and Genetic Testing",
+       "body": [
+        "Except for identical twins, every person's DNA sequence is unique. **DNA fingerprinting** compares specific, highly variable regions of DNA between samples, such as a crime scene sample and a suspect's DNA, to determine whether they match, a technique also used routinely to establish paternity.",
+        "**Genetic testing** can screen for specific disease-causing mutations, such as those linked to certain hereditary cancers, letting individuals and their doctors make informed decisions about monitoring or preventive care well before any symptoms might appear."
+       ],
+       "example": {
+        "problem": "A DNA sample from a crime scene is compared to DNA samples from three suspects at several highly variable DNA regions. Suspect 2's pattern matches the crime scene sample at every region tested; Suspects 1 and 3 do not match at several regions. What can investigators reasonably conclude?",
+        "steps": [
+         "Recognize that DNA fingerprinting compares patterns at variable regions, not the entire genome.",
+         "A full match across multiple independent variable regions is statistically very unlikely to occur by chance between two different people.",
+         "A non-match at several regions effectively rules out that individual as the source."
+        ],
+        "answer": "Suspect 2 is very likely the source of the crime scene DNA, while Suspects 1 and 3 are effectively excluded as sources, based on their non-matching patterns."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "genetic engineering",
+       "def": "The direct manipulation of an organism's DNA, often to insert a gene from another species."
+      },
+      {
+       "term": "DNA fingerprinting",
+       "def": "A technique that compares variable DNA regions between samples to determine whether they come from the same individual."
+      },
+      {
+       "term": "genetic testing",
+       "def": "Screening an individual's DNA for specific disease-associated mutations."
+      },
+      {
+       "term": "genetically modified organism",
+       "def": "An organism whose DNA has been deliberately altered using genetic engineering techniques."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How is human insulin for diabetes treatment produced using genetic engineering?",
+       "choices": [
+        "It is extracted directly from human blood only",
+        "The human insulin gene is inserted into bacteria, which then mass-produce the insulin protein",
+        "It is synthesized without any genes involved",
+        "It is extracted from genetically modified crops"
+       ],
+       "answer": 1,
+       "explain": "Inserting the human insulin gene into bacterial DNA lets the bacteria produce large quantities of human insulin protein, a far more scalable and consistent method than earlier animal-based extraction."
+      },
+      {
+       "q": "What is the basic principle behind DNA fingerprinting used in forensic investigations?",
+       "choices": [
+        "All humans have identical DNA, so no comparison is needed",
+        "Comparing highly variable DNA regions between individuals can reliably distinguish one person's DNA from another's",
+        "It requires sequencing an individual's entire genome",
+        "It only works on identical twins"
+       ],
+       "answer": 1,
+       "explain": "Because certain DNA regions vary enormously between unrelated individuals, comparing several of these regions between two samples can reliably confirm or rule out a match."
+      },
+      {
+       "q": "What is a genetic test for a hereditary cancer mutation primarily used for?",
+       "choices": [
+        "Curing the cancer directly",
+        "Identifying increased risk so individuals can pursue monitoring or preventive care before symptoms appear",
+        "Changing a person's existing DNA sequence",
+        "Producing insulin"
+       ],
+       "answer": 1,
+       "explain": "Genetic testing identifies whether a person carries a disease-associated mutation, informing decisions about earlier or more frequent screening and preventive measures, not altering the person's DNA."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Evolution and the Diversity of Life",
+   "summary": "How natural selection explains adaptation, how biologists organize the tree of life, and a tour of life's major groups.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Evolution by Natural Selection",
+     "minutes": 13,
+     "intro": "Charles Darwin's idea is simple enough to state in one sentence and powerful enough to explain the diversity of all life on Earth: individuals with traits suited to their environment tend to survive and reproduce more successfully than others.",
+     "sections": [
+      {
+       "heading": "The Logic of Natural Selection",
+       "body": [
+        "**Natural selection** requires three ingredients: variation among individuals in a population, at least some of that variation being heritable (passed from parent to offspring), and that variation affecting survival or reproductive success. When all three are present, traits that improve survival or reproduction, called **adaptations**, become more common in the population over successive generations.",
+        "Natural selection does not act on individuals over their own lifetime; a giraffe cannot make its own neck longer by stretching. It acts across generations, favoring individuals who already happen to carry helpful heritable traits, so those traits become more frequent in the population over time."
+       ],
+       "example": {
+        "problem": "In a population of 1,000 beetles, 300 are green and 700 are brown. Birds hunting against green foliage eat brown beetles more easily, so green beetles survive at 70% per generation while brown beetles survive at only 40%. Of the survivors, roughly what percentage are green?",
+        "steps": [
+         "Calculate surviving green beetles: 300 × 0.70 = 210.",
+         "Calculate surviving brown beetles: 700 × 0.40 = 280.",
+         "Find the percentage green among all survivors: 210 ÷ (210 + 280) = 210/490."
+        ],
+        "answer": "About 43% of survivors are green, up from 30% in the original population, showing how differential survival shifts a trait's frequency."
+       }
+      },
+      {
+       "heading": "Evidence Supporting Evolution",
+       "body": [
+        "The **fossil record** shows a clear progression of increasingly modern life forms in older to younger rock layers, including transitional fossils that bridge major groups. **Homologous structures**, like the same basic bone arrangement in a bird's wing, a whale's flipper, and a human arm, point to shared ancestry even though these limbs now serve very different functions.",
+        "Molecular evidence adds an independent confirmation: species that anatomy and fossils suggest are closely related also tend to have more similar DNA sequences, exactly what shared ancestry would predict, and precisely the pattern used today to build accurate family trees of life."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "natural selection",
+       "def": "The process by which heritable traits that improve survival or reproduction become more common over generations."
+      },
+      {
+       "term": "adaptation",
+       "def": "A heritable trait that improves an organism's survival or reproductive success."
+      },
+      {
+       "term": "homologous structure",
+       "def": "A structure shared by different species due to common ancestry, even if it serves different functions now."
+      },
+      {
+       "term": "fossil record",
+       "def": "The collected physical remains and traces of past life, used as evidence for evolutionary change over time."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which three conditions must hold for natural selection to occur in a population?",
+       "choices": [
+        "Small population size, no mutations, stable climate",
+        "Heritable variation, that variation affecting survival/reproduction, and unequal reproductive success",
+        "High mutation rate and geographic isolation",
+        "Abundant food and no predators"
+       ],
+       "answer": 1,
+       "explain": "Natural selection requires variation that can be inherited and that affects how successfully individuals survive and reproduce; when these hold, favorable traits spread through the population over generations."
+      },
+      {
+       "q": "A giraffe stretching its neck throughout its life to reach higher leaves will NOT pass a longer neck to its offspring. Why not?",
+       "choices": [
+        "Because giraffes cannot have offspring",
+        "Because traits acquired during an individual's lifetime are not encoded in its DNA and cannot be inherited",
+        "Because natural selection does not apply to giraffes",
+        "Because neck length is not heritable in any species"
+       ],
+       "answer": 1,
+       "explain": "Only heritable variation, encoded in DNA and passed through reproduction, can be acted on by natural selection; changes an individual acquires during its own life are not passed to offspring."
+      },
+      {
+       "q": "A bat's wing, a whale's flipper, and a human arm share the same underlying bone pattern despite serving very different functions. What does this suggest?",
+       "choices": [
+        "They evolved completely independently with no shared ancestry",
+        "They are homologous structures, indicating a shared common ancestor",
+        "They are identical in function as well as structure",
+        "They disprove the theory of evolution"
+       ],
+       "answer": 1,
+       "explain": "Shared underlying structure despite different current functions is the hallmark of homology, strong evidence that these species share a common evolutionary ancestor."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Classification and the Tree of Life",
+     "minutes": 12,
+     "intro": "With millions of known species, biologists need a shared, logical system for naming and organizing life, one based on evolutionary relationships rather than superficial looks.",
+     "sections": [
+      {
+       "heading": "Taxonomy and Naming",
+       "body": [
+        "**Taxonomy** organizes life into a nested hierarchy running from broad to specific: domain, kingdom, phylum, class, order, family, genus, and species. Every species also gets a unique two-part scientific name, its genus and species, such as *Panthera leo* for the lion, which avoids the confusion of common names that vary by region and language.",
+        "Modern classification groups organisms by shared evolutionary ancestry, using evidence from anatomy, development, and increasingly DNA sequence comparison, rather than by superficial similarity alone."
+       ]
+      },
+      {
+       "heading": "Domains and Kingdoms",
+       "body": [
+        "All life is divided into three **domains**: Bacteria and Archaea, both prokaryotic but chemically and genetically distinct from each other, and Eukarya, which includes every eukaryotic organism and splits further into kingdoms such as Protista, Fungi, Plantae, and Animalia. Fungi absorb nutrients from their surroundings and have chitin cell walls; plants photosynthesize and have cellulose cell walls; animals ingest food and have no cell walls at all.",
+        "A **phylogenetic tree** is a branching diagram showing how different groups are related through common ancestry, with species sharing a more recent common ancestor placed closer together on the diagram."
+       ],
+       "example": {
+        "problem": "An organism is single-celled, has no nucleus, and lives in extreme heat near deep-sea vents, using chemistry unlike typical bacteria. Which domain does it most likely belong to?",
+        "steps": [
+         "Rule out Eukarya, since the organism has no nucleus.",
+         "Compare the remaining two prokaryotic domains: Bacteria and Archaea.",
+         "Archaea are known for often living in extreme environments and having distinct cell chemistry from typical bacteria."
+        ],
+        "answer": "The organism most likely belongs to the domain Archaea, based on its extreme habitat and distinct cell chemistry."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "taxonomy",
+       "def": "The science of naming and classifying organisms into a nested hierarchy."
+      },
+      {
+       "term": "domain",
+       "def": "The broadest level of classification: Bacteria, Archaea, or Eukarya."
+      },
+      {
+       "term": "phylogenetic tree",
+       "def": "A branching diagram representing evolutionary relationships among organisms."
+      },
+      {
+       "term": "kingdom",
+       "def": "A major classification level within a domain, such as Plantae, Fungi, or Animalia."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the purpose of a two-part scientific name like *Homo sapiens*?",
+       "choices": [
+        "It replaces the need for classification entirely",
+        "It gives every species one unique, universal name that avoids the ambiguity of common names",
+        "It only applies to endangered species",
+        "It indicates an organism's diet"
+       ],
+       "answer": 1,
+       "explain": "Binomial names are standardized and universal across languages, avoiding the confusion that can arise from regionally varying common names."
+      },
+      {
+       "q": "Which domain includes organisms with a true nucleus and membrane-bound organelles?",
+       "choices": [
+        "Bacteria",
+        "Archaea",
+        "Eukarya",
+        "None of the domains"
+       ],
+       "answer": 2,
+       "explain": "Eukarya is defined by the presence of a nucleus and membrane-bound organelles; Bacteria and Archaea are both prokaryotic domains lacking these features."
+      },
+      {
+       "q": "A mushroom absorbs nutrients from its surroundings and has cell walls made of chitin. Which kingdom does it belong to?",
+       "choices": [
+        "Plantae",
+        "Animalia",
+        "Fungi",
+        "Archaea"
+       ],
+       "answer": 2,
+       "explain": "Absorptive nutrition and chitin cell walls are defining features of the kingdom Fungi, distinguishing it from plants (cellulose walls, photosynthesis) and animals (no cell walls, ingestion)."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Surveying Life's Diversity",
+     "minutes": 12,
+     "intro": "From invisible bacteria to towering redwoods, life on Earth spans an astonishing range of forms, yet all of it can be sorted into a manageable number of major groups once you know what to look for.",
+     "sections": [
+      {
+       "heading": "Microbes and Protists",
+       "body": [
+        "**Bacteria** and **archaea** are single-celled prokaryotes found in nearly every environment on Earth, including some of the most extreme; many are harmless or beneficial (like the bacteria in your gut that aid digestion), while a minority cause disease. **Protists** are a highly varied eukaryotic group, mostly single-celled, including amoebas, algae, and the parasite that causes malaria, unified mainly by not fitting neatly into the animal, plant, or fungus kingdoms.",
+        "Viruses are not classified as living cells at all, since they cannot reproduce independently; they must hijack a host cell's machinery to make copies of themselves, which is a key reason antibiotics, which target bacterial cell processes, do nothing against viral infections."
+       ]
+      },
+      {
+       "heading": "Plants, Fungi, and Animals",
+       "body": [
+        "**Plants** are photosynthetic, mostly land-based, multicellular eukaryotes ranging from mosses to flowering trees, all sharing cellulose cell walls. **Fungi**, including mushrooms, molds, and yeasts, absorb nutrients externally by secreting digestive enzymes onto their food source, then absorbing the released nutrients, rather than ingesting food internally the way animals do.",
+        "**Animals** are multicellular eukaryotes that ingest food, lack cell walls, and are typically capable of movement at some stage of life; this kingdom ranges from simple sponges to the enormous complexity of vertebrates, all sharing that basic ingestion-based way of getting nutrients."
+       ],
+       "example": {
+        "problem": "A biology student finds an organism that is multicellular, cannot move on its own, has no chloroplasts, and grows by extending thread-like filaments into a rotting log while secreting enzymes onto the wood. What kingdom does it most likely belong to?",
+        "steps": [
+         "Rule out plants, since it lacks chloroplasts and does not photosynthesize.",
+         "Rule out animals, since it does not ingest food internally and largely cannot move.",
+         "Match its behavior, secreting digestive enzymes externally and absorbing the released nutrients, to the defining feature of fungi."
+        ],
+        "answer": "The organism most likely belongs to the kingdom Fungi, based on its external digestion and non-photosynthetic, immobile lifestyle."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "protist",
+       "def": "A highly varied, mostly single-celled eukaryotic organism that does not fit into the animal, plant, or fungus kingdoms."
+      },
+      {
+       "term": "virus",
+       "def": "A non-cellular infectious particle that must hijack a host cell's machinery to reproduce."
+      },
+      {
+       "term": "external digestion",
+       "def": "A feeding strategy, used by fungi, of secreting digestive enzymes onto food and then absorbing the released nutrients."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why are antibiotics ineffective against viral infections like the common cold?",
+       "choices": [
+        "Antibiotics kill all viruses instantly",
+        "Antibiotics target bacterial cell processes, which viruses, being non-cellular, do not have",
+        "Viruses are a type of fungus",
+        "Viruses are immune to all chemicals"
+       ],
+       "answer": 1,
+       "explain": "Antibiotics work by disrupting processes specific to bacterial cells, such as bacterial cell wall construction; viruses lack cellular machinery of their own, so these drugs have no target to act on."
+      },
+      {
+       "q": "What feeding strategy is characteristic of fungi, distinguishing them from animals?",
+       "choices": [
+        "Photosynthesis",
+        "Ingesting whole food internally",
+        "Secreting digestive enzymes externally and absorbing the released nutrients",
+        "Absorbing sunlight directly through the skin"
+       ],
+       "answer": 2,
+       "explain": "Fungi digest their food externally by secreting enzymes onto it and then absorbing the broken-down nutrients, unlike animals, which ingest food and digest it internally."
+      },
+      {
+       "q": "The parasite that causes malaria is single-celled and eukaryotic but does not fit into the plant, fungus, or animal kingdoms. Which group does it belong to?",
+       "choices": [
+        "Bacteria",
+        "Archaea",
+        "Protist",
+        "Virus"
+       ],
+       "answer": 2,
+       "explain": "Protists are a highly diverse eukaryotic group defined largely by not fitting into the other eukaryotic kingdoms, and the malaria parasite is a classic example."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "The Human Body, Ecosystems, and Conservation",
+   "summary": "How the human body's organ systems keep it stable, how populations grow and ecosystems cycle energy, and the human impact on biodiversity today.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Human Body: Organ Systems Overview",
+     "minutes": 13,
+     "intro": "Your body is a collaboration between roughly a dozen major organ systems, each with its own job, all working together to keep you alive and stable without you ever having to think about it.",
+     "sections": [
+      {
+       "heading": "Major Organ Systems",
+       "body": [
+        "The **circulatory system** (heart, blood vessels, blood) delivers oxygen and nutrients throughout the body and removes waste. The **respiratory system** (lungs, airway) exchanges oxygen and carbon dioxide with the environment. The **digestive system** breaks food down into absorbable nutrients. The **nervous system** (brain, spinal cord, nerves) senses the environment and coordinates rapid responses, while the **endocrine system** uses hormones to coordinate slower, longer-lasting processes like growth and metabolism.",
+        "The **skeletal system** provides structural support and protects internal organs; the **muscular system** produces movement; the **immune system** defends against pathogens; and the **excretory (urinary) system**, centered on the kidneys, filters blood and removes waste as urine, while also regulating water and salt balance."
+       ]
+      },
+      {
+       "heading": "Homeostasis: The Body's Shared Goal",
+       "body": [
+        "Despite their different jobs, every organ system contributes to the same underlying goal: **homeostasis**, keeping internal conditions, temperature, blood sugar, pH, water balance, stable despite a constantly changing outside world. Most homeostatic control relies on **negative feedback**: a sensor detects a deviation from the normal target, and the body responds in a way that pushes the variable back toward normal.",
+        "This is exactly why organ systems are so deeply interconnected: a drop in blood oxygen (respiratory) triggers a faster heart rate (circulatory), which is itself regulated by hormonal signals (endocrine) and nervous system input, illustrating that no single organ system works in true isolation."
+       ],
+       "example": {
+        "problem": "After eating a large meal, a person's blood glucose level rises well above normal. Describe, in terms of organ systems, how the body brings it back down.",
+        "steps": [
+         "The digestive system has broken food down and released glucose into the bloodstream, raising blood glucose.",
+         "The endocrine system detects this rise (via the pancreas) and releases insulin.",
+         "Insulin signals cells throughout the body (muscle, liver, fat) to take up glucose from the blood, lowering blood glucose back toward its normal range."
+        ],
+        "answer": "The endocrine system releases insulin, which prompts cells to absorb glucose from the blood, returning blood glucose to its normal homeostatic range."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "circulatory system",
+       "def": "The organ system, centered on the heart and blood vessels, that transports oxygen, nutrients, and waste throughout the body."
+      },
+      {
+       "term": "endocrine system",
+       "def": "The organ system that uses hormones to coordinate slower, longer-lasting body processes."
+      },
+      {
+       "term": "homeostasis",
+       "def": "The maintenance of a stable internal environment despite external changes."
+      },
+      {
+       "term": "negative feedback",
+       "def": "A control mechanism in which a response counteracts a deviation, returning a variable toward its normal range."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which organ system is primarily responsible for coordinating body processes using hormones released into the bloodstream?",
+       "choices": [
+        "Skeletal system",
+        "Endocrine system",
+        "Excretory system",
+        "Muscular system"
+       ],
+       "answer": 1,
+       "explain": "The endocrine system uses hormones, chemical messengers carried in the blood, to coordinate longer-lasting processes such as growth, metabolism, and blood sugar regulation."
+      },
+      {
+       "q": "What is the underlying goal shared by nearly all of the body's organ systems?",
+       "choices": [
+        "Producing new organ systems",
+        "Maintaining homeostasis, a stable internal environment",
+        "Increasing body temperature continuously",
+        "Preventing all cell division"
+       ],
+       "answer": 1,
+       "explain": "Despite their different specific jobs, organ systems ultimately work together to keep internal conditions like temperature, pH, and glucose level within a stable, survivable range."
+      },
+      {
+       "q": "After blood glucose falls too low, insulin release stops and the pancreas releases glucagon instead, prompting the liver to release stored glucose. This is an example of what kind of control?",
+       "choices": [
+        "Positive feedback that amplifies the original change",
+        "Negative feedback that counteracts the deviation and restores the normal range",
+        "A one-time process with no ongoing regulation",
+        "A process unrelated to homeostasis"
+       ],
+       "answer": 1,
+       "explain": "The response (releasing stored glucose) directly counteracts the deviation (low blood glucose), pushing the variable back toward its normal set point, the defining feature of negative feedback."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Ecosystems and Populations",
+     "minutes": 13,
+     "intro": "Every organism is part of a larger web: a population that grows and shrinks, and an ecosystem that moves energy and nutrients through a whole community of species. These patterns explain everything from why deer populations crash after a harsh winter to why food chains rarely have more than a few links.",
+     "sections": [
+      {
+       "heading": "Population Growth",
+       "body": [
+        "A population with abundant resources grows **exponentially**, its size increasing at an accelerating rate, producing a J-shaped curve. In reality, resources are limited, so growth eventually slows as the population nears the environment's **carrying capacity**, the maximum population size the habitat's resources can sustainably support, producing an S-shaped **logistic** growth curve instead.",
+        "Factors like food, water, and disease that limit a population's growth are called **limiting factors**; some, like disease, have a bigger impact as population density increases (density-dependent), while others, like a severe storm, strike regardless of population size (density-independent)."
+       ],
+       "example": {
+        "problem": "A population of fish starts at 200 and doubles every year with abundant food and no predators. How many fish are present after 4 years, and why is this growth pattern unlikely to continue indefinitely?",
+        "steps": [
+         "Doubling 4 times multiplies the population by 2^4 = 16.",
+         "Multiply: 200 × 16 = 3,200.",
+         "Recognize that real environments have limited food, space, and oxygen, so growth will eventually slow as the population nears carrying capacity."
+        ],
+        "answer": "There would be about 3,200 fish after 4 years, but this exponential pattern cannot continue forever because limited resources will eventually slow growth toward the pond's carrying capacity."
+       }
+      },
+      {
+       "heading": "Energy Flow Through Ecosystems",
+       "body": [
+        "Energy enters most ecosystems through **producers** (plants and algae) capturing sunlight, then passes to primary consumers that eat producers, then to secondary and tertiary consumers, with **decomposers** breaking down dead matter at every level and recycling nutrients back into the system. At each transfer between these **trophic levels**, roughly 90% of the energy is lost as heat, leaving only about 10% available to the next level.",
+        "This steady loss of energy at each step is exactly why food chains are rarely longer than four or five levels, and why top predators, like sharks or eagles, are always far less numerous than the producers supporting the entire food web beneath them."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "exponential growth",
+       "def": "Population growth that accelerates continuously under unlimited resources, producing a J-shaped curve."
+      },
+      {
+       "term": "carrying capacity",
+       "def": "The maximum population size an environment can sustainably support."
+      },
+      {
+       "term": "logistic growth",
+       "def": "Population growth that slows as it nears carrying capacity, producing an S-shaped curve."
+      },
+      {
+       "term": "trophic level",
+       "def": "An organism's position in a food chain, such as producer or primary consumer."
+      },
+      {
+       "term": "ten percent rule",
+       "def": "The pattern that only about 10% of energy transfers from one trophic level to the next."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A bacterial colony starts at 50 cells and doubles every hour. How many cells are present after 3 hours?",
+       "choices": [
+        "150",
+        "200",
+        "400",
+        "50"
+       ],
+       "answer": 2,
+       "explain": "Doubling 3 times multiplies the starting population by 2^3 = 8; 50 × 8 = 400 cells."
+      },
+      {
+       "q": "What does the flattening top of an S-shaped logistic growth curve represent?",
+       "choices": [
+        "Population extinction",
+        "The population approaching the environment's carrying capacity",
+        "An error in data collection",
+        "Unlimited exponential growth"
+       ],
+       "answer": 1,
+       "explain": "As a population nears carrying capacity, limited resources slow its growth rate, flattening the curve near the maximum sustainable population size."
+      },
+      {
+       "q": "An ecosystem's producers hold 10,000 kcal of energy. Using the ten percent rule, about how much energy is available to secondary consumers (two trophic levels up)?",
+       "choices": [
+        "1,000 kcal",
+        "100 kcal",
+        "10 kcal",
+        "10,000 kcal"
+       ],
+       "answer": 1,
+       "explain": "Producers to primary consumers: 10,000 × 0.10 = 1,000 kcal; primary to secondary consumers: 1,000 × 0.10 = 100 kcal."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Human Impact and Conservation",
+     "minutes": 12,
+     "intro": "Human activity is now the dominant force shaping which species thrive and which disappear. Understanding the specific mechanisms behind biodiversity loss is the first step toward the conservation strategies that can slow it.",
+     "sections": [
+      {
+       "heading": "Threats to Biodiversity",
+       "body": [
+        "**Habitat destruction**, converting forests, wetlands, and grasslands into farmland or cities, is the single largest driver of species loss worldwide, since it directly eliminates the space and resources species depend on. **Invasive species**, introduced to new regions either deliberately or by accident, can outcompete or prey on native species that have no evolved defenses against them.",
+        "**Climate change** shifts temperature and rainfall patterns faster than many species can migrate or adapt to, while **overharvesting**, unsustainable hunting, fishing, or logging, removes individuals faster than populations can replace them. These pressures often compound: a species already stressed by habitat loss is far more vulnerable to a new invasive predator or a shifting climate."
+       ]
+      },
+      {
+       "heading": "Conservation Strategies",
+       "body": [
+        "**Protected areas**, national parks, marine reserves, and wildlife refuges, set aside habitat where development and resource extraction are restricted, giving vulnerable species room to recover. **Sustainable resource management**, such as fishing quotas set below a population's replacement rate, aims to allow continued human use of a resource without driving it toward collapse.",
+        "Conservation increasingly also includes restoring damaged habitats, breeding endangered species in captivity for eventual reintroduction, and international agreements that regulate trade in endangered species, recognizing that many conservation challenges cross national borders and require coordinated action."
+       ],
+       "example": {
+        "problem": "A fish population of 50,000 individuals grows by 10% per year without fishing. A fishing quota removes exactly 10% of the population each year. Will this quota be sustainable long-term, and why?",
+        "steps": [
+         "Calculate the natural annual growth: 50,000 × 0.10 = 5,000 new fish per year.",
+         "Calculate the annual removal under the quota: 50,000 × 0.10 = 5,000 fish removed per year.",
+         "Compare growth to removal: since removal equals growth, the population would remain roughly stable rather than growing or shrinking."
+        ],
+        "answer": "The quota is roughly sustainable at this specific population size, since it removes fish at the same rate the population naturally replaces them, keeping the population stable rather than declining."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "habitat destruction",
+       "def": "The elimination or conversion of natural habitat, the leading cause of biodiversity loss."
+      },
+      {
+       "term": "invasive species",
+       "def": "A non-native species introduced to a new region that causes ecological or economic harm."
+      },
+      {
+       "term": "protected area",
+       "def": "Land or water set aside with legal restrictions on development or resource extraction to conserve habitat."
+      },
+      {
+       "term": "sustainable resource management",
+       "def": "Using a natural resource at a rate the population can naturally replace, avoiding long-term decline."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is generally considered the leading cause of biodiversity loss worldwide?",
+       "choices": [
+        "Invasive species",
+        "Habitat destruction from converting natural land to farms or cities",
+        "Overharvesting alone",
+        "Volcanic activity"
+       ],
+       "answer": 1,
+       "explain": "Converting natural habitat to human use directly removes the space and resources species need to survive, making habitat destruction the leading overall driver of biodiversity loss."
+      },
+      {
+       "q": "A deer population grows by 8% per year. A hunting quota is set to remove 15% of the population annually. What is the likely long-term result?",
+       "choices": [
+        "The population will grow steadily",
+        "The population will likely decline over time, since removal (15%) exceeds natural growth (8%)",
+        "The population size will be completely unaffected",
+        "The quota guarantees the population doubles"
+       ],
+       "answer": 1,
+       "explain": "Because the quota removes individuals faster than the population naturally replaces them, the population is expected to shrink over time unless the quota is reduced."
+      },
+      {
+       "q": "What is the main purpose of establishing a protected area like a national park or marine reserve?",
+       "choices": [
+        "To increase resource extraction in that area",
+        "To restrict development and resource extraction so vulnerable species and habitats have room to recover",
+        "To eliminate all human presence from the region permanently",
+        "To relocate all native species elsewhere"
+       ],
+       "answer": 1,
+       "explain": "Protected areas limit development and extraction specifically to preserve habitat, giving species room to maintain or rebuild healthy populations."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

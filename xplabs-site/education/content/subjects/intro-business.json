@@ -1,0 +1,788 @@
+{
+  "id": "intro-business",
+  "title": "Introduction to Business",
+  "domain": "business",
+  "level": "Intro college",
+  "description": "A survey of how businesses actually operate: the economic and ethical environment they compete in, the legal forms an owner can choose, and the management, marketing, and financial systems that keep a company running. You will move from broad economic forces down to the practical mechanics of forming a company, leading people, reaching customers, and reading the numbers behind a real decision.",
+  "outcomes": [
+    "You can explain how a market economy allocates resources and identify the four factors of production at work in a real business.",
+    "You can compare sole proprietorships, partnerships, and corporations and recommend a legal structure for a given venture.",
+    "You can apply the four functions of management — planning, organizing, leading, and controlling — to a workplace scenario.",
+    "You can build a basic marketing mix of product, price, place, and promotion for a new product.",
+    "You can explain how a business raises money through debt and equity and calculate the cost of a simple loan.",
+    "You can read a basic balance sheet and income statement and explain what each major line represents."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "The Business Environment",
+      "summary": "Every business operates inside an economic system, faces real risk, and answers to more than just its owners — this unit builds that foundation before anything else.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "What Is Business? Profit, Risk, and Stakeholders",
+          "minutes": 10,
+          "intro": "Every business, from a food truck to a multinational corporation, exists to do the same basic thing: combine resources to produce something people will pay more for than it cost to make — and every owner accepts real risk in exchange for that potential reward.",
+          "sections": [
+            {
+              "heading": "Business, Revenue, and Profit",
+              "body": [
+                "A **business** is an organization that provides goods or services in exchange for money, with the goal of earning a **profit**: what remains after all costs of producing and selling are subtracted from **revenue**, the total money taken in from sales. Profit is never guaranteed — it is the reward for correctly judging what customers want and delivering it more efficiently than competitors.",
+                "It helps to keep revenue and profit distinct in your head, because a business can have high revenue and still lose money if its costs are high enough. A shop that rings up $10,000 in sales but spends $11,000 on rent, wages, and inventory has not earned $10,000 — it has lost $1,000, and that loss is the number that determines whether the business can keep its doors open."
+              ],
+              "example": {
+                "problem": "A weekend food stand sells 180 plates at $8 each. Ingredients, propane, and the vendor permit cost $610 for the weekend. What is the stand's profit and profit margin?",
+                "steps": [
+                  "Find total revenue: 180 plates × $8 = $1,440.",
+                  "Subtract costs from revenue: $1,440 − $610 = $830 profit.",
+                  "Find profit margin: $830 ÷ $1,440 ≈ 0.576, or about 57.6%."
+                ],
+                "answer": "The stand earns $830 in profit, a margin of about 57.6% of revenue."
+              }
+            },
+            {
+              "heading": "Risk, Reward, and Business Failure",
+              "body": [
+                "Starting a business means committing money, time, and reputation to an uncertain outcome, which is why **business risk** is unavoidable. Data on new firms consistently shows that roughly half close within five years, usually from misjudging demand, running out of cash, or underestimating competitors.",
+                "Risk and potential reward move together: a savings account carries almost no risk and pays very little, while a new restaurant or startup carries real uncertainty and can pay far more if it succeeds — precisely because so many similar ventures fail along the way. This tradeoff is why careful entrepreneurs research a market before committing capital rather than treating an idea as a guaranteed win."
+              ]
+            },
+            {
+              "heading": "Stakeholders: Who a Business Answers To",
+              "body": [
+                "A **stakeholder** is any person or group affected by a business's decisions — owners, employees, customers, suppliers, the surrounding community, and regulators all count, not just the people who hold ownership. A factory's decision to relocate touches shareholders' returns, workers' jobs, a town's tax base, and customers' prices, often all at the same time.",
+                "Businesses that track only the owner's interest create risk of their own: employees who feel exploited quit or organize, communities that feel harmed push for new regulation, and customers who feel misled stop buying. Balancing stakeholder interests is not just good ethics — it is a practical requirement for staying in business over the long run."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Business", "def": "An organization that provides goods or services in exchange for money with the goal of earning a profit."},
+            {"term": "Revenue", "def": "The total amount of money a business takes in from sales before any costs are subtracted."},
+            {"term": "Profit", "def": "What remains after all costs are subtracted from revenue; also called net income."},
+            {"term": "Business risk", "def": "The uncertainty a business owner accepts that the venture may lose money or fail."},
+            {"term": "Stakeholder", "def": "Any person or group affected by a business's decisions, including owners, employees, customers, and the community."}
+          ],
+          "practice": [
+            {"q": "A stand earns $2,400 in sales and spends $1,650 on ingredients, labor, and rent for the week. What is its profit?", "choices": ["$750", "$2,400", "$1,650", "$4,050"], "answer": 0, "explain": "Profit = revenue − costs = $2,400 − $1,650 = $750."},
+            {"q": "Why do riskier ventures tend to offer higher potential rewards than safe options like a savings account?", "choices": ["Because so many similar risky ventures fail, the ones that succeed must pay enough to make the average risk worth taking", "Because government rules require higher payouts for risky businesses", "Because risk and reward are unrelated in practice", "Because safe investments are not legally available to business owners"], "answer": 0, "explain": "Higher potential payouts compensate for the higher failure rate among similar risky ventures."},
+            {"q": "A company that ignores employee and community impact and tracks only shareholder return is most likely to face:", "choices": ["Long-term instability as ignored stakeholders push back through turnover, regulation, or lost customers", "No consequences, since only shareholders matter", "Guaranteed higher profit with no downside", "The complete elimination of business risk"], "answer": 0, "explain": "Ignored stakeholders have their own ways of pushing back, from quitting to lobbying for regulation."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Economic Systems and the Factors of Production",
+          "minutes": 11,
+          "intro": "Before a single product is sold, an economic system has already decided — through markets, government, or some mix of both — who gets to control land, labor, and capital, and that decision shapes every business that operates within it.",
+          "sections": [
+            {
+              "heading": "The Factors of Production",
+              "body": [
+                "Every business, no matter how simple, combines four **factors of production**: **natural resources** (raw materials like land, water, timber), **labor** (the human effort and skill applied to the work), **capital** (money, tools, buildings, and equipment used to produce), and **entrepreneurship** (the willingness to combine the other three and take on risk). A furniture maker needs wood (natural resource), a woodworker's skill (labor), tools and a workshop (capital), and someone willing to start the company (entrepreneurship).",
+                "Businesses succeed partly by combining these four factors more efficiently than competitors — using less wood per chair, training workers faster, or financing equipment more cheaply. When a factor becomes scarce or expensive, the business's costs and decisions shift immediately, which is why understanding these four inputs matters even before studying finance or marketing."
+              ]
+            },
+            {
+              "heading": "Market, Command, and Mixed Economies",
+              "body": [
+                "In a **market economy**, prices and production decisions emerge from the free interaction of buyers and sellers, with minimal government direction — businesses decide what to make based on what customers will pay. In a **command economy**, a central government decides what gets produced, in what quantity, and at what price, largely removing that decision from individual businesses.",
+                "In practice, almost every real economy, including the United States, is a **mixed economy**: markets set most prices and production decisions, but government intervenes through taxes, regulation, minimum wage laws, and public services like roads and courts. A business operating in a mixed economy has to satisfy customers to survive, but it also has to comply with a layer of rules it did not choose."
+              ]
+            },
+            {
+              "heading": "Supply, Demand, and the Market Price",
+              "body": [
+                "**Demand** is how much of a good customers are willing to buy at a given price, and it typically rises as price falls. **Supply** is how much producers are willing to sell at a given price, and it typically rises as price rises. The **market price** settles where the quantity buyers want to purchase matches the quantity sellers want to provide.",
+                "When demand for a product suddenly increases, price rises until supply catches up, since existing producers can charge more and new producers are drawn in by the higher potential profit. Businesses that read these signals early, and expand production or enter a market as demand rises, capture more of that new demand than competitors who react late."
+              ],
+              "example": {
+                "problem": "A local coffee roaster raises its bag price from $12 to $15 after a viral article boosts demand. At $12 they sold 400 bags a month; at $15 they still sell 360 bags a month. Did monthly revenue increase or decrease?",
+                "steps": [
+                  "Revenue at $12: 400 × $12 = $4,800.",
+                  "Revenue at $15: 360 × $15 = $5,400.",
+                  "Compare: $5,400 is greater than $4,800, so revenue increased even though quantity sold fell."
+                ],
+                "answer": "Revenue increased from $4,800 to $5,400 per month, because the price increase outweighed the drop in bags sold."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Factors of production", "def": "The four inputs — natural resources, labor, capital, and entrepreneurship — combined to produce goods and services."},
+            {"term": "Market economy", "def": "An economic system where prices and production are set by buyers and sellers with minimal government direction."},
+            {"term": "Command economy", "def": "An economic system where a central government decides what is produced, in what amount, and at what price."},
+            {"term": "Mixed economy", "def": "An economic system combining market forces with government intervention through taxes, regulation, and public services."},
+            {"term": "Equilibrium price", "def": "The market price at which the quantity buyers want to purchase equals the quantity sellers want to provide."}
+          ],
+          "practice": [
+            {"q": "Which factor of production does a bakery's brick oven and delivery van represent?", "choices": ["Capital", "Labor", "Natural resources", "Entrepreneurship"], "answer": 0, "explain": "Tools, equipment, and buildings used to produce goods are classified as capital."},
+            {"q": "In a mixed economy, which statement is most accurate?", "choices": ["Markets set most prices, but government adds rules like taxes and regulation", "Government sets every price and quantity produced", "Businesses face no rules of any kind", "Prices are fixed permanently by law"], "answer": 0, "explain": "A mixed economy blends market pricing with government intervention rather than relying on either alone."},
+            {"q": "If demand for a product rises sharply while supply stays the same, the market price will typically:", "choices": ["Rise, until quantity supplied and quantity demanded balance again", "Fall to zero immediately", "Stay exactly the same regardless of demand", "Be set by the government within a day"], "answer": 0, "explain": "Higher demand at an unchanged supply pushes the equilibrium price up until the market clears again."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Business Ethics and Social Responsibility",
+          "minutes": 11,
+          "intro": "Being legal and being right are not the same thing, and the businesses that last tend to be the ones that treat that gap seriously instead of assuming the law has already answered every hard question.",
+          "sections": [
+            {
+              "heading": "Ethics Versus Law",
+              "body": [
+                "**Business ethics** is the study of what counts as right and wrong conduct in a business setting, and it is distinct from law, which is the minimum standard a government is willing to enforce. A company can follow every applicable law and still make a choice most people would call wrong — for example, marketing a sugary product aggressively to young children in a way no specific statute forbids.",
+                "This distinction matters practically, not just morally: law lags behind new situations like new technologies or new markets, so relying only on 'is it legal?' leaves a company exposed to reputational damage that can cost more than a lawsuit, because it erodes the customer trust the business depends on to operate at all."
+              ]
+            },
+            {
+              "heading": "Corporate Social Responsibility",
+              "body": [
+                "**Corporate social responsibility (CSR)** is a company's voluntary commitment to operate in ways that benefit employees, communities, and the environment, beyond what law requires. Common CSR practices include reducing environmental impact beyond regulatory minimums, paying above minimum wage, and supporting local community programs.",
+                "Critics argue CSR can be a public-relations exercise that costs little and changes little, while supporters point to real cases where sustained CSR investment reduced employee turnover and opened new customer segments. Evaluating any specific CSR claim means checking whether it changes actual behavior and spending, not just messaging."
+              ]
+            },
+            {
+              "heading": "A Framework for Ethical Business Decisions",
+              "body": [
+                "A practical framework for a hard business decision: identify the stakeholders affected, identify the facts and the ethical issue at stake, generate more than one option, and weigh each option by its consequences and by whether it violates a clear duty such as honesty, fairness, or safety. Reaching the same answer through more than one lens is a good sign the choice is solid.",
+                "When the frameworks disagree — the option that produces the best overall outcome also requires misleading a customer — that disagreement is worth naming out loud to decision-makers rather than quietly picking one side, because it reveals a genuine tradeoff instead of a simple right answer."
+              ],
+              "example": {
+                "problem": "A company finds a legal loophole letting it dispose of a byproduct that isn't classified as hazardous, though it causes mild, unmeasured ecological harm. Is 'it's not illegal' a sufficient ethical justification?",
+                "steps": [
+                  "Separate the legal question (is it against the law?) from the ethical question (is it right?).",
+                  "Note that 'not illegal' only answers the legal question — ecological harm and stakeholder trust remain live ethical concerns.",
+                  "Weigh the option against a compliant disposal method, factoring in reputational risk if the practice becomes public."
+                ],
+                "answer": "No — legality is a floor, not an ethical justification; the ecological harm and stakeholder trust at stake require separate evaluation."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Business ethics", "def": "The study of what constitutes right and wrong conduct in a business context."},
+            {"term": "Corporate social responsibility (CSR)", "def": "A company's voluntary commitment to benefit employees, communities, and the environment beyond legal minimums."},
+            {"term": "Reputational risk", "def": "The potential loss of customer trust and business value from a legal but widely criticized decision."},
+            {"term": "Ethical decision framework", "def": "A structured process for weighing stakeholders, facts, options, and duties before making a hard business decision."}
+          ],
+          "practice": [
+            {"q": "A company acts fully within the law but faces public backlash for a choice most people see as wrong. This shows that:", "choices": ["Legal and ethical are not the same standard", "The company broke the law", "CSR requires no ethical reasoning", "Reputational risk cannot result from legal actions"], "answer": 0, "explain": "Legality sets a floor; ethical judgment often extends further than what the law requires."},
+            {"q": "Corporate social responsibility refers to:", "choices": ["A company's voluntary commitment to benefit employees, communities, and the environment beyond legal minimums", "A government requirement every company must follow", "A synonym for maximizing shareholder profit only", "A tax filed annually by public corporations"], "answer": 0, "explain": "CSR is voluntary action beyond what regulation requires, not a legal mandate."},
+            {"q": "When two ethical frameworks applied to the same decision produce conflicting recommendations, the best practice is to:", "choices": ["Name the tradeoff explicitly to decision-makers rather than quietly picking one side", "Ignore both frameworks and decide by profit alone", "Always default to whichever option is legal", "Assume the frameworks are broken and stop using them"], "answer": 0, "explain": "Naming a genuine tradeoff openly leads to a more defensible decision than hiding the conflict."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Ownership and Entrepreneurship",
+      "summary": "Before a business can operate, its owner has to choose a legal structure and, in many cases, build it from nothing — decisions that shape liability, taxes, and control for years to come.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Sole Proprietorships and Partnerships",
+          "minutes": 10,
+          "intro": "The very first decision a new business owner makes — often before writing a business plan — is what legal structure the company will take, and that choice determines who is personally on the hook if things go wrong.",
+          "sections": [
+            {
+              "heading": "Sole Proprietorships",
+              "body": [
+                "A **sole proprietorship** is a business owned and run by one person, with no legal separation between the owner and the business. It is the simplest and most common structure to start — often requiring nothing more than a local business license — and the owner keeps all profit after taxes.",
+                "The tradeoff is **unlimited liability**: because the business has no separate legal identity, the owner's personal assets, such as a house, car, or savings, are exposed if the business is sued or cannot pay its debts. A sole proprietor who takes out a $50,000 business loan and whose business fails is still personally responsible for repaying that $50,000."
+              ]
+            },
+            {
+              "heading": "General and Limited Partnerships",
+              "body": [
+                "A **general partnership** is owned by two or more people who share profits, losses, and management responsibility, and each general partner has unlimited personal liability, including for decisions made by other partners. A **limited partnership** adds at least one limited partner who invests money but takes no role in management and, in exchange, risks only the amount they invested.",
+                "Partnerships bring more skills, capital, and shared workload than a solo venture, but they also require a clear partnership agreement covering profit splits, decision-making authority, and what happens if a partner wants to leave — disputes over exactly these points are a common reason partnerships fail even when the underlying business is profitable."
+              ]
+            },
+            {
+              "heading": "Choosing Between the Two",
+              "body": [
+                "A sole proprietorship suits a low-risk, single-owner business — a freelance consultant or a small retail shop — where simplicity and full control outweigh the liability exposure. A partnership suits a venture that genuinely needs more than one owner's capital, skills, or workload, provided the partners can commit to a written agreement up front.",
+                "Both structures share one major weakness worth remembering: neither protects personal assets from business debts or lawsuits, which is the main reason growing businesses eventually convert to a corporate structure once the stakes get high enough to justify the added cost and paperwork."
+              ],
+              "example": {
+                "problem": "A photographer operates as a sole proprietor and is sued for $80,000 after a client claims breach of contract. The business itself has only $12,000 in assets. What happens to the remaining $68,000, and why?",
+                "steps": [
+                  "Recognize that a sole proprietorship has no legal separation between owner and business.",
+                  "Because liability is unlimited, the owner's personal assets can be used to cover the shortfall.",
+                  "The remaining $68,000 can be pursued against the owner's personal savings, car, or other assets, not just the $12,000 held by the business."
+                ],
+                "answer": "The photographer is personally liable for the remaining $68,000, because a sole proprietorship offers no separation between business and personal assets."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Sole proprietorship", "def": "A business owned and run by one person with no legal separation between owner and business."},
+            {"term": "Unlimited liability", "def": "Personal responsibility for business debts that extends to an owner's personal assets."},
+            {"term": "General partnership", "def": "A business owned by two or more people who share profits, losses, and unlimited personal liability."},
+            {"term": "Limited partnership", "def": "A partnership with at least one limited partner who invests money but does not manage the business and risks only their investment."}
+          ],
+          "practice": [
+            {"q": "The main disadvantage of a sole proprietorship is:", "choices": ["The owner has unlimited personal liability for business debts", "It is the hardest structure to legally form", "Profits must be shared with a government agency", "It cannot be operated by one person"], "answer": 0, "explain": "Because there is no legal separation between owner and business, personal assets are exposed to business debts."},
+            {"q": "A limited partner differs from a general partner because a limited partner:", "choices": ["Invests money but does not manage the business and risks only their investment", "Has unlimited personal liability for all business debts", "Must be the sole owner of the business", "Cannot legally invest any capital"], "answer": 0, "explain": "Limited partners trade management authority for a cap on their financial risk."},
+            {"q": "Two friends open a bakery as general partners with no written agreement. Six months later they disagree about splitting profits. This scenario illustrates:", "choices": ["Why a clear partnership agreement is essential from the start", "Why sole proprietorships are always safer than partnerships", "That partnerships are illegal without government approval", "That profit splits are always automatically equal by law"], "answer": 0, "explain": "Disputes over profit splits and authority are common when partners skip a written agreement."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Corporations and Limited Liability Companies",
+          "minutes": 12,
+          "intro": "A corporation lets thousands of strangers jointly own a single company without any of them risking more than what they paid for their shares — a legal invention that made large-scale modern business possible.",
+          "sections": [
+            {
+              "heading": "The Corporation and Limited Liability",
+              "body": [
+                "A **corporation** is a business chartered by a state as a legal entity separate from its owners, who hold ownership through shares of **stock**. Because the corporation itself, not its owners, is legally responsible for its debts and lawsuits, shareholders enjoy **limited liability** — they can lose the money they invested, but not their personal assets beyond that.",
+                "This separation is what allows a corporation to raise money from thousands of investors who have never met its managers and never plan to work there: an investor buying $500 of stock in a public company risks exactly $500, no matter what the company later does or how large its debts become."
+              ]
+            },
+            {
+              "heading": "Double Taxation and the S Corporation",
+              "body": [
+                "A standard corporation, or **C corporation**, faces **double taxation**: the corporation pays income tax on its profit, and then shareholders pay tax again on any dividends they receive from that already-taxed profit. This is the main financial drawback of the corporate structure compared to a sole proprietorship or partnership, where profit is taxed only once, on the owner's personal return.",
+                "An **S corporation** is a special IRS election, available to smaller corporations meeting strict eligibility rules such as 100 shareholders or fewer and one class of stock, that lets profit pass through to shareholders' personal tax returns and be taxed only once — combining limited liability with single taxation, at the cost of stricter ownership rules."
+              ]
+            },
+            {
+              "heading": "The Limited Liability Company (LLC)",
+              "body": [
+                "A **limited liability company (LLC)** is a hybrid structure that gives owners, called members, the limited liability of a corporation while allowing profit to pass through to their personal tax returns like a partnership, avoiding double taxation without the strict ownership rules of an S corporation. LLCs have become the most common choice for new small businesses in the United States for exactly this combination.",
+                "The LLC's main tradeoff compared to a corporation is that it is generally harder to raise large amounts of investor capital through, since it cannot issue stock to the public — which is why a company planning to go public eventually still tends to incorporate rather than stay an LLC."
+              ],
+              "example": {
+                "problem": "An investor buys $2,000 of stock in a public corporation. The company later goes bankrupt owing $40 million. How much can creditors recover from this investor?",
+                "steps": [
+                  "Identify the ownership structure: shareholders have limited liability, meaning they are not personally responsible for corporate debts beyond their investment.",
+                  "Determine the investor's maximum loss: the $2,000 originally invested.",
+                  "Conclude that creditors cannot pursue the investor's personal assets beyond that $2,000, regardless of how large the company's total debt is."
+                ],
+                "answer": "The investor can lose at most the $2,000 invested; limited liability shields personal assets from the company's $40 million in debt."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Corporation", "def": "A business chartered by a state as a legal entity separate from its owners."},
+            {"term": "Limited liability", "def": "Protection that caps an owner's financial loss at the amount invested, shielding personal assets."},
+            {"term": "C corporation", "def": "A standard corporation whose profit is taxed once at the corporate level and again on shareholder dividends."},
+            {"term": "Double taxation", "def": "Taxing corporate profit once at the company level and again when paid out as dividends to shareholders."},
+            {"term": "Limited liability company (LLC)", "def": "A hybrid business structure combining limited liability with pass-through taxation."}
+          ],
+          "practice": [
+            {"q": "Limited liability means a shareholder in a corporation can lose:", "choices": ["At most the amount they invested in shares, not their personal assets beyond that", "Nothing at all, even if they invested money", "Their entire personal net worth if the company is sued", "Only money, never any shares they own"], "answer": 0, "explain": "Limited liability caps an investor's loss at the amount they put into shares."},
+            {"q": "Double taxation refers to a C corporation's profit being taxed:", "choices": ["Once at the corporate level and again when paid out to shareholders as dividends", "Twice by two different states in the same year", "Once by the IRS and once by a foreign government", "Only if the company operates internationally"], "answer": 0, "explain": "Corporate profit is taxed first at the company level, then again as personal income when distributed as dividends."},
+            {"q": "An LLC is often chosen by small business owners mainly because it offers:", "choices": ["Limited liability combined with pass-through taxation, avoiding double taxation", "Unlimited liability with lower paperwork", "The ability to issue stock to the public more easily than a corporation", "Guaranteed exemption from all business taxes"], "answer": 0, "explain": "The LLC combines a corporation's liability protection with a partnership's single layer of taxation."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Starting a Venture: From Idea to Business Plan",
+          "minutes": 11,
+          "intro": "Most business ideas fail not because the product was bad, but because no one tested whether a real customer would actually pay for it before money was spent building it.",
+          "sections": [
+            {
+              "heading": "Validating an Opportunity",
+              "body": [
+                "An **entrepreneur** is someone who organizes and assumes the risk of a business venture in pursuit of profit, and the first job of an entrepreneur is not writing a plan but validating that a real, paying market exists for the idea. Talking to twenty potential customers before spending a dollar on production reveals more than any amount of internal brainstorming.",
+                "A useful early test is whether potential customers will commit something real — a deposit, a signed pre-order, their contact information in exchange for a specific promise — rather than just saying 'I'd probably buy that' in a casual conversation, since polite interest and actual purchasing behavior are reliably different things."
+              ]
+            },
+            {
+              "heading": "The Business Plan",
+              "body": [
+                "A **business plan** is a written document describing the business's product, target market, competition, operations, and financial projections, typically written to guide the founder and to persuade lenders or investors to provide funding. Its core sections usually include an executive summary, market analysis, an operations plan, a management team description, and financial projections covering at least the first one to three years.",
+                "The financial projections section is where many first-time plans fall apart, because founders tend to underestimate costs and overestimate early sales — a realistic plan builds in a cash cushion for the likely gap between when expenses start and when steady revenue arrives, since that gap is what actually kills new businesses, not a bad product idea."
+              ]
+            },
+            {
+              "heading": "Sources of Startup Financing",
+              "body": [
+                "New businesses typically draw on some combination of personal savings, loans from family and friends, a small business bank loan, and, for high-growth ventures, outside equity investors such as angel investors or venture capital firms who provide cash in exchange for partial ownership. Each source carries a different tradeoff between how much control the founder keeps and how much capital is available.",
+                "A **small business loan** must be repaid with interest regardless of how the business performs, but the founder keeps full ownership; an **equity investor** takes on the risk that the money may never be repaid if the business fails, but in exchange claims a share of ownership and future profit."
+              ],
+              "example": {
+                "problem": "A founder needs $60,000 to launch. A bank offers a loan at 8% annual interest, repaid over 3 years. An investor instead offers $60,000 for 25% ownership. If the business is worth $500,000 in three years, compare the two options roughly.",
+                "steps": [
+                  "Loan cost: interest alone is roughly $60,000 × 8% × 3 years ≈ $14,400 over the loan's life, plus repaying the $60,000 principal — but the founder keeps 100% of a $500,000 business.",
+                  "Equity cost: giving up 25% ownership of a $500,000 business means giving up $125,000 in value at that point, far more than the loan's interest cost.",
+                  "Compare: the loan is far cheaper in this successful scenario, but it required qualifying for credit and making fixed payments regardless of how the business performed."
+                ],
+                "answer": "In this successful scenario the loan is much cheaper — about $14,400 in interest versus $125,000 in equity value given up — but it carried the risk of fixed repayment even if the business had struggled."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Entrepreneur", "def": "Someone who organizes and assumes the risk of a business venture in pursuit of profit."},
+            {"term": "Business plan", "def": "A written document describing a business's product, market, operations, and financial projections."},
+            {"term": "Small business loan", "def": "Borrowed capital that must be repaid with interest on a fixed schedule, without giving up ownership."},
+            {"term": "Equity investor", "def": "An investor who provides capital in exchange for a share of ownership and future profit."}
+          ],
+          "practice": [
+            {"q": "The most reliable way to validate a business idea before investing money is to:", "choices": ["Get potential customers to commit something real, like a deposit or pre-order", "Ask friends and family if they like the idea in general conversation", "Write the full business plan first and validate the idea afterward", "Assume that any product you personally like will find a market"], "answer": 0, "explain": "A real commitment, not polite interest, is the strongest signal that paying demand exists."},
+            {"q": "Compared to a bank loan, an equity investor:", "choices": ["Takes on more risk of losing their money but gains a share of ownership and future profit", "Must be repaid on a fixed schedule regardless of business performance", "Never requires the founder to give up any ownership", "Is legally required for every new business"], "answer": 0, "explain": "Equity investors are repaid only if the business succeeds, in exchange for a stake in future profit."},
+            {"q": "A common reason realistic financial projections matter in a business plan is that:", "choices": ["Founders often underestimate costs and overestimate early sales, and the resulting cash gap is what kills many new businesses", "Investors never read the financial section", "Financial projections are optional in every business plan", "Costs are always lower than founders expect"], "answer": 0, "explain": "The gap between early expenses and steady revenue is a leading cause of new business failure."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Management and Organization",
+      "summary": "Once a business exists, someone has to plan its direction, organize its people and resources, lead them day to day, and check that results match the plan — the four functions every manager performs.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "The Four Functions of Management",
+          "minutes": 10,
+          "intro": "A manager's job looks completely different from hour to hour — a budget meeting in the morning, a hiring decision at lunch, a conflict between two employees by afternoon — but nearly all of it fits into just four recurring functions.",
+          "sections": [
+            {
+              "heading": "Planning and Organizing",
+              "body": [
+                "**Planning** is setting goals and deciding the course of action to reach them, from a one-year sales target down to next week's staffing schedule. **Organizing** is arranging people and resources to carry out that plan — deciding who reports to whom, which tasks belong to which role, and how departments divide the work.",
+                "Planning without organizing produces a goal nobody is actually positioned to execute; organizing without planning produces a tidy org chart pointed at no clear direction. A new store manager who sets a sales target but never assigns specific staff to specific shifts and duties will likely miss that target regardless of how good the target was."
+              ]
+            },
+            {
+              "heading": "Leading and Controlling",
+              "body": [
+                "**Leading** is directing, motivating, and influencing people to work toward the organization's goals — it is the interpersonal, day-to-day function of management, distinct from simply issuing orders. **Controlling** is monitoring performance against the plan and making corrections when results drift from the target, which requires clear, measurable standards set during the planning stage.",
+                "These four functions run in a loop, not a straight line: controlling often reveals that the original plan needs revision, which sends the manager back to planning, then re-organizing, then leading the team through the change. A manager who only controls without ever adjusting the plan tends to catch problems without ever actually fixing them."
+              ]
+            },
+            {
+              "heading": "Applying the Four Functions",
+              "body": [
+                "Consider a restaurant manager noticing that Friday dinner service consistently runs 20 minutes behind. Controlling reveals the problem by comparing actual wait times to the target. Planning addresses it by setting a specific new goal, such as adding an expediting station. Organizing assigns a specific staff member to that new station, and leading means training and motivating that employee to make the new station work.",
+                "Notice that skipping any one function breaks the cycle: assigning a staff member without training them well often fails just as surely as identifying the problem without ever setting a concrete fix. Strong managers move through all four deliberately rather than defaulting to whichever one feels most natural to them."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Planning", "def": "Setting goals and deciding the course of action needed to reach them."},
+            {"term": "Organizing", "def": "Arranging people and resources to carry out a plan, including reporting lines and task division."},
+            {"term": "Leading", "def": "Directing, motivating, and influencing people to work toward organizational goals."},
+            {"term": "Controlling", "def": "Monitoring performance against a plan and correcting course when results drift from the target."}
+          ],
+          "practice": [
+            {"q": "Setting a specific one-year sales target for a store is an example of which management function?", "choices": ["Planning", "Organizing", "Leading", "Controlling"], "answer": 0, "explain": "Setting goals and a course of action is the definition of the planning function."},
+            {"q": "A manager who checks weekly sales numbers against the target and flags a shortfall is performing which function?", "choices": ["Controlling", "Planning", "Organizing", "Leading"], "answer": 0, "explain": "Monitoring performance against a plan and identifying deviation is controlling."},
+            {"q": "The four functions of management are best described as:", "choices": ["A repeating loop, where controlling often sends the manager back to planning again", "A strict one-time sequence performed only when a business is founded", "Four unrelated tasks a manager can choose to skip freely", "A function only top executives perform, never front-line managers"], "answer": 0, "explain": "Controlling frequently reveals the need to revise the plan, restarting the cycle."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Organizational Structure and Span of Control",
+          "minutes": 11,
+          "intro": "Two companies with the identical product and the identical number of employees can perform completely differently depending on one invisible factor: how their reporting lines and decision authority are actually arranged.",
+          "sections": [
+            {
+              "heading": "Chain of Command and Span of Control",
+              "body": [
+                "The **chain of command** is the line of authority running from the top of an organization down to the front line, showing who reports to whom. **Span of control** is the number of employees a single manager directly supervises — a manager overseeing 4 people has a narrow span, while one overseeing 20 has a wide span.",
+                "A narrow span of control allows closer supervision and faster individual feedback but requires more layers of management to cover the same number of employees, adding cost and slowing decisions. A wide span of control cuts management overhead but requires employees who need less direct oversight, often because their roles are more routine or they are more experienced."
+              ]
+            },
+            {
+              "heading": "Centralization and Decentralization",
+              "body": [
+                "In a **centralized** organization, most significant decisions are made by a small group of top executives, with limited authority pushed down to lower levels. In a **decentralized** organization, decision-making authority is spread to managers and employees closer to the actual problem, such as a regional manager or a store supervisor.",
+                "Decentralization tends to speed up decisions and improve responsiveness to local conditions, but it risks inconsistency across locations. Centralization keeps decisions consistent and tightly controlled but can be slow and disconnected from what is actually happening on the ground."
+              ]
+            },
+            {
+              "heading": "Functional, Divisional, and Matrix Structures",
+              "body": [
+                "A **functional structure** groups employees by the type of work they do, such as marketing, finance, or operations, which builds deep expertise within each department but can make coordination across departments slower. A **divisional structure** groups employees by product line, geographic region, or customer type, giving each division its own functions and faster internal coordination, at the cost of duplicating resources across divisions.",
+                "A **matrix structure** has employees report to two managers at once, typically a functional manager and a project or product manager, combining the expertise of a functional structure with the coordination of a divisional one, but it can create genuine confusion about who has final say when the two managers disagree."
+              ],
+              "example": {
+                "problem": "A company with 200 employees is deciding between a functional structure and a divisional structure as it expands into three distinct product lines with very different customers. Which is the better fit, and why?",
+                "steps": [
+                  "Note that a functional structure groups by task type across the whole company, which works well when products and customers are similar.",
+                  "Note that a divisional structure groups by product line, giving each line its own dedicated functions and faster response to its distinct customers.",
+                  "Since the three product lines have very different customers, a divisional structure better matches each line's specific market, despite duplicating some functions like marketing across the divisions."
+                ],
+                "answer": "A divisional structure fits better here, because the three product lines serve genuinely different customers and benefit from dedicated, faster-moving teams, despite the added cost of duplication."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Chain of command", "def": "The line of authority running from the top of an organization down to the front line."},
+            {"term": "Span of control", "def": "The number of employees a single manager directly supervises."},
+            {"term": "Centralization", "def": "Concentrating most significant decisions among a small group of top executives."},
+            {"term": "Decentralization", "def": "Spreading decision-making authority to managers and employees closer to the problem."},
+            {"term": "Matrix structure", "def": "An organizational structure where employees report to two managers at once, typically functional and product-based."}
+          ],
+          "practice": [
+            {"q": "A manager who directly supervises 25 employees has:", "choices": ["A wide span of control", "A narrow span of control", "No chain of command", "A matrix structure by definition"], "answer": 0, "explain": "Supervising a large number of employees directly is the definition of a wide span of control."},
+            {"q": "A decentralized organization is most likely to:", "choices": ["Make faster, locally responsive decisions but risk inconsistency across locations", "Have every decision made by top executives only", "Eliminate the need for any management structure", "Guarantee identical decisions at every location"], "answer": 0, "explain": "Pushing authority to local managers speeds decisions but can create inconsistency between locations."},
+            {"q": "An employee who reports to both a functional manager and a project manager works within a:", "choices": ["Matrix structure", "Purely functional structure", "Purely divisional structure", "Structure with no chain of command"], "answer": 0, "explain": "Reporting to two managers at once is the defining feature of a matrix structure."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Managing Human Resources",
+          "minutes": 11,
+          "intro": "A company can have a brilliant strategy and still fail if it cannot find, train, and keep the people who have to actually carry that strategy out — which is the entire job of human resource management.",
+          "sections": [
+            {
+              "heading": "Recruiting, Selecting, and Onboarding",
+              "body": [
+                "**Human resource management (HRM)** is the function responsible for recruiting, developing, motivating, and retaining an organization's employees. **Recruiting** is attracting a pool of qualified candidates for an open position, while **selection** is the process of evaluating and choosing among them, typically through applications, interviews, and sometimes skills testing.",
+                "**Onboarding** is the structured process of integrating a new hire into the company, including training on job tasks, introducing company culture and policies, and setting early performance expectations. Companies that invest in structured onboarding see measurably lower turnover in an employee's first year than companies that leave new hires to figure things out on their own."
+              ]
+            },
+            {
+              "heading": "Training, Performance, and Compensation",
+              "body": [
+                "**Training** builds specific skills employees need to do their current job well, while **development** builds broader capabilities for future roles and career growth. **Performance appraisal** is the formal, periodic evaluation of an employee's work, ideally measured against clear standards set in advance rather than a manager's general impression.",
+                "**Compensation** includes both direct pay, such as wages, salary, and bonuses, and benefits like health insurance and retirement contributions, and together they form a major lever for both attracting talent and retaining it — a competitive salary paired with weak benefits often loses candidates to a lower salary with strong benefits."
+              ]
+            },
+            {
+              "heading": "Legal Protections in Employment",
+              "body": [
+                "U.S. employment law includes protections such as the prohibition on discrimination based on race, sex, age, and disability under laws like Title VII of the Civil Rights Act, minimum wage and overtime rules under the Fair Labor Standards Act, and workplace safety standards enforced by OSHA, the Occupational Safety and Health Administration.",
+                "HR departments exist partly to keep a company compliant with this legal framework, since violations, such as wrongful termination, unpaid overtime, or unsafe conditions, expose a company to lawsuits, fines, and reputational damage well beyond the cost of following the rules in the first place."
+              ],
+              "example": {
+                "problem": "A company classifies a full-time worker as an 'independent contractor' to avoid paying overtime, even though the company controls the worker's schedule, tools, and daily tasks exactly like an employee. What is the risk?",
+                "steps": [
+                  "Recognize that job classification is determined by the actual working relationship, not just the label a company gives it.",
+                  "Note that a worker controlled this closely is likely legally an employee regardless of the contract's label.",
+                  "Conclude that misclassifying this worker exposes the company to back pay for unpaid overtime, fines, and legal liability under the Fair Labor Standards Act."
+                ],
+                "answer": "The company risks legal liability for misclassification, including back overtime pay and fines, because the actual working relationship determines employee status."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Human resource management (HRM)", "def": "The function responsible for recruiting, developing, motivating, and retaining employees."},
+            {"term": "Recruiting", "def": "Attracting a pool of qualified candidates for an open position."},
+            {"term": "Onboarding", "def": "The structured process of integrating a new hire into a company's tasks, culture, and expectations."},
+            {"term": "Performance appraisal", "def": "The formal, periodic evaluation of an employee's work against defined standards."},
+            {"term": "Compensation", "def": "Direct pay and benefits provided to an employee in exchange for their work."}
+          ],
+          "practice": [
+            {"q": "The process of evaluating and choosing among job candidates is called:", "choices": ["Selection", "Recruiting", "Onboarding", "Compensation"], "answer": 0, "explain": "Selection is the evaluation and choice among candidates already recruited."},
+            {"q": "Structured onboarding programs are associated with:", "choices": ["Lower employee turnover in the first year on the job", "Higher first-year turnover in nearly all studies", "No measurable effect on retention", "A legal requirement under federal law"], "answer": 0, "explain": "Structured onboarding is linked to better first-year retention compared to leaving new hires unsupported."},
+            {"q": "A company that labels a tightly supervised, full-time worker an 'independent contractor' to avoid overtime pay is most at risk of:", "choices": ["Legal liability for misclassification, including back pay and fines", "No risk at all, since job titles determine legal status", "Automatic approval from the Department of Labor", "Reduced liability compared to hiring an employee"], "answer": 0, "explain": "Classification depends on the actual working relationship, not the label used in a contract."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Operations and Marketing",
+      "summary": "A business has to actually produce what it sells and then get the right customers to buy it — the twin disciplines of operations management and marketing.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Operations Management: Producing Goods and Services",
+          "minutes": 10,
+          "intro": "Behind every product on a shelf is a sequence of decisions about how much to make, how to make it efficiently, and how to keep quality consistent — the discipline of operations management.",
+          "sections": [
+            {
+              "heading": "Production Processes and Productivity",
+              "body": [
+                "**Operations management** is the function responsible for planning and overseeing the production of goods and services. **Productivity** measures output relative to the resources, such as labor, capital, and time, used to produce it, and improving productivity is one of the most direct ways a business increases profit without raising prices.",
+                "A factory that redesigns its assembly line to build 120 units per shift instead of 100, using the same workers and equipment, has raised productivity by 20% — and that gain drops straight to the bottom line as either lower cost per unit or more units available to sell."
+              ]
+            },
+            {
+              "heading": "Inventory and Supply Chain Management",
+              "body": [
+                "**Supply chain management** coordinates the flow of materials, information, and money from raw material suppliers through production to the final customer. **Inventory** is the stock of raw materials, in-process goods, and finished products a business holds, and managing it well means balancing the cost of holding too much against the cost of holding too little and losing sales.",
+                "Many businesses use a **just-in-time (JIT)** approach, ordering materials to arrive right before they're needed rather than stockpiling large reserves, which cuts storage costs sharply but leaves the business more exposed to supply disruptions when a shipment is delayed."
+              ]
+            },
+            {
+              "heading": "Quality Control",
+              "body": [
+                "**Quality control** is the process of monitoring output to ensure it meets defined standards before it reaches the customer, using methods ranging from inspecting a sample of finished units to statistical methods that flag a production line drifting out of tolerance before defects become widespread.",
+                "The cost of catching a defect rises sharply the later it's caught: a flawed part caught on the factory floor costs little to fix, while the same flaw caught by a customer after a product ships can cost a recall, a refund, and lasting reputational damage."
+              ],
+              "example": {
+                "problem": "A factory produces 500 units per shift with a 4% defect rate. It considers a quality upgrade costing $2,000 per shift that would cut the defect rate to 1%. Each defect that reaches a customer costs the company $50 in refunds and replacement. Is the upgrade worth it on defect costs alone?",
+                "steps": [
+                  "Defects before upgrade: 500 × 4% = 20 defective units, costing 20 × $50 = $1,000.",
+                  "Defects after upgrade: 500 × 1% = 5 defective units, costing 5 × $50 = $250.",
+                  "Savings from upgrade: $1,000 − $250 = $750 per shift, compared against the $2,000 upgrade cost."
+                ],
+                "answer": "The upgrade saves only $750 per shift in defect costs against a $2,000 cost, so on defect savings alone it is not worth it — unless other benefits like reputation close the gap."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Operations management", "def": "The function responsible for planning and overseeing the production of goods and services."},
+            {"term": "Productivity", "def": "Output measured relative to the resources used to produce it."},
+            {"term": "Supply chain management", "def": "Coordinating the flow of materials, information, and money from suppliers to the final customer."},
+            {"term": "Just-in-time (JIT)", "def": "An inventory approach that orders materials to arrive right before they are needed, minimizing stockpiles."},
+            {"term": "Quality control", "def": "The process of monitoring output to ensure it meets defined standards before reaching the customer."}
+          ],
+          "practice": [
+            {"q": "A business that produces more output using the same labor and equipment has increased its:", "choices": ["Productivity", "Supply chain", "Inventory", "Quality control budget"], "answer": 0, "explain": "Productivity is output relative to the resources used, and it rose because output increased with unchanged inputs."},
+            {"q": "The main risk of a just-in-time inventory system is:", "choices": ["Greater exposure to supply disruptions since little buffer stock exists", "Higher storage costs than traditional inventory methods", "Guaranteed product defects", "Elimination of all supply chain coordination"], "answer": 0, "explain": "Without buffer stock, a delayed shipment can halt production entirely."},
+            {"q": "Catching a product defect is generally cheapest when it happens:", "choices": ["Early in production, before the product reaches the customer", "After the customer has already purchased and used it", "During a public product recall", "It costs the same at every stage"], "answer": 0, "explain": "The cost of a defect rises sharply the later in the process it is discovered."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Understanding the Customer: Market Segmentation",
+          "minutes": 10,
+          "intro": "Trying to sell one product to 'everyone' usually means selling it well to no one — which is why marketing starts not with the product, but with dividing the market into groups worth targeting specifically.",
+          "sections": [
+            {
+              "heading": "The Marketing Concept",
+              "body": [
+                "The **marketing concept** is the principle that a business succeeds by identifying customer needs and satisfying them, rather than starting with a product and then trying to convince customers to want it. Many failed products came from a production-first mindset: build what the company is good at making, then figure out who might buy it.",
+                "A **target market** is the specific group of customers a business decides to focus its marketing efforts on, chosen because their needs align well with what the business offers. Defining a target market clearly, rather than vaguely aiming at everyone who might want the product, lets a business tailor its offering to actually resonate with real people."
+              ]
+            },
+            {
+              "heading": "Market Segmentation",
+              "body": [
+                "**Market segmentation** is dividing a broad market into distinct groups of customers who share similar needs or characteristics. Common approaches include **demographic** segmentation, such as age or income, **geographic** segmentation, such as region or climate, **psychographic** segmentation, such as lifestyle or values, and **behavioral** segmentation, such as usage rate or brand loyalty.",
+                "A running shoe company might segment by behavioral factors, separating casual walkers from competitive marathon runners, because these two groups want fundamentally different things from a shoe, such as comfort and price versus performance and weight, even though both fall under 'people who buy running shoes.'"
+              ]
+            },
+            {
+              "heading": "Choosing and Positioning for a Segment",
+              "body": [
+                "After identifying segments, a business evaluates each for size, growth, and fit with its own strengths, then selects one or more target segments to pursue. **Positioning** is the process of shaping how the target segment perceives the product relative to competitors, such as the cheapest option, the highest quality, or the most convenient.",
+                "A clear position lets every other decision, from price to advertising tone to where the product is sold, follow logically from it; a company positioned as premium and durable should not simultaneously discount aggressively, because that would contradict the position it worked to establish."
+              ],
+              "example": {
+                "problem": "A skincare brand identifies two segments: budget-conscious teenagers and affluent adults seeking anti-aging products. It has limited resources to market to only one segment well. Which segment fits a premium positioning strategy?",
+                "steps": [
+                  "Identify the segmentation factors at play: demographic factors such as age and income.",
+                  "Note that a premium, anti-aging positioning requires customers willing to pay more for perceived quality and results.",
+                  "Match the segments: the affluent adult segment better fits a premium position, since budget-conscious teenagers are more price-sensitive and less focused on anti-aging."
+                ],
+                "answer": "The affluent adult segment fits a premium anti-aging position best, since that segment values quality and results over low price."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Marketing concept", "def": "The principle that a business succeeds by identifying customer needs and satisfying them."},
+            {"term": "Target market", "def": "The specific group of customers a business focuses its marketing efforts on."},
+            {"term": "Market segmentation", "def": "Dividing a broad market into distinct groups of customers with similar needs or characteristics."},
+            {"term": "Positioning", "def": "Shaping how a target segment perceives a product relative to competitors."}
+          ],
+          "practice": [
+            {"q": "The marketing concept holds that a business should:", "choices": ["Identify customer needs first and build products to satisfy them", "Build the product it is best at making, then find buyers afterward", "Market to every possible customer equally, with no segmentation", "Set prices before considering any customer need"], "answer": 0, "explain": "The marketing concept starts with customer needs rather than an existing product."},
+            {"q": "Dividing customers into groups based on lifestyle and values is an example of:", "choices": ["Psychographic segmentation", "Demographic segmentation", "Geographic segmentation", "Behavioral segmentation"], "answer": 0, "explain": "Lifestyle and values describe psychographic characteristics, not age, location, or usage behavior."},
+            {"q": "Positioning a product as 'premium and durable' should logically be followed by:", "choices": ["Pricing and messaging consistent with a premium image, avoiding contradictory discount strategies", "Aggressive discounting to maximize short-term sales volume", "Ignoring the target segment identified during segmentation", "Selling exclusively through discount retail bins"], "answer": 0, "explain": "All marketing mix decisions should reinforce, not contradict, the chosen position."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "The Marketing Mix: Product, Price, Place, Promotion",
+          "minutes": 12,
+          "intro": "Once a business knows exactly who it's selling to, it still has to make four interlocking decisions correctly — what to sell, what to charge, where to sell it, and how to tell people about it — and getting even one wrong can undo the other three.",
+          "sections": [
+            {
+              "heading": "Product and Price",
+              "body": [
+                "**Product** decisions cover the actual good or service, including its features, quality level, branding, and packaging, all chosen to match what the target segment values most. **Price** is what the customer pays, and setting it well requires balancing what customers are willing to pay, what competitors charge, and what the company needs to cover its costs and earn a margin.",
+                "Price strategy ranges from **penetration pricing**, setting a low initial price to quickly capture market share, to **price skimming**, setting a high initial price to capture early adopters willing to pay a premium, then lowering it over time. A new streaming service might use penetration pricing to build a large user base fast, while a new flagship phone often uses skimming."
+              ]
+            },
+            {
+              "heading": "Place: Getting the Product to the Customer",
+              "body": [
+                "**Place**, also called **distribution**, covers how and where the product reaches the customer, through a company's own retail stores, third-party retailers, online marketplaces, or direct-to-consumer shipping. A **distribution channel** is the path a product takes from producer to final customer, and it can be direct, with no intermediary, or indirect, through one or more wholesalers or retailers.",
+                "Choosing a channel involves a real tradeoff: selling directly online keeps more profit per unit and gives the company full control over the customer experience, but selling through established retailers reaches far more customers immediately, since those retailers already have foot traffic and trust a new company would take years to build on its own."
+              ]
+            },
+            {
+              "heading": "Promotion: Communicating Value",
+              "body": [
+                "**Promotion** covers all the ways a business communicates with its target market to inform, persuade, or remind them about a product, including advertising, sales promotions like coupons, public relations, personal selling, and social media content.",
+                "The four elements of the marketing mix have to reinforce each other: an expensive, premium-positioned product sold through a discount online marketplace and promoted mainly through coupon-heavy social ads sends contradictory signals that undermine the premium position the product and price decisions were trying to establish."
+              ],
+              "example": {
+                "problem": "A company launches a $180 premium blender positioned as a professional-grade kitchen tool. It plans to sell only through a discount clearance website and promote it mainly with '50% off' flash-sale ads. Identify the marketing mix problem.",
+                "steps": [
+                  "Note the product and price decisions: premium positioning at a high price point of $180.",
+                  "Check the place decision: a discount clearance website contradicts a premium image.",
+                  "Check the promotion decision: constant flash-sale discounting further undercuts the premium position, training customers to wait for a lower price instead of valuing the product at $180."
+                ],
+                "answer": "The place and promotion choices contradict the premium product and price positioning; a premium product needs distribution and promotion that reinforce quality, not discount-driven channels and messaging."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Marketing mix", "def": "The combination of product, price, place, and promotion decisions used to reach a target market."},
+            {"term": "Penetration pricing", "def": "Setting a low initial price to quickly capture market share."},
+            {"term": "Price skimming", "def": "Setting a high initial price to capture early adopters, then lowering it over time."},
+            {"term": "Distribution channel", "def": "The path a product takes from producer to final customer, direct or through intermediaries."},
+            {"term": "Promotion", "def": "The ways a business communicates with its target market to inform, persuade, or remind them about a product."}
+          ],
+          "practice": [
+            {"q": "Setting a low initial price to quickly build market share is called:", "choices": ["Penetration pricing", "Price skimming", "Positioning", "Segmentation"], "answer": 0, "explain": "Penetration pricing intentionally sets an initially low price to gain share fast."},
+            {"q": "Selling directly to consumers online instead of through a retailer typically offers a company:", "choices": ["More profit per unit and control, but reaches fewer customers immediately", "Less profit per unit but instant access to a retailer's foot traffic", "No difference compared to selling through a retailer", "Guaranteed higher total sales volume"], "answer": 0, "explain": "Direct sales keep more margin and control but lack a retailer's existing customer traffic."},
+            {"q": "A premium-positioned product sold mainly through constant discount promotions illustrates:", "choices": ["A marketing mix where promotion contradicts the product's intended positioning", "An ideal marketing mix strategy for any premium brand", "A pricing strategy known as price skimming", "A case where place and promotion decisions are irrelevant to positioning"], "answer": 0, "explain": "Discount-driven promotion undercuts the exclusivity a premium position is meant to convey."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Money, Finance, and Accounting",
+      "summary": "Every business decision eventually turns into a number — how it's financed, what it costs, and what the resulting financial statements say about the company's health.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Money, Banks, and the Financial System",
+          "minutes": 10,
+          "intro": "Money only works as a tool for business because a whole system of banks, interest rates, and credit exists to move it from people who have more than they need to businesses that need more than they have.",
+          "sections": [
+            {
+              "heading": "The Functions of Money",
+              "body": [
+                "Money serves three functions in an economy: a **medium of exchange**, accepted in trade for goods and services and replacing inefficient bartering; a **store of value**, meaning it can be saved and used later without losing usefulness; and a **unit of account**, a common measure for comparing the value of very different things, like a car and a haircut.",
+                "A functioning business economy depends on money reliably serving all three functions — if a currency loses value too fast through high inflation, it stops working well as a store of value, and businesses start raising prices constantly just to keep up, which itself disrupts planning and contracts."
+              ]
+            },
+            {
+              "heading": "Banks and Credit",
+              "body": [
+                "Commercial banks take in deposits and make loans, effectively channeling savings from people and businesses with excess cash to borrowers who need capital, earning the spread between the interest they pay depositors and the interest they charge borrowers. This channeling function is why a healthy banking system is treated as essential infrastructure for business investment.",
+                "**Credit** is the ability to borrow money or access goods and services with a promise to pay later, and a business's **creditworthiness**, its track record of repaying debt, directly determines what interest rate it can borrow at. A business with strong, consistent revenue and a clean repayment history borrows more cheaply than a new, unproven company."
+              ]
+            },
+            {
+              "heading": "The Federal Reserve and Interest Rates",
+              "body": [
+                "The **Federal Reserve** is the central bank of the United States, responsible for regulating the banking system and influencing the broader supply of money and credit in the economy, primarily by setting a target for short-term interest rates. When the Fed raises its target rate, borrowing becomes more expensive across the economy, for mortgages, car loans, and business loans alike.",
+                "For a business, rising interest rates directly raise the cost of any loan used to finance expansion, equipment, or inventory, which is why business investment decisions typically slow down when rates rise sharply and pick back up when rates fall."
+              ],
+              "example": {
+                "problem": "A business takes a $100,000 loan to buy equipment. At 5% annual interest, the first year's interest cost is $5,000. If a Federal Reserve rate hike pushes the loan's rate to 9%, what is the new first-year interest cost, and by how much did it increase?",
+                "steps": [
+                  "Calculate new interest: $100,000 × 9% = $9,000.",
+                  "Compare to original: $9,000 − $5,000 = $4,000 more in interest cost for the first year alone.",
+                  "Recognize this $4,000 must now be covered by the equipment's returns for the investment to remain profitable."
+                ],
+                "answer": "The new first-year interest cost is $9,000, an increase of $4,000 over the original 5% rate — a direct hit to the project's profitability."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Medium of exchange", "def": "Money's function as something widely accepted in trade for goods and services."},
+            {"term": "Store of value", "def": "Money's function of being savable and usable later without losing its usefulness."},
+            {"term": "Credit", "def": "The ability to borrow money or access goods and services with a promise to pay later."},
+            {"term": "Creditworthiness", "def": "A borrower's track record of repaying debt, which determines the interest rate lenders offer."},
+            {"term": "Federal Reserve", "def": "The central bank of the United States, which regulates banks and influences interest rates and the money supply."}
+          ],
+          "practice": [
+            {"q": "Money serving as a common measure to compare the value of a car and a haircut illustrates its role as a:", "choices": ["Unit of account", "Medium of exchange", "Store of value", "Line of credit"], "answer": 0, "explain": "A unit of account is a common measure used to compare the value of different goods and services."},
+            {"q": "A business with strong revenue and a clean repayment history typically:", "choices": ["Can borrow at a lower interest rate because it presents less risk to lenders", "Cannot access credit at all", "Pays the same interest rate as every other borrower by law", "Must always pay in cash and cannot use loans"], "answer": 0, "explain": "Lower perceived risk to a lender translates into a lower interest rate offered to the borrower."},
+            {"q": "When the Federal Reserve raises its target interest rate, businesses typically experience:", "choices": ["Higher borrowing costs, which can slow investment in expansion and equipment", "Lower borrowing costs across the economy", "No change in the cost of business loans", "An automatic increase in creditworthiness"], "answer": 0, "explain": "Higher benchmark rates raise the cost of business loans, often slowing investment decisions."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Financial Management and Raising Capital",
+          "minutes": 11,
+          "intro": "A business can be profitable on paper and still go bankrupt if it runs out of cash at the wrong moment — which is exactly why financial management is treated as a distinct skill from simply 'making money.'",
+          "sections": [
+            {
+              "heading": "The Role of Financial Management",
+              "body": [
+                "**Financial management** is the function responsible for planning, acquiring, and using funds to maximize the value of the business, which includes forecasting cash needs, deciding how to finance operations and growth, and managing the risk of running short on cash. A financial manager must think beyond current profit and ask whether cash will actually be available when bills, payroll, and loan payments come due.",
+                "This distinction between profit and cash matters because a company can record a sale as revenue before it actually collects payment. If customers are slow to pay their invoices, a profitable-looking company can still fail to make payroll, a situation known as being **cash poor** despite being profitable on the books."
+              ]
+            },
+            {
+              "heading": "Debt Versus Equity Financing",
+              "body": [
+                "**Debt financing** raises money by borrowing, which must be repaid with interest on a fixed schedule regardless of how the business performs, but does not require giving up any ownership. **Equity financing** raises money by selling ownership shares to investors, who share in future profit and losses but require no fixed repayment if the business struggles.",
+                "The right mix between debt and equity depends on the business's risk tolerance and stage: a stable, predictable business can safely take on more debt since it can reliably cover fixed payments, while an early, unpredictable startup often relies more heavily on equity, since it cannot guarantee it will have cash on hand for fixed loan payments."
+              ]
+            },
+            {
+              "heading": "Working Capital and Short-Term Financing",
+              "body": [
+                "**Working capital** is a business's current assets, such as cash, receivables, and inventory, minus its current liabilities, such as bills and short-term debt due soon, and it measures the cash cushion available for day-to-day operations. Negative working capital is a warning sign: it means short-term obligations exceed the cash and near-cash assets available to pay them.",
+                "Businesses manage working capital through tools like a **line of credit**, a pre-approved amount a business can borrow from as needed and repay flexibly, used to smooth over predictable seasonal gaps between when expenses are paid and when revenue actually arrives."
+              ],
+              "example": {
+                "problem": "A business has $85,000 in current assets and $110,000 in current liabilities due within the year. Calculate its working capital and interpret the result.",
+                "steps": [
+                  "Calculate working capital: current assets − current liabilities = $85,000 − $110,000 = −$25,000.",
+                  "Interpret the negative result: the business's short-term obligations exceed the liquid assets available to cover them.",
+                  "Recognize this as a warning sign of a potential cash shortfall, worth addressing through a line of credit or faster collection of receivables."
+                ],
+                "answer": "Working capital is −$25,000, a warning sign that short-term liabilities exceed available current assets and the business may face a cash shortfall."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Financial management", "def": "The function responsible for planning, acquiring, and using funds to maximize the value of a business."},
+            {"term": "Debt financing", "def": "Raising money by borrowing, repaid with interest on a fixed schedule without giving up ownership."},
+            {"term": "Equity financing", "def": "Raising money by selling ownership shares to investors who share in future profit and losses."},
+            {"term": "Working capital", "def": "Current assets minus current liabilities, measuring a business's short-term cash cushion."},
+            {"term": "Line of credit", "def": "A pre-approved amount a business can borrow from as needed and repay flexibly."}
+          ],
+          "practice": [
+            {"q": "A company that records a sale as revenue but has not yet collected payment from the customer can become:", "choices": ["Cash poor despite being profitable on paper", "Automatically bankrupt", "Ineligible for any future financing", "Exempt from paying taxes on the sale"], "answer": 0, "explain": "Recorded revenue does not guarantee collected cash, which can create a cash shortage despite profitability."},
+            {"q": "Compared to debt financing, equity financing:", "choices": ["Requires no fixed repayment but gives up a share of ownership and future profit", "Must always be repaid on a fixed schedule with interest", "Never dilutes the founder's ownership", "Is only available to companies with no revenue"], "answer": 0, "explain": "Equity investors accept the risk of no fixed repayment in exchange for a share of ownership."},
+            {"q": "A business with negative working capital most likely faces:", "choices": ["A risk of short-term cash shortfalls since current liabilities exceed current assets", "No financial risk of any kind", "Guaranteed long-term profitability", "An inability to ever borrow money again"], "answer": 0, "explain": "Negative working capital signals that near-term obligations exceed the liquid assets available to cover them."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Reading Financial Statements",
+          "minutes": 12,
+          "intro": "Two companies can look identical from the outside, with the same industry and the same size storefront, and be in completely different financial health, a difference that only becomes visible once you can actually read their financial statements.",
+          "sections": [
+            {
+              "heading": "The Balance Sheet",
+              "body": [
+                "The **balance sheet** is a snapshot of what a business owns and owes at a specific point in time, organized around the **accounting equation**: Assets = Liabilities + Equity. Assets are everything the business owns of value, such as cash, inventory, and equipment; liabilities are everything it owes, such as loans and unpaid bills; equity is the owners' remaining claim after liabilities are subtracted from assets.",
+                "Because the equation must always balance, equity is really just a residual: it is not a separate pile of resources but a calculated leftover, meaning a business with $500,000 in assets and $350,000 in liabilities has exactly $150,000 in equity, no more and no less, by definition."
+              ]
+            },
+            {
+              "heading": "The Income Statement",
+              "body": [
+                "The **income statement** shows a business's revenue, costs, and resulting profit or loss over a period of time, such as a month, quarter, or year, rather than a single moment. Its basic structure is Revenue − Expenses = Net Income, or net loss if expenses exceed revenue.",
+                "Reading an income statement carefully means checking not just the bottom-line net income, but which expenses are driving it: a company with flat or falling net income despite rising revenue is often struggling with cost control, not sales, and that distinction changes what management should actually fix."
+              ]
+            },
+            {
+              "heading": "Connecting the Statements",
+              "body": [
+                "The balance sheet and income statement connect through equity: net income earned during a period increases the retained earnings portion of equity, assuming none of it is paid out as dividends. This link is why a company can be simultaneously profitable and still show a weak balance sheet, if past losses or heavy debt outweigh recent gains.",
+                "Investors and lenders read both statements together, not separately, because profit alone doesn't reveal whether a company carries too much debt relative to its assets, and a strong balance sheet alone doesn't reveal whether the company is currently profitable or losing money each month."
+              ],
+              "example": {
+                "problem": "A company reports total assets of $420,000 and total liabilities of $310,000 on its balance sheet. Its income statement for the year shows revenue of $250,000 and total expenses of $268,000. Calculate the company's equity and net income, and describe its overall position.",
+                "steps": [
+                  "Calculate equity: assets − liabilities = $420,000 − $310,000 = $110,000.",
+                  "Calculate net income: revenue − expenses = $250,000 − $268,000 = −$18,000, a net loss.",
+                  "Interpret: the company has positive equity of $110,000 but posted a net loss this year, meaning its overall financial position is still solid but its current-year performance is a warning sign worth investigating."
+                ],
+                "answer": "Equity is $110,000 and the company posted a net loss of $18,000 for the year — a financially solid balance sheet but a concerning current-year performance."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Balance sheet", "def": "A snapshot of what a business owns and owes at a specific point in time."},
+            {"term": "Accounting equation", "def": "The identity Assets = Liabilities + Equity that a balance sheet must always satisfy."},
+            {"term": "Income statement", "def": "A financial statement showing revenue, expenses, and resulting net income over a period of time."},
+            {"term": "Net income", "def": "Revenue minus expenses over a period; a positive result is profit, a negative result is a net loss."},
+            {"term": "Retained earnings", "def": "The portion of accumulated net income kept in the business rather than paid out as dividends."}
+          ],
+          "practice": [
+            {"q": "A company has $600,000 in assets and $420,000 in liabilities. Its equity is:", "choices": ["$180,000", "$1,020,000", "$420,000", "$600,000"], "answer": 0, "explain": "Equity = assets − liabilities = $600,000 − $420,000 = $180,000."},
+            {"q": "An income statement's basic structure is:", "choices": ["Revenue − Expenses = Net income", "Assets = Liabilities + Equity", "Assets − Equity = Liabilities", "Net income = Assets − Liabilities"], "answer": 0, "explain": "The income statement measures net income as revenue minus expenses over a period."},
+            {"q": "A company can show positive net income for the year and still have a weak balance sheet if:", "choices": ["Past losses or heavy debt outweigh the recent profit", "The two statements are always identical in what they measure", "Net income always guarantees a strong balance sheet", "The income statement includes liabilities directly"], "answer": 0, "explain": "Accumulated past losses or heavy debt on the balance sheet can outweigh a single profitable year."}
+          ]
+        }
+      ]
+    }
+  ]
+}

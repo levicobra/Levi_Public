@@ -1,0 +1,1877 @@
+{
+ "id": "biology",
+ "title": "Biology",
+ "domain": "life",
+ "level": "College",
+ "description": "The full two-semester majors biology sequence in one course: the chemistry that makes life possible, how cells are built and harvest energy, how traits are inherited and DNA is read, how evolution explains life's diversity, and how plants, animals, and ecosystems function. Every lesson pushes past vocabulary into calculation and reasoning.",
+ "outcomes": [
+  "You can explain how atomic bonding and water's properties make carbon-based life possible, and identify the four macromolecule classes by structure and function.",
+  "You can trace how a cell converts glucose and light energy into ATP through respiration and photosynthesis, including the approximate ATP yield of each pathway.",
+  "You can predict genotype and phenotype ratios from a genetic cross with a Punnett square, and explain how DNA is replicated and translated into protein.",
+  "You can apply the logic of natural selection to an adaptation, calculate allele frequencies with the Hardy-Weinberg equation, and place an organism in the tree of life.",
+  "You can compare how plants and animals solve transport, structural support, and reproduction, and connect population growth to ecosystem-level energy flow."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Chemistry of Life",
+   "summary": "The atomic structure, bonding, and properties of water that set the stage for biology, followed by the four classes of macromolecules and the energy rules every cell obeys.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Atoms, Bonds, and the Properties of Water",
+     "minutes": 14,
+     "intro": "Every question in biology eventually comes down to chemistry: why DNA holds its shape, why membranes form two layers instead of one, why blood can carry oxygen across your whole body. Start here, with atoms and water, and the rest of biology stops looking like memorization and starts looking like logic.",
+     "sections": [
+      {
+       "heading": "Atomic Structure and Chemical Bonds",
+       "body": [
+        "An atom's protons and neutrons sit in a dense nucleus while electrons occupy shells around it. Chemistry is really the behavior of the outermost, or **valence**, electrons: atoms bond to fill that outer shell, usually to a stable total of eight electrons. A **covalent bond** forms when two atoms share electron pairs; an **ionic bond** forms when one atom transfers an electron to another, creating oppositely charged ions that attract.",
+        "Covalent bonds can be shared evenly, a **nonpolar** bond, or unevenly, a **polar** bond, depending on how strongly each atom pulls on the shared electrons (its electronegativity). Oxygen and nitrogen pull harder than hydrogen or carbon, which is why water and DNA's phosphate backbone are polar while most of a fat molecule is not."
+       ],
+       "example": {
+        "problem": "Carbon has an atomic number of 6, giving it an electron arrangement of 2 electrons in its first shell and 4 in its second. How many covalent bonds will one carbon atom typically form, and why?",
+        "steps": [
+         "The outer (valence) shell holds 4 electrons but is stable only when it holds 8.",
+         "Carbon needs 4 more electrons to complete that outer shell.",
+         "It gets those 4 electrons by sharing one electron pair with each of 4 other atoms."
+        ],
+        "answer": "Carbon forms 4 covalent bonds, which is exactly why it can build the long, branching, ring-shaped backbones found in every biological molecule."
+       }
+      },
+      {
+       "heading": "Why Water Makes Life Possible",
+       "body": [
+        "A water molecule is bent, with oxygen hogging the shared electrons, so it carries a slightly negative oxygen end and slightly positive hydrogen ends. This makes water **polar**, and polar water molecules form weak, temporary **hydrogen bonds** with each other, each hydrogen of one molecule attracting the oxygen of the next.",
+        "Those hydrogen bonds give water unusual properties: high **cohesion** (water sticking to itself, pulling water up a tall tree trunk), **adhesion** (water sticking to other surfaces, like the inside of a straw-thin xylem tube), a high specific heat that keeps oceans and cells from swinging wildly in temperature, and the fact that ice floats because hydrogen bonds lock water molecules into a spaced-out lattice when frozen."
+       ]
+      },
+      {
+       "heading": "pH, Acids, and Bases",
+       "body": [
+        "Water molecules occasionally split into H+ and OH- ions, and the **pH scale** measures the concentration of H+ in a solution, from 0 (extremely acidic) to 14 (extremely basic), with 7 being neutral. Each whole-number drop in pH means a tenfold increase in H+ concentration, because pH is a logarithmic scale.",
+        "Human blood must stay within a narrow pH range near 7.4; a shift of even half a unit can be life-threatening. Cells manage this with **buffers**, molecules that soak up excess H+ or release H+ to resist pH changes, the same principle used by the bicarbonate buffer system in your bloodstream."
+       ],
+       "example": {
+        "problem": "A solution has a hydrogen ion concentration [H+] of 1 × 10^-4 moles per liter. What is its pH, and is the solution acidic or basic?",
+        "steps": [
+         "pH is defined as -log10[H+].",
+         "-log10(1 × 10^-4) = -(-4) = 4.",
+         "Compare 4 to the neutral value of 7."
+        ],
+        "answer": "The pH is 4, which is well below 7, so the solution is acidic."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "valence electron",
+       "def": "An electron in an atom's outermost shell, the one involved in chemical bonding."
+      },
+      {
+       "term": "covalent bond",
+       "def": "A bond formed when two atoms share a pair of electrons."
+      },
+      {
+       "term": "ionic bond",
+       "def": "A bond formed by the electrical attraction between a positive and a negative ion after electron transfer."
+      },
+      {
+       "term": "hydrogen bond",
+       "def": "A weak attraction between a slightly positive hydrogen on one polar molecule and a slightly negative atom on another."
+      },
+      {
+       "term": "pH",
+       "def": "A logarithmic scale from 0 to 14 measuring the hydrogen ion concentration of a solution."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is a water molecule described as polar?",
+       "choices": [
+        "It has no electrons",
+        "Oxygen pulls the shared electrons more strongly than hydrogen, creating uneven charge",
+        "It contains an ionic bond",
+        "It is a solid at room temperature"
+       ],
+       "answer": 1,
+       "explain": "Oxygen's stronger pull on the shared electrons gives the oxygen end a slight negative charge and the hydrogen ends a slight positive charge, making the molecule polar."
+      },
+      {
+       "q": "A solution has a pH of 9. Compared to a solution with pH 7, its hydrogen ion concentration is approximately how many times lower?",
+       "choices": [
+        "2 times",
+        "9 times",
+        "100 times",
+        "1000 times"
+       ],
+       "answer": 2,
+       "explain": "Each pH unit is a tenfold change in [H+]. Going from pH 7 to pH 9 is a 2-unit increase in pH, meaning [H+] drops by 10 × 10 = 100 times."
+      },
+      {
+       "q": "Which property of water lets it be pulled in a continuous column up a tall tree's xylem?",
+       "choices": [
+        "High specific heat",
+        "Cohesion from hydrogen bonding between water molecules",
+        "Its ionic bonds",
+        "Its neutral pH"
+       ],
+       "answer": 1,
+       "explain": "Cohesion, water molecules hydrogen-bonding to each other, lets water form a continuous chain that can be pulled upward as the top of the chain evaporates from leaves."
+      },
+      {
+       "q": "Carbon's ability to form 4 covalent bonds is most directly explained by which fact?",
+       "choices": [
+        "Carbon is radioactive",
+        "Carbon has 4 valence electrons and needs 4 more to fill its outer shell",
+        "Carbon has no neutrons",
+        "Carbon only bonds ionically"
+       ],
+       "answer": 1,
+       "explain": "With 4 electrons in its outer shell, carbon needs 4 more to reach the stable total of 8, which it achieves by sharing one electron pair in each of 4 covalent bonds."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Biological Macromolecules",
+     "minutes": 15,
+     "intro": "Everything your body is built from, muscle, hair, hormones, the DNA in every nucleus, is assembled from just four families of large molecules. Learn the monomer each is built from and the job each family does, and you can look at any biological structure and guess what it is made of.",
+     "sections": [
+      {
+       "heading": "Building and Breaking Polymers",
+       "body": [
+        "Large biological molecules, or **polymers**, are chains of smaller repeating units called **monomers**. Cells link monomers together through **dehydration synthesis**, a reaction that forms a bond between two monomers and releases one water molecule each time. The reverse reaction, **hydrolysis**, adds a water molecule back in to break a bond apart, which is exactly what happens when you digest food.",
+        "This same monomer-to-polymer logic applies across all four macromolecule classes, even though the specific monomers and bonds differ: carbohydrates link sugars, proteins link amino acids, and nucleic acids link nucleotides. Only lipids break the pattern, since most are not true polymers built from repeating identical units."
+       ],
+       "example": {
+        "problem": "Five glucose monomers join end to end into a single chain through dehydration synthesis. How many water molecules are released in total?",
+        "steps": [
+         "Joining 5 monomers into one continuous chain requires forming 4 bonds (one between each adjacent pair).",
+         "Each dehydration synthesis reaction that forms one bond releases exactly one water molecule.",
+         "Multiply the number of bonds by the number of water molecules released per bond."
+        ],
+        "answer": "4 water molecules are released, one for each of the 4 bonds connecting the 5 glucose units."
+       }
+      },
+      {
+       "heading": "Carbohydrates and Lipids",
+       "body": [
+        "**Carbohydrates** are built from sugar monomers (monosaccharides) like glucose. Two sugars linked form a disaccharide (table sugar), and long chains form polysaccharides: starch stores energy in plants, glycogen stores it in animal liver and muscle, and cellulose forms rigid plant cell walls that most animals cannot digest.",
+        "**Lipids** are mostly nonpolar and do not mix with water, which is exactly why they make good long-term energy storage (fats) and good membranes (phospholipids). A triglyceride is glycerol attached to three fatty acid chains; a phospholipid replaces one fatty acid with a phosphate group, giving it a polar head and nonpolar tails, the structure behind every cell membrane."
+       ]
+      },
+      {
+       "heading": "Proteins and Nucleic Acids",
+       "body": [
+        "**Proteins** are chains of **amino acids** linked by peptide bonds; the specific sequence of 20 possible amino acid types determines how the chain folds into a precise 3D shape, which in turn determines the protein's job, whether that is catalyzing a reaction (an enzyme), providing structure (collagen), or transporting oxygen (hemoglobin). Even one wrong amino acid can break the shape and the function.",
+        "**Nucleic acids** are chains of **nucleotides**, each made of a sugar, a phosphate, and a nitrogen base. DNA stores genetic instructions as a sequence of four bases (A, T, G, C); RNA carries and acts on copies of those instructions. The order of bases is itself a code, the same way letters in a word carry meaning through their order."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "monomer",
+       "def": "A small repeating molecular unit that links with others to form a polymer."
+      },
+      {
+       "term": "polymer",
+       "def": "A large molecule built from many repeating monomer units."
+      },
+      {
+       "term": "dehydration synthesis",
+       "def": "A reaction that joins two monomers into a bond and releases a water molecule."
+      },
+      {
+       "term": "hydrolysis",
+       "def": "A reaction that breaks a bond between monomers by adding a water molecule."
+      },
+      {
+       "term": "amino acid",
+       "def": "The monomer building block of proteins, linked by peptide bonds."
+      },
+      {
+       "term": "nucleotide",
+       "def": "The monomer building block of DNA and RNA, made of a sugar, phosphate, and nitrogen base."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What reaction joins two monosaccharides into a disaccharide, and what byproduct does it release?",
+       "choices": [
+        "Hydrolysis; it absorbs water",
+        "Dehydration synthesis; it releases water",
+        "Ionization; it releases a proton",
+        "Fermentation; it releases carbon dioxide"
+       ],
+       "answer": 1,
+       "explain": "Dehydration synthesis forms the bond between the two sugars and releases one water molecule; digestion later reverses this with hydrolysis."
+      },
+      {
+       "q": "A phospholipid's polar head and nonpolar tails are the direct reason it can form which structure?",
+       "choices": [
+        "A polysaccharide chain",
+        "The double-layered cell membrane",
+        "A DNA double helix",
+        "A triglyceride fat droplet"
+       ],
+       "answer": 1,
+       "explain": "Phospholipids spontaneously arrange into a bilayer with polar heads facing the watery environment on both sides and nonpolar tails hidden in the middle, forming the cell membrane."
+      },
+      {
+       "q": "Ten glucose monomers are linked into one continuous starch chain by dehydration synthesis. How many water molecules are released?",
+       "choices": [
+        "9",
+        "10",
+        "11",
+        "5"
+       ],
+       "answer": 0,
+       "explain": "Linking 10 monomers into one chain requires 9 bonds (n − 1), and each bond-forming reaction releases exactly one water molecule, for 9 total."
+      },
+      {
+       "q": "What determines a protein's overall three-dimensional shape and therefore its function?",
+       "choices": [
+        "The number of nucleotides in its DNA",
+        "The specific sequence of amino acids in its chain",
+        "Whether it is a monosaccharide or disaccharide",
+        "Its phosphate content"
+       ],
+       "answer": 1,
+       "explain": "The order of amino acids dictates how the chain folds and interacts with itself, producing a precise shape; changing even one amino acid can distort that shape and disable the protein."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Energy, Enzymes, and Metabolism",
+     "minutes": 13,
+     "intro": "Nothing in a cell happens without energy management: building molecules costs energy, breaking them releases it, and almost every reaction in between needs a helper to happen fast enough to matter. Enzymes are that helper, and understanding them explains why body temperature and blood pH are so tightly controlled.",
+     "sections": [
+      {
+       "heading": "ATP as Energy Currency",
+       "body": [
+        "Cells store usable energy in **ATP** (adenosine triphosphate), a molecule with three linked phosphate groups. Breaking the bond to the last phosphate releases energy the cell can immediately use, converting ATP to ADP plus a free phosphate; reactions that release energy this way are **exergonic**. Building ATP back up from ADP requires adding energy, making it an **endergonic** process, which is exactly what cellular respiration accomplishes.",
+        "A cell couples these two types of reactions constantly: it captures energy from food or sunlight to endergonically build ATP, then spends that ATP exergonically to power muscle contraction, active transport, and biosynthesis. A resting human cell recycles its entire ATP pool roughly every minute."
+       ]
+      },
+      {
+       "heading": "Enzymes Lower Activation Energy",
+       "body": [
+        "Even a reaction that releases energy overall usually needs an initial energy investment to get started, called the **activation energy**. **Enzymes** are proteins that speed up reactions by lowering this activation energy barrier, without being consumed or changing the reaction's outcome. Each enzyme has an **active site** shaped to fit a specific **substrate**, the molecule it acts on, much like a key fits a particular lock.",
+        "Enzyme activity depends heavily on conditions. Each enzyme has an optimal temperature and pH; move too far from that optimum and the enzyme's shape distorts (**denatures**), destroying the active site's fit and shutting down the reaction. This is why a fever above about 40°C is dangerous: it begins to denature the enzymes your metabolism depends on."
+       ],
+       "example": {
+        "problem": "An enzyme works fastest at 37°C, the normal human body temperature. Predict what happens to its reaction rate at 60°C and explain why, in terms of the enzyme's structure.",
+        "steps": [
+         "Identify that 60°C is far above the enzyme's optimal temperature of 37°C.",
+         "Excess heat disrupts the weak bonds holding the enzyme's 3D shape together.",
+         "A distorted shape changes the active site so the substrate no longer fits."
+        ],
+        "answer": "The reaction rate collapses, because the enzyme denatures at 60°C and its active site can no longer bind the substrate."
+       }
+      },
+      {
+       "heading": "Metabolic Pathways and Feedback",
+       "body": [
+        "Reactions in a cell rarely happen in isolation; they are organized into **metabolic pathways**, ordered sequences where each enzyme's product becomes the next enzyme's substrate. **Catabolic** pathways break molecules down and release energy (like cellular respiration); **anabolic** pathways build molecules up and consume energy (like protein synthesis).",
+        "Cells regulate these pathways with **feedback inhibition**: when a pathway's final product builds up, it binds back to an early enzyme in the same pathway and switches it off, preventing waste. This is the same logic as a thermostat shutting off a furnace once a room reaches the target temperature."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "activation energy",
+       "def": "The minimum energy input needed to start a chemical reaction."
+      },
+      {
+       "term": "enzyme",
+       "def": "A protein catalyst that speeds up a specific reaction by lowering its activation energy."
+      },
+      {
+       "term": "substrate",
+       "def": "The specific molecule an enzyme acts on."
+      },
+      {
+       "term": "active site",
+       "def": "The region of an enzyme shaped to bind its substrate."
+      },
+      {
+       "term": "denaturation",
+       "def": "The loss of a protein's normal shape due to heat, pH, or other stress, which destroys its function."
+      },
+      {
+       "term": "feedback inhibition",
+       "def": "Regulation in which a pathway's end product shuts off an enzyme earlier in that same pathway."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Breaking the bond between the second and third phosphate of ATP releases energy the cell can use. What type of reaction is this?",
+       "choices": [
+        "Endergonic",
+        "Exergonic",
+        "Anabolic only",
+        "A dehydration synthesis reaction"
+       ],
+       "answer": 1,
+       "explain": "Reactions that release energy, like ATP hydrolysis to ADP plus phosphate, are exergonic."
+      },
+      {
+       "q": "What is the direct role of an enzyme's active site?",
+       "choices": [
+        "To store ATP",
+        "To bind a specific substrate and position it for the reaction",
+        "To transport ions across the membrane",
+        "To provide structural support to the cell"
+       ],
+       "answer": 1,
+       "explain": "The active site is the enzyme's binding pocket, shaped to fit a particular substrate so the reaction can proceed efficiently."
+      },
+      {
+       "q": "A fever raises body temperature well above 37°C. Why is a very high fever dangerous at the cellular level?",
+       "choices": [
+        "It lowers blood pH directly",
+        "It can denature enzymes, destroying the active sites they need to function",
+        "It increases ATP production indefinitely",
+        "It stops all covalent bonds from forming"
+       ],
+       "answer": 1,
+       "explain": "Excess heat disrupts the bonds holding an enzyme's shape together; once denatured, the active site no longer fits its substrate and metabolism breaks down."
+      },
+      {
+       "q": "In feedback inhibition, what typically shuts off an enzyme early in a metabolic pathway?",
+       "choices": [
+        "A drop in temperature",
+        "The buildup of the pathway's own final product",
+        "An increase in substrate concentration only",
+        "Ultraviolet light"
+       ],
+       "answer": 1,
+       "explain": "When the end product of a pathway accumulates, it binds an earlier enzyme in that pathway and inhibits it, preventing the cell from wastefully overproducing the product."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "The Cell",
+   "summary": "How cells are organized inside and out, how substances cross the plasma membrane, and how cells harvest energy from glucose and sunlight.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Cell Structure and the Plasma Membrane",
+     "minutes": 14,
+     "intro": "Every living thing on Earth is built from cells, but not all cells are built the same way. Knowing the difference between a bacterium and one of your own cells, and knowing how a membrane decides what gets in and out, explains an enormous amount of biology in one lesson.",
+     "sections": [
+      {
+       "heading": "Prokaryotic and Eukaryotic Cells",
+       "body": [
+        "**Prokaryotic** cells, found in bacteria and archaea, are small and simple: they lack a nucleus and membrane-bound organelles, keeping their single circular chromosome loose in the cytoplasm. **Eukaryotic** cells, found in protists, fungi, plants, and animals, are larger and more compartmentalized, with a true **nucleus** enclosing their DNA and a set of specialized organelles dividing up the cell's labor.",
+        "That compartmentalization is the whole advantage of the eukaryotic plan: reactions that would interfere with each other, like DNA replication and protein digestion, can run simultaneously in separate membrane-bound spaces instead of colliding in one shared cytoplasm."
+       ]
+      },
+      {
+       "heading": "Organelles and Their Jobs",
+       "body": [
+        "The **nucleus** houses DNA and controls gene expression. **Mitochondria** perform cellular respiration, producing most of the cell's ATP; plant and algal cells additionally have **chloroplasts**, which perform photosynthesis. The **rough endoplasmic reticulum**, studded with ribosomes, builds and folds proteins destined for secretion or membranes, while the **Golgi apparatus** modifies, sorts, and packages those proteins for their final destination.",
+        "**Ribosomes**, found free in the cytoplasm or attached to the rough ER, are the actual machines that build proteins from mRNA instructions, whether or not the cell has a nucleus. Even prokaryotes have ribosomes, which is one reason certain antibiotics that target bacterial ribosomes can kill bacteria without harming human cells."
+       ]
+      },
+      {
+       "heading": "The Plasma Membrane and Osmosis",
+       "body": [
+        "Every cell is wrapped in a **plasma membrane**, a phospholipid bilayer studded with proteins that is often described as a **fluid mosaic** because its components can drift and shift. The membrane is **selectively permeable**: small nonpolar molecules cross easily, while ions and large polar molecules need specific channel or carrier proteins.",
+        "Water crosses membranes by **osmosis**, moving toward the side with a higher solute concentration until the two sides reach equilibrium. A cell in a **hypotonic** solution (lower solute concentration outside) gains water and can swell or burst; a cell in a **hypertonic** solution loses water and shrinks; a cell in an **isotonic** solution stays the same size."
+       ],
+       "example": {
+        "problem": "A red blood cell, which normally sits in blood at about 0.9% salt concentration, is accidentally placed in a container of pure distilled water. Predict what happens to the cell and explain why.",
+        "steps": [
+         "Compare solute concentration inside the cell to the surrounding distilled water.",
+         "Distilled water has essentially zero solute, making it hypotonic relative to the cell's interior.",
+         "Water moves by osmosis from the low-solute side (outside) to the high-solute side (inside the cell)."
+        ],
+        "answer": "Water rushes into the cell, causing it to swell and potentially burst (lyse), because the surrounding distilled water is hypotonic to the cell's cytoplasm."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "prokaryote",
+       "def": "A cell without a nucleus or membrane-bound organelles, such as a bacterium."
+      },
+      {
+       "term": "eukaryote",
+       "def": "A cell with a true nucleus and membrane-bound organelles."
+      },
+      {
+       "term": "organelle",
+       "def": "A specialized membrane-bound structure inside a eukaryotic cell that performs a specific function."
+      },
+      {
+       "term": "mitochondrion",
+       "def": "The organelle that performs cellular respiration to produce most of a cell's ATP."
+      },
+      {
+       "term": "selective permeability",
+       "def": "A membrane property that allows some substances to cross more easily than others."
+      },
+      {
+       "term": "osmosis",
+       "def": "The diffusion of water across a membrane toward the side with higher solute concentration."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the key structural difference between a prokaryotic and a eukaryotic cell?",
+       "choices": [
+        "Prokaryotes have no cell membrane at all",
+        "Eukaryotes have a true nucleus and membrane-bound organelles; prokaryotes do not",
+        "Prokaryotes are always larger",
+        "Only eukaryotes have ribosomes"
+       ],
+       "answer": 1,
+       "explain": "The defining difference is compartmentalization: eukaryotic cells enclose their DNA in a nucleus and divide labor among membrane-bound organelles, while prokaryotic cells do not."
+      },
+      {
+       "q": "Which organelle is responsible for producing most of a eukaryotic cell's ATP?",
+       "choices": [
+        "Golgi apparatus",
+        "Mitochondrion",
+        "Rough endoplasmic reticulum",
+        "Nucleus"
+       ],
+       "answer": 1,
+       "explain": "Mitochondria carry out the bulk of cellular respiration, converting glucose-derived energy into ATP."
+      },
+      {
+       "q": "A plant cell is placed in a strongly hypertonic saltwater solution. What is the expected result?",
+       "choices": [
+        "The cell swells and bursts",
+        "Water leaves the cell by osmosis and the cell shrinks",
+        "Nothing changes because plant cells lack membranes",
+        "The cell divides immediately"
+       ],
+       "answer": 1,
+       "explain": "In a hypertonic solution, the outside has a higher solute concentration than the cell interior, so water moves out of the cell by osmosis, causing it to shrink."
+      },
+      {
+       "q": "Why can certain antibiotics kill bacteria while leaving human cells unharmed?",
+       "choices": [
+        "Bacteria have no ribosomes to target",
+        "Bacterial ribosomes differ enough from eukaryotic ribosomes that some drugs bind only the bacterial version",
+        "Bacteria lack a plasma membrane",
+        "Human cells have no mitochondria"
+       ],
+       "answer": 1,
+       "explain": "Bacterial (prokaryotic) ribosomes are structurally distinct from eukaryotic ribosomes, so some antibiotics bind and disable only the bacterial ones."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Cellular Respiration",
+     "minutes": 16,
+     "intro": "Right now, in nearly every cell in your body, glucose is being systematically dismantled in a three-stage process that captures its energy in ATP. Following that energy step by step, from glycolysis to the electron transport chain, explains why you breathe and why you cannot hold your breath forever.",
+     "sections": [
+      {
+       "heading": "Glycolysis: The Universal First Step",
+       "body": [
+        "**Glycolysis** splits one 6-carbon glucose molecule into two 3-carbon pyruvate molecules in the cytoplasm, a process every living cell can perform whether or not oxygen is present. Glycolysis invests 2 ATP to get started but produces 4 ATP, for a net gain of 2 ATP, plus 2 molecules of the electron carrier NADH.",
+        "Because glycolysis does not require oxygen, it is the only energy-harvesting step available during anaerobic conditions, which is why it is also the first stage of both full aerobic respiration and fermentation."
+       ]
+      },
+      {
+       "heading": "The Krebs Cycle and Electron Transport Chain",
+       "body": [
+        "If oxygen is available, each pyruvate enters a mitochondrion, is converted to acetyl-CoA, and feeds into the **Krebs cycle**, which strips off carbon dioxide and loads electrons onto NADH and FADH2 carriers while directly producing a small amount of ATP. The real payoff comes next: those loaded electron carriers deliver their electrons to the **electron transport chain**, a series of proteins in the inner mitochondrial membrane that uses the electrons' energy to pump protons and ultimately drive **oxidative phosphorylation**, the ATP synthase-powered production of the bulk of the cell's ATP.",
+        "Oxygen's essential role is as the final electron acceptor at the end of the electron transport chain; without it, electrons have nowhere to unload, the chain backs up, and oxidative phosphorylation stops entirely, which is why you cannot survive long without oxygen."
+       ]
+      },
+      {
+       "heading": "Total Yield and Fermentation",
+       "body": [
+        "Adding glycolysis, the Krebs cycle, and oxidative phosphorylation together, one glucose molecule yields roughly 30 to 32 ATP under aerobic conditions, the exact number varying slightly with cell type. When oxygen is unavailable, cells fall back on **fermentation**, which regenerates the NAD+ glycolysis needs by converting pyruvate to lactic acid (in muscle and some bacteria) or ethanol and CO2 (in yeast), without producing any additional ATP beyond glycolysis's net 2.",
+        "This is why sprinting hard enough to outpace oxygen delivery leads to lactic acid buildup and muscle fatigue: your muscle cells are surviving on fermentation's meager 2 ATP per glucose instead of aerobic respiration's 30-plus."
+       ],
+       "example": {
+        "problem": "One glucose molecule is fully oxidized through aerobic cellular respiration. Approximately how many net ATP are produced? If the same cell instead relies entirely on fermentation due to a lack of oxygen, how many net ATP does it get from that same glucose molecule?",
+        "steps": [
+         "Aerobic: glycolysis nets 2 ATP, the Krebs cycle nets about 2 ATP directly, and oxidative phosphorylation from the electron carriers contributes roughly 26 to 28 more ATP.",
+         "Add these aerobic contributions together for a total of about 30 to 32 ATP.",
+         "Fermentation only runs glycolysis and does not add oxidative phosphorylation, so its yield is glycolysis's net alone."
+        ],
+        "answer": "About 30-32 ATP aerobically, versus only 2 net ATP through fermentation."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "glycolysis",
+       "def": "The splitting of glucose into two pyruvate molecules in the cytoplasm, netting 2 ATP without requiring oxygen."
+      },
+      {
+       "term": "Krebs cycle",
+       "def": "A cyclic series of reactions in the mitochondrial matrix that extracts electrons from pyruvate-derived molecules, releasing CO2."
+      },
+      {
+       "term": "electron transport chain",
+       "def": "A series of proteins in the inner mitochondrial membrane that uses electron energy to pump protons and drive ATP production."
+      },
+      {
+       "term": "oxidative phosphorylation",
+       "def": "ATP production driven by the proton gradient built by the electron transport chain, using ATP synthase."
+      },
+      {
+       "term": "NADH",
+       "def": "An electron carrier molecule that shuttles high-energy electrons to the electron transport chain."
+      },
+      {
+       "term": "fermentation",
+       "def": "An anaerobic pathway that regenerates NAD+ for glycolysis by converting pyruvate to lactic acid or ethanol, without added ATP."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which stage of cellular respiration can occur without oxygen and happens in the cytoplasm?",
+       "choices": [
+        "The Krebs cycle",
+        "Oxidative phosphorylation",
+        "Glycolysis",
+        "The electron transport chain"
+       ],
+       "answer": 2,
+       "explain": "Glycolysis takes place in the cytoplasm and does not require oxygen, netting 2 ATP per glucose regardless of oxygen availability."
+      },
+      {
+       "q": "What is oxygen's specific role in aerobic cellular respiration?",
+       "choices": [
+        "It is the substrate broken down by glycolysis",
+        "It is the final electron acceptor at the end of the electron transport chain",
+        "It directly builds glucose from CO2",
+        "It replaces ATP as the cell's energy currency"
+       ],
+       "answer": 1,
+       "explain": "Oxygen accepts electrons at the end of the electron transport chain, combining with them and hydrogen ions to form water; without this final acceptor, the chain stalls."
+      },
+      {
+       "q": "Roughly how many net ATP does aerobic respiration of one glucose molecule yield, compared to fermentation of the same glucose?",
+       "choices": [
+        "2 ATP aerobic vs. 30 ATP fermentation",
+        "30-32 ATP aerobic vs. 2 ATP fermentation",
+        "Both yield exactly 2 ATP",
+        "Both yield exactly 36 ATP"
+       ],
+       "answer": 1,
+       "explain": "Aerobic respiration adds oxidative phosphorylation on top of glycolysis and the Krebs cycle, reaching roughly 30-32 ATP, while fermentation is limited to glycolysis's net 2 ATP."
+      },
+      {
+       "q": "During an all-out sprint, a runner's muscles briefly rely on fermentation. What causes the burning sensation in overworked muscles?",
+       "choices": [
+        "Excess oxygen buildup",
+        "Lactic acid accumulation from fermentation outpacing oxygen delivery",
+        "A sudden drop in body temperature",
+        "Excess ATP synthase activity"
+       ],
+       "answer": 1,
+       "explain": "When oxygen delivery cannot keep up with demand, muscle cells ferment pyruvate into lactic acid to keep glycolysis running, and the buildup contributes to the burning, fatigued feeling."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Photosynthesis",
+     "minutes": 15,
+     "intro": "Nearly every calorie of energy in every ecosystem on Earth traces back to sunlight captured by a chloroplast. Photosynthesis is cellular respiration run partly in reverse, and once you see the two processes side by side, both become far easier to remember.",
+     "sections": [
+      {
+       "heading": "The Light-Dependent Reactions",
+       "body": [
+        "Inside a chloroplast's thylakoid membranes, **chlorophyll** and other pigments absorb light energy and pass it through protein complexes called **photosystems**. That energy splits water molecules apart, releasing oxygen gas as a byproduct, generating a proton gradient that produces ATP, and loading electrons onto the carrier NADPH.",
+        "In short, the light-dependent reactions convert light energy into two portable forms the cell can use immediately afterward: ATP and NADPH. Every oxygen molecule you breathe was released by this water-splitting step somewhere in a plant, alga, or cyanobacterium."
+       ]
+      },
+      {
+       "heading": "The Calvin Cycle",
+       "body": [
+        "The ATP and NADPH from the light reactions power the **Calvin cycle** in the chloroplast's stroma, which does not need light directly and so is sometimes called the light-independent reactions. The Calvin cycle fixes carbon dioxide from the air onto an existing 5-carbon molecule, then uses the ATP and NADPH to convert that fixed carbon into G3P, a 3-carbon sugar that the cell can use to build glucose and other carbohydrates.",
+        "**Carbon fixation**, the incorporation of inorganic CO2 into an organic molecule, is the step that ultimately builds the sugars every other organism in the food chain depends on, directly or indirectly."
+       ]
+      },
+      {
+       "heading": "Comparing Photosynthesis and Respiration",
+       "body": [
+        "Photosynthesis and cellular respiration are near mirror images: photosynthesis consumes CO2 and water and releases O2 and glucose, while respiration consumes glucose and O2 and releases CO2 and water. Photosynthesis stores energy from light into chemical bonds; respiration releases that stored chemical energy back out as usable ATP.",
+        "Plants perform both processes: photosynthesis in their chloroplasts during daylight, and respiration in their mitochondria around the clock, which is why a plant is a net oxygen producer only when its rate of photosynthesis exceeds its own respiration."
+       ],
+       "example": {
+        "problem": "Write the overall balanced equation for photosynthesis and identify which reactant is oxidized (loses electrons) and which is reduced (gains electrons).",
+        "steps": [
+         "The balanced equation is 6CO2 + 6H2O + light energy → C6H12O6 + 6O2.",
+         "Water is split apart and its electrons are removed, releasing O2; losing electrons means water is oxidized.",
+         "Carbon dioxide gains those electrons (as hydrogens) as it is built up into glucose, so CO2 is reduced."
+        ],
+        "answer": "6CO2 + 6H2O + light → C6H12O6 + 6O2; water is oxidized and carbon dioxide is reduced."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "chlorophyll",
+       "def": "The main pigment in chloroplasts that absorbs light energy for photosynthesis."
+      },
+      {
+       "term": "photosystem",
+       "def": "A protein complex in the thylakoid membrane that captures light energy and passes electrons along."
+      },
+      {
+       "term": "Calvin cycle",
+       "def": "The set of light-independent reactions that use ATP and NADPH to fix CO2 into sugar."
+      },
+      {
+       "term": "carbon fixation",
+       "def": "The incorporation of inorganic carbon dioxide into an organic molecule."
+      },
+      {
+       "term": "stomata",
+       "def": "Small pores in a leaf's surface that regulate gas exchange and water loss."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Where does the oxygen released during photosynthesis come from?",
+       "choices": [
+        "Carbon dioxide",
+        "Splitting of water molecules during the light-dependent reactions",
+        "The Calvin cycle directly",
+        "Glucose breakdown"
+       ],
+       "answer": 1,
+       "explain": "The light-dependent reactions split water to supply electrons for the photosystems, releasing oxygen gas as a byproduct."
+      },
+      {
+       "q": "What do the light-dependent reactions supply to the Calvin cycle?",
+       "choices": [
+        "Oxygen and carbon dioxide",
+        "ATP and NADPH",
+        "Glucose and starch",
+        "Chlorophyll and stomata"
+       ],
+       "answer": 1,
+       "explain": "The light-dependent reactions convert light energy into ATP and NADPH, which the Calvin cycle then uses to fix CO2 into sugar."
+      },
+      {
+       "q": "In the overall photosynthesis equation, which molecule is reduced?",
+       "choices": [
+        "Water",
+        "Oxygen gas",
+        "Carbon dioxide, as it is converted into glucose",
+        "Chlorophyll"
+       ],
+       "answer": 2,
+       "explain": "Carbon dioxide gains electrons (in the form of hydrogens) as it is transformed into glucose, making it the molecule that is reduced."
+      },
+      {
+       "q": "Photosynthesis and cellular respiration are best described as which kind of relationship?",
+       "choices": [
+        "Unrelated processes that never interact",
+        "Near mirror-image processes: one stores light energy in chemical bonds, the other releases it",
+        "Two names for the exact same reaction",
+        "Processes that only occur in animals"
+       ],
+       "answer": 1,
+       "explain": "Photosynthesis builds glucose using CO2, water, and light energy, while respiration breaks glucose back down using oxygen, releasing CO2, water, and usable ATP, essentially reversing photosynthesis's inputs and outputs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Genetics",
+   "summary": "How cells divide and pass on genetic information, how traits follow Mendel's laws of inheritance, and how DNA's code is copied and translated into protein.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Cell Division: Mitosis and Meiosis",
+     "minutes": 14,
+     "intro": "Your body replaces billions of cells every day through one type of division, while a completely different type of division, running in your ovaries or testes, is busy shuffling your DNA to make genetically unique offspring possible. Confusing the two is one of the most common mistakes in introductory biology, so this lesson keeps them clearly separate.",
+     "sections": [
+      {
+       "heading": "Mitosis: Making Identical Copies",
+       "body": [
+        "**Mitosis** is the division of a single cell's nucleus into two nuclei with identical genetic content, used for growth and tissue repair. Before mitosis begins, the cell's DNA is copied during interphase, so each of the 46 human chromosomes exists as two identical sister chromatids joined at a centromere.",
+        "Mitosis then proceeds through prophase, metaphase, anaphase, and telophase: chromosomes condense and align at the cell's center, sister chromatids are pulled apart to opposite poles, and two new nuclei form, each with a complete, identical set of chromosomes. The cell then splits in two through cytokinesis, producing two **diploid** daughter cells genetically identical to the parent."
+       ]
+      },
+      {
+       "heading": "Meiosis: Creating Genetic Variation",
+       "body": [
+        "**Meiosis** produces gametes (sperm and egg) and involves two sequential divisions, meiosis I and meiosis II, following one round of DNA replication. The result is four **haploid** cells, each with half the chromosome number of the parent cell, rather than mitosis's two identical diploid cells.",
+        "Meiosis introduces genetic variation in two key ways: **crossing over**, where homologous chromosomes exchange segments of DNA during meiosis I, and **independent assortment**, where each pair of homologous chromosomes lines up and separates independently of every other pair. Together these mechanisms are why full siblings, aside from identical twins, are never genetically identical."
+       ],
+       "example": {
+        "problem": "A human somatic (body) cell has 46 chromosomes. How many chromosomes will each daughter cell contain after mitosis, and how many will each gamete contain after meiosis?",
+        "steps": [
+         "Mitosis preserves the chromosome number: one diploid parent cell produces two diploid daughter cells.",
+         "The starting diploid number is 46, so each mitotic daughter cell also has 46.",
+         "Meiosis instead halves the chromosome number to produce haploid gametes: 46 ÷ 2 = 23."
+        ],
+        "answer": "46 chromosomes after mitosis; 23 chromosomes in each gamete after meiosis."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "chromosome",
+       "def": "A structure of tightly packaged DNA and protein carrying an organism's genetic information."
+      },
+      {
+       "term": "mitosis",
+       "def": "Nuclear division producing two genetically identical diploid daughter cells, used for growth and repair."
+      },
+      {
+       "term": "meiosis",
+       "def": "Two rounds of division producing four genetically varied haploid gametes."
+      },
+      {
+       "term": "diploid",
+       "def": "Having two complete sets of chromosomes, one from each parent."
+      },
+      {
+       "term": "haploid",
+       "def": "Having one complete set of chromosomes, as in a gamete."
+      },
+      {
+       "term": "crossing over",
+       "def": "The exchange of DNA segments between homologous chromosomes during meiosis I, increasing genetic variation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main functional difference between mitosis and meiosis?",
+       "choices": [
+        "Mitosis only happens in plants",
+        "Mitosis produces 2 identical diploid cells; meiosis produces 4 genetically varied haploid cells",
+        "Meiosis happens in every cell of the body",
+        "Mitosis halves the chromosome number"
+       ],
+       "answer": 1,
+       "explain": "Mitosis is for growth and repair and yields two identical diploid cells, while meiosis produces gametes and yields four haploid cells with new genetic combinations."
+      },
+      {
+       "q": "A dog has 78 chromosomes in its somatic cells. How many chromosomes will each of its sperm cells have after meiosis?",
+       "choices": [
+        "78",
+        "39",
+        "156",
+        "19.5"
+       ],
+       "answer": 1,
+       "explain": "Meiosis halves the diploid chromosome number to produce haploid gametes, so 78 ÷ 2 = 39 chromosomes per sperm cell."
+      },
+      {
+       "q": "Which two mechanisms during meiosis directly increase genetic variation among offspring?",
+       "choices": [
+        "Cytokinesis and interphase",
+        "Crossing over and independent assortment",
+        "DNA replication and centromere formation",
+        "Prophase and telophase alone"
+       ],
+       "answer": 1,
+       "explain": "Crossing over swaps DNA segments between homologous chromosomes, and independent assortment randomizes which homolog of each pair ends up in a given gamete; together they generate enormous genetic diversity."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Mendelian Inheritance",
+     "minutes": 16,
+     "intro": "Gregor Mendel never saw a chromosome or a strand of DNA, yet by carefully counting pea plants he worked out rules of inheritance that still hold up today. A Punnett square turns his rules into a simple grid you can use to predict the odds of any offspring's traits.",
+     "sections": [
+      {
+       "heading": "Mendel's Laws and Vocabulary",
+       "body": [
+        "An organism's **genotype** is its actual pair of gene versions, or **alleles**, for a trait; its **phenotype** is the physical trait that genotype produces. When an organism has two different alleles it is **heterozygous**; two identical alleles makes it **homozygous**. A **dominant** allele's trait shows up whenever at least one copy is present, while a **recessive** allele's trait only shows up when two copies are present.",
+        "Mendel's **law of segregation** states that the two alleles for a gene separate during gamete formation, so each gamete carries only one. His **law of independent assortment** states that alleles for different genes, located on different chromosomes, are distributed to gametes independently of each other."
+       ]
+      },
+      {
+       "heading": "Punnett Squares and Monohybrid Crosses",
+       "body": [
+        "A **Punnett square** is a grid that lays out every possible combination of alleles from two parents' gametes, letting you read off the expected ratio of offspring genotypes and phenotypes. For a **monohybrid cross** (tracking one gene) between two heterozygotes, the classic result is a 3:1 phenotype ratio, since three of the four boxes contain at least one dominant allele.",
+        "This 3:1 ratio is one of the most important patterns in biology; recognizing it in real data is often the first clue that a trait follows simple dominant-recessive inheritance."
+       ],
+       "example": {
+        "problem": "In pea plants, purple flower color (P) is dominant over white (p). Two heterozygous (Pp) plants are crossed. What fraction of their offspring is expected to have white flowers?",
+        "steps": [
+         "Each Pp parent produces gametes carrying either P or p, each with 50% probability.",
+         "Building the 2×2 Punnett square gives four equally likely offspring combinations: PP, Pp, Pp, and pp.",
+         "Only the pp combination produces the recessive white phenotype, since white requires two copies of the recessive allele."
+        ],
+        "answer": "1 out of 4 offspring, or 25%, are expected to have white flowers."
+       }
+      },
+      {
+       "heading": "Beyond Simple Dominance",
+       "body": [
+        "Not every trait follows strict dominant-recessive rules. In **incomplete dominance**, heterozygotes show a blended intermediate phenotype, such as a red flower crossed with a white flower producing pink offspring. In **codominance**, both alleles are fully and separately expressed at once, such as a cow with both red and white patches of fur (roan coloring), rather than a blend.",
+        "Many genes also have **multiple alleles** in a population, even though any one individual carries only two; human ABO blood type is a classic example, with three alleles (A, B, and O) combining to produce four possible blood types."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "genotype",
+       "def": "The specific pair of alleles an organism carries for a gene."
+      },
+      {
+       "term": "phenotype",
+       "def": "The observable physical trait produced by a genotype."
+      },
+      {
+       "term": "dominant allele",
+       "def": "An allele whose trait appears whenever at least one copy is present."
+      },
+      {
+       "term": "recessive allele",
+       "def": "An allele whose trait appears only when two copies are present."
+      },
+      {
+       "term": "homozygous",
+       "def": "Carrying two identical alleles for a gene."
+      },
+      {
+       "term": "heterozygous",
+       "def": "Carrying two different alleles for a gene."
+      },
+      {
+       "term": "Punnett square",
+       "def": "A grid used to predict the possible genotype and phenotype combinations of offspring from a cross."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In pea plants, tall (T) is dominant over short (t). A cross between a homozygous tall (TT) plant and a homozygous short (tt) plant produces what phenotype ratio in the offspring?",
+       "choices": [
+        "100% tall",
+        "3:1 tall to short",
+        "100% short",
+        "50% tall, 50% short"
+       ],
+       "answer": 0,
+       "explain": "Every offspring receives one T allele and one t allele, making them all Tt heterozygotes; since T is dominant, all offspring are tall."
+      },
+      {
+       "q": "Two heterozygous (Pp) pea plants are crossed. What fraction of offspring is expected to be heterozygous (Pp) themselves?",
+       "choices": [
+        "1/4",
+        "1/2",
+        "3/4",
+        "0"
+       ],
+       "answer": 1,
+       "explain": "The Punnett square gives PP, Pp, Pp, pp; two of the four boxes (1/2) are heterozygous Pp."
+      },
+      {
+       "q": "A red-flowered plant is crossed with a white-flowered plant, and all offspring are pink. This pattern is an example of what?",
+       "choices": [
+        "Simple dominance",
+        "Codominance",
+        "Incomplete dominance",
+        "Independent assortment"
+       ],
+       "answer": 2,
+       "explain": "A blended intermediate phenotype like pink, rather than one color fully masking the other, is the signature of incomplete dominance."
+      },
+      {
+       "q": "Human ABO blood type is controlled by three alleles (A, B, O) in the population, even though each person carries only two. This illustrates which genetic concept?",
+       "choices": [
+        "Codominance only",
+        "Multiple alleles",
+        "Incomplete dominance only",
+        "Independent assortment only"
+       ],
+       "answer": 1,
+       "explain": "A gene with more than two allele versions circulating in a population, like the three ABO alleles, is described as having multiple alleles, even though any individual only carries two of them."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "DNA Structure, Replication, and Gene Expression",
+     "minutes": 16,
+     "intro": "DNA is often called a blueprint, but a more accurate comparison is a recipe book written in a four-letter alphabet, copied precisely before every cell division and read out, three letters at a time, to build every protein you have. This lesson walks through both the copying and the reading.",
+     "sections": [
+      {
+       "heading": "DNA Structure and Replication",
+       "body": [
+        "DNA is a double helix made of two strands of nucleotides running in opposite directions, held together by hydrogen bonds between complementary bases: adenine (A) always pairs with thymine (T), and guanine (G) always pairs with cytosine (C). This strict pairing rule means that if you know one strand's sequence, you automatically know the other's.",
+        "**DNA replication** is **semiconservative**: the double helix unwinds, and each original strand serves as a template for building a new complementary strand, so each of the two resulting DNA molecules contains one old strand and one newly made strand. This process is carried out by the enzyme DNA polymerase, working with impressive accuracy and speed."
+       ]
+      },
+      {
+       "heading": "Transcription and Translation",
+       "body": [
+        "**Transcription** copies a gene's DNA sequence into a complementary messenger RNA (mRNA) strand, using the same base-pairing rule except that RNA uses uracil (U) in place of thymine. The mRNA then carries that copied instruction out of the nucleus to a ribosome.",
+        "**Translation** reads the mRNA three bases at a time; each three-base unit is a **codon**, and each codon specifies one amino acid (or a stop signal) according to the universal genetic code. Transfer RNA (tRNA) molecules match each codon to its corresponding amino acid, and the ribosome links those amino acids together in order, building the protein one codon at a time."
+       ],
+       "example": {
+        "problem": "A gene's DNA template strand reads 3'-TAC GGG ATT-5'. What is the resulting mRNA sequence, and what does it encode, given that AUG codes for the amino acid methionine (start), CCC codes for proline, and UAA is a stop codon?",
+        "steps": [
+         "Build the mRNA by complementary base pairing against the template strand, remembering RNA uses U instead of T.",
+         "T pairs with A, A pairs with U, C pairs with G, G pairs with C, so 3'-TAC-5' becomes 5'-AUG-3', 3'-GGG-5' becomes 5'-CCC-3', and 3'-ATT-5' becomes 5'-UAA-3'.",
+         "Read the resulting mRNA codons in order: AUG, CCC, UAA."
+        ],
+        "answer": "The mRNA reads 5'-AUG CCC UAA-3', encoding a start signal for methionine, then proline, then a stop signal that ends the protein at just one amino acid."
+       }
+      },
+      {
+       "heading": "Mutations",
+       "body": [
+        "A **mutation** is any change in a DNA sequence. A **point mutation** substitutes one base for another and may change one amino acid, change nothing (due to code redundancy), or introduce a premature stop codon. **Frameshift mutations**, caused by inserting or deleting a base that is not a multiple of three, shift every codon reading downstream of the change, usually producing a garbled, nonfunctional protein.",
+        "Not all mutations are harmful; some are neutral, and a rare few improve an organism's function in its environment, which is the raw material natural selection acts upon over generations."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "base pairing",
+       "def": "The rule that adenine pairs with thymine (or uracil in RNA), and guanine pairs with cytosine."
+      },
+      {
+       "term": "semiconservative replication",
+       "def": "DNA replication in which each new double helix retains one original strand and one newly synthesized strand."
+      },
+      {
+       "term": "transcription",
+       "def": "The copying of a gene's DNA sequence into a complementary mRNA strand."
+      },
+      {
+       "term": "translation",
+       "def": "The ribosome's reading of mRNA codons to assemble a chain of amino acids into a protein."
+      },
+      {
+       "term": "codon",
+       "def": "A three-base sequence in mRNA that specifies one amino acid or a stop signal."
+      },
+      {
+       "term": "mutation",
+       "def": "A change in a DNA sequence, which may be neutral, harmful, or occasionally beneficial."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In DNA, guanine always pairs with which base?",
+       "choices": [
+        "Adenine",
+        "Thymine",
+        "Cytosine",
+        "Uracil"
+       ],
+       "answer": 2,
+       "explain": "Complementary base pairing links guanine (G) with cytosine (C), and adenine (A) with thymine (T)."
+      },
+      {
+       "q": "Why is DNA replication described as 'semiconservative'?",
+       "choices": [
+        "Because both new DNA molecules are entirely new",
+        "Because each new DNA molecule keeps one original strand and gains one newly made strand",
+        "Because only half of the DNA is copied each time",
+        "Because RNA polymerase conserves half the genome"
+       ],
+       "answer": 1,
+       "explain": "Semiconservative replication means each of the two resulting double helices is a mix of one old (template) strand and one newly synthesized strand."
+      },
+      {
+       "q": "An mRNA codon reads 5'-GGU-3'. What molecule reads this codon and delivers the matching amino acid during translation?",
+       "choices": [
+        "DNA polymerase",
+        "A ribosomal RNA subunit alone",
+        "A transfer RNA (tRNA) molecule",
+        "A restriction enzyme"
+       ],
+       "answer": 2,
+       "explain": "Each tRNA molecule has an anticodon that pairs with a specific mRNA codon and carries the corresponding amino acid to the ribosome."
+      },
+      {
+       "q": "Inserting a single extra nucleotide into the middle of a gene (not a multiple of three bases) typically causes what kind of mutation?",
+       "choices": [
+        "A silent mutation with no effect",
+        "A frameshift mutation that garbles every codon downstream of the insertion",
+        "A mutation that only affects the DNA outside genes",
+        "No effect since RNA is unaffected by DNA insertions"
+       ],
+       "answer": 1,
+       "explain": "Because codons are read three bases at a time, inserting one extra base shifts the reading frame for every codon after it, usually producing a nonfunctional protein."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Evolution and the Diversity of Life",
+   "summary": "The mechanism of natural selection and the evidence behind it, how population genetics and speciation produce new species, and how biologists organize the tree of life.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Natural Selection and Evidence for Evolution",
+     "minutes": 14,
+     "intro": "Charles Darwin's central idea is almost embarrassingly simple to state and endlessly powerful in what it explains: individuals with heritable traits suited to their environment tend to survive and reproduce more successfully than others. This lesson makes that logic concrete with numbers and shows the evidence that has confirmed it again and again.",
+     "sections": [
+      {
+       "heading": "The Logic of Natural Selection",
+       "body": [
+        "**Natural selection** requires three conditions: individuals in a population vary in their traits, at least some of that variation is heritable (passed to offspring), and that variation affects survival or reproductive success. When those three conditions hold, traits that improve survival or reproduction, called **adaptations**, become more common in the population over generations, simply because their carriers leave more offspring.",
+        "Natural selection acts on existing variation; it does not create new traits on demand, and it does not act with foresight or intention. It is a purely statistical consequence of some individuals reproducing more than others across many generations."
+       ],
+       "example": {
+        "problem": "A population of 1,000 moths has 200 dark-colored moths and 800 light-colored moths. After a factory darkens the local tree bark with soot, dark moths survive predation at 80% per generation while light moths survive at only 40%. Of the survivors, what percentage are dark-colored?",
+        "steps": [
+         "Calculate dark survivors: 200 × 0.80 = 160.",
+         "Calculate light survivors: 800 × 0.40 = 320.",
+         "Find the percentage of dark moths among all survivors: 160 ÷ (160 + 320) = 160/480."
+        ],
+        "answer": "About 33% of survivors are dark-colored, up from 20% in the original population, showing how differential survival shifts a trait's frequency in just one generation."
+       }
+      },
+      {
+       "heading": "Evidence from Multiple Fields",
+       "body": [
+        "The **fossil record** shows a consistent sequence of increasingly modern forms appearing over time in older to younger rock layers, and it has captured transitional fossils, such as species linking fish to early tetrapods. **Homologous structures**, like the shared bone pattern in a bat's wing, a whale's flipper, and a human arm, reveal common ancestry even when the structures now serve very different functions.",
+        "**Analogous structures**, like a bird's wing and an insect's wing, look superficially similar because of shared function (flight) but evolved independently and share no recent common ancestor, a pattern called convergent evolution. Molecular evidence adds a further, independent layer: species that are more closely related, as judged by fossils and anatomy, also have more similar DNA and protein sequences, exactly as common descent would predict."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "natural selection",
+       "def": "The process by which heritable traits that improve survival or reproduction become more common over generations."
+      },
+      {
+       "term": "adaptation",
+       "def": "A heritable trait that improves an organism's survival or reproductive success in its environment."
+      },
+      {
+       "term": "fitness",
+       "def": "A measure of an individual's reproductive success relative to others in the population."
+      },
+      {
+       "term": "homologous structure",
+       "def": "A structure shared by different species due to common ancestry, even if it now serves different functions."
+      },
+      {
+       "term": "analogous structure",
+       "def": "A structure that is similar in different species due to convergent evolution, not common ancestry."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which three conditions must be true for natural selection to occur in a population?",
+       "choices": [
+        "High mutation rate, small population, no predators",
+        "Heritable variation, that variation affecting survival/reproduction, and differences in reproductive success",
+        "Genetic drift, migration, and isolation",
+        "Large population size, stable climate, abundant food"
+       ],
+       "answer": 1,
+       "explain": "Natural selection requires variation among individuals, that the variation is heritable, and that it affects how many offspring individuals leave; when all three hold, favorable traits become more common over time."
+      },
+      {
+       "q": "A whale's flipper and a human arm share the same underlying bone arrangement despite very different functions. This is evidence of what?",
+       "choices": [
+        "Convergent evolution",
+        "Homologous structures reflecting common ancestry",
+        "Analogous structures",
+        "No evolutionary relationship"
+       ],
+       "answer": 1,
+       "explain": "Shared underlying structure despite different current function is the signature of homology, indicating the two species inherited the basic body plan from a shared ancestor."
+      },
+      {
+       "q": "A bird's wing and a butterfly's wing serve the same function (flight) but arose independently through very different structures. What is this pattern called?",
+       "choices": [
+        "Homology",
+        "Convergent evolution producing analogous structures",
+        "Genetic drift",
+        "Semiconservative replication"
+       ],
+       "answer": 1,
+       "explain": "When unrelated lineages independently evolve similar features in response to similar functional demands, without shared ancestry for that trait, the structures are analogous and the process is convergent evolution."
+      },
+      {
+       "q": "In a population of 500 beetles, 100 are green and 400 are brown. After a change in habitat, green beetles survive at 60% and brown beetles survive at 30%. How many green beetles survive?",
+       "choices": [
+        "60",
+        "100",
+        "120",
+        "40"
+       ],
+       "answer": 0,
+       "explain": "100 green beetles × 0.60 survival rate = 60 surviving green beetles."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Population Genetics and Speciation",
+     "minutes": 15,
+     "intro": "Evolution is, at its core, a change in the frequency of alleles in a population over time. The Hardy-Weinberg equation gives biologists a mathematical baseline for 'no evolution happening,' which makes any deviation from that baseline a signal that something, selection, drift, migration, or nonrandom mating, is at work.",
+     "sections": [
+      {
+       "heading": "Allele Frequencies and Hardy-Weinberg Equilibrium",
+       "body": [
+        "A population's **gene pool** is the sum of all alleles carried by all its members; **allele frequency** is the proportion that one specific allele makes up of that pool. The **Hardy-Weinberg equilibrium** describes a hypothetical population where allele frequencies do not change across generations, which requires no mutation, no migration, no selection, random mating, and a very large population size.",
+        "Hardy-Weinberg gives two key equations: p + q = 1 (where p and q are the frequencies of the two alleles for a gene) and p² + 2pq + q² = 1 (the frequencies of the homozygous dominant, heterozygous, and homozygous recessive genotypes). Because real populations almost always violate at least one of the equilibrium assumptions, comparing real allele frequencies to the Hardy-Weinberg prediction is a standard way to detect evolution in action."
+       ],
+       "example": {
+        "problem": "In a population, the recessive phenotype (genotype qq) appears in 16% of individuals. Assuming Hardy-Weinberg equilibrium, what percentage of the population is heterozygous (carriers)?",
+        "steps": [
+         "The recessive phenotype frequency equals q², so q² = 0.16.",
+         "Take the square root to find q: q = 0.4, meaning p = 1 − 0.4 = 0.6.",
+         "Heterozygote frequency is 2pq = 2 × 0.6 × 0.4 = 0.48."
+        ],
+        "answer": "48% of the population is expected to be heterozygous."
+       }
+      },
+      {
+       "heading": "Mechanisms of Speciation",
+       "body": [
+        "**Speciation** is the formation of new, distinct species, and it requires **reproductive isolation**: some barrier that prevents two populations from interbreeding and exchanging genes. In **allopatric speciation**, a physical barrier, a mountain range, a river, an ocean, geographically separates populations, which then diverge independently until they can no longer interbreed even if reunited.",
+        "In **sympatric speciation**, new species arise without geographic separation, often through mechanisms like polyploidy in plants (an error in chromosome number that immediately creates a reproductive barrier) or strong preferences for different mates or habitats within the same area. Either route ends the same way: enough genetic divergence accumulates that the two populations become separate species."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "gene pool",
+       "def": "The complete set of alleles present in a population."
+      },
+      {
+       "term": "allele frequency",
+       "def": "The proportion of a specific allele among all alleles for that gene in a population."
+      },
+      {
+       "term": "Hardy-Weinberg equilibrium",
+       "def": "A theoretical state in which allele and genotype frequencies remain constant across generations, absent evolutionary forces."
+      },
+      {
+       "term": "speciation",
+       "def": "The evolutionary process by which new, distinct species form."
+      },
+      {
+       "term": "reproductive isolation",
+       "def": "Any barrier that prevents two populations from successfully interbreeding."
+      },
+      {
+       "term": "allopatric speciation",
+       "def": "Speciation that occurs when populations are separated by a geographic barrier."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a Hardy-Weinberg population, the frequency of allele A is p = 0.7. What is the frequency of allele a (q)?",
+       "choices": [
+        "0.7",
+        "0.3",
+        "1.3",
+        "0.49"
+       ],
+       "answer": 1,
+       "explain": "Since p + q = 1, q = 1 − 0.7 = 0.3."
+      },
+      {
+       "q": "A population has q² = 0.09 for a recessive trait. What is the frequency of the heterozygous genotype (2pq)?",
+       "choices": [
+        "0.09",
+        "0.42",
+        "0.7",
+        "0.09 squared"
+       ],
+       "answer": 1,
+       "explain": "q = √0.09 = 0.3, so p = 0.7; heterozygote frequency 2pq = 2 × 0.7 × 0.3 = 0.42, or 42%."
+      },
+      {
+       "q": "A river changes course and permanently divides one lizard population into two, which independently diverge over thousands of years until they can no longer interbreed. This is an example of what?",
+       "choices": [
+        "Sympatric speciation",
+        "Allopatric speciation",
+        "Hardy-Weinberg equilibrium",
+        "Convergent evolution"
+       ],
+       "answer": 1,
+       "explain": "A geographic barrier separating populations that then diverge independently is the defining feature of allopatric speciation."
+      },
+      {
+       "q": "Which of the following is NOT one of the five conditions required for Hardy-Weinberg equilibrium?",
+       "choices": [
+        "No mutation",
+        "Random mating",
+        "Natural selection actively favoring one allele",
+        "A very large population size"
+       ],
+       "answer": 2,
+       "explain": "Hardy-Weinberg equilibrium requires the absence of natural selection; if selection favors one allele, allele frequencies will change and the population will not be in equilibrium."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Classifying Diversity: The Tree of Life",
+     "minutes": 13,
+     "intro": "With millions of species described and many more undiscovered, biologists need a shared system for naming and organizing life. That system, built on shared ancestry rather than superficial resemblance, lets a phylogenetic tree tell you which species are closest relatives at a glance.",
+     "sections": [
+      {
+       "heading": "Taxonomy and the Hierarchy of Classification",
+       "body": [
+        "**Taxonomy** is the science of naming and classifying organisms into a nested hierarchy, traditionally: domain, kingdom, phylum, class, order, family, genus, and species, from broadest to most specific. Every species also receives a two-part **binomial** scientific name (genus and species), such as *Homo sapiens*, which is universal across languages and avoids the ambiguity of common names.",
+        "Modern taxonomy increasingly groups organisms by shared evolutionary ancestry rather than surface appearance alone; two species can look very different yet be classified close together if their DNA and developmental biology reveal a recent shared ancestor."
+       ]
+      },
+      {
+       "heading": "The Three Domains",
+       "body": [
+        "Life is divided into three **domains**: Bacteria and Archaea, both prokaryotic and each with distinct cell chemistry, and Eukarya, which includes all eukaryotic life and further splits into kingdoms such as Protista, Fungi, Plantae, and Animalia. Archaea, despite superficially resembling bacteria, are genetically more closely related to eukaryotes in several respects, which is exactly why they were split into their own domain rather than lumped in with bacteria.",
+        "Within Eukarya, kingdom-level groups are defined by traits like cell wall composition, mode of nutrition, and multicellularity: fungi absorb nutrients externally and have chitin cell walls, plants photosynthesize and have cellulose cell walls, and animals ingest food and lack cell walls entirely."
+       ]
+      },
+      {
+       "heading": "Phylogenetic Trees and Cladistics",
+       "body": [
+        "A **phylogenetic tree** is a branching diagram that represents evolutionary relationships, with each branch point, or node, representing a common ancestor shared by everything branching off above it. Species that share a more recent common ancestor are placed closer together on the tree, connected by a node nearer the tips (the present) than species that diverged earlier.",
+        "**Cladistics** builds these trees using shared derived traits (features present in a group and its ancestor but not in more distant relatives) rather than overall similarity, which is why cladistic analysis can group a crocodile closer to birds than to lizards: crocodiles and birds share a more recent common ancestor, evidenced by specific derived traits, even though crocodiles look more lizard-like at a glance."
+       ],
+       "example": {
+        "problem": "On a phylogenetic tree, species A and species B share a more recent common ancestor with each other than either does with species C. How should their branches be drawn?",
+        "steps": [
+         "Identify that A and B's shared node (common ancestor) should be placed closer to the tips of the tree (more recent in time).",
+         "Species C's branch point with the A-B lineage should be placed further back (an earlier, more distant common ancestor).",
+         "Draw A and B as sister branches splitting from a recent node, with C branching off an earlier node that leads to both A, B, and C."
+        ],
+        "answer": "A and B are drawn as sister branches joined at a recent node; C branches off earlier, from a node that is ancestral to A, B, and C together."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "taxonomy",
+       "def": "The science of naming and classifying organisms into a nested hierarchy."
+      },
+      {
+       "term": "domain",
+       "def": "The broadest level of biological classification: Bacteria, Archaea, or Eukarya."
+      },
+      {
+       "term": "binomial nomenclature",
+       "def": "The two-part genus-species naming system used for every organism."
+      },
+      {
+       "term": "phylogenetic tree",
+       "def": "A branching diagram representing evolutionary relationships among species."
+      },
+      {
+       "term": "cladistics",
+       "def": "A method of classification based on shared derived traits indicating common ancestry."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the correct order of taxonomic levels from broadest to most specific?",
+       "choices": [
+        "Species, genus, family, order, class, phylum, kingdom, domain",
+        "Domain, kingdom, phylum, class, order, family, genus, species",
+        "Kingdom, domain, class, phylum, family, order, genus, species",
+        "Phylum, domain, kingdom, class, order, family, genus, species"
+       ],
+       "answer": 1,
+       "explain": "The standard hierarchy runs from the broadest group, domain, down to the most specific, species: domain, kingdom, phylum, class, order, family, genus, species."
+      },
+      {
+       "q": "Archaea were split off into their own domain, separate from Bacteria, primarily because of what?",
+       "choices": [
+        "They are visibly much larger than bacteria",
+        "Genetic and biochemical evidence shows they are distinct from bacteria and share some traits with eukaryotes",
+        "They contain a nucleus like eukaryotes",
+        "They were discovered more recently than bacteria"
+       ],
+       "answer": 1,
+       "explain": "Although archaea resemble bacteria in size and simplicity, molecular evidence revealed they are a genetically distinct lineage, sharing certain molecular features with eukaryotes, justifying a separate domain."
+      },
+      {
+       "q": "On a phylogenetic tree, two species connected by a node very close to the tips (the present) compared to a third species share what?",
+       "choices": [
+        "No evolutionary relationship at all",
+        "A more recent common ancestor with each other than with the third species",
+        "Identical DNA",
+        "The same genus name automatically"
+       ],
+       "answer": 1,
+       "explain": "Nodes closer to the present indicate more recent shared ancestry; two species joined by such a node are more closely related to each other than to a species whose branch point is further back."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Plant and Animal Form and Function",
+   "summary": "How plants move water and sugar without a pump, how animal tissues cooperate to maintain a stable internal environment, and how both kingdoms reproduce and develop.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Plant Structure and Transport",
+     "minutes": 13,
+     "intro": "A tree can lift hundreds of liters of water to its topmost leaves every day with no heart and no pump, using nothing but physics. Understanding how it does that also explains why plants wilt, why leaves have pores, and why sugar made in a leaf can feed a root meters underground.",
+     "sections": [
+      {
+       "heading": "Roots, Stems, and Leaves",
+       "body": [
+        "Roots anchor a plant and absorb water and minerals from soil through root hairs, which vastly increase the absorbing surface area. Stems support the plant and contain the vascular tissue that connects roots to leaves. Leaves are the primary site of photosynthesis, with a flattened shape that maximizes light capture and small pores called **stomata** on their surface that open and close to regulate gas exchange and water loss.",
+        "Two specialized tissues run throughout the whole plant like a plumbing system: **xylem** transports water and dissolved minerals upward from roots to leaves, and **phloem** transports sugars produced by photosynthesis to wherever they are needed, including non-photosynthetic tissue like roots and developing fruit."
+       ]
+      },
+      {
+       "heading": "Moving Water Without a Pump",
+       "body": [
+        "Water rises through xylem by the **cohesion-tension theory**: water evaporating from leaf surfaces (**transpiration**) pulls the entire connected column of water upward, the same way sucking on a straw pulls liquid up, because water's hydrogen-bonded cohesion keeps the column from breaking. This makes transpiration, not a pump, the actual engine driving water transport in most plants.",
+        "Phloem works on a different principle, **pressure flow**: sugar is actively loaded into phloem cells near where it's made (a leaf), water follows by osmosis, raising pressure there, and that pressure pushes the sugar-water solution toward areas of lower pressure, where sugar is being used or stored, such as roots or fruit."
+       ],
+       "example": {
+        "problem": "A tree absorbs a total of 404 liters of water from the soil in one day. Of that, 4 liters are used directly in photosynthesis and growth, and the rest is lost through transpiration. What percentage of the water absorbed is lost through transpiration versus used metabolically?",
+        "steps": [
+         "Calculate water used metabolically as a percentage: 4 ÷ 404 ≈ 0.0099, or about 1%.",
+         "Calculate water lost to transpiration: 404 − 4 = 400 liters.",
+         "Express that as a percentage of the total: 400 ÷ 404 ≈ 0.9901, or about 99%."
+        ],
+        "answer": "About 99% of the absorbed water is lost through transpiration, while only about 1% is actually used for photosynthesis and growth."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "xylem",
+       "def": "Plant vascular tissue that transports water and minerals upward from roots to leaves."
+      },
+      {
+       "term": "phloem",
+       "def": "Plant vascular tissue that transports sugars from where they are made to where they are used or stored."
+      },
+      {
+       "term": "transpiration",
+       "def": "The evaporation of water from a plant's leaf surfaces, which pulls water upward through the xylem."
+      },
+      {
+       "term": "cohesion-tension theory",
+       "def": "The explanation for water transport in xylem based on water's cohesive hydrogen bonding and the pull created by transpiration."
+      },
+      {
+       "term": "stomata",
+       "def": "Small, adjustable pores on a leaf's surface that control gas exchange and water loss."
+      },
+      {
+       "term": "translocation",
+       "def": "The movement of sugars through phloem via pressure flow."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What ultimately drives water upward through a tall tree's xylem, given that plants have no pump equivalent to a heart?",
+       "choices": [
+        "Active transport by root cells alone",
+        "Transpiration pulling on a cohesive column of water",
+        "Gravity pulling water upward",
+        "Photosynthesis directly pumping water"
+       ],
+       "answer": 1,
+       "explain": "Water evaporating from leaves during transpiration creates tension that pulls the entire cohesive water column upward through the xylem, requiring no pump."
+      },
+      {
+       "q": "Sugar produced in a leaf needs to reach a growing root far below ground. Which tissue transports it there, and by what mechanism?",
+       "choices": [
+        "Xylem, by cohesion-tension",
+        "Phloem, by pressure flow",
+        "Stomata, by diffusion",
+        "Root hairs, by active transport alone"
+       ],
+       "answer": 1,
+       "explain": "Phloem carries sugars from source to sink tissues via pressure flow: sugar loading raises pressure near the leaf, pushing solution toward areas of lower pressure like the root."
+      },
+      {
+       "q": "A plant absorbs 200 liters of water in a day and uses only 2 liters for photosynthesis and growth. What percentage of absorbed water is lost through transpiration?",
+       "choices": [
+        "1%",
+        "50%",
+        "99%",
+        "2%"
+       ],
+       "answer": 2,
+       "explain": "198 of the 200 liters (200 − 2) are lost to transpiration; 198 ÷ 200 = 0.99, or 99%."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Animal Tissues and Homeostasis",
+     "minutes": 14,
+     "intro": "Every organ in your body, however specialized, is built from combinations of just four basic tissue types, and every one of those organs is quietly working to keep your internal conditions inside a narrow survivable range. Both ideas, tissue types and homeostasis, are the foundation for every organ-system topic that follows in biology and physiology.",
+     "sections": [
+      {
+       "heading": "The Four Animal Tissue Types",
+       "body": [
+        "**Epithelial tissue** covers body surfaces and lines cavities and organs, forming protective and absorptive barriers such as skin and the lining of the intestines. **Connective tissue** binds, supports, and cushions other tissues, and includes an unusually broad range of forms, from bone and cartilage to blood and the fat that pads your organs.",
+        "**Muscle tissue** contracts to produce movement, and comes in three types: skeletal (voluntary movement), cardiac (the heart), and smooth (involuntary, found in organ walls like the gut). **Nervous tissue** generates and transmits electrical signals, forming the brain, spinal cord, and nerves that coordinate the rest of the body."
+       ]
+      },
+      {
+       "heading": "Homeostasis and Negative Feedback",
+       "body": [
+        "**Homeostasis** is the maintenance of a stable internal environment, temperature, pH, glucose level, water balance, despite a constantly changing external environment. Most homeostatic control uses **negative feedback**: a **receptor** detects a deviation from the **set point**, a control center processes that information, and an **effector** acts to counteract the deviation and push the variable back toward the set point.",
+        "Negative feedback is inherently self-limiting: once the variable returns to its set point, the correcting signal shuts off, which is exactly why body temperature does not overcorrect and swing wildly past normal after you cool down from exercise."
+       ],
+       "example": {
+        "problem": "During exercise, a person's core body temperature rises from the normal set point of about 37°C to 38.5°C. Describe the negative feedback loop that returns it to normal.",
+        "steps": [
+         "Temperature receptors in the skin and hypothalamus detect the rise above the 37°C set point.",
+         "The hypothalamus (control center) processes this signal and activates effectors.",
+         "Sweat glands increase sweat production for evaporative cooling, and blood vessels near the skin dilate to radiate more heat, both increasing heat loss until temperature returns to 37°C, at which point the signal to the effectors shuts off."
+        ],
+        "answer": "Sweating and skin vasodilation increase heat loss until temperature returns to the 37°C set point, then the corrective signals stop, which is a textbook negative feedback loop."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "epithelial tissue",
+       "def": "Tissue that covers body surfaces and lines cavities and organs."
+      },
+      {
+       "term": "connective tissue",
+       "def": "Tissue that binds, supports, or cushions other tissues, including bone, cartilage, blood, and fat."
+      },
+      {
+       "term": "homeostasis",
+       "def": "The maintenance of a stable internal environment despite external changes."
+      },
+      {
+       "term": "negative feedback",
+       "def": "A control loop in which a response counteracts a deviation from the set point, returning the system toward normal."
+      },
+      {
+       "term": "set point",
+       "def": "The target value a homeostatic system works to maintain."
+      },
+      {
+       "term": "effector",
+       "def": "A structure that carries out the response in a homeostatic feedback loop."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which tissue type lines the inside of the small intestine and absorbs nutrients?",
+       "choices": [
+        "Muscle tissue",
+        "Nervous tissue",
+        "Epithelial tissue",
+        "Connective tissue"
+       ],
+       "answer": 2,
+       "explain": "Epithelial tissue forms protective and absorptive linings and coverings throughout the body, including the intestinal lining where nutrient absorption occurs."
+      },
+      {
+       "q": "In a negative feedback loop for blood glucose, what is the role of the effector?",
+       "choices": [
+        "It detects the initial change in glucose level",
+        "It carries out the response that corrects the deviation, such as insulin causing cells to take up glucose",
+        "It sets the target glucose level",
+        "It has no functional role in the loop"
+       ],
+       "answer": 1,
+       "explain": "The effector executes the corrective action; for blood glucose, insulin-triggered glucose uptake by cells is the effector response that lowers blood glucose back toward the set point."
+      },
+      {
+       "q": "Why does negative feedback typically prevent a corrected variable from overshooting far past its set point?",
+       "choices": [
+        "Because effectors work faster than receptors",
+        "Because the corrective signal shuts off once the variable returns to the set point",
+        "Because homeostasis ignores small deviations",
+        "Because only positive feedback can overshoot"
+       ],
+       "answer": 1,
+       "explain": "As the variable approaches the set point, the deviation shrinks, so the receptor's signal weakens and the effector's response tapers off, which keeps the system from overshooting significantly."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Reproduction and Development",
+     "minutes": 13,
+     "intro": "Plants and animals solve the problem of making the next generation in strikingly different ways, one relying on wind, water, or insects to move sex cells that cannot move themselves, the other usually bringing sex cells together directly. Both processes end in the same milestone: a single fertilized cell developing into a complex multicellular body.",
+     "sections": [
+      {
+       "heading": "Plant Reproduction",
+       "body": [
+        "Most plants reproduce sexually through flowers, structures that produce and protect the reproductive cells. **Pollination**, the transfer of pollen (containing sperm cells) from a flower's male structures to the female structures, is often carried out by wind or animal pollinators like bees, which are drawn in by color, scent, and nectar rewards. After fertilization, the ovule develops into a **seed**, containing an embryo and a food supply, while the surrounding tissue often develops into a fruit that aids seed dispersal.",
+        "Plants also show **alternation of generations**, cycling between a multicellular diploid stage (the familiar plant body, called the sporophyte) and a multicellular haploid stage (the gametophyte), a life cycle pattern not seen in animals."
+       ]
+      },
+      {
+       "heading": "Animal Reproduction and Development",
+       "body": [
+        "Animal reproduction typically begins with **fertilization**, the fusion of a haploid sperm and egg into a diploid **zygote**. The zygote then undergoes rapid cell divisions called **cleavage**, producing a solid ball of cells and then a hollow ball called a blastula, without an overall increase in size.",
+        "During **gastrulation**, cells rearrange into three distinct layers, ectoderm (which becomes skin and nervous tissue), mesoderm (which becomes muscle, bone, and blood), and endoderm (which becomes the lining of the digestive and respiratory tracts). Nearly every animal organ can be traced back to one of these three germ layers, which is why gastrulation is considered one of the most important events in animal development."
+       ],
+       "example": {
+        "problem": "A packet contains 200 seeds with an 85% germination rate. How many seeds would be expected to germinate if planted under ideal conditions?",
+        "steps": [
+         "Multiply the total number of seeds by the germination rate expressed as a decimal.",
+         "200 × 0.85 = 170."
+        ],
+        "answer": "About 170 of the 200 seeds are expected to germinate."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "pollination",
+       "def": "The transfer of pollen from a flower's male structures to its female structures."
+      },
+      {
+       "term": "fertilization",
+       "def": "The fusion of a sperm and egg to form a diploid zygote."
+      },
+      {
+       "term": "zygote",
+       "def": "The diploid cell formed immediately after fertilization."
+      },
+      {
+       "term": "gastrulation",
+       "def": "The developmental process that forms the three germ layers: ectoderm, mesoderm, and endoderm."
+      },
+      {
+       "term": "alternation of generations",
+       "def": "A life cycle, found in plants, that alternates between multicellular haploid and diploid stages."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which structure develops from a fertilized ovule and contains a plant embryo along with a food supply?",
+       "choices": [
+        "Pollen grain",
+        "Seed",
+        "Stoma",
+        "Xylem vessel"
+       ],
+       "answer": 1,
+       "explain": "After fertilization, the ovule develops into a seed, which packages the embryo together with stored nutrients to support early growth."
+      },
+      {
+       "q": "During animal development, which germ layer formed at gastrulation gives rise to muscle and bone?",
+       "choices": [
+        "Ectoderm",
+        "Mesoderm",
+        "Endoderm",
+        "Blastula"
+       ],
+       "answer": 1,
+       "explain": "Mesoderm, the middle germ layer formed during gastrulation, develops into muscle, bone, blood, and related connective tissues."
+      },
+      {
+       "q": "A farmer plants 500 seeds with a known 90% germination rate. How many seeds are expected to germinate?",
+       "choices": [
+        "450",
+        "50",
+        "500",
+        "90"
+       ],
+       "answer": 0,
+       "explain": "500 × 0.90 = 450 seeds expected to germinate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Ecology",
+   "summary": "How populations grow and hit limits, how energy and nutrients move through ecosystems, and the scale of today's biodiversity crisis.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Population Growth and Limits",
+     "minutes": 14,
+     "intro": "A population with unlimited resources grows explosively, doubling again and again; a real population never gets that luxury for long. Comparing the two growth models, exponential and logistic, explains everything from bacterial cultures in a dish to deer populations crashing after a mild winter.",
+     "sections": [
+      {
+       "heading": "Exponential Growth",
+       "body": [
+        "**Exponential growth** occurs when a population's growth rate is proportional to its current size and resources are effectively unlimited, producing a J-shaped curve that gets steeper over time. This pattern shows up in real biology mainly in short bursts: a bacterial colony in fresh growth medium, or an invasive species colonizing new territory with no natural predators yet.",
+        "Exponential growth can only be sustained briefly in nature, because a growing population inevitably runs into limited food, space, or accumulating waste, which is why unchecked exponential growth is the exception rather than the rule."
+       ],
+       "example": {
+        "problem": "A bacterial population starts at 100 cells and doubles every hour under ideal conditions. How many cells are present after 5 hours?",
+        "steps": [
+         "Doubling n times multiplies the starting population by 2^n.",
+         "After 5 hours, n = 5, so the multiplier is 2^5 = 32.",
+         "Multiply the starting population by that factor: 100 × 32."
+        ],
+        "answer": "3,200 cells after 5 hours."
+       }
+      },
+      {
+       "heading": "Logistic Growth and Carrying Capacity",
+       "body": [
+        "**Logistic growth** accounts for limited resources: population growth slows as the population approaches the environment's **carrying capacity** (K), the maximum population size that habitat's resources can sustainably support, producing an S-shaped curve that levels off rather than climbing forever.",
+        "**Limiting factors**, such as food, water, nesting space, and predation, control where carrying capacity sits. Some limiting factors are **density-dependent**, meaning their impact grows stronger as population density increases (disease spreads faster in crowded populations), while others are **density-independent**, affecting a population regardless of its size (a wildfire or severe freeze)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "exponential growth",
+       "def": "Population growth proportional to current size, producing an accelerating J-shaped curve under unlimited resources."
+      },
+      {
+       "term": "logistic growth",
+       "def": "Population growth that slows as the population nears carrying capacity, producing an S-shaped curve."
+      },
+      {
+       "term": "carrying capacity",
+       "def": "The maximum population size an environment can sustainably support."
+      },
+      {
+       "term": "limiting factor",
+       "def": "A resource or condition that restricts population growth."
+      },
+      {
+       "term": "density-dependent factor",
+       "def": "A limiting factor whose effect on a population intensifies as population density increases."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A population of 50 rabbits doubles every 3 months with no predators or food limits. How many rabbits are there after 9 months?",
+       "choices": [
+        "150",
+        "200",
+        "400",
+        "100"
+       ],
+       "answer": 2,
+       "explain": "Doubling occurs 3 times in 9 months (2^3 = 8); 50 × 8 = 400 rabbits."
+      },
+      {
+       "q": "What does the leveling-off portion of a logistic growth curve represent?",
+       "choices": [
+        "The population has gone extinct",
+        "The population is approaching its environment's carrying capacity",
+        "Exponential growth is accelerating",
+        "Predators have all died out"
+       ],
+       "answer": 1,
+       "explain": "As a population nears carrying capacity, limited resources slow the growth rate, flattening the curve at the environment's maximum sustainable population size."
+      },
+      {
+       "q": "Disease spreads faster and kills more individuals as a population becomes more crowded. This is an example of what kind of limiting factor?",
+       "choices": [
+        "Density-independent",
+        "Density-dependent",
+        "Exponential",
+        "A carrying capacity increase"
+       ],
+       "answer": 1,
+       "explain": "Because disease's impact grows stronger with higher population density, it is a density-dependent limiting factor, unlike events such as wildfires that strike regardless of density."
+      },
+      {
+       "q": "Which growth pattern produces a J-shaped curve rather than an S-shaped curve?",
+       "choices": [
+        "Logistic growth",
+        "Exponential growth",
+        "Growth at carrying capacity",
+        "Density-dependent growth"
+       ],
+       "answer": 1,
+       "explain": "Exponential growth, unconstrained by limiting resources, accelerates continuously and produces the characteristic J-shaped curve."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Energy Flow and Nutrient Cycles",
+     "minutes": 13,
+     "intro": "Energy moves through an ecosystem in one direction and is mostly lost along the way, while the chemical elements life is built from, carbon, nitrogen, water, cycle around again and again. Both patterns explain why food chains are short and why life depends on decomposers and microbes most people never think about.",
+     "sections": [
+      {
+       "heading": "Trophic Levels and the Ten Percent Rule",
+       "body": [
+        "Energy enters most ecosystems through **producers** capturing sunlight, then passes to primary consumers that eat producers, secondary consumers that eat primary consumers, and so on up the food chain, with **decomposers** breaking down dead material at every level and returning nutrients to the system. Each step is a **trophic level**.",
+        "At each transfer between trophic levels, roughly 90% of the energy is lost as heat from metabolism or simply never consumed, leaving only about 10% available to the next level, a pattern called the **ten percent rule**. This is the fundamental reason food chains are rarely longer than four or five levels and top predators are always far less abundant than the producers supporting them."
+       ],
+       "example": {
+        "problem": "A field of producers contains 50,000 kilocalories of energy. Using the ten percent rule, how much energy is available to tertiary consumers, three trophic levels above the producers?",
+        "steps": [
+         "Producers to primary consumers: 50,000 × 0.10 = 5,000 kcal.",
+         "Primary to secondary consumers: 5,000 × 0.10 = 500 kcal.",
+         "Secondary to tertiary consumers: 500 × 0.10 = 50 kcal."
+        ],
+        "answer": "50 kilocalories are available to tertiary consumers, just 0.1% of the original 50,000 kcal."
+       }
+      },
+      {
+       "heading": "Biogeochemical Cycles",
+       "body": [
+        "Unlike energy, matter cycles repeatedly through ecosystems in **biogeochemical cycles**. The **carbon cycle** moves carbon between the atmosphere (as CO2), living organisms (via photosynthesis and respiration), and long-term storage in oceans, rocks, and fossil fuels. The **nitrogen cycle** depends heavily on bacteria: atmospheric nitrogen gas (N2) is largely unusable by most organisms until **nitrogen fixation** by specialized bacteria converts it into forms like ammonium that plants can absorb.",
+        "The **water cycle** moves water between oceans, atmosphere, and land through evaporation, condensation, and precipitation, while also carrying dissolved nutrients along with it. Disrupting any of these cycles, for instance by burning large amounts of fossil fuel or over-applying nitrogen fertilizer, has consequences that ripple through the whole ecosystem."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "trophic level",
+       "def": "An organism's position in a food chain, such as producer, primary consumer, or secondary consumer."
+      },
+      {
+       "term": "ten percent rule",
+       "def": "The observation that roughly only 10% of energy transfers from one trophic level to the next."
+      },
+      {
+       "term": "producer",
+       "def": "An organism, typically a plant or alga, that captures energy from sunlight to make its own food."
+      },
+      {
+       "term": "decomposer",
+       "def": "An organism that breaks down dead organic matter and recycles nutrients back into the ecosystem."
+      },
+      {
+       "term": "nitrogen fixation",
+       "def": "The conversion of atmospheric nitrogen gas into forms usable by plants, carried out mainly by specialized bacteria."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A pond ecosystem's producers contain 20,000 kcal of energy. Using the ten percent rule, how much energy reaches the secondary consumers (two trophic levels up)?",
+       "choices": [
+        "2,000 kcal",
+        "200 kcal",
+        "20,000 kcal",
+        "20 kcal"
+       ],
+       "answer": 1,
+       "explain": "Producers to primary consumers: 20,000 × 0.10 = 2,000 kcal; primary to secondary consumers: 2,000 × 0.10 = 200 kcal."
+      },
+      {
+       "q": "Why are top predators, like eagles or sharks, always much less abundant than the producers at the base of their food chain?",
+       "choices": [
+        "Because they reproduce more slowly only",
+        "Because roughly 90% of energy is lost at each trophic transfer, leaving little to support upper levels",
+        "Because producers are toxic to predators",
+        "Because predators never eat producers directly"
+       ],
+       "answer": 1,
+       "explain": "The ten percent rule means each successive trophic level has only about a tenth of the energy of the level below it, so there is far less total energy available to support top predators."
+      },
+      {
+       "q": "Most plants cannot use atmospheric nitrogen gas (N2) directly. What process converts it into a usable form like ammonium?",
+       "choices": [
+        "Photosynthesis",
+        "Nitrogen fixation by specialized bacteria",
+        "The ten percent rule",
+        "Transpiration"
+       ],
+       "answer": 1,
+       "explain": "Nitrogen-fixing bacteria convert inert atmospheric N2 into ammonium or related compounds that plant roots can absorb and use to build proteins and nucleic acids."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Biodiversity and Human Impact",
+     "minutes": 12,
+     "intro": "Biologists estimate species are currently going extinct at a rate far above the natural background level, driven almost entirely by human activity. Understanding the specific mechanisms behind that loss, habitat destruction chief among them, is the first step toward slowing it.",
+     "sections": [
+      {
+       "heading": "Measuring Biodiversity",
+       "body": [
+        "**Biodiversity** refers to the variety of life at multiple levels: genetic diversity within a species, species diversity within a community, and ecosystem diversity across a landscape. High biodiversity generally makes ecosystems more resilient, able to absorb disturbances like disease or drought because functional redundancy among species helps maintain overall ecosystem processes even if some species decline.",
+        "Biodiversity is not spread evenly across the planet; tropical regions, especially rainforests and coral reefs, hold a disproportionate share of Earth's total species richness despite covering a comparatively small fraction of Earth's surface."
+       ]
+      },
+      {
+       "heading": "Human-Driven Threats to Biodiversity",
+       "body": [
+        "**Habitat destruction and fragmentation**, converting forest or grassland to farmland or cities, is the single largest driver of biodiversity loss worldwide, since it directly removes the space and resources species need. **Invasive species**, introduced deliberately or accidentally to new regions, can outcompete, prey on, or introduce disease to native species that never evolved defenses against them.",
+        "**Climate change** shifts temperature and precipitation patterns faster than many species can migrate or adapt, while **overharvesting**, overfishing, poaching, and unsustainable logging directly remove individuals faster than populations can replace them. These threats frequently compound each other, a fragmented, climate-stressed population being far more vulnerable to a single invasive predator or disease than an intact one would be."
+       ],
+       "example": {
+        "problem": "A forest that originally covered 10,000 hectares has been reduced by development to 2,500 hectares. What percentage of the original habitat remains, and what percentage has been lost?",
+        "steps": [
+         "Calculate the remaining percentage: 2,500 ÷ 10,000 = 0.25, or 25%.",
+         "Calculate the percentage lost: 100% − 25% = 75%."
+        ],
+        "answer": "25% of the original habitat remains; 75% has been lost."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "biodiversity",
+       "def": "The variety of life, including genetic, species, and ecosystem diversity."
+      },
+      {
+       "term": "habitat fragmentation",
+       "def": "The breaking up of a large, continuous habitat into smaller, isolated patches."
+      },
+      {
+       "term": "invasive species",
+       "def": "A non-native species introduced to a new region that causes ecological or economic harm."
+      },
+      {
+       "term": "overharvesting",
+       "def": "Removing individuals from a population faster than it can naturally replace them."
+      },
+      {
+       "term": "endangered species",
+       "def": "A species at serious risk of extinction throughout all or a significant part of its range."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is generally considered the single largest driver of biodiversity loss worldwide?",
+       "choices": [
+        "Invasive species",
+        "Habitat destruction and fragmentation",
+        "Overharvesting alone",
+        "Volcanic eruptions"
+       ],
+       "answer": 1,
+       "explain": "Converting natural habitat to farmland, cities, or roads directly eliminates the space and resources species need, making habitat destruction the leading overall cause of biodiversity loss."
+      },
+      {
+       "q": "A wetland shrinks from 8,000 hectares to 6,000 hectares due to development. What percentage of the original wetland has been lost?",
+       "choices": [
+        "25%",
+        "75%",
+        "20%",
+        "60%"
+       ],
+       "answer": 0,
+       "explain": "The loss is 8,000 − 6,000 = 2,000 hectares; 2,000 ÷ 8,000 = 0.25, or 25% lost."
+      },
+      {
+       "q": "Why can invasive species cause severe harm to an ecosystem they are introduced into?",
+       "choices": [
+        "They always die out immediately",
+        "Native species have not evolved defenses against them, allowing invasives to outcompete or prey on natives unchecked",
+        "They only affect plant species",
+        "They increase biodiversity in every case"
+       ],
+       "answer": 1,
+       "explain": "Because native species did not co-evolve with the invader, they often lack effective defenses or competitive strategies against it, letting the invasive species spread and displace natives."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
