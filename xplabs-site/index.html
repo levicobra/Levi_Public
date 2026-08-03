@@ -4,209 +4,329 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>XPLabs</title>
-<meta name="description" content="XPLabs is an independent studio in Honolulu building games and software. Home of The Last Station, Space Glyph, Life XP, Hearth &amp; Hunt, and a free military benefits directory.">
-<meta name="theme-color" content="#07090A">
-<meta name="color-scheme" content="dark">
+<meta name="description" content="XPLabs builds games. Four titles in development or live across Unreal Engine, native iOS and Roblox: The Last Station, Space Glyph, Life XP, Hearth &amp; Hunt.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#17171B">
 <link rel="icon" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://xplabs.us/">
 <meta property="og:title" content="XPLabs">
-<meta property="og:description" content="An independent studio in Honolulu building games and software.">
+<meta property="og:description" content="Four games across Unreal Engine, native iOS and Roblox.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xplabs.us/">
 <meta property="og:image" content="https://xplabs.us/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-
 <style>
 /* =====================================================================
-   XPLabs — site root
-   Tokens match games/index.html and games/the-last-station/index.html.
-   Change a colour here and you must change it in those two files too.
+   XPLABS — site root
+
+   TO EDIT TEXT: search for the words you want to change.
+   TO CHANGE COLOURS: edit :root below.
+
+   COLOUR RULE (important): each game owns one colour. Three of them are
+   dark enough for white type. MUSTARD IS NOT — that slab uses dark type
+   instead. Mustard must never be used as text on the bone background;
+   it only ever works as a ground.
    ===================================================================== */
 :root{
-  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;
-  --line:#1E2527; --line-soft:#161C1D;
-  --paper:#E9EFEC; --muted:#9BA8A3; --muted-dim:#7E8B86;
-  --signal:#3DE38A; --amber:#F5A524;
-  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  --t-micro:0.6875rem; --t-small:0.8125rem; --t-body:1.0625rem;
-  --t-lead: clamp(1.125rem, 1.02rem + 0.42vw, 1.375rem);
-  --t-h3:   clamp(1.1875rem, 1.12rem + 0.3vw, 1.4375rem);
-  --t-h2:   clamp(2.0625rem, 1.55rem + 2.35vw, 3.375rem);
-  --gap:1.5rem; --section-y: clamp(4rem, 7vw, 7rem);
-  --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1180px;
-  --radius:3px; --header-h:60px;
+  --ink:#17171B;         /* 15.0:1 on bone */
+  --ink-2:#4E4E56;       /* 7.4:1 on bone  */
+  --bone:#F0EBE0;
+  --bone-2:#E6E0D2;
+
+  /* game grounds */
+  --teal:#0B6155;        /* white type — 7.4:1  */
+  --ultra:#20338C;       /* white type — 11.0:1 */
+  --rust:#A63423;        /* white type — 6.7:1  */
+  --mustard:#C98A06;     /* DARK type  — 6.1:1  */
+
+  --display:"Arial Black","Arial Bold",Impact,"Helvetica Neue",Arial,sans-serif;
+  --text:Georgia,"Iowan Old Style",Charter,"Times New Roman",serif;
+  --ui:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+
+  /* ONE modular scale, ratio 1.25, fluid between 360 and 1400.
+     Every size on the page comes from here. */
+  --s-0: 1.0625rem;                                   /* 17px body        */
+  --s-1: clamp(1.25rem, 1.14rem + 0.48vw, 1.5rem);
+  --s-2: clamp(1.5rem,  1.3rem  + 0.9vw,  2rem);
+  --s-3: clamp(1.875rem,1.5rem  + 1.7vw,  2.75rem);
+  --s-4: clamp(2.25rem, 1.6rem  + 2.9vw,  4rem);
+  --s-5: clamp(2.75rem, 1.5rem  + 5.6vw,  6.5rem);    /* hero only        */
+  --s-min: 0.8125rem;                                 /* 13px labels      */
+
+  --wrap:72rem;
+  --gutter: clamp(1.15rem, 4vw, 3rem);
 }
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);
-  font-size:var(--t-body);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{
+  margin:0;background:var(--bone);color:var(--ink);
+  font-family:var(--text);font-size:var(--s-0);line-height:1.6;
+  overflow-x:clip;-webkit-font-smoothing:antialiased;
+}
 img{max-width:100%;height:auto;display:block}
+p{margin:0}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:900;line-height:.94;
+  /* Arial Black is already tightly fitted — it needs LESS negative tracking,
+     not more. One value, applied everywhere. */
+  letter-spacing:-.012em;text-wrap:balance}
 a{color:inherit}
-.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:var(--gutter);top:.5rem;z-index:99;background:var(--signal);color:#04140C;padding:.6rem 1rem;border-radius:var(--radius)}
-:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+.skip:focus{left:.6rem;top:.6rem;z-index:99;background:var(--ink);color:var(--bone);padding:.7rem 1rem}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.slab :focus-visible{outline-color:#fff}
 
-.site-header{position:sticky;top:0;z-index:40;background:rgba(7,9,10,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--header-h)}
-.brand{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);
-  letter-spacing:.18em;text-transform:uppercase;text-decoration:none;font-weight:600}
-.nav-links{display:none;gap:1.75rem}
-@media (min-width:820px){.nav-links{display:flex}}
-.nav-links a{font-size:.9375rem;color:var(--muted);text-decoration:none;transition:color .16s}
-.nav-links a:hover{color:var(--paper)}
-.tick{display:inline-flex;align-items:flex-end;gap:2px;height:11px}
-.tick i{width:2px;background:var(--signal);border-radius:1px;display:block}
-.tick i:nth-child(1){height:35%}.tick i:nth-child(2){height:65%}
-.tick i:nth-child(3){height:100%}.tick i:nth-child(4){height:50%}
+/* ---------- masthead ---------- */
+.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+  gap:.5rem 1rem;padding-block:1.1rem;border-bottom:3px solid var(--ink)}
+.logo{font-family:var(--display);font-size:var(--s-1);letter-spacing:-.02em;text-decoration:none}
+.top nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--ui);font-size:var(--s-min)}
+.top nav a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
+.top nav a:hover{border-bottom-color:var(--ink)}
 
 /* ---------- hero ---------- */
-.hero{padding-block:calc(var(--section-y)*.9) var(--section-y);
-  background:
-    radial-gradient(120% 80% at 12% 0%, rgba(61,227,138,.07), transparent 62%),
-    linear-gradient(180deg, var(--ink-2), var(--ink));
-  border-bottom:1px solid var(--line-soft)}
-.eyebrow{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);
-  letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin:0 0 1.5rem}
-h1{font-size:var(--t-h2);line-height:1.02;letter-spacing:-.034em;margin:0 0 1.5rem;max-width:16ch;text-wrap:balance}
-.lead{font-size:var(--t-lead);color:var(--muted);max-width:56ch;margin:0 0 2rem}
-.chips{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;padding:0;margin:0}
-.chip{display:inline-flex;align-items:center;gap:.5rem;padding:.42rem .8rem;border:1px solid var(--line);
-  border-radius:100px;background:rgba(255,255,255,.012);font-family:var(--mono);font-size:var(--t-micro);
-  letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.chip--live{border-color:rgba(61,227,138,.35);color:var(--signal)}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--signal)}
+.hero{padding-block:clamp(2.5rem,7vw,5.5rem) clamp(2rem,5vw,4rem)}
+.hero h1{font-size:var(--s-5)}
+.hero h1 em{font-style:normal;color:var(--rust)}
+.hero__sub{font-size:var(--s-1);max-width:34ch;margin-top:1.4rem;line-height:1.45}
+.hero__facts{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin-top:1.75rem;
+  font-family:var(--ui);font-size:var(--s-min);color:var(--ink-2)}
+.hero__facts b{color:var(--ink);font-weight:700}
+
+/* ---------- full-bleed colour plate ----------
+   margin-left calc(50% - 50vw) + matching padding pulls the slab to the
+   viewport edge from inside the centred wrapper, at every width. */
+.slab{
+  margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+  padding-left:calc(50vw - 50% + var(--gutter));padding-right:calc(50vw - 50% + var(--gutter));
+  padding-block:clamp(2.25rem,5vw,4rem);
+  color:#fff;
+}
+.slab--teal{background:var(--teal)}
+.slab--ultra{background:var(--ultra)}
+.slab--rust{background:var(--rust)}
+.slab--mustard{background:var(--mustard);color:var(--ink)}   /* the exception */
+.slab__in{max-width:var(--wrap);margin-inline:auto}
+
+.g__label{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;opacity:.82;margin-bottom:.5rem}
+.g__name{font-size:var(--s-3)}
+.slab--teal .g__name{font-size:var(--s-4)}    /* flagship reads bigger at every width */
+.g__kind{font-family:var(--ui);font-size:var(--s-min);margin-top:.5rem;opacity:.88}
+.g__body{margin-top:1.1rem;max-width:52ch;line-height:1.6}
+.g__body + .g__body{margin-top:.8rem}
+.g__go{display:inline-block;margin-top:1.4rem;font-family:var(--ui);font-size:var(--s-min);
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+  border-bottom:3px solid currentColor;padding-bottom:3px}
+
+/* specs — a real list, wraps instead of colliding at 320px */
+.g__specs{display:flex;flex-wrap:wrap;gap:.4rem .5rem;margin-top:1.4rem;
+  font-family:var(--ui);font-size:var(--s-min)}
+.g__specs li{border:2px solid currentColor;padding:.3rem .6rem;white-space:nowrap}
+
+/* the flagship gets art and a second column; the others deliberately do not */
+.g--lead{display:grid;gap:clamp(1.5rem,3vw,2.5rem)}
+@media (min-width:900px){.g--lead{grid-template-columns:1.15fr .85fr;align-items:center}}
+.g--lead figure{margin:0}
+.g--lead img{width:100%;border:3px solid rgba(255,255,255,.28)}
+.g--lead figcaption{font-family:var(--ui);font-size:var(--s-min);opacity:.8;margin-top:.5rem}
+
+/* the closing slab sets its prose in two columns so it fills the plate
+   instead of leaving half of it empty */
+.duo{columns:2;column-gap:clamp(2rem,4vw,3.5rem);margin-top:1.1rem}
+.duo p{break-inside:avoid;margin:0;max-width:none}
+.duo p + p{margin-top:.8rem}
+@media (max-width:820px){.duo{columns:1}}
+
+/* the two middle games share a row on wide screens — breaks the 4x parallel rhythm */
+.pair{display:grid;gap:clamp(2rem,4vw,3.5rem)}
+@media (min-width:960px){.pair{grid-template-columns:1fr 1fr}}
 
 /* ---------- directories ---------- */
-.dirs{padding-block:var(--section-y)}
-.sec-label{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.2em;text-transform:uppercase;
-  color:var(--muted-dim);margin:0 0 2rem;display:flex;align-items:center;gap:1rem}
-.sec-label::after{content:"";flex:1;height:1px;background:var(--line-soft)}
-.grid{display:grid;gap:1.25rem}
-@media (min-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
-  padding:clamp(1.5rem,3vw,2rem);text-decoration:none;display:flex;flex-direction:column;
-  transition:border-color .18s, background .18s}
-.card:hover{border-color:#2C3639;background:var(--surface-2)}
-.card__num{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.2em;color:var(--muted-dim);margin:0 0 .9rem}
-.card__title{font-size:var(--t-h3);margin:0 0 .6rem;letter-spacing:-.014em}
-.card__body{color:var(--muted);margin:0 0 1.25rem;font-size:.9375rem;flex:1}
-.card__go{font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;color:var(--signal)}
-.card--wide{grid-column:1/-1}
-.titles{list-style:none;padding:0;margin:0 0 1.25rem;display:flex;flex-wrap:wrap;gap:.5rem}
-.titles li{font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.1em;text-transform:uppercase;
-  color:var(--muted-dim);border:1px solid var(--line-soft);border-radius:2px;padding:.3rem .6rem}
+.dirs{padding-block:clamp(2.5rem,6vw,4.5rem)}
+.dirs h2{font-size:var(--s-2);margin-bottom:1.5rem}
+.dir{display:block;text-decoration:none;border-top:3px solid var(--ink);padding-block:1.15rem}
+.dir:last-of-type{border-bottom:3px solid var(--ink)}
+.dir__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem}
+.dir__n{font-family:var(--display);font-size:var(--s-2);letter-spacing:-.012em}
+.dir__arrow{font-family:var(--ui);font-size:var(--s-min);font-weight:700;margin-left:auto}
+.dir__b{color:var(--ink-2);max-width:56ch;margin-top:.35rem}
+.dir:hover{background:var(--bone-2)}
+.dir:hover .dir__n{color:var(--rust)}
 
-.site-footer{border-top:1px solid var(--line-soft);padding-block:2.5rem;color:var(--muted-dim);font-size:var(--t-small)}
-.site-footer a{color:var(--muted);text-decoration:none}
-.site-footer a:hover{color:var(--paper)}
-.foot-row{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:baseline}
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:var(--bone);padding-block:2.5rem 3rem}
+.foot__grid{display:grid;gap:1.5rem}
+@media (min-width:720px){.foot__grid{grid-template-columns:1.3fr 1fr}}
+.foot h2{font-size:var(--s-1)}
+.foot p{margin-top:.5rem;color:#C9C4B8}
+.foot a{color:var(--bone)}
+.foot__meta{margin-top:2rem;padding-top:1rem;border-top:1px solid #3A3A42;
+  font-family:var(--ui);font-size:var(--s-min);color:#9A958A}
 
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
-    transition-duration:.001ms!important;scroll-behavior:auto!important}
-}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
 </style>
 </head>
 <body>
-
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <nav class="wrap nav" aria-label="Primary">
-    <a class="brand" href="/">
-      <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      XPLabs
-    </a>
-    <div class="nav-links">
-      <a href="/games/">Games</a>
-      <a href="/engineering/">Engineering</a>
-      <a href="/military-benefits/">Military benefits</a>
-      <a href="/personal/">Personal</a>
-    </div>
+<header class="wrap top">
+  <a class="logo" href="/">XPLABS</a>
+  <nav aria-label="Primary">
+    <a href="/games/">Games</a>
+    <a href="/engineering/">Engineering</a>
+    <a href="/military-benefits/">Benefits</a>
+    <a href="/personal/">Personal</a>
   </nav>
 </header>
 
 <main id="main">
 
-<section class="hero">
-  <div class="wrap">
-    <p class="eyebrow">
-      <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      XPLabs LLC · Honolulu, Hawaiʻi
-    </p>
-    <h1>Small studio. Big signal.</h1>
-    <p class="lead">XPLabs builds sharply scoped games and software — projects chosen to be
-    finishable by a small team rather than impressive on a roadmap. Four titles are in
-    development or live, across Unreal Engine, native iOS, and Roblox.</p>
-    <ul class="chips">
-      <li class="chip chip--live"><span class="dot" aria-hidden="true"></span>4 titles</li>
-      <li class="chip">Unreal Engine</li>
-      <li class="chip">Swift</li>
-      <li class="chip">Roblox</li>
-    </ul>
-  </div>
+<section class="wrap hero">
+  <h1>XPLabs builds&nbsp;games.<br><em>Four of them.</em></h1>
+  <p class="hero__sub">A survivors game in Unreal Engine, a puzzle-defense campaign in Swift,
+  an offline life simulator, and a live Roblox world.</p>
+  <p class="hero__facts">
+    <span><b>4</b> titles</span>
+    <span><b>4</b> engines</span>
+    <span><b>1</b> live, <b>1</b> in release prep</span>
+  </p>
 </section>
 
-<section class="wrap dirs">
-  <p class="sec-label">Directory</p>
+<!-- ===== THE LAST STATION — flagship: art, second column, largest type ===== -->
+<div class="wrap">
+  <section class="slab slab--teal">
+    <div class="slab__in g--lead">
+      <div>
+        <p class="g__label">In development</p>
+        <h2 class="g__name">The Last Station</h2>
+        <p class="g__kind">Unreal Engine 5 &middot; mobile &middot; free to play</p>
+        <p class="g__body">A survivors game built for one thumb. You only steer — your equipped
+        cards fire on tap and aim is automatic. All the depth is in the loadout: five part cards
+        across Power, Weapons, Sensors, Jammers and Drones, plus five stat medallions. Kinetic
+        weapons break armoured brutes, energy weapons melt shields. That is the whole pre-mission
+        read.</p>
+        <p class="g__body">You play <b>C</b>, the last operator of a dying signal station on a
+        refurbished offshore rig. Runs last about three minutes. A restart takes two seconds.</p>
+        <ul class="g__specs">
+          <li>26 cards</li><li>8 medallions</li><li>~3 min runs</li>
+        </ul>
+        <a class="g__go" href="/games/the-last-station/">Open the title page &rarr;</a>
+      </div>
+      <figure>
+        <img src="game-art/da_world_phosphor_station_backdrop.webp" width="1672" height="941"
+             loading="eager" fetchpriority="high"
+             alt="A night-time offshore rig station lit by green phosphor light beneath a teal aurora.">
+        <figcaption>Phosphor Station — the signal you are trying to keep alive.</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
 
-  <div class="grid">
+<!-- ===== The middle two share a row — deliberately not the flagship treatment ===== -->
+<div class="wrap">
+  <section class="slab slab--ultra">
+    <div class="slab__in pair">
+      <div>
+        <p class="g__label">Release prep</p>
+        <h2 class="g__name">Space Glyph</h2>
+        <p class="g__kind">Swift 6 &middot; SpriteKit &middot; iPhone</p>
+        <p class="g__body">Matching and shooting are the same act. Your first match locks the
+        board and starts a short timed phase; every follow-up match refills the timer, so a good
+        chain is something you extend under pressure. Bigger connected matches forge stronger
+        gems — the only attack that crosses lanes.</p>
+        <p class="g__body">No ads, no subscriptions, no loot boxes, no tracking. Purchases are
+        cosmetic and never gate progress.</p>
+        <ul class="g__specs">
+          <li>100 missions</li><li>4 sectors</li><li>Premium</li>
+        </ul>
+      </div>
+      <div>
+        <p class="g__label">Playable</p>
+        <h2 class="g__name">Life XP</h2>
+        <p class="g__kind">SwiftUI &middot; SceneKit &middot; iPhone</p>
+        <p class="g__body">An offline life simulator. Walk a small town, step through any door
+        into a full-screen interior, and use the station that belongs there — a bed, a teller
+        window, a weight rack, a gig board.</p>
+        <p class="g__body">Underneath, a deterministic hour-by-hour simulation ties together work,
+        school, banking, housing, health and consequences. Every Monday the world settles up in a
+        fixed order. Money is tracked in whole cents so nothing drifts.</p>
+        <ul class="g__specs">
+          <li>17 locations</li><li>12 jobs</li><li>Fully offline</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
 
-    <a class="card card--wide" href="/games/">
-      <p class="card__num">01 / GAMES</p>
-      <h2 class="card__title">Four games, four stacks</h2>
-      <ul class="titles">
-        <li>The Last Station</li><li>Space Glyph</li><li>Life XP</li><li>Hearth &amp; Hunt</li>
+<!-- ===== HEARTH & HUNT — mustard, so DARK type. The one live title. ===== -->
+<div class="wrap">
+  <section class="slab slab--mustard">
+    <div class="slab__in">
+      <p class="g__label">Live build</p>
+      <h2 class="g__name">Hearth &amp; Hunt</h2>
+      <p class="g__kind">Roblox &middot; server-authoritative PvPvE</p>
+      <div class="duo">
+        <p>Built for two-player teams who want something relaxed and solo players who want
+        something competitive — in the same match. Keepers stay home, grow magical crops and
+        upgrade the homestead. Hunters go out into the wilds, fight creatures, contest objectives
+        and haul rare materials back. Roles switch freely.</p>
+        <p>Three terrain bands pay 1×, 2× and 3×, so the risk you take is the reward you get.
+        PvP is deliberately non-destructive and low-punishment. Everything resolves in a
+        fifteen-minute match ending in the Grand Bloom.</p>
+      </div>
+      <ul class="g__specs">
+        <li>15 min matches</li><li>Solo or duo</li><li>Keeper &middot; Hunter</li>
       </ul>
-      <p class="card__body">A mobile survivors game in Unreal Engine, a puzzle-defense campaign in
-      Swift, an offline life simulator with a deterministic economy, and a server-authoritative
-      Roblox PvPvE game.</p>
-      <span class="card__go">View the catalog →</span>
-    </a>
+    </div>
+  </section>
+</div>
 
-    <a class="card" href="/engineering/">
-      <p class="card__num">02 / ENGINEERING</p>
-      <h2 class="card__title">Engineering</h2>
-      <p class="card__body">Game design and technical work, including how these projects get built
-      — small teams, AI-augmented pipelines, and shipping on real deadlines.</p>
-      <span class="card__go">Read more →</span>
-    </a>
+<section class="wrap dirs">
+  <h2>Also here</h2>
 
-    <a class="card" href="/military-benefits/">
-      <p class="card__num">03 / MILITARY BENEFITS</p>
-      <h2 class="card__title">Military benefits</h2>
-      <p class="card__body">A free directory of benefits, programs, and discounts for service
-      members, veterans, and their families. No signup, no paywall. Thirteen categories, links
-      verified.</p>
-      <span class="card__go">Open the directory →</span>
-    </a>
+  <a class="dir" href="/games/">
+    <span class="dir__row"><span class="dir__n">Games</span><span class="dir__arrow">All four &rarr;</span></span>
+    <span class="dir__b">The full catalog, with what each title is built on and where it stands.</span>
+  </a>
 
-    <a class="card card--wide" href="/personal/">
-      <p class="card__num">04 / PERSONAL</p>
-      <h2 class="card__title">Levi Colby</h2>
-      <p class="card__body">Background, writing, and everything that does not belong under a
-      company heading.</p>
-      <span class="card__go">More →</span>
-    </a>
+  <a class="dir" href="/engineering/">
+    <span class="dir__row"><span class="dir__n">Engineering</span><span class="dir__arrow">Read &rarr;</span></span>
+    <span class="dir__b">Game design and technical work — how these get built, and what a small
+    team with an AI-augmented pipeline can actually ship.</span>
+  </a>
 
-  </div>
+  <a class="dir" href="/military-benefits/">
+    <span class="dir__row"><span class="dir__n">Military benefits</span><span class="dir__arrow">Open the directory &rarr;</span></span>
+    <span class="dir__b">A free directory of 279 programs, benefits and discounts for service
+    members, veterans and their families. No signup, no ads.</span>
+  </a>
+
+  <a class="dir" href="/personal/">
+    <span class="dir__row"><span class="dir__n">Personal</span><span class="dir__arrow">More &rarr;</span></span>
+    <span class="dir__b">Background, writing, and everything that does not belong under a company
+    heading.</span>
+  </a>
 </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap foot-row">
+<footer class="foot">
+  <div class="wrap foot__grid">
     <div>
-      <strong style="color:var(--paper)">XPLabs</strong><br>
-      Independent games. Persistent worlds. Strong signals.
+      <h2>Work with XPLabs</h2>
+      <p>Open to contract and collaboration on game design and development.
+      Email <a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a>.</p>
     </div>
     <div>
-      <a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a><br>
-      © 2026 XPLabs LLC · Honolulu, HI
+      <h2>Hiring</h2>
+      <p>Looking for a remote lead developer, Unreal Engine, royalty-based contract.
+      <a href="/games/the-last-station/#careers">Details</a>.</p>
     </div>
   </div>
+  <div class="wrap foot__meta">© 2026 XPLabs LLC · Honolulu, HI</div>
 </footer>
 
 </body>
