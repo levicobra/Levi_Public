@@ -201,22 +201,35 @@ function renderHome() {
 
   view.innerHTML = `
   <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Free · Open · Works offline</p>
-      <h1>Learn anything.<br>No internet required.</h1>
-      <p class="lead">${nSubjects} subjects from kindergarten to college — real lessons,
-      worked examples, and practice, built on OpenStax and open educational resources.
-      Visit once and the whole library lives on your device.</p>
-      <div class="hero-row">
-        <a class="btn btn-primary" href="#/search">Find a topic</a>
-        <a class="btn" href="#/library">Offline library</a>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Free · Open · Works offline</p>
+        <h1>Learn anything.<span class="h1-soft">No internet required.</span></h1>
+        <p class="lead">${nSubjects} subjects from kindergarten to college — real lessons,
+        worked examples, and practice, built on OpenStax and open educational resources.
+        Visit once and the whole library lives on your device.</p>
+        <div class="hero-row">
+          <a class="btn btn-primary" href="#/search">Find a topic</a>
+          <a class="btn" href="#/library">Offline library</a>
+        </div>
+        <p class="hero-note">No account, no tracking, no cost. Your progress stays on your device.</p>
       </div>
-      <div class="stats-row" aria-label="Your progress">
-        <div class="stat"><span class="stat-num">${done}</span><span class="stat-label">lessons completed</span></div>
-        <div class="stat"><span class="stat-num">${st}</span><span class="stat-label">day streak</span></div>
-        <div class="stat"><span class="stat-num">${nSubjects}</span><span class="stat-label">subjects available</span></div>
+      <div class="hero-panel">
+        <p class="hero-panel-head"><span>Your progress</span><span>${catalog.domains.length} domains</span></p>
+        <div class="stats-row" aria-label="Your progress">
+          <div class="stat"><span class="stat-num">${done}</span><span class="stat-label">Lessons</span></div>
+          <div class="stat"><span class="stat-num">${st}</span><span class="stat-label">Streak</span></div>
+          <div class="stat"><span class="stat-num">${nSubjects}</span><span class="stat-label">Subjects</span></div>
+        </div>
+        ${resumeCard}
+        <div class="hero-panel-foot">
+          <span class="kicker">Popular starts</span>
+          <a class="pill-link" href="#/d/k8">K–8 Foundations</a>
+          <a class="pill-link" href="#/d/math">Mathematics</a>
+          <a class="pill-link" href="#/d/cs">Computer Science</a>
+          <a class="pill-link" href="#/d/languages">Languages</a>
+        </div>
       </div>
-      ${resumeCard}
     </div>
   </section>
   <section class="wrap domains-section">
@@ -241,6 +254,7 @@ function renderDomain(id) {
       <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span>/</span><span aria-current="page">${esc(d.title)}</span></nav>
       <h1>${esc(d.title)}</h1>
       <p class="lead">${esc(d.tagline)}</p>
+      <p class="head-count">${d.subjects.length} subjects · free forever · available offline</p>
     </div>
   </section>
   <section class="wrap pad-y">
@@ -549,7 +563,7 @@ async function renderLibrary() {
   const swReady = !!(navigator.serviceWorker && navigator.serviceWorker.controller);
 
   view.innerHTML = `
-  <section class="wrap pad-y">
+  <section class="wrap pad-y library">
     <h1>Offline library</h1>
     <p class="lead">XP Education stores its entire library on your device, so lessons
     open instantly with no connection — on a plane, on deployment, or anywhere the

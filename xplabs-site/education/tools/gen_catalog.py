@@ -69,7 +69,7 @@ SOURCES = {
 # Domains: (id, title, accent, tagline, [subjects])
 # Subject: (id, title, level, blurb, source_key or None)
 DOMAINS = [
-    ("k8", "K–8 Foundations", "#FFD166",
+    ("k8", "K–8 Foundations", "#F7B955",
      "The building blocks — reading, writing, math, and science for young learners.", [
         ("reading-foundations", "Reading & Phonics", "Elementary",
          "Letters, sounds, sight words, and the road to confident reading.", None),
@@ -84,7 +84,7 @@ DOMAINS = [
         ("grammar-composition", "Grammar & Composition", "Middle school",
          "Parts of speech, sentence craft, paragraphs, and clear written expression.", None),
     ]),
-    ("math", "Mathematics", "#5BA8FF",
+    ("math", "Mathematics", "#5A9CFF",
      "From arithmetic to calculus — a complete mathematical ladder.", [
         ("prealgebra", "Prealgebra", "High school",
          "Whole numbers, fractions, decimals, and the first steps into algebraic thinking.", "prealgebra"),
@@ -113,7 +113,7 @@ DOMAINS = [
         ("differential-equations", "Differential Equations", "Advanced",
          "Modeling change — first-order, second-order, and systems of ODEs.", None),
     ]),
-    ("physical", "Physical Sciences", "#A78BFA",
+    ("physical", "Physical Sciences", "#9B8CFF",
      "Matter, energy, and the laws that govern the universe.", [
         ("physics", "College Physics", "Intro college",
          "Algebra-based physics: motion, forces, energy, waves, electricity, and light.", "college-physics"),
@@ -155,7 +155,7 @@ DOMAINS = [
         ("neuroscience", "Introduction to Neuroscience", "College",
          "Neurons, brain systems, senses, memory, and behavior.", None),
     ]),
-    ("cs", "Computer Science", "#2FD4E6",
+    ("cs", "Computer Science", "#2CD1E5",
      "Code, computation, and how to build things with software.", [
         ("intro-computer-science", "Introduction to Computer Science", "Intro college",
          "How computers work, how software is built, and the field's big ideas.", "intro-cs"),
@@ -174,7 +174,7 @@ DOMAINS = [
         ("game-development", "Game Development", "All levels",
          "Loops, entities, physics, and design — how games actually get made.", None),
     ]),
-    ("engineering", "Engineering & Trades", "#FB923C",
+    ("engineering", "Engineering & Trades", "#FF8A4C",
      "Design, build, fix — practical skills and engineering foundations.", [
         ("intro-engineering", "Introduction to Engineering", "Intro college",
          "The engineering method, disciplines, units, and design thinking.", None),
@@ -189,7 +189,7 @@ DOMAINS = [
         ("technical-drawing", "Technical Drawing & CAD", "High school",
          "Sketching, orthographic projection, dimensioning, and digital modeling.", None),
     ]),
-    ("social", "Social Sciences", "#F472B6",
+    ("social", "Social Sciences", "#F06CB4",
      "Mind, society, money, and power — the sciences of human behavior.", [
         ("psychology", "Psychology", "Intro college",
          "The science of mind and behavior, from neurons to social life.", "psychology"),
@@ -208,7 +208,7 @@ DOMAINS = [
         ("human-geography", "Human Geography", "High school",
          "Population, culture, cities, and how humans shape the planet.", None),
     ]),
-    ("history", "History", "#D4A373",
+    ("history", "History", "#C99A5E",
      "What happened, why it mattered, and how it echoes now.", [
         ("us-history", "U.S. History", "Intro college",
          "From the first peoples to the present day.", "us-history"),
@@ -223,7 +223,7 @@ DOMAINS = [
         ("military-history", "Military History", "All levels",
          "Strategy, technology, and the conflicts that shaped the world.", None),
     ]),
-    ("business", "Business & Finance", "#A3E635",
+    ("business", "Business & Finance", "#9BD645",
      "Start it, run it, fund it — business from first principles.", [
         ("intro-business", "Introduction to Business", "Intro college",
          "How businesses work: ownership, operations, people, and markets.", "intro-business"),
@@ -248,7 +248,7 @@ DOMAINS = [
         ("personal-finance", "Personal Finance", "All levels",
          "Budgeting, credit, saving, investing, taxes, and big purchases.", None),
     ]),
-    ("humanities", "Humanities", "#E4737B",
+    ("humanities", "Humanities", "#EF6A7D",
      "Ideas, stories, and the examined life.", [
         ("philosophy", "Introduction to Philosophy", "Intro college",
          "Knowledge, mind, ethics, and the big questions, argued carefully.", "philosophy"),
@@ -263,7 +263,7 @@ DOMAINS = [
         ("logic", "Logic & Critical Thinking", "Intro college",
          "Arguments, fallacies, and formal logic for clearer thinking.", None),
     ]),
-    ("languages", "Languages", "#2DD4BF",
+    ("languages", "Languages", "#24CBB4",
      "Speak to more of the world.", [
         ("spanish", "Spanish", "All levels",
          "The essentials of Spanish — sounds, grammar, and everyday conversation.", None),
@@ -280,7 +280,7 @@ DOMAINS = [
         ("asl", "American Sign Language", "All levels",
          "Fingerspelling, core signs, grammar, and Deaf culture.", None),
     ]),
-    ("health", "Health & Wellness", "#FB7185",
+    ("health", "Health & Wellness", "#FA7061",
      "The science of taking care of a human body and mind.", [
         ("nutrition", "Nutrition", "Intro college",
          "Macronutrients, micronutrients, diets, and evidence-based eating.", None),
@@ -295,7 +295,7 @@ DOMAINS = [
         ("mental-health", "Mental Health Essentials", "All levels",
          "Stress, resilience, common conditions, and finding help.", None),
     ]),
-    ("arts", "Arts & Music", "#E879F9",
+    ("arts", "Arts & Music", "#DE7BF5",
      "Make things worth looking at and listening to.", [
         ("music-theory", "Music Theory", "All levels",
          "Notes, scales, chords, rhythm, and how music fits together.", None),
@@ -310,7 +310,7 @@ DOMAINS = [
         ("creative-writing", "Creative Writing", "All levels",
          "Fiction, poetry, and narrative craft — with exercises that work.", None),
     ]),
-    ("success", "College & Career Success", "#CBD5E1",
+    ("success", "College & Career Success", "#8FA9CC",
      "How to study, get hired, and thrive.", [
         ("college-success", "College Success", "Intro college",
          "Time, study strategies, wellbeing, and finishing what you start.", "college-success"),

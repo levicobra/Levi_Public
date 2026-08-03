@@ -1,0 +1,734 @@
+{
+ "id": "elementary-math",
+ "title": "Elementary Math",
+ "domain": "k8",
+ "level": "Elementary",
+ "description": "A complete tour of elementary arithmetic: counting and place value, addition and subtraction with regrouping, multiplication and division, fractions, and the practical math of shapes, time, money, and graphs. Every lesson works real problems all the way to the answer.",
+ "outcomes": [
+  "You can read, write, compare, and round numbers into the hundreds using place value.",
+  "You can add and subtract multi-digit numbers, regrouping when needed, and check your answer.",
+  "You can multiply and divide using equal groups, arrays, and fact strategies.",
+  "You can name, compare, and add fractions with the same denominator.",
+  "You can find the perimeter and area of rectangles.",
+  "You can tell time, count money, and read bar graphs and pictographs."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Numbers and Place Value",
+   "summary": "Numbers have structure. Learn to count past 100, see what each digit is worth, and compare and round with confidence.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Counting to 120 and Skip Counting",
+     "minutes": 10,
+     "intro": "Counting is more than a song. When you can count on from any number, and skip count by 2s, 5s, and 10s, you have the raw speed that addition and multiplication are built on. Let's tune up your counting engine.",
+     "sections": [
+      {
+       "heading": "Counting On from Anywhere",
+       "body": [
+        "Strong counters do not need to start at 1. If someone says 47, you can launch straight into 48, 49, 50, 51. The tricky spots are the decade crossings: after 59 comes 60, after 99 comes 100, and after 109 comes 110.",
+        "Practice the bridges on their own. Say the three numbers around each crossing: 58, 59, 60. Then 68, 69, 70. Then 98, 99, 100, 101. Once the bridges are smooth, counting to 120 is just a calm walk.",
+        "Counting backward matters too, because subtraction leans on it. Try counting down from 52: 51, 50, 49, 48. Backward crossings like 40 down to 39 deserve extra reps."
+       ]
+      },
+      {
+       "heading": "Skip Counting: The Fast Lanes",
+       "body": [
+        "**Skip counting** means counting by equal jumps. By 2s: 2, 4, 6, 8, 10. By 5s: 5, 10, 15, 20. By 10s: 10, 20, 30, 40. Each jump adds the same amount, which is why skip counting is secretly early multiplication.",
+        "Skip counting has real jobs. Count shoes by 2s, count nickels by 5s, count dimes by 10s. Counting a pile of 6 nickels as 5, 10, 15, 20, 25, 30 is far faster than counting 30 pennies one by one.",
+        "You can skip count starting anywhere. Counting by 10s from 37 gives 47, 57, 67, 77: only the tens digit changes. Noticing that pattern is your first taste of place value, coming up next."
+       ],
+       "example": {
+        "problem": "What number comes next: 35, 40, 45, __?",
+        "steps": [
+         "Find the jump size: 40 − 35 = 5, and 45 − 40 = 5, so we are skip counting by 5s.",
+         "Take one more jump: 45 + 5 = 50."
+        ],
+        "answer": "50"
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "counting on", "def": "Starting a count from any number, like 47, 48, 49, instead of starting at 1."},
+      {"term": "skip counting", "def": "Counting by equal jumps, like 5, 10, 15, 20."},
+      {"term": "decade crossing", "def": "The spot where the tens change, like 59 to 60."}
+     ],
+     "practice": [
+      {"q": "You are counting by 10s: 40, 50, 60. What comes next?", "choices": ["61", "65", "70", "80"], "answer": 2, "explain": "Each jump adds 10, and 60 + 10 = 70."},
+      {"q": "What number comes right after 99?", "choices": ["90", "100", "109", "110"], "answer": 1, "explain": "99 sits at a big crossing: the next number is 100, where the hundreds begin."},
+      {"q": "Counting by 2s: 12, 14, 16, __?", "choices": ["17", "18", "20", "26"], "answer": 1, "explain": "Add 2 each time: 16 + 2 = 18."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Place Value: Ones, Tens, Hundreds",
+     "minutes": 12,
+     "intro": "Why is the 5 in 52 worth more than the 5 in 25? Because in our number system, position is power. The same digit can mean 5, 50, or 500 depending on where it stands. Place value is the single most important idea in elementary math.",
+     "sections": [
+      {
+       "heading": "Each Place Has a Value",
+       "body": [
+        "In a number like 347, each digit lives in a place. Reading from the right: the 7 is in the **ones place** and is worth 7, the 4 is in the **tens place** and is worth 40, and the 3 is in the **hundreds place** and is worth 300.",
+        "So 347 really means 300 + 40 + 7. Writing a number stretched out like this is called **expanded form**. It shows what the compact number is hiding: three bundles of a hundred, four bundles of ten, and seven singles.",
+        "Zero is a placeholder, and it matters. The number 306 means 3 hundreds, 0 tens, and 6 ones. Drop the zero and you get 36, a completely different number. Zero holds the tens place open so the 3 stays worth 300."
+       ],
+       "example": {
+        "problem": "Write 582 in expanded form and give the value of each digit.",
+        "steps": [
+         "The 5 is in the hundreds place: worth 500.",
+         "The 8 is in the tens place: worth 80.",
+         "The 2 is in the ones place: worth 2.",
+         "Add the pieces to check: 500 + 80 + 2 = 582."
+        ],
+        "answer": "582 = 500 + 80 + 2"
+       }
+      },
+      {
+       "heading": "Bundling and Trading",
+       "body": [
+        "Place value works by bundling in tens. Ten ones bundle into one ten. Ten tens bundle into one hundred. This trade-ten rule is why our system can write any number, no matter how huge, with just ten digits, 0 through 9.",
+        "Picture 34 as base-ten blocks: 3 rods of ten and 4 single cubes. Now add 8 more cubes: you have 3 rods and 12 cubes. Trade ten cubes for a rod: 4 rods and 2 cubes, which is 42. You just previewed regrouping, the star of Unit 2.",
+        "A quick game: grab a handful of dry beans, group them into piles of ten, and write the number. 4 piles and 7 leftovers is 47. Physically bundling makes the tens place feel real instead of abstract."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "digit", "def": "One of the symbols 0 through 9 used to write numbers."},
+      {"term": "place value", "def": "The value a digit has because of its position, like the 4 in 347 being worth 40."},
+      {"term": "expanded form", "def": "A number stretched into its place values: 347 = 300 + 40 + 7."},
+      {"term": "placeholder zero", "def": "A zero that holds a place open, like the 0 in 306."}
+     ],
+     "practice": [
+      {"q": "What is the value of the 7 in 275?", "choices": ["7", "70", "700", "75"], "answer": 1, "explain": "The 7 sits in the tens place, so it is worth 7 tens, which is 70."},
+      {"q": "Which number is 3 hundreds, 0 tens, and 6 ones?", "choices": ["36", "360", "306", "603"], "answer": 2, "explain": "Three hundreds and six ones with a zero holding the tens place is 306. Without the placeholder zero you would wrongly get 36."},
+      {"q": "Which digit is in the tens place of 941?", "choices": ["9", "4", "1", "0"], "answer": 1, "explain": "From the right: 1 is ones, 4 is tens, 9 is hundreds. The tens digit is 4, worth 40."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Comparing and Rounding Numbers",
+     "minutes": 12,
+     "intro": "Which is bigger, 456 or 465? And about how many is 268, roughly? Comparing and rounding are the judgment skills of math: they let you rank numbers instantly and estimate answers before you compute, so mistakes have nowhere to hide.",
+     "sections": [
+      {
+       "heading": "Comparing with < , > , =",
+       "body": [
+        "To compare two numbers, march through the places from left to right, biggest place first. Compare 456 and 465: hundreds tie at 4, so check tens: 5 versus 6. Six tens beat five tens, so 465 is greater. We write 465 > 456.",
+        "The symbols are < for less than, > for greater than, and = for equal. A friendly memory trick: the symbol is a hungry alligator mouth that always opens toward the bigger meal. In 3 < 8, the mouth opens at the 8.",
+        "Leftmost first is the whole trick. Never compare by last digits: 129 ends in 9 and 310 ends in 0, but 310 is far bigger because 3 hundreds beat 1 hundred."
+       ],
+       "example": {
+        "problem": "Compare 389 and 398 using < or >.",
+        "steps": [
+         "Compare hundreds: both have 3. Tie, move right.",
+         "Compare tens: 8 versus 9. Nine tens are more.",
+         "So 398 is greater: 389 < 398."
+        ],
+        "answer": "389 < 398"
+       }
+      },
+      {
+       "heading": "Rounding to the Nearest Ten",
+       "body": [
+        "**Rounding** replaces a number with the nearest friendly number. Rounding to the nearest ten asks: which multiple of ten is closest? For 43, the neighbors are 40 and 50, and 43 is only 3 away from 40, so 43 rounds to 40.",
+        "The digit rule makes it fast: look at the ones digit. If it is 0 through 4, round down; if it is 5 through 9, round up. So 47 rounds up to 50, and 45, right in the middle, rounds up to 50 by the rule.",
+        "Rounding powers **estimation**. Before computing 268 + 122, round: 270 + 120 = 390. Now if your exact answer comes out near 390, great; if you get 500-something, you know to recheck. Estimation is your built-in error alarm."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "greater than (>)", "def": "The symbol showing the first number is bigger: 465 > 456."},
+      {"term": "less than (<)", "def": "The symbol showing the first number is smaller: 3 < 8."},
+      {"term": "rounding", "def": "Replacing a number with the nearest friendly number, like 43 becoming 40."},
+      {"term": "estimation", "def": "Using rounded numbers to get a quick, close answer."}
+     ],
+     "practice": [
+      {"q": "Which comparison is correct?", "choices": ["389 > 398", "398 > 389", "389 = 398", "129 > 310"], "answer": 1, "explain": "Hundreds tie at 3, so compare tens: 9 beats 8, making 398 the greater number."},
+      {"q": "Round 62 to the nearest ten.", "choices": ["50", "60", "70", "65"], "answer": 1, "explain": "The ones digit is 2, which is in the 0-4 range, so round down to 60. And 62 is only 2 away from 60 but 8 away from 70."},
+      {"q": "Round 45 to the nearest ten.", "choices": ["40", "44", "50", "55"], "answer": 2, "explain": "A ones digit of 5 rounds up by the rule, so 45 rounds to 50."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Addition and Subtraction",
+   "summary": "Master the facts with clever strategies, see how addition and subtraction undo each other, and conquer regrouping with big numbers.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Addition Strategies",
+     "minutes": 12,
+     "intro": "You do not need to memorize 100 addition facts by brute force. A few smart strategies, counting on, doubles, and make-ten, let you figure out any fact fast, and with practice the answers start popping into your head on their own.",
+     "sections": [
+      {
+       "heading": "Counting On and Doubles",
+       "body": [
+        "For adding a small number, use **counting on**: start from the bigger number and count up. For 8 + 3, say 8, then 9, 10, 11. Always start from the bigger number; counting on 8 from 3 works but takes far longer.",
+        "**Doubles** are the facts kids learn fastest: 6 + 6 = 12, 7 + 7 = 14, 8 + 8 = 16. They have a rhythm that sticks. Learn them cold, because they unlock the near-doubles trick.",
+        "A **near double** is a double plus one. For 7 + 8, think: 7 + 7 = 14, and 8 is one more than 7, so 7 + 8 = 15. One known fact plus one tiny step beats counting on your fingers every time."
+       ]
+      },
+      {
+       "heading": "Make Ten",
+       "body": [
+        "Ten is the friendliest number in math, because adding to 10 is effortless: 10 + 3 = 13, 10 + 6 = 16. The **make-ten** strategy breaks one addend apart so the other becomes 10.",
+        "Take 8 + 5. Eight needs 2 more to reach 10, so split the 5 into 2 + 3. Now: 8 + 2 = 10, then 10 + 3 = 13. So 8 + 5 = 13. Your brain does this in a blink once the pairs that make ten, like 8 and 2, 7 and 3, 6 and 4, are automatic.",
+        "Make ten scales up beautifully. For 48 + 5, the same move works: 48 + 2 = 50, then 50 + 3 = 53. Strategies that grow with you are the ones worth practicing."
+       ],
+       "example": {
+        "problem": "Use the make-ten strategy to solve 9 + 6.",
+        "steps": [
+         "Nine needs 1 more to make 10.",
+         "Split the 6 into 1 + 5.",
+         "Add to ten: 9 + 1 = 10.",
+         "Add the rest: 10 + 5 = 15."
+        ],
+        "answer": "9 + 6 = 15"
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "addend", "def": "A number being added; in 8 + 5, both 8 and 5 are addends."},
+      {"term": "sum", "def": "The answer to an addition problem."},
+      {"term": "doubles fact", "def": "Adding a number to itself, like 7 + 7 = 14."},
+      {"term": "make ten", "def": "Splitting an addend so one number reaches 10 first: 8 + 5 = 8 + 2 + 3 = 13."}
+     ],
+     "practice": [
+      {"q": "Use make ten: 9 + 7 = ?", "choices": ["15", "16", "17", "18"], "answer": 1, "explain": "9 + 1 = 10, and the leftover 6 gives 10 + 6 = 16."},
+      {"q": "You know 8 + 8 = 16. What is 8 + 9?", "choices": ["16", "17", "18", "15"], "answer": 1, "explain": "9 is one more than 8, so the answer is one more than the double: 16 + 1 = 17. That is the near-doubles trick."},
+      {"q": "What is the best first move for 3 + 9?", "choices": ["Count on 9 from 3", "Start at 9 and count on 3", "Split 3 into 1 + 2 for no reason", "Guess"], "answer": 1, "explain": "Order does not change a sum, so start from the bigger number: 9, then 10, 11, 12. Three counts instead of nine."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Subtraction and Fact Families",
+     "minutes": 12,
+     "intro": "Here is a secret that makes subtraction easy: every subtraction problem is an addition problem in disguise. Asking 13 − 9 is exactly the same as asking 9 plus what makes 13. Once you see the family connection, you never have to fear a minus sign again.",
+     "sections": [
+      {
+       "heading": "Two Meanings of Subtraction",
+       "body": [
+        "Subtraction can mean **taking away**: you have 12 grapes, you eat 4, and 12 − 4 = 8 remain. But it can also mean **finding the difference**: Maya has 12 stickers and Leo has 4, so Maya has 12 − 4 = 8 more.",
+        "For numbers that are close together, counting up beats counting back. To solve 52 − 49, do not count back 49 times; count up from 49 to 52: that is just 3 hops, so the difference is 3.",
+        "Choose your tool by looking at the numbers. Taking away a small amount? Count back. Numbers close together? Count up. Flexible solvers beat one-trick solvers."
+       ]
+      },
+      {
+       "heading": "Fact Families",
+       "body": [
+        "A **fact family** is a set of three numbers linked by addition and subtraction. The family 4, 9, 13 makes four facts: 4 + 9 = 13, 9 + 4 = 13, 13 − 9 = 4, and 13 − 4 = 9. Learn one family and you own all four facts.",
+        "This is why addition and subtraction are called **inverse operations**: each undoes the other. If 6 + 7 = 13, then 13 − 7 must be 6. Subtraction is never a brand-new fact to memorize; it is an addition fact read backward.",
+        "Fact families also give you a checking superpower. After computing 15 − 8 = 7, verify by adding back: 7 + 8 = 15. If the addition does not return your starting number, the subtraction was wrong. Check every time; it takes two seconds."
+       ],
+       "example": {
+        "problem": "Solve 13 − 9 by thinking addition.",
+        "steps": [
+         "Rewrite the question: 9 plus what equals 13?",
+         "Count up from 9 to 13: 10, 11, 12, 13. That is 4 hops.",
+         "So 13 − 9 = 4.",
+         "Check: 9 + 4 = 13. Correct."
+        ],
+        "answer": "13 − 9 = 4"
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "difference", "def": "The answer to a subtraction problem."},
+      {"term": "fact family", "def": "Three numbers linked by four facts, like 4, 9, 13."},
+      {"term": "inverse operations", "def": "Operations that undo each other, like addition and subtraction."},
+      {"term": "counting up", "def": "Solving subtraction by counting from the smaller number to the bigger one."}
+     ],
+     "practice": [
+      {"q": "Which fact belongs to the family of 3, 7, and 10?", "choices": ["10 − 3 = 7", "7 − 3 = 10", "10 + 3 = 7", "3 + 10 = 7"], "answer": 0, "explain": "The family facts are 3 + 7 = 10, 7 + 3 = 10, 10 − 7 = 3, and 10 − 3 = 7. Only the first choice appears in that list."},
+      {"q": "Solve 12 − 9 by counting up.", "choices": ["2", "3", "4", "21"], "answer": 1, "explain": "Count up from 9: 10, 11, 12 is 3 hops, so 12 − 9 = 3. Check: 9 + 3 = 12."},
+      {"q": "You computed 14 − 6 = 8. What is the best check?", "choices": ["Do it again the same way", "Add: 8 + 6 should equal 14", "Round both numbers", "Subtract 8 − 6"], "answer": 1, "explain": "Addition undoes subtraction. Since 8 + 6 = 14 returns the starting number, the answer 8 is confirmed."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Regrouping: Adding and Subtracting Big Numbers",
+     "minutes": 15,
+     "intro": "What happens when the ones column overflows, like in 47 + 38, where 7 + 8 makes 15? You regroup: trade ten ones for one ten and carry it over. Regrouping is just the bundling rule from place value put to work, and it handles any size of number.",
+     "sections": [
+      {
+       "heading": "Adding with Regrouping",
+       "body": [
+        "Stack the numbers so ones sit over ones and tens over tens, then add the ones column first. In 47 + 38, the ones give 7 + 8 = 15. Fifteen ones is 1 ten and 5 ones, so write the 5 below and carry the 1 into the tens column.",
+        "Now the tens column: 4 + 3 = 7, plus the carried 1 makes 8. The answer is 85. The carried digit is not a magic mark; it is a real ten that overflowed from the ones column and moved into its proper place.",
+        "Estimate first, always. 47 is about 50 and 38 is about 40, so expect an answer near 90. Getting 85 fits. If you had forgotten the carry and gotten 75, your estimate would raise an eyebrow."
+       ],
+       "example": {
+        "problem": "Add 47 + 38.",
+        "steps": [
+         "Ones: 7 + 8 = 15. Write 5, carry 1 ten.",
+         "Tens: 4 + 3 = 7, plus the carried 1 = 8.",
+         "Read the answer: 85.",
+         "Estimate check: 50 + 40 = 90, and 85 is close. Reasonable."
+        ],
+        "answer": "47 + 38 = 85"
+       }
+      },
+      {
+       "heading": "Subtracting with Regrouping",
+       "body": [
+        "Sometimes the top ones digit is too small, as in 62 − 28: you cannot take 8 from 2. So borrow: break one of the 6 tens into ten ones. The 6 tens become 5, and the 2 ones become 12.",
+        "Now subtract each column: ones give 12 − 8 = 4, and tens give 5 − 2 = 3. The answer is 34. Borrowing is just carrying in reverse: a ten unbundles into ones exactly when the ones column needs help.",
+        "Check with addition, your inverse-operation superpower: 34 + 28 should rebuild 62. Ones: 4 + 8 = 12, write 2 carry 1. Tens: 3 + 2 + 1 = 6. You get 62. Confirmed."
+       ],
+       "example": {
+        "problem": "Subtract 71 − 45.",
+        "steps": [
+         "Ones: 1 is smaller than 5, so borrow a ten: 7 tens become 6, and 1 one becomes 11.",
+         "Ones: 11 − 5 = 6.",
+         "Tens: 6 − 4 = 2.",
+         "Answer: 26. Check: 26 + 45 = 71. Correct."
+        ],
+        "answer": "71 − 45 = 26"
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "regrouping", "def": "Trading ten ones for a ten (carrying) or a ten for ten ones (borrowing)."},
+      {"term": "carry", "def": "Moving an overflow ten from the ones column into the tens column."},
+      {"term": "borrow", "def": "Breaking a ten into ten ones so the ones column can subtract."},
+      {"term": "column addition", "def": "Stacking numbers by place value and adding column by column."}
+     ],
+     "practice": [
+      {"q": "What is 56 + 27?", "choices": ["73", "83", "84", "93"], "answer": 1, "explain": "Ones: 6 + 7 = 13, write 3 carry 1. Tens: 5 + 2 + 1 = 8. The sum is 83."},
+      {"q": "What is 60 − 24?", "choices": ["44", "36", "46", "34"], "answer": 1, "explain": "Borrow: 6 tens become 5, and 0 ones become 10. Ones: 10 − 4 = 6. Tens: 5 − 2 = 3. The answer is 36, and 36 + 24 = 60 confirms it."},
+      {"q": "In 47 + 38, why do we carry a 1?", "choices": ["It is a decoration", "7 + 8 = 15, which is 1 ten and 5 ones, and the ten belongs in the tens column", "The 4 and 3 need company", "We always carry no matter what"], "answer": 1, "explain": "Fifteen ones overflow the ones place. Ten of them bundle into one ten, which is carried to where tens live."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Multiplication and Division",
+   "summary": "Multiplication is repeated addition with superpowers, and division is its mirror twin. Build meaning first, then speed.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Multiplication Means",
+     "minutes": 12,
+     "intro": "Three bags with five apples in each bag. You could add 5 + 5 + 5, but multiplication says it faster: 3 × 5 = 15. Multiplication counts equal groups in one stroke, and once you see the groups, the times table stops being a mystery.",
+     "sections": [
+      {
+       "heading": "Equal Groups",
+       "body": [
+        "The expression 3 × 5 means 3 groups of 5. It is a shortcut for repeated addition: 5 + 5 + 5 = 15. The numbers being multiplied are called **factors**, and the answer is the **product**.",
+        "Equal is the key word. Multiplication only works when every group has the same amount. Three bags holding 5, 5, and 5 apples is 3 × 5. Bags holding 4, 5, and 6 apples need plain addition.",
+        "Watch for equal groups hiding in real life: 4 chairs at each of 6 tables, 2 wheels on each of 8 bikes, 5 fingers on each of 2 hands. Say each one as a multiplication: 6 × 4 = 24 chairs, 8 × 2 = 16 wheels, 2 × 5 = 10 fingers."
+       ]
+      },
+      {
+       "heading": "Arrays and the Big Flip",
+       "body": [
+        "An **array** is objects arranged in rows and columns, like eggs in a carton. Four rows of 6 eggs shows 4 × 6 = 24. Arrays turn multiplication into a picture you can count and check.",
+        "Now rotate the array a quarter turn: 4 rows of 6 becomes 6 rows of 4. Same eggs, same total. This proves the **commutative property**: 4 × 6 = 6 × 4. Every fact you learn comes with its flip for free, cutting the times table nearly in half.",
+        "Two special players: multiplying by 1 changes nothing (7 × 1 = 7), and multiplying by 0 gives 0 every time (7 × 0 = 0), because seven groups of nothing is still nothing."
+       ],
+       "example": {
+        "problem": "A muffin tray has 3 rows with 4 muffins in each row. How many muffins?",
+        "steps": [
+         "Recognize the array: 3 rows of 4.",
+         "Write it as multiplication: 3 × 4.",
+         "Skip count the rows: 4, 8, 12.",
+         "Check with the flip: 4 × 3 = 3 + 3 + 3 + 3 = 12. Same."
+        ],
+        "answer": "3 × 4 = 12 muffins"
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "factor", "def": "A number being multiplied; in 3 × 5, both 3 and 5 are factors."},
+      {"term": "product", "def": "The answer to a multiplication problem."},
+      {"term": "array", "def": "Objects arranged in equal rows and columns, picturing a multiplication."},
+      {"term": "commutative property", "def": "Order does not change a product: 4 × 6 = 6 × 4."}
+     ],
+     "practice": [
+      {"q": "Which addition matches 3 × 5?", "choices": ["3 + 5", "5 + 5 + 5", "3 + 3 + 3 + 3 + 3 + 3", "5 + 3 + 5"], "answer": 1, "explain": "3 × 5 means 3 groups of 5, which is 5 + 5 + 5 = 15. (Choice three shows six 3s, which would be 6 × 3.)"},
+      {"q": "An array has 4 rows of 2 dots. How many dots?", "choices": ["6", "8", "12", "42"], "answer": 1, "explain": "4 × 2 = 8. Skip count the rows: 2, 4, 6, 8."},
+      {"q": "What is 9 × 0?", "choices": ["9", "0", "90", "1"], "answer": 1, "explain": "Nine groups with nothing in them hold nothing at all. Any number times 0 is 0."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Mastering the Times Table",
+     "minutes": 15,
+     "intro": "The times table looks like 100 facts to memorize, but smart students learn it as a handful of patterns. Flips, doubles, fives, nines with their famous finger trick: by the end of this lesson the table will feel less like a wall and more like a ladder.",
+     "sections": [
+      {
+       "heading": "Conquer by Pattern",
+       "body": [
+        "Start with the easy rows: the 1s (no change), the 10s (attach a zero: 6 × 10 = 60), the 5s (skip count 5, 10, 15, or notice products end in 5 or 0), and the 2s (just doubles: 2 × 7 = 14).",
+        "The 4s are double-doubles: to get 4 × 6, double 6 to get 12, then double again to get 24. The 8s double the 4s: 8 × 6 is double 24, which is 48. Doubling is a skill you already own; these rows just reuse it.",
+        "The 9s hide a beautiful pattern: 9 × 6 = 54, and 5 + 4 = 9. Every 9s product has digits summing to 9, and the tens digit is one less than the factor. So 9 × 7: tens digit 6, digits must sum to 9, answer 63."
+       ],
+       "example": {
+        "problem": "Find 9 × 8 using the nines pattern.",
+        "steps": [
+         "The tens digit is one less than 8: that is 7.",
+         "The digits must add to 9, so the ones digit is 9 − 7 = 2.",
+         "Read the answer: 72.",
+         "Check another way: 10 × 8 = 80, minus one 8 is 72. Same."
+        ],
+        "answer": "9 × 8 = 72"
+       }
+      },
+      {
+       "heading": "The Stubborn Few",
+       "body": [
+        "After patterns and flips, only a handful of facts remain, and they are famously stubborn: 6 × 7 = 42, 6 × 8 = 48, 7 × 8 = 56, and the squares 6 × 6 = 36 and 7 × 7 = 49. Give these direct, daily practice.",
+        "Use anchor facts to rebuild ones you forget. Forgot 6 × 7? Take 5 × 7 = 35 and add one more 7 to get 42. Forgot 7 × 8? Take 7 × 7 = 49 and add 7 to get 56. Rebuilding is not cheating; it is how mathematicians think.",
+        "Practice in short daily bursts, five minutes a day, mixing new facts with old ones. Say the whole fact aloud, six sevens are forty-two, because saying the full sentence builds a stronger memory than answers alone."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "times table", "def": "The grid of multiplication facts from 1 × 1 up to 10 × 10."},
+      {"term": "double-double", "def": "Multiplying by 4 by doubling twice: 4 × 6 = double 12 = 24."},
+      {"term": "nines pattern", "def": "In 9s facts the digits sum to 9, like 54 for 9 × 6."},
+      {"term": "anchor fact", "def": "A known fact used to rebuild a forgotten one, like 5 × 7 helping with 6 × 7."}
+     ],
+     "practice": [
+      {"q": "What is 9 × 7?", "choices": ["56", "63", "72", "64"], "answer": 1, "explain": "Nines pattern: tens digit is 6 (one less than 7), digits sum to 9, so the answer is 63."},
+      {"q": "Use double-doubles: what is 4 × 8?", "choices": ["24", "32", "36", "48"], "answer": 1, "explain": "Double 8 to get 16, double again to get 32."},
+      {"q": "You forget 6 × 8. Which anchor rebuilds it fastest?", "choices": ["Count by 1s to 48", "5 × 8 = 40, then add one more 8", "9 × 8 = 72, then subtract 8", "Start over from 1 × 8"], "answer": 1, "explain": "From 5 × 8 = 40, one more group of 8 gives 48. Anchoring to fives is fast because fives are automatic."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Division: Sharing Fairly",
+     "minutes": 14,
+     "intro": "Twelve cookies, three friends: how many cookies each? Division answers fair-sharing questions, and here is the good news: every division fact is a multiplication fact you already know, just read in reverse. 12 ÷ 3 asks nothing more than 3 times what makes 12.",
+     "sections": [
+      {
+       "heading": "Two Ways to Divide",
+       "body": [
+        "**Sharing division** deals items out: 12 cookies shared among 3 friends means each friend gets 12 ÷ 3 = 4 cookies. You know the number of groups and want the size of each group.",
+        "**Grouping division** makes bundles: 12 cookies packed in bags of 3 means you can fill 12 ÷ 3 = 4 bags. You know the size of each group and want the number of groups. Same equation, different question.",
+        "In 12 ÷ 3 = 4, the 12 is the **dividend** (what is being divided), the 3 is the **divisor**, and the 4 is the **quotient**. Watch out: order matters in division. 12 ÷ 3 = 4, but 3 ÷ 12 is not 4; division is not commutative."
+       ]
+      },
+      {
+       "heading": "Think Multiplication, Handle Leftovers",
+       "body": [
+        "To solve any division, flip it into multiplication. For 21 ÷ 7, ask: 7 times what makes 21? Since 7 × 3 = 21, the answer is 3. Every hour spent on the times table pays out double, because it buys division too.",
+        "Sometimes sharing does not come out even. Deal 17 stickers to 5 friends: each gets 3 (using up 15), and 2 stickers are left over. We write 17 ÷ 5 = 3 R2, where R2 means a **remainder** of 2.",
+        "The remainder must always be smaller than the divisor. If you claim 17 ÷ 5 = 2 R7, those 7 leftovers could still hand one more sticker to each of the 5 friends, so the sharing was not finished."
+       ],
+       "example": {
+        "problem": "Solve 19 ÷ 4.",
+        "steps": [
+         "Ask: 4 times what gets close to 19 without going over?",
+         "Try 4 × 4 = 16. Good. (4 × 5 = 20 is too big.)",
+         "Find the leftover: 19 − 16 = 3.",
+         "The remainder 3 is smaller than the divisor 4, so we are done."
+        ],
+        "answer": "19 ÷ 4 = 4 R3"
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "dividend", "def": "The number being divided; the 12 in 12 ÷ 3."},
+      {"term": "divisor", "def": "The number you divide by; the 3 in 12 ÷ 3."},
+      {"term": "quotient", "def": "The answer to a division problem."},
+      {"term": "remainder", "def": "What is left over when sharing does not come out even."}
+     ],
+     "practice": [
+      {"q": "What is 15 ÷ 3?", "choices": ["4", "5", "6", "45"], "answer": 1, "explain": "Think multiplication: 3 × 5 = 15, so 15 ÷ 3 = 5."},
+      {"q": "20 apples are packed in bags of 4. How many bags?", "choices": ["4", "5", "16", "24"], "answer": 1, "explain": "This is grouping division: 20 ÷ 4 = 5 because 4 × 5 = 20. Five full bags."},
+      {"q": "What is 22 ÷ 5?", "choices": ["4 R2", "3 R7", "5 R3", "4 R3"], "answer": 0, "explain": "5 × 4 = 20 is the closest without going over, and 22 − 20 = 2 left over. The remainder 2 is properly smaller than 5. (3 R7 fails because a remainder of 7 could still be shared.)"}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Fractions",
+   "summary": "Fractions are numbers for parts: half a pizza, three quarters of an hour. Learn what they mean, when two fractions match, and how to add them.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What a Fraction Is",
+     "minutes": 12,
+     "intro": "Cut a pizza into 4 equal slices and eat 3 of them: you ate 3/4 of the pizza. A fraction is a number that names part of a whole, and its two parts, the top and the bottom, each have one clear job. Get those jobs straight and fractions become friendly.",
+     "sections": [
+      {
+       "heading": "Top Job, Bottom Job",
+       "body": [
+        "The bottom number, the **denominator**, tells how many *equal* pieces the whole is cut into. The top number, the **numerator**, tells how many of those pieces you are talking about. In 3/4, the whole has 4 equal pieces and you have 3 of them.",
+        "Equal pieces is non-negotiable. If a sandwich is torn into one big hunk and one crumb, the hunk is not 1/2, no matter how you argue it. Halves, thirds, and fourths only mean something when every piece matches.",
+        "Read fractions properly: 1/2 is one half, 1/3 is one third, 3/4 is three fourths (or three quarters). The bottom names the piece size; the top counts the pieces."
+       ]
+      },
+      {
+       "heading": "Bigger Bottom, Smaller Pieces",
+       "body": [
+        "Here is the idea that trips everyone up at first: a bigger denominator means *smaller* pieces. Cutting one pizza among 8 people leaves thinner slices than cutting it among 4. So 1/8 is smaller than 1/4, even though 8 is bigger than 4.",
+        "Fractions live on the number line between the whole numbers. To place 3/4, cut the space between 0 and 1 into 4 equal steps and hop 3 of them. A fraction is a genuine number with an address, not just a picture of pizza.",
+        "When the numerator equals the denominator, you have the whole thing: 4/4 of a pizza is 1 entire pizza. And 2/2, 3/3, and 8/8 are all just different outfits for the number 1."
+       ],
+       "example": {
+        "problem": "A chocolate bar is split into 8 equal squares. You eat 5 squares. What fraction did you eat, and what fraction is left?",
+        "steps": [
+         "The whole has 8 equal pieces, so the denominator is 8.",
+         "You ate 5 pieces: that is 5/8.",
+         "The rest: 8 − 5 = 3 squares remain, which is 3/8.",
+         "Check: 5/8 and 3/8 together make 8/8, the whole bar."
+        ],
+        "answer": "You ate 5/8; 3/8 is left."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "fraction", "def": "A number naming part of a whole, like 3/4."},
+      {"term": "numerator", "def": "The top number: how many pieces you have."},
+      {"term": "denominator", "def": "The bottom number: how many equal pieces the whole is cut into."},
+      {"term": "whole", "def": "The complete object or set, equal to fractions like 4/4."}
+     ],
+     "practice": [
+      {"q": "A circle is cut into 4 equal parts and 3 are shaded. What fraction is shaded?", "choices": ["4/3", "3/4", "1/3", "3/7"], "answer": 1, "explain": "Four equal parts makes the denominator 4; three shaded makes the numerator 3: 3/4."},
+      {"q": "Which is the smaller piece: 1/4 or 1/8 of the same pizza?", "choices": ["1/4", "1/8", "They are equal", "Cannot tell"], "answer": 1, "explain": "More pieces means smaller pieces. Cutting into 8 makes thinner slices than cutting into 4, so 1/8 < 1/4."},
+      {"q": "What does 6/6 of a sandwich mean?", "choices": ["Six sandwiches", "Nothing", "The whole sandwich", "Half the sandwich"], "answer": 2, "explain": "When the numerator equals the denominator, you have every piece: 6/6 = 1 whole."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Equivalent Fractions and Comparing",
+     "minutes": 14,
+     "intro": "Half a pizza and 2/4 of a pizza are exactly the same amount of food. Fractions that look different can be equal, and knowing how to spot and build these twins, called equivalent fractions, is the key to comparing any two fractions.",
+     "sections": [
+      {
+       "heading": "Same Amount, Different Name",
+       "body": [
+        "**Equivalent fractions** name the same amount with different numbers: 1/2 = 2/4 = 3/6 = 4/8. Picture it: cut each half of a pizza in half again, and your 1 piece out of 2 becomes 2 pieces out of 4. Nothing was added or eaten.",
+        "To build an equivalent fraction, multiply the top and bottom by the same number. Start with 1/2 and multiply both by 3: you get 3/6. Multiplying top and bottom by 3 is really multiplying the fraction by 3/3, which is 1, and multiplying by 1 changes nothing.",
+        "It works in reverse too: divide top and bottom by the same number to simplify. The fraction 4/8, divided top and bottom by 4, simplifies to 1/2, its simplest form."
+       ],
+       "example": {
+        "problem": "Fill in the blank: 1/2 = ?/6",
+        "steps": [
+         "The denominator went from 2 to 6. What was it multiplied by? 2 × 3 = 6, so by 3.",
+         "Do the same to the numerator: 1 × 3 = 3.",
+         "So 1/2 = 3/6."
+        ],
+        "answer": "3/6"
+       }
+      },
+      {
+       "heading": "Comparing Fractions",
+       "body": [
+        "Same denominator? Compare numerators: 5/8 > 3/8, because five of a piece beat three of the same piece. This is the easy case, and it is why we often rewrite fractions to share a denominator.",
+        "Same numerator? Compare piece sizes: 2/3 > 2/5, because thirds are bigger pieces than fifths, and two big pieces beat two small ones. Remember: bigger bottom, smaller pieces.",
+        "Different everything? Use 1/2 as a benchmark. Is the fraction more or less than half? 5/8 is more than half (half of 8 is 4, and 5 > 4), while 2/5 is less than half (half of 5 is 2.5, and 2 < 2.5). So 5/8 > 2/5 without any hard work."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "equivalent fractions", "def": "Fractions naming the same amount, like 1/2 and 2/4."},
+      {"term": "simplify", "def": "Dividing top and bottom by the same number to get simplest form."},
+      {"term": "benchmark fraction", "def": "A familiar fraction like 1/2 used as a comparison landmark."}
+     ],
+     "practice": [
+      {"q": "Which fraction is equivalent to 1/2?", "choices": ["2/3", "3/6", "1/4", "2/5"], "answer": 1, "explain": "Multiply top and bottom of 1/2 by 3: you get 3/6, the same amount with a new name."},
+      {"q": "Which is greater: 3/8 or 5/8?", "choices": ["3/8", "5/8", "They are equal", "Cannot compare"], "answer": 1, "explain": "The pieces are the same size (eighths), so five pieces beat three: 5/8 > 3/8."},
+      {"q": "Which is greater: 1/3 or 1/4?", "choices": ["1/4", "1/3", "They are equal", "Cannot compare"], "answer": 1, "explain": "Same numerator, so compare piece sizes. Thirds are bigger than fourths, so 1/3 > 1/4."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Adding and Subtracting Fractions",
+     "minutes": 12,
+     "intro": "If you eat 2 slices of an 8-slice pizza and your friend eats 3, together you ate 5 slices: 2/8 + 3/8 = 5/8. When fractions share a denominator, adding them is as easy as adding the tops. The one rule: never touch the bottom.",
+     "sections": [
+      {
+       "heading": "Add the Tops, Keep the Bottom",
+       "body": [
+        "When denominators match, the pieces are the same size, so you just count pieces: 2/8 + 3/8 = 5/8. Two eighths plus three eighths makes five eighths, the same way 2 apples plus 3 apples makes 5 apples.",
+        "The classic mistake is adding the bottoms too: 2/8 + 3/8 is not 5/16. Think about what that would claim: you ate 5 slices, but the pizza mysteriously became a 16-slice pizza. The denominator names the piece size, and eating more slices does not change the size of a slice.",
+        "Subtraction works the same way: 7/10 − 4/10 = 3/10. Seven dimes-worth of pieces minus four leaves three, and the pieces are still tenths."
+       ],
+       "example": {
+        "problem": "Add 3/6 + 2/6, then simplify if possible.",
+        "steps": [
+         "Denominators match at 6, so add numerators: 3 + 2 = 5.",
+         "The sum is 5/6.",
+         "Can 5/6 simplify? 5 and 6 share no common factor bigger than 1, so no. Done."
+        ],
+        "answer": "3/6 + 2/6 = 5/6"
+       }
+      },
+      {
+       "heading": "Reaching and Passing the Whole",
+       "body": [
+        "Sums can land exactly on a whole: 1/4 + 3/4 = 4/4 = 1. All four quarters together rebuild the whole pizza. When the numerator reaches the denominator, say the simpler name: one.",
+        "Sums can also pass the whole: 3/4 + 2/4 = 5/4, which is more than 1. Five quarter-slices is one whole pizza plus one extra quarter, written as the mixed number 1 1/4. Both names, 5/4 and 1 1/4, are correct.",
+        "Fraction addition solves real problems. A recipe needs 1/4 cup of oil for the pan and 2/4 cup for the batter: 1/4 + 2/4 = 3/4 cup total. You ran 3/8 of a mile then 3/8 more: 6/8 of a mile, which simplifies to 3/4."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "like denominators", "def": "Matching bottoms, meaning the pieces are the same size."},
+      {"term": "mixed number", "def": "A whole number plus a fraction, like 1 1/4."},
+      {"term": "improper fraction", "def": "A fraction worth 1 or more, like 5/4."}
+     ],
+     "practice": [
+      {"q": "What is 2/8 + 3/8?", "choices": ["5/16", "5/8", "6/8", "1/8"], "answer": 1, "explain": "Add the tops and keep the bottom: 2 + 3 = 5 eighths. Adding the bottoms (5/16) would wrongly claim the slices changed size."},
+      {"q": "What is 5/8 − 2/8?", "choices": ["3/8", "3/0", "7/8", "2/8"], "answer": 0, "explain": "Subtract the numerators: 5 − 2 = 3, and the pieces are still eighths: 3/8."},
+      {"q": "What is 1/4 + 3/4?", "choices": ["4/8", "1", "3/4", "4/16"], "answer": 1, "explain": "1 + 3 = 4 quarters, and 4/4 is the whole thing: exactly 1."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Geometry, Measurement, and Data",
+   "summary": "Math you can see and touch: shapes and their perimeters and areas, clocks and coins, and graphs that turn counts into pictures.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Shapes, Perimeter, and Area",
+     "minutes": 14,
+     "intro": "How much fence does a garden need, and how much space is inside for planting? Those are two different questions with two different measurements: perimeter for the border, area for the inside. Mixing them up is the classic geometry mistake, so let's nail the difference.",
+     "sections": [
+      {
+       "heading": "Know Your Shapes",
+       "body": [
+        "Flat shapes are named by their sides: a **triangle** has 3, a **quadrilateral** has 4, a pentagon 5, a hexagon 6. Among quadrilaterals, a **rectangle** has four square corners, and a **square** is a rectangle whose sides are all equal.",
+        "That last sentence deserves a second look: every square is a rectangle, but not every rectangle is a square. Categories in math can nest inside each other, like a square being a special member of the rectangle club.",
+        "Solid shapes have their own names: a cube (like dice), a sphere (like a ball), a cylinder (like a can), and a cone (like an ice cream cone). Flat shapes have sides and corners; solids have faces, edges, and vertices."
+       ]
+      },
+      {
+       "heading": "Perimeter: The Walk Around",
+       "body": [
+        "**Perimeter** is the distance all the way around a shape. To find it, add up every side length. A rectangle 5 m long and 3 m wide has perimeter 5 + 3 + 5 + 3 = 16 m. That is how much fence the garden needs.",
+        "Perimeter is measured in plain length units: centimeters, meters, inches, feet. If you walked the border of the shape, perimeter is how far your feet traveled.",
+        "Shortcut for rectangles: opposite sides match, so add length and width, then double: (5 + 3) × 2 = 16. Same answer, fewer steps."
+       ]
+      },
+      {
+       "heading": "Area: The Space Inside",
+       "body": [
+        "**Area** is the amount of flat space a shape covers, measured in squares: square centimeters (cm^2^) or square meters (m^2^). Picture tiling the shape with unit squares and counting them.",
+        "For a rectangle, the tiles form an array: a 5 m by 3 m garden holds 3 rows of 5 tiles, so area = 5 × 3 = 15 m^2^. Area is length × width, and it is really just your multiplication arrays wearing a geometry hat.",
+        "Compare the two answers for the same garden: perimeter 16 m of fence around the edge, area 15 m^2^ of soil inside. Different questions, different units, different numbers."
+       ],
+       "example": {
+        "problem": "A rectangle is 6 cm long and 4 cm wide. Find its perimeter and its area.",
+        "steps": [
+         "Perimeter: add all sides: 6 + 4 + 6 + 4 = 20 cm. (Shortcut: (6 + 4) × 2 = 20.)",
+         "Area: multiply length × width: 6 × 4 = 24 cm^2^.",
+         "Sanity check the units: perimeter in cm, area in cm^2^."
+        ],
+        "answer": "Perimeter = 20 cm; Area = 24 cm^2^"
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "quadrilateral", "def": "Any flat shape with exactly 4 sides."},
+      {"term": "perimeter", "def": "The distance around a shape: add all the sides."},
+      {"term": "area", "def": "The space inside a flat shape, counted in unit squares."},
+      {"term": "square unit", "def": "A 1-by-1 square used to measure area, like cm^2^."}
+     ],
+     "practice": [
+      {"q": "What is the perimeter of a square with sides of 3 cm?", "choices": ["6 cm", "9 cm", "12 cm", "3 cm"], "answer": 2, "explain": "A square has four equal sides: 3 + 3 + 3 + 3 = 12 cm."},
+      {"q": "What is the area of a rectangle 7 m long and 2 m wide?", "choices": ["9 m^2^", "14 m^2^", "18 m^2^", "14 m"], "answer": 1, "explain": "Area = length × width = 7 × 2 = 14, measured in square meters. (18 would be the perimeter, and area needs square units.)"},
+      {"q": "A farmer wants to know how much fence to buy. Which should she calculate?", "choices": ["Area", "Perimeter", "Volume", "The number of corners"], "answer": 1, "explain": "Fence runs around the border, and the distance around is the perimeter. Area would tell her how much land is inside."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Time and Money",
+     "minutes": 14,
+     "intro": "What time does practice start, and do you have enough coins for a snack? Clocks and money are where math meets daily life, and both run on skills you already have: counting by 5s, place value, and careful adding.",
+     "sections": [
+      {
+       "heading": "Reading a Clock",
+       "body": [
+        "An analog clock has two hands. The short **hour hand** tells the hour; the long **minute hand** tells the minutes. Each number on the clock face marks 5 minutes for the minute hand, so count by 5s: minute hand on the 3 means 15 minutes past.",
+        "Special names: when the minute hand points straight up at 12, it is something o'clock. Pointing down at the 6 is half past (30 minutes). On the 3 is quarter past (15 minutes), and on the 9 is quarter to the next hour (45 minutes past this one).",
+        "**Elapsed time** is how long something lasts. From 3:15 to 4:45: first jump an hour, 3:15 to 4:15, then count the extra minutes, 4:15 to 4:45 is 30 minutes. Total: 1 hour 30 minutes."
+       ],
+       "example": {
+        "problem": "A movie starts at 2:00 and ends at 3:45. How long is it?",
+        "steps": [
+         "Jump whole hours first: 2:00 to 3:00 is 1 hour.",
+         "Count remaining minutes: 3:00 to 3:45 is 45 minutes.",
+         "Combine: 1 hour 45 minutes."
+        ],
+        "answer": "1 hour 45 minutes"
+       }
+      },
+      {
+       "heading": "Counting Money",
+       "body": [
+        "Know your coins: a **penny** is 1¢, a **nickel** 5¢, a **dime** 10¢, and a **quarter** 25¢. A dollar is 100¢. Notice the dime is smaller than the nickel but worth more; size does not equal value.",
+        "To count a handful of coins, start with the biggest values and count down. For 2 quarters, 1 dime, and 3 pennies: 25, 50, then 60, then 61, 62, 63. Total: 63¢. Counting largest-first keeps the skip counting smooth.",
+        "**Making change** is counting up from the price to the payment. A snack costs 65¢ and you pay with a dollar (100¢): count up 65 → 75 → 100, using a dime (10¢) and a quarter (25¢). Your change is 35¢. Check: 65 + 35 = 100."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "hour hand", "def": "The short clock hand that shows the hour."},
+      {"term": "minute hand", "def": "The long clock hand; each clock number counts 5 minutes for it."},
+      {"term": "elapsed time", "def": "How much time passes between a start and an end."},
+      {"term": "making change", "def": "Counting up from the price to the amount paid."}
+     ],
+     "practice": [
+      {"q": "The minute hand points at the 6. How many minutes past the hour is it?", "choices": ["6 minutes", "15 minutes", "30 minutes", "45 minutes"], "answer": 2, "explain": "Each clock number is 5 minutes: 6 × 5 = 30. The minute hand on the 6 means half past."},
+      {"q": "How much are 3 dimes and 1 nickel?", "choices": ["8¢", "35¢", "31¢", "40¢"], "answer": 1, "explain": "Count the dimes: 10, 20, 30, then add the nickel: 35¢."},
+      {"q": "Soccer starts at 4:30 and ends at 5:15. How long is practice?", "choices": ["45 minutes", "1 hour 15 minutes", "30 minutes", "85 minutes"], "answer": 0, "explain": "From 4:30 to 5:00 is 30 minutes, and 5:00 to 5:15 adds 15 more: 45 minutes total."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Bar Graphs and Pictographs",
+     "minutes": 12,
+     "intro": "The class voted on favorite fruits, and now there is a pile of votes to make sense of. Graphs turn counts into pictures so your eyes can spot the winner instantly. Learn to read them carefully, especially the sneaky key on a pictograph.",
+     "sections": [
+      {
+       "heading": "Tallies and Bar Graphs",
+       "body": [
+        "Data collection starts with **tally marks**: one stroke per vote, with every fifth stroke slashed across the previous four to make a bundle of 5. Two bundles and three singles is 5 + 5 + 3 = 13 votes, countable at a glance.",
+        "A **bar graph** shows each category as a bar; taller bar, bigger count. To read one, find the bar's top, slide across to the number scale, and read the value. Always check the scale: some graphs count by 1s, others by 2s or 5s.",
+        "Graphs answer comparison questions fast. If apples got 8 votes and grapes got 5, the apple bar stands 3 units taller, so apples beat grapes by 8 − 5 = 3 votes. Reading and then subtracting is the standard two-step move."
+       ]
+      },
+      {
+       "heading": "Pictographs and the Key",
+       "body": [
+        "A **pictograph** uses little pictures instead of bars: a row of apple symbols for apple votes. The crucial part is the **key**, which tells what one symbol is worth. It might be 1 vote, or 2, or 10.",
+        "If the key says each symbol = 2 votes, then 4 apple symbols mean 4 × 2 = 8 votes. A half symbol is worth half the key: with a key of 2, a half symbol adds 1. Skipping the key is the number one pictograph error.",
+        "When you make your own graph, give it a title, label the categories, keep the scale even, and, on a pictograph, state the key clearly. A graph with missing labels is a picture; with labels, it is information."
+       ],
+       "example": {
+        "problem": "A pictograph shows pizza votes with 3 whole pizza symbols and 1 half symbol. The key says each symbol = 4 votes. How many votes did pizza get?",
+        "steps": [
+         "Whole symbols: 3 × 4 = 12 votes.",
+         "Half symbol: half of 4 is 2 votes.",
+         "Add: 12 + 2 = 14."
+        ],
+        "answer": "14 votes"
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "tally marks", "def": "Counting strokes bundled in fives for quick totals."},
+      {"term": "bar graph", "def": "A graph where bar height shows each category's count."},
+      {"term": "pictograph", "def": "A graph using picture symbols, each worth the amount in the key."},
+      {"term": "key", "def": "The note on a pictograph telling what one symbol is worth."}
+     ],
+     "practice": [
+      {"q": "A pictograph key says each star = 5 votes. A row shows 3 stars. How many votes?", "choices": ["3", "8", "15", "35"], "answer": 2, "explain": "Each star is worth 5, so 3 × 5 = 15 votes. Always multiply by the key."},
+      {"q": "On a bar graph, dogs have 9 votes and cats have 6. By how many votes do dogs win?", "choices": ["15", "3", "2", "9"], "answer": 1, "explain": "Compare by subtracting: 9 − 6 = 3 votes."},
+      {"q": "What do four tally strokes with a fifth slashed across them show?", "choices": ["4", "5", "6", "10"], "answer": 1, "explain": "The slash bundles the strokes into a group of exactly 5, making big counts easy to read."}
+     ]
+    }
+   ]
+  }
+ ]
+}
