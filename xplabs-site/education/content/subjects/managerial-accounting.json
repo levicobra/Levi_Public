@@ -1,0 +1,809 @@
+{
+  "id": "managerial-accounting",
+  "title": "Managerial Accounting",
+  "domain": "business",
+  "level": "College",
+  "description": "The branch of accounting built for people inside a company, not investors outside it: how to classify costs, price products, plan budgets, and decide between competing uses of limited resources. You will build cost systems from scratch, learn the tools managers use to plan and control operations, and practice the specific analysis behind real short-term and long-term business decisions.",
+  "outcomes": [
+    "You can classify costs as fixed, variable, direct, or indirect and build a contribution margin income statement.",
+    "You can apply job order costing, process costing, and activity-based costing to assign overhead to products.",
+    "You can perform break-even and target-profit analysis and build a master budget from a sales forecast.",
+    "You can calculate and interpret price and quantity variances against a standard cost.",
+    "You can identify relevant costs for a special order or make-or-buy decision and evaluate a capital investment using payback, NPV, and IRR.",
+    "You can evaluate performance using responsibility accounting, ROI, and the balanced scorecard."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations of Managerial Accounting",
+      "summary": "Before building any costing system, you need to know how managerial accounting differs from financial accounting, how costs behave, and how to reorganize an income statement around that behavior.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Managerial Accounting vs Financial Accounting",
+          "minutes": 10,
+          "intro": "Financial accounting tells the outside world what already happened; managerial accounting exists for a completely different audience — the managers inside the company who need numbers to decide what happens next.",
+          "sections": [
+            {
+              "heading": "Two Audiences, Two Purposes",
+              "body": [
+                "**Managerial accounting** produces financial information for internal users, managers and employees, to support planning, directing, and controlling day-to-day operations. **Financial accounting** produces information for external users, investors, lenders, and regulators, following GAAP rules and standardized formats. The same underlying transactions feed both, but the reports built from them look and function very differently.",
+                "Because managerial accounting reports never leave the building, they are not required to follow GAAP, are not audited, and can be produced as frequently as management needs, daily or weekly rather than only quarterly or annually. A plant manager might review a cost report every morning, something no external financial statement is ever built to support."
+              ]
+            },
+            {
+              "heading": "Forward-Looking vs Historical",
+              "body": [
+                "Financial accounting is fundamentally historical: it reports what already happened last quarter or last year. Managerial accounting is fundamentally forward-looking: budgets, forecasts, and 'what if this price changes' scenarios are its core output, because managers need to decide what to do next, not just understand what already occurred.",
+                "This forward-looking orientation means managerial accounting embraces estimates and approximations that financial accounting would consider too imprecise to report externally — a manager deciding whether to launch a new product line needs a reasonable cost estimate today, not a perfectly precise number available only after the fact."
+              ]
+            },
+            {
+              "heading": "Segment and Product-Level Detail",
+              "body": [
+                "Financial accounting reports the company as a single, consolidated whole to outside readers. Managerial accounting routinely breaks results down by department, product line, region, or individual manager's area of responsibility, because a manager overseeing one product line has little use for a company-wide number that buries their own line's performance inside everyone else's.",
+                "This granularity is exactly why the same total company revenue can support dozens of different internal managerial reports simultaneously, each one built for a different manager's specific decision, while financial accounting produces essentially one consolidated report for all outside readers."
+              ],
+              "example": {
+                "problem": "A company's income statement reports total revenue of $12 million for the year. Internally, its managerial accounting reports break this down by three regions: North ($5M revenue, $4.2M costs), South ($4M revenue, $3.9M costs), and West ($3M revenue, $2.5M costs). Which region is least profitable in dollar terms, and why might financial accounting alone hide this?",
+                "steps": [
+                  "Calculate profit by region: North = $5M − $4.2M = $0.8M; South = $4M − $3.9M = $0.1M; West = $3M − $2.5M = $0.5M.",
+                  "Compare: South earns only $0.1M profit despite $4M in revenue, the thinnest margin of the three regions.",
+                  "Financial accounting's single consolidated total revenue of $12 million hides this regional weakness entirely, since it only reports the company as a whole."
+                ],
+                "answer": "The South region is least profitable, earning only $0.1M profit on $4M revenue; the consolidated financial statement would never reveal this regional weakness on its own."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Managerial accounting", "def": "Accounting information produced for internal managers to support planning, directing, and controlling operations."},
+            {"term": "Financial accounting", "def": "Accounting information produced for external users following GAAP and standardized reporting formats."},
+            {"term": "Internal users", "def": "Managers and employees inside a company who use accounting information to make operating decisions."},
+            {"term": "External users", "def": "Investors, lenders, and regulators outside a company who rely on its audited financial statements."},
+            {"term": "Segment reporting", "def": "Breaking down financial results by department, product line, or region for internal management use."}
+          ],
+          "practice": [
+            {"q": "Managerial accounting reports are primarily intended for:", "choices": ["Internal managers making planning and operating decisions", "External investors and lenders", "Government tax auditors exclusively", "The general public"], "answer": 0, "explain": "Managerial accounting exists to support internal planning and decision-making, not external reporting."},
+            {"q": "Unlike financial accounting, managerial accounting reports:", "choices": ["Are not required to follow GAAP and can be produced as often as management needs", "Must always be audited by an external accountant", "Can only be prepared annually", "Are legally required to be published publicly"], "answer": 0, "explain": "Internal reports are unaudited and can be produced on any schedule management finds useful."},
+            {"q": "A key difference in orientation between the two fields is that managerial accounting is generally:", "choices": ["Forward-looking, supporting budgets and decisions about the future", "Exclusively historical, reporting only what already happened", "Identical to financial accounting in every respect", "Focused only on tax compliance"], "answer": 0, "explain": "Managerial accounting is built around budgets, forecasts, and decisions about what to do next."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Cost Classifications: Fixed, Variable, Direct, and Indirect",
+          "minutes": 11,
+          "intro": "Before a manager can make a single good decision about pricing, staffing, or expansion, they need to correctly sort every dollar of cost into categories that behave completely differently as the business changes size.",
+          "sections": [
+            {
+              "heading": "Fixed and Variable Costs",
+              "body": [
+                "A **fixed cost** stays the same in total regardless of how much is produced or sold, within a relevant range, such as monthly rent or a manager's salary. A **variable cost** changes in total in direct proportion to production or sales volume, such as raw materials or sales commissions — doubling production roughly doubles total variable cost, but fixed cost stays the same.",
+                "On a per-unit basis, this relationship flips: variable cost per unit stays constant no matter how many units are made, while fixed cost per unit falls as volume rises, since the same fixed total is spread across more units. This is why producing more units, up to a point, tends to lower the average cost per unit."
+              ]
+            },
+            {
+              "heading": "Mixed Costs",
+              "body": [
+                "A **mixed cost** contains both a fixed and a variable component, such as a utility bill with a flat base charge plus a per-kilowatt-hour usage charge, or a delivery driver's salary plus mileage reimbursement. Mixed costs must be separated into their fixed and variable parts before they can be used properly in most managerial accounting analysis, using methods like the high-low method or regression analysis.",
+                "Treating a mixed cost as purely fixed or purely variable produces distorted cost estimates: a manager who treats a mixed utility bill as entirely fixed will underestimate costs at high production volumes and overestimate them at low volumes, since the usage-based variable portion actually does move with output."
+              ]
+            },
+            {
+              "heading": "Direct and Indirect Costs",
+              "body": [
+                "A **direct cost** can be traced conveniently and specifically to a single cost object, such as a specific product or department — the wood used in a specific chair, or the wages of the worker assembling it. An **indirect cost** benefits multiple cost objects and cannot be traced to just one, such as factory rent or a factory supervisor's salary that oversees production of many different products at once.",
+                "Indirect costs relevant to production are typically called **manufacturing overhead**, and because they cannot be directly traced, they must instead be allocated to products using a reasonable basis, such as machine hours or labor hours — a process that introduces some unavoidable approximation into any product's total reported cost."
+              ],
+              "example": {
+                "problem": "A furniture factory pays $8,000 per month in factory rent, a fixed cost, and $15 per chair in wood and fabric, a variable cost. Last month it produced 400 chairs. Calculate total cost and cost per chair.",
+                "steps": [
+                  "Calculate total variable cost: 400 chairs × $15 = $6,000.",
+                  "Calculate total cost: fixed cost plus variable cost = $8,000 + $6,000 = $14,000.",
+                  "Calculate cost per chair: $14,000 ÷ 400 = $35 per chair."
+                ],
+                "answer": "Total cost is $14,000, and the average cost per chair is $35."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Fixed cost", "def": "A cost that stays the same in total regardless of production volume, within a relevant range."},
+            {"term": "Variable cost", "def": "A cost that changes in total in direct proportion to production or sales volume."},
+            {"term": "Mixed cost", "def": "A cost containing both a fixed component and a variable component."},
+            {"term": "Direct cost", "def": "A cost that can be conveniently traced to a single cost object, such as a specific product."},
+            {"term": "Indirect cost", "def": "A cost that benefits multiple cost objects and cannot be traced to just one."},
+            {"term": "Manufacturing overhead", "def": "Indirect production costs that must be allocated to products rather than directly traced."}
+          ],
+          "practice": [
+            {"q": "A cost that stays the same in total regardless of production volume, within a relevant range, is a:", "choices": ["Fixed cost", "Variable cost", "Mixed cost", "Direct cost"], "answer": 0, "explain": "By definition, a fixed cost does not change in total as volume changes within the relevant range."},
+            {"q": "A factory's rent is $10,000 per month regardless of output. If output doubles from 500 to 1,000 units, the fixed cost per unit will:", "choices": ["Fall by half, since the same total is spread across twice as many units", "Double, along with output", "Stay exactly the same per unit", "Become a variable cost automatically"], "answer": 0, "explain": "Fixed cost per unit falls as volume rises because the same total fixed cost is divided among more units."},
+            {"q": "The wages of a factory supervisor who oversees production of five different products is best classified as a:", "choices": ["Indirect cost, since it cannot be traced to just one product", "Direct cost, since it is a labor cost", "A variable cost that changes with volume", "Not a cost at all, since it is a fixed salary"], "answer": 0, "explain": "A cost shared across multiple products that cannot be traced to just one is indirect, regardless of whether it is fixed or variable."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Cost Behavior and the Contribution Margin Income Statement",
+          "minutes": 12,
+          "intro": "Once costs are correctly separated into fixed and variable, a manager can build an entirely different version of the income statement — one designed to directly answer the question 'what happens to profit if we sell one more unit?'",
+          "sections": [
+            {
+              "heading": "The Contribution Margin",
+              "body": [
+                "The **contribution margin** is sales revenue minus total variable costs, representing the amount left over from each sale to first cover fixed costs and then contribute to profit. **Contribution margin per unit** is selling price per unit minus variable cost per unit, and it directly shows how much each additional unit sold adds toward covering fixed costs.",
+                "The **contribution margin ratio** expresses this as a percentage of sales: contribution margin ÷ sales revenue. A company with a 40% contribution margin ratio keeps 40 cents of every additional sales dollar to apply toward fixed costs and profit, a figure central to break-even and profit-planning calculations."
+              ]
+            },
+            {
+              "heading": "The Contribution Margin Income Statement",
+              "body": [
+                "A **contribution margin income statement** reorganizes costs by behavior rather than by function: Sales Revenue − Variable Costs = Contribution Margin, then Contribution Margin − Fixed Costs = Operating Income. This differs from the traditional income statement, which separates costs by function, cost of goods sold versus operating expenses, rather than by whether they are fixed or variable.",
+                "This reorganization matters because a traditional income statement blends fixed and variable costs together inside cost of goods sold, making it difficult to quickly answer 'what happens to profit if sales volume changes by 10%' — a question the contribution margin format is specifically built to answer at a glance."
+              ]
+            },
+            {
+              "heading": "Using Contribution Margin for Decisions",
+              "body": [
+                "Because contribution margin isolates the profit impact of one additional unit sold, it directly supports decisions like accepting a special one-time order below normal price, deciding whether to drop an unprofitable-looking product line, or estimating the profit effect of a sales promotion — all without needing to recalculate fixed costs, which don't change with these short-term volume decisions.",
+                "A common mistake is applying a per-unit total cost, including an allocated share of fixed costs, to a decision about a single extra unit; since fixed costs don't actually change with one more unit produced, only the variable cost and contribution margin per unit are relevant to that specific decision."
+              ],
+              "example": {
+                "problem": "A company sells a product for $50 per unit. Variable cost per unit is $30. Fixed costs total $60,000 per month. The company sold 4,000 units last month. Build a contribution margin income statement and calculate the contribution margin ratio.",
+                "steps": [
+                  "Calculate sales revenue: 4,000 units × $50 = $200,000.",
+                  "Calculate total variable cost: 4,000 units × $30 = $120,000.",
+                  "Calculate contribution margin: $200,000 − $120,000 = $80,000. Contribution margin ratio: $80,000 ÷ $200,000 = 0.40, or 40%.",
+                  "Calculate operating income: Contribution margin minus fixed costs = $80,000 − $60,000 = $20,000."
+                ],
+                "answer": "Sales $200,000 − Variable costs $120,000 = Contribution margin $80,000, a 40% ratio; Contribution margin $80,000 − Fixed costs $60,000 = Operating income $20,000."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Contribution margin", "def": "Sales revenue minus total variable costs, available to cover fixed costs and contribute to profit."},
+            {"term": "Contribution margin per unit", "def": "Selling price per unit minus variable cost per unit."},
+            {"term": "Contribution margin ratio", "def": "Contribution margin divided by sales revenue, expressed as a percentage."},
+            {"term": "Contribution margin income statement", "def": "An income statement organized by cost behavior: sales minus variable costs minus fixed costs."},
+            {"term": "Operating income", "def": "Contribution margin minus fixed costs in a contribution margin income statement."}
+          ],
+          "practice": [
+            {"q": "Contribution margin is calculated as:", "choices": ["Sales revenue minus total variable costs", "Sales revenue minus total fixed costs", "Sales revenue minus total costs", "Fixed costs minus variable costs"], "answer": 0, "explain": "Contribution margin isolates revenue after variable costs only, before fixed costs are subtracted."},
+            {"q": "A product sells for $80 with a variable cost of $50 per unit. Its contribution margin per unit is:", "choices": ["$30", "$80", "$50", "$130"], "answer": 0, "explain": "$80 − $50 = $30 contribution margin per unit."},
+            {"q": "A company evaluates a one-time special order using only the product's variable cost and contribution margin, ignoring fixed costs. This is appropriate because:", "choices": ["Fixed costs typically do not change with a small increase in volume from a single special order", "Fixed costs should always be ignored in every decision", "Variable costs never matter for short-term decisions", "Contribution margin is the same thing as total cost"], "answer": 0, "explain": "Since fixed costs are unaffected by one extra order, only the incremental variable cost and contribution margin are relevant."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Costing Systems",
+      "summary": "Different production settings need different ways of assigning cost to products — from a single custom job to millions of identical units to a complex mix of both.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Job Order Costing",
+          "minutes": 11,
+          "intro": "A custom furniture maker building one client's specific dining table needs a completely different costing approach than a factory stamping out identical widgets by the thousand — job order costing is built for exactly the custom, one-at-a-time case.",
+          "sections": [
+            {
+              "heading": "When Job Order Costing Applies",
+              "body": [
+                "**Job order costing** assigns costs to a specific, distinct unit or batch of production, called a **job**, and is used when products are unique or made to customer specification, such as custom furniture, a construction project, or an audit engagement. Each job accumulates its own direct materials, direct labor, and allocated overhead separately from every other job.",
+                "This contrasts with mass-production settings, where identical units flow continuously through the same process, making it impractical and unnecessary to track costs job by job — that setting instead uses process costing, covered in the next lesson."
+              ]
+            },
+            {
+              "heading": "The Job Cost Sheet",
+              "body": [
+                "A **job cost sheet** is the document that accumulates all costs charged to a specific job: direct materials requisitioned for that job, direct labor hours and cost charged to that job, and manufacturing overhead applied to that job using a predetermined rate. Once the job is finished, the job cost sheet's total becomes the basis for the finished product's recorded cost.",
+                "Direct materials and direct labor are traced to a job through source documents, a materials requisition form and a labor time ticket, while overhead cannot be traced directly and must instead be applied using an allocation rate, since costs like factory rent and utilities benefit every job running through the shop simultaneously."
+              ]
+            },
+            {
+              "heading": "Applying Overhead with a Predetermined Rate",
+              "body": [
+                "A **predetermined overhead rate** is calculated before the period begins: estimated total manufacturing overhead for the period ÷ estimated total amount of the allocation base, such as direct labor hours or machine hours. This rate is then applied to each job based on the job's actual amount of that allocation base, such as the actual labor hours the job consumed.",
+                "Using a predetermined rate, calculated in advance, rather than actual overhead, calculated only after the fact, lets a company estimate a job's total cost, and set a price, before the job is even finished, which is essential for quoting a price to a customer up front rather than waiting until all costs are fully known."
+              ],
+              "example": {
+                "problem": "A custom cabinet shop estimates $180,000 in total overhead and 9,000 total labor hours for the year, giving a predetermined overhead rate. Job #205 uses $2,400 of direct materials, 40 direct labor hours at $25 per hour, and consumes 40 labor hours as its overhead allocation base. Calculate the predetermined overhead rate and Job #205's total cost.",
+                "steps": [
+                  "Calculate the predetermined overhead rate: $180,000 ÷ 9,000 hours = $20 per labor hour.",
+                  "Calculate direct labor cost for Job #205: 40 hours × $25 = $1,000.",
+                  "Calculate overhead applied to Job #205: 40 hours × $20 = $800.",
+                  "Calculate total job cost: Direct materials $2,400 + Direct labor $1,000 + Overhead $800 = $4,200."
+                ],
+                "answer": "The predetermined overhead rate is $20 per labor hour, and Job #205's total cost is $4,200."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Job order costing", "def": "A costing system that assigns costs to a specific, distinct unit or batch of production."},
+            {"term": "Job", "def": "A distinct unit or batch of production tracked separately under job order costing."},
+            {"term": "Job cost sheet", "def": "The document accumulating direct materials, direct labor, and applied overhead for a specific job."},
+            {"term": "Predetermined overhead rate", "def": "A rate calculated before the period begins by dividing estimated overhead by an estimated allocation base."},
+            {"term": "Allocation base", "def": "The measure, such as labor hours or machine hours, used to apply overhead to jobs or products."}
+          ],
+          "practice": [
+            {"q": "Job order costing is most appropriate for a business that:", "choices": ["Produces unique or custom units or batches, such as custom furniture or construction projects", "Produces millions of identical units on a continuous assembly line", "Never has any manufacturing overhead", "Only sells services, never physical products"], "answer": 0, "explain": "Job order costing tracks cost job by job, which fits custom or batch production best."},
+            {"q": "A predetermined overhead rate is calculated:", "choices": ["Before the period begins, using estimated overhead and an estimated allocation base", "Only after the period ends, using actual overhead costs", "By dividing direct materials by direct labor", "Only for companies with no fixed costs"], "answer": 0, "explain": "The rate is set in advance so costs can be estimated and jobs priced before they are finished."},
+            {"q": "A company estimates $240,000 in overhead and 12,000 machine hours for the year. Its predetermined overhead rate is:", "choices": ["$20 per machine hour", "$240,000 per machine hour", "$12,000 per machine hour", "$2 per machine hour"], "answer": 0, "explain": "$240,000 ÷ 12,000 = $20 per machine hour."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Process Costing",
+          "minutes": 11,
+          "intro": "A factory producing a million identical bottles of shampoo has no meaningful way to track cost bottle by individual bottle — instead, it tracks cost by production step and spreads it evenly across everything that passed through.",
+          "sections": [
+            {
+              "heading": "When Process Costing Applies",
+              "body": [
+                "**Process costing** assigns costs to a production process or department over a period, then spreads that total cost evenly across all the identical units produced, rather than tracking individual jobs. It is used for mass production of identical or near-identical units, such as chemicals, food processing, or bottled beverages, where individual units are indistinguishable from each other.",
+                "Because units are essentially identical, there is no meaningful benefit to tracking cost unit by unit as in job order costing — instead, total departmental cost for a period is simply divided by the number of equivalent units produced in that period to get an average cost per unit."
+              ]
+            },
+            {
+              "heading": "Equivalent Units of Production",
+              "body": [
+                "Because a production process rarely starts and stops in exact alignment with a reporting period, some units are only partially complete at the end of the period. **Equivalent units of production** convert partially finished units into an equivalent number of fully finished units for costing purposes — 100 units that are 50% complete count as 50 equivalent units.",
+                "This adjustment is necessary because it would overstate a period's productivity to count a half-finished unit the same as a fully finished one, and understate it to ignore partially completed units entirely; equivalent units let partial progress be counted proportionally, giving an accurate cost-per-unit calculation."
+              ]
+            },
+            {
+              "heading": "Calculating Cost per Equivalent Unit",
+              "body": [
+                "The core process costing calculation is: Cost per equivalent unit = Total costs incurred during the period ÷ Total equivalent units of production for the period. This cost per unit is then applied to determine the cost of units completed and transferred out, and the cost remaining in ending work-in-process inventory.",
+                "In practice, this calculation is done separately for materials and for conversion costs, meaning direct labor plus overhead, since materials are often added entirely at the start of a process while labor and overhead accumulate more evenly throughout, giving each cost category a different completion percentage for partially finished units."
+              ],
+              "example": {
+                "problem": "A bottling department incurs $84,000 in conversion costs during the month. It completes and transfers out 8,000 units, and ends the month with 2,000 units that are 40% complete for conversion costs. Calculate total equivalent units and the cost per equivalent unit for conversion costs.",
+                "steps": [
+                  "Calculate equivalent units from ending work-in-process: 2,000 units × 40% = 800 equivalent units.",
+                  "Calculate total equivalent units: 8,000 completed units + 800 equivalent units from ending WIP = 8,800 equivalent units.",
+                  "Calculate cost per equivalent unit: $84,000 ÷ 8,800 ≈ $9.55 per equivalent unit."
+                ],
+                "answer": "Total equivalent units are 8,800, and the cost per equivalent unit for conversion costs is approximately $9.55."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Process costing", "def": "A costing system that assigns costs to a production process and spreads them evenly across identical units."},
+            {"term": "Equivalent units of production", "def": "A conversion of partially finished units into an equivalent number of fully finished units."},
+            {"term": "Conversion costs", "def": "Direct labor plus manufacturing overhead in a process costing calculation."},
+            {"term": "Cost per equivalent unit", "def": "Total period costs divided by total equivalent units of production."},
+            {"term": "Work-in-process inventory", "def": "Units that have entered production but are not yet fully complete at period end."}
+          ],
+          "practice": [
+            {"q": "Process costing is most appropriate for:", "choices": ["Mass production of identical units, such as chemicals or bottled beverages", "One-of-a-kind custom projects like a custom home", "Professional services billed by the hour", "Companies with no manufacturing overhead"], "answer": 0, "explain": "Process costing suits continuous, identical-unit production rather than custom jobs."},
+            {"q": "2,000 units that are 30% complete represent how many equivalent units?", "choices": ["600", "2,000", "300", "1,400"], "answer": 0, "explain": "2,000 × 30% = 600 equivalent units."},
+            {"q": "Conversion costs in process costing refer to:", "choices": ["Direct labor plus manufacturing overhead", "Direct materials only", "Total revenue for the period", "Fixed costs only"], "answer": 0, "explain": "Conversion costs combine direct labor and manufacturing overhead as a single cost category."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Activity-Based Costing vs Traditional Costing",
+          "minutes": 12,
+          "intro": "A company that allocates all its overhead using a single measure like direct labor hours can end up systematically overcharging its simple, high-volume products and undercharging its complex, low-volume ones — a distortion that activity-based costing was built to fix.",
+          "sections": [
+            {
+              "heading": "The Problem with a Single Overhead Rate",
+              "body": [
+                "Traditional costing applies manufacturing overhead using a single allocation base, such as direct labor hours, across all products. This works reasonably well when overhead is genuinely driven by that one base and products consume similar amounts of overhead-driving activity relative to their labor hours.",
+                "But modern factories often have overhead driven by many different activities, not just labor hours: machine setups, quality inspections, purchase orders, and engineering changes. A low-volume, highly customized product might require many machine setups relative to its labor hours, while a high-volume standard product requires very few — a single labor-hour-based rate would assign both products a cost that doesn't reflect what actually drives their overhead."
+              ]
+            },
+            {
+              "heading": "Activity-Based Costing",
+              "body": [
+                "**Activity-based costing (ABC)** assigns overhead costs to products based on the specific activities that drive those costs, rather than a single volume-based measure. It identifies distinct **cost pools**, groups of overhead cost associated with a particular activity, such as machine setups or quality inspections, and a **cost driver** for each pool, the specific measure that causes that cost to be incurred, such as the number of setups performed.",
+                "Each product is then charged overhead based on how much of each cost driver it actually consumes, rather than assuming all overhead scales uniformly with labor hours. A product requiring frequent machine setups is charged proportionally more of the setup-related overhead pool, regardless of how many labor hours it uses."
+              ]
+            },
+            {
+              "heading": "When ABC Is Worth the Effort",
+              "body": [
+                "ABC produces more accurate product costs than traditional costing, particularly when a company makes a diverse mix of high-volume and low-volume, high-complexity products, since traditional costing tends to systematically under-cost complex, low-volume products and over-cost simple, high-volume ones under a single volume-based rate.",
+                "The tradeoff is that ABC requires substantially more data collection and analysis, identifying activities, cost pools, and cost drivers, and tracking each product's actual consumption of each driver, making it most worthwhile for companies where product cost distortion under traditional methods would actually change important pricing or product-mix decisions."
+              ],
+              "example": {
+                "problem": "A company makes Product A, high volume and simple with few setups, and Product B, low volume and complex with many setups. Total setup overhead is $60,000 for 300 total setups. Product A requires 50 setups; Product B requires 250 setups. Calculate the setup cost assigned to each product under ABC.",
+                "steps": [
+                  "Calculate the cost driver rate: $60,000 ÷ 300 setups = $200 per setup.",
+                  "Calculate Product A's setup cost: 50 setups × $200 = $10,000.",
+                  "Calculate Product B's setup cost: 250 setups × $200 = $50,000."
+                ],
+                "answer": "Product A is assigned $10,000 of setup overhead, and Product B is assigned $50,000, reflecting Product B's much heavier consumption of machine setups."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Traditional costing", "def": "A costing approach that applies overhead using a single volume-based allocation base across all products."},
+            {"term": "Activity-based costing (ABC)", "def": "A costing method assigning overhead based on the specific activities that drive those costs."},
+            {"term": "Cost pool", "def": "A group of overhead costs associated with a particular activity."},
+            {"term": "Cost driver", "def": "The specific measure that causes an overhead cost pool to be incurred."},
+            {"term": "Overhead allocation", "def": "The process of assigning indirect costs to products using a chosen basis or driver."}
+          ],
+          "practice": [
+            {"q": "Traditional costing tends to distort product costs most when:", "choices": ["A company makes a diverse mix of high-volume simple products and low-volume complex products", "All products consume overhead in exact proportion to labor hours", "The company has no overhead at all", "Every product is identical"], "answer": 0, "explain": "A single volume-based rate misrepresents cost when products vary widely in complexity and volume."},
+            {"q": "In activity-based costing, a cost driver is:", "choices": ["The specific measure that causes an overhead cost pool to be incurred, such as number of setups", "A synonym for direct materials", "Always the same as direct labor hours", "Only relevant to process costing, not ABC"], "answer": 0, "explain": "A cost driver links a cost pool to the activity that actually causes it."},
+            {"q": "Total inspection overhead is $40,000 for 200 total inspections. A product requiring 60 inspections would be assigned how much inspection overhead under ABC?", "choices": ["$12,000", "$40,000", "$8,000", "$60,000"], "answer": 0, "explain": "Rate = $40,000 ÷ 200 = $200 per inspection; $200 × 60 = $12,000."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Planning Tools",
+      "summary": "Managers plan ahead using break-even analysis to set targets, a chain of budgets to translate a sales forecast into detailed operating plans, and standard costs to build a benchmark for later comparison.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Cost-Volume-Profit Analysis and Break-Even",
+          "minutes": 12,
+          "intro": "Every manager eventually needs to answer one deceptively simple question — how many units do we need to sell before we stop losing money — and cost-volume-profit analysis is the tool built to answer it precisely.",
+          "sections": [
+            {
+              "heading": "The Break-Even Point",
+              "body": [
+                "**Cost-volume-profit (CVP) analysis** examines how changes in costs and sales volume affect a company's profit, built on the same fixed-cost, variable-cost, and contribution margin ideas from earlier. The **break-even point** is the sales volume at which total revenue exactly equals total costs, meaning profit is exactly zero.",
+                "In units, break-even point equals Fixed Costs ÷ Contribution Margin per Unit. This formula makes intuitive sense: each unit sold contributes its contribution margin toward covering fixed costs, so dividing total fixed costs by that per-unit contribution tells you exactly how many units are needed before all fixed costs are covered."
+              ]
+            },
+            {
+              "heading": "Break-Even in Sales Dollars and Target Profit",
+              "body": [
+                "Break-even can also be expressed in sales dollars: Fixed Costs ÷ Contribution Margin Ratio, useful when a company sells multiple products at different prices and a single units figure wouldn't be meaningful. This produces the total revenue needed to break even, rather than a specific unit count.",
+                "CVP analysis extends naturally to **target profit** analysis: instead of solving for zero profit, add the desired target profit to fixed costs in the numerator: (Fixed Costs + Target Profit) ÷ Contribution Margin per Unit gives the exact number of units needed to hit a specific profit goal, not just break even."
+              ]
+            },
+            {
+              "heading": "The Margin of Safety",
+              "body": [
+                "The **margin of safety** measures how far actual or budgeted sales exceed the break-even point, expressed in units, dollars, or as a percentage: (Actual Sales − Break-even Sales) ÷ Actual Sales. It answers the practical question of how much sales could drop before the company starts losing money.",
+                "A large margin of safety indicates a comfortable cushion against a sales downturn, while a small or negative margin of safety signals that even a modest drop in sales would push the company into a loss — information that changes how aggressively a manager should react to early signs of softening demand."
+              ],
+              "example": {
+                "problem": "A company sells a product for $40 with a variable cost of $25 per unit. Fixed costs are $90,000 per month. Calculate the break-even point in units, and the units needed to earn a target profit of $30,000.",
+                "steps": [
+                  "Calculate contribution margin per unit: $40 − $25 = $15.",
+                  "Calculate break-even units: $90,000 ÷ $15 = 6,000 units.",
+                  "Calculate units for target profit: ($90,000 + $30,000) ÷ $15 = $120,000 ÷ $15 = 8,000 units."
+                ],
+                "answer": "The break-even point is 6,000 units, and 8,000 units are needed to earn a $30,000 target profit."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Cost-volume-profit (CVP) analysis", "def": "Analysis examining how changes in costs and sales volume affect a company's profit."},
+            {"term": "Break-even point", "def": "The sales volume at which total revenue exactly equals total costs, so profit is zero."},
+            {"term": "Target profit", "def": "A specific profit goal used to calculate the sales volume needed to achieve it."},
+            {"term": "Margin of safety", "def": "How far actual or budgeted sales exceed the break-even point."},
+            {"term": "Contribution margin ratio", "def": "Contribution margin divided by sales revenue, used in break-even dollar calculations."}
+          ],
+          "practice": [
+            {"q": "The break-even point in units is calculated as:", "choices": ["Fixed costs ÷ contribution margin per unit", "Fixed costs ÷ variable cost per unit", "Total sales ÷ variable cost per unit", "Contribution margin ÷ fixed costs"], "answer": 0, "explain": "Dividing fixed costs by contribution margin per unit tells you how many units are needed to cover fixed costs exactly."},
+            {"q": "A product has a contribution margin of $20 per unit, and fixed costs are $100,000. Break-even in units is:", "choices": ["5,000", "2,000", "20,000", "100,000"], "answer": 0, "explain": "$100,000 ÷ $20 = 5,000 units."},
+            {"q": "A company's margin of safety is small or negative. This means:", "choices": ["Even a modest sales decline could push the company into a loss", "The company has an unusually large cushion above break-even", "Fixed costs are zero", "The company cannot calculate its break-even point"], "answer": 0, "explain": "A small margin of safety means actual sales are close to the break-even point, leaving little room for a decline."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "The Master Budget: Sales, Production, and Cash Budgets",
+          "minutes": 12,
+          "intro": "A company's annual plan is not one document but a connected chain of smaller budgets, each one feeding numbers into the next, starting from a single forecast that every other budget in the chain ultimately depends on.",
+          "sections": [
+            {
+              "heading": "The Master Budget and the Sales Budget",
+              "body": [
+                "The **master budget** is a comprehensive set of interconnected budgets covering all of a company's planned operations and finances for a period, typically a year, broken into quarters or months. It always begins with the **sales budget**, a forecast of expected unit sales and sales revenue, because nearly every other operating budget depends on how much the company expects to sell.",
+                "A sales forecast that is too optimistic cascades errors through the entire master budget: production plans overstate needed output, purchasing overstates needed materials, and staffing plans overstate needed labor — which is why sales forecasting, though inherently uncertain, is treated as the single most consequential estimate in the whole planning process."
+              ]
+            },
+            {
+              "heading": "The Production Budget",
+              "body": [
+                "The **production budget** determines how many units must be produced, based on budgeted sales plus desired ending inventory minus beginning inventory: Production = Budgeted Sales + Desired Ending Inventory − Beginning Inventory. This ensures the company produces enough to meet sales demand while maintaining whatever inventory cushion management wants on hand.",
+                "From the production budget, a company can then build its direct materials budget, direct labor budget, and manufacturing overhead budget, each one a further breakdown of what it will take to actually produce the units the production budget calls for."
+              ]
+            },
+            {
+              "heading": "The Cash Budget",
+              "body": [
+                "The **cash budget** projects cash receipts and cash disbursements period by period, identifying in advance whether the company will have a cash shortfall requiring short-term borrowing, or a cash surplus available for investment or debt repayment. It draws inputs from nearly every other budget: cash collections from the sales budget, cash payments for materials from the purchasing budget, and payroll from the labor budget.",
+                "Building the cash budget before the period begins lets a company arrange financing, such as a line of credit, ahead of an anticipated shortfall, rather than discovering the shortfall only when it's too late to arrange affordable financing — this forward visibility is one of budgeting's most practical benefits."
+              ],
+              "example": {
+                "problem": "A company budgets sales of 5,000 units next quarter. It wants 800 units of ending inventory and currently has 500 units of beginning inventory. How many units must be produced?",
+                "steps": [
+                  "Apply the production budget formula: Production = Budgeted Sales + Desired Ending Inventory − Beginning Inventory.",
+                  "Substitute the values: Production = 5,000 + 800 − 500.",
+                  "Calculate: 5,000 + 800 = 5,800; 5,800 − 500 = 5,300 units."
+                ],
+                "answer": "The company must produce 5,300 units."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Master budget", "def": "A comprehensive set of interconnected budgets covering a company's planned operations and finances for a period."},
+            {"term": "Sales budget", "def": "A forecast of expected unit sales and sales revenue, the starting point of the master budget."},
+            {"term": "Production budget", "def": "A budget determining units to produce based on budgeted sales and desired inventory levels."},
+            {"term": "Cash budget", "def": "A projection of cash receipts and disbursements used to anticipate shortfalls or surpluses."},
+            {"term": "Direct materials budget", "def": "A budget determining the raw materials needed and to be purchased to support the production budget."}
+          ],
+          "practice": [
+            {"q": "The master budget process typically begins with:", "choices": ["The sales budget", "The cash budget", "The production budget", "The manufacturing overhead budget"], "answer": 0, "explain": "Nearly every other budget depends on the sales forecast, so it comes first."},
+            {"q": "A company budgets sales of 4,000 units, wants 600 units of ending inventory, and has 400 units of beginning inventory. How many units must be produced?", "choices": ["4,200", "4,000", "4,600", "3,800"], "answer": 0, "explain": "4,000 + 600 − 400 = 4,200 units."},
+            {"q": "The cash budget is most useful because it:", "choices": ["Identifies a potential cash shortfall in advance, allowing time to arrange financing", "Replaces the need for a sales budget", "Only tracks non-cash expenses like depreciation", "Is prepared only after the fiscal year ends"], "answer": 0, "explain": "Forecasting cash needs ahead of time lets a company arrange financing before a shortfall becomes urgent."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Standard Costs and Variance Analysis",
+          "minutes": 12,
+          "intro": "A manager who only knows that actual costs came in $8,000 over budget knows almost nothing useful yet — standard costing exists to break that single number down into exactly which quantities and which prices went wrong.",
+          "sections": [
+            {
+              "heading": "Standard Costs",
+              "body": [
+                "A **standard cost** is a predetermined, budgeted cost for a unit of product, based on expected quantities of materials and labor and their expected prices, established before production begins. Standards serve as a benchmark against which actual costs are later compared, and as a planning tool for setting prices and budgets in advance.",
+                "Standards are typically set for both the quantity of an input, a standard quantity such as 2 pounds of material per unit, and its price, a standard price such as $5 per pound, allowing a total variance to be broken apart into a quantity component and a price component separately."
+              ]
+            },
+            {
+              "heading": "The Price and Quantity Variance Formulas",
+              "body": [
+                "A **materials price variance** measures the difference between what was actually paid for materials and what should have been paid at the standard price, for the actual quantity purchased: (Actual Price − Standard Price) × Actual Quantity. A **materials quantity variance** measures the difference between the actual quantity used and the standard quantity allowed for the actual output, valued at the standard price: (Actual Quantity − Standard Quantity Allowed) × Standard Price.",
+                "The same logic applies to labor: a **labor rate variance** isolates the effect of paying a different wage rate than standard, and a **labor efficiency variance** isolates the effect of using more or fewer labor hours than standard allows for the actual output achieved."
+              ]
+            },
+            {
+              "heading": "Interpreting Variances",
+              "body": [
+                "A **favorable variance** means actual cost was lower than standard, good for profit; an **unfavorable variance** means actual cost was higher than standard. But a favorable variance is not automatically good news: buying cheaper, lower-quality materials might produce a favorable price variance while simultaneously causing an unfavorable quantity variance from increased waste or rework, so variances should be read together, not in isolation.",
+                "Investigating variances is itself a management decision balancing cost against benefit: a company typically only investigates variances that are both large in dollar terms and unusual relative to normal fluctuation, rather than chasing every tiny deviation from standard."
+              ],
+              "example": {
+                "problem": "A company's standard cost for material is $4 per pound, with a standard quantity of 3 pounds per unit. It actually paid $4.50 per pound and used 3.2 pounds per unit to produce 1,000 units. Calculate the materials price variance and materials quantity variance.",
+                "steps": [
+                  "Calculate actual quantity purchased and used: 1,000 units × 3.2 pounds = 3,200 pounds.",
+                  "Calculate materials price variance: (Actual Price − Standard Price) × Actual Quantity = ($4.50 − $4.00) × 3,200 = $1,600 unfavorable, since actual price was higher.",
+                  "Calculate standard quantity allowed: 1,000 units × 3 pounds = 3,000 pounds.",
+                  "Calculate materials quantity variance: (Actual Quantity − Standard Quantity Allowed) × Standard Price = (3,200 − 3,000) × $4.00 = $800 unfavorable, since more material was used than allowed."
+                ],
+                "answer": "The materials price variance is $1,600 unfavorable, and the materials quantity variance is $800 unfavorable — the company paid more per pound and used more pounds than the standard allowed."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Standard cost", "def": "A predetermined, budgeted cost for a unit of product based on expected quantities and prices."},
+            {"term": "Materials price variance", "def": "The difference between actual and standard price paid for materials, times the actual quantity purchased."},
+            {"term": "Materials quantity variance", "def": "The difference between actual and standard quantity used, valued at the standard price."},
+            {"term": "Labor rate variance", "def": "The effect of paying a wage rate different from the standard rate."},
+            {"term": "Labor efficiency variance", "def": "The effect of using more or fewer labor hours than the standard allows for actual output."},
+            {"term": "Favorable and unfavorable variance", "def": "A favorable variance means actual cost was lower than standard; unfavorable means it was higher."}
+          ],
+          "practice": [
+            {"q": "A materials price variance measures:", "choices": ["The difference between actual price paid and standard price, for the actual quantity purchased", "The difference between actual and standard quantity used only", "Total labor cost variance", "The break-even point in units"], "answer": 0, "explain": "The price variance isolates the price component of a cost variance, holding quantity at the actual amount purchased."},
+            {"q": "A company pays $3.20 per pound instead of a $3.00 standard, buying 5,000 pounds. The materials price variance is:", "choices": ["$1,000 unfavorable", "$1,000 favorable", "$15,000 unfavorable", "$100 unfavorable"], "answer": 0, "explain": "(Actual Price − Standard Price) × Actual Quantity = ($3.20 − $3.00) × 5,000 = $1,000 unfavorable."},
+            {"q": "A favorable materials price variance combined with an unfavorable materials quantity variance most likely suggests:", "choices": ["Cheaper, lower-quality materials were purchased, leading to more waste or rework", "No relationship exists between the two variances", "The company used less labor than standard", "The company's standard costs were set too high"], "answer": 0, "explain": "Buying cheaper materials can save on price but cause more waste, producing this exact pattern of variances."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Decision Making",
+      "summary": "Managers use relevant cost analysis for short-term choices and formal capital budgeting tools for long-term investments, then hold managers accountable only for what they actually control.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Relevant Costs for Short-Term Decisions",
+          "minutes": 11,
+          "intro": "Managers routinely get short-term decisions wrong not because they can't do the math, but because they include costs in the calculation that have absolutely no bearing on which choice is actually better.",
+          "sections": [
+            {
+              "heading": "Relevant Costs and Sunk Costs",
+              "body": [
+                "A **relevant cost** is a future cost that differs between the alternatives being considered, and only relevant costs should influence a decision. A **sunk cost** is a cost already incurred in the past that cannot be changed by any current decision, and sunk costs are never relevant, no matter how large or how much they feel like they should matter emotionally.",
+                "A company that already spent $200,000 developing a product that turns out to have weak demand should evaluate whether to continue selling it based only on future revenues and future costs from this point forward — the $200,000 already spent is sunk and irrelevant to whether continuing makes sense going forward, even though it's psychologically hard to ignore."
+              ]
+            },
+            {
+              "heading": "Special Order Decisions",
+              "body": [
+                "A **special order decision** evaluates whether to accept a one-time order at a price below the company's normal selling price, typically appropriate only when the company has idle production capacity available. The relevant comparison is the special order's price against its incremental variable cost, not against the full cost including allocated fixed overhead, since fixed costs generally don't change just because of one extra order.",
+                "Accepting a special order makes sense whenever the offered price exceeds the variable cost per unit, since every unit sold above variable cost contributes positively to covering fixed costs and profit, provided the order doesn't displace existing regular-price sales or damage the company's regular pricing structure."
+              ]
+            },
+            {
+              "heading": "Make-or-Buy Decisions",
+              "body": [
+                "A **make-or-buy decision** compares the cost of producing a component in-house against purchasing it from an outside supplier. The relevant costs to make it in-house are the variable costs, plus any fixed costs that would actually be avoided if the company stopped making it, not the fixed costs that would continue regardless, such as factory rent that stays the same either way.",
+                "A common analytical mistake is comparing the outside supplier's price against the full in-house cost per unit, including allocated fixed costs that won't actually go away if production stops — only the truly avoidable costs should be compared to the purchase price."
+              ],
+              "example": {
+                "problem": "A company normally sells a part for $60, with variable cost of $35 and allocated fixed overhead of $15 per unit, a full cost of $50. A customer offers to buy 1,000 units in a one-time order at $42 per unit, and the company has idle capacity. Should the company accept the special order?",
+                "steps": [
+                  "Identify the relevant cost for this decision: variable cost per unit of $35, since fixed overhead is already being incurred regardless and idle capacity means no regular sales are displaced.",
+                  "Compare the offered price to relevant cost: $42 offered versus $35 variable cost.",
+                  "Calculate the contribution from accepting: ($42 − $35) × 1,000 units = $7,000 additional contribution toward fixed costs and profit."
+                ],
+                "answer": "Yes, the company should accept the order — it exceeds variable cost by $7 per unit, contributing an additional $7,000 in profit, even though it is below the normal $60 price and even below the full $50 cost figure."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Relevant cost", "def": "A future cost that differs between the alternatives being considered in a decision."},
+            {"term": "Sunk cost", "def": "A past cost already incurred that cannot be changed by any current decision, and is therefore never relevant."},
+            {"term": "Special order decision", "def": "A decision evaluating whether to accept a one-time order at a price below normal selling price."},
+            {"term": "Make-or-buy decision", "def": "A decision comparing the cost of producing a component in-house against purchasing it from a supplier."},
+            {"term": "Avoidable cost", "def": "A cost that would actually stop being incurred if a specific decision, such as ending production, were made."}
+          ],
+          "practice": [
+            {"q": "A sunk cost is:", "choices": ["A past cost that cannot be changed by any current decision and is never relevant", "A future cost that differs between alternatives", "Always the largest cost in any decision", "Only relevant to capital budgeting decisions"], "answer": 0, "explain": "Sunk costs are unaffected by any current or future decision, so they should never influence one."},
+            {"q": "A company has idle capacity and receives a special order at $28 per unit for a product with a variable cost of $22 and full allocated cost of $30. Should it accept the order?", "choices": ["Yes, because $28 exceeds the $22 variable cost, contributing $6 per unit toward fixed costs and profit", "No, because $28 is below the full cost of $30", "No, special orders should never be accepted below the normal price", "Yes, but only because fixed costs will decrease"], "answer": 0, "explain": "Since fixed costs are unaffected, comparing price to variable cost, not full cost, is the correct approach."},
+            {"q": "In a make-or-buy decision, the fixed costs relevant to the analysis are:", "choices": ["Only the fixed costs that would actually be avoided if production stopped", "All fixed costs, whether avoidable or not", "No fixed costs are ever relevant to a make-or-buy decision", "Only costs incurred in a previous year"], "answer": 0, "explain": "Only fixed costs that would genuinely disappear if the company stopped making the part are relevant to the comparison."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Capital Budgeting: Payback, NPV, and IRR",
+          "minutes": 13,
+          "intro": "Deciding whether to spend $500,000 on new equipment today in exchange for cash flows spread over the next several years requires comparing money at very different points in time — which is exactly the problem capital budgeting tools are built to solve.",
+          "sections": [
+            {
+              "heading": "The Payback Period",
+              "body": [
+                "**Capital budgeting** is the process of evaluating and selecting long-term investments, such as new equipment or a new facility. The **payback period** is the simplest method: how long it takes for a project's cumulative cash inflows to equal its initial investment. A $100,000 investment generating $25,000 per year has a 4-year payback period.",
+                "Payback period's main weakness is that it ignores the time value of money and ignores any cash flows occurring after the payback point is reached — a project with a fast payback but weak long-term returns can look artificially attractive next to one with a slightly slower payback but much stronger returns over its full life."
+              ]
+            },
+            {
+              "heading": "Net Present Value (NPV)",
+              "body": [
+                "The **time value of money** reflects that a dollar received today is worth more than a dollar received in the future, because today's dollar can be invested and earn a return in the meantime. **Net present value (NPV)** discounts all of a project's future cash flows back to today's dollars using a required rate of return, then subtracts the initial investment: a positive NPV means the project is expected to earn more than the required rate of return.",
+                "NPV is generally considered the most theoretically sound capital budgeting method because it accounts for both the time value of money and all cash flows over the project's entire life, not just the flows up to the payback point. A company comparing two mutually exclusive projects should generally choose the one with the higher NPV, all else equal."
+              ]
+            },
+            {
+              "heading": "Internal Rate of Return (IRR)",
+              "body": [
+                "The **internal rate of return (IRR)** is the discount rate at which a project's NPV exactly equals zero, in other words, the project's own effective rate of return. A project is generally considered acceptable if its IRR exceeds the company's required rate of return, called the **hurdle rate**.",
+                "IRR and NPV usually agree on whether to accept a single, independent project, but they can disagree when ranking mutually exclusive projects of very different sizes or cash flow timing, in which case NPV is generally regarded as the more reliable method."
+              ],
+              "example": {
+                "problem": "A project requires an initial investment of $150,000 and is expected to generate $40,000 per year in cash flow for 5 years. Calculate its payback period. Separately, if the same project's discounted cash flows over 5 years total $172,000, calculate its NPV.",
+                "steps": [
+                  "Calculate payback period: $150,000 ÷ $40,000 per year = 3.75 years.",
+                  "Calculate NPV: Present value of cash flows minus initial investment = $172,000 − $150,000 = $22,000.",
+                  "Interpret: a positive NPV of $22,000 means the project is expected to earn more than the required rate of return used to discount the cash flows, making it an attractive investment."
+                ],
+                "answer": "The payback period is 3.75 years, and the NPV is a positive $22,000, indicating the project is expected to exceed its required rate of return."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Capital budgeting", "def": "The process of evaluating and selecting long-term investments."},
+            {"term": "Payback period", "def": "The time required for a project's cumulative cash inflows to equal its initial investment."},
+            {"term": "Time value of money", "def": "The principle that a dollar received today is worth more than a dollar received in the future."},
+            {"term": "Net present value (NPV)", "def": "The present value of a project's future cash flows minus its initial investment."},
+            {"term": "Internal rate of return (IRR)", "def": "The discount rate at which a project's NPV equals exactly zero."},
+            {"term": "Hurdle rate", "def": "A company's required rate of return, used as the benchmark for accepting a project."}
+          ],
+          "practice": [
+            {"q": "A project costing $80,000 generates $20,000 per year. Its payback period is:", "choices": ["4 years", "2 years", "20,000 years", "80,000 years"], "answer": 0, "explain": "$80,000 ÷ $20,000 = 4 years."},
+            {"q": "A positive NPV indicates that a project is expected to:", "choices": ["Earn more than the required rate of return used to discount its cash flows", "Have no cash flows at all", "Break even exactly, earning zero return", "Always have a shorter payback period than a competing project"], "answer": 0, "explain": "A positive NPV means the discounted cash flows exceed the initial investment, indicating a return above the required rate."},
+            {"q": "The internal rate of return (IRR) is defined as:", "choices": ["The discount rate at which a project's NPV equals zero", "The company's required rate of return, always fixed at a set percentage", "The same thing as the payback period", "Only relevant when NPV is negative"], "answer": 0, "explain": "IRR is the specific discount rate that makes a project's NPV exactly zero."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Responsibility Accounting and Decentralized Performance",
+          "minutes": 11,
+          "intro": "As a company grows, it becomes impossible for one person at the top to make every decision — so responsibility accounting exists to hold each manager accountable specifically for the results they actually have the power to control.",
+          "sections": [
+            {
+              "heading": "Responsibility Centers",
+              "body": [
+                "**Responsibility accounting** evaluates managers based on the revenues, costs, or investments they have the authority to control, rather than on the company's total results, which include factors outside any single manager's influence. A **responsibility center** is an organizational unit whose manager is held accountable for a specific set of financial results.",
+                "There are four common types of responsibility centers, distinguished by what the manager controls: a **cost center** manager controls only costs, a **revenue center** manager controls only revenue generation, a **profit center** manager controls both revenue and costs, and an **investment center** manager controls revenue, costs, and the capital invested in the unit."
+              ]
+            },
+            {
+              "heading": "Evaluating Each Type of Center",
+              "body": [
+                "A cost center, such as an IT department or a manufacturing plant with no sales responsibility, is evaluated primarily on how well it controlled its costs relative to a budget. A profit center, such as an individual store within a retail chain, is evaluated on its net profit, since its manager can influence both pricing and cost decisions.",
+                "An investment center, such as a division that manages its own capital assets, is evaluated using metrics like **return on investment (ROI)**, calculated as operating income ÷ average operating assets, which measures how efficiently the division used the capital under its control to generate profit."
+              ]
+            },
+            {
+              "heading": "The Danger of Misaligned Metrics",
+              "body": [
+                "A well-designed responsibility accounting system holds each manager accountable only for outcomes they genuinely control; charging a store manager for a corporate-level marketing decision they had no input on, for instance, produces demotivation and unfair evaluation rather than better decisions, since the manager cannot actually influence the outcome they're being judged on.",
+                "A subtler danger is that ROI-based evaluation can discourage an investment center manager from accepting a genuinely good new project if it would slightly lower their division's current, already-strong ROI average, even though the project exceeds the company's overall required rate of return."
+              ],
+              "example": {
+                "problem": "Division A has operating income of $300,000 and average operating assets of $2,000,000. Division B has operating income of $250,000 and average operating assets of $1,000,000. Which division has the higher ROI, and what does this suggest about their relative efficiency in using invested capital?",
+                "steps": [
+                  "Calculate Division A's ROI: $300,000 ÷ $2,000,000 = 0.15, or 15%.",
+                  "Calculate Division B's ROI: $250,000 ÷ $1,000,000 = 0.25, or 25%.",
+                  "Compare: Division B has the higher ROI, 25% versus 15%, meaning it generates more operating income per dollar of capital invested, even though its total operating income in dollars is lower than Division A's."
+                ],
+                "answer": "Division B has the higher ROI at 25% versus Division A's 15%, showing Division B uses its invested capital more efficiently, even with lower total operating income in dollars."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Responsibility accounting", "def": "Evaluating managers based on the revenues, costs, or investments they have authority to control."},
+            {"term": "Responsibility center", "def": "An organizational unit whose manager is held accountable for a specific set of financial results."},
+            {"term": "Cost center", "def": "A responsibility center whose manager controls only costs."},
+            {"term": "Profit center", "def": "A responsibility center whose manager controls both revenue and costs."},
+            {"term": "Investment center", "def": "A responsibility center whose manager controls revenue, costs, and invested capital."},
+            {"term": "Return on investment (ROI)", "def": "Operating income divided by average operating assets, measuring efficiency of capital use."}
+          ],
+          "practice": [
+            {"q": "A manager who is responsible for both revenue and costs, but not for capital investment decisions, runs a:", "choices": ["Profit center", "Cost center", "Revenue center", "Investment center"], "answer": 0, "explain": "A profit center manager controls both revenue and costs but not capital investment decisions."},
+            {"q": "Return on investment (ROI) for an investment center is calculated as:", "choices": ["Operating income ÷ average operating assets", "Operating income ÷ total revenue", "Total revenue ÷ average operating assets", "Fixed costs ÷ variable costs"], "answer": 0, "explain": "ROI measures profit generated relative to the capital invested to produce it."},
+            {"q": "Holding a store manager accountable for a corporate marketing decision they had no input on is problematic because:", "choices": ["Responsibility accounting should only hold managers accountable for outcomes they genuinely control", "All costs should always be allocated equally to every manager", "Store managers never have any real responsibilities", "Marketing decisions have no effect on any store's performance"], "answer": 0, "explain": "Fair evaluation requires holding a manager accountable only for what they can actually influence."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Performance Measurement",
+      "summary": "Beyond individual decisions, managers need broader frameworks for tracking performance across time, understanding how costing choices affect reported income, and maintaining integrity under pressure.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "The Balanced Scorecard",
+          "minutes": 11,
+          "intro": "A company obsessed only with this quarter's profit can quietly let product quality slip, employees burn out, and customers drift away — problems that won't show up in the financial numbers until it's already too late to fix them cheaply.",
+          "sections": [
+            {
+              "heading": "Beyond Financial Measures",
+              "body": [
+                "The **balanced scorecard** is a performance measurement framework that evaluates a company across four perspectives rather than financial results alone: financial, customer, internal business processes, and learning and growth. The premise is that financial results are a lagging indicator, reflecting past decisions, while the other three perspectives capture leading indicators of future financial performance.",
+                "A company's financial statements might look strong this year even while its customer satisfaction scores are quietly declining, or while its employee turnover is quietly rising, either of which is a strong signal of financial trouble that will show up later — the balanced scorecard is designed to surface these warning signs before they become a financial crisis."
+              ]
+            },
+            {
+              "heading": "The Four Perspectives",
+              "body": [
+                "The **financial perspective** includes traditional measures like revenue growth and return on investment. The **customer perspective** includes measures like customer satisfaction scores, retention rate, and market share. The **internal business process perspective** includes measures like defect rates, cycle time, and on-time delivery, tracking how efficiently and reliably the company operates.",
+                "The **learning and growth perspective** includes measures like employee training hours, employee satisfaction, and employee turnover, tracking whether the company is investing in the people and capabilities it will need for future performance."
+              ]
+            },
+            {
+              "heading": "Cause-and-Effect Linkages",
+              "body": [
+                "The balanced scorecard's core insight is that these four perspectives are causally linked in sequence: well-trained, satisfied employees tend to produce more efficient, higher-quality internal processes, which tend to produce more satisfied customers, which eventually drives stronger financial results. This chain suggests that financial problems often have their root cause several steps upstream.",
+                "This is why a company using the balanced scorecard well doesn't just track four separate lists of numbers, but deliberately looks for the connections between them — rising employee turnover today is treated as an early warning sign worth investigating now, well before it eventually shows up as declining financial performance."
+              ],
+              "example": {
+                "problem": "A company's balanced scorecard shows financial results are strong this quarter, but customer satisfaction scores have dropped 12% and employee turnover has risen 20% over the past year. Using the cause-and-effect logic of the balanced scorecard, what should management be most concerned about?",
+                "steps": [
+                  "Recognize that financial results are a lagging indicator, reflecting past performance rather than predicting future performance.",
+                  "Note that rising employee turnover, learning and growth, and falling customer satisfaction, customer perspective, are both leading indicators that typically precede financial deterioration.",
+                  "Conclude that despite currently strong financials, the declining leading indicators suggest future financial performance is at meaningful risk unless the underlying causes are addressed."
+                ],
+                "answer": "Management should be concerned that today's strong financial results mask deteriorating leading indicators, employee turnover and customer satisfaction, which the balanced scorecard's logic suggests often predict future financial decline."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Balanced scorecard", "def": "A performance framework evaluating a company across financial, customer, internal process, and learning and growth perspectives."},
+            {"term": "Financial perspective", "def": "The balanced scorecard perspective covering traditional measures like revenue growth and ROI."},
+            {"term": "Customer perspective", "def": "The balanced scorecard perspective covering customer satisfaction, retention, and market share."},
+            {"term": "Internal business process perspective", "def": "The balanced scorecard perspective covering efficiency and reliability measures like defect rates and cycle time."},
+            {"term": "Learning and growth perspective", "def": "The balanced scorecard perspective covering employee training, satisfaction, and turnover."}
+          ],
+          "practice": [
+            {"q": "The balanced scorecard framework evaluates a company using:", "choices": ["Four perspectives: financial, customer, internal business process, and learning and growth", "Only financial measures like revenue and profit", "Only customer satisfaction surveys", "A single overall efficiency score"], "answer": 0, "explain": "The balanced scorecard deliberately looks beyond financial measures to three additional perspectives."},
+            {"q": "Financial results are described in the balanced scorecard framework as:", "choices": ["A lagging indicator reflecting past decisions", "A leading indicator that predicts future customer satisfaction", "Irrelevant to overall performance measurement", "The only perspective worth tracking"], "answer": 0, "explain": "Financial results reflect the consequences of past decisions rather than predicting future performance."},
+            {"q": "Rising employee turnover and falling customer satisfaction, even alongside strong current financial results, should be treated as:", "choices": ["An early warning sign worth investigating, since these are leading indicators of future financial performance", "Irrelevant noise with no connection to financial results", "Proof that the balanced scorecard framework doesn't work", "A sign to immediately cut the training budget"], "answer": 0, "explain": "These leading indicators often precede a decline in financial performance if left unaddressed."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Absorption vs Variable Costing",
+          "minutes": 12,
+          "intro": "Two accountants can look at the exact same factory, the exact same units produced and sold, and report two different net income numbers, purely because they chose different rules for whether fixed factory overhead belongs on the balance sheet or the income statement.",
+          "sections": [
+            {
+              "heading": "Absorption Costing",
+              "body": [
+                "**Absorption costing**, also called full costing, treats all manufacturing costs, both variable and fixed manufacturing overhead, as product costs, meaning they are included in inventory value and only become an expense when the product is actually sold. GAAP requires absorption costing for external financial reporting.",
+                "Under absorption costing, if a company produces more units than it sells in a period, some fixed manufacturing overhead gets stored in ending inventory on the balance sheet rather than expensed immediately, which can make net income higher than it would be if all fixed overhead were expensed right away."
+              ]
+            },
+            {
+              "heading": "Variable Costing",
+              "body": [
+                "**Variable costing** treats only variable manufacturing costs as product costs; fixed manufacturing overhead is treated as a period expense, expensed in full in the period it's incurred regardless of how many units were sold. This matches the contribution margin approach used internally for planning, which is why variable costing is common for internal managerial reporting even though it isn't allowed for external reporting.",
+                "Under variable costing, net income depends only on units sold, not units produced, because fixed overhead is expensed in full every period regardless of production level — a meaningfully different relationship than under absorption costing, where net income can be influenced by production volume decisions alone."
+              ]
+            },
+            {
+              "heading": "Reconciling the Two Methods",
+              "body": [
+                "When production exceeds sales in a period, absorption costing reports higher net income than variable costing, because some fixed overhead stays capitalized in ending inventory under absorption costing rather than being fully expensed. When sales exceed production, drawing down inventory, variable costing reports higher net income, because previously deferred fixed overhead from prior periods is now being released and expensed.",
+                "When production and sales are exactly equal in a period, both methods report identical net income, since no fixed overhead shifts into or out of inventory that period. Understanding this relationship helps explain why a manager might be tempted to overproduce under an absorption-costing-based bonus plan, since overproduction alone can inflate reported net income."
+              ],
+              "example": {
+                "problem": "A company produces 10,000 units and sells 8,000 units this period. Fixed manufacturing overhead is $50,000 for the period, or $5 per unit produced. Under absorption costing, how much fixed overhead is expensed this period, and how much is in ending inventory?",
+                "steps": [
+                  "Calculate fixed overhead per unit: $50,000 ÷ 10,000 units produced = $5 per unit.",
+                  "Calculate fixed overhead expensed, attached to units sold: 8,000 units sold × $5 = $40,000 expensed this period.",
+                  "Calculate fixed overhead remaining in ending inventory: 2,000 units unsold × $5 = $10,000 deferred in inventory."
+                ],
+                "answer": "Under absorption costing, $40,000 of fixed overhead is expensed this period, and $10,000 remains capitalized in ending inventory, attached to the 2,000 unsold units."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Absorption costing", "def": "A costing method treating all manufacturing costs, variable and fixed, as product costs included in inventory."},
+            {"term": "Variable costing", "def": "A costing method treating only variable manufacturing costs as product costs, expensing fixed overhead immediately."},
+            {"term": "Period expense", "def": "A cost expensed in full in the period incurred, regardless of production or sales volume."},
+            {"term": "Product cost", "def": "A cost included in inventory value until the related product is sold."},
+            {"term": "Fixed manufacturing overhead", "def": "Fixed indirect production costs, treated differently under absorption and variable costing."}
+          ],
+          "practice": [
+            {"q": "Absorption costing treats fixed manufacturing overhead as:", "choices": ["A product cost, included in inventory value until the product is sold", "A period expense, always expensed immediately regardless of sales", "Revenue", "A cost that is never included in net income"], "answer": 0, "explain": "Absorption costing capitalizes fixed overhead into inventory until the related units are sold."},
+            {"q": "When a company produces more units than it sells in a period, absorption costing net income compared to variable costing net income will be:", "choices": ["Higher, because some fixed overhead is deferred in ending inventory", "Lower, because more overhead is expensed immediately", "Identical in every case", "Impossible to determine without more information"], "answer": 0, "explain": "Absorption costing defers a portion of fixed overhead into inventory when production exceeds sales, raising reported net income."},
+            {"q": "Under variable costing, net income depends primarily on:", "choices": ["Units sold, since fixed overhead is expensed in full each period regardless of production", "Units produced, regardless of how many are sold", "Total revenue only, ignoring all costs", "The company's chosen inventory costing method, FIFO or LIFO"], "answer": 0, "explain": "Because fixed overhead is always expensed in full under variable costing, net income tracks units sold rather than units produced."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Ethics and Sustainability in Managerial Accounting",
+          "minutes": 10,
+          "intro": "The same cost and performance numbers a manager reports can be quietly shaded to look better than reality, which is why professional standards and a genuine ethical compass matter just as much in managerial accounting as technical skill.",
+          "sections": [
+            {
+              "heading": "Ethical Pressures in Managerial Accounting",
+              "body": [
+                "Because managerial accounting reports are internal and unaudited, they carry a particular temptation: a manager under pressure to hit a budget or bonus target might be tempted to shift costs between periods, delay recognizing a known problem, or manipulate an estimate like bad debt or inventory obsolescence to make current results look better than they really are.",
+                "The Institute of Management Accountants (IMA) publishes a formal statement of ethical professional practice covering competence, confidentiality, integrity, and credibility, giving management accountants a concrete standard to point to when facing pressure to misrepresent numbers internally, even though no external auditor will ever review the report."
+              ]
+            },
+            {
+              "heading": "Sustainability and Cost Accounting",
+              "body": [
+                "**Environmental cost accounting** attempts to identify and track costs traditionally buried inside general overhead, such as waste disposal, regulatory compliance, and energy use, so managers can see the true cost of environmentally relevant decisions rather than having them hidden inside an aggregate overhead pool where no one product or process bears its actual share.",
+                "Making these costs visible often reveals that a supposedly cheaper production process is not actually cheaper once its full waste, compliance, and energy costs are properly counted, changing a decision that looked purely financial once environmental costs are transparently included rather than buried in overhead."
+              ]
+            },
+            {
+              "heading": "Building a Culture That Resists Manipulation",
+              "body": [
+                "Beyond individual ethics, well-designed internal controls, such as requiring documentation for unusual journal entries, segregating who sets estimates from who is measured against them, and rotating who reviews budget-versus-actual reports, reduce the opportunity and temptation for a single manager to manipulate numbers, even under intense performance pressure.",
+                "Performance evaluation systems that reward only short-term numbers, without regard for how those numbers were achieved, create exactly the pressure that leads to unethical reporting; systems that also account for the sustainability and long-term consequences of a manager's decisions tend to produce more honest reporting and better long-term outcomes."
+              ],
+              "example": {
+                "problem": "A plant manager, facing a bonus tied to this quarter's reported profit, considers delaying a known equipment repair into next quarter and reclassifying a clearly capital expenditure as an operating expense to hit this quarter's target. Evaluate this using an ethical decision framework.",
+                "steps": [
+                  "Identify the stakeholders affected: the company's owners and investors who rely on accurate internal numbers for decisions, and the manager's own long-term credibility.",
+                  "Identify the ethical issue: deliberately manipulating the timing and classification of costs to mislead performance evaluation, even though the numbers stay entirely internal.",
+                  "Weigh the consequences: short-term bonus gain against long-term risk of discovery, damaged trust, and worse decisions being made company-wide based on inaccurate internal data."
+                ],
+                "answer": "This is an ethical violation of integrity and credibility standards, similar to the IMA's ethical guidance; the short-term bonus gain does not outweigh the long-term risk of discovery and the harm of decision-makers acting on misleading internal numbers."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "IMA Statement of Ethical Professional Practice", "def": "A formal ethics code for management accountants covering competence, confidentiality, integrity, and credibility."},
+            {"term": "Environmental cost accounting", "def": "Tracking environmentally relevant costs, such as waste and compliance, that would otherwise be buried in general overhead."},
+            {"term": "Integrity", "def": "An ethical standard requiring honest, unbiased reporting of accounting information."},
+            {"term": "Credibility", "def": "An ethical standard requiring accurate, objective communication of information to intended users."},
+            {"term": "Internal controls", "def": "Policies and procedures that reduce the opportunity for manipulation of financial and managerial data."}
+          ],
+          "practice": [
+            {"q": "The IMA's ethical standards for management accountants matter especially because:", "choices": ["Internal managerial reports are typically unaudited, relying more heavily on individual professional integrity", "Managerial accounting reports are always publicly audited", "GAAP fully covers all ethical questions in managerial accounting", "Ethical standards only apply to external financial accountants"], "answer": 0, "explain": "Without an external audit as a check, professional ethical standards carry more of the weight for internal reports."},
+            {"q": "Environmental cost accounting aims to:", "choices": ["Make environmentally relevant costs visible rather than buried inside general overhead", "Eliminate the need for a production budget", "Replace GAAP for external financial reporting", "Track only costs unrelated to production"], "answer": 0, "explain": "It surfaces costs like waste and compliance that would otherwise be hidden inside aggregate overhead."},
+            {"q": "A manager who reclassifies a capital expenditure as an operating expense purely to hit a quarterly bonus target is:", "choices": ["Violating integrity and credibility standards even though the report is only internal", "Following standard, ethical managerial accounting practice", "Required to do this under GAAP", "Improving the accuracy of the company's internal reports"], "answer": 0, "explain": "Deliberately misclassifying a cost to manipulate a performance metric violates core ethical standards regardless of audience."}
+          ]
+        }
+      ]
+    }
+  ]
+}

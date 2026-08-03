@@ -1,0 +1,1506 @@
+{
+ "id": "photography",
+ "title": "Photography",
+ "domain": "arts",
+ "level": "All levels",
+ "description": "Photography teaches you to make deliberate, well-exposed, well-composed images on whatever camera you own, phone included. You will master the exposure triangle, learn to read and shape light, and apply proven composition techniques across portraits, landscapes, and street photography. The course closes with an editing workflow so you can carry a shot from click to finished image.",
+ "outcomes": [
+  "You can explain how aperture, shutter speed, and ISO interact, and set all three on purpose for a given scene.",
+  "You can read a histogram and your camera's meter to judge exposure instead of guessing.",
+  "You can apply the rule of thirds, leading lines, framing, and simplification to strengthen a shot.",
+  "You can choose a focal length and focus technique to control depth of field on purpose.",
+  "You can shoot confidently in golden-hour and harsh midday light, and know when to add flash or a reflector.",
+  "You can run a basic edit (exposure, crop, color) and organize a small portfolio of finished images."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "How a Camera Sees: The Exposure Triangle",
+   "summary": "Every photograph is a measured dose of light. This unit builds the three controls that dose it: aperture, shutter speed, and ISO.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Exposure Is and How Cameras Measure It",
+     "minutes": 12,
+     "intro": "A photograph is light hitting a sensor for a measured amount of time through a measured opening. Get that measurement right and detail survives in both the shadows and the highlights; get it wrong and you lose one or both forever.",
+     "sections": [
+      {
+       "heading": "Exposure as a Bucket of Light",
+       "body": [
+        "Think of the sensor as a bucket you are filling with light. Three valves control how much light lands in the bucket: the aperture (how wide the opening is), the shutter speed (how long the valve stays open), and the ISO (how much the camera amplifies whatever light it collected). Too little light and the bucket is nearly empty, a dark, noisy image. Too much light and the bucket overflows, a washed-out image with no detail in the brightest areas.",
+        "These three valves are called the exposure triangle because changing any one changes how much light reaches the sensor, and the other two can be adjusted to compensate. Learning photography's technical side is mostly learning to move these three dials with intention instead of leaving the camera to guess."
+       ]
+      },
+      {
+       "heading": "The Light Meter",
+       "body": [
+        "Every camera, including a phone camera, has a light meter built in. It reads scene brightness and recommends settings that render an average scene as middle gray, roughly 18% reflectance. You will usually see the meter as a scale from -2 to +2, with 0 meaning the camera thinks the exposure is correct.",
+        "The meter is a good starting point, not a law. A scene that is mostly white snow, or a stage lit mostly black, will fool it, because the meter still tries to render the average as middle gray. Snow comes out gray instead of white unless you deliberately override the meter toward overexposure."
+       ],
+       "example": {
+        "problem": "You are photographing a bride in a white dress against a white wall, and the camera's meter reads 0. Should you trust it?",
+        "steps": [
+         "The meter always tries to render the average brightness of the frame as middle gray.",
+         "A frame that is mostly white will be pulled down toward gray if you trust the meter at 0.",
+         "To keep the dress and wall looking white, you need to deliberately overexpose beyond the meter's suggestion, typically by 1 to 1.5 stops."
+        ],
+        "answer": "No — check the histogram instead, and dial in roughly +1 to +1.5 stops of exposure compensation so the dress renders as white, not gray."
+       }
+      },
+      {
+       "heading": "The Histogram",
+       "body": [
+        "The histogram is a graph of how many pixels fall at each brightness level, from pure black on the left to pure white on the right. It is more reliable than the small preview screen, which can look fine or terrible depending on how bright your surroundings are.",
+        "A histogram bunched against the left edge usually means lost shadow detail; one bunched against the right edge usually means blown highlights. A histogram spread across the middle, touching the edges only where the scene genuinely has pure black or white, is usually a well-exposed image."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "exposure triangle",
+       "def": "The combination of aperture, shutter speed, and ISO that together determine how much light reaches the sensor."
+      },
+      {
+       "term": "light meter",
+       "def": "A built-in sensor that measures scene brightness and recommends settings to render it as middle gray."
+      },
+      {
+       "term": "histogram",
+       "def": "A graph showing how many pixels in an image fall at each brightness level from black to white."
+      },
+      {
+       "term": "exposure compensation",
+       "def": "A manual override that tells the meter to make the image brighter or darker than its default suggestion."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does a camera's meter render a scene of fresh white snow as gray if you trust it at 0?",
+       "choices": [
+        "The sensor cannot detect white light at all",
+        "The meter assumes the average scene should render as middle gray",
+        "Snow reflects too little light for the sensor to register",
+        "White balance settings only work indoors"
+       ],
+       "answer": 1,
+       "explain": "Light meters average the scene toward middle gray, about 18% reflectance, so an unusually bright scene like snow needs deliberate overexposure to look correctly bright."
+      },
+      {
+       "q": "A histogram is bunched tightly against the right edge of the graph. What does this suggest?",
+       "choices": [
+        "The image is underexposed with crushed shadows",
+        "The image has too little contrast",
+        "The image is overexposed with blown highlights",
+        "The image has perfect exposure"
+       ],
+       "answer": 2,
+       "explain": "The right edge of a histogram represents pure white. Data piled against it means large areas of the image have lost detail to overexposure."
+      },
+      {
+       "q": "What are the three controls in the exposure triangle?",
+       "choices": [
+        "Aperture, shutter speed, and ISO",
+        "Focal length, aperture, and white balance",
+        "Shutter speed, white balance, and focus mode",
+        "ISO, focal length, and metering mode"
+       ],
+       "answer": 0,
+       "explain": "Aperture, shutter speed, and ISO jointly determine how much light reaches the sensor and how it is recorded."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Aperture and Depth of Field",
+     "minutes": 14,
+     "intro": "Aperture is the opening in the lens that light passes through, and it is the single biggest lever you have over how much of a photo looks sharp versus blurred. Its number system feels backwards at first, but it pays off in every genre.",
+     "sections": [
+      {
+       "heading": "The f-Number Scale",
+       "body": [
+        "Aperture is written as an f-number, such as f/2.8 or f/11, and the scale runs backwards from how it feels: a small f-number like f/1.8 describes a wide-open aperture that lets in a lot of light, while a large f-number like f/16 describes a small opening that lets in little light. The f-number is a ratio of focal length to opening diameter, so a bigger number means a smaller physical opening.",
+        "The standard full-stop scale runs f/1.4, f/2, f/2.8, f/4, f/5.6, f/8, f/11, f/16, f/22. Each step to the right lets in exactly half as much light as the step before it, because the opening's area is cut in half at each stop even though the diameter only shrinks by a factor of about 1.4."
+       ],
+       "example": {
+        "problem": "How much less light reaches the sensor at f/16 compared to f/2.8, measured in stops and as a fraction?",
+        "steps": [
+         "List the full stops between them: f/2.8, f/4, f/5.6, f/8, f/11, f/16.",
+         "Count the steps from f/2.8 to f/16: that is 5 steps.",
+         "Each step halves the light, so 5 steps means dividing by 2 five times: 2^5 = 32."
+        ],
+        "answer": "f/16 lets in 1/32 as much light as f/2.8 — five full stops less."
+       }
+      },
+      {
+       "heading": "Depth of Field",
+       "body": [
+        "Depth of field is the zone in front of and behind your focus point that still looks acceptably sharp. A wide aperture, like f/1.8, produces a shallow depth of field: your subject is crisp and the background melts into soft blur, useful for isolating a portrait subject from a busy background.",
+        "A narrow aperture, like f/11 or f/16, produces a deep depth of field, keeping everything from a nearby rock to a distant mountain looking sharp, which is why landscape photographers commonly shoot in that range. Depth of field also gets shallower as you get physically closer to your subject or use a longer focal length, so aperture is not the only lever, just the most direct one."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "aperture",
+       "def": "The adjustable opening in a lens that controls how much light passes through, measured in f-stops."
+      },
+      {
+       "term": "f-stop",
+       "def": "A number describing aperture size as a ratio of focal length to opening diameter; smaller numbers mean wider openings."
+      },
+      {
+       "term": "depth of field",
+       "def": "The range of distance in a photo that appears acceptably sharp."
+      },
+      {
+       "term": "full stop",
+       "def": "A standard step in the aperture, shutter speed, or ISO scale that doubles or halves the amount of light."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which aperture lets in the most light?",
+       "choices": [
+        "f/16",
+        "f/2.8",
+        "f/11",
+        "f/8"
+       ],
+       "answer": 1,
+       "explain": "Aperture numbers work backwards from intuition: the smallest f-number, f/2.8 here, describes the widest opening and lets in the most light."
+      },
+      {
+       "q": "A portrait photographer wants a subject sharp against a creamy, blurred background. Which aperture is the better choice?",
+       "choices": [
+        "f/16",
+        "f/22",
+        "f/1.8",
+        "f/11"
+       ],
+       "answer": 2,
+       "explain": "A wide aperture like f/1.8 produces a shallow depth of field, keeping the subject sharp while throwing the background out of focus."
+      },
+      {
+       "q": "Moving from f/4 to f/8 changes the light reaching the sensor by how much?",
+       "choices": [
+        "No change, since both are mid-range apertures",
+        "Half as much light (one stop less)",
+        "One quarter as much light (two stops less)",
+        "Double the light (one stop more)"
+       ],
+       "answer": 2,
+       "explain": "f/4 to f/5.6 is one stop, and f/5.6 to f/8 is a second stop, so f/8 lets in one quarter of the light that f/4 does."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Shutter Speed and Motion",
+     "minutes": 12,
+     "intro": "Shutter speed is how long the sensor is exposed to light, and that single number decides whether a moving subject freezes crisply or streaks into a blur. Both effects are useful — the trick is choosing on purpose.",
+     "sections": [
+      {
+       "heading": "Fast and Slow Shutter Speeds",
+       "body": [
+        "Shutter speed is measured in seconds or fractions of a second: 1/1000, 1/250, 1/60, 1/4, or even several full seconds. A fast shutter speed like 1/1000 exposes the sensor so briefly that even a sprinting athlete or a bird in flight freezes with crisp edges.",
+        "A slow shutter speed like 1/4 second or 2 seconds keeps the sensor open long enough that anything moving during that time smears into a blur: car headlights become light trails, a waterfall becomes silky, and a handheld camera itself will blur the whole frame unless it is braced or on a tripod."
+       ]
+      },
+      {
+       "heading": "The Handholding Rule",
+       "body": [
+        "Camera shake, not subject motion, is the most common reason handheld photos come out soft. A widely used rule of thumb says your shutter speed should be at least as fast as 1 over your focal length in millimeters — so a 50mm lens wants at least 1/50 second, and a 200mm telephoto wants at least 1/200 second, to keep ordinary hand tremor from blurring the shot.",
+        "Image stabilization, built into many lenses and phones, can buy two to four extra stops of slower shutter speed before shake becomes visible, but it does nothing to freeze a moving subject; only shutter speed itself controls that."
+       ],
+       "example": {
+        "problem": "You are shooting handheld with a 300mm lens and no image stabilization. What is the slowest shutter speed you should trust for a sharp shot?",
+        "steps": [
+         "Apply the rule of thumb: minimum shutter speed is about 1/focal length.",
+         "Focal length is 300mm, so the minimum safe shutter speed is about 1/300 second."
+        ],
+        "answer": "About 1/300 second or faster — anything slower risks visible camera shake."
+       }
+      },
+      {
+       "heading": "Choosing Shutter Speed for the Subject",
+       "body": [
+        "For freezing fast action like sports or wildlife, start around 1/1000 to 1/2000 second. For general handheld shooting of people walking or talking, 1/125 to 1/250 is usually enough. For deliberate motion blur, such as a silky waterfall or light trails from traffic, you need speeds of half a second or slower, almost always on a tripod to keep everything except the moving subject sharp.",
+        "Because a slow shutter speed lets in far more light than a fast one, slowing down for creative blur usually forces you to close the aperture or lower the ISO to avoid overexposure, which is the exposure triangle in action."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "shutter speed",
+       "def": "The length of time the sensor is exposed to light, controlling motion blur."
+      },
+      {
+       "term": "camera shake",
+       "def": "Blur caused by the photographer's hand movement during exposure, not by subject motion."
+      },
+      {
+       "term": "image stabilization",
+       "def": "Lens or sensor technology that compensates for hand tremor, allowing slower handheld shutter speeds."
+      },
+      {
+       "term": "motion blur",
+       "def": "The streaked appearance of a moving subject captured during a slow shutter speed."
+      }
+     ],
+     "practice": [
+      {
+       "q": "You want to freeze a hummingbird's wings in flight. Which shutter speed is the best choice?",
+       "choices": [
+        "2 seconds",
+        "1/30 second",
+        "1/2000 second",
+        "1/8 second"
+       ],
+       "answer": 2,
+       "explain": "Hummingbird wings move extremely fast, so only a very brief exposure like 1/2000 second is short enough to freeze them sharply."
+      },
+      {
+       "q": "Using the 1/focal-length rule, what is the minimum safe handheld shutter speed for an 85mm lens with no stabilization?",
+       "choices": [
+        "1/8 second",
+        "1/85 second",
+        "1/500 second",
+        "1 second"
+       ],
+       "answer": 1,
+       "explain": "The rule of thumb sets the minimum shutter speed at roughly 1 over the focal length in millimeters, so an 85mm lens suggests about 1/85 second."
+      },
+      {
+       "q": "A photographer wants a waterfall to look silky and smooth rather than frozen. What should they do?",
+       "choices": [
+        "Use a very fast shutter speed and a wide aperture",
+        "Use a slow shutter speed on a tripod",
+        "Increase the ISO as high as possible",
+        "Switch to a wider focal length only"
+       ],
+       "answer": 1,
+       "explain": "A slow shutter speed lets moving water blur into a smooth streak, but the camera must be steadied on a tripod so everything else in the frame stays sharp."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Balancing the Triangle",
+   "summary": "With all three controls in hand, this unit covers ISO, how to trade stops between the three settings, and the shooting modes that let you hand off some of the math to the camera.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "ISO and Noise",
+     "minutes": 10,
+     "intro": "ISO is the exposure triangle's third lever, and it is the one with the steepest hidden cost: turn it up and dim scenes get brighter, but you trade that brightness for visible speckled noise.",
+     "sections": [
+      {
+       "heading": "What ISO Does",
+       "body": [
+        "ISO sets how strongly the camera amplifies the light the sensor actually captured. A low ISO like 100 applies little amplification and produces the cleanest image, but it needs a well-lit scene, a wide aperture, or a slow shutter speed to expose properly. A high ISO like 3200 amplifies the same captured light far more, brightening a dim scene without changing aperture or shutter speed.",
+        "Like aperture and shutter speed, ISO moves in full stops that double or halve the effective brightness: 100, 200, 400, 800, 1600, 3200, 6400. Doubling ISO has the same brightening effect as opening the aperture one stop or halving the shutter speed."
+       ]
+      },
+      {
+       "heading": "The Cost: Noise",
+       "body": [
+        "Amplifying a faint signal amplifies its errors along with it, which shows up as noise: grainy speckling and color blotches, most visible in shadows and flat areas like skies. Modern cameras handle ISO 1600 or even 3200 cleanly, but cheaper sensors and older phones show noise starting much lower, sometimes by ISO 800.",
+        "The practical rule is to use the lowest ISO the scene allows. Raise it only when you have already opened the aperture as wide as your creative choice allows and slowed the shutter as much as motion allows, and the image is still too dark."
+       ],
+       "example": {
+        "problem": "You are shooting indoors at f/2.8 and 1/125 second, and the image is still one stop underexposed at ISO 400. What should you do?",
+        "steps": [
+         "Aperture and shutter are already set by creative and motion requirements, so neither should change.",
+         "The only remaining lever is ISO.",
+         "Doubling ISO from 400 to 800 adds exactly one stop of brightness, matching the shortfall."
+        ],
+        "answer": "Raise ISO from 400 to 800 to gain the missing stop of exposure."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ISO",
+       "def": "The setting that controls how strongly the camera amplifies captured light; higher values brighten the image but add noise."
+      },
+      {
+       "term": "noise",
+       "def": "Grainy speckling and color blotches that appear when a signal is amplified too much, most visible at high ISO."
+      },
+      {
+       "term": "base ISO",
+       "def": "The lowest, cleanest ISO setting a camera offers, typically 100."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Raising ISO from 400 to 1600 is equivalent to how many stops of added brightness?",
+       "choices": [
+        "One stop",
+        "Two stops",
+        "Three stops",
+        "Four stops"
+       ],
+       "answer": 1,
+       "explain": "400 to 800 is one stop, and 800 to 1600 is a second stop, so 400 to 1600 is two full stops brighter."
+      },
+      {
+       "q": "What is the main visual cost of raising ISO too high?",
+       "choices": [
+        "Reduced depth of field",
+        "Motion blur",
+        "Visible grain and noise, especially in shadows",
+        "A narrower field of view"
+       ],
+       "answer": 2,
+       "explain": "High ISO amplifies the sensor's signal along with its errors, producing visible noise that is most obvious in shadows and flat areas like sky."
+      },
+      {
+       "q": "What is the general rule for choosing ISO?",
+       "choices": [
+        "Always use the highest ISO for the sharpest images",
+        "Use the lowest ISO the scene and settings allow",
+        "ISO should always match the shutter speed number",
+        "ISO has no effect on image quality"
+       ],
+       "answer": 1,
+       "explain": "Because higher ISO adds noise, the standard practice is to raise it only as much as needed after aperture and shutter speed are already set."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Stops of Light and Equivalent Exposures",
+     "minutes": 14,
+     "intro": "Because aperture, shutter speed, and ISO all move in the same currency of stops, you can trade one for another and land on the exact same exposure while changing the picture's look completely.",
+     "sections": [
+      {
+       "heading": "One Stop, Three Dials",
+       "body": [
+        "A stop is a doubling or halving of light, and it is the common unit that ties all three settings together. Opening the aperture one stop (say, f/8 to f/5.6), slowing the shutter one stop (say, 1/250 to 1/125), or raising the ISO one stop (say, 400 to 800) all add exactly the same amount of light to the exposure.",
+        "This means a correct exposure is not one single combination of settings, it is a whole family of equivalent combinations. f/8 at 1/125 and ISO 400 records the same total light as f/5.6 at 1/250 and ISO 400, because closing the aperture one stop and doubling the shutter speed's opening time cancel out."
+       ],
+       "example": {
+        "problem": "A scene is correctly exposed at f/8, 1/125 second, ISO 100. You want a shallower depth of field, so you open up to f/2.8. What shutter speed keeps the same exposure, with ISO unchanged?",
+        "steps": [
+         "Count the stops from f/8 to f/2.8: f/8 → f/5.6 → f/4 → f/2.8 is 3 stops, each letting in double the light.",
+         "Opening 3 stops means 8 times more light is now entering (2×2×2 = 8).",
+         "To cancel that out, the shutter must let in 8 times less light, which means a shutter speed 3 stops faster than 1/125.",
+         "1/125 → 1/250 → 1/500 → 1/1000 is 3 stops faster."
+        ],
+        "answer": "1/1000 second keeps the exposure equivalent to f/8 at 1/125, ISO 100."
+       }
+      },
+      {
+       "heading": "Why You Would Choose One Equivalent Over Another",
+       "body": [
+        "If all equivalent exposures record the same brightness, the choice between them comes down to the side effects: aperture also sets depth of field, shutter speed also sets motion blur, and ISO also sets noise. The f/2.8 version of the exposure above has a shallower depth of field and freezes motion better than the f/8 version, at the cost of a background that is far more blurred.",
+        "Skilled exposure decisions start with the creative question — do I want the background sharp or blurred, do I want motion frozen or streaked, can I afford some noise — and only then pick the specific combination of the three dials that answers it while keeping the total exposure correct."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "stop",
+       "def": "A doubling or halving of the amount of light in an exposure; the common unit shared by aperture, shutter speed, and ISO."
+      },
+      {
+       "term": "equivalent exposure",
+       "def": "A different combination of aperture, shutter speed, and ISO that records the same total amount of light."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A correct exposure is f/5.6, 1/500 second, ISO 200. You change the aperture to f/11 (2 stops less light). What shutter speed keeps the exposure equivalent?",
+       "choices": [
+        "1/125 second",
+        "1/2000 second",
+        "1/500 second (unchanged)",
+        "1/60 second"
+       ],
+       "answer": 0,
+       "explain": "Closing 2 stops (f/5.6 to f/8 to f/11) cuts the light to one quarter, so the shutter must let in 4 times more light: 1/500 → 1/250 → 1/125, two stops slower."
+      },
+      {
+       "q": "Which single fact makes 'equivalent exposures' possible?",
+       "choices": [
+        "Aperture, shutter speed, and ISO all measure light in the same stop-based unit",
+        "Cameras automatically correct for any setting change",
+        "ISO does not actually affect exposure, only noise",
+        "Shutter speed and aperture are unrelated to light quantity"
+       ],
+       "answer": 0,
+       "explain": "Because a stop means the same doubling or halving of light regardless of which dial produces it, moves on any of the three dials can be measured and cancelled against each other."
+      },
+      {
+       "q": "Between two equivalent exposures, one at f/16 and one at f/2, what changes even though the brightness stays the same?",
+       "choices": [
+        "Nothing changes at all",
+        "Only the file size of the photo",
+        "Depth of field, since aperture also controls how much of the scene looks sharp",
+        "The camera's autofocus speed"
+       ],
+       "answer": 2,
+       "explain": "Equivalent exposures share total brightness, but aperture still independently controls depth of field, so the f/16 shot will look far more sharp throughout than the f/2 shot."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Shooting Modes: Auto, Priority, and Manual",
+     "minutes": 11,
+     "intro": "Every camera offers a spectrum of modes between fully automatic and fully manual. Knowing what each one hands you and what it takes away lets you pick the fastest path to the shot you want.",
+     "sections": [
+      {
+       "heading": "Auto and Program Modes",
+       "body": [
+        "Full Auto lets the camera choose aperture, shutter speed, and ISO with no input from you beyond pointing and shooting; it is reliable for snapshots but gives you no creative control over depth of field or motion blur. Program mode (P) is similar but usually lets you nudge the combination the camera picked, or override ISO, while it still balances exposure automatically.",
+        "Both modes are reasonable for fast, low-stakes shooting, but neither is built for a photographer who has decided in advance that the background must be blurred or that motion must be frozen."
+       ]
+      },
+      {
+       "heading": "Priority Modes",
+       "body": [
+        "Aperture Priority (A or Av) lets you set the aperture you want for depth of field, and the camera automatically chooses a shutter speed to match, adjusting as light changes. It is the most common mode for portraits and landscapes, where depth of field is the main creative decision.",
+        "Shutter Priority (S or Tv) works the other way: you set the shutter speed for the motion effect you want, and the camera picks the matching aperture. It suits sports, wildlife, and any scene where freezing or blurring motion is the priority and depth of field is secondary."
+       ],
+       "example": {
+        "problem": "You are photographing a soccer game and want every shot sharp despite fast running. Which mode should you choose and why?",
+        "steps": [
+         "The primary concern is freezing motion, not depth of field.",
+         "Shutter Priority lets you fix the shutter speed directly, for example 1/1000 second.",
+         "The camera will then automatically choose an aperture to expose correctly at that shutter speed."
+        ],
+        "answer": "Shutter Priority (S/Tv), set to a fast shutter speed like 1/1000 second, so motion stays frozen regardless of changing light."
+       }
+      },
+      {
+       "heading": "Manual Mode",
+       "body": [
+        "Manual mode (M) hands you direct control of aperture, shutter speed, and ISO, with the meter only there to advise. It is essential when the scene would fool automatic modes, such as a backlit subject, fireworks, or a stage show with quickly changing bright and dark areas, and when you need the exposure to stay perfectly consistent across a whole series of shots.",
+        "Manual mode is not inherently more skilled than Aperture or Shutter Priority; professionals use whichever mode gets a correctly exposed, creatively controlled shot fastest, and that is very often a priority mode rather than full manual."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Aperture Priority",
+       "def": "A shooting mode where the photographer sets the aperture and the camera automatically chooses a matching shutter speed."
+      },
+      {
+       "term": "Shutter Priority",
+       "def": "A shooting mode where the photographer sets the shutter speed and the camera automatically chooses a matching aperture."
+      },
+      {
+       "term": "Manual mode",
+       "def": "A shooting mode where the photographer sets aperture, shutter speed, and ISO directly, with the meter only advising."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A photographer wants to guarantee a blurred background for a portrait and does not care which shutter speed the camera picks. Which mode fits best?",
+       "choices": [
+        "Shutter Priority",
+        "Aperture Priority",
+        "Full Auto",
+        "Program mode only"
+       ],
+       "answer": 1,
+       "explain": "Aperture Priority lets the photographer fix the aperture (and therefore depth of field) directly, while the camera handles the shutter speed to keep exposure correct."
+      },
+      {
+       "q": "Why might a photographer choose Manual mode over Aperture Priority?",
+       "choices": [
+        "Manual mode always produces sharper images",
+        "The scene would fool the meter, such as strong backlighting, and exposure must stay fixed across a series",
+        "Manual mode is required to change ISO",
+        "Aperture Priority cannot be used with prime lenses"
+       ],
+       "answer": 1,
+       "explain": "Manual mode is chosen when automatic metering would be unreliable or when the exposure needs to stay perfectly consistent shot to shot, not because it is inherently sharper."
+      },
+      {
+       "q": "In Shutter Priority mode, what does the photographer directly control?",
+       "choices": [
+        "Aperture only",
+        "ISO only",
+        "Shutter speed, while the camera sets a matching aperture",
+        "Both aperture and shutter speed manually"
+       ],
+       "answer": 2,
+       "explain": "Shutter Priority mode fixes the shutter speed as chosen by the photographer, and the camera automatically selects an aperture to expose correctly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Composition",
+   "summary": "Technically perfect exposure means little if the frame is not organized to guide the eye. This unit covers the composition tools that turn a snapshot into a photograph.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Rule of Thirds and Frame Balance",
+     "minutes": 11,
+     "intro": "The eye does not naturally rest on the dead center of a frame. A handful of placement habits, starting with the rule of thirds, make a composition feel balanced instead of accidental.",
+     "sections": [
+      {
+       "heading": "The Rule of Thirds",
+       "body": [
+        "Imagine the frame divided by two evenly spaced horizontal lines and two evenly spaced vertical lines, like a tic-tac-toe grid. Placing a key subject, such as a person's eyes or a lone tree, near one of the four intersections where those lines cross tends to feel more dynamic and balanced than placing it dead center.",
+        "The same grid guides horizons: putting the horizon on the lower third emphasizes sky and drama above, while putting it on the upper third emphasizes foreground and ground detail. Most phone cameras can overlay this grid directly on the screen, which makes it easy to practice."
+       ],
+       "example": {
+        "problem": "You are photographing a lighthouse against a dramatic, cloud-filled sky. Where should the horizon and the lighthouse sit in the frame?",
+        "steps": [
+         "The sky is the dramatic element, so it should dominate the frame.",
+         "Placing the horizon along the lower third line gives roughly two-thirds of the frame to sky.",
+         "Placing the lighthouse near a vertical third line, rather than dead center, keeps the composition dynamic."
+        ],
+        "answer": "Put the horizon on the lower third line and the lighthouse near one of the vertical third lines, not in the exact center."
+       }
+      },
+      {
+       "heading": "When to Break It",
+       "body": [
+        "The rule of thirds is a starting habit, not a physical law. Perfectly centered compositions work well for subjects with strong symmetry, like a reflection in still water or a face shot straight-on, where the symmetry itself is the point of the photo.",
+        "The underlying goal is intentional placement: know why your subject sits where it sits in the frame, whether that is on a third line or dead center, rather than placing it there because you never considered an alternative."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "rule of thirds",
+       "def": "A composition guideline placing key subjects near the intersections of a frame divided into three equal columns and rows."
+      },
+      {
+       "term": "symmetry",
+       "def": "A composition where elements mirror each other around a center line, often used to justify a centered subject."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to the rule of thirds, where is a strong place to position a person's eyes in a portrait?",
+       "choices": [
+        "Exactly in the center of the frame",
+        "Near one of the four grid-line intersections",
+        "Always in the bottom-right corner",
+        "Cropped out of the frame entirely"
+       ],
+       "answer": 1,
+       "explain": "The rule of thirds suggests placing key focal points, like eyes in a portrait, near where the grid's horizontal and vertical lines intersect."
+      },
+      {
+       "q": "When is a perfectly centered composition often the right choice?",
+       "choices": [
+        "Only when using a telephoto lens",
+        "When the subject has strong symmetry, such as a reflection",
+        "Only in black-and-white photography",
+        "The rule of thirds should never be broken"
+       ],
+       "answer": 1,
+       "explain": "Symmetrical subjects, like a mirror reflection, often look best centered because the symmetry itself is the visual point of the image."
+      },
+      {
+       "q": "You want a photo to emphasize a dramatic sky over the ground below. Where should the horizon sit?",
+       "choices": [
+        "Exactly through the middle of the frame",
+        "Along the upper third line",
+        "Along the lower third line",
+        "The horizon should be cropped out"
+       ],
+       "answer": 2,
+       "explain": "Placing the horizon on the lower third gives roughly two-thirds of the frame to the sky, emphasizing it."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Leading Lines, Framing, and Depth",
+     "minutes": 11,
+     "intro": "A photograph is flat, but good composition tricks the eye into feeling depth and direction. Leading lines and natural frames are two of the most reliable tools for that illusion.",
+     "sections": [
+      {
+       "heading": "Leading Lines",
+       "body": [
+        "A leading line is any line in the scene, a road, a fence, a river, a row of streetlights, that draws the viewer's eye from one part of the frame toward the main subject. Lines that enter from a corner and travel diagonally toward the subject tend to feel more energetic than lines that run flat across the frame.",
+        "Leading lines work because human vision instinctively follows a line to see where it goes. A photographer who notices a path curving toward a cabin, and positions themselves so that path enters the bottom of the frame, has used the environment to do part of the composition's work automatically."
+       ]
+      },
+      {
+       "heading": "Framing Within the Frame",
+       "body": [
+        "Framing means using an element in the scene, a doorway, an arch, overhanging branches, a window, to surround the main subject and create a frame within the photograph's frame. This draws attention inward and adds a sense of depth by placing something in the foreground, the framing element, distinct from something in the middle or background, the subject.",
+        "Good framing elements are usually darker or less detailed than the subject, so the eye is pushed past them rather than getting stuck on them. A brightly lit doorway framing a dim subject inverts this and often reads as a mistake rather than a choice."
+       ],
+       "example": {
+        "problem": "You are photographing a distant mountain peak and notice an old stone archway nearby. How could you use the archway to strengthen the composition?",
+        "steps": [
+         "Position yourself so the archway occupies the foreground edges of the frame, mostly in shadow.",
+         "Compose so the mountain peak is visible through the opening of the arch, roughly centered within it.",
+         "Expose for the brighter mountain, letting the archway go slightly darker, which pushes the eye through it toward the peak."
+        ],
+        "answer": "Shoot through the archway with the peak framed inside its opening, keeping the arch itself darker so it reads as a frame, not a competing subject."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "leading line",
+       "def": "A line within a scene that draws the viewer's eye toward the main subject."
+      },
+      {
+       "term": "framing (compositional)",
+       "def": "Using foreground elements to surround and draw attention to the main subject, adding a sense of depth."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What makes a leading line effective in a composition?",
+       "choices": [
+        "It must be perfectly straight and horizontal",
+        "It draws the viewer's eye toward the main subject",
+        "It should be the brightest element in the frame",
+        "It only works in black-and-white photos"
+       ],
+       "answer": 1,
+       "explain": "A leading line's job is to guide the viewer's eye through the frame toward the subject, using the natural tendency of vision to follow lines."
+      },
+      {
+       "q": "When using a doorway to frame a subject, why is it usually better for the doorway to be darker than the subject?",
+       "choices": [
+        "Dark doorways are technically easier to photograph",
+        "It pushes the eye past the frame toward the brighter subject",
+        "Camera meters cannot read bright doorways",
+        "It has no effect on the composition"
+       ],
+       "answer": 1,
+       "explain": "A darker framing element does not compete for attention, so the eye moves through it toward the brighter, more detailed subject beyond."
+      },
+      {
+       "q": "Which of these is the best example of a leading line?",
+       "choices": [
+        "A flat, empty gray wall filling the frame",
+        "A winding road entering the bottom corner and curving toward a house",
+        "A subject centered with no surrounding detail",
+        "Uniform fog with no visible shapes"
+       ],
+       "answer": 1,
+       "explain": "A road that enters the frame and curves toward the subject actively guides the viewer's eye, which is exactly what a leading line does."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Simplifying the Frame",
+     "minutes": 10,
+     "intro": "Most beginner photos fail not from bad light but from clutter: too many competing subjects fighting for attention. Simplification is the discipline of deciding what does not belong in the frame.",
+     "sections": [
+      {
+       "heading": "One Subject, One Story",
+       "body": [
+        "A strong photograph usually answers one clear question: what am I looking at? When a frame includes a person, a dog, a parked car, and a distracting sign all with roughly equal visual weight, the viewer's eye has nowhere obvious to settle, and the photo reads as busy rather than composed.",
+        "Simplifying often means physically moving, not just cropping later. Stepping two feet to the left to hide a trash can behind a tree, or crouching to put a plain sky behind a subject instead of a cluttered building, solves the problem better than any amount of editing afterward."
+       ]
+      },
+      {
+       "heading": "Negative Space",
+       "body": [
+        "Negative space is the empty or plain area of a frame, a stretch of blank sky, a smooth wall, a calm patch of water, that surrounds and isolates the subject. Generous negative space makes a small or simple subject feel deliberate rather than lost.",
+        "Negative space also gives a viewer's eye somewhere to rest, which paradoxically makes the subject itself feel more important. A single red kayak on a vast gray lake reads as a strong, intentional photograph specifically because of all the empty water around it."
+       ],
+       "example": {
+        "problem": "You photograph a single bright yellow bicycle leaning against a plain concrete wall. How does negative space affect the composition here?",
+        "steps": [
+         "The plain concrete wall and open ground around the bicycle contain no competing detail.",
+         "That empty space is negative space, and it isolates the bicycle as the only meaningful subject.",
+         "Because there is nothing else pulling attention, the small, simple subject reads as a deliberate, confident composition rather than an empty photo."
+        ],
+        "answer": "The plain wall acts as negative space, isolating the bicycle and making the simple subject feel intentional rather than accidental."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "negative space",
+       "def": "The empty or visually plain area of a composition that surrounds and isolates the main subject."
+      },
+      {
+       "term": "visual clutter",
+       "def": "Competing elements in a frame that distract from the intended subject."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A photo of a hiker includes a trash can and a parked car of similar visual weight in the background. What is the best fix?",
+       "choices": [
+        "Add a filter to the whole image",
+        "Physically reposition to remove the distracting elements from the frame",
+        "Increase the ISO",
+        "Switch to black and white to hide the problem"
+       ],
+       "answer": 1,
+       "explain": "Simplifying a busy frame is usually best solved by moving the camera position so distracting elements are no longer in the shot, not by editing after the fact."
+      },
+      {
+       "q": "What role does negative space play in a composition?",
+       "choices": [
+        "It makes an image technically underexposed",
+        "It gives the eye a place to rest and isolates the subject",
+        "It is always a mistake to include it",
+        "It only matters in landscape photography"
+       ],
+       "answer": 1,
+       "explain": "Negative space is empty area that removes competing detail, letting the viewer's eye settle on and appreciate the subject."
+      },
+      {
+       "q": "Which question best captures the goal of simplifying a frame?",
+       "choices": [
+        "How many objects can I fit into one photo?",
+        "What am I looking at, and does everything in the frame serve that?",
+        "Is the shutter speed fast enough?",
+        "Is the aperture set to f/8?"
+       ],
+       "answer": 1,
+       "explain": "Simplification is about making sure every element in the frame supports one clear subject, rather than packing in unrelated detail."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Working with Light",
+   "summary": "Light is the raw material of every photograph. This unit covers how its direction and quality change a photo, and how to work with both the sun's daily cycle and artificial fill light.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Direction and Quality of Light",
+     "minutes": 12,
+     "intro": "The same subject photographed from the front, the side, and behind can look like three different subjects. Direction of light shapes a face or an object; quality of light decides whether that shaping is gentle or harsh.",
+     "sections": [
+      {
+       "heading": "Front, Side, and Back Light",
+       "body": [
+        "Front light, coming from behind the camera onto the subject's face, is easy to expose and shows detail evenly, but it flattens texture and can look plain because shadows barely fall on the visible side of the subject. Side light, coming from roughly ninety degrees to the subject, carves out texture and dimension, since half the face or object falls into shadow, which is why it is favored for dramatic portraits.",
+        "Backlight, coming from behind the subject toward the camera, is the trickiest: it can produce a glowing rim of light around hair or edges, or silhouette the subject entirely into a dark shape against a bright background, depending on how you meter and whether you add fill light on the front of the subject."
+       ]
+      },
+      {
+       "heading": "Hard Light versus Soft Light",
+       "body": [
+        "Hard light comes from a small or distant light source, like the sun at noon or a bare flash, and produces sharp-edged, high-contrast shadows. It can look striking on strong subjects but is unforgiving on skin, exaggerating texture and blemishes.",
+        "Soft light comes from a large or nearby light source, like an overcast sky or a window with sheer curtains, and produces gradual, low-contrast shadows with soft edges. Soft light is generally more flattering for portraits because it smooths texture rather than carving into it, which is why overcast days are secretly excellent for portrait shooting."
+       ],
+       "example": {
+        "problem": "You need to shoot an outdoor portrait at noon under a clear sky, and the client wants flattering, even skin tones. What should you do?",
+        "steps": [
+         "Direct overhead noon sun is hard, high-contrast light that creates unflattering shadows under the eyes and nose.",
+         "Move the subject into open shade, such as under a tree or awning, which turns the same sunlight into large, soft, indirect light.",
+         "If no shade is available, use a diffuser between the sun and the subject, or a reflector to fill in the harsh shadows."
+        ],
+        "answer": "Move the subject into open shade (or diffuse/fill the harsh sun), converting hard midday light into soft, even, flattering light."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "front light",
+       "def": "Light striking a subject from the direction of the camera, producing even but flat illumination."
+      },
+      {
+       "term": "side light",
+       "def": "Light striking a subject from roughly ninety degrees, emphasizing texture and dimension through shadow."
+      },
+      {
+       "term": "hard light",
+       "def": "Light from a small or distant source that produces sharp-edged, high-contrast shadows."
+      },
+      {
+       "term": "soft light",
+       "def": "Light from a large or nearby source that produces gradual, low-contrast shadows."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is overcast daylight often flattering for portraits?",
+       "choices": [
+        "It is brighter than direct sun",
+        "The clouds act as a large diffuser, producing soft, even light",
+        "It eliminates the need for any exposure settings",
+        "Overcast light has no direction at all"
+       ],
+       "answer": 1,
+       "explain": "A cloud layer spreads sunlight across a huge area of sky, turning it into a large, soft light source that produces gentle, flattering shadows."
+      },
+      {
+       "q": "Which lighting direction is most likely to silhouette a subject if you meter for the background?",
+       "choices": [
+        "Front light",
+        "Side light",
+        "Backlight",
+        "Overcast light"
+       ],
+       "answer": 2,
+       "explain": "Backlight puts the bright light source behind the subject; metering for that bright background underexposes the subject into a dark silhouette."
+      },
+      {
+       "q": "What visual effect does hard light typically produce?",
+       "choices": [
+        "Gradual, barely visible shadows",
+        "Sharp-edged, high-contrast shadows",
+        "No shadows at all",
+        "Only color shifts, no shadow changes"
+       ],
+       "answer": 1,
+       "explain": "Hard light comes from a small or distant source, like the midday sun, and casts shadows with sharp, well-defined edges and strong contrast."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Golden Hour, Blue Hour, and Harsh Sun",
+     "minutes": 11,
+     "intro": "The sun's position rewrites every scene it touches over the course of a day. Learning its schedule tells you when to shoot outdoors and when to look for shade instead.",
+     "sections": [
+      {
+       "heading": "Golden Hour",
+       "body": [
+        "Golden hour is the period shortly after sunrise and shortly before sunset, when the sun sits low on the horizon. Its light travels through more atmosphere at that angle, scattering out blue wavelengths and leaving a warm, orange-gold color, while its low angle produces long, soft-edged shadows.",
+        "This combination of warm color and soft directional light is why golden hour is prized for portraits and landscapes alike: it flatters skin tones, adds dimension through gentle side and back lighting, and rarely produces the squinting, harsh shadows of midday sun."
+       ]
+      },
+      {
+       "heading": "Blue Hour and Midday Sun",
+       "body": [
+        "Blue hour is the short window just before sunrise and just after sunset, when the sun is below the horizon but the sky still glows with a deep, even blue. It is a favorite for cityscapes, because building lights and the sky are close enough in brightness to both show detail in the same exposure.",
+        "Midday sun, by contrast, sits high overhead and produces the hardest, most vertical light of the day, casting short, dense shadows straight down that hollow out eye sockets in portraits and flatten landscape texture. It is the least forgiving light for people, though it works fine for punchy, high-contrast architectural or street shots."
+       ],
+       "example": {
+        "problem": "You are scouting a shoot and want dramatic, warm-toned photos of a couple at the beach with a colorful sky. What time of day should you schedule the shoot?",
+        "steps": [
+         "Midday sun would produce harsh downward shadows and a washed-out sky, unsuitable for the goal.",
+         "Golden hour, shortly before sunset, gives warm color and soft, flattering directional light on the couple.",
+         "Shooting straight through into blue hour afterward can add a second set of images with a deep blue sky, if time allows."
+        ],
+        "answer": "Schedule the shoot for golden hour, in the last hour or so before sunset, extending into blue hour if a second look is wanted."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "golden hour",
+       "def": "The period shortly after sunrise or before sunset with warm, low-angle, soft directional light."
+      },
+      {
+       "term": "blue hour",
+       "def": "The short period just before sunrise or after sunset when the sky glows a deep, even blue."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does golden-hour light appear warm and orange?",
+       "choices": [
+        "The sun's temperature changes at low angles",
+        "Sunlight travels through more atmosphere at a low angle, scattering out blue wavelengths",
+        "Cameras automatically add a warm filter at sunset",
+        "It is an illusion caused by tired eyes"
+       ],
+       "answer": 1,
+       "explain": "At a low angle, sunlight passes through much more atmosphere than at midday, scattering away blue light and leaving the warm orange tones that reach the ground."
+      },
+      {
+       "q": "Blue hour is especially popular for which type of photography?",
+       "choices": [
+        "Fast sports action",
+        "Cityscapes, where building lights balance with the glowing sky",
+        "Extreme close-up macro work",
+        "Underwater photography"
+       ],
+       "answer": 1,
+       "explain": "During blue hour, artificial building lights and the still-glowing sky are close enough in brightness that both can be exposed well in the same shot, which suits cityscapes."
+      },
+      {
+       "q": "Why is midday sun considered unflattering for portraits?",
+       "choices": [
+        "It is too dim to expose properly",
+        "It casts short, hard, downward shadows that hollow out facial features",
+        "It only affects black-and-white photos",
+        "It makes autofocus unreliable"
+       ],
+       "answer": 1,
+       "explain": "With the sun high overhead, light falls almost straight down, creating harsh shadows under the eyes, nose, and chin that most people find unflattering."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Flash and Reflected Fill Light",
+     "minutes": 11,
+     "intro": "When the sun will not cooperate, you can bring your own light or bounce the light that is already there. Fill flash and reflectors are the two most portable tools for fixing harsh shadows on the spot.",
+     "sections": [
+      {
+       "heading": "Fill Flash",
+       "body": [
+        "Fill flash means firing a flash, whether a phone's LED, a pop-up flash, or a dedicated speedlight, at a low enough power that it only lightens shadows rather than becoming the main light source. This is especially useful outdoors at midday, where harsh sun creates deep shadows under the eyes; a touch of fill flash brightens those shadows without overpowering the natural light.",
+        "The most common mistake is using flash at full power indoors, pointed directly at a subject, which produces a flat, harsh look with a sharp shadow behind the subject on the wall. Bouncing the flash off a white ceiling or wall, when the flash allows it, softens this dramatically by turning a small direct source into a larger, softer one."
+       ]
+      },
+      {
+       "heading": "Reflectors",
+       "body": [
+        "A reflector is simply a surface, from a purpose-built collapsible disc to a white foam board or even a light-colored wall, that bounces existing light back onto a subject to fill in shadows. Positioned opposite the main light source, a white reflector lifts shadow detail gently, while a silver reflector bounces more light and adds more contrast and sparkle.",
+        "Reflectors cost nothing to operate and need no batteries, which makes them a reliable backup any time flash is impractical or unwanted, such as during a quiet ceremony or a shoot where a harsh flash would be distracting."
+       ],
+       "example": {
+        "problem": "You are shooting a portrait outdoors in open shade, and the subject's face looks a little flat and gray. A helper is available but you have no flash. What can you do?",
+        "steps": [
+         "Open shade is soft but sometimes low in contrast, leaving the face looking a bit dull.",
+         "Have the helper hold a white or silver reflector below and in front of the subject, angled to catch ambient light.",
+         "Adjust the reflector's angle until it bounces a visible amount of light back up into the subject's face, adding brightness and a catch light in the eyes."
+        ],
+        "answer": "Use a reflector to bounce ambient light back onto the face, brightening it and adding contrast without needing a flash."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "fill flash",
+       "def": "Flash used at low power to lighten shadows rather than serve as the main light source."
+      },
+      {
+       "term": "reflector",
+       "def": "A surface used to bounce existing light back onto a subject to fill in shadows."
+      },
+      {
+       "term": "bounce flash",
+       "def": "Aiming a flash at a ceiling or wall so the light softens and spreads before reaching the subject."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main purpose of fill flash in bright outdoor sunlight?",
+       "choices": [
+        "To completely replace the sunlight",
+        "To lighten harsh shadows without overpowering natural light",
+        "To increase the shutter speed",
+        "To reduce the file size of the image"
+       ],
+       "answer": 1,
+       "explain": "Fill flash is used at low power specifically to soften shadows created by hard sunlight, not to become the dominant light source."
+      },
+      {
+       "q": "Why does bouncing a flash off a ceiling produce softer light than firing it directly at a subject?",
+       "choices": [
+        "It reduces the flash's power to zero",
+        "It turns a small direct light source into a larger, more diffuse one",
+        "It changes the color temperature to blue",
+        "Bounced flash has no effect on shadows"
+       ],
+       "answer": 1,
+       "explain": "Bouncing spreads the light across a wide ceiling or wall area first, effectively enlarging the light source, which is what makes light softer."
+      },
+      {
+       "q": "What is a reflector used for in portrait photography?",
+       "choices": [
+        "To increase shutter speed automatically",
+        "To bounce existing light back onto a subject and fill shadows",
+        "To replace the need for a lens",
+        "To measure the color temperature of light"
+       ],
+       "answer": 1,
+       "explain": "A reflector redirects available ambient light back onto the subject, filling in shadows without requiring any powered light source."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Lenses and Focus",
+   "summary": "The lens you choose and where you tell the camera to focus shape a photo as much as exposure does. This unit covers focal length, focus modes, and matching gear to the job.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Focal Length and Field of View",
+     "minutes": 12,
+     "intro": "Focal length, printed in millimeters on every lens, sets how wide or narrow a slice of the world the camera sees, and it quietly reshapes perspective at the same time.",
+     "sections": [
+      {
+       "heading": "Wide, Normal, and Telephoto",
+       "body": [
+        "On a standard full-frame camera, focal lengths shorter than about 35mm are considered wide-angle: they capture a broad field of view, useful for landscapes, interiors, and group shots in tight spaces, but they stretch and exaggerate objects near the edges of the frame. Around 50mm is considered a 'normal' focal length, framing a field of view close to what the human eye perceives, with minimal distortion.",
+        "Focal lengths beyond about 85mm are telephoto: they capture a narrow field of view, magnifying distant subjects, which suits portraits, wildlife, and sports where you cannot or should not get physically close. Telephoto lenses also compress perspective, making background objects look closer to the subject in size and distance than they actually are."
+       ],
+       "example": {
+        "problem": "You are photographing a soccer match from the sideline, thirty meters from the far goal, and want the players to fill the frame. Which type of lens should you use?",
+        "steps": [
+         "The distance to the subject is large and cannot be shortened during play.",
+         "A wide-angle lens would render the distant players as tiny specks in a large empty field.",
+         "A telephoto lens, such as 200mm or longer, magnifies the distant subject to fill more of the frame."
+        ],
+        "answer": "Use a telephoto lens (roughly 200mm or longer) to magnify the distant players and fill the frame."
+       }
+      },
+      {
+       "heading": "Perspective and Distortion",
+       "body": [
+        "Wide-angle lenses used close to a subject exaggerate the size of whatever is nearest the lens, which is why a wide lens held too close to a face distorts the nose into looking larger than it is; this is a common mistake in phone selfies taken at arm's length. The fix is not the lens alone but the distance: stepping back and using a slightly longer focal length for portraits, commonly 85mm to 135mm, keeps facial proportions natural.",
+        "This proportion effect is called perspective distortion, and it comes from subject distance far more than from the lens itself; a wide lens used far from a flat subject shows little distortion, while any lens used extremely close to a rounded subject like a face will show some."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "focal length",
+       "def": "A measurement in millimeters describing a lens's field of view and magnification; shorter numbers are wider, longer numbers are more zoomed in."
+      },
+      {
+       "term": "wide-angle lens",
+       "def": "A lens with a focal length shorter than about 35mm, capturing a broad field of view."
+      },
+      {
+       "term": "telephoto lens",
+       "def": "A lens with a focal length beyond about 85mm, magnifying distant subjects and compressing perspective."
+      },
+      {
+       "term": "perspective distortion",
+       "def": "The exaggeration of near objects' size relative to far objects, caused mainly by shooting distance rather than focal length alone."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do wide-angle selfies often make a nose look larger than it is?",
+       "choices": [
+        "Wide lenses always add blur",
+        "The subject is very close to the lens, exaggerating near-object size",
+        "Wide lenses cannot focus on faces",
+        "It only happens with black-and-white photos"
+       ],
+       "answer": 1,
+       "explain": "Perspective distortion comes mainly from close shooting distance; a wide lens held near a face exaggerates whatever is nearest, usually the nose."
+      },
+      {
+       "q": "Which focal length range is generally recommended for flattering portraits?",
+       "choices": [
+        "14mm to 24mm",
+        "85mm to 135mm",
+        "8mm fisheye",
+        "400mm super-telephoto only"
+       ],
+       "answer": 1,
+       "explain": "The 85mm to 135mm range lets a photographer stand at a comfortable distance while keeping facial proportions natural, avoiding both wide-angle distortion and extreme compression."
+      },
+      {
+       "q": "What effect does a telephoto lens have on background objects relative to the subject?",
+       "choices": [
+        "It makes the background disappear entirely",
+        "It compresses perspective, making background objects look closer in size and distance",
+        "It always blurs the subject instead of the background",
+        "It has no effect on perspective"
+       ],
+       "answer": 1,
+       "explain": "Telephoto lenses compress the apparent distance between subject and background, making far objects look larger and closer together than they really are."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Focus Modes and Depth-of-Field Control",
+     "minutes": 11,
+     "intro": "A perfectly composed, perfectly exposed photo still fails if the wrong part of the frame is sharp. Choosing the right focus mode and focus point is what puts sharpness exactly where you want it.",
+     "sections": [
+      {
+       "heading": "Single and Continuous Autofocus",
+       "body": [
+        "Single-shot autofocus (often labeled AF-S or One-Shot) locks focus once on a stationary subject when you half-press the shutter, and it will not adjust again until you release and refocus. It suits still subjects like a posed portrait, a building, or a plate of food, where the distance to the subject is not changing.",
+        "Continuous autofocus (AF-C or AI Servo) keeps re-focusing constantly as long as the shutter button is half-pressed, tracking a subject that is moving toward or away from the camera. It is the correct choice for kids running, pets playing, or any sports and wildlife photography where distance is constantly changing."
+       ]
+      },
+      {
+       "heading": "Choosing the Focus Point",
+       "body": [
+        "Cameras and phones let you choose where in the frame to focus, either by tapping a point on the screen or moving a focus point with a joystick or dial. Letting the camera decide automatically often focuses on whatever is closest or most centered, which is not always your intended subject, especially with the rule of thirds pushing subjects off-center.",
+        "For portraits specifically, always focus on the nearest eye. With a shallow depth of field at a wide aperture, even a few centimeters of focus error can put the tip of the nose in focus while the eyes go soft, which reads immediately as an out-of-focus photo even though technically something in the frame is sharp."
+       ],
+       "example": {
+        "problem": "You are shooting a portrait at f/1.8, and the subject's face is turned slightly to one side, so one eye is a little closer to the camera than the other. Where should you place the focus point?",
+        "steps": [
+         "At f/1.8 the depth of field is very shallow, often just a few centimeters at portrait distance.",
+         "If focus lands on the ear or the far eye instead of the near eye, the whole face can read as soft.",
+         "The near eye is what viewers instinctively check for sharpness in a portrait."
+        ],
+        "answer": "Place the focus point directly on the nearer eye, since it is the detail viewers will judge for sharpness."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "single-shot autofocus",
+       "def": "A focus mode that locks focus once on a stationary subject and does not readjust until refocused."
+      },
+      {
+       "term": "continuous autofocus",
+       "def": "A focus mode that keeps adjusting focus in real time to track a moving subject."
+      },
+      {
+       "term": "focus point",
+       "def": "The specific location in the frame the camera is told to use to judge sharp focus."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which autofocus mode is best suited for photographing a dog running toward the camera?",
+       "choices": [
+        "Single-shot autofocus",
+        "Continuous autofocus",
+        "Manual focus locked at infinity",
+        "No autofocus mode matters for moving subjects"
+       ],
+       "answer": 1,
+       "explain": "Continuous autofocus keeps re-adjusting as the distance to a moving subject changes, which is exactly what a running dog requires."
+      },
+      {
+       "q": "In a shallow depth-of-field portrait, why does focus placement matter so much?",
+       "choices": [
+        "It does not matter as long as the subject is in the frame",
+        "A few centimeters of focus error can put the eyes out of focus even if something else in the frame is sharp",
+        "Focus placement only matters for landscape photos",
+        "Autofocus is always perfectly accurate regardless of aperture"
+       ],
+       "answer": 1,
+       "explain": "At a wide aperture like f/1.8, the zone of sharp focus is only a few centimeters deep, so even a small misplacement can leave the eyes soft while something else, like the nose or ear, is sharp."
+      },
+      {
+       "q": "Why might letting the camera choose the focus point automatically be risky with rule-of-thirds composition?",
+       "choices": [
+        "Automatic focus always fails in daylight",
+        "Auto focus point selection often favors the center or nearest object, which may not be the intended subject",
+        "Cameras cannot use autofocus off-center at all",
+        "It has no risk whatsoever"
+       ],
+       "answer": 1,
+       "explain": "Automatic focus point selection commonly defaults to the center or closest object, which can miss an off-center subject placed deliberately per the rule of thirds."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Choosing the Right Lens for the Shot",
+     "minutes": 10,
+     "intro": "No single lens does everything well. Matching focal length and aperture to the actual job, rather than always reaching for the same lens, is what separates a deliberate photographer from a lucky one.",
+     "sections": [
+      {
+       "heading": "Prime versus Zoom",
+       "body": [
+        "A prime lens has a single fixed focal length, such as 50mm, and cannot zoom; in exchange, primes are usually lighter, sharper, and offer wider maximum apertures like f/1.4 or f/1.8 for the same price as a much more limited zoom. A zoom lens covers a range of focal lengths, such as 24-70mm, trading some sharpness and maximum aperture for the flexibility to reframe without moving your feet or changing lenses.",
+        "Many working photographers carry both: a fast prime for portraits or low light, and a versatile zoom for events and travel where the subject distance keeps changing and there is no time to swap lenses."
+       ]
+      },
+      {
+       "heading": "Matching the Lens to the Genre",
+       "body": [
+        "Portraits typically favor 85mm to 135mm at a wide aperture, for flattering compression and a blurred background. Landscapes typically favor wide-angle lenses around 16mm to 35mm at a narrow aperture like f/11, to capture sweeping scenes with everything sharp from front to back. Wildlife and sports favor long telephoto lenses, often 300mm or beyond, because you usually cannot get physically close to the subject.",
+        "Street photography often favors a compact, unobtrusive prime around 28mm to 50mm, close to normal human vision and easy to carry and shoot with quickly and quietly, without drawing attention with a large zoom lens."
+       ],
+       "example": {
+        "problem": "You are packing for a single day that includes a group family portrait outdoors, a hike with wide scenic views, and a stop to photograph deer from a distance. What lens choices would cover the day best?",
+        "steps": [
+         "The family portrait wants flattering compression, suggesting a lens in the 85mm to 135mm range.",
+         "The scenic hike wants a broad field of view with everything sharp, suggesting a wide-angle lens around 16mm to 35mm.",
+         "The distant deer require magnification, suggesting a telephoto lens of 300mm or more.",
+         "A single versatile zoom, such as a 24-200mm, could cover most of this if carrying multiple lenses is impractical."
+        ],
+        "answer": "Bring a wide-angle lens for the landscape, a longer lens (85-135mm or a telephoto zoom) for the portrait and deer, or a single wide-range zoom like 24-200mm if traveling light."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "prime lens",
+       "def": "A lens with a single, fixed focal length that cannot zoom."
+      },
+      {
+       "term": "zoom lens",
+       "def": "A lens covering a range of focal lengths, adjustable without changing lenses."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is a typical trade-off of choosing a prime lens over a zoom lens?",
+       "choices": [
+        "Primes are always heavier and slower",
+        "Primes usually offer a wider maximum aperture and more sharpness, but cannot zoom",
+        "Primes cannot be used for portraits",
+        "Zoom lenses are always sharper than primes"
+       ],
+       "answer": 1,
+       "explain": "Prime lenses trade zoom flexibility for typically wider apertures, lighter weight, and higher sharpness at a given price point."
+      },
+      {
+       "q": "Which lens type and aperture combination best suits a wide landscape where everything from foreground rocks to distant mountains should be sharp?",
+       "choices": [
+        "A telephoto lens at f/2.8",
+        "A wide-angle lens at f/11",
+        "A wide-angle lens at f/1.4",
+        "A telephoto lens at f/1.8"
+       ],
+       "answer": 1,
+       "explain": "A wide-angle lens captures the broad scene, and a narrow aperture like f/11 provides the deep depth of field needed to keep both near and far elements sharp."
+      },
+      {
+       "q": "Why do street photographers often prefer a compact prime lens around 35mm?",
+       "choices": [
+        "It is the only lens capable of autofocus",
+        "It is unobtrusive, close to natural vision, and quick to shoot with",
+        "It has the narrowest possible field of view",
+        "It eliminates the need for any exposure settings"
+       ],
+       "answer": 1,
+       "explain": "A small prime near 35mm to 50mm is light, quiet, and close to how the eye naturally frames a scene, letting street photographers work quickly without attracting attention."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Genres, Editing, and Portfolio",
+   "summary": "The final unit applies everything to three common genres, then walks through a basic editing workflow and how to assemble a small, focused portfolio.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Portraits",
+     "minutes": 13,
+     "intro": "A portrait succeeds or fails on connection more than on technique, but the technical choices, aperture, focus point, and light direction, are exactly what make that connection visible.",
+     "sections": [
+      {
+       "heading": "Directing a Subject",
+       "body": [
+        "Most people freeze or over-pose in front of a camera, so a portrait photographer's job includes giving simple, specific directions rather than a vague “look natural.” Instructions like “turn your shoulders slightly away from me and look back over your shoulder” or “relax your hands and rest them in your lap” give a subject something concrete to do, which produces a more natural result than an open-ended request.",
+        "Conversation also matters: asking a genuine question and photographing the response, rather than only counting down to a forced smile, tends to capture more authentic expressions and micro-expressions that read as sincere in the final image."
+       ]
+      },
+      {
+       "heading": "Technical Choices for Portraits",
+       "body": [
+        "A wide aperture between f/1.8 and f/4 isolates the subject from the background, a focal length of 85mm to 135mm keeps facial proportions flattering, and focus should always land on the nearer eye. Soft, directional light, whether from open shade, a large window, or golden hour, shapes the face gently instead of flattening or harshly carving it.",
+        "Eye contact with the lens is not mandatory; a three-quarter turn of the head with the subject's gaze just off-camera often reads as more candid and dynamic than a straight, posed stare, especially for environmental or lifestyle portraits rather than formal headshots."
+       ],
+       "example": {
+        "problem": "You are shooting an outdoor headshot in open shade at golden hour, using an 85mm lens. Choose an aperture and describe the focus point.",
+        "steps": [
+         "Open shade and golden hour both provide soft, flattering light, so no additional fill is strictly required.",
+         "An aperture around f/2.8 gives a pleasantly blurred background while keeping enough depth of field that both eyes stay sharp even if the head is slightly turned.",
+         "Focus should be locked on the nearer eye, refined with continuous or single-shot autofocus depending on whether the subject is holding still."
+        ],
+        "answer": "Use roughly f/2.8 on the 85mm lens, and focus on the subject's nearer eye."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "posing direction",
+       "def": "Specific, concrete instructions given to a portrait subject to produce a natural-looking result."
+      },
+      {
+       "term": "environmental portrait",
+       "def": "A portrait that includes meaningful surroundings to say something about the subject's life or work."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do specific instructions like 'turn your shoulders away and glance back' often work better than saying 'look natural'?",
+       "choices": [
+        "They are shorter to say",
+        "They give the subject something concrete to do instead of an ambiguous, freezing instruction",
+        "They guarantee a smile",
+        "They only work for professional models"
+       ],
+       "answer": 1,
+       "explain": "Vague instructions like 'look natural' often make subjects self-conscious and stiff, while specific physical directions give them something concrete to focus on, producing more relaxed results."
+      },
+      {
+       "q": "Which combination is best suited to a flattering outdoor headshot?",
+       "choices": [
+        "16mm lens at f/16, focused on the background",
+        "85mm lens at roughly f/2.8, focused on the near eye",
+        "8mm fisheye lens at f/22",
+        "300mm lens at f/1.4, focused on the ear"
+       ],
+       "answer": 1,
+       "explain": "An 85mm lens at a moderately wide aperture gives flattering compression and background blur while keeping enough depth of field for a sharp face, with focus correctly placed on the near eye."
+      },
+      {
+       "q": "What is an environmental portrait?",
+       "choices": [
+        "A portrait taken only outdoors in nature",
+        "A portrait that includes meaningful surroundings related to the subject",
+        "A portrait shot with no background at all",
+        "A type of macro photography"
+       ],
+       "answer": 1,
+       "explain": "An environmental portrait deliberately includes context, like a chef in their kitchen or a mechanic in their shop, to say something about who the subject is."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Landscape and Street Photography",
+     "minutes": 12,
+     "intro": "Landscape and street photography sit at opposite ends of the pace spectrum, slow deliberate planning versus split-second reaction, but both reward the same discipline of composition and light already built in this course.",
+     "sections": [
+      {
+       "heading": "Landscape Photography",
+       "body": [
+        "Strong landscapes usually combine a clear foreground element, like a rock or flower, a well-composed middle ground, and a distant background, giving the eye a path through depth rather than a flat wall of scenery. A narrow aperture around f/8 to f/16 keeps this entire depth sharp, and a sturdy tripod lets you use those narrow apertures even as light fades at golden or blue hour without raising ISO.",
+        "Checking sunrise and sunset times and scouting a location in advance, ideally the day before, turns landscape photography from luck into repeatable craft: you arrive already knowing where the light will fall and where your foreground interest will sit relative to it."
+       ]
+      },
+      {
+       "heading": "Street Photography",
+       "body": [
+        "Street photography captures unposed, candid moments of public life, and it rewards fast, unobtrusive gear and pre-set exposure so you are not fumbling with dials when a moment appears. Many street photographers pre-focus at a middle distance, such as three meters, and use a narrow-ish aperture like f/8, so most subjects that step into that zone are already acceptably sharp without focusing in the moment.",
+        "Respect and legality matter here: laws about photographing strangers in public vary by place, and even where it is legal, experienced street photographers develop judgment about which moments are worth capturing and which crossing a line into intrusion or disrespect, especially with vulnerable subjects."
+       ],
+       "example": {
+        "problem": "You want to shoot candid street photography in a busy plaza without missing fast-moving moments. What settings would let you react instantly?",
+        "steps": [
+         "Pre-focusing removes the delay of autofocus hunting when a moment appears suddenly.",
+         "Setting a moderate aperture like f/8 gives enough depth of field that small distance errors from pre-focusing still land sharp.",
+         "Using Aperture Priority or Manual with a fast enough shutter speed, such as 1/250, freezes typical walking-pace motion."
+        ],
+        "answer": "Pre-focus at a set distance, use around f/8 for a forgiving depth of field, and keep shutter speed near 1/250 to freeze normal foot traffic."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "foreground interest",
+       "def": "A close, well-composed element placed in the near part of a landscape frame to create depth."
+      },
+      {
+       "term": "pre-focus",
+       "def": "Setting focus to a specific anticipated distance in advance, so a subject entering that zone is already sharp."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do landscape photographers commonly use apertures around f/8 to f/16?",
+       "choices": [
+        "To blur the background as much as possible",
+        "To achieve a deep depth of field keeping foreground through background sharp",
+        "Because wider apertures are not physically possible outdoors",
+        "To reduce the need for a tripod"
+       ],
+       "answer": 1,
+       "explain": "A narrow aperture produces a deep depth of field, which is essential for landscapes where sharpness is wanted from near foreground elements all the way to the distant horizon."
+      },
+      {
+       "q": "What is the benefit of pre-focusing in street photography?",
+       "choices": [
+        "It permanently locks the lens so it can never refocus",
+        "It removes autofocus delay so a sudden candid moment is already sharp",
+        "It only works with telephoto lenses",
+        "It eliminates the need for correct exposure"
+       ],
+       "answer": 1,
+       "explain": "Pre-focusing at an anticipated distance means the photographer can react instantly to a fleeting moment without waiting for autofocus to lock on."
+      },
+      {
+       "q": "Why is scouting a landscape location the day before a shoot useful?",
+       "choices": [
+        "It guarantees good weather",
+        "It lets the photographer plan composition and timing around known sunrise or sunset light",
+        "It is required by photography competitions",
+        "It replaces the need for any camera settings"
+       ],
+       "answer": 1,
+       "explain": "Scouting in advance lets a photographer identify foreground elements and know where light will fall at golden or blue hour, turning the shoot into planned craft rather than luck."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Editing Workflow and Building a Portfolio",
+     "minutes": 12,
+     "intro": "A great shot straight out of the camera can still be improved, and a folder of a thousand random photos is not a portfolio. This closing lesson covers a simple, repeatable edit and how to curate work that represents you well.",
+     "sections": [
+      {
+       "heading": "A Basic Editing Workflow",
+       "body": [
+        "A reliable order for editing a photo, whether in a phone app or full desktop software, is: correct exposure and white balance first, then adjust contrast and color, then crop and straighten, and finally sharpen and export. Doing exposure and color first matters because a crop decision can shift once you see the corrected image, and sharpening applied too early can exaggerate noise you have not dealt with yet.",
+        "Small, deliberate adjustments beat heavy-handed ones: pulling shadows up slightly to recover detail, nudging white balance so skin tones look natural rather than orange or blue, and straightening a tilted horizon usually improve a photo more than an aggressive filter that overrides its original character."
+       ]
+      },
+      {
+       "heading": "Curating a Portfolio",
+       "body": [
+        "A portfolio is not an archive; it is a curated argument for what you can do, and that means ruthless editing down to your strongest, most varied work. A common target for a first portfolio is 15 to 20 images that each show a different strength, rather than 40 similar shots from the same afternoon that all make the same point.",
+        "Get a second opinion before finalizing a portfolio, since photographers are often too attached to a technically difficult shot or a personally meaningful moment to judge it purely on how it reads to a stranger seeing it for the first time. A friend or fellow photographer will usually spot the two or three images that quietly weaken the set."
+       ],
+       "example": {
+        "problem": "You have 200 photos from a recent trip and need to build a 15-image portfolio section. How should you proceed?",
+        "steps": [
+         "First pass: eliminate any technically flawed images (soft focus, blown highlights, closed eyes) regardless of how meaningful the moment felt.",
+         "Second pass: group the remaining strong images by subject or mood, and keep only the single best image from each near-duplicate group.",
+         "Final pass: arrange the surviving images to show range, portraits, landscapes, and detail shots, rather than fifteen photos of the same subject.",
+         "Ask someone else to review the set and flag any image that feels weaker than the rest before finalizing."
+        ],
+        "answer": "Cut technical failures first, keep only the best of each similar group, arrange for variety, then get outside feedback before finalizing the 15 images."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "white balance",
+       "def": "The color adjustment that corrects for the color cast of a light source so whites look neutral."
+      },
+      {
+       "term": "portfolio",
+       "def": "A curated, edited selection of a photographer's strongest and most varied work."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a basic editing workflow, why is exposure and color correction usually done before cropping?",
+       "choices": [
+        "Cropping always happens automatically",
+        "The corrected image may change what composition and crop look best",
+        "Cropping must always come first by software design",
+        "It has no effect on the order"
+       ],
+       "answer": 1,
+       "explain": "Correcting exposure and color first can reveal detail or issues that change how you want to frame the final crop, so doing color correction before cropping avoids wasted decisions."
+      },
+      {
+       "q": "What is the main purpose of a photography portfolio?",
+       "choices": [
+        "To store every photo ever taken",
+        "To present a curated, varied selection of your strongest work",
+        "To showcase only the most technically difficult shots regardless of quality",
+        "To replace the need for a resume entirely"
+       ],
+       "answer": 1,
+       "explain": "A portfolio is meant to argue for your abilities through a small, deliberately chosen set of strong, varied images, not to archive everything you have shot."
+      },
+      {
+       "q": "Why is getting a second opinion useful before finalizing a portfolio?",
+       "choices": [
+        "Other people always have better cameras",
+        "Photographers can be too personally attached to a shot to judge it objectively",
+        "It is legally required to publish a portfolio",
+        "It guarantees more views online"
+       ],
+       "answer": 1,
+       "explain": "Personal or technical attachment to a photo can blind a photographer to how it reads to a stranger, so outside feedback often catches weak images that should be cut."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
