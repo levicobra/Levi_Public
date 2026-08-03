@@ -1,0 +1,1284 @@
+{
+ "version": 1,
+ "name": "XP Education",
+ "domains": [
+  {
+   "id": "k8",
+   "title": "K–8 Foundations",
+   "accent": "#FFD166",
+   "tagline": "The building blocks — reading, writing, math, and science for young learners.",
+   "subjects": [
+    {
+     "id": "reading-foundations",
+     "title": "Reading & Phonics",
+     "level": "Elementary",
+     "blurb": "Letters, sounds, sight words, and the road to confident reading.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "elementary-math",
+     "title": "Elementary Math",
+     "level": "Elementary",
+     "blurb": "Counting, place value, arithmetic, fractions, and early problem solving.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "elementary-science",
+     "title": "Elementary Science",
+     "level": "Elementary",
+     "blurb": "Plants, animals, weather, matter, and how to think like a scientist.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "middle-school-math",
+     "title": "Middle School Math",
+     "level": "Middle school",
+     "blurb": "Ratios, negative numbers, equations, geometry, and data — the bridge to algebra.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "middle-school-science",
+     "title": "Middle School Science",
+     "level": "Middle school",
+     "blurb": "Cells, forces, energy, Earth systems, and hands-on scientific inquiry.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "grammar-composition",
+     "title": "Grammar & Composition",
+     "level": "Middle school",
+     "blurb": "Parts of speech, sentence craft, paragraphs, and clear written expression.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "math",
+   "title": "Mathematics",
+   "accent": "#5BA8FF",
+   "tagline": "From arithmetic to calculus — a complete mathematical ladder.",
+   "subjects": [
+    {
+     "id": "prealgebra",
+     "title": "Prealgebra",
+     "level": "High school",
+     "blurb": "Whole numbers, fractions, decimals, and the first steps into algebraic thinking.",
+     "source": {
+      "name": "OpenStax Prealgebra 2e",
+      "url": "https://openstax.org/details/books/prealgebra-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "elementary-algebra",
+     "title": "Elementary Algebra",
+     "level": "High school",
+     "blurb": "Linear equations, graphing, polynomials, and factoring from the ground up.",
+     "source": {
+      "name": "OpenStax Elementary Algebra 2e",
+      "url": "https://openstax.org/details/books/elementary-algebra-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "intermediate-algebra",
+     "title": "Intermediate Algebra",
+     "level": "High school",
+     "blurb": "Functions, quadratics, rational expressions, and exponential growth.",
+     "source": {
+      "name": "OpenStax Intermediate Algebra 2e",
+      "url": "https://openstax.org/details/books/intermediate-algebra-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "college-algebra",
+     "title": "College Algebra",
+     "level": "Intro college",
+     "blurb": "Functions in depth — polynomial, rational, exponential, and logarithmic.",
+     "source": {
+      "name": "OpenStax College Algebra 2e",
+      "url": "https://openstax.org/details/books/college-algebra-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "trigonometry",
+     "title": "Trigonometry",
+     "level": "Intro college",
+     "blurb": "Angles, the unit circle, identities, and the mathematics of triangles and waves.",
+     "source": {
+      "name": "OpenStax Algebra and Trigonometry 2e",
+      "url": "https://openstax.org/details/books/algebra-and-trigonometry-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "precalculus",
+     "title": "Precalculus",
+     "level": "Intro college",
+     "blurb": "The full toolkit for calculus: functions, trig, sequences, and conics.",
+     "source": {
+      "name": "OpenStax Precalculus 2e",
+      "url": "https://openstax.org/details/books/precalculus-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "calculus-1",
+     "title": "Calculus I",
+     "level": "College",
+     "blurb": "Limits, derivatives, and the beginning of integration.",
+     "source": {
+      "name": "OpenStax Calculus Volume 1",
+      "url": "https://openstax.org/details/books/calculus-volume-1",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "calculus-2",
+     "title": "Calculus II",
+     "level": "College",
+     "blurb": "Techniques of integration, applications, and infinite series.",
+     "source": {
+      "name": "OpenStax Calculus Volume 2",
+      "url": "https://openstax.org/details/books/calculus-volume-2",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "calculus-3",
+     "title": "Calculus III",
+     "level": "College",
+     "blurb": "Vectors, partial derivatives, multiple integrals, and vector calculus.",
+     "source": {
+      "name": "OpenStax Calculus Volume 3",
+      "url": "https://openstax.org/details/books/calculus-volume-3",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "statistics",
+     "title": "Introductory Statistics",
+     "level": "Intro college",
+     "blurb": "Describing data, probability, distributions, and drawing sound conclusions.",
+     "source": {
+      "name": "OpenStax Introductory Statistics 2e",
+      "url": "https://openstax.org/details/books/introductory-statistics-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "contemporary-math",
+     "title": "Contemporary Mathematics",
+     "level": "Intro college",
+     "blurb": "Math for life — logic, sets, finance, voting, graph theory, and more.",
+     "source": {
+      "name": "OpenStax Contemporary Mathematics",
+      "url": "https://openstax.org/details/books/contemporary-mathematics",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "linear-algebra",
+     "title": "Linear Algebra",
+     "level": "College",
+     "blurb": "Vectors, matrices, linear transformations, and eigenvalues.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "differential-equations",
+     "title": "Differential Equations",
+     "level": "Advanced",
+     "blurb": "Modeling change — first-order, second-order, and systems of ODEs.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "physical",
+   "title": "Physical Sciences",
+   "accent": "#A78BFA",
+   "tagline": "Matter, energy, and the laws that govern the universe.",
+   "subjects": [
+    {
+     "id": "physics",
+     "title": "College Physics",
+     "level": "Intro college",
+     "blurb": "Algebra-based physics: motion, forces, energy, waves, electricity, and light.",
+     "source": {
+      "name": "OpenStax College Physics 2e",
+      "url": "https://openstax.org/details/books/college-physics-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "university-physics-1",
+     "title": "University Physics I",
+     "level": "College",
+     "blurb": "Calculus-based mechanics: kinematics, Newton's laws, energy, and rotation.",
+     "source": {
+      "name": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/details/books/university-physics-volume-1",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "university-physics-2",
+     "title": "University Physics II",
+     "level": "College",
+     "blurb": "Thermodynamics, electricity, and magnetism with calculus.",
+     "source": {
+      "name": "OpenStax University Physics Volume 2",
+      "url": "https://openstax.org/details/books/university-physics-volume-2",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "university-physics-3",
+     "title": "University Physics III",
+     "level": "College",
+     "blurb": "Optics, relativity, and the quantum world.",
+     "source": {
+      "name": "OpenStax University Physics Volume 3",
+      "url": "https://openstax.org/details/books/university-physics-volume-3",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "chemistry",
+     "title": "Chemistry",
+     "level": "Intro college",
+     "blurb": "Atoms, bonding, reactions, stoichiometry, and the states of matter.",
+     "source": {
+      "name": "OpenStax Chemistry 2e",
+      "url": "https://openstax.org/details/books/chemistry-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "chemistry-atoms-first",
+     "title": "Chemistry: Atoms First",
+     "level": "Intro college",
+     "blurb": "The same chemistry, built up from atomic structure outward.",
+     "source": {
+      "name": "OpenStax Chemistry: Atoms First 2e",
+      "url": "https://openstax.org/details/books/chemistry-atoms-first-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "organic-chemistry",
+     "title": "Organic Chemistry",
+     "level": "Advanced",
+     "blurb": "Carbon compounds, mechanisms, synthesis, and spectroscopy.",
+     "source": {
+      "name": "OpenStax Organic Chemistry",
+      "url": "https://openstax.org/details/books/organic-chemistry",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "astronomy",
+     "title": "Astronomy",
+     "level": "Intro college",
+     "blurb": "The solar system, stars, galaxies, and the history of the cosmos.",
+     "source": {
+      "name": "OpenStax Astronomy 2e",
+      "url": "https://openstax.org/details/books/astronomy-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "earth-science",
+     "title": "Earth Science & Geology",
+     "level": "High school",
+     "blurb": "Rocks, plate tectonics, volcanoes, earthquakes, and Earth's deep history.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "meteorology",
+     "title": "Weather & Climate",
+     "level": "High school",
+     "blurb": "The atmosphere, storms, forecasting, and Earth's climate system.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "title": "Life Sciences",
+   "accent": "#3DE38A",
+   "tagline": "Cells to ecosystems — the science of living things.",
+   "subjects": [
+    {
+     "id": "biology",
+     "title": "Biology",
+     "level": "College",
+     "blurb": "The full majors sequence: molecules, cells, genetics, evolution, and ecology.",
+     "source": {
+      "name": "OpenStax Biology 2e",
+      "url": "https://openstax.org/details/books/biology-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "concepts-biology",
+     "title": "Concepts of Biology",
+     "level": "Intro college",
+     "blurb": "A friendlier tour of biology for non-majors.",
+     "source": {
+      "name": "OpenStax Concepts of Biology",
+      "url": "https://openstax.org/details/books/concepts-biology",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "microbiology",
+     "title": "Microbiology",
+     "level": "College",
+     "blurb": "Bacteria, viruses, immunity, and microbes in health and disease.",
+     "source": {
+      "name": "OpenStax Microbiology",
+      "url": "https://openstax.org/details/books/microbiology",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "anatomy-physiology",
+     "title": "Anatomy & Physiology",
+     "level": "College",
+     "blurb": "Every organ system of the human body — structure and function together.",
+     "source": {
+      "name": "OpenStax Anatomy and Physiology 2e",
+      "url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "genetics",
+     "title": "Genetics",
+     "level": "College",
+     "blurb": "Heredity from Mendel to genomics — DNA, inheritance, and biotechnology.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "ecology",
+     "title": "Ecology & Conservation",
+     "level": "Intro college",
+     "blurb": "Populations, ecosystems, biodiversity, and protecting the living world.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "marine-biology",
+     "title": "Marine Biology",
+     "level": "Intro college",
+     "blurb": "Ocean life from reef to abyss — with a Pacific Islands lens.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "neuroscience",
+     "title": "Introduction to Neuroscience",
+     "level": "College",
+     "blurb": "Neurons, brain systems, senses, memory, and behavior.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cs",
+   "title": "Computer Science",
+   "accent": "#2FD4E6",
+   "tagline": "Code, computation, and how to build things with software.",
+   "subjects": [
+    {
+     "id": "intro-computer-science",
+     "title": "Introduction to Computer Science",
+     "level": "Intro college",
+     "blurb": "How computers work, how software is built, and the field's big ideas.",
+     "source": {
+      "name": "OpenStax Introduction to Computer Science",
+      "url": "https://openstax.org/details/books/introduction-computer-science",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "python-programming",
+     "title": "Python Programming",
+     "level": "Intro college",
+     "blurb": "From first script to real programs — variables, loops, functions, and files.",
+     "source": {
+      "name": "OpenStax Introduction to Python Programming",
+      "url": "https://openstax.org/details/books/introduction-python-programming",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "web-development",
+     "title": "Web Development",
+     "level": "All levels",
+     "blurb": "HTML, CSS, and JavaScript — build and ship real pages.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "data-structures",
+     "title": "Data Structures & Algorithms",
+     "level": "College",
+     "blurb": "Lists, trees, graphs, sorting, and how to reason about efficiency.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "databases",
+     "title": "Databases & SQL",
+     "level": "Intro college",
+     "blurb": "Tables, queries, joins, and designing data that lasts.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "networking-security",
+     "title": "Networking & Cybersecurity",
+     "level": "Intro college",
+     "blurb": "How the internet works and how to defend what runs on it.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "ai-machine-learning",
+     "title": "AI & Machine Learning",
+     "level": "College",
+     "blurb": "From linear models to neural networks — how machines learn from data.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "game-development",
+     "title": "Game Development",
+     "level": "All levels",
+     "blurb": "Loops, entities, physics, and design — how games actually get made.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "engineering",
+   "title": "Engineering & Trades",
+   "accent": "#FB923C",
+   "tagline": "Design, build, fix — practical skills and engineering foundations.",
+   "subjects": [
+    {
+     "id": "intro-engineering",
+     "title": "Introduction to Engineering",
+     "level": "Intro college",
+     "blurb": "The engineering method, disciplines, units, and design thinking.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "electronics",
+     "title": "Electronics & Circuits",
+     "level": "All levels",
+     "blurb": "Volts, amps, components, soldering, and reading schematics.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "automotive",
+     "title": "Automotive Basics",
+     "level": "All levels",
+     "blurb": "How cars work and the maintenance anyone can do.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "home-maintenance",
+     "title": "Home & DIY Maintenance",
+     "level": "All levels",
+     "blurb": "Plumbing, electrical, drywall, and the repairs that save real money.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "woodworking",
+     "title": "Woodworking",
+     "level": "All levels",
+     "blurb": "Tools, joinery, finishing, and safe shop practice.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "technical-drawing",
+     "title": "Technical Drawing & CAD",
+     "level": "High school",
+     "blurb": "Sketching, orthographic projection, dimensioning, and digital modeling.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "social",
+   "title": "Social Sciences",
+   "accent": "#F472B6",
+   "tagline": "Mind, society, money, and power — the sciences of human behavior.",
+   "subjects": [
+    {
+     "id": "psychology",
+     "title": "Psychology",
+     "level": "Intro college",
+     "blurb": "The science of mind and behavior, from neurons to social life.",
+     "source": {
+      "name": "OpenStax Psychology 2e",
+      "url": "https://openstax.org/details/books/psychology-2e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "sociology",
+     "title": "Sociology",
+     "level": "Intro college",
+     "blurb": "Culture, institutions, inequality, and how societies hold together.",
+     "source": {
+      "name": "OpenStax Introduction to Sociology 3e",
+      "url": "https://openstax.org/details/books/introduction-sociology-3e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "anthropology",
+     "title": "Anthropology",
+     "level": "Intro college",
+     "blurb": "Human cultures past and present, from fieldwork to globalization.",
+     "source": {
+      "name": "OpenStax Introduction to Anthropology",
+      "url": "https://openstax.org/details/books/introduction-anthropology",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "political-science",
+     "title": "Political Science",
+     "level": "Intro college",
+     "blurb": "States, ideologies, institutions, and comparative politics.",
+     "source": {
+      "name": "OpenStax Introduction to Political Science",
+      "url": "https://openstax.org/details/books/introduction-political-science",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "american-government",
+     "title": "American Government",
+     "level": "Intro college",
+     "blurb": "The Constitution, branches, rights, and how U.S. politics works.",
+     "source": {
+      "name": "OpenStax American Government 3e",
+      "url": "https://openstax.org/details/books/american-government-3e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "microeconomics",
+     "title": "Microeconomics",
+     "level": "Intro college",
+     "blurb": "Supply and demand, markets, firms, and the choices people make.",
+     "source": {
+      "name": "OpenStax Principles of Microeconomics 3e",
+      "url": "https://openstax.org/details/books/principles-microeconomics-3e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "macroeconomics",
+     "title": "Macroeconomics",
+     "level": "Intro college",
+     "blurb": "GDP, inflation, unemployment, and steering whole economies.",
+     "source": {
+      "name": "OpenStax Principles of Macroeconomics 3e",
+      "url": "https://openstax.org/details/books/principles-macroeconomics-3e",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "human-geography",
+     "title": "Human Geography",
+     "level": "High school",
+     "blurb": "Population, culture, cities, and how humans shape the planet.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "title": "History",
+   "accent": "#D4A373",
+   "tagline": "What happened, why it mattered, and how it echoes now.",
+   "subjects": [
+    {
+     "id": "us-history",
+     "title": "U.S. History",
+     "level": "Intro college",
+     "blurb": "From the first peoples to the present day.",
+     "source": {
+      "name": "OpenStax U.S. History",
+      "url": "https://openstax.org/details/books/us-history",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "world-history-1",
+     "title": "World History to 1500",
+     "level": "Intro college",
+     "blurb": "Early humans, ancient empires, and the medieval world.",
+     "source": {
+      "name": "OpenStax World History Volume 1: to 1500",
+      "url": "https://openstax.org/details/books/world-history-volume-1",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "world-history-2",
+     "title": "World History since 1500",
+     "level": "Intro college",
+     "blurb": "Exploration, revolutions, world wars, and the modern era.",
+     "source": {
+      "name": "OpenStax World History Volume 2: from 1400",
+      "url": "https://openstax.org/details/books/world-history-volume-2",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "ancient-civilizations",
+     "title": "Ancient Civilizations",
+     "level": "High school",
+     "blurb": "Mesopotamia, Egypt, Greece, Rome, and the ancient Americas and Asia.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "hawaii-pacific-history",
+     "title": "Hawaiʻi & Pacific History",
+     "level": "All levels",
+     "blurb": "Voyaging, the Hawaiian Kingdom, and the Pacific's story.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "military-history",
+     "title": "Military History",
+     "level": "All levels",
+     "blurb": "Strategy, technology, and the conflicts that shaped the world.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "business",
+   "title": "Business & Finance",
+   "accent": "#A3E635",
+   "tagline": "Start it, run it, fund it — business from first principles.",
+   "subjects": [
+    {
+     "id": "intro-business",
+     "title": "Introduction to Business",
+     "level": "Intro college",
+     "blurb": "How businesses work: ownership, operations, people, and markets.",
+     "source": {
+      "name": "OpenStax Introduction to Business",
+      "url": "https://openstax.org/details/books/introduction-business",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "financial-accounting",
+     "title": "Financial Accounting",
+     "level": "College",
+     "blurb": "The language of business — journals, ledgers, and financial statements.",
+     "source": {
+      "name": "OpenStax Principles of Accounting, Volume 1: Financial Accounting",
+      "url": "https://openstax.org/details/books/principles-financial-accounting",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "managerial-accounting",
+     "title": "Managerial Accounting",
+     "level": "College",
+     "blurb": "Costs, budgets, and the numbers managers actually use.",
+     "source": {
+      "name": "OpenStax Principles of Accounting, Volume 2: Managerial Accounting",
+      "url": "https://openstax.org/details/books/principles-managerial-accounting",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "management",
+     "title": "Principles of Management",
+     "level": "Intro college",
+     "blurb": "Planning, leading, organizing, and getting work done through people.",
+     "source": {
+      "name": "OpenStax Principles of Management",
+      "url": "https://openstax.org/details/books/principles-management",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "organizational-behavior",
+     "title": "Organizational Behavior",
+     "level": "College",
+     "blurb": "Motivation, teams, culture, and leadership inside organizations.",
+     "source": {
+      "name": "OpenStax Organizational Behavior",
+      "url": "https://openstax.org/details/books/organizational-behavior",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "marketing",
+     "title": "Principles of Marketing",
+     "level": "Intro college",
+     "blurb": "Customers, positioning, the marketing mix, and modern channels.",
+     "source": {
+      "name": "OpenStax Principles of Marketing",
+      "url": "https://openstax.org/details/books/principles-marketing",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "business-ethics",
+     "title": "Business Ethics",
+     "level": "Intro college",
+     "blurb": "Doing well and doing right — ethical reasoning for business life.",
+     "source": {
+      "name": "OpenStax Business Ethics",
+      "url": "https://openstax.org/details/books/business-ethics",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "business-law",
+     "title": "Business Law",
+     "level": "Intro college",
+     "blurb": "Contracts, torts, entities, and the legal rules of commerce.",
+     "source": {
+      "name": "OpenStax Business Law I Essentials",
+      "url": "https://openstax.org/details/books/business-law-i-essentials",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "entrepreneurship",
+     "title": "Entrepreneurship",
+     "level": "All levels",
+     "blurb": "From idea to venture — opportunity, funding, and launch.",
+     "source": {
+      "name": "OpenStax Entrepreneurship",
+      "url": "https://openstax.org/details/books/entrepreneurship",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "finance",
+     "title": "Principles of Finance",
+     "level": "College",
+     "blurb": "Time value of money, risk, markets, and corporate finance.",
+     "source": {
+      "name": "OpenStax Principles of Finance",
+      "url": "https://openstax.org/details/books/principles-finance",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "personal-finance",
+     "title": "Personal Finance",
+     "level": "All levels",
+     "blurb": "Budgeting, credit, saving, investing, taxes, and big purchases.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "humanities",
+   "title": "Humanities",
+   "accent": "#E4737B",
+   "tagline": "Ideas, stories, and the examined life.",
+   "subjects": [
+    {
+     "id": "philosophy",
+     "title": "Introduction to Philosophy",
+     "level": "Intro college",
+     "blurb": "Knowledge, mind, ethics, and the big questions, argued carefully.",
+     "source": {
+      "name": "OpenStax Introduction to Philosophy",
+      "url": "https://openstax.org/details/books/introduction-philosophy",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "writing",
+     "title": "Writing & Rhetoric",
+     "level": "Intro college",
+     "blurb": "Argument, structure, style, and the craft of college writing.",
+     "source": {
+      "name": "OpenStax Writing Guide with Handbook",
+      "url": "https://openstax.org/details/books/writing-guide",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "world-literature",
+     "title": "World Literature",
+     "level": "Intro college",
+     "blurb": "Epics, drama, poetry, and novels across cultures and centuries.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "mythology",
+     "title": "Mythology & World Religions",
+     "level": "All levels",
+     "blurb": "Sacred stories and belief systems from around the world.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "ethics",
+     "title": "Ethics",
+     "level": "Intro college",
+     "blurb": "Moral theories and hard cases — how to reason about right and wrong.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "logic",
+     "title": "Logic & Critical Thinking",
+     "level": "Intro college",
+     "blurb": "Arguments, fallacies, and formal logic for clearer thinking.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "languages",
+   "title": "Languages",
+   "accent": "#2DD4BF",
+   "tagline": "Speak to more of the world.",
+   "subjects": [
+    {
+     "id": "spanish",
+     "title": "Spanish",
+     "level": "All levels",
+     "blurb": "The essentials of Spanish — sounds, grammar, and everyday conversation.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "french",
+     "title": "French",
+     "level": "All levels",
+     "blurb": "French from bonjour to real conversations.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "japanese",
+     "title": "Japanese",
+     "level": "All levels",
+     "blurb": "Hiragana, katakana, core grammar, and polite everyday Japanese.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "german",
+     "title": "German",
+     "level": "All levels",
+     "blurb": "German fundamentals — cases, word order, and practical vocabulary.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "hawaiian",
+     "title": "ʻŌlelo Hawaiʻi",
+     "level": "All levels",
+     "blurb": "The Hawaiian language — pronunciation, structure, and living culture.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "latin",
+     "title": "Latin",
+     "level": "All levels",
+     "blurb": "The root language of the West — grammar, vocabulary, and real texts.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "asl",
+     "title": "American Sign Language",
+     "level": "All levels",
+     "blurb": "Fingerspelling, core signs, grammar, and Deaf culture.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "title": "Health & Wellness",
+   "accent": "#FB7185",
+   "tagline": "The science of taking care of a human body and mind.",
+   "subjects": [
+    {
+     "id": "nutrition",
+     "title": "Nutrition",
+     "level": "Intro college",
+     "blurb": "Macronutrients, micronutrients, diets, and evidence-based eating.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "lifespan-development",
+     "title": "Lifespan Development",
+     "level": "Intro college",
+     "blurb": "Human growth from infancy through aging.",
+     "source": {
+      "name": "OpenStax Lifespan Development",
+      "url": "https://openstax.org/details/books/lifespan-development",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "public-health",
+     "title": "Public Health",
+     "level": "Intro college",
+     "blurb": "Epidemiology, prevention, and the health of populations.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "first-aid",
+     "title": "First Aid & Emergency Care",
+     "level": "All levels",
+     "blurb": "Bleeding, burns, CPR concepts, and keeping people alive until help comes.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "fitness",
+     "title": "Fitness & Exercise Science",
+     "level": "All levels",
+     "blurb": "Training principles, strength, conditioning, and recovery.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "mental-health",
+     "title": "Mental Health Essentials",
+     "level": "All levels",
+     "blurb": "Stress, resilience, common conditions, and finding help.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "arts",
+   "title": "Arts & Music",
+   "accent": "#E879F9",
+   "tagline": "Make things worth looking at and listening to.",
+   "subjects": [
+    {
+     "id": "music-theory",
+     "title": "Music Theory",
+     "level": "All levels",
+     "blurb": "Notes, scales, chords, rhythm, and how music fits together.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "art-history",
+     "title": "Art History",
+     "level": "Intro college",
+     "blurb": "From cave walls to contemporary art — the story of images.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "drawing",
+     "title": "Drawing Fundamentals",
+     "level": "All levels",
+     "blurb": "Line, form, value, perspective, and daily practice.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "photography",
+     "title": "Photography",
+     "level": "All levels",
+     "blurb": "Exposure, composition, light, and making photographs on any camera.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "film",
+     "title": "Film Studies",
+     "level": "Intro college",
+     "blurb": "How movies are made and how to watch them critically.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "creative-writing",
+     "title": "Creative Writing",
+     "level": "All levels",
+     "blurb": "Fiction, poetry, and narrative craft — with exercises that work.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  },
+  {
+   "id": "success",
+   "title": "College & Career Success",
+   "accent": "#CBD5E1",
+   "tagline": "How to study, get hired, and thrive.",
+   "subjects": [
+    {
+     "id": "college-success",
+     "title": "College Success",
+     "level": "Intro college",
+     "blurb": "Time, study strategies, wellbeing, and finishing what you start.",
+     "source": {
+      "name": "OpenStax College Success",
+      "url": "https://openstax.org/details/books/college-success",
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "study-skills",
+     "title": "Learning How to Learn",
+     "level": "All levels",
+     "blurb": "Memory, spaced practice, note-taking, and evidence-based study.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "career-readiness",
+     "title": "Career Readiness",
+     "level": "All levels",
+     "blurb": "Resumes, interviews, networking, and the first years on the job.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "test-prep",
+     "title": "Test Prep: SAT · ACT · ASVAB",
+     "level": "High school",
+     "blurb": "Strategies and core review for the big standardized tests.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    },
+    {
+     "id": "workplace-communication",
+     "title": "Workplace Communication",
+     "level": "All levels",
+     "blurb": "Email, meetings, presentations, and disagreeing productively.",
+     "source": {
+      "name": "XP Education original",
+      "url": null,
+      "license": "CC BY 4.0"
+     }
+    }
+   ]
+  }
+ ]
+}

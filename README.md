@@ -25,6 +25,20 @@ small team work at a scale that would normally need a much bigger one.
 
 🔗 [xplabs-games-dead-air.levicolby.chatgpt.site](https://xplabs-games-dead-air.levicolby.chatgpt.site)
 
+### XP Education — free offline learning platform
+
+A free learning platform that works fully offline. 100+ subjects across 14
+domains — K–8 foundations through college math, science, history, business,
+languages, trades, arts, and test prep — with real lessons, worked examples,
+and practice questions. College courses are aligned to
+[OpenStax](https://openstax.org) open textbooks (CC BY 4.0) and link to the
+full free books.
+
+Built as an installable PWA: visit once and the entire library lives on your
+device. No account, no tracking, no paywall.
+
+🔗 `xplabs.us/education/`
+
 ### ServeStuff — military benefits directory
 
 A free, no-signup hub that pulls scattered military benefits and discounts into
