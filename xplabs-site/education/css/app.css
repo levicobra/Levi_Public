@@ -89,7 +89,6 @@ html[data-textsize="l"]{ --t-body:1.1875rem; --t-read:1.1875rem; --t-lead:1.375r
   --a-soft: color-mix(in srgb, var(--accent) 11%, transparent);
   --a-wash: color-mix(in srgb, var(--accent) 6%, transparent);
   --a-glow: color-mix(in srgb, var(--accent) 26%, transparent);
-  --a-fill: var(--accent);
   --a-on:#05100A;
 }
 
@@ -109,12 +108,12 @@ html[data-theme="light"]{
   --paper:#161B17;
   --paper-dim:#2C332C;
   --muted:#57604F;
-  --muted-dim:#77806F;
+  --muted-dim:#666E5D;
 
-  --signal:#0C7F49;
+  --signal:#0A7643;
   --signal-ink:#FFFFFF;
   --danger:#C0392F;
-  --right:#0C7F49;
+  --right:#0A7643;
   --wrong:#C0392F;
 
   --shadow-1:0 1px 2px rgba(60,52,32,.06), 0 10px 24px -18px rgba(60,52,32,.35);
@@ -122,14 +121,13 @@ html[data-theme="light"]{
   --shadow-pop:0 20px 44px -20px rgba(60,52,32,.4);
 }
 html[data-theme="light"] *{
-  --a-text: color-mix(in oklab, var(--accent) 58%, #101610);
+  --a-text: color-mix(in oklab, var(--accent) 48%, #101610);
   --a-line: color-mix(in srgb, var(--accent) 42%, transparent);
   --a-line-2: color-mix(in srgb, var(--accent) 72%, transparent);
   --a-soft: color-mix(in srgb, var(--accent) 15%, transparent);
   --a-wash: color-mix(in srgb, var(--accent) 9%, transparent);
   --a-glow: color-mix(in srgb, var(--accent) 20%, transparent);
-  --a-fill: color-mix(in oklab, var(--accent) 72%, #141A14);
-  --a-on:#FFFFFF;
+  --a-on:#0E120E;
 }
 
 /* -------------------------------------------------------------------------
@@ -139,7 +137,8 @@ html[data-theme="light"] *{
 /* several components below set display, which would defeat the hidden attribute
    the app toggles on #install-btn, #offline-pill, #quiz-score, #toast, .quiz-explain */
 [hidden]{ display:none !important }
-html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth;
+  scroll-padding-top:calc(var(--header-h) + 1rem) }
 body{
   margin:0; background:var(--ink); color:var(--paper);
   font-family:var(--sans); font-size:var(--t-body); line-height:1.6;
@@ -738,7 +737,7 @@ html[data-theme="light"] .h1-soft{
   border-color:var(--a-line-2); background:var(--surface-2); transform:translateX(2px);
 }
 .quiz-choice:hover:not(:disabled)::before{ background:var(--a-soft); color:var(--a-text) }
-.quiz-choice:disabled{ cursor:default; opacity:.62; transform:none }
+.quiz-choice:disabled{ cursor:default; opacity:.72; transform:none }
 .quiz-choice.is-right{
   opacity:1; color:var(--paper);
   border-color:color-mix(in srgb, var(--right) 62%, transparent);
@@ -899,7 +898,7 @@ html[data-theme="light"] .quiz-choice.is-right::before{ color:#fff }
 #warm-status:not(:empty){
   font-size:var(--t-small); font-family:var(--mono); color:var(--muted);
   padding:.6rem .9rem; border-radius:var(--r-sm); background:var(--surface-2);
-  display:inline-block;
+  border:1px solid var(--line-soft); display:inline-block;
 }
 
 .setting-row{
