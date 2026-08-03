@@ -50,7 +50,7 @@ const PROGRESS_KEY = 'xped.progress.v1';
 const SETTINGS_KEY = 'xped.settings.v1';
 
 let progress = store.read(PROGRESS_KEY, { subjects: {}, days: {} });
-let settings = store.read(SETTINGS_KEY, { theme: 'dark', textSize: 'm' });
+let settings = store.read(SETTINGS_KEY, { theme: 'light', textSize: 'm' });
 
 function saveProgress() { store.write(PROGRESS_KEY, progress); }
 function saveSettings() { store.write(SETTINGS_KEY, settings); }
@@ -752,7 +752,7 @@ function applySettings() {
   document.documentElement.dataset.theme = settings.theme;
   document.documentElement.dataset.textsize = settings.textSize;
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.content = settings.theme === 'light' ? '#F7F5F0' : '#07090A';
+  if (meta) meta.content = settings.theme === 'light' ? '#F5F2EA' : '#07090A';
 }
 
 /* ---------- install prompt ---------- */

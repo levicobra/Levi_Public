@@ -8,7 +8,7 @@
 'use strict';
 
 /* @VERSION */
-const VERSION = 'xped-21a5192d678a';
+const VERSION = 'xped-35af5a7d5fda';
 /* @END-VERSION */
 
 /* @PRECACHE */

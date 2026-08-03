@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- data-theme is set here so the light theme paints on first frame; app.js
+     overrides it from saved settings before anything renders. -->
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>XP Education — free offline learning, every subject</title>
 <meta name="description" content="XP Education is a free learning platform that works fully offline. 100+ subjects from K–8 through college — math, science, history, languages, trades, and more — built on OpenStax and open educational resources.">
-<meta name="theme-color" content="#07090A">
-<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#F5F2EA">
+<meta name="color-scheme" content="light dark">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png" sizes="192x192">
@@ -17,6 +19,23 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xplabs.us/education/">
 <link rel="stylesheet" href="css/app.css">
+<script>
+/* Apply saved theme/text size before first paint so a returning reader never
+   sees a flash of the wrong theme. app.js is the source of truth afterwards;
+   light is the default when nothing is stored. */
+(function () {
+  try {
+    var s = JSON.parse(localStorage.getItem('xped.settings.v1') || '{}');
+    var r = document.documentElement;
+    r.dataset.theme = s.theme === 'dark' ? 'dark' : 'light';
+    if (s.textSize) r.dataset.textsize = s.textSize;
+    if (r.dataset.theme === 'dark') {
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.content = '#07090A';
+    }
+  } catch (e) { /* private mode / blocked storage — light default stands */ }
+})();
+</script>
 </head>
 <body>
 
