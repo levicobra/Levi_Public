@@ -1,0 +1,739 @@
+{
+ "id": "finance",
+ "title": "Principles of Finance",
+ "domain": "business",
+ "level": "College",
+ "description": "Principles of Finance is the mathematics and reasoning behind every financial decision a firm or investor makes: what a dollar tomorrow is worth today, how risk gets priced, what a bond or stock is actually worth, and which projects and financing choices create value. Every concept is worked through with real numbers, from bond pricing to the cost of capital.",
+ "outcomes": [
+  "You can read a balance sheet and income statement and compute the core liquidity, leverage, and profitability ratios from them.",
+  "You can calculate the future value and present value of a single sum, an annuity, and a perpetuity.",
+  "You can compute a portfolio's expected return and use CAPM to find a stock's required return given its beta.",
+  "You can price a bond from its coupon, face value, and yield, and value a stock using the dividend discount model.",
+  "You can compute a project's NPV and IRR and decide whether it creates value.",
+  "You can compute a firm's weighted average cost of capital and explain how capital structure affects risk and return."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Foundations of Finance",
+   "summary": "What financial managers are actually trying to maximize, how the financial system connects savers and borrowers, and how to read and interpret the statements that describe a company's health.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Financial System and the Goal of the Firm",
+     "minutes": 11,
+     "intro": "Before any formula, finance starts with one question: what is a financial manager actually trying to maximize? Getting this wrong - chasing this quarter's profit instead of long-term value - has sunk plenty of companies that looked fine on paper.",
+     "sections": [
+      {
+       "heading": "The Goal of the Firm: Maximizing Value, Not Just Profit",
+       "body": [
+        "The standard goal of financial management is to maximize the market value of the firm - and for a public company, that means maximizing the stock price - not simply maximizing this year's accounting profit. Profit can be boosted short-term in ways that destroy long-term value, such as skipping maintenance or research that would have paid off for years.",
+        "This goal creates an **agency problem**: managers (agents) run the company day-to-day, but shareholders (principals) own it and bear the financial consequences of managers' decisions. Compensation tied to long-term stock performance, rather than short-term earnings, is one common tool used to align what's good for managers with what's good for owners."
+       ],
+       "example": {
+        "problem": "A company can either (a) cut this year's R&D budget by $500,000 to boost reported profit, which would cancel a project with an estimated net present value of $3,000,000, or (b) keep the R&D funded and report lower current profit. Which choice fits the goal of the firm?",
+        "steps": [
+         "The goal of financial management is to maximize the market value of the firm, not this year's accounting profit.",
+         "Choice (a) raises this year's profit by $500,000 but destroys $3,000,000 of value the R&D project would have created.",
+         "Choice (b) accepts a smaller profit number today but preserves $3,000,000 of value."
+        ],
+        "answer": "Choice (b): funding the R&D preserves far more shareholder value than the short-term profit boost from cutting it."
+       }
+      },
+      {
+       "heading": "How the Financial System Connects Savers and Borrowers",
+       "body": [
+        "The financial system exists to move money from those who have more than they currently need (savers) to those who can use it productively (borrowers and firms) - through **financial markets** (like stock and bond markets, where securities trade directly between investors) and **financial intermediaries** (like banks, which take deposits and make loans).",
+        "This matters to a firm's finance function directly: whether a company raises money by selling stock, borrowing from a bank, or issuing bonds, it is tapping into this same savers-to-borrowers system, and the price it pays - the interest rate or the return investors demand - depends on how that system prices risk."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "goal of the firm", "def": "Maximizing the market value of the firm (its stock price, for a public company), not simply maximizing short-term accounting profit."},
+      {"term": "agency problem", "def": "The conflict of interest that arises when managers (agents) make decisions for shareholders (principals) whose financial outcomes differ from their own."},
+      {"term": "financial market", "def": "A venue, such as a stock or bond market, where securities trade directly between investors."},
+      {"term": "financial intermediary", "def": "An institution, such as a bank, that takes funds from savers and lends them to borrowers."}
+     ],
+     "practice": [
+      {"q": "Why is 'maximize this year's accounting profit' considered the wrong goal for financial management?", "choices": ["Because profit is illegal to report", "Because profit can be boosted short-term in ways - like cutting valuable R&D or maintenance - that destroy long-term firm value", "Because shareholders never care about profit", "Because only private companies report profit"], "answer": 1, "explain": "Actions that raise this year's profit, like slashing valuable R&D, can destroy far more long-term value than they create, which is why the true goal is maximizing firm value, not short-term profit."},
+      {"q": "What best describes the agency problem in a corporation?", "choices": ["Customers disagreeing with a company's pricing", "A conflict of interest between managers, who make decisions, and shareholders, who bear the financial consequences", "A dispute between two competing companies", "A disagreement between two government regulators"], "answer": 1, "explain": "The agency problem arises because managers control day-to-day decisions but shareholders own the company and absorb the financial results of those decisions."},
+      {"q": "What is the main difference between a financial market and a financial intermediary?", "choices": ["There is no difference", "A financial market lets securities trade directly between investors, while an intermediary like a bank sits between savers and borrowers", "Financial markets are illegal", "Intermediaries only deal in cash, never loans"], "answer": 1, "explain": "Markets connect investors directly (buying and selling stocks or bonds), while intermediaries like banks collect deposits and make loans, standing between savers and borrowers."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Reading the Financial Statements",
+     "minutes": 12,
+     "intro": "Three documents tell you almost everything about a company's financial health: what it owns and owes, what it earned, and where its cash actually came from and went. Learning to read them is the entry ticket to every other topic in finance.",
+     "sections": [
+      {
+       "heading": "The Balance Sheet: A Snapshot",
+       "body": [
+        "The **balance sheet** shows what a company owns (**assets**), what it owes (**liabilities**), and the owners' stake in what's left (**equity**), all at a single point in time. It always balances by definition: Assets = Liabilities + Equity, because whatever the company owns was financed either by borrowing or by owners' investment and retained profit.",
+        "Assets and liabilities are typically split into current (expected to convert to cash or come due within a year) and long-term. That split matters because it drives liquidity analysis - whether the company can cover its near-term obligations with its near-term resources."
+       ],
+       "example": {
+        "problem": "Rivertown Robotics reports current assets of $400,000 and long-term assets of $600,000. Its current liabilities are $200,000 and its long-term debt is $400,000. Find total assets, total liabilities, and total equity.",
+        "steps": [
+         "Total assets = current assets + long-term assets = 400,000 + 600,000 = $1,000,000.",
+         "Total liabilities = current liabilities + long-term debt = 200,000 + 400,000 = $600,000.",
+         "Equity = Assets − Liabilities = 1,000,000 − 600,000 = $400,000."
+        ],
+        "answer": "Total assets $1,000,000; total liabilities $600,000; total equity $400,000."
+       }
+      },
+      {
+       "heading": "The Income Statement: Performance Over Time",
+       "body": [
+        "The **income statement** covers a period (a quarter or a year) rather than a single moment, moving from revenue down through costs to a final **net income** figure: Revenue − Cost of Goods Sold = Gross Profit; Gross Profit − Operating Expenses = Operating Income; Operating Income − Interest − Taxes = Net Income.",
+        "Net income is not the same as cash. A company can report a healthy net income while its bank balance shrinks, if customers are slow to pay or inventory is piling up - which is exactly why a separate cash flow statement exists, tracking actual cash moving through operating, investing, and financing activities."
+       ],
+       "example": {
+        "problem": "Rivertown Robotics earns $1,200,000 in revenue, with cost of goods sold of $700,000 and operating expenses of $300,000. It has no interest expense and pays a 25% tax rate. Find net income.",
+        "steps": [
+         "Gross profit = revenue − COGS = 1,200,000 − 700,000 = $500,000.",
+         "Operating income = gross profit − operating expenses = 500,000 − 300,000 = $200,000.",
+         "Taxes = 200,000 × 0.25 = $50,000.",
+         "Net income = operating income − taxes = 200,000 − 50,000 = $150,000."
+        ],
+        "answer": "Net income = $150,000."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "balance sheet", "def": "A snapshot at one point in time of what a company owns (assets), owes (liabilities), and the owners' stake (equity), where Assets = Liabilities + Equity."},
+      {"term": "income statement", "def": "A summary of revenue, costs, and net income over a period of time, such as a quarter or year."},
+      {"term": "net income", "def": "Revenue minus all costs, operating expenses, interest, and taxes - the 'bottom line' of the income statement."},
+      {"term": "cash flow statement", "def": "A statement tracking actual cash moving through operating, investing, and financing activities, separate from accounting net income."}
+     ],
+     "practice": [
+      {"q": "Using Rivertown Robotics' balance sheet, if total assets are $1,000,000 and total liabilities are $600,000, what is total equity?", "choices": ["$1,600,000", "$600,000", "$400,000", "$1,000,000"], "answer": 2, "explain": "Equity = Assets − Liabilities = 1,000,000 − 600,000 = $400,000, since the balance sheet must always balance."},
+      {"q": "A company reports strong net income but its cash balance is shrinking. What does this most likely indicate?", "choices": ["The income statement must be fraudulent", "Net income is not the same as cash - customers may be paying slowly or inventory may be piling up", "Cash flow statements are optional and can be ignored", "The balance sheet is out of balance"], "answer": 1, "explain": "Net income reflects accounting revenue and expenses, not cash actually collected or paid; a cash flow statement separately tracks the real movement of cash."},
+      {"q": "Using the same method as the worked example, a company has revenue of $900,000, COGS of $500,000, operating expenses of $200,000, no interest expense, and a 20% tax rate. What is net income?", "choices": ["$160,000", "$200,000", "$120,000", "$100,000"], "answer": 0, "explain": "Gross profit = 900,000 − 500,000 = 400,000. Operating income = 400,000 − 200,000 = 200,000. Taxes = 200,000 × 0.20 = 40,000. Net income = 200,000 − 40,000 = $160,000."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Financial Ratios: What the Numbers Reveal",
+     "minutes": 12,
+     "intro": "Two companies can have wildly different sizes and still be compared fairly, because ratios strip out scale and reveal what actually matters: can it pay its bills, how much does it owe, and how efficiently does it turn sales and equity into profit?",
+     "sections": [
+      {
+       "heading": "Liquidity and Leverage Ratios",
+       "body": [
+        "The **current ratio** (current assets ÷ current liabilities) measures whether a company can cover its near-term obligations with its near-term resources; a ratio comfortably above 1.0 suggests it can. The **debt-to-equity ratio** (total liabilities ÷ total equity) measures how much of the company is financed by borrowing versus owners' own money - higher leverage magnifies both gains and losses.",
+        "Neither ratio has one universal 'good' number - a stable utility company can safely carry more debt than a volatile startup, because its cash flow is more predictable. Ratios are most useful compared against a company's own history or against similar companies in its industry."
+       ]
+      },
+      {
+       "heading": "Profitability Ratios",
+       "body": [
+        "**Net profit margin** (net income ÷ revenue) shows how much of every sales dollar becomes profit after all costs. **Return on equity (ROE)** (net income ÷ total equity) shows how much profit the company generates for each dollar shareholders have invested - often the single most-watched profitability measure, since it directly reflects the return owners are actually earning.",
+        "Because ROE divides by equity rather than total assets, taking on more debt (which shrinks equity's share of financing) can mechanically raise ROE even if the underlying business hasn't improved - a reminder that a strong ratio always deserves a second look at what's driving it."
+       ],
+       "example": {
+        "problem": "Rivertown Robotics has current assets of $400,000, current liabilities of $200,000, total liabilities of $600,000, total equity of $400,000, net income of $150,000, and revenue of $1,200,000. Compute the current ratio, debt-to-equity ratio, net profit margin, and ROE.",
+        "steps": [
+         "Current ratio = current assets ÷ current liabilities = 400,000 ÷ 200,000 = 2.0.",
+         "Debt-to-equity = total liabilities ÷ total equity = 600,000 ÷ 400,000 = 1.5.",
+         "Net profit margin = net income ÷ revenue = 150,000 ÷ 1,200,000 = 12.5%.",
+         "ROE = net income ÷ total equity = 150,000 ÷ 400,000 = 37.5%."
+        ],
+        "answer": "Current ratio 2.0; debt-to-equity 1.5; net profit margin 12.5%; ROE 37.5%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "current ratio", "def": "Current assets divided by current liabilities, measuring whether near-term resources cover near-term obligations."},
+      {"term": "debt-to-equity ratio", "def": "Total liabilities divided by total equity, measuring how much of the company is financed by debt versus owners' equity."},
+      {"term": "net profit margin", "def": "Net income divided by revenue, showing how much of every sales dollar becomes profit."},
+      {"term": "return on equity (ROE)", "def": "Net income divided by total equity, showing the return shareholders are earning on their investment."}
+     ],
+     "practice": [
+      {"q": "A company has current assets of $300,000 and current liabilities of $150,000. What is its current ratio?", "choices": ["0.5", "1.5", "2.0", "3.0"], "answer": 2, "explain": "Current ratio = 300,000 ÷ 150,000 = 2.0, meaning current assets are twice current liabilities."},
+      {"q": "Why can increasing debt mechanically raise a company's ROE even without any real improvement in the underlying business?", "choices": ["ROE ignores net income entirely", "ROE divides by equity, and more debt financing shrinks equity's share, which can raise ROE even if performance is unchanged", "Debt automatically increases net income", "ROE is unaffected by financing choices"], "answer": 1, "explain": "Because ROE = net income ÷ equity, and taking on more debt (rather than equity) to finance the same assets shrinks the denominator, ROE can rise mechanically from financing choices alone."},
+      {"q": "Two companies have identical debt-to-equity ratios of 1.2. Why might that number still mean something different for each company?", "choices": ["Ratios always mean exactly the same thing for every company", "Industries and cash flow stability differ, so the same leverage level can be safe for one company and risky for another", "Debt-to-equity ratios are never comparable across companies", "The ratio only applies to public companies"], "answer": 1, "explain": "There is no single universally 'good' ratio value - a stable, predictable business can safely carry leverage that would be risky for a volatile one, so ratios are best judged against industry and history."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "The Time Value of Money",
+   "summary": "A dollar today is worth more than a dollar later. This unit builds the tools - future value, present value, annuities, and loan math - used in every other part of finance.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Future and Present Value of a Single Sum",
+     "minutes": 12,
+     "intro": "A dollar today is worth more than a dollar a year from now - not because of inflation alone, but because a dollar today can be invested and grow. Time value of money turns that simple idea into a precise, calculable tool.",
+     "sections": [
+      {
+       "heading": "Future Value: Growing a Dollar Forward",
+       "body": [
+        "**Future value (FV)** answers: if I invest a sum today at a given rate, what will it be worth later? The formula is FV = PV × (1 + r)^n, where PV is the amount invested today, r is the interest rate per period, and n is the number of periods. Compounding means each period's interest is calculated on the growing balance, not just the original amount, which is why growth accelerates over time.",
+        "The rate and the number of periods must match: if r is an annual rate, n must be counted in years; if compounding is monthly, both r and n need to be converted to monthly terms first. Mixing annual rates with monthly periods (or vice versa) is one of the most common time-value mistakes."
+       ],
+       "example": {
+        "problem": "You invest $5,000 today at 6% annual interest, compounded annually. What is it worth in 10 years?",
+        "steps": [
+         "FV = PV × (1 + r)^n = 5,000 × (1.06)^10.",
+         "(1.06)^10 ≈ 1.79085.",
+         "FV = 5,000 × 1.79085 ≈ $8,954.24."
+        ],
+        "answer": "About $8,954.24 after 10 years."
+       }
+      },
+      {
+       "heading": "Present Value: Discounting a Dollar Back",
+       "body": [
+        "**Present value (PV)** runs the same idea in reverse: what is a future sum worth today, given a discount rate that reflects what that money could otherwise earn? The formula is PV = FV ÷ (1 + r)^n - so a dollar promised further in the future, or discounted at a higher rate, is worth less today.",
+        "This discount rate is not arbitrary; it should reflect the return available on an alternative investment of similar risk. Comparing $10,000 in five years to $10,000 today only makes sense once you've translated the future amount into today's dollars using an appropriate rate - which is exactly why present value underlies almost every valuation technique in finance."
+       ],
+       "example": {
+        "problem": "You are promised $10,000 in 5 years. If similar investments earn 8% annually, what is that $10,000 worth today?",
+        "steps": [
+         "PV = FV ÷ (1 + r)^n = 10,000 ÷ (1.08)^5.",
+         "(1.08)^5 ≈ 1.46933.",
+         "PV = 10,000 ÷ 1.46933 ≈ $6,805.83."
+        ],
+        "answer": "About $6,805.83 today."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "future value (FV)", "def": "The value a sum of money grows to after earning interest over time: FV = PV × (1 + r)^n."},
+      {"term": "present value (PV)", "def": "The value today of a future sum of money, discounted at a given rate: PV = FV ÷ (1 + r)^n."},
+      {"term": "discount rate", "def": "The rate used to convert a future sum into its present value, reflecting the return available on an alternative investment of similar risk."},
+      {"term": "compounding", "def": "Earning interest on both the original amount and previously earned interest, which accelerates growth over time."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, what is the future value of $8,000 invested for 10 years at 6% annual interest, compounded annually?", "choices": ["$8,480", "$12,000", "$14,327", "$80,000"], "answer": 2, "explain": "FV = 8,000 × (1.06)^10 ≈ 8,000 × 1.79085 ≈ $14,326.80, close to $14,327."},
+      {"q": "Why is $10,000 received in 5 years worth less than $10,000 today?", "choices": ["Because money physically deteriorates over time", "Because that future $10,000 could instead be earning a return if it were available today, so it must be discounted back", "Because taxes always increase over 5 years", "Because $10,000 will always buy fewer goods regardless of interest rates"], "answer": 1, "explain": "Present value reflects the opportunity to invest money now and earn a return; a future sum is discounted back to account for the return given up by not having it today."},
+      {"q": "A student wants to find the present value of $20,000 needed in 8 years, using a 5% annual discount rate compounded annually, but mistakenly uses a monthly rate of 5% instead. What is the main error?", "choices": ["There is no error - the calculation is correct either way", "The rate and the number of periods must be measured in matching units (both annual or both monthly), or the answer will be wrong", "Present value calculations never involve compounding", "Discount rates cannot exceed 5%"], "answer": 1, "explain": "Time value of money formulas require the rate and the number of periods to be in matching units; mixing an annual rate with monthly periods (or the reverse) produces an incorrect result."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Annuities and Perpetuities",
+     "minutes": 12,
+     "intro": "Most real financial commitments aren't a single lump sum - they're a stream of equal payments, like a loan payment, a retirement withdrawal, or a bond coupon. Annuities and perpetuities are the tools for valuing exactly that.",
+     "sections": [
+      {
+       "heading": "The Future Value of an Ordinary Annuity",
+       "body": [
+        "An **ordinary annuity** is a series of equal payments made at the end of each period. Its future value - what all those payments will be worth once the last one is made - is FV = PMT × [(1 + r)^n − 1] ÷ r, where PMT is the payment amount, r is the rate per period, and n is the number of payments.",
+        "This formula is really just the sum of the future values of every individual payment, each compounding for a different number of remaining periods, added together into one clean expression. It's the math behind steadily saving toward a goal, one deposit at a time."
+       ],
+       "example": {
+        "problem": "You deposit $1,000 at the end of each year into an account earning 7% annually. How much will you have after 20 years?",
+        "steps": [
+         "FV = PMT × [(1 + r)^n − 1] ÷ r = 1,000 × [(1.07)^20 − 1] ÷ 0.07.",
+         "(1.07)^20 ≈ 3.86968.",
+         "FV = 1,000 × (3.86968 − 1) ÷ 0.07 = 1,000 × 40.995 ≈ $40,995."
+        ],
+        "answer": "About $40,995 after 20 years."
+       }
+      },
+      {
+       "heading": "The Present Value of an Annuity, and Perpetuities",
+       "body": [
+        "The present value of an ordinary annuity - what a stream of future payments is worth today - is PV = PMT × [1 − (1 + r)^−n] ÷ r. This is the formula behind figuring out how large a retirement fund needs to be today to support a fixed withdrawal every year for a set number of years.",
+        "A **perpetuity** is simply an annuity that never ends, and its present value collapses to a remarkably simple formula: PV = PMT ÷ r. A preferred stock paying a fixed $80 dividend forever, with investors requiring an 8% return, is worth exactly PV = 80 ÷ 0.08 = $1,000 today - no complicated series required, because terms far in the future contribute almost nothing to present value."
+       ],
+       "example": {
+        "problem": "You want to withdraw $5,000 at the end of each year for 15 years from an account earning 5% annually. How much must be in the account today?",
+        "steps": [
+         "PV = PMT × [1 − (1 + r)^−n] ÷ r = 5,000 × [1 − (1.05)^−15] ÷ 0.05.",
+         "(1.05)^15 ≈ 2.07893, so (1.05)^−15 ≈ 0.48102.",
+         "PV = 5,000 × (1 − 0.48102) ÷ 0.05 = 5,000 × 10.3797 ≈ $51,898."
+        ],
+        "answer": "About $51,898 must be in the account today."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "ordinary annuity", "def": "A series of equal payments made at the end of each period, such as a loan payment or savings deposit."},
+      {"term": "future value of an annuity", "def": "The total value all payments in an annuity will grow to by the time the final payment is made."},
+      {"term": "present value of an annuity", "def": "The lump sum today that is equivalent to a stream of equal future payments."},
+      {"term": "perpetuity", "def": "An annuity that continues forever, with present value equal to the payment divided by the discount rate: PV = PMT ÷ r."}
+     ],
+     "practice": [
+      {"q": "A preferred stock pays a fixed $60 annual dividend forever. If investors require a 6% return, what is the stock worth today?", "choices": ["$100", "$360", "$1,000", "$600"], "answer": 2, "explain": "For a perpetuity, PV = PMT ÷ r = 60 ÷ 0.06 = $1,000."},
+      {"q": "Using the same method as the worked example, what is the future value of $2,000 deposited at the end of each year for 20 years at 7% annual interest?", "choices": ["$40,000", "$81,990", "$28,000", "$14,000"], "answer": 1, "explain": "FV = 2,000 × [(1.07)^20 − 1] ÷ 0.07 ≈ 2,000 × 40.995 ≈ $81,990."},
+      {"q": "Why does a perpetuity have a finite present value even though the payments continue forever?", "choices": ["Because perpetuities are illegal beyond 100 years", "Because payments far in the future are discounted so heavily that they contribute almost nothing to present value", "Because the formula ignores payments after year 50", "Because perpetuities always pay a shrinking amount"], "answer": 1, "explain": "Discounting shrinks the present value of distant payments so much that, even added up to infinity, the total remains finite - which is why PV = PMT ÷ r works."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Loans, APR, and the Effective Annual Rate",
+     "minutes": 12,
+     "intro": "The rate printed on a loan or credit card is often not the rate you actually pay. Understanding the gap between a stated rate and its true annual cost - and how a loan payment is actually built - protects you from an expensive surprise.",
+     "sections": [
+      {
+       "heading": "APR vs. the Effective Annual Rate (EAR)",
+       "body": [
+        "The **annual percentage rate (APR)** is simply the periodic rate multiplied by the number of periods in a year - it ignores compounding within the year. The **effective annual rate (EAR)** accounts for that compounding: EAR = (1 + periodic rate)^(periods per year) − 1. Whenever compounding happens more than once a year, EAR is higher than APR, and the gap grows with how often compounding occurs.",
+        "This gap is not a rounding error - it can meaningfully change what you actually pay or earn. Comparing two loans or investments only by their APR, without checking the compounding frequency, can lead to comparing numbers that aren't actually comparable."
+       ],
+       "example": {
+        "problem": "A credit card charges 1.5% interest per month. What is its APR, and what is its effective annual rate (EAR)?",
+        "steps": [
+         "APR = periodic rate × periods per year = 1.5% × 12 = 18%.",
+         "EAR = (1 + 0.015)^12 − 1.",
+         "(1.015)^12 ≈ 1.19562, so EAR ≈ 19.56%."
+        ],
+        "answer": "APR is 18%, but the effective annual rate is about 19.56% because of monthly compounding."
+       }
+      },
+      {
+       "heading": "Amortization: Paying Down a Loan",
+       "body": [
+        "An **amortizing loan** is repaid with equal periodic payments that each cover that period's interest plus a growing share of principal. The payment amount is PMT = P × r × (1 + r)^n ÷ [(1 + r)^n − 1], where P is the loan amount, r is the periodic rate, and n is the number of payments.",
+        "Early payments on an amortizing loan are mostly interest, because the balance owed is still large; later payments are mostly principal, because the balance has shrunk. This is why paying even a little extra principal early in a loan's life saves disproportionately more interest than paying extra near the end."
+       ],
+       "example": {
+        "problem": "A $20,000 auto loan carries a 6% annual rate (0.5% per month) for 48 months. Find the monthly payment.",
+        "steps": [
+         "r = 0.06 ÷ 12 = 0.005 per month; n = 48.",
+         "(1.005)^48 ≈ 1.2705.",
+         "PMT = 20,000 × 0.005 × 1.2705 ÷ (1.2705 − 1) ≈ 127.05 ÷ 0.2705 ≈ $469.70 per month."
+        ],
+        "answer": "About $469.70 per month, totaling roughly $22,545.60 over 48 months - about $2,545.60 in interest."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "APR (annual percentage rate)", "def": "The periodic interest rate multiplied by the number of periods per year, ignoring compounding within the year."},
+      {"term": "EAR (effective annual rate)", "def": "The true annual rate after accounting for compounding: EAR = (1 + periodic rate)^periods − 1."},
+      {"term": "amortizing loan", "def": "A loan repaid through equal periodic payments that each cover interest plus a growing share of principal."},
+      {"term": "principal", "def": "The original amount borrowed (or still owed), separate from interest charged on it."}
+     ],
+     "practice": [
+      {"q": "A savings account compounds 2% monthly interest. Which is true of its APR versus its EAR?", "choices": ["APR and EAR are always identical", "EAR will be higher than APR because of monthly compounding", "APR will be higher than EAR", "Neither can be calculated without knowing the account balance"], "answer": 1, "explain": "Whenever compounding occurs more than once per year, EAR (which accounts for compounding) exceeds APR (which simply multiplies the periodic rate by the number of periods)."},
+      {"q": "Using the same method as the worked example, what is the EAR for a rate that compounds monthly at 1% per month?", "choices": ["12%", "About 12.68%", "1%", "24%"], "answer": 1, "explain": "EAR = (1.01)^12 − 1 ≈ 1.1268 − 1 ≈ 12.68%, higher than the simple APR of 12%."},
+      {"q": "Why does paying extra principal early in an amortizing loan save more total interest than paying the same extra amount near the end?", "choices": ["It doesn't - the timing makes no difference", "Early in the loan the balance owed is largest, so reducing it sooner cuts the interest charged on that balance for many more remaining payments", "Interest rates always fall over the life of a loan", "Extra payments made late are illegal"], "answer": 1, "explain": "Interest is charged on the remaining balance each period; cutting that balance early removes interest charges across many more future payments than an equivalent cut made near the end."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Risk and Return",
+   "summary": "How to measure an investment's expected return and risk, why combining assets reduces risk through diversification, and how CAPM prices risk into a required return.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Measuring Expected Return and Risk",
+     "minutes": 11,
+     "intro": "An investment's return is never a single guaranteed number - it's a range of possible outcomes, each with some chance of happening. Expected return and standard deviation turn that uncertainty into two comparable numbers.",
+     "sections": [
+      {
+       "heading": "Expected Return: A Probability-Weighted Average",
+       "body": [
+        "**Expected return**, E(R), is the probability-weighted average of an investment's possible returns across different future scenarios: E(R) = Σ [probability of scenario × return in that scenario]. It is not a promise of what will happen, but the average outcome if the same situation played out many, many times.",
+        "Building the scenarios honestly matters more than the math itself. A company's expected return depends heavily on realistic estimates of how the economy might unfold - boom, normal growth, recession - and reasonable probabilities for each, not just optimistic guesses."
+       ]
+      },
+      {
+       "heading": "Risk: How Far Outcomes Spread from the Average",
+       "body": [
+        "**Standard deviation**, σ, measures how far actual returns tend to spread out from the expected return - it is the square root of the **variance**, which is the probability-weighted average of squared deviations from the expected return. A higher standard deviation means outcomes are more spread out, which is exactly what 'risk' means in finance: less predictability around the expected outcome.",
+        "Two investments can share the same expected return but very different risk - one clustering tightly around its average, another swinging wildly between big gains and big losses. Standard deviation is what separates those two very different situations, which is why return alone never tells the whole story."
+       ],
+       "example": {
+        "problem": "A stock's return depends on the economy: a 30% chance of a boom with a 20% return, a 50% chance of normal growth with a 10% return, and a 20% chance of a recession with a −15% return. Find the expected return and the standard deviation.",
+        "steps": [
+         "Expected return = 0.30(20) + 0.50(10) + 0.20(−15) = 6 + 5 − 3 = 8%.",
+         "Deviations from 8%: boom 20 − 8 = 12; normal 10 − 8 = 2; recession −15 − 8 = −23.",
+         "Variance = 0.30(12²) + 0.50(2²) + 0.20(−23²) = 0.30(144) + 0.50(4) + 0.20(529) = 43.2 + 2 + 105.8 = 151.",
+         "Standard deviation = √151 ≈ 12.29%."
+        ],
+        "answer": "Expected return is 8%, with a standard deviation of about 12.29%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "expected return", "def": "The probability-weighted average of an investment's possible returns across different scenarios."},
+      {"term": "variance", "def": "The probability-weighted average of the squared deviations of returns from the expected return."},
+      {"term": "standard deviation", "def": "The square root of variance, measuring how far actual returns tend to spread from the expected return; the standard measure of risk."}
+     ],
+     "practice": [
+      {"q": "Using the worked example's method, if a stock has a 100% chance of a single 8% return with no other possible outcomes, what is its standard deviation?", "choices": ["8%", "100%", "0%", "Cannot be determined"], "answer": 2, "explain": "With only one possible outcome, there is no deviation from the expected return at all, so variance and standard deviation are both zero - a risk-free result."},
+      {"q": "Two stocks both have an expected return of 10%, but Stock A has a standard deviation of 5% and Stock B has a standard deviation of 25%. What does this tell an investor?", "choices": ["Stock A and Stock B are equally risky", "Stock B's actual returns are likely to spread much further from 10% than Stock A's, making it the riskier investment", "Stock A must be a bond and Stock B must be a stock", "Standard deviation has no relationship to risk"], "answer": 1, "explain": "A higher standard deviation means outcomes are more spread out around the expected return, which is the definition of higher risk in this context - even with identical expected returns."},
+      {"q": "A stock has a 50% chance of a 30% return and a 50% chance of a −10% return. What is its expected return?", "choices": ["20%", "10%", "0%", "30%"], "answer": 1, "explain": "Expected return = 0.50(30) + 0.50(−10) = 15 − 5 = 10%."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Diversification and Portfolio Risk",
+     "minutes": 11,
+     "intro": "Combining two risky investments into one portfolio can produce a result less risky than either investment alone - not through magic, but through the simple fact that their returns don't move in perfect lockstep.",
+     "sections": [
+      {
+       "heading": "Why Combining Assets Reduces Risk",
+       "body": [
+        "**Diversification** works because different assets don't move identically together; when one zigs, another may zag, lag, or barely move at all. The key statistic is **correlation**, ranging from −1 (moving perfectly opposite) to +1 (moving perfectly together). The lower the correlation between two assets, the more a portfolio's risk drops below the simple average of the two assets' individual risks.",
+        "A portfolio's expected return is always just the weighted average of its assets' expected returns - there is no diversification benefit there. The benefit shows up only in risk: portfolio risk is typically lower than the weighted average of individual risks, as long as the assets aren't perfectly correlated."
+       ]
+      },
+      {
+       "heading": "Computing Portfolio Risk",
+       "body": [
+        "For a two-asset portfolio, portfolio variance is σp² = wA²σA² + wB²σB² + 2·wA·wB·ρ·σA·σB, where w is each asset's weight, σ is each asset's standard deviation, and ρ (rho) is the correlation between the two assets' returns. When ρ is less than 1, this formula produces a portfolio standard deviation lower than the simple weighted average of σA and σB.",
+        "This is precisely why professionally managed portfolios hold many assets across different industries, countries, and asset classes: it is one of the few ways to reduce risk without necessarily giving up expected return, since the return side of the ledger is unaffected by how correlated the assets are."
+       ],
+       "example": {
+        "problem": "A portfolio holds 50% Stock A (expected return 8%, standard deviation 20%) and 50% Stock B (expected return 14%, standard deviation 30%), with a correlation of 0 between them. Find the portfolio's expected return and standard deviation, and compare the standard deviation to the simple weighted average of the two individual standard deviations.",
+        "steps": [
+         "Expected return = 0.5(8) + 0.5(14) = 4 + 7 = 11%.",
+         "Variance = wA²σA² + wB²σB² + 2wAwBρσAσB = (0.5²)(0.20²) + (0.5²)(0.30²) + 0 = 0.25(0.04) + 0.25(0.09) = 0.01 + 0.0225 = 0.0325.",
+         "Standard deviation = √0.0325 ≈ 18.03%.",
+         "Simple weighted average of the individual risks = 0.5(20) + 0.5(30) = 25%."
+        ],
+        "answer": "Portfolio expected return is 11%, with a standard deviation of about 18.03% - well below the 25% simple average, showing the diversification benefit of combining uncorrelated assets."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "diversification", "def": "Combining assets whose returns don't move in perfect lockstep to reduce a portfolio's overall risk."},
+      {"term": "correlation", "def": "A measure from −1 to +1 of how closely two assets' returns move together; lower correlation produces greater diversification benefit."},
+      {"term": "portfolio variance", "def": "The combined risk of a portfolio, which depends on each asset's individual risk, the portfolio weights, and the correlation between assets."}
+     ],
+     "practice": [
+      {"q": "Using the worked example's method, why is the portfolio's standard deviation (about 18.03%) lower than the simple weighted average of the two stocks' individual risks (25%)?", "choices": ["Because the calculation contains an error", "Because the two stocks have a correlation below 1, so their combined risk is less than the weighted average of their separate risks", "Because Stock B's risk was ignored", "Because portfolio expected return is also lower than either stock's return"], "answer": 1, "explain": "Whenever correlation between two assets is below 1, diversification reduces portfolio risk below the simple weighted average of the individual risks - the entire point of combining imperfectly correlated assets."},
+      {"q": "If two stocks had a correlation of exactly +1 (moving in perfect lockstep), what would happen to the diversification benefit?", "choices": ["It would be maximized", "It would disappear - portfolio standard deviation would simply equal the weighted average of the individual standard deviations", "Expected return would drop to zero", "The stocks could no longer be held together"], "answer": 1, "explain": "Diversification benefit comes specifically from correlation below +1; at a correlation of exactly +1, the assets move together perfectly and there is no risk-reduction benefit from combining them."},
+      {"q": "Does combining two risky stocks into a portfolio change the portfolio's expected return compared to the weighted average of their individual expected returns?", "choices": ["Yes, diversification always raises expected return", "No - expected return is always simply the weighted average of the individual expected returns, regardless of correlation", "Yes, diversification always lowers expected return", "Expected return cannot be calculated for a portfolio"], "answer": 1, "explain": "Correlation affects portfolio risk, not portfolio expected return - expected return is always the straightforward weighted average of the assets' individual expected returns."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Capital Asset Pricing Model",
+     "minutes": 11,
+     "intro": "Why should a risky stock be expected to earn more than a savings account? The Capital Asset Pricing Model answers with a specific number: exactly how much extra return a given level of risk should demand.",
+     "sections": [
+      {
+       "heading": "Systematic Risk and Beta",
+       "body": [
+        "Diversification eliminates risk specific to one company (a factory fire, a bad product launch) - this is **unsystematic risk**, and a well-diversified investor isn't compensated for bearing it, because it can be diversified away for free. What remains is **systematic risk**: risk tied to the whole market (recessions, interest rate changes) that no amount of diversification removes.",
+        "**Beta (β)** measures a stock's sensitivity to that market-wide, systematic risk. A beta of 1.0 means the stock tends to move with the overall market; a beta above 1.0 means it amplifies market swings (more volatile than the market); a beta below 1.0 means it's more muted than the market's swings."
+       ]
+      },
+      {
+       "heading": "The CAPM Formula",
+       "body": [
+        "The **Capital Asset Pricing Model (CAPM)** states that a stock's required return equals the risk-free rate plus beta times the market risk premium: E(R) = Rf + β × (E(Rm) − Rf), where Rf is the risk-free rate (like a government bond yield) and E(Rm) − Rf is the extra return the overall market is expected to earn above the risk-free rate.",
+        "CAPM gives managers and investors a concrete number for the return a given stock should offer given its risk - which becomes the **cost of equity** used later to evaluate whether a company is creating value for its shareholders."
+       ],
+       "example": {
+        "problem": "The risk-free rate is 3%, the expected market return is 9%, and a stock has a beta of 1.4. What return does CAPM say this stock should offer?",
+        "steps": [
+         "Market risk premium = E(Rm) − Rf = 9% − 3% = 6%.",
+         "E(R) = Rf + β × market risk premium = 3% + 1.4 × 6%.",
+         "1.4 × 6% = 8.4%; 3% + 8.4% = 11.4%."
+        ],
+        "answer": "CAPM implies a required return of 11.4% for this stock."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "unsystematic risk", "def": "Risk specific to one company or investment that can be eliminated through diversification."},
+      {"term": "systematic risk", "def": "Market-wide risk, such as recessions or interest rate changes, that cannot be diversified away."},
+      {"term": "beta (β)", "def": "A measure of a stock's sensitivity to systematic, market-wide risk; a beta of 1.0 moves with the market."},
+      {"term": "CAPM (Capital Asset Pricing Model)", "def": "A formula for a stock's required return: E(R) = Rf + β × (E(Rm) − Rf)."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, if the risk-free rate is 2%, the expected market return is 8%, and a stock has a beta of 0.5, what return does CAPM imply?", "choices": ["4%", "5%", "8%", "10%"], "answer": 1, "explain": "Market risk premium = 8% − 2% = 6%. E(R) = 2% + 0.5 × 6% = 2% + 3% = 5%."},
+      {"q": "Why isn't an investor compensated with extra expected return for bearing unsystematic risk?", "choices": ["Unsystematic risk is always zero", "Unsystematic risk can be eliminated for free through diversification, so the market doesn't reward bearing it unnecessarily", "Unsystematic risk always equals systematic risk", "Only bonds carry unsystematic risk"], "answer": 1, "explain": "Since diversification can eliminate company-specific risk at no cost, an investor who chooses not to diversify isn't rewarded for a risk that could have simply been avoided."},
+      {"q": "A stock has a beta of 1.8. What does this indicate about the stock relative to the overall market?", "choices": ["It tends to move independently of the market", "It tends to amplify market swings, moving further than the overall market in both directions", "It has no systematic risk", "It always loses money when the market rises"], "answer": 1, "explain": "A beta above 1.0 means the stock tends to move more than the market - rising more in market upswings and falling more in market downswings."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Valuing Bonds, Stocks, and Capital Projects",
+   "summary": "How to price a bond, value a stock from its dividends, and decide whether an investment project is worth undertaking using NPV, IRR, and payback.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Bond Pricing and Yield to Maturity",
+     "minutes": 12,
+     "intro": "A bond's price isn't fixed at its face value - it moves constantly as interest rates change, because a bond's fixed coupon becomes more or less attractive compared to what new bonds are currently paying.",
+     "sections": [
+      {
+       "heading": "What a Bond Promises, and How It's Priced",
+       "body": [
+        "A bond promises two things: a fixed **coupon** payment (usually annual or semiannual) for a set number of years, and repayment of the **face value** (also called par value, commonly $1,000) at maturity. A bond's price is simply the present value of all those future cash flows, discounted at the **yield to maturity (YTM)** - the return investors currently require for bonds of similar risk and maturity.",
+        "Bond price = PV of the coupon annuity + PV of the face value paid at maturity. Because this is a present value calculation, price and yield move in opposite directions: when market yields rise, the price of existing bonds with lower fixed coupons must fall to remain competitive, and vice versa."
+       ],
+       "example": {
+        "problem": "A bond has a $1,000 face value, a 6% annual coupon ($60 per year), and 5 years to maturity. The current market yield is 8%. Find the bond's price.",
+        "steps": [
+         "PV of coupons (5-year annuity of $60 at 8%): factor = [1 − (1.08)^−5] ÷ 0.08 ≈ 3.9927; PV = 60 × 3.9927 ≈ $239.56.",
+         "PV of face value: 1,000 ÷ (1.08)^5 ≈ 1,000 ÷ 1.46933 ≈ $680.58.",
+         "Price = PV of coupons + PV of face value = 239.56 + 680.58 ≈ $920.14."
+        ],
+        "answer": "The bond is priced at about $920.14 - a discount bond, because its 6% coupon is below the 8% market yield."
+       }
+      },
+      {
+       "heading": "Premium, Par, and Discount Bonds",
+       "body": [
+        "When a bond's coupon rate equals the current market yield, it prices at exactly face value - a **par bond**. When the coupon rate is below the market yield, the bond must sell below face value - a **discount bond** - to make up the difference and offer a competitive total return. When the coupon rate is above the market yield, the bond sells above face value - a **premium bond**.",
+        "This relationship is why a bond bought at a discount, and held to maturity, delivers total return partly through coupon payments and partly through price appreciation up to face value - both pieces combine into the yield to maturity."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "coupon", "def": "The fixed periodic interest payment a bond promises, based on its coupon rate applied to face value."},
+      {"term": "face value (par value)", "def": "The amount a bond repays at maturity, commonly $1,000, on which the coupon rate is calculated."},
+      {"term": "yield to maturity (YTM)", "def": "The total return an investor earns holding a bond to maturity; also the discount rate used to price the bond."},
+      {"term": "discount bond / premium bond", "def": "A bond priced below face value because its coupon is below market yield (discount), or above face value because its coupon exceeds market yield (premium)."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, if market yields fall to 4% for the same 6% coupon, 5-year, $1,000 bond, would the bond's price be above, at, or below $1,000?", "choices": ["Below $1,000, because yields fell", "Exactly $1,000, since maturity has not changed", "Above $1,000, because the 6% coupon now exceeds the lower 4% market yield", "The price cannot be determined without more information"], "answer": 2, "explain": "When a bond's fixed coupon rate exceeds the current market yield, it becomes more attractive than newly issued bonds and prices above face value as a premium bond."},
+      {"q": "Why does a bond's price fall when market interest rates rise?", "choices": ["Bond prices are unrelated to interest rates", "The bond's fixed coupon becomes less attractive next to new bonds paying the higher rate, so its price must fall to offer a competitive total return", "Rising rates automatically increase a bond's face value", "Bond issuers are required to lower the price by law"], "answer": 1, "explain": "Because a bond's price is the present value of fixed future cash flows discounted at the market yield, a higher yield lowers that present value, and a fixed coupon becomes relatively less attractive."},
+      {"q": "A bond's coupon rate exactly equals the current market yield to maturity. What is true of its price?", "choices": ["It prices below face value", "It prices above face value", "It prices at exactly face value - a par bond", "Its price cannot be calculated"], "answer": 2, "explain": "When the coupon rate matches the market yield exactly, the present value of the bond's cash flows equals its face value, making it a par bond."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Valuing Stocks with the Dividend Discount Model",
+     "minutes": 12,
+     "intro": "A stock's fair value should come from what it will actually pay out to owners over time - not from guessing what other investors will pay for it later. The dividend discount model turns that idea into a formula.",
+     "sections": [
+      {
+       "heading": "Valuing a Stock as the Present Value of Its Dividends",
+       "body": [
+        "The **dividend discount model (DDM)** values a stock as the present value of all the dividends it is expected to pay, discounted at the investor's required return. When dividends are expected to grow at a constant rate forever, this collapses into the **Gordon growth model**: P₀ = D₁ ÷ (r − g), where D₁ is next year's expected dividend, r is the required return, and g is the constant growth rate.",
+        "This formula only works when r is greater than g - if expected growth ever equaled or exceeded the required return, the formula would produce a nonsensical or infinite value, a sign that the constant-growth assumption has broken down and a different valuation approach is needed."
+       ],
+       "example": {
+        "problem": "A stock is expected to pay a $2.00 dividend next year, growing at a constant 5% per year forever. Investors require an 11% return. What is the stock worth today?",
+        "steps": [
+         "P₀ = D₁ ÷ (r − g) = 2.00 ÷ (0.11 − 0.05).",
+         "r − g = 0.06.",
+         "P₀ = 2.00 ÷ 0.06 ≈ $33.33."
+        ],
+        "answer": "The stock is worth about $33.33 today."
+       }
+      },
+      {
+       "heading": "What the Formula Reveals About Stock Prices",
+       "body": [
+        "The Gordon growth model shows that a stock's price is highly sensitive to both its growth rate and its required return - small changes in either input can swing the implied value substantially, which is why real-world valuations often use a range of assumptions rather than a single precise number.",
+        "Stocks are also commonly compared using simpler valuation multiples like the **price-to-earnings (P/E) ratio** (price ÷ earnings per share), which doesn't require forecasting future dividends directly but instead compares a stock's price to similar companies' multiples as a quick sanity check on whether a stock looks expensive or cheap relative to its peers."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "dividend discount model (DDM)", "def": "A method of valuing a stock as the present value of all its expected future dividends."},
+      {"term": "Gordon growth model", "def": "A simplified DDM formula for constant dividend growth forever: P₀ = D₁ ÷ (r − g)."},
+      {"term": "required return", "def": "The return an investor demands for holding a given stock, reflecting its risk (often estimated using CAPM)."},
+      {"term": "price-to-earnings (P/E) ratio", "def": "A stock's price divided by its earnings per share, used to compare valuation across similar companies."}
+     ],
+     "practice": [
+      {"q": "Using the same formula as the worked example, a stock is expected to pay a $3.00 dividend next year, grow at 4% forever, with investors requiring a 10% return. What is the stock worth today?", "choices": ["$30.00", "$50.00", "$75.00", "$300.00"], "answer": 1, "explain": "P₀ = D₁ ÷ (r − g) = 3.00 ÷ (0.10 − 0.04) = 3.00 ÷ 0.06 = $50.00."},
+      {"q": "Why does the Gordon growth model break down (produce a nonsensical result) if the growth rate g is equal to or greater than the required return r?", "choices": ["It never breaks down under any conditions", "The denominator (r − g) becomes zero or negative, which is a signal the constant-growth assumption no longer holds", "Dividends can never grow that fast in reality", "The model only applies to bonds, not stocks"], "answer": 1, "explain": "With r − g at zero or negative, the formula produces an infinite or negative value, which is a mathematical signal that a different valuation approach is needed rather than a real answer."},
+      {"q": "What is the main advantage of comparing a stock's P/E ratio to similar companies, rather than only relying on the dividend discount model?", "choices": ["P/E ratios are always more accurate than any other method", "It offers a quick sanity check on relative valuation without needing to forecast a specific future dividend stream", "P/E ratios eliminate the need for any judgment", "The dividend discount model cannot be used for any company"], "answer": 1, "explain": "P/E comparisons provide a fast, relative check against peer companies, which is useful alongside (not instead of) more detailed models like the DDM."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Capital Budgeting: NPV, IRR, and Payback",
+     "minutes": 13,
+     "intro": "Should a company spend $50,000 on a new project? The answer isn't a feeling - it's a calculation comparing what the project costs today to what its future cash flows are actually worth today.",
+     "sections": [
+      {
+       "heading": "Net Present Value: The Gold-Standard Decision Rule",
+       "body": [
+        "**Net present value (NPV)** is the present value of a project's future cash flows minus its initial cost: NPV = (PV of future cash flows) − (initial investment). A positive NPV means the project is expected to create value beyond what it costs, after accounting for the time value of money and the risk-appropriate discount rate; a negative NPV means it destroys value and should be rejected.",
+        "NPV is considered the most reliable capital budgeting rule because it directly measures the dollar impact on firm value - which, as established earlier, is exactly the goal financial managers are supposed to maximize. When ranking multiple acceptable projects, the one with the higher NPV adds more value, all else equal."
+       ],
+       "example": {
+        "problem": "A project requires an initial investment of $50,000 and is expected to generate $15,000 per year for 5 years. The company's required return is 10%. Find the project's NPV and decide whether to accept it.",
+        "steps": [
+         "PV of cash flows: annuity factor = [1 − (1.10)^−5] ÷ 0.10 ≈ 3.7908.",
+         "PV of cash flows = 15,000 × 3.7908 ≈ $56,861.85.",
+         "NPV = PV of cash flows − initial investment = 56,861.85 − 50,000 ≈ $6,861.85."
+        ],
+        "answer": "NPV is about +$6,861.85, so the project should be accepted - it is expected to add value beyond its cost."
+       }
+      },
+      {
+       "heading": "Internal Rate of Return and Payback Period",
+       "body": [
+        "The **internal rate of return (IRR)** is the discount rate at which a project's NPV equals exactly zero - in other words, the project's own break-even rate of return. If a project's IRR exceeds the company's required return (its cost of capital), the project is expected to add value, matching what a positive NPV would show.",
+        "The **payback period** simply asks how long it takes for a project's cash flows to return the initial investment, ignoring the time value of money entirely. It's a quick, simple check favored for its simplicity, but it ignores both what happens after payback and the discount rate - which is why it's used as a supplementary screen, not a substitute for NPV."
+       ],
+       "example": {
+        "problem": "Using the same project ($50,000 investment, $15,000 per year for 5 years), estimate the IRR and the simple payback period.",
+        "steps": [
+         "At 15%, NPV ≈ +$282 (still positive); at 16%, NPV ≈ −$886 (now negative), so the IRR is between 15% and 16%, closer to about 15.2%.",
+         "Since 15.2% exceeds the 10% required return, the IRR agrees with the NPV decision: accept the project.",
+         "Simple payback period = initial investment ÷ annual cash flow = 50,000 ÷ 15,000 ≈ 3.33 years."
+        ],
+        "answer": "IRR is about 15.2% (above the 10% hurdle rate), and simple payback is about 3.33 years."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "net present value (NPV)", "def": "The present value of a project's future cash flows minus its initial cost; positive NPV means the project is expected to add value."},
+      {"term": "internal rate of return (IRR)", "def": "The discount rate at which a project's NPV equals zero; accept the project if IRR exceeds the required return."},
+      {"term": "payback period", "def": "The time it takes for a project's cash flows to return the initial investment, ignoring the time value of money."},
+      {"term": "required return / cost of capital", "def": "The minimum return a company demands from a project, reflecting its risk; used as the discount rate in NPV and as the hurdle rate for IRR."}
+     ],
+     "practice": [
+      {"q": "A project has an NPV of −$4,200 at the company's required return. What should the company do?", "choices": ["Accept it, because negative numbers indicate strong future growth", "Reject it, because a negative NPV means the project is expected to destroy value relative to its cost", "Accept it only if the payback period is under 10 years", "NPV alone cannot be used to decide"], "answer": 1, "explain": "A negative NPV means the present value of a project's future cash flows is less than its cost, so the project is expected to reduce firm value and should be rejected."},
+      {"q": "A project's IRR is 9%, but the company's required return (cost of capital) is 12%. What does this indicate?", "choices": ["The project should be accepted, since 9% is a positive return", "The project should be rejected, since its IRR is below the required return, implying a negative NPV", "IRR and NPV always disagree", "The payback period is irrelevant to this decision"], "answer": 1, "explain": "When a project's IRR falls below the required return, its NPV at that required return is negative, meaning the project fails to earn enough to justify its cost of capital."},
+      {"q": "What is the main weakness of using payback period alone to evaluate a project?", "choices": ["It cannot be calculated for any real project", "It ignores the time value of money and ignores any cash flows occurring after the payback point", "It always recommends rejecting long-term projects", "It requires knowing the project's IRR first"], "answer": 1, "explain": "Payback period simply counts years to recover the investment, without discounting cash flows or considering value created (or lost) after that point - which is why NPV is the preferred primary decision rule."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Capital Structure and the Cost of Capital",
+   "summary": "How companies price the cost of debt and equity, blend them into WACC, and choose a mix of debt and equity that balances tax benefits against the risk of financial distress.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Cost of Debt and the Cost of Equity",
+     "minutes": 11,
+     "intro": "Every dollar a company raises - whether by borrowing or by selling stock - has a cost, even though only debt comes with a stated interest rate. Knowing both costs is the first step toward knowing whether an investment is actually worth funding.",
+     "sections": [
+      {
+       "heading": "The After-Tax Cost of Debt",
+       "body": [
+        "The **cost of debt** starts with the yield lenders or bondholders currently require, but because interest payments are tax-deductible, the true cost to the company is lower than that stated rate. The **after-tax cost of debt** = pretax cost of debt × (1 − tax rate), reflecting the fact that the government effectively subsidizes part of every interest payment through the tax deduction.",
+        "This tax deduction is often called the **interest tax shield**, and it is one of the real financial advantages of using debt rather than equity - a benefit equity financing does not receive, since dividend payments are not tax-deductible."
+       ],
+       "example": {
+        "problem": "A company's bonds yield 7%, and its tax rate is 25%. Find the after-tax cost of debt.",
+        "steps": [
+         "After-tax cost of debt = pretax cost × (1 − tax rate) = 7% × (1 − 0.25).",
+         "1 − 0.25 = 0.75.",
+         "7% × 0.75 = 5.25%."
+        ],
+        "answer": "The after-tax cost of debt is 5.25%."
+       }
+      },
+      {
+       "heading": "The Cost of Equity",
+       "body": [
+        "The **cost of equity** is trickier, because there's no stated rate - shareholders don't sign a contract promising a fixed return. Two common methods estimate it: CAPM, E(R) = Rf + β × (E(Rm) − Rf), using the stock's risk relative to the market; and the dividend growth model, r = D₁ ÷ P₀ + g, using the stock's current price, expected dividend, and expected growth rate.",
+        "Unlike debt, the cost of equity gets no tax deduction, because dividends and retained earnings used to reward shareholders are paid with after-tax dollars. This is one reason debt is often called 'cheaper' than equity - though taking on more debt also raises the risk of financial distress, a cost that isn't captured in the interest rate alone."
+       ],
+       "example": {
+        "problem": "The risk-free rate is 3%, the market risk premium is 6%, and a company's stock has a beta of 1.2. Find the cost of equity using CAPM.",
+        "steps": [
+         "Cost of equity = Rf + β × market risk premium.",
+         "= 3% + 1.2 × 6%.",
+         "1.2 × 6% = 7.2%; 3% + 7.2% = 10.2%."
+        ],
+        "answer": "The cost of equity is 10.2%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "cost of debt", "def": "The return lenders or bondholders require, adjusted downward after tax because interest payments are tax-deductible."},
+      {"term": "interest tax shield", "def": "The reduction in taxes a company gets because interest payments on debt are tax-deductible."},
+      {"term": "cost of equity", "def": "The return shareholders require for holding a company's stock, commonly estimated with CAPM or the dividend growth model."},
+      {"term": "financial distress", "def": "The risk and cost of a company struggling to meet its debt obligations, which rises as a company takes on more debt."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, a company's bonds yield 8% and its tax rate is 30%. What is the after-tax cost of debt?", "choices": ["8.0%", "5.6%", "2.4%", "6.0%"], "answer": 1, "explain": "After-tax cost of debt = 8% × (1 − 0.30) = 8% × 0.70 = 5.6%."},
+      {"q": "Why is the after-tax cost of debt lower than the pretax interest rate a company pays?", "choices": ["Lenders always charge less than they state", "Interest payments are tax-deductible, so the government effectively absorbs part of the cost through lower taxes owed", "After-tax cost of debt is a marketing term with no real meaning", "Debt is never actually repaid"], "answer": 1, "explain": "Because interest expense reduces taxable income, the true cost of debt to the company is the pretax rate reduced by the tax savings it generates - the interest tax shield."},
+      {"q": "Why does the cost of equity get no equivalent tax deduction the way debt does?", "choices": ["Equity financing is illegal in most cases", "Dividends and returns paid to shareholders come from after-tax profit, unlike tax-deductible interest paid to lenders", "Shareholders never expect any return", "Equity is always more expensive regardless of taxes"], "answer": 1, "explain": "Interest is deducted before taxes are calculated, while dividends are paid out of profit that has already been taxed - so equity financing does not receive the same tax advantage as debt."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Weighted Average Cost of Capital (WACC)",
+     "minutes": 12,
+     "intro": "A company almost never funds itself with 100% debt or 100% equity - it's usually some mix of both. WACC blends the cost of each funding source into a single number: the minimum return any new investment must clear to be worth doing.",
+     "sections": [
+      {
+       "heading": "Blending Debt and Equity into One Rate",
+       "body": [
+        "The **weighted average cost of capital (WACC)** combines the after-tax cost of debt and the cost of equity, each weighted by its share of the company's total financing: WACC = (weight of debt × after-tax cost of debt) + (weight of equity × cost of equity). The weights should reflect the market values of debt and equity, not their accounting book values, since market value reflects what investors would actually have to be paid to hold each claim today.",
+        "WACC represents the minimum return a company's assets, as a whole, must generate to satisfy both lenders and shareholders. It is the discount rate most commonly used in NPV calculations for projects of similar risk to the company's existing business, because it reflects the true blended cost of the capital funding that investment."
+       ],
+       "example": {
+        "problem": "A company is financed 40% by debt and 60% by equity. Its after-tax cost of debt is 5.25% and its cost of equity is 10.2%. Find its WACC.",
+        "steps": [
+         "WACC = (weight of debt × after-tax cost of debt) + (weight of equity × cost of equity).",
+         "= (0.40 × 5.25%) + (0.60 × 10.2%).",
+         "0.40 × 5.25% = 2.1%; 0.60 × 10.2% = 6.12%.",
+         "WACC = 2.1% + 6.12% = 8.22%."
+        ],
+        "answer": "The company's WACC is 8.22%."
+       }
+      },
+      {
+       "heading": "Why WACC Matters for Decision-Making",
+       "body": [
+        "A project should only be accepted if its expected return exceeds WACC - otherwise, the company is destroying value for its investors, even if the project generates a positive accounting profit. This links WACC directly back to NPV and IRR: WACC is exactly the discount rate that belongs in an NPV calculation, and the hurdle rate an IRR must clear.",
+        "A company's WACC changes whenever its financing mix or the market's required returns shift - taking on more debt, for instance, changes both the weights and, often, the cost of each component, since more leverage typically raises the risk (and required return) of both debt and equity."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "weighted average cost of capital (WACC)", "def": "The blended cost of a company's financing, combining the weighted after-tax cost of debt and cost of equity."},
+      {"term": "capital structure weights", "def": "The proportion of a company's total financing that comes from debt versus equity, ideally measured at market value."},
+      {"term": "hurdle rate", "def": "The minimum required return a project must exceed to be considered worth undertaking; commonly set equal to WACC."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, a company is financed 30% by debt (after-tax cost 4%) and 70% by equity (cost 12%). What is its WACC?", "choices": ["8.0%", "9.6%", "10.0%", "16.0%"], "answer": 1, "explain": "WACC = (0.30 × 4%) + (0.70 × 12%) = 1.2% + 8.4% = 9.6%."},
+      {"q": "Why should a company generally use market values, not accounting book values, when computing WACC's capital structure weights?", "choices": ["Book values are always illegal to use", "Market values reflect what investors would actually need to be paid today to hold each type of claim, which is what WACC is meant to represent", "Book values are always higher than market values", "There is no meaningful difference between the two"], "answer": 1, "explain": "WACC represents the actual cost of raising capital today, which is reflected in current market values of debt and equity, not historical accounting book values."},
+      {"q": "A project is expected to earn a 7% return, and the company's WACC is 9%. What does this suggest?", "choices": ["The project should be accepted since 7% is a positive return", "The project should likely be rejected, since its return falls short of the minimum return required by the company's investors", "WACC is irrelevant to this decision", "The project's IRR must also be 9%"], "answer": 1, "explain": "A project earning below WACC fails to compensate investors adequately for the capital tied up in it, implying a negative NPV at that discount rate."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Capital Structure and Financial Leverage",
+     "minutes": 12,
+     "intro": "Two companies with identical assets and identical operating profit can post very different returns to their shareholders - purely because of how much debt each one uses. That's financial leverage, and it cuts both ways.",
+     "sections": [
+      {
+       "heading": "How Debt Magnifies Returns to Equity",
+       "body": [
+        "**Financial leverage** means using debt to fund assets instead of (or alongside) equity. Because interest payments to lenders are fixed regardless of how well the business performs, any operating profit above what's needed to cover that fixed interest flows entirely to a smaller base of equity - which can magnify the **return on equity (ROE)** shareholders earn, compared to an all-equity capital structure.",
+        "The magnification runs both directions, though: in a bad year, the same fixed interest payments must still be paid before shareholders see anything, which can turn a modest operating loss into a much larger loss on equity. Leverage doesn't create value on its own - it redistributes and amplifies the underlying business risk between lenders and shareholders."
+       ],
+       "example": {
+        "problem": "A company has $1,000,000 in assets and expects $150,000 in operating profit (EBIT) this year, with a 25% tax rate. Compare its return on equity if it is financed with (a) no debt versus (b) $500,000 of debt at 8% interest and $500,000 of equity.",
+        "steps": [
+         "All-equity: Net income = EBIT × (1 − tax rate) = 150,000 × 0.75 = $112,500. ROE = 112,500 ÷ 1,000,000 = 11.25%.",
+         "With debt: Interest = 500,000 × 0.08 = $40,000. Earnings before tax = 150,000 − 40,000 = $110,000.",
+         "Net income = 110,000 × 0.75 = $82,500. Equity is now only $500,000.",
+         "ROE = 82,500 ÷ 500,000 = 16.5%."
+        ],
+        "answer": "ROE rises from 11.25% with no debt to 16.5% with 50% debt financing - leverage magnified the return on the smaller equity base, in this profitable scenario."
+       }
+      },
+      {
+       "heading": "The Trade-Off: Tax Shield vs. Distress Risk",
+       "body": [
+        "Debt's interest tax shield genuinely lowers a company's blended cost of capital, up to a point - which is why most companies use some debt rather than none. But as debt increases, so does the risk of financial distress: the danger of being unable to make required payments, which brings real costs (legal fees, lost customers, distracted management) even before outright bankruptcy.",
+        "The commonly accepted **trade-off theory** says an optimal capital structure balances the tax benefit of additional debt against the rising expected cost of financial distress - meaning that more debt is not always better, and the 'right' amount of leverage depends heavily on how stable and predictable a company's cash flows are."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "financial leverage", "def": "The use of debt to fund a company's assets, which magnifies returns to equity in both good and bad years."},
+      {"term": "return on equity (ROE)", "def": "Net income divided by shareholders' equity; a measure of the return equity holders are earning."},
+      {"term": "financial distress", "def": "The risk and real costs of being unable to meet debt obligations, rising as a company takes on more leverage."},
+      {"term": "trade-off theory", "def": "The theory that optimal capital structure balances debt's tax benefit against the rising expected cost of financial distress."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, in a bad year the same company's EBIT falls to $20,000 instead of $150,000. Compare ROE with no debt versus $500,000 of debt at 8% interest (still 25% tax rate).", "choices": ["No debt gives higher ROE than the leveraged case in this bad year", "Both cases produce identical ROE regardless of EBIT", "The leveraged case always produces higher ROE no matter what EBIT is", "Leverage has no effect when EBIT changes"], "answer": 0, "explain": "All-equity: net income = 20,000 × 0.75 = 15,000, ROE = 1.5%. Leveraged: interest = 40,000, EBT = 20,000 − 40,000 = −20,000 (a loss), so leverage turns a modest operating profit into a net loss on equity - showing leverage magnifies downside as well as upside."},
+      {"q": "Why doesn't a company simply take on as much debt as possible, given the interest tax shield?", "choices": ["Interest tax shields don't actually reduce taxes", "Rising debt increases the risk and real costs of financial distress, which can outweigh the tax benefit beyond some point", "Debt is illegal above a certain amount for all companies", "ROE always falls as debt increases, so it isn't worth it"], "answer": 1, "explain": "The trade-off theory holds that added debt brings a real tax benefit but also rising expected costs of financial distress; beyond some point, those distress costs outweigh the tax shield, capping how much debt is optimal."},
+      {"q": "What is the central claim of trade-off theory regarding capital structure?", "choices": ["Companies should always use 100% debt financing", "Companies should always use 100% equity financing", "Optimal capital structure balances the tax benefit of debt against the rising expected cost of financial distress", "Capital structure has no effect on firm value"], "answer": 2, "explain": "Trade-off theory explicitly weighs debt's tax advantage against the increasing risk of financial distress as leverage rises, implying a balanced, moderate level of debt is typically optimal."}
+     ]
+    }
+   ]
+  }
+ ]
+}

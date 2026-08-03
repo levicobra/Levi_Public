@@ -1,0 +1,808 @@
+{
+ "id": "linear-algebra",
+ "title": "Linear Algebra",
+ "domain": "math",
+ "level": "College",
+ "description": "A first course in linear algebra built for real understanding: vectors and vector spaces, matrices and systems of equations, linear transformations, determinants, eigenvalues, and orthogonality. Every idea is computed by hand with real numbers so you build both the intuition and the mechanical skill engineers, scientists, and data analysts rely on daily.",
+ "outcomes": [
+  "You can add, scale, and combine vectors, and determine whether a set of vectors is linearly independent or spans a space.",
+  "You can solve systems of linear equations with Gaussian elimination and compute matrix inverses.",
+  "You can determine whether a function is a linear transformation and find its standard matrix, kernel, and range.",
+  "You can compute a determinant by cofactor expansion and use it to test invertibility and apply Cramer's rule.",
+  "You can find eigenvalues and eigenvectors of a matrix and use them to diagonalize it.",
+  "You can compute dot products, test orthogonality, and use Gram-Schmidt and least squares to fit a line to data."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Vectors and Vector Spaces",
+   "summary": "The building blocks of linear algebra: vectors, how they combine, and what it means for a set of vectors to be independent or to span a space.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Vectors in R^n",
+     "minutes": 14,
+     "intro": "A vector is not just an arrow on a page - it is a list of numbers that can represent a force, a velocity, a color, or a customer's purchase history. Once you can add and scale these lists correctly, you have the operations that everything else in linear algebra is built from.",
+     "sections": [
+      {
+       "heading": "Vectors as Ordered Lists",
+       "body": [
+        "A vector in **R^n** is an ordered list of n real numbers, written as a column: v = (v~1~, v~2~, ..., v~n~). In R^2, the vector (3, 4) can be drawn as an arrow from the origin to the point (3, 4); in R^3, (1, -2, 5) points to a location in 3D space. The same notation extends to any number of dimensions, even ones you cannot draw.",
+        "Two vectors are **equal** only if every corresponding entry matches. The **zero vector**, all entries 0, is the unique vector that changes nothing when added to any other vector - it plays the same role 0 plays in ordinary arithmetic."
+       ]
+      },
+      {
+       "heading": "Vector Addition and Scalar Multiplication",
+       "body": [
+        "**Vector addition** adds corresponding entries: (2, 3) + (5, -1) = (7, 2). Geometrically, this is the 'tip-to-tail' rule - place the second vector's tail at the first vector's tip, and the sum points from the very start to the very end. **Scalar multiplication** multiplies every entry by a single number: 3(2, -1) = (6, -3), which stretches or shrinks the vector (and flips its direction if the scalar is negative).",
+        "A **linear combination** of vectors combines both operations: c~1~v~1~ + c~2~v~2~ + ... for scalars c~i~. Nearly every question in linear algebra - solving systems, finding spans, checking independence - is really a question about which linear combinations are possible."
+       ],
+       "example": {
+        "problem": "Let u = (2, -1, 3) and v = (0, 4, -2). Compute 3u - 2v.",
+        "steps": [
+         "Scale u by 3: 3u = (6, -3, 9).",
+         "Scale v by 2: 2v = (0, 8, -4).",
+         "Subtract entry by entry: 3u - 2v = (6-0, -3-8, 9-(-4)) = (6, -11, 13)."
+        ],
+        "answer": "3u - 2v = (6, -11, 13)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "vector", "def": "An ordered list of n real numbers, representing a point or direction in R^n."},
+      {"term": "zero vector", "def": "The vector with every entry equal to 0."},
+      {"term": "vector addition", "def": "Adding two vectors entry by entry."},
+      {"term": "scalar multiplication", "def": "Multiplying every entry of a vector by a single number."},
+      {"term": "linear combination", "def": "A sum of scaled vectors, c~1~v~1~ + c~2~v~2~ + ..."}
+     ],
+     "practice": [
+      {"q": "Let a = (1, 5) and b = (-2, 3). What is a + b?", "choices": ["(-1, 8)", "(3, 2)", "(-2, 15)", "(1, -3)"], "answer": 0, "explain": "Add corresponding entries: (1+(-2), 5+3) = (-1, 8)."},
+      {"q": "What is -2(4, -3, 1)?", "choices": ["(8, -6, 2)", "(-8, 6, -2)", "(2, -1.5, 0.5)", "(-2, 1, -1)"], "answer": 1, "explain": "Multiply every entry by -2: (-2×4, -2×-3, -2×1) = (-8, 6, -2)."},
+      {"q": "For u = (1, 2) and v = (3, -1), what is 2u + v?", "choices": ["(5, 3)", "(2, 5)", "(5, 5)", "(4, 1)"], "answer": 0, "explain": "2u = (2, 4); adding v gives (2+3, 4+(-1)) = (5, 3)."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Linear Combinations and Span",
+     "minutes": 15,
+     "intro": "Ask a simple question: starting with just two vectors, which points can you actually reach by scaling and adding them? The answer to that question - the span - decides whether a system of equations has a solution at all, long before you do any row reduction.",
+     "sections": [
+      {
+       "heading": "What Span Means",
+       "body": [
+        "The **span** of a set of vectors is the set of every possible linear combination of them - every point reachable by scaling and adding. The span of a single nonzero vector in R^2 is the entire line through the origin in that vector's direction. The span of two vectors that point in different directions (not multiples of each other) is the entire plane R^2.",
+        "If a set of vectors **spans** R^n, every vector in R^n can be written as some linear combination of them - the set is 'enough' to reach everywhere. Whether a given set spans a space is really a question about whether a corresponding system of equations always has a solution, for any target vector."
+       ]
+      },
+      {
+       "heading": "Testing Whether a Vector Is in a Span",
+       "body": [
+        "To check whether a target vector b is in the span of v~1~ and v~2~, ask: do there exist scalars c~1~, c~2~ with c~1~v~1~ + c~2~v~2~ = b? This is a system of linear equations - one equation per coordinate of b - and it is in the span exactly when that system has a solution.",
+        "In R^2, two vectors span the whole plane as long as neither is a scalar multiple of the other. In R^3, two vectors can span at most a plane through the origin, never all of R^3, no matter how you choose them - you would need a third vector pointing outside that plane."
+       ],
+       "example": {
+        "problem": "Is the vector b = (7, 4) in the span of v~1~ = (1, 2) and v~2~ = (3, -1)?",
+        "steps": [
+         "Set up c~1~(1,2) + c~2~(3,-1) = (7,4), giving two equations: c~1~ + 3c~2~ = 7 and 2c~1~ - c~2~ = 4.",
+         "From the second equation, c~2~ = 2c~1~ - 4. Substitute into the first: c~1~ + 3(2c~1~-4) = 7, so c~1~ + 6c~1~ - 12 = 7, giving 7c~1~ = 19, so c~1~ = 19/7.",
+         "Then c~2~ = 2(19/7) - 4 = 38/7 - 28/7 = 10/7.",
+         "Check: (19/7)(1,2) + (10/7)(3,-1) = (19/7 + 30/7, 38/7 - 10/7) = (49/7, 28/7) = (7, 4). It works."
+        ],
+        "answer": "Yes, b is in the span, with c~1~ = 19/7 and c~2~ = 10/7."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "span", "def": "The set of all linear combinations of a given set of vectors."},
+      {"term": "spans R^n", "def": "A set of vectors whose linear combinations can produce every vector in R^n."}
+     ],
+     "practice": [
+      {"q": "The span of a single nonzero vector v in R^2 is:", "choices": ["A single point", "A line through the origin in the direction of v", "All of R^2", "The empty set"], "answer": 1, "explain": "Scaling one vector by every possible real number traces out the entire line through the origin along that vector's direction - nothing more."},
+      {"q": "Can two vectors ever span all of R^3?", "choices": ["Yes, if they are not parallel", "No - two vectors span at most a plane, never all of 3D space", "Yes, always", "Only if both vectors are the zero vector"], "answer": 1, "explain": "Every linear combination of two vectors lies in the plane (or line) they determine through the origin; reaching all of R^3 requires a third vector pointing outside that plane."},
+      {"q": "To check whether b is in the span of v~1~ and v~2~, you should:", "choices": ["Check if b equals v~1~ or v~2~", "See if the system c~1~v~1~ + c~2~v~2~ = b has a solution for c~1~, c~2~", "Compute the length of b", "Check if v~1~ and v~2~ are the zero vector"], "answer": 1, "explain": "Being in the span means being expressible as some linear combination, so the test is whether the corresponding system of equations for the coefficients has a solution."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Linear Independence",
+     "minutes": 14,
+     "intro": "If one vector in your set is secretly just a combination of the others, it is dead weight - it adds no new direction you could not already reach. Linear independence is the precise test for whether every vector in a set is actually pulling its own weight.",
+     "sections": [
+      {
+       "heading": "The Definition of Independence",
+       "body": [
+        "A set of vectors v~1~, ..., v~k~ is **linearly independent** if the only way to combine them to get the zero vector is the trivial way: c~1~v~1~ + ... + c~k~v~k~ = 0 forces every c~i~ = 0. If some other combination of scalars (not all zero) also produces the zero vector, the set is **linearly dependent**.",
+        "Dependence means at least one vector in the set can be written as a linear combination of the others - it is redundant. Two vectors are dependent exactly when one is a scalar multiple of the other, since that is the only way to combine two vectors and cancel to zero without both scalars being 0."
+       ]
+      },
+      {
+       "heading": "Testing Independence with a System of Equations",
+       "body": [
+        "To test independence in practice, set up c~1~v~1~ + c~2~v~2~ + ... + c~k~v~k~ = 0 as a system of linear equations in the unknowns c~i~, then solve it. If the only solution is all c~i~ = 0, the vectors are independent; if there is a nonzero solution, they are dependent.",
+        "A useful shortcut: in R^n, any set of more than n vectors is automatically dependent, since you cannot have more independent directions than the dimension of the space allows. This is why, for example, any 4 vectors in R^3 must be linearly dependent, no matter which 4 you pick."
+       ],
+       "example": {
+        "problem": "Are the vectors v~1~ = (1, 2, 0), v~2~ = (0, 1, 1), and v~3~ = (2, 1, -2) linearly independent?",
+        "steps": [
+         "Set up c~1~(1,2,0) + c~2~(0,1,1) + c~3~(2,1,-2) = (0,0,0), giving three equations: c~1~ + 2c~3~ = 0; 2c~1~ + c~2~ + c~3~ = 0; c~2~ - 2c~3~ = 0.",
+         "From the first equation, c~1~ = -2c~3~. From the third, c~2~ = 2c~3~.",
+         "Substitute into the second: 2(-2c~3~) + 2c~3~ + c~3~ = 0 → -4c~3~ + 2c~3~ + c~3~ = -c~3~ = 0, so c~3~ = 0.",
+         "Then c~1~ = -2(0) = 0 and c~2~ = 2(0) = 0. The only solution is the trivial one."
+        ],
+        "answer": "Yes, the three vectors are linearly independent (only c~1~=c~2~=c~3~=0 works)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "linearly independent", "def": "A set of vectors where the only combination summing to zero uses all-zero scalars."},
+      {"term": "linearly dependent", "def": "A set where some nontrivial combination of the vectors equals the zero vector."},
+      {"term": "trivial solution", "def": "The all-zero solution c~1~=c~2~=...=0, which always solves a homogeneous equation."}
+     ],
+     "practice": [
+      {"q": "Which pair of vectors is linearly dependent?", "choices": ["(1, 0) and (0, 1)", "(2, 4) and (1, 2)", "(1, 1) and (1, -1)", "(3, 0) and (0, 5)"], "answer": 1, "explain": "(2,4) = 2×(1,2), so one is a scalar multiple of the other - a nontrivial combination 1×(2,4) − 2×(1,2) = (0,0) exists, making them dependent."},
+      {"q": "In R^3, if you are given 5 vectors, what can you conclude?", "choices": ["They must be independent", "They must be dependent, since more than 3 vectors in R^3 are always dependent", "They span R^3 automatically", "Nothing can be concluded without more information"], "answer": 1, "explain": "R^3 has dimension 3, so any set of more than 3 vectors cannot all be independent - there simply aren't enough independent directions to go around."},
+      {"q": "A set of vectors is linearly dependent if and only if:", "choices": ["All vectors are the zero vector", "At least one vector can be written as a linear combination of the others", "The vectors are all unit vectors", "The set has exactly two vectors"], "answer": 1, "explain": "Dependence means redundancy - some vector is not adding a new direction because it can already be built from the others."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Matrices and Linear Systems",
+   "summary": "Matrices as compact machines for representing and solving systems of linear equations, from basic operations through Gaussian elimination and inverses.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Matrix Operations",
+     "minutes": 15,
+     "intro": "A matrix is really just a grid of numbers, but treating that grid as a single mathematical object - one you can add, scale, and multiply by other grids - is what lets you compress an entire system of equations, or an entire transformation of space, into one compact expression.",
+     "sections": [
+      {
+       "heading": "Matrix Addition and Scalar Multiplication",
+       "body": [
+        "A **matrix** is a rectangular array of numbers with m rows and n columns, described as m × n. Two matrices of the same size are added entry by entry, exactly like vectors. Scalar multiplication also works entry by entry: multiply every entry of the matrix by the scalar.",
+        "A matrix with 1 row is a **row vector**, and a matrix with 1 column is a **column vector** - vectors are simply special cases of matrices. This is why matrix operations and vector operations follow the exact same rules for addition and scaling."
+       ]
+      },
+      {
+       "heading": "Matrix Multiplication",
+       "body": [
+        "To multiply matrices A (size m × n) and B (size n × p), the number of columns of A must equal the number of rows of B; the result is m × p. Each entry of the product is the **dot product** of a row of A with a column of B: entry (i, j) of AB is row i of A times column j of B, summing the products of corresponding entries.",
+        "Matrix multiplication is **not commutative** in general: AB usually does not equal BA, and one product might not even be defined if the sizes don't line up the other way. This is a genuine departure from ordinary number arithmetic and trips up nearly every new student at least once."
+       ],
+       "example": {
+        "problem": "Compute AB for A = [[1, 2], [3, 0]] and B = [[4, -1], [2, 5]].",
+        "steps": [
+         "Entry (1,1): row 1 of A times column 1 of B = 1×4 + 2×2 = 4 + 4 = 8.",
+         "Entry (1,2): row 1 of A times column 2 of B = 1×(-1) + 2×5 = -1 + 10 = 9.",
+         "Entry (2,1): row 2 of A times column 1 of B = 3×4 + 0×2 = 12 + 0 = 12.",
+         "Entry (2,2): row 2 of A times column 2 of B = 3×(-1) + 0×5 = -3 + 0 = -3."
+        ],
+        "answer": "AB = [[8, 9], [12, -3]]."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "matrix", "def": "A rectangular array of numbers with a fixed number of rows and columns."},
+      {"term": "dot product", "def": "The sum of the products of corresponding entries of two vectors of the same length."},
+      {"term": "matrix multiplication", "def": "Combining two matrices where each entry of the product is a dot product of a row and a column."}
+     ],
+     "practice": [
+      {"q": "For matrix multiplication AB to be defined, what must be true?", "choices": ["A and B must be the same size", "The number of columns of A must equal the number of rows of B", "A and B must both be square", "The number of rows of A must equal the number of rows of B"], "answer": 1, "explain": "Each entry of AB is formed from a row of A dotted with a column of B, so the length of A's rows (its column count) must match the length of B's columns (its row count)."},
+      {"q": "For A = [[2, 0], [1, 3]] and B = [[1, 4], [2, -1]], what is entry (2,1) of AB?", "choices": ["2", "4", "5", "7"], "answer": 3, "explain": "Entry (2,1) is row 2 of A times column 1 of B: (1×1) + (3×2) = 1 + 6 = 7."},
+      {"q": "Why is matrix multiplication generally not commutative?", "choices": ["Because AB and BA are always undefined together", "Because AB combines rows of A with columns of B, which is a different computation than BA", "Because matrices cannot be multiplied at all", "Because only square matrices can be multiplied"], "answer": 1, "explain": "AB and BA involve fundamentally different pairings of rows and columns (and may even have different dimensions), so there is no general reason they should produce the same result."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Solving Systems with Gaussian Elimination",
+     "minutes": 18,
+     "intro": "Every system of linear equations, no matter how many variables, can be solved with one systematic procedure: turn it into a matrix, then methodically eliminate variables row by row until the answer falls out. That procedure is Gaussian elimination, the workhorse algorithm of linear algebra.",
+     "sections": [
+      {
+       "heading": "Augmented Matrices and Row Operations",
+       "body": [
+        "A system of linear equations can be written as an **augmented matrix**: the coefficients of the variables, plus a final column for the constants on the right side, separated by a bar. Three **elementary row operations** are allowed, and none of them change the solution set: swap two rows, multiply a row by a nonzero scalar, or add a multiple of one row to another.",
+        "The goal is **row echelon form**: each row's first nonzero entry (the **pivot**) sits to the right of the pivot in the row above, and any all-zero rows sit at the bottom. From there, **back-substitution** solves for the variables starting from the bottom row and working up."
+       ]
+      },
+      {
+       "heading": "Working an Example by Hand",
+       "body": [
+        "The mechanics are always the same: pick a pivot, use row operations to make every entry below it zero, then move to the next column and repeat. Careful bookkeeping - one operation at a time, checked against the original equations - is the only real skill required; the logic never changes no matter how large the system gets.",
+        "A system can have exactly one solution (a single pivot in every column), infinitely many solutions (a column with no pivot, giving a free variable), or no solution at all (a row reduces to something like 0 = 5, a contradiction)."
+       ],
+       "example": {
+        "problem": "Solve the system: x + 2y = 5 and 3x - y = 1.",
+        "steps": [
+         "Write the augmented matrix: [[1, 2, | 5], [3, -1, | 1]].",
+         "Eliminate the 3 in row 2 by replacing row 2 with (row 2 − 3×row 1): [3−3(1), −1−3(2), | 1−3(5)] = [0, −7, | −14].",
+         "Solve the new row 2 for y: −7y = −14, so y = 2.",
+         "Back-substitute into row 1: x + 2(2) = 5, so x = 5 − 4 = 1."
+        ],
+        "answer": "x = 1, y = 2."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "augmented matrix", "def": "A matrix of a system's coefficients plus a column of constants, separated by a bar."},
+      {"term": "row echelon form", "def": "A matrix form where each row's pivot is right of the pivot above it, with zero rows at the bottom."},
+      {"term": "pivot", "def": "The first nonzero entry in a row of a matrix in echelon form."},
+      {"term": "back-substitution", "def": "Solving for variables from the bottom equation upward once echelon form is reached."}
+     ],
+     "practice": [
+      {"q": "Which row operation is NOT allowed when solving a system by Gaussian elimination?", "choices": ["Swapping two rows", "Multiplying a row by zero", "Multiplying a row by a nonzero constant", "Adding a multiple of one row to another"], "answer": 1, "explain": "Multiplying a row by zero destroys information and can change the solution set; only nonzero scalar multiplication is a valid elementary row operation."},
+      {"q": "Solve: 2x + y = 8 and x - y = 1. What is x?", "choices": ["2", "3", "4", "5"], "answer": 1, "explain": "Adding the two equations eliminates y: (2x+y)+(x-y) = 8+1 → 3x = 9 → x = 3. (Then y = x−1 = 2.)"},
+      {"q": "A system reduces to the row [0, 0, | 7]. What does this mean?", "choices": ["The system has exactly one solution", "The system has infinitely many solutions", "The system has no solution - it is inconsistent", "y must equal 7"], "answer": 2, "explain": "A row of all zeros equaling a nonzero constant (0 = 7) is a contradiction, meaning the system has no solution."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Matrix Inverses",
+     "minutes": 16,
+     "intro": "Dividing by a matrix is not a real operation, but multiplying by its inverse does the same job - and knowing when that inverse even exists tells you, instantly, whether a system of equations has exactly one solution.",
+     "sections": [
+      {
+       "heading": "What an Inverse Does",
+       "body": [
+        "The **identity matrix** I is the square matrix with 1s on the main diagonal and 0s elsewhere; it acts like the number 1 in matrix multiplication, since AI = IA = A for any compatible A. A square matrix A is **invertible** if there exists a matrix A^-1^ with AA^-1^ = A^-1^A = I. Not every matrix has an inverse - a matrix without one is called **singular**.",
+        "Inverses matter because they solve systems directly: if Ax = b and A^-1^ exists, then x = A^-1^b is the unique solution. This is the matrix version of solving 5x = 10 by multiplying both sides by 1/5."
+       ]
+      },
+      {
+       "heading": "Computing a 2×2 Inverse",
+       "body": [
+        "For a 2×2 matrix A = [[a, b], [c, d]], the inverse (when it exists) is A^-1^ = (1/(ad-bc)) × [[d, -b], [-c, a]]: swap the diagonal entries, negate the off-diagonal entries, and divide everything by ad-bc. That quantity, ad-bc, is the matrix's **determinant** - and if it equals 0, the inverse does not exist, because you would be dividing by zero.",
+        "For larger matrices, inverses are usually found by row-reducing the augmented matrix [A | I] until the left side becomes I; whatever appears on the right side is then A^-1^. This is the same elimination technique used to solve systems, applied to an entire identity matrix at once instead of a single constant column."
+       ],
+       "example": {
+        "problem": "Find the inverse of A = [[4, 3], [2, 1]], if it exists.",
+        "steps": [
+         "Compute the determinant: ad - bc = (4)(1) - (3)(2) = 4 - 6 = -2. Since this is nonzero, the inverse exists.",
+         "Swap the diagonal entries and negate the off-diagonal entries: [[1, -3], [-2, 4]].",
+         "Divide every entry by the determinant, -2: A^-1^ = (1/-2)[[1, -3], [-2, 4]] = [[-1/2, 3/2], [1, -2]]."
+        ],
+        "answer": "A^-1^ = [[-1/2, 3/2], [1, -2]]."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "identity matrix", "def": "The square matrix with 1s on the diagonal and 0s elsewhere, acting like 1 in multiplication."},
+      {"term": "invertible", "def": "A square matrix A is invertible if some A^-1^ satisfies AA^-1^ = A^-1^A = I."},
+      {"term": "singular matrix", "def": "A square matrix with no inverse."},
+      {"term": "determinant", "def": "A number computed from a square matrix that is zero exactly when the matrix is singular."}
+     ],
+     "practice": [
+      {"q": "For a 2×2 matrix [[a,b],[c,d]], the matrix has no inverse exactly when:", "choices": ["a = d", "ad - bc = 0", "b = c", "a + d = 0"], "answer": 1, "explain": "ad − bc is the determinant; when it equals zero, the inverse formula requires dividing by zero, so no inverse exists."},
+      {"q": "What is the inverse of [[2, 0], [0, 5]]?", "choices": ["[[1/2, 0], [0, 1/5]]", "[[5, 0], [0, 2]]", "[[-2, 0], [0, -5]]", "[[0, 1/2], [1/5, 0]]"], "answer": 0, "explain": "The determinant is 2×5 − 0×0 = 10. Swapping the diagonal (unchanged here), negating off-diagonal (already 0), and dividing by 10 gives [[5/10, 0],[0, 2/10]] = [[1/2, 0],[0, 1/5]]."},
+      {"q": "If A is invertible and Ax = b, what is the solution for x?", "choices": ["x = Ab", "x = A^-1^b", "x = b/A", "x = A + b"], "answer": 1, "explain": "Multiplying both sides of Ax = b on the left by A^-1^ gives A^-1^Ax = A^-1^b, and since A^-1^A = I, this simplifies to x = A^-1^b."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Linear Transformations",
+   "summary": "Functions that respect vector addition and scaling, the matrices that represent them, and the subspaces - kernel and range - that describe their behavior.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Linear Transformations and Their Matrices",
+     "minutes": 15,
+     "intro": "Rotating an image, scaling a graphic, or projecting a 3D scene onto a 2D screen are all, mathematically, the exact same kind of operation: a linear transformation. Once you know the rule, every one of these operations reduces to a single matrix multiplication.",
+     "sections": [
+      {
+       "heading": "The Definition of Linearity",
+       "body": [
+        "A function T from R^n to R^m is a **linear transformation** if it preserves both vector operations: T(u + v) = T(u) + T(v) for all vectors u, v, and T(cv) = cT(v) for every scalar c. Together, these mean T respects linear combinations entirely: T(c~1~v~1~ + c~2~v~2~) = c~1~T(v~1~) + c~2~T(v~2~).",
+        "Every linear transformation sends the zero vector to the zero vector, since T(0) = T(0·v) = 0·T(v) = 0. This gives a fast way to rule out non-linear functions: if T(0) is not 0, the transformation cannot be linear, no matter how it otherwise behaves."
+       ]
+      },
+      {
+       "heading": "The Standard Matrix",
+       "body": [
+        "Every linear transformation from R^n to R^m can be represented by an m × n matrix A, called its **standard matrix**, such that T(v) = Av for every vector v. To find A, apply T to each standard basis vector (e~1~ = (1,0,...,0), e~2~ = (0,1,0,...,0), and so on) - the results become the columns of A, in order.",
+        "This connection is the reason matrices and linear transformations are often treated as the same idea: once you know how a transformation acts on a small handful of basis vectors, its standard matrix tells you exactly how it acts on every vector in the space."
+       ],
+       "example": {
+        "problem": "A linear transformation T: R^2 → R^2 rotates every vector 90° counterclockwise. Find its standard matrix.",
+        "steps": [
+         "Apply T to e~1~ = (1, 0): rotating (1,0) by 90° counterclockwise sends it to (0, 1). This becomes column 1 of the matrix.",
+         "Apply T to e~2~ = (0, 1): rotating (0,1) by 90° counterclockwise sends it to (-1, 0). This becomes column 2.",
+         "Assemble the columns into the standard matrix: A = [[0, -1], [1, 0]]."
+        ],
+        "answer": "The standard matrix for 90° counterclockwise rotation is [[0, -1], [1, 0]]."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "linear transformation", "def": "A function preserving vector addition and scalar multiplication: T(cu+dv) = cT(u)+dT(v)."},
+      {"term": "standard basis vectors", "def": "The vectors e~1~, e~2~, ... with a single 1 and all other entries 0."},
+      {"term": "standard matrix", "def": "The matrix A such that T(v) = Av; its columns are T applied to each standard basis vector."}
+     ],
+     "practice": [
+      {"q": "Which property must every linear transformation T satisfy?", "choices": ["T(0) can be any vector", "T(u + v) = T(u) + T(v) for all vectors u, v", "T must map R^n to R^n (same dimension)", "T(v) must always be longer than v"], "answer": 1, "explain": "Preserving vector addition, T(u+v) = T(u)+T(v), is one of the two defining properties of linearity; the domain and codomain need not have the same dimension."},
+      {"q": "A transformation T scales every vector by 2 and then adds the fixed vector (1, 1). Is T linear?", "choices": ["Yes, because scaling by 2 is linear", "No, because T(0) = (1,1), not the zero vector", "Yes, all transformations from R^2 to R^2 are linear", "Cannot be determined without more information"], "answer": 1, "explain": "T(0) = 2(0) + (1,1) = (1,1) ≠ (0,0). Every linear transformation must send the zero vector to the zero vector, so this T is not linear."},
+      {"q": "To find the standard matrix of T: R^2 → R^2, what should you compute?", "choices": ["T applied to any single vector", "T applied to each standard basis vector, used as the columns", "The determinant of T", "The sum of all entries of T"], "answer": 1, "explain": "The columns of the standard matrix are exactly T(e~1~), T(e~2~), ..., the images of the standard basis vectors."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Kernel and Range",
+     "minutes": 16,
+     "intro": "Every linear transformation squashes some information and preserves the rest. The kernel measures exactly what gets crushed to zero, and the range measures exactly what can be reached as an output - together they reveal everything about how the transformation reshapes space.",
+     "sections": [
+      {
+       "heading": "The Kernel",
+       "body": [
+        "The **kernel** of a linear transformation T (also called its null space when T is given by a matrix A) is the set of all vectors v with T(v) = 0. The kernel always contains at least the zero vector, since every linear transformation sends 0 to 0; if the kernel contains only the zero vector, T is called **one-to-one** (injective) - different inputs always give different outputs.",
+        "Finding the kernel of T(v) = Av means solving the homogeneous system Av = 0. If that system has only the trivial solution, the kernel is just {0}; if it has free variables, the kernel contains infinitely many vectors, all mapped to zero."
+       ]
+      },
+      {
+       "heading": "The Range",
+       "body": [
+        "The **range** of T is the set of all possible outputs T(v) as v ranges over the entire domain - equivalently, the span of the columns of the standard matrix A. If the range is all of the codomain (every possible output vector is achieved), T is called **onto** (surjective).",
+        "A useful shortcut called the **rank-nullity theorem** ties these together: for T: R^n → R^m, (dimension of the kernel) + (dimension of the range) = n, the dimension of the domain. A transformation with a large kernel necessarily has a smaller range, and vice versa - you cannot maximize both at once."
+       ],
+       "example": {
+        "problem": "Find the kernel of T(x, y, z) = (x + 2y - z, 2x + 4y - 2z), given by the matrix A = [[1, 2, -1], [2, 4, -2]].",
+        "steps": [
+         "Solve Av = 0: x + 2y - z = 0 and 2x + 4y - 2z = 0. Notice the second equation is exactly twice the first, so it gives no new information.",
+         "Solve the single independent equation x + 2y - z = 0 for x: x = z - 2y.",
+         "Both y and z are free variables. The kernel is every vector of the form (z-2y, y, z) = y(-2, 1, 0) + z(1, 0, 1)."
+        ],
+        "answer": "The kernel is the span of (-2, 1, 0) and (1, 0, 1) - a plane through the origin, since the two rows of A were dependent and left two free variables."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "kernel (null space)", "def": "The set of all vectors that a linear transformation sends to the zero vector."},
+      {"term": "one-to-one (injective)", "def": "A transformation whose kernel contains only the zero vector."},
+      {"term": "range", "def": "The set of all possible outputs of a linear transformation."},
+      {"term": "onto (surjective)", "def": "A transformation whose range is the entire codomain."},
+      {"term": "rank-nullity theorem", "def": "For T: R^n → R^m, dim(kernel) + dim(range) = n."}
+     ],
+     "practice": [
+      {"q": "If the kernel of a linear transformation T: R^3 → R^3 contains only the zero vector, T is:", "choices": ["Onto but not one-to-one", "One-to-one", "Neither onto nor one-to-one", "Undefined"], "answer": 1, "explain": "A kernel containing only the zero vector means no two distinct inputs map to the same output - that is exactly the definition of one-to-one."},
+      {"q": "For T: R^4 → R^3, if the kernel has dimension 1, what is the dimension of the range?", "choices": ["1", "2", "3", "4"], "answer": 2, "explain": "By the rank-nullity theorem, dim(kernel) + dim(range) = n = 4. With dim(kernel) = 1, dim(range) = 4 − 1 = 3."},
+      {"q": "The range of a linear transformation given by matrix A is:", "choices": ["The set of solutions to Av = 0", "The span of the columns of A", "Always all of R^m", "The set of eigenvalues of A"], "answer": 1, "explain": "Every output Av is a linear combination of A's columns (weighted by the entries of v), so the range is exactly the span of A's columns."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Composition and Invertibility of Transformations",
+     "minutes": 14,
+     "intro": "Rotate a shape, then scale it, and you have performed two transformations back to back. Composing linear transformations turns out to be exactly matrix multiplication - which is precisely why matrix multiplication was defined the way it was in the first place.",
+     "sections": [
+      {
+       "heading": "Composing Transformations",
+       "body": [
+        "If S: R^n → R^m and T: R^m → R^p are linear transformations with standard matrices A and B, the **composition** T∘S (apply S first, then T) is itself a linear transformation, and its standard matrix is simply BA - the matrix of the second transformation times the matrix of the first, in that order.",
+        "This is exactly why matrix multiplication is defined the way it is: it was built specifically so that composing transformations corresponds to multiplying their matrices. The order matters, matching the fact that rotating then scaling a shape generally gives a different result than scaling then rotating."
+       ]
+      },
+      {
+       "heading": "Invertible Transformations",
+       "body": [
+        "A linear transformation T is **invertible** if there is another linear transformation T^-1^ that undoes it completely: T^-1^(T(v)) = v for every v. T is invertible exactly when its standard matrix A is invertible, and in that case, the standard matrix of T^-1^ is simply A^-1^.",
+        "Invertible transformations are always both one-to-one and onto - they lose no information (empty kernel except {0}) and reach every possible output (full range). Geometrically, invertible transformations in R^2 or R^3, like rotations and non-degenerate scalings, can always be 'undone'; a projection onto a lower-dimensional subspace, by contrast, is never invertible, because it throws away information permanently."
+       ],
+       "example": {
+        "problem": "T rotates vectors 90° counterclockwise, with standard matrix A = [[0, -1], [1, 0]]. Find the standard matrix of T^-1^, and describe what it does geometrically.",
+        "steps": [
+         "Compute the determinant of A: (0)(0) - (-1)(1) = 0 + 1 = 1, which is nonzero, so A is invertible.",
+         "Apply the 2×2 inverse formula: A^-1^ = (1/1)[[0, 1], [-1, 0]] = [[0, 1], [-1, 0]].",
+         "Interpret geometrically: this matrix sends e~1~=(1,0) to (0,-1) and e~2~=(0,1) to (1,0), which is a 90° clockwise rotation."
+        ],
+        "answer": "A^-1^ = [[0, 1], [-1, 0]], which rotates vectors 90° clockwise - exactly undoing the original counterclockwise rotation."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "composition of transformations", "def": "Applying one transformation after another; corresponds to multiplying their standard matrices."},
+      {"term": "invertible transformation", "def": "A transformation T with an inverse T^-1^ satisfying T^-1^(T(v)) = v for all v."}
+     ],
+     "practice": [
+      {"q": "If S has standard matrix A and T has standard matrix B, the standard matrix of T∘S (S first, then T) is:", "choices": ["A + B", "AB", "BA", "A^-1^B"], "answer": 2, "explain": "Composition order matters: since S is applied first, its matrix acts on the vector first, so the combined matrix is BA, with A closest to the vector."},
+      {"q": "Why is a projection from R^3 onto the xy-plane never invertible?", "choices": ["Because projections are not linear transformations", "Because it collapses the z-direction, losing information that cannot be recovered", "Because its standard matrix has no columns", "Because projections always have empty range"], "answer": 1, "explain": "A projection sends every point with the same x and y (but different z) to the same output, so distinct inputs share an output - information about z is destroyed and cannot be undone."},
+      {"q": "A linear transformation T is invertible exactly when:", "choices": ["Its standard matrix has a zero determinant", "Its standard matrix is invertible", "It maps every vector to itself", "It has an infinite kernel"], "answer": 1, "explain": "T is invertible if and only if its standard matrix A is an invertible matrix, in which case T^-1^ has standard matrix A^-1^."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Determinants",
+   "summary": "A single number computed from a square matrix that reveals invertibility, scaling factors, and the geometry of areas and volumes.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Computing Determinants",
+     "minutes": 15,
+     "intro": "A determinant packs an enormous amount of information about a matrix into one number: whether it is invertible, how it scales area or volume, and whether it flips orientation. Learning to compute it by hand, for matrices of any size, is a core linear algebra skill.",
+     "sections": [
+      {
+       "heading": "2×2 and 3×3 Determinants",
+       "body": [
+        "For a 2×2 matrix [[a, b], [c, d]], the determinant is det(A) = ad - bc. For a 3×3 matrix, the determinant is computed by **cofactor expansion** along any row or column: pick a row, and for each entry, multiply it by its **cofactor** - the determinant of the smaller matrix left after deleting that entry's row and column, with an alternating sign pattern (+, -, +, -, ...).",
+        "Expansion along the first row of a 3×3 matrix [[a,b,c],[d,e,f],[g,h,i]] gives det(A) = a(ei-fh) - b(di-fg) + c(dh-eg), where each 2×2 determinant is the matrix left after crossing out that entry's row and column."
+       ]
+      },
+      {
+       "heading": "Choosing a Row or Column",
+       "body": [
+        "Cofactor expansion works along any row or column and always gives the same final determinant - so a smart strategy is to expand along whichever row or column has the most zeros, since a zero entry means you can skip computing its cofactor entirely, saving significant work.",
+        "For matrices larger than 3×3, the same idea recurses: expanding a 4×4 determinant reduces it to four 3×3 determinants, each of which reduces further to 2×2 determinants. It gets tedious quickly, which is exactly why row reduction methods and computer algebra are used for large matrices in practice."
+       ],
+       "example": {
+        "problem": "Compute the determinant of A = [[2, 1, 0], [3, -1, 2], [1, 4, 1]] by expanding along the first row.",
+        "steps": [
+         "det(A) = 2 × det([[-1,2],[4,1]]) − 1 × det([[3,2],[1,1]]) + 0 × det([[3,-1],[1,4]]).",
+         "First 2×2 determinant: (-1)(1) - (2)(4) = -1 - 8 = -9.",
+         "Second 2×2 determinant: (3)(1) - (2)(1) = 3 - 2 = 1.",
+         "The third term is multiplied by 0, so it vanishes. Combine: 2(-9) - 1(1) + 0 = -18 - 1 = -19."
+        ],
+        "answer": "det(A) = -19."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "determinant", "def": "A single number computed from a square matrix, encoding invertibility and scaling."},
+      {"term": "cofactor expansion", "def": "A method for computing a determinant by expanding along a row or column using signed smaller determinants."},
+      {"term": "minor", "def": "The determinant of the smaller matrix left after deleting one row and one column."}
+     ],
+     "practice": [
+      {"q": "What is the determinant of [[5, 2], [3, 4]]?", "choices": ["14", "20", "26", "6"], "answer": 0, "explain": "det = ad - bc = (5)(4) - (2)(3) = 20 - 6 = 14."},
+      {"q": "When expanding a 3×3 determinant by cofactors, why is it helpful to choose a row or column with zeros?", "choices": ["It changes the final answer to a smaller number", "Any term multiplied by zero can be skipped, saving computation", "Zeros are required for the determinant formula to work at all", "It only works for the first row"], "answer": 1, "explain": "Cofactor expansion works along any row or column with the same result, but a zero entry means that term contributes 0 regardless of its cofactor, so you can skip calculating it."},
+      {"q": "For A = [[1,0,2],[0,3,0],[4,0,1]], expanding along the second row (which has two zeros) gives det(A) equal to:", "choices": ["3 × det([[1,2],[4,1]])", "0", "3 × det([[1,0],[4,0]])", "1 × det([[3,0],[0,1]])"], "answer": 0, "explain": "Expanding along row 2, the only nonzero entry is the middle one, 3, with cofactor sign +. Its minor is formed by deleting row 2 and column 2: [[1,2],[4,1]]."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Properties of Determinants and Cramer's Rule",
+     "minutes": 15,
+     "intro": "The determinant is not just a formula to grind through - it behaves in predictable, useful ways under row operations and multiplication, and it hands you a direct formula for solving small systems of equations without ever row-reducing.",
+     "sections": [
+      {
+       "heading": "Key Properties",
+       "body": [
+        "A matrix is invertible if and only if its determinant is nonzero - a determinant of 0 means the matrix is singular. Swapping two rows of a matrix flips the sign of the determinant; multiplying one row by a scalar k multiplies the whole determinant by k; and adding a multiple of one row to another leaves the determinant unchanged.",
+        "For two square matrices of the same size, det(AB) = det(A) × det(B) - determinants multiply under matrix multiplication. Also, det(A^T^) = det(A), where A^T^ is A's transpose (rows and columns swapped), so every row property of determinants has a matching column property."
+       ]
+      },
+      {
+       "heading": "Cramer's Rule",
+       "body": [
+        "**Cramer's rule** solves a system Ax = b directly with determinants, without row reduction: for each variable x~i~, replace column i of A with the vector b to form a new matrix A~i~, and then x~i~ = det(A~i~) / det(A). This only works when det(A) ≠ 0, meaning A is invertible and the system has a unique solution.",
+        "Cramer's rule is elegant for small systems (2×2 or 3×3) and is especially useful when you only need one variable's value, since you can compute just that one ratio without solving for every other variable. For larger systems, though, computing all those determinants becomes far slower than Gaussian elimination."
+       ],
+       "example": {
+        "problem": "Use Cramer's rule to solve: 2x + y = 5 and x - 3y = -8.",
+        "steps": [
+         "Write A = [[2, 1], [1, -3]]. det(A) = (2)(-3) - (1)(1) = -6 - 1 = -7.",
+         "For x, replace column 1 with b = (5, -8): A~1~ = [[5, 1], [-8, -3]]. det(A~1~) = (5)(-3) - (1)(-8) = -15 + 8 = -7. So x = -7/-7 = 1.",
+         "For y, replace column 2 with b: A~2~ = [[2, 5], [1, -8]]. det(A~2~) = (2)(-8) - (5)(1) = -16 - 5 = -21. So y = -21/-7 = 3."
+        ],
+        "answer": "x = 1, y = 3."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Cramer's rule", "def": "A formula solving Ax=b using determinants: x~i~ = det(A~i~)/det(A), where A~i~ replaces column i with b."},
+      {"term": "transpose", "def": "The matrix formed by swapping the rows and columns of a matrix, written A^T^."}
+     ],
+     "practice": [
+      {"q": "If det(A) = 0 for a square matrix A, what does this mean?", "choices": ["A is invertible", "A is singular - it has no inverse", "Cramer's rule always gives a unique solution", "A must be the identity matrix"], "answer": 1, "explain": "A determinant of zero is exactly the condition for a matrix to be singular; Cramer's rule cannot be used since it requires dividing by det(A)."},
+      {"q": "If det(A) = 3 and det(B) = 4 for two square matrices of the same size, what is det(AB)?", "choices": ["7", "12", "1", "Cannot be determined"], "answer": 1, "explain": "Determinants multiply under matrix multiplication: det(AB) = det(A) × det(B) = 3 × 4 = 12."},
+      {"q": "Swapping two rows of a matrix does what to its determinant?", "choices": ["Doubles it", "Leaves it unchanged", "Flips its sign", "Sets it to zero"], "answer": 2, "explain": "Row swaps reverse the sign of the determinant - a well-known property used both in computation and in proofs about determinants."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Geometric Meaning of Determinants",
+     "minutes": 12,
+     "intro": "A determinant is not just an algebraic recipe - it is literally the area or volume scaling factor of a linear transformation, and its sign tells you whether the transformation flips space inside out.",
+     "sections": [
+      {
+       "heading": "Area, Volume, and Scaling",
+       "body": [
+        "For a 2×2 matrix A, |det(A)| is the area of the parallelogram formed by its two column vectors - and more generally, it is the factor by which A scales any area when used as a linear transformation. For a 3×3 matrix, |det(A)| is the volume of the parallelepiped formed by its three column vectors, and again it is the volume-scaling factor of the transformation.",
+        "If det(A) = 0, the columns of A are linearly dependent, which collapses the parallelogram or parallelepiped to a lower dimension (a line, a point) with zero area or volume - exactly matching the fact that a matrix with determinant 0 is singular and destroys some dimension of information."
+       ]
+      },
+      {
+       "heading": "Sign and Orientation",
+       "body": [
+        "The sign of the determinant reveals **orientation**: a positive determinant means the transformation preserves orientation (a counterclockwise arrangement of basis vectors stays counterclockwise), while a negative determinant means it reverses orientation, like a reflection flipping a shape into its mirror image.",
+        "This geometric view ties together everything about determinants covered so far: invertibility (nonzero determinant, no collapse in dimension), scaling (the magnitude of the determinant), and orientation (its sign) are three facets of one single number."
+       ],
+       "example": {
+        "problem": "The columns of A = [[3, 1], [0, 2]] form a parallelogram. Find its area, and state whether A preserves or reverses orientation.",
+        "steps": [
+         "Compute the determinant: det(A) = (3)(2) - (1)(0) = 6 - 0 = 6.",
+         "The area of the parallelogram is |det(A)| = |6| = 6.",
+         "Since det(A) = 6 is positive, the transformation preserves orientation - no reflection occurs."
+        ],
+        "answer": "Area = 6 square units; orientation is preserved (positive determinant)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "orientation", "def": "Whether a transformation preserves (positive determinant) or reverses (negative determinant) the arrangement of basis vectors."},
+      {"term": "parallelepiped", "def": "The 3D solid formed by three vectors, whose volume equals the absolute value of their matrix's determinant."}
+     ],
+     "practice": [
+      {"q": "A 2×2 matrix has determinant -5. What does the negative sign tell you?", "choices": ["The matrix is singular", "The transformation reverses orientation, like a reflection", "The area scaled is negative", "The matrix has no columns"], "answer": 1, "explain": "The sign of the determinant indicates orientation: negative means the transformation flips orientation, as a reflection would, even though the area itself (|det(A)| = 5) is a positive quantity."},
+      {"q": "If det(A) = 0 for a 2×2 matrix, what does this say about the parallelogram formed by its columns?", "choices": ["It has maximum possible area", "It has collapsed to a line or point with zero area", "It is always a perfect square", "It cannot be determined"], "answer": 1, "explain": "A zero determinant means the two column vectors are linearly dependent (parallel or one is zero), collapsing the parallelogram into a line segment or a point with no area."},
+      {"q": "For a 3×3 matrix with determinant 12, what does |det(A)| = 12 represent geometrically?", "choices": ["The sum of the matrix's entries", "The volume of the parallelepiped formed by its column vectors", "The number of pivots in the matrix", "The trace of the matrix"], "answer": 1, "explain": "For a 3×3 matrix, the absolute value of the determinant equals the volume of the parallelepiped spanned by its three column vectors."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Eigenvalues and Eigenvectors",
+   "summary": "The special directions a matrix only stretches, never rotates - and how they reveal a matrix's long-run behavior through diagonalization.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Finding Eigenvalues and Eigenvectors",
+     "minutes": 17,
+     "intro": "Most vectors get pushed off in some new direction when you multiply them by a matrix. But every matrix has special directions - eigenvectors - that only get stretched or shrunk, never rotated. Finding them unlocks a matrix's true underlying behavior.",
+     "sections": [
+      {
+       "heading": "The Eigenvalue Equation",
+       "body": [
+        "For a square matrix A, a nonzero vector v is an **eigenvector** with **eigenvalue** λ if Av = λv - multiplying v by A has exactly the same effect as simply scaling v by the number λ. Geometrically, A does not rotate v off its line at all; it only stretches it (if λ > 1), shrinks it (if 0 < λ < 1), or reverses it (if λ < 0).",
+        "Rearranging Av = λv gives (A - λI)v = 0. Since v must be nonzero, this homogeneous system needs a nontrivial solution, which happens exactly when the matrix (A - λI) is singular - that is, when det(A - λI) = 0. This equation is called the **characteristic equation**, and its solutions are the eigenvalues."
+       ]
+      },
+      {
+       "heading": "From Eigenvalues to Eigenvectors",
+       "body": [
+        "Once an eigenvalue λ is found, the corresponding eigenvectors are found by solving (A - λI)v = 0 - a homogeneous system, exactly like finding a kernel. The full solution set (excluding the zero vector) is called the **eigenspace** for that eigenvalue, and it can be one-dimensional (a line) or larger, depending on the matrix.",
+        "For an n × n matrix, the characteristic equation is a degree-n polynomial in λ, so there are at most n eigenvalues (some may repeat, and some may be complex numbers even when the matrix itself has only real entries)."
+       ],
+       "example": {
+        "problem": "Find the eigenvalues and eigenvectors of A = [[4, 1], [2, 3]].",
+        "steps": [
+         "Set up the characteristic equation: det(A - λI) = det([[4-λ, 1], [2, 3-λ]]) = (4-λ)(3-λ) - (1)(2) = 0.",
+         "Expand: 12 - 4λ - 3λ + λ² - 2 = λ² - 7λ + 10 = 0. Factor: (λ-5)(λ-2) = 0, giving λ = 5 or λ = 2.",
+         "For λ = 5: solve (A - 5I)v = 0, i.e. [[-1, 1], [2, -2]]v = 0. This gives -v~1~+v~2~=0, so v~2~=v~1~; an eigenvector is (1, 1).",
+         "For λ = 2: solve (A - 2I)v = 0, i.e. [[2, 1], [2, 1]]v = 0. This gives 2v~1~+v~2~=0, so v~2~=-2v~1~; an eigenvector is (1, -2)."
+        ],
+        "answer": "Eigenvalues λ = 5 (eigenvector (1,1)) and λ = 2 (eigenvector (1,-2))."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "eigenvector", "def": "A nonzero vector v such that Av = λv for some scalar λ."},
+      {"term": "eigenvalue", "def": "The scalar λ by which A stretches or shrinks its corresponding eigenvector."},
+      {"term": "characteristic equation", "def": "det(A - λI) = 0, whose solutions are the eigenvalues of A."},
+      {"term": "eigenspace", "def": "The set of all eigenvectors for a given eigenvalue, plus the zero vector."}
+     ],
+     "practice": [
+      {"q": "For A = [[5, 0], [0, 3]], what are its eigenvalues?", "choices": ["5 and 3", "0 and 0", "8 only", "15 only"], "answer": 0, "explain": "For a diagonal matrix, the eigenvalues are simply the diagonal entries themselves: 5 and 3."},
+      {"q": "The characteristic equation of a matrix is used to find:", "choices": ["The matrix's inverse", "The eigenvalues of the matrix", "The rank of the matrix", "The transpose of the matrix"], "answer": 1, "explain": "Setting det(A - λI) = 0 and solving for λ is precisely how eigenvalues are found."},
+      {"q": "If v is an eigenvector of A with eigenvalue λ = 0, what does Av equal?", "choices": ["v", "The zero vector", "-v", "It cannot be determined"], "answer": 1, "explain": "Av = λv = 0v = the zero vector; an eigenvalue of 0 means v is in the kernel of A."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Diagonalization",
+     "minutes": 16,
+     "intro": "Multiplying a matrix by itself ten times by hand is painful - unless you can rewrite that matrix in terms of its eigenvalues, in which case raising it to a power becomes almost as easy as raising a single number to a power. That trick is diagonalization.",
+     "sections": [
+      {
+       "heading": "Building P and D",
+       "body": [
+        "A square matrix A is **diagonalizable** if it can be written as A = PDP^-1^, where D is a diagonal matrix holding A's eigenvalues along the diagonal, and P is a matrix whose columns are the corresponding eigenvectors, in the same order as the eigenvalues in D. This works whenever A has n linearly independent eigenvectors, for an n × n matrix - which is guaranteed, for example, whenever A has n distinct eigenvalues.",
+        "Not every matrix is diagonalizable: if an eigenvalue's eigenspace does not have enough independent eigenvectors to match its multiplicity in the characteristic equation, there simply are not enough columns to build an invertible P."
+       ]
+      },
+      {
+       "heading": "Why Diagonalization Is Useful",
+       "body": [
+        "Diagonalization makes computing powers of a matrix dramatically easier: A^k^ = PD^k^P^-1^, and D^k^ is trivial to compute because a diagonal matrix's power is just each diagonal entry raised to that power. Without diagonalization, computing A^10^ directly would mean nine full matrix multiplications; with it, you only need one diagonal power and two matrix multiplications total.",
+        "This technique underlies solving systems of difference equations, analyzing long-run population or Markov chain behavior, and much of differential equations - anywhere a process repeats the same linear step over and over, diagonalization reveals its long-term behavior almost for free."
+       ],
+       "example": {
+        "problem": "Using A = [[4, 1], [2, 3]] from the previous lesson (eigenvalues 5 and 2, eigenvectors (1,1) and (1,-2)), compute A^2^ using diagonalization, and check it against direct multiplication.",
+        "steps": [
+         "Form P = [[1, 1], [1, -2]] (eigenvectors as columns) and D = [[5, 0], [0, 2]] (eigenvalues on the diagonal).",
+         "D² = [[25, 0], [0, 4]], since a diagonal matrix's power just raises each diagonal entry.",
+         "Compute P^-1^: det(P) = (1)(-2)-(1)(1) = -3, so P^-1^ = (1/-3)[[-2,-1],[-1,1]] = [[2/3, 1/3],[1/3, -1/3]].",
+         "A² = PD²P^-1^. Direct check: A² = A×A = [[4,1],[2,3]]×[[4,1],[2,3]] = [[4×4+1×2, 4×1+1×3],[2×4+3×2, 2×1+3×3]] = [[18,7],[14,11]]."
+        ],
+        "answer": "A² = [[18, 7], [14, 11]] (matches whether computed directly or via PD²P^-1^)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "diagonalizable", "def": "A matrix A that can be written as A = PDP^-1^ with D diagonal and P's columns the eigenvectors."},
+      {"term": "diagonal matrix", "def": "A matrix with entries only on the main diagonal, all other entries zero."}
+     ],
+     "practice": [
+      {"q": "In the diagonalization A = PDP^-1^, what do the columns of P represent?", "choices": ["The rows of A", "The eigenvectors of A, in the same order as the eigenvalues in D", "The determinant of A", "Random unit vectors"], "answer": 1, "explain": "P's columns must be eigenvectors corresponding, in order, to the eigenvalues placed on the diagonal of D - this ordering is essential for the formula to work."},
+      {"q": "Why is A^k^ = PD^k^P^-1^ useful for large k?", "choices": ["Because P and D are always the same matrix", "Because raising a diagonal matrix to a power is just raising each diagonal entry, avoiding repeated matrix multiplication", "Because it avoids needing to know the eigenvalues", "It isn't - direct multiplication is always faster"], "answer": 1, "explain": "D^k^ only requires raising each diagonal entry (a single eigenvalue) to the k-th power, which is far simpler than performing k−1 full matrix multiplications of A by itself."},
+      {"q": "A matrix is guaranteed to be diagonalizable if:", "choices": ["It is the zero matrix", "It has n distinct eigenvalues (for an n×n matrix)", "Its determinant is 0", "It is not square"], "answer": 1, "explain": "Distinct eigenvalues always come with linearly independent eigenvectors, giving exactly enough independent columns to build an invertible P."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Applications of Eigenvalues",
+     "minutes": 14,
+     "intro": "Eigenvalues are not just an algebra exercise - they predict whether a population will explode or die out, where a Markov chain settles in the long run, and how a vibrating structure will actually move. Seeing one real application makes the whole abstract machinery click into place.",
+     "sections": [
+      {
+       "heading": "Long-Run Behavior of a Repeated Process",
+       "body": [
+        "Many real systems repeat the same linear step over and over: a population growing each year by the same transition rules, or a Markov chain moving between states with fixed probabilities. If a state vector x~0~ can be written as a combination of eigenvectors, then applying the matrix repeatedly just multiplies each eigenvector's contribution by its eigenvalue raised to that power - so the eigenvalue with the largest absolute value eventually dominates every other term.",
+        "This is why the largest eigenvalue (in absolute value), often called the **dominant eigenvalue**, controls the long-run growth rate or steady-state behavior of the whole system: after enough repetitions, the process's shape converges toward the direction of the dominant eigenvector, no matter what mix of eigenvectors it started from."
+       ]
+      },
+      {
+       "heading": "A Simple Population Model",
+       "body": [
+        "Suppose two connected populations (say, city and suburb residents) shift between groups each year according to a matrix A. Applying A repeatedly to the initial population vector models the populations many years into the future. If the dominant eigenvalue is greater than 1, the total population grows over time; if it is less than 1, the population shrinks toward zero; if it equals 1, the population settles into a stable long-run distribution.",
+        "This same logic - repeated application of a matrix, dominated eventually by the largest eigenvalue - is exactly how search engines rank web pages, how ecologists model species with multiple age classes, and how engineers predict a structure's dominant vibration mode."
+       ],
+       "example": {
+        "problem": "A matrix A = [[0.9, 0.1], [0.1, 0.9]] models yearly transitions between two population groups. It has eigenvalues 1 and 0.8. What happens to the population distribution after many years?",
+        "steps": [
+         "Since the eigenvalues are 1 and 0.8, and |0.8| < |1|, the eigenvalue 1 is dominant.",
+         "The component of the population aligned with the eigenvalue-0.8 eigenvector shrinks toward zero over time, since 0.8^k^ → 0 as k grows.",
+         "The component aligned with the eigenvalue-1 eigenvector stays exactly the same size forever, since 1^k^ = 1 for any k."
+        ],
+        "answer": "The population distribution converges to a stable long-run pattern aligned entirely with the eigenvalue-1 eigenvector, as the other component fades away."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "dominant eigenvalue", "def": "The eigenvalue with the largest absolute value, which controls long-run behavior under repeated application of a matrix."},
+      {"term": "steady state", "def": "A long-run distribution that no longer changes under repeated application of a matrix, associated with eigenvalue 1."}
+     ],
+     "practice": [
+      {"q": "A matrix modeling a repeated process has eigenvalues 1.2 and 0.5. What happens to the total quantity over many repetitions?", "choices": ["It shrinks to zero", "It grows, dominated by the eigenvalue 1.2", "It stays exactly constant", "It oscillates forever"], "answer": 1, "explain": "The dominant eigenvalue, 1.2, has the larger absolute value, so its contribution grows every step (1.2^k^ increases without bound) and eventually overwhelms the 0.5 component, which shrinks."},
+      {"q": "In a Markov-chain-style model, an eigenvalue exactly equal to 1 typically corresponds to:", "choices": ["The process collapsing to zero", "A long-run steady state that persists unchanged", "An error in the model", "A negative population"], "answer": 1, "explain": "Since 1^k^ = 1 for every k, the component of the state aligned with an eigenvalue-1 eigenvector never grows or shrinks - it represents the stable, persisting long-run distribution."},
+      {"q": "Why does the dominant eigenvalue eventually control a repeatedly-applied matrix's behavior, regardless of the starting vector?", "choices": ["Because all eigenvalues are always equal to 1", "Because other eigenvalue components shrink faster (or grow slower) in comparison, leaving the dominant term to dominate the total", "Because the starting vector is irrelevant to any matrix process", "Because only square matrices have this property, and squareness alone guarantees it"], "answer": 1, "explain": "When a starting vector is expressed as a combination of eigenvectors, repeated application raises each eigenvalue to increasing powers; the largest one grows fastest (or shrinks slowest), so it eventually swamps every other term in the sum."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Orthogonality and Applications",
+   "summary": "Measuring angles and lengths with the dot product, building perpendicular bases with Gram-Schmidt, and fitting a line to noisy data with least squares.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Dot Products, Length, and Orthogonality",
+     "minutes": 14,
+     "intro": "Linear algebra can tell you not just where a vector points, but how long it is and what angle it makes with another vector - and it does all of that with a single operation you already know: the dot product.",
+     "sections": [
+      {
+       "heading": "Dot Product and Length",
+       "body": [
+        "The **dot product** of u = (u~1~,...,u~n~) and v = (v~1~,...,v~n~) is u·v = u~1~v~1~ + u~2~v~2~ + ... + u~n~v~n~ - a single number, not a vector. The **length** (or norm) of a vector is ||v|| = √(v·v), the square root of the vector dotted with itself, which generalizes the Pythagorean theorem to any number of dimensions.",
+        "A vector with length 1 is called a **unit vector**. Any nonzero vector v can be turned into a unit vector pointing the same direction by dividing by its own length: v/||v||, a process called **normalizing**."
+       ]
+      },
+      {
+       "heading": "Orthogonality",
+       "body": [
+        "Two vectors are **orthogonal** (perpendicular) exactly when their dot product is zero: u·v = 0. This matches the geometric picture in R^2^ and R^3^, where the dot product formula u·v = ||u|| ||v|| cos(θ) shows that a dot product of 0 forces cos(θ) = 0, meaning θ = 90°.",
+        "An **orthogonal set** of vectors is a set where every pair is orthogonal to every other pair; an **orthonormal set** is an orthogonal set where every vector also has length 1. Orthonormal sets are especially convenient because coordinates relative to them are found simply by taking dot products, no system-solving required."
+       ],
+       "example": {
+        "problem": "Are u = (3, -2, 1) and v = (2, 4, 2) orthogonal? Find the length of u.",
+        "steps": [
+         "Compute the dot product: u·v = (3)(2) + (-2)(4) + (1)(2) = 6 - 8 + 2 = 0.",
+         "Since u·v = 0, the vectors are orthogonal.",
+         "Compute the length of u: ||u|| = √(3² + (-2)² + 1²) = √(9+4+1) = √14."
+        ],
+        "answer": "Yes, u and v are orthogonal; ||u|| = √14 ≈ 3.74."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "dot product", "def": "The sum of products of corresponding entries of two vectors: u·v = Σ u~i~v~i~."},
+      {"term": "length (norm)", "def": "||v|| = √(v·v), generalizing the Pythagorean theorem to any dimension."},
+      {"term": "orthogonal", "def": "Two vectors with dot product equal to zero; perpendicular."},
+      {"term": "unit vector", "def": "A vector with length exactly 1."}
+     ],
+     "practice": [
+      {"q": "What is the dot product of (2, -1, 3) and (1, 4, 0)?", "choices": ["-2", "2", "9", "5"], "answer": 0, "explain": "u·v = (2)(1) + (-1)(4) + (3)(0) = 2 - 4 + 0 = -2."},
+      {"q": "What is the length of the vector (0, 3, 4)?", "choices": ["3", "4", "5", "7"], "answer": 2, "explain": "||v|| = √(0²+3²+4²) = √(0+9+16) = √25 = 5."},
+      {"q": "Two nonzero vectors u and v satisfy u·v = 0. What can you conclude?", "choices": ["u and v point in the same direction", "u and v are orthogonal (perpendicular)", "u and v have the same length", "u or v must be the zero vector"], "answer": 1, "explain": "A dot product of zero between two nonzero vectors is precisely the definition of orthogonality - they meet at a 90° angle."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Gram-Schmidt Process",
+     "minutes": 16,
+     "intro": "Given any set of independent vectors, no matter how skewed and non-perpendicular they look, the Gram-Schmidt process can systematically straighten them into a perfectly orthogonal set spanning the exact same space.",
+     "sections": [
+      {
+       "heading": "Projections",
+       "body": [
+        "The key building block of Gram-Schmidt is the **projection** of a vector v onto another vector u: proj~u~(v) = ((v·u)/(u·u)) × u. This gives the component of v that points exactly along u's direction - the 'shadow' v would cast onto the line through u.",
+        "Subtracting that projection off leaves a vector orthogonal to u: v - proj~u~(v) is exactly perpendicular to u, since it removes precisely the part of v that overlapped with u's direction. This subtraction is the entire mechanism behind Gram-Schmidt."
+       ]
+      },
+      {
+       "heading": "Building an Orthogonal Basis",
+       "body": [
+        "Starting from independent vectors v~1~, v~2~, ..., v~k~, the **Gram-Schmidt process** builds an orthogonal set one vector at a time: keep u~1~ = v~1~; then u~2~ = v~2~ - proj~u1~(v~2~), removing any overlap with u~1~; then u~3~ = v~3~ - proj~u1~(v~3~) - proj~u2~(v~3~), removing overlap with both previous vectors, and so on.",
+        "The resulting set u~1~, ..., u~k~ spans the exact same space as the original vectors but is now fully orthogonal - and dividing each u~i~ by its own length turns it into an orthonormal basis, the most convenient possible coordinate system for that space."
+       ],
+       "example": {
+        "problem": "Apply Gram-Schmidt to v~1~ = (1, 1) and v~2~ = (2, 0) to find an orthogonal basis.",
+        "steps": [
+         "Set u~1~ = v~1~ = (1, 1).",
+         "Compute the projection of v~2~ onto u~1~: proj~u1~(v~2~) = ((v~2~·u~1~)/(u~1~·u~1~)) × u~1~ = ((2×1+0×1)/(1²+1²)) × (1,1) = (2/2)(1,1) = (1,1).",
+         "Subtract: u~2~ = v~2~ - proj~u1~(v~2~) = (2,0) - (1,1) = (1,-1).",
+         "Check orthogonality: u~1~·u~2~ = (1)(1) + (1)(-1) = 1 - 1 = 0. Confirmed orthogonal."
+        ],
+        "answer": "Orthogonal basis: u~1~ = (1, 1), u~2~ = (1, -1)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "projection", "def": "The component of one vector pointing along another: proj~u~(v) = ((v·u)/(u·u))u."},
+      {"term": "Gram-Schmidt process", "def": "A procedure that converts any independent set of vectors into an orthogonal set spanning the same space."},
+      {"term": "orthonormal basis", "def": "An orthogonal basis where every vector also has length 1."}
+     ],
+     "practice": [
+      {"q": "What is the projection of v = (4, 2) onto u = (1, 0)?", "choices": ["(4, 0)", "(0, 2)", "(1, 0)", "(4, 2)"], "answer": 0, "explain": "proj~u~(v) = ((v·u)/(u·u))u = ((4×1+2×0)/(1))×(1,0) = 4×(1,0) = (4,0)."},
+      {"q": "After Gram-Schmidt, what relationship does the new vector u~2~ have with u~1~?", "choices": ["u~2~ equals u~1~", "u~2~ is a scalar multiple of u~1~", "u~2~ is orthogonal to u~1~", "u~2~ has the same length as u~1~ always"], "answer": 2, "explain": "u~2~ is constructed by subtracting off exactly the part of v~2~ that overlaps with u~1~'s direction, guaranteeing what remains is perpendicular to u~1~."},
+      {"q": "Why divide each Gram-Schmidt output vector by its own length as a final step?", "choices": ["To make the vectors orthogonal to each other (they weren't before)", "To turn an orthogonal basis into an orthonormal one, with every vector having length 1", "To make the vectors point in new directions", "This step is never actually necessary or useful"], "answer": 1, "explain": "Gram-Schmidt alone produces an orthogonal (perpendicular) set; normalizing each vector to length 1 upgrades it to a fully orthonormal basis."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Least Squares",
+     "minutes": 16,
+     "intro": "Real data almost never lies exactly on a straight line - measurement noise, human error, and randomness guarantee it. Least squares finds the single best-fitting line anyway, by making the total squared error as small as it can possibly be.",
+     "sections": [
+      {
+       "heading": "Why Least Squares Is Needed",
+       "body": [
+        "When you have more data points than a line has parameters, the system Ax = b describing 'every point lies exactly on this line' is usually **inconsistent** - it has no exact solution, because real data has scatter. Rather than giving up, **least squares** finds the vector x^ that makes ||Ax - b||, the total error, as small as possible.",
+        "The key geometric idea is that the best approximate solution occurs when the error vector Ax^ - b is orthogonal to every column of A: any error that could still be reduced by adjusting x would not yet be orthogonal to A's columns, so orthogonality marks the true minimum."
+       ]
+      },
+      {
+       "heading": "The Normal Equations",
+       "body": [
+        "This orthogonality condition leads to the **normal equations**: A^T^Ax = A^T^b, where A^T^ is the transpose of A. Solving this new (always consistent) system for x gives the least-squares solution x^ - the best possible fit in the sense of minimizing total squared error, even though the original system had no exact solution.",
+        "For fitting a line y = mx + b to data points, A's columns are the x-values and a column of 1s, and b holds the y-values; solving the normal equations for the two unknowns m and b gives the standard best-fit line - the same line produced by any statistical software's 'linear regression.'"
+       ],
+       "example": {
+        "problem": "Find the least-squares line y = mx + b through the points (1, 2), (2, 3), and (3, 5).",
+        "steps": [
+         "Set up A = [[1,1],[2,1],[3,1]] (x-values and a column of 1s) and b = (2,3,5). The normal equations are A^T^Ax = A^T^b.",
+         "Compute A^T^A = [[1²+2²+3², 1+2+3],[1+2+3, 3]] = [[14, 6],[6, 3]].",
+         "Compute A^T^b = [1(2)+2(3)+3(5), 1(2)+1(3)+1(5)] = [2+6+15, 2+3+5] = [23, 10].",
+         "Solve [[14,6],[6,3]][m,b] = [23,10]: from row 2, 6m+3b=10 → b=(10-6m)/3. Substitute into row 1: 14m+6((10-6m)/3)=23 → 14m + 2(10-6m) = 23 → 14m+20-12m=23 → 2m=3 → m=1.5. Then b=(10-9)/3 = 1/3."
+        ],
+        "answer": "Best-fit line: y = 1.5x + 1/3 (approximately y = 1.5x + 0.33)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "inconsistent system", "def": "A system of equations with no exact solution, common when data has more points than parameters."},
+      {"term": "least squares", "def": "A method finding the x that minimizes ||Ax-b||, the total squared error, when Ax=b has no exact solution."},
+      {"term": "normal equations", "def": "The equation A^T^Ax = A^T^b, whose solution gives the least-squares approximation."}
+     ],
+     "practice": [
+      {"q": "Why is the system Ax = b often inconsistent when fitting a line to real data?", "choices": ["Because A is never square", "Because real data has scatter, so no single line passes exactly through every point", "Because least squares only works with 2 data points", "Because A^T^A is always singular"], "answer": 1, "explain": "With more data points than the two parameters (slope and intercept) of a line, it is essentially impossible for every point to fall exactly on one line - hence no exact solution, motivating the least-squares approximation."},
+      {"q": "What equation is solved to find the least-squares solution?", "choices": ["Ax = b", "A^T^Ax = A^T^b", "A^-1^b = x", "det(A)x = b"], "answer": 1, "explain": "The normal equations, A^T^Ax = A^T^b, come from requiring the error vector to be orthogonal to A's columns, and they are always consistent even when Ax=b is not."},
+      {"q": "Geometrically, the least-squares solution minimizes:", "choices": ["The determinant of A", "The length of x", "The length of the error vector Ax - b", "The number of columns in A"], "answer": 2, "explain": "Least squares is defined precisely as finding the x that makes ||Ax - b||, the size of the leftover error, as small as possible."}
+     ]
+    }
+   ]
+  }
+ ]
+}

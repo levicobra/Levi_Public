@@ -1,0 +1,844 @@
+{
+  "id": "philosophy",
+  "title": "Introduction to Philosophy",
+  "domain": "humanities",
+  "level": "Intro college",
+  "description": "A rigorous introduction to philosophy's core branches and methods: how to construct and evaluate arguments, and how thinkers across history have tackled questions about reality, knowledge, mind, God, and how we ought to live. You will reconstruct primary positions in each debate, learn the technical vocabulary philosophers use, and practice building and testing your own arguments rather than just summarizing others'.",
+  "outcomes": [
+    "You can identify the premises and conclusion of an argument and test it for validity and soundness.",
+    "You can explain the major positions on free will, personal identity, and knowledge, and state one strong objection to each.",
+    "You can distinguish consequentialist, deontological, and virtue-based moral reasoning and apply each to a concrete dilemma.",
+    "You can reconstruct the classic arguments for and against God's existence and evaluate their logical structure.",
+    "You can describe the mind-body problem and compare dualist and physicalist answers to it.",
+    "You can recognize common informal fallacies in everyday arguments and explain precisely why each fails."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Doing Philosophy",
+      "summary": "Philosophy is a method before it is a set of answers — this unit sets up what counts as a philosophical question and how to read and build an argument.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "What Is Philosophy?",
+          "minutes": 10,
+          "intro": "Ask a physicist what an electron is and a historian what caused a war, and both can point to evidence that settles the question — but ask what makes an action right, and there is no experiment to run; that gap is where philosophy begins.",
+          "sections": [
+            {
+              "heading": "A Method, Not a Body of Opinions",
+              "body": [
+                "**Philosophy** is often mistaken for a set of personal opinions — 'my philosophy is...' — but as an academic discipline it is better understood as a method: the systematic use of reasoned argument to examine claims that other fields simply take for granted. A biologist assumes the external world exists in order to study cells; a philosopher asks what justifies that assumption in the first place.",
+                "This makes philosophy unusually self-reflective. Most disciplines apply a method to a domain outside themselves; philosophy also questions its own methods, asking what counts as a good argument and whether its own questions are even meaningful. That reflexivity is a feature, not a flaw — it lets philosophy examine assumptions no other field will touch."
+              ]
+            },
+            {
+              "heading": "Questions That Observation Alone Cannot Settle",
+              "body": [
+                "A philosophical question typically cannot be resolved by looking harder at the world. Whether it is ever right to lie to spare someone's feelings is not answered by gathering more data, because the disagreement concerns which considerations should count, and how heavily, not some missing fact.",
+                "This does not make philosophical questions unanswerable — it means answering them takes a different kind of evidence: careful argument, thought experiments, and testing a position against its own logical consequences. Progress in philosophy looks like narrowing the field of defensible positions and understanding exactly why the rejected ones fail, rather than converging on one final settled fact."
+              ],
+              "example": {
+                "problem": "Sort these into empirical (settled by observation) versus philosophical (settled by argument): (a) What is the boiling point of water at sea level? (b) Is it ever right to lie to protect someone's feelings? (c) How many moons does Jupiter have?",
+                "steps": [
+                  "(a) and (c) can be settled by measuring or counting, so they are empirical questions.",
+                  "(b) cannot be settled by any observation — it depends on which moral considerations (honesty, care, harm) should take priority and how they should be weighed, which is a philosophical question."
+                ],
+                "answer": "(a) and (c) are empirical; (b) is philosophical."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Philosophy", "def": "The systematic use of reasoned argument to examine fundamental questions about reality, knowledge, value, and mind."},
+            {"term": "Reflexivity", "def": "Philosophy's tendency to examine its own methods and assumptions, not only an external subject matter."},
+            {"term": "Thought experiment", "def": "An imagined scenario used to test the logical consequences of a position or intuition."}
+          ],
+          "practice": [
+            {"q": "Which best describes philosophy as an academic discipline?", "choices": ["A method of reasoned argument applied to questions other fields take for granted", "A collection of personal opinions about life", "A branch of experimental physics", "A historical record of famous quotations"], "answer": 0, "explain": "Philosophy is defined by its method — systematic argument — not by holding a fixed set of opinions."},
+            {"q": "Why is 'Is it ever right to lie to spare feelings?' a philosophical rather than empirical question?", "choices": ["No observation settles which considerations should count and how much", "It has never been studied by anyone", "It can be answered by a laboratory experiment", "It is really a question about chemistry"], "answer": 0, "explain": "The disagreement is about weighing considerations like honesty and care, not about a missing fact in the world."},
+            {"q": "Philosophy's 'reflexivity' refers to its tendency to:", "choices": ["Question its own methods and assumptions", "Avoid all self-criticism", "Rely only on laboratory data", "Refuse to define its own terms"], "answer": 0, "explain": "Unlike most fields, philosophy turns its method on itself, asking what counts as a good argument at all."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "The Branches of Philosophy",
+          "minutes": 11,
+          "intro": "Philosophers rarely argue about everything at once; they sort questions into a handful of major branches, and knowing which branch a question belongs to often tells you what kind of answer to look for.",
+          "sections": [
+            {
+              "heading": "Metaphysics and Epistemology",
+              "body": [
+                "**Metaphysics** studies the fundamental nature of reality — what exists, what things are made of, whether the future is open or fixed. Questions like 'do humans have free will?' and 'what makes you the same person you were ten years ago?' belong here, because they ask what is ultimately true about the world, not how we could know it.",
+                "**Epistemology** studies knowledge itself: what it is, how we get it, and how much we can trust it. 'Can I know anything for certain?' and 'is science more reliable than intuition?' are epistemological, because they ask about justification and belief rather than about what exists."
+              ]
+            },
+            {
+              "heading": "Value Theory and Logic",
+              "body": [
+                "**Value theory** (also called axiology) covers ethics (what makes actions right or wrong), political philosophy (how power and justice should be organized), and aesthetics (what makes something beautiful or a work of art). These branches ask what ought to be, not merely what is.",
+                "**Logic** cuts across all the others: it is the study of what makes an argument good, regardless of its subject. A metaphysician, an epistemologist, and an ethicist all rely on logic to move from premises to conclusions responsibly, which is why it is usually studied first."
+              ],
+              "example": {
+                "problem": "Classify each question by branch: (a) Is punishing an innocent person ever justified? (b) Does the past exist in the same way the present does? (c) Can dreaming ever be distinguished from waking experience?",
+                "steps": [
+                  "(a) concerns right and wrong action, so it belongs to ethics, a branch of value theory.",
+                  "(b) concerns the fundamental nature of time and existence, so it is metaphysics.",
+                  "(c) concerns whether and how we can know we are awake, so it is epistemology."
+                ],
+                "answer": "(a) ethics, (b) metaphysics, (c) epistemology."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Metaphysics", "def": "The branch of philosophy studying the fundamental nature of reality and existence."},
+            {"term": "Epistemology", "def": "The branch of philosophy studying the nature, sources, and limits of knowledge."},
+            {"term": "Value theory (axiology)", "def": "The branch of philosophy covering ethics, political philosophy, and aesthetics — questions of what ought to be."}
+          ],
+          "practice": [
+            {"q": "'Does the past exist in the same way the present does?' belongs to which branch?", "choices": ["Metaphysics", "Ethics", "Aesthetics", "Political philosophy"], "answer": 0, "explain": "It asks about the fundamental nature of time and existence, the core subject of metaphysics."},
+            {"q": "Logic is described as cutting across the other branches because it:", "choices": ["Studies what makes any argument good, regardless of subject", "Only applies to mathematics", "Is a subfield of aesthetics", "Replaces the need for epistemology"], "answer": 0, "explain": "Every branch of philosophy depends on logic to move responsibly from premises to conclusions."},
+            {"q": "A question about whether a painting counts as art belongs to:", "choices": ["Aesthetics", "Epistemology", "Metaphysics", "Logic"], "answer": 0, "explain": "Aesthetics, part of value theory, studies what makes something beautiful or count as art."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Reading and Constructing Arguments",
+          "minutes": 12,
+          "intro": "Philosophers disagree constantly, but they are expected to disagree in a specific, disciplined way: by laying out premises that are supposed to support a conclusion, so anyone can see exactly where the disagreement really lies.",
+          "sections": [
+            {
+              "heading": "Premises, Conclusions, and Standard Form",
+              "body": [
+                "An **argument** in philosophy is not a quarrel — it is a set of statements called **premises** offered as reasons for accepting another statement, the **conclusion**. Writing an argument in standard form means numbering each premise, drawing a line, and stating the conclusion below it, which forces every hidden assumption into the open.",
+                "For example: (1) All humans are mortal. (2) Socrates is a human. Therefore, (3) Socrates is mortal. Standard form makes it obvious which statement is doing the work of support and which is the claim being supported — a distinction that gets lost in ordinary paragraph-style writing."
+              ]
+            },
+            {
+              "heading": "The Principle of Charity",
+              "body": [
+                "The **principle of charity** requires reconstructing an opponent's argument in its strongest possible form before criticizing it — filling in the most plausible missing premise, not the most convenient one to knock down. Attacking a weaker version of someone's position than the one they actually hold is a failure of reasoning, not a victory.",
+                "Charitable reconstruction matters because philosophy's goal is to find the truth, not to win a debate. If you defeat a strawman version of an argument, you have learned nothing about whether the real position is correct, and you have wasted the chance to find its actual weak point."
+              ],
+              "example": {
+                "problem": "Someone says, 'Eating meat is fine because plants feel nothing when killed.' Reconstruct the hidden premise charitably in standard form.",
+                "steps": [
+                  "Identify the stated premise: killing plants causes no suffering.",
+                  "Identify the unstated premise needed to reach the conclusion: causing suffering, not killing itself, is what makes an act wrong.",
+                  "Standard form: (1) Killing plants causes no suffering. (2) An act is wrong only if it causes suffering. Therefore (3) killing plants for food is not wrong."
+                ],
+                "answer": "The hidden premise is that an act is wrong only if it causes suffering — supplying it in standard form reveals the argument's exact logical structure."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Premise", "def": "A statement offered as a reason to support an argument's conclusion."},
+            {"term": "Conclusion", "def": "The statement an argument's premises are intended to establish."},
+            {"term": "Principle of charity", "def": "The norm of reconstructing an argument in its strongest, most plausible form before criticizing it."}
+          ],
+          "practice": [
+            {"q": "In the argument '(1) All humans are mortal. (2) Socrates is a human. Therefore (3) Socrates is mortal,' statement (3) is the:", "choices": ["Conclusion", "First premise", "Second premise", "Hidden assumption"], "answer": 0, "explain": "Statement (3) is what the premises are meant to establish, which is the definition of a conclusion."},
+            {"q": "The principle of charity requires that you:", "choices": ["Reconstruct an argument in its strongest plausible form before criticizing it", "Always agree with an opponent's conclusion", "Ignore arguments you find implausible", "Attack the weakest possible version of a claim"], "answer": 0, "explain": "Charity means engaging the strongest version of a position, since defeating a weak version teaches nothing about the real claim."},
+            {"q": "Writing an argument in standard form is useful mainly because it:", "choices": ["Forces hidden assumptions into the open by separating premises from the conclusion", "Makes the argument automatically true", "Removes the need for any premises", "Is required only in formal logic classes"], "answer": 0, "explain": "Standard form isolates each premise, making unstated assumptions and the argument's real structure visible."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Logic and Reasoning",
+      "summary": "Before you can evaluate a philosopher's conclusion, you need tools for judging whether their reasoning actually supports it — this unit covers deduction, induction, and the fallacies that derail both.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Deductive Arguments, Validity, and Soundness",
+          "minutes": 12,
+          "intro": "Two arguments can look equally convincing on the page, yet one guarantees its conclusion and the other only makes it likely — telling the difference is the single most useful skill logic teaches.",
+          "sections": [
+            {
+              "heading": "Validity: A Guarantee About Form",
+              "body": [
+                "A **deductive argument** is **valid** if, purely because of its logical form, the conclusion cannot be false while the premises are true. Validity says nothing about whether the premises actually are true — it only guarantees that truth would carry through if they were. '(1) All cats can fly. (2) Felix is a cat. Therefore (3) Felix can fly' is valid, even though premise (1) is false.",
+                "This is why validity is checked by form rather than content: any argument matching the pattern 'All A are B; x is an A; therefore x is B' is valid, whether A, B, and x refer to cats and flying or to humans and mortality. Logicians care about form first because it is what makes an argument trustworthy independent of the specific topic."
+              ]
+            },
+            {
+              "heading": "Soundness: Validity Plus True Premises",
+              "body": [
+                "A **sound** argument is a valid argument whose premises are also actually true — soundness is what you want when you care not just about logical structure but about the conclusion being genuinely established. 'All humans are mortal; Socrates is a human; therefore Socrates is mortal' is both valid and sound, because both premises are true.",
+                "**Modus ponens** ('if P then Q; P; therefore Q') and **modus tollens** ('if P then Q; not Q; therefore not P') are two of the most common valid forms. Recognizing them lets you check an everyday argument's structure quickly: 'if it's raining, the street is wet; the street is wet; therefore it's raining' looks similar but is actually invalid, since a wet street has other possible causes."
+              ],
+              "example": {
+                "problem": "Evaluate: '(1) If a number is divisible by 4, it is divisible by 2. (2) 14 is divisible by 2. Therefore (3) 14 is divisible by 4.' Is this valid? Is the conclusion true?",
+                "steps": [
+                  "Check the form: 'if P then Q; Q; therefore P' — this affirms the consequent, which is not a valid form.",
+                  "Confirm with the specific case: 14 is divisible by 2 but not by 4, so the conclusion is false even though premise (1) is true.",
+                  "Because a valid argument can never have true premises and a false conclusion, and this one does, the argument must be invalid."
+                ],
+                "answer": "Invalid — it commits the fallacy of affirming the consequent, and the false conclusion (14 is divisible by 4) confirms it."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Validity", "def": "A property of an argument's form guaranteeing that if the premises are true, the conclusion must be true."},
+            {"term": "Soundness", "def": "A valid argument whose premises are also actually true."},
+            {"term": "Modus ponens", "def": "The valid form: if P then Q; P; therefore Q."}
+          ],
+          "practice": [
+            {"q": "An argument with false premises but a valid logical form is:", "choices": ["Valid but not sound", "Sound but not valid", "Neither valid nor sound", "Both valid and sound"], "answer": 0, "explain": "Validity depends only on form; soundness additionally requires true premises, which this argument lacks."},
+            {"q": "'If it's raining, the street is wet; the street is wet; therefore it's raining' is invalid because it:", "choices": ["Affirms the consequent instead of using modus ponens", "Uses modus tollens correctly", "Has a false first premise", "Contains no premises at all"], "answer": 0, "explain": "Concluding P from 'if P then Q' and Q alone ignores that Q could have other causes — this is affirming the consequent."},
+            {"q": "A sound argument must be:", "choices": ["Valid, with all premises actually true", "Invalid, with all premises actually true", "Valid, regardless of whether premises are true", "Persuasive, regardless of its logical form"], "answer": 0, "explain": "Soundness requires both a valid form and true premises together."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Inductive Reasoning and Its Limits",
+          "minutes": 11,
+          "intro": "Every time you expect the sun to rise tomorrow because it always has before, you are reasoning inductively — and Hume showed that this kind of reasoning, however useful, can never be logically guaranteed.",
+          "sections": [
+            {
+              "heading": "Inductive Strength Versus Deductive Validity",
+              "body": [
+                "An **inductive argument** offers premises that make its conclusion probable rather than certain — even a strong inductive argument can have true premises and a false conclusion, unlike a valid deductive one. 'Every swan observed so far is white; therefore all swans are white' is a strong induction, but it turned out to be false once black swans were observed in Australia.",
+                "Inductive **strength** comes in degrees: an argument based on a larger, more representative sample is stronger than one based on a small or biased sample. Concluding 'most people prefer tea' from surveying five friends is a much weaker induction than concluding it from a random sample of ten thousand people."
+              ]
+            },
+            {
+              "heading": "The Problem of Induction",
+              "body": [
+                "David Hume observed that we justify inductive reasoning by an inductive argument — 'induction has worked in the past, so it will keep working' — which assumes the very reliability it is trying to prove. This circularity is called the **problem of induction**, and no fully non-circular justification for induction has been found since.",
+                "This does not mean we should abandon induction; even Hume kept using it in daily life. It means our confidence in predictions, however well supported, always carries a residual gap that no amount of past evidence can close with certainty, which is a very different situation from deductive proof."
+              ],
+              "example": {
+                "problem": "A researcher tests a new fertilizer on 500 randomly chosen farms across different climates and finds it increases yield in 480 of them. Is this induction strong, and can it be certain?",
+                "steps": [
+                  "Check the sample: 500 farms across varied climates is large and reasonably representative, which makes the induction strong.",
+                  "Check certainty: even a strong induction only makes the conclusion probable, since some unobserved farm could behave differently.",
+                  "Conclude: the argument gives good practical grounds to expect the fertilizer works generally, but not logical certainty."
+                ],
+                "answer": "It is a strong inductive argument due to the large, varied sample, but strength never converts to certainty."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Inductive argument", "def": "An argument whose premises are intended to make its conclusion probable, not certain."},
+            {"term": "Inductive strength", "def": "The degree to which an induction's premises make its conclusion likely, based on sample size and representativeness."},
+            {"term": "Problem of induction", "def": "Hume's observation that justifying induction by appeal to its past success is circular."}
+          ],
+          "practice": [
+            {"q": "Unlike a valid deductive argument, a strong inductive argument can have:", "choices": ["True premises and a false conclusion", "No premises at all", "A conclusion identical to a premise", "Only one possible interpretation"], "answer": 0, "explain": "Induction only makes a conclusion probable, so true premises never guarantee a true conclusion the way deductive validity does."},
+            {"q": "Hume's problem of induction points out that justifying induction by 'it has worked before' is:", "choices": ["Circular, since it assumes the reliability it is trying to prove", "A valid deductive proof", "Irrelevant to everyday reasoning", "Solved by using larger samples"], "answer": 0, "explain": "Using induction's past success to justify induction assumes the very pattern of reliability in question."},
+            {"q": "Which factor most increases the strength of an inductive argument?", "choices": ["A larger, more representative sample", "A smaller, more convenient sample", "Restating the conclusion as a premise", "Removing all evidence from consideration"], "answer": 0, "explain": "Larger, representative samples make the jump from observed cases to the general conclusion more reliable."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Common Informal Fallacies",
+          "minutes": 11,
+          "intro": "Most bad arguments are not invalid in some technical sense — they are informal fallacies, patterns of reasoning that feel persuasive but smuggle in an error, and learning to spot them is one of the most transferable skills in this course.",
+          "sections": [
+            {
+              "heading": "Attacking the Arguer or a Distortion",
+              "body": [
+                "An **ad hominem** fallacy attacks the person making an argument rather than the argument itself — 'you can't trust her view on climate policy, she's not even a scientist' dismisses the reasoning without engaging it, even if the reasoning happens to be sound.",
+                "A **strawman** fallacy misrepresents an opponent's position as weaker or more extreme than it actually is, then refutes that distorted version. If someone argues for modest gun regulations and their opponent responds 'so you want to ban all guns,' they have attacked a position nobody stated."
+              ]
+            },
+            {
+              "heading": "False Choices and Runaway Slopes",
+              "body": [
+                "A **false dilemma** presents only two options when more exist — 'either we cut the education budget or the whole economy collapses' ignores every option in between, such as raising other revenue or cutting a different budget line.",
+                "A **slippery slope** fallacy claims a first step will inevitably lead to an extreme outcome without justifying each link in the chain — 'if we allow students to redo one assignment, soon no one will ever have to meet a deadline' assumes an escalation nothing in the original proposal supports."
+              ],
+              "example": {
+                "problem": "Identify the fallacy: 'You think we should recycle more? Next you'll want us to ban all cars and live in caves.'",
+                "steps": [
+                  "Identify the original, modest position: recycling more.",
+                  "Identify the response: an extreme, unstated escalation (banning all cars, living in caves) with no argued connection between the steps.",
+                  "This pattern — assuming an extreme outcome follows inevitably from a modest first step — is a slippery slope, and it also strawmans the original claim."
+                ],
+                "answer": "It is primarily a slippery slope fallacy (with an element of strawmanning), since it assumes an unjustified chain to an extreme conclusion."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Ad hominem", "def": "A fallacy that attacks the person making an argument instead of the argument's content."},
+            {"term": "Strawman", "def": "A fallacy that misrepresents a position as weaker than it is, then refutes that distortion."},
+            {"term": "False dilemma", "def": "A fallacy that presents only two options when more actually exist."},
+            {"term": "Slippery slope", "def": "A fallacy claiming a first step inevitably leads to an extreme outcome without justifying each link."}
+          ],
+          "practice": [
+            {"q": "Dismissing an economist's argument by saying 'she's biased because she works for a bank' without addressing her reasoning is:", "choices": ["Ad hominem", "False dilemma", "Slippery slope", "Modus ponens"], "answer": 0, "explain": "The response attacks the arguer's affiliation rather than engaging the substance of her argument."},
+            {"q": "'Either we go to war or we look weak forever' ignores diplomatic and economic options, making it a:", "choices": ["False dilemma", "Strawman", "Ad hominem", "Valid deductive argument"], "answer": 0, "explain": "It reduces a range of real options down to only two, which is the defining feature of a false dilemma."},
+            {"q": "A strawman fallacy specifically involves:", "choices": ["Refuting a distorted, weaker version of an opponent's actual position", "Correctly restating an opponent's position before refuting it", "Presenting only two options", "Attacking the arguer's credentials"], "answer": 0, "explain": "Strawmanning replaces the real position with an exaggerated one that is easier to knock down."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Metaphysics",
+      "summary": "Metaphysics asks what is ultimately real — this unit works through persistence and change, the freedom of the will, and what makes you the same person over time.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Substance, Change, and Persistence",
+          "minutes": 11,
+          "intro": "A wooden ship has every one of its planks replaced over decades, one at a time — and the ancient puzzle of whether it is still the same ship forces a surprisingly hard question: what does it even mean for a thing to persist through change?",
+          "sections": [
+            {
+              "heading": "The Ship of Theseus",
+              "body": [
+                "The **Ship of Theseus** puzzle asks: if a ship has every plank replaced one by one over years, is the fully replaced ship still the same ship? Intuitions pull both ways — the continuous process of repair suggests yes, while the fact that no original material remains suggests no.",
+                "The puzzle sharpens when a second version is added: suppose someone collects all the discarded original planks and reassembles them into a ship. Now there are two candidates for 'the real ship of Theseus,' and whichever one you pick, the puzzle shows that our ordinary concept of identity over time is less precise than it feels."
+              ]
+            },
+            {
+              "heading": "Universals and Particulars",
+              "body": [
+                "A **particular** is an individual, concrete thing — this apple, that chair. A **universal** is a property or quality that many particulars can share, such as redness or roundness. Metaphysicians disagree about whether universals exist independently (realism) or are just useful labels we apply to similar particulars (nominalism).",
+                "This debate matters beyond abstract philosophy: if universals are real, then 'redness' is something apples, stop signs, and fire trucks all genuinely share, not merely resemble. If nominalism is correct, there is no single thing 'redness' — only many individually red objects that we group by convenient labels."
+              ],
+              "example": {
+                "problem": "Apply the Ship of Theseus reasoning to a sports team: if every player on a team is replaced one at a time over ten years, is it still 'the same team'?",
+                "steps": [
+                  "Identify what carries continuity: the name, the organization, the fan base, and the gradual (not all-at-once) replacement.",
+                  "Note the parallel: like the ship, no original 'parts' (players) remain, yet common usage still calls it the same team.",
+                  "Conclude that 'same team' likely tracks organizational and gradual continuity rather than sameness of constituent parts — mirroring one common answer to the ship puzzle."
+                ],
+                "answer": "By the same logic used for the ship, most people would still call it the same team, because identity here tracks continuity of organization rather than sameness of parts — though, as with the ship, this is a judgment call, not a proof."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Ship of Theseus", "def": "A classic puzzle asking whether an object with all its parts gradually replaced remains the same object."},
+            {"term": "Particular", "def": "An individual, concrete thing, as opposed to a general property it might share with others."},
+            {"term": "Universal", "def": "A property or quality, such as redness, that many different particulars can share."}
+          ],
+          "practice": [
+            {"q": "The Ship of Theseus puzzle is designed to test our concept of:", "choices": ["Identity and persistence through change", "The speed of light", "Grammatical correctness", "Economic value"], "answer": 0, "explain": "The puzzle probes what, if anything, makes an object 'the same' object after all its parts change."},
+            {"q": "A philosopher who denies that universals exist independently, treating them only as useful labels, holds a position called:", "choices": ["Nominalism", "Realism about universals", "Modus ponens", "Empiricism"], "answer": 0, "explain": "Nominalism denies independent universals exist, treating shared properties as names we apply to similar particulars."},
+            {"q": "In the puzzle, adding a reassembled ship from the discarded original planks is meant to:", "choices": ["Show two candidates can both plausibly claim to be 'the real ship,' sharpening the puzzle", "Prove definitively which ship is real", "Show that particulars do not exist", "Resolve the puzzle by majority vote"], "answer": 0, "explain": "Having two plausible candidates shows our ordinary notion of identity is less precise than it initially seems."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Free Will and Determinism",
+          "minutes": 13,
+          "intro": "If every event, including every choice you have ever made, was fully caused by events before it stretching back before you were born, in what sense — if any — were you free to have chosen differently?",
+          "sections": [
+            {
+              "heading": "Hard Determinism and Libertarianism",
+              "body": [
+                "**Determinism** is the thesis that every event, including human decisions, is the necessary result of prior causes according to natural law. **Hard determinism** combines this with the claim that free will therefore does not exist — if your decision to read this sentence was fixed by prior brain states, you could not have chosen otherwise.",
+                "**Metaphysical libertarianism** (not the political view) denies determinism for at least human choices, holding that genuinely free decisions are not fully fixed by prior causes. Its central challenge is explaining how an undetermined choice is any less random than a coin flip — if nothing prior fixes it, what makes it 'yours' rather than arbitrary?"
+              ]
+            },
+            {
+              "heading": "Compatibilism",
+              "body": [
+                "**Compatibilism** argues that free will and determinism are not actually in conflict, redefining freedom as acting according to your own desires and reasoning without external coercion — regardless of whether those desires were themselves caused. On this view, a person who freely chooses coffee over tea is free because the choice flows from her own uncoerced preferences, even if those preferences have prior causes.",
+                "Critics object that this redefines freedom rather than defending the freedom people actually care about — if your desires themselves were entirely fixed by genetics and upbringing before you existed, compatibilists must explain why 'acting on your own desires' is enough for genuine responsibility, rather than just relabeling determinism as freedom."
+              ],
+              "example": {
+                "problem": "A woman robs a bank because she was raised in extreme poverty and threats forced her hand, versus a woman who robs a bank purely because she enjoys the thrill, with no coercion or hardship. Would a compatibilist treat these cases identically?",
+                "steps": [
+                  "Recall the compatibilist test: freedom means acting from one's own uncoerced desires and reasoning.",
+                  "Apply it to case one: external threats mean the action was coerced, undermining free, responsible choice on compatibilist terms.",
+                  "Apply it to case two: the action flows from her own desire for thrill with no coercion, so a compatibilist would call it free even though upbringing still shaped her, unlike case one."
+                ],
+                "answer": "No — a compatibilist would distinguish them by the presence of coercion, treating the second case as free and the first as significantly less free, even though determinism is assumed true in both."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Determinism", "def": "The thesis that every event, including decisions, necessarily follows from prior causes according to natural law."},
+            {"term": "Hard determinism", "def": "The view that determinism is true and free will therefore does not exist."},
+            {"term": "Compatibilism", "def": "The view that free will and determinism are compatible, with freedom redefined as acting on one's own uncoerced desires."}
+          ],
+          "practice": [
+            {"q": "A hard determinist would say that a decision fully fixed by prior causes is:", "choices": ["Not free, since the person could not have chosen otherwise", "Free, because it followed the person's own desires", "Uncaused and therefore random", "Impossible under determinism"], "answer": 0, "explain": "Hard determinism combines determinism with the denial of free will precisely because nothing could have gone otherwise."},
+            {"q": "The main challenge to metaphysical libertarianism is explaining:", "choices": ["How an undetermined choice differs from mere randomness", "Why determinism must be true", "Why coercion is irrelevant to freedom", "Why universals exist"], "answer": 0, "explain": "If a choice isn't fixed by prior causes, critics ask what makes it a deliberate choice rather than an arbitrary event."},
+            {"q": "Compatibilists define free action as one that:", "choices": ["Flows from a person's own uncoerced desires and reasoning", "Has absolutely no prior cause", "Is randomly generated", "Is approved by a majority of onlookers"], "answer": 0, "explain": "Compatibilism relocates freedom to the absence of external coercion, not the absence of causation."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Personal Identity Over Time",
+          "minutes": 12,
+          "intro": "You have almost none of the same atoms you had ten years ago, and your memories and personality have shifted too — so what, if anything, actually makes the person reading this sentence the same person who existed a decade ago?",
+          "sections": [
+            {
+              "heading": "The Bodily and Psychological Criteria",
+              "body": [
+                "The **bodily criterion** holds that personal identity over time consists in having the same physical body (or at least the same continuously functioning brain). On this view, whoever has your brain, in whatever body, is you — but it struggles with ordinary cases like gradual cell replacement, which mirrors the Ship of Theseus problem.",
+                "The **psychological continuity criterion**, associated with John Locke, holds that identity consists in an overlapping chain of memories, personality, and intentions connecting earlier and later selves — you today are connected to you-at-age-ten not by any single shared memory, but by a continuous chain of overlapping connections."
+              ]
+            },
+            {
+              "heading": "Teleportation and Duplication Puzzles"
+              ,
+              "body": [
+                "Imagine a teleporter that scans your body, destroys the original, and builds an exact atomic duplicate elsewhere. The bodily criterion says the person who steps out is not you, since your original body was destroyed; the psychological criterion says it is you, since all your memories and personality continue unbroken.",
+                "The puzzle gets sharper if the teleporter malfunctions and produces two duplicates instead of destroying the original — psychological continuity cannot say both duplicates are identical to the original person, since two things cannot both be identical to one thing, which shows continuity alone may not be sufficient for identity either."
+              ],
+              "example": {
+                "problem": "A patient receives a full brain transplant into a donor body. According to the bodily criterion, who is the resulting person? According to the psychological criterion?",
+                "steps": [
+                  "Bodily criterion: identity tracks the body (or, in refined versions, the brain), so if the brain is treated as the seat of the bodily criterion, the person is whoever has that brain.",
+                  "Psychological criterion: identity tracks memory and personality, which travel with the brain, so both criteria converge here on 'the person is whoever has the original brain.'",
+                  "Note the two criteria typically only diverge in cases like teleportation, where the body is destroyed and rebuilt rather than physically continuous."
+                ],
+                "answer": "Both the bodily criterion (via brain continuity) and the psychological criterion agree: the person is whoever ends up with the original brain."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Bodily criterion", "def": "The view that personal identity over time consists in having the same physical body or brain."},
+            {"term": "Psychological continuity", "def": "Locke's view that personal identity consists in an overlapping chain of memory, personality, and intention."},
+            {"term": "Duplication problem", "def": "The puzzle showing that if a person could be duplicated, continuity alone cannot explain identity, since two duplicates cannot both be identical to one original."}
+          ],
+          "practice": [
+            {"q": "According to psychological continuity theory, what connects you today to yourself at age ten?", "choices": ["An overlapping chain of memory and personality, not one single shared memory", "Having exactly the same atoms", "Having the same legal name", "Nothing at all — they are unrelated people"], "answer": 0, "explain": "Locke's theory relies on overlapping links across time, not a single memory bridging the whole gap."},
+            {"q": "The teleporter duplication case is a problem for psychological continuity theory because:", "choices": ["Two duplicates cannot both be identical to one original person", "It proves personal identity does not exist", "It shows bodies never change", "It confirms the bodily criterion is always correct"], "answer": 0, "explain": "If continuity alone made you identical to the original, both duplicates would qualify, which violates basic logic about identity."},
+            {"q": "The bodily criterion of personal identity locates identity in:", "choices": ["Having the same physical body or continuously functioning brain", "Having the same memories regardless of body", "Sharing the same name across a lifetime", "Being recognized by other people"], "answer": 0, "explain": "The bodily criterion ties identity to physical continuity rather than psychological connections."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Epistemology",
+      "summary": "Epistemology asks what knowledge is and how much of it we can actually have — from the classic definition of knowledge to the deepest challenges of skepticism.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Knowledge as Justified True Belief",
+          "minutes": 11,
+          "intro": "Believing something true is not the same as knowing it — you might believe your lottery ticket will lose and be right purely by luck, which feels importantly different from knowing it based on the odds.",
+          "sections": [
+            {
+              "heading": "The Traditional Analysis",
+              "body": [
+                "The traditional analysis defines **knowledge** as **justified true belief (JTB)**: you know a proposition P only if (1) you believe P, (2) P is actually true, and (3) your belief is justified — supported by good reasons or evidence, not luck or guessing. Believing it will rain because you feel lucky, and having it happen to rain, is a true belief but not knowledge, since the belief was not justified.",
+                "Each condition rules out a different failure: without belief, you cannot know something you do not even accept; without truth, you cannot know something false (you can only believe it); without justification, a true belief that is a lucky guess still falls short of knowledge, since it could easily have been wrong."
+              ]
+            },
+            {
+              "heading": "The Gettier Problem",
+              "body": [
+                "In 1963, Edmund **Gettier** presented cases where all three JTB conditions are satisfied, yet the result still does not feel like knowledge, because justification and truth line up only by luck. Suppose you see a clock that reads 3:00, reasonably believe it is 3:00, and it happens to actually be 3:00 — but only because the clock is broken and stopped at exactly 3:00 by coincidence.",
+                "This is called the **Gettier problem**: your belief is justified (the clock looked reliable) and true (it happens to be 3:00) but you do not really know the time, because your justification was accidentally, not reliably, connected to the truth. This showed JTB is necessary but not obviously sufficient for knowledge, and epistemologists still debate what fourth condition might fix it."
+              ],
+              "example": {
+                "problem": "You reasonably believe your coworker Smith will get the promotion because the boss told you so, and you also believe 'the person who gets the promotion has ten coins in their pocket' because you counted Smith's coins. In fact, you get the promotion instead, and you happen to also have ten coins in your pocket. Is your belief 'the person who gets the promotion has ten coins in their pocket' knowledge?",
+                "steps": [
+                  "Check justification: yes, you had good reason to believe it, based on Smith's coins and the tip about the promotion.",
+                  "Check truth: yes, the statement turns out true, but only because you, not Smith, got the job and happened to also have ten coins.",
+                  "Check the connection: the justification (about Smith) and the truth (about you) are connected only by coincidence, not by any reliable link."
+                ],
+                "answer": "No — this is a classic Gettier case: justified and true, but true only by accident, so it fails to count as knowledge."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Justified true belief (JTB)", "def": "The traditional analysis of knowledge as belief that is both true and supported by adequate justification."},
+            {"term": "Justification", "def": "Adequate reasons or evidence supporting a belief, as opposed to luck or guessing."},
+            {"term": "Gettier problem", "def": "Cases showing justified true belief can hold by coincidence rather than knowledge, challenging the JTB analysis."}
+          ],
+          "practice": [
+            {"q": "Believing it will rain purely because you 'feel lucky,' and having it actually rain, fails to count as knowledge because it lacks:", "choices": ["Justification", "Truth", "Belief", "A conclusion"], "answer": 0, "explain": "The belief happens to be true, but nothing supports it beyond a hunch, so the justification condition fails."},
+            {"q": "The Gettier problem shows that justified true belief is:", "choices": ["Not obviously sufficient for knowledge, since justification and truth can align by luck", "Never sufficient or necessary for knowledge", "Always sufficient for knowledge", "Irrelevant to how philosophers define knowledge"], "answer": 0, "explain": "Gettier cases satisfy all three JTB conditions yet still seem to fall short of real knowledge due to a lucky coincidence."},
+            {"q": "In the broken-clock example, the belief 'it is 3:00' fails to be knowledge because:", "choices": ["The truth of the belief is only accidentally connected to the justification", "The belief was false", "The person did not believe it was 3:00", "Clocks can never justify beliefs"], "answer": 0, "explain": "The clock's reading matched reality by coincidence (it was stopped), not through a reliable connection to the actual time."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Rationalism Versus Empiricism",
+          "minutes": 12,
+          "intro": "You know that 7 + 5 = 12 without running an experiment, but you know your coffee is hot only by tasting it — that contrast is the seed of one of philosophy's longest-running disputes about where knowledge comes from.",
+          "sections": [
+            {
+              "heading": "Rationalism",
+              "body": [
+                "**Rationalism**, associated with René Descartes, holds that reason alone, independent of sensory experience, can be a source of substantive knowledge. Mathematical and logical truths are the strongest case: you can know that 2 + 2 = 4 or that nothing can be entirely red and entirely blue at once through pure reasoning, without needing to check the world.",
+                "Rationalists argue some ideas (like the concept of a perfect triangle, or of infinity) are too precise to have been derived purely from imperfect sensory experience, suggesting the mind supplies certain concepts or truths independently — a view called innatism."
+              ]
+            },
+            {
+              "heading": "Empiricism",
+              "body": [
+                "**Empiricism**, associated with John Locke and David Hume, holds that all substantive knowledge of the world ultimately derives from sensory experience — the mind at birth is a **tabula rasa** ('blank slate'), and even abstract ideas are built by combining and reflecting on things we have sensed. Locke argued that a person born blind cannot truly grasp 'red' the way a sighted person can, because the concept originates in visual experience, not pure reason.",
+                "The rationalist/empiricist divide maps onto the **a priori/a posteriori** distinction: **a priori** knowledge is knowable independent of experience (math, logic); **a posteriori** knowledge requires experience to justify (that water boils at 100°C at sea level). Rationalists claim more territory for the a priori than empiricists are willing to grant."
+              ],
+              "example": {
+                "problem": "Classify as more naturally a priori or a posteriori, and note which tradition would emphasize each: (a) 'All bachelors are unmarried.' (b) 'Water freezes at 0°C at sea level.'",
+                "steps": [
+                  "(a) is true purely by the meanings of 'bachelor' and 'unmarried' — you can know it just by understanding the words, without observation, making it a priori.",
+                  "(b) requires observing water under specific conditions; no amount of pure reasoning alone tells you the freezing point, making it a posteriori.",
+                  "Rationalists would emphasize how much can be known like (a); empiricists insist most substantive claims about the world are like (b)."
+                ],
+                "answer": "(a) is a priori; (b) is a posteriori — and the dispute is over how large the a priori category really is."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Rationalism", "def": "The view that reason alone, independent of sensory experience, can yield substantive knowledge."},
+            {"term": "Empiricism", "def": "The view that all substantive knowledge of the world ultimately derives from sensory experience."},
+            {"term": "A priori / a posteriori", "def": "Knowledge knowable independent of experience, versus knowledge that requires experience to justify."}
+          ],
+          "practice": [
+            {"q": "The claim that the mind at birth is a 'tabula rasa,' or blank slate, is most associated with:", "choices": ["Empiricism", "Rationalism", "Hard determinism", "The Gettier problem"], "answer": 0, "explain": "Locke's empiricist picture holds the mind starts blank and all ideas are built from sensory experience."},
+            {"q": "'All bachelors are unmarried' is typically classified as:", "choices": ["A priori, knowable by understanding the terms alone", "A posteriori, requiring observation of many bachelors", "Neither true nor false", "A Gettier case"], "answer": 0, "explain": "Its truth follows from the meanings of the words themselves, not from any empirical investigation."},
+            {"q": "Rationalists cite mathematical knowledge as their strongest case because:", "choices": ["Mathematical truths seem knowable through pure reasoning, without sensory checking", "Math requires extensive laboratory experiments", "Mathematics is entirely a posteriori", "Empiricists reject mathematics as knowledge"], "answer": 0, "explain": "You can verify that 2 + 2 = 4 by reasoning alone, which is exactly the kind of case rationalism points to."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Skepticism and Its Responses",
+          "minutes": 12,
+          "intro": "Descartes asked you to imagine an all-powerful evil demon feeding you a perfectly convincing false experience of the world — and once you take that possibility seriously, it becomes surprisingly hard to say how you would ever know you weren't being deceived.",
+          "sections": [
+            {
+              "heading": "Cartesian Doubt and Modern Versions",
+              "body": [
+                "**Cartesian skepticism** begins with Descartes' method of doubt: to find secure foundations for knowledge, he imagined an evil demon capable of making every sensory experience false, then asked what, if anything, could survive that doubt. His famous answer — 'I think, therefore I am' — is the one thing he judged immune, since doubting requires a thinker doing the doubting.",
+                "The modern version is the **brain-in-a-vat** scenario: if your brain were kept alive in a vat and fed electrical signals producing a perfect illusion of ordinary life, your experience would be indistinguishable from the one you are having now. The unsettling force of the argument is that no experience you could ever have would let you rule the scenario out from the inside."
+              ]
+            },
+            {
+              "heading": "Foundationalism and Coherentism as Responses",
+              "body": [
+                "**Foundationalism** responds to skepticism by identifying some beliefs (like Descartes' 'I think, therefore I am,' or basic sensory experiences) as self-justifying foundations that do not need further support, with all other knowledge built on top of them. The challenge is that very little turns out to qualify as a truly foundational, undoubtable belief.",
+                "**Coherentism** rejects the need for foundations altogether, holding that a belief is justified by how well it fits and supports a whole interconnected web of other beliefs, with no belief more basic than any other. Critics object that an entirely self-consistent but wildly false belief system (like an elaborate conspiracy theory) could in principle cohere perfectly with itself while still being untrue."
+              ],
+              "example": {
+                "problem": "A believer in an elaborate but internally consistent conspiracy theory says every one of their beliefs supports every other, so by coherentist standards their beliefs are justified. What is the standard objection?",
+                "steps": [
+                  "Recall coherentism's test: justification comes from mutual support among beliefs, not connection to an outside foundation.",
+                  "Note the theory can be perfectly self-consistent while still being entirely disconnected from reality.",
+                  "Conclude that pure internal coherence, without any anchor to experience or an outside foundation, cannot guarantee truth — which is the standard objection to coherentism."
+                ],
+                "answer": "The objection is that a system can cohere perfectly and still be false, since coherence alone never checks a belief system against the outside world."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Cartesian skepticism", "def": "Doubt, following Descartes' method, about whether any belief can survive the possibility of total deception."},
+            {"term": "Brain-in-a-vat", "def": "A modern skeptical scenario in which a brain fed artificial signals cannot distinguish illusion from reality."},
+            {"term": "Foundationalism", "def": "The view that some self-justifying basic beliefs support all further, non-basic knowledge."},
+            {"term": "Coherentism", "def": "The view that a belief is justified by fitting a mutually supporting web of beliefs, with no foundational beliefs required."}
+          ],
+          "practice": [
+            {"q": "Descartes concluded that 'I think, therefore I am' survives total doubt because:", "choices": ["Doubting itself requires a thinker doing the doubting", "It can be proven by sensory experience", "An evil demon confirmed it directly", "It is an empirical, a posteriori claim"], "answer": 0, "explain": "Even if every sensory belief is false, the act of doubting still requires something doing the doubting to exist."},
+            {"q": "The brain-in-a-vat scenario is unsettling mainly because:", "choices": ["No possible experience could let you rule it out from the inside", "It has been scientifically proven true", "It only applies to skeptics, not ordinary people", "It resolves the problem of induction"], "answer": 0, "explain": "By design, the simulated experience would be indistinguishable from ordinary experience, so no internal test can rule it out."},
+            {"q": "The standard objection to coherentism is that:", "choices": ["A fully self-consistent belief system can still be entirely false", "It requires an infinite number of foundational beliefs", "It is identical to foundationalism", "It cannot account for any beliefs at all"], "answer": 0, "explain": "Mutual support among beliefs never guarantees a connection to how the world actually is."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Philosophy of Mind and Philosophy of Religion",
+      "summary": "This unit tackles what the mind is and how it relates to the body, then turns to the classic arguments for and against God's existence.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "The Mind-Body Problem",
+          "minutes": 12,
+          "intro": "You can point to a brain scan and show exactly which neurons fire when someone feels pain, yet the felt experience of pain itself — what it's like from the inside — seems to be a different kind of thing entirely from any neuron firing.",
+          "sections": [
+            {
+              "heading": "Dualism",
+              "body": [
+                "**Substance dualism**, defended by Descartes, holds that mind and body are two fundamentally different kinds of substance: the body is physical and extended in space, while the mind is a non-physical, non-spatial thinking thing. Descartes argued you can doubt your body exists (in his demon scenario) but cannot doubt your mind exists, so mind and body must be genuinely distinct substances.",
+                "Dualism's central difficulty is the **interaction problem**: if the mind is truly non-physical, how does it causally affect a physical body — for instance, how does a non-physical decision to raise your arm cause physical neurons and muscles to move? Critics argue this violates the physical principle that only physical causes produce physical effects."
+              ]
+            },
+            {
+              "heading": "Physicalism and the Explanatory Gap",
+              "body": [
+                "**Physicalism** holds that mental states just are physical states of the brain (or are fully realized by them), with no separate non-physical substance required — pain simply is a certain pattern of neural firing, described in different vocabulary. This avoids the interaction problem entirely, since there is only one kind of substance interacting with itself.",
+                "Physicalism faces the **explanatory gap**: even a complete physical description of neural firing during pain does not seem to explain why that firing is accompanied by any felt experience at all, rather than occurring 'in the dark' with no experience attached. This gap is sometimes called the 'hard problem of consciousness,' and it remains one of the most active debates in philosophy of mind."
+              ],
+              "example": {
+                "problem": "A patient reports a vivid experience of a phantom limb — pain that feels located in a leg that was amputated years earlier. How would a dualist and a physicalist each try to explain this?",
+                "steps": [
+                  "Dualist explanation: the non-physical mind continues to represent the leg as present and generates a genuine experience of pain located there, somewhat independent of the (now absent) physical limb.",
+                  "Physicalist explanation: the pain is fully explained by ongoing activity in the brain's body-mapping regions, which continue firing as if the limb were present, with no non-physical component required.",
+                  "Note that physicalism's account fits neatly with actual neuroscience findings about cortical remapping, which is one reason physicalism is the dominant view among neuroscientists."
+                ],
+                "answer": "A dualist would appeal to the mind representing the limb independently of the body; a physicalist would explain the entire experience through continued neural activity in body-mapping brain regions."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Substance dualism", "def": "The view that mind and body are two fundamentally different kinds of substance."},
+            {"term": "Interaction problem", "def": "The challenge of explaining how a non-physical mind could causally affect a physical body."},
+            {"term": "Physicalism", "def": "The view that mental states are physical states of the brain, with no separate non-physical substance."},
+            {"term": "Explanatory gap", "def": "The unresolved gap between a full physical description of the brain and an explanation of why it produces felt experience."}
+          ],
+          "practice": [
+            {"q": "The interaction problem is a challenge specifically for:", "choices": ["Substance dualism", "Physicalism", "Empiricism", "Compatibilism"], "answer": 0, "explain": "Dualism must explain how a non-physical mind causes changes in a physical body, which physicalism avoids by treating both as one substance."},
+            {"q": "The 'explanatory gap' refers to the difficulty of explaining:", "choices": ["Why physical brain activity is accompanied by any felt experience at all", "How neurons transmit electrical signals", "Why bodies are made of cells", "How memories are stored biologically"], "answer": 0, "explain": "Even a full physical account of neural firing does not obviously explain why there is a subjective experience attached to it."},
+            {"q": "Descartes argued mind and body are distinct substances because:", "choices": ["He could doubt the body exists but not that the mind exists", "Neurons cannot be observed", "Physical objects cannot be doubted at all", "Only the body can think"], "answer": 0, "explain": "Since the mind survives even his most radical doubt while the body does not, he concluded they must be different kinds of substance."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Arguments for God's Existence",
+          "minutes": 13,
+          "intro": "Three of the most influential arguments in Western philosophy try to establish God's existence using nothing but reasoning about cause, design, and the very concept of a perfect being — and each has been rigorously challenged in turn.",
+          "sections": [
+            {
+              "heading": "The Cosmological and Teleological Arguments",
+              "body": [
+                "The **cosmological argument** reasons from the existence of the universe to a first cause: everything that exists has a cause, an infinite regress of causes is impossible or unsatisfying, so there must be a first, uncaused cause, identified with God. Critics ask why the first cause itself does not also need a cause, and why that cause must have the traditional attributes of God rather than being some impersonal force.",
+                "The **teleological argument** (the argument from design) reasons from the apparent order and complexity of nature — the fine-tuned constants of physics, the intricate structure of an eye — to an intelligent designer. Critics respond that evolution by natural selection explains biological complexity without a designer, and that apparent fine-tuning could result from chance, or from many universes with different constants (only some capable of supporting observers to notice)."
+              ]
+            },
+            {
+              "heading": "The Ontological Argument",
+              "body": [
+                "The **ontological argument**, from Anselm, reasons from the very concept of God as 'the greatest conceivable being' to God's actual existence: since a being that exists is greater than an otherwise identical being that exists only in the imagination, the greatest conceivable being must exist in reality, not merely as an idea, or it would not be the greatest conceivable being.",
+                "The classic objection, from Gaunilo, applies the same reasoning to a 'greatest conceivable island,' concluding absurdly that the perfect island must exist — suggesting something is wrong with reasoning from the mere concept of a 'greatest' thing to its real existence, regardless of what the thing is."
+              ],
+              "example": {
+                "problem": "A critic says: 'Even if the universe needs a first cause, that only gets you to some first cause — not to a being that is all-knowing, all-powerful, and morally perfect.' Which argument is this objecting to, and is the objection about the argument's logic or its scope?",
+                "steps": [
+                  "Identify the argument: this targets the cosmological argument, which argues for a first cause.",
+                  "Determine the type of objection: it does not deny that a first cause exists; it denies that the argument, even if successful, establishes the specific attributes traditionally assigned to God.",
+                  "Classify it: this is an objection about the argument's scope (what it actually proves), not a challenge to its internal logical validity."
+                ],
+                "answer": "It targets the cosmological argument, and it is a scope objection — granting a first cause while denying the argument shows that cause has God's traditional attributes."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Cosmological argument", "def": "An argument reasoning from the existence of the universe to a first, uncaused cause identified with God."},
+            {"term": "Teleological argument", "def": "An argument reasoning from apparent order and design in nature to an intelligent designer."},
+            {"term": "Ontological argument", "def": "Anselm's argument reasoning from the concept of God as the greatest conceivable being to God's actual existence."}
+          ],
+          "practice": [
+            {"q": "Gaunilo's 'greatest conceivable island' objection targets which argument?", "choices": ["The ontological argument", "The cosmological argument", "The teleological argument", "The problem of induction"], "answer": 0, "explain": "Gaunilo applies Anselm's own reasoning pattern to an island to show it produces an absurd result, questioning the argument's logic."},
+            {"q": "A standard objection to the teleological argument is that:", "choices": ["Natural selection explains biological complexity without a designer", "The universe cannot have any order at all", "It relies on the ontological argument's logic", "It has never been stated clearly"], "answer": 0, "explain": "Evolutionary theory offers a naturalistic explanation for complex biological structure, undercutting the need for a designer."},
+            {"q": "A common objection to the cosmological argument asks:", "choices": ["Why the first cause itself would not also need a cause", "Why islands cannot be perfect", "Why evolution is false", "Why the mind and body interact"], "answer": 0, "explain": "If everything needs a cause, critics press on why the 'first cause' is exempt from that same requirement."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "The Problem of Evil",
+          "minutes": 12,
+          "intro": "If God is all-powerful, all-knowing, and perfectly good, why does a child suffer from a painful illness no one chose and nothing seems to justify — this question has driven more philosophical and theological debate than perhaps any other in the philosophy of religion.",
+          "sections": [
+            {
+              "heading": "The Logical and Evidential Problems",
+              "body": [
+                "The **logical problem of evil** argues that the existence of any evil at all is logically inconsistent with a God who is simultaneously all-powerful (able to prevent evil), all-knowing (aware of all evil), and all-good (motivated to prevent it) — since such a being should have prevented all evil, yet evil exists.",
+                "The **evidential problem of evil** is a weaker but more widely defended version: it does not claim evil is logically impossible alongside God's existence, only that the sheer amount and severity of seemingly pointless suffering (a fawn dying slowly and unseen in a forest fire, for instance) makes God's existence significantly less probable, even if not strictly impossible."
+              ]
+            },
+            {
+              "heading": "Theodicies: The Free Will and Soul-Making Defenses",
+              "body": [
+                "The **free will defense** responds that God permits moral evil (evil caused by human choices) because genuine free will, a great good, requires the real possibility of choosing wrongly — a world with free creatures who can choose evil is arguably better than a world of puppets who can only do good.",
+                "The **soul-making theodicy**, from John Hick, argues that a world containing hardship and suffering is necessary for developing virtues like courage, compassion, and resilience that could not develop in a pain-free paradise — suffering is the difficult but necessary environment for moral and spiritual growth. Critics note neither defense obviously accounts for natural evils (disease, earthquakes) that no human choice or growth seems to require."
+              ],
+              "example": {
+                "problem": "A critic says: 'The free will defense might explain human cruelty, but it doesn't explain why an earthquake kills thousands of people who made no relevant choice.' What kind of evil is the critic pointing to, and which theodicy is most directly challenged?",
+                "steps": [
+                  "Identify the category: earthquakes are natural evils (suffering from nature, not human moral choice), as distinct from moral evils.",
+                  "Determine which defense this challenges: the free will defense specifically addresses moral evil caused by human choices, so it does not directly cover natural evil.",
+                  "Note that the soul-making theodicy is the more common response invoked for natural evil, though critics still question whether the scale of natural suffering is really necessary for growth."
+                ],
+                "answer": "The critic is pointing to natural evil, which directly challenges the free will defense; soul-making is the theodicy usually offered in response, though it too faces objections about scale."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Logical problem of evil", "def": "The argument that any evil at all is logically inconsistent with an all-powerful, all-knowing, all-good God."},
+            {"term": "Evidential problem of evil", "def": "The argument that the amount and severity of seemingly pointless suffering makes God's existence less probable."},
+            {"term": "Free will defense", "def": "The response that God permits moral evil because genuine free will requires the real possibility of choosing wrongly."},
+            {"term": "Soul-making theodicy", "def": "Hick's view that hardship is necessary for developing virtues like courage and compassion."}
+          ],
+          "practice": [
+            {"q": "The evidential (as opposed to logical) problem of evil claims that evil:", "choices": ["Makes God's existence less probable without making it strictly impossible", "Makes God's existence logically impossible", "Has no bearing on belief in God at all", "Proves natural evil does not exist"], "answer": 0, "explain": "The evidential version is a probabilistic argument based on the scale of suffering, weaker than the logical version's claim of strict inconsistency."},
+            {"q": "The free will defense is most directly challenged by which category of evil?", "choices": ["Natural evil, such as earthquakes and disease", "Moral evil caused by human cruelty", "Evil that does not exist", "Evil caused entirely by choice"], "answer": 0, "explain": "Free will explains evil arising from human choices, but earthquakes and disease involve no relevant human choice at all."},
+            {"q": "John Hick's soul-making theodicy argues that suffering is:", "choices": ["A necessary environment for developing virtues like courage and compassion", "Proof that God does not exist", "Entirely random and without purpose", "Only relevant to moral, not natural, evil"], "answer": 0, "explain": "Hick argues virtues could not develop in a world without hardship, making difficulty a purposeful part of moral growth."}
+          ]
+        },
+        {
+          "id": "l4",
+          "title": "Faith, Reason, and Religious Experience",
+          "minutes": 11,
+          "intro": "Millions of people report a direct, personal experience of the divine that feels as immediate and certain to them as seeing a tree or feeling the sun — the question of what, if anything, such experiences can prove is its own philosophical debate.",
+          "sections": [
+            {
+              "heading": "The Evidentialist Challenge",
+              "body": [
+                "**Evidentialism**, in the philosophy of religion, holds that it is irrational to believe a claim, including a religious one, without sufficient evidence proportioned to how extraordinary the claim is. W.K. Clifford's famous formulation is that it is wrong, always and everywhere, to believe anything on insufficient evidence, since such beliefs can spread carelessness and cause real harm.",
+                "Evidentialists apply this standard to religious belief just as they would to any other extraordinary claim, arguing that faith which outruns the available evidence is not a virtue but an intellectual and ethical failing, however comforting it might feel."
+              ]
+            },
+            {
+              "heading": "Fideism and the Argument from Religious Experience",
+              "body": [
+                "**Fideism** responds that faith is a distinct, legitimate way of holding belief that need not (and perhaps cannot) meet ordinary evidential standards, since ultimate questions about God may lie beyond what reason and evidence alone can settle. On this view, demanding proof for faith misunderstands what faith is for.",
+                "William James offered a different response, the **argument from religious experience**: many people across cultures report experiences of profound, seemingly direct contact with the divine, and treating all such testimony as worthless requires a level of skepticism most people do not apply to other kinds of first-person experience. Critics note that religious experiences differ dramatically across traditions and often conflict with each other, which weakens their evidential force as pointing to any one specific religious truth."
+              ],
+              "example": {
+                "problem": "A person reports a powerful, life-changing experience of feeling God's presence during a moment of crisis. An evidentialist and a fideist would each respond differently — describe both responses.",
+                "steps": [
+                  "Evidentialist response: the experience alone, without independent corroborating evidence, is not sufficient grounds for the extraordinary claim that God exists and intervened; it may be explained by psychological or neurological factors instead.",
+                  "Fideist response: the experience itself can be a legitimate, sufficient basis for faith, since faith is not meant to be held to the same evidential bar as an ordinary empirical claim.",
+                  "Note the disagreement is not about whether the experience happened, but about what kind of justification religious belief actually requires."
+                ],
+                "answer": "An evidentialist would say the experience alone is insufficient evidence for the extraordinary claim; a fideist would say religious experience can justify faith on its own terms, without needing to meet ordinary evidential standards."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Evidentialism", "def": "The view that it is irrational to hold a belief without evidence proportioned to how extraordinary the claim is."},
+            {"term": "Fideism", "def": "The view that faith is a legitimate way of holding belief that need not meet ordinary evidential standards."},
+            {"term": "Argument from religious experience", "def": "The argument that widespread reports of direct experience of the divine provide some evidence for religious claims."}
+          ],
+          "practice": [
+            {"q": "W.K. Clifford's evidentialist position holds that believing without sufficient evidence is:", "choices": ["Wrong, always and everywhere", "Acceptable for religious claims only", "Required for genuine faith", "Impossible to avoid"], "answer": 0, "explain": "Clifford argued that believing on insufficient evidence is an ethical failing regardless of the subject matter."},
+            {"q": "Fideism differs from evidentialism mainly by claiming that:", "choices": ["Faith need not meet ordinary evidential standards", "Faith requires more evidence than any other belief", "Religious experience is always deceptive", "Evidence is irrelevant to all beliefs, religious or not"], "answer": 0, "explain": "Fideism holds faith operates by different standards than ordinary evidence-based belief."},
+            {"q": "A common objection to the argument from religious experience is that:", "choices": ["Such experiences conflict across traditions, weakening their force as evidence for one specific religious truth", "No one has ever reported such an experience", "It is identical to the ontological argument", "It only applies to atheists"], "answer": 0, "explain": "Different, mutually inconsistent religious experiences across cultures make it hard to treat them as pointing to one specific truth."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Moral and Political Philosophy",
+      "summary": "Having built tools for reasoning and examined reality, knowledge, mind, and God, this unit turns to the oldest practical question of all: how should we live, and how should we organize life together?",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Consequentialism and Deontology",
+          "minutes": 12,
+          "intro": "Imagine you could save five strangers from a runaway trolley by pushing one person onto the tracks to stop it — most people's gut reactions to this scenario reveal, more clearly than any lecture could, that we don't all judge right and wrong by the same standard.",
+          "sections": [
+            {
+              "heading": "Consequentialism",
+              "body": [
+                "**Consequentialism** judges an action's rightness entirely by its outcomes: the right action is the one producing the best overall consequences. **Utilitarianism**, its most influential form, specifically defines 'best' as the greatest total happiness or well-being for everyone affected, counting each person's welfare equally.",
+                "Applied to the trolley case, a utilitarian calculation compares five deaths averted against one death caused, and on pure numbers favors pushing the one person — a conclusion many people find deeply uncomfortable, which is exactly the kind of tension that motivates rival theories."
+              ]
+            },
+            {
+              "heading": "Deontology",
+              "body": [
+                "**Deontology**, most associated with Immanuel Kant, judges actions by whether they conform to a moral duty or rule, independent of the consequences they produce — some acts (like using a person merely as a means to save others, without their consent) are wrong even if they produce a better outcome. Kant's **categorical imperative** tests an action by asking whether the rule behind it could be willed as a universal law for everyone.",
+                "Applied to the trolley case, a strict deontologist objects to pushing the one person because doing so uses that person purely as an instrument to save others, violating their status as an end in themselves — regardless of how many lives are saved as a result. This is why the trolley problem is used so often: it isolates exactly where consequentialist and deontological reasoning diverge."
+              ],
+              "example": {
+                "problem": "A surgeon could secretly kill one healthy patient to harvest organs and save five dying patients who need transplants. Compare how a consequentialist and a deontologist would evaluate this, and note why most people's intuitions align with only one of the two theories here, unlike the classic trolley case.",
+                "steps": [
+                  "Consequentialist calculation: five lives saved versus one lost suggests, on pure outcome-counting, that the surgery produces better overall consequences.",
+                  "Deontological objection: killing the healthy patient uses him purely as a means to benefit others, without his consent, violating a core moral duty regardless of the numbers.",
+                  "Note that most people's intuitions side with the deontological verdict here, even though many of those same people accept the utilitarian verdict in the trolley case — a puzzle both theories must explain."
+                ],
+                "answer": "A consequentialist would favor the surgery on outcome-counting grounds; a deontologist would condemn it as using a person merely as a means — and most people's intuitions favor the deontological answer here, unlike in the standard trolley case."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Consequentialism", "def": "The view that an action's rightness depends entirely on the goodness of its outcomes."},
+            {"term": "Utilitarianism", "def": "The consequentialist theory that the right action produces the greatest total happiness or well-being for everyone affected."},
+            {"term": "Deontology", "def": "The view that actions are right or wrong based on conformity to duty or rule, independent of consequences."},
+            {"term": "Categorical imperative", "def": "Kant's test for a moral rule: whether it could be willed as a universal law for everyone."}
+          ],
+          "practice": [
+            {"q": "A consequentialist judges the rightness of an action by:", "choices": ["The overall goodness of its outcomes", "Whether it follows a fixed duty regardless of outcome", "The character of the person performing it", "Whether a majority of people approve of it"], "answer": 0, "explain": "Consequentialism defines right action purely in terms of the results it produces, not the rule or character behind it."},
+            {"q": "Kant's categorical imperative tests a moral rule by asking:", "choices": ["Whether it could be willed as a universal law for everyone", "Whether it maximizes total happiness", "Whether it is legal in most countries", "Whether it produces the least suffering"], "answer": 0, "explain": "Kant's test is about universalizability of the rule behind an action, not about calculating outcomes."},
+            {"q": "In the organ-harvesting case, the deontological objection is that the healthy patient is:", "choices": ["Used merely as a means to benefit others, without consent", "Not actually harmed by the surgery", "Given the greatest total happiness", "Treated according to utilitarian calculation"], "answer": 0, "explain": "Deontology holds that treating a person purely as an instrument for others' benefit violates their status as an end in themselves."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Virtue Ethics and Care Ethics",
+          "minutes": 11,
+          "intro": "Instead of asking 'what rule applies here?' or 'what produces the best outcome?', a third tradition asks a different question entirely: what would a genuinely honest, courageous, and fair-minded person actually do?",
+          "sections": [
+            {
+              "heading": "Virtue Ethics",
+              "body": [
+                "**Virtue ethics**, rooted in Aristotle, holds that ethics is fundamentally about character rather than rules or outcomes — the right action is what a person with well-developed virtues (courage, honesty, generosity, practical wisdom) would do in the situation. Aristotle's **doctrine of the mean** locates virtue as a balance between two vices: courage is the mean between the excess of recklessness and the deficiency of cowardice.",
+                "Virtue ethics does not produce a formula the way consequentialism or deontology does, which is sometimes treated as a weakness, but its defenders argue this reflects moral reality accurately: ethical life is less about applying a single rule correctly and more about cultivating stable good character through habit and practice over an entire life."
+              ]
+            },
+            {
+              "heading": "Care Ethics",
+              "body": [
+                "**Care ethics**, developed by Carol Gilligan and Nel Noddings, criticizes traditional theories for over-emphasizing abstract, impartial rules and instead centers ethics on maintaining caring relationships and responding to the concrete needs of particular people you are connected to. A parent's obligation to their own child, on this view, is not simply an instance of a universal rule applied impartially, but flows from the specific relationship itself.",
+                "Care ethics has been especially influential in medical and caregiving contexts, where treating every patient with strictly identical, impartial rules can miss what is actually best for a specific person's needs and relationships — though critics worry that partiality toward those close to us could, unchecked, justify neglecting the needs of strangers."
+              ],
+              "example": {
+                "problem": "A nurse has two patients needing attention: her own mother, also a patient on the ward, and a stranger in a nearly identical medical situation. How would care ethics reason about this differently than a strict impartial utilitarian rule?",
+                "steps": [
+                  "Recall care ethics' core claim: relationships and concrete responsibilities to particular people matter morally, not just impartial calculation.",
+                  "Apply it: the nurse's relationship with her mother generates a genuine, additional moral consideration beyond treating the two patients as interchangeable cases.",
+                  "Contrast with strict impartial utilitarianism, which in its purest form would tell the nurse to weigh both patients' welfare identically, ignoring the relationship entirely."
+                ],
+                "answer": "Care ethics holds that the nurse's relationship to her mother is itself morally relevant, unlike a strictly impartial utilitarian rule that would treat both patients as interchangeable."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Virtue ethics", "def": "The view that ethics centers on character and virtue rather than rules or consequences alone."},
+            {"term": "Doctrine of the mean", "def": "Aristotle's idea that a virtue is a balanced mean between an excess vice and a deficiency vice."},
+            {"term": "Care ethics", "def": "The view that ethics centers on maintaining caring relationships and responding to particular people's concrete needs."}
+          ],
+          "practice": [
+            {"q": "Aristotle's doctrine of the mean locates courage as a balance between:", "choices": ["Recklessness (excess) and cowardice (deficiency)", "Honesty and dishonesty", "Utilitarianism and deontology", "Care ethics and virtue ethics"], "answer": 0, "explain": "Virtue, for Aristotle, is a mean between an excess and a deficiency of the same trait — courage sits between recklessness and cowardice."},
+            {"q": "Care ethics differs from traditional impartial theories chiefly by emphasizing:", "choices": ["Concrete relationships and responsibilities to particular people", "Maximizing aggregate happiness above all else", "Strict universal rules applied identically to everyone", "The doctrine of the categorical imperative"], "answer": 0, "explain": "Care ethics centers moral reasoning on maintaining specific relationships, not purely impartial calculation or universal rules."},
+            {"q": "A key criticism of virtue ethics is that it:", "choices": ["Does not supply a clear formula for what to do in every specific situation", "Ignores character entirely", "Is identical to utilitarian calculation", "Cannot be applied to real ethical dilemmas at all"], "answer": 0, "explain": "Unlike consequentialism or deontology, virtue ethics does not reduce to a simple decision procedure, which critics see as a gap."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Justice and the Social Contract",
+          "minutes": 12,
+          "intro": "Why should anyone obey laws they never personally agreed to, made by people they never met, enforced by a government they may not even support — political philosophy's answer usually starts with an imagined agreement.",
+          "sections": [
+            {
+              "heading": "Social Contract Theory",
+              "body": [
+                "**Social contract theory**, developed by Hobbes, Locke, and Rousseau, argues that political authority is legitimate because it rests on an (often implicit) agreement among individuals to give up some freedoms in exchange for the security and benefits of organized society. Hobbes argued that without such an agreement, life in a 'state of nature' would be a brutal war of all against all, making even a strict government preferable to no government at all.",
+                "Locke's version was more limited: individuals retain certain natural rights (life, liberty, property) that government exists to protect, and a government that systematically violates those rights breaks the contract and can be legitimately overthrown — an idea that directly influenced the language of the U.S. Declaration of Independence."
+              ]
+            },
+            {
+              "heading": "Rawls' Veil of Ignorance",
+              "body": [
+                "John Rawls updated the social contract with a thought experiment called the **veil of ignorance**: imagine designing a society's basic rules without knowing what position you will occupy in it — your race, class, talents, or even your conception of the good life. Rawls argued that rational people behind this veil would choose principles that protect the worst-off position, since anyone could end up there.",
+                "This leads to Rawls' **difference principle**: social and economic inequalities are only justified if they work to the benefit of the least advantaged members of society. Critics on the political right argue this principle overvalues equality at the cost of individual liberty and merit; critics on the left argue it is too permissive of some level of inequality."
+              ],
+              "example": {
+                "problem": "Two proposed tax policies: Policy A gives everyone an identical flat amount regardless of need. Policy B redistributes more to the poorest, funded by higher taxes on the wealthiest, and is projected to raise the income floor for the poorest group. Which would Rawls' difference principle favor, and why?",
+                "steps": [
+                  "Recall the difference principle: inequality is justified only if it benefits the least advantaged.",
+                  "Evaluate Policy A: an identical flat amount does nothing special to improve the position of the worst-off relative to alternatives.",
+                  "Evaluate Policy B: it is specifically designed to raise the floor for the poorest group, which is exactly the test the difference principle applies."
+                ],
+                "answer": "Rawls' difference principle would favor Policy B, since it is judged specifically by whether it improves the position of the least advantaged, which Policy B is designed to do."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Social contract theory", "def": "The view that political authority is legitimate because it rests on an agreement among individuals to form organized society."},
+            {"term": "State of nature", "def": "Hobbes' hypothetical condition of life without government or organized society."},
+            {"term": "Veil of ignorance", "def": "Rawls' thought experiment of designing society's rules without knowing one's own position within it."},
+            {"term": "Difference principle", "def": "Rawls' principle that social and economic inequalities are just only if they benefit the least advantaged."}
+          ],
+          "practice": [
+            {"q": "Rawls' veil of ignorance asks people designing society's rules to do so without knowing:", "choices": ["Their own position, talents, or class within that society", "The total population of the society", "Whether government should exist at all", "The names of any historical philosophers"], "answer": 0, "explain": "The veil removes knowledge of one's own place in society specifically to produce impartial, fair principles."},
+            {"q": "According to Rawls' difference principle, an economic inequality is just only if it:", "choices": ["Benefits the least advantaged members of society", "Benefits only the wealthiest members", "Is approved by a simple majority vote", "Eliminates all forms of inequality entirely"], "answer": 0, "explain": "The difference principle specifically tests inequality against whether it improves the position of the worst-off group."},
+            {"q": "Locke's version of the social contract holds that a government which systematically violates natural rights:", "choices": ["Breaks the contract and can be legitimately overthrown", "Remains legitimate regardless of its actions", "Is impossible, since governments cannot violate rights", "Was never based on a contract in the first place"], "answer": 0, "explain": "Locke's contract is conditional on protecting natural rights, so a government violating them forfeits its legitimacy."}
+          ]
+        }
+      ]
+    }
+  ]
+}

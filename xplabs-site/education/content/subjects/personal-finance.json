@@ -1,0 +1,667 @@
+{
+ "id": "personal-finance",
+ "title": "Personal Finance",
+ "domain": "business",
+ "level": "All levels",
+ "description": "Personal Finance is the practical math and decision-making behind managing your own money: building a budget that actually holds, using credit without falling into its traps, letting compound interest work for you, and navigating insurance, taxes, and the biggest purchases of a lifetime - a home, a car, an education. Every lesson works real numbers to a real answer.",
+ "outcomes": [
+  "You can build a zero-based monthly budget and size an emergency fund based on your real expenses.",
+  "You can explain how credit scores are calculated and compute credit utilization and credit card interest costs.",
+  "You can calculate compound growth over time and compare investment fees using real numbers.",
+  "You can work through a health insurance bill using deductibles, coinsurance, and out-of-pocket maximums.",
+  "You can compute your tax bracket, marginal rate, and effective tax rate on a given income.",
+  "You can calculate loan payments and total interest for student loans, auto loans, and mortgages."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Budgeting Basics",
+   "summary": "How to sort spending into needs, wants, and values; how to build a budget where every dollar has a job; and how to size and build an emergency fund.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Needs, Wants, and Values",
+     "minutes": 10,
+     "intro": "Every dollar you spend is a vote for the life you're building. Before any budget or spreadsheet works, you need a clear-eyed way to sort what you spend on into needs, wants, and what actually reflects what you value.",
+     "sections": [
+      {
+       "heading": "Needs vs. Wants",
+       "body": [
+        "A **need** is spending required for basic survival and functioning: housing, food, utilities, minimum transportation, healthcare. A **want** is discretionary spending that improves quality of life but isn't required: dining out, entertainment, subscriptions, upgrades. The line isn't always obvious - a car may be a need for commuting, but a luxury upgrade on top of that is a want layered onto a need.",
+        "A common starting framework is the **50/30/20 rule**: roughly 50% of take-home pay toward needs, 30% toward wants, and 20% toward savings and extra debt repayment. It isn't a law - just a simple structure for sorting spending before deciding what, if anything, needs to change."
+       ]
+      },
+      {
+       "heading": "Aligning Spending with Values",
+       "body": [
+        "Real budgeting success comes from spending in line with what you actually value, not from cutting every want to zero. It's fine to spend generously on something you love - travel, hobbies, a nice bike - as long as it's a conscious tradeoff against something else, not accidental overspending that leaves no room for savings.",
+        "Every dollar has an **opportunity cost**: money spent on one thing is money not available for something else. Framing purchases this way - 'this is instead of that' - turns a vague feeling of overspending into a specific, comparable tradeoff you can actually evaluate."
+       ],
+       "example": {
+        "problem": "Monica takes home $3,200 per month. Using the 50/30/20 rule as a starting point, how much should go to needs, wants, and savings/debt repayment?",
+        "steps": [
+         "Needs = 50% × 3,200 = $1,600.",
+         "Wants = 30% × 3,200 = $960.",
+         "Savings/debt repayment = 20% × 3,200 = $640."
+        ],
+        "answer": "$1,600 for needs, $960 for wants, $640 for savings or debt repayment."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "need", "def": "Spending required for basic survival and functioning, such as housing, food, utilities, and minimum transportation."},
+      {"term": "want", "def": "Discretionary spending that improves quality of life but isn't required for survival, such as dining out or entertainment."},
+      {"term": "50/30/20 rule", "def": "A budgeting guideline allocating about 50% of take-home pay to needs, 30% to wants, and 20% to savings or debt repayment."},
+      {"term": "opportunity cost", "def": "What you give up by spending or saving money one way instead of another."}
+     ],
+     "practice": [
+      {"q": "Using the 50/30/20 rule, someone with $2,400 in monthly take-home pay should budget roughly how much for wants?", "choices": ["$1,200", "$720", "$480", "$2,400"], "answer": 1, "explain": "Wants = 30% × 2,400 = $720 under the 50/30/20 guideline."},
+      {"q": "Which of the following is best classified as a 'want' rather than a 'need'?", "choices": ["Rent on a one-bedroom apartment", "A streaming subscription", "A basic grocery bill", "An electric bill"], "answer": 1, "explain": "A streaming subscription is discretionary spending that improves quality of life but isn't required for basic survival, making it a want rather than a need."},
+      {"q": "Why is the 50/30/20 rule described as a 'starting point' rather than a fixed law?", "choices": ["Because it is illegal to use in some states", "Because actual needs, income, and goals vary by person, so the percentages should be adjusted to fit real circumstances", "Because it only works for people with no debt", "Because it applies only to wants, not needs"], "answer": 1, "explain": "The 50/30/20 split is a general guideline; real budgets should be adjusted for individual circumstances like high housing costs, debt payoff goals, or dependents."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Building a Zero-Based Budget",
+     "minutes": 12,
+     "intro": "A zero-based budget gives every single dollar of income a job before the month begins - so instead of wondering where your paycheck went, you already decided where it's going.",
+     "sections": [
+      {
+       "heading": "What 'Zero-Based' Actually Means",
+       "body": [
+        "In a **zero-based budget**, you subtract every planned expense and savings contribution from your income until the result is zero - not because you spend everything, but because every dollar, including savings, has been assigned a specific category. Income − (all expenses + all savings) = $0 is the goal, not overspending.",
+        "This differs from simply tracking spending after the fact. A zero-based budget is built before the month starts, using your actual expected income and a deliberate plan for every category - rent, groceries, debt payments, savings, fun money - so surprises come from unexpected events, not from never having decided where money would go."
+       ]
+      },
+      {
+       "heading": "Building One Step by Step",
+       "body": [
+        "Start by listing take-home income for the month. Then list **fixed expenses** (rent, insurance, loan payments - amounts that don't change month to month), **variable expenses** (groceries, utilities, gas - necessary but fluctuating), and **discretionary spending** (entertainment, dining out). Savings and extra debt payoff should be budgeted as their own line item, not whatever happens to be left over.",
+        "If expenses plus savings don't add up to exactly your income, adjust a category - usually a discretionary one - until they do. The zero-based method forces this reconciliation every month, which is exactly what makes it effective: it catches drift before it becomes a habit."
+       ],
+       "example": {
+        "problem": "Jordan takes home $3,200 per month. His plan: Housing $1,000, Utilities $150, Groceries $400, Transportation $250, Debt payments $300, Insurance $150, Savings $400, Entertainment $200, Personal/misc $350. Does this budget balance to zero?",
+        "steps": [
+         "Add all categories: 1,000 + 150 + 400 + 250 + 300 + 150 + 400 + 200 + 350.",
+         "1,000 + 150 = 1,150; + 400 = 1,550; + 250 = 1,800; + 300 = 2,100; + 150 = 2,250; + 400 = 2,650; + 200 = 2,850; + 350 = 3,200.",
+         "Total planned spending and savings = $3,200, matching his $3,200 income exactly."
+        ],
+        "answer": "Yes - every dollar of the $3,200 is assigned, so income minus all categories equals zero."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "zero-based budget", "def": "A budget where every dollar of income is assigned to a category - including savings - so income minus all planned categories equals zero."},
+      {"term": "fixed expense", "def": "A cost that stays the same each month, such as rent or a loan payment."},
+      {"term": "variable expense", "def": "A necessary cost that fluctuates month to month, such as groceries or utilities."},
+      {"term": "discretionary spending", "def": "Optional spending on wants, such as entertainment or dining out, that can be adjusted more easily than fixed expenses."}
+     ],
+     "practice": [
+      {"q": "In a zero-based budget, what does it mean when income minus all planned categories equals zero?", "choices": ["The person has no money left for anything, including savings", "Every dollar of income, including savings, has been assigned a specific job before the month starts", "The budget has failed and needs to be redone", "The person is in debt"], "answer": 1, "explain": "Zero-based budgeting means every dollar - including money set aside for savings - has an assigned category; 'zero' is the planning target, not a sign of running out of money."},
+      {"q": "Using Jordan's budget as a model, if his rent unexpectedly increases by $100 per month and his income stays the same, what must happen to keep the budget zero-based?", "choices": ["Nothing - the budget will balance itself automatically", "At least one other category (often a discretionary one) must be reduced by $100 to offset the increase", "His income must increase by $100", "Zero-based budgets cannot handle unexpected cost increases"], "answer": 1, "explain": "Because every dollar must be assigned and the total must equal income, a $100 increase in one category requires an equal reduction somewhere else to keep the budget balanced at zero."},
+      {"q": "What is the key difference between a zero-based budget and simply tracking spending after it happens?", "choices": ["There is no real difference between the two", "A zero-based budget assigns every dollar a job before the month starts, while tracking only records what already happened", "Tracking spending is illegal in most states", "Zero-based budgets do not include savings"], "answer": 1, "explain": "Zero-based budgeting is proactive - deciding where every dollar goes in advance - while simply tracking spending is reactive, only showing where money already went."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Emergency Funds and Saving Systems",
+     "minutes": 11,
+     "intro": "A car repair, a medical bill, or a sudden layoff shouldn't have to mean a maxed-out credit card. An emergency fund is the one savings goal that comes before almost everything else, because it's what keeps a bad month from becoming a bad year.",
+     "sections": [
+      {
+       "heading": "How Big Should an Emergency Fund Be?",
+       "body": [
+        "An **emergency fund** is cash set aside specifically for unplanned, necessary expenses - not a vacation, not a want, but true emergencies like job loss, medical bills, or urgent home or car repairs. The standard guideline is 3 to 6 months of **essential expenses** (not full income - just the needs categories: housing, food, utilities, minimum debt payments, insurance).",
+        "Where in that 3-to-6-month range to land depends on your situation: someone with a stable job, other working household members, and good insurance can lean toward 3 months, while someone with irregular income, a single household earner, or a less secure job should lean toward 6 months or more."
+       ]
+      },
+      {
+       "heading": "Where to Keep It, and How to Build It",
+       "body": [
+        "An emergency fund should be kept somewhere safe and immediately accessible - a **high-yield savings account**, not invested in the stock market, because the point is certainty and quick access, not growth. Money that could disappear in value right when you need it defeats the purpose of the fund.",
+        "Building the fund is usually done through **automated saving**: a fixed amount moved to savings on payday, before it can be spent on anything else. Treating savings like a required 'bill you pay yourself' consistently outperforms saving whatever happens to be left at the end of the month, which is often nothing."
+       ],
+       "example": {
+        "problem": "Priya's essential monthly expenses (housing, food, utilities, minimum debt payments, insurance) total $2,400. She wants a 3-month emergency fund, and is currently saving $300 per month toward it from zero. How large is her target fund, and how many months will it take to reach it?",
+        "steps": [
+         "Target fund = 3 × monthly essential expenses = 3 × 2,400 = $7,200.",
+         "Months to reach the goal = target ÷ monthly savings = 7,200 ÷ 300 = 24 months."
+        ],
+        "answer": "Her target emergency fund is $7,200, and at $300 per month it will take 24 months (2 years) to reach it."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "emergency fund", "def": "Cash set aside specifically for unplanned necessary expenses, such as job loss, medical bills, or urgent repairs."},
+      {"term": "essential expenses", "def": "The needs-only portion of a budget - housing, food, utilities, minimum debt payments, insurance - used to size an emergency fund."},
+      {"term": "high-yield savings account", "def": "A savings account offering a higher interest rate than a standard account, while remaining safe and immediately accessible."},
+      {"term": "automated saving", "def": "Moving a fixed amount to savings automatically on payday, before it can be spent elsewhere."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, if essential monthly expenses are $1,800 and the goal is a 6-month emergency fund, what is the target amount?", "choices": ["$1,800", "$5,400", "$10,800", "$21,600"], "answer": 2, "explain": "Target fund = 6 × 1,800 = $10,800."},
+      {"q": "Why should an emergency fund typically be kept in a savings account rather than invested in the stock market?", "choices": ["Savings accounts always earn a higher return than stocks", "The fund needs to be safe and immediately accessible, since the point is certainty when an emergency strikes, not growth", "Stock market investments are illegal for emergency funds", "Savings accounts have no minimum balance requirements"], "answer": 1, "explain": "Emergency funds prioritize safety and quick access over growth, since the money may be needed immediately and shouldn't be exposed to market swings that could shrink it right when it's needed."},
+      {"q": "Why does automating a fixed transfer to savings on payday tend to work better than saving 'whatever is left over' at the end of the month?", "choices": ["Automated transfers are required by law", "Treating savings like a required expense paid first tends to actually happen, while 'leftover' savings is often nothing after spending", "Leftover savings always earns a higher interest rate", "There is no real difference between the two approaches"], "answer": 1, "explain": "Paying savings first, automatically, removes the temptation to spend it first and reliably builds the fund, whereas relying on leftover money often results in little or nothing being saved."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Banking and Credit",
+   "summary": "How bank accounts and FDIC insurance work, what actually drives a credit score, and how to use credit cards without falling into the interest trap.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "How Banking Works: Checking, Savings, and Beyond",
+     "minutes": 10,
+     "intro": "A bank isn't just a safe place to keep money - it's a business built on moving other people's money around, and understanding how it works helps you use it (and avoid its fees) to your advantage.",
+     "sections": [
+      {
+       "heading": "Checking vs. Savings Accounts",
+       "body": [
+        "A **checking account** is built for frequent transactions - paying bills, making debit purchases, writing checks - and typically pays little or no interest. A **savings account** is built to hold money you're not spending right away, usually pays some interest, and often limits how many withdrawals you can make per month.",
+        "Banks make much of their money by lending out a portion of the money customers deposit, at a higher interest rate than they pay depositors, and by charging fees - overdraft fees, monthly maintenance fees, ATM fees - which is exactly why comparing account fee schedules, and meeting minimum balance requirements to waive fees, is worth the time it takes."
+       ]
+      },
+      {
+       "heading": "FDIC Insurance and Choosing a Bank",
+       "body": [
+        "In the United States, deposits at FDIC-insured banks are protected up to $250,000 per depositor, per bank, per ownership category - meaning if the bank fails, government-backed insurance covers your deposits up to that limit. Always confirm a bank or credit union is FDIC-insured (or NCUA-insured for credit unions) before depositing money.",
+        "Online-only banks often offer higher interest rates on savings and lower fees than traditional brick-and-mortar banks, because they don't maintain physical branches - a real tradeoff against the convenience of in-person service, worth weighing based on how often you actually need a branch."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "checking account", "def": "A bank account built for frequent transactions like bill payments and debit purchases, usually paying little or no interest."},
+      {"term": "savings account", "def": "A bank account built to hold money not being spent immediately, usually paying some interest and limiting withdrawals."},
+      {"term": "FDIC insurance", "def": "U.S. government-backed protection of bank deposits up to $250,000 per depositor, per bank, per ownership category."},
+      {"term": "overdraft fee", "def": "A fee charged when an account holder spends more than their available balance."}
+     ],
+     "practice": [
+      {"q": "Which account type is generally best suited for money you plan to spend on bills and everyday purchases this month?", "choices": ["A savings account", "A checking account", "A certificate of deposit", "An emergency fund"], "answer": 1, "explain": "Checking accounts are designed for frequent transactions like bill payments and debit purchases, unlike savings accounts, which are built to hold money not being spent right away."},
+      {"q": "If a bank fails, what does FDIC insurance guarantee for a depositor with $150,000 in a single account at that bank?", "choices": ["Nothing is protected", "The full $150,000 is protected, since it is under the $250,000 per-depositor, per-bank limit", "Only $100,000 is protected", "FDIC insurance only applies to savings accounts, not checking accounts"], "answer": 1, "explain": "FDIC insurance protects deposits up to $250,000 per depositor, per bank, per ownership category - $150,000 falls entirely within that limit and would be fully protected."},
+      {"q": "Why can online-only banks often offer higher savings interest rates than traditional brick-and-mortar banks?", "choices": ["Online banks are not regulated", "They avoid the cost of maintaining physical branches, letting them pass some of that savings to customers through better rates", "Online banks are less safe, so they must pay more to attract customers", "There is no real difference in rates between the two"], "answer": 1, "explain": "Without the overhead of physical branch networks, online banks often pass along savings to customers as higher interest rates and lower fees, a real tradeoff against in-person service."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "How Credit Scores Work",
+     "minutes": 11,
+     "intro": "A three-digit number can decide whether you get approved for an apartment, what interest rate you pay on a car loan, and sometimes even whether you get a job offer. Knowing what actually drives that number puts you back in control of it.",
+     "sections": [
+      {
+       "heading": "What Goes Into a Credit Score",
+       "body": [
+        "A credit score (commonly a FICO score, ranging from 300 to 850) is built from a handful of weighted factors: **payment history** (about 35%, whether you've paid bills on time), **credit utilization** (about 30%, how much of your available credit you're using), length of credit history (about 15%), credit mix (about 10%, having different types of credit like cards and loans), and new credit inquiries (about 10%).",
+        "Payment history and utilization together make up roughly two-thirds of the score, which means the two most powerful things you control are simple: pay every bill on time, every time, and keep balances low relative to your credit limits."
+       ]
+      },
+      {
+       "heading": "Credit Utilization in Practice",
+       "body": [
+        "**Credit utilization** is your credit card balance divided by your credit limit, and lenders generally like to see it under 30%, with under 10% considered excellent. This isn't about carrying a balance and paying interest - it's about how much of your available credit is being used at the moment your balance is reported, even if you pay it off in full every month.",
+        "Because utilization is measured per card and overall, closing an old, unused credit card can actually hurt your score - it reduces your total available credit, which can push your utilization ratio up even if your spending hasn't changed, and it can also shorten your average length of credit history."
+       ],
+       "example": {
+        "problem": "Deshawn has one credit card with a $5,000 limit and a current balance of $1,500. What is his credit utilization ratio, and is it in a healthy range?",
+        "steps": [
+         "Utilization = balance ÷ credit limit = 1,500 ÷ 5,000.",
+         "1,500 ÷ 5,000 = 0.30 = 30%."
+        ],
+        "answer": "His utilization is 30%, right at the commonly cited upper guideline - keeping it under 10% would be considered excellent."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "credit score", "def": "A three-digit number (commonly 300-850) summarizing creditworthiness, built mainly from payment history and credit utilization."},
+      {"term": "payment history", "def": "A record of whether bills and debts were paid on time; the single largest factor in most credit scores."},
+      {"term": "credit utilization", "def": "The percentage of available credit currently being used, calculated as balance divided by credit limit."},
+      {"term": "credit inquiry", "def": "A record of a lender checking your credit report, typically when you apply for new credit."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, a credit card has a $10,000 limit and a $4,000 balance. What is the utilization ratio?", "choices": ["10%", "25%", "40%", "60%"], "answer": 2, "explain": "Utilization = 4,000 ÷ 10,000 = 0.40 = 40%."},
+      {"q": "Which two factors together make up roughly two-thirds of a typical credit score?", "choices": ["Credit mix and new credit inquiries", "Payment history and credit utilization", "Length of credit history and credit mix", "New credit inquiries and length of credit history"], "answer": 1, "explain": "Payment history (about 35%) and credit utilization (about 30%) together account for roughly 65% of a typical FICO score - the two most impactful factors."},
+      {"q": "Why might closing an old, unused credit card actually lower someone's credit score?", "choices": ["Closing cards is illegal", "It reduces total available credit, which can raise the utilization ratio, and can shorten the average length of credit history", "Credit scores only consider currently active cards, so this should have no effect", "Closing a card always erases payment history for all other cards"], "answer": 1, "explain": "Losing that card's credit limit shrinks total available credit, which can push utilization higher even without new spending, and it can also reduce the average age of your open accounts."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Using Credit Cards Wisely",
+     "minutes": 12,
+     "intro": "A credit card can be a convenient, even rewarding, tool - or an expensive trap. The difference almost always comes down to one habit: paying the statement balance in full, every month, without exception.",
+     "sections": [
+      {
+       "heading": "How Credit Card Interest Actually Works",
+       "body": [
+        "Credit cards charge interest based on an **APR (annual percentage rate)**, but the interest is calculated and applied monthly - so a card with a 22% APR charges roughly 22% ÷ 12 ≈ 1.83% per month on any balance carried past the due date. Paying the statement balance in full by the due date avoids interest entirely, thanks to a **grace period** most cards offer on purchases.",
+        "Once you carry a balance, that grace period disappears and interest begins accruing on the outstanding amount - which is why even a single month of carrying a balance can add real cost, and why 'I'll pay it off eventually' is a much more expensive plan than it sounds."
+       ]
+      },
+      {
+       "heading": "Why Minimum Payments Are a Trap",
+       "body": [
+        "Credit card **minimum payments** are set low - often just 1-3% of the balance plus that month's interest - specifically because low minimums keep balances outstanding (and interest accruing) for as long as possible. Paying only the minimum on a card can stretch a modest balance into years of payments and turn a manageable debt into one that costs more in interest than the amount originally borrowed.",
+        "The fix is straightforward even when it isn't easy: pay more than the minimum whenever possible, prioritize the highest-APR balance first if carrying multiple cards, and treat 'pay in full every month' as the real goal rather than the exception."
+       ],
+       "example": {
+        "problem": "Maria carries a $2,000 balance on a card with a 22% APR and pays only the $50 minimum each month, making no new charges. About how long will it take to pay off, and roughly how much interest will she pay in total?",
+        "steps": [
+         "Monthly interest rate ≈ 22% ÷ 12 ≈ 1.83%.",
+         "First month's interest ≈ 2,000 × 0.0183 ≈ $36.67, so only about $13.33 of the $50 payment reduces the balance.",
+         "Using the standard loan payoff formula, it takes roughly 73 months (over 6 years) to pay off the balance at this rate.",
+         "Total paid ≈ 73 × $50 ≈ $3,650, so total interest paid ≈ 3,650 − 2,000 ≈ $1,650."
+        ],
+        "answer": "It takes about 6 years to pay off, and Maria pays roughly $1,650 in interest - more than 80% of the original $2,000 balance."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "APR (annual percentage rate)", "def": "The yearly interest rate charged on a credit card balance, applied monthly on any amount carried past the due date."},
+      {"term": "grace period", "def": "A window (commonly the time until the next due date) during which no interest is charged if the statement balance is paid in full."},
+      {"term": "minimum payment", "def": "The smallest amount a cardholder must pay each month, usually a small percentage of the balance plus that month's interest."},
+      {"term": "statement balance", "def": "The total amount owed as of the last billing cycle's closing date; paying this in full by the due date avoids interest."}
+     ],
+     "practice": [
+      {"q": "A credit card has a 24% APR. Roughly what is the equivalent monthly interest rate charged on a carried balance?", "choices": ["24%", "12%", "2%", "0.24%"], "answer": 2, "explain": "Monthly rate ≈ 24% ÷ 12 = 2%, applied to any balance carried past the due date."},
+      {"q": "Why does paying only the minimum payment on a credit card balance take so long to pay off?", "choices": ["Minimum payments are set intentionally low, so a large share of each payment covers interest rather than reducing the principal balance", "Minimum payments are illegal, so cards discourage them", "Interest stops accruing once a minimum payment is made", "Minimum payments always equal the full statement balance"], "answer": 0, "explain": "Low minimum payments are mostly absorbed by monthly interest, leaving only a small amount to actually reduce the balance - which is why it can take years to pay off even a modest balance this way."},
+      {"q": "What is the single most reliable way to avoid paying any credit card interest?", "choices": ["Making only the minimum payment on time", "Paying the full statement balance by the due date every month", "Requesting a lower APR once per year", "Using the card only for large purchases"], "answer": 1, "explain": "Paying the statement balance in full by the due date keeps the grace period intact, so no interest accrues on purchases at all - the single most effective way to avoid credit card interest."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Saving and Investing",
+   "summary": "How compound interest turns time into money, how stocks, bonds, and index funds differ, and how retirement accounts and employer matches work.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Compound Interest: Your Most Powerful Tool",
+     "minutes": 12,
+     "intro": "Compound interest has been called the eighth wonder of the world for a reason: money invested today doesn't just grow, it grows on its own growth - and starting early matters more than almost any other single decision in personal finance.",
+     "sections": [
+      {
+       "heading": "How Compounding Works",
+       "body": [
+        "**Compound interest** means you earn a return not only on your original investment, but also on all the returns it has already earned. The formula is Future Value = Present Value × (1 + r)^n, where r is the annual return rate and n is the number of years invested - the exponent is what makes growth accelerate rather than stay flat over time.",
+        "Because of that exponent, the difference between investing at age 25 and waiting until age 35 is not simply 'ten years less growth' - it's ten fewer years of the most valuable compounding period, since money invested earliest has the most future years left to keep multiplying."
+       ]
+      },
+      {
+       "heading": "Why Starting Early Beats Contributing More Later",
+       "body": [
+        "The practical lesson is that time in the market matters more than timing the market or even the exact amount invested - a smaller amount invested early can outgrow a larger amount invested later, purely because it has more years to compound. This is the single strongest argument for starting to invest as early as possible, even with small amounts.",
+        "This doesn't mean waiting to start is fine as long as you 'catch up' later with bigger contributions - the math usually doesn't work that way, because no later amount of saving can recreate the extra years of compounding that were lost."
+       ],
+       "example": {
+        "problem": "Aiko invests $6,000 once at age 25 in an account earning 7% annually, and never touches it again. Compare its value at age 65 (40 years of growth) versus if she had waited until age 35 to invest the same $6,000 (30 years of growth).",
+        "steps": [
+         "Starting at 25: FV = 6,000 × (1.07)^40 ≈ 6,000 × 14.974 ≈ $89,847.",
+         "Starting at 35: FV = 6,000 × (1.07)^30 ≈ 6,000 × 7.612 ≈ $45,674.",
+         "Difference = 89,847 − 45,674 ≈ $44,173."
+        ],
+        "answer": "Starting 10 years earlier roughly doubles the outcome: about $89,847 versus $45,674 - a $44,173 difference from the same $6,000, invested the same way, just started a decade sooner."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "compound interest", "def": "Interest earned on both the original investment and on all previously earned interest or returns."},
+      {"term": "future value", "def": "What an investment grows to after earning a return over a number of years: FV = PV × (1 + r)^n."},
+      {"term": "time in the market", "def": "The total number of years money remains invested and compounding, which matters more than trying to time market highs and lows."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, what is the approximate future value of $3,000 invested once at 7% annual return for 40 years?", "choices": ["$8,400", "$21,000", "$44,924", "$120,000"], "answer": 2, "explain": "FV = 3,000 × (1.07)^40 ≈ 3,000 × 14.974 ≈ $44,924."},
+      {"q": "Why does starting to invest 10 years earlier produce nearly double the final amount in the worked example, rather than just a modest boost?", "choices": ["Because interest rates were higher in the past", "Because compound growth accelerates with an exponent on time, so extra early years are the most valuable years for growth", "Because the $6,000 amount changes over time", "Because later investors are charged a penalty"], "answer": 1, "explain": "Since future value grows by (1 + r) raised to the power of the number of years, adding years at the start captures the most compounding, since every dollar of that early growth then also compounds for all the years that follow."},
+      {"q": "Why is 'time in the market' generally considered more important than trying to time the exact best moment to invest?", "choices": ["Because timing the market is illegal", "Because more years invested means more years of compounding, and that effect typically outweighs the impact of any single well-timed purchase", "Because markets never go down", "Because time in the market guarantees a specific return"], "answer": 1, "explain": "The number of years money stays invested and compounding tends to matter more for long-term growth than trying to pick the perfect entry point, which is difficult to do reliably anyway."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Stocks, Bonds, and Index Funds",
+     "minutes": 12,
+     "intro": "Every long-term investor eventually has to decide what to actually own. Stocks, bonds, and the funds that bundle them together each play a different role - and the fees you pay to hold them matter far more than most people realize.",
+     "sections": [
+      {
+       "heading": "Stocks and Bonds: Two Very Different Claims",
+       "body": [
+        "A **stock** is a share of ownership in a company - your return depends entirely on how that company performs, which means higher potential growth but also higher volatility. A **bond** is a loan you make to a company or government, which promises to pay you back with interest - generally lower potential return, but more predictable and less volatile than stocks.",
+        "Because stocks and bonds tend to respond differently to economic conditions, most long-term portfolios hold both, with the mix (often called asset allocation) shifting toward more bonds as an investor gets closer to needing the money, trading some growth potential for more stability."
+       ]
+      },
+      {
+       "heading": "Index Funds and the Cost of Fees",
+       "body": [
+        "An **index fund** is a fund that simply holds all (or a representative sample) of the stocks or bonds in a market index, like the S&P 500, rather than trying to pick winners - and because there's no expensive research team trying to beat the market, index funds typically charge a very low **expense ratio** (an annual fee, as a percentage of your investment).",
+        "That fee difference compounds just like returns do. A fund charging 1.0% a year instead of 0.03% doesn't just cost you 1% each year in isolation - it costs you 1% of a balance that would otherwise have kept growing, year after year, which becomes a very large number over decades."
+       ],
+       "example": {
+        "problem": "Two investors each put $10,000 into a fund for 30 years, earning 7% before fees. Investor A pays a 0.03% expense ratio (net return 6.97%); Investor B pays a 1.0% expense ratio (net return 6.0%). Compare their final balances.",
+        "steps": [
+         "Investor A: FV = 10,000 × (1.0697)^30 ≈ 10,000 × 7.548 ≈ $75,480.",
+         "Investor B: FV = 10,000 × (1.06)^30 ≈ 10,000 × 5.743 ≈ $57,430.",
+         "Difference = 75,480 − 57,430 ≈ $18,050."
+        ],
+        "answer": "Investor A ends up with about $18,050 more, purely from a fee difference of less than one percentage point per year, compounded over 30 years."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "stock", "def": "A share of ownership in a company, with returns tied to how that company performs."},
+      {"term": "bond", "def": "A loan made to a company or government that promises repayment with interest; generally lower risk and return than stocks."},
+      {"term": "index fund", "def": "A fund that holds the stocks or bonds in a market index rather than trying to pick winners, usually charging very low fees."},
+      {"term": "expense ratio", "def": "The annual fee a fund charges, expressed as a percentage of the amount invested."}
+     ],
+     "practice": [
+      {"q": "Why do stocks generally carry more volatility (bigger swings in value) than bonds?", "choices": ["Stocks are illegal to sell quickly", "A stock's return depends on company performance, which can vary widely, while a bond promises a fixed repayment with interest", "Bonds always lose money over time", "Stocks pay no return at all"], "answer": 1, "explain": "Stock returns depend on uncertain company performance, while bonds promise a fixed repayment stream, making bonds generally more predictable and less volatile than stocks."},
+      {"q": "Using the same method as the worked example, why does a 1.0% expense ratio cost an investor far more than 'just 1% per year' over a 30-year period?", "choices": ["It doesn't - fees never compound", "The fee is taken from a balance that would otherwise keep compounding, so lost growth is lost every year after, not just once", "Expense ratios are charged only once at the start", "Higher expense ratios always guarantee higher returns"], "answer": 1, "explain": "Because the fee reduces the balance available to keep growing, its effect compounds over time just like returns do, turning a seemingly small annual fee into a large gap after decades."},
+      {"q": "What is the defining feature of an index fund compared to an actively managed fund?", "choices": ["It guarantees a fixed return every year", "It holds the stocks or bonds of a market index rather than trying to pick individual winners, typically at a much lower fee", "It only invests in bonds", "It cannot be held in a retirement account"], "answer": 1, "explain": "Index funds simply track a market index rather than paying analysts to pick investments, which is why they typically charge far lower fees than actively managed funds."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Retirement Accounts: 401(k) and IRA",
+     "minutes": 11,
+     "intro": "Retirement accounts aren't a different kind of investment - they're a special tax status wrapped around ordinary investments like stocks and bonds, and understanding that wrapper can be worth thousands of dollars over a career.",
+     "sections": [
+      {
+       "heading": "Employer Matches: Free Money With a Catch",
+       "body": [
+        "A **401(k)** is a retirement account offered through an employer, often with an **employer match** - the employer contributes additional money based on how much you contribute, up to a limit. A common match structure is 50% of your contribution up to 6% of your salary, meaning if you contribute 6%, the employer adds another 3% on top, for free.",
+        "Not contributing enough to capture the full match is often described as leaving free money on the table, because that match is an instant, guaranteed return on your contribution that no investment can reliably match on its own."
+       ]
+      },
+      {
+       "heading": "Traditional vs. Roth: Pay Taxes Now or Later",
+       "body": [
+        "A **traditional** 401(k) or IRA is funded with pre-tax dollars - contributions reduce your taxable income now, but withdrawals in retirement are taxed as ordinary income. A **Roth** 401(k) or IRA is funded with after-tax dollars - no upfront tax break, but qualified withdrawals in retirement are entirely tax-free, including all the growth.",
+        "The choice often comes down to whether you expect your tax rate to be higher now or in retirement: if you expect to be in a lower tax bracket in retirement, traditional accounts often win; if you expect a similar or higher bracket later (common for younger savers early in their careers), Roth accounts often come out ahead."
+       ],
+       "example": {
+        "problem": "Sam earns $50,000 a year and his employer matches 50% of his 401(k) contributions up to 6% of salary. If Sam contributes 6% of his salary, how much does he contribute, how much does the employer add, and what is the total annual contribution?",
+        "steps": [
+         "Sam's contribution = 6% × 50,000 = $3,000.",
+         "Employer match = 50% × Sam's contribution = 50% × 3,000 = $1,500.",
+         "Total annual contribution = 3,000 + 1,500 = $4,500."
+        ],
+        "answer": "Sam contributes $3,000, his employer adds $1,500, for a total of $4,500 per year - $1,500 of it essentially free money."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "401(k)", "def": "An employer-sponsored retirement account, often including an employer match on employee contributions."},
+      {"term": "employer match", "def": "Additional money an employer contributes to a retirement account based on the employee's own contribution, up to a limit."},
+      {"term": "traditional account", "def": "A retirement account funded with pre-tax dollars, where withdrawals in retirement are taxed as ordinary income."},
+      {"term": "Roth account", "def": "A retirement account funded with after-tax dollars, where qualified withdrawals in retirement are entirely tax-free."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, if Sam earned $60,000 and contributed 6% with the same 50% match up to 6%, what would the total annual contribution be?", "choices": ["$3,600", "$1,800", "$5,400", "$7,200"], "answer": 2, "explain": "Sam's contribution = 6% × 60,000 = $3,600. Employer match = 50% × 3,600 = $1,800. Total = 3,600 + 1,800 = $5,400."},
+      {"q": "Why is failing to contribute enough to capture a full employer 401(k) match often described as 'leaving free money on the table'?", "choices": ["Because the employer match must be repaid later", "Because the match is additional money the employer contributes only in response to your own contribution, effectively a guaranteed extra return", "Because 401(k) accounts have no tax benefits", "Because matches are illegal to decline"], "answer": 1, "explain": "An employer match is extra money added specifically because you contributed - money you simply don't receive if you contribute less than the amount needed to capture the full match."},
+      {"q": "A young saver expects to be in a similar or higher tax bracket by retirement. Which account type would this reasoning tend to favor?", "choices": ["Traditional, because it avoids taxes entirely", "Roth, because paying tax now (at a bracket expected to be similar to or lower than the future) and withdrawing tax-free later is more favorable", "Neither account type matters if tax brackets don't change", "A checking account, since retirement accounts always lose money"], "answer": 1, "explain": "If future tax rates are expected to be similar to or higher than today's, paying tax on contributions now (Roth) and enjoying fully tax-free withdrawals later tends to be more advantageous than deferring tax to a future, possibly higher, bracket."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Insurance and Taxes",
+   "summary": "How health, auto, and home insurance actually pay out; and how the marginal tax bracket system determines what you really owe.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Health Insurance Basics",
+     "minutes": 12,
+     "intro": "A single hospital visit can cost more than a year of premiums - which is exactly why understanding deductibles, coinsurance, and out-of-pocket maximums before you need care can save you from a devastating surprise bill.",
+     "sections": [
+      {
+       "heading": "The Core Vocabulary: Premium, Deductible, Coinsurance",
+       "body": [
+        "A **premium** is the amount you pay regularly (usually monthly) just to have coverage, whether or not you use any care. A **deductible** is the amount you must pay out of pocket for covered care before your insurance starts sharing costs. **Coinsurance** is the percentage of costs you continue to pay after meeting your deductible, with insurance covering the rest.",
+        "A **copay** is a fixed dollar amount for a specific service (like $30 for a doctor visit), separate from the deductible/coinsurance structure for other costs. The **out-of-pocket maximum** is the absolute most you'll pay in a year for covered care - once you hit it, insurance covers 100% of covered costs for the rest of the year."
+       ]
+      },
+      {
+       "heading": "Working Through a Real Bill",
+       "body": [
+        "These pieces work together in sequence: you pay 100% of costs until you hit your deductible, then you pay your coinsurance percentage on costs above the deductible, until you hit your out-of-pocket maximum, after which insurance covers everything for the rest of the year. Understanding this sequence is what lets you actually estimate what a major medical event will cost you.",
+        "Plans with lower premiums usually have higher deductibles and out-of-pocket maximums, and vice versa - so the 'best' plan depends on how much care you expect to need. Someone who rarely needs care may prefer a lower premium, higher deductible plan, while someone managing an ongoing condition may come out ahead paying more monthly for lower cost-sharing."
+       ],
+       "example": {
+        "problem": "Malia's health plan has a $2,000 deductible, 20% coinsurance, and a $6,000 out-of-pocket maximum. She has a medical bill of $10,000 this year and has paid nothing toward her deductible yet. How much does she pay, and how much does insurance pay?",
+        "steps": [
+         "She first pays the full $2,000 deductible out of pocket, leaving 10,000 − 2,000 = $8,000 of billed costs.",
+         "On the remaining $8,000, she pays 20% coinsurance: 20% × 8,000 = $1,600. Insurance pays the other 80%: 80% × 8,000 = $6,400.",
+         "Her total out-of-pocket cost so far = 2,000 + 1,600 = $3,600, which is under her $6,000 out-of-pocket maximum, so no additional cap applies this year."
+        ],
+        "answer": "Malia pays $3,600 total; her insurance pays $6,400 of the $10,000 bill."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "premium", "def": "The regular (usually monthly) payment required just to have health insurance coverage, regardless of care used."},
+      {"term": "deductible", "def": "The amount a policyholder must pay out of pocket for covered care before insurance begins sharing costs."},
+      {"term": "coinsurance", "def": "The percentage of costs a policyholder continues to pay after meeting the deductible, with insurance covering the rest."},
+      {"term": "out-of-pocket maximum", "def": "The most a policyholder will pay for covered care in a year; insurance covers 100% of covered costs beyond this amount."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, if Malia's medical bill had instead been $3,000 with the same $2,000 deductible and 20% coinsurance, how much would she pay total?", "choices": ["$2,200", "$3,000", "$600", "$2,000"], "answer": 0, "explain": "She pays the $2,000 deductible first, leaving $1,000. Coinsurance = 20% × 1,000 = $200. Total = 2,000 + 200 = $2,200."},
+      {"q": "What is the main purpose of an out-of-pocket maximum in a health insurance plan?", "choices": ["To increase how much a policyholder pays without limit", "To cap the total amount a policyholder pays for covered care in a year, after which insurance covers 100%", "To replace the need for a monthly premium", "To determine eligibility for coverage"], "answer": 1, "explain": "The out-of-pocket maximum protects policyholders from unlimited costs by capping their total spending on covered care each year."},
+      {"q": "Why might someone managing an ongoing medical condition prefer a plan with a higher premium but lower deductible and coinsurance?", "choices": ["Higher-premium plans are always illegal to decline", "Because they expect to use enough care that lower cost-sharing saves more overall than the extra premium costs", "Because premiums are refunded at the end of the year", "Because deductibles never apply to ongoing conditions"], "answer": 1, "explain": "Someone expecting frequent care may pay less in total (premium plus cost-sharing) with a plan that has a higher premium but lower deductible and coinsurance, since they'll actually use the lower cost-sharing repeatedly."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Protecting Your Stuff: Auto, Home, and Renters Insurance",
+     "minutes": 11,
+     "intro": "Insurance for your car, your home, and what's inside it works on the same basic idea as health insurance - trading a small, predictable cost now for protection against a large, unpredictable loss later.",
+     "sections": [
+      {
+       "heading": "Auto Insurance: Liability and Beyond",
+       "body": [
+        "**Liability coverage** pays for injuries or property damage you cause to others in an accident, and is required in some form by law in nearly every state - it does not cover your own car or injuries. Liability limits are often written as three numbers, like 100/300/50: $100,000 per person for injuries, $300,000 total per accident for injuries, and $50,000 for property damage.",
+        "**Collision** coverage pays for damage to your own car from an accident, regardless of fault; **comprehensive** coverage pays for non-collision damage like theft, fire, or hail. Both are optional beyond liability, but are often required by a lender if you're still financing the car, since the lender has a financial interest in the vehicle."
+       ]
+      },
+      {
+       "heading": "Home and Renters Insurance",
+       "body": [
+        "**Homeowners insurance** covers the structure of a home and its contents against covered perils (fire, certain storms, theft) and includes liability coverage if someone is injured on your property. **Renters insurance** covers a tenant's personal belongings and liability, but not the building itself, which remains the landlord's responsibility and insurance to cover.",
+        "Renters insurance is often surprisingly inexpensive - commonly $15 to $30 a month - because it only needs to cover belongings and liability, not the structure. Skipping it is a common and costly mistake, since a landlord's insurance will not reimburse a tenant for their own stolen or damaged possessions."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "liability coverage", "def": "Insurance that pays for injuries or property damage you cause to others; does not cover your own vehicle or injuries."},
+      {"term": "collision coverage", "def": "Optional auto insurance that pays for damage to your own vehicle from an accident, regardless of fault."},
+      {"term": "comprehensive coverage", "def": "Optional auto insurance that pays for non-collision damage to your vehicle, such as theft, fire, or hail."},
+      {"term": "renters insurance", "def": "Insurance covering a tenant's personal belongings and liability, but not the building itself."}
+     ],
+     "practice": [
+      {"q": "A driver's auto liability policy is written as 100/300/50. What does the '50' represent?", "choices": ["$50,000 per person for injuries", "$50,000 total for injuries per accident", "$50,000 for property damage caused to others", "A $50 monthly premium"], "answer": 2, "explain": "In a 100/300/50 liability policy, the third number represents the property damage liability limit - here, $50,000 for property damage caused to others."},
+      {"q": "Why doesn't a landlord's property insurance cover a renter's personal belongings if they're stolen or damaged?", "choices": ["Landlord insurance always covers everything in the unit", "Landlord insurance covers the building structure, not a tenant's personal belongings, which is why renters insurance exists separately", "Renters are legally required to have no insurance", "Tenants are never allowed to file insurance claims"], "answer": 1, "explain": "A landlord's policy protects the structure they own; a tenant's own belongings need to be covered by the tenant's own renters insurance policy."},
+      {"q": "A driver wants coverage for damage to their own car after an at-fault accident. Which coverage type provides this?", "choices": ["Liability coverage", "Collision coverage", "Renters insurance", "FDIC insurance"], "answer": 1, "explain": "Collision coverage specifically pays for damage to the policyholder's own vehicle from an accident, regardless of who was at fault."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "How Income Tax Works: Brackets, Not a Flat Rate",
+     "minutes": 12,
+     "intro": "Moving into a higher tax bracket doesn't mean all of your income suddenly gets taxed at the higher rate - a common and costly misunderstanding that can make people turn down a raise they should absolutely take.",
+     "sections": [
+      {
+       "heading": "Marginal Tax Brackets",
+       "body": [
+        "The U.S. uses a **marginal tax bracket** system: income is divided into chunks, and each chunk is taxed at its own rate, with the rate rising as income rises. Using simplified illustrative brackets for a single filer - 10% on the first $11,000, 12% on income from $11,000 to $44,725, and 22% on income from $44,725 to $95,375 - someone earning $60,000 does not pay 22% on the entire $60,000.",
+        "Instead, they pay 10% on the first $11,000, 12% on the next chunk up to $44,725, and 22% only on the portion above $44,725. This is why the rate on your last dollar earned (your **marginal tax rate**) is always higher than the rate you pay on average across all your income."
+       ]
+      },
+      {
+       "heading": "Marginal Rate vs. Effective Rate",
+       "body": [
+        "Your **effective tax rate** is your total tax bill divided by your total taxable income - the true average rate you actually paid, which is always lower than your marginal rate in a bracket system. This distinction matters for real decisions: earning an extra dollar of income, or getting a raise that pushes part of your income into a higher bracket, never reduces your overall take-home pay, because only the income within the new bracket is taxed at the higher rate.",
+        "Understanding this removes a common (and costly) fear: no raise or bonus can ever leave you with less money after taxes than before, because bracket boundaries only apply to the income that falls within them, never retroactively to income already taxed at a lower rate."
+       ],
+       "example": {
+        "problem": "Using the simplified brackets above (10% up to $11,000; 12% from $11,000-$44,725; 22% from $44,725-$95,375), find the tax owed and effective tax rate for a single filer with $60,000 in taxable income.",
+        "steps": [
+         "Bracket 1: 10% × 11,000 = $1,100.",
+         "Bracket 2: 12% × (44,725 − 11,000) = 12% × 33,725 = $4,047.",
+         "Bracket 3: 22% × (60,000 − 44,725) = 22% × 15,275 = $3,360.50.",
+         "Total tax = 1,100 + 4,047 + 3,360.50 = $8,507.50.",
+         "Effective tax rate = 8,507.50 ÷ 60,000 ≈ 14.18%."
+        ],
+        "answer": "Total tax owed is about $8,507.50; the marginal rate is 22%, but the effective (average) rate is only about 14.18%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "marginal tax bracket", "def": "A range of income taxed at a specific rate, with higher ranges of income taxed at higher rates."},
+      {"term": "marginal tax rate", "def": "The tax rate applied to the last (highest) dollar of income earned; the rate of the bracket you're currently in."},
+      {"term": "effective tax rate", "def": "Total tax owed divided by total taxable income; the true average rate paid across all income."},
+      {"term": "taxable income", "def": "Income remaining after subtracting deductions, used to calculate tax owed under the bracket system."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, why does a single filer earning $60,000 pay far less than 22% of their total income in tax, even though 22% is their marginal rate?", "choices": ["Because the 22% rate is a mistake in the tax code", "Because only the income above $44,725 is taxed at 22% - the rest is taxed at the lower 10% and 12% rates that applied to those earlier chunks of income", "Because tax brackets do not actually apply to real income", "Because effective tax rate and marginal tax rate are the same number"], "answer": 1, "explain": "In a marginal bracket system, only income within a given bracket is taxed at that bracket's rate; income in lower brackets keeps being taxed at the lower rates, which is why the effective rate is always below the marginal rate."},
+      {"q": "Someone worries that accepting a raise will push them into a higher tax bracket and leave them with less take-home pay than before. Is this concern justified?", "choices": ["Yes, entering a higher bracket taxes all of your income at the new higher rate", "No - only the additional income within the new bracket is taxed at the higher rate, so take-home pay never decreases from earning more", "Yes, but only for incomes above $1,000,000", "No, because tax brackets no longer exist"], "answer": 1, "explain": "Marginal brackets apply only to the income within each bracket; a raise that pushes part of your income into a higher bracket still leaves your earlier income taxed at the same lower rates as before, so total take-home pay always rises with a raise."},
+      {"q": "What is the difference between marginal tax rate and effective tax rate?", "choices": ["They are always exactly the same number", "Marginal rate is the rate on your last dollar of income; effective rate is your total tax divided by total income, and is always lower in a bracket system", "Marginal rate only applies to businesses", "Effective rate is always higher than marginal rate"], "answer": 1, "explain": "Marginal rate reflects the bracket your last dollar falls into, while effective rate averages your entire tax bill across all your income - which is always a lower number given how brackets stack up from low to high rates."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Big Purchases and Life Decisions",
+   "summary": "The loan math behind the three biggest purchases most people make: an education, a car, and a home.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Student Loans: Borrowing for Education",
+     "minutes": 12,
+     "intro": "A student loan is often the first major debt someone takes on, and the size of the monthly payment it creates years later depends entirely on numbers decided today: how much you borrow, at what rate, and over how many years.",
+     "sections": [
+      {
+       "heading": "Federal vs. Private Student Loans",
+       "body": [
+        "**Federal student loans** come from the U.S. government, generally offer fixed interest rates, and include borrower protections like income-driven repayment plans and deferment options during hardship. **Private student loans** come from banks or other lenders, may have variable rates, and typically offer far fewer flexible repayment options if a borrower runs into trouble.",
+        "Because of these protections, financial guidance almost universally recommends exhausting federal loan options (and scholarships and grants, which don't need to be repaid at all) before turning to private loans, which should be a last resort for any remaining gap in funding."
+       ]
+      },
+      {
+       "heading": "What a Standard Repayment Actually Costs",
+       "body": [
+        "Student loan payments follow the same amortization math as any other loan: PMT = P × r × (1 + r)^n ÷ [(1 + r)^n − 1], where P is the amount borrowed, r is the monthly interest rate, and n is the number of monthly payments. Standard federal repayment plans commonly span 10 years (120 payments).",
+        "The total cost of a loan is always more than the amount borrowed, because of interest - and that gap grows with the interest rate and how long repayment stretches out. Borrowing only what's actually needed, rather than the maximum offered, is one of the simplest ways to reduce this lifetime cost."
+       ],
+       "example": {
+        "problem": "A student borrows $30,000 in federal loans at a 5% annual interest rate, to be repaid over the standard 10-year (120-month) plan. Find the approximate monthly payment and total interest paid.",
+        "steps": [
+         "Monthly rate = 5% ÷ 12 ≈ 0.4167%; n = 120 payments.",
+         "Using the loan payment formula, the monthly payment comes out to about $318.20 per month.",
+         "Total paid over 120 months ≈ 318.20 × 120 ≈ $38,184.",
+         "Total interest paid ≈ 38,184 − 30,000 ≈ $8,184."
+        ],
+        "answer": "The monthly payment is about $318.20, and total interest paid over 10 years is roughly $8,184 - more than a quarter of the original amount borrowed."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "federal student loan", "def": "A student loan issued by the U.S. government, generally with fixed rates and flexible repayment protections."},
+      {"term": "private student loan", "def": "A student loan from a bank or private lender, often with fewer borrower protections than federal loans."},
+      {"term": "amortization", "def": "The process of paying down a loan through equal periodic payments covering interest and a growing share of principal."},
+      {"term": "income-driven repayment", "def": "A federal loan repayment plan that sets monthly payments based on the borrower's income, available for federal loans."}
+     ],
+     "practice": [
+      {"q": "Why do financial guides generally recommend exhausting federal student loans before turning to private loans?", "choices": ["Federal loans are always interest-free", "Federal loans generally offer fixed rates and flexible protections like income-driven repayment, which most private loans do not match", "Private loans are illegal for undergraduate students", "There is no meaningful difference between the two"], "answer": 1, "explain": "Federal loans come with borrower protections - fixed rates, income-driven repayment, deferment options - that make them generally safer than private loans, which are usually recommended only as a last resort."},
+      {"q": "Using the same method as the worked example, why does the total amount repaid on a student loan always exceed the amount originally borrowed?", "choices": ["Because loan servicers add random extra fees with no basis", "Because interest accrues on the outstanding balance throughout repayment, adding to the total cost beyond the original principal", "Because student loans are illegal to repay in full", "Because the amount borrowed is always rounded up"], "answer": 1, "explain": "Interest is charged on the loan balance throughout the repayment period, which is why total payments always exceed the original amount borrowed - the interest is the lender's return for lending the money."},
+      {"q": "What is the most direct way a student can reduce the total lifetime cost of their student loans, all else being equal?", "choices": ["Borrowing the maximum amount offered, regardless of need", "Borrowing only what is actually needed for education costs, since a smaller principal accrues less total interest", "Choosing the longest possible repayment term available", "Avoiding federal loans entirely"], "answer": 1, "explain": "Since interest accrues on the outstanding balance, borrowing less principal directly reduces the total interest paid over the life of the loan."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Buying a Car: Loans, Leasing, and the True Cost of Ownership",
+     "minutes": 12,
+     "intro": "A car is one of the biggest purchases most people make regularly, and the sticker price is only the beginning - financing terms, depreciation, and the loan-versus-lease decision can change the real cost by thousands of dollars.",
+     "sections": [
+      {
+       "heading": "Financing a Car Purchase",
+       "body": [
+        "Buying a car with a loan means the same amortization math as any other loan applies: a shorter loan term means higher monthly payments but less total interest paid, while a longer term lowers the monthly payment but increases total interest - and can even leave you owing more than the car is worth for a while, since cars **depreciate** quickly.",
+        "A larger down payment reduces the amount financed, directly lowering both the monthly payment and the total interest paid over the loan. Lenders also usually offer better interest rates to borrowers with stronger credit scores, which is one more reason the credit habits from earlier lessons matter for a major purchase like this."
+       ]
+      },
+      {
+       "heading": "Buying vs. Leasing",
+       "body": [
+        "**Leasing** means paying to use a car for a set period (commonly 2-3 years) without ever owning it - monthly payments are usually lower than a loan payment on the same car, because you're only paying for the vehicle's depreciation during the lease, not its full value. At the end, you return the car (or pay to buy it) and have no ownership stake to show for the payments made.",
+        "Buying with a loan means higher payments now but real ownership once the loan is paid off - after which there's no more monthly payment while you continue driving the car. Leasing tends to fit people who want a new car every few years and drive a predictable, limited number of miles; buying tends to fit people who plan to keep the car for many years past any loan payoff."
+       ],
+       "example": {
+        "problem": "A buyer finances a $28,000 car with a 5-year loan at 6% annual interest. Find the approximate monthly payment and total interest paid.",
+        "steps": [
+         "Monthly rate = 6% ÷ 12 = 0.5%; n = 60 months.",
+         "Using the loan payment formula, the monthly payment comes out to about $541.32 per month.",
+         "Total paid over 60 months ≈ 541.32 × 60 ≈ $32,479.",
+         "Total interest paid ≈ 32,479 − 28,000 ≈ $4,479."
+        ],
+        "answer": "Monthly payment is about $541.32, and total interest paid over 5 years is roughly $4,479."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "depreciation", "def": "The loss in a car's value over time, typically fastest in the first few years of ownership."},
+      {"term": "leasing", "def": "Paying to use a car for a set period without owning it, usually with lower monthly payments but no ownership stake at the end."},
+      {"term": "down payment", "def": "An upfront payment toward a purchase that reduces the amount financed and the total interest paid."},
+      {"term": "loan term", "def": "The length of time over which a loan is repaid; longer terms lower monthly payments but increase total interest paid."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, would a 3-year loan on the same $28,000 car at 6% have higher or lower total interest than the 5-year loan?", "choices": ["Higher total interest, because monthly payments would be higher", "Lower total interest, because the balance is paid off faster, even though monthly payments are higher", "The same total interest regardless of term length", "Interest cannot be calculated for loans under 5 years"], "answer": 1, "explain": "A shorter loan term means the outstanding balance shrinks faster, accruing less total interest overall, even though the required monthly payment is higher than on a longer-term loan."},
+      {"q": "Why do lease payments tend to be lower than loan payments on the same car?", "choices": ["Leases require no credit check", "A lease payment only covers the vehicle's expected depreciation during the lease term, not its full purchase price", "Leases are always shorter than one year", "Lease payments include no interest at all"], "answer": 1, "explain": "Because a lease only requires paying for the value the car is expected to lose during the lease term (plus finance charges), rather than its entire value, lease payments are typically lower than loan payments on the same vehicle."},
+      {"q": "Why does a larger down payment reduce the total interest paid on a car loan?", "choices": ["It doesn't affect total interest at all", "It reduces the amount financed, so interest accrues on a smaller balance from the very first payment", "Down payments are refunded with interest at the end of the loan", "Larger down payments always extend the loan term"], "answer": 1, "explain": "Since interest is calculated on the outstanding loan balance, financing a smaller amount (because more was paid upfront) means less total interest accrues over the life of the loan."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Renting vs. Buying a Home, and How Mortgages Work",
+     "minutes": 13,
+     "intro": "A mortgage is the largest loan most people will ever take out, stretched across decades - which means even small differences in rate or down payment translate into tens of thousands of dollars over the life of the loan.",
+     "sections": [
+      {
+       "heading": "Renting vs. Buying: More Than Just a Monthly Payment",
+       "body": [
+        "Renting offers flexibility (easy to move, no responsibility for repairs, no exposure to a falling housing market) at the cost of never building equity in the property. Buying builds **equity** - ownership value - with each payment and can appreciate over time, but comes with maintenance costs, property taxes, less flexibility to move, and exposure if home values fall.",
+        "The right choice depends heavily on how long you plan to stay in one place: buying generally only makes financial sense if you'll stay long enough to recoup the significant upfront transaction costs (closing costs, agent commissions) through years of building equity - commonly cited as at least 3 to 5 years, often longer."
+       ]
+      },
+      {
+       "heading": "How a Mortgage Payment Is Built",
+       "body": [
+        "A **mortgage** is simply a very large, very long amortizing loan, using the same formula as any other loan: PMT = P × r × (1 + r)^n ÷ [(1 + r)^n − 1]. Standard mortgages commonly run 30 years (360 monthly payments), which minimizes the monthly payment at the cost of a large amount of total interest paid over the life of the loan.",
+        "A larger down payment (commonly 20% to avoid extra **private mortgage insurance**) reduces both the loan amount and the monthly payment - and over a 30-year term, even a modest difference in the interest rate can change total interest paid by tens of thousands of dollars, which is why shopping for the best available rate is worth real effort."
+       ],
+       "example": {
+        "problem": "A buyer purchases a $300,000 home with a 20% down payment, financing the remaining $240,000 with a 30-year fixed mortgage at 6.5% annual interest. Find the approximate monthly principal-and-interest payment and the total interest paid over the life of the loan.",
+        "steps": [
+         "Down payment = 20% × 300,000 = $60,000, leaving a loan amount of $240,000.",
+         "Monthly rate = 6.5% ÷ 12 ≈ 0.5417%; n = 360 months.",
+         "Using the loan payment formula, the monthly payment comes out to about $1,517.",
+         "Total paid over 360 months ≈ 1,517 × 360 ≈ $546,120. Total interest ≈ 546,120 − 240,000 ≈ $306,120."
+        ],
+        "answer": "The monthly principal-and-interest payment is about $1,517, and total interest paid over 30 years is roughly $306,120 - more than the amount originally borrowed."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "equity (home)", "def": "The portion of a home's value the owner actually owns, equal to the home's value minus the remaining mortgage balance."},
+      {"term": "mortgage", "def": "A large, long-term loan used to buy real estate, repaid through amortizing monthly payments."},
+      {"term": "down payment", "def": "An upfront payment toward a home purchase that reduces the loan amount; commonly 20% to avoid private mortgage insurance."},
+      {"term": "private mortgage insurance (PMI)", "def": "Insurance required by many lenders when a down payment is below 20%, protecting the lender (not the borrower) if the loan defaults."}
+     ],
+     "practice": [
+      {"q": "Using the same method as the worked example, would a 15-year mortgage on the same $240,000 loan at 6.5% have a higher or lower monthly payment than the 30-year version, and what would happen to total interest?", "choices": ["Lower monthly payment and lower total interest", "Higher monthly payment, but lower total interest paid over the life of the loan", "Higher monthly payment and higher total interest", "Both monthly payment and total interest stay exactly the same"], "answer": 1, "explain": "A shorter term concentrates the same principal into fewer, larger payments, which raises the monthly payment but sharply cuts the number of months interest accrues, lowering total interest paid overall."},
+      {"q": "Why is private mortgage insurance (PMI) typically required when a down payment is below 20%?", "choices": ["It protects the borrower if home values fall", "It protects the lender against the higher risk of default associated with a smaller down payment and thinner initial equity", "It replaces the need for homeowners insurance", "It is required only for renters, not buyers"], "answer": 1, "explain": "A smaller down payment means the borrower has less equity cushion, which increases the lender's risk if the loan defaults - PMI protects the lender against that added risk, not the borrower."},
+      {"q": "Why does the choice between renting and buying depend heavily on how long someone plans to stay in one place?", "choices": ["Because renting is always cheaper regardless of timeframe", "Because buying involves large upfront transaction costs that take years of building equity to recoup, making a short stay less favorable financially", "Because mortgages cannot be paid off early", "Because rental leases can never be shorter than 5 years"], "answer": 1, "explain": "The significant upfront costs of buying (closing costs, commissions) are only offset over time as a buyer builds equity and potentially benefits from appreciation - a short stay may not be long enough for that math to work out favorably compared to renting."}
+     ]
+    }
+   ]
+  }
+ ]
+}

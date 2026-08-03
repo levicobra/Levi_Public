@@ -1,0 +1,1126 @@
+{
+ "id": "genetics",
+ "title": "Genetics",
+ "domain": "life",
+ "level": "College",
+ "description": "A college-level tour of heredity, from Gregor Mendel's pea plants to the molecular machinery of DNA and the biotechnology built on top of it. You will work Punnett squares and genetic maps by hand, trace a gene through transcription and translation, and see how tools like PCR and CRISPR turned genetics into an editable science.",
+ "outcomes": [
+  "You can predict offspring ratios for monohybrid and dihybrid crosses using Punnett squares and the forked-line method.",
+  "You can explain incomplete dominance, codominance, multiple alleles, and sex-linked inheritance with worked crosses.",
+  "You can calculate genetic map distances from recombination frequencies and interpret a linkage map.",
+  "You can trace a gene from DNA through transcription and translation to a finished protein, and predict the effect of a mutation.",
+  "You can apply the Hardy-Weinberg equation to compute allele and genotype frequencies in a population.",
+  "You can describe how PCR, DNA sequencing, and CRISPR work, and weigh the ethical questions they raise."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Foundations of Heredity",
+   "summary": "Mendel's pea experiments and the logic of dominant and recessive traits, worked out with Punnett squares for one and two genes at a time.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Mendel's Peas and the Law of Segregation",
+     "minutes": 14,
+     "intro": "In the 1860s, an Austrian monk named Gregor Mendel spent eight years crossing pea plants in a monastery garden and counting offspring by the thousands. His patience uncovered the basic rules of heredity decades before anyone knew what a gene physically was, and those rules still predict your own family traits today.",
+     "sections": [
+      {
+       "heading": "Mendel's Experimental Design",
+       "body": [
+        "Mendel worked with true-breeding pea lines: plants that, when self-pollinated, always produced offspring identical to the parent for a given trait. He picked seven traits with two clear forms each, such as purple versus white flowers, and cross-pollinated a true-breeding purple-flowered plant (the P, or parental, generation) with a true-breeding white-flowered plant.",
+        "Every single offspring in this first filial generation, or F1, had purple flowers. The white trait had not blended away or vanished; it reappeared when Mendel let the F1 plants self-pollinate. In the F2 generation, about three-quarters of the plants were purple and one-quarter were white, a ratio close to 3:1 that repeated across all seven traits."
+       ]
+      },
+      {
+       "heading": "The Law of Segregation",
+       "body": [
+        "Mendel explained the 3:1 ratio by proposing that each plant carries two hereditary units, now called **alleles**, for each trait, one inherited from each parent. During formation of sperm and egg cells, these two alleles separate, or **segregate**, so each gamete carries only one. This is the Law of Segregation.",
+        "In the F1 plants, the allele for purple was **dominant** and masked the **recessive** allele for white, which is why every F1 plant looked purple even while quietly carrying a white allele. When two F1 plants (each carrying one purple and one white allele) were crossed, the recessive white trait could reappear in roughly one offspring out of four."
+       ],
+       "example": {
+        "problem": "In one of Mendel's actual F2 generations, he counted 705 purple-flowered plants and 224 white-flowered plants. Does this match the ratio predicted by the Law of Segregation?",
+        "steps": [
+         "Add the totals: 705 + 224 = 929 plants.",
+         "Divide each count by the white total to express the ratio relative to 1: 705 ÷ 224 ≈ 3.15, and 224 ÷ 224 = 1.",
+         "Compare to the predicted 3:1 ratio: 3.15:1 is very close to 3:1, well within the variation expected from a real experiment."
+        ],
+        "answer": "Yes — about 3.15:1, closely matching the predicted 3:1 ratio."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "allele",
+       "def": "One version of a gene, such as the purple-flower or white-flower version in peas."
+      },
+      {
+       "term": "dominant",
+       "def": "An allele that is expressed in the phenotype whenever it is present, masking a recessive allele."
+      },
+      {
+       "term": "recessive",
+       "def": "An allele whose effect is hidden unless paired with another copy of the same recessive allele."
+      },
+      {
+       "term": "true-breeding",
+       "def": "A line of organisms that always produces offspring identical to the parent for a trait; genetically homozygous."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Mendel crossed a true-breeding purple-flowered pea plant with a true-breeding white-flowered plant. What color were all the F1 offspring?",
+       "choices": [
+        "All white",
+        "All purple",
+        "Half purple, half white",
+        "All pale pink"
+       ],
+       "answer": 1,
+       "explain": "Purple is dominant, so every F1 plant, carrying one purple and one white allele, showed the purple phenotype."
+      },
+      {
+       "q": "According to the Law of Segregation, what happens to the two alleles an organism carries for a gene?",
+       "choices": [
+        "They blend into a single intermediate allele",
+        "They both go into every gamete",
+        "They separate so each gamete gets only one",
+        "They are destroyed during meiosis"
+       ],
+       "answer": 2,
+       "explain": "Segregation means the paired alleles split apart during gamete formation, so each sperm or egg carries just one of the two."
+      },
+      {
+       "q": "In the F2 generation of Mendel's cross, about what fraction of plants had white flowers?",
+       "choices": [
+        "1/2",
+        "1/4",
+        "1/3",
+        "3/4"
+       ],
+       "answer": 1,
+       "explain": "The recessive white trait reappeared in roughly one out of every four F2 plants, giving the classic 3:1 ratio."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Punnett Squares and Monohybrid Crosses",
+     "minutes": 14,
+     "intro": "A Punnett square is a simple grid that turns Mendel's rules into a prediction machine: give it the alleles of two parents, and it hands back the exact odds of every possible offspring. Once you can build one for a single gene, you can answer questions like whether a couple's child could inherit a recessive condition.",
+     "sections": [
+      {
+       "heading": "Genotype and Phenotype",
+       "body": [
+        "An organism's **genotype** is its actual pair of alleles for a gene, such as BB, Bb, or bb. Its **phenotype** is the observable trait that genotype produces, such as brown or blue eyes. An organism with two identical alleles (BB or bb) is **homozygous**; one with two different alleles (Bb) is **heterozygous**.",
+        "To build a monohybrid Punnett square, write one parent's two alleles across the top of a 2×2 grid and the other parent's two alleles down the side. Each of the four inner boxes is filled by combining the allele from its row with the allele from its column, giving the four possible offspring genotypes."
+       ]
+      },
+      {
+       "heading": "Reading the Results",
+       "body": [
+        "For a cross between two heterozygotes, Bb × Bb, the four boxes come out BB, Bb, Bb, and bb, a genotypic ratio of 1 BB : 2 Bb : 1 bb. Since B is dominant, BB and Bb both look the same, giving a phenotypic ratio of 3 dominant : 1 recessive, exactly the ratio Mendel observed.",
+        "A **test cross** uses this logic in reverse: to find out whether a dominant-looking individual is BB or Bb, cross it with a known bb individual. If any offspring show the recessive trait, the test individual must have been heterozygous, because a BB parent could never contribute a b allele."
+       ],
+       "example": {
+        "problem": "A pea plant with purple flowers of unknown genotype is crossed with a white-flowered (bb) plant. Half the offspring have white flowers. What was the purple parent's genotype?",
+        "steps": [
+         "White offspring (bb) need a b allele from each parent. The bb parent already supplies one b to every offspring.",
+         "Since some offspring are white, the purple parent must also be able to contribute a b allele, so it cannot be BB.",
+         "The purple parent must be Bb: a Bb × bb cross gives 1 Bb (purple) : 1 bb (white), matching the observed 50/50 split."
+        ],
+        "answer": "Bb (heterozygous)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "genotype",
+       "def": "The actual pair of alleles an organism carries for a gene, like Bb."
+      },
+      {
+       "term": "phenotype",
+       "def": "The observable trait produced by a genotype, like purple flowers."
+      },
+      {
+       "term": "homozygous",
+       "def": "Having two identical alleles for a gene, such as BB or bb."
+      },
+      {
+       "term": "heterozygous",
+       "def": "Having two different alleles for a gene, such as Bb."
+      },
+      {
+       "term": "test cross",
+       "def": "A cross with a homozygous recessive individual, used to reveal an unknown genotype."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a Bb × Bb cross, what is the expected phenotypic ratio if B is dominant?",
+       "choices": [
+        "1:1",
+        "1:2:1",
+        "3:1",
+        "9:3:3:1"
+       ],
+       "answer": 2,
+       "explain": "The genotypic ratio 1 BB : 2 Bb : 1 bb collapses to a 3:1 phenotypic ratio because BB and Bb look identical."
+      },
+      {
+       "q": "Why is a test cross always performed against a homozygous recessive individual?",
+       "choices": [
+        "Because bb individuals can only ever produce b gametes, so any dominant offspring reveal the other parent's allele",
+        "Because bb individuals are always infertile otherwise",
+        "Because dominant traits skip generations",
+        "Because it is required by law in plant breeding"
+       ],
+       "answer": 0,
+       "explain": "A bb parent contributes only b alleles, so any recessive offspring proves the other parent could also contribute a b, meaning it must be heterozygous."
+      },
+      {
+       "q": "An individual is homozygous for a gene. What does that tell you about its two alleles?",
+       "choices": [
+        "They must both be dominant",
+        "They must both be recessive",
+        "They are identical to each other",
+        "They came from the same parent"
+       ],
+       "answer": 2,
+       "explain": "Homozygous simply means the two alleles match, which could be two dominant (BB) or two recessive (bb) alleles."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Dihybrid Crosses and Independent Assortment",
+     "minutes": 16,
+     "intro": "What happens when you track two traits at once, like seed shape and seed color? Mendel found that the two genes sort into gametes independently of each other, a discovery that lets you predict combinations of traits with the same confidence as a single trait.",
+     "sections": [
+      {
+       "heading": "The Law of Independent Assortment",
+       "body": [
+        "Mendel crossed pea plants that were heterozygous for two genes at once, round-yellow seeds (RrYy) crossed with another RrYy plant. If the two genes assort independently during gamete formation, an RrYy plant can produce four equally likely gamete types: RY, Ry, rY, and ry.",
+        "The **Law of Independent Assortment** states that alleles of different genes separate into gametes independently of one another, so long as the genes sit on different chromosomes (or far apart on the same one). This means the round/wrinkled outcome does not influence which color allele ends up in the same gamete."
+       ]
+      },
+      {
+       "heading": "Building the 9:3:3:1 Ratio",
+       "body": [
+        "A full dihybrid Punnett square for RrYy × RrYy has 4 gamete types on each side, making a 4×4 grid of 16 equally likely boxes. Sorting those 16 outcomes by phenotype gives 9 round-yellow, 3 round-green, 3 wrinkled-yellow, and 1 wrinkled-green, the classic 9:3:3:1 ratio.",
+        "A faster method than a 16-box grid is the **forked-line method**: solve each gene separately (3 round : 1 wrinkled, and 3 yellow : 1 green), then multiply the fractions for every combination, such as 3/4 round × 3/4 yellow = 9/16 round-yellow. This scales easily to three or more genes, where a Punnett square would become unmanageable."
+       ],
+       "example": {
+        "problem": "A dihybrid cross RrYy × RrYy produces 320 offspring. How many are expected to be wrinkled and yellow (rrYy or rrYY)?",
+        "steps": [
+         "The wrinkled-yellow phenotype occupies 3/16 of the 9:3:3:1 ratio.",
+         "Multiply: 320 × 3/16 = 60.",
+         "So about 60 of the 320 offspring should be wrinkled and yellow."
+        ],
+        "answer": "About 60 offspring."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "independent assortment",
+       "def": "The principle that alleles of different genes sort into gametes independently of each other."
+      },
+      {
+       "term": "dihybrid cross",
+       "def": "A cross that tracks two genes at once, such as RrYy × RrYy."
+      },
+      {
+       "term": "forked-line method",
+       "def": "A shortcut for dihybrid or trihybrid crosses that multiplies the probability of each trait separately."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For independent assortment to hold true for two genes, what condition must be met?",
+       "choices": [
+        "Both genes must be dominant",
+        "The genes must be on different chromosomes or far apart on the same one",
+        "The plant must be self-pollinating",
+        "Both parents must be homozygous"
+       ],
+       "answer": 1,
+       "explain": "Genes that are close together on the same chromosome tend to be inherited together rather than independently; that exception is covered in the next unit on linkage."
+      },
+      {
+       "q": "In a 9:3:3:1 dihybrid ratio, what fraction of offspring show both recessive traits?",
+       "choices": [
+        "9/16",
+        "3/16",
+        "1/16",
+        "1/4"
+       ],
+       "answer": 2,
+       "explain": "The final number in the 9:3:3:1 ratio, 1/16, represents offspring that are recessive for both genes."
+      },
+      {
+       "q": "Using the forked-line method, what is the probability of round (dominant) and green (recessive) seeds from an RrYy × RrYy cross?",
+       "choices": [
+        "9/16",
+        "3/16",
+        "1/16",
+        "3/4"
+       ],
+       "answer": 1,
+       "explain": "Round is 3/4 and green is 1/4, so 3/4 × 1/4 = 3/16, matching the round-green portion of the 9:3:3:1 ratio."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Beyond Simple Dominance",
+   "summary": "Real inheritance is messier than Mendel's peas: alleles can blend, share the stage, come in more than two flavors, ride on sex chromosomes, or travel together on the same chromosome.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Incomplete Dominance, Codominance, and Multiple Alleles",
+     "minutes": 15,
+     "intro": "Not every gene follows the neat dominant-versus-recessive script. Sometimes alleles blend their effects, sometimes both show up at full strength side by side, and sometimes there are more than two alleles competing for the same gene in a population.",
+     "sections": [
+      {
+       "heading": "Incomplete Dominance and Codominance",
+       "body": [
+        "In **incomplete dominance**, the heterozygote's phenotype is an intermediate blend of the two homozygous phenotypes. Cross a red-flowered snapdragon (RR) with a white one (rr), and the Rr offspring are pink, not red, because a single dose of the red-pigment allele only produces half as much pigment.",
+        "In **codominance**, both alleles are fully and separately expressed in the heterozygote rather than blending. Roan cattle, which show both red hairs and white hairs side by side, are a classic example, and human ABO blood type provides another, covered next."
+       ]
+      },
+      {
+       "heading": "Multiple Alleles: ABO Blood Type",
+       "body": [
+        "Most genes have only two alleles in a population, but some have three or more; the gene is still described with the usual capital/lowercase logic, just with more options. Human ABO blood type is controlled by three alleles: IA and IB, which are codominant with each other, and i, which is recessive to both.",
+        "Genotype IAIA or IAi gives type A blood; IBIB or IBi gives type B; IAIB gives type AB, because both antigens are expressed; and ii gives type O. Even though there are three alleles in the population, any one person still carries only two of them."
+       ],
+       "example": {
+        "problem": "A father with genotype IAi (type A blood) has children with a mother of genotype IBi (type B blood). What blood types are possible in their children, and in what ratio?",
+        "steps": [
+         "List the father's possible gametes: IA or i. List the mother's possible gametes: IB or i.",
+         "Combine them in a 2×2 grid: IAIB, IAi, IBi, and ii.",
+         "Translate genotypes to phenotypes: IAIB = type AB, IAi = type A, IBi = type B, ii = type O."
+        ],
+        "answer": "Type AB, A, B, and O, each with probability 1/4."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "incomplete dominance",
+       "def": "A pattern where the heterozygote shows a blended, intermediate phenotype, like pink flowers from red and white parents."
+      },
+      {
+       "term": "codominance",
+       "def": "A pattern where both alleles are fully expressed together in the heterozygote, like roan cattle coats."
+      },
+      {
+       "term": "multiple alleles",
+       "def": "A gene with more than two allele versions in the population, such as the three alleles of the ABO gene."
+      },
+      {
+       "term": "ABO blood group",
+       "def": "The human blood type system controlled by codominant IA and IB alleles and recessive i."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A red snapdragon (RR) is crossed with a white one (rr). What color are the Rr offspring, and why?",
+       "choices": [
+        "Red, because R is fully dominant",
+        "White, because r is fully dominant",
+        "Pink, an intermediate blend from incomplete dominance",
+        "Striped red and white, from codominance"
+       ],
+       "answer": 2,
+       "explain": "Incomplete dominance produces an intermediate phenotype because one red allele makes only half the pigment of two red alleles."
+      },
+      {
+       "q": "Which genotype produces type AB blood?",
+       "choices": [
+        "IAIA",
+        "IAi",
+        "IAIB",
+        "ii"
+       ],
+       "answer": 2,
+       "explain": "IA and IB are codominant, so a person carrying one of each expresses both antigens, giving type AB blood."
+      },
+      {
+       "q": "How many ABO alleles can any single person carry, even though three exist in the population?",
+       "choices": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+       ],
+       "answer": 1,
+       "explain": "A person inherits exactly one allele from each parent, so despite three alleles existing across the population, each individual carries only two."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Sex-Linked Inheritance",
+     "minutes": 15,
+     "intro": "Color blindness and hemophilia show up far more often in men than women, and the reason is not chance: the genes involved sit on the X chromosome, which men have only one copy of. Understanding sex-linked inheritance explains this pattern and lets you trace it through a family.",
+     "sections": [
+      {
+       "heading": "X and Y Chromosomes",
+       "body": [
+        "Humans typically have 23 pairs of chromosomes; 22 pairs are autosomes, and the 23rd pair determines sex. Females are XX and males are XY. Because the Y chromosome is small and carries few genes, most genes on the X chromosome exist in only one copy in males, a condition called **hemizygous**.",
+        "A gene carried on the X chromosome shows a **sex-linked** inheritance pattern. For X-linked recessive traits, such as red-green color blindness or hemophilia, a single recessive allele is enough to produce the trait in a hemizygous male, while a female needs two copies (one on each X) to be affected."
+       ]
+      },
+      {
+       "heading": "Tracing X-Linked Crosses",
+       "body": [
+        "Write X-linked alleles as superscripts on the X itself, for example X^C for normal color vision and X^c for color blindness, with Y written alone since it carries no allele for the gene. A woman who is X^CX^c is a **carrier**: she has normal vision herself but can pass the recessive allele to her children.",
+        "This is why color blindness is much more common in men: a son only needs one X^c, inherited from his mother, to be color blind, while a daughter needs an X^c from both her mother and her father. A carrier mother crossed with a color-vision-normal father produces sons who have a 50% chance of being color blind, but no color-blind daughters."
+       ],
+       "example": {
+        "problem": "A carrier mother (X^CX^c) and a color-vision-normal father (X^CY) have children. What fraction of their sons are expected to be color blind?",
+        "steps": [
+         "The mother's gametes are X^C or X^c, each with probability 1/2. The father's gametes are X^C or Y, each with probability 1/2.",
+         "Sons receive the father's Y and one of the mother's X alleles: half the sons get X^C (normal), half get X^c (color blind).",
+         "So among sons specifically, 1/2 are expected to be color blind."
+        ],
+        "answer": "1/2 (50%) of sons."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sex-linked trait",
+       "def": "A trait controlled by a gene located on a sex chromosome, usually the X."
+      },
+      {
+       "term": "hemizygous",
+       "def": "Having only one copy of a gene, as males do for most X-linked genes."
+      },
+      {
+       "term": "X-linked recessive",
+       "def": "An inheritance pattern where a recessive allele on the X chromosome causes the trait, more commonly in males."
+      },
+      {
+       "term": "carrier",
+       "def": "An individual heterozygous for a recessive allele who does not show the trait but can pass it on."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why are X-linked recessive conditions like color blindness more common in men than women?",
+       "choices": [
+        "Men have two X chromosomes",
+        "Men need only one recessive allele because they are hemizygous for X-linked genes",
+        "The color blindness gene is on the Y chromosome",
+        "Women are naturally immune to X-linked conditions"
+       ],
+       "answer": 1,
+       "explain": "With only one X chromosome, a man expresses whatever allele is on it, while a woman's second X can mask a recessive allele."
+      },
+      {
+       "q": "A carrier mother (X^CX^c) and a normal-vision father (X^CY) have a daughter. What is the daughter's expected genotype?",
+       "choices": [
+        "X^CX^C or X^CX^c, never color blind",
+        "X^cX^c, always color blind",
+        "X^CY",
+        "X^cY"
+       ],
+       "answer": 0,
+       "explain": "The daughter always gets an X^C from her father, so she is either X^CX^C or X^CX^c — normal-visioned in either case, though possibly a carrier."
+      },
+      {
+       "q": "How is an X-linked allele written for a male, such as X^cY?",
+       "choices": [
+        "With two alleles on the X and none on the Y",
+        "With one allele on the X and the Y written without an allele",
+        "With alleles on both X and Y",
+        "Males cannot carry X-linked alleles"
+       ],
+       "answer": 1,
+       "explain": "Males are hemizygous for X-linked genes: they carry a single allele on their one X chromosome, and the Y is written plain because it carries no matching allele."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Linkage and Genetic Mapping",
+     "minutes": 16,
+     "intro": "Independent assortment breaks down for genes that sit close together on the same chromosome, because they tend to travel to the same gamete as a package deal. Measuring how often that package breaks apart lets geneticists build a map of the chromosome itself.",
+     "sections": [
+      {
+       "heading": "Genes That Travel Together",
+       "body": [
+        "Genes located near each other on the same chromosome show **linkage**: they are inherited together more often than independent assortment would predict, because they are physically attached rather than sorting freely into gametes. A dihybrid cross between linked genes produces mostly the two parental combinations, not the expected 9:3:3:1 ratio.",
+        "Linkage is not absolute, though. During meiosis, homologous chromosomes can swap segments in a process called **crossing over**, which creates new, recombinant combinations of alleles. The closer two genes sit, the less likely a crossover will land between them, and the fewer recombinant offspring appear."
+       ]
+      },
+      {
+       "heading": "Building a Genetic Map",
+       "body": [
+        "The **recombination frequency** is the percentage of offspring showing a new, non-parental combination of two linked traits. Geneticists convert this percentage directly into map distance, measured in **map units** or centimorgans (cM), where 1% recombination frequency equals roughly 1 map unit.",
+        "By comparing recombination frequencies between several pairs of genes on the same chromosome, you can order the genes and space them out, building a linkage map that reflects real physical distance along the chromosome: genes with low recombination frequency are close together, and genes with high recombination frequency are far apart."
+       ],
+       "example": {
+        "problem": "A test cross between two linked genes produces 182 parental-type offspring and 18 recombinant-type offspring, for 200 total. What is the map distance between the genes?",
+        "steps": [
+         "Calculate recombination frequency: 18 recombinants ÷ 200 total = 0.09, or 9%.",
+         "Convert directly to map units: a recombination frequency of 9% corresponds to 9 map units (9 cM)."
+        ],
+        "answer": "9 map units (9 cM) apart."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "linkage",
+       "def": "The tendency of genes located near each other on a chromosome to be inherited together."
+      },
+      {
+       "term": "crossing over",
+       "def": "The exchange of segments between homologous chromosomes during meiosis, which can separate linked alleles."
+      },
+      {
+       "term": "recombination frequency",
+       "def": "The percentage of offspring with a new, non-parental combination of linked traits."
+      },
+      {
+       "term": "centimorgan",
+       "def": "A unit of genetic map distance, roughly equal to 1% recombination frequency."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do linked genes fail to produce the classic 9:3:3:1 dihybrid ratio?",
+       "choices": [
+        "They are on different chromosomes",
+        "They are physically close together and tend to be inherited as a unit rather than assorting independently",
+        "One of the genes is always recessive",
+        "Linked genes cannot be tracked with Punnett squares"
+       ],
+       "answer": 1,
+       "explain": "Independent assortment assumes genes sort freely; linked genes resist this because they are attached to the same chromosome and mostly travel together."
+      },
+      {
+       "q": "A test cross gives a recombination frequency of 20% between two genes. About how many map units apart are they?",
+       "choices": [
+        "2",
+        "10",
+        "20",
+        "50"
+       ],
+       "answer": 2,
+       "explain": "Recombination frequency converts roughly one-to-one into map units, so 20% recombination corresponds to about 20 map units."
+      },
+      {
+       "q": "What process creates recombinant offspring for linked genes?",
+       "choices": [
+        "Independent assortment",
+        "Crossing over between homologous chromosomes during meiosis",
+        "Mitosis in somatic cells",
+        "Random mutation"
+       ],
+       "answer": 1,
+       "explain": "Crossing over physically swaps segments between homologous chromosomes, breaking up the original linked combination of alleles."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Molecular Genetics",
+   "summary": "Zoom in from whole-organism traits to the molecule that carries them: how DNA is built, copied, read into RNA, and translated into the proteins that build a living cell.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "DNA Structure and Replication",
+     "minutes": 15,
+     "intro": "Every trait Mendel tracked in his pea plants ultimately traces back to a molecule twisted into a double helix inside every cell. Understanding how DNA is built, and how it makes an exact copy of itself before every cell division, is the foundation for everything else in molecular genetics.",
+     "sections": [
+      {
+       "heading": "The Double Helix",
+       "body": [
+        "DNA is built from repeating units called **nucleotides**, each made of a sugar (deoxyribose), a phosphate group, and one of four nitrogenous bases: adenine (A), thymine (T), guanine (G), or cytosine (C). Two long strands of nucleotides twist around each other into a double helix, held together by hydrogen bonds between bases.",
+        "Base pairing is strict: adenine always pairs with thymine, and guanine always pairs with cytosine, a rule called **complementary base pairing**. The two strands run in opposite directions, described as **antiparallel**, which matters for how enzymes read and copy the molecule."
+       ]
+      },
+      {
+       "heading": "Semiconservative Replication",
+       "body": [
+        "Before a cell divides, its DNA must be copied so each daughter cell gets a full set. The enzyme **helicase** unwinds and separates the double helix at points called replication origins, exposing each strand so it can serve as a template.",
+        "**DNA polymerase** then builds a new complementary strand by matching free nucleotides to each exposed template strand, following the A-T and G-C pairing rule. Because each new double helix ends up with one original (parent) strand and one newly built strand, this process is called **semiconservative replication**."
+       ],
+       "example": {
+        "problem": "One strand of a DNA molecule reads 5'-A T G C C G T A-3'. What is the sequence of its complementary strand?",
+        "steps": [
+         "Pair each base: A pairs with T, T pairs with A, G pairs with C, C pairs with G.",
+         "Match base by base: A→T, T→A, G→C, C→G, C→G, G→C, T→A, A→T.",
+         "Write the new strand in the antiparallel (opposite) direction: 3'-T A C G G C A T-5'."
+        ],
+        "answer": "3'-TACGGCAT-5' (equivalently written 5'-TACGGCAT-3' reversed)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "nucleotide",
+       "def": "The building block of DNA: a sugar, a phosphate, and a nitrogenous base (A, T, G, or C)."
+      },
+      {
+       "term": "complementary base pairing",
+       "def": "The rule that A pairs only with T, and G pairs only with C."
+      },
+      {
+       "term": "helicase",
+       "def": "The enzyme that unwinds and separates the two DNA strands during replication."
+      },
+      {
+       "term": "DNA polymerase",
+       "def": "The enzyme that builds a new DNA strand by adding nucleotides complementary to a template."
+      },
+      {
+       "term": "semiconservative replication",
+       "def": "DNA copying that produces two double helices, each with one old strand and one new strand."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If one strand of DNA reads 5'-GGATCC-3', what is its complementary strand?",
+       "choices": [
+        "3'-CCTAGG-5'",
+        "3'-GGATCC-5'",
+        "3'-TTCGAA-5'",
+        "3'-AACGTT-5'"
+       ],
+       "answer": 0,
+       "explain": "Pairing G-C and A-T base by base gives C, C, T, A, G, G, written 3'-CCTAGG-5' in the antiparallel direction."
+      },
+      {
+       "q": "Why is DNA replication called semiconservative?",
+       "choices": [
+        "Because only half of the DNA is copied each time",
+        "Because each new double helix contains one original strand and one newly made strand",
+        "Because DNA polymerase works on only one strand at a time",
+        "Because half of all replications fail"
+       ],
+       "answer": 1,
+       "explain": "Each daughter molecule conserves one of the two original parent strands paired with a freshly synthesized strand."
+      },
+      {
+       "q": "What is the role of helicase in DNA replication?",
+       "choices": [
+        "It builds the new complementary strand",
+        "It unwinds and separates the two DNA strands",
+        "It joins RNA fragments together",
+        "It removes incorrect nucleotides"
+       ],
+       "answer": 1,
+       "explain": "Helicase unzips the double helix by breaking the hydrogen bonds between base pairs, exposing single strands for copying."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Transcription: DNA to RNA",
+     "minutes": 14,
+     "intro": "DNA never leaves the nucleus to build a protein directly; instead, the cell makes a disposable working copy in the form of RNA. Transcription is the process that turns a gene's DNA sequence into that messenger copy.",
+     "sections": [
+      {
+       "heading": "From Template to mRNA",
+       "body": [
+        "The enzyme **RNA polymerase** binds to a specific DNA sequence called a **promoter**, which marks the start of a gene, and begins building an RNA strand using one DNA strand as a template. That strand is the **template strand**; the other DNA strand, which matches the RNA in sequence (except for one base), is the **coding strand**.",
+        "RNA polymerase reads the template strand and adds complementary RNA nucleotides, but with one twist: RNA uses **uracil (U)** instead of thymine, so it pairs with adenine on the template. The result is a single strand of messenger RNA, or pre-mRNA in eukaryotes, that mirrors the coding strand's sequence with U in place of T."
+       ]
+      },
+      {
+       "heading": "Processing the Pre-mRNA",
+       "body": [
+        "In eukaryotic cells, the initial transcript is not ready to use. It contains both **exons**, the sequences that will code for protein, and **introns**, non-coding sequences that must be cut out. A molecular machine called the spliceosome removes the introns and joins the exons together in a process called **splicing**.",
+        "The mature mRNA also gets a protective 5' cap and a poly-A tail added to its ends, which help it exit the nucleus, resist degradation, and be recognized by the ribosome. Only after capping, splicing, and tailing is the mRNA ready to travel to the cytoplasm for translation."
+       ],
+       "example": {
+        "problem": "A DNA template strand reads 3'-TAC GGA TTC-5'. What is the corresponding mRNA sequence?",
+        "steps": [
+         "Pair each template base with its RNA complement, remembering RNA uses U instead of T: T→A, A→U, C→G, G→C, G→C, A→U, T→A, T→A, C→G.",
+         "Read the template in order (3' to 5') and write the mRNA in the matching 5' to 3' direction: template T-A-C-G-G-A-T-T-C becomes mRNA A-U-G-C-C-U-A-A-G."
+        ],
+        "answer": "5'-AUG CCU AAG-3'."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "RNA polymerase",
+       "def": "The enzyme that builds an RNA strand by reading a DNA template."
+      },
+      {
+       "term": "promoter",
+       "def": "A DNA sequence marking where RNA polymerase should start transcribing a gene."
+      },
+      {
+       "term": "exon",
+       "def": "A coding segment of a gene that remains in the mature mRNA after splicing."
+      },
+      {
+       "term": "intron",
+       "def": "A non-coding segment of a gene that is removed from the pre-mRNA before translation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What base does RNA use in place of the DNA base thymine?",
+       "choices": [
+        "Adenine",
+        "Guanine",
+        "Cytosine",
+        "Uracil"
+       ],
+       "answer": 3,
+       "explain": "RNA substitutes uracil for thymine; uracil still pairs with adenine, just as thymine does in DNA."
+      },
+      {
+       "q": "What is removed from a pre-mRNA molecule during splicing?",
+       "choices": [
+        "Exons",
+        "Introns",
+        "The poly-A tail",
+        "The 5' cap"
+       ],
+       "answer": 1,
+       "explain": "Introns are the non-coding sequences cut out by the spliceosome, leaving only exons joined together in the mature mRNA."
+      },
+      {
+       "q": "A DNA template strand reads 3'-ATG-5'. What mRNA sequence does RNA polymerase produce from it?",
+       "choices": [
+        "5'-UAC-3'",
+        "5'-ATG-3'",
+        "5'-TAC-3'",
+        "5'-CGU-3'"
+       ],
+       "answer": 0,
+       "explain": "Pairing A-U, T-A, G-C gives U-A-C, written 5'-UAC-3' since mRNA is built antiparallel to its template."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Translation: RNA to Protein",
+     "minutes": 16,
+     "intro": "Messenger RNA is only an instruction sheet; translation is where the cell's ribosomes actually read that sheet three letters at a time and snap together a chain of amino acids into a working protein.",
+     "sections": [
+      {
+       "heading": "The Genetic Code",
+       "body": [
+        "The ribosome reads mRNA in non-overlapping groups of three bases called **codons**, each specifying one amino acid (or a stop signal). With four possible bases in each of three positions, there are 4×4×4 = 64 possible codons, but only 20 amino acids, so most amino acids are specified by more than one codon, a property called redundancy.",
+        "Translation always begins at the start codon **AUG**, which also codes for the amino acid methionine, and sets the **reading frame**, the grouping of subsequent bases into codons. Translation ends when the ribosome reaches one of three stop codons (UAA, UAG, or UGA), which do not code for any amino acid."
+       ]
+      },
+      {
+       "heading": "Building the Polypeptide",
+       "body": [
+        "**Transfer RNA (tRNA)** molecules ferry amino acids to the ribosome. Each tRNA has an **anticodon** that base-pairs with a complementary codon on the mRNA, ensuring the correct amino acid is added at each step. The ribosome moves codon by codon along the mRNA, forming a peptide bond between each new amino acid and the growing chain.",
+        "This elongation continues until a stop codon enters the ribosome. Since no tRNA carries an anticodon matching a stop codon, a release factor instead binds and frees the finished polypeptide chain, which then folds into its functional three-dimensional shape."
+       ],
+       "example": {
+        "problem": "An mRNA strand reads 5'-AUG GGC AAA UAA-3'. Using the genetic code (AUG = Met, GGC = Gly, AAA = Lys, UAA = Stop), what polypeptide is produced?",
+        "steps": [
+         "Break the mRNA into codons: AUG | GGC | AAA | UAA.",
+         "Translate each codon using the genetic code: AUG = Methionine, GGC = Glycine, AAA = Lysine, UAA = Stop (no amino acid added).",
+         "Assemble the amino acids in order, stopping before the stop codon: Met-Gly-Lys."
+        ],
+        "answer": "Methionine – Glycine – Lysine (a 3-amino-acid chain)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "codon",
+       "def": "A three-base sequence on mRNA that specifies one amino acid or a stop signal."
+      },
+      {
+       "term": "anticodon",
+       "def": "The three-base sequence on a tRNA molecule that pairs with a complementary mRNA codon."
+      },
+      {
+       "term": "start codon",
+       "def": "The codon AUG, which begins translation and codes for methionine."
+      },
+      {
+       "term": "stop codon",
+       "def": "One of three codons (UAA, UAG, UGA) that ends translation without adding an amino acid."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can 64 possible codons specify only 20 amino acids?",
+       "choices": [
+        "Most codons are never used",
+        "The genetic code is redundant: several codons can code for the same amino acid",
+        "Only 20 codons are read by ribosomes",
+        "Stop codons make up the other 44 combinations"
+       ],
+       "answer": 1,
+       "explain": "Redundancy means multiple codons often specify the same amino acid, which is why 64 codon combinations can still cover only 20 amino acids plus stop signals."
+      },
+      {
+       "q": "What is the function of a tRNA's anticodon?",
+       "choices": [
+        "It marks the start of translation",
+        "It pairs with a complementary mRNA codon so the correct amino acid is delivered",
+        "It removes introns from mRNA",
+        "It signals the ribosome to stop"
+       ],
+       "answer": 1,
+       "explain": "The anticodon is the tRNA's matching piece to a specific mRNA codon, ensuring each codon receives its correct amino acid."
+      },
+      {
+       "q": "An mRNA reads 5'-AUG UUU UAG-3', where UUU codes for phenylalanine. What polypeptide results?",
+       "choices": [
+        "Methionine only",
+        "Methionine – Phenylalanine",
+        "Phenylalanine only",
+        "Methionine – Phenylalanine – Stop (as an amino acid)"
+       ],
+       "answer": 1,
+       "explain": "AUG codes for methionine, UUU codes for phenylalanine, and UAG is a stop codon that ends translation without adding an amino acid."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Mutations and Gene Regulation",
+     "minutes": 15,
+     "intro": "A single typo in a gene's sequence can be harmless, catastrophic, or anything in between, depending on exactly where it falls. And even a perfectly normal gene is useless if the cell never switches it on, which is why cells devote enormous machinery to deciding which genes to read and when.",
+     "sections": [
+      {
+       "heading": "Types of Mutations",
+       "body": [
+        "A **point mutation** changes a single base in the DNA sequence. If the new codon still specifies the same amino acid, it is a **silent mutation** with no effect. If it specifies a different amino acid, it is a **missense mutation**, which may or may not change the protein's function. If it creates a premature stop codon, it is a **nonsense mutation**, usually producing a truncated, nonfunctional protein.",
+        "A **frameshift mutation** occurs when a base is inserted or deleted rather than substituted, shifting every codon downstream of that point into a new reading frame. Because the ribosome reads in fixed groups of three, a frameshift usually scrambles the entire rest of the protein, making it far more disruptive than a typical point mutation."
+       ]
+      },
+      {
+       "heading": "Turning Genes On and Off",
+       "body": [
+        "Cells do not transcribe every gene all the time; instead, regulatory proteins called **transcription factors** bind near a gene's promoter to encourage or block RNA polymerase from starting transcription. This is how a liver cell and a neuron, which carry identical DNA, end up with completely different sets of active genes.",
+        "Bacteria offer a clean example with the **operon**, a cluster of genes controlled by one shared promoter and regulatory switch. In the classic lac operon, the genes for digesting lactose are switched on only when lactose is present and glucose is scarce, so the cell does not waste energy making enzymes it does not need."
+       ],
+       "example": {
+        "problem": "A gene segment reads AUG-CCU-AAG. A mutation deletes the C in the second codon, shifting it to AUG-CUA-AG(next base). Is this a point mutation or a frameshift, and why does it matter more?",
+        "steps": [
+         "The original reading frame is AUG | CCU | AAG.",
+         "Deleting one base shifts everything after it: the new sequence reads AUG | CUA | AG... pulling in whatever base follows next, regrouping every codon downstream.",
+         "Because every codon after the deletion has changed, this is a frameshift mutation, not a simple point substitution, so it typically corrupts the entire downstream protein rather than a single amino acid."
+        ],
+        "answer": "A frameshift mutation, because it shifts the reading frame and scrambles all downstream codons."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "point mutation",
+       "def": "A change to a single base in a DNA sequence."
+      },
+      {
+       "term": "frameshift mutation",
+       "def": "An insertion or deletion that shifts the reading frame of all downstream codons."
+      },
+      {
+       "term": "transcription factor",
+       "def": "A regulatory protein that binds DNA to promote or block transcription of a gene."
+      },
+      {
+       "term": "operon",
+       "def": "A cluster of bacterial genes controlled together by one promoter and regulatory switch."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A point mutation changes a codon but the new codon still specifies the same amino acid. What type of mutation is this?",
+       "choices": [
+        "Missense",
+        "Nonsense",
+        "Silent",
+        "Frameshift"
+       ],
+       "answer": 2,
+       "explain": "A silent mutation changes the DNA sequence without changing the resulting amino acid, thanks to the redundancy of the genetic code."
+      },
+      {
+       "q": "Why are frameshift mutations usually more damaging than point mutations?",
+       "choices": [
+        "They only affect non-coding DNA",
+        "They shift the reading frame, scrambling every codon downstream of the mutation",
+        "They always create a new promoter",
+        "They cannot be repaired by cells"
+       ],
+       "answer": 1,
+       "explain": "Because the ribosome reads in fixed groups of three, an insertion or deletion regroups every subsequent codon, usually destroying the rest of the protein."
+      },
+      {
+       "q": "What is the main purpose of the lac operon's regulatory switch?",
+       "choices": [
+        "To repair DNA damage",
+        "To turn on lactose-digesting genes only when lactose is present and glucose is scarce",
+        "To speed up DNA replication",
+        "To translate mRNA faster"
+       ],
+       "answer": 1,
+       "explain": "The lac operon lets bacteria conserve energy by only producing lactose-digesting enzymes when lactose is actually available to use."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Genomics and Biotechnology",
+   "summary": "How genetics scales from a single gene to whole populations, and how modern tools let scientists read, copy, and directly edit DNA.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Population Genetics and the Hardy-Weinberg Equation",
+     "minutes": 16,
+     "intro": "Zoom out from one family's Punnett square to an entire population, and a new question appears: what fraction of everyone's alleles are which version? The Hardy-Weinberg equation gives a baseline answer, and any real population that departs from it is quietly evolving.",
+     "sections": [
+      {
+       "heading": "Allele and Genotype Frequencies",
+       "body": [
+        "In a population genetics problem, let p represent the frequency of the dominant allele and q represent the frequency of the recessive allele for a gene with only two alleles. Since every allele in the population must be one or the other, p + q = 1.",
+        "If mating is random and the two alleles combine independently, the expected genotype frequencies follow the **Hardy-Weinberg equation**: p² (homozygous dominant) + 2pq (heterozygous) + q² (homozygous recessive) = 1. This equation is the population-level version of the Punnett square you already know."
+       ]
+      },
+      {
+       "heading": "Using Hardy-Weinberg to Predict Populations",
+       "body": [
+        "Hardy-Weinberg equilibrium assumes no natural selection, no new mutations, no migration in or out, random mating, and a very large population. These conditions rarely hold perfectly in nature, which is exactly why the equation is useful: any measurable shift away from its predictions is evidence that one of those forces, most often natural selection, is acting on the population.",
+        "In practice, geneticists usually start from the easiest number to measure directly: the frequency of the recessive phenotype, q², counted straight from observable traits. From there, q, p, and the genotype frequencies can all be calculated."
+       ],
+       "example": {
+        "problem": "In a population, 9% of individuals show a recessive trait (cystic fibrosis carriers aside, just the trait itself). Assuming Hardy-Weinberg equilibrium, what fraction of the population is heterozygous?",
+        "steps": [
+         "The recessive phenotype frequency is q² = 0.09, so q = √0.09 = 0.3.",
+         "Since p + q = 1, p = 1 − 0.3 = 0.7.",
+         "The heterozygous frequency is 2pq = 2 × 0.7 × 0.3 = 0.42."
+        ],
+        "answer": "42% of the population is expected to be heterozygous."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "allele frequency",
+       "def": "The proportion of a specific allele among all alleles for a gene in a population."
+      },
+      {
+       "term": "Hardy-Weinberg equilibrium",
+       "def": "The state where allele and genotype frequencies remain constant across generations, described by p² + 2pq + q² = 1."
+      },
+      {
+       "term": "gene pool",
+       "def": "The complete set of alleles for all genes in a population."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a Hardy-Weinberg population, the recessive allele frequency q = 0.4. What is the dominant allele frequency p?",
+       "choices": [
+        "0.4",
+        "0.6",
+        "0.16",
+        "0.8"
+       ],
+       "answer": 1,
+       "explain": "Since p + q = 1, p = 1 − 0.4 = 0.6."
+      },
+      {
+       "q": "If q = 0.2 in a Hardy-Weinberg population, what percentage of the population is homozygous recessive (q²)?",
+       "choices": [
+        "2%",
+        "4%",
+        "20%",
+        "40%"
+       ],
+       "answer": 1,
+       "explain": "q² = 0.2 × 0.2 = 0.04, which is 4% of the population."
+      },
+      {
+       "q": "Which of these would cause a real population to violate Hardy-Weinberg equilibrium?",
+       "choices": [
+        "Extremely large population size",
+        "Completely random mating",
+        "Natural selection favoring one phenotype",
+        "Zero migration in or out"
+       ],
+       "answer": 2,
+       "explain": "Hardy-Weinberg assumes no selection; if one phenotype has a survival or reproductive advantage, allele frequencies will shift away from equilibrium."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "PCR, Cloning, and DNA Sequencing",
+     "minutes": 15,
+     "intro": "Before genetic engineering could take off, scientists needed ways to make millions of copies of a tiny DNA sample, cut and paste genes between organisms, and read out a sequence letter by letter. PCR, restriction enzymes, and sequencing solved exactly those problems.",
+     "sections": [
+      {
+       "heading": "Amplifying DNA with PCR",
+       "body": [
+        "The **polymerase chain reaction (PCR)** copies a specific stretch of DNA millions of times over in a test tube using a heat-cycling machine. Each cycle has three steps: **denaturation** (heating to separate the DNA strands), **annealing** (cooling so short synthetic **primers** bind to the target sequence), and **extension** (a heat-stable DNA polymerase builds new complementary strands).",
+        "Because both original strands are copied every cycle, the amount of target DNA doubles each time, growing exponentially rather than by a fixed amount. This exponential doubling is what makes it possible to go from a few molecules of DNA, such as from a crime scene sample, to enough material to analyze in only a couple of hours."
+       ]
+      },
+      {
+       "heading": "Cutting, Reading, and Recombining DNA",
+       "body": [
+        "**Restriction enzymes** cut DNA at specific short sequences, acting like molecular scissors. Scientists use them to cut a gene of interest out of one organism's DNA and splice it into a circular piece of bacterial DNA called a **plasmid**, creating **recombinant DNA** that bacteria can then copy and express as they multiply, a process called cloning.",
+        "**DNA sequencing** reads out the exact order of bases in a DNA molecule. The original Sanger method, and today's much faster next-generation methods, both work by synthesizing new DNA strands and detecting which base was added at each position, ultimately reconstructing the full sequence letter by letter."
+       ],
+       "example": {
+        "problem": "A PCR reaction starts with a single copy of a target DNA sequence. After 20 cycles, roughly how many copies exist?",
+        "steps": [
+         "Each cycle doubles the amount of target DNA, so after n cycles there are 2^n copies.",
+         "Calculate 2^20: 2^10 = 1,024, so 2^20 = 1,024 × 1,024 = 1,048,576.",
+         "Round for practical purposes: about 1 million copies."
+        ],
+        "answer": "About 1,048,576 copies (roughly 1 million)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "PCR (polymerase chain reaction)",
+       "def": "A lab technique that exponentially copies a target DNA sequence using repeated heating and cooling cycles."
+      },
+      {
+       "term": "primer",
+       "def": "A short synthetic DNA sequence that marks where DNA polymerase should start copying."
+      },
+      {
+       "term": "restriction enzyme",
+       "def": "An enzyme that cuts DNA at a specific short sequence."
+      },
+      {
+       "term": "recombinant DNA",
+       "def": "DNA created by combining genetic material from two different sources, such as a gene spliced into a plasmid."
+      }
+     ],
+     "practice": [
+      {
+       "q": "During PCR, what happens in the denaturation step?",
+       "choices": [
+        "Primers bind to the target DNA",
+        "The DNA is heated to separate its two strands",
+        "New DNA strands are built",
+        "Restriction enzymes cut the DNA"
+       ],
+       "answer": 1,
+       "explain": "Denaturation uses high heat to break the hydrogen bonds holding the two DNA strands together, exposing single strands for the next step."
+      },
+      {
+       "q": "Why does PCR produce exponential rather than linear growth in DNA copies?",
+       "choices": [
+        "Only one strand is copied per cycle",
+        "Every strand present, old and new, is copied again in each new cycle",
+        "The reaction only runs once",
+        "Primers are used up after the first cycle"
+       ],
+       "answer": 1,
+       "explain": "Because every DNA strand present at the start of a cycle serves as a template, the total amount roughly doubles each cycle, producing exponential growth."
+      },
+      {
+       "q": "What is the role of a plasmid in creating recombinant DNA?",
+       "choices": [
+        "It cuts the DNA at specific sequences",
+        "It serves as a small circular carrier that bacteria can copy along with an inserted gene",
+        "It reads the DNA sequence",
+        "It heats the DNA to separate the strands"
+       ],
+       "answer": 1,
+       "explain": "A plasmid is a small circular piece of bacterial DNA that can carry a foreign gene and be replicated as the bacterium multiplies, effectively cloning the gene."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "CRISPR and the Ethics of Genetic Technology",
+     "minutes": 15,
+     "intro": "CRISPR-Cas9 turned gene editing from a slow, imprecise process into something closer to using find-and-replace on a document, and that power comes with real questions about how, and on whom, it should be used.",
+     "sections": [
+      {
+       "heading": "How CRISPR-Cas9 Edits Genes",
+       "body": [
+        "**CRISPR-Cas9** is a gene-editing system adapted from a bacterial immune defense against viruses. A short **guide RNA** is designed to match a specific target sequence in the genome; it directs the Cas9 protein, which acts as molecular scissors, to that exact location and cuts both strands of the DNA there.",
+        "Once the DNA is cut, the cell's own repair machinery takes over. Non-homologous end joining often introduces small insertions or deletions that disable the gene, while homology-directed repair, guided by a supplied DNA template, can insert or correct a specific sequence, allowing precise edits rather than just gene disruption."
+       ]
+      },
+      {
+       "heading": "Genetic Testing and Ethical Questions",
+       "body": [
+        "Genetic testing can screen prospective parents for recessive disease alleles, diagnose a genetic disorder in a patient, or even be used in agriculture to check crop varieties. These tests raise practical questions about privacy, insurance discrimination, and how much genetic information people are entitled to know or keep confidential.",
+        "CRISPR raises a sharper distinction: editing **somatic cells** (like liver or blood cells) affects only the treated individual and is not passed to offspring, while editing **germline cells** (sperm, eggs, or embryos) changes every future generation descended from that individual. Most countries currently permit somatic gene therapy research but restrict or ban heritable germline editing in humans, precisely because its effects and risks would be inherited indefinitely."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "CRISPR-Cas9",
+       "def": "A gene-editing system that uses a guide RNA to direct the Cas9 protein to cut DNA at a specific target sequence."
+      },
+      {
+       "term": "guide RNA",
+       "def": "A short RNA sequence in CRISPR that matches and directs Cas9 to a specific DNA target."
+      },
+      {
+       "term": "somatic cell editing",
+       "def": "Gene editing of non-reproductive cells, affecting only the treated individual, not their offspring."
+      },
+      {
+       "term": "germline editing",
+       "def": "Gene editing of sperm, eggs, or embryos, which is passed on to all future generations."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the role of the guide RNA in CRISPR-Cas9?",
+       "choices": [
+        "It repairs DNA after cutting",
+        "It matches a target DNA sequence and directs the Cas9 protein to cut there",
+        "It replaces the DNA polymerase enzyme",
+        "It amplifies the target DNA like PCR"
+       ],
+       "answer": 1,
+       "explain": "The guide RNA is designed to base-pair with a specific genome sequence, steering Cas9's cutting activity to exactly that location."
+      },
+      {
+       "q": "Why is germline gene editing treated more cautiously than somatic gene editing?",
+       "choices": [
+        "Germline editing is technically easier to perform",
+        "Germline changes are passed on to all future generations, while somatic changes affect only the treated individual",
+        "Somatic cells cannot be edited with CRISPR",
+        "There is no difference in practice"
+       ],
+       "answer": 1,
+       "explain": "Editing sperm, eggs, or embryos means any change, intended or unintended, is inherited by every descendant, which is why most countries restrict human germline editing far more tightly than somatic gene therapy."
+      },
+      {
+       "q": "After Cas9 cuts DNA at the target site, what determines whether the edit disables the gene or precisely corrects it?",
+       "choices": [
+        "The type of guide RNA used only",
+        "Which cellular repair pathway acts on the cut, and whether a repair template is supplied",
+        "The color of the fluorescent tag used",
+        "Whether PCR was run beforehand"
+       ],
+       "answer": 1,
+       "explain": "Non-homologous end joining tends to introduce small errors that disrupt the gene, while homology-directed repair with a supplied template can make a precise, intended correction."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

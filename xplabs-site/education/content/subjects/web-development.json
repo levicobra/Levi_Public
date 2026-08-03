@@ -1,0 +1,1570 @@
+{
+ "id": "web-development",
+ "title": "Web Development",
+ "domain": "cs",
+ "level": "All levels",
+ "description": "A practical, build-as-you-go introduction to the web's three core languages: HTML for structure, CSS for style and layout, and JavaScript for interactivity. By the end you can build a real, responsive, interactive page from scratch and put it online.",
+ "outcomes": [
+  "You can structure a web page with correct, semantic HTML, including text, links, lists, images, and tables.",
+  "You can build accessible forms with proper labels, input types, and validation attributes.",
+  "You can style a page with CSS selectors, the box model, colors, and typography.",
+  "You can build responsive layouts using Flexbox, CSS Grid, and media queries.",
+  "You can write JavaScript that stores data in variables, branches, loops, and works with arrays.",
+  "You can use JavaScript to select DOM elements, change content, and respond to user events, then ship a static site."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "HTML Foundations",
+   "summary": "Every web page ever built starts from the same skeleton of nested elements. This unit covers the document structure, text and link markup, and images and tables.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Structure of a Web Page",
+     "minutes": 10,
+     "intro": "Every web page ever built, from the simplest personal blog to the most complex app, starts from the same skeleton. Learn that skeleton once and you can read the source of any page on the internet.",
+     "sections": [
+      {
+       "heading": "The Document Skeleton",
+       "body": [
+        "An HTML file starts with `<!DOCTYPE html>`, telling the browser to use modern HTML rules. Inside `<html>` sit two children: `<head>`, holding metadata like the page title, and `<body>`, holding everything visible on the page.",
+        "**Elements** are built from tags: an opening tag like `<p>`, content, and a closing tag `</p>`. Some elements, like `<img>` and `<br>`, are self-closing and never wrap content, since they have nothing to contain."
+       ]
+      },
+      {
+       "heading": "Nesting and Attributes",
+       "body": [
+        "Elements **nest** inside each other to form a tree: a `<body>` might contain a `<div>` containing a `<p>` containing a `<strong>`. Proper nesting means every tag closes in the reverse order it opened.",
+        "**Attributes** add information inside an opening tag, written as name='value'. `<a href='https://example.com'>` uses the href attribute to say where a link points; every element type supports its own relevant attributes."
+       ],
+       "example": {
+        "problem": "What is wrong with this HTML: <p>Hello <strong>world</p></strong>?",
+        "steps": [
+         "The <strong> tag opens after <p>, so it must close before </p> closes, following proper nesting order.",
+         "Here </p> closes before </strong>, which is improperly nested.",
+         "The corrected version is <p>Hello <strong>world</strong></p>."
+        ],
+        "answer": "The tags are improperly nested; <strong> must close before </p>, giving <p>Hello <strong>world</strong></p>."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "HTML element",
+       "def": "A structural unit of a web page, built from an opening tag, content, and a closing tag."
+      },
+      {
+       "term": "tag",
+       "def": "The markup, like <p> or </p>, that opens or closes an element."
+      },
+      {
+       "term": "nesting",
+       "def": "Placing one element inside another, forming a tree of parent and child elements."
+      },
+      {
+       "term": "attribute",
+       "def": "Extra information added inside an opening tag, written as name='value'."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the correct top-level HTML structure?",
+       "choices": [
+        "<body> inside <head> inside <html>",
+        "<head> and <body> both as direct children of <html>",
+        "<html> inside <body>",
+        "<head> is optional and can be removed"
+       ],
+       "answer": 1,
+       "explain": "A valid HTML document has <html> as the root, containing <head> and <body> as siblings."
+      },
+      {
+       "q": "Why is <img> considered a self-closing element?",
+       "choices": [
+        "It never has any attributes",
+        "It has no content to wrap, so it needs no closing tag",
+        "Images are not real HTML elements",
+        "Self-closing means it displays twice"
+       ],
+       "answer": 1,
+       "explain": "Since an image has nothing to contain between an opening and closing tag, it is written as a single self-closing tag."
+      },
+      {
+       "q": "In <a href='https://example.com'>Visit</a>, what is href?",
+       "choices": [
+        "The text shown to the user",
+        "An attribute specifying where the link points",
+        "A CSS property",
+        "A JavaScript function"
+       ],
+       "answer": 1,
+       "explain": "href is an HTML attribute on the <a> element that gives the destination URL of the link."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Text, Links, and Lists in HTML",
+     "minutes": 10,
+     "intro": "Headings, paragraphs, links, and lists make up the vast majority of text you will ever markup. Master these tags and you can structure almost any article.",
+     "sections": [
+      {
+       "heading": "Headings and Paragraphs",
+       "body": [
+        "`<h1>` through `<h6>` mark headings, from most important (`<h1>`) to least (`<h6>`). A page should have exactly one `<h1>` describing its main topic, with `<h2>` and smaller marking sections and subsections beneath it.",
+        "`<p>` marks a paragraph of body text. Browsers automatically add space above and below each `<p>`, so you should never use empty paragraphs or `<br>` tags just to create blank vertical space; that is a job for CSS."
+       ]
+      },
+      {
+       "heading": "Links and Lists",
+       "body": [
+        "`<a href='...'>` creates a hyperlink; the text between its tags is what the user clicks, and the href attribute is the destination. Linking to another page on your own site uses a relative path, like href='about.html', instead of a full address.",
+        "`<ul>` creates an unordered (bulleted) list and `<ol>` creates an ordered (numbered) list; both contain one or more `<li>` (list item) elements, one per bullet or number."
+       ],
+       "example": {
+        "problem": "Write the HTML for an unordered list with two items: 'Milk' and 'Eggs'.",
+        "steps": [
+         "Start with <ul> to open the unordered list.",
+         "Add one <li> per item: <li>Milk</li> and <li>Eggs</li>.",
+         "Close the list with </ul>."
+        ],
+        "answer": "<ul><li>Milk</li><li>Eggs</li></ul>"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "heading (h1-h6)",
+       "def": "Elements that mark titles and section headers, ranked from most (h1) to least (h6) important."
+      },
+      {
+       "term": "paragraph",
+       "def": "A block of body text marked with <p>."
+      },
+      {
+       "term": "hyperlink",
+       "def": "A clickable link created with <a href='...'> pointing to another page or resource."
+      },
+      {
+       "term": "ordered/unordered list",
+       "def": "<ol> for numbered lists or <ul> for bulleted lists, each containing <li> items."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many <h1> elements should a well-structured page typically have?",
+       "choices": [
+        "As many as needed",
+        "Exactly one, describing the page's main topic",
+        "Zero; h1 is deprecated",
+        "At least six, one per heading level"
+       ],
+       "answer": 1,
+       "explain": "A single <h1> should describe the page's main topic, with smaller headings marking sections beneath it."
+      },
+      {
+       "q": "What tag creates a numbered list?",
+       "choices": [
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<nl>"
+       ],
+       "answer": 1,
+       "explain": "<ol> (ordered list) produces a numbered list; <ul> produces a bulleted, unordered list."
+      },
+      {
+       "q": "In <a href='about.html'>About</a>, what does 'about.html' represent?",
+       "choices": [
+        "The visible link text",
+        "The destination the link points to",
+        "A CSS class name",
+        "An image source"
+       ],
+       "answer": 1,
+       "explain": "The href attribute's value is the URL or relative path the link navigates to when clicked."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Images, Tables, and Semantic HTML5",
+     "minutes": 12,
+     "intro": "Not every page is just text. Images need special handling for accessibility, tables need genuine tabular data to make sense, and HTML5's semantic tags describe what a section of a page actually means, not just how it looks.",
+     "sections": [
+      {
+       "heading": "Images and alt Text",
+       "body": [
+        "`<img src='cat.jpg' alt='A gray tabby cat sleeping'>` embeds an image. src points to the image file; alt provides a text description that screen readers announce for visually impaired users, and that browsers display if the image fails to load.",
+        "Every meaningful `<img>` needs alt text; only truly decorative images (like a repeating background flourish) should use alt='' to tell screen readers to skip announcing it."
+       ]
+      },
+      {
+       "heading": "Tables and Semantic Structure",
+       "body": [
+        "`<table>` holds tabular data: `<tr>` for each row, `<th>` for header cells, and `<td>` for regular data cells. Tables should be used for genuinely tabular data, like a class schedule, never merely to force a page layout.",
+        "HTML5 added **semantic elements** like `<header>`, `<nav>`, `<main>`, `<article>`, and `<footer>` that describe a section's meaning, replacing generic `<div>` tags wherever a more specific tag fits, which helps both search engines and assistive technology understand the page."
+       ],
+       "example": {
+        "problem": "Which HTML5 semantic element should wrap a website's main navigation menu?",
+        "steps": [
+         "<div> is generic and describes nothing about the content's role.",
+         "<nav> specifically identifies a block of navigation links.",
+         "Using <nav> instead of a generic div lets browsers, search engines, and screen readers recognize the menu's purpose automatically."
+        ],
+        "answer": "<nav>"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "alt attribute",
+       "def": "Text on an <img> describing the image for screen readers and for cases where it fails to load."
+      },
+      {
+       "term": "table / tr / td",
+       "def": "The elements that build an HTML table: the table itself, rows, and data cells."
+      },
+      {
+       "term": "semantic HTML",
+       "def": "HTML elements chosen for the meaning of the content, like <nav> or <article>, rather than generic containers."
+      },
+      {
+       "term": "header / nav / main / footer",
+       "def": "HTML5 elements marking a page's banner, navigation, primary content, and footer regions."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why should every meaningful image include an alt attribute?",
+       "choices": [
+        "It makes the image load faster",
+        "It provides a text description for screen readers and for when the image fails to load",
+        "It is required for images to display at all",
+        "It changes the image's file size"
+       ],
+       "answer": 1,
+       "explain": "alt text gives screen reader users a description and serves as a fallback if the image cannot load."
+      },
+      {
+       "q": "When is it appropriate to use a <table> element?",
+       "choices": [
+        "Whenever you want to lay out a whole page",
+        "Only for genuinely tabular data, like rows and columns of related data",
+        "Never; tables are deprecated in HTML5",
+        "Only inside a <nav> element"
+       ],
+       "answer": 1,
+       "explain": "Tables should represent real tabular data, not be used as a general page layout tool."
+      },
+      {
+       "q": "What is the main advantage of <header>, <nav>, and <main> over generic <div> tags?",
+       "choices": [
+        "They automatically apply CSS styling",
+        "They describe the meaning of a section, helping search engines and screen readers understand the page",
+        "They load faster than div elements",
+        "They are required for every valid HTML page"
+       ],
+       "answer": 1,
+       "explain": "Semantic elements convey the purpose of a section of content, which assistive technology and search engines can use directly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "HTML Forms and Accessibility",
+   "summary": "Forms are how the web collects information, and accessibility ensures that collection works for everyone. This unit covers building forms correctly and the accessibility fundamentals every page needs.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Building Forms: Inputs, Labels, and Buttons",
+     "minutes": 12,
+     "intro": "Forms are how the web collects information: logins, searches, checkouts, sign-ups. A form built without labels or the right input types works for some users and quietly fails others.",
+     "sections": [
+      {
+       "heading": "The form Element and Inputs",
+       "body": [
+        "`<form action='/submit' method='post'>` wraps every field belonging to one submission. action says where the data goes; method says how (get appends data to the URL, post sends it in the request body, better for sensitive or large data).",
+        "`<input type='text' name='username'>` creates a single-line text field. The name attribute is essential: it is the label the server uses to identify this field's value among all the form's submitted data."
+       ]
+      },
+      {
+       "heading": "Labels and Buttons",
+       "body": [
+        "`<label for='email'>Email</label>` paired with `<input id='email' type='email'>` links the visible label text to its field, so clicking the label focuses the input, and screen readers announce the label when the field receives focus.",
+        "`<button type='submit'>Send</button>` submits the form. Every text input needs an associated label; a form with only placeholder text and no real labels is a common, easily fixed accessibility failure."
+       ],
+       "example": {
+        "problem": "Write HTML for a properly labeled text input for a user's first name, with id 'fname'.",
+        "steps": [
+         "Create the label first: <label for='fname'>First name</label>.",
+         "Create the matching input: <input id='fname' type='text' name='fname'>.",
+         "The label's for attribute and the input's id attribute must match exactly to connect them."
+        ],
+        "answer": "<label for='fname'>First name</label><input id='fname' type='text' name='fname'>"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "form",
+       "def": "The HTML element wrapping a set of fields submitted together."
+      },
+      {
+       "term": "input",
+       "def": "An HTML element that collects a single value from the user, with many possible types."
+      },
+      {
+       "term": "label",
+       "def": "An element that provides visible, clickable, and screen-reader-accessible text for a form field."
+      },
+      {
+       "term": "name attribute",
+       "def": "The attribute that identifies an input's value when the form's data is submitted."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What connects a <label> to its <input> so that clicking the label focuses the field?",
+       "choices": [
+        "Matching for and id attribute values",
+        "Placing them next to each other in the HTML",
+        "Giving them the same name attribute",
+        "There is no way to connect them"
+       ],
+       "answer": 0,
+       "explain": "The label's for attribute must match the input's id attribute exactly to create the connection."
+      },
+      {
+       "q": "What does the name attribute on an <input> do?",
+       "choices": [
+        "Displays visible text next to the field",
+        "Identifies the field's value when the form data is submitted",
+        "Sets the field's default value",
+        "Controls the field's color"
+       ],
+       "answer": 1,
+       "explain": "The server uses the name attribute to identify each field's submitted value among all the form data."
+      },
+      {
+       "q": "Why is method='post' often preferred over method='get' for a login form?",
+       "choices": [
+        "post is faster than get",
+        "post sends data in the request body instead of appending it visibly to the URL",
+        "get does not work with passwords at all",
+        "There is no real difference between them"
+       ],
+       "answer": 1,
+       "explain": "post keeps submitted data out of the visible URL and browser history, which matters for sensitive fields like passwords."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Form Validation and Input Types",
+     "minutes": 10,
+     "intro": "HTML5 input types do a surprising amount of validation and mobile-keyboard optimization for free, before a single line of JavaScript gets involved.",
+     "sections": [
+      {
+       "heading": "Specialized Input Types",
+       "body": [
+        "type='email' requires a valid email-shaped value and shows an email-friendly keyboard on mobile. type='number' restricts entry to numbers and can set min and max. type='password' masks typed characters. type='date' shows a native date picker.",
+        "Choosing the right type is not cosmetic: type='tel' on a phone number field brings up a numeric keypad on mobile, dramatically reducing typing friction, while type='text' would bring up a full, slower keyboard."
+       ]
+      },
+      {
+       "heading": "Built-in Validation Attributes",
+       "body": [
+        "required prevents form submission until a field has a value. minlength and maxlength bound text length; pattern supplies a regular expression the value must match, like pattern='[0-9]{5}' for a 5-digit ZIP code.",
+        "This is called **client-side validation**: it gives instant feedback without a network round-trip, but it is never a substitute for validating the same data again on the server, since a user can always bypass browser checks."
+       ],
+       "example": {
+        "problem": "Write an <input> for a required email field named 'contact'.",
+        "steps": [
+         "Use type='email' so the browser validates the email format.",
+         "Add the name attribute: name='contact', so the server can identify the submitted value.",
+         "Add the required attribute so the form cannot submit with this field empty."
+        ],
+        "answer": "<input type='email' name='contact' required>"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "input type",
+       "def": "The attribute on <input> that determines what kind of value and keyboard behavior a field expects."
+      },
+      {
+       "term": "required attribute",
+       "def": "A validation attribute that blocks form submission until a field has a value."
+      },
+      {
+       "term": "pattern attribute",
+       "def": "A validation attribute supplying a regular expression a field's value must match."
+      },
+      {
+       "term": "client-side validation",
+       "def": "Validation performed by the browser before submission, giving instant feedback but not replacing server checks."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which input type shows a numeric keypad on mobile and is best for a phone number field?",
+       "choices": [
+        "type='text'",
+        "type='tel'",
+        "type='password'",
+        "type='email'"
+       ],
+       "answer": 1,
+       "explain": "type='tel' is designed for telephone numbers and brings up a numeric keypad on mobile devices."
+      },
+      {
+       "q": "What does the required attribute do on an input?",
+       "choices": [
+        "Hides the field until filled",
+        "Prevents the form from submitting until the field has a value",
+        "Automatically fills in a default value",
+        "Makes the field read-only"
+       ],
+       "answer": 1,
+       "explain": "required blocks submission of the form as long as that field is left empty."
+      },
+      {
+       "q": "Why is client-side validation alone never enough to protect a server?",
+       "choices": [
+        "Browsers do not actually support validation",
+        "A user can bypass browser-based checks entirely and send data directly to the server",
+        "Client-side validation is slower than server-side",
+        "HTML forms cannot include validation attributes"
+       ],
+       "answer": 1,
+       "explain": "Since requests can be sent directly to a server outside the browser, the server must independently validate all incoming data."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Web Accessibility Basics",
+     "minutes": 12,
+     "intro": "A page that only works with a mouse, and only makes sense visually, excludes a huge portion of potential visitors. Accessibility is not an extra feature; it is core, and most of it is just using HTML correctly.",
+     "sections": [
+      {
+       "heading": "Semantic HTML Is Accessible HTML",
+       "body": [
+        "Screen readers, software that reads a page aloud for blind and low-vision users, rely on real HTML elements to understand structure: a `<button>` announces itself as a button and responds to Enter and Space; a `<div>` styled to look like a button does neither, unless extra work is added.",
+        "Using the right element for the job, `<button>` for actions, `<a>` for navigation, real headings for structure, solves most accessibility problems automatically, before ARIA attributes are even needed."
+       ]
+      },
+      {
+       "heading": "Keyboard Access and ARIA",
+       "body": [
+        "Every interactive element should be usable with the Tab key alone, with no mouse. Testing this yourself, unplugging your mouse and navigating with Tab and Enter, quickly reveals gaps that visual testing misses.",
+        "**ARIA** attributes, like aria-label='Close menu', add accessibility information when semantic HTML alone cannot express it, such as labeling an icon-only button that has no visible text. ARIA supplements semantic HTML; it never replaces it."
+       ],
+       "example": {
+        "problem": "A close button on a modal only contains an X icon, with no visible text. How do you make it accessible to screen reader users?",
+        "steps": [
+         "A screen reader has nothing to announce for an icon with no text.",
+         "Add an aria-label attribute describing the button's purpose: aria-label='Close'.",
+         "The screen reader now announces 'Close, button' even though no visible text exists."
+        ],
+        "answer": "<button aria-label='Close'>×</button>"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "screen reader",
+       "def": "Software that reads a page's content aloud, used by blind and low-vision users."
+      },
+      {
+       "term": "semantic HTML",
+       "def": "Using elements chosen for their meaning, like <button> or <nav>, so assistive technology understands the page."
+      },
+      {
+       "term": "keyboard accessibility",
+       "def": "The ability to use every interactive part of a page with only the keyboard, no mouse required."
+      },
+      {
+       "term": "ARIA",
+       "def": "A set of HTML attributes that add accessibility information not otherwise expressed by semantic HTML alone."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does a real <button> element work better for accessibility than a <div> styled to look like one?",
+       "choices": [
+        "<div> elements cannot be styled with CSS",
+        "<button> is automatically announced correctly and responds to keyboard input like Enter and Space",
+        "Divs are slower to render",
+        "Buttons cannot contain icons"
+       ],
+       "answer": 1,
+       "explain": "Real <button> elements come with built-in keyboard and screen reader behavior that a styled div lacks by default."
+      },
+      {
+       "q": "What is the purpose of an aria-label attribute?",
+       "choices": [
+        "It changes an element's visible color",
+        "It provides an accessible name for elements that lack visible descriptive text",
+        "It validates form input",
+        "It is required on every HTML element"
+       ],
+       "answer": 1,
+       "explain": "aria-label gives screen readers a name to announce when there is no visible text to read, like an icon-only button."
+      },
+      {
+       "q": "What is a simple way to test whether a page is keyboard accessible?",
+       "choices": [
+        "Check that all text is black on white",
+        "Unplug the mouse and try navigating the whole page using only Tab and Enter",
+        "Resize the browser window",
+        "Check the page's load time"
+       ],
+       "answer": 1,
+       "explain": "Navigating without a mouse quickly reveals interactive elements that cannot be reached or activated by keyboard alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "CSS Fundamentals",
+   "summary": "CSS decides how HTML looks. This unit covers selectors and the cascade, the box model that governs every element's size and spacing, and colors, units, and typography.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Selectors and the Cascade",
+     "minutes": 12,
+     "intro": "CSS decides what an HTML page looks like, but its rules do not always apply the way you expect. Understanding selectors and the cascade explains exactly which style wins when several could apply.",
+     "sections": [
+      {
+       "heading": "Basic Selectors",
+       "body": [
+        "A CSS rule pairs a **selector** with a block of declarations: `p { color: navy; }` selects every <p> element and sets its text color. An element selector like p matches by tag name; a class selector like .card matches any element with class='card'; an ID selector like #header matches the one element with id='header'.",
+        "Classes are reusable across many elements; IDs must be unique per page. Prefer classes for styling, since you will almost always want to apply the same look to more than one element eventually."
+       ]
+      },
+      {
+       "heading": "The Cascade and Specificity",
+       "body": [
+        "When multiple rules target the same element, CSS resolves conflicts using **specificity**: ID selectors beat class selectors, which beat element selectors, regardless of the order they appear in the stylesheet.",
+        "When specificity ties, the rule that appears later in the stylesheet wins. This is the 'cascade' in Cascading Style Sheets: later, equally specific rules override earlier ones."
+       ],
+       "example": {
+        "problem": "Given .box { color: blue; } and #main { color: red; } both apply to the same element, <div id='main' class='box'>, what color is the text?",
+        "steps": [
+         "#main is an ID selector; .box is a class selector.",
+         "ID selectors have higher specificity than class selectors, regardless of source order.",
+         "The ID rule wins: the text is red."
+        ],
+        "answer": "red"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "selector",
+       "def": "The part of a CSS rule that determines which elements the styling applies to."
+      },
+      {
+       "term": "class",
+       "def": "A reusable HTML attribute value that a CSS class selector (.name) can target on many elements."
+      },
+      {
+       "term": "id",
+       "def": "A unique HTML attribute value, meant to appear once per page, that an ID selector (#name) targets."
+      },
+      {
+       "term": "specificity",
+       "def": "The rule CSS uses to decide which of several conflicting rules applies, based on selector type."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which selector matches every element with class='highlight'?",
+       "choices": [
+        "#highlight",
+        "highlight",
+        ".highlight",
+        ":highlight"
+       ],
+       "answer": 2,
+       "explain": "A period prefix, .highlight, is the CSS syntax for a class selector."
+      },
+      {
+       "q": "Between an ID selector and a class selector targeting the same element, which one wins?",
+       "choices": [
+        "The class selector always wins",
+        "The ID selector always wins, regardless of order",
+        "Whichever comes first in the file",
+        "Neither applies; they cancel out"
+       ],
+       "answer": 1,
+       "explain": "ID selectors have higher specificity than class selectors, so an ID rule overrides a conflicting class rule no matter the order."
+      },
+      {
+       "q": "If two rules have equal specificity and both target the same element, which one applies?",
+       "choices": [
+        "The first one in the stylesheet",
+        "The one written in a separate file",
+        "The one that appears later in the stylesheet",
+        "Both apply simultaneously, causing an error"
+       ],
+       "answer": 2,
+       "explain": "When specificity is tied, the cascade favors whichever rule was declared later in the stylesheet."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Box Model",
+     "minutes": 12,
+     "intro": "Every single HTML element CSS touches is secretly a rectangular box, and understanding the four layers of that box, content, padding, border, and margin, explains almost every spacing mystery in web design.",
+     "sections": [
+      {
+       "heading": "Content, Padding, Border, Margin",
+       "body": [
+        "From the inside out: **content** is the element's actual text or image. **Padding** is transparent space between the content and the border, part of the element's own background. **Border** is a visible or invisible line around the padding. **Margin** is transparent space outside the border, separating this element from its neighbors.",
+        "padding: 10px; adds 10 pixels of space on all four sides; margin: 0 auto; sets zero top and bottom margin and centers a block element horizontally by splitting the remaining width evenly on the left and right."
+       ]
+      },
+      {
+       "heading": "box-sizing and Calculating Total Size",
+       "body": [
+        "By default, width sets only the content box's width; padding and border add on top, so an element with width: 200px; padding: 20px; border: 2px solid; actually occupies 244px total (200 plus 20+20 padding plus 2+2 border).",
+        "Setting box-sizing: border-box; changes this so width includes padding and border, making the element's total width exactly what you specified, which is why most modern CSS resets apply box-sizing: border-box to everything."
+       ],
+       "example": {
+        "problem": "An element has width: 300px, padding: 15px on each side, and border: 5px solid on each side, with the default box-sizing. What is its total rendered width?",
+        "steps": [
+         "Content width: 300px.",
+         "Add padding on both sides: 300 + 15 + 15 = 330px.",
+         "Add border on both sides: 330 + 5 + 5 = 340px."
+        ],
+        "answer": "340px"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "box model",
+       "def": "The layered structure of every HTML element: content, padding, border, and margin."
+      },
+      {
+       "term": "padding",
+       "def": "Transparent space between an element's content and its border."
+      },
+      {
+       "term": "margin",
+       "def": "Transparent space outside an element's border, separating it from neighboring elements."
+      },
+      {
+       "term": "box-sizing",
+       "def": "A CSS property controlling whether width includes padding and border (border-box) or not (content-box)."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which layer of the box model sits directly outside the border?",
+       "choices": [
+        "Content",
+        "Padding",
+        "Margin",
+        "Background"
+       ],
+       "answer": 2,
+       "explain": "Reading from the inside out: content, padding, border, then margin as the outermost layer."
+      },
+      {
+       "q": "An element has width: 100px, padding: 10px on each side, and no border, using the default box-sizing. What is its total rendered width?",
+       "choices": [
+        "100px",
+        "110px",
+        "120px",
+        "90px"
+       ],
+       "answer": 2,
+       "explain": "With the default box-sizing, padding adds on top of the specified width: 100 + 10 + 10 = 120px."
+      },
+      {
+       "q": "What does setting box-sizing: border-box do?",
+       "choices": [
+        "Removes all padding and border",
+        "Makes width include padding and border, so the total size equals the specified width",
+        "Adds a visible border to every element",
+        "Makes margin collapse automatically"
+       ],
+       "answer": 1,
+       "explain": "border-box changes width's meaning so padding and border are included inside the specified width, rather than added on top."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Colors, Units, and Typography",
+     "minutes": 10,
+     "intro": "Choosing colors, sizes, and fonts is where a page starts to feel designed rather than default. A handful of units and properties cover the vast majority of real styling decisions.",
+     "sections": [
+      {
+       "heading": "Color Formats",
+       "body": [
+        "CSS colors can be named (red), hexadecimal (#ff0000), or a function like rgb(255, 0, 0) or rgba(255, 0, 0, 0.5), where the fourth value in rgba sets opacity from 0 (invisible) to 1 (fully opaque).",
+        "Hex colors use two digits per channel, red, green, blue, each from 00 to ff. #ffffff is pure white; #000000 is pure black; #808080 is a middle gray."
+       ]
+      },
+      {
+       "heading": "Units: px, %, em, and rem",
+       "body": [
+        "px is an absolute pixel value that never changes size. % sizes relative to the parent element. em sizes relative to the current element's own font size, so it compounds when nested. rem sizes relative to the root (<html>) font size, avoiding that compounding, which makes it the more predictable choice for most spacing and font-size values.",
+        "font-family: 'Georgia', serif; sets the typeface, listing fallback fonts in case the first is unavailable; font-weight: bold; and font-style: italic; control weight and slant; line-height: 1.5; sets comfortable spacing between lines of text."
+       ],
+       "example": {
+        "problem": "The root font size is 16px. What pixel size does 1.5rem represent?",
+        "steps": [
+         "rem is always relative to the root element's font size, here 16px.",
+         "1.5rem means 1.5 times the root size: 1.5 × 16px.",
+         "1.5 × 16 = 24."
+        ],
+        "answer": "24px"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "hex color",
+       "def": "A color written as a # followed by six hexadecimal digits for red, green, and blue."
+      },
+      {
+       "term": "rgba()",
+       "def": "A color function specifying red, green, blue, and an alpha (opacity) value from 0 to 1."
+      },
+      {
+       "term": "em / rem",
+       "def": "Font-relative units; em is relative to the current element, rem to the root element's font size."
+      },
+      {
+       "term": "font-family",
+       "def": "The CSS property that sets an element's typeface, with fallback options."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In rgba(0, 0, 255, 0.5), what does the 0.5 control?",
+       "choices": [
+        "The color's hue",
+        "The element's width",
+        "The color's opacity, from 0 to 1",
+        "The font size"
+       ],
+       "answer": 2,
+       "explain": "The fourth value in rgba is the alpha channel, controlling transparency from 0 (invisible) to 1 (fully opaque)."
+      },
+      {
+       "q": "Why is rem often preferred over em for font-size, to avoid unpredictable compounding?",
+       "choices": [
+        "rem is always relative to the root element's font size, not a nested parent's",
+        "rem only works on headings",
+        "em is not supported in modern browsers",
+        "rem and em are identical in every way"
+       ],
+       "answer": 0,
+       "explain": "Because rem always refers back to the root font size, it avoids the compounding effect that nested em values can produce."
+      },
+      {
+       "q": "If the root font size is 20px, what pixel size does 2rem represent?",
+       "choices": [
+        "20px",
+        "22px",
+        "40px",
+        "2px"
+       ],
+       "answer": 2,
+       "explain": "2rem means 2 times the root font size: 2 × 20px = 40px."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "CSS Layout",
+   "summary": "Modern CSS layout tools turn once-painful problems, centering, columns, responsive design, into a few predictable properties. This unit covers Flexbox, Grid, and media queries.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Flexbox for One-Dimensional Layout",
+     "minutes": 14,
+     "intro": "Before flexbox, centering a box vertically was a running joke among developers. Flexbox turns alignment, spacing, and ordering along a single row or column into a handful of predictable properties.",
+     "sections": [
+      {
+       "heading": "Setting Up a Flex Container",
+       "body": [
+        "display: flex; on a parent element turns its direct children into **flex items**, arranged by default in a single horizontal row. flex-direction: column; switches that row into a vertical column instead.",
+        "justify-content aligns items along the main axis (flex-start, center, space-between, space-around); align-items aligns items along the cross axis (flex-start, center, stretch). Together, justify-content: center; align-items: center; on a flex container famously centers its content both horizontally and vertically in two lines of CSS."
+       ]
+      },
+      {
+       "heading": "Controlling Individual Items",
+       "body": [
+        "flex-wrap: wrap; lets items move to a new row instead of shrinking forever when a container is too narrow to fit them all in one line.",
+        "On an individual item, flex-grow: 1; lets it expand to fill available extra space, while flex-shrink: 0; prevents it from shrinking below its natural size, even under pressure. gap: 16px; adds consistent spacing between every flex item without needing margins."
+       ],
+       "example": {
+        "problem": "You have a navbar with a logo on the left and three links on the right, all in one row, evenly spaced apart with room between the logo and the links. Which flexbox property creates that spacing?",
+        "steps": [
+         "display: flex on the navbar arranges the logo and links in one row.",
+         "justify-content: space-between pushes the first item to the start and the last item to the end, distributing remaining space evenly between all items.",
+         "This creates exactly the logo-left, links-right layout with even spacing described."
+        ],
+        "answer": "justify-content: space-between;"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "flexbox",
+       "def": "A CSS layout mode for arranging items in a single row or column with flexible alignment and spacing."
+      },
+      {
+       "term": "flex-direction",
+       "def": "The property that sets whether flex items lay out in a row or a column."
+      },
+      {
+       "term": "justify-content",
+       "def": "The property that aligns flex items along the main axis."
+      },
+      {
+       "term": "align-items",
+       "def": "The property that aligns flex items along the cross axis."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which property arranges flex items into a vertical column instead of a horizontal row?",
+       "choices": [
+        "justify-content: column",
+        "flex-direction: column",
+        "align-items: column",
+        "display: column"
+       ],
+       "answer": 1,
+       "explain": "flex-direction controls the axis flex items are laid out along; setting it to column stacks them vertically."
+      },
+      {
+       "q": "Which combination centers a flex container's content both horizontally and vertically?",
+       "choices": [
+        "justify-content: center; align-items: center;",
+        "flex-direction: center;",
+        "display: center;",
+        "gap: center;"
+       ],
+       "answer": 0,
+       "explain": "justify-content centers along the main axis and align-items centers along the cross axis; together they center in both directions."
+      },
+      {
+       "q": "What does flex-wrap: wrap; allow flex items to do?",
+       "choices": [
+        "Shrink infinitely to fit one row",
+        "Move onto a new row instead of shrinking below their natural size",
+        "Change color automatically",
+        "Reverse their order"
+       ],
+       "answer": 1,
+       "explain": "flex-wrap: wrap lets items that no longer fit move onto additional rows rather than being squeezed indefinitely."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "CSS Grid for Two-Dimensional Layout",
+     "minutes": 14,
+     "intro": "Flexbox excels at a single row or column; CSS Grid excels at rows and columns together, making it the natural tool for whole-page layouts like a header, sidebar, main content, and footer.",
+     "sections": [
+      {
+       "heading": "Defining Rows and Columns",
+       "body": [
+        "display: grid; turns an element into a grid container. grid-template-columns: 200px 1fr 1fr; defines three columns: a fixed 200px column, then two equal flexible columns sharing the remaining space, since fr (fraction) units divide leftover space proportionally.",
+        "grid-template-rows works the same way for rows. gap: 20px; adds consistent spacing between both rows and columns at once, without needing margins on individual items."
+       ]
+      },
+      {
+       "heading": "Placing Items on the Grid",
+       "body": [
+        "By default, grid items fill cells in order, left to right, then wrapping to the next row. grid-column: 1 / 3; makes an item span from column line 1 to column line 3, covering two columns' worth of width.",
+        "Named template areas make layout code read like a picture: defining grid-template-areas with rows like 'header header' and 'sidebar main', then setting grid-area: header; on an element places it exactly where the word header appears in that layout map."
+       ],
+       "example": {
+        "problem": "A grid has grid-template-columns: 1fr 2fr 1fr;. If the container is 400px wide (ignoring gaps), how wide is the middle column?",
+        "steps": [
+         "The fr units add up to 1 + 2 + 1 = 4 total fraction units.",
+         "Each fraction unit represents 400px ÷ 4 = 100px.",
+         "The middle column is 2fr, so it gets 2 × 100px = 200px."
+        ],
+        "answer": "200px"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "CSS Grid",
+       "def": "A CSS layout mode for arranging items across both rows and columns at once."
+      },
+      {
+       "term": "fr unit",
+       "def": "A fraction unit in Grid that divides remaining space among columns or rows proportionally."
+      },
+      {
+       "term": "grid-template-columns",
+       "def": "The property defining a grid container's column sizes."
+      },
+      {
+       "term": "grid-area",
+       "def": "A property placing an item into a named region of a grid-template-areas layout."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In grid-template-columns: 100px 1fr 1fr;, what does the 1fr mean for the second and third columns?",
+       "choices": [
+        "Exactly 1 pixel wide",
+        "They split the remaining space after the fixed column, equally between them",
+        "They are hidden from view",
+        "They are always 100px wide, matching the first column"
+       ],
+       "answer": 1,
+       "explain": "fr units divide whatever space remains after fixed-size columns are subtracted, splitting it proportionally."
+      },
+      {
+       "q": "A grid container is 300px wide with grid-template-columns: 1fr 2fr;. How wide is the second column?",
+       "choices": [
+        "100px",
+        "150px",
+        "200px",
+        "300px"
+       ],
+       "answer": 2,
+       "explain": "The fr units total 1 + 2 = 3, so each unit is 100px; the second column, at 2fr, gets 200px."
+      },
+      {
+       "q": "What is CSS Grid generally better suited for compared to flexbox?",
+       "choices": [
+        "Aligning items along a single row only",
+        "Laying out both rows and columns together, like a full page layout",
+        "Styling text and fonts",
+        "Adding color to elements"
+       ],
+       "answer": 1,
+       "explain": "Grid is designed for two-dimensional layouts, arranging content across rows and columns simultaneously."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Responsive Design with Media Queries",
+     "minutes": 12,
+     "intro": "A layout designed only for a laptop screen often breaks badly on a phone. Media queries let CSS apply different rules depending on the screen's width, making one page work well everywhere.",
+     "sections": [
+      {
+       "heading": "Writing a Media Query",
+       "body": [
+        "@media (max-width: 600px) { .sidebar { display: none; } } applies the rule inside only when the viewport is 600px wide or narrower, commonly used to hide, stack, or resize elements for small screens.",
+        "min-width queries apply styles at or above a given width instead, letting you write rules that turn on for larger screens, like switching a single-column layout into a multi-column one once there is enough space."
+       ]
+      },
+      {
+       "heading": "Mobile-First Design",
+       "body": [
+        "**Mobile-first** design writes the base CSS for small screens first, then uses min-width media queries to add complexity as the screen grows, rather than writing desktop styles first and trying to undo them for mobile.",
+        "A viewport meta tag in the page's <head> is required for media queries to work correctly on mobile devices; without it, phones render the page at a zoomed-out desktop width by default."
+       ],
+       "example": {
+        "problem": "You want a two-column layout on screens 768px and wider, but a single column below that. Write the media query controlling the two-column rule.",
+        "steps": [
+         "Mobile-first means the single-column layout is the default, unconditional CSS.",
+         "The two-column layout should only apply at 768px and above, so use a min-width query.",
+         "@media (min-width: 768px) { .container { display: grid; grid-template-columns: 1fr 1fr; } }"
+        ],
+        "answer": "@media (min-width: 768px) { .container { display: grid; grid-template-columns: 1fr 1fr; } }"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "media query",
+       "def": "A CSS rule that applies styles only when the viewport matches a given condition, like a minimum or maximum width."
+      },
+      {
+       "term": "mobile-first",
+       "def": "A design approach that writes base styles for small screens, adding complexity for larger ones with min-width queries."
+      },
+      {
+       "term": "viewport meta tag",
+       "def": "An HTML tag that tells mobile browsers to render the page at the device's actual width."
+      },
+      {
+       "term": "breakpoint",
+       "def": "The specific width at which a layout's media query rules change."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does @media (max-width: 600px) { ... } apply to?",
+       "choices": [
+        "Screens exactly 600px wide only",
+        "Viewports 600px wide or narrower",
+        "Viewports wider than 600px",
+        "All screens, regardless of width"
+       ],
+       "answer": 1,
+       "explain": "max-width matches any viewport at or below the given width, not just an exact width."
+      },
+      {
+       "q": "What does mobile-first design mean?",
+       "choices": [
+        "Only designing for mobile devices, ignoring desktops",
+        "Writing base styles for small screens first, then adding complexity for larger screens with min-width queries",
+        "Designing the desktop layout first, then hiding elements on mobile",
+        "Using max-width queries exclusively"
+       ],
+       "answer": 1,
+       "explain": "Mobile-first starts with the simplest, small-screen layout as the default and layers on enhancements for larger viewports."
+      },
+      {
+       "q": "Why is the viewport meta tag required for responsive design to work on phones?",
+       "choices": [
+        "It changes the page's color scheme",
+        "Without it, phones render the page at a zoomed-out desktop width instead of the device's actual width",
+        "It is only needed for image-heavy pages",
+        "It replaces the need for media queries entirely"
+       ],
+       "answer": 1,
+       "explain": "Without the viewport tag, mobile browsers assume a wide desktop layout and zoom out, making media queries behave incorrectly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "JavaScript Fundamentals",
+   "summary": "JavaScript is what makes a page react. This unit covers variables and data types, conditionals and loops, and functions and arrays, the core building blocks of any script.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Variables, Data Types, and Operators",
+     "minutes": 12,
+     "intro": "HTML structures a page and CSS styles it, but JavaScript is what makes it react: respond to clicks, validate a form, update content without reloading. Every JS program starts with variables holding values.",
+     "sections": [
+      {
+       "heading": "let, const, and Data Types",
+       "body": [
+        "let score = 0; declares a variable that can be reassigned later; const name = 'Maya'; declares one that cannot be reassigned after its first value. Prefer const by default, and switch to let only for values you know will change.",
+        "JavaScript's core types include number (both whole numbers and decimals share one type), string, boolean, and the special values null (an intentional absence of a value) and undefined (a variable that has been declared but not yet assigned)."
+       ]
+      },
+      {
+       "heading": "Operators and Type Coercion",
+       "body": [
+        "Arithmetic operators + - * / % work as expected on numbers. The + operator behaves differently on strings, joining ('concatenating') them instead of adding: '5' + 3 produces the string '53', not the number 8, because JavaScript converts the number to a string first.",
+        "=== (strict equality) checks both value and type without converting either side, while == (loose equality) converts types before comparing, which causes surprising results like '5' == 5 being true. Modern JavaScript style strongly prefers === to avoid those surprises."
+       ],
+       "example": {
+        "problem": "What does '5' + 3 evaluate to in JavaScript, and why?",
+        "steps": [
+         "The + operator sees a string on the left side, '5'.",
+         "When + has a string operand, JavaScript converts the other operand to a string too, rather than doing math.",
+         "3 becomes '3', and the strings concatenate: '5' + '3' = '53'."
+        ],
+        "answer": "'53' (a string), because + concatenates when either side is a string."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "let / const",
+       "def": "Keywords for declaring variables; let allows reassignment, const does not."
+      },
+      {
+       "term": "type coercion",
+       "def": "JavaScript's automatic conversion of a value from one type to another during an operation."
+      },
+      {
+       "term": "strict equality (===)",
+       "def": "A comparison operator that checks both value and type without converting either side."
+      },
+      {
+       "term": "string concatenation",
+       "def": "Joining strings together, which the + operator performs when either operand is a string."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why should const be preferred over let by default?",
+       "choices": [
+        "const runs faster in every case",
+        "const signals the value will not be reassigned, making code easier to reason about",
+        "let is deprecated in modern JavaScript",
+        "const is required for numbers"
+       ],
+       "answer": 1,
+       "explain": "Using const by default communicates intent and prevents accidental reassignment, reserving let only for values that truly change."
+      },
+      {
+       "q": "What does '5' + 3 produce in JavaScript?",
+       "choices": [
+        "8",
+        "'53'",
+        "'8'",
+        "An error"
+       ],
+       "answer": 1,
+       "explain": "Since one operand is a string, + concatenates rather than adds, converting 3 to '3' and joining it: '53'."
+      },
+      {
+       "q": "Why is === generally preferred over == in modern JavaScript?",
+       "choices": [
+        "=== is the only operator that works on strings",
+        "=== avoids the type coercion that == performs, preventing surprising comparison results",
+        "== does not exist in JavaScript",
+        "=== is required before every if statement"
+       ],
+       "answer": 1,
+       "explain": "=== compares value and type directly, avoiding the implicit conversions == performs that can produce unexpected true results."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Control Flow: Conditionals and Loops",
+     "minutes": 12,
+     "intro": "JavaScript's if statements and loops encode the exact same logic as any C-family language: branch on a condition, repeat while one holds, just wrapped in parentheses and curly braces instead of relying on indentation alone.",
+     "sections": [
+      {
+       "heading": "if / else if / else",
+       "body": [
+        "if (condition) { ... } else if (otherCondition) { ... } else { ... } branches exactly like Python's if/elif/else, except conditions are wrapped in parentheses and blocks are wrapped in curly braces.",
+        "JavaScript treats certain values as automatically 'falsy' in a condition, even without an explicit comparison: 0, '' (empty string), null, undefined, and NaN all act like false; virtually everything else, including any non-empty string, acts like true."
+       ]
+      },
+      {
+       "heading": "for and while Loops",
+       "body": [
+        "for (let i = 0; i < 5; i++) { console.log(i); } runs its body 5 times, with i counting 0 through 4: the three parts inside the parentheses are the starting value, the continue-while condition, and the update run after each pass.",
+        "while (condition) { ... } repeats as long as its condition stays true, just like Python's while loop, and is the right choice when the number of repetitions is not known in advance."
+       ],
+       "example": {
+        "problem": "What does this loop print? let total = 0; for (let i = 1; i <= 4; i++) { total += i; } console.log(total);",
+        "steps": [
+         "The loop runs for i = 1, 2, 3, 4, since the condition i <= 4 stops it after 4.",
+         "total accumulates each pass: 0+1=1, 1+2=3, 3+3=6, 6+4=10.",
+         "console.log(total) runs after the loop finishes, printing the final accumulated value."
+        ],
+        "answer": "10"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "if / else if / else",
+       "def": "JavaScript's branching structure, choosing one block to run based on conditions."
+      },
+      {
+       "term": "falsy value",
+       "def": "A value, like 0, '', null, undefined, or NaN, that behaves like false in a condition."
+      },
+      {
+       "term": "for loop",
+       "def": "A loop with an explicit start, condition, and update expression, commonly used for a known number of repetitions."
+      },
+      {
+       "term": "while loop",
+       "def": "A loop that repeats as long as its condition remains true, suited to an unknown number of repetitions."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of these values is considered 'falsy' in a JavaScript condition?",
+       "choices": [
+        "'hello'",
+        "1",
+        "0",
+        "[1, 2, 3]"
+       ],
+       "answer": 2,
+       "explain": "0 is one of JavaScript's falsy values, along with '', null, undefined, and NaN."
+      },
+      {
+       "q": "In for (let i = 0; i < 5; i++) { ... }, how many times does the loop body run?",
+       "choices": [
+        "4",
+        "5",
+        "6",
+        "Infinitely"
+       ],
+       "answer": 1,
+       "explain": "i counts 0, 1, 2, 3, 4, five values total, before i < 5 becomes false and stops the loop."
+      },
+      {
+       "q": "Which loop is the best fit for repeating until a user enters 'quit', where the number of repetitions is unknown in advance?",
+       "choices": [
+        "for loop",
+        "while loop",
+        "if statement",
+        "switch statement"
+       ],
+       "answer": 1,
+       "explain": "while loops suit situations where you cannot predict the exact number of repetitions ahead of time."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Functions and Arrays in JavaScript",
+     "minutes": 14,
+     "intro": "JavaScript functions and arrays work much like Python's, with their own syntax quirks. Mastering both is what turns static pages into programs that actually compute something.",
+     "sections": [
+      {
+       "heading": "Declaring and Calling Functions",
+       "body": [
+        "function add(a, b) { return a + b; } declares a named function; calling add(2, 3) returns 5. **Arrow functions**, a more compact modern syntax, write the same thing as const add = (a, b) => a + b;, with an implicit return when the body is a single expression.",
+        "Just like Python, a JavaScript function without an explicit return implicitly returns undefined, JavaScript's equivalent of Python's None."
+       ]
+      },
+      {
+       "heading": "Arrays and Array Methods",
+       "body": [
+        "An array is written with square brackets: const fruits = ['apple', 'banana', 'cherry'];, indexed from 0 just like Python, so fruits[0] is 'apple'. .push(item) adds to the end; .length gives the count of items.",
+        ".map(fn) returns a new array with fn applied to every item, without changing the original: [1, 2, 3].map(n => n * 2) returns [2, 4, 6]. .filter(fn) returns only the items for which fn returns true: [1, 2, 3, 4].filter(n => n % 2 === 0) returns [2, 4]."
+       ],
+       "example": {
+        "problem": "What does [1, 2, 3, 4, 5].filter(n => n > 2).map(n => n * 10) return?",
+        "steps": [
+         "filter(n => n > 2) keeps only values greater than 2: [3, 4, 5].",
+         "map(n => n * 10) then multiplies each remaining value by 10.",
+         "The result is [30, 40, 50]."
+        ],
+        "answer": "[30, 40, 50]"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "arrow function",
+       "def": "A compact JavaScript function syntax, written as (params) => expression."
+      },
+      {
+       "term": "array",
+       "def": "An ordered, zero-indexed collection of values written with square brackets."
+      },
+      {
+       "term": ".map()",
+       "def": "An array method that returns a new array with a function applied to every item."
+      },
+      {
+       "term": ".filter()",
+       "def": "An array method that returns a new array containing only items for which a function returns true."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does const double = n => n * 2; double(7) return?",
+       "choices": [
+        "7",
+        "14",
+        "'n*2'",
+        "undefined"
+       ],
+       "answer": 1,
+       "explain": "The arrow function doubles its input: 7 * 2 = 14."
+      },
+      {
+       "q": "What does [1, 2, 3].map(n => n + 1) return?",
+       "choices": [
+        "[1, 2, 3]",
+        "[2, 3, 4]",
+        "[1, 4, 9]",
+        "undefined"
+       ],
+       "answer": 1,
+       "explain": "map applies n => n + 1 to every item, adding 1 to each: [2, 3, 4]."
+      },
+      {
+       "q": "What does [5, 12, 8, 3].filter(n => n > 6) return?",
+       "choices": [
+        "[5, 3]",
+        "[12, 8]",
+        "[5, 12, 8, 3]",
+        "[]"
+       ],
+       "answer": 1,
+       "explain": "filter keeps only values greater than 6: 12 and 8 qualify, while 5 and 3 do not."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "JavaScript in the Browser",
+   "summary": "JavaScript's real power on the web comes from reading and rewriting the page after it loads, and responding to what a user does. This closing unit covers the DOM, events, and shipping a finished page.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The DOM: Selecting and Changing Elements",
+     "minutes": 12,
+     "intro": "The Document Object Model is the browser's live, in-memory representation of your HTML, and JavaScript's real power on the web comes from reading and rewriting it after the page has already loaded.",
+     "sections": [
+      {
+       "heading": "Selecting Elements",
+       "body": [
+        "document.querySelector('.card') returns the first element matching the CSS selector .card; document.querySelectorAll('.card') returns all of them, as a list-like collection you can loop over. Selectors here use the exact same syntax as CSS selectors.",
+        "document.getElementById('header') is an older, narrower alternative that only matches by ID, still common in existing code but generally replaced by querySelector('#header') in modern JavaScript for consistency."
+       ]
+      },
+      {
+       "heading": "Reading and Changing Content",
+       "body": [
+        "element.textContent reads or sets an element's plain text; element.innerHTML reads or sets its content as raw HTML, allowing new tags to be inserted, but requiring caution, since inserting untrusted user input this way can introduce security vulnerabilities.",
+        "element.style.color = 'red'; changes a single CSS property directly from JavaScript, while element.classList.add('active') and .remove('active') toggle a CSS class, which is usually the cleaner approach since the actual styling rules stay in your CSS file."
+       ],
+       "example": {
+        "problem": "Write JavaScript that selects the element with id 'title' and changes its text to 'Welcome!'",
+        "steps": [
+         "Select the element: const title = document.querySelector('#title');",
+         "Change its text content: title.textContent = 'Welcome!';"
+        ],
+        "answer": "const title = document.querySelector('#title'); title.textContent = 'Welcome!';"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "DOM",
+       "def": "The Document Object Model; the browser's live, in-memory tree representation of the page's HTML."
+      },
+      {
+       "term": "querySelector()",
+       "def": "A method that returns the first element matching a given CSS selector."
+      },
+      {
+       "term": "textContent",
+       "def": "A property for reading or setting an element's plain text content."
+      },
+      {
+       "term": "classList",
+       "def": "A property offering methods like .add() and .remove() to toggle an element's CSS classes."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does document.querySelectorAll('.item') return?",
+       "choices": [
+        "Only the first matching element",
+        "Every element matching the selector, as a list-like collection",
+        "A single string of all matching text",
+        "An error if more than one element matches"
+       ],
+       "answer": 1,
+       "explain": "querySelectorAll returns all matching elements, unlike querySelector, which returns only the first."
+      },
+      {
+       "q": "Why is classList.add('active') often preferred over setting element.style directly?",
+       "choices": [
+        "classList.add() runs faster in every browser",
+        "It keeps the actual styling rules in CSS rather than scattering inline styles through JavaScript",
+        "element.style does not exist in modern browsers",
+        "classList.add() can only be used once per page"
+       ],
+       "answer": 1,
+       "explain": "Toggling a class keeps the visual styling defined in CSS, leaving JavaScript responsible only for deciding when the class applies."
+      },
+      {
+       "q": "What is a security risk of setting element.innerHTML directly from untrusted user input?",
+       "choices": [
+        "It always crashes the browser",
+        "Malicious HTML or script content in the input could be inserted and executed on the page",
+        "innerHTML cannot display any text at all",
+        "It permanently disables the DOM"
+       ],
+       "answer": 1,
+       "explain": "innerHTML parses its content as real HTML, so unescaped attacker-controlled input can inject and run malicious code."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Handling Events",
+     "minutes": 12,
+     "intro": "A page only feels interactive once it can respond to what a user does: clicking a button, typing in a field, submitting a form. Event listeners are how JavaScript hooks into those moments.",
+     "sections": [
+      {
+       "heading": "addEventListener",
+       "body": [
+        "button.addEventListener('click', function() { ... }); runs the given function every time the button is clicked. The first argument names the event type ('click', 'submit', 'keydown', among many others); the second is the function to run when it fires.",
+        "The function passed to addEventListener automatically receives an **event object** as its argument, commonly named event or e, carrying details like which key was pressed or which element was clicked."
+       ]
+      },
+      {
+       "heading": "Preventing Default Behavior and Reading Form Input",
+       "body": [
+        "Submitting a <form> normally reloads the page; event.preventDefault(), called inside a 'submit' event handler, stops that default behavior so JavaScript can process the form data itself, without a jarring full-page reload.",
+        "document.querySelector('#email').value reads the current text inside an input field, letting a handler validate or use whatever the user typed before deciding what to do next."
+       ],
+       "example": {
+        "problem": "Write an event listener that prevents a form with id 'signup' from reloading the page on submit.",
+        "steps": [
+         "Select the form: const form = document.querySelector('#signup');",
+         "Add a submit listener: form.addEventListener('submit', function(event) { ... });",
+         "Inside the handler, call event.preventDefault(); to stop the default page reload."
+        ],
+        "answer": "const form = document.querySelector('#signup'); form.addEventListener('submit', function(event) { event.preventDefault(); });"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "addEventListener",
+       "def": "A method that registers a function to run whenever a given event occurs on an element."
+      },
+      {
+       "term": "event object",
+       "def": "The object automatically passed to an event handler, carrying details about the event that occurred."
+      },
+      {
+       "term": "preventDefault()",
+       "def": "A method on the event object that stops the browser's default action for that event, like a form reload."
+      },
+      {
+       "term": ".value",
+       "def": "A property that reads or sets the current text inside a form input element."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does button.addEventListener('click', myFunction); do?",
+       "choices": [
+        "Runs myFunction immediately, once, when the page loads",
+        "Runs myFunction every time the button is clicked",
+        "Deletes the button after one click",
+        "Changes the button's color to myFunction's return value"
+       ],
+       "answer": 1,
+       "explain": "addEventListener registers myFunction to run each time the specified event, here 'click', fires on that element."
+      },
+      {
+       "q": "What does calling event.preventDefault() inside a form's submit handler accomplish?",
+       "choices": [
+        "It deletes the form from the page",
+        "It stops the form's default full-page reload so JavaScript can handle the submission instead",
+        "It automatically validates every input",
+        "It cancels the event listener permanently"
+       ],
+       "answer": 1,
+       "explain": "preventDefault() stops the browser's built-in reload-on-submit behavior, letting your JavaScript take over the submission."
+      },
+      {
+       "q": "How do you read the current text typed into an input with id 'username'?",
+       "choices": [
+        "document.querySelector('#username').value",
+        "document.querySelector('#username').text",
+        "document.querySelector('#username').content",
+        "document.getElementById.value('username')"
+       ],
+       "answer": 0,
+       "explain": "The .value property holds the current text content of a form input element."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Putting It Together: Building and Deploying a Page",
+     "minutes": 14,
+     "intro": "A finished page is HTML, CSS, and JavaScript working together, then actually available on the internet for someone else to visit. This closing lesson covers linking your three files correctly and the basics of shipping a static site.",
+     "sections": [
+      {
+       "heading": "Linking CSS and JavaScript to HTML",
+       "body": [
+        "<link rel='stylesheet' href='styles.css'> inside <head> loads an external CSS file. <script src='script.js'></script> placed just before the closing </body> tag loads JavaScript after the HTML above it has already loaded, so your script can safely find elements already on the page.",
+        "Alternatively, the defer attribute, <script src='script.js' defer></script>, lets you keep the script tag in <head> while still guaranteeing it runs only after the full HTML document has parsed, which is the modern preferred approach."
+       ]
+      },
+      {
+       "heading": "Shipping a Static Site",
+       "body": [
+        "A site built only from HTML, CSS, and JavaScript files, with no server-side code, is called a **static site**, and it can be hosted for free on services like GitHub Pages or Netlify by simply uploading the files.",
+        "Before shipping, check that every image has alt text, every link works, the page looks reasonable on a narrow mobile width, and the browser's developer console shows no red error messages, a final pass that catches the majority of embarrassing launch-day bugs."
+       ],
+       "example": {
+        "problem": "Your script.js tries to select a button with document.querySelector('#save-btn') but gets null, even though the button exists in the HTML. What is the most likely cause?",
+        "steps": [
+         "null from querySelector usually means the element did not exist in the DOM yet when the script ran.",
+         "This happens when a <script> tag in <head> runs before the HTML below it has loaded, without defer or a placement at the end of <body>.",
+         "Moving the script to just before </body>, or adding the defer attribute, fixes the ordering so the button exists first."
+        ],
+        "answer": "The script ran before the button existed in the DOM; move the script to the end of <body> or add the defer attribute."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "link rel='stylesheet'",
+       "def": "The HTML tag used to load an external CSS file into a page."
+      },
+      {
+       "term": "defer attribute",
+       "def": "A script attribute that delays execution until after the HTML document has fully parsed."
+      },
+      {
+       "term": "static site",
+       "def": "A website built only from HTML, CSS, and JavaScript files, with no server-side code required."
+      },
+      {
+       "term": "developer console",
+       "def": "The browser panel that shows JavaScript errors, logged messages, and lets you inspect a running page."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does <script src='script.js' defer></script> placed in <head> work correctly, unlike a plain <script> in the same spot?",
+       "choices": [
+        "defer makes the script load faster over the network",
+        "defer delays running the script until after the full HTML document has parsed",
+        "defer removes the need for a src attribute",
+        "defer only works with CSS files, not JavaScript"
+       ],
+       "answer": 1,
+       "explain": "defer guarantees the script executes only after the HTML has finished parsing, so elements it looks for already exist."
+      },
+      {
+       "q": "What is a 'static site'?",
+       "choices": [
+        "A site that never changes its CSS colors",
+        "A site built only from HTML, CSS, and JavaScript files, with no server-side code",
+        "A site that only works on desktop computers",
+        "A site with no images"
+       ],
+       "answer": 1,
+       "explain": "A static site is composed entirely of files served as-is, with no server-side processing generating the pages."
+      },
+      {
+       "q": "Before shipping a page, checking the browser's developer console is useful mainly for what?",
+       "choices": [
+        "Changing the page's font",
+        "Spotting red error messages that reveal broken JavaScript or failed resource loads",
+        "Measuring the page's file size",
+        "Testing the server's uptime"
+       ],
+       "answer": 1,
+       "explain": "The console surfaces JavaScript errors and failed network requests that are otherwise invisible on the rendered page."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1674 @@
+{
+ "id": "music-theory",
+ "title": "Music Theory",
+ "domain": "arts",
+ "level": "All levels",
+ "description": "A practical introduction to how Western music is built and written down: pitch and notation, rhythm and meter, scales and key signatures, intervals, and the chords that give harmony its pull. Every idea is tied to a concrete example you can check by counting steps on a keyboard or staff, so you leave able to read, build, and analyze real music, not just recite rules.",
+ "outcomes": [
+  "You can read pitches in treble and bass clef, including ledger lines, and find them on a piano keyboard.",
+  "You can write and count rhythms in simple and compound meters, including ties, dots, and syncopation.",
+  "You can build any major or minor scale from its starting note and name its key signature.",
+  "You can identify and construct any interval and invert it to find its complement.",
+  "You can build triads and seventh chords in root position and inversion, and analyze a chord progression with roman numerals.",
+  "You can recognize cadences well enough to explain how a short chord progression creates a sense of rest or motion."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Pitch and Notation",
+   "summary": "The building blocks of reading music: the letter names of pitch, the staff and its clefs, and how notation reaches beyond five lines using octaves and ledger lines.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Musical Alphabet and the Keyboard",
+     "minutes": 12,
+     "intro": "Western music names every pitch with just seven letters, A through G, repeating over and over from the lowest rumble to the highest whistle. Once you can see that pattern on a keyboard, the entire staff stops looking like a code and starts looking like a map.",
+     "sections": [
+      {
+       "heading": "The Seven Letter Names",
+       "body": [
+        "Pitches are named A, B, C, D, E, F, and G, and then the pattern simply repeats: after G comes another A, an octave higher. On a piano, the white keys in a row spell out this alphabet in order, over and over across the keyboard.",
+        "Because the alphabet is only seven letters long, learning to read music is mostly learning to recognize where you are in that short repeating cycle, not memorizing dozens of unique symbols."
+       ]
+      },
+      {
+       "heading": "Half Steps and Whole Steps",
+       "body": [
+        "The smallest distance between two notes on a piano is a half step: two keys with no other key between them, black or white. A whole step is two half steps stacked together, skipping one key.",
+        "Most white-key neighbors are a whole step apart, with one important exception: E to F and B to C are each only a half step apart, because there is no black key between them. This irregularity is the reason scales are not evenly spaced, and it matters for everything you build in this course."
+       ],
+       "example": {
+        "problem": "Starting on C and moving up by letter name to F, mark each step as a half step or a whole step.",
+        "steps": [
+         "C to D: there is a black key between them, so this is a whole step.",
+         "D to E: another black key between them, so this is also a whole step.",
+         "E to F: no black key between these two white keys, so this is a half step."
+        ],
+        "answer": "C to D to E to F contains two whole steps followed by one half step."
+       }
+      },
+      {
+       "heading": "Sharps and Flats",
+       "body": [
+        "A sharp (♯) raises a pitch by one half step, and a flat (♭) lowers it by one half step. The black keys on a piano are reached this way: the black key just above C is C♯, and the same key is also D♭, since it sits one half step below D.",
+        "When two names point to the exact same physical pitch, like C♯ and D♭, they are called enharmonic equivalents. Which name you use depends on musical context, covered later when you build scales and key signatures."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "half step",
+       "def": "The smallest distance between two adjacent pitches, with no note in between."
+      },
+      {
+       "term": "whole step",
+       "def": "A distance equal to two half steps."
+      },
+      {
+       "term": "sharp (♯)",
+       "def": "A symbol that raises a pitch by one half step."
+      },
+      {
+       "term": "flat (♭)",
+       "def": "A symbol that lowers a pitch by one half step."
+      },
+      {
+       "term": "enharmonic equivalent",
+       "def": "Two different note names, such as C♯ and D♭, that sound the same pitch."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which pair of white keys is only a half step apart with no black key between them?",
+       "choices": [
+        "C and D",
+        "D and E",
+        "E and F",
+        "F and G"
+       ],
+       "answer": 2,
+       "explain": "E and F sit right next to each other on the keyboard with no black key between them, making that gap a half step, unlike most white-key neighbors."
+      },
+      {
+       "q": "What does a flat symbol (♭) do to a pitch?",
+       "choices": [
+        "Raises it by a whole step",
+        "Lowers it by a half step",
+        "Raises it by a half step",
+        "Has no effect on pitch"
+       ],
+       "answer": 1,
+       "explain": "A flat lowers a pitch by exactly one half step, the opposite effect of a sharp."
+      },
+      {
+       "q": "Which of these correctly describes an enharmonic pair?",
+       "choices": [
+        "C and D, because they are next to each other",
+        "C♯ and D♭, because they are the same physical key",
+        "C and G, because they sound pleasant together",
+        "A whole note and a half note"
+       ],
+       "answer": 1,
+       "explain": "C♯ and D♭ refer to the exact same key on the piano; they are two different spellings for one pitch, which is what makes them enharmonic."
+      },
+      {
+       "q": "How many letter names are used to name pitches in Western music before the pattern repeats?",
+       "choices": [
+        "5",
+        "7",
+        "8",
+        "12"
+       ],
+       "answer": 1,
+       "explain": "Only seven letters, A through G, are used; the eighth note up from any starting pitch shares that same starting letter name, one octave higher."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Reading the Staff and Clefs",
+     "minutes": 12,
+     "intro": "Five lines and four spaces can hold an entire orchestra's worth of pitches, but only if you know which letter belongs to which line. A clef is the key that unlocks that translation, and once it clicks, reading notation becomes fast pattern recognition instead of counting from scratch every time.",
+     "sections": [
+      {
+       "heading": "The Staff and the Treble Clef",
+       "body": [
+        "A staff is five horizontal lines with four spaces between them, and both the lines and the spaces can hold notes. A clef, drawn at the start of the staff, tells you which specific pitch each line and space represents.",
+        "The treble clef (also called the G clef, since its curl circles the line representing G) is used for higher-pitched instruments and voices. Reading bottom to top, its five lines spell E, G, B, D, F, often remembered with \"Every Good Boy Does Fine,\" and its four spaces spell F, A, C, E, which simply spells the word FACE."
+       ]
+      },
+      {
+       "heading": "The Bass Clef",
+       "body": [
+        "The bass clef (also called the F clef, since its two dots bracket the line representing F) is used for lower-pitched instruments and voices, such as cello or a pianist's left hand. Its five lines, bottom to top, spell G, B, D, F, A, often remembered with \"Good Boys Do Fine Always.\"",
+        "Its four spaces, bottom to top, spell A, C, E, G, often remembered with \"All Cows Eat Grass.\" Notice the bass clef sits lower on the keyboard than the treble clef, which is exactly why the two are usually paired for instruments with a wide range, like piano."
+       ],
+       "example": {
+        "problem": "Identify the note sitting on the second line from the bottom of the treble staff, and the note in the third space from the bottom of the bass staff.",
+        "steps": [
+         "Treble clef lines from bottom to top are E, G, B, D, F, so the second line up is G.",
+         "Bass clef spaces from bottom to top are A, C, E, G, so the third space up is E."
+        ],
+        "answer": "The note is G on the treble staff's second line, and E on the bass staff's third space."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "staff",
+       "def": "Five horizontal lines and four spaces used to notate pitch."
+      },
+      {
+       "term": "treble clef",
+       "def": "The G clef, used for higher pitches; its lines read E G B D F and spaces read F A C E."
+      },
+      {
+       "term": "bass clef",
+       "def": "The F clef, used for lower pitches; its lines read G B D F A and spaces read A C E G."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In the treble clef, what note sits in the very first (bottom) space of the staff?",
+       "choices": [
+        "E",
+        "F",
+        "G",
+        "A"
+       ],
+       "answer": 1,
+       "explain": "The treble clef's spaces, bottom to top, spell F A C E, so the bottom space is F."
+      },
+      {
+       "q": "What does the bass clef's nickname \"F clef\" refer to?",
+       "choices": [
+        "It can only play the note F",
+        "Its two dots bracket the line representing F",
+        "It is used exclusively for the piano",
+        "It replaces the need for a key signature"
+       ],
+       "answer": 1,
+       "explain": "The bass clef symbol is drawn with two dots that sit just above and below the staff line representing F, which is how it marks that line's identity."
+      },
+      {
+       "q": "Which mnemonic correctly matches the bass clef's five lines, bottom to top?",
+       "choices": [
+        "Every Good Boy Does Fine",
+        "All Cows Eat Grass",
+        "Good Boys Do Fine Always",
+        "FACE"
+       ],
+       "answer": 2,
+       "explain": "The bass clef's lines, bottom to top, are G B D F A, commonly remembered as \"Good Boys Do Fine Always.\""
+      },
+      {
+       "q": "A note sits on the middle line of the treble staff. What pitch is it?",
+       "choices": [
+        "E",
+        "G",
+        "B",
+        "D"
+       ],
+       "answer": 2,
+       "explain": "The treble clef lines from bottom to top are E, G, B, D, F, making the third (middle) line B."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Octaves, Ledger Lines, and the Grand Staff",
+     "minutes": 10,
+     "intro": "Music needs far more pitches than five lines and four spaces can hold on their own, so notation extends the staff in two ways: repeating letter names an octave apart, and adding short extra lines when a pitch runs off the edge.",
+     "sections": [
+      {
+       "heading": "Octaves",
+       "body": [
+        "An octave is the distance between one pitch and the next pitch that shares its letter name, either higher or lower. A note and the note one octave above it sound like \"the same note, higher,\" because the higher pitch vibrates at exactly twice the frequency of the lower one.",
+        "This is why musicians can refer to \"the A above middle C\" and mean something very specific: concert pitch A, commonly tuned to 440 vibrations per second (440 Hz), sits one octave above the A just below it, which vibrates at 220 Hz."
+       ]
+      },
+      {
+       "heading": "Ledger Lines and the Grand Staff",
+       "body": [
+        "When a pitch is too high or too low to fit on the five-line staff, notation adds short ledger lines, one at a time, extending the staff just far enough to place that single note.",
+        "Middle C is the pitch that sits exactly between the treble and bass staves: written on one ledger line below the treble staff, or one ledger line above the bass staff. Piano music stacks a treble staff over a bass staff, connected as a grand staff, with middle C as the shared reference point between a pianist's two hands."
+       ],
+       "example": {
+        "problem": "A pianist's right hand plays middle C. Where is it written, and what happens if the melody rises to the A just above it?",
+        "steps": [
+         "Middle C is written on one ledger line below the treble staff, since it sits just below that staff's lowest line, E.",
+         "The A just above middle C is a whole step above B, which is the treble staff's bottom line, so it sits in the very first space, just above the ledger line note."
+        ],
+        "answer": "Middle C sits on a ledger line below the treble staff, and the A right above it lands in the staff's bottom space, no longer needing a ledger line."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "octave",
+       "def": "The interval between a pitch and the next pitch sharing its letter name, at double or half the frequency."
+      },
+      {
+       "term": "ledger line",
+       "def": "A short line added above or below a staff to notate a pitch outside its five lines."
+      },
+      {
+       "term": "grand staff",
+       "def": "A treble staff and bass staff joined together, used for piano and other wide-range instruments."
+      },
+      {
+       "term": "middle C",
+       "def": "The C that sits between the treble and bass staves, one ledger line from each."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If concert pitch A vibrates at 440 Hz, what is the frequency of the A one octave below it?",
+       "choices": [
+        "880 Hz",
+        "440 Hz",
+        "220 Hz",
+        "110 Hz"
+       ],
+       "answer": 2,
+       "explain": "Moving down one octave halves the frequency, so the A one octave below 440 Hz vibrates at 220 Hz."
+      },
+      {
+       "q": "Where is middle C written on the grand staff?",
+       "choices": [
+        "On the treble staff's top line",
+        "On one ledger line below the treble staff",
+        "In the bass staff's bottom space",
+        "It cannot be notated on the grand staff"
+       ],
+       "answer": 1,
+       "explain": "Middle C sits between the two staves and is written on a single ledger line just below the treble staff, or equivalently just above the bass staff."
+      },
+      {
+       "q": "What is a ledger line used for?",
+       "choices": [
+        "Marking the key signature",
+        "Notating a pitch that falls outside the staff's five lines",
+        "Indicating tempo",
+        "Showing which clef is in use"
+       ],
+       "answer": 1,
+       "explain": "A ledger line is a short extra line added above or below the staff so a pitch too high or low for the regular five lines can still be notated precisely."
+      },
+      {
+       "q": "Two notes are an octave apart. What is true of their letter names and frequencies?",
+       "choices": [
+        "Different letter names, same frequency",
+        "Same letter name, one frequency is double the other",
+        "Same letter name, same frequency",
+        "Different letter names, one frequency is double the other"
+       ],
+       "answer": 1,
+       "explain": "An octave connects two notes with the same letter name where the higher pitch vibrates at exactly twice the frequency of the lower one."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Rhythm and Meter",
+   "summary": "How music organizes time: note and rest values, reading time signatures, and the dots and ties that let rhythm stretch, hold, and syncopate.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Note and Rest Values",
+     "minutes": 12,
+     "intro": "Pitch tells you what to play; rhythm tells you when and for how long. Note values describe duration in proportion to each other, which is why the same notated rhythm can be played slowly at a funeral or briskly at a dance and still be recognizably the same rhythm.",
+     "sections": [
+      {
+       "heading": "Relative Note Durations",
+       "body": [
+        "Note values are named for fractions of a whole note: a whole note lasts the longest, a half note lasts half as long, a quarter note a quarter as long, and so on through eighth and sixteenth notes. In common practice, the quarter note is usually treated as one beat.",
+        "Because these are ratios, not fixed seconds, a quarter note is always exactly twice as long as an eighth note and half as long as a half note, no matter how fast or slow the music is played. Tempo changes how long a beat lasts in real time; it never changes these internal ratios."
+       ]
+      },
+      {
+       "heading": "Rests: Notated Silence",
+       "body": [
+        "Every note value has a matching rest of identical duration: a whole rest, half rest, quarter rest, and eighth rest each occupy exactly as much time as their note counterpart, just in silence rather than sound.",
+        "Rests are not optional decoration; leaving out the correct rest changes the rhythm just as much as leaving out a note would, since an ensemble depends on every player counting the same silences at the same moments."
+       ],
+       "example": {
+        "problem": "A whole note lasts 4 beats. How many eighth notes fit in that same span of time?",
+        "steps": [
+         "A whole note (4 beats) equals two half notes (2 beats each).",
+         "Each half note equals two quarter notes (1 beat each), so a whole note equals four quarter notes.",
+         "Each quarter note equals two eighth notes (half a beat each), so four quarter notes equal eight eighth notes."
+        ],
+        "answer": "Eight eighth notes fit in the same duration as one whole note."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "whole note",
+       "def": "A note lasting 4 beats in common time, the longest standard note value."
+      },
+      {
+       "term": "quarter note",
+       "def": "A note lasting 1 beat in common time, usually treated as the basic beat unit."
+      },
+      {
+       "term": "eighth note",
+       "def": "A note lasting half a beat, or half of a quarter note."
+      },
+      {
+       "term": "rest",
+       "def": "A symbol indicating a specific duration of silence, matching a note value."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many quarter notes equal the duration of one whole note?",
+       "choices": [
+        "2",
+        "3",
+        "4",
+        "8"
+       ],
+       "answer": 2,
+       "explain": "A whole note's duration equals exactly four quarter notes, since each half note (half of a whole note) equals two quarter notes."
+      },
+      {
+       "q": "Why does a quarter note played at a fast tempo still count as one beat, the same as at a slow tempo?",
+       "choices": [
+        "Note values are fixed in seconds regardless of tempo",
+        "Note values are ratios relative to each other, and tempo scales all of them together",
+        "Fast tempos convert quarter notes into eighth notes",
+        "Rests are unaffected by tempo but notes are not"
+       ],
+       "answer": 1,
+       "explain": "Note durations are proportional to one another; tempo changes how long each beat lasts in real time, but a quarter note is always one beat and always twice an eighth note, at any tempo."
+      },
+      {
+       "q": "What is the purpose of a rest in written music?",
+       "choices": [
+        "To indicate a change in key",
+        "To notate a specific duration of silence",
+        "To mark the end of a piece",
+        "To show which instrument plays next"
+       ],
+       "answer": 1,
+       "explain": "A rest notates an exact duration of silence, matching the same time value as its equivalent note, so ensembles stay together through silent passages too."
+      },
+      {
+       "q": "Which is the correct order of note values from longest to shortest?",
+       "choices": [
+        "Quarter, half, whole, eighth",
+        "Whole, half, quarter, eighth",
+        "Eighth, quarter, half, whole",
+        "Half, whole, eighth, quarter"
+       ],
+       "answer": 1,
+       "explain": "From longest to shortest: whole note, half note, quarter note, then eighth note, each half the duration of the one before it."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Time Signatures and Meter",
+     "minutes": 13,
+     "intro": "A time signature is a set of instructions in disguise: two stacked numbers that tell a performer exactly how to count. Learn to read those two numbers correctly and you can walk into a piece of music you have never seen and immediately know how to feel its pulse.",
+     "sections": [
+      {
+       "heading": "Reading a Time Signature",
+       "body": [
+        "A time signature has two numbers stacked at the start of a piece. The top number tells you how many beats are in each measure (the segments the staff is divided into by vertical bar lines). The bottom number tells you which note value counts as one beat: a 4 means the quarter note gets the beat, an 8 means the eighth note gets the beat.",
+        "So 4/4 time means four quarter-note beats per measure, while 3/4 means three quarter-note beats per measure, the meter behind most waltzes."
+       ]
+      },
+      {
+       "heading": "Simple vs. Compound Meter",
+       "body": [
+        "In simple meter, each main beat naturally divides into two equal parts (a quarter-note beat splits into two eighth notes). Time signatures like 2/4, 3/4, and 4/4 are simple meters.",
+        "In compound meter, each main beat naturally divides into three equal parts instead. The most common example is 6/8: even though the bottom number is 8, the six eighth notes group into two main beats of three eighths each, so a 6/8 measure feels like two big beats, not six small ones, and each main beat is best thought of as a dotted quarter note."
+       ],
+       "example": {
+        "problem": "A measure of 6/8 time is completely filled with eighth notes. How many eighth notes does it contain, and how many main beats does that group into under compound meter?",
+        "steps": [
+         "The top number of 6/8 tells you there are 6 eighth-note units of value per measure.",
+         "In compound meter, eighth notes group in sets of three per main beat.",
+         "Six eighth notes divided into groups of three gives two main beats per measure."
+        ],
+        "answer": "The measure contains 6 eighth notes, grouped into 2 main beats (each a dotted quarter note) in compound meter."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "time signature",
+       "def": "Two stacked numbers indicating beats per measure and which note value equals one beat."
+      },
+      {
+       "term": "measure (bar)",
+       "def": "A segment of music containing a fixed number of beats, marked off by bar lines."
+      },
+      {
+       "term": "simple meter",
+       "def": "A meter where each main beat divides naturally into two equal parts, such as 3/4 or 4/4."
+      },
+      {
+       "term": "compound meter",
+       "def": "A meter where each main beat divides naturally into three equal parts, such as 6/8 or 9/8."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a time signature, what does the bottom number indicate?",
+       "choices": [
+        "How many beats are in each measure",
+        "Which note value receives one beat",
+        "The tempo of the piece",
+        "The key signature"
+       ],
+       "answer": 1,
+       "explain": "The bottom number specifies which note value counts as a single beat; a 4 means quarter notes get the beat, an 8 means eighth notes do."
+      },
+      {
+       "q": "How many main beats does a measure of 6/8 time typically feel like, in compound meter?",
+       "choices": [
+        "Six",
+        "Four",
+        "Three",
+        "Two"
+       ],
+       "answer": 3,
+       "explain": "Even though six eighth notes fill the measure, compound meter groups them into two sets of three, giving the measure a feel of two main (dotted-quarter) beats."
+      },
+      {
+       "q": "Which of these time signatures is a simple meter?",
+       "choices": [
+        "6/8",
+        "9/8",
+        "3/4",
+        "12/8"
+       ],
+       "answer": 2,
+       "explain": "3/4 time divides each quarter-note beat into two equal eighth notes, which is the definition of simple meter; 6/8, 9/8, and 12/8 are all compound meters."
+      },
+      {
+       "q": "In 3/4 time, how many quarter-note beats are in each measure?",
+       "choices": [
+        "2",
+        "3",
+        "4",
+        "6"
+       ],
+       "answer": 1,
+       "explain": "The top number of the time signature, 3, tells you there are three beats per measure, and the bottom number, 4, tells you each beat is a quarter note."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Ties, Dots, and Subdividing Beats",
+     "minutes": 12,
+     "intro": "Real rhythms rarely line up neatly on the beat; music breathes through notes that stretch across beats and accents that land where you least expect them. Ties and dots are the tools notation uses to write exactly those moments down.",
+     "sections": [
+      {
+       "heading": "Dotted Notes",
+       "body": [
+        "A dot placed after a note adds half of that note's original value to itself. A dotted half note, for example, is a half note (2 beats) plus half of 2 beats (1 beat), for a total of 3 beats.",
+        "This same rule applies to any note value: a dotted quarter note is a quarter note (1 beat) plus half a beat, totaling 1.5 beats, which is exactly why a dotted quarter note is the natural \"one main beat\" unit in compound meters like 6/8."
+       ]
+      },
+      {
+       "heading": "Ties and Syncopation",
+       "body": [
+        "A tie is a curved line connecting two notes of the same pitch; instead of being played twice, they are played as one continuous sound lasting the combined duration of both notes. Ties are essential for holding a note across a bar line, since a single note symbol cannot span two measures on its own.",
+        "Syncopation happens when a rhythm emphasizes a beat, or part of a beat, that is not normally accented, often by tying a note from a weak part of the beat over into a strong one. This deliberate placement against the expected pulse is a defining feature of jazz, funk, and countless other rhythmically driven styles."
+       ],
+       "example": {
+        "problem": "In 4/4 time, a measure starts with a dotted half note, followed immediately by a quarter note. Does this rhythm exactly fill the measure?",
+        "steps": [
+         "A dotted half note lasts 2 beats plus half of 2 beats, totaling 3 beats.",
+         "The following quarter note adds exactly 1 more beat.",
+         "3 beats plus 1 beat equals 4 beats, which is exactly the total a 4/4 measure holds."
+        ],
+        "answer": "Yes, the dotted half note (3 beats) plus the quarter note (1 beat) sum to exactly 4 beats, filling the 4/4 measure with no gap or overflow."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "dot",
+       "def": "A symbol placed after a note that adds half of that note's value to its total duration."
+      },
+      {
+       "term": "tie",
+       "def": "A curved line connecting two same-pitch notes, combining their durations into one sound."
+      },
+      {
+       "term": "syncopation",
+       "def": "Rhythmic emphasis placed on a normally unaccented beat or part of a beat."
+      },
+      {
+       "term": "subdivision",
+       "def": "Dividing a beat into smaller, equal rhythmic units."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many beats does a dotted quarter note last?",
+       "choices": [
+        "1",
+        "1.5",
+        "2",
+        "2.5"
+       ],
+       "answer": 1,
+       "explain": "A quarter note is 1 beat; the dot adds half of that value, 0.5 beats, for a total of 1.5 beats."
+      },
+      {
+       "q": "What is the main function of a tie between two notes of the same pitch?",
+       "choices": [
+        "To lower the pitch of the second note",
+        "To combine their durations into one continuous sound",
+        "To indicate a rest between them",
+        "To change the time signature"
+       ],
+       "answer": 1,
+       "explain": "A tie joins two same-pitch notes so they are performed as a single sustained sound equal to the combined duration of both notes, rather than two separate attacks."
+      },
+      {
+       "q": "Syncopation is best described as:",
+       "choices": [
+        "Playing every beat exactly as expected",
+        "Emphasis placed on a normally weak or unaccented beat",
+        "A type of key signature",
+        "Removing all rests from a rhythm"
+       ],
+       "answer": 1,
+       "explain": "Syncopation shifts emphasis onto a beat, or part of a beat, that would not normally be accented, creating rhythmic tension against the expected pulse."
+      },
+      {
+       "q": "A half note (2 beats) gains a dot. What is its new total duration?",
+       "choices": [
+        "2.5 beats",
+        "3 beats",
+        "4 beats",
+        "1 beat"
+       ],
+       "answer": 1,
+       "explain": "The dot adds half of the half note's original value (half of 2 beats is 1 beat), so 2 beats plus 1 beat equals 3 beats total."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Scales and Keys",
+   "summary": "How scales are constructed from steps, how key signatures summarize a scale's sharps or flats on the circle of fifths, and how minor scales relate to their major partners.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Half Steps, Whole Steps, and the Major Scale",
+     "minutes": 14,
+     "intro": "Every major scale you will ever play, in any key, is built from the exact same recipe of steps. Learn that one recipe and you can construct a major scale starting on any note without ever memorizing a separate pattern for each key.",
+     "sections": [
+      {
+       "heading": "The Major Scale Formula",
+       "body": [
+        "A major scale follows a fixed pattern of whole steps (W) and half steps (H), starting from its tonic (starting note): W-W-H-W-W-W-H. Apply this pattern to any starting note and the result is a major scale in that key.",
+        "You can check this pattern on the white keys starting from C: C-D (W), D-E (W), E-F (H), F-G (W), G-A (W), A-B (W), B-C (H). C major is the only major scale that uses no sharps or flats, precisely because its natural half steps (E-F and B-C) already fall exactly where the formula needs them."
+       ]
+      },
+      {
+       "heading": "Building a Scale from Any Note",
+       "body": [
+        "Starting on a note other than C means the formula will require a sharp or flat somewhere, since the natural half steps of the keyboard (E-F and B-C) will not always land where the W-W-H-W-W-W-H pattern needs a half step.",
+        "Take G major: G-A (W), A-B (W), B-C (H), C-D (W), D-E (W), E-F♯ (W), F♯-G (H). Notice the sixth step must be a whole step, but E to F is naturally only a half step, so F is raised to F♯ to stretch that gap to a full whole step, keeping the rest of the pattern intact."
+       ],
+       "example": {
+        "problem": "Build the D major scale using the formula W-W-H-W-W-W-H, starting on D.",
+        "steps": [
+         "D to E is a whole step.",
+         "E to F♯ is a whole step (F must be sharped to make this a whole step rather than the natural half step to F).",
+         "F♯ to G is a half step.",
+         "G to A, A to B, and B to C♯ are each whole steps (C must be sharped for the last of these to be a whole step).",
+         "C♯ to D is a half step, completing the octave."
+        ],
+        "answer": "D major is D, E, F♯, G, A, B, C♯, D, requiring two sharps: F♯ and C♯."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "major scale",
+       "def": "A seven-note scale built from the pattern whole-whole-half-whole-whole-whole-half."
+      },
+      {
+       "term": "tonic",
+       "def": "The first and \"home\" note of a scale or key."
+      },
+      {
+       "term": "scale formula",
+       "def": "The fixed sequence of whole and half steps that defines a scale type."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the whole-step/half-step formula for a major scale, starting from the tonic?",
+       "choices": [
+        "W-H-W-W-H-W-W",
+        "W-W-H-W-W-W-H",
+        "H-W-W-H-W-W-W",
+        "W-W-W-H-W-W-H"
+       ],
+       "answer": 1,
+       "explain": "Every major scale follows the same pattern from its tonic: whole, whole, half, whole, whole, whole, half."
+      },
+      {
+       "q": "Why does C major require no sharps or flats?",
+       "choices": [
+        "It is the only scale allowed to skip the formula",
+        "Its natural half steps, E-F and B-C, happen to fall exactly where the major scale formula needs them",
+        "C major does not actually follow the major scale formula",
+        "Sharps are never used in any major scale"
+       ],
+       "answer": 1,
+       "explain": "The keyboard's only two natural half steps, E-F and B-C, land in exactly the third-to-fourth and seventh-to-eighth positions the major scale formula requires, so no note needs to be altered."
+      },
+      {
+       "q": "Building a scale on F using the major scale formula requires which single altered note?",
+       "choices": [
+        "F♯",
+        "B♭",
+        "C♯",
+        "E♭"
+       ],
+       "answer": 1,
+       "explain": "F major is F, G, A, B♭, C, D, E, F: the fourth step must be a half step below where B natural would sit, so B is flatted to B♭ to keep the A-to-B♭ gap a half step as the formula requires."
+      },
+      {
+       "q": "How many sharps or flats does the D major scale require?",
+       "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+       ],
+       "answer": 2,
+       "explain": "D major requires two sharps, F♯ and C♯, to keep the whole-whole-half-whole-whole-whole-half pattern intact starting from D."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Key Signatures and the Circle of Fifths",
+     "minutes": 14,
+     "intro": "Instead of writing a sharp or flat next to every single altered note throughout an entire piece, composers write them once, at the start of every staff, as a key signature. The circle of fifths is the map that tells you exactly how many, and which ones, belong to any given key.",
+     "sections": [
+      {
+       "heading": "What a Key Signature Does",
+       "body": [
+        "A key signature is the group of sharps or flats placed right after the clef at the start of each line of music. Every sharp or flat listed there applies to every instance of that letter name for the rest of the piece, in every octave, unless canceled by a natural sign.",
+        "This is simply a shortcut: instead of writing an accidental sharp next to every single F in a piece in G major, the key signature places one sharp on the F line once, and the performer understands it governs all the F's throughout."
+       ]
+      },
+      {
+       "heading": "The Circle of Fifths",
+       "body": [
+        "The circle of fifths arranges the twelve keys in a circle where each step clockwise moves up a perfect fifth and adds one sharp. Starting from C major (no sharps or flats): G major has 1 sharp, D major has 2, A major has 3, and so on.",
+        "The sharps always accumulate in a fixed order: F♯, C♯, G♯, D♯, A♯, E♯, B♯. Moving counterclockwise around the circle instead adds flats, in the reverse order: B♭, E♭, A♭, D♭, G♭, C♭, F♭. This order is exactly why a key with 2 sharps always has F♯ and C♯ specifically, never some other pair."
+       ],
+       "example": {
+        "problem": "How many sharps does D major have, and which specific notes are sharped?",
+        "steps": [
+         "On the circle of fifths, D major is two steps clockwise from C (C to G is 1 sharp, G to D is 2 sharps).",
+         "The order sharps accumulate in is always F♯, C♯, G♯...",
+         "With 2 sharps, the first two in that order apply: F♯ and C♯."
+        ],
+        "answer": "D major has 2 sharps: F♯ and C♯, matching exactly the scale built by the formula in the previous lesson."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "key signature",
+       "def": "Sharps or flats placed at the start of each staff line, applying throughout the piece."
+      },
+      {
+       "term": "circle of fifths",
+       "def": "A diagram arranging keys by ascending perfect fifths, showing how many sharps or flats each has."
+      },
+      {
+       "term": "order of sharps",
+       "def": "The fixed sequence sharps are added in: F♯, C♯, G♯, D♯, A♯, E♯, B♯."
+      },
+      {
+       "term": "order of flats",
+       "def": "The fixed sequence flats are added in: B♭, E♭, A♭, D♭, G♭, C♭, F♭."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A key signature has 3 sharps. Which specific notes are sharped?",
+       "choices": [
+        "F♯, C♯, G♯",
+        "F♯, B♭, E♭",
+        "C♯, D♯, G♯",
+        "G♯, A♯, B♯"
+       ],
+       "answer": 0,
+       "explain": "Sharps always accumulate in the fixed order F♯, C♯, G♯, D♯..., so 3 sharps means exactly F♯, C♯, and G♯."
+      },
+      {
+       "q": "What is the purpose of a key signature?",
+       "choices": [
+        "To indicate the tempo of a piece",
+        "To apply sharps or flats to every instance of certain notes throughout a piece, without rewriting them",
+        "To show the time signature",
+        "To indicate which instrument should play"
+       ],
+       "answer": 1,
+       "explain": "A key signature is a shortcut: it marks which notes are consistently sharped or flatted for an entire piece, so individual accidentals do not need to be rewritten next to every occurrence."
+      },
+      {
+       "q": "Moving clockwise around the circle of fifths from C, what happens at each step?",
+       "choices": [
+        "One flat is removed",
+        "One sharp is added",
+        "The time signature changes",
+        "The tonic note stays the same"
+       ],
+       "answer": 1,
+       "explain": "Each clockwise step around the circle of fifths represents moving up a perfect fifth and adding exactly one more sharp to the key signature."
+      },
+      {
+       "q": "How many flats does F major have?",
+       "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+       ],
+       "answer": 1,
+       "explain": "F major sits one step counterclockwise from C on the circle of fifths, giving it exactly 1 flat, B♭."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Minor Scales",
+     "minutes": 14,
+     "intro": "Every major key has a quieter twin hiding inside its own key signature: a minor key that shares every sharp and flat but starts on a different note and feels completely different emotionally. Minor scales also come in three related versions, each solving a different musical problem.",
+     "sections": [
+      {
+       "heading": "The Relative Minor",
+       "body": [
+        "Every major key has a relative minor: a minor key that uses the exact same key signature (same sharps or flats) but starts on a different tonic. The relative minor's tonic is always the sixth scale degree of its major partner.",
+        "For example, C major (no sharps or flats) and A minor share a key signature; count up from C to its sixth degree, A, and that is the relative minor's starting note. This relationship is why key signatures alone do not tell you whether a piece is major or minor; you also need to know which note feels like \"home.\""
+       ]
+      },
+      {
+       "heading": "Natural, Harmonic, and Melodic Minor",
+       "body": [
+        "Natural minor follows its own fixed formula: W-H-W-W-H-W-W. Applied to A, this gives A-B-C-D-E-F-G-A, using only the notes of C major's key signature, as expected for relative keys.",
+        "Harmonic minor raises the seventh scale degree by a half step, creating a stronger pull back to the tonic (a leading tone) that natural minor lacks. Melodic minor raises both the sixth and seventh degrees when ascending, to smooth out the resulting awkward gap, but reverts to the natural minor form when descending."
+       ],
+       "example": {
+        "problem": "Find the relative minor of G major, and write out its natural minor scale.",
+        "steps": [
+         "G major has one sharp, F♯.",
+         "The sixth scale degree of G major (G-A-B-C-D-E) is E, so E minor is the relative minor.",
+         "Applying the natural minor formula (W-H-W-W-H-W-W) starting on E: E-F♯-G-A-B-C-D-E."
+        ],
+        "answer": "E natural minor is E, F♯, G, A, B, C, D, E, sharing G major's single sharp, F♯."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "relative minor",
+       "def": "The minor key sharing a major key's exact key signature, starting on the major scale's sixth degree."
+      },
+      {
+       "term": "natural minor",
+       "def": "A minor scale following the formula whole-half-whole-whole-half-whole-whole."
+      },
+      {
+       "term": "harmonic minor",
+       "def": "Natural minor with the seventh degree raised a half step, strengthening the pull to the tonic."
+      },
+      {
+       "term": "melodic minor",
+       "def": "Natural minor with the sixth and seventh degrees raised when ascending, reverting to natural minor when descending."
+      },
+      {
+       "term": "leading tone",
+       "def": "A scale's seventh degree when it sits a half step below the tonic, creating strong pull toward it."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the relative minor of C major?",
+       "choices": [
+        "A minor",
+        "E minor",
+        "G minor",
+        "F minor"
+       ],
+       "answer": 0,
+       "explain": "A minor shares C major's key signature (no sharps or flats) and starts on C major's sixth scale degree, A."
+      },
+      {
+       "q": "What distinguishes harmonic minor from natural minor?",
+       "choices": [
+        "Harmonic minor lowers the third degree",
+        "Harmonic minor raises the seventh degree by a half step",
+        "Harmonic minor has no tonic",
+        "Harmonic minor uses a completely different key signature"
+       ],
+       "answer": 1,
+       "explain": "Harmonic minor takes the natural minor scale and raises only the seventh scale degree by a half step, creating a stronger leading tone pulling to the tonic."
+      },
+      {
+       "q": "Melodic minor is unusual because:",
+       "choices": [
+        "It has no seventh degree at all",
+        "It raises the sixth and seventh degrees ascending, but reverts to natural minor descending",
+        "It is identical to major going up and down",
+        "It only exists in Baroque music"
+       ],
+       "answer": 1,
+       "explain": "Melodic minor raises both the sixth and seventh scale degrees on the way up to smooth the melodic line, but uses the plain natural minor form on the way back down."
+      },
+      {
+       "q": "A minor key's relative major is found by:",
+       "choices": [
+        "Going up a perfect fifth from the minor tonic",
+        "Going up a minor third from the minor tonic",
+        "Going down a whole step from the minor tonic",
+        "They never share a relationship"
+       ],
+       "answer": 1,
+       "explain": "The relative major sits a minor third above the minor tonic; equivalently, the minor tonic is the sixth degree of its relative major scale."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Scale Degrees and Solfège",
+     "minutes": 10,
+     "intro": "Musicians rarely say \"the fourth note of the scale\" when they can use a single word instead. Naming scale degrees and using solfège syllables lets you talk about any key's harmonic roles using the same vocabulary every time.",
+     "sections": [
+      {
+       "heading": "Naming Scale Degrees",
+       "body": [
+        "Each note of a scale has a functional name based on its position: 1 is the tonic (home), 2 the supertonic, 3 the mediant, 4 the subdominant, 5 the dominant, 6 the submediant, and 7 the leading tone (in major) or subtonic (in natural minor).",
+        "Of these, the tonic (1), dominant (5), and leading tone (7) matter most in early harmony study, since the pull from the dominant back to the tonic, strengthened by the leading tone, drives much of how Western harmony creates and resolves tension."
+       ]
+      },
+      {
+       "heading": "Movable-Do Solfège",
+       "body": [
+        "Solfège assigns the syllables do-re-mi-fa-sol-la-ti-do to scale degrees 1 through 8 (the eighth being the octave repeat of do). In the movable-do system used in most theory classes, do always means \"the tonic of whatever key you are in,\" not a fixed pitch.",
+        "This means in C major, do is C, but in G major, do is G; the pattern of syllables and their emotional colors stays constant relative to the key, which is exactly why solfège is useful for training your ear to hear scale degree function independent of absolute pitch."
+       ],
+       "example": {
+        "problem": "In the key of F major, name the note that is the dominant and the note that is the leading tone.",
+        "steps": [
+         "F major's scale is F-G-A-B♭-C-D-E-F.",
+         "The dominant is scale degree 5: F(1)-G(2)-A(3)-B♭(4)-C(5), so the dominant is C.",
+         "The leading tone is scale degree 7: continuing, D(6)-E(7), so the leading tone is E."
+        ],
+        "answer": "In F major, the dominant is C and the leading tone is E."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "tonic",
+       "def": "Scale degree 1, the \"home\" note a key is named after."
+      },
+      {
+       "term": "dominant",
+       "def": "Scale degree 5, the note with the strongest pull back toward the tonic."
+      },
+      {
+       "term": "leading tone",
+       "def": "Scale degree 7 in a major key, sitting a half step below the tonic."
+      },
+      {
+       "term": "solfège",
+       "def": "A system of syllables (do re mi fa sol la ti do) assigned to scale degrees."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In movable-do solfège, what does \"do\" always represent?",
+       "choices": [
+        "The pitch C, in every key",
+        "The tonic of whatever key you are in",
+        "The dominant of the key",
+        "A fixed pitch that never changes"
+       ],
+       "answer": 1,
+       "explain": "In the movable-do system, \"do\" is always the tonic of the current key, so it refers to a different actual pitch depending on the key."
+      },
+      {
+       "q": "Which scale degree is called the dominant?",
+       "choices": [
+        "1",
+        "4",
+        "5",
+        "7"
+       ],
+       "answer": 2,
+       "explain": "The dominant is scale degree 5, known for its strong harmonic pull back toward the tonic."
+      },
+      {
+       "q": "In G major (G-A-B-C-D-E-F♯-G), what note is the leading tone?",
+       "choices": [
+        "F♯",
+        "E",
+        "D",
+        "G"
+       ],
+       "answer": 0,
+       "explain": "The leading tone is scale degree 7; counting G(1)-A(2)-B(3)-C(4)-D(5)-E(6)-F♯(7) shows F♯ is the seventh degree, sitting a half step below the tonic G."
+      },
+      {
+       "q": "What is the solfège syllable for scale degree 1?",
+       "choices": [
+        "Sol",
+        "Ti",
+        "Do",
+        "Fa"
+       ],
+       "answer": 2,
+       "explain": "Do is always assigned to scale degree 1, the tonic, in the movable-do system."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Intervals",
+   "summary": "Measuring the distance between two pitches: counting numeric interval size, classifying quality as perfect, major, or minor, and inverting intervals using a simple, predictable rule.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Naming Intervals",
+     "minutes": 12,
+     "intro": "An interval is simply the distance between two pitches, and naming one starts with a piece of counting so simple it is easy to underestimate: just count the letter names involved, including both ends.",
+     "sections": [
+      {
+       "heading": "Counting the Number",
+       "body": [
+        "To find an interval's numeric name, count every letter name from the bottom note to the top note, inclusive of both notes themselves. C up to G, for example, counts C-D-E-F-G, five letter names, making it a fifth.",
+        "This counting method works regardless of any sharps or flats attached to the notes; C up to G♯ is still counted as a fifth, because sharps and flats affect an interval's quality, covered in the next lesson, not its basic numeric size."
+       ]
+      },
+      {
+       "heading": "The Interval Size Categories",
+       "body": [
+        "The numeric names run: unison (the same note twice), second, third, fourth, fifth, sixth, seventh, and octave (the same letter name an octave apart). Beyond the octave, intervals like a ninth or eleventh exist but are treated as an octave plus a smaller interval in most analysis.",
+        "Getting comfortable with this counting is worth doing until it is automatic, since every other interval concept in this course builds directly on top of correctly identifying this basic numeric size first."
+       ],
+       "example": {
+        "problem": "What is the numeric interval name from D up to B?",
+        "steps": [
+         "Count every letter name from D to B inclusive: D, E, F, G, A, B.",
+         "That is six letter names total."
+        ],
+        "answer": "D up to B is a sixth."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "interval",
+       "def": "The distance between two pitches, named by counting letters and describing quality."
+      },
+      {
+       "term": "unison",
+       "def": "An interval between two instances of the same pitch."
+      },
+      {
+       "term": "octave",
+       "def": "An interval spanning eight letter names, ending on the same letter name it started on."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the numeric interval name from C up to A?",
+       "choices": [
+        "Fourth",
+        "Fifth",
+        "Sixth",
+        "Seventh"
+       ],
+       "answer": 2,
+       "explain": "Counting inclusively from C: C, D, E, F, G, A, that is six letter names, making the interval a sixth."
+      },
+      {
+       "q": "Does the presence of a sharp or flat change an interval's basic numeric name?",
+       "choices": [
+        "Yes, a sharp always adds one to the numeric name",
+        "No, the numeric name only depends on counting letter names, not accidentals",
+        "Yes, but only for fifths and octaves",
+        "Sharps and flats cannot appear in intervals"
+       ],
+       "answer": 1,
+       "explain": "The numeric size of an interval comes purely from counting letter names inclusively; accidentals affect the interval's quality (major, minor, and so on), not its basic number."
+      },
+      {
+       "q": "What numeric interval spans the same letter name an octave apart, such as C to the next C?",
+       "choices": [
+        "A seventh",
+        "A unison",
+        "An octave",
+        "A ninth"
+       ],
+       "answer": 2,
+       "explain": "An interval spanning eight letter names and landing back on the same letter name is called an octave."
+      },
+      {
+       "q": "From E up to C (the next C above E), how many letter names are counted?",
+       "choices": [
+        "4",
+        "5",
+        "6",
+        "7"
+       ],
+       "answer": 1,
+       "explain": "Counting inclusively: E, F, G, A, B, C, that is five letter names, making it a fifth."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Interval Quality: Major, Minor, and Perfect",
+     "minutes": 14,
+     "intro": "Two intervals can share the same numeric name, like \"third,\" and still sound completely different: one bright, one darker. That difference is called quality, and it is measured precisely in half steps.",
+     "sections": [
+      {
+       "heading": "Perfect Intervals",
+       "body": [
+        "Unisons, fourths, fifths, and octaves are called perfect when they match the interval built directly from the major scale of the bottom note. In half steps: a perfect unison is 0, a perfect fourth is 5, a perfect fifth is 7, and a perfect octave is 12.",
+        "These four interval types are called \"perfect\" because historically they were considered the most stable and consonant, and because, unlike other interval types, they do not use major/minor labels; instead, they use augmented (a half step wider) or diminished (a half step narrower) when altered."
+       ]
+      },
+      {
+       "heading": "Major and Minor Intervals",
+       "body": [
+        "Seconds, thirds, sixths, and sevenths use major and minor labels instead of perfect. A major interval matches the major scale of the bottom note: a major second is 2 half steps, a major third is 4, a major sixth is 9, and a major seventh is 11.",
+        "A minor interval is exactly one half step narrower than its major counterpart: a minor second is 1 half step, a minor third is 3, a minor sixth is 8, and a minor seventh is 10."
+       ],
+       "example": {
+        "problem": "Identify the interval from C up to E, and separately from C up to E♭.",
+        "steps": [
+         "C to E natural spans 4 half steps (C-C♯-D-D♯-E), and E is the third degree of the C major scale, so this is a major third.",
+         "C to E♭ spans 3 half steps, exactly one half step narrower than the major third."
+        ],
+        "answer": "C up to E is a major third; C up to E♭ is a minor third."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "perfect interval",
+       "def": "A unison, fourth, fifth, or octave matching the bottom note's major scale, not labeled major/minor."
+      },
+      {
+       "term": "major interval",
+       "def": "A second, third, sixth, or seventh matching the bottom note's major scale."
+      },
+      {
+       "term": "minor interval",
+       "def": "A second, third, sixth, or seventh exactly one half step narrower than the major version."
+      },
+      {
+       "term": "semitone",
+       "def": "Another name for a half step, the smallest interval in standard Western tuning."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many half steps make up a perfect fifth?",
+       "choices": [
+        "5",
+        "6",
+        "7",
+        "8"
+       ],
+       "answer": 2,
+       "explain": "A perfect fifth spans exactly 7 half steps, such as from C up to G."
+      },
+      {
+       "q": "What distinguishes a minor third from a major third?",
+       "choices": [
+        "A minor third is one half step narrower than a major third",
+        "A minor third is one half step wider than a major third",
+        "They are identical in half steps but spelled differently",
+        "Minor thirds do not exist"
+       ],
+       "answer": 0,
+       "explain": "A minor third (3 half steps) is exactly one half step smaller than a major third (4 half steps)."
+      },
+      {
+       "q": "Why are fourths, fifths, unisons, and octaves called \"perfect\" rather than major or minor?",
+       "choices": [
+        "Because they cannot be played on a piano",
+        "Because they were historically considered especially stable and consonant, and use augmented/diminished for alterations instead",
+        "Because they never appear in real music",
+        "Because they are always dissonant"
+       ],
+       "answer": 1,
+       "explain": "These four interval types were traditionally treated as the most stable, consonant intervals, and use the augmented/diminished labels rather than major/minor when altered."
+      },
+      {
+       "q": "What interval is formed from C up to A, given that A is the sixth degree of the C major scale?",
+       "choices": [
+        "Major sixth",
+        "Minor sixth",
+        "Perfect sixth",
+        "Diminished sixth"
+       ],
+       "answer": 0,
+       "explain": "Since A matches the sixth degree of the C major scale exactly, C up to A is a major sixth, spanning 9 half steps."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Inverting Intervals",
+     "minutes": 10,
+     "intro": "Flip any interval upside down, moving the bottom note up an octave, and it becomes a new but completely predictable interval. Knowing the inversion rule means you only ever need to memorize half the intervals to know all of them.",
+     "sections": [
+      {
+       "heading": "The Inversion Rule",
+       "body": [
+        "To invert an interval, take the bottom note and move it up an octave above the top note (or equivalently, take the top note down an octave below the bottom note). Every inverted interval follows two paired rules.",
+        "First, the numeric names always add up to 9: a second inverts to a seventh, a third to a sixth, a fourth to a fifth, and a unison to an octave. Second, the quality flips in a fixed way: major becomes minor (and minor becomes major), while perfect stays perfect, and augmented becomes diminished (and diminished becomes augmented)."
+       ],
+       "example": {
+        "problem": "Invert a major third built from C up to E.",
+        "steps": [
+         "Numerically, a third inverts to a sixth, since 3 + 6 = 9.",
+         "Quality-wise, major inverts to minor.",
+         "Moving C up an octave above E gives the inverted interval E up to C, which should be a minor sixth."
+        ],
+        "answer": "The inversion of a major third (C-E) is a minor sixth (E up to C), which checks out at 8 half steps: E-F-F♯-G-G♯-A-A♯-B-C."
+       }
+      },
+      {
+       "heading": "Why Inversions Matter",
+       "body": [
+        "Recognizing inversions cuts your memorization work roughly in half: once you know a major third is 4 half steps, you automatically know its inversion, a minor sixth, is 8 half steps, without separately memorizing every sixth from scratch.",
+        "Inversions also explain why certain intervals sound related even though they look different on the page. A perfect fifth and its inversion, a perfect fourth, share a close, stable relationship in harmony precisely because they are two views of the same pair of notes, just with the bottom and top swapped."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "interval inversion",
+       "def": "Flipping an interval by moving its bottom note above its top note (or vice versa), following fixed rules for number and quality."
+      },
+      {
+       "term": "complement",
+       "def": "Another name for an interval's inversion; the two together always complete an octave."
+      },
+      {
+       "term": "compound interval",
+       "def": "An interval larger than an octave, such as a ninth, often treated as an octave plus a smaller interval."
+      }
+     ],
+     "practice": [
+      {
+       "q": "When an interval is inverted, what do the two numeric names always add up to?",
+       "choices": [
+        "7",
+        "8",
+        "9",
+        "10"
+       ],
+       "answer": 2,
+       "explain": "Inverted interval numbers always sum to 9: for example, a third and a sixth, or a fourth and a fifth."
+      },
+      {
+       "q": "A major second is inverted. What quality and number does the result have?",
+       "choices": [
+        "Minor seventh",
+        "Major seventh",
+        "Minor sixth",
+        "Perfect seventh"
+       ],
+       "answer": 0,
+       "explain": "A second inverts to a seventh (2 + 7 = 9), and major quality inverts to minor, giving a minor seventh."
+      },
+      {
+       "q": "What happens to a perfect interval's quality when it is inverted?",
+       "choices": [
+        "It becomes major",
+        "It becomes minor",
+        "It stays perfect",
+        "It becomes augmented"
+       ],
+       "answer": 2,
+       "explain": "Perfect intervals remain perfect after inversion; only major/minor and augmented/diminished pairs flip to their opposite."
+      },
+      {
+       "q": "A perfect fourth is inverted. What is the resulting interval?",
+       "choices": [
+        "Perfect fifth",
+        "Perfect third",
+        "Major fifth",
+        "Minor fifth"
+       ],
+       "answer": 0,
+       "explain": "A fourth inverts to a fifth (4 + 5 = 9), and since perfect intervals stay perfect, the result is a perfect fifth."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Chords and Harmony",
+   "summary": "Building triads and seventh chords from stacked thirds, understanding inversions, and using roman numeral analysis to read how chords create tension and resolution.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Building Triads",
+     "minutes": 13,
+     "intro": "Nearly every chord you will encounter as a beginner starts from the same simple recipe: stack two thirds on top of each other. Which flavor of third goes on the bottom and which goes on top determines the chord's entire personality.",
+     "sections": [
+      {
+       "heading": "Stacking Thirds",
+       "body": [
+        "A triad is a three-note chord built by stacking a third and then another third on top of a root note. There are four possible qualities, depending on whether each third is major (4 half steps) or minor (3 half steps).",
+        "A major triad stacks a major third then a minor third (root to third is 4 half steps, third to fifth is 3 more). A minor triad reverses that order: minor third then major third. A diminished triad stacks two minor thirds. An augmented triad stacks two major thirds."
+       ]
+      },
+      {
+       "heading": "Recognizing the Four Qualities by Ear and Number",
+       "body": [
+        "Because the two smaller thirds combine differently, the outer interval, root to fifth, also differs by quality: a major or minor triad's root-to-fifth interval is a perfect fifth (7 half steps), a diminished triad's is a diminished fifth (6 half steps), and an augmented triad's is an augmented fifth (8 half steps).",
+        "This gives two independent ways to check your work when building a triad: verify each stacked third individually, and then verify the total span from root to fifth matches what that quality predicts."
+       ],
+       "example": {
+        "problem": "Build a major triad on the root E.",
+        "steps": [
+         "A major triad starts with a major third above the root: E up to G♯ spans 4 half steps.",
+         "Then a minor third is stacked on top of that: G♯ up to B spans 3 half steps.",
+         "Check the outer span: E up to B should be a perfect fifth, 7 half steps, and 4 + 3 = 7, confirming the answer."
+        ],
+        "answer": "The E major triad is E, G♯, B."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "triad",
+       "def": "A three-note chord built by stacking two thirds on top of a root."
+      },
+      {
+       "term": "root",
+       "def": "The note a chord is built upward from, and usually its most stable-sounding tone."
+      },
+      {
+       "term": "major triad",
+       "def": "A triad built major third then minor third above the root (root-third-fifth spans a perfect fifth)."
+      },
+      {
+       "term": "minor triad",
+       "def": "A triad built minor third then major third above the root."
+      },
+      {
+       "term": "diminished triad",
+       "def": "A triad built from two stacked minor thirds, spanning a diminished fifth."
+      },
+      {
+       "term": "augmented triad",
+       "def": "A triad built from two stacked major thirds, spanning an augmented fifth."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What two intervals, stacked in order, form a major triad above its root?",
+       "choices": [
+        "Minor third, then major third",
+        "Major third, then minor third",
+        "Two major thirds",
+        "Two minor thirds"
+       ],
+       "answer": 1,
+       "explain": "A major triad stacks a major third (4 half steps) directly above the root, then a minor third (3 half steps) above that."
+      },
+      {
+       "q": "A diminished triad is built from which two stacked intervals?",
+       "choices": [
+        "Major third, then major third",
+        "Major third, then minor third",
+        "Minor third, then minor third",
+        "Minor third, then major third"
+       ],
+       "answer": 2,
+       "explain": "A diminished triad stacks two minor thirds (3 half steps each) on top of each other, giving it a compressed, tense sound."
+      },
+      {
+       "q": "What is the root-to-fifth span, in half steps, of a major or minor triad?",
+       "choices": [
+        "5",
+        "6",
+        "7",
+        "8"
+       ],
+       "answer": 2,
+       "explain": "Both major and minor triads span a perfect fifth (7 half steps) from root to fifth; only the middle third differs between them."
+      },
+      {
+       "q": "Building a minor triad on D, which note is the fifth?",
+       "choices": [
+        "A",
+        "A♭",
+        "A♯",
+        "G"
+       ],
+       "answer": 0,
+       "explain": "A minor triad on D stacks a minor third (D to F, 3 half steps) then a major third (F to A, 4 half steps), landing on A as the fifth, a perfect fifth above D."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Chord Inversions",
+     "minutes": 12,
+     "intro": "A triad does not have to be played with its root as the lowest note. Rearranging which chord tone sits in the bass changes a chord's inversion, its sound, and how smoothly it connects to the chords around it.",
+     "sections": [
+      {
+       "heading": "Root Position, First Inversion, Second Inversion",
+       "body": [
+        "When the root of the triad is the lowest-sounding note, the chord is in root position. When the third of the triad is the lowest note instead (with the root and fifth stacked above it), the chord is in first inversion.",
+        "When the fifth of the triad is the lowest note (with the root and third above it), the chord is in second inversion. All three arrangements contain the exact same three letter names; only which one is on the bottom changes."
+       ]
+      },
+      {
+       "heading": "Figured Bass Shorthand",
+       "body": [
+        "Roman numeral chord analysis often adds small numbers, called figured bass, to show inversion at a glance: root position is usually left unmarked (or shown as 5/3), first inversion is marked with a 6, and second inversion is marked 6/4.",
+        "These numbers describe the intervals above the bass note: a first inversion triad has a third and a sixth above its bass note, hence \"6,\" while a second inversion triad has a fourth and a sixth above its bass note, hence \"6/4.\""
+       ],
+       "example": {
+        "problem": "Take the C major triad in root position, C-E-G, and write its first inversion.",
+        "steps": [
+         "Root position has C, the root, as the lowest note: C-E-G.",
+         "First inversion puts the third, E, as the lowest note instead, with the remaining notes, G and C, stacked above it."
+        ],
+        "answer": "The first inversion of C major is E-G-C, with E in the bass."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "root position",
+       "def": "A chord voicing with the root as the lowest-sounding note."
+      },
+      {
+       "term": "first inversion",
+       "def": "A chord voicing with the third as the lowest-sounding note."
+      },
+      {
+       "term": "second inversion",
+       "def": "A chord voicing with the fifth as the lowest-sounding note."
+      },
+      {
+       "term": "figured bass",
+       "def": "Small numbers indicating a chord's inversion and the intervals above its bass note."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In first inversion, which chord tone is the lowest-sounding note?",
+       "choices": [
+        "The root",
+        "The third",
+        "The fifth",
+        "The seventh"
+       ],
+       "answer": 1,
+       "explain": "First inversion places the third of the chord as the lowest note, with the root and fifth stacked above it."
+      },
+      {
+       "q": "The figured bass symbol \"6/4\" indicates which inversion?",
+       "choices": [
+        "Root position",
+        "First inversion",
+        "Second inversion",
+        "There is no such inversion"
+       ],
+       "answer": 2,
+       "explain": "6/4 marks second inversion, where the fifth of the chord is in the bass, producing a fourth and a sixth above that bass note."
+      },
+      {
+       "q": "The G major triad is G-B-D. What is its second inversion?",
+       "choices": [
+        "G-B-D",
+        "B-D-G",
+        "D-G-B",
+        "D-B-G"
+       ],
+       "answer": 2,
+       "explain": "Second inversion places the fifth, D, as the lowest note, with the remaining notes, G and B, stacked above it."
+      },
+      {
+       "q": "What stays the same between root position, first inversion, and second inversion of the same triad?",
+       "choices": [
+        "The lowest-sounding note",
+        "The three letter names that make up the chord",
+        "The chord's quality changes each time",
+        "Nothing stays the same"
+       ],
+       "answer": 1,
+       "explain": "All three inversions use exactly the same three notes; only which one is placed as the lowest-sounding note changes."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Seventh Chords",
+     "minutes": 12,
+     "intro": "Add one more third on top of a triad and you get a richer, more colorful four-note chord: a seventh chord. These chords carry more tension than a plain triad, which is exactly what makes them so useful for pulling a listener toward resolution.",
+     "sections": [
+      {
+       "heading": "Adding a Fourth Note",
+       "body": [
+        "A seventh chord is built by stacking a third on top of a triad's fifth, adding a fourth note a seventh above the root (hence the name). The added interval, from root to this new top note, can itself be major or minor, creating different seventh chord types.",
+        "The most common seventh chords you will encounter early on are the major seventh (a major triad plus a major seventh above the root) and the dominant seventh (a major triad plus a minor seventh above the root)."
+       ]
+      },
+      {
+       "heading": "The Dominant Seventh Chord",
+       "body": [
+        "The dominant seventh chord is especially important because it is built on the fifth scale degree (the dominant) of a key, and its particular mix of intervals creates strong tension that wants to resolve to the tonic chord.",
+        "Minor seventh chords (a minor triad plus a minor seventh above the root) and half-diminished or fully diminished seventh chords (built from diminished triads) round out the common seventh chord types used in tonal harmony."
+       ],
+       "example": {
+        "problem": "Build a G dominant seventh chord (G7).",
+        "steps": [
+         "Start with the G major triad: G, B, D (major third then minor third).",
+         "Add a minor seventh above the root G, which is F natural (10 half steps above G, one half step narrower than the major seventh, F♯)."
+        ],
+        "answer": "G7 is G, B, D, F, a major triad with a minor seventh added on top."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "seventh chord",
+       "def": "A four-note chord built by stacking three thirds above a root."
+      },
+      {
+       "term": "dominant seventh",
+       "def": "A major triad plus a minor seventh above the root, typically built on a key's fifth scale degree."
+      },
+      {
+       "term": "major seventh chord",
+       "def": "A major triad plus a major seventh above the root."
+      },
+      {
+       "term": "minor seventh chord",
+       "def": "A minor triad plus a minor seventh above the root."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A dominant seventh chord combines which two elements?",
+       "choices": [
+        "A minor triad plus a major seventh",
+        "A major triad plus a minor seventh",
+        "A diminished triad plus a major seventh",
+        "A major triad plus a major seventh"
+       ],
+       "answer": 1,
+       "explain": "The dominant seventh chord is a major triad with a minor seventh interval added above the root, giving it its characteristic tension."
+      },
+      {
+       "q": "What are the four notes of a G7 (G dominant seventh) chord?",
+       "choices": [
+        "G, B, D, F♯",
+        "G, B♭, D, F",
+        "G, B, D, F",
+        "G, B, D♯, F"
+       ],
+       "answer": 2,
+       "explain": "G7 stacks the G major triad (G-B-D) with a minor seventh above the root, F natural, giving G, B, D, F."
+      },
+      {
+       "q": "Why is the dominant seventh chord especially useful in tonal harmony?",
+       "choices": [
+        "It has no tension at all",
+        "It is built on the fifth scale degree and creates strong pull toward the tonic chord",
+        "It never resolves to anything",
+        "It only exists in minor keys"
+       ],
+       "answer": 1,
+       "explain": "Built on the dominant (scale degree 5), this chord's specific mix of intervals creates strong harmonic tension that listeners hear as wanting to resolve to the tonic."
+      },
+      {
+       "q": "A minor seventh chord is built from which combination?",
+       "choices": [
+        "A minor triad plus a minor seventh",
+        "A major triad plus a major seventh",
+        "A diminished triad plus a diminished seventh",
+        "A minor triad plus a major seventh"
+       ],
+       "answer": 0,
+       "explain": "A minor seventh chord combines a minor triad with a minor seventh interval above the root."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Roman Numerals and Functional Harmony",
+     "minutes": 14,
+     "intro": "Once you can build a triad on every scale degree of a key, you can label an entire chord progression with roman numerals and start reading harmony the way a fluent speaker reads a sentence: not note by note, but by its overall shape and direction.",
+     "sections": [
+      {
+       "heading": "Roman Numeral Analysis",
+       "body": [
+        "Roman numeral analysis labels each chord in a key by the scale degree its root sits on. Uppercase numerals (I, IV, V) indicate a major chord, lowercase numerals (ii, iii, vi) indicate a minor chord, and a small circle (vii°) indicates a diminished chord.",
+        "In any major key, stacking a triad on each scale degree using only the notes of that key produces a fixed, predictable pattern of qualities: I (major), ii (minor), iii (minor), IV (major), V (major), vi (minor), vii° (diminished). In C major specifically, this gives C, Dm, Em, F, G, Am, and B diminished."
+       ]
+      },
+      {
+       "heading": "Cadences",
+       "body": [
+        "A cadence is a short chord progression that creates a sense of arrival or pause, functioning like punctuation in language. An authentic cadence, V to I, is the strongest way to end a phrase, since the dominant's tension resolves fully into the tonic's stability.",
+        "A plagal cadence, IV to I, is a softer close, sometimes called the \"Amen\" cadence from its use in hymns. A half cadence ends on V, creating a sense of a pause rather than a full stop, and a deceptive cadence moves from V to vi, setting up a resolution to the tonic and then surprising the listener by resolving somewhere else instead."
+       ],
+       "example": {
+        "problem": "In the key of C major, label the chord progression C - F - G - C using roman numerals, and identify the cadence at the end.",
+        "steps": [
+         "C major's diatonic chords are I=C, ii=Dm, iii=Em, IV=F, V=G, vi=Am, vii°=Bdim.",
+         "C matches I, F matches IV, G matches V, and the final C matches I again.",
+         "The final two chords, G to C, are V to I."
+        ],
+        "answer": "The progression is I - IV - V - I, and it ends with an authentic cadence (V to I)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "roman numeral analysis",
+       "def": "Labeling chords by the scale degree of their root, with case and symbols showing chord quality."
+      },
+      {
+       "term": "authentic cadence",
+       "def": "A V-to-I chord progression, the strongest and most conclusive way to end a phrase."
+      },
+      {
+       "term": "plagal cadence",
+       "def": "A IV-to-I chord progression, a softer close sometimes called the \"Amen\" cadence."
+      },
+      {
+       "term": "half cadence",
+       "def": "A phrase ending on the V chord, creating a sense of pause rather than full resolution."
+      },
+      {
+       "term": "deceptive cadence",
+       "def": "A V-to-vi progression that sets up an expected resolution to I and then avoids it."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a major key, what roman numeral chord quality is used for the ii, iii, and vi chords?",
+       "choices": [
+        "All major",
+        "All minor",
+        "All diminished",
+        "All augmented"
+       ],
+       "answer": 1,
+       "explain": "In a major key's diatonic chords, the ii, iii, and vi chords are all minor triads, shown with lowercase roman numerals."
+      },
+      {
+       "q": "Which cadence is considered the strongest, most conclusive way to end a musical phrase?",
+       "choices": [
+        "Half cadence",
+        "Plagal cadence",
+        "Deceptive cadence",
+        "Authentic cadence"
+       ],
+       "answer": 3,
+       "explain": "The authentic cadence, moving from V to I, resolves the dominant's tension fully into the tonic, making it the strongest and most conclusive-sounding cadence."
+      },
+      {
+       "q": "A deceptive cadence moves from which chord to which chord?",
+       "choices": [
+        "IV to I",
+        "V to I",
+        "V to vi",
+        "I to V"
+       ],
+       "answer": 2,
+       "explain": "A deceptive cadence moves from V, which the listener expects to resolve to I, to vi instead, creating a surprising, unresolved effect."
+      },
+      {
+       "q": "In C major, what chord is built on the fourth scale degree, and is it major or minor?",
+       "choices": [
+        "G major",
+        "F major",
+        "D minor",
+        "A minor"
+       ],
+       "answer": 1,
+       "explain": "The fourth scale degree of C major is F, and the diatonic triad built there, IV, is a major chord: F, A, C."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

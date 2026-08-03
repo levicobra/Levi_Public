@@ -1,0 +1,1259 @@
+{
+ "id": "game-development",
+ "title": "Game Development",
+ "domain": "cs",
+ "level": "All levels",
+ "description": "This course teaches how games are actually built: the loop that keeps them running, the entities and physics that make objects move and collide believably, and the design principles that make all that motion fun. You will work through real numbers for movement, collisions, and frame timing, and see how a game goes from a rough prototype to something players can actually finish. No prior programming experience is assumed.",
+ "outcomes": [
+  "You can explain the structure of a game loop and why delta time keeps motion consistent across frame rates.",
+  "You can describe how entities, sprites, and components represent objects in a game.",
+  "You can compute simple 2D movement using vectors, velocity, and acceleration, and detect collisions with AABB.",
+  "You can apply core design principles — core loop, difficulty curve, and feedback — to make a game engaging.",
+  "You can describe the pipeline from prototype to shipped game, including playtesting and scoping a project realistically."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "The Game Loop and Game Objects",
+   "summary": "Every game, no matter the genre, is built on the same skeleton: a loop that keeps checking input, updating the world, and drawing it, dozens of times per second.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Makes a Game 'Run': The Game Loop",
+     "minutes": 10,
+     "intro": "Unlike a script that runs once and finishes, a game keeps running in a continuous cycle, checking for input and redrawing the screen so fast it feels like an unbroken, living world.",
+     "sections": [
+      {
+       "heading": "Input, Update, Render",
+       "body": [
+        "The **game loop** repeats three steps continuously: process **input** (what did the player just do?), **update** the game's state (move characters, check collisions, run AI), and **render** (draw the current state to the screen). This cycle repeats dozens of times every second for as long as the game is running.",
+        "This structure is what separates a game from a normal program: a word processor waits patiently for you to type, but a game keeps moving forward on its own, whether or not the player does anything at all."
+       ]
+      },
+      {
+       "heading": "Why This Structure Matters",
+       "body": [
+        "Separating update from render means the game's logic (physics, scoring, AI) is independent of how or how often the screen actually redraws, which matters for the frame rate discussion in the next lesson. It also keeps code organized: one function's job is 'what changes,' another's is 'what gets drawn.'",
+        "Nearly every game engine, from the simplest hobby project to a professional AAA engine, is built around some version of this same input-update-render cycle underneath all its other features."
+       ],
+       "example": {
+        "problem": "A simple game loop calls update() 60 times per second. How many times does update() get called in one minute of gameplay?",
+        "steps": [
+         "There are 60 seconds in one minute.",
+         "The loop calls update() 60 times per second.",
+         "60 calls/second × 60 seconds = 3,600 calls."
+        ],
+        "answer": "3,600 times."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "game loop",
+       "def": "The continuously repeating cycle of input, update, and render that keeps a game running."
+      },
+      {
+       "term": "update",
+       "def": "The step in a game loop where the game's state changes: positions, physics, AI, scoring."
+      },
+      {
+       "term": "render",
+       "def": "The step in a game loop where the current game state is drawn to the screen."
+      },
+      {
+       "term": "frame",
+       "def": "One complete pass through the game loop, producing one drawn image."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A game loop calls update() 30 times per second. How many calls happen in 10 seconds?",
+       "choices": [
+        "30",
+        "100",
+        "300",
+        "3,000"
+       ],
+       "answer": 2,
+       "explain": "30 calls per second × 10 seconds = 300 calls."
+      },
+      {
+       "q": "What are the three core steps repeated in a game loop?",
+       "choices": [
+        "Save, load, quit",
+        "Input, update, render",
+        "Compile, build, ship",
+        "Design, test, publish"
+       ],
+       "answer": 1,
+       "explain": "The game loop continuously processes input, updates game state, and renders the result to the screen."
+      },
+      {
+       "q": "Why does separating 'update' logic from 'render' logic matter?",
+       "choices": [
+        "It has no real benefit",
+        "It keeps the game's rules independent of exactly how or how often the screen redraws",
+        "It makes the game unplayable",
+        "Rendering must always happen before updating"
+       ],
+       "answer": 1,
+       "explain": "Keeping update logic separate from rendering lets game state change reliably regardless of variations in how the screen is drawn."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Frame Rate, Delta Time, and Smooth Motion",
+     "minutes": 12,
+     "intro": "Frame rates aren't perfectly constant in the real world, and if you don't account for that, the exact same game can run in fast-forward on a powerful computer and in slow motion on a weaker one.",
+     "sections": [
+      {
+       "heading": "Frame Rate and the Problem It Creates",
+       "body": [
+        "**Frame rate**, measured in **FPS (frames per second)**, is how many times the loop completes each second; 60 FPS is a common target for smooth-feeling games. But frame rate can vary, dropping when the scene gets complex or the hardware is under load.",
+        "If you move a character a fixed number of pixels every single frame, that character moves faster on a machine hitting 120 FPS than on one hitting 30 FPS, since more frames run per second — the same game would feel wildly inconsistent across devices."
+       ]
+      },
+      {
+       "heading": "Delta Time Fixes This",
+       "body": [
+        "**Delta time** is the actual number of seconds that elapsed since the previous frame, and multiplying movement speed by delta time each frame makes motion **frame-rate independent**: `distance_this_frame = speed × delta_time`. A character moving 200 pixels per second covers the same total distance per real second, whether the game runs at 30 FPS or 144 FPS.",
+        "This is one of the first bugs almost every beginner hits, and one of the most important habits to build early: always scale movement, timers, and physics by delta time, never by a fixed per-frame amount."
+       ],
+       "example": {
+        "problem": "A character should move at 200 pixels per second. On a frame where delta time is 0.02 seconds (50 FPS), how far should the character move that frame?",
+        "steps": [
+         "Apply the formula: distance = speed × delta_time.",
+         "distance = 200 × 0.02.",
+         "200 × 0.02 = 4."
+        ],
+        "answer": "4 pixels that frame."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "frame rate (FPS)",
+       "def": "How many times the game loop completes per second, measured in frames per second."
+      },
+      {
+       "term": "delta time",
+       "def": "The actual elapsed time, in seconds, since the previous frame, used to scale movement consistently."
+      },
+      {
+       "term": "frame-rate independence",
+       "def": "Designing movement and physics so they behave the same regardless of the game's actual frame rate."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A character moves at 100 pixels per second. On a frame with delta time 0.05 seconds, how far should it move that frame?",
+       "choices": [
+        "2 pixels",
+        "5 pixels",
+        "10 pixels",
+        "50 pixels"
+       ],
+       "answer": 1,
+       "explain": "distance = 100 × 0.05 = 5 pixels."
+      },
+      {
+       "q": "Why is moving a fixed number of pixels per frame (ignoring delta time) a problem?",
+       "choices": [
+        "It has no downside at all",
+        "The character would move faster on high-FPS machines and slower on low-FPS machines, making speed inconsistent",
+        "Fixed movement is always more accurate",
+        "Delta time is only relevant for audio"
+       ],
+       "answer": 1,
+       "explain": "Without scaling by delta time, more frames per second means more fixed-size movements per second, making speed vary with hardware performance."
+      },
+      {
+       "q": "What does 'delta time' represent?",
+       "choices": [
+        "The total time the game has been running",
+        "The actual number of seconds elapsed since the previous frame",
+        "A fixed constant of exactly 1 second",
+        "The number of pixels on screen"
+       ],
+       "answer": 1,
+       "explain": "Delta time is measured fresh each frame, capturing the real elapsed time so movement can be scaled consistently."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Entities, Sprites, and Components",
+     "minutes": 10,
+     "intro": "Every object in a game — the player, an enemy, a coin, a wall — needs some way to be represented in code, and modern games favor small, mixable pieces over rigid categories.",
+     "sections": [
+      {
+       "heading": "Entities and Sprites",
+       "body": [
+        "An **entity** is any distinct object in the game world: the player, an enemy, a coin, a bullet. A **sprite** is the 2D image (or animated sequence of images) used to visually represent an entity on screen; an entity's visual appearance and its behavior are conceptually separate things.",
+        "Some entities need very little: a background decoration might just need a position and a sprite, with no behavior at all beyond sitting still."
+       ]
+      },
+      {
+       "heading": "Component-Based Design",
+       "body": [
+        "Rather than building one giant class per entity type, many engines use an **entity-component system**: an entity is just an id, and behavior comes from attaching small, reusable **components** (Position, Sprite, Health, Velocity) to it. A Coin needs only Position and Sprite; a Player needs those plus Health and Velocity.",
+        "This avoids deep, rigid inheritance trees (like 'Enemy extends Character extends Entity') that become awkward the moment an object needs to mix and match behaviors that don't fit neatly into one branch of the hierarchy."
+       ],
+       "example": {
+        "problem": "You're designing a 'Coin' entity that just needs a position and a sprite (no health, no movement), and a 'Player' entity that needs position, sprite, health, and velocity. Using components, which pieces does each entity need?",
+        "steps": [
+         "The Coin never moves and can't be damaged, so it needs only the components representing where it is and what it looks like: Position and Sprite.",
+         "The Player can be hurt and moves around, so it needs those same two components plus Health and Velocity.",
+         "Each entity is just the sum of the components attached to it."
+        ],
+        "answer": "Coin: Position, Sprite. Player: Position, Sprite, Health, Velocity."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "entity",
+       "def": "Any distinct object in a game world, such as the player, an enemy, or a coin."
+      },
+      {
+       "term": "sprite",
+       "def": "The 2D image or animated image sequence used to visually represent an entity."
+      },
+      {
+       "term": "component",
+       "def": "A small, reusable piece of data or behavior (like Position or Health) attached to an entity."
+      },
+      {
+       "term": "entity-component system",
+       "def": "A design pattern where entities gain behavior by attaching components, instead of rigid inheritance."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In an entity-component system, what is an entity fundamentally?",
+       "choices": [
+        "A large class containing all possible behaviors",
+        "Essentially just an id, with behavior coming from attached components",
+        "A single image file",
+        "A fixed category like 'Enemy' or 'Item'"
+       ],
+       "answer": 1,
+       "explain": "An entity is a lightweight identifier; its actual capabilities come entirely from whichever components are attached to it."
+      },
+      {
+       "q": "A 'Wall' entity never moves and cannot be destroyed, only blocking the player's path and appearing on screen. Which components does it likely need?",
+       "choices": [
+        "Only Health",
+        "Only Velocity",
+        "Position and Sprite (plus a collision component)",
+        "Position, Sprite, Health, and Velocity"
+       ],
+       "answer": 2,
+       "explain": "A static, indestructible wall needs a location and appearance (and something to detect collisions with), but no health or movement components."
+      },
+      {
+       "q": "What is the main advantage of components over deep inheritance trees for game objects?",
+       "choices": [
+        "Components make games load slower",
+        "Components let entities mix and match behaviors freely, avoiding awkward rigid class hierarchies",
+        "Inheritance always requires fewer lines of code",
+        "Sprites cannot be used with inheritance"
+       ],
+       "answer": 1,
+       "explain": "Components can be freely combined per entity, sidestepping the problem of an object needing behaviors from multiple unrelated branches of an inheritance tree."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Movement and Physics",
+   "summary": "Believable motion comes from a small set of ideas — vectors, velocity, acceleration, and collision tests — applied consistently every frame.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Vectors and Velocity",
+     "minutes": 10,
+     "intro": "Every moving object in a 2D game needs two numbers to describe where it's going and how fast, and that pair of numbers is exactly what a vector is.",
+     "sections": [
+      {
+       "heading": "2D Vectors",
+       "body": [
+        "A **vector** in 2D is a pair of numbers (x, y) representing a direction and magnitude. Position is stored as a vector (where the object currently is); **velocity** is also a vector (how much position changes per second, in each direction).",
+        "A velocity of (3, -2) means an object moves 3 units right and 2 units up every second (in many game coordinate systems, negative y points upward), combining direction and speed into one pair of numbers."
+       ]
+      },
+      {
+       "heading": "Updating Position with Velocity",
+       "body": [
+        "Each frame (or each second, scaled by delta time as covered in unit 1), an object's new position is computed by adding its velocity to its current position: `new_position = position + velocity × delta_time`. Over many frames, this accumulation is what actually moves the object across the screen.",
+        "This same idea extends directly to acceleration in the next lesson: just as velocity changes position over time, acceleration changes velocity over time."
+       ],
+       "example": {
+        "problem": "A ship at position (100, 50) has a constant velocity of (3, -2) pixels per frame. What is its position after 4 frames?",
+        "steps": [
+         "Compute total displacement over 4 frames: velocity × frames = (3 × 4, -2 × 4) = (12, -8).",
+         "Add the displacement to the starting position: (100 + 12, 50 + (-8)).",
+         "(100 + 12, 50 - 8) = (112, 42)."
+        ],
+        "answer": "(112, 42)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "vector",
+       "def": "A pair of numbers (x, y) representing a 2D direction and magnitude, used for position or velocity."
+      },
+      {
+       "term": "velocity",
+       "def": "A vector describing how much an object's position changes per unit of time."
+      },
+      {
+       "term": "displacement",
+       "def": "The total change in position over some span of time or number of frames."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An object at position (10, 10) has velocity (2, 5) pixels per frame. What is its position after 3 frames?",
+       "choices": [
+        "(16, 25)",
+        "(12, 15)",
+        "(6, 15)",
+        "(13, 13)"
+       ],
+       "answer": 0,
+       "explain": "Displacement = (2×3, 5×3) = (6, 15). New position = (10+6, 10+15) = (16, 25)."
+      },
+      {
+       "q": "What does a velocity vector of (0, -4) mean, assuming negative y is upward?",
+       "choices": [
+        "Moving 4 units right each frame",
+        "Moving 4 units upward each frame, with no horizontal movement",
+        "The object is not moving at all",
+        "Moving 4 units downward each frame"
+       ],
+       "answer": 1,
+       "explain": "An x-component of 0 means no horizontal change, and a negative y-component of -4 means moving 4 units upward each frame."
+      },
+      {
+       "q": "Why is velocity represented as a vector rather than a single number?",
+       "choices": [
+        "Because games cannot use single numbers",
+        "Because it needs to capture both direction and magnitude, which a single number cannot express in 2D",
+        "Vectors are only used for graphics, not movement",
+        "A single number is always sufficient for any game"
+       ],
+       "answer": 1,
+       "explain": "Movement in 2D needs both how fast and in which direction, which requires two components (x and y), exactly what a vector provides."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Acceleration and Gravity",
+     "minutes": 12,
+     "intro": "A believable jump doesn't move at a constant speed — it starts fast, slows down, stops for an instant at the peak, then falls faster and faster, and a single idea, acceleration, produces that whole arc automatically.",
+     "sections": [
+      {
+       "heading": "Acceleration Changes Velocity",
+       "body": [
+        "**Acceleration** describes how velocity itself changes over time, exactly as velocity describes how position changes over time. Each frame, `velocity = velocity + acceleration × delta_time`, and then position updates using that new velocity, as covered in the previous lesson.",
+        "**Gravity** is simply a constant downward acceleration applied every frame, which is why objects in a game world speed up as they fall, rather than falling at one fixed speed the whole way down."
+       ]
+      },
+      {
+       "heading": "Simulating a Jump Arc",
+       "body": [
+        "A jump is built from just two ingredients: an initial upward velocity applied once (the jump 'impulse'), and constant downward gravity acceleration applied every frame afterward. The velocity starts negative (upward), gets pulled toward zero and then positive (downward) by gravity each frame, producing the classic rise-peak-fall arc with no special-case code needed.",
+        "This is exactly why a jump feels physically natural without a designer manually scripting every position along the arc: the simple accumulation of a constant acceleration produces the curve automatically."
+       ],
+       "example": {
+        "problem": "A jumping character starts with velocity -10 (negative = up). Gravity adds +1 to velocity every frame (positive = down). What is the velocity after 5 frames, and is the character still moving up or now falling?",
+        "steps": [
+         "Apply gravity for 5 frames: velocity = initial + (gravity × frames) = -10 + (1 × 5).",
+         "-10 + 5 = -5.",
+         "The result, -5, is still negative, meaning the character is still moving upward, though slower than before — approaching the peak of the jump but not there yet."
+        ],
+        "answer": "Velocity = -5 (still moving upward, decelerating toward the peak of the jump)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "acceleration",
+       "def": "The rate at which velocity changes over time."
+      },
+      {
+       "term": "gravity",
+       "def": "A constant downward acceleration applied to falling or jumping objects each frame."
+      },
+      {
+       "term": "jump impulse",
+       "def": "The initial burst of upward velocity applied once when a jump begins."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A character starts a jump with velocity -8 (up), and gravity adds +2 to velocity each frame. What is the velocity after 3 frames?",
+       "choices": [
+        "-14",
+        "-2",
+        "2",
+        "-6"
+       ],
+       "answer": 1,
+       "explain": "-8 + (2 × 3) = -8 + 6 = -2, still negative (still moving up, but slowing down)."
+      },
+      {
+       "q": "In the previous scenario (-8 initial velocity, +2 gravity per frame), after how many frames does the velocity first become positive (start falling)?",
+       "choices": [
+        "After frame 3",
+        "After frame 4",
+        "After frame 5",
+        "It never becomes positive"
+       ],
+       "answer": 2,
+       "explain": "Velocity after frame 4: -8 + (2×4) = -8+8 = 0 (the peak). After frame 5: -8+10 = 2, the first positive (falling) value — so it turns positive after frame 5, meaning frame 4 is the peak and it starts falling on frame 5."
+      },
+      {
+       "q": "What is gravity, in terms of how a game simulates it?",
+       "choices": [
+        "A one-time upward velocity boost",
+        "A constant downward acceleration applied every frame",
+        "A type of collision detection",
+        "A fixed position all objects fall to"
+       ],
+       "answer": 1,
+       "explain": "Gravity is modeled as a steady per-frame acceleration downward, which is why falling objects speed up over time rather than falling at a constant rate."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Collision Detection: AABB",
+     "minutes": 12,
+     "intro": "Before a game can react to two objects touching, it needs a fast, reliable way to test whether they actually overlap — and for most 2D games, that test is surprisingly simple.",
+     "sections": [
+      {
+       "heading": "Axis-Aligned Bounding Boxes",
+       "body": [
+        "An **AABB** (axis-aligned bounding box) represents an object's collision shape as a simple, non-rotated rectangle, described by its left, right, top, and bottom edges (or equivalently, position plus width and height). Most 2D game objects use an AABB even if their sprite isn't perfectly rectangular, trading a little precision for speed and simplicity.",
+        "'Axis-aligned' means the rectangle's edges are always parallel to the screen's x and y axes, never rotated, which is exactly what makes the overlap test in the next section so cheap to compute."
+       ]
+      },
+      {
+       "heading": "The AABB Overlap Test",
+       "body": [
+        "Two AABBs collide exactly when they overlap on both axes simultaneously: `A.left < B.right AND A.right > B.left` (x-axis overlap) AND `A.top < B.bottom AND A.bottom > B.top` (y-axis overlap). If either axis shows no overlap, the boxes cannot be touching, no matter what the other axis shows.",
+        "This test runs in constant time per pair of objects and is cheap enough to run every single frame for many objects at once, which is why AABB collision remains the default choice for most 2D games, even fairly complex ones."
+       ],
+       "example": {
+        "problem": "Rectangle A has left=10, right=50, top=20, bottom=60. Rectangle B has left=40, right=80, top=30, bottom=70. Do they collide, using the AABB overlap test?",
+        "steps": [
+         "X-axis: A spans 10 to 50, B spans 40 to 80. Since A.right (50) > B.left (40) and B.right (80) > A.left (10), the x-ranges overlap between 40 and 50.",
+         "Y-axis: A spans 20 to 60, B spans 30 to 70. Since A.bottom (60) > B.top (30) and B.bottom (70) > A.top (20), the y-ranges overlap between 30 and 60.",
+         "Both axes overlap simultaneously, so the boxes collide."
+        ],
+        "answer": "Yes, they collide — both the x-ranges (40-50) and y-ranges (30-60) overlap."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "AABB",
+       "def": "Axis-aligned bounding box: a non-rotated rectangle used to represent an object's collision shape."
+      },
+      {
+       "term": "collision detection",
+       "def": "The process of determining whether two or more objects are overlapping or touching."
+      },
+      {
+       "term": "overlap test",
+       "def": "A check, often per axis, determining whether two shapes intersect."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Rectangle A spans x=0 to 20; Rectangle B spans x=25 to 40. Do they overlap on the x-axis?",
+       "choices": [
+        "Yes, they overlap between 20 and 25",
+        "No, there is a gap between 20 and 25 with no overlap",
+        "They always overlap regardless of position",
+        "Cannot be determined from x-axis alone"
+       ],
+       "answer": 1,
+       "explain": "A ends at 20 and B starts at 25, leaving a gap with no shared x-range, so there is no overlap on this axis."
+      },
+      {
+       "q": "For two AABBs to collide, what must be true?",
+       "choices": [
+        "They must overlap on the x-axis only",
+        "They must overlap on the y-axis only",
+        "They must overlap on both the x-axis and the y-axis simultaneously",
+        "They must have identical width and height"
+       ],
+       "answer": 2,
+       "explain": "AABB collision requires simultaneous overlap on both axes; overlapping on only one axis is not enough to guarantee the shapes actually touch."
+      },
+      {
+       "q": "Why is AABB collision detection popular for 2D games despite treating every object as a perfect rectangle?",
+       "choices": [
+        "It is the only collision method that exists",
+        "It is fast and simple to compute every frame, a reasonable tradeoff against perfect shape accuracy",
+        "It automatically fixes all physics bugs",
+        "AABB only works for 3D games"
+       ],
+       "answer": 1,
+       "explain": "The speed and simplicity of the axis-overlap test make it practical to run every frame for many objects, even though it sacrifices some shape precision."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Game Design Fundamentals",
+   "summary": "Code alone doesn't make a game fun — design principles like the core loop, difficulty pacing, and feedback are what turn working mechanics into an experience players actually want.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Core Loop and Player Motivation",
+     "minutes": 10,
+     "intro": "Every game you've ever kept playing has one thing in common: a short, repeatable cycle of actions that stays satisfying to repeat, again and again.",
+     "sections": [
+      {
+       "heading": "What Is a Core Loop?",
+       "body": [
+        "A **core loop** is the short cycle of actions a player repeats throughout the game: in a typical action RPG, that's roughly fight enemies → collect loot → grow stronger → face tougher enemies, then repeat. Every genre has its own version, but nearly every successful game can describe its core loop in one sentence.",
+        "If the core loop itself isn't satisfying on repeat, no amount of story, art, or content added on top will fix it — the loop is the foundation everything else sits on."
+       ]
+      },
+      {
+       "heading": "Player Motivation",
+       "body": [
+        "Players return to a loop for different reasons: **mastery** (getting visibly better at a skill), **progress** (leveling up, unlocking new content), **story** (wanting to see what happens next), and **reward** (loot, achievements, points). Strong games often layer several of these together rather than relying on just one.",
+        "Recognizing which motivations a game is leaning on helps explain why a mechanic works, or why it feels hollow: a reward with no real skill or progress behind it can feel empty fast."
+       ],
+       "example": {
+        "problem": "Identify the core loop of a typical match-3 puzzle game (like matching colored tiles) in one sentence.",
+        "steps": [
+         "Identify the repeated action: the player matches tiles of the same type together.",
+         "Identify the immediate consequence: matching clears tiles and earns points toward completing the level's objective.",
+         "Identify what resets the cycle: completing the level unlocks the next, slightly harder one, and the player repeats the process."
+        ],
+        "answer": "Match tiles → earn points/clear objectives → unlock the next, slightly harder level → repeat."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "core loop",
+       "def": "The short, repeated cycle of actions a player performs throughout a game."
+      },
+      {
+       "term": "player motivation",
+       "def": "The underlying reasons (mastery, progress, story, reward) a player keeps engaging with a game."
+      },
+      {
+       "term": "mastery",
+       "def": "A motivation driven by visibly improving at a skill over time."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is a 'core loop'?",
+       "choices": [
+        "The game's opening cutscene",
+        "The short, repeated cycle of actions a player performs throughout the game",
+        "A bug in the game's code",
+        "The final boss encounter"
+       ],
+       "answer": 1,
+       "explain": "The core loop is the fundamental repeated cycle of play that the whole game is built around."
+      },
+      {
+       "q": "A player keeps playing a rhythm game specifically because they enjoy getting visibly better at hitting notes precisely. Which motivation is this?",
+       "choices": [
+        "Story",
+        "Reward",
+        "Mastery",
+        "None of these"
+       ],
+       "answer": 2,
+       "explain": "Mastery is the motivation of visibly improving at a skill, which matches enjoying getting better at hitting notes."
+      },
+      {
+       "q": "Why is a satisfying core loop considered foundational to a game's success?",
+       "choices": [
+        "Because story and art matter more than the loop",
+        "If the loop itself isn't enjoyable to repeat, no amount of content added on top will fix that",
+        "Because core loops are optional in most games",
+        "Because only puzzle games need a core loop"
+       ],
+       "answer": 1,
+       "explain": "Since the core loop is what the player repeats constantly, an unsatisfying loop undermines everything else layered on top of it."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Difficulty Curves and Balancing",
+     "minutes": 10,
+     "intro": "A game that's too easy gets boring, and one that's too hard gets abandoned — a difficulty curve is the deliberate shape of challenge over time that keeps players in between those two failure states.",
+     "sections": [
+      {
+       "heading": "Shaping the Difficulty Curve",
+       "body": [
+        "A **difficulty curve** describes how challenging a game gets as the player progresses, ideally rising gradually rather than jumping unpredictably. Well-designed curves often include intentional valleys after a hard section, letting players recover and practice a new skill before the next ramp up.",
+        "A sudden, unplanned spike, where one section is dramatically harder than everything around it, is one of the most common ways games lose players, since it breaks the sense that difficulty is progressing fairly and predictably."
+       ]
+      },
+      {
+       "heading": "Balancing Tools",
+       "body": [
+        "Designers tune difficulty using levers like enemy health and damage, resource scarcity (ammo, healing items), time limits, and the number and combination of enemies faced at once. **Playtesting** — watching real players attempt the game — is the most reliable way to find spikes and dead spots that design intuition alone tends to miss.",
+        "Data from playtests, like average completion time per level, gives designers concrete numbers to spot problems, rather than relying only on how difficulty feels to the people who built the game and already know all its tricks."
+       ],
+       "example": {
+        "problem": "A game's first five levels take players an average of 2, 3, 4, 4, and 12 minutes to complete. What does the jump on level 5 suggest, and what's one likely fix?",
+        "steps": [
+         "Compare each level's time to the one before it: the increase from level 4 (4 minutes) to level 5 (12 minutes) is a 3x jump, far steeper than the earlier gradual ramp (2→3→4→4).",
+         "This pattern suggests a significant, likely unintended difficulty spike at level 5, the kind that frustrates and can cause players to quit.",
+         "A fix is to add an intermediate level to smooth the ramp, reduce the difficulty of level 5 itself, or add guidance/hints for whatever new mechanic or challenge level 5 introduces."
+        ],
+        "answer": "A steep, likely frustrating difficulty spike at level 5; smooth it with an intermediate level or added guidance before it."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "difficulty curve",
+       "def": "How a game's challenge level changes as the player progresses, ideally rising gradually."
+      },
+      {
+       "term": "difficulty spike",
+       "def": "A sudden, disproportionate jump in challenge compared to the surrounding sections."
+      },
+      {
+       "term": "playtesting",
+       "def": "Observing real players attempt a game to find balance problems and points of confusion."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is a 'difficulty spike'?",
+       "choices": [
+        "A gradual, smooth increase in challenge",
+        "A sudden, disproportionate jump in challenge compared to the surrounding sections",
+        "A bonus level with no enemies",
+        "A tutorial section"
+       ],
+       "answer": 1,
+       "explain": "A spike is an unexpectedly steep jump in challenge, distinct from the intended gradual rise of a well-tuned difficulty curve."
+      },
+      {
+       "q": "Why is playtesting considered more reliable than a designer's own intuition for finding difficulty problems?",
+       "choices": [
+        "Designers always overestimate difficulty",
+        "Designers already know all the game's tricks and patterns, unlike a new player encountering it fresh",
+        "Playtesting is faster than designing",
+        "Playtesting removes the need for any design work"
+       ],
+       "answer": 1,
+       "explain": "A designer's deep familiarity with their own game makes it hard to judge true difficulty the way a fresh player experiences it, which is exactly what playtesting reveals."
+      },
+      {
+       "q": "Which of these is a common lever designers use to adjust difficulty?",
+       "choices": [
+        "The game's file size",
+        "Enemy health, damage, and resource scarcity",
+        "The programming language used",
+        "The company's marketing budget"
+       ],
+       "answer": 1,
+       "explain": "Enemy stats and resource availability are direct, tunable levers that shape how hard a section of a game feels."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Feedback, Juice, and Game Feel",
+     "minutes": 10,
+     "intro": "Two games can share the exact same underlying mechanic and feel completely different to play, and the difference usually comes down to how clearly and satisfyingly the game responds to what the player just did.",
+     "sections": [
+      {
+       "heading": "Feedback Confirms Actions",
+       "body": [
+        "**Feedback** is any visual, audio, or haptic response confirming that a player's action registered: a sound when a button is pressed, a flash when an enemy is hit, a number popping up showing damage dealt. Without feedback, players are often left unsure whether their input even worked.",
+        "Good feedback should be immediate — delayed or missing feedback is one of the most common reasons a game feels unresponsive or 'laggy,' even when the underlying logic is working correctly."
+       ]
+      },
+      {
+       "heading": "Juice and Game Feel",
+       "body": [
+        "**Juice** refers to small, often exaggerated extra touches, screen shake, squash-and-stretch animation, a satisfying 'pop' sound, a brief pause on impact, layered on top of a mechanic without changing what it actually does. These add up to what designers call **game feel**: how satisfying an action is to perform, independent of its strategic value.",
+        "Juice is cheap to add relative to its impact, and it is frequently the difference between a mechanically identical prototype that feels flat and a polished game that feels alive and responsive."
+       ],
+       "example": {
+        "problem": "Two versions of the same game exist. Version A has no sound, no animation change, and no camera reaction when an enemy is defeated. Version B adds a squash animation, a 'pop' sound, and a brief camera shake for the same event. Which will most players perceive as more satisfying, and why, even though the mechanic is identical?",
+        "steps": [
+         "In both versions, the underlying mechanic (defeating an enemy) is exactly the same.",
+         "Version B provides immediate multi-sensory feedback, visual, audio, and camera, confirming the action landed.",
+         "This layered feedback is what players experience as 'juice' or good game feel, making the same event feel more impactful even without any mechanical difference."
+        ],
+        "answer": "Version B — the added sensory feedback ('juice') makes the same underlying mechanic feel far more satisfying."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "feedback",
+       "def": "Any visual, audio, or haptic response confirming that a player's action registered."
+      },
+      {
+       "term": "juice",
+       "def": "Small, often exaggerated flourishes (screen shake, squash-and-stretch) added on top of a mechanic to make it feel better."
+      },
+      {
+       "term": "game feel",
+       "def": "How satisfying a game's actions are to perform, independent of their strategic value."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is 'feedback' in game design?",
+       "choices": [
+        "A player's written review of the game",
+        "Any visual, audio, or haptic response confirming a player's action registered",
+        "The game's difficulty curve",
+        "The core loop of the game"
+       ],
+       "answer": 1,
+       "explain": "Feedback is the immediate confirmation, through sight, sound, or touch, that an action actually had an effect."
+      },
+      {
+       "q": "Why can 'juice' (screen shake, squash-and-stretch, sound) make an unchanged mechanic feel more satisfying?",
+       "choices": [
+        "It changes the actual rules of the game",
+        "It layers extra sensory confirmation on top of an action, without altering what the action does mechanically",
+        "It always makes the game harder",
+        "It replaces the need for any core loop"
+       ],
+       "answer": 1,
+       "explain": "Juice is purely additive sensory polish; the mechanic itself is unchanged, but the perceived impact and satisfaction increase substantially."
+      },
+      {
+       "q": "A player presses a button and nothing visibly or audibly changes for half a second, even though the action did register internally. What problem does this describe?",
+       "choices": [
+        "Excellent game feel",
+        "A likely feedback delay, making the game feel unresponsive despite working correctly",
+        "A difficulty spike",
+        "A well-tuned core loop"
+       ],
+       "answer": 1,
+       "explain": "Delayed or missing feedback is a classic cause of a game feeling unresponsive, even when its internal logic is functioning as intended."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Building a Game: Systems",
+   "summary": "Beyond the core loop, a shippable game needs supporting systems: managing screens and states, reading player input reliably, and shaping levels that teach players as they go.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "State Machines: Menus, Levels, and Game Over",
+     "minutes": 10,
+     "intro": "A game is never just 'running' — it's always in some specific mode, a menu, active gameplay, paused, game over — and keeping those modes cleanly separated prevents an entire category of confusing bugs.",
+     "sections": [
+      {
+       "heading": "States and Transitions",
+       "body": [
+        "A **state machine** models a game as existing in exactly one of several discrete **states** (Menu, Playing, Paused, GameOver) at any given time, with defined **transitions** between them (pressing Start moves Menu → Playing). Only certain transitions are allowed; you can't jump directly from Menu to GameOver, for instance.",
+        "Each state typically has its own input handling and its own update/render behavior, so the game only reacts to inputs that actually make sense in that state, like ignoring a 'jump' button press while sitting in the main menu."
+       ]
+      },
+      {
+       "heading": "Why State Machines Prevent Bugs",
+       "body": [
+        "Without a clear state machine, a common bug is gameplay logic running while a pause menu is open, an enemy still moving or a timer still ticking down behind a menu the player thinks has frozen the game. Explicit states make it clear exactly which update logic should run in which situation.",
+        "This same pattern scales to far more complex games, with substates nested inside states (a 'Playing' state might itself contain 'Exploring' vs. 'InDialogue' substates), but the core idea of one clearly defined active mode at a time stays the same."
+       ],
+       "example": {
+        "problem": "A game is in the 'Playing' state. The player presses Start/Pause. According to a typical state machine, what state should it transition to, and what should happen to gameplay update() logic in that new state?",
+        "steps": [
+         "Pressing pause is a defined transition from Playing to a new state specifically meant for this: Paused.",
+         "In the Paused state, gameplay update() logic (physics, enemy AI, timers) should stop running entirely, since the game is meant to be frozen.",
+         "Rendering should still continue, drawing the frozen scene (often with a pause overlay), and only 'resume' input should be processed while in this state."
+        ],
+        "answer": "Transitions to the Paused state; gameplay update() logic halts while rendering continues to show the frozen game."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "state machine",
+       "def": "A model where a system exists in exactly one of several defined states at a time, with rules for transitioning between them."
+      },
+      {
+       "term": "state transition",
+       "def": "A defined change from one state to another, triggered by an event like an input or condition."
+      },
+      {
+       "term": "Paused state",
+       "def": "A game state where gameplay update logic halts while rendering (often showing an overlay) continues."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why shouldn't gameplay update() logic keep running while the game is in the Paused state?",
+       "choices": [
+        "It should keep running exactly as normal",
+        "Pausing is meant to freeze the game world, so physics, AI, and timers should stop until the player resumes",
+        "Update logic only matters in the Menu state",
+        "Rendering must also stop during Paused"
+       ],
+       "answer": 1,
+       "explain": "The whole point of a pause is that the game world stops changing, which requires gameplay update logic to halt in that state."
+      },
+      {
+       "q": "What is a 'state transition'?",
+       "choices": [
+        "A type of sprite animation",
+        "A defined change from one state to another, triggered by an event",
+        "A physics calculation",
+        "A difficulty curve adjustment"
+       ],
+       "answer": 1,
+       "explain": "A transition is the rule connecting one state to another, triggered by something like an input event or a condition being met."
+      },
+      {
+       "q": "What common bug does a well-designed state machine help prevent?",
+       "choices": [
+        "Slow rendering performance",
+        "Gameplay logic (like enemy movement) continuing to run while the game appears paused",
+        "Sprites loading in the wrong order",
+        "Levels being too easy"
+       ],
+       "answer": 1,
+       "explain": "Explicit states make clear exactly which logic runs in which mode, preventing gameplay from silently continuing behind what looks like a frozen pause screen."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Input Handling and Controls",
+     "minutes": 10,
+     "intro": "Players judge how a game 'feels' partly by how it feels to control, and small details in how input is read can make identical mechanics feel crisp or frustratingly sluggish.",
+     "sections": [
+      {
+       "heading": "Reading Input and Mapping Actions",
+       "body": [
+        "Rather than hardcoding 'if spacebar is pressed, jump' throughout the game, most games use **input mapping**: raw hardware input (a specific key or button) is mapped to a named action ('Jump'), so the actual key can be changed (rebound) without touching any gameplay code.",
+        "This also makes supporting multiple control schemes, keyboard, gamepad, touch, straightforward: each maps its own raw inputs to the same set of named actions the game logic actually checks."
+       ]
+      },
+      {
+       "heading": "Responsive Input Handling",
+       "body": [
+        "A naive implementation might only check for a jump input while the character is exactly touching the ground that same frame, which can miss legitimate presses that arrive a fraction of a second too early or too late, making controls feel unresponsive even though the player did everything right.",
+        "**Input buffering** fixes this by remembering a recent button press for a short window (commonly under 0.15 seconds) and executing the action automatically the instant conditions allow it, rather than requiring an exact single frame of perfect timing."
+       ],
+       "example": {
+        "problem": "A player presses the jump button 0.05 seconds before the character lands on the ground, but the game only checks for jump input while grounded, so the press is ignored and the jump never happens. What common technique fixes this?",
+        "steps": [
+         "The problem is that a legitimate, well-timed press is being discarded simply because it arrived a fraction of a second too early.",
+         "Input buffering remembers a button press for a short window of time instead of discarding it instantly.",
+         "When the character becomes grounded shortly after, the buffered jump input is applied automatically, executing the jump the player intended."
+        ],
+        "answer": "Input buffering — briefly remembering the press so it fires as soon as the character lands."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "input mapping",
+       "def": "Associating raw hardware input with named game actions, so controls can be rebound without changing game logic."
+      },
+      {
+       "term": "polling",
+       "def": "Checking the current state of input devices, typically once per frame."
+      },
+      {
+       "term": "input buffering",
+       "def": "Remembering a recent input for a short window so it can still be applied once conditions allow."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do most games map raw input to named actions ('Jump') instead of hardcoding specific keys throughout the codebase?",
+       "choices": [
+        "It makes the game run faster",
+        "It lets controls be rebound and supports multiple input devices without changing gameplay logic",
+        "It is required by all game engines",
+        "It removes the need for a game loop"
+       ],
+       "answer": 1,
+       "explain": "Mapping decouples gameplay logic from specific hardware keys, making rebinding and multi-device support far simpler."
+      },
+      {
+       "q": "What problem does input buffering solve?",
+       "choices": [
+        "Slow rendering",
+        "A well-timed but slightly early or late button press being ignored because the exact conditions weren't met that frame",
+        "Running out of memory",
+        "Difficulty curve spikes"
+       ],
+       "answer": 1,
+       "explain": "Buffering keeps a recent press available for a short window, so a near-miss in timing still results in the intended action."
+      },
+      {
+       "q": "What is 'input mapping'?",
+       "choices": [
+        "Drawing a map of the game world",
+        "Associating raw hardware input with a named game action",
+        "A type of collision detection",
+        "A difficulty balancing tool"
+       ],
+       "answer": 1,
+       "explain": "Input mapping connects a physical key or button to an abstract action name that the game's logic actually checks against."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Audio, Cameras, and Level Design Basics",
+     "minutes": 12,
+     "intro": "Sound, camera behavior, and how a level is laid out all shape the player's experience just as much as the core mechanics do, often without the player consciously noticing any of them.",
+     "sections": [
+      {
+       "heading": "Audio and Camera Basics",
+       "body": [
+        "Games separate **sound effects** (short, immediate cues tied to specific events, like a jump or hit) from **music** (longer, mood-setting background tracks), often adjusting their relative volumes (ducking music briefly during important sound effects) so neither drowns out the other.",
+        "A **camera follow** system keeps the player centered or comfortably framed on screen, typically with smoothing so the camera doesn't jerk instantly to match every small movement, and bounds so it doesn't show empty space beyond the edge of the level."
+       ]
+      },
+      {
+       "heading": "Teaching Mechanics Through Level Design",
+       "body": [
+        "Good level design introduces a new mechanic in a low-risk, isolated setting first, letting players learn its behavior safely before combining it with other challenges. **Signposting**, visual cues like lighting, color, or level geometry, guides players toward the intended path without an explicit on-screen instruction.",
+        "**Pacing** alternates tension and relief: an intense combat section followed by a calmer exploration or story moment gives players a chance to recover before the next challenge, mirroring the difficulty-curve valleys covered in unit 3."
+       ],
+       "example": {
+        "problem": "A new enemy type that shoots fireballs appears for the first time in a level. What does good level design suggest for introducing it?",
+        "steps": [
+         "Introducing a new threat in a chaotic combination with several other enemies risks the player never understanding what actually killed them or how the new enemy behaves.",
+         "Placing the first encounter in a safe, isolated space, with room to observe the attack pattern and plenty of room to dodge, lets the player learn it with low risk.",
+         "Only after this safe introduction should the enemy reappear combined with tougher challenges, once its pattern is already familiar."
+        ],
+        "answer": "Introduce it in a low-risk, isolated encounter first, so players learn its pattern safely before facing it in harder combinations."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "camera follow",
+       "def": "A system that keeps the camera tracking the player, typically smoothed and bounded to the level's edges."
+      },
+      {
+       "term": "signposting",
+       "def": "Visual cues (lighting, color, geometry) that guide players toward the intended path without explicit instructions."
+      },
+      {
+       "term": "level pacing",
+       "def": "The alternation of tension and relief across a level's sections to avoid exhausting the player."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does good level design introduce a brand-new enemy type in an isolated, low-risk encounter first?",
+       "choices": [
+        "To make the game shorter overall",
+        "So players can safely learn its attack pattern before facing it combined with other challenges",
+        "Because new enemies must always appear only once",
+        "It has no effect on player learning"
+       ],
+       "answer": 1,
+       "explain": "A safe first encounter teaches the enemy's behavior with low stakes, preparing players for tougher combinations later."
+      },
+      {
+       "q": "What is 'signposting' in level design?",
+       "choices": [
+        "Placing literal text signs everywhere",
+        "Using visual cues like lighting or geometry to guide players without explicit instructions",
+        "A type of sound effect",
+        "A camera smoothing technique"
+       ],
+       "answer": 1,
+       "explain": "Signposting relies on visual design elements to subtly direct player attention and movement, rather than explicit on-screen text."
+      },
+      {
+       "q": "Why might a camera 'follow' system include smoothing rather than snapping instantly to the player's exact position?",
+       "choices": [
+        "Smoothing is required by all game engines",
+        "Instant snapping can feel jarring, while smoothing produces a more comfortable, natural-feeling camera motion",
+        "Smoothing makes the game run faster",
+        "It has no effect on player experience"
+       ],
+       "answer": 1,
+       "explain": "A camera that eases toward the player rather than snapping exactly avoids jerky, uncomfortable motion on screen."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "From Prototype to Shipped Game",
+   "summary": "Making a fun mechanic is only the start — turning it into a finished, released game requires realistic scope, honest playtesting, and a plan for actually reaching players.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Prototyping and Playtesting",
+     "minutes": 10,
+     "intro": "Before investing months into art, story, and polish, smart developers spend a few days answering one cheap question first: is the core mechanic actually fun?",
+     "sections": [
+      {
+       "heading": "What a Prototype Is For",
+       "body": [
+        "A **prototype** is a fast, rough, minimal build meant to test one specific question, most often 'is this mechanic fun?', before committing serious time to content, art, or polish. Prototypes are deliberately disposable; some are even discarded entirely once they've answered their question.",
+        "The mistake many new developers make is polishing a prototype extensively before knowing whether the core idea works at all, investing real effort into something that might get thrown away regardless of how nice it looks."
+       ]
+      },
+      {
+       "heading": "Playtesting the Right Way",
+       "body": [
+        "**Playtesting** means watching real people play, not just asking them afterward whether they liked it, since players are often unable to articulate exactly what felt confusing or dull, but their hesitation, confusion, or repeated failed attempts show it directly.",
+        "Effective playtesting means staying quiet and observing rather than explaining controls or hinting at solutions, since a game that only works when someone stands beside the player explaining it isn't actually working yet."
+       ],
+       "example": {
+        "problem": "A designer wants to test whether a new 'grappling hook' mechanic is fun. What should the prototype include, and what should it deliberately leave out?",
+        "steps": [
+         "The one question being tested is specifically whether the grapple mechanic itself is fun, so the prototype needs a functional grappling hook and a simple test space to swing and climb through.",
+         "Final art, sound, story, and general polish don't affect whether the underlying mechanic is fun, so they can be left out entirely for now.",
+         "Testing this way answers the real question quickly, without wasting effort on things that would need to be redone if the mechanic doesn't work."
+        ],
+        "answer": "Include the working grapple mechanic and a rough test space; leave out final art, audio, and story until the mechanic proves fun."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "prototype",
+       "def": "A fast, rough, minimal build meant to test a specific question, usually whether a mechanic is fun."
+      },
+      {
+       "term": "playtesting",
+       "def": "Observing real players use a game to find what is fun, confusing, or broken."
+      },
+      {
+       "term": "core mechanic",
+       "def": "The central gameplay action a prototype is built to test."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main purpose of a prototype?",
+       "choices": [
+        "To be the final, polished game",
+        "To quickly test a specific question, usually whether a core mechanic is fun, before investing further",
+        "To showcase final art and sound",
+        "To market the game to publishers"
+       ],
+       "answer": 1,
+       "explain": "Prototypes exist to answer a focused question cheaply, before committing to the time cost of full production."
+      },
+      {
+       "q": "Why should playtesters generally be observed rather than asked to explain their opinion afterward?",
+       "choices": [
+        "Asking opinions is always more accurate",
+        "Players often can't articulate exactly what felt confusing, but their hesitation and behavior during play reveal it directly",
+        "Observation is faster to write up in a report",
+        "Players never have useful opinions"
+       ],
+       "answer": 1,
+       "explain": "Direct observation of confusion, hesitation, or repeated failure often reveals problems more reliably than a player's after-the-fact self-report."
+      },
+      {
+       "q": "Why is spending significant time polishing a prototype's art before testing its core mechanic often a mistake?",
+       "choices": [
+        "Art is never important in game development",
+        "The mechanic might not even be fun, wasting the polish effort entirely if the idea gets discarded",
+        "Polish always makes prototypes worse",
+        "Prototypes should never be tested at all"
+       ],
+       "answer": 1,
+       "explain": "Polishing before validating the core idea risks investing real effort into something that may need to be scrapped if the underlying mechanic doesn't work."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Genres and Choosing Scope",
+     "minutes": 10,
+     "intro": "The single most common reason first-time game developers never finish a project isn't lack of skill — it's picking something far too big to actually build.",
+     "sections": [
+      {
+       "heading": "Genres Shape Required Systems",
+       "body": [
+        "A game's **genre** (platformer, puzzle, RPG, shooter, strategy) shapes which systems it inevitably needs: an RPG typically needs an inventory, stats, and dialogue systems; a platformer needs precise jump physics and level layout tools; a strategy game needs AI opponents and resource management.",
+        "Understanding a genre's expected systems ahead of time helps estimate how much work a project actually requires, well before writing a line of code for it."
+       ]
+      },
+      {
+       "heading": "Scope and Scope Creep",
+       "body": [
+        "**Scope** is the total amount of content and systems a game requires; matching scope to the actual available time and team size is one of the hardest and most important skills in game development. **Scope creep** is the gradual, often well-intentioned expansion of a project beyond what was realistically planned, usually the reason ambitious first projects never ship.",
+        "A well-scoped first project deliberately limits itself to one or two core systems, executed well, rather than many systems executed poorly or left unfinished — a small finished game teaches far more than a large unfinished one."
+       ],
+       "example": {
+        "problem": "A solo hobbyist developer with 3 months of part-time work plans an open-world RPG with crafting, a day/night cycle, 40 hours of content, and full voice acting. What's the central risk, and what's a better-scoped alternative?",
+        "steps": [
+         "Each individual system (open world, crafting, day/night cycle, 40 hours of content, voice acting) is itself a significant undertaking for a full team, let alone one part-time solo developer.",
+         "Combined, this is a severe case of scope mismatch relative to 3 months of part-time work, and the most likely outcome is an unfinished project.",
+         "A far better-scoped alternative is a small, focused game built around just one polished mechanic, sized to genuinely finish within the available time."
+        ],
+        "answer": "Severe scope mismatch risking an unfinished project; a much smaller, single-mechanic game scoped to the available time is far more likely to actually ship."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "genre",
+       "def": "A category of game (platformer, puzzle, RPG, etc.) that shapes which systems it typically needs."
+      },
+      {
+       "term": "scope",
+       "def": "The total amount of content and systems a game project requires to complete."
+      },
+      {
+       "term": "scope creep",
+       "def": "The gradual, often well-intentioned expansion of a project beyond its original, realistic plan."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is 'scope creep'?",
+       "choices": [
+        "A bug that causes the camera to move unexpectedly",
+        "The gradual expansion of a project beyond its original, realistic plan",
+        "A type of difficulty spike",
+        "A genre of game"
+       ],
+       "answer": 1,
+       "explain": "Scope creep describes a project quietly growing beyond what was realistically planned for the available time and team size."
+      },
+      {
+       "q": "Why is a small, finished game generally considered more valuable to a first-time developer than a large, unfinished one?",
+       "choices": [
+        "Small games are always more profitable",
+        "A finished project, however small, teaches far more about the full development process than an abandoned large one",
+        "Large games are always technically impossible",
+        "Unfinished games cannot use a game loop"
+       ],
+       "answer": 1,
+       "explain": "Completing a project, even a modest one, exposes a developer to the full pipeline from idea to shipped product, which an abandoned project never does."
+      },
+      {
+       "q": "Which systems would a typical RPG likely need that a simple puzzle game would not?",
+       "choices": [
+        "A game loop",
+        "Inventory, stats, and dialogue systems",
+        "Collision detection of any kind",
+        "A title screen"
+       ],
+       "answer": 1,
+       "explain": "RPGs typically require systems like inventory management, character stats, and dialogue, which a simple puzzle game generally does not need."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Publishing, Platforms, and Postmortems",
+     "minutes": 10,
+     "intro": "Finishing a game is a milestone, but shipping it well, and learning honestly from how that went, is what turns one project into a career of getting better at making them.",
+     "sections": [
+      {
+       "heading": "Choosing a Platform",
+       "body": [
+        "Different **platforms** (PC storefronts like Steam, mobile app stores, consoles) each come with different requirements: certification processes, store page conventions, control scheme expectations, and monetization models (one-time purchase, free-to-play with ads, subscriptions).",
+        "Choosing a platform early affects design decisions throughout development, like whether controls need to work with touch input, or whether a session needs to be playable in short mobile-friendly bursts."
+       ]
+      },
+      {
+       "heading": "Postmortems",
+       "body": [
+        "A **postmortem** is an honest, structured review conducted after a game ships, examining what went well, what went poorly, and what the team would do differently next time. Being specific and honest, rather than vague or self-congratulatory, is what makes a postmortem actually useful for the next project.",
+        "Common postmortem topics include whether scope was managed realistically, whether marketing and store presence got enough attention early enough, and which technical or design decisions caused avoidable problems later in development."
+       ],
+       "example": {
+        "problem": "A team ships a game that sells poorly despite positive reviews, and their postmortem reveals they spent zero budget or time on a store page trailer or marketing before launch. What lesson should they carry into their next project?",
+        "steps": [
+         "Positive reviews show the game itself wasn't the problem; visibility and discovery were.",
+         "The postmortem specifically identifies a complete lack of marketing and store presence before launch as the root cause.",
+         "The lesson is that marketing and a compelling store page need to be planned and resourced from early in development, not treated as an afterthought once the game is already finished."
+        ],
+        "answer": "Marketing and store-page presence need to be planned and resourced from early in development, not left until after the game is finished."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "platform",
+       "def": "The distribution channel a game releases on, such as a PC storefront, mobile app store, or console."
+      },
+      {
+       "term": "postmortem",
+       "def": "An honest, structured review after a game ships, examining what went well and poorly."
+      },
+      {
+       "term": "store page",
+       "def": "A game's public listing on a platform, including its trailer, screenshots, and description, used to attract players."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the purpose of a postmortem?",
+       "choices": [
+        "To celebrate the game's launch with no critical reflection",
+        "To honestly review what went well and poorly after shipping, to improve the next project",
+        "To advertise the game to new players",
+        "To fix bugs found after launch"
+       ],
+       "answer": 1,
+       "explain": "A postmortem is a deliberately honest retrospective meant to extract real lessons for future projects, not a celebration."
+      },
+      {
+       "q": "A well-reviewed game sells poorly because the team never built a store page trailer or did any marketing before launch. What does this suggest about their next project?",
+       "choices": [
+        "Marketing doesn't matter if the game is good enough",
+        "Marketing and store presence should be planned and resourced early in development, not as an afterthought",
+        "The game should have been made harder",
+        "They should switch to a different game engine"
+       ],
+       "answer": 1,
+       "explain": "A good game with no visibility can still fail commercially; the fix is treating marketing as part of development, planned from early on."
+      },
+      {
+       "q": "Why might a developer choose to design controls around touch input from the very start of a project?",
+       "choices": [
+        "Touch input is required on every platform",
+        "Because they've chosen mobile as their target platform, which shapes control design decisions from early in development",
+        "Touch input has no effect on design",
+        "PC games always use touch input"
+       ],
+       "answer": 1,
+       "explain": "Choosing a target platform early, like mobile, directly shapes which control schemes and interaction patterns need to be designed for from the start."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1157 @@
+{
+ "id": "middle-school-science",
+ "title": "Middle School Science",
+ "domain": "k8",
+ "level": "Middle school",
+ "description": "Middle School Science builds scientific thinking through five strands: how scientists ask and test questions, the cell as the basic unit of life, the forces and motion Newton described, the many forms energy takes, and the systems that shape Earth's surface and weather. Each lesson works through a real example or calculation so ideas become tools you can use, not just vocabulary to memorize.",
+ "outcomes": [
+  "You can explain what makes a hypothesis testable and design a fair experiment with controlled variables and a control group.",
+  "You can describe cell theory and identify the structures that distinguish plant cells from animal cells.",
+  "You can calculate speed from distance and time, read distance-time graphs, and apply Newton's three laws of motion.",
+  "You can identify balanced and unbalanced forces and explain the roles of gravity and friction in everyday motion.",
+  "You can trace energy transformations and calculate kinetic and gravitational potential energy.",
+  "You can describe Earth's layers, explain plate tectonics, and trace the stages of the water cycle."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Scientific Inquiry and the Nature of Science",
+   "summary": "Learn what makes an idea scientific, how to design a fair experiment, and how to read evidence honestly.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Makes Something Science?",
+     "minutes": 10,
+     "intro": "Science is not a pile of facts to memorize — it's a method for asking questions about the natural world and testing the answers against evidence. Understanding that method is the real starting point of every science course, including this one.",
+     "sections": [
+      {
+       "heading": "The Scientific Method as a Loop",
+       "body": [
+        "The **scientific method** is a repeatable cycle: observe something, ask a question, form a **hypothesis** (a testable, educated guess about the answer), test the hypothesis with an experiment, analyze the results, and draw a conclusion. If the evidence doesn't support the hypothesis, scientists revise it and test again — that loop, not a single 'right answer,' is what makes science self-correcting.",
+        "A good hypothesis is written so it can be proven wrong. 'Plants need sunlight to grow well' is testable: you can grow plants with and without light and measure the difference. 'Plants like sunlight' is not testable, because 'like' cannot be measured. Precision in wording is what separates a scientific hypothesis from a vague opinion."
+       ],
+       "example": {
+        "problem": "A student notices that her plants near the window grow taller than plants in a dark closet. Write a testable hypothesis.",
+        "steps": [
+         "Identify the observation: plants near light grow taller.",
+         "Turn it into a testable, measurable statement.",
+         "State a hypothesis that predicts a measurable outcome."
+        ],
+        "answer": "If a plant receives more sunlight, then it will grow taller, because sunlight provides energy for growth."
+       }
+      },
+      {
+       "heading": "Theory, Law, and Fact — Words Science Uses Differently",
+       "body": [
+        "In everyday speech, 'theory' means a guess. In science, a **theory** is the opposite: a well-tested explanation, backed by huge amounts of evidence, that explains a wide range of observations, like the theory of evolution or cell theory. Theories are not 'promoted' to laws; they answer a different question.",
+        "A **scientific law** describes what happens, usually as a mathematical relationship, without necessarily explaining why. The law of gravity describes how objects attract each other with a formula; a theory of gravity explains why. Both laws and theories can be revised if new evidence demands it, though well-established ones rarely need major changes."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "scientific method",
+       "def": "A repeatable cycle of observing, questioning, hypothesizing, testing, and concluding."
+      },
+      {
+       "term": "hypothesis",
+       "def": "A testable, educated guess about the answer to a scientific question."
+      },
+      {
+       "term": "theory (scientific)",
+       "def": "A well-tested explanation supported by extensive evidence, explaining many observations."
+      },
+      {
+       "term": "law (scientific)",
+       "def": "A description of what happens, often as a mathematical relationship, without explaining why."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of these is a testable hypothesis?",
+       "choices": [
+        "If a car's tires have more air pressure, then it will roll farther on a flat surface.",
+        "Cars are more fun with big tires.",
+        "Tires are usually black.",
+        "Driving fast is exciting."
+       ],
+       "answer": 0,
+       "explain": "This statement predicts a measurable outcome (rolling distance) based on a measurable cause (tire pressure), so it can be tested and possibly proven wrong."
+      },
+      {
+       "q": "In science, a theory is best described as...",
+       "choices": [
+        "a well-tested explanation supported by extensive evidence",
+        "an untested guess",
+        "a law that has been proven",
+        "an opinion shared by many scientists"
+       ],
+       "answer": 0,
+       "explain": "Unlike everyday use of the word, a scientific theory is a thoroughly tested, evidence-backed explanation, not a hunch."
+      },
+      {
+       "q": "Why must a hypothesis be testable?",
+       "choices": [
+        "So it can be checked against evidence and possibly proven wrong",
+        "So it sounds more scientific",
+        "So teachers can grade it easily",
+        "Because untestable ideas are always false"
+       ],
+       "answer": 0,
+       "explain": "A hypothesis must be testable so an experiment can actually check whether it is supported or refuted by evidence."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Designing a Fair Experiment",
+     "minutes": 12,
+     "intro": "Ever wonder why a science-fair project needs a control group? Without one, you can't tell whether your fertilizer actually helped the plants grow, or whether they would have grown that tall anyway. Fair experiments are built to rule out every explanation except the one you're testing.",
+     "sections": [
+      {
+       "heading": "Variables: Independent, Dependent, and Controlled",
+       "body": [
+        "Every fair experiment has three kinds of variables. The **independent variable** is the one thing the experimenter deliberately changes, like the amount of fertilizer given to a plant. The **dependent variable** is what you measure to see the effect, like plant height after three weeks.",
+        "**Controlled variables** are everything else that must be kept the same for every group, such as the type of plant, the amount of water, the amount of sunlight, and the size of the pot. If you let two variables change at once — say, both fertilizer and sunlight — you can no longer tell which one caused the result."
+       ],
+       "example": {
+        "problem": "A student tests whether more fertilizer makes tomato plants grow taller, using three identical pots with different fertilizer amounts, same soil, same water, and same light. Identify the independent and dependent variables.",
+        "steps": [
+         "Find what the student deliberately changes between groups: the amount of fertilizer.",
+         "Find what the student measures as the result: the plant height.",
+         "Independent variable = fertilizer amount; dependent variable = plant height."
+        ],
+        "answer": "Independent variable: fertilizer amount. Dependent variable: plant height."
+       }
+      },
+      {
+       "heading": "Control Groups and Sample Size",
+       "body": [
+        "A **control group** receives no treatment (in this case, no fertilizer) and is compared against the treatment groups. Without a control group, you cannot know whether the plants would have grown that much anyway, from just water and sunlight alone.",
+        "A single plant per group isn't enough — one plant might just happen to be unusually strong or weak. Scientists use a large enough **sample size** (many plants per group) and often repeat the experiment, so a fluke result in one plant doesn't get mistaken for a real pattern."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "independent variable",
+       "def": "The one factor the experimenter deliberately changes between groups."
+      },
+      {
+       "term": "dependent variable",
+       "def": "The factor that is measured to see the effect of the independent variable."
+      },
+      {
+       "term": "controlled variable",
+       "def": "A factor kept the same across all groups so it cannot affect the results."
+      },
+      {
+       "term": "control group",
+       "def": "A group that receives no treatment, used as a baseline for comparison."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In an experiment testing how water amount affects seed germination, what is the independent variable?",
+       "choices": [
+        "The amount of water given",
+        "The number of seeds that sprout",
+        "The type of soil used",
+        "The room temperature"
+       ],
+       "answer": 0,
+       "explain": "The independent variable is the one factor the experimenter deliberately changes, which here is the amount of water given."
+      },
+      {
+       "q": "Why does a fair experiment need a control group?",
+       "choices": [
+        "To show what happens without the treatment, for comparison",
+        "To make the experiment take longer",
+        "To use up extra plants",
+        "To make the data look better"
+       ],
+       "answer": 0,
+       "explain": "A control group shows the baseline outcome with no treatment, so you can tell whether the treatment actually caused a difference."
+      },
+      {
+       "q": "A student tests 1 plant with fertilizer and 1 plant without. What is the main problem with this design?",
+       "choices": [
+        "The sample size is too small to rule out chance differences between the two plants",
+        "There are too many variables being tested",
+        "The plants need more sunlight",
+        "The experiment has no hypothesis"
+       ],
+       "answer": 0,
+       "explain": "With only one plant per group, any difference could just be natural variation between two individual plants rather than a real effect of the fertilizer."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Reading Data: Graphs, Tables, and Evidence",
+     "minutes": 12,
+     "intro": "Raw numbers hide their story until you organize them. A bar graph, line graph, or data table turns a pile of measurements into a pattern you can actually see and reason about, and reading them correctly is a skill you'll use in every science class after this one.",
+     "sections": [
+      {
+       "heading": "Choosing and Reading the Right Graph",
+       "body": [
+        "A **line graph** is best for showing how something changes continuously over time, like temperature over 24 hours; each point connects to the next to show a trend. A **bar graph** is best for comparing separate, distinct categories, like the average height of five different plant species.",
+        "When reading any graph, always check the axis labels and units first. A graph with 'time (minutes)' on the x-axis and 'distance (meters)' on the y-axis is telling a completely different story than one with 'time (hours)' and 'distance (kilometers),' even if the lines look identical."
+       ],
+       "example": {
+        "problem": "A line graph shows a plant's height at 0 cm on day 0, 4 cm on day 5, and 10 cm on day 10. Between which interval did the plant grow fastest?",
+        "steps": [
+         "Find the growth in each interval: day 0 to 5 is 4 - 0 = 4 cm over 5 days.",
+         "Day 5 to 10 is 10 - 4 = 6 cm over 5 days.",
+         "6 cm in 5 days is faster growth than 4 cm in 5 days, so day 5 to 10 was faster."
+        ],
+        "answer": "Day 5 to day 10"
+       }
+      },
+      {
+       "heading": "Evidence Supports or Refutes — It Doesn't Prove",
+       "body": [
+        "Scientific conclusions are always stated in terms of what the evidence **supports**, not what it 'proves' with total certainty. If data from ten trials consistently shows that plants grow taller with more sunlight, scientists say the evidence supports the hypothesis, leaving room for future data to add nuance or exceptions.",
+        "Outliers, data points far from the rest, deserve attention, not automatic deletion. A single unusually tall plant in the no-fertilizer group might mean a measurement error, or it might mean something scientifically interesting, like a genetic difference. Good scientists investigate outliers instead of ignoring them."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "line graph",
+       "def": "A graph connecting data points to show continuous change over time."
+      },
+      {
+       "term": "bar graph",
+       "def": "A graph using bars to compare separate categories."
+      },
+      {
+       "term": "evidence",
+       "def": "Data or observations used to support or refute a hypothesis."
+      },
+      {
+       "term": "outlier",
+       "def": "A data point that differs greatly from the rest of the data set."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which type of graph is best for showing temperature change over 24 hours?",
+       "choices": [
+        "Line graph",
+        "Bar graph",
+        "Pie chart",
+        "No graph is needed"
+       ],
+       "answer": 0,
+       "explain": "A line graph shows continuous change over time, which fits temperature tracked hour by hour."
+      },
+      {
+       "q": "A data table shows five trials with similar results, except one trial with a wildly different number. What should a scientist do with that outlier?",
+       "choices": [
+        "Investigate it rather than automatically deleting it",
+        "Always delete it immediately",
+        "Ignore all five other trials instead",
+        "Report only the outlier as the true result"
+       ],
+       "answer": 0,
+       "explain": "Outliers might reveal a measurement error or a genuinely interesting result, so they should be investigated, not discarded automatically."
+      },
+      {
+       "q": "What is the most accurate way to describe what strong evidence does for a hypothesis?",
+       "choices": [
+        "It supports the hypothesis",
+        "It proves the hypothesis with complete certainty",
+        "It has no effect on the hypothesis",
+        "It disproves all other hypotheses forever"
+       ],
+       "answer": 0,
+       "explain": "Scientific evidence supports or refutes a hypothesis; it does not offer absolute proof, since future evidence could still add nuance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Cells and Life",
+   "summary": "Explore the cell as the basic unit of life, compare plant and animal cells, and see how cells build up into organisms.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Cell: Basic Unit of Life",
+     "minutes": 12,
+     "intro": "Every living thing you have ever seen, a redwood tree, a mushroom, a housefly, you, is built from the same basic unit: the cell. Zoom in far enough on any organism and you find the same handful of tiny structures doing the work of life.",
+     "sections": [
+      {
+       "heading": "Cell Theory",
+       "body": [
+        "**Cell theory** states three things: all living things are made of one or more cells, the cell is the basic unit of structure and function in living things, and all cells come from pre-existing cells. This theory took over 150 years and dozens of scientists' work to establish, using early microscopes to see what the naked eye never could.",
+        "Organisms fall into two broad categories based on cell count. **Unicellular** organisms, like bacteria and many protists, are a single cell that does everything needed for life. **Multicellular** organisms, like plants, fungi, and animals, are built from trillions of cells that specialize and cooperate."
+       ]
+      },
+      {
+       "heading": "Inside the Cell: Key Organelles",
+       "body": [
+        "The **cell membrane** surrounds every cell and controls what enters and exits, like a security checkpoint that lets in nutrients and lets out waste. The **nucleus**, found in more complex cells, stores the cell's DNA and acts as its control center, directing what the cell builds and when.",
+        "**Mitochondria** are the cell's power plants, breaking down food molecules to release usable energy, which is why muscle cells, which need lots of energy, are packed with far more mitochondria than skin cells. **Cytoplasm** is the jelly-like fluid filling the cell, where organelles float and many chemical reactions happen."
+       ],
+       "example": {
+        "problem": "A muscle cell has thousands of mitochondria, while a skin cell has only a few hundred. What does this suggest about the muscle cell's energy needs?",
+        "steps": [
+         "Recall that mitochondria produce usable energy for the cell.",
+         "More mitochondria generally means the cell needs more energy to do its job.",
+         "Muscle cells contract constantly and need large amounts of energy, so they are packed with mitochondria."
+        ],
+        "answer": "Muscle cells need much more energy than skin cells, so they contain far more mitochondria."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "cell theory",
+       "def": "The idea that all living things are made of cells, cells are the basic unit of life, and cells come from existing cells."
+      },
+      {
+       "term": "unicellular / multicellular",
+       "def": "Unicellular organisms are a single cell; multicellular organisms are built from many cells."
+      },
+      {
+       "term": "cell membrane",
+       "def": "The boundary controlling what enters and exits a cell."
+      },
+      {
+       "term": "mitochondria",
+       "def": "Organelles that break down food to release usable energy for the cell."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which statement is part of cell theory?",
+       "choices": [
+        "All living things are made of one or more cells",
+        "Only animals are made of cells",
+        "Cells can form from non-living matter",
+        "All cells contain a nucleus"
+       ],
+       "answer": 0,
+       "explain": "Cell theory states that all living things are made of one or more cells, among its other core claims."
+      },
+      {
+       "q": "What is the main job of the cell membrane?",
+       "choices": [
+        "Controlling what enters and exits the cell",
+        "Storing the cell's DNA",
+        "Producing energy for the cell",
+        "Carrying out photosynthesis"
+       ],
+       "answer": 0,
+       "explain": "The cell membrane acts as a boundary and checkpoint, controlling which substances enter and leave the cell."
+      },
+      {
+       "q": "Why would a muscle cell likely contain more mitochondria than a skin cell?",
+       "choices": [
+        "Muscle cells need more energy for constant contraction",
+        "Skin cells have no need for a nucleus",
+        "Muscle cells do not need a cell membrane",
+        "Mitochondria are only found in unicellular organisms"
+       ],
+       "answer": 0,
+       "explain": "Muscle cells use a lot of energy to contract repeatedly, so they contain far more mitochondria than less energy-demanding cells like skin cells."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Plant and Animal Cells: Similarities and Differences",
+     "minutes": 12,
+     "intro": "Line up a plant cell and an animal cell side by side and you'll spot a family resemblance — both share a nucleus, membrane, and mitochondria — but three structures found only in plant cells explain why a tree can stand upright and make its own food from sunlight.",
+     "sections": [
+      {
+       "heading": "Shared Structures",
+       "body": [
+        "Both plant and animal cells are **eukaryotic**, meaning they have a nucleus enclosed in a membrane, along with mitochondria, cytoplasm, and a cell membrane. These shared structures reflect a shared basic strategy for staying alive: control genetic information, generate energy, and manage what crosses the boundary.",
+        "Because both cell types share this basic toolkit, a microscope image of just the nucleus and mitochondria wouldn't tell you whether you were looking at a leaf cell or a cheek cell. The real differences show up in structures unique to plants."
+       ]
+      },
+      {
+       "heading": "What Plant Cells Have That Animal Cells Don't",
+       "body": [
+        "Plant cells have a rigid **cell wall** made of cellulose surrounding the cell membrane, giving the cell a fixed shape and support — this is why plant cells look boxy and uniform under a microscope, while animal cells look round and irregular. Animal cells have no cell wall.",
+        "Plant cells also contain **chloroplasts**, the organelles that carry out **photosynthesis**, using sunlight to convert carbon dioxide and water into glucose and oxygen. Most plant cells also have one large, central **vacuole** that stores water and helps keep the cell firm; animal cells may have several small vacuoles instead."
+       ],
+       "example": {
+        "problem": "You look at an unlabeled cell under a microscope and see a rigid rectangular shape, a cell wall, and green chloroplasts. Is it a plant or animal cell?",
+        "steps": [
+         "Recall that only plant cells have a cell wall and chloroplasts.",
+         "The rigid rectangular shape and cell wall point to a plant cell.",
+         "The presence of chloroplasts confirms it, since only plant cells photosynthesize."
+        ],
+        "answer": "It is a plant cell."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "eukaryotic cell",
+       "def": "A cell with a nucleus enclosed in a membrane, found in both plants and animals."
+      },
+      {
+       "term": "cell wall",
+       "def": "A rigid structure surrounding the cell membrane in plant cells, giving fixed shape and support."
+      },
+      {
+       "term": "chloroplast",
+       "def": "The organelle in plant cells that carries out photosynthesis."
+      },
+      {
+       "term": "vacuole",
+       "def": "A storage sac inside a cell; plant cells usually have one large central vacuole."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which structure is found in plant cells but not animal cells?",
+       "choices": [
+        "Cell wall",
+        "Nucleus",
+        "Mitochondria",
+        "Cell membrane"
+       ],
+       "answer": 0,
+       "explain": "The rigid cell wall made of cellulose is unique to plant cells (and some other organisms), not animal cells."
+      },
+      {
+       "q": "What is the main function of chloroplasts?",
+       "choices": [
+        "Carrying out photosynthesis to make glucose",
+        "Storing the cell's DNA",
+        "Breaking down waste",
+        "Controlling what enters the cell"
+       ],
+       "answer": 0,
+       "explain": "Chloroplasts use sunlight to convert carbon dioxide and water into glucose and oxygen through photosynthesis."
+      },
+      {
+       "q": "A student sees a round cell with no cell wall and no chloroplasts under a microscope. What kind of cell is it most likely?",
+       "choices": [
+        "An animal cell",
+        "A plant cell",
+        "A cell wall",
+        "None of the above"
+       ],
+       "answer": 0,
+       "explain": "The absence of a cell wall and chloroplasts, along with a round shape, points to an animal cell."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "From Cells to Organisms: Levels of Organization",
+     "minutes": 12,
+     "intro": "A single cell rarely works alone in a large organism. Cells organize into tissues, tissues into organs, and organs into systems — a chain of command that turns trillions of tiny cells into one coordinated body.",
+     "sections": [
+      {
+       "heading": "Cells, Tissues, and Organs",
+       "body": [
+        "A **tissue** is a group of similar cells working together to perform a specific job. Muscle tissue is made of cells specialized for contracting; nerve tissue is made of cells specialized for sending electrical signals. Cells in a tissue are alike in structure because they share the same specialized job.",
+        "An **organ** is made of two or more different tissues working together for a shared function. The heart, for example, combines muscle tissue (to pump), nerve tissue (to control the rhythm), and connective tissue (to hold it all together) into one organ."
+       ],
+       "example": {
+        "problem": "The stomach contains muscle tissue, nerve tissue, and connective tissue all working together to digest food. What level of organization is the stomach?",
+        "steps": [
+         "Identify that the stomach is built from more than one type of tissue.",
+         "Recall that a structure made of multiple tissue types working together is an organ.",
+         "The stomach is an organ."
+        ],
+        "answer": "The stomach is an organ."
+       }
+      },
+      {
+       "heading": "Organ Systems and the Whole Organism",
+       "body": [
+        "An **organ system** is a group of organs working together for a broader function. The digestive system includes the stomach, intestines, liver, and more, all cooperating to break down food and absorb nutrients. The circulatory system includes the heart, blood vessels, and blood, cooperating to transport materials around the body.",
+        "The full chain of organization runs from small to large: cell → tissue → organ → organ system → organism. Damage at a lower level can ripple upward — a problem in heart muscle cells can weaken heart tissue, which can impair the heart organ, which can strain the entire circulatory system."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "tissue",
+       "def": "A group of similar cells working together to perform a specific job."
+      },
+      {
+       "term": "organ",
+       "def": "A structure made of two or more tissues working together for a shared function."
+      },
+      {
+       "term": "organ system",
+       "def": "A group of organs working together for a broader function, like digestion or circulation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Put these in order from smallest to largest: organ, cell, tissue, organ system.",
+       "choices": [
+        "Cell, tissue, organ, organ system",
+        "Tissue, cell, organ, organ system",
+        "Organ, tissue, cell, organ system",
+        "Organ system, organ, tissue, cell"
+       ],
+       "answer": 0,
+       "explain": "The levels of organization run from smallest to largest: cell, tissue, organ, then organ system."
+      },
+      {
+       "q": "What is a tissue?",
+       "choices": [
+        "A group of similar cells working together for a specific job",
+        "A group of different organs",
+        "A single specialized cell",
+        "A complete organism"
+       ],
+       "answer": 0,
+       "explain": "A tissue is a collection of similar cells performing the same specialized function, like muscle or nerve tissue."
+      },
+      {
+       "q": "The heart is made of muscle, nerve, and connective tissue working together. What level of organization is this?",
+       "choices": [
+        "Organ",
+        "Tissue",
+        "Cell",
+        "Organ system"
+       ],
+       "answer": 0,
+       "explain": "A structure made of multiple different tissues working together for one function is an organ."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Forces and Motion",
+   "summary": "Describe motion with speed and graphs, then explain it with Newton's three laws, gravity, and friction.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Describing Motion: Speed and Distance-Time Graphs",
+     "minutes": 12,
+     "intro": "Before you can explain why things move the way they do, you need the vocabulary to describe motion precisely: how fast, how far, which direction — and a distance-time graph is the clearest picture of a moving object's whole story.",
+     "sections": [
+      {
+       "heading": "Speed and Velocity",
+       "body": [
+        "**Speed** is how fast an object moves, calculated as distance divided by time: speed = distance ÷ time. A cyclist who covers 30 miles in 2 hours has a speed of 30 ÷ 2 = 15 miles per hour. Speed only tells you how fast, with no information about direction.",
+        "**Velocity** adds direction to speed: it's the speed of an object plus which way it's headed, like '15 mph north.' Two cars can have the same speed but different velocities if they're moving in different directions, which matters enormously if those two cars are approaching the same intersection."
+       ],
+       "example": {
+        "problem": "A runner covers 400 meters in 80 seconds. Find her speed.",
+        "steps": [
+         "Use speed = distance ÷ time.",
+         "Substitute: speed = 400 ÷ 80.",
+         "Divide: 400 ÷ 80 = 5."
+        ],
+        "answer": "5 meters per second"
+       }
+      },
+      {
+       "heading": "Reading Distance-Time Graphs",
+       "body": [
+        "On a **distance-time graph**, time is on the x-axis and distance is on the y-axis. The steeper the line, the faster the object is moving, because a steep line means a lot of distance is covered in a short time. A flat, horizontal line means the object's distance isn't changing, it's stopped.",
+        "The **slope** of a distance-time graph is exactly the speed: slope = rise ÷ run = change in distance ÷ change in time. If a graph line rises from 0 m to 20 m as time goes from 0 s to 4 s, the slope, and therefore the speed, is 20 ÷ 4 = 5 meters per second."
+       ],
+       "example": {
+        "problem": "A distance-time graph shows an object at 0 m at time 0 s and at 60 m at time 12 s, as a straight line. Find its speed.",
+        "steps": [
+         "The slope of the line equals the speed: change in distance ÷ change in time.",
+         "Change in distance: 60 - 0 = 60 m.",
+         "Change in time: 12 - 0 = 12 s.",
+         "Speed = 60 ÷ 12 = 5 m/s."
+        ],
+        "answer": "5 meters per second"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "speed",
+       "def": "How fast an object moves, calculated as distance divided by time."
+      },
+      {
+       "term": "velocity",
+       "def": "Speed combined with direction of motion."
+      },
+      {
+       "term": "distance-time graph",
+       "def": "A graph with time on the x-axis and distance on the y-axis, whose slope equals speed."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A car travels 180 miles in 3 hours. What is its speed?",
+       "choices": [
+        "60 mph",
+        "54 mph",
+        "183 mph",
+        "90 mph"
+       ],
+       "answer": 0,
+       "explain": "Speed = distance ÷ time = 180 ÷ 3 = 60 mph."
+      },
+      {
+       "q": "On a distance-time graph, what does a flat horizontal line mean?",
+       "choices": [
+        "The object is not moving (stopped)",
+        "The object is moving very fast",
+        "The object is speeding up",
+        "The object is moving backward"
+       ],
+       "answer": 0,
+       "explain": "A flat line means distance is not changing over time, so the object is stopped."
+      },
+      {
+       "q": "A distance-time graph shows an object moving from 0 m to 100 m in 20 s. What is its speed?",
+       "choices": [
+        "5 m/s",
+        "20 m/s",
+        "100 m/s",
+        "2 m/s"
+       ],
+       "answer": 0,
+       "explain": "Speed equals the slope: 100 m ÷ 20 s = 5 m/s."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Newton's Laws of Motion",
+     "minutes": 14,
+     "intro": "Three short laws, written by Isaac Newton over 300 years ago, still explain why a seatbelt saves your life, why a rocket needs to expel fuel to move forward, and why a heavy shopping cart is harder to push than an empty one.",
+     "sections": [
+      {
+       "heading": "Newton's First and Second Laws",
+       "body": [
+        "**Newton's first law** (the law of inertia) says an object at rest stays at rest, and an object in motion stays in motion at constant speed and direction, unless acted on by an unbalanced force. This is why passengers lurch forward when a car brakes suddenly: their bodies keep moving forward due to inertia even though the car has stopped.",
+        "**Newton's second law** relates force, mass, and acceleration: force = mass × acceleration (F = ma). A bigger force produces more acceleration on the same object, and the same force produces less acceleration on a more massive object, which is why it takes more force to accelerate a loaded truck than an empty bicycle at the same rate."
+       ],
+       "example": {
+        "problem": "A 2 kg cart is pushed with a force of 10 newtons. Find its acceleration.",
+        "steps": [
+         "Use F = ma, rearranged to a = F ÷ m.",
+         "Substitute: a = 10 ÷ 2.",
+         "Divide: a = 5."
+        ],
+        "answer": "5 m/s²"
+       }
+      },
+      {
+       "heading": "Newton's Third Law",
+       "body": [
+        "**Newton's third law** says every action force has an equal and opposite reaction force. When you push on a wall, the wall pushes back on you with equal force, you can feel it in your hand. Rockets launch by this exact principle: burning fuel is pushed downward out of the engine, and the escaping gas pushes the rocket upward with equal force.",
+        "Action-reaction pairs act on two different objects, which is why they don't cancel out. When you jump off a skateboard, your feet push the skateboard backward (action) and the skateboard pushes your feet forward (reaction), you move one way, the skateboard moves the other."
+       ],
+       "example": {
+        "problem": "A swimmer pushes backward against the water with her arms and legs. Using Newton's third law, explain why she moves forward.",
+        "steps": [
+         "Identify the action force: the swimmer pushes the water backward.",
+         "Apply Newton's third law: the water pushes back on the swimmer with an equal and opposite force.",
+         "That reaction force pushes the swimmer forward."
+        ],
+        "answer": "The water pushes the swimmer forward with a force equal and opposite to the force she applied backward on the water."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "inertia",
+       "def": "The tendency of an object to resist a change in its motion."
+      },
+      {
+       "term": "Newton's second law",
+       "def": "Force equals mass times acceleration: F = ma."
+      },
+      {
+       "term": "Newton's third law",
+       "def": "Every action force has an equal and opposite reaction force."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 5 kg object experiences a net force of 20 N. What is its acceleration?",
+       "choices": [
+        "4 m/s²",
+        "100 m/s²",
+        "25 m/s²",
+        "0.25 m/s²"
+       ],
+       "answer": 0,
+       "explain": "a = F ÷ m = 20 ÷ 5 = 4 m/s²."
+      },
+      {
+       "q": "Why do passengers lurch forward when a car suddenly stops?",
+       "choices": [
+        "Inertia keeps their bodies moving forward even though the car stopped",
+        "The car pushes them forward",
+        "Gravity pulls them forward",
+        "Friction pushes them forward"
+       ],
+       "answer": 0,
+       "explain": "Newton's first law: a body in motion stays in motion unless acted on by a force, so passengers keep moving forward due to inertia."
+      },
+      {
+       "q": "A rocket expels hot gas downward. According to Newton's third law, what happens to the rocket?",
+       "choices": [
+        "The gas pushes the rocket upward with an equal and opposite force",
+        "Nothing, since gas has no mass",
+        "The rocket slows down",
+        "The rocket moves sideways"
+       ],
+       "answer": 0,
+       "explain": "The action of expelling gas downward creates an equal and opposite reaction force pushing the rocket upward."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Gravity, Friction, and Balanced/Unbalanced Forces",
+     "minutes": 12,
+     "intro": "Why does a dropped ball fall instead of floating, and why does a sled eventually stop instead of sliding forever? Two everyday forces, gravity and friction, answer both questions, and together with the idea of balanced forces, they explain almost every motion you see.",
+     "sections": [
+      {
+       "heading": "Gravity",
+       "body": [
+        "**Gravity** is the force of attraction between any two objects with mass, and it gets stronger with more mass and weaker with more distance. On Earth's surface, gravity accelerates falling objects at about 9.8 m/s² (ignoring air resistance), which is why a dropped rock speeds up as it falls rather than falling at constant speed.",
+        "**Weight** is the force of gravity pulling on an object's mass, measured in newtons, and it changes depending on where you are, an astronaut weighs less on the Moon because the Moon has less mass and weaker gravity than Earth, even though the astronaut's **mass** (amount of matter) stays exactly the same everywhere."
+       ]
+      },
+      {
+       "heading": "Friction and Balanced vs. Unbalanced Forces",
+       "body": [
+        "**Friction** is a force that resists motion between two surfaces in contact, and it always acts opposite to the direction of motion. Rougher surfaces create more friction (a rubber sole on gravel), while smoother surfaces create less (ice skates on ice), which is why the same push slides an object much farther on ice than on gravel.",
+        "When all forces on an object cancel out, they are **balanced**, and the object's motion doesn't change, it stays still or keeps moving at constant velocity. When forces don't cancel out, they are **unbalanced**, and the object accelerates in the direction of the leftover, or **net**, force. A book resting on a table has balanced forces: gravity pulling down exactly matches the table pushing up."
+       ],
+       "example": {
+        "problem": "A sled is pushed forward with 40 N of force, while friction pushes back with 40 N. Is the sled's motion changing?",
+        "steps": [
+         "Compare the forces: 40 N forward and 40 N of friction backward.",
+         "Since the forces are equal and opposite, they are balanced.",
+         "Balanced forces mean no change in motion, so the sled continues at constant velocity (or stays at rest if it was already still)."
+        ],
+        "answer": "No — the forces are balanced, so the sled's velocity does not change."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "gravity",
+       "def": "The force of attraction between any two objects with mass."
+      },
+      {
+       "term": "weight vs. mass",
+       "def": "Weight is the force of gravity on an object's mass; mass is the amount of matter, unchanged by location."
+      },
+      {
+       "term": "friction",
+       "def": "A force that resists motion between two surfaces in contact."
+      },
+      {
+       "term": "balanced / unbalanced forces",
+       "def": "Balanced forces cancel out with no change in motion; unbalanced forces cause acceleration."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does an astronaut weigh less on the Moon than on Earth?",
+       "choices": [
+        "The Moon has less mass and weaker gravity than Earth",
+        "The astronaut's mass decreases on the Moon",
+        "There is no gravity on the Moon",
+        "The astronaut becomes lighter in space suits"
+       ],
+       "answer": 0,
+       "explain": "Weight depends on gravity, and the Moon's weaker gravity (due to its smaller mass) results in less weight, even though the astronaut's mass is unchanged."
+      },
+      {
+       "q": "Which surface pairing would create the most friction?",
+       "choices": [
+        "Rubber sole on gravel",
+        "Ice skate on ice",
+        "Sock on a polished floor",
+        "Air hockey puck on its table"
+       ],
+       "answer": 0,
+       "explain": "Rougher surfaces create more friction, and a rubber sole on gravel is a much rougher pairing than the smooth surfaces in the other choices."
+      },
+      {
+       "q": "A box sits still on the floor, with gravity pulling down and the floor pushing up with equal force. What term describes these forces?",
+       "choices": [
+        "Balanced",
+        "Unbalanced",
+        "Frictionless",
+        "Net force is large"
+       ],
+       "answer": 0,
+       "explain": "Equal and opposite forces that cancel out are called balanced forces, resulting in no change in motion."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Energy",
+   "summary": "Identify forms of energy, apply the law of conservation of energy, and calculate kinetic and potential energy.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Forms of Energy and Energy Transformation",
+     "minutes": 10,
+     "intro": "Energy never disappears, it only changes form. A bouncing ball, a toaster, and a lightning bolt are all just energy switching costumes, and learning to track those costume changes is the key to understanding almost every process in science.",
+     "sections": [
+      {
+       "heading": "Common Forms of Energy",
+       "body": [
+        "**Energy** is the ability to do work or cause change, and it comes in many forms. **Thermal energy** is the energy of moving particles, felt as heat. **Chemical energy** is stored in the bonds of molecules, like food or gasoline. **Electrical energy** comes from moving electric charges, powering everything plugged into an outlet.",
+        "**Radiant energy** (light) travels as electromagnetic waves, including the visible light and warmth you feel from the Sun. **Sound energy** comes from vibrating objects, like a guitar string. Every one of these forms can transform into another, which is exactly what makes energy so useful, and so trackable."
+       ]
+      },
+      {
+       "heading": "The Law of Conservation of Energy",
+       "body": [
+        "The **law of conservation of energy** states that energy cannot be created or destroyed, only transformed from one form to another or transferred from one object to another. The total amount of energy in a closed system stays exactly the same, even as its form keeps changing.",
+        "A gas stove burner is a chain of transformations: chemical energy in the gas transforms into thermal energy (heat) and radiant energy (light from the flame). None of the original energy vanishes, some may spread into the surrounding air as heat that's hard to capture, but it hasn't been destroyed, just spread out."
+       ],
+       "example": {
+        "problem": "A flashlight uses a battery to light a bulb. Trace the energy transformation from battery to light.",
+        "steps": [
+         "Identify the starting form: chemical energy is stored in the battery.",
+         "The battery converts chemical energy into electrical energy that flows through the circuit.",
+         "The bulb converts electrical energy into radiant energy (light) and some thermal energy (heat)."
+        ],
+        "answer": "Chemical energy → electrical energy → radiant energy (and some heat)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "energy",
+       "def": "The ability to do work or cause change."
+      },
+      {
+       "term": "thermal energy",
+       "def": "The energy of moving particles, felt as heat."
+      },
+      {
+       "term": "chemical energy",
+       "def": "Energy stored in the bonds of molecules, like food or gasoline."
+      },
+      {
+       "term": "law of conservation of energy",
+       "def": "Energy cannot be created or destroyed, only transformed or transferred."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What form of energy is stored in the bonds of gasoline molecules?",
+       "choices": [
+        "Chemical energy",
+        "Radiant energy",
+        "Sound energy",
+        "Electrical energy"
+       ],
+       "answer": 0,
+       "explain": "Energy stored in molecular bonds, like in gasoline or food, is chemical energy."
+      },
+      {
+       "q": "According to the law of conservation of energy, what happens to the total energy in a closed system?",
+       "choices": [
+        "It stays the same, only changing form",
+        "It slowly disappears",
+        "It increases over time",
+        "It can be created from nothing"
+       ],
+       "answer": 0,
+       "explain": "The law of conservation of energy states that total energy in a closed system remains constant, only changing form."
+      },
+      {
+       "q": "A toaster plugged into an outlet gets hot and glows slightly. What energy transformation is happening?",
+       "choices": [
+        "Electrical energy transforms into thermal and radiant energy",
+        "Chemical energy transforms into sound energy",
+        "Radiant energy transforms into chemical energy",
+        "Nuclear energy transforms into electrical energy"
+       ],
+       "answer": 0,
+       "explain": "The toaster converts electrical energy from the outlet into thermal energy (heat) and some radiant energy (the glow)."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Kinetic and Potential Energy",
+     "minutes": 12,
+     "intro": "Hold a ball at the top of a staircase and it has energy waiting to happen; let it go and that waiting energy turns into motion. This lesson gives you the two main categories that every mechanical energy story is built from: potential and kinetic.",
+     "sections": [
+      {
+       "heading": "Kinetic Energy",
+       "body": [
+        "**Kinetic energy** is the energy of motion, anything moving has it, and the faster and heavier it is, the more it has. The formula is KE = 1/2 × mass × velocity². Because velocity is squared, doubling an object's speed quadruples its kinetic energy, which is a big part of why crash damage rises so sharply with speed.",
+        "A 2 kg ball moving at 3 m/s has KE = 1/2 × 2 × 3² = 1/2 × 2 × 9 = 9 joules. Double the speed to 6 m/s and KE = 1/2 × 2 × 36 = 36 joules, four times as much energy from only twice the speed."
+       ],
+       "example": {
+        "problem": "Find the kinetic energy of a 4 kg object moving at 5 m/s.",
+        "steps": [
+         "Use KE = 1/2 × mass × velocity².",
+         "Square the velocity: 5² = 25.",
+         "Multiply: 1/2 × 4 × 25 = 2 × 25 = 50."
+        ],
+        "answer": "50 joules"
+       }
+      },
+      {
+       "heading": "Potential Energy and the Trade Between Them",
+       "body": [
+        "**Gravitational potential energy** is stored energy due to an object's height above the ground: PE = mass × gravity (9.8 m/s²) × height. A book held higher above a table has more potential energy than the same book held just above it, because it has farther to fall.",
+        "As an object falls, potential energy converts into kinetic energy, and (ignoring air resistance) the total mechanical energy stays constant. A ball dropped from a height starts with all potential energy and no kinetic energy; right before it hits the ground, it has all kinetic energy and nearly no potential energy left."
+       ],
+       "example": {
+        "problem": "Find the gravitational potential energy of a 3 kg book held 2 meters above the floor. Use gravity = 9.8 m/s².",
+        "steps": [
+         "Use PE = mass × gravity × height.",
+         "Substitute: PE = 3 × 9.8 × 2.",
+         "Multiply: 3 × 9.8 = 29.4, then 29.4 × 2 = 58.8."
+        ],
+        "answer": "58.8 joules"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "kinetic energy",
+       "def": "The energy of motion, calculated as 1/2 × mass × velocity²."
+      },
+      {
+       "term": "gravitational potential energy",
+       "def": "Stored energy due to an object's height above the ground, PE = mass × gravity × height."
+      },
+      {
+       "term": "joule",
+       "def": "The standard unit for measuring energy."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the kinetic energy of a 2 kg object moving at 4 m/s.",
+       "choices": [
+        "16 joules",
+        "8 joules",
+        "32 joules",
+        "4 joules"
+       ],
+       "answer": 0,
+       "explain": "KE = 1/2 × 2 × 4² = 1/2 × 2 × 16 = 16 joules."
+      },
+      {
+       "q": "What happens to an object's kinetic energy if its speed doubles (mass stays the same)?",
+       "choices": [
+        "It quadruples",
+        "It doubles",
+        "It stays the same",
+        "It is cut in half"
+       ],
+       "answer": 0,
+       "explain": "Because kinetic energy depends on velocity squared, doubling the speed multiplies kinetic energy by four."
+      },
+      {
+       "q": "A ball sits at the top of a hill, not moving. What kind of energy does it mainly have?",
+       "choices": [
+        "Gravitational potential energy",
+        "Kinetic energy",
+        "Sound energy",
+        "Electrical energy"
+       ],
+       "answer": 0,
+       "explain": "A stationary object at height has stored energy due to its position, which is gravitational potential energy, not kinetic energy since it isn't moving."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Earth Systems",
+   "summary": "Explore Earth's internal layers, plate tectonics, and the water cycle that drives weather and climate.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Earth's Layers and Plate Tectonics",
+     "minutes": 12,
+     "intro": "Beneath your feet, Earth is not one solid ball but four distinct layers, and the outermost one is cracked into giant moving pieces that carry entire continents across the planet's surface at about the speed your fingernails grow.",
+     "sections": [
+      {
+       "heading": "Earth's Four Layers",
+       "body": [
+        "Earth has four main layers. The **crust** is the thin, rocky outer layer we live on, thinner under oceans (about 5 km) and thicker under continents (about 30-70 km). Below that, the **mantle** is a thick layer of hot, slowly flowing rock that makes up most of Earth's volume.",
+        "Below the mantle, the **outer core** is liquid metal (mostly iron and nickel), and its movement generates Earth's magnetic field. At the very center, the **inner core** is solid metal, kept solid by immense pressure despite temperatures hotter than the Sun's surface."
+       ]
+      },
+      {
+       "heading": "Plate Tectonics",
+       "body": [
+        "Earth's crust and uppermost mantle are broken into large pieces called **tectonic plates**, which float on the slowly flowing mantle beneath them and drift a few centimeters per year, roughly the speed fingernails grow. Where plates meet, three things can happen: they can collide (convergent boundary), pull apart (divergent boundary), or slide past each other (transform boundary).",
+        "Each type of boundary produces different features. Convergent boundaries can push up mountain ranges (like the Himalayas) or create deep ocean trenches. Divergent boundaries create new crust as magma rises, like at the Mid-Atlantic Ridge. Transform boundaries, like California's San Andreas Fault, cause earthquakes as plates grind past each other."
+       ],
+       "example": {
+        "problem": "Two tectonic plates are sliding past each other horizontally, causing frequent earthquakes but no new mountains or ocean trenches. What type of boundary is this?",
+        "steps": [
+         "Recall that convergent boundaries create mountains or trenches, and divergent boundaries create new crust.",
+         "Sliding past each other with earthquakes but no new crust or mountains matches neither of those.",
+         "This matches the description of a transform boundary."
+        ],
+        "answer": "A transform boundary"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "crust",
+       "def": "Earth's thin, rocky outer layer."
+      },
+      {
+       "term": "mantle",
+       "def": "The thick layer of hot, slowly flowing rock beneath the crust."
+      },
+      {
+       "term": "core (inner/outer)",
+       "def": "Earth's center layers of metal; the outer core is liquid, the inner core is solid."
+      },
+      {
+       "term": "tectonic plate",
+       "def": "A large piece of Earth's crust and upper mantle that moves slowly over time."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which layer of Earth generates the planet's magnetic field?",
+       "choices": [
+        "The liquid outer core",
+        "The solid inner core",
+        "The crust",
+        "The mantle"
+       ],
+       "answer": 0,
+       "explain": "The movement of liquid metal in the outer core generates Earth's magnetic field."
+      },
+      {
+       "q": "What happens at a divergent plate boundary?",
+       "choices": [
+        "Plates pull apart and new crust forms",
+        "Plates collide to form mountains",
+        "Plates slide past each other",
+        "Nothing; divergent boundaries are inactive"
+       ],
+       "answer": 0,
+       "explain": "At a divergent boundary, plates move apart and magma rises to form new crust, as at the Mid-Atlantic Ridge."
+      },
+      {
+       "q": "The San Andreas Fault is famous for earthquakes as two plates slide past each other. What kind of boundary is this?",
+       "choices": [
+        "Transform boundary",
+        "Convergent boundary",
+        "Divergent boundary",
+        "Volcanic boundary"
+       ],
+       "answer": 0,
+       "explain": "Plates sliding past each other, producing earthquakes without new crust or mountains, describes a transform boundary."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Weather, Climate, and the Water Cycle",
+     "minutes": 12,
+     "intro": "Weather is what's happening in the sky right now; climate is the long-term pattern behind it, and the water cycle is the engine that drives both, endlessly recycling the same water between ocean, air, and land.",
+     "sections": [
+      {
+       "heading": "Weather vs. Climate",
+       "body": [
+        "**Weather** describes short-term atmospheric conditions, today's temperature, rain, or wind, and it can change hour to hour. **Climate** describes the average weather pattern of a region over a long period, typically 30 years or more, including expected temperature ranges and seasonal rainfall.",
+        "A useful way to remember the difference: climate is what you expect, and weather is what you get. A single cold day doesn't disprove a warm climate, just as a single hot day doesn't disprove a cooling trend."
+       ]
+      },
+      {
+       "heading": "The Water Cycle",
+       "body": [
+        "The **water cycle** moves water continuously between the ocean, atmosphere, and land through several stages. **Evaporation** turns liquid water into water vapor, mostly from oceans, heated by the Sun. **Condensation** turns water vapor back into liquid droplets, forming clouds as the vapor cools at higher altitudes.",
+        "**Precipitation** (rain, snow, sleet, or hail) falls when cloud droplets grow too heavy to stay airborne. **Collection** happens when that water gathers in oceans, lakes, rivers, and groundwater, ready to evaporate again and restart the cycle. Plants add another step, **transpiration**, releasing water vapor from their leaves."
+       ],
+       "example": {
+        "problem": "Water vapor rises from the ocean, cools into clouds, and falls as rain into a river, which flows back to the ocean. Name the four main stages in order.",
+        "steps": [
+         "Water rising as vapor from the ocean is evaporation.",
+         "Vapor cooling into clouds is condensation.",
+         "Water falling as rain is precipitation.",
+         "Water gathering in the river and ocean is collection."
+        ],
+        "answer": "Evaporation, condensation, precipitation, collection"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "weather",
+       "def": "Short-term atmospheric conditions, like today's temperature or rain."
+      },
+      {
+       "term": "climate",
+       "def": "The average weather pattern of a region over a long period of time."
+      },
+      {
+       "term": "water cycle",
+       "def": "The continuous movement of water between ocean, atmosphere, and land."
+      },
+      {
+       "term": "evaporation / condensation / precipitation",
+       "def": "The stages where liquid water becomes vapor, vapor becomes droplets, and droplets fall as rain or snow."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which best describes climate?",
+       "choices": [
+        "The average weather pattern of a region over many years",
+        "Today's temperature and wind",
+        "A single storm passing through",
+        "Tomorrow's forecast"
+       ],
+       "answer": 0,
+       "explain": "Climate describes long-term average weather patterns, not short-term daily conditions like a single storm or forecast."
+      },
+      {
+       "q": "What process turns water vapor into clouds?",
+       "choices": [
+        "Condensation",
+        "Evaporation",
+        "Precipitation",
+        "Collection"
+       ],
+       "answer": 0,
+       "explain": "Condensation is the process where water vapor cools and turns back into liquid droplets, forming clouds."
+      },
+      {
+       "q": "Rain and snow are both examples of which stage of the water cycle?",
+       "choices": [
+        "Precipitation",
+        "Evaporation",
+        "Condensation",
+        "Transpiration"
+       ],
+       "answer": 0,
+       "explain": "Precipitation is water falling from clouds as rain, snow, sleet, or hail."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

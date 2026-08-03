@@ -1,0 +1,873 @@
+{
+  "id": "prealgebra",
+  "title": "Prealgebra",
+  "domain": "math",
+  "level": "High school",
+  "description": "A ground-up tour of number sense: whole numbers, integers, fractions, decimals, and percents, all handled with real computation instead of shortcuts. The course ends with ratios, proportions, and the first moves into algebra so you arrive at Elementary Algebra ready to solve equations.",
+  "outcomes": [
+    "Add, subtract, multiply, and divide whole numbers and integers, including negative numbers, without a calculator.",
+    "Simplify fractions and mixed numbers and perform all four operations on them.",
+    "Convert fluently between fractions, decimals, and percents, and solve percent problems like discounts and tax.",
+    "Set up and solve proportions from ratios and rates, including scaling recipes and reading maps.",
+    "Evaluate algebraic expressions for given values and solve one- and two-step equations.",
+    "Translate everyday word problems into arithmetic or algebraic steps and carry them to a correct answer."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Whole Numbers and Operations",
+      "summary": "Place value, rounding, and the four basic operations on whole numbers, done by hand and understood, not just performed.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Place Value and Rounding",
+          "minutes": 15,
+          "intro": "Every number you will ever write, from a grocery bill to a national budget, is built from just ten digits arranged by place value; once you can read that arrangement, rounding numbers for a fast, sensible estimate becomes almost automatic.",
+          "sections": [
+            {
+              "heading": "Reading Place Value",
+              "body": [
+                "Our number system is a base-ten system: each position a digit sits in is worth ten times the position to its right. In 4,706, the 4 sits in the thousands place and is worth 4,000, the 7 is in the hundreds place and is worth 700, the 0 holds the tens place, and the 6 is worth 6 ones.",
+                "You can always rebuild a number by adding up what each digit is worth. This is called expanded form. Writing a number in expanded form is a good check that you truly understand its size, not just its digit pattern, and it matters a lot once negative numbers and decimals extend the same idea in both directions."
+              ],
+              "example": {
+                "problem": "Give the value of each digit in 305,912.",
+                "steps": [
+                  "3 is in the hundred-thousands place, so it is worth 300,000.",
+                  "0 is in the ten-thousands place, so it contributes 0.",
+                  "5 is in the thousands place, so it is worth 5,000.",
+                  "9 is in the hundreds place, so it is worth 900.",
+                  "1 is in the tens place, so it is worth 10, and 2 is in the ones place, worth 2."
+                ],
+                "answer": "305,912 = 300,000 + 5,000 + 900 + 10 + 2"
+              }
+            },
+            {
+              "heading": "Rounding Numbers",
+              "body": [
+                "To round to a given place, look one digit to the right of that place. If that digit is 5 or more, increase the rounding digit by 1; if it is 4 or less, leave the rounding digit alone. Every digit to the right of the rounding place then becomes 0.",
+                "Rounding is not about losing information carelessly, it is about choosing the amount of precision a situation actually needs. A city does not need its population reported to the exact person, and a shopper estimating a total at the register does not need cents."
+              ],
+              "example": {
+                "problem": "Round 47,382 to the nearest thousand.",
+                "steps": [
+                  "The thousands digit is 7, so look at the digit to its right: 3, in the hundreds place.",
+                  "3 is less than 5, so the thousands digit stays 7.",
+                  "Replace every digit to the right of the thousands place with 0."
+                ],
+                "answer": "47,382 rounds to 47,000"
+              }
+            },
+            {
+              "heading": "Estimating with Rounding",
+              "body": [
+                "Rounding each number in a calculation before you compute gives a quick sanity check on the exact answer. If you are buying items priced $18.75, $6.20, and $41.10, rounding to the nearest ten dollars gives $20 + $10 + $40 = $70, so an exact total anywhere near $66 should feel right and a total of $700 should immediately look wrong.",
+                "This habit catches misplaced decimal points and typos before they turn into real mistakes, whether you are balancing a checkbook, reading a contractor's quote, or double-checking a calculator screen you glanced at too quickly."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "place value", "def": "the value a digit holds based on its position in a number, each position worth ten times the one to its right"},
+            {"term": "expanded form", "def": "a number written as the sum of the values of each of its digits"},
+            {"term": "round", "def": "to replace a number with a nearby, less precise value for easier use"},
+            {"term": "estimate", "def": "an approximate answer found quickly, often by rounding first"}
+          ],
+          "practice": [
+            {"q": "What is the value of the 6 in 68,204?", "choices": ["6", "60", "6,000", "60,000"], "answer": 3, "explain": "The 6 sits in the ten-thousands place, so it is worth 6 × 10,000 = 60,000."},
+            {"q": "Round 583,204 to the nearest ten thousand.", "choices": ["580,000", "590,000", "583,000", "600,000"], "answer": 0, "explain": "The ten-thousands digit is 8; the digit to its right is 3, which is less than 5, so it stays 8 and everything after becomes 0, giving 580,000."},
+            {"q": "Which value is written correctly in expanded form for 4,029?", "choices": ["4,000 + 0 + 20 + 9", "4,000 + 200 + 9", "400 + 20 + 9", "4,000 + 20 + 9"], "answer": 3, "explain": "4,029 has 4 thousands, 0 hundreds, 2 tens, and 9 ones, so its expanded form is 4,000 + 20 + 9 (the 0 hundreds contributes nothing)."},
+            {"q": "You estimate a purchase of $47.60 and $22.15 by rounding each to the nearest ten dollars. What is your estimate?", "choices": ["$60", "$70", "$50", "$80"], "answer": 1, "explain": "$47.60 rounds to $50 and $22.15 rounds to $20, and $50 + $20 = $70."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Adding and Subtracting Whole Numbers",
+          "minutes": 16,
+          "intro": "Carrying and borrowing feel mechanical, but each one is really just place value doing its job: ten of one place quietly becomes one of the next, in either direction, and once you see that clearly the steps stop feeling arbitrary.",
+          "sections": [
+            {
+              "heading": "Adding with Carrying",
+              "body": [
+                "Add column by column starting from the ones place. Whenever a column's sum reaches 10 or more, write down the ones digit of that sum and carry the tens digit into the next column to the left, adding it in with that column's digits.",
+                "Carrying works because ten of any place is worth exactly one of the next place up: ten ones make one ten, ten tens make one hundred, and so on. Lining up digits by place value before you add is essential, since adding a ones digit to a tens digit by mistake silently changes the answer."
+              ],
+              "example": {
+                "problem": "Add 4,567 + 2,895.",
+                "steps": [
+                  "Ones: 7 + 5 = 12. Write 2, carry 1 to the tens column.",
+                  "Tens: 6 + 9 + 1 (carried) = 16. Write 6, carry 1 to the hundreds column.",
+                  "Hundreds: 5 + 8 + 1 (carried) = 14. Write 4, carry 1 to the thousands column.",
+                  "Thousands: 4 + 2 + 1 (carried) = 7."
+                ],
+                "answer": "4,567 + 2,895 = 7,462"
+              }
+            },
+            {
+              "heading": "Subtracting with Borrowing",
+              "body": [
+                "Subtract column by column from the ones place. If the top digit in a column is smaller than the bottom digit, borrow: take 1 from the column to the left (reducing that digit by 1) and add 10 to the current column's top digit before subtracting.",
+                "Borrowing can cascade: if the digit you are borrowing from is itself a 0, you have to borrow from further left first, turning that 0 into a 9 after the chain of borrows resolves. Working slowly through each column in order prevents errors here."
+              ],
+              "example": {
+                "problem": "Subtract 5,032 − 1,847.",
+                "steps": [
+                  "Ones: 2 − 7 needs borrowing. Borrow 1 from the tens (3 becomes 2), turning the ones into 12. Now 12 − 7 = 5.",
+                  "Tens: the tens digit is now 2, and 2 − 4 needs borrowing too. The hundreds digit is 0, so first borrow 1 from the thousands: 5 becomes 4, and the hundreds 0 becomes 10.",
+                  "The hundreds column lends 1 to the tens: hundreds becomes 9, tens becomes 12 (2 plus the borrowed 10). Now 12 − 4 = 8.",
+                  "Hundreds: 9 − 8 = 1. Thousands: 4 − 1 = 3.",
+                  "Check by adding the result back to 1,847: 3,185 + 1,847 = 5,032, confirming the subtraction."
+                ],
+                "answer": "5,032 − 1,847 = 3,185"
+              }
+            },
+            {
+              "heading": "Word Problems with Addition and Subtraction",
+              "body": [
+                "The hardest part of a word problem is rarely the arithmetic, it is deciding whether the situation calls for addition or subtraction. Combining two separate amounts into a total calls for addition; finding how much is left, how much more is needed, or the difference between two amounts calls for subtraction.",
+                "A useful habit is to restate the problem in your own words before choosing an operation: a warehouse that starts with 5,032 boxes and ships out 1,847 of them is left with a smaller pile, a clear subtraction situation, while a warehouse that receives two separate shipments is combining amounts, a clear addition situation."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "carrying", "def": "moving a value of ten from one column into the next column to the left when adding"},
+            {"term": "borrowing", "def": "taking a value of ten from the next column to the left when a subtraction column is too small"},
+            {"term": "sum", "def": "the result of adding two or more numbers"},
+            {"term": "difference", "def": "the result of subtracting one number from another"}
+          ],
+          "practice": [
+            {"q": "What is 3,875 + 4,268?", "choices": ["8,143", "7,143", "8,043", "7,043"], "answer": 0, "explain": "Adding column by column with carries: 5+8=13 (write 3 carry 1), 7+6+1=14 (write 4 carry 1), 8+2+1=11 (write 1 carry 1), 3+4+1=8, giving 8,143."},
+            {"q": "A tank holds 6,004 liters and 2,758 liters are drained out. How many liters remain?", "choices": ["3,246", "3,346", "4,246", "3,256"], "answer": 0, "explain": "6,004 − 2,758 requires repeated borrowing and equals 3,246; check: 3,246 + 2,758 = 6,004."},
+            {"q": "Which operation should you use to find how many more runs a team needs to tie a game?", "choices": ["Multiplication", "Division", "Subtraction", "Rounding"], "answer": 2, "explain": "Finding the gap between the current score and the target score is a difference, which is found by subtraction."},
+            {"q": "What is 999 + 1?", "choices": ["1,000", "9,991", "1,001", "990"], "answer": 0, "explain": "Adding 1 to 999 carries through every column: ones 9+1=10 carry, tens 9+1=10 carry, hundreds 9+1=10 carry, giving 1,000."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Multiplying and Dividing Whole Numbers",
+          "minutes": 18,
+          "intro": "Multiplication is repeated addition done efficiently, and division is the question multiplication leaves behind: how many times does one amount fit into another? Getting comfortable with both by hand builds the number sense that estimation and algebra later depend on.",
+          "sections": [
+            {
+              "heading": "Multiplying Multi-Digit Numbers",
+              "body": [
+                "To multiply a multi-digit number by another, break the second number into its place values and multiply the first number by each piece separately, then add the partial products. This is exactly what the standard multiplication algorithm does column by column, just organized on paper.",
+                "For 234 × 16, split 16 into 10 and 6: 234 × 10 = 2,340 and 234 × 6 = 1,404. Adding those partial products, 2,340 + 1,404, gives the full answer. Splitting a hard multiplication into two easier ones is a strategy worth keeping even after you are fast at the standard algorithm."
+              ],
+              "example": {
+                "problem": "Multiply 234 × 16.",
+                "steps": [
+                  "Split 16 = 10 + 6.",
+                  "234 × 10 = 2,340.",
+                  "234 × 6 = 1,404.",
+                  "Add the partial products: 2,340 + 1,404 = 3,744."
+                ],
+                "answer": "234 × 16 = 3,744"
+              }
+            },
+            {
+              "heading": "Dividing and Remainders",
+              "body": [
+                "Long division answers the question how many times does the divisor fit into the dividend, working from the largest place value down. At each step you estimate, multiply, subtract, and bring down the next digit, repeating until every digit has been used.",
+                "When a divisor does not fit a whole number of times, whatever is left over is the remainder, and it must always be smaller than the divisor. A remainder of 0 means the division is exact, which is worth checking by multiplying the quotient by the divisor and confirming it reproduces the dividend."
+              ],
+              "example": {
+                "problem": "Divide 936 ÷ 24.",
+                "steps": [
+                  "24 does not fit into 9, so look at 93: 24 × 3 = 72 and 24 × 4 = 96 (too big), so the first digit of the quotient is 3, with remainder 93 − 72 = 21.",
+                  "Bring down the 6, making 216.",
+                  "24 × 9 = 216 exactly, so the next quotient digit is 9 with remainder 0.",
+                  "Check: 24 × 39 = 936."
+                ],
+                "answer": "936 ÷ 24 = 39"
+              }
+            },
+            {
+              "heading": "Word Problems with Multiplication and Division",
+              "body": [
+                "Multiplication situations usually involve equal groups combined into a total: 16 boxes of 234 pens each asks for a total pen count. Division situations usually split a total into equal groups or ask how many equal groups a total makes: 936 pencils packed 24 to a box asks how many boxes are needed.",
+                "A quick check that separates the two: if you know the size of one group and the number of groups and need the grand total, multiply; if you know the grand total and one of those other two pieces and need to find the missing piece, divide."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "product", "def": "the result of multiplying two or more numbers"},
+            {"term": "partial product", "def": "the result of multiplying by just one place value of a multi-digit factor"},
+            {"term": "quotient", "def": "the result of dividing one number by another"},
+            {"term": "remainder", "def": "the amount left over when a dividend does not divide evenly by the divisor"}
+          ],
+          "practice": [
+            {"q": "What is 46 × 23?", "choices": ["1,058", "1,038", "1,148", "958"], "answer": 0, "explain": "46 × 20 = 920 and 46 × 3 = 138; adding the partial products, 920 + 138 = 1,058."},
+            {"q": "What is 725 ÷ 8, including the remainder?", "choices": ["90 remainder 5", "91 remainder 5", "90 remainder 8", "89 remainder 13"], "answer": 0, "explain": "8 × 90 = 720, and 725 − 720 = 5, which is less than 8, so the quotient is 90 with remainder 5."},
+            {"q": "A bakery packs 18 muffins into each box and has 342 muffins. How many full boxes can it fill?", "choices": ["18", "19", "20", "17"], "answer": 1, "explain": "342 ÷ 18 = 19 exactly, since 18 × 19 = 342, so 19 full boxes can be filled with none left over."},
+            {"q": "Which situation calls for multiplication rather than division?", "choices": ["Splitting 480 dollars evenly among 8 people", "Finding how many groups of 12 fit in 300", "Finding the total cost of 12 items at 15 dollars each", "Finding how many times 7 fits into 84"], "answer": 2, "explain": "Finding a total from a group size and number of groups (12 items at $15 each) is a multiplication situation; the other three all split a total into groups, which is division."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Integers",
+      "summary": "Negative numbers, the number line, and the sign rules for adding, subtracting, multiplying, and dividing integers.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Negative Numbers and the Number Line",
+          "minutes": 14,
+          "intro": "Temperatures below zero, elevations below sea level, and money you owe all need numbers that go past zero in the other direction; the number line makes those negative numbers just as concrete and orderable as the positive ones you already know.",
+          "sections": [
+            {
+              "heading": "The Number Line and Comparing Integers",
+              "body": [
+                "On a number line, numbers increase to the right and decrease to the left, with zero in the middle. Every integer has an opposite the same distance from zero on the other side: the opposite of 5 is −5, and the opposite of −5 is 5.",
+                "To compare two integers, whichever sits further to the right is greater, regardless of how the digits look. This means −2 is greater than −8, because on the number line −2 sits to the right of −8, even though 8 is the bigger digit."
+              ],
+              "example": {
+                "problem": "Order −5, 3, −8, and 0 from least to greatest.",
+                "steps": [
+                  "Place each number on a number line: −8 is furthest left, then −5, then 0, then 3.",
+                  "Reading left to right gives the order from least to greatest."
+                ],
+                "answer": "−8, −5, 0, 3"
+              }
+            },
+            {
+              "heading": "Absolute Value",
+              "body": [
+                "The absolute value of a number is its distance from zero on the number line, and distance is never negative. The absolute value of 7 is 7, and the absolute value of −7 is also 7, because both sit exactly 7 units from zero.",
+                "Absolute value strips away direction and keeps only size, which is useful whenever a problem cares about how far something is from a reference point but not which side it is on, such as how far a temperature is from freezing."
+              ],
+              "example": {
+                "problem": "Find |−12| and |9|.",
+                "steps": [
+                  "−12 is 12 units from zero, so |−12| = 12.",
+                  "9 is 9 units from zero, so |9| = 9."
+                ],
+                "answer": "|−12| = 12 and |9| = 9"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "integer", "def": "a whole number or its opposite: ..., −2, −1, 0, 1, 2, ..."},
+            {"term": "opposite", "def": "a number the same distance from zero on the other side of the number line"},
+            {"term": "absolute value", "def": "the distance a number is from zero, always zero or positive"}
+          ],
+          "practice": [
+            {"q": "Which integer is greater, −3 or −11?", "choices": ["−3", "−11", "They are equal", "Cannot be compared"], "answer": 0, "explain": "−3 is closer to zero and sits further right on the number line than −11, so −3 is the greater value."},
+            {"q": "What is |−20|?", "choices": ["−20", "20", "0", "2"], "answer": 1, "explain": "Absolute value gives distance from zero, which is never negative, so |−20| = 20."},
+            {"q": "A submarine is at an elevation of −150 meters and a drone is at 40 meters. Which is further from sea level?", "choices": ["The submarine", "The drone", "They are equally far", "Cannot be determined"], "answer": 0, "explain": "|−150| = 150 and |40| = 40; 150 is greater than 40, so the submarine is further from sea level."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Adding and Subtracting Integers",
+          "minutes": 16,
+          "intro": "Once you can picture a number line, adding a negative number is just moving left instead of right, and subtracting an integer is the same as adding its opposite — two rules that replace a pile of memorized cases with one consistent idea.",
+          "sections": [
+            {
+              "heading": "Adding Integers",
+              "body": [
+                "When two integers have the same sign, add their absolute values and keep that common sign: −4 + (−9) combines two negative moves, giving −13. When two integers have different signs, subtract the smaller absolute value from the larger and keep the sign of whichever number has the greater absolute value.",
+                "Think of each addend as a movement along the number line starting from the other: −8 + 5 starts at −8 and moves 5 units right, landing at −3. Since 8 is larger than 5, the result keeps the negative sign, matching the rule."
+              ],
+              "example": {
+                "problem": "Add −8 + 5.",
+                "steps": [
+                  "The signs are different, so subtract the smaller absolute value from the larger: 8 − 5 = 3.",
+                  "Keep the sign of the number with the larger absolute value, which is −8, so the result is negative."
+                ],
+                "answer": "−8 + 5 = −3"
+              }
+            },
+            {
+              "heading": "Subtracting Integers",
+              "body": [
+                "Subtracting an integer gives the same result as adding its opposite: a − b is always equal to a + (−b). This single rule turns every subtraction problem into an addition problem you already know how to handle.",
+                "This matters most when the number being subtracted is itself negative, since subtracting a negative becomes adding a positive: taking away a debt is the same as being credited that amount."
+              ],
+              "example": {
+                "problem": "Subtract −4 − (−9).",
+                "steps": [
+                  "Rewrite subtraction as adding the opposite: −4 − (−9) becomes −4 + 9.",
+                  "The signs are different, so subtract absolute values: 9 − 4 = 5.",
+                  "The number with the larger absolute value, 9, is positive, so the result is positive."
+                ],
+                "answer": "−4 − (−9) = 5"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "same sign", "def": "two numbers that are both positive or both negative"},
+            {"term": "additive inverse", "def": "another name for a number's opposite; a number plus its additive inverse equals zero"}
+          ],
+          "practice": [
+            {"q": "What is −6 + (−7)?", "choices": ["−13", "13", "−1", "1"], "answer": 0, "explain": "Both numbers are negative, so add the absolute values (6 + 7 = 13) and keep the negative sign, giving −13."},
+            {"q": "What is 9 − 15?", "choices": ["6", "−6", "24", "−24"], "answer": 1, "explain": "9 − 15 = 9 + (−15); the signs differ, so subtract absolute values (15 − 9 = 6) and keep the sign of the larger absolute value, −15, giving −6."},
+            {"q": "What is 3 − (−8)?", "choices": ["−5", "5", "11", "−11"], "answer": 2, "explain": "Subtracting a negative is the same as adding its opposite: 3 − (−8) = 3 + 8 = 11."},
+            {"q": "A hiker starts at an elevation of −20 feet and climbs 45 feet. What is the new elevation?", "choices": ["25 feet", "−25 feet", "65 feet", "−65 feet"], "answer": 0, "explain": "−20 + 45 has different signs; 45 − 20 = 25, and 45 has the larger absolute value and is positive, so the result is 25 feet."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Multiplying and Dividing Integers",
+          "minutes": 14,
+          "intro": "The sign rules for multiplying and dividing integers are the same rule twice over, and once you memorize the pattern for one operation you already know it for the other.",
+          "sections": [
+            {
+              "heading": "Sign Rules for Multiplication",
+              "body": [
+                "Multiply the absolute values as usual, then decide the sign: two numbers with the same sign produce a positive product, and two numbers with different signs produce a negative product. Positive times positive is positive, negative times negative is positive, and any mix of one positive and one negative is negative.",
+                "A quick way to remember it: multiplying by a negative flips the sign of the other factor once. Multiply by a second negative and you flip it back, which is why two negatives multiplied together land back on positive."
+              ],
+              "example": {
+                "problem": "Multiply −6 × 7 and −6 × −7.",
+                "steps": [
+                  "For −6 × 7: multiply absolute values, 6 × 7 = 42. The signs differ (negative and positive), so the product is negative.",
+                  "For −6 × −7: multiply absolute values, 6 × 7 = 42. Both signs are negative (the same), so the product is positive."
+                ],
+                "answer": "−6 × 7 = −42, and −6 × −7 = 42"
+              }
+            },
+            {
+              "heading": "Sign Rules for Division",
+              "body": [
+                "Division follows the identical sign rule as multiplication: same signs give a positive quotient, different signs give a negative quotient. This makes sense because division is defined by multiplication — 36 ÷ (−4) asks what number times −4 gives 36, and that number must be negative.",
+                "As with whole numbers, always divide the absolute values first and attach the sign afterward, and double check your answer by multiplying the quotient back by the divisor to confirm it reproduces the original dividend."
+              ],
+              "example": {
+                "problem": "Divide −36 ÷ −4.",
+                "steps": [
+                  "Divide absolute values: 36 ÷ 4 = 9.",
+                  "Both signs are negative (the same), so the quotient is positive.",
+                  "Check: 9 × (−4) = −36, confirming the division."
+                ],
+                "answer": "−36 ÷ −4 = 9"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "sign rule", "def": "same signs multiply or divide to a positive result, different signs give a negative result"},
+            {"term": "positive product", "def": "the result of multiplying two numbers with the same sign"},
+            {"term": "negative product", "def": "the result of multiplying two numbers with different signs"}
+          ],
+          "practice": [
+            {"q": "What is −8 × 5?", "choices": ["40", "−40", "13", "−13"], "answer": 1, "explain": "The signs differ (negative and positive), so 8 × 5 = 40 becomes negative: −40."},
+            {"q": "What is −45 ÷ −9?", "choices": ["5", "−5", "36", "−36"], "answer": 0, "explain": "Both numbers are negative, the same sign, so the quotient is positive: 45 ÷ 9 = 5."},
+            {"q": "What is 7 × (−7)?", "choices": ["49", "−49", "0", "−14"], "answer": 1, "explain": "The signs differ, so 7 × 7 = 49 becomes negative: −49."},
+            {"q": "A temperature drops 3 degrees each hour for 5 hours. What is the total change?", "choices": ["−15 degrees", "15 degrees", "−8 degrees", "8 degrees"], "answer": 0, "explain": "A drop of 3 degrees repeated 5 times is 5 × (−3); same-magnitude repeated negative change multiplies to −15 degrees."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Fractions",
+      "summary": "What fractions mean, how to simplify and compare them, and how to add, subtract, multiply, and divide fractions and mixed numbers.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Understanding and Simplifying Fractions",
+          "minutes": 15,
+          "intro": "A fraction is a precise way of describing a part of a whole, and simplifying one down to its lowest terms is just describing the exact same amount with smaller, friendlier numbers.",
+          "sections": [
+            {
+              "heading": "What a Fraction Represents",
+              "body": [
+                "A fraction a/b means the whole has been split into b equal parts, and you have a of them. The bottom number, the denominator, tells you the size of each part; the top number, the numerator, tells you how many of those parts you are counting.",
+                "Two fractions can look different and still represent the same amount: 1/2 and 2/4 both describe exactly half of something, because 2/4 splits the whole into twice as many, twice as small pieces and counts twice as many of them."
+              ]
+            },
+            {
+              "heading": "Simplifying Fractions",
+              "body": [
+                "To simplify a fraction, divide both the numerator and denominator by their greatest common factor (GCF), the largest number that divides evenly into both. This shrinks the fraction to its simplest, lowest-terms form without changing the amount it represents.",
+                "A fraction is fully simplified when the numerator and denominator share no common factor besides 1. If you are unsure of the GCF, you can divide by any shared factor repeatedly — dividing by 2, then 3, and so on — until no further common factor remains."
+              ],
+              "example": {
+                "problem": "Simplify 18/24 to lowest terms.",
+                "steps": [
+                  "Find the GCF of 18 and 24: both divide evenly by 6, and 6 is their greatest common factor.",
+                  "Divide numerator and denominator by 6: 18 ÷ 6 = 3, and 24 ÷ 6 = 4."
+                ],
+                "answer": "18/24 = 3/4"
+              }
+            },
+            {
+              "heading": "Comparing Fractions",
+              "body": [
+                "Fractions are easiest to compare once they share a common denominator, since then you only need to compare numerators. To compare 3/5 and 5/8, rewrite both with denominator 40: 3/5 = 24/40 and 5/8 = 25/40, so 5/8 is slightly larger.",
+                "When denominators are already equal, comparison is immediate: with the same size pieces, the fraction with more pieces is greater. This is the same logic that makes 5/8 greater than 3/8 without any conversion needed."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "numerator", "def": "the top number of a fraction, counting how many parts are taken"},
+            {"term": "denominator", "def": "the bottom number of a fraction, showing how many equal parts the whole is split into"},
+            {"term": "greatest common factor (GCF)", "def": "the largest number that divides evenly into two or more numbers"},
+            {"term": "lowest terms", "def": "a fraction simplified so its numerator and denominator share no common factor besides 1"}
+          ],
+          "practice": [
+            {"q": "What is 24/36 simplified to lowest terms?", "choices": ["2/3", "3/4", "4/6", "12/18"], "answer": 0, "explain": "The GCF of 24 and 36 is 12; dividing both by 12 gives 2/3, which has no common factor left."},
+            {"q": "Which fraction is equivalent to 3/4?", "choices": ["6/9", "9/12", "6/10", "8/10"], "answer": 1, "explain": "9/12 simplifies by dividing both by 3 to get 3/4, the same value; the other options simplify to different fractions."},
+            {"q": "Which is greater, 5/6 or 7/9?", "choices": ["5/6", "7/9", "They are equal", "Cannot be compared"], "answer": 0, "explain": "Using a common denominator of 18: 5/6 = 15/18 and 7/9 = 14/18, so 5/6 is greater."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Multiplying and Dividing Fractions",
+          "minutes": 16,
+          "intro": "Multiplying fractions is the most mechanical operation in this unit — multiply straight across — while dividing fractions asks you to flip the second fraction first, a rule that feels strange until you see why it works.",
+          "sections": [
+            {
+              "heading": "Multiplying Fractions",
+              "body": [
+                "To multiply two fractions, multiply the numerators together to get the new numerator, and multiply the denominators together to get the new denominator. No common denominator is needed for multiplication, unlike addition and subtraction.",
+                "It often helps to simplify before multiplying by canceling common factors between any numerator and any denominator, which keeps the numbers small and avoids simplifying a large fraction at the end."
+              ],
+              "example": {
+                "problem": "Multiply 2/3 × 3/8.",
+                "steps": [
+                  "Notice the 3 in the first numerator and the 3 in the second denominator can cancel, since 3/3 = 1.",
+                  "This leaves 2/1 × 1/8.",
+                  "Multiply straight across: 2 × 1 = 2, and 1 × 8 = 8, giving 2/8.",
+                  "Simplify 2/8 by dividing both by 2, giving 1/4."
+                ],
+                "answer": "2/3 × 3/8 = 1/4"
+              }
+            },
+            {
+              "heading": "Dividing Fractions",
+              "body": [
+                "To divide by a fraction, multiply by its reciprocal instead — flip the numerator and denominator of the second fraction, then multiply as usual. Dividing by 2/5 is the same as multiplying by 5/2, because dividing by a number and multiplying by its reciprocal always give the same result.",
+                "This works because dividing by 2/5 asks how many groups of 2/5 fit into the first amount, and multiplying by the reciprocal 5/2 answers exactly that question by scaling up instead of down."
+              ],
+              "example": {
+                "problem": "Divide 3/4 ÷ 2/5.",
+                "steps": [
+                  "Rewrite as multiplication by the reciprocal: 3/4 × 5/2.",
+                  "Multiply straight across: 3 × 5 = 15, and 4 × 2 = 8, giving 15/8.",
+                  "Convert the improper fraction 15/8 to a mixed number: 15 ÷ 8 = 1 remainder 7."
+                ],
+                "answer": "3/4 ÷ 2/5 = 15/8 = 1 7/8"
+              }
+            },
+            {
+              "heading": "Working with Mixed Numbers",
+              "body": [
+                "Before multiplying or dividing a mixed number, convert it to an improper fraction: multiply the whole number by the denominator, add the numerator, and keep the same denominator. So 2 1/3 becomes (2 × 3 + 1)/3 = 7/3.",
+                "Once every mixed number is an improper fraction, multiply or divide exactly as with any other fractions, then convert the final answer back to a mixed number if the context calls for it, such as a recipe amount or a length of board."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "reciprocal", "def": "a fraction flipped so its numerator and denominator switch places; a number times its reciprocal equals 1"},
+            {"term": "improper fraction", "def": "a fraction whose numerator is greater than or equal to its denominator"},
+            {"term": "mixed number", "def": "a whole number combined with a proper fraction, such as 2 1/3"}
+          ],
+          "practice": [
+            {"q": "What is 4/5 × 5/8?", "choices": ["1/2", "9/13", "20/40", "1/4"], "answer": 0, "explain": "Multiplying straight across gives 20/40, which simplifies to 1/2."},
+            {"q": "What is 2/3 ÷ 4/9?", "choices": ["8/27", "3/2", "1/2", "2/9"], "answer": 1, "explain": "Dividing by 4/9 means multiplying by its reciprocal, 9/4: 2/3 × 9/4 = 18/12, which simplifies to 3/2."},
+            {"q": "What is 1 1/2 × 2/3?", "choices": ["1", "3/4", "2", "1 1/3"], "answer": 0, "explain": "Convert 1 1/2 to 3/2, then multiply: 3/2 × 2/3 = 6/6 = 1."},
+            {"q": "A recipe needs 3/4 cup of flour per batch. How many batches can you make with 6 cups of flour?", "choices": ["4.5", "8", "6.75", "4"], "answer": 1, "explain": "This is 6 ÷ 3/4, which equals 6 × 4/3 = 24/3 = 8 full batches."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Adding and Subtracting Fractions",
+          "minutes": 18,
+          "intro": "You cannot add thirds and fourths any more than you can add apples and oranges without first describing both in the same units; finding a common denominator is exactly that translation step.",
+          "sections": [
+            {
+              "heading": "Adding and Subtracting with Like Denominators",
+              "body": [
+                "When two fractions already share the same denominator, add or subtract their numerators and keep the denominator unchanged. This works because the pieces are already the same size, so you are simply counting how many total pieces you have.",
+                "For example, 3/8 + 2/8 combines 3 eighths and 2 eighths into 5 eighths, written 5/8. No conversion is needed since both fractions are already speaking the same units."
+              ]
+            },
+            {
+              "heading": "Adding and Subtracting with Unlike Denominators",
+              "body": [
+                "When denominators differ, first rewrite both fractions using their least common denominator (LCD), the smallest number both denominators divide into evenly. Multiply each fraction's numerator and denominator by whatever factor turns its denominator into the LCD, then add or subtract the new numerators.",
+                "For 1/4 + 1/6, the LCD is 12: 1/4 becomes 3/12, and 1/6 becomes 2/12, since 12 ÷ 4 = 3 and 12 ÷ 6 = 2. Now that the pieces are the same size, 3/12 + 2/12 = 5/12."
+              ],
+              "example": {
+                "problem": "Add 1/4 + 1/6.",
+                "steps": [
+                  "The LCD of 4 and 6 is 12.",
+                  "Convert 1/4 to twelfths: multiply numerator and denominator by 3, giving 3/12.",
+                  "Convert 1/6 to twelfths: multiply numerator and denominator by 2, giving 2/12.",
+                  "Add the numerators: 3/12 + 2/12 = 5/12."
+                ],
+                "answer": "1/4 + 1/6 = 5/12"
+              }
+            },
+            {
+              "heading": "Adding and Subtracting Mixed Numbers",
+              "body": [
+                "Add or subtract the whole numbers and the fractional parts separately, converting fractions to a common denominator first. If subtracting the fractional parts would require a negative result, borrow 1 from the whole number and convert it into an extra fraction with the common denominator before subtracting.",
+                "This borrowing step is the fraction version of borrowing in whole-number subtraction: instead of borrowing ten of the next place, you are borrowing one whole, split into however many parts the common denominator uses."
+              ],
+              "example": {
+                "problem": "Subtract 5 1/3 − 2 3/4.",
+                "steps": [
+                  "Convert both fractional parts to twelfths: 1/3 = 4/12, and 3/4 = 9/12.",
+                  "Since 4/12 is smaller than 9/12, borrow 1 from the 5, turning it into 4, and add 12/12 to the 4/12, making 16/12.",
+                  "Subtract whole numbers: 4 − 2 = 2. Subtract fractions: 16/12 − 9/12 = 7/12."
+                ],
+                "answer": "5 1/3 − 2 3/4 = 2 7/12"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "least common denominator (LCD)", "def": "the smallest number that two or more denominators divide into evenly"},
+            {"term": "like denominators", "def": "fractions that already share the same denominator"},
+            {"term": "borrowing (fractions)", "def": "converting one whole unit into a fraction with the common denominator to allow subtraction"}
+          ],
+          "practice": [
+            {"q": "What is 2/9 + 4/9?", "choices": ["6/18", "6/9", "2/3", "Both B and C"], "answer": 3, "explain": "2/9 + 4/9 = 6/9, and 6/9 simplifies to 2/3, so both B and C describe the same correct result."},
+            {"q": "What is 1/2 + 1/3?", "choices": ["2/5", "5/6", "1/6", "2/6"], "answer": 1, "explain": "The LCD of 2 and 3 is 6: 1/2 = 3/6 and 1/3 = 2/6, so 3/6 + 2/6 = 5/6."},
+            {"q": "What is 4 1/5 − 1 3/5?", "choices": ["2 3/5", "3 2/5", "2 2/5", "3 3/5"], "answer": 0, "explain": "Since 1/5 is smaller than 3/5, borrow 1 from 4 (making it 3) and add it as 5/5 to 1/5, giving 6/5. Then 3 − 1 = 2 whole and 6/5 − 3/5 = 3/5, giving 2 3/5."},
+            {"q": "What is 3/10 − 1/5?", "choices": ["1/5", "2/5", "1/10", "1/2"], "answer": 2, "explain": "Convert 1/5 to tenths: 1/5 = 2/10. Then 3/10 − 2/10 = 1/10."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Decimals and Percents",
+      "summary": "Decimal arithmetic, converting between fractions, decimals, and percents, and solving practical percent problems.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Decimal Operations",
+          "minutes": 15,
+          "intro": "Decimals are just fractions with denominators of 10, 100, or 1,000 written in a shorthand that lines up naturally with money and measurement, and the same place-value logic from whole numbers carries straight through.",
+          "sections": [
+            {
+              "heading": "Adding and Subtracting Decimals",
+              "body": [
+                "Line up the decimal points before adding or subtracting, so that each column still compares digits of the same place value: tenths with tenths, hundredths with hundredths. Add zeros at the end of a shorter decimal if it helps keep the columns visually aligned; this changes nothing about the value.",
+                "Once the decimal points are aligned, add or subtract exactly as you would whole numbers, carrying and borrowing across columns as needed, then bring the decimal point straight down into the answer in the same position."
+              ],
+              "example": {
+                "problem": "Add 12.75 + 3.6.",
+                "steps": [
+                  "Line up decimal points: 12.75 and 3.60 (writing an extra zero to match places).",
+                  "Add column by column: 5 + 0 = 5 (hundredths), 7 + 6 = 13, write 3 carry 1 (tenths), 2 + 3 + 1 = 6, 1 + 0 = 1 (ones and tens).",
+                  "Bring the decimal point straight down."
+                ],
+                "answer": "12.75 + 3.6 = 16.35"
+              }
+            },
+            {
+              "heading": "Multiplying Decimals",
+              "body": [
+                "Multiply decimals as if the decimal points were not there, then count the total number of decimal places in both factors combined, and place the decimal point that many places from the right in the product.",
+                "For 3.2 × 1.5, ignore the decimals and compute 32 × 15 = 480. Since 3.2 has one decimal place and 1.5 has one decimal place, the product needs 1 + 1 = 2 decimal places, giving 4.80, which is the same as 4.8."
+              ],
+              "example": {
+                "problem": "Multiply 3.2 × 1.5.",
+                "steps": [
+                  "Multiply as whole numbers: 32 × 15 = 480.",
+                  "Count decimal places in the factors: 3.2 has 1, and 1.5 has 1, for a total of 2.",
+                  "Place the decimal point 2 places from the right in 480, giving 4.80."
+                ],
+                "answer": "3.2 × 1.5 = 4.8"
+              }
+            },
+            {
+              "heading": "Dividing Decimals",
+              "body": [
+                "To divide by a decimal, move the decimal point in the divisor to the right until it is a whole number, then move the decimal point in the dividend the same number of places, adding zeros if necessary. This does not change the answer, since it is equivalent to multiplying both numbers by the same power of 10.",
+                "Then divide as usual with the adjusted whole-number divisor, keeping track of the decimal point's position in the dividend as you bring digits down."
+              ],
+              "example": {
+                "problem": "Divide 7.5 ÷ 0.25.",
+                "steps": [
+                  "Move the decimal point 2 places right in 0.25 to make it 25, and do the same to 7.5, making it 750.",
+                  "Divide 750 ÷ 25 = 30."
+                ],
+                "answer": "7.5 ÷ 0.25 = 30"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "decimal point", "def": "the dot separating the whole-number part of a number from its fractional part"},
+            {"term": "tenths, hundredths", "def": "the first and second place values to the right of the decimal point"}
+          ],
+          "practice": [
+            {"q": "What is 8.4 − 2.75?", "choices": ["5.65", "6.65", "5.75", "6.75"], "answer": 0, "explain": "Line up decimal points: 8.40 − 2.75 = 5.65 after borrowing across the tenths and hundredths columns."},
+            {"q": "What is 2.5 × 0.4?", "choices": ["1", "10", "0.1", "100"], "answer": 0, "explain": "25 × 4 = 100, and the factors together have 1 + 1 = 2 decimal places, so the point moves 2 places left in 100 to give 1.00, or 1."},
+            {"q": "What is 9.6 ÷ 0.4?", "choices": ["2.4", "24", "0.24", "240"], "answer": 1, "explain": "Move the decimal one place right in both numbers to get 96 ÷ 4 = 24."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Converting Fractions, Decimals, and Percents",
+          "minutes": 14,
+          "intro": "Fractions, decimals, and percents are three different costumes for the same underlying amount, and knowing how to swap between them lets you always pick whichever form is easiest for the calculation in front of you.",
+          "sections": [
+            {
+              "heading": "Fractions to Decimals",
+              "body": [
+                "To convert a fraction to a decimal, divide the numerator by the denominator. Some divisions terminate cleanly, like 1/4 = 0.25, while others repeat forever, like 1/3 = 0.333..., which is usually rounded for practical use.",
+                "This conversion is worth memorizing for common fractions — halves, quarters, fifths, and eighths — since they show up constantly in measurements, grades, and money."
+              ],
+              "example": {
+                "problem": "Convert 3/8 to a decimal.",
+                "steps": [
+                  "Divide 3 by 8: 3.000 ÷ 8.",
+                  "8 goes into 30 three times (24), remainder 6, bring down a 0 to get 60.",
+                  "8 goes into 60 seven times (56), remainder 4, bring down a 0 to get 40.",
+                  "8 goes into 40 five times exactly, remainder 0."
+                ],
+                "answer": "3/8 = 0.375"
+              }
+            },
+            {
+              "heading": "Decimals to Percents and Back",
+              "body": [
+                "To convert a decimal to a percent, multiply by 100, which just shifts the decimal point two places right, and attach a percent sign. To go the other way, from percent to decimal, divide by 100, shifting the decimal point two places left.",
+                "Since 0.375 × 100 = 37.5, the decimal 0.375 equals 37.5%. This connects directly to the fraction conversion above: 3/8 = 0.375 = 37.5%, three equivalent ways of writing the same value."
+              ],
+              "example": {
+                "problem": "Convert 0.6 to a fraction and a percent.",
+                "steps": [
+                  "As a fraction, 0.6 means 6 tenths, or 6/10, which simplifies to 3/5.",
+                  "As a percent, multiply 0.6 by 100 to get 60%."
+                ],
+                "answer": "0.6 = 3/5 = 60%"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "percent", "def": "a ratio out of 100, shown with a % sign; percent literally means per hundred"},
+            {"term": "terminating decimal", "def": "a decimal whose digits stop, such as 0.25"},
+            {"term": "repeating decimal", "def": "a decimal whose digits repeat forever, such as 0.333..."}
+          ],
+          "practice": [
+            {"q": "What is 1/5 written as a decimal?", "choices": ["0.15", "0.2", "0.5", "0.05"], "answer": 1, "explain": "1 ÷ 5 = 0.2 exactly."},
+            {"q": "What is 0.45 written as a percent?", "choices": ["0.45%", "4.5%", "45%", "450%"], "answer": 2, "explain": "Multiplying 0.45 by 100 shifts the decimal two places right, giving 45%."},
+            {"q": "What is 7/10 written as a percent?", "choices": ["7%", "0.7%", "70%", "700%"], "answer": 2, "explain": "7/10 = 0.7 as a decimal, and 0.7 × 100 = 70%."},
+            {"q": "What is 125% written as a decimal?", "choices": ["1.25", "0.125", "12.5", "125.0"], "answer": 0, "explain": "Dividing 125 by 100 shifts the decimal two places left, giving 1.25."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Solving Percent Problems",
+          "minutes": 17,
+          "intro": "Sales tax, tips, discounts, and interest are all the same percent calculation wearing different labels, so mastering one clean method here pays off every time you shop, eat out, or read a bank statement.",
+          "sections": [
+            {
+              "heading": "Finding a Percent of a Number",
+              "body": [
+                "To find a percent of a number, convert the percent to a decimal and multiply. Finding 15% of 80 means computing 0.15 × 80, since 15% as a decimal is 0.15.",
+                "This single move covers tips, taxes, and discounts alike: an 8% sales tax on a $50 purchase is 0.08 × 50, and a 20% tip on a $34 bill is 0.20 × 34. The percent always converts to a decimal first."
+              ],
+              "example": {
+                "problem": "Find 15% of 80.",
+                "steps": [
+                  "Convert 15% to a decimal: 0.15.",
+                  "Multiply: 0.15 × 80 = 12."
+                ],
+                "answer": "15% of 80 is 12"
+              }
+            },
+            {
+              "heading": "Discounts and Sale Prices",
+              "body": [
+                "A discount reduces a price by a percent of the original amount. To find the sale price directly, you can either subtract the discount amount from the original price, or multiply the original price by (100% minus the discount percent).",
+                "Both methods agree: a 25% discount leaves 75% of the original price remaining, so multiplying the original price by 0.75 gives the sale price in one step instead of two."
+              ],
+              "example": {
+                "problem": "A $60 shirt is discounted 25%. Find the sale price.",
+                "steps": [
+                  "Find the discount amount: 25% of 60 is 0.25 × 60 = 15.",
+                  "Subtract the discount from the original price: 60 − 15 = 45."
+                ],
+                "answer": "The sale price is $45"
+              }
+            },
+            {
+              "heading": "Percent Change",
+              "body": [
+                "Percent change compares an amount of change to the original starting value: percent change equals the change divided by the original amount, then converted to a percent. Use the value before the change happened as the original, never the new value.",
+                "This same formula covers both increases and decreases; the sign of the change (positive for an increase, negative for a decrease) simply tells you whether to call it a percent increase or a percent decrease."
+              ],
+              "example": {
+                "problem": "A price rises from $40 to $50. Find the percent increase.",
+                "steps": [
+                  "Find the change: 50 − 40 = 10.",
+                  "Divide the change by the original amount: 10 ÷ 40 = 0.25.",
+                  "Convert to a percent: 0.25 = 25%."
+                ],
+                "answer": "The price increased by 25%"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "discount", "def": "a reduction in price, usually expressed as a percent of the original price"},
+            {"term": "percent change", "def": "the amount of change divided by the original value, expressed as a percent"},
+            {"term": "sale price", "def": "the price after a discount has been subtracted from the original price"}
+          ],
+          "practice": [
+            {"q": "What is 20% of 150?", "choices": ["20", "30", "130", "300"], "answer": 1, "explain": "20% as a decimal is 0.20, and 0.20 × 150 = 30."},
+            {"q": "A $80 jacket is on sale for 30% off. What is the sale price?", "choices": ["$24", "$56", "$50", "$60"], "answer": 1, "explain": "30% of 80 is 24, and 80 − 24 = 56, the sale price."},
+            {"q": "A population grows from 200 to 250. What is the percent increase?", "choices": ["20%", "25%", "50%", "40%"], "answer": 1, "explain": "The change is 250 − 200 = 50, and 50 ÷ 200 = 0.25, which is 25%."},
+            {"q": "A meal costs $42 before tip. What is the total with an 18% tip?", "choices": ["$7.56", "$49.56", "$44.42", "$50.40"], "answer": 1, "explain": "18% of 42 is 0.18 × 42 = 7.56, and adding that tip to the bill gives 42 + 7.56 = 49.56."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Ratios, Proportions, and Early Algebra",
+      "summary": "Ratios and rates, solving proportions, and the first steps into algebra: expressions, variables, and simple equations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Ratios and Rates",
+          "minutes": 13,
+          "intro": "A ratio compares two quantities, and once one of those quantities is a unit like an hour or a dollar, the comparison becomes a rate — the tool behind speed limits, prices per pound, and fuel efficiency.",
+          "sections": [
+            {
+              "heading": "Writing and Simplifying Ratios",
+              "body": [
+                "A ratio compares two quantities and can be written as a to b, a:b, or a/b. Like a fraction, a ratio simplifies by dividing both quantities by their greatest common factor: a classroom with 12 boys and 18 girls has a boy-to-girl ratio of 12:18, which simplifies to 2:3.",
+                "Order matters in a ratio: the ratio of boys to girls, 2:3, is not the same statement as the ratio of girls to boys, 3:2, even though both describe the identical classroom."
+              ]
+            },
+            {
+              "heading": "Unit Rates",
+              "body": [
+                "A rate compares two quantities measured in different units, and a unit rate expresses that comparison for a single unit of the second quantity, such as miles per one hour or dollars per one pound. Finding a unit rate means dividing to make the second quantity equal to 1.",
+                "Unit rates make comparisons easy: if one store sells 3 pounds of rice for $4.50 and another sells 5 pounds for $7.00, converting both to price per pound ($1.50 versus $1.40) reveals which is actually the better deal."
+              ],
+              "example": {
+                "problem": "A car travels 240 miles in 4 hours. Find its unit rate in miles per hour.",
+                "steps": [
+                  "Divide the distance by the time: 240 ÷ 4 = 60."
+                ],
+                "answer": "The unit rate is 60 miles per hour"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "ratio", "def": "a comparison of two quantities, written a:b or a/b"},
+            {"term": "rate", "def": "a ratio comparing two quantities measured in different units"},
+            {"term": "unit rate", "def": "a rate simplified so the second quantity equals 1"}
+          ],
+          "practice": [
+            {"q": "A recipe uses 2 cups of flour to 3 cups of sugar. What is the simplified ratio of flour to sugar?", "choices": ["2:3", "3:2", "1:1", "4:6"], "answer": 0, "explain": "2:3 has no common factor besides 1, so it is already in simplest form."},
+            {"q": "A runner covers 15 miles in 2.5 hours. What is the unit rate in miles per hour?", "choices": ["5", "6", "37.5", "12.5"], "answer": 1, "explain": "15 ÷ 2.5 = 6 miles per hour."},
+            {"q": "Which purchase gives the better price per ounce: 10 ounces for $4, or 16 ounces for $6?", "choices": ["10 ounces for $4", "16 ounces for $6", "They are equal", "Cannot be determined"], "answer": 1, "explain": "10 ounces for $4 is $0.40 per ounce; 16 ounces for $6 is $0.375 per ounce, which is cheaper per unit."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Solving Proportions",
+          "minutes": 15,
+          "intro": "A proportion says two ratios are equal, and cross multiplication turns that single statement into a simple equation you can solve for whatever piece is missing, whether it is a recipe amount, a map distance, or a scale model measurement.",
+          "sections": [
+            {
+              "heading": "What Makes a Proportion",
+              "body": [
+                "A proportion is an equation stating that two ratios are equal, such as 3/4 = 6/8. You can check whether two ratios truly form a proportion by simplifying both fully and confirming they match, or by cross multiplying: if a/b = c/d, then a × d must equal b × c.",
+                "Proportions appear whenever a relationship stays constant while both quantities scale together, such as a recipe scaled up for more servings, or a map where every real distance corresponds proportionally to a distance on paper."
+              ]
+            },
+            {
+              "heading": "Solving for an Unknown with Cross Multiplication",
+              "body": [
+                "To solve a proportion with an unknown, cross multiply — multiply the numerator of one ratio by the denominator of the other, and set that equal to the product of the remaining numerator and denominator — then solve the resulting equation for the unknown.",
+                "Cross multiplication works because multiplying both sides of a/b = c/d by both denominators clears the fractions entirely, leaving a plain equation: a × d = b × c."
+              ],
+              "example": {
+                "problem": "Solve 3/4 = x/20 for x.",
+                "steps": [
+                  "Cross multiply: 3 × 20 = 4 × x, giving 60 = 4x.",
+                  "Divide both sides by 4: x = 15."
+                ],
+                "answer": "x = 15"
+              }
+            },
+            {
+              "heading": "Applications: Scaling and Maps",
+              "body": [
+                "Recipes, maps, and scale models all rely on proportional reasoning. If a map's scale reads 1 inch equals 25 miles, and two cities are 3.5 inches apart on the map, set up the proportion 1/25 = 3.5/x and cross multiply to find the real distance.",
+                "The habit to build is always writing corresponding quantities in the same position in both ratios — map distance over real distance on both sides, never map distance over real distance on one side and the reverse on the other."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "proportion", "def": "an equation stating that two ratios are equal"},
+            {"term": "cross multiplication", "def": "multiplying the numerator of each ratio by the denominator of the other to solve or check a proportion"}
+          ],
+          "practice": [
+            {"q": "Solve for x: 5/6 = x/24.", "choices": ["18", "20", "22", "16"], "answer": 1, "explain": "Cross multiplying gives 5 × 24 = 6x, so 120 = 6x, and x = 20."},
+            {"q": "A map scale is 1 inch = 40 miles. Two towns are 2.5 inches apart on the map. How far apart are they in reality?", "choices": ["80 miles", "100 miles", "60 miles", "40 miles"], "answer": 1, "explain": "Setting up 1/40 = 2.5/x and cross multiplying gives x = 40 × 2.5 = 100 miles."},
+            {"q": "A recipe for 4 servings needs 3 eggs. How many eggs are needed for 10 servings?", "choices": ["6", "7", "7.5", "8"], "answer": 2, "explain": "Setting up 3/4 = x/10 and cross multiplying gives 4x = 30, so x = 7.5 eggs."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Variables, Expressions, and Simple Equations",
+          "minutes": 16,
+          "intro": "This is the doorway into algebra: letting a letter stand in for an unknown number, evaluating expressions once you know that number, and undoing operations step by step to solve for it when you do not.",
+          "sections": [
+            {
+              "heading": "Evaluating Algebraic Expressions",
+              "body": [
+                "An algebraic expression combines numbers, variables, and operations, such as 3x + 7. To evaluate it, substitute the given value for the variable and compute using the standard order of operations: parentheses, exponents, multiplication and division, addition and subtraction.",
+                "Substituting carefully matters: replace every instance of the variable with the given number, keeping any multiplication that was implied by the variable's placement, then simplify step by step rather than trying to combine everything at once."
+              ],
+              "example": {
+                "problem": "Evaluate 3x + 7 when x = 5.",
+                "steps": [
+                  "Substitute x = 5: 3(5) + 7.",
+                  "Multiply first: 3 × 5 = 15.",
+                  "Add: 15 + 7 = 22."
+                ],
+                "answer": "3x + 7 = 22 when x = 5"
+              }
+            },
+            {
+              "heading": "Translating Words into Expressions",
+              "body": [
+                "Certain words consistently signal certain operations: sum, more than, and increased by signal addition; difference, less than, and decreased by signal subtraction; product and times signal multiplication; quotient and per signal division. Watch out for less than, which reverses the order of the words: five less than a number x is written x − 5, not 5 − x.",
+                "Building this translation skill is the single most important step toward solving word problems throughout algebra, since every equation you will ever set up starts as a sentence before it becomes symbols."
+              ]
+            },
+            {
+              "heading": "Solving One-Step and Two-Step Equations",
+              "body": [
+                "To solve an equation, perform the same operation on both sides until the variable stands alone. For a one-step equation like x + 9 = 14, subtract 9 from both sides to isolate x. For a two-step equation like 2x + 5 = 17, undo addition or subtraction first, then undo multiplication or division.",
+                "Always perform inverse operations in the reverse order of how the expression was built: since 2x + 5 was built by multiplying by 2 and then adding 5, solving it undoes the addition first (subtracting 5) and the multiplication second (dividing by 2)."
+              ],
+              "example": {
+                "problem": "Solve 2x + 5 = 17 for x.",
+                "steps": [
+                  "Subtract 5 from both sides: 2x = 12.",
+                  "Divide both sides by 2: x = 6.",
+                  "Check by substituting back: 2(6) + 5 = 12 + 5 = 17."
+                ],
+                "answer": "x = 6"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "variable", "def": "a letter standing in for an unknown or changeable number"},
+            {"term": "algebraic expression", "def": "a combination of numbers, variables, and operations without an equals sign"},
+            {"term": "equation", "def": "a statement that two expressions are equal, joined by an equals sign"},
+            {"term": "inverse operation", "def": "an operation that undoes another, such as subtraction undoing addition"}
+          ],
+          "practice": [
+            {"q": "Evaluate 4x − 3 when x = 6.", "choices": ["21", "18", "27", "24"], "answer": 0, "explain": "Substitute x = 6: 4(6) − 3 = 24 − 3 = 21."},
+            {"q": "Which expression represents 'seven less than a number n'?", "choices": ["7 − n", "n − 7", "7n", "n + 7"], "answer": 1, "explain": "'Less than' reverses word order, so seven less than n means n − 7, not 7 − n."},
+            {"q": "Solve for x: x − 9 = 14.", "choices": ["5", "23", "−5", "−23"], "answer": 1, "explain": "Adding 9 to both sides gives x = 14 + 9 = 23."},
+            {"q": "Solve for x: 3x − 4 = 11.", "choices": ["5", "4", "7", "3"], "answer": 0, "explain": "Add 4 to both sides to get 3x = 15, then divide by 3 to get x = 5."}
+          ]
+        }
+      ]
+    }
+  ]
+}

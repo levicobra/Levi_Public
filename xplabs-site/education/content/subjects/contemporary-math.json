@@ -1,0 +1,786 @@
+{
+ "id": "contemporary-math",
+ "title": "Contemporary Mathematics",
+ "domain": "math",
+ "level": "Intro college",
+ "description": "A tour of the math you actually use outside a calculus classroom: clear reasoning with sets and logic, the number systems behind everyday counting, the arithmetic of interest and loans, probability and statistics for real decisions, and the graph theory and voting math behind networks and elections. Every idea is worked through with real numbers to a real answer.",
+ "outcomes": [
+  "You can build truth tables and judge whether an everyday argument is logically valid.",
+  "You can describe sets with precise notation and Venn diagrams, and compute unions, intersections, and complements.",
+  "You can calculate simple and compound interest and a loan's monthly payment, and compare financial options using the numbers.",
+  "You can summarize a data set with mean, median, and standard deviation, and compute probabilities and expected value for real games and decisions.",
+  "You can model a network as a graph, find efficient routes and minimum-cost connections, and apply voting and apportionment methods to real elections."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Sets, Logic, and Reasoning",
+   "summary": "The toolkit of clear thinking: describing collections precisely with sets, and judging arguments precisely with logic and truth tables.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Sets and Venn Diagrams",
+     "minutes": 14,
+     "intro": "Every time you filter a streaming catalog by 'available now' and 'released after 2020,' you are doing set theory. Sets let you describe exact collections of things and combine them with precise rules, which is the backbone of databases, surveys, and logical arguments alike.",
+     "sections": [
+      {
+       "heading": "Describing a Set",
+       "body": [
+        "A **set** is a well-defined collection of objects, called its **elements**. You can list a set inside braces, called roster notation: the set of primary colors is {red, yellow, blue}. You can also describe it with a rule, called set-builder notation, such as {x | x is a whole number less than 5}, which names the exact same set as {0, 1, 2, 3, 4}.",
+        "One set is a **subset** of another if every element of the first also belongs to the second, written A ⊆ B. Since every element of {2, 4} appears in {1, 2, 3, 4, 5}, we can write {2, 4} ⊆ {1, 2, 3, 4, 5}. The **universal set** is the entire pool under discussion, like 'all students at this college,' and every set we mention lives inside it."
+       ]
+      },
+      {
+       "heading": "Union, Intersection, and Complement",
+       "body": [
+        "The **union** of two sets, written A ∪ B, collects everything in A or B or both. The **intersection**, written A ∩ B, keeps only what is in both. If A is students taking Spanish and B is students taking French, A ∪ B is everyone taking at least one language, and A ∩ B is the smaller group taking both at once.",
+        "The **complement** of A, written A′, is everything in the universal set that is not in A. If the universal set is 200 students and 120 take Spanish, A′ has 80 students - everyone left over. A Venn diagram, two overlapping circles inside a rectangle for the universal set, makes all three operations visible in one picture."
+       ],
+       "example": {
+        "problem": "Out of 50 students, 28 take Spanish, 19 take French, and 9 take both. How many students take Spanish or French?",
+        "steps": [
+         "Let A = Spanish (28 students) and B = French (19 students); the overlap A ∩ B is the 9 who take both.",
+         "Use the inclusion-exclusion rule so the overlap is not counted twice: |A ∪ B| = |A| + |B| − |A ∩ B|.",
+         "|A ∪ B| = 28 + 19 − 9 = 38."
+        ],
+        "answer": "38 students take Spanish or French (and 12 of the 50 take neither)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "set", "def": "A well-defined collection of objects, called its elements."},
+      {"term": "subset", "def": "A set A is a subset of B (A ⊆ B) if every element of A is also in B."},
+      {"term": "union (∪)", "def": "Everything in either set, or both: A ∪ B."},
+      {"term": "intersection (∩)", "def": "Only what is shared by both sets: A ∩ B."},
+      {"term": "complement", "def": "Everything in the universal set that is not in A, written A′."}
+     ],
+     "practice": [
+      {"q": "Let A = {2, 4, 6, 8} and B = {4, 8, 12}. What is A ∩ B?", "choices": ["{2, 4, 6, 8, 12}", "{4, 8}", "{2, 6}", "{12}"], "answer": 1, "explain": "Intersection keeps only elements that appear in both sets; 4 and 8 are the only ones in both A and B."},
+      {"q": "If the universal set is {1, 2, ..., 10} and A = {2, 4, 6, 8, 10}, what is A′?", "choices": ["{1, 3, 5, 7, 9}", "{2, 4, 6, 8, 10}", "the empty set", "{1, 2, ..., 10}"], "answer": 0, "explain": "The complement is everything in the universal set that is not in A - here, the five odd numbers from 1 to 10."},
+      {"q": "In a survey of 80 people, 45 like coffee, 30 like tea, and 15 like both. How many like coffee or tea?", "choices": ["75", "60", "90", "45"], "answer": 1, "explain": "|A ∪ B| = 45 + 30 − 15 = 60. Without subtracting the 15 who like both, you would double-count them."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Inductive and Deductive Reasoning",
+     "minutes": 12,
+     "intro": "A detective spotting a pattern in three burglaries, and a judge applying a law to one specific case, are using two different kinds of reasoning. Telling them apart - and knowing which one actually proves something - is one of the most useful thinking skills any course can teach you.",
+     "sections": [
+      {
+       "heading": "Inductive Reasoning: Reasoning from Patterns",
+       "body": [
+        "**Inductive reasoning** draws a general conclusion from specific examples or a repeating pattern. If you see 3, 6, 9, 12 and guess the next term is 15, you reasoned inductively - you spotted 'add 3 each time' from a handful of cases. The conclusion, called a **conjecture**, is a strong guess, not a proof.",
+        "Inductive conclusions can be wrong, and a single **counterexample** - one case that breaks the pattern - is enough to disprove one. The conjecture 'all prime numbers are odd' looks solid until you check 2, which is prime and even. One counterexample destroys a conjecture no matter how many examples supported it."
+       ]
+      },
+      {
+       "heading": "Deductive Reasoning: Reasoning from Rules",
+       "body": [
+        "**Deductive reasoning** starts from general statements accepted as true and applies them to a specific case to reach a conclusion that is guaranteed, not just likely. The classic form is a **syllogism**: 'All mammals are warm-blooded. A whale is a mammal. Therefore, a whale is warm-blooded.' If the two starting statements are true, the conclusion must be true.",
+        "An argument's structure can be **valid** - the conclusion truly follows from the premises - even if a premise turns out false, making the argument **unsound**. 'All birds can fly. Penguins are birds. Therefore penguins can fly' is valid in form but unsound, because the first premise is false. Checking both validity and truth is how you evaluate any deductive argument."
+       ],
+       "example": {
+        "problem": "What is the next term in the pattern 2, 5, 10, 17, 26, and what type of reasoning did you use to find it?",
+        "steps": [
+         "Look at the differences between consecutive terms: 5−2=3, 10−5=5, 17−10=7, 26−17=9.",
+         "The differences themselves increase by 2 each time (3, 5, 7, 9), so the next difference should be 11.",
+         "Add that difference to the last term: 26 + 11 = 37."
+        ],
+        "answer": "37, found by inductive reasoning - a conjecture based on a pattern in specific examples, not a proof."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "inductive reasoning", "def": "Drawing a general conclusion from specific examples or a pattern."},
+      {"term": "conjecture", "def": "A conclusion reached by inductive reasoning; a strong guess, not a proof."},
+      {"term": "counterexample", "def": "A single case that disproves a conjecture."},
+      {"term": "deductive reasoning", "def": "Applying accepted general rules to a specific case to reach a guaranteed conclusion."},
+      {"term": "valid argument", "def": "An argument whose conclusion truly follows from its premises, regardless of whether the premises are true."}
+     ],
+     "practice": [
+      {"q": "A student notices the first four odd numbers squared are 1, 9, 25, 49 and concludes 'the square of any odd number is odd.' What kind of reasoning is this?", "choices": ["Deductive reasoning", "Inductive reasoning", "A syllogism", "A counterexample"], "answer": 1, "explain": "The student generalized from specific examples to a pattern - that is inductive reasoning, producing a conjecture."},
+      {"q": "Which single example would disprove the conjecture 'all rectangles are squares'?", "choices": ["A square with side 4", "A rectangle with sides 3 and 3", "A rectangle with sides 2 and 5", "A rectangle with four right angles"], "answer": 2, "explain": "A 2-by-5 rectangle is a rectangle but not a square, so it is a counterexample that breaks the conjecture."},
+      {"q": "'All licensed drivers are at least 16. Maria is a licensed driver. Therefore, Maria is at least 16.' This argument is:", "choices": ["Inductive and weak", "Deductive and valid", "A counterexample", "Unsound because the premises are false"], "answer": 1, "explain": "This is a syllogism: general rules applied to a specific case, with a conclusion that must follow if the premises are true - a valid deductive argument."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Logical Statements and Truth Tables",
+     "minutes": 16,
+     "intro": "'If it rains, the game is cancelled' sounds simple, but logicians can pin down exactly when that sentence is true or false for every possible combination of rain and cancellation. That precision is what a truth table gives you, and it is the same machinery that runs inside every computer chip.",
+     "sections": [
+      {
+       "heading": "Statements and Connectives",
+       "body": [
+        "A logical **statement** is a sentence that is either true or false, never both. 'Paris is the capital of France' is a statement (true); 'Please close the door' is not, since it cannot be true or false. Statements combine with **connectives**: **and** (conjunction, p ∧ q, true only when both are true), **or** (disjunction, p ∨ q, true when at least one is true), and **not** (negation, ¬p, which flips the truth value).",
+        "A **conditional statement**, 'if p then q' (p → q), is false in exactly one situation: when p is true but q is false. 'If you are a citizen, you can vote' is broken only by someone who is a citizen and cannot vote - if you are not a citizen, the statement is not broken either way."
+       ]
+      },
+      {
+       "heading": "Truth Tables",
+       "body": [
+        "A **truth table** lists every possible combination of true (T) and false (F) for the statements involved, then works out the result for each row. For p → q, there are four rows (p and q each T or F), and the table shows T, F, T, T for p,q = TT, TF, FT, FF - false only in that one TF row.",
+        "Truth tables let you test whether an argument form is valid by checking every possible case at once, rather than trusting your gut on one example. If a conclusion comes out true in every row where all the premises are true, the argument form is valid no matter what real-world statements you plug in."
+       ],
+       "example": {
+        "problem": "Build the truth table for the conditional p → q and use it to check: is 'if p → q is true and p is true, then q is true' (modus ponens) always valid?",
+        "steps": [
+         "List all four combinations of p and q: (T,T), (T,F), (F,T), (F,F).",
+         "p → q is false only in the (T,F) row; it is true in the other three rows: (T,T)→T, (T,F)→F, (F,T)→T, (F,F)→T.",
+         "Now restrict to rows where both 'p → q' is true AND p is true: only (T,T) satisfies both conditions.",
+         "In that single row, q is T. So whenever the premises hold, q is always true."
+        ],
+        "answer": "Yes - modus ponens is valid; in the only row where p → q and p are both true, q is also true."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "statement", "def": "A sentence that is either true or false, never both."},
+      {"term": "conjunction (∧)", "def": "'And'; true only when both statements are true."},
+      {"term": "disjunction (∨)", "def": "'Or'; true when at least one statement is true."},
+      {"term": "conditional (→)", "def": "'If p then q'; false only when p is true and q is false."},
+      {"term": "truth table", "def": "A table listing every combination of truth values and the resulting outcome."}
+     ],
+     "practice": [
+      {"q": "The statement 'If I finish my homework, I can play games' is false in which situation?", "choices": ["I finish homework and I play games", "I don't finish homework and I don't play games", "I finish homework and I don't play games", "I don't finish homework and I do play games"], "answer": 2, "explain": "A conditional p → q is false in exactly one case: p true and q false. Here that means homework is finished but games are not allowed."},
+      {"q": "For p ∧ q, in how many of the four T/F rows is the statement true?", "choices": ["0", "1", "2", "3"], "answer": 1, "explain": "Conjunction is true only when both p and q are true, which is a single row out of the four possible combinations."},
+      {"q": "What does ¬p mean?", "choices": ["p and its opposite are both true", "The negation of p; it flips p's truth value", "p or its opposite", "Nothing unless p is true"], "answer": 1, "explain": "The negation symbol ¬ simply reverses the truth value: if p is true, ¬p is false, and vice versa."},
+      {"q": "Which connective is true only when at least one of the two statements is true?", "choices": ["Conjunction (∧)", "Negation (¬)", "Disjunction (∨)", "Conditional (→)"], "answer": 2, "explain": "Disjunction (or) requires at least one side to be true; it is false only when both sides are false."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Number Theory and Numeration Systems",
+   "summary": "How numbers are built from primes and factors, how remainders behave in cycles, and how the same quantity can be written in different bases.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Divisibility, Primes, and Factoring",
+     "minutes": 12,
+     "intro": "Every whole number bigger than 1 is either a prime building block or a product of them - there is no third option. That single fact, discovered over two thousand years ago, is still the basis of how computers keep your passwords and bank transactions secure today.",
+     "sections": [
+      {
+       "heading": "Primes, Composites, and Divisibility Rules",
+       "body": [
+        "A **prime number** has exactly two factors: 1 and itself. 2, 3, 5, 7, 11, and 13 are prime; 1 is not prime (it has only one factor). A **composite number** has more than two factors, like 12 (1, 2, 3, 4, 6, 12). Quick divisibility rules save time: a number is divisible by 2 if it ends in an even digit, by 3 if its digit sum is divisible by 3, by 5 if it ends in 0 or 5, and by 10 if it ends in 0.",
+        "**Prime factorization** breaks a composite number into the unique product of primes that build it, usually found with a factor tree: keep splitting until every branch ends in a prime. Every composite number has exactly one prime factorization, up to the order you write the factors - this is called the Fundamental Theorem of Arithmetic."
+       ]
+      },
+      {
+       "heading": "Greatest Common Factor and Least Common Multiple",
+       "body": [
+        "The **greatest common factor (GCF)** of two numbers is the largest number that divides both evenly; the **least common multiple (LCM)** is the smallest number that both divide into evenly. Both are easiest to find from prime factorizations: for the GCF, multiply the shared primes at their lowest shared power; for the LCM, multiply every prime that appears at its highest power.",
+        "GCF and LCM show up constantly in fractions and scheduling: the GCF simplifies a fraction to lowest terms, and the LCM finds a common denominator or the next time two repeating events line up, like buses that run every 12 and 18 minutes."
+       ],
+       "example": {
+        "problem": "Find the GCF and LCM of 48 and 180.",
+        "steps": [
+         "Prime factorize each number: 48 = 2^4 × 3, and 180 = 2^2 × 3^2 × 5.",
+         "For the GCF, take each shared prime at its lowest power: 2^2 × 3^1 = 4 × 3 = 12.",
+         "For the LCM, take every prime at its highest power: 2^4 × 3^2 × 5 = 16 × 9 × 5 = 720.",
+         "Check: GCF × LCM should equal the product of the original numbers: 12 × 720 = 8,640, and 48 × 180 = 8,640. It matches."
+        ],
+        "answer": "GCF = 12, LCM = 720."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "prime number", "def": "A whole number greater than 1 with exactly two factors: 1 and itself."},
+      {"term": "composite number", "def": "A whole number with more than two factors."},
+      {"term": "prime factorization", "def": "Writing a number as a unique product of prime numbers."},
+      {"term": "GCF", "def": "Greatest common factor: the largest number dividing two numbers evenly."},
+      {"term": "LCM", "def": "Least common multiple: the smallest number both original numbers divide into evenly."}
+     ],
+     "practice": [
+      {"q": "Which of these is a prime number?", "choices": ["21", "27", "31", "33"], "answer": 2, "explain": "31 has no factors other than 1 and itself; 21 = 3×7, 27 = 3^3, and 33 = 3×11 are all composite."},
+      {"q": "What is the prime factorization of 60?", "choices": ["2 × 30", "2^2 × 3 × 5", "2 × 3 × 10", "4 × 15"], "answer": 1, "explain": "60 = 4 × 15 = 2^2 × 3 × 5; the others are not fully broken down into primes."},
+      {"q": "Two buses leave the station together, one returning every 12 minutes and one every 18 minutes. How many minutes until they next leave together?", "choices": ["6", "24", "30", "36"], "answer": 3, "explain": "The buses realign at the LCM of 12 and 18. 12 = 2^2×3, 18 = 2×3^2, so LCM = 2^2×3^2 = 36 minutes."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Modular Arithmetic",
+     "minutes": 12,
+     "intro": "A clock only has 12 numbers, yet it can tell time forever, because it wraps back around to 1 after 12. That wraparound trick has a name - modular arithmetic - and it quietly runs barcode check digits, calendars, and clock arithmetic of every kind.",
+     "sections": [
+      {
+       "heading": "Counting in a Circle",
+       "body": [
+        "**Modular arithmetic** asks for the remainder after dividing by a fixed number called the **modulus**. We say a is **congruent** to b mod n, written a ≡ b (mod n), if a and b leave the same remainder when divided by n. On a 12-hour clock, 15 ≡ 3 (mod 12), because both leave remainder 3 when divided by 12 - which is exactly why 3:00 and 15:00 point to the same spot on the clock face.",
+        "To find a mod n, divide a by n and keep only the remainder. This works for adding hours past midnight, days of the week (mod 7), or months of the year (mod 12) - anything that cycles back to the start after a fixed count."
+       ]
+      },
+      {
+       "heading": "Everyday Uses of Modular Arithmetic",
+       "body": [
+        "Clocks and calendars are the most familiar use, but modular arithmetic also generates the **check digits** on barcodes and ID numbers, which catch typos by making sure a weighted sum comes out congruent to 0 mod some fixed number. It is also the mathematical engine behind modern encryption, where huge numbers are combined mod an enormous modulus to scramble and unscramble secure messages.",
+        "The key skill is comfort with wraparound: numbers do not just get bigger forever in modular arithmetic, they cycle. Practicing clock and calendar problems is the fastest way to build the intuition that later supports both cryptography and computer science."
+       ],
+       "example": {
+        "problem": "It is currently 9:00 on a 12-hour clock. What time will it be in 47 hours?",
+        "steps": [
+         "Reduce 47 hours mod 12, since the clock repeats every 12 hours: 47 = 3 × 12 + 11, so 47 ≡ 11 (mod 12).",
+         "Add 11 hours to 9:00: 9 + 11 = 20.",
+         "20 is more than 12, so reduce it mod 12 as well: 20 − 12 = 8."
+        ],
+        "answer": "8:00."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "modulus", "def": "The fixed number used for wraparound in modular arithmetic, like 12 for clock hours."},
+      {"term": "congruent (mod n)", "def": "Two numbers that leave the same remainder when divided by n."},
+      {"term": "remainder", "def": "What is left over after division; the result kept in modular arithmetic."},
+      {"term": "check digit", "def": "An extra digit computed with modular arithmetic to catch typing errors in ID numbers."}
+     ],
+     "practice": [
+      {"q": "What is 29 mod 7?", "choices": ["0", "1", "2", "4"], "answer": 1, "explain": "29 = 4 × 7 + 1, so the remainder is 1: 29 ≡ 1 (mod 7)."},
+      {"q": "If today is Wednesday, what day of the week will it be in 17 days? (Sunday=0, Monday=1, ..., Saturday=6, with Wednesday=3)", "choices": ["Wednesday", "Thursday", "Saturday", "Sunday"], "answer": 2, "explain": "17 mod 7 = 3, since 17 = 2×7+3. Adding 3 to Wednesday (day 3) gives day 6, which is Saturday."},
+      {"q": "Which statement correctly describes 22 ≡ 10 (mod 12)?", "choices": ["22 and 10 both leave remainder 10 when divided by 12", "22 and 10 both leave the same remainder when divided by 12", "22 divided by 12 equals 10", "22 and 10 are both prime"], "answer": 1, "explain": "22 = 1×12+10 and 10 = 0×12+10, so both leave remainder 10 when divided by 12 - that shared remainder is what congruence means."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Number Bases",
+     "minutes": 12,
+     "intro": "You write numbers in base ten because you have ten fingers, but a computer has none - only switches that are on or off. That is why every number inside a phone or laptop is secretly written in base two, using nothing but 0s and 1s.",
+     "sections": [
+      {
+       "heading": "Place Value in Any Base",
+       "body": [
+        "In base ten, each place is worth a power of 10: ones, tens, hundreds. A **base** simply changes which power the places count: in base two (**binary**), each place is worth a power of 2 - ones, twos, fours, eights - and only the digits 0 and 1 are allowed, since 'two' rolls over into a new place the same way 'ten' does in our system.",
+        "To convert a binary number to decimal, add up the place values where the digit is 1. The binary number 1101 has 1s in the eights, fours, and ones places (reading right to left: 1, 0, 1, 1), so it equals 8 + 4 + 0 + 1."
+       ],
+       "example": {
+        "problem": "Convert the binary number 1101 to decimal.",
+        "steps": [
+         "Write the place values from right to left: ones (2^0=1), twos (2^1=2), fours (2^2=4), eights (2^3=8).",
+         "Match each binary digit to its place: 1(eights), 1(fours), 0(twos), 1(ones).",
+         "Add the places with a 1: 8 + 4 + 0 + 1 = 13."
+        ],
+        "answer": "1101 in binary equals 13 in decimal."
+       }
+      },
+      {
+       "heading": "Converting Decimal to Binary",
+       "body": [
+        "To go the other direction, repeatedly find the largest power of 2 that fits, subtract it, and repeat. For 25: the largest power of 2 that fits is 16 (2^4), leaving 9; the largest power fitting in 9 is 8 (2^3), leaving 1; the largest power fitting in 1 is 1 (2^0). So 25 = 16 + 8 + 1, meaning the binary digits are 1 (sixteens), 1 (eights), 0 (fours), 0 (twos), 1 (ones): 11001.",
+        "This same place-value idea extends to any base - base five, base sixteen (hexadecimal, used for color codes), or any other. Once you see that a 'base' is just a choice of how many symbols each place can hold before rolling over, converting between bases is the same subtraction-and-matching process every time."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "base", "def": "The number of symbols used before a place value rolls over to the next; base ten uses 0-9."},
+      {"term": "binary (base two)", "def": "A number system using only the digits 0 and 1, with place values that are powers of 2."},
+      {"term": "positional notation", "def": "A number system where a digit's value depends on its position (its place value)."}
+     ],
+     "practice": [
+      {"q": "What is the decimal value of the binary number 1011?", "choices": ["9", "10", "11", "13"], "answer": 2, "explain": "1011 has 1s in the eights, twos, and ones places: 8 + 0 + 2 + 1 = 11."},
+      {"q": "What is 18 (decimal) written in binary?", "choices": ["10010", "10001", "11000", "10100"], "answer": 0, "explain": "18 = 16 + 2, so the binary digits are 1 (sixteens), 0 (eights), 0 (fours), 1 (twos), 0 (ones): 10010."},
+      {"q": "Why do computers use binary instead of base ten?", "choices": ["Binary numbers are always smaller", "A switch naturally has two states, on or off, matching two digits", "Base ten cannot represent negative numbers", "Binary was chosen only for historical tradition"], "answer": 1, "explain": "Computer circuits are built from switches that are either on or off, which map directly onto the two digits of binary - 1 and 0."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Financial Mathematics",
+   "summary": "Money math for real decisions: how interest grows, how compounding changes everything, and how loan payments are actually calculated.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Simple Interest",
+     "minutes": 12,
+     "intro": "Lend a friend $100 and ask for $105 back next year, and you have just invented simple interest - the oldest and most transparent way of pricing the use of money over time. Banks, bonds, and short-term loans still use exactly this formula.",
+     "sections": [
+      {
+       "heading": "The Simple Interest Formula",
+       "body": [
+        "**Simple interest** is calculated only on the original amount borrowed or invested, called the **principal (P)**, and grows the same amount every period. The formula is I = P × r × t, where r is the annual interest rate written as a decimal and t is time in years. A $500 loan at 4% for 2 years earns I = 500 × 0.04 × 2 = $40 in interest, no matter how the money is used along the way.",
+        "The **maturity value** - the total amount owed or received at the end - is simply A = P + I, principal plus interest. Simple interest is common for short-term loans, T-bills, and some certificates of deposit, precisely because it is easy to predict and verify by hand."
+       ],
+       "example": {
+        "problem": "You invest $2,000 in a bond paying 5% simple annual interest for 3 years. How much interest do you earn, and what is the total value at maturity?",
+        "steps": [
+         "Identify the values: P = $2,000, r = 0.05, t = 3 years.",
+         "Apply the formula: I = P × r × t = 2,000 × 0.05 × 3 = $300.",
+         "Add interest to principal for the maturity value: A = P + I = 2,000 + 300 = $2,300."
+        ],
+        "answer": "You earn $300 in interest; the bond matures at $2,300."
+       }
+      },
+      {
+       "heading": "Solving for Other Variables",
+       "body": [
+        "The same formula, I = Prt, can be rearranged to solve for any missing piece. Need the rate? r = I / (Pt). Need the time? t = I / (Pr). Need the principal? P = I / (rt). This flexibility matters in real life: a loan document might tell you the total interest and the rate, and ask you to figure out how long the loan will run.",
+        "A common trap is mixing units of time: if the rate is annual but the term is given in months, convert months to years first (divide by 12) before plugging into the formula. Forgetting this conversion is the single most frequent simple interest mistake."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "principal", "def": "The original amount of money borrowed or invested."},
+      {"term": "simple interest", "def": "Interest calculated only on the principal, using I = Prt."},
+      {"term": "maturity value", "def": "The total amount owed or received at the end of the term: A = P + I."},
+      {"term": "interest rate", "def": "The percentage of the principal charged or earned per year, written as a decimal in formulas."}
+     ],
+     "practice": [
+      {"q": "A loan of $1,200 charges 6% simple annual interest for 4 years. How much interest accrues?", "choices": ["$72", "$288", "$300", "$480"], "answer": 1, "explain": "I = Prt = 1,200 × 0.06 × 4 = $288."},
+      {"q": "You earn $150 in interest on a $2,500 investment held for 2 years. What was the annual simple interest rate?", "choices": ["2%", "3%", "6%", "8%"], "answer": 1, "explain": "r = I/(Pt) = 150/(2,500×2) = 150/5,000 = 0.03, or 3%."},
+      {"q": "A $900 loan at 5% simple interest for 6 months accrues how much interest?", "choices": ["$45", "$22.50", "$270", "$4.50"], "answer": 1, "explain": "Convert 6 months to 0.5 years first: I = 900 × 0.05 × 0.5 = $22.50. Forgetting to convert months to years would give the wrong answer of $45."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Compound Interest",
+     "minutes": 14,
+     "intro": "Albert Einstein reportedly called compound interest the most powerful force in the universe - whether or not he actually said it, the math backs up the compliment. Once interest starts earning interest on itself, growth stops being a straight line and starts curving upward fast.",
+     "sections": [
+      {
+       "heading": "How Compounding Works",
+       "body": [
+        "With **compound interest**, each period's interest is added to the principal, and the next period earns interest on that larger amount. The formula is A = P(1 + r/n)^(nt), where P is principal, r is the annual rate, n is the number of **compounding periods** per year, and t is time in years. When n = 1 (compounded annually), the formula simplifies to A = P(1 + r)^t.",
+        "The more frequently interest compounds - annually, monthly, daily - the faster money grows, because interest starts earning its own interest sooner. Two accounts with the same stated annual rate can produce different actual returns depending on n, which is why the **nominal rate** advertised is not always the whole story."
+       ],
+       "example": {
+        "problem": "You invest $1,000 at 6% annual interest, compounded annually, for 10 years. How much will it be worth?",
+        "steps": [
+         "Since compounding is annual, use A = P(1 + r)^t with P = 1,000, r = 0.06, t = 10.",
+         "Compute (1.06)^10 ≈ 1.79085.",
+         "Multiply: A = 1,000 × 1.79085 ≈ $1,790.85."
+        ],
+        "answer": "About $1,790.85 - compared to only $1,600 with simple interest over the same 10 years."
+       }
+      },
+      {
+       "heading": "The Rule of 72",
+       "body": [
+        "The **Rule of 72** gives a fast mental estimate of how long money takes to double at a given annual rate: divide 72 by the interest rate percentage. At 6% interest, money roughly doubles in 72/6 = 12 years; at 8%, it doubles in about 9 years. It is an approximation, most accurate for rates between about 4% and 15%, but it is an excellent sanity check before running the full formula.",
+        "This rule reveals why even small rate differences matter enormously over decades: a retirement account earning 8% instead of 4% does not grow twice as fast - because doubling time roughly halves, the money can double roughly twice as many times over the same span, compounding the advantage further."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "compound interest", "def": "Interest calculated on the principal plus all previously earned interest."},
+      {"term": "compounding period", "def": "How often interest is calculated and added, e.g., monthly or annually."},
+      {"term": "nominal rate", "def": "The stated annual interest rate, before accounting for compounding frequency."},
+      {"term": "Rule of 72", "def": "An estimate for doubling time: divide 72 by the interest rate percentage."}
+     ],
+     "practice": [
+      {"q": "At 9% annual interest, about how many years will it take an investment to double, using the Rule of 72?", "choices": ["4 years", "6 years", "8 years", "12 years"], "answer": 2, "explain": "72 ÷ 9 = 8 years, an estimate for doubling time at 9% annual interest."},
+      {"q": "Two savings accounts both advertise 5% annual interest, but one compounds monthly and one compounds annually. After several years, which will be worth more?", "choices": ["The annually compounded account", "The monthly compounded account", "They will always be exactly equal", "It depends only on the principal, not the compounding"], "answer": 1, "explain": "More frequent compounding lets interest start earning interest sooner, so the monthly-compounded account grows to a slightly larger balance even at the same nominal rate."},
+      {"q": "What does the variable n represent in A = P(1 + r/n)^(nt)?", "choices": ["The number of years the money is invested", "The number of compounding periods per year", "The total interest earned", "The principal amount"], "answer": 1, "explain": "n is how many times per year interest compounds - for example, n = 12 for monthly compounding."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Loans and Amortization",
+     "minutes": 16,
+     "intro": "A car loan's monthly payment feels like a single fixed number, but underneath it, the mix of interest and principal shifts every single month. Understanding that shift - called amortization - is what lets you see exactly how much of your payment is actually paying down what you owe.",
+     "sections": [
+      {
+       "heading": "The Monthly Payment Formula",
+       "body": [
+        "An **installment loan** is repaid with equal periodic payments that cover both interest and a shrinking share of principal. The monthly payment M for a loan of amount P, monthly interest rate r (annual rate divided by 12), and n total monthly payments is M = P × [r(1+r)^n] / [(1+r)^n − 1]. Plug in the loan amount, convert the annual rate to a monthly rate, and count the number of months to get an exact payment.",
+        "This formula looks intimidating, but a loan calculator (or the table in the back of many finance textbooks) applies it instantly. What matters most is understanding what drives the payment up or down: a higher rate, a larger principal, or a shorter term all increase the monthly payment, while a longer term lowers the monthly payment but increases the total interest paid over the life of the loan."
+       ],
+       "example": {
+        "problem": "You take out a $15,000 car loan at 6% annual interest, paid off over 4 years (48 monthly payments). Find the monthly payment and the total interest paid.",
+        "steps": [
+         "Convert to monthly terms: r = 0.06/12 = 0.005 per month, n = 48 payments.",
+         "Compute (1 + r)^n = (1.005)^48 ≈ 1.2705.",
+         "Apply the formula: M = 15,000 × [0.005 × 1.2705] / [1.2705 − 1] = 15,000 × 0.0063525/0.2705 ≈ $352.28 per month.",
+         "Total paid over the loan: 352.28 × 48 ≈ $16,909.44. Total interest = $16,909.44 − $15,000 = $1,909.44."
+        ],
+        "answer": "Monthly payment ≈ $352.28; total interest paid over 4 years ≈ $1,909.44."
+       }
+      },
+      {
+       "heading": "How Amortization Shifts Over Time",
+       "body": [
+        "In an **amortization schedule**, every payment is split between interest (based on the remaining balance) and principal (whatever is left over). Early in the loan, the balance is high, so a large share of each payment goes to interest and only a small share reduces principal. As the balance shrinks month by month, the interest portion shrinks too, and more of each identical payment attacks the principal.",
+        "This is why paying extra toward principal early in a loan saves so much interest: every dollar of principal paid off early stops accruing interest for the rest of the loan's life, while a dollar paid off in the final month barely saves anything, since almost no interest was left to save."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "installment loan", "def": "A loan repaid in equal periodic payments covering interest and principal."},
+      {"term": "amortization", "def": "The process of paying off a loan through scheduled payments split between interest and principal."},
+      {"term": "principal portion", "def": "The part of a loan payment that reduces the amount owed, separate from interest."}
+     ],
+     "practice": [
+      {"q": "In the early months of a car loan's amortization schedule, most of each payment goes toward:", "choices": ["Principal, since the balance is highest then", "Interest, since the balance is highest then", "Fees only", "An equal 50/50 split every month"], "answer": 1, "explain": "Interest is charged on the remaining balance, which is largest at the start of the loan, so early payments are mostly interest with only a small principal reduction."},
+      {"q": "If you shorten a loan's term from 5 years to 3 years while keeping the rate and amount the same, what happens?", "choices": ["The monthly payment rises but total interest paid falls", "The monthly payment falls but total interest paid rises", "Both the monthly payment and total interest fall", "Neither the payment nor the interest changes"], "answer": 0, "explain": "Repaying faster means larger monthly payments, but the balance is exposed to interest for less time overall, so total interest paid decreases."},
+      {"q": "Why does paying extra toward principal early in a loan save more interest than paying extra near the end?", "choices": ["Early payments are always larger by rule", "Extra principal paid early stops accruing interest for the whole remaining term", "Interest rates always drop near the end of a loan", "It doesn't - timing makes no difference"], "answer": 1, "explain": "Interest is charged on the outstanding balance each period; reducing that balance sooner means fewer future periods accrue interest on that portion of the debt."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Probability and Statistics",
+   "summary": "Describing data with numbers that summarize it fairly, and calculating the chances behind everyday uncertainty.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Describing Data: Mean, Median, and Spread",
+     "minutes": 14,
+     "intro": "Two neighborhoods can have the exact same average income and feel completely different, because one has everyone clustered near the average and the other has a few billionaires skewing the number. Knowing which summary statistic to trust - and when - is the difference between insight and a misleading headline.",
+     "sections": [
+      {
+       "heading": "Measures of Center",
+       "body": [
+        "The **mean** (average) adds all values and divides by how many there are. The **median** is the middle value when data is sorted - or the average of the two middle values if there is an even count. The **mode** is the most frequent value. The mean uses every data point but is easily pulled by extreme values; the median ignores extremes and better represents a typical case when data is skewed, like home prices or incomes.",
+        "A rule of thumb: if a data set has one or two extreme outliers, report the median as the 'typical' value, and mention the mean separately if it differs a lot - that gap itself is informative, since it signals how skewed the distribution is."
+       ]
+      },
+      {
+       "heading": "Measures of Spread",
+       "body": [
+        "The **range** (highest minus lowest) gives a crude sense of spread but is very sensitive to a single extreme value. The **standard deviation** measures the typical distance of data points from the mean, and is far more informative: a small standard deviation means data clusters tightly around the mean, while a large one means data is spread widely.",
+        "To compute a population standard deviation: find the mean, subtract it from each value and square the result, average those squared differences (this average is called the **variance**), then take the square root. Squaring first prevents positive and negative deviations from cancelling out, and the square root brings the units back to match the original data."
+       ],
+       "example": {
+        "problem": "Find the mean and standard deviation of the data set {4, 8, 6, 5, 3, 7}.",
+        "steps": [
+         "Find the mean: (4+8+6+5+3+7)/6 = 33/6 = 5.5.",
+         "Subtract the mean from each value and square it: (-1.5)²=2.25, (2.5)²=6.25, (0.5)²=0.25, (-0.5)²=0.25, (-2.5)²=6.25, (1.5)²=2.25.",
+         "Average the squared differences (the variance): (2.25+6.25+0.25+0.25+6.25+2.25)/6 = 17.5/6 ≈ 2.92.",
+         "Take the square root: √2.92 ≈ 1.71."
+        ],
+        "answer": "Mean = 5.5; standard deviation ≈ 1.71."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "mean", "def": "The sum of all values divided by how many there are; the arithmetic average."},
+      {"term": "median", "def": "The middle value of sorted data, resistant to extreme outliers."},
+      {"term": "standard deviation", "def": "A measure of the typical distance data points fall from the mean."},
+      {"term": "variance", "def": "The average of the squared differences from the mean; the standard deviation squared."},
+      {"term": "outlier", "def": "A data point far removed from the rest of the data, which can distort the mean."}
+     ],
+     "practice": [
+      {"q": "A neighborhood's incomes are $40k, $42k, $45k, $41k, and $900k. Which measure best describes the 'typical' income?", "choices": ["The mean, since it uses every value", "The median, since it resists the one extreme outlier", "The range", "The mode, since all values are unique"], "answer": 1, "explain": "The mean is dragged far above what any typical household earns by the single $900k outlier; the median stays close to the cluster of ordinary incomes."},
+      {"q": "Data set A has standard deviation 2, and data set B (with the same mean) has standard deviation 15. What does this tell you?", "choices": ["Set A's values are more spread out than set B's", "Set B's values are more spread out than set A's", "Both sets have identical spread", "Standard deviation says nothing about spread"], "answer": 1, "explain": "A larger standard deviation means data points are, on average, farther from the mean - set B is far more spread out than set A."},
+      {"q": "Why are deviations from the mean squared before averaging, when computing variance?", "choices": ["To make the numbers larger for easier reading", "So that positive and negative deviations don't cancel each other out", "Because square roots are easier to compute than differences", "It is only a historical convention with no mathematical reason"], "answer": 1, "explain": "Some deviations are positive and some negative; without squaring, they would sum to roughly zero and hide the actual spread of the data."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Basic Probability",
+     "minutes": 14,
+     "intro": "Casinos do not gamble - they calculate. Every game on a casino floor is built so that, over thousands of plays, the probabilities guarantee the house comes out ahead. Learning how to compute those probabilities yourself means you can spot a good bet from a bad one, in games and in life.",
+     "sections": [
+      {
+       "heading": "Sample Spaces and Simple Probability",
+       "body": [
+        "The **sample space** is the set of all possible outcomes of an experiment - for one die roll, {1, 2, 3, 4, 5, 6}. An **event** is any subset of outcomes you care about, like 'rolling an even number,' {2, 4, 6}. When all outcomes are equally likely, the probability of an event is P(event) = (number of favorable outcomes) / (total outcomes in the sample space).",
+        "Rolling two dice, the sample space has 36 equally likely outcomes (6 × 6, since each die is independent). To find P(sum = 7), count the favorable pairs: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) - six outcomes out of 36, giving P = 6/36 = 1/6."
+       ]
+      },
+      {
+       "heading": "Combining Events: 'Or' and 'And'",
+       "body": [
+        "For 'or' probabilities, use P(A or B) = P(A) + P(B) − P(A and B), subtracting the overlap so it is not double-counted - the same inclusion-exclusion idea from set theory. If events cannot happen together (**mutually exclusive**), the overlap is 0 and you simply add.",
+        "For 'and' probabilities with **independent events** - where one outcome does not affect the other, like two separate coin flips - multiply: P(A and B) = P(A) × P(B). Independence is a real assumption to check: drawing two cards without replacement is not independent, because removing the first card changes the odds for the second."
+       ],
+       "example": {
+        "problem": "A standard deck has 52 cards. What is the probability of drawing a King or a Heart?",
+        "steps": [
+         "P(King) = 4/52, since there are 4 kings. P(Heart) = 13/52, since there are 13 hearts.",
+         "Find the overlap: the King of Hearts is counted in both groups, so P(King and Heart) = 1/52.",
+         "Apply inclusion-exclusion: P(King or Heart) = 4/52 + 13/52 − 1/52 = 16/52."
+        ],
+        "answer": "16/52, which simplifies to 4/13 (about 30.8%)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "sample space", "def": "The set of all possible outcomes of an experiment."},
+      {"term": "event", "def": "A subset of outcomes from the sample space that you are interested in."},
+      {"term": "mutually exclusive", "def": "Events that cannot both happen at the same time."},
+      {"term": "independent events", "def": "Events where the outcome of one does not affect the probability of the other."}
+     ],
+     "practice": [
+      {"q": "What is the probability of rolling a sum of 8 with two fair dice?", "choices": ["4/36", "5/36", "6/36", "8/36"], "answer": 1, "explain": "The pairs summing to 8 are (2,6),(3,5),(4,4),(5,3),(6,2) - five outcomes out of 36, giving 5/36."},
+      {"q": "You flip a fair coin twice. What is the probability of getting heads both times?", "choices": ["1/2", "1/3", "1/4", "1"], "answer": 2, "explain": "The flips are independent, so multiply: P(H) × P(H) = 1/2 × 1/2 = 1/4."},
+      {"q": "In a deck of 52 cards, what is P(drawing a Jack or a Queen)?", "choices": ["4/52", "8/52", "16/52", "1/13"], "answer": 1, "explain": "There are 4 Jacks and 4 Queens, and no card is both, so they are mutually exclusive: P = 4/52 + 4/52 = 8/52."},
+      {"q": "Which pair of events is mutually exclusive?", "choices": ["Drawing a heart and drawing a face card", "Rolling an even number and rolling a number greater than 4", "Rolling a 1 and rolling a 6 on the same single die roll", "Flipping heads and it being a Tuesday"], "answer": 2, "explain": "A single die roll can only show one face at a time, so rolling a 1 and rolling a 6 in that same roll can never both happen."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Expected Value and the Normal Distribution",
+     "minutes": 14,
+     "intro": "A raffle ticket that costs $5 can feel like a harmless splurge, but the math of expected value reveals exactly how much you are giving up, on average, every time you buy one. The same tool tells insurance companies what to charge and casinos what odds to offer.",
+     "sections": [
+      {
+       "heading": "Expected Value",
+       "body": [
+        "The **expected value** of a game or decision is the long-run average outcome if you repeated it many times: multiply each possible net result by its probability, and add them up. It does not predict any single outcome - it predicts the average over many repetitions, which is exactly what matters to a business running the same game thousands of times.",
+        "A negative expected value does not mean you cannot win; it means that, on average across many plays, you lose money - which is precisely how lotteries, raffles, and casino games are designed to stay profitable for the organizer while still occasionally paying out big prizes."
+       ],
+       "example": {
+        "problem": "A raffle sells 1,000 tickets at $5 each, with one $2,000 prize. What is the expected value of buying one ticket?",
+        "steps": [
+         "P(win) = 1/1,000; if you win, your net gain is the prize minus the ticket cost: 2,000 − 5 = $1,995.",
+         "P(lose) = 999/1,000; if you lose, your net result is just the cost of the ticket: −$5.",
+         "Expected value = (1/1,000)(1,995) + (999/1,000)(−5) = 1.995 − 4.995 = −3.00."
+        ],
+        "answer": "Expected value = −$3.00 per ticket; on average, buyers lose $3 for every ticket bought."
+       }
+      },
+      {
+       "heading": "The Normal Distribution and Z-Scores",
+       "body": [
+        "Many real-world measurements - heights, test scores, measurement errors - cluster into a symmetric bell shape called the **normal distribution**, centered on the mean. The **empirical rule** (68-95-99.7 rule) says about 68% of values fall within 1 standard deviation of the mean, 95% within 2, and 99.7% within 3.",
+        "A **z-score** converts any value into 'how many standard deviations from the mean it is': z = (x − mean) / standard deviation. A z-score of 0 is exactly average; z = 2 means a value is unusually high (2 standard deviations above the mean), which by the empirical rule puts it in roughly the top 2.5% of the distribution."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "expected value", "def": "The long-run average outcome of a probabilistic situation, weighting each result by its probability."},
+      {"term": "normal distribution", "def": "A symmetric, bell-shaped distribution of data centered on the mean."},
+      {"term": "empirical rule", "def": "About 68%, 95%, and 99.7% of normal data fall within 1, 2, and 3 standard deviations of the mean."},
+      {"term": "z-score", "def": "The number of standard deviations a value lies above or below the mean."}
+     ],
+     "practice": [
+      {"q": "A game costs $10 to play. With probability 1/5 you win $30 (net gain $20), and otherwise you win nothing (net loss $10). What is the expected value?", "choices": ["$0", "-$4", "$4", "-$10"], "answer": 1, "explain": "EV = (1/5)(20) + (4/5)(−10) = 4 − 8 = −$4. The game loses the player $4 on average per play."},
+      {"q": "A test has mean 75 and standard deviation 5. What is the z-score for a score of 82?", "choices": ["0.7", "1.4", "7", "14"], "answer": 1, "explain": "z = (82 − 75)/5 = 7/5 = 1.4."},
+      {"q": "By the empirical rule, about what percent of normally distributed data falls within 2 standard deviations of the mean?", "choices": ["68%", "95%", "99.7%", "50%"], "answer": 1, "explain": "The empirical rule states roughly 95% of data in a normal distribution falls within 2 standard deviations of the mean."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Graph Theory and Networks",
+   "summary": "Modeling connections - roads, friendships, computer networks - as dots and lines you can analyze mathematically to find efficient routes and connections.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Graphs, Vertices, and Euler Circuits",
+     "minutes": 14,
+     "intro": "In 1736, the city of Königsberg had seven bridges, and its residents wondered if they could take a walk crossing each bridge exactly once and return home. A mathematician named Euler proved they could not - and in doing so, invented an entire branch of mathematics for studying networks.",
+     "sections": [
+      {
+       "heading": "Graph Vocabulary",
+       "body": [
+        "A **graph** is a collection of points, called **vertices**, connected by lines, called **edges**. Graphs model anything with connections: vertices could be cities and edges could be roads, or vertices could be people and edges could be friendships. The **degree** of a vertex is the number of edges touching it - a city with 3 roads leading out has degree 3.",
+        "A **path** moves from vertex to vertex along edges without repeating a vertex; a **circuit** is a path that returns to its starting vertex. A graph is **connected** if you can reach every vertex from every other vertex by following some path - a disconnected graph has isolated 'islands' with no route between them."
+       ]
+      },
+      {
+       "heading": "Euler's Theorem",
+       "body": [
+        "An **Euler circuit** is a route that uses every edge of a graph exactly once and returns to its starting point. Euler proved that a connected graph has an Euler circuit if and only if every vertex has even degree. If exactly two vertices have odd degree, the graph still has an **Euler path** - a route using every edge once - but it must start at one odd vertex and end at the other, not return home.",
+        "This single theorem answered the Königsberg bridge question instantly: since the four landmasses all had odd numbers of bridges touching them, no route could cross every bridge exactly once and return to the start - or even complete the walk at all, since more than two vertices had odd degree."
+       ],
+       "example": {
+        "problem": "A delivery network connects warehouses A, B, C, D with routes AB, BC, CD, DA, and AC. Does it have an Euler circuit?",
+        "steps": [
+         "Find the degree of each vertex by counting edges touching it: A touches AB, DA, AC → degree 3. B touches AB, BC → degree 2. C touches BC, CD, AC → degree 3. D touches CD, DA → degree 2.",
+         "Euler's theorem requires every vertex to have even degree for an Euler circuit to exist.",
+         "A and C both have odd degree (3), so no Euler circuit exists."
+        ],
+        "answer": "No Euler circuit - but since exactly two vertices (A and C) are odd, an Euler path exists, starting at one and ending at the other."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "vertex", "def": "A point in a graph, often representing a location, person, or object."},
+      {"term": "edge", "def": "A connection between two vertices in a graph."},
+      {"term": "degree", "def": "The number of edges touching a given vertex."},
+      {"term": "Euler circuit", "def": "A route using every edge of a graph exactly once, returning to the start."}
+     ],
+     "practice": [
+      {"q": "In a graph, vertex X has edges to vertices A, B, and C. What is the degree of vertex X?", "choices": ["1", "2", "3", "4"], "answer": 2, "explain": "Degree counts the number of edges touching a vertex; X has three edges leading to A, B, and C."},
+      {"q": "A connected graph has exactly two vertices of odd degree, and the rest are even. What does Euler's theorem tell you?", "choices": ["It has an Euler circuit", "It has an Euler path, but not a circuit", "It has neither a path nor a circuit", "It cannot be a valid graph"], "answer": 1, "explain": "With exactly two odd-degree vertices, an Euler path exists between them, but a circuit (returning to start) requires all vertices to be even degree."},
+      {"q": "Why did Königsberg's bridge problem have no solution?", "choices": ["There were too few bridges", "More than two landmasses had an odd number of bridges touching them", "The river was too wide to cross", "The city was not fully connected"], "answer": 1, "explain": "Euler's theorem requires at most two odd-degree vertices for any Euler path to exist at all; Königsberg had four landmasses with odd bridge counts, ruling out any qualifying route."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Hamiltonian Circuits and the Traveling Salesperson Problem",
+     "minutes": 15,
+     "intro": "A delivery driver does not care about crossing every road exactly once - they care about visiting every stop exactly once and getting home by the shortest route. That everyday problem, called the traveling salesperson problem, is one of the most famous unsolved-in-general puzzles in mathematics.",
+     "sections": [
+      {
+       "heading": "Hamiltonian Circuits",
+       "body": [
+        "A **Hamiltonian circuit** visits every vertex of a graph exactly once and returns to the start - the opposite emphasis from an Euler circuit, which cares about edges rather than vertices. In a **complete graph** (where every vertex connects directly to every other vertex), the number of distinct Hamiltonian circuits is (n − 1)!/2, since a circuit and its reverse are considered the same route.",
+        "For 4 cities, that is (4−1)!/2 = 3!/2 = 3 distinct circuits - small enough to check by hand. But for 10 cities, it balloons to 9!/2 = 181,440 circuits, and for 20 cities, the number is astronomically large. Checking every possible route by brute force quickly becomes impossible even for a computer."
+       ]
+      },
+      {
+       "heading": "The Nearest-Neighbor Heuristic",
+       "body": [
+        "Because brute force fails for large problems, the **traveling salesperson problem (TSP)** is often solved approximately with a **heuristic** - a fast method that gives a good, though not always perfect, answer. The **nearest-neighbor algorithm** starts at any vertex and repeatedly travels to the closest unvisited vertex, until all are visited, then returns to the start.",
+        "Nearest-neighbor is fast and usually reasonable, but it can be fooled into a poor final route, because an early greedy choice can strand a costly last edge at the end. It is a practical starting point, not a guarantee of the shortest possible route."
+       ],
+       "example": {
+        "problem": "Four cities A, B, C, D have direct distances AB=5, AC=8, AD=9, BC=6, BD=7, CD=4. Use the nearest-neighbor algorithm starting at A to find a route, and its total distance.",
+        "steps": [
+         "Start at A. The nearest unvisited city is B (distance 5).",
+         "From B, unvisited cities are C (6) and D (7). Choose the nearer one, C (distance 6).",
+         "From C, the only unvisited city is D (distance 4).",
+         "Return from D to the start, A (distance 9). Total: 5 + 6 + 4 + 9 = 24."
+        ],
+        "answer": "Route A→B→C→D→A, total distance 24."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Hamiltonian circuit", "def": "A route visiting every vertex of a graph exactly once and returning to the start."},
+      {"term": "complete graph", "def": "A graph where every pair of vertices is directly connected by an edge."},
+      {"term": "traveling salesperson problem (TSP)", "def": "The problem of finding the shortest Hamiltonian circuit through a set of locations."},
+      {"term": "nearest-neighbor algorithm", "def": "A heuristic that repeatedly travels to the closest unvisited vertex."}
+     ],
+     "practice": [
+      {"q": "How many distinct Hamiltonian circuits exist in a complete graph with 5 vertices?", "choices": ["5", "12", "24", "120"], "answer": 1, "explain": "(n−1)!/2 = 4!/2 = 24/2 = 12 distinct circuits."},
+      {"q": "What is the main drawback of the nearest-neighbor algorithm for solving the TSP?", "choices": ["It never produces a valid circuit", "It can only be used on graphs with fewer than 4 vertices", "An early greedy choice can leave a costly final edge, so it isn't guaranteed to find the shortest route", "It requires checking every possible route, which is too slow"], "answer": 2, "explain": "Nearest-neighbor makes the locally best choice at each step, which can back the route into an expensive final edge - it is fast but not guaranteed optimal."},
+      {"q": "Why is checking every possible route by brute force impractical for the TSP with 20 cities?", "choices": ["There are only 20 possible routes to check", "The number of possible circuits grows factorially and becomes astronomically large", "20-city problems have no valid solution", "Brute force only works for Euler circuits, not Hamiltonian circuits"], "answer": 1, "explain": "The count of Hamiltonian circuits, (n−1)!/2, grows so fast that even 20 cities produce more routes than could be checked in a reasonable time, even by computer."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Minimum Spanning Trees",
+     "minutes": 13,
+     "intro": "A cable company needs to connect five towns with fiber optic line, but running a direct cable between every pair of towns would be wildly wasteful. The cheapest way to connect everyone, with no redundant loops, is exactly what a minimum spanning tree finds.",
+     "sections": [
+      {
+       "heading": "Spanning Trees",
+       "body": [
+        "A **spanning tree** of a connected graph touches every vertex using the fewest possible edges and contains no cycles (no way to loop back to a vertex you already visited). A graph with n vertices always needs exactly n − 1 edges to span it as a tree - any fewer and it would be disconnected, any more and it would contain a cycle.",
+        "A **minimum spanning tree (MST)** is the spanning tree whose edges add up to the smallest possible total weight, where weight might represent distance, cost, or cable length. Finding the MST answers a very practical question: what is the cheapest way to connect every location with no wasted redundancy?"
+       ]
+      },
+      {
+       "heading": "Kruskal's Algorithm",
+       "body": [
+        "**Kruskal's algorithm** builds a minimum spanning tree greedily: sort all edges from smallest to largest weight, then add each edge to the tree as long as it does not create a cycle with edges already chosen, skipping it otherwise. Stop once n − 1 edges have been added.",
+        "This greedy approach - always taking the cheapest safe option - actually guarantees the true minimum total weight, which is a rare and pleasant surprise in optimization; most greedy strategies do not guarantee an optimal answer, but Kruskal's does."
+       ],
+       "example": {
+        "problem": "Four towns A, B, C, D need to be connected by cable. Possible cable costs (in $1,000s) are AB=3, AC=5, AD=9, BC=4, BD=6, CD=2. Find the minimum spanning tree and its total cost.",
+        "steps": [
+         "Sort edges by cost, smallest first: CD(2), AB(3), BC(4), AC(5), BD(6), AD(9).",
+         "Add CD(2): no cycle yet. Components so far: {A}, {B}, {C,D}.",
+         "Add AB(3): no cycle. Components: {A,B}, {C,D}.",
+         "Add BC(4): connects {A,B} and {C,D} into one component with no cycle. Now n−1 = 3 edges are placed, so the tree is complete - stop here."
+        ],
+        "answer": "Minimum spanning tree uses CD, AB, and BC, for a total cost of 2+3+4 = $9,000."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "spanning tree", "def": "A subgraph that touches every vertex using the fewest edges and no cycles."},
+      {"term": "minimum spanning tree (MST)", "def": "The spanning tree with the smallest possible total edge weight."},
+      {"term": "Kruskal's algorithm", "def": "A greedy method that builds an MST by adding the cheapest edge that does not create a cycle."},
+      {"term": "cycle", "def": "A path in a graph that loops back to a vertex already visited."}
+     ],
+     "practice": [
+      {"q": "A connected graph has 7 vertices. How many edges does its spanning tree contain?", "choices": ["5", "6", "7", "8"], "answer": 1, "explain": "A spanning tree always has exactly n − 1 edges; for 7 vertices, that is 6 edges."},
+      {"q": "In Kruskal's algorithm, what happens when the next cheapest edge would create a cycle?", "choices": ["It is added anyway", "It is skipped, and the algorithm moves to the next cheapest edge", "The algorithm stops immediately", "The whole tree is rebuilt from scratch"], "answer": 1, "explain": "Kruskal's algorithm only adds an edge if it does not create a cycle; if it would, that edge is skipped and the next cheapest edge is considered."},
+      {"q": "Why does Kruskal's algorithm stop once n − 1 edges are chosen?", "choices": ["Because that is the maximum number of edges any graph can have", "Because a spanning tree connecting n vertices needs exactly n − 1 edges, and adding more would create a cycle", "Because the algorithm always fails after that point", "It doesn't - it must check every remaining edge regardless"], "answer": 1, "explain": "Once n − 1 edges connect all n vertices with no cycle, the tree is complete; any additional edge would necessarily create a cycle."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Voting and Apportionment",
+   "summary": "The mathematics of fair decisions: how individual votes and state populations get turned into collective outcomes, and why the method chosen can decide the result.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Voting Methods",
+     "minutes": 15,
+     "intro": "Three different, entirely reasonable ways of counting the same ballots can produce three different winners. That is not a flaw in any one method - it is a mathematical fact about elections, and knowing it changes how you read every close race you will ever follow.",
+     "sections": [
+      {
+       "heading": "Plurality and Majority",
+       "body": [
+        "The **plurality method** simply gives the win to whoever has the most first-place votes, even without a majority. A **majority** means more than half of all votes; a **plurality** only means the most votes among the choices, which can be well under half when three or more candidates split the vote.",
+        "Plurality is simple and widely used, but it can pick a winner most voters actually rank last among the alternatives, if opposition is split across multiple similar candidates. This flaw motivated the alternative methods used in many elections today."
+       ]
+      },
+      {
+       "heading": "Borda Count and Ranked-Choice Voting",
+       "body": [
+        "The **Borda count** has voters rank all candidates, then assigns points for each rank (with n candidates, first place gets n−1 points, last place gets 0), and totals the points across all ballots. Because it rewards being ranked highly by everyone, not just being someone's top pick, it can pick a broadly acceptable candidate that plurality would overlook.",
+        "**Ranked-choice voting** (instant runoff) has voters rank candidates, then eliminates the candidate with the fewest first-place votes and redistributes those ballots to each voter's next choice, repeating until someone has a majority. It guarantees a majority winner among the remaining candidates, unlike plurality."
+       ],
+       "example": {
+        "problem": "Fifteen voters rank three candidates A, B, C as follows: 6 voters prefer A > B > C; 5 voters prefer B > C > A; 4 voters prefer C > B > A. Find the plurality winner and the Borda count winner.",
+        "steps": [
+         "Plurality counts only first-place votes: A has 6, B has 5, C has 4. A wins by plurality, with 6 of 15 votes (40%, not a majority).",
+         "Borda count (2 points for 1st, 1 for 2nd, 0 for 3rd, since there are 3 candidates): A gets 6×2=12 from its 6 first-place votes, plus 0 from the other 9 ballots where it ranks last = 12.",
+         "B gets 6×1 (2nd place on the 6 A-first ballots) + 5×2 (1st place on its own 5 ballots) + 4×1 (2nd place on the 4 C-first ballots) = 6+10+4 = 20.",
+         "C gets 6×0 + 5×1 (2nd place on the B-first ballots) + 4×2 (1st place on its own ballots) = 0+5+8 = 13."
+        ],
+        "answer": "Plurality winner: A (6 votes). Borda count winner: B (20 points) - the two methods disagree."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "plurality method", "def": "The candidate with the most first-place votes wins, even without a majority."},
+      {"term": "majority", "def": "More than half of all votes cast."},
+      {"term": "Borda count", "def": "A method assigning points by rank on each ballot and totaling them across all voters."},
+      {"term": "ranked-choice voting", "def": "A method that repeatedly eliminates the lowest first-place finisher and redistributes ballots until a majority winner emerges."}
+     ],
+     "practice": [
+      {"q": "In a 3-candidate race, Candidate X gets 34% of first-place votes, Y gets 33%, and Z gets 33%. Under the plurality method, who wins?", "choices": ["Y, since the vote was nearly tied", "Z, chosen by a tiebreaker", "X, despite having no majority", "No one - a runoff is automatically required"], "answer": 2, "explain": "Plurality only requires the most votes, not a majority; X wins with 34% even though 66% of voters preferred someone else."},
+      {"q": "In the Borda count with 4 candidates, how many points does a last-place ranking receive?", "choices": ["0", "1", "3", "4"], "answer": 0, "explain": "With n candidates, points run from n−1 (first place) down to 0 (last place); for 4 candidates, last place always earns 0 points."},
+      {"q": "What guarantee does ranked-choice voting (instant runoff) provide that plain plurality does not?", "choices": ["It always agrees with the Borda count winner", "The eventual winner has a majority among the remaining candidates at the final round", "It never requires more than one round of counting", "It eliminates the need for voters to rank candidates"], "answer": 1, "explain": "By eliminating the weakest candidate and redistributing ballots each round, ranked-choice voting ensures the final winner has a majority in the last round - something plurality cannot guarantee with three or more candidates."},
+      {"q": "Why can the Borda count winner differ from the plurality winner?", "choices": ["Borda count only looks at first-place votes, same as plurality", "Borda count rewards being ranked well by many voters, not just being a smaller group's top pick", "Plurality always agrees with Borda count in elections with 3 or more candidates", "Borda count ignores ballots entirely"], "answer": 1, "explain": "Plurality can crown a polarizing candidate with a small but leading group of first-place votes, while Borda count favors a candidate broadly acceptable across most ballots, even without being anyone's top choice."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Apportionment Methods",
+     "minutes": 14,
+     "intro": "The U.S. Constitution requires that seats in the House of Representatives be divided among states by population, but population never divides into a whole number of seats evenly. Deciding what to do with the leftover fractions is a genuine mathematical problem with real political consequences.",
+     "sections": [
+      {
+       "heading": "Standard Divisor and Standard Quota",
+       "body": [
+        "The **standard divisor** is the total population divided by the total number of seats to distribute - it represents 'how many people per seat.' Each group's **standard quota** is its own population divided by the standard divisor, showing how many seats it would get if fractional seats were allowed.",
+        "Standard quotas almost never come out as whole numbers, which is exactly the problem apportionment methods must solve: some rule is needed to convert quotas like 3.4 or 4.7 into a fair set of whole-number seats that still adds up to the total available."
+       ]
+      },
+      {
+       "heading": "Hamilton's Method",
+       "body": [
+        "**Hamilton's method** (the largest remainder method) first gives each group its **lower quota** - the standard quota rounded down. This usually leaves a few seats undistributed, because the fractional parts were dropped. Those leftover seats go, one at a time, to the groups with the largest fractional remainders, until every seat is assigned.",
+        "Hamilton's method always distributes exactly the right total number of seats and treats every group's leftover fraction fairly on its own terms, but it is famous for a flaw called the **Alabama paradox**, where adding more total seats to distribute can actually cause a state to lose a seat - a strange and unintuitive failure that led Congress to eventually adopt other methods for some purposes."
+       ],
+       "example": {
+        "problem": "Three states have populations 3,400, 4,700, and 1,900 (total 10,000), and 10 seats must be apportioned. Use Hamilton's method.",
+        "steps": [
+         "Standard divisor = total population ÷ total seats = 10,000 ÷ 10 = 1,000 people per seat.",
+         "Standard quotas: State A = 3,400/1,000 = 3.4; State B = 4,700/1,000 = 4.7; State C = 1,900/1,000 = 1.9.",
+         "Lower quotas (round down): A=3, B=4, C=1, totaling 8 seats - leaving 2 seats undistributed.",
+         "Give the 2 leftover seats to the largest fractional remainders: C (.9) and B (.7) each get one extra seat."
+        ],
+        "answer": "Final apportionment: State A = 3 seats, State B = 5 seats, State C = 2 seats (total 10)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "standard divisor", "def": "Total population divided by total seats; represents people per seat."},
+      {"term": "standard quota", "def": "A group's population divided by the standard divisor; its exact fractional share of seats."},
+      {"term": "Hamilton's method", "def": "An apportionment method that assigns lower quotas first, then gives leftover seats to the largest remainders."},
+      {"term": "Alabama paradox", "def": "A flaw where increasing the total number of seats can cause a group to lose a seat under Hamilton's method."}
+     ],
+     "practice": [
+      {"q": "If the total population is 50,000 and there are 25 seats to distribute, what is the standard divisor?", "choices": ["500", "1,000", "2,000", "2,500"], "answer": 2, "explain": "Standard divisor = total population ÷ total seats = 50,000 ÷ 25 = 2,000 people per seat."},
+      {"q": "A state's standard quota is 6.35. Under Hamilton's method, what is its lower quota?", "choices": ["6", "6.35", "7", "0.35"], "answer": 0, "explain": "The lower quota is the standard quota rounded down to the nearest whole number: 6.35 rounds down to 6."},
+      {"q": "What is the Alabama paradox?", "choices": ["A state receiving zero seats regardless of population", "Increasing the total number of seats can cause a state to lose a seat under Hamilton's method", "Two states always tying under Hamilton's method", "The standard divisor becoming negative"], "answer": 1, "explain": "The Alabama paradox is the surprising and undesirable situation where adding more seats to the total pool causes one particular state's apportionment to decrease under Hamilton's method."}
+     ]
+    }
+   ]
+  }
+ ]
+}

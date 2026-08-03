@@ -1,0 +1,1202 @@
+{
+ "id": "middle-school-math",
+ "title": "Middle School Math",
+ "domain": "k8",
+ "level": "Middle school",
+ "description": "Middle School Math is the bridge from arithmetic to algebra: ratios and proportional reasoning, positive and negative numbers, expressions and equations, geometry's area and volume formulas, and the basic statistics needed to describe real data. Every lesson works a problem to a final numeric answer, so skills stick instead of staying abstract.",
+ "outcomes": [
+  "You can simplify ratios, compute unit rates, and solve proportions to scale recipes, maps, and prices.",
+  "You can add, subtract, multiply, and divide positive and negative integers and rational numbers.",
+  "You can translate words into algebraic expressions and solve one- and two-step equations and inequalities.",
+  "You can find the area of triangles, parallelograms, and circles, and the surface area and volume of prisms and cylinders.",
+  "You can compute mean, median, mode, and range, and choose an appropriate way to display data.",
+  "You can plot, identify the quadrant of, and reflect points on the full coordinate plane."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Ratios, Rates, and Percents",
+   "summary": "Compare quantities with ratios, scale them with proportions, and apply the same reasoning to percents.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Ratios and Unit Rates",
+     "minutes": 10,
+     "intro": "A ratio compares two quantities by division, like 3 cups of flour to 2 cups of sugar. Ratios show up on ingredient labels, gear systems, and maps: learn to read, simplify, and compare them and you can compare almost anything two numbers can describe.",
+     "sections": [
+      {
+       "heading": "What a Ratio Means",
+       "body": [
+        "A ratio compares two quantities using division. The ratio of 3 to 2, written 3:2 or 3/2, means for every 3 of the first thing there are 2 of the second. Order matters: the ratio of cats to dogs in a shelter with 8 cats and 12 dogs is 8:12, not 12:8.",
+        "Ratios simplify the same way fractions do: divide both terms by their greatest common factor. The ratio 8:12 shares a common factor of 4, so 8:12 simplifies to 2:3. This describes the same shelter, just in the smallest whole numbers that keep the comparison true."
+       ],
+       "example": {
+        "problem": "A fruit bowl has 6 apples and 15 oranges. Write the ratio of apples to oranges in simplest form.",
+        "steps": [
+         "Write the ratio in the order asked: apples to oranges is 6:15.",
+         "Find the greatest common factor of 6 and 15, which is 3.",
+         "Divide both terms by 3: 6÷3 = 2 and 15÷3 = 5."
+        ],
+        "answer": "2:5"
+       }
+      },
+      {
+       "heading": "Unit Rates",
+       "body": [
+        "A **unit rate** is a ratio simplified so the second number is 1, like 60 miles per 1 hour. Unit rates let you compare deals that come in different-sized packages, because they put everything on the same footing: cost, distance, or amount per single unit.",
+        "To find a unit rate, divide the first quantity by the second. If a car travels 240 miles in 4 hours, divide 240 by 4 to get 60 miles per hour. That single number, 60, tells you the speed for any one hour, not just those particular 4."
+       ],
+       "example": {
+        "problem": "A 12-ounce bottle of juice costs $3.00, and an 18-ounce bottle costs $4.50. Which is the better deal per ounce?",
+        "steps": [
+         "Find the unit price of the 12-oz bottle: $3.00 ÷ 12 = $0.25 per ounce.",
+         "Find the unit price of the 18-oz bottle: $4.50 ÷ 18 = $0.25 per ounce.",
+         "Compare: both are $0.25 per ounce, so the deals are equal."
+        ],
+        "answer": "Both cost $0.25 per ounce — it's a tie."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ratio",
+       "def": "A comparison of two quantities by division, like 3:2."
+      },
+      {
+       "term": "simplest form",
+       "def": "A ratio reduced by dividing both terms by their greatest common factor."
+      },
+      {
+       "term": "unit rate",
+       "def": "A ratio simplified so the second term is 1, like 60 miles per hour."
+      },
+      {
+       "term": "greatest common factor (GCF)",
+       "def": "The largest number that divides two numbers evenly."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A class has 10 boys and 15 girls. What is the ratio of boys to girls in simplest form?",
+       "choices": [
+        "10:15",
+        "2:3",
+        "3:2",
+        "1:5"
+       ],
+       "answer": 1,
+       "explain": "The GCF of 10 and 15 is 5. Dividing both terms by 5 gives 2:3."
+      },
+      {
+       "q": "A car travels 150 miles on 5 gallons of gas. What is the unit rate in miles per gallon?",
+       "choices": [
+        "30 mpg",
+        "25 mpg",
+        "750 mpg",
+        "5 mpg"
+       ],
+       "answer": 0,
+       "explain": "Divide 150 miles by 5 gallons: 150 ÷ 5 = 30 miles per gallon."
+      },
+      {
+       "q": "Which ratio is equivalent to 4:6?",
+       "choices": [
+        "2:3",
+        "6:4",
+        "8:10",
+        "3:8"
+       ],
+       "answer": 0,
+       "explain": "Dividing 4:6 by their GCF of 2 gives 2:3, the simplest equivalent form."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Solving Proportions",
+     "minutes": 12,
+     "intro": "A proportion is a statement that two ratios are equal, and it's the single most useful tool for scaling recipes, maps, and models up or down. Once you can solve a proportion, you can find any missing piece as long as you know the other three.",
+     "sections": [
+      {
+       "heading": "Setting Up a Proportion",
+       "body": [
+        "A **proportion** sets two ratios equal, like 3/4 = 9/12. To solve for an unknown, write both ratios so matching quantities line up in the same position — both numerators are the same kind of thing, and both denominators are the same kind of thing.",
+        "Cross multiplication turns a proportion into a simple equation. For a/b = c/d, cross multiply to get a×d = b×c. This works because multiplying both sides of the equation by both denominators clears every fraction at once."
+       ],
+       "example": {
+        "problem": "Solve for x: 3/4 = x/20",
+        "steps": [
+         "Cross multiply: 3 × 20 = 4 × x.",
+         "Simplify the left side: 60 = 4x.",
+         "Divide both sides by 4: x = 15."
+        ],
+        "answer": "x = 15"
+       }
+      },
+      {
+       "heading": "Scaling Recipes and Maps",
+       "body": [
+        "Proportions scale real things. If a recipe for 4 people uses 2 cups of rice, and you want to feed 10 people, set up 2/4 = x/10 and cross multiply: 2×10 = 4×x, so 20 = 4x, so x = 5 cups of rice.",
+        "Map scales work the same way. If 1 inch on a map represents 20 real miles, and two cities are 3.5 inches apart on the map, solve 1/20 = 3.5/x. Cross multiplying gives 1×x = 20×3.5, so x = 70 real miles apart."
+       ],
+       "example": {
+        "problem": "A recipe that serves 4 uses 2 cups of rice. How much rice is needed to serve 10 people?",
+        "steps": [
+         "Set up a proportion: 2 cups/4 people = x cups/10 people.",
+         "Cross multiply: 2 × 10 = 4 × x.",
+         "Simplify: 20 = 4x, so x = 5."
+        ],
+        "answer": "5 cups of rice"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "proportion",
+       "def": "A statement that two ratios are equal, like 3/4 = 9/12."
+      },
+      {
+       "term": "cross multiplication",
+       "def": "Multiplying the numerator of one ratio by the denominator of the other to solve a proportion."
+      },
+      {
+       "term": "scale",
+       "def": "A ratio, like 1 inch = 20 miles, used to shrink or enlarge real distances on a map or model."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Solve for x: 5/6 = x/24",
+       "choices": [
+        "18",
+        "20",
+        "4",
+        "30"
+       ],
+       "answer": 1,
+       "explain": "Cross multiply: 5 × 24 = 120, then 120 ÷ 6 = 20."
+      },
+      {
+       "q": "A map scale is 1 inch = 50 miles. Two towns are 4.5 inches apart on the map. How far apart are they in real life?",
+       "choices": [
+        "225 miles",
+        "45 miles",
+        "11 miles",
+        "200 miles"
+       ],
+       "answer": 0,
+       "explain": "Multiply 4.5 inches by 50 miles per inch: 4.5 × 50 = 225 miles."
+      },
+      {
+       "q": "Solve for x: x/9 = 6/18",
+       "choices": [
+        "3",
+        "6",
+        "12",
+        "2"
+       ],
+       "answer": 0,
+       "explain": "6/18 simplifies to 1/3. Since x/9 = 1/3, x = 9 ÷ 3 = 3."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Percent of a Number and Percent Change",
+     "minutes": 12,
+     "intro": "Percent means \"per hundred,\" and it's the language of discounts, tips, taxes, and test scores. Learn two moves — finding a percent of a number, and finding percent change — and you can handle almost any percent problem you'll meet outside the classroom.",
+     "sections": [
+      {
+       "heading": "Finding a Percent of a Number",
+       "body": [
+        "**Percent** literally means per hundred: 25% is 25 out of 100, or the fraction 25/100, or the decimal 0.25. To find a percent of a number, convert the percent to a decimal and multiply.",
+        "To convert a percent to a decimal, divide by 100, which moves the decimal point two places left. 25% becomes 0.25, 8% becomes 0.08, and 150% becomes 1.50. Then multiply that decimal by the number you're taking the percent of."
+       ],
+       "example": {
+        "problem": "What is 30% of 80?",
+        "steps": [
+         "Convert 30% to a decimal: 30 ÷ 100 = 0.30.",
+         "Multiply: 0.30 × 80 = 24."
+        ],
+        "answer": "24"
+       }
+      },
+      {
+       "heading": "Percent Change: Increase and Decrease",
+       "body": [
+        "**Percent change** measures how much a quantity grew or shrank, relative to its starting value. The formula is: percent change = (change in amount ÷ original amount) × 100. A positive result is a percent increase; a negative result is a percent decrease.",
+        "Discounts and tips are percent decreases and increases in disguise. A $40 shirt with a 25% discount: the discount amount is 0.25 × 40 = $10, so the sale price is 40 − 10 = $30. A $50 meal with a 20% tip adds 0.20 × 50 = $10, for a total of $60."
+       ],
+       "example": {
+        "problem": "A plant grows from 12 cm to 15 cm. What is the percent increase?",
+        "steps": [
+         "Find the change: 15 − 12 = 3 cm.",
+         "Divide the change by the original amount: 3 ÷ 12 = 0.25.",
+         "Convert to a percent: 0.25 × 100 = 25%."
+        ],
+        "answer": "25% increase"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "percent",
+       "def": "A number expressed as parts per hundred, like 25% = 25/100."
+      },
+      {
+       "term": "percent change",
+       "def": "The change in a quantity divided by its original amount, times 100."
+      },
+      {
+       "term": "discount",
+       "def": "A percent decrease subtracted from an original price."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is 15% of 60?",
+       "choices": [
+        "9",
+        "6",
+        "15",
+        "45"
+       ],
+       "answer": 0,
+       "explain": "Convert 15% to 0.15, then multiply: 0.15 × 60 = 9."
+      },
+      {
+       "q": "A $50 jacket is on sale for 20% off. What is the sale price?",
+       "choices": [
+        "$40",
+        "$30",
+        "$10",
+        "$45"
+       ],
+       "answer": 0,
+       "explain": "The discount is 0.20 × 50 = $10, so the sale price is 50 − 10 = $40."
+      },
+      {
+       "q": "A population grows from 200 to 250. What is the percent increase?",
+       "choices": [
+        "25%",
+        "50%",
+        "20%",
+        "5%"
+       ],
+       "answer": 0,
+       "explain": "The change is 50, and 50 ÷ 200 = 0.25, which is 25%."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Negative Numbers and Integer Operations",
+   "summary": "Extend arithmetic below zero: compare, add, subtract, multiply, and divide positive and negative numbers.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Number Line, Absolute Value, and Comparing Integers",
+     "minutes": 10,
+     "intro": "Negative numbers describe anything that can go below zero: temperatures, bank balances, elevations below sea level. The number line is your map for this world, and absolute value measures distance on it, no matter which direction you're facing.",
+     "sections": [
+      {
+       "heading": "Negative Numbers on the Number Line",
+       "body": [
+        "**Integers** are the whole numbers and their opposites: ..., -3, -2, -1, 0, 1, 2, 3, .... On a number line, negative numbers sit to the left of zero and positive numbers sit to the right. Every number has an opposite the same distance from zero on the other side; the opposite of 7 is -7.",
+        "Comparing integers means asking which sits farther right on the line. Farther right is always greater, even for negatives: -2 is greater than -5 because -2 sits to the right of -5. This trips up many students, since -5 'looks bigger' without its sign, but -5 is actually the smaller value."
+       ]
+      },
+      {
+       "heading": "Absolute Value",
+       "body": [
+        "**Absolute value** is a number's distance from zero on the number line, and distance is never negative. The absolute value of 7 is 7, written |7| = 7. The absolute value of -7 is also 7, written |-7| = 7, because -7 sits 7 units from zero, just on the other side.",
+        "Absolute value answers 'how far,' not 'which direction.' A hiker at an elevation of -20 feet and one at +20 feet are both 20 feet from sea level: |-20| = |20| = 20. But their actual positions are opposites."
+       ],
+       "example": {
+        "problem": "Order these from least to greatest: -8, 3, -1, 0, -5",
+        "steps": [
+         "Plot mentally on a number line: more negative numbers sit farther left.",
+         "-8 is farthest left, then -5, then -1, then 0, then 3.",
+         "So the order is -8, -5, -1, 0, 3."
+        ],
+        "answer": "-8, -5, -1, 0, 3"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "integer",
+       "def": "A whole number or its opposite, like -3, 0, or 5."
+      },
+      {
+       "term": "negative number",
+       "def": "A number less than zero, plotted to the left of zero on a number line."
+      },
+      {
+       "term": "absolute value",
+       "def": "A number's distance from zero, always zero or positive."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which is greater, -3 or -9?",
+       "choices": [
+        "-3",
+        "-9",
+        "They are equal",
+        "Cannot compare"
+       ],
+       "answer": 0,
+       "explain": "-3 sits farther right on the number line than -9, so -3 is the greater value."
+      },
+      {
+       "q": "What is |-12|?",
+       "choices": [
+        "12",
+        "-12",
+        "0",
+        "1/12"
+       ],
+       "answer": 0,
+       "explain": "Absolute value is distance from zero, which is never negative: |-12| = 12."
+      },
+      {
+       "q": "Order from least to greatest: 4, -6, 0, -2",
+       "choices": [
+        "-6, -2, 0, 4",
+        "4, 0, -2, -6",
+        "-2, -6, 0, 4",
+        "0, -2, -6, 4"
+       ],
+       "answer": 0,
+       "explain": "From farthest left to farthest right on the number line: -6, -2, 0, 4."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Adding and Subtracting Integers",
+     "minutes": 12,
+     "intro": "Adding a negative number is really just subtracting, and subtracting a negative number is really just adding — once you internalize that one flip, every integer problem becomes a number-line walk you can do in your head.",
+     "sections": [
+      {
+       "heading": "Adding Integers",
+       "body": [
+        "Think of addition as a walk on the number line, starting at the first number. Adding a positive number means walking right; adding a negative number means walking left. To compute 5 + (-8), start at 5 and walk 8 steps left, landing on -3.",
+        "When signs match, add the absolute values and keep the sign: -4 + (-6) = -10, because both are walks to the left, 4 steps then 6 more, for 10 total steps left. When signs differ, subtract the smaller absolute value from the larger, and keep the sign of the number with the bigger absolute value: -4 + 6 = 2, since 6 is bigger and positive."
+       ],
+       "example": {
+        "problem": "Compute -9 + 4.",
+        "steps": [
+         "Signs differ, so subtract absolute values: 9 - 4 = 5.",
+         "Keep the sign of the number with the larger absolute value, which is -9 (negative).",
+         "So -9 + 4 = -5."
+        ],
+        "answer": "-5"
+       }
+      },
+      {
+       "heading": "Subtracting Integers",
+       "body": [
+        "Subtracting a number is the same as adding its opposite. This is the single most useful rule in integer arithmetic: a - b = a + (-b). So 5 - 8 becomes 5 + (-8) = -3, and 5 - (-8) becomes 5 + 8 = 13.",
+        "Watch for double negatives: subtracting a negative flips to addition. -3 - (-7) becomes -3 + 7 = 4. A quick way to remember: two minus signs next to each other 'cancel' into a plus, just like in everyday speech where 'not never' means 'always'."
+       ],
+       "example": {
+        "problem": "Compute -6 - (-10).",
+        "steps": [
+         "Rewrite subtraction as adding the opposite: -6 - (-10) = -6 + 10.",
+         "Signs differ: subtract absolute values, 10 - 6 = 4.",
+         "Keep the sign of the larger absolute value, which is 10 (positive): the answer is 4."
+        ],
+        "answer": "4"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "additive inverse",
+       "def": "A number's opposite; adding a number and its additive inverse gives zero."
+      },
+      {
+       "term": "integer addition rule",
+       "def": "Add absolute values and keep the shared sign if signs match; otherwise subtract and keep the larger sign."
+      },
+      {
+       "term": "integer subtraction rule",
+       "def": "Subtracting a number is the same as adding its opposite: a - b = a + (-b)."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Compute -7 + 3.",
+       "choices": [
+        "-4",
+        "4",
+        "-10",
+        "10"
+       ],
+       "answer": 0,
+       "explain": "Signs differ: 7 - 3 = 4, and the sign of the larger absolute value (-7) is negative, so the answer is -4."
+      },
+      {
+       "q": "Compute 5 - 9.",
+       "choices": [
+        "-4",
+        "4",
+        "14",
+        "-14"
+       ],
+       "answer": 0,
+       "explain": "Rewrite as 5 + (-9). Signs differ: 9 - 5 = 4, keep the negative sign: -4."
+      },
+      {
+       "q": "Compute -2 - (-8).",
+       "choices": [
+        "6",
+        "-6",
+        "10",
+        "-10"
+       ],
+       "answer": 0,
+       "explain": "Rewrite as -2 + 8. Signs differ: 8 - 2 = 6, keep the positive sign: 6."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Multiplying and Dividing Integers and Rational Numbers",
+     "minutes": 12,
+     "intro": "Multiplying and dividing signed numbers follows one clean rule about signs, and once that rule is automatic you can handle negative fractions and decimals exactly the same way you handle negative whole numbers.",
+     "sections": [
+      {
+       "heading": "The Sign Rule for Multiplication and Division",
+       "body": [
+        "For both multiplication and division: same signs give a positive result, different signs give a negative result. Positive × positive = positive, negative × negative = positive, but positive × negative = negative and negative × positive = negative. Division follows the identical pattern.",
+        "A quick way to check a chain of multiplications: count the negative signs. An even number of negative factors gives a positive product; an odd number gives a negative product. For (-2) × (-3) × (-1), there are three negatives (odd), so the product is negative: 6 × -1 = -6."
+       ],
+       "example": {
+        "problem": "Compute (-8) × (-5) and then (-8) × 5.",
+        "steps": [
+         "(-8) × (-5): same signs (both negative), so the result is positive: 8 × 5 = 40.",
+         "(-8) × 5: different signs, so the result is negative: 8 × 5 = 40, but negative, giving -40."
+        ],
+        "answer": "(-8)×(-5) = 40, and (-8)×5 = -40"
+       }
+      },
+      {
+       "heading": "Negative Fractions and Decimals",
+       "body": [
+        "The sign rule applies to any rational number, not just integers. Multiplying -3/4 by -2/3 gives a positive answer: multiply the fractions normally, (3×2)/(4×3) = 6/12 = 1/2, and since both factors were negative, the product is positive 1/2.",
+        "Dividing signed decimals works the same way: divide the absolute values, then apply the sign rule. -7.5 ÷ 2.5: divide 7.5 by 2.5 to get 3, and since the signs differ (negative ÷ positive), the answer is -3."
+       ],
+       "example": {
+        "problem": "Compute -2/3 × 3/8",
+        "steps": [
+         "Multiply the absolute values: 2/3 × 3/8 = 6/24.",
+         "Simplify 6/24 by dividing by the GCF, 6: 6/24 = 1/4.",
+         "Signs differ (negative × positive), so the result is negative: -1/4."
+        ],
+        "answer": "-1/4"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sign rule",
+       "def": "Same signs multiply or divide to a positive result; different signs give a negative result."
+      },
+      {
+       "term": "rational number",
+       "def": "Any number that can be written as a fraction of two integers, including negative fractions and decimals."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Compute (-6) × (-7).",
+       "choices": [
+        "42",
+        "-42",
+        "13",
+        "-13"
+       ],
+       "answer": 0,
+       "explain": "Same signs (both negative) give a positive product: 6 × 7 = 42."
+      },
+      {
+       "q": "Compute -36 ÷ 4.",
+       "choices": [
+        "-9",
+        "9",
+        "-32",
+        "32"
+       ],
+       "answer": 0,
+       "explain": "Different signs give a negative result: 36 ÷ 4 = 9, so the answer is -9."
+      },
+      {
+       "q": "Compute -1/2 × -2/5",
+       "choices": [
+        "1/5",
+        "-1/5",
+        "2/5",
+        "-2/5"
+       ],
+       "answer": 0,
+       "explain": "Multiply the fractions: 1×2/(2×5) = 2/10 = 1/5. Same signs give a positive result."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Expressions and Equations",
+   "summary": "Translate words into algebra, evaluate expressions, and solve one- and two-step equations and inequalities.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Writing and Evaluating Expressions",
+     "minutes": 10,
+     "intro": "Algebra starts the moment you let a letter stand for a number you don't know yet. Once you can translate words into expressions, and expressions into numbers, you have the basic reading-and-writing skill for everything else in algebra.",
+     "sections": [
+      {
+       "heading": "Translating Words into Expressions",
+       "body": [
+        "An **algebraic expression** combines numbers, variables, and operations, like 3n + 5. Certain words signal certain operations: 'sum' and 'more than' mean addition, 'difference' and 'less than' mean subtraction, 'product' and 'times' mean multiplication, and 'quotient' means division.",
+        "Word order can trick you, especially with subtraction. '5 less than a number n' means n - 5, not 5 - n, because you are taking 5 away from n. Read carefully: the quantity being reduced comes first in the expression, even though 'less than' appears in the middle of the sentence."
+       ],
+       "example": {
+        "problem": "Write an expression for 'the product of 4 and a number x, increased by 7.'",
+        "steps": [
+         "'Product of 4 and x' means 4 × x, or 4x.",
+         "'Increased by 7' means add 7.",
+         "Combine: 4x + 7."
+        ],
+        "answer": "4x + 7"
+       }
+      },
+      {
+       "heading": "Evaluating Expressions",
+       "body": [
+        "To **evaluate** an expression, substitute a given number for the variable and follow the order of operations: parentheses, exponents, multiplication and division left to right, then addition and subtraction left to right (PEMDAS).",
+        "Evaluate 3x² - 2x + 1 when x = 4: first square, 4² = 16, then multiply, 3 × 16 = 48; then 2 × 4 = 8. Put it together: 48 - 8 + 1 = 41. Doing the steps in order keeps a multi-term expression from turning into a guessing game."
+       ],
+       "example": {
+        "problem": "Evaluate 2n + 3 when n = 5.",
+        "steps": [
+         "Substitute 5 for n: 2(5) + 3.",
+         "Multiply first: 2 × 5 = 10.",
+         "Add: 10 + 3 = 13."
+        ],
+        "answer": "13"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "variable",
+       "def": "A letter that stands for an unknown or changeable number."
+      },
+      {
+       "term": "algebraic expression",
+       "def": "A combination of numbers, variables, and operations, like 3n + 5."
+      },
+      {
+       "term": "evaluate",
+       "def": "To find the value of an expression by substituting numbers for variables."
+      },
+      {
+       "term": "order of operations",
+       "def": "The rule for the order to compute: parentheses, exponents, multiply/divide, add/subtract (PEMDAS)."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which expression represents '8 less than a number y'?",
+       "choices": [
+        "y - 8",
+        "8 - y",
+        "8y",
+        "y + 8"
+       ],
+       "answer": 0,
+       "explain": "'8 less than y' means starting with y and subtracting 8, so the expression is y - 8."
+      },
+      {
+       "q": "Evaluate 4x + 6 when x = 3.",
+       "choices": [
+        "18",
+        "13",
+        "10",
+        "22"
+       ],
+       "answer": 0,
+       "explain": "Substitute: 4(3) + 6 = 12 + 6 = 18."
+      },
+      {
+       "q": "Evaluate 2n² - 1 when n = 3.",
+       "choices": [
+        "17",
+        "11",
+        "35",
+        "5"
+       ],
+       "answer": 0,
+       "explain": "Square first: 3² = 9. Then 2 × 9 = 18, and 18 - 1 = 17."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Solving One-Step Equations",
+     "minutes": 12,
+     "intro": "An equation is a balance scale: whatever you do to one side, you must do to the other, or the scale tips. Master the one-step equation and you have the core move — undo the operation — that every later equation builds on.",
+     "sections": [
+      {
+       "heading": "The Balance Idea and Inverse Operations",
+       "body": [
+        "An **equation** states that two expressions are equal, like x + 5 = 12. To solve it, isolate the variable by undoing whatever is being done to it, using the **inverse operation**: addition undoes subtraction, subtraction undoes addition, multiplication undoes division, and division undoes multiplication.",
+        "Whatever operation you apply, apply it to both sides of the equation to keep the balance true. If x + 5 = 12, subtract 5 from both sides: x + 5 - 5 = 12 - 5, which simplifies to x = 7. Always check by substituting back in: 7 + 5 = 12. True."
+       ],
+       "example": {
+        "problem": "Solve for x: x - 9 = 14",
+        "steps": [
+         "Identify the operation done to x: 9 is subtracted.",
+         "Undo it by adding 9 to both sides: x - 9 + 9 = 14 + 9.",
+         "Simplify: x = 23.",
+         "Check: 23 - 9 = 14. True."
+        ],
+        "answer": "x = 23"
+       }
+      },
+      {
+       "heading": "One-Step Equations with Multiplication and Division",
+       "body": [
+        "When a variable is multiplied by a number, undo it by dividing both sides by that number. To solve 6x = 42, divide both sides by 6: 6x/6 = 42/6, giving x = 7.",
+        "When a variable is divided by a number, undo it by multiplying both sides by that number. To solve n/4 = 9, multiply both sides by 4: n = 36. Always check your solution by plugging it back into the original equation."
+       ],
+       "example": {
+        "problem": "Solve for x: x/5 = 8",
+        "steps": [
+         "Undo the division by multiplying both sides by 5: (x/5) × 5 = 8 × 5.",
+         "Simplify: x = 40.",
+         "Check: 40/5 = 8. True."
+        ],
+        "answer": "x = 40"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "equation",
+       "def": "A statement that two expressions are equal, like x + 5 = 12."
+      },
+      {
+       "term": "inverse operation",
+       "def": "An operation that undoes another, like subtraction undoing addition."
+      },
+      {
+       "term": "isolate the variable",
+       "def": "To get the variable alone on one side of an equation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Solve for x: x + 7 = 15",
+       "choices": [
+        "8",
+        "22",
+        "7",
+        "-8"
+       ],
+       "answer": 0,
+       "explain": "Subtract 7 from both sides: 15 - 7 = 8."
+      },
+      {
+       "q": "Solve for x: 5x = 35",
+       "choices": [
+        "7",
+        "30",
+        "175",
+        "5"
+       ],
+       "answer": 0,
+       "explain": "Divide both sides by 5: 35 ÷ 5 = 7."
+      },
+      {
+       "q": "Solve for n: n - 6 = -2",
+       "choices": [
+        "4",
+        "-8",
+        "8",
+        "-4"
+       ],
+       "answer": 0,
+       "explain": "Add 6 to both sides: -2 + 6 = 4."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Solving Two-Step Equations and Inequalities",
+     "minutes": 14,
+     "intro": "Most real equations take two moves to solve, not one — and inequalities work almost the same way, with one twist you must never forget: flip the inequality sign when you multiply or divide by a negative number.",
+     "sections": [
+      {
+       "heading": "Two-Step Equations",
+       "body": [
+        "A **two-step equation** like 3x + 4 = 19 needs two inverse operations, done in reverse order of operations: undo addition or subtraction first, then undo multiplication or division. Subtract 4 from both sides first: 3x = 15. Then divide both sides by 3: x = 5.",
+        "Order matters because of how the expression was built. 3x + 4 means multiply x by 3, then add 4, so to undo it you reverse that: subtract 4 first, then divide by 3. Dividing by 3 before subtracting 4 would divide the 4 as well, which is not allowed."
+       ],
+       "example": {
+        "problem": "Solve for x: 2x - 5 = 11",
+        "steps": [
+         "Undo subtraction first: add 5 to both sides. 2x - 5 + 5 = 11 + 5, so 2x = 16.",
+         "Undo multiplication: divide both sides by 2. 2x/2 = 16/2, so x = 8.",
+         "Check: 2(8) - 5 = 16 - 5 = 11. True."
+        ],
+        "answer": "x = 8"
+       }
+      },
+      {
+       "heading": "Inequalities and the Flip Rule",
+       "body": [
+        "An **inequality** compares two expressions using <, >, ≤, or ≥ instead of =. You solve it exactly like an equation, using inverse operations on both sides, with one crucial exception: if you multiply or divide both sides by a negative number, you must flip the inequality sign.",
+        "Why flip? Consider 2 < 5. Multiply both sides by -1 without flipping: -2 < -5, which is false, since -2 is actually greater than -5. Flipping the sign fixes it: -2 > -5, which is true. That flip keeps the inequality honest whenever the sign of the multiplier is negative."
+       ],
+       "example": {
+        "problem": "Solve for x: -3x + 2 > 14",
+        "steps": [
+         "Subtract 2 from both sides: -3x > 12.",
+         "Divide both sides by -3, and flip the inequality sign because you divided by a negative: x < -4."
+        ],
+        "answer": "x < -4"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "two-step equation",
+       "def": "An equation requiring two inverse operations to solve, like 3x + 4 = 19."
+      },
+      {
+       "term": "inequality",
+       "def": "A comparison of two expressions using <, >, ≤, or ≥."
+      },
+      {
+       "term": "flip rule",
+       "def": "When multiplying or dividing an inequality by a negative number, reverse the inequality sign."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Solve for x: 4x + 3 = 23",
+       "choices": [
+        "5",
+        "6.5",
+        "20",
+        "8"
+       ],
+       "answer": 0,
+       "explain": "Subtract 3: 4x = 20. Divide by 4: x = 5."
+      },
+      {
+       "q": "Solve for x: 5x - 2 = 18",
+       "choices": [
+        "4",
+        "3.2",
+        "20",
+        "16"
+       ],
+       "answer": 0,
+       "explain": "Add 2: 5x = 20. Divide by 5: x = 4."
+      },
+      {
+       "q": "Solve the inequality: -2x < 10",
+       "choices": [
+        "x > -5",
+        "x < -5",
+        "x > 5",
+        "x < 5"
+       ],
+       "answer": 0,
+       "explain": "Divide both sides by -2 and flip the sign: x > -5."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Geometry: Area and Volume",
+   "summary": "Compute the area of flat shapes and the surface area and volume of solid shapes using core formulas.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Area of Triangles, Quadrilaterals, and Circles",
+     "minutes": 14,
+     "intro": "Every flat shape's area comes from a formula built out of a rectangle in disguise — triangles are half a rectangle, parallelograms are a slid rectangle, and circles trade straight sides for the constant π. Learn the core formulas and you can find the area of almost anything flat.",
+     "sections": [
+      {
+       "heading": "Triangles and Parallelograms",
+       "body": [
+        "The area of a **triangle** is A = 1/2 × base × height, where the height is measured perpendicular to the base, not along a slanted side. A triangle with base 10 cm and height 6 cm has area 1/2 × 10 × 6 = 30 cm², because a triangle is always exactly half of the rectangle that boxes it in.",
+        "The area of a **parallelogram** is A = base × height, using the same perpendicular height idea. A parallelogram with base 8 m and height 5 m has area 8 × 5 = 40 m². Slanting the sides of a rectangle doesn't change its area, as long as the base and perpendicular height stay the same."
+       ],
+       "example": {
+        "problem": "Find the area of a triangle with base 14 in and height 9 in.",
+        "steps": [
+         "Use the formula A = 1/2 × base × height.",
+         "Substitute: A = 1/2 × 14 × 9.",
+         "Multiply: 14 × 9 = 126, then 126 ÷ 2 = 63."
+        ],
+        "answer": "63 in²"
+       }
+      },
+      {
+       "heading": "Circles: Circumference and Area",
+       "body": [
+        "A circle's **circumference** (distance around) is C = 2πr, or equivalently πd, where r is the radius and d is the diameter. Its **area** is A = πr². Both formulas depend only on the radius, and π is approximately 3.14.",
+        "For a circle with radius 5 cm: circumference is 2 × 3.14 × 5 = 31.4 cm, and area is 3.14 × 5² = 3.14 × 25 = 78.5 cm². Area uses the radius squared, while circumference uses the radius only once — that's why area grows much faster as circles get bigger."
+       ],
+       "example": {
+        "problem": "A circular garden has a radius of 4 m. Find its area, using π ≈ 3.14.",
+        "steps": [
+         "Use A = πr².",
+         "Substitute: A = 3.14 × 4².",
+         "Square first: 4² = 16.",
+         "Multiply: 3.14 × 16 = 50.24."
+        ],
+        "answer": "≈ 50.24 m²"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "base and height",
+       "def": "For area formulas, the height must be measured perpendicular to the base."
+      },
+      {
+       "term": "area",
+       "def": "The amount of flat space a shape covers, measured in square units."
+      },
+      {
+       "term": "circumference",
+       "def": "The distance around a circle, C = 2πr."
+      },
+      {
+       "term": "π (pi)",
+       "def": "A constant, approximately 3.14, relating a circle's circumference and area to its radius."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the area of a triangle with base 12 cm and height 5 cm.",
+       "choices": [
+        "30 cm²",
+        "60 cm²",
+        "17 cm²",
+        "6 cm²"
+       ],
+       "answer": 0,
+       "explain": "A = 1/2 × 12 × 5 = 1/2 × 60 = 30 cm²."
+      },
+      {
+       "q": "Find the area of a parallelogram with base 9 m and height 4 m.",
+       "choices": [
+        "36 m²",
+        "13 m²",
+        "18 m²",
+        "20 m²"
+       ],
+       "answer": 0,
+       "explain": "A = base × height = 9 × 4 = 36 m²."
+      },
+      {
+       "q": "Find the circumference of a circle with radius 3 in, using π ≈ 3.14.",
+       "choices": [
+        "18.84 in",
+        "9.42 in",
+        "28.26 in",
+        "6.28 in"
+       ],
+       "answer": 0,
+       "explain": "C = 2πr = 2 × 3.14 × 3 = 18.84 in."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Surface Area and Volume of Prisms and Cylinders",
+     "minutes": 15,
+     "intro": "Surface area tells you how much material wraps a solid — the wrapping-paper problem — while volume tells you how much it can hold inside. Rectangular prisms and cylinders are the two workhorse shapes, and both formulas build directly on the area formulas you just learned.",
+     "sections": [
+      {
+       "heading": "Volume of Rectangular Prisms and Cylinders",
+       "body": [
+        "The **volume** of a rectangular prism is V = length × width × height, measuring how many unit cubes fit inside. A box 5 cm by 4 cm by 3 cm holds 5 × 4 × 3 = 60 cubic centimeters, since each layer is 5 × 4 = 20 cubes and there are 3 layers stacked.",
+        "The volume of a **cylinder** is V = πr²h: find the area of the circular base (πr²) and multiply by the height, exactly like stacking prism layers. A cylinder with radius 3 in and height 10 in has volume 3.14 × 3² × 10 = 3.14 × 9 × 10 = 282.6 in³."
+       ],
+       "example": {
+        "problem": "Find the volume of a rectangular prism with length 6 m, width 2 m, and height 5 m.",
+        "steps": [
+         "Use V = length × width × height.",
+         "Substitute: V = 6 × 2 × 5.",
+         "Multiply: 6 × 2 = 12, then 12 × 5 = 60."
+        ],
+        "answer": "60 m³"
+       }
+      },
+      {
+       "heading": "Surface Area of Prisms",
+       "body": [
+        "**Surface area** is the total area of every face of a solid added together — imagine unfolding the solid flat and finding the area of that flattened net. For a rectangular prism, there are three pairs of matching rectangular faces: top/bottom, front/back, and two sides.",
+        "For a rectangular prism with length l, width w, and height h, surface area is SA = 2lw + 2lh + 2wh. A box 4 cm by 3 cm by 2 cm has SA = 2(4×3) + 2(4×2) + 2(3×2) = 2(12) + 2(8) + 2(6) = 24 + 16 + 12 = 52 cm²."
+       ],
+       "example": {
+        "problem": "Find the surface area of a rectangular prism with length 5 in, width 4 in, and height 3 in.",
+        "steps": [
+         "Use SA = 2lw + 2lh + 2wh.",
+         "Find each product: lw = 20, lh = 15, wh = 12.",
+         "Double each and add: 2(20) + 2(15) + 2(12) = 40 + 30 + 24 = 94."
+        ],
+        "answer": "94 in²"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "volume",
+       "def": "The amount of space inside a three-dimensional solid, measured in cubic units."
+      },
+      {
+       "term": "surface area",
+       "def": "The total area of all the faces of a solid added together."
+      },
+      {
+       "term": "net",
+       "def": "A flattened, unfolded version of a three-dimensional solid, used to find its surface area."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the volume of a rectangular prism with length 8 cm, width 3 cm, and height 2 cm.",
+       "choices": [
+        "48 cm³",
+        "13 cm³",
+        "96 cm³",
+        "24 cm³"
+       ],
+       "answer": 0,
+       "explain": "V = 8 × 3 × 2 = 48 cm³."
+      },
+      {
+       "q": "Find the volume of a cylinder with radius 2 m and height 5 m, using π ≈ 3.14.",
+       "choices": [
+        "62.8 m³",
+        "31.4 m³",
+        "20 m³",
+        "125.6 m³"
+       ],
+       "answer": 0,
+       "explain": "V = πr²h = 3.14 × 2² × 5 = 3.14 × 4 × 5 = 62.8 m³."
+      },
+      {
+       "q": "Find the surface area of a rectangular prism with length 3 ft, width 2 ft, and height 4 ft.",
+       "choices": [
+        "52 ft²",
+        "24 ft²",
+        "26 ft²",
+        "9 ft²"
+       ],
+       "answer": 0,
+       "explain": "SA = 2(3×2) + 2(3×4) + 2(2×4) = 12 + 24 + 16 = 52 ft²."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Statistics and the Coordinate Plane",
+   "summary": "Summarize data with mean, median, mode, and range, and locate and transform points on the coordinate plane.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Mean, Median, Mode, Range, and Data Displays",
+     "minutes": 14,
+     "intro": "Four numbers can summarize an entire messy data set: the mean, median, mode, and range. Learn to compute each one and choose the right display — a histogram or a box plot — and you can describe any batch of numbers clearly and honestly.",
+     "sections": [
+      {
+       "heading": "Mean, Median, and Mode",
+       "body": [
+        "The **mean** (average) is the sum of all values divided by how many values there are. For the data set 4, 8, 6, 10, 2: the sum is 4+8+6+10+2 = 30, and there are 5 values, so the mean is 30 ÷ 5 = 6.",
+        "The **median** is the middle value when data is sorted in order. Sort 4, 8, 6, 10, 2 into 2, 4, 6, 8, 10: the middle value is 6. If there is an even number of values, average the two middle numbers. The **mode** is the value that appears most often; a data set can have one mode, several, or none."
+       ],
+       "example": {
+        "problem": "Find the mean, median, and mode of: 3, 7, 7, 9, 4",
+        "steps": [
+         "Mean: sum = 3+7+7+9+4 = 30, divided by 5 values = 6.",
+         "Median: sort to 3, 4, 7, 7, 9; the middle value is 7.",
+         "Mode: 7 appears twice, more than any other value, so the mode is 7."
+        ],
+        "answer": "Mean = 6, Median = 7, Mode = 7"
+       }
+      },
+      {
+       "heading": "Range and Choosing a Display",
+       "body": [
+        "The **range** is the largest value minus the smallest value, and it measures how spread out the data is. For 3, 7, 7, 9, 4, the range is 9 - 3 = 6. A small range means data is bunched together; a large range means it's spread wide.",
+        "A **histogram** groups numeric data into bars by interval, showing how many values fall in each range — good for seeing the overall shape of a large data set. A **box plot** shows the minimum, first quartile, median, third quartile, and maximum as a single compact picture, making it easy to compare the spread of several groups at once."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "mean",
+       "def": "The sum of all values divided by the number of values; the average."
+      },
+      {
+       "term": "median",
+       "def": "The middle value of a data set when sorted in order."
+      },
+      {
+       "term": "mode",
+       "def": "The value that appears most often in a data set."
+      },
+      {
+       "term": "range",
+       "def": "The largest value minus the smallest value in a data set."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the mean of 10, 12, 14, 16, 18.",
+       "choices": [
+        "14",
+        "12",
+        "16",
+        "70"
+       ],
+       "answer": 0,
+       "explain": "Sum = 70, divided by 5 values = 14."
+      },
+      {
+       "q": "Find the median of 5, 2, 9, 1, 7.",
+       "choices": [
+        "5",
+        "2",
+        "9",
+        "7"
+       ],
+       "answer": 0,
+       "explain": "Sorted: 1, 2, 5, 7, 9. The middle value is 5."
+      },
+      {
+       "q": "Find the range of 22, 15, 30, 18, 25.",
+       "choices": [
+        "15",
+        "22",
+        "30",
+        "8"
+       ],
+       "answer": 0,
+       "explain": "Range = largest - smallest = 30 - 15 = 15."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Coordinate Plane in Four Quadrants",
+     "minutes": 12,
+     "intro": "The coordinate plane turns pairs of numbers into exact locations, and once negative numbers join the x- and y-axes, that single grid spreads into four quadrants that can plot anything from a video game character to a temperature-over-time graph.",
+     "sections": [
+      {
+       "heading": "Plotting Points and Naming Quadrants",
+       "body": [
+        "The coordinate plane is built from two number lines crossing at a point called the **origin** (0,0): the horizontal **x-axis** and the vertical **y-axis**. Every point is named by an **ordered pair** (x, y), where x tells you how far to move left or right and y tells you how far to move up or down.",
+        "The two axes split the plane into four **quadrants**, numbered counterclockwise starting at the upper right. Quadrant I has both coordinates positive (x>0, y>0). Quadrant II has x negative, y positive. Quadrant III has both negative. Quadrant IV has x positive, y negative."
+       ],
+       "example": {
+        "problem": "In which quadrant does the point (-3, 5) lie?",
+        "steps": [
+         "Check the sign of x: -3 is negative.",
+         "Check the sign of y: 5 is positive.",
+         "Negative x and positive y is Quadrant II."
+        ],
+        "answer": "Quadrant II"
+       }
+      },
+      {
+       "heading": "Distance and Reflections on the Plane",
+       "body": [
+        "Two points with the same y-coordinate lie on a horizontal line, and the distance between them is just the difference of their x-coordinates. The distance between (2, 4) and (7, 4) is 7 - 2 = 5 units. The same idea works vertically using y-coordinates.",
+        "Reflecting a point across an axis flips one coordinate's sign. Reflecting (4, 3) across the x-axis gives (4, -3): the x stays the same, the y flips sign. Reflecting (4, 3) across the y-axis gives (-4, 3): the y stays the same, the x flips sign."
+       ],
+       "example": {
+        "problem": "Reflect the point (6, -2) across the y-axis.",
+        "steps": [
+         "Reflecting across the y-axis keeps y the same and flips the sign of x.",
+         "x = 6 becomes -6.",
+         "y = -2 stays -2."
+        ],
+        "answer": "(-6, -2)"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "origin",
+       "def": "The point (0,0) where the x-axis and y-axis cross."
+      },
+      {
+       "term": "ordered pair",
+       "def": "A pair of numbers (x, y) naming a point's position on the coordinate plane."
+      },
+      {
+       "term": "quadrant",
+       "def": "One of four regions of the coordinate plane, split by the x-axis and y-axis."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In which quadrant does the point (4, -6) lie?",
+       "choices": [
+        "Quadrant IV",
+        "Quadrant I",
+        "Quadrant II",
+        "Quadrant III"
+       ],
+       "answer": 0,
+       "explain": "x is positive and y is negative, which is Quadrant IV."
+      },
+      {
+       "q": "What is the distance between (3, 5) and (3, -2)?",
+       "choices": [
+        "7",
+        "2",
+        "5",
+        "3"
+       ],
+       "answer": 0,
+       "explain": "Both points share the same x-coordinate, so distance is the difference in y: 5 - (-2) = 7."
+      },
+      {
+       "q": "Reflect the point (-2, 5) across the x-axis.",
+       "choices": [
+        "(-2, -5)",
+        "(2, 5)",
+        "(2, -5)",
+        "(-2, 5)"
+       ],
+       "answer": 0,
+       "explain": "Reflecting across the x-axis keeps x the same and flips the sign of y: (-2, -5)."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

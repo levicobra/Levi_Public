@@ -1,0 +1,808 @@
+{
+  "id": "intermediate-algebra",
+  "title": "Intermediate Algebra",
+  "domain": "math",
+  "level": "High school",
+  "description": "Building on elementary algebra, this course tackles functions, systems in three variables, rational and radical expressions, and quadratic and exponential models. The goal is fluency with the algebraic machinery that every later math and science course assumes you already have.",
+  "outcomes": [
+    "Classify real numbers, apply their properties, and simplify expressions with exponents and absolute value.",
+    "Solve compound and absolute value equations and inequalities, and evaluate functions using function notation.",
+    "Solve systems of linear equations in two and three variables and graph systems of linear inequalities.",
+    "Factor polynomials by grouping and the ac method, and simplify, multiply, divide, and solve rational expressions and equations.",
+    "Simplify and perform operations on radical expressions, and solve radical equations while checking for extraneous solutions.",
+    "Solve quadratic equations by the quadratic formula and completing the square, graph parabolas, and model exponential growth and decay."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations: Real Numbers and Functions",
+      "summary": "The real number system and its properties, compound and absolute value equations and inequalities, and an introduction to functions and function notation.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Real Numbers and Simplifying Expressions",
+          "minutes": 15,
+          "intro": "Before you can manipulate an expression with confidence, you need to know exactly what kind of numbers you are working with and which shortcuts the properties of real numbers actually allow.",
+          "sections": [
+            {
+              "heading": "The Real Number System",
+              "body": [
+                "Real numbers include the rational numbers — any number expressible as a fraction of integers, including terminating and repeating decimals — and the irrational numbers, whose decimal expansions never terminate or repeat, such as √2 and π. Within the rationals sit the integers, and within the integers sit the whole numbers and natural numbers.",
+                "Recognizing which set a number belongs to matters when a problem restricts a variable's domain: a length must be a positive real number, a count of items must be a whole number, and some formulas only make sense for rational inputs."
+              ]
+            },
+            {
+              "heading": "Properties of Real Numbers",
+              "body": [
+                "The commutative properties say order does not matter for addition or multiplication: a + b = b + a and ab = ba. The associative properties say grouping does not matter: (a + b) + c = a + (b + c) and (ab)c = a(bc). The distributive property connects addition and multiplication: a(b + c) = ab + ac.",
+                "These properties justify moves you already make automatically, like rearranging terms before combining them, and they fail for subtraction and division — order and grouping do matter there, which is why 5 − 3 does not equal 3 − 5."
+              ]
+            },
+            {
+              "heading": "Simplifying with Exponents and Absolute Value",
+              "body": [
+                "Order of operations still governs every simplification: absolute value bars and parentheses group their contents first, then exponents apply, then multiplication and division, then addition and subtraction, all read left to right within each level.",
+                "Absolute value bars act like parentheses for grouping purposes but always output a nonnegative result at the end. When absolute value and exponents both appear, resolve what is inside the bars first, then take the absolute value, before combining with anything outside."
+              ],
+              "example": {
+                "problem": "Simplify |−7| + 2(3 − 5)².",
+                "steps": [
+                  "Simplify inside parentheses first: 3 − 5 = −2.",
+                  "Apply the exponent: (−2)² = 4.",
+                  "Multiply: 2 × 4 = 8.",
+                  "Evaluate the absolute value: |−7| = 7.",
+                  "Add: 7 + 8 = 15."
+                ],
+                "answer": "15"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "rational number", "def": "a number expressible as a fraction of two integers, including terminating and repeating decimals"},
+            {"term": "irrational number", "def": "a real number whose decimal expansion never terminates or repeats, such as √2"},
+            {"term": "commutative property", "def": "the rule that order does not affect the result of addition or multiplication"},
+            {"term": "associative property", "def": "the rule that grouping does not affect the result of addition or multiplication"}
+          ],
+          "practice": [
+            {"q": "Which number is irrational?", "choices": ["0.75", "√9", "√7", "−4"], "answer": 2, "explain": "√7 is not a perfect square, so its decimal expansion never terminates or repeats; √9 = 3, which is rational."},
+            {"q": "Simplify 3 + 4(6 − 8)² − |−5|.", "choices": ["14", "18", "8", "−2"], "answer": 0, "explain": "6 − 8 = −2, squared is 4, times 4 is 16, plus 3 is 19, minus |−5| = 5 gives 14."},
+            {"q": "Which property justifies rewriting (2 + 3) + 7 as 2 + (3 + 7)?", "choices": ["Commutative property", "Associative property", "Distributive property", "Identity property"], "answer": 1, "explain": "Regrouping terms without changing their order is the associative property."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Compound and Absolute Value Equations and Inequalities",
+          "minutes": 17,
+          "intro": "Absolute value measures distance from zero without caring about direction, so any equation or inequality involving it usually splits into two separate cases — one for each direction that distance could point.",
+          "sections": [
+            {
+              "heading": "Compound Inequalities",
+              "body": [
+                "A compound inequality joins two conditions with 'and' or 'or.' An 'and' compound inequality, often written as a single chain like −4 < 2x ≤ 8, requires both conditions to hold at once, and you solve it by applying the same operation to all three parts simultaneously.",
+                "An 'or' compound inequality is true whenever at least one of its two conditions holds, and its solution is typically two separate, non-overlapping rays on the number line rather than one connected interval."
+              ],
+              "example": {
+                "problem": "Solve −3 < 2x + 1 ≤ 9.",
+                "steps": [
+                  "Subtract 1 from all three parts: −4 < 2x ≤ 8.",
+                  "Divide all three parts by 2: −2 < x ≤ 4."
+                ],
+                "answer": "−2 < x ≤ 4"
+              }
+            },
+            {
+              "heading": "Absolute Value Equations",
+              "body": [
+                "Because |x| = a means x is exactly a units from zero, the equation |expression| = a (for a positive) always splits into two cases: expression = a or expression = −a. Solve each case as its own linear equation, and both solutions belong to the original equation unless a check reveals otherwise.",
+                "If a is negative, the equation |expression| = a has no solution at all, since an absolute value can never produce a negative output."
+              ],
+              "example": {
+                "problem": "Solve |2x − 3| = 7.",
+                "steps": [
+                  "Split into two cases: 2x − 3 = 7 or 2x − 3 = −7.",
+                  "Solve the first: 2x = 10, so x = 5.",
+                  "Solve the second: 2x = −4, so x = −2."
+                ],
+                "answer": "x = 5 or x = −2"
+              }
+            },
+            {
+              "heading": "Absolute Value Inequalities",
+              "body": [
+                "For |expression| < a (a positive), the solution is the compound 'and' inequality −a < expression < a, since the expression must stay within a units of zero on both sides. For |expression| > a, the solution splits into an 'or' inequality, expression < −a or expression > a, since the expression must be further than a units away in either direction.",
+                "Remember which pattern goes with which symbol: less than gives one connected interval (a 'between' statement), greater than gives two separate rays (an 'outside' statement)."
+              ],
+              "example": {
+                "problem": "Solve |x − 4| < 3.",
+                "steps": [
+                  "Rewrite as a compound inequality: −3 < x − 4 < 3.",
+                  "Add 4 to all three parts: 1 < x < 7."
+                ],
+                "answer": "1 < x < 7"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "compound inequality", "def": "two inequalities joined by 'and' or 'or'"},
+            {"term": "absolute value equation", "def": "an equation involving absolute value that typically splits into two linear cases"}
+          ],
+          "practice": [
+            {"q": "Solve −5 ≤ 3x − 2 < 10.", "choices": ["−1 ≤ x < 4", "−1 ≤ x < 12", "1 ≤ x < 4", "−7 ≤ x < 8"], "answer": 0, "explain": "Add 2 to all parts: −3 ≤ 3x < 12, then divide by 3: −1 ≤ x < 4."},
+            {"q": "Solve |3x + 6| = 12.", "choices": ["x = 2 or x = −6", "x = 6 or x = −2", "x = 2 or x = 6", "x = −2 or x = −6"], "answer": 0, "explain": "Split into 3x + 6 = 12, giving x = 2, or 3x + 6 = −12, giving x = −6."},
+            {"q": "Solve |x + 1| > 5.", "choices": ["x > 4 or x < −6", "−6 < x < 4", "x > 6 or x < −4", "x > 4"], "answer": 0, "explain": "Greater-than absolute value inequalities split into two rays: x + 1 > 5 gives x > 4, and x + 1 < −5 gives x < −6."},
+            {"q": "Solve |2x| ≤ 8.", "choices": ["−4 ≤ x ≤ 4", "x ≤ 4", "−4 ≤ x", "x ≥ 4 or x ≤ −4"], "answer": 0, "explain": "Less-than-or-equal absolute value inequalities form one interval: −8 ≤ 2x ≤ 8, so dividing by 2 gives −4 ≤ x ≤ 4."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Introduction to Functions",
+          "minutes": 14,
+          "intro": "A function is a strict promise: for every input you feed it, exactly one output comes back, and function notation is just a compact way of naming that promise and evaluating it.",
+          "sections": [
+            {
+              "heading": "Function Notation and Evaluating Functions",
+              "body": [
+                "A function assigns exactly one output to each input. Function notation f(x) names the output that function f produces for input x, replacing the more cumbersome 'y equals' phrasing while emphasizing that y depends on x through a specific rule.",
+                "Evaluating f(3) means substituting 3 everywhere x appears in the function's rule and simplifying, exactly like evaluating any algebraic expression once a value is known."
+              ],
+              "example": {
+                "problem": "For f(x) = 2x² − 3x + 1, find f(3).",
+                "steps": [
+                  "Substitute x = 3: 2(3)² − 3(3) + 1.",
+                  "Apply the exponent: 3² = 9, so 2(9) = 18.",
+                  "Multiply: 3(3) = 9.",
+                  "Combine: 18 − 9 + 1 = 10."
+                ],
+                "answer": "f(3) = 10"
+              }
+            },
+            {
+              "heading": "Domain and Range",
+              "body": [
+                "The domain of a function is the complete set of inputs it accepts, and the range is the complete set of outputs it can produce. For most polynomial functions, the domain is all real numbers, but functions with denominators or square roots often exclude certain inputs, such as values that make a denominator zero or a radicand negative.",
+                "Finding the domain usually means asking what could go wrong: division by zero and the square root of a negative number are the two most common restrictions to check for in this course."
+              ]
+            },
+            {
+              "heading": "The Vertical Line Test",
+              "body": [
+                "A graph represents a function exactly when no vertical line crosses it more than once, since a vertical line crossing twice would mean one input produces two different outputs, breaking the definition of a function.",
+                "This visual test is a fast way to check whether a relation graphed on paper qualifies as a function: circles and sideways parabolas typically fail it, while straight lines (except vertical ones) and upright parabolas pass it."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "function", "def": "a relation that assigns exactly one output to each input"},
+            {"term": "domain", "def": "the complete set of allowable input values for a function"},
+            {"term": "range", "def": "the complete set of output values a function can produce"},
+            {"term": "vertical line test", "def": "a graph represents a function if no vertical line crosses it more than once"}
+          ],
+          "practice": [
+            {"q": "For g(x) = x² + 4x − 1, find g(−2).", "choices": ["−5", "3", "−1", "11"], "answer": 0, "explain": "g(−2) = (−2)² + 4(−2) − 1 = 4 − 8 − 1 = −5."},
+            {"q": "What value must be excluded from the domain of h(x) = 5/(x − 3)?", "choices": ["0", "3", "5", "−3"], "answer": 1, "explain": "The denominator x − 3 cannot equal zero, so x = 3 must be excluded from the domain."},
+            {"q": "Which graph fails the vertical line test?", "choices": ["A straight diagonal line", "A parabola opening upward", "A circle", "A horizontal line"], "answer": 2, "explain": "A vertical line through the middle of a circle crosses it twice, so a circle is not the graph of a function."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Systems and Graphing",
+      "summary": "Graphing linear functions, solving systems in two and three variables, and graphing systems of linear inequalities.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Graphing Linear Functions",
+          "minutes": 14,
+          "intro": "Every linear equation, no matter how it is originally written, can be rearranged into slope-intercept form, and that single rearranging skill unlocks graphing lines quickly no matter their starting form.",
+          "sections": [
+            {
+              "heading": "Converting Standard Form to Slope-Intercept Form",
+              "body": [
+                "Standard form writes a line as Ax + By = C. To graph it easily, solve for y to convert it into slope-intercept form y = mx + b, isolating y using the same inverse-operation steps used for any equation.",
+                "This conversion is worth doing whenever a line's equation arrives in standard form, since slope-intercept form immediately reveals both the slope and the y-intercept needed to sketch the graph."
+              ],
+              "example": {
+                "problem": "Convert 3x − 4y = 8 to slope-intercept form.",
+                "steps": [
+                  "Subtract 3x from both sides: −4y = −3x + 8.",
+                  "Divide every term by −4: y = (3/4)x − 2."
+                ],
+                "answer": "y = (3/4)x − 2"
+              }
+            },
+            {
+              "heading": "Horizontal and Vertical Lines",
+              "body": [
+                "A horizontal line has equation y = k for some constant k, and its slope is always 0, since y never changes no matter what x is. A vertical line has equation x = k, and its slope is undefined, since every point shares the same x-value, making the denominator of the slope formula zero.",
+                "Vertical lines are the one case that is not a function, since a single input x = k would correspond to every possible y-value, violating the one-output-per-input rule."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "standard form", "def": "a linear equation written as Ax + By = C"},
+            {"term": "horizontal line", "def": "a line with equation y = k and slope 0"},
+            {"term": "vertical line", "def": "a line with equation x = k and undefined slope"}
+          ],
+          "practice": [
+            {"q": "Convert 2x + 5y = 20 to slope-intercept form.", "choices": ["y = −(2/5)x + 4", "y = (2/5)x + 4", "y = −(5/2)x + 4", "y = 2x + 20"], "answer": 0, "explain": "Subtract 2x: 5y = −2x + 20, then divide by 5: y = −(2/5)x + 4."},
+            {"q": "What is the slope of the line y = −6?", "choices": ["0", "−6", "Undefined", "6"], "answer": 0, "explain": "y = −6 is a horizontal line, and horizontal lines always have a slope of 0."},
+            {"q": "What is the slope of the line x = 4?", "choices": ["0", "4", "Undefined", "1/4"], "answer": 2, "explain": "x = 4 is a vertical line, and vertical lines have an undefined slope."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Solving Systems of Linear Equations",
+          "minutes": 18,
+          "intro": "Two-variable systems find where two lines cross; three-variable systems find where three flat planes all meet at a single point, and the elimination strategy that solves one scales up naturally to solve the other.",
+          "sections": [
+            {
+              "heading": "Reviewing Two-Variable Systems",
+              "body": [
+                "A system of two linear equations in two variables is solved by substitution or elimination, producing one ordered pair as the solution whenever the lines are not parallel. This is the foundation the three-variable case builds on directly.",
+                "Before tackling three variables, it helps to be completely fluent with two: choose whichever variable is easiest to eliminate or isolate, and always check your solution in both original equations."
+              ]
+            },
+            {
+              "heading": "Solving Systems in Three Variables",
+              "body": [
+                "A system of three linear equations in three variables (x, y, z) is solved by using elimination to combine pairs of equations, reducing the three-variable system down to a two-variable system, then down further to one variable.",
+                "The strategy: pick one variable to eliminate, combine two pairs of equations to eliminate it from each pair, giving two new equations in the remaining two variables. Solve that smaller system as usual, then substitute back to find the third variable."
+              ],
+              "example": {
+                "problem": "Solve x + y + z = 6, 2x − y + z = 3, and x − y + 2z = 5.",
+                "steps": [
+                  "Subtract equation 1 from equation 2: (2x − y + z) − (x + y + z) = 3 − 6, giving x − 2y = −3.",
+                  "Subtract equation 1 from equation 3: (x − y + 2z) − (x + y + z) = 5 − 6, giving −2y + z = −1, so z = 2y − 1.",
+                  "From equation 1, x = 6 − y − z = 6 − y − (2y − 1) = 7 − 3y.",
+                  "Substitute into x − 2y = −3: (7 − 3y) − 2y = −3, giving 7 − 5y = −3, so y = 2.",
+                  "Then z = 2(2) − 1 = 3, and x = 7 − 3(2) = 1."
+                ],
+                "answer": "(x, y, z) = (1, 2, 3)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "system in three variables", "def": "three linear equations sharing the variables x, y, and z, typically solved by reducing to a smaller system"},
+            {"term": "ordered triple", "def": "a solution to a three-variable system, written (x, y, z)"}
+          ],
+          "practice": [
+            {"q": "In solving a three-variable system, what is the first strategic goal?", "choices": ["Guess and check values", "Reduce it to a two-variable system by eliminating one variable", "Graph all three equations directly", "Solve for z immediately"], "answer": 1, "explain": "Eliminating one variable from two different pairs of equations produces a smaller, two-variable system that can be solved with familiar methods."},
+            {"q": "Solve x + y + z = 10, x − y + z = 4, and x + y − z = 2.", "choices": ["(3, 4, 3)", "(4, 3, 3)", "(3, 3, 4)", "(4, 4, 2)"], "answer": 0, "explain": "Subtracting equation 2 from equation 1 gives 2y = 6, so y = 3. Subtracting equation 3 from equation 1 gives 2z = 8, so z = 4. Then x = 10 − 3 − 4 = 3, giving (3, 4, 3)."},
+            {"q": "A three-variable system's solution, if unique, is written as what kind of value?", "choices": ["A single number", "An ordered pair", "An ordered triple", "A range of values"], "answer": 2, "explain": "A unique solution to a three-variable system gives one value for each of x, y, and z, written together as an ordered triple."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Systems of Linear Inequalities",
+          "minutes": 15,
+          "intro": "Graphing an inequality shades a whole half of the plane rather than drawing a single line, and when two such shaded regions overlap, that overlap is the full solution set of the system.",
+          "sections": [
+            {
+              "heading": "Graphing a Single Linear Inequality",
+              "body": [
+                "To graph y < mx + b or y > mx + b, first graph the boundary line y = mx + b, using a dashed line for strict inequalities (< or >) since points on the line are not included, or a solid line for ≤ or ≥, since points on the line are included.",
+                "Then shade the side of the line that satisfies the inequality: shade below the line for 'less than' forms and above the line for 'greater than' forms, or test a point not on the line, like the origin, to confirm which side to shade."
+              ]
+            },
+            {
+              "heading": "Graphing a System of Inequalities",
+              "body": [
+                "To graph a system of two or more linear inequalities, graph each one's boundary and shading on the same coordinate plane, then identify the region where all the shadings overlap. That overlapping region is the complete solution set, since any point in it satisfies every inequality in the system simultaneously.",
+                "Testing a specific point is a reliable check: if a candidate point satisfies every inequality in the system when substituted in, it lies within the correct overlapping region."
+              ],
+              "example": {
+                "problem": "Confirm whether (3, 3) is a solution to the system y ≤ 2x + 1 and y > −x + 3.",
+                "steps": [
+                  "Check the first inequality: is 3 ≤ 2(3) + 1 = 7? Yes, 3 ≤ 7 is true.",
+                  "Check the second inequality: is 3 > −(3) + 3 = 0? Yes, 3 > 0 is true.",
+                  "Since both inequalities hold, the point satisfies the entire system."
+                ],
+                "answer": "(3, 3) is a solution to the system"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "boundary line", "def": "the line graphed from the equation form of an inequality, dashed for strict inequalities and solid otherwise"},
+            {"term": "solution region", "def": "the area of the coordinate plane where the shaded regions of every inequality in a system overlap"}
+          ],
+          "practice": [
+            {"q": "For the inequality y < 3x − 2, what kind of boundary line should be drawn?", "choices": ["Solid line", "Dashed line", "No line at all", "A curved line"], "answer": 1, "explain": "Strict inequalities (< or >) use a dashed boundary line, since points exactly on the line do not satisfy the inequality."},
+            {"q": "Is (0, 0) a solution to the system y ≥ x + 1 and y ≤ 4x + 5?", "choices": ["Yes, it satisfies both", "No, it fails the first inequality", "No, it fails the second inequality", "No, it fails both"], "answer": 1, "explain": "Checking y ≥ x + 1 with (0,0): 0 ≥ 1 is false, so (0,0) fails the first inequality even though it satisfies the second (0 ≤ 5)."},
+            {"q": "The solution region of a system of two linear inequalities is best described as:", "choices": ["A single point", "A single line", "The overlap of both shaded half-planes", "The union of both shaded half-planes"], "answer": 2, "explain": "A system requires every inequality to hold at once, so the solution is where the shaded regions overlap, not their combined union."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Polynomials and Rational Expressions",
+      "summary": "Factoring by grouping and the ac method, and simplifying, multiplying, dividing, and solving rational expressions and equations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Factoring by Grouping and the ac Method",
+          "minutes": 17,
+          "intro": "When a trinomial's leading coefficient is not 1, or a polynomial has four separate terms, the simple factoring tricks from before stop working — but a slightly more organized version of the same idea still gets the job done.",
+          "sections": [
+            {
+              "heading": "Factoring by Grouping",
+              "body": [
+                "A four-term polynomial can sometimes be factored by splitting it into two pairs of terms, factoring the greatest common factor out of each pair separately, and then factoring out the common binomial that remains.",
+                "This works when the two pairs, after their individual GCFs are pulled out, leave behind the exact same binomial factor, which can then be factored out one more time."
+              ],
+              "example": {
+                "problem": "Factor 2x³ + 3x² + 4x + 6 by grouping.",
+                "steps": [
+                  "Group the terms in pairs: (2x³ + 3x²) + (4x + 6).",
+                  "Factor the GCF from each pair: x²(2x + 3) + 2(2x + 3).",
+                  "Both pairs now share the common factor (2x + 3); factor it out: (2x + 3)(x² + 2)."
+                ],
+                "answer": "2x³ + 3x² + 4x + 6 = (2x + 3)(x² + 2)"
+              }
+            },
+            {
+              "heading": "Factoring Trinomials with the ac Method",
+              "body": [
+                "For a trinomial ax² + bx + c where a is not 1, multiply a and c together, then find two numbers that multiply to that product and add to b. Rewrite the middle term bx using those two numbers, splitting it into two terms, then factor the resulting four-term polynomial by grouping.",
+                "This method extends the same 'two numbers that multiply and add' idea from simpler trinomials, just accounting for the extra factor a by working with the product ac instead of c alone."
+              ],
+              "example": {
+                "problem": "Factor 3x² + 11x + 6 using the ac method.",
+                "steps": [
+                  "Multiply a and c: 3 × 6 = 18.",
+                  "Find two numbers multiplying to 18 and adding to 11: 9 and 2.",
+                  "Rewrite the middle term: 3x² + 9x + 2x + 6.",
+                  "Factor by grouping: 3x(x + 3) + 2(x + 3) = (x + 3)(3x + 2)."
+                ],
+                "answer": "3x² + 11x + 6 = (x + 3)(3x + 2)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "factoring by grouping", "def": "splitting a four-term polynomial into pairs, factoring each pair, then factoring out the shared binomial"},
+            {"term": "ac method", "def": "a technique for factoring ax² + bx + c by splitting the middle term based on the product ac"}
+          ],
+          "practice": [
+            {"q": "Factor x³ + 5x² + 2x + 10 by grouping.", "choices": ["(x + 5)(x² + 2)", "(x² + 5)(x + 2)", "(x + 2)(x² + 5)", "(x + 10)(x² + 5)"], "answer": 0, "explain": "Grouping gives x²(x + 5) + 2(x + 5), and factoring out the shared (x + 5) gives (x + 5)(x² + 2)."},
+            {"q": "Factor 2x² + 7x + 3 using the ac method.", "choices": ["(2x + 1)(x + 3)", "(2x + 3)(x + 1)", "(x + 1)(x + 3)", "(2x + 6)(x + 1)"], "answer": 0, "explain": "ac = 2 × 3 = 6; two numbers multiplying to 6 and adding to 7 are 6 and 1: 2x² + 6x + x + 3 = 2x(x + 3) + 1(x + 3) = (2x + 1)(x + 3)."},
+            {"q": "In the ac method for 5x² + 13x + 6, which two numbers should replace the middle term?", "choices": ["10 and 3", "15 and 2", "6 and 7", "5 and 8"], "answer": 0, "explain": "ac = 5 × 6 = 30; the two numbers multiplying to 30 and adding to 13 are 10 and 3."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Simplifying Rational Expressions",
+          "minutes": 16,
+          "intro": "A rational expression is just a fraction with polynomials on top and bottom, and simplifying one works exactly like simplifying a numeric fraction, factor first and cancel what matches — with one extra step: noting which inputs would break the expression.",
+          "sections": [
+            {
+              "heading": "Restrictions and Excluded Values",
+              "body": [
+                "A rational expression is undefined wherever its denominator equals zero, so before simplifying, it is worth identifying those excluded values by setting the original (unsimplified) denominator equal to zero and solving.",
+                "This matters because simplifying can sometimes hide a restriction: a factor that cancels between numerator and denominator still represented a value that made the original expression undefined, so that value stays excluded even after simplifying."
+              ]
+            },
+            {
+              "heading": "Simplifying by Factoring",
+              "body": [
+                "To simplify a rational expression, factor both the numerator and denominator completely, then cancel any factors that appear in both. Only fully factored common factors can be canceled — never cancel individual terms inside a sum that has not been factored.",
+                "For (x² − 9)/(x² + 5x + 6), factor the numerator as a difference of squares, (x − 3)(x + 3), and factor the denominator as a trinomial, (x + 2)(x + 3), then cancel the shared factor (x + 3)."
+              ],
+              "example": {
+                "problem": "Simplify (x² − 9)/(x² + 5x + 6) and state its restrictions.",
+                "steps": [
+                  "Factor the numerator: x² − 9 = (x − 3)(x + 3).",
+                  "Factor the denominator: x² + 5x + 6 = (x + 2)(x + 3).",
+                  "Cancel the shared factor (x + 3): (x − 3)/(x + 2).",
+                  "The original denominator is zero when x = −2 or x = −3, so both values are excluded."
+                ],
+                "answer": "(x − 3)/(x + 2), with x ≠ −2 and x ≠ −3"
+              }
+            },
+            {
+              "heading": "Multiplying and Dividing Rational Expressions",
+              "body": [
+                "Multiply rational expressions the same way as numeric fractions: factor everything first, cancel common factors across the whole product, then multiply what remains straight across. Divide by multiplying by the reciprocal of the second expression, exactly as with numeric fractions.",
+                "Factoring before canceling, rather than multiplying everything out first, keeps the arithmetic manageable and reveals cancellations that would otherwise be buried inside large expanded polynomials."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "rational expression", "def": "a fraction whose numerator and denominator are polynomials"},
+            {"term": "excluded value", "def": "an input that makes a rational expression's denominator equal zero, and is therefore not in its domain"}
+          ],
+          "practice": [
+            {"q": "Simplify (x² − 4)/(x² + x − 2).", "choices": ["(x − 2)/(x − 1)", "(x + 2)/(x − 1)", "(x − 2)/(x + 1)", "(x + 2)/(x + 1)"], "answer": 0, "explain": "x² − 4 factors to (x − 2)(x + 2), and x² + x − 2 factors to (x − 1)(x + 2); canceling the shared factor (x + 2) leaves (x − 2)/(x − 1)."},
+            {"q": "What value must be excluded from (x + 5)/(x² − 25)?", "choices": ["x = 5 only", "x = −5 only", "x = 5 and x = −5", "No values are excluded"], "answer": 2, "explain": "The denominator x² − 25 = (x − 5)(x + 5) is zero when x = 5 or x = −5, so both are excluded even though x = −5 also cancels with the numerator."},
+            {"q": "Multiply (x/(x+3)) × ((x+3)/(2x)).", "choices": ["1/2", "x²/(2x(x+3))", "x/(2x)", "(x+3)/(2)"], "answer": 0, "explain": "The (x + 3) factors cancel, and the x factors cancel, leaving 1/2."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Solving Rational Equations",
+          "minutes": 17,
+          "intro": "Rational equations clear their denominators the same way fraction equations always have, but with one new danger: a solution that looks perfectly valid on paper can secretly make a denominator zero, and you have to check for that every time.",
+          "sections": [
+            {
+              "heading": "Clearing Denominators with the LCD",
+              "body": [
+                "To solve a rational equation, multiply every term on both sides by the least common denominator of all the fractions present. This clears every denominator at once, leaving a simpler equation, usually linear or quadratic, that can be solved with familiar methods.",
+                "Identify the LCD by factoring every denominator first, then taking each distinct factor the greatest number of times it appears in any single denominator, exactly as with numeric fractions."
+              ],
+              "example": {
+                "problem": "Solve 3/x + 1/2 = 5/x.",
+                "steps": [
+                  "The LCD of x and 2 is 2x. Multiply every term by 2x: 2x(3/x) + 2x(1/2) = 2x(5/x).",
+                  "Simplify each term: 6 + x = 10.",
+                  "Subtract 6 from both sides: x = 4.",
+                  "Check: x = 4 does not make any original denominator zero, so it is valid."
+                ],
+                "answer": "x = 4"
+              }
+            },
+            {
+              "heading": "Checking for Extraneous Solutions",
+              "body": [
+                "After clearing denominators and solving, always substitute each solution back into the original equation's denominators to make sure none of them become zero. A solution that makes an original denominator zero is called extraneous and must be thrown out, even though it correctly solves the cleared, denominator-free version of the equation.",
+                "This checking step is not optional bookkeeping — it is the only way to catch a genuinely invalid answer that the algebra alone would let slip through."
+              ],
+              "example": {
+                "problem": "Solve x/(x − 2) = 2/(x − 2) + 3.",
+                "steps": [
+                  "Multiply every term by (x − 2): x = 2 + 3(x − 2).",
+                  "Distribute: x = 2 + 3x − 6, which simplifies to x = 3x − 4.",
+                  "Subtract 3x from both sides: −2x = −4, so x = 2.",
+                  "Check x = 2 in the original denominators: x − 2 = 0, which is undefined, so x = 2 is extraneous."
+                ],
+                "answer": "No solution (x = 2 is extraneous)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "rational equation", "def": "an equation containing one or more rational expressions"},
+            {"term": "extraneous solution", "def": "a value produced by solving an equation that does not actually satisfy the original equation, often because it creates a zero denominator"}
+          ],
+          "practice": [
+            {"q": "Solve 2/x + 3 = 5/x.", "choices": ["x = 1", "x = 1.5", "x = 3", "x = 2/5"], "answer": 0, "explain": "Multiplying every term by x gives 2 + 3x = 5, so 3x = 3 and x = 1. Checking: 2/1 + 3 = 5, and 5/1 = 5, so both sides match."},
+            {"q": "When solving a rational equation, why must you check your solutions in the original equation?", "choices": ["To verify the arithmetic only", "Because clearing denominators can introduce extraneous solutions that make a denominator zero", "Because rational equations never have real solutions", "To simplify the final answer"], "answer": 1, "explain": "Multiplying by an expression containing the variable can introduce solutions that satisfy the cleared equation but make an original denominator zero, so checking against the original equation is essential."},
+            {"q": "Solve x/(x − 3) = 3/(x − 3) + 2.", "choices": ["x = 3", "x = 6", "No solution", "x = 0"], "answer": 2, "explain": "Multiplying by (x − 3) gives x = 3 + 2(x − 3), which simplifies to x = 2x − 3, so x = 3. But x = 3 makes the original denominators zero, so it is extraneous and the equation has no solution."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Roots and Radicals",
+      "summary": "Simplifying radical expressions, performing operations on radicals, and solving radical equations while checking for extraneous roots.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Simplifying Radical Expressions",
+          "minutes": 15,
+          "intro": "A square root is unsimplified as long as it hides a perfect-square factor inside it, and pulling that perfect square out is the single skill that makes every later radical operation manageable.",
+          "sections": [
+            {
+              "heading": "Simplifying Square Roots",
+              "body": [
+                "To simplify √n, find the largest perfect-square factor of n, rewrite n as that perfect square times the remaining factor, and pull the perfect square's root outside the radical. Since √(ab) = √a × √b, a perfect-square factor like 36 becomes a whole number 6 once its root is taken.",
+                "For √72, notice that 72 = 36 × 2, and 36 is a perfect square. So √72 = √36 × √2 = 6√2, a fully simplified radical since 2 has no perfect-square factors left."
+              ],
+              "example": {
+                "problem": "Simplify √72.",
+                "steps": [
+                  "Find the largest perfect-square factor of 72: 72 = 36 × 2, and 36 = 6².",
+                  "Rewrite: √72 = √36 × √2.",
+                  "Simplify the perfect square: √36 = 6."
+                ],
+                "answer": "√72 = 6√2"
+              }
+            },
+            {
+              "heading": "Simplifying Higher-Index Roots",
+              "body": [
+                "Cube roots and higher-index roots simplify the same way, just searching for perfect cubes, perfect fourth powers, and so on instead of perfect squares. For a cube root, look for the largest perfect-cube factor of the radicand.",
+                "For ∛54, notice 54 = 27 × 2, and 27 = 3³ is a perfect cube. So ∛54 = ∛27 × ∛2 = 3∛2."
+              ],
+              "example": {
+                "problem": "Simplify ∛54.",
+                "steps": [
+                  "Find the largest perfect-cube factor of 54: 54 = 27 × 2, and 27 = 3³.",
+                  "Rewrite: ∛54 = ∛27 × ∛2.",
+                  "Simplify the perfect cube: ∛27 = 3."
+                ],
+                "answer": "∛54 = 3∛2"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "radical", "def": "an expression involving a root, written with the √ symbol"},
+            {"term": "radicand", "def": "the number or expression underneath a radical symbol"},
+            {"term": "perfect square", "def": "a number that is the square of an integer, such as 4, 9, 16, or 36"}
+          ],
+          "practice": [
+            {"q": "Simplify √50.", "choices": ["5√2", "2√5", "10√5", "5√10"], "answer": 0, "explain": "50 = 25 × 2, and 25 is a perfect square, so √50 = √25 × √2 = 5√2."},
+            {"q": "Simplify √48.", "choices": ["4√3", "2√12", "16√3", "4√12"], "answer": 0, "explain": "48 = 16 × 3, and 16 is a perfect square, so √48 = √16 × √3 = 4√3."},
+            {"q": "Simplify ∛40.", "choices": ["2∛5", "4∛10", "2∛10", "8∛5"], "answer": 0, "explain": "40 = 8 × 5, and 8 = 2³ is a perfect cube, so ∛40 = ∛8 × ∛5 = 2∛5."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Operations with Radicals",
+          "minutes": 16,
+          "intro": "Radicals add and subtract only when they match exactly, but they multiply freely with any other radical of the same index, and a stray radical left in a denominator is considered unfinished work until it is rationalized away.",
+          "sections": [
+            {
+              "heading": "Adding and Subtracting Like Radicals",
+              "body": [
+                "Radicals can be combined by addition or subtraction only when they are like radicals — the same index and the same radicand after full simplification. Combine like radicals by adding or subtracting their coefficients, leaving the radical part unchanged, exactly like combining like terms.",
+                "Before deciding two radicals cannot combine, simplify both fully first: √8 and √18 look different, but √8 = 2√2 and √18 = 3√2 turn out to be like radicals after simplification and can be added."
+              ],
+              "example": {
+                "problem": "Simplify 3√2 + 5√2, and separately simplify √8 + √18.",
+                "steps": [
+                  "3√2 and 5√2 are already like radicals: add coefficients, 3 + 5 = 8, giving 8√2.",
+                  "Simplify √8 = √4 × √2 = 2√2, and √18 = √9 × √2 = 3√2.",
+                  "Now both are like radicals: 2√2 + 3√2 = 5√2."
+                ],
+                "answer": "3√2 + 5√2 = 8√2, and √8 + √18 = 5√2"
+              }
+            },
+            {
+              "heading": "Multiplying Radicals",
+              "body": [
+                "Radicals with the same index multiply directly, radicand times radicand, using the rule √a × √b = √(ab), then simplify the result. Unlike addition, multiplication does not require the radicals to match beforehand.",
+                "For √3 × √12, multiply the radicands first: 3 × 12 = 36, giving √36, which simplifies to the whole number 6."
+              ],
+              "example": {
+                "problem": "Multiply √3 × √12.",
+                "steps": [
+                  "Multiply the radicands: 3 × 12 = 36.",
+                  "Simplify: √36 = 6."
+                ],
+                "answer": "√3 × √12 = 6"
+              }
+            },
+            {
+              "heading": "Rationalizing the Denominator",
+              "body": [
+                "A radical expression is not considered fully simplified if a radical remains in the denominator. To rationalize a denominator with a single square root, multiply both the numerator and denominator by that same square root, since a square root times itself removes the radical.",
+                "For 1/√5, multiply top and bottom by √5: (1 × √5)/(√5 × √5) = √5/5, leaving a radical in the numerator instead, which is the accepted simplified form."
+              ],
+              "example": {
+                "problem": "Rationalize the denominator of 1/√5.",
+                "steps": [
+                  "Multiply numerator and denominator by √5: (1 × √5)/(√5 × √5).",
+                  "Simplify the denominator: √5 × √5 = 5."
+                ],
+                "answer": "1/√5 = √5/5"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "like radicals", "def": "radicals with the same index and the same radicand after full simplification"},
+            {"term": "rationalize the denominator", "def": "rewriting a fraction so no radical remains in the denominator"}
+          ],
+          "practice": [
+            {"q": "Simplify 4√3 − 2√3.", "choices": ["2√3", "2", "6√3", "2√6"], "answer": 0, "explain": "4√3 and 2√3 are like radicals, so subtract coefficients: 4 − 2 = 2, giving 2√3."},
+            {"q": "Multiply √5 × √20.", "choices": ["10", "√100", "Both A and B are correct", "√25"], "answer": 2, "explain": "√5 × √20 = √100, and √100 simplifies to 10, so both forms describe the same correct result."},
+            {"q": "Rationalize 3/√2.", "choices": ["3√2/2", "3/2", "√2/3", "6/√2"], "answer": 0, "explain": "Multiply numerator and denominator by √2: (3√2)/(√2 × √2) = 3√2/2."},
+            {"q": "Simplify √12 + √27.", "choices": ["5√3", "√39", "5√39", "2√3 + 3√3"], "answer": 0, "explain": "√12 = 2√3 and √27 = 3√3, both like radicals, so they combine to 2√3 + 3√3 = 5√3."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Solving Radical Equations",
+          "minutes": 16,
+          "intro": "Squaring both sides of an equation is a powerful move for eliminating a square root, but squaring can also manufacture a solution that never actually worked, which is why every radical equation ends with a mandatory check.",
+          "sections": [
+            {
+              "heading": "Isolating and Squaring",
+              "body": [
+                "To solve an equation containing a square root, first isolate the radical completely on one side of the equation, then square both sides to eliminate it. Squaring a square root simply returns the radicand, turning the equation into an ordinary polynomial equation.",
+                "It is essential to isolate the radical before squaring; squaring an equation where other terms sit alongside the radical does not eliminate the root and instead creates a much messier expression."
+              ],
+              "example": {
+                "problem": "Solve √(x + 3) = 5.",
+                "steps": [
+                  "The radical is already isolated on the left side.",
+                  "Square both sides: (√(x + 3))² = 5², giving x + 3 = 25.",
+                  "Subtract 3 from both sides: x = 22.",
+                  "Check: √(22 + 3) = √25 = 5, which matches the original equation."
+                ],
+                "answer": "x = 22"
+              }
+            },
+            {
+              "heading": "Checking for Extraneous Solutions",
+              "body": [
+                "Squaring both sides of an equation can introduce extraneous solutions, since squaring destroys information about sign: both a positive and its negative square to the same value. Every candidate solution to a radical equation must be substituted back into the original equation to confirm it truly works.",
+                "This is especially important when the equation, after squaring, becomes quadratic and produces two candidate solutions, since typically only one of the two will actually satisfy the original radical equation."
+              ],
+              "example": {
+                "problem": "Solve √(2x + 3) = x.",
+                "steps": [
+                  "Square both sides: 2x + 3 = x².",
+                  "Rearrange into standard form: x² − 2x − 3 = 0.",
+                  "Factor: (x − 3)(x + 1) = 0, giving candidate solutions x = 3 or x = −1.",
+                  "Check x = 3: √(2(3) + 3) = √9 = 3, which matches.",
+                  "Check x = −1: √(2(−1) + 3) = √1 = 1, but the original right side is −1, and 1 ≠ −1, so x = −1 is extraneous."
+                ],
+                "answer": "x = 3 only"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "radical equation", "def": "an equation in which a variable appears inside a radical"},
+            {"term": "extraneous root", "def": "a candidate solution produced by squaring both sides that does not satisfy the original radical equation"}
+          ],
+          "practice": [
+            {"q": "Solve √(x − 4) = 6.", "choices": ["x = 40", "x = 10", "x = 32", "x = 2"], "answer": 0, "explain": "Squaring both sides gives x − 4 = 36, so x = 40. Checking: √(40 − 4) = √36 = 6."},
+            {"q": "Solve √(3x + 1) = x − 1.", "choices": ["x = 0 or x = 5", "x = 5 only", "x = 0 only", "No solution"], "answer": 1, "explain": "Squaring gives 3x + 1 = x² − 2x + 1, so x² − 5x = 0, giving x = 0 or x = 5. Checking x = 0: √1 = 1, but x − 1 = −1, so it's extraneous. Checking x = 5: √16 = 4, and x − 1 = 4, which matches, so only x = 5 works."},
+            {"q": "Why must solutions to radical equations always be checked in the original equation?", "choices": ["Because radicals are always irrational", "Because squaring both sides can introduce extraneous solutions", "Because radical equations have no real solutions", "Because checking simplifies the radicand"], "answer": 1, "explain": "Squaring both sides can produce values that solve the squared equation but not the original one, since squaring loses information about sign."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Quadratics and Exponentials",
+      "summary": "Solving quadratic equations by the quadratic formula and completing the square, graphing parabolas, and modeling exponential growth and decay.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Solving Quadratic Equations",
+          "minutes": 18,
+          "intro": "Factoring only solves the quadratic equations that happen to factor nicely; completing the square and the quadratic formula solve every quadratic equation there is, no exceptions.",
+          "sections": [
+            {
+              "heading": "The Quadratic Formula",
+              "body": [
+                "For any equation in standard form ax² + bx + c = 0, the quadratic formula gives both solutions at once: x = (−b ± √(b² − 4ac)) / (2a). Identify a, b, and c from the equation, substitute carefully, and simplify.",
+                "The expression under the square root, b² − 4ac, is called the discriminant. A positive discriminant gives two distinct real solutions, a discriminant of zero gives exactly one repeated real solution, and a negative discriminant gives two complex (non-real) solutions."
+              ],
+              "example": {
+                "problem": "Solve 2x² + 3x − 2 = 0 using the quadratic formula.",
+                "steps": [
+                  "Identify a = 2, b = 3, c = −2.",
+                  "Compute the discriminant: b² − 4ac = 9 − 4(2)(−2) = 9 + 16 = 25.",
+                  "Substitute into the formula: x = (−3 ± √25) / (2(2)) = (−3 ± 5) / 4.",
+                  "Compute both solutions: x = (−3 + 5)/4 = 0.5, or x = (−3 − 5)/4 = −2."
+                ],
+                "answer": "x = 0.5 or x = −2"
+              }
+            },
+            {
+              "heading": "Completing the Square",
+              "body": [
+                "Completing the square transforms x² + bx into a perfect square trinomial by adding (b/2)², the square of half the coefficient of x. Whatever you add to one side of an equation to complete the square, you must add to the other side as well to keep it balanced.",
+                "This technique both solves quadratic equations directly and is the method used to derive the quadratic formula itself, since completing the square on the general equation ax² + bx + c = 0 produces that formula."
+              ],
+              "example": {
+                "problem": "Solve x² + 6x + 5 = 0 by completing the square.",
+                "steps": [
+                  "Move the constant to the other side: x² + 6x = −5.",
+                  "Take half of 6 (which is 3) and square it (9), adding it to both sides: x² + 6x + 9 = −5 + 9 = 4.",
+                  "Write the left side as a perfect square: (x + 3)² = 4.",
+                  "Take the square root of both sides: x + 3 = ±2.",
+                  "Solve both cases: x = −1 or x = −5."
+                ],
+                "answer": "x = −1 or x = −5"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "quadratic formula", "def": "x = (−b ± √(b² − 4ac)) / (2a), which solves any equation of the form ax² + bx + c = 0"},
+            {"term": "discriminant", "def": "the expression b² − 4ac, which reveals the number and type of solutions a quadratic equation has"},
+            {"term": "completing the square", "def": "adding (b/2)² to x² + bx to form a perfect square trinomial"}
+          ],
+          "practice": [
+            {"q": "Use the quadratic formula to solve x² − 5x + 6 = 0.", "choices": ["x = 2 or x = 3", "x = −2 or x = −3", "x = 1 or x = 6", "x = 5 or x = 6"], "answer": 0, "explain": "a = 1, b = −5, c = 6; the discriminant is 25 − 24 = 1, and x = (5 ± 1)/2 gives x = 3 or x = 2."},
+            {"q": "What does a discriminant of 0 indicate about a quadratic equation's solutions?", "choices": ["Two distinct real solutions", "No real solutions", "Exactly one repeated real solution", "Infinitely many solutions"], "answer": 2, "explain": "When b² − 4ac = 0, the ± term in the quadratic formula contributes nothing, so both roots are identical, giving one repeated real solution."},
+            {"q": "Solve x² − 8x + 7 = 0 by completing the square.", "choices": ["x = 1 or x = 7", "x = −1 or x = −7", "x = 4 or x = 2", "x = 2 or x = 6"], "answer": 0, "explain": "Rewrite as x² − 8x = −7, add (−4)² = 16 to both sides to get (x − 4)² = 9, then x − 4 = ±3, giving x = 7 or x = 1."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Graphing Quadratic Functions",
+          "minutes": 16,
+          "intro": "Every quadratic function graphs as a parabola with a single highest or lowest point, the vertex, and once you can locate that point and the direction the parabola opens, sketching the whole curve is straightforward.",
+          "sections": [
+            {
+              "heading": "Finding the Vertex",
+              "body": [
+                "For a quadratic in standard form y = ax² + bx + c, the vertex's x-coordinate is given by x = −b/(2a). Substitute that x-value back into the function to find the corresponding y-coordinate, giving the full vertex point.",
+                "The parabola opens upward when a is positive, making the vertex a minimum point, and opens downward when a is negative, making the vertex a maximum point."
+              ],
+              "example": {
+                "problem": "Find the vertex of y = x² − 4x + 3.",
+                "steps": [
+                  "Identify a = 1 and b = −4.",
+                  "Find the x-coordinate: x = −(−4)/(2(1)) = 4/2 = 2.",
+                  "Substitute x = 2 into the function: y = (2)² − 4(2) + 3 = 4 − 8 + 3 = −1."
+                ],
+                "answer": "Vertex at (2, −1)"
+              }
+            },
+            {
+              "heading": "Intercepts and Sketching the Graph",
+              "body": [
+                "The y-intercept of y = ax² + bx + c is always (0, c), found instantly without any computation. The x-intercepts, if they exist, are found by setting y = 0 and solving the resulting quadratic equation by factoring, completing the square, or the quadratic formula.",
+                "To sketch a parabola, plot the vertex, the y-intercept, and any x-intercepts, then draw a smooth symmetric curve through them, mirrored across the vertical line through the vertex (the axis of symmetry)."
+              ],
+              "example": {
+                "problem": "Find the y-intercept and x-intercepts of y = x² − 4x + 3, and describe its graph.",
+                "steps": [
+                  "The y-intercept is (0, 3), directly from c = 3.",
+                  "Set y = 0: x² − 4x + 3 = 0, which factors as (x − 1)(x − 3) = 0, giving x = 1 or x = 3.",
+                  "The vertex, found earlier, is (2, −1), and since a = 1 is positive, the parabola opens upward."
+                ],
+                "answer": "y-intercept (0, 3), x-intercepts (1, 0) and (3, 0), opening upward from vertex (2, −1)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "parabola", "def": "the U-shaped curve that is the graph of a quadratic function"},
+            {"term": "vertex", "def": "the highest or lowest point of a parabola"},
+            {"term": "axis of symmetry", "def": "the vertical line through the vertex that the parabola is mirrored across"}
+          ],
+          "practice": [
+            {"q": "Find the vertex of y = x² − 6x + 5.", "choices": ["(3, −4)", "(−3, −4)", "(3, 4)", "(6, 5)"], "answer": 0, "explain": "x = −(−6)/(2)(1) = 3; y = 9 − 18 + 5 = −4, giving vertex (3, −4)."},
+            {"q": "What is the y-intercept of y = 2x² + 5x − 7?", "choices": ["(0, −7)", "(0, 5)", "(0, 2)", "(−7, 0)"], "answer": 0, "explain": "The y-intercept of a quadratic in standard form is always (0, c), which here is (0, −7)."},
+            {"q": "A parabola has a = −3. Which statement is true?", "choices": ["It opens upward and the vertex is a minimum", "It opens downward and the vertex is a maximum", "It has no vertex", "It is a straight line"], "answer": 1, "explain": "A negative leading coefficient makes a parabola open downward, so its vertex is the highest point, a maximum."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Exponential Growth and Decay",
+          "minutes": 15,
+          "intro": "Populations, investments, and radioactive samples all change by a percentage of their current size rather than a fixed amount, and that single feature is exactly what an exponential function is built to model.",
+          "sections": [
+            {
+              "heading": "Exponential Growth",
+              "body": [
+                "Exponential growth is modeled by y = a(1 + r)^t, where a is the initial amount, r is the growth rate as a decimal, and t is the number of time periods elapsed. Because the base (1 + r) is applied repeatedly through the exponent, the quantity grows faster and faster over time, unlike the constant increase of linear growth.",
+                "This model applies to population growth, compound interest, and any situation where a fixed percentage is added to the current total at regular intervals."
+              ],
+              "example": {
+                "problem": "A town of 500 people grows 4% per year. Find the population after 3 years.",
+                "steps": [
+                  "Identify a = 500, r = 0.04, t = 3.",
+                  "Substitute: y = 500(1.04)³.",
+                  "Compute (1.04)³ = 1.124864.",
+                  "Multiply: 500 × 1.124864 = 562.432."
+                ],
+                "answer": "About 562 people after 3 years"
+              }
+            },
+            {
+              "heading": "Exponential Decay",
+              "body": [
+                "Exponential decay is modeled by y = a(1 − r)^t, using the same variables but with a rate that is subtracted from 1 instead of added, since the quantity shrinks by a percentage each time period rather than growing. The base (1 − r) is always between 0 and 1 for decay to occur.",
+                "This model describes radioactive decay, depreciation of a car's value, and medication leaving the bloodstream, among other situations where a fixed percentage is lost each period."
+              ],
+              "example": {
+                "problem": "An 80-gram radioactive sample decays at 15% per year. Find the amount remaining after 2 years.",
+                "steps": [
+                  "Identify a = 80, r = 0.15, t = 2.",
+                  "Substitute: y = 80(0.85)².",
+                  "Compute (0.85)² = 0.7225.",
+                  "Multiply: 80 × 0.7225 = 57.8."
+                ],
+                "answer": "About 57.8 grams remain after 2 years"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "exponential growth", "def": "growth modeled by y = a(1 + r)^t, where the quantity increases by a percentage each time period"},
+            {"term": "exponential decay", "def": "decay modeled by y = a(1 − r)^t, where the quantity decreases by a percentage each time period"}
+          ],
+          "practice": [
+            {"q": "A $2,000 investment grows at 5% annual interest. What is its value after 2 years?", "choices": ["$2,205", "$2,200", "$2,100", "$2,000"], "answer": 0, "explain": "y = 2000(1.05)² = 2000 × 1.1025 = 2205."},
+            {"q": "A car worth $18,000 depreciates 12% per year. What is its approximate value after 1 year?", "choices": ["$15,840", "$16,200", "$17,880", "$14,400"], "answer": 0, "explain": "y = 18000(1 − 0.12)¹ = 18000 × 0.88 = 15,840."},
+            {"q": "In the exponential model y = a(1 + r)^t, what does the variable a represent?", "choices": ["The growth rate", "The number of time periods", "The initial amount before any growth", "The final amount"], "answer": 2, "explain": "a is the starting quantity at t = 0, before any growth or decay has been applied."}
+          ]
+        }
+      ]
+    }
+  ]
+}

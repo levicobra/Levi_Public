@@ -1,0 +1,1492 @@
+{
+ "id": "earth-science",
+ "title": "Earth Science & Geology",
+ "domain": "physical",
+ "level": "High school",
+ "description": "A high school course in geology and Earth science: how minerals and rocks form and recycle, why continents drift and plates collide, what causes earthquakes and volcanic eruptions, how weathering and erosion sculpt landscapes, and how geologists read rock layers and radioactive decay to reconstruct 4.6 billion years of Earth's history.",
+ "outcomes": [
+  "You can identify common minerals using physical properties like hardness, streak, and cleavage, and classify rocks by how they formed.",
+  "You can explain plate tectonic theory and predict what happens at divergent, convergent, and transform plate boundaries.",
+  "You can explain what causes earthquakes and volcanic eruptions, and calculate how magnitude differences translate into energy differences.",
+  "You can distinguish weathering from erosion, describe how water, wind, ice, and gravity reshape landscapes, and explain how soil forms.",
+  "You can apply relative dating principles and radiometric half-life calculations to determine the order and age of rocks and events.",
+  "You can place major events, like the Cambrian explosion and mass extinctions, correctly on the geologic time scale."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Minerals and Rocks",
+   "summary": "What minerals are, how geologists identify them using physical properties, and how the rock cycle links igneous, sedimentary, and metamorphic rock through heat, pressure, weathering, and time.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Minerals: Nature's Building Blocks",
+     "minutes": 11,
+     "intro": "Every rock under your feet, every grain of sand at the beach, and the graphite inside a pencil all trace back to minerals: the naturally formed crystalline substances that are the basic ingredients of the solid Earth. Learning what counts as a mineral, and what doesn't, is the foundation for everything else in geology.",
+     "sections": [
+      {
+       "heading": "The Five-Part Definition",
+       "body": [
+        "Geologists define a **mineral** using five strict requirements: it must be naturally occurring (not manufactured), inorganic (not made by life, ruling out things like pearl or coal), a solid at room temperature, have a definite chemical composition (a specific formula or a narrow range, like quartz's SiO~2~), and have an ordered, repeating internal crystal structure. A substance that fails even one test, like liquid mercury or a synthetic diamond made in a lab, is not a true mineral by this definition.",
+        "A **rock**, by contrast, is simply a naturally occurring solid mass made of one or more minerals (or sometimes mineral-like materials such as volcanic glass). Granite, for example, is a rock built from at least three different minerals, quartz, feldspar, and mica, locked together, while a single crystal of pure quartz is a mineral in its own right. This is why geologists always ask which minerals are present before they ask which rock they're looking at."
+       ]
+      },
+      {
+       "heading": "Crystal Structure and Why It Matters",
+       "body": [
+        "The ordered internal arrangement of atoms in a mineral, its **crystal structure**, controls nearly everything about how it looks and behaves. Halite (table salt) always splits into cubes because its atoms are stacked in a cubic lattice; quartz grows in six-sided prisms for the same underlying reason. When a mineral forms slowly with room to grow, that internal order shows up as flat, symmetric external crystal faces.",
+        "Two minerals can share the exact same chemical formula and still look and behave completely differently if their atoms are arranged differently, a relationship called **polymorphism**. Carbon is the classic example: graphite (soft, gray, slippery, used in pencils) and diamond (the hardest natural substance known) are both pure carbon, but graphite's atoms are arranged in weakly bonded sheets while diamond's are locked into a rigid three-dimensional lattice."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "mineral",
+       "def": "A naturally occurring, inorganic solid with a definite chemical composition and an ordered crystal structure."
+      },
+      {
+       "term": "rock",
+       "def": "A naturally occurring solid mass made of one or more minerals."
+      },
+      {
+       "term": "crystal structure",
+       "def": "The ordered, repeating arrangement of atoms inside a mineral."
+      },
+      {
+       "term": "polymorphism",
+       "def": "Two or more minerals sharing the same chemical formula but having different crystal structures."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of the following would NOT be classified as a mineral?",
+       "choices": [
+        "Quartz",
+        "Halite",
+        "Coal",
+        "Diamond"
+       ],
+       "answer": 2,
+       "explain": "Coal formed from decayed plant material (organic) and lacks an ordered crystal structure, so it fails the mineral definition even though it is a natural solid."
+      },
+      {
+       "q": "Graphite and diamond are both made of pure carbon but have very different properties. What explains this?",
+       "choices": [
+        "They have different chemical formulas",
+        "They only differ in the temperature they form at",
+        "Their atoms are arranged in different crystal structures",
+        "Graphite contains oxygen impurities"
+       ],
+       "answer": 2,
+       "explain": "This is polymorphism: the identical chemical formula but different atomic arrangement produces radically different properties, soft weakly-bonded sheets versus a rigid 3D lattice."
+      },
+      {
+       "q": "A solid, naturally-formed material has a fixed chemical formula but no repeating internal crystal structure, like volcanic glass. Is it a true mineral?",
+       "choices": [
+        "Yes, it meets all requirements",
+        "No, because it fails the crystal structure requirement",
+        "Yes, if it is also inorganic",
+        "No, because it must be organic"
+       ],
+       "answer": 1,
+       "explain": "All five criteria must be met: natural, inorganic, solid, definite composition, and an ordered crystalline structure. Missing the crystal structure disqualifies it, even though it is a natural inorganic solid."
+      },
+      {
+       "q": "What is the key difference between a mineral and a rock?",
+       "choices": [
+        "They mean exactly the same thing",
+        "A mineral is a single crystalline substance; a rock is a mass made of one or more minerals",
+        "Rocks are always older than minerals",
+        "Minerals only form underground while rocks only form at the surface"
+       ],
+       "answer": 1,
+       "explain": "A mineral is one crystalline substance with a defined composition and structure; a rock is a naturally occurring mass built from one or more minerals."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Mohs Scale and Mineral Identification",
+     "minutes": 12,
+     "intro": "You don't need a laboratory to identify most minerals: a fingernail, a penny, and a steel knife blade can get you most of the way there. Geologists rely on a handful of simple physical property tests, developed nearly two centuries ago, that still work in the field today.",
+     "sections": [
+      {
+       "heading": "Hardness and the Mohs Scale",
+       "body": [
+        "In 1812, mineralogist Friedrich Mohs ranked ten common minerals from softest to hardest and built a relative **hardness scale** still used today: 1 talc, 2 gypsum, 3 calcite, 4 fluorite, 5 apatite, 6 orthoclase feldspar, 7 quartz, 8 topaz, 9 corundum, 10 diamond. Hardness is tested by trying to scratch an unknown mineral with an object of known hardness; if the object leaves a scratch, the unknown is softer than that object.",
+        "Field geologists use handy substitutes for the scale's fixed points: a fingernail is about 2.5, a copper penny about 3.5, a piece of window glass or a steel knife blade about 5.5, and a steel file about 6.5. By working through these common objects in order, you can bracket an unknown mineral's hardness to within about one point without any lab equipment."
+       ],
+       "example": {
+        "problem": "A mineral sample scratches a copper penny (hardness 3.5) but cannot scratch glass (hardness 5.5). What is its likely Mohs hardness range, and which common mineral fits?",
+        "steps": [
+         "The mineral is harder than the penny (>3.5), so it isn't talc, gypsum, or calcite.",
+         "The mineral is softer than glass (<5.5), so it isn't apatite or anything higher.",
+         "That places its hardness between about 3.5 and 5.5, matching fluorite, which has a Mohs hardness of exactly 4."
+        ],
+        "answer": "The mineral's hardness is between 3.5 and 5.5, consistent with fluorite (hardness 4)."
+       }
+      },
+      {
+       "heading": "Streak, Luster, and Cleavage",
+       "body": [
+        "**Streak** is the color of a mineral's powder, found by rubbing it across an unglazed porcelain plate; it is far more reliable than the mineral's outward color, since gold-colored pyrite (\"fool's gold\") streaks greenish-black while real gold streaks golden-yellow. **Luster** describes how a mineral's surface reflects light, broadly split into metallic (shiny like metal, as in pyrite or galena) and non-metallic (glassy, pearly, dull, silky, or waxy).",
+        "**Cleavage** is a mineral's tendency to break along smooth, flat planes determined by weak spots in its crystal structure; mica cleaves into thin, flexible sheets in one direction, while halite cleaves into perfect cubes in three directions at right angles. Minerals that lack these weak planes instead show **fracture**, breaking along rough or curved surfaces, like the smooth curved fracture of quartz called conchoidal fracture."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Mohs scale",
+       "def": "A relative hardness scale from 1 (talc) to 10 (diamond), used to identify minerals by scratch tests."
+      },
+      {
+       "term": "streak",
+       "def": "The color of a mineral's powder, obtained by rubbing it on an unglazed porcelain plate."
+      },
+      {
+       "term": "luster",
+       "def": "How a mineral's surface reflects light, classified as metallic or non-metallic."
+      },
+      {
+       "term": "cleavage",
+       "def": "A mineral's tendency to break along smooth, flat planes determined by its crystal structure."
+      },
+      {
+       "term": "fracture",
+       "def": "The rough or curved breakage pattern of a mineral that lacks cleavage planes."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is streak more reliable than a mineral's outward color for identification?",
+       "choices": [
+        "Outward color can vary between samples due to impurities, but streak color is much more consistent",
+        "Streak is always the same color as the mineral's surface",
+        "Color is measured with instruments while streak is not",
+        "Streak only works on metallic minerals"
+       ],
+       "answer": 0,
+       "explain": "Surface color is easily affected by impurities and weathering, but the powdered streak reveals a more consistent, diagnostic color for a given mineral."
+      },
+      {
+       "q": "A mineral breaks along smooth, repeatable flat planes in one direction, like sheets of paper peeling apart. This property is called:",
+       "choices": [
+        "Fracture",
+        "Cleavage",
+        "Luster",
+        "Streak"
+       ],
+       "answer": 1,
+       "explain": "Cleavage describes breakage along flat planes tied to weak points in the crystal structure; mica's one-directional sheet cleavage is a classic example."
+      },
+      {
+       "q": "Pyrite has a metallic golden luster but streaks greenish-black, while real gold streaks golden-yellow. This mismatch is why prospectors nicknamed pyrite:",
+       "choices": [
+        "The streak test",
+        "Fool's gold",
+        "A fracture mineral",
+        "An index mineral"
+       ],
+       "answer": 1,
+       "explain": "Pyrite closely resembles gold in color and luster but is easily told apart by its streak, earning it the nickname fool's gold."
+      },
+      {
+       "q": "A mineral scratches glass (hardness 5.5) but cannot scratch a steel file (hardness 6.5). Which mineral best fits this range?",
+       "choices": [
+        "Talc (hardness 1)",
+        "Apatite (hardness 5)",
+        "Orthoclase feldspar (hardness 6)",
+        "Diamond (hardness 10)"
+       ],
+       "answer": 2,
+       "explain": "A hardness between 5.5 and 6.5 matches orthoclase feldspar, which sits at exactly 6 on the Mohs scale."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Rock Cycle: Igneous, Sedimentary, Metamorphic",
+     "minutes": 13,
+     "intro": "No rock on Earth is truly permanent. Heat, pressure, weathering, and time constantly recycle rock material from one type into another in a slow, endless loop called the rock cycle, and every rock you will ever pick up is just a snapshot of one stage in that ongoing process.",
+     "sections": [
+      {
+       "heading": "Igneous Rock: Born From Melt",
+       "body": [
+        "**Igneous rock** forms when molten rock, called magma underground or lava at the surface, cools and crystallizes into solid minerals. The cooling rate controls crystal size: magma that cools slowly deep underground forms **intrusive** (plutonic) rock with large, visible crystals, like granite, while lava that cools quickly at the surface forms **extrusive** (volcanic) rock with tiny crystals or none at all, like basalt or the glassy obsidian.",
+        "Igneous rocks are also classified by composition. **Felsic** magmas are rich in silica and light-colored minerals like quartz and feldspar, cool into rocks like granite (intrusive) and rhyolite (extrusive), and tend to be thick and slow-flowing. **Mafic** magmas are lower in silica and richer in iron and magnesium, cool into rocks like gabbro (intrusive) and basalt (extrusive), and flow more easily."
+       ]
+      },
+      {
+       "heading": "Sedimentary Rock: Layer Upon Layer",
+       "body": [
+        "Weathering breaks existing rock into fragments called sediment, which is then transported by water, wind, or ice and deposited in layers. Over time, the weight of accumulating layers compacts the sediment, and dissolved minerals cement the grains together in a process called **lithification**, turning loose sediment into solid **sedimentary rock**. Sand becomes sandstone, mud becomes shale, and gravel becomes conglomerate.",
+        "Not all sedimentary rock is made of broken fragments. **Chemical sedimentary rocks**, like rock salt, form when dissolved minerals precipitate directly out of evaporating water, and **organic sedimentary rocks**, like coal and some limestone, form from the compressed remains of plants or shells. Because sediment settles in layers over time, sedimentary rock is the main archive geologists use to read Earth's past."
+       ]
+      },
+      {
+       "heading": "Metamorphic Rock and the Cycle Closes",
+       "body": [
+        "**Metamorphic rock** forms when existing rock, igneous, sedimentary, or even older metamorphic rock, is subjected to intense heat and pressure without fully melting, causing its minerals to recrystallize into new, more stable forms. Shale under heat and pressure becomes slate, then phyllite, then schist, then gneiss, as its minerals align into visible bands, a texture called **foliation**. Limestone, which has no platy minerals to align, instead recrystallizes into non-foliated marble.",
+        "If any rock, igneous, sedimentary, or metamorphic, is heated past its melting point, it becomes magma again, and the cycle restarts. This is why the rock cycle has no true starting point: a piece of granite exposed at the surface can weather into sand, be buried and lithified into sandstone, get metamorphosed into quartzite under mountain-building pressure, and eventually melt into magma that cools into a brand-new igneous rock."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "igneous rock",
+       "def": "Rock formed when magma or lava cools and crystallizes."
+      },
+      {
+       "term": "sedimentary rock",
+       "def": "Rock formed from compacted and cemented sediment, or from precipitated/organic material."
+      },
+      {
+       "term": "metamorphic rock",
+       "def": "Rock formed when existing rock is transformed by heat and pressure without fully melting."
+      },
+      {
+       "term": "lithification",
+       "def": "The compaction and cementation of loose sediment into solid sedimentary rock."
+      },
+      {
+       "term": "foliation",
+       "def": "Banded texture in metamorphic rock caused by platy minerals aligning under pressure."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A rock has large, easily visible crystals throughout. This texture suggests it:",
+       "choices": [
+        "Cooled quickly at Earth's surface",
+        "Cooled slowly deep underground",
+        "Formed from compacted sediment",
+        "Formed from recrystallization under pressure"
+       ],
+       "answer": 1,
+       "explain": "Slow cooling deep underground gives crystals time to grow large, producing an intrusive (plutonic) igneous texture like that of granite."
+      },
+      {
+       "q": "Shale is metamorphosed under increasing heat and pressure. What visible feature develops as its platy minerals align?",
+       "choices": [
+        "Cleavage planes only",
+        "Foliation",
+        "Lithification",
+        "Conchoidal fracture"
+       ],
+       "answer": 1,
+       "explain": "Foliation is the banded texture that forms when platy minerals like mica align under directed pressure, visible in slate, phyllite, schist, and gneiss."
+      },
+      {
+       "q": "Which process directly turns loose sediment, like sand or mud, into solid sedimentary rock?",
+       "choices": [
+        "Crystallization from magma",
+        "Foliation",
+        "Lithification (compaction and cementation)",
+        "Metamorphism"
+       ],
+       "answer": 2,
+       "explain": "Lithification is the compaction and cementation that binds loose sediment grains together into solid rock."
+      },
+      {
+       "q": "Basalt is described as a mafic, extrusive igneous rock. What does this tell you about how it formed?",
+       "choices": [
+        "It cooled slowly underground from silica-rich magma",
+        "It cooled quickly at the surface from low-silica, iron/magnesium-rich lava",
+        "It formed from compacted sediment",
+        "It formed by recrystallization under pressure without melting"
+       ],
+       "answer": 1,
+       "explain": "Mafic means low-silica, iron/magnesium-rich composition, and extrusive means it cooled quickly at the surface, giving basalt its fine-grained texture."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Plate Tectonics",
+   "summary": "Earth's layered interior, the evidence that convinced scientists continents drift, and how plate tectonic theory explains mountains, ocean basins, and the location of most earthquakes and volcanoes.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Earth's Layered Interior",
+     "minutes": 11,
+     "intro": "Nobody has ever drilled more than about 12 kilometers into the Earth, less than a fifth of one percent of the way to the center, yet geologists have mapped the planet's deep interior in remarkable detail using an indirect tool: the seismic waves from earthquakes traveling through and around it.",
+     "sections": [
+      {
+       "heading": "Crust, Mantle, and Core by Composition",
+       "body": [
+        "Earth's interior is divided into three chemically distinct layers. The **crust** is the thin, brittle outer shell, ranging from about 5-10 kilometers thick under the oceans (dense basalt) to 30-70 kilometers thick under continents (lighter granite). Beneath it, the **mantle** extends to a depth of about 2,900 kilometers and is made of hot, dense rock rich in iron and magnesium.",
+        "At the center lies the **core**, split into a liquid **outer core** (2,900 to about 5,150 kilometers deep) and a solid **inner core** (5,150 kilometers to Earth's center at 6,371 kilometers), both made mostly of iron and nickel. Despite the inner core's extreme temperature, over 5,000°C, immense pressure at that depth keeps the iron solid rather than liquid."
+       ]
+      },
+      {
+       "heading": "Lithosphere and Asthenosphere by Behavior",
+       "body": [
+        "For plate tectonics, a different way of slicing the interior matters more: by physical behavior rather than chemistry. The **lithosphere** is the rigid outer shell, made up of the crust plus the topmost, cooler part of the mantle, and it is broken into the tectonic plates that move across the planet's surface.",
+        "Below the lithosphere sits the **asthenosphere**, a hotter, softer layer of the upper mantle that behaves like a slow-flowing solid over geologic time, similar to warm asphalt. The rigid lithospheric plates essentially float and slide on this weaker, more plastic asthenosphere, which is what makes plate motion possible in the first place."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "crust",
+       "def": "Earth's thin, brittle outermost layer, thinner and denser under oceans than under continents."
+      },
+      {
+       "term": "mantle",
+       "def": "The thick, hot, iron-and-magnesium-rich layer beneath the crust, extending to about 2,900 km depth."
+      },
+      {
+       "term": "core",
+       "def": "Earth's innermost layer, made mostly of iron and nickel, split into a liquid outer core and solid inner core."
+      },
+      {
+       "term": "lithosphere",
+       "def": "The rigid outer shell of crust plus uppermost mantle, broken into tectonic plates."
+      },
+      {
+       "term": "asthenosphere",
+       "def": "The hot, plastic upper-mantle layer beneath the lithosphere that plates slide on."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which layer is broken into the moving tectonic plates?",
+       "choices": [
+        "Asthenosphere",
+        "Lithosphere",
+        "Outer core",
+        "Inner core"
+       ],
+       "answer": 1,
+       "explain": "The lithosphere, the rigid crust plus uppermost mantle, is broken into the plates that make up plate tectonics."
+      },
+      {
+       "q": "Why is the inner core solid despite being hotter than the liquid outer core?",
+       "choices": [
+        "It is made of a completely different, higher-melting-point material",
+        "Immense pressure at that depth keeps the iron solid despite the extreme heat",
+        "It has cooled much faster than the outer core",
+        "It contains no iron, unlike the outer core"
+       ],
+       "answer": 1,
+       "explain": "Pressure raises the melting point of iron enough that, despite temperatures over 5,000°C, the inner core stays solid while the less-pressurized outer core remains liquid."
+      },
+      {
+       "q": "The asthenosphere behaves like a slow-flowing solid over geologic time. What role does this play in plate tectonics?",
+       "choices": [
+        "It prevents plates from moving at all",
+        "It lets rigid lithospheric plates slide and float on top of it",
+        "It is the source of all volcanic eruptions",
+        "It is the same thing as the lithosphere"
+       ],
+       "answer": 1,
+       "explain": "Because the asthenosphere flows plastically over long timescales, the rigid lithospheric plates above it can slide and drift, which is the physical basis of plate motion."
+      },
+      {
+       "q": "Which is thicker: oceanic crust or continental crust?",
+       "choices": [
+        "Oceanic crust is much thicker because it is denser",
+        "Continental crust is thicker (30-70 km) while oceanic crust is thinner (5-10 km)",
+        "They are exactly the same thickness everywhere",
+        "Crust thickness cannot be measured"
+       ],
+       "answer": 1,
+       "explain": "Continental crust (granite-rich, less dense) is considerably thicker, 30-70 km, than oceanic crust (basalt-rich, denser), which is only about 5-10 km thick."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "From Continental Drift to Plate Tectonic Theory",
+     "minutes": 12,
+     "intro": "In 1912, German scientist Alfred Wegener proposed that today's continents were once joined in a single landmass and had slowly drifted apart, an idea that most geologists of his time rejected outright, mainly because he could not explain what force could possibly move something as massive as a continent.",
+     "sections": [
+      {
+       "heading": "Wegener's Evidence for Continental Drift",
+       "body": [
+        "Wegener assembled four independent lines of evidence for what he called **continental drift**. The coastlines of South America and Africa fit together like puzzle pieces; identical fossils of the land reptile *Mesosaurus* and the plant *Glossopteris* appear on continents now separated by oceans too wide for either to have crossed; matching rock layers and mountain ranges line up across the Atlantic; and glacial scratch marks on continents now in the tropics show they were once joined near the South Pole.",
+        "Despite this evidence, Wegener's hypothesis stalled for decades because he could not identify a believable mechanism, guessing (incorrectly) that continents plowed through ocean floor like icebreakers through ice. It took the discovery of seafloor spreading in the 1960s to finally supply the missing piece and transform continental drift into the accepted theory of plate tectonics."
+       ]
+      },
+      {
+       "heading": "Seafloor Spreading Provides the Mechanism",
+       "body": [
+        "In the 1960s, oceanographer Harry Hess proposed **seafloor spreading**: new ocean floor forms continuously at mid-ocean ridges, where magma rises, cools, and pushes older seafloor away in both directions like a slow conveyor belt. Confirming evidence came from magnetic stripes frozen into the ocean floor, symmetric bands of alternating magnetic polarity on either side of mid-ocean ridges that record Earth's magnetic field reversals over millions of years.",
+        "These matching, mirror-image stripes could only be explained if new crust really was forming at the ridge and spreading outward over time, giving Wegener's drifting continents a driving mechanism at last. By the late 1960s, geologists had unified continental drift and seafloor spreading into modern **plate tectonic theory**: Earth's lithosphere is broken into large rigid plates that move slowly atop the asthenosphere, driven by heat escaping from Earth's interior."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "continental drift",
+       "def": "Wegener's hypothesis that continents were once joined and have since drifted apart."
+      },
+      {
+       "term": "seafloor spreading",
+       "def": "The process by which new ocean floor forms at mid-ocean ridges and spreads outward."
+      },
+      {
+       "term": "plate tectonic theory",
+       "def": "The theory that Earth's lithosphere is broken into rigid plates that move atop the asthenosphere."
+      },
+      {
+       "term": "mid-ocean ridge",
+       "def": "An underwater mountain chain where new oceanic crust forms as plates diverge."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why did most geologists reject Wegener's continental drift hypothesis for decades?",
+       "choices": [
+        "There was no fossil or rock evidence at all",
+        "He could not explain a believable mechanism or force that could move continents",
+        "The continents do not actually fit together",
+        "Seafloor spreading had already disproved it"
+       ],
+       "answer": 1,
+       "explain": "Wegener's evidence was compelling, but without a plausible physical mechanism for moving continents, most geologists of his era dismissed the idea."
+      },
+      {
+       "q": "What discovery in the 1960s finally provided a mechanism for continental drift?",
+       "choices": [
+        "Matching fossils on separated continents",
+        "Seafloor spreading at mid-ocean ridges",
+        "Mohs hardness testing",
+        "Radiometric dating of granite"
+       ],
+       "answer": 1,
+       "explain": "Harry Hess's seafloor spreading hypothesis, later confirmed by magnetic stripe patterns, finally explained how continents could actually move."
+      },
+      {
+       "q": "Symmetric magnetic stripes found on either side of a mid-ocean ridge are strong evidence for:",
+       "choices": [
+        "Continental crust being denser than oceanic crust",
+        "New ocean floor forming at the ridge and spreading outward over time",
+        "Earth's core being entirely solid",
+        "Volcanic eruptions directly causing earthquakes"
+       ],
+       "answer": 1,
+       "explain": "The mirror-image magnetic stripes record reversals in Earth's magnetic field over time, and their symmetry around the ridge shows new crust is continuously forming there and spreading outward."
+      },
+      {
+       "q": "Which of these was NOT one of Wegener's original lines of evidence for continental drift?",
+       "choices": [
+        "Matching coastlines of continents",
+        "Matching fossils on now-separated continents",
+        "Magnetic stripes on the seafloor",
+        "Matching rock layers across the Atlantic"
+       ],
+       "answer": 2,
+       "explain": "Magnetic seafloor stripes were discovered decades after Wegener, by later researchers studying seafloor spreading; his original evidence was coastlines, fossils, rock layers, and glacial scratches."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Plate Boundaries: Divergent, Convergent, Transform",
+     "minutes": 13,
+     "intro": "Nearly all of Earth's earthquakes, volcanoes, and mountain ranges cluster along one kind of feature: the boundaries where tectonic plates meet. There are only three basic ways two plates can interact, pull apart, push together, or slide past each other, and each produces its own distinctive landscape.",
+     "sections": [
+      {
+       "heading": "Divergent Boundaries: Plates Pull Apart",
+       "body": [
+        "At a **divergent boundary**, two plates move away from each other, and magma rises from the mantle to fill the gap, creating new crust. On the ocean floor this produces a **mid-ocean ridge**, an underwater mountain chain like the Mid-Atlantic Ridge; on land it produces a widening **rift valley**, like the East African Rift, where the continent is actively being pulled apart and may eventually split into a new ocean basin.",
+        "Divergent boundaries are typically associated with shallow, moderate earthquakes and gentle, effusive volcanic activity rather than violent eruptions, since the mafic magma rising there is relatively low in silica and flows easily rather than trapping explosive gas pressure."
+       ]
+      },
+      {
+       "heading": "Convergent Boundaries: Plates Collide",
+       "body": [
+        "At a **convergent boundary**, two plates move toward each other, and the result depends on what kind of crust each plate carries. When dense oceanic crust meets less-dense continental crust, the oceanic plate sinks beneath the continental one in a process called **subduction**, producing volcanic mountain chains like the Andes. When two oceanic plates converge, the older, denser one subducts, producing a curved chain of volcanic islands called an **island arc**, like Japan or the Mariana Islands.",
+        "When two continental plates collide, neither is dense enough to subduct, so instead the crust crumples and thickens upward, producing the tallest mountain ranges on Earth; the Himalayas are still rising today as the Indian Plate continues driving into the Eurasian Plate. Convergent boundaries, especially subduction zones, also generate the largest and most damaging earthquakes on the planet."
+       ],
+       "example": {
+        "problem": "Two oceanic plates converge at a boundary. Plate A is 30 million years old; Plate B is 90 million years old. Which plate subducts, and why?",
+        "steps": [
+         "Older oceanic crust has had more time to cool and grow denser as it moves away from the mid-ocean ridge where it formed.",
+         "Plate B, at 90 million years old, is older and therefore cooler and denser than 30-million-year-old Plate A.",
+         "Denser oceanic crust sinks beneath less dense crust at a convergent boundary."
+        ],
+        "answer": "Plate B, the older and denser plate, subducts beneath Plate A."
+       }
+      },
+      {
+       "heading": "Transform Boundaries: Plates Slide Past",
+       "body": [
+        "At a **transform boundary**, two plates grind horizontally past each other in opposite (or same-direction but different-speed) motion, with crust neither created nor destroyed. California's San Andreas Fault, where the Pacific Plate slides northwest relative to the North American Plate, is the best-known example, and the friction of this sliding motion is a major source of shallow, sometimes severe earthquakes."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "divergent boundary",
+       "def": "A plate boundary where two plates move apart and new crust forms."
+      },
+      {
+       "term": "convergent boundary",
+       "def": "A plate boundary where two plates move toward each other and collide."
+      },
+      {
+       "term": "transform boundary",
+       "def": "A plate boundary where two plates slide horizontally past each other."
+      },
+      {
+       "term": "subduction",
+       "def": "The process where a denser oceanic plate sinks beneath a less dense plate at a convergent boundary."
+      },
+      {
+       "term": "island arc",
+       "def": "A curved chain of volcanic islands formed where one oceanic plate subducts beneath another."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What landform commonly develops at a divergent boundary on the ocean floor?",
+       "choices": [
+        "Island arc",
+        "Mid-ocean ridge",
+        "Subduction trench",
+        "Transform fault"
+       ],
+       "answer": 1,
+       "explain": "Divergent boundaries on the seafloor produce mid-ocean ridges, underwater mountain chains where new crust forms as plates spread apart."
+      },
+      {
+       "q": "The Himalayas formed, and continue to rise, because of which type of plate boundary?",
+       "choices": [
+        "A divergent boundary",
+        "A convergent boundary between two continental plates",
+        "A transform boundary",
+        "A convergent boundary between two oceanic plates"
+       ],
+       "answer": 1,
+       "explain": "Neither the Indian nor Eurasian continental plate is dense enough to subduct, so their collision crumples and thickens the crust upward into the Himalayas."
+      },
+      {
+       "q": "The San Andreas Fault, where crust is neither created nor destroyed but plates grind past each other horizontally, is an example of a:",
+       "choices": [
+        "Divergent boundary",
+        "Convergent boundary",
+        "Transform boundary",
+        "Subduction zone"
+       ],
+       "answer": 2,
+       "explain": "Transform boundaries involve plates sliding past one another with no new crust created and none destroyed, exactly the case at the San Andreas Fault."
+      },
+      {
+       "q": "At an ocean-continent convergent boundary, what typically happens?",
+       "choices": [
+        "The continental plate subducts beneath the oceanic plate",
+        "The denser oceanic plate subducts beneath the lighter continental plate",
+        "Both plates rise together to form a mid-ocean ridge",
+        "The plates simply slide past each other with no vertical motion"
+       ],
+       "answer": 1,
+       "explain": "Oceanic crust is denser than continental crust, so at an ocean-continent boundary the oceanic plate subducts beneath the continental plate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Earthquakes and Volcanoes",
+   "summary": "What causes the ground to shake and mountains to erupt, how scientists measure and locate these events, and the hazards and monitoring tools that keep people safe.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Faults and Seismic Waves",
+     "minutes": 12,
+     "intro": "The 1906 San Francisco earthquake released, in under a minute, energy that had been slowly building in rock for decades. Understanding earthquakes starts with understanding how rock stores that energy, and how it is released and transmitted once the rock finally breaks.",
+     "sections": [
+      {
+       "heading": "Elastic Rebound and Faults",
+       "body": [
+        "Rock on either side of a **fault**, a fracture in Earth's crust along which movement has occurred, does not simply slide smoothly. Instead, friction locks the fault in place while tectonic forces keep pushing, slowly bending and storing elastic energy in the surrounding rock, much like a bent stick. When the built-up stress finally exceeds the friction holding the fault together, the rock suddenly snaps back to its unstrained shape, releasing the stored energy as an **earthquake**; this process is called **elastic rebound**.",
+        "Faults come in three basic types based on the direction of motion. A **normal fault** occurs where rock is being pulled apart (tension), and one block drops down relative to the other. A **reverse fault** occurs where rock is being compressed, pushing one block up and over the other. A **strike-slip fault**, like the San Andreas, occurs where blocks slide horizontally past each other with no vertical motion."
+       ]
+      },
+      {
+       "heading": "Seismic Waves: P, S, and Surface Waves",
+       "body": [
+        "The energy released at a fault's rupture point, the **focus** (or hypocenter), radiates outward as **seismic waves**. **P waves** (primary waves) are compressional, squeezing and stretching rock in the direction of travel like a slinky, travel fastest, and can pass through both solid rock and liquid. **S waves** (secondary waves) shake rock side to side perpendicular to their direction of travel, arrive second, and cannot travel through liquid at all.",
+        "Once P and S waves reach the surface, they generate slower but far more destructive **surface waves**, which roll and shake the ground much like ocean waves, causing most of an earthquake's structural damage. The point on Earth's surface directly above the focus, where shaking is typically strongest, is called the **epicenter**."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "fault",
+       "def": "A fracture in Earth's crust along which rock on either side has moved."
+      },
+      {
+       "term": "elastic rebound",
+       "def": "The sudden release of stored elastic energy in rock as it snaps back after a fault slips."
+      },
+      {
+       "term": "focus",
+       "def": "The underground point where an earthquake's rupture and energy release begins, also called the hypocenter."
+      },
+      {
+       "term": "P wave",
+       "def": "A fast, compressional seismic wave that can travel through solids and liquids."
+      },
+      {
+       "term": "S wave",
+       "def": "A slower, shear seismic wave that can only travel through solids."
+      },
+      {
+       "term": "epicenter",
+       "def": "The point on Earth's surface directly above an earthquake's focus."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What causes an earthquake, according to elastic rebound theory?",
+       "choices": [
+        "Rock evaporates suddenly along a fault",
+        "Built-up elastic strain in rock exceeds the friction holding a fault together, and the rock suddenly snaps back",
+        "The moon's gravity pulls directly on the crust",
+        "Volcanic gas pressure builds up underground"
+       ],
+       "answer": 1,
+       "explain": "Elastic rebound theory holds that rock bends and stores strain energy near a locked fault until the stress overcomes friction, at which point it suddenly snaps back, releasing energy as an earthquake."
+      },
+      {
+       "q": "Which seismic wave type travels fastest and can pass through both solids and liquids?",
+       "choices": [
+        "S wave",
+        "Surface wave",
+        "P wave",
+        "Love wave"
+       ],
+       "answer": 2,
+       "explain": "P waves are compressional waves that travel fastest of all seismic waves and can pass through solid rock as well as liquid, unlike S waves."
+      },
+      {
+       "q": "Why can't S waves travel through Earth's liquid outer core?",
+       "choices": [
+        "S waves require a rigid medium to shear through, and liquid has no shear strength",
+        "S waves are simply too slow to reach the core",
+        "The core is too hot for any waves to enter it",
+        "S waves only ever travel along the surface"
+       ],
+       "answer": 0,
+       "explain": "S waves move by shearing material side to side, which requires a rigid medium; liquids cannot support shear, so S waves cannot pass through the liquid outer core."
+      },
+      {
+       "q": "A fault where one block drops down relative to the other due to tension (the crust being pulled apart) is called a:",
+       "choices": [
+        "Reverse fault",
+        "Strike-slip fault",
+        "Normal fault",
+        "Transform fault"
+       ],
+       "answer": 2,
+       "explain": "A normal fault forms under tension, with one block dropping down relative to the other; reverse faults form under compression instead."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Measuring and Locating Earthquakes",
+     "minutes": 13,
+     "intro": "News reports describe earthquakes with a single number, like magnitude 6.2, but that number hides an important fact: each whole step up the scale represents a dramatically larger earthquake, not merely a slightly bigger one.",
+     "sections": [
+      {
+       "heading": "Magnitude: A Logarithmic Scale",
+       "body": [
+        "**Magnitude** measures the total energy released at an earthquake's source, recorded on instruments called **seismographs**, which produce a wavy record called a **seismogram**. The original Richter scale (and its modern replacement, the moment magnitude scale, used for larger and more distant earthquakes) is **logarithmic**: each increase of one whole number represents about a 10-fold increase in recorded ground motion (amplitude), and roughly a 31.6-fold increase in the actual energy released.",
+        "Because energy scales by about 31.6 times per magnitude step, two magnitude units apart represents roughly 31.6 × 31.6 ≈ 1,000 times more energy, not merely twice as much. This is why a magnitude 7 earthquake is a global news event while a magnitude 5 barely makes local headlines, despite the two numbers looking only two apart."
+       ],
+       "example": {
+        "problem": "How many times more ground-motion amplitude, and roughly how many times more energy, does a magnitude 6.0 earthquake release compared to a magnitude 4.0 earthquake?",
+        "steps": [
+         "Magnitude difference: 6.0 − 4.0 = 2 whole units.",
+         "Amplitude increases about 10× per unit, so amplitude ratio = 10^2 = 100 times greater.",
+         "Energy increases about 31.6× per unit, so energy ratio ≈ 31.6^2 ≈ 1,000 times greater."
+        ],
+        "answer": "The magnitude 6.0 quake has about 100 times the ground-motion amplitude and roughly 1,000 times the energy of the magnitude 4.0 quake."
+       }
+      },
+      {
+       "heading": "Intensity and Locating the Epicenter",
+       "body": [
+        "Unlike magnitude, which is a single fixed number for an earthquake, **intensity** measures how strongly shaking is felt at a specific location, using the **Modified Mercalli Scale** (a scale from I to XII based on observed effects, from barely felt to total destruction). Intensity varies with distance from the epicenter, local soil conditions, and building construction, so the same earthquake can register intensity II in one town and intensity VIII in another closer to the fault.",
+        "Seismologists locate an earthquake's epicenter using the fact that P waves consistently outrun S waves, so the longer the delay between their arrival at a station, the farther that station is from the epicenter. By drawing a circle of that radius around three or more separated seismograph stations, the point where all three circles intersect pinpoints the epicenter, a method called triangulation."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "magnitude",
+       "def": "A single, logarithmic measure of the total energy released at an earthquake's source."
+      },
+      {
+       "term": "seismograph",
+       "def": "An instrument that records ground motion during an earthquake."
+      },
+      {
+       "term": "seismogram",
+       "def": "The wavy record produced by a seismograph."
+      },
+      {
+       "term": "logarithmic scale",
+       "def": "A scale where each whole-number increase represents a multiplicative, not additive, increase."
+      },
+      {
+       "term": "intensity",
+       "def": "A measure of how strongly shaking is felt at a specific location, which varies by distance and ground conditions."
+      },
+      {
+       "term": "Modified Mercalli Scale",
+       "def": "A scale from I to XII that rates earthquake intensity based on observed effects and damage."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A magnitude 5.0 earthquake compared to a magnitude 3.0 earthquake releases about how much more energy?",
+       "choices": [
+        "2 times",
+        "10 times",
+        "100 times",
+        "1,000 times"
+       ],
+       "answer": 3,
+       "explain": "A magnitude difference of 2 corresponds to an energy ratio of about 31.6^2 ≈ 1,000 times, since energy scales roughly 31.6-fold per whole magnitude unit."
+      },
+      {
+       "q": "Why can the same earthquake be assigned different intensity values in different towns, even though it has only one magnitude?",
+       "choices": [
+        "Magnitude itself changes with distance from the epicenter",
+        "Intensity measures local shaking effects, which vary with distance, soil conditions, and construction",
+        "Each town has its own seismograph reading a different magnitude",
+        "Intensity and magnitude measure the exact same thing"
+       ],
+       "answer": 1,
+       "explain": "Magnitude is a single, fixed value for the whole earthquake, but intensity describes the felt effects at a specific place, which depend on distance from the epicenter, local geology, and building quality."
+      },
+      {
+       "q": "How do seismologists use P and S wave arrival times to locate an epicenter?",
+       "choices": [
+        "They measure the delay between P and S wave arrival at three or more stations and triangulate the distance",
+        "They only need a single seismograph station",
+        "They measure only the P wave's amplitude",
+        "They read the location directly off the Modified Mercalli Scale"
+       ],
+       "answer": 0,
+       "explain": "Because P waves consistently arrive before S waves, the size of that delay reveals distance from the epicenter; combining distances from at least three stations pinpoints the epicenter by triangulation."
+      },
+      {
+       "q": "The Richter and moment magnitude scales are described as logarithmic. What does that mean in practice?",
+       "choices": [
+        "Each whole-number increase represents a much larger jump in energy and amplitude, not a simple linear one",
+        "The scale can only go up to a maximum of 10",
+        "Magnitude is measured in decibels, like sound",
+        "Each number represents exactly the same fixed increase in energy"
+       ],
+       "answer": 0,
+       "explain": "A logarithmic scale means each additional whole number represents a multiplicative jump (about 10× amplitude, about 31.6× energy), not a small linear step."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Volcanoes: Magma, Eruption Styles, and Hazards",
+     "minutes": 13,
+     "intro": "Not all volcanoes erupt the same way: some, like Hawaii's Kilauea, ooze fountains of glowing lava for months at a time with relatively little danger to distant observers, while others, like Mount St. Helens in 1980, can level a forest in minutes. The difference comes down to the chemistry of the magma feeding them.",
+     "sections": [
+      {
+       "heading": "Magma Composition Controls Eruption Style",
+       "body": [
+        "**Felsic magma** is high in silica and relatively low in temperature, making it thick and viscous, resistant to flowing, and prone to trapping dissolved gas until pressure builds to a violent, explosive release. **Mafic magma** is low in silica, hotter, and much less viscous, so gas escapes easily and the magma erupts as relatively gentle, flowing lava rather than building toward an explosion.",
+        "This composition difference produces three main volcano shapes. **Shield volcanoes**, built from repeated mafic lava flows, have gentle, wide slopes, like Hawaii's Mauna Loa. **Composite volcanoes** (stratovolcanoes), built from alternating layers of felsic ash and lava, have steep, symmetric cones and tend to erupt explosively, like Mount St. Helens or Mount Fuji. **Cinder cones** are small, steep, single-vent volcanoes built from ejected volcanic fragments, like Parícutin in Mexico."
+       ]
+      },
+      {
+       "heading": "Hazards and Monitoring",
+       "body": [
+        "Explosive volcanoes produce several distinct hazards beyond lava itself: **pyroclastic flows**, fast-moving, superheated avalanches of ash and gas that can travel over 100 km/h and are usually the deadliest hazard; **lahars**, volcanic mudflows formed when ash mixes with water or melting snow; and widespread **ashfall**, which can collapse roofs and ground aircraft hundreds of kilometers away.",
+        "Volcanologists monitor active volcanoes for warning signs before an eruption using several tools together: seismographs detect small earthquake swarms caused by magma forcing its way upward through rock; tiltmeters and GPS detect the ground itself bulging as magma accumulates in a shallow chamber; and gas sensors track rising sulfur dioxide emissions, which often increase as magma nears the surface."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "felsic magma",
+       "def": "High-silica, viscous magma that traps gas and tends to erupt explosively."
+      },
+      {
+       "term": "mafic magma",
+       "def": "Low-silica, fluid magma that releases gas easily and erupts effusively."
+      },
+      {
+       "term": "shield volcano",
+       "def": "A wide, gently sloping volcano built from repeated mafic lava flows."
+      },
+      {
+       "term": "composite volcano",
+       "def": "A steep, cone-shaped volcano built from alternating ash and lava layers, prone to explosive eruptions."
+      },
+      {
+       "term": "pyroclastic flow",
+       "def": "A fast-moving, superheated avalanche of volcanic ash and gas, usually the deadliest eruption hazard."
+      },
+      {
+       "term": "lahar",
+       "def": "A volcanic mudflow formed when ash mixes with water or melting snow."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does felsic magma tend to produce more explosive eruptions than mafic magma?",
+       "choices": [
+        "Felsic magma is thin and flows easily, releasing gas gradually",
+        "Felsic magma is thick and viscous, trapping dissolved gas until pressure builds explosively",
+        "Felsic magma contains no dissolved gas at all",
+        "Mafic magma is always hotter than felsic magma, which is why it explodes"
+       ],
+       "answer": 1,
+       "explain": "Felsic magma's high silica content makes it viscous, trapping gas that builds pressure until it is released violently, unlike the free-flowing, gas-releasing mafic magma."
+      },
+      {
+       "q": "Mauna Loa's broad, gently sloping shape, built from repeated low-viscosity lava flows, is characteristic of which volcano type?",
+       "choices": [
+        "Composite volcano",
+        "Cinder cone",
+        "Shield volcano",
+        "Caldera"
+       ],
+       "answer": 2,
+       "explain": "Shield volcanoes are built almost entirely from fluid mafic lava flows, producing the broad, gently sloping profile seen in Mauna Loa and Kilauea."
+      },
+      {
+       "q": "A fast-moving, superheated avalanche of ash and gas that is usually a volcano's deadliest hazard is called a:",
+       "choices": [
+        "Lahar",
+        "Pyroclastic flow",
+        "Ashfall event",
+        "Lava dome"
+       ],
+       "answer": 1,
+       "explain": "Pyroclastic flows can travel over 100 km/h at extreme temperatures, making them the deadliest hazard associated with explosive volcanic eruptions."
+      },
+      {
+       "q": "Which monitoring tool detects ground deformation, such as bulging caused by rising magma?",
+       "choices": [
+        "Seismograph alone",
+        "Gas sensor",
+        "Tiltmeter and GPS",
+        "Mohs hardness test"
+       ],
+       "answer": 2,
+       "explain": "Tiltmeters and GPS instruments detect subtle ground swelling as magma accumulates in a shallow chamber beneath a volcano, an early warning sign of a possible eruption."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Weathering, Erosion, and Soil",
+   "summary": "How rock breaks down in place, how water, wind, ice, and gravity carry that material away and reshape the land, and how weathered rock becomes living soil.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Weathering: Breaking Rock Down",
+     "minutes": 11,
+     "intro": "A boulder sitting exposed on a mountainside looks permanent on a human timescale, but freeze, thaw, rainwater, and plant roots are relentlessly working on it, and given enough time, that same boulder will end up as a handful of sand and clay.",
+     "sections": [
+      {
+       "heading": "Mechanical Weathering",
+       "body": [
+        "**Mechanical weathering** (also called physical weathering) breaks rock into smaller pieces without changing its chemical composition. **Frost wedging** is the most powerful process in cold climates: water seeps into cracks, and because water expands about 9% in volume when it freezes, the repeated freeze-thaw cycle levers cracks wider until the rock splits. **Exfoliation** peels rock apart in curved sheets as buried rock is exposed and expands after overlying material erodes away, relieving pressure.",
+        "Other mechanical weathering agents include **root wedging**, where growing plant roots pry rock apart along cracks, and **abrasion**, where rock fragments carried by wind, water, or ice grind against other rock like sandpaper. Mechanical weathering increases the total surface area of rock exposed to air and water, which speeds up the chemical processes described next."
+       ]
+      },
+      {
+       "heading": "Chemical Weathering",
+       "body": [
+        "**Chemical weathering** alters a rock's mineral composition, converting stable minerals into new, more chemically stable ones. **Oxidation** occurs when iron-bearing minerals react with oxygen, forming iron oxides (rust) that visibly turn rock reddish-brown, common in warm, humid climates. **Dissolution** occurs when rainwater, made naturally acidic by dissolved carbon dioxide (carbonic acid), slowly dissolves soluble rock like limestone, carving out caves and sinkholes in a landscape called **karst topography**.",
+        "Chemical weathering happens fastest in warm, wet climates, since heat speeds chemical reactions and water is required to carry them out; a granite boulder in a humid rainforest weathers chemically far faster than an identical boulder in a cold desert. This is why old buildings and monuments in humid regions show far more surface decay than similar structures in dry climates, even at the same age."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "mechanical weathering",
+       "def": "The breakdown of rock into smaller pieces without changing its chemical composition."
+      },
+      {
+       "term": "frost wedging",
+       "def": "The widening of rock cracks by the repeated expansion of freezing water."
+      },
+      {
+       "term": "exfoliation",
+       "def": "The peeling of rock in curved sheets as pressure is relieved by erosion of overlying material."
+      },
+      {
+       "term": "chemical weathering",
+       "def": "The alteration of a rock's mineral composition into new, more stable minerals."
+      },
+      {
+       "term": "oxidation",
+       "def": "A chemical weathering reaction between iron-bearing minerals and oxygen that produces rust."
+      },
+      {
+       "term": "karst topography",
+       "def": "A landscape of caves and sinkholes formed by the dissolution of soluble rock like limestone."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does frost wedging split rock apart?",
+       "choices": [
+        "Water shrinks as it freezes, pulling rock together",
+        "Water expands by about 9% when it freezes, widening cracks with repeated cycles",
+        "Ice is chemically reactive with most minerals",
+        "Frost wedging is actually a form of chemical weathering"
+       ],
+       "answer": 1,
+       "explain": "Water expands roughly 9% in volume when it freezes, and the repeated freeze-thaw cycle acts like a wedge, gradually forcing cracks wider until the rock splits."
+      },
+      {
+       "q": "Limestone caves and sinkholes (karst topography) form primarily through which process?",
+       "choices": [
+        "Frost wedging",
+        "Oxidation",
+        "Dissolution by mildly acidic rainwater",
+        "Root wedging"
+       ],
+       "answer": 2,
+       "explain": "Rainwater, made slightly acidic by dissolved CO2, slowly dissolves soluble limestone bedrock, carving out the caves and sinkholes typical of karst topography."
+      },
+      {
+       "q": "Why does chemical weathering happen fastest in warm, humid climates?",
+       "choices": [
+        "Heat speeds up chemical reactions and water is required to carry them out",
+        "Cold climates actually produce more chemical reactions",
+        "Chemical weathering does not depend on climate at all",
+        "Humid climates prevent oxidation from occurring"
+       ],
+       "answer": 0,
+       "explain": "Chemical reactions generally speed up with higher temperature, and water is a necessary ingredient for reactions like dissolution and oxidation, so warm, wet climates weather rock chemically much faster."
+      },
+      {
+       "q": "Rust forming on iron-bearing minerals in a rock is an example of:",
+       "choices": [
+        "Exfoliation",
+        "Oxidation",
+        "Abrasion",
+        "Frost wedging"
+       ],
+       "answer": 1,
+       "explain": "Oxidation is the chemical reaction between iron-bearing minerals and oxygen that produces iron oxide, or rust, turning rock reddish-brown."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Erosion and Deposition: Water, Wind, and Ice",
+     "minutes": 12,
+     "intro": "Weathering breaks rock down where it sits, but it is erosion that does the moving, and every grain of sand on a beach or silt in a river delta has a specific story about which agent, water, wind, or ice, carried it there.",
+     "sections": [
+      {
+       "heading": "Erosion and Deposition by Water",
+       "body": [
+        "Moving water is the most powerful erosional agent on Earth, carving valleys, carrying sediment, and depositing it wherever the water slows down. Rivers erode fastest on the outside of a curve (where water moves fastest) and deposit sediment on the inside of a curve (where water slows), gradually shifting the river's path into looping bends called **meanders**. Where a river meets a lake or ocean and abruptly slows, it drops its sediment load, building a fan-shaped deposit called a **delta**.",
+        "Rainwater running downhill before it reaches a defined stream channel, called **runoff**, is responsible for the earliest stages of erosion on hillsides, carving small rills that can grow into gullies. Because water's carrying capacity depends heavily on its speed, even small changes in a river's slope or volume dramatically change how much sediment it can pick up, carry, and eventually drop."
+       ]
+      },
+      {
+       "heading": "Erosion and Deposition by Wind and Ice",
+       "body": [
+        "Wind erosion is most powerful in dry, sparsely vegetated regions like deserts, where it removes fine material through **deflation** (lifting loose particles away) and grinds rock surfaces through **abrasion**. Wind-deposited sand accumulates into **dunes**, while wind-blown silt can travel great distances and settle into thick, fertile deposits called **loess**.",
+        "**Glaciers**, slow-moving rivers of ice, are exceptionally powerful erosional agents: as they flow, embedded rock fragments grind against the bedrock beneath them, carving distinctive U-shaped valleys (unlike the V-shaped valleys rivers carve) and leaving long parallel scratches called **striations**. When a glacier melts and retreats, it dumps its load of unsorted rock debris in ridges called **moraines**, marking exactly how far the ice once extended."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "meander",
+       "def": "A looping bend in a river's path formed by erosion on the outside and deposition on the inside of curves."
+      },
+      {
+       "term": "delta",
+       "def": "A fan-shaped sediment deposit formed where a river slows abruptly upon reaching a lake or ocean."
+      },
+      {
+       "term": "runoff",
+       "def": "Rainwater flowing downhill over land before reaching a defined stream channel."
+      },
+      {
+       "term": "deflation",
+       "def": "The removal of loose, fine particles by wind."
+      },
+      {
+       "term": "loess",
+       "def": "A thick, fertile deposit of fine, wind-blown silt."
+      },
+      {
+       "term": "glacier",
+       "def": "A slow-moving mass of ice that erodes and deposits large volumes of rock debris."
+      },
+      {
+       "term": "moraine",
+       "def": "A ridge of unsorted rock debris deposited at the edge or end of a glacier."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A river erodes fastest on which part of a bend, and deposits sediment on which part?",
+       "choices": [
+        "It erodes the inside and deposits on the outside",
+        "It erodes the outside, where water moves fastest, and deposits on the inside, where water slows",
+        "It erodes and deposits equally on both sides",
+        "Rivers do not erode on curves at all"
+       ],
+       "answer": 1,
+       "explain": "Water moves fastest on the outside of a river bend, eroding that bank, while slower water on the inside of the bend drops sediment, gradually shaping the river into meanders."
+      },
+      {
+       "q": "A U-shaped valley with long parallel scratches on its bedrock is strong evidence that the valley was carved by:",
+       "choices": [
+        "Wind",
+        "A river",
+        "A glacier",
+        "Chemical weathering"
+       ],
+       "answer": 2,
+       "explain": "Glaciers carve distinctive U-shaped valleys and leave parallel striations in bedrock as embedded rock fragments grind against it, unlike the V-shaped valleys rivers produce."
+      },
+      {
+       "q": "Thick, fertile deposits of fine, wind-blown silt are called:",
+       "choices": [
+        "Moraine",
+        "Loess",
+        "Delta",
+        "Striation"
+       ],
+       "answer": 1,
+       "explain": "Loess is fine silt carried and deposited by wind, often forming thick, agriculturally valuable soil deposits far from its source."
+      },
+      {
+       "q": "A ridge of unsorted rock debris marking how far a glacier once extended, deposited as the ice melted back, is called a:",
+       "choices": [
+        "Delta",
+        "Dune",
+        "Moraine",
+        "Meander"
+       ],
+       "answer": 2,
+       "explain": "A moraine is the ridge of unsorted debris a glacier carries and then deposits at its melting edge, directly marking the glacier's former extent."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Soil Formation and Mass Wasting",
+     "minutes": 12,
+     "intro": "Soil looks like simple dirt, but a single handful can take hundreds to thousands of years to form, and once slopes get steep or saturated enough, that same ground can suddenly give way in a landslide that reshapes a hillside in seconds.",
+     "sections": [
+      {
+       "heading": "How Soil Forms",
+       "body": [
+        "**Soil** develops where weathered rock (parent material) mixes with organic matter, air, water, and living organisms over time. Five factors control how soil forms in a given place, often remembered by the acronym CLORPT: climate, living organisms, relief (slope and topography), parent material, and time. Warm, wet climates with abundant plant and microbial life typically build thick, fertile soil far faster than cold, dry, or steep terrain.",
+        "Mature soil develops distinct horizontal layers called **horizons**. The **O horizon** at the surface is mostly decomposed organic matter (humus); the **A horizon**, or topsoil, mixes humus with mineral particles and is the most fertile layer; the **B horizon**, or subsoil, accumulates minerals and clay leached down from above; and the **C horizon** is partially weathered parent rock, sitting atop unweathered bedrock."
+       ]
+      },
+      {
+       "heading": "Mass Wasting: Gravity Takes Over",
+       "body": [
+        "**Mass wasting** is the downhill movement of rock, soil, and debris under the direct pull of gravity, ranging from imperceptibly slow to catastrophically fast. **Creep** is the slowest form, an almost undetectable downhill inching of soil that nonetheless tilts fence posts and trees over decades. **Slump** occurs when a block of material slides downhill along a curved surface, rotating as it goes, common on saturated slopes.",
+        "**Rockfalls** involve rock breaking loose and falling freely or bouncing down a steep slope, while **landslides** and **mudflows** are rapid, often deadly, movements of large volumes of debris (or debris mixed with water), frequently triggered by heavy rainfall, earthquakes, or human excavation removing a slope's support. Steeper slopes, weaker or saturated material, and the removal of stabilizing vegetation all increase mass wasting risk."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "soil",
+       "def": "A mixture of weathered rock, organic matter, air, water, and organisms that develops over time."
+      },
+      {
+       "term": "CLORPT",
+       "def": "The five factors of soil formation: climate, living organisms, relief, parent material, and time."
+      },
+      {
+       "term": "horizon",
+       "def": "A distinct horizontal layer within mature soil, such as topsoil or subsoil."
+      },
+      {
+       "term": "mass wasting",
+       "def": "The downhill movement of rock, soil, and debris under the direct pull of gravity."
+      },
+      {
+       "term": "creep",
+       "def": "The slowest form of mass wasting, an almost undetectable downhill inching of soil."
+      },
+      {
+       "term": "landslide",
+       "def": "A rapid, often destructive downhill movement of a large volume of rock and debris."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which soil horizon is the most fertile, mixing humus with mineral particles?",
+       "choices": [
+        "O horizon",
+        "A horizon (topsoil)",
+        "B horizon (subsoil)",
+        "C horizon"
+       ],
+       "answer": 1,
+       "explain": "The A horizon, or topsoil, combines decomposed organic humus with mineral particles, making it the most fertile layer for plant growth."
+      },
+      {
+       "q": "What does the acronym CLORPT stand for in soil formation?",
+       "choices": [
+        "Carbon, Limestone, Oxygen, Rock, Pressure, Temperature",
+        "Climate, Living organisms, Relief, Parent material, Time",
+        "Compaction, Lithification, Oxidation, Rifting, Pressure, Tectonics",
+        "Cleavage, Luster, Oxidation, Refraction, Polymorphism, Texture"
+       ],
+       "answer": 1,
+       "explain": "CLORPT summarizes the five factors that control soil formation: climate, living organisms, relief (topography), parent material, and time."
+      },
+      {
+       "q": "The slowest, almost undetectable form of mass wasting, which nonetheless tilts fence posts and trees over decades, is called:",
+       "choices": [
+        "Rockfall",
+        "Landslide",
+        "Creep",
+        "Mudflow"
+       ],
+       "answer": 2,
+       "explain": "Creep is the extremely slow, gradual downhill movement of soil, too slow to see directly, but visible over years in tilted trees, fences, and utility poles."
+      },
+      {
+       "q": "Which combination of factors most increases the risk of a landslide on a slope?",
+       "choices": [
+        "Dry conditions and gentle slopes",
+        "Steep slopes, saturated or weak material, and removed vegetation",
+        "Cold temperatures alone",
+        "Thick bedrock with no soil covering it"
+       ],
+       "answer": 1,
+       "explain": "Steeper slopes, water-saturated or weak material, and the loss of stabilizing plant roots all reduce a slope's stability and increase the risk of a rapid landslide."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Earth's History and Deep Time",
+   "summary": "How geologists determine the relative and absolute ages of rocks and events, and how those methods built the geologic time scale spanning 4.6 billion years.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Relative Dating: Reading the Rock Record",
+     "minutes": 12,
+     "intro": "Long before radioactivity was even discovered, geologists could already put rock layers in the correct chronological order just by carefully observing how they were stacked, cut, and disturbed, a set of logical rules that still underpins geology today.",
+     "sections": [
+      {
+       "heading": "The Principles of Relative Dating",
+       "body": [
+        "**Relative dating** determines the order in which events occurred without assigning exact ages, using a handful of logical principles. The **law of superposition** states that in an undisturbed sequence of sedimentary layers, the oldest layer is at the bottom and each successive layer above is younger. The **principle of original horizontality** holds that sediment is originally deposited in flat, horizontal layers, so tilted or folded layers must have been disturbed after they formed.",
+        "The **principle of cross-cutting relationships** states that any feature which cuts across existing rock, such as a fault or an igneous intrusion, must be younger than the rock it cuts through. An **inclusion**, a fragment of one rock embedded in another, must be older than the rock surrounding it, since it had to already exist to be incorporated."
+       ]
+      },
+      {
+       "heading": "Unconformities and Index Fossils",
+       "body": [
+        "An **unconformity** is a gap in the rock record representing a period of erosion or non-deposition, a missing chapter in Earth's history at that location; recognizing unconformities keeps geologists from assuming rock layers are more continuous in time than they really are. Unconformities are identified by an eroded surface, often with an obvious change in rock type or missing layers, sitting between two other sequences.",
+        "The **principle of faunal succession**, established by William Smith in the early 1800s, observes that fossil species appear and disappear from the rock record in a consistent, recognizable order worldwide. This makes certain widespread, short-lived, easily identifiable fossils, called **index fossils**, extremely useful: finding the same index fossil in rock layers on two different continents proves those layers formed at the same time, even without any numerical age."
+       ],
+       "example": {
+        "problem": "A rock sequence, from bottom to top, shows: sandstone, shale, an igneous dike cutting through both layers, and limestone above the dike (which the dike does not cut through). Put these four features in order from oldest to youngest.",
+        "steps": [
+         "By superposition, sandstone (bottom) is older than shale (above it).",
+         "By cross-cutting relationships, the dike must be younger than both sandstone and shale, since it cuts through them.",
+         "The limestone sits on top and is not cut by the dike, so the dike must be older than the limestone, or the dike would cut through it too."
+        ],
+        "answer": "Oldest to youngest: sandstone, shale, igneous dike, limestone."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "relative dating",
+       "def": "Determining the order in which geologic events occurred without assigning exact numerical ages."
+      },
+      {
+       "term": "law of superposition",
+       "def": "In an undisturbed sequence, the oldest sedimentary layer is at the bottom and layers get younger going up."
+      },
+      {
+       "term": "cross-cutting relationships",
+       "def": "The principle that any feature cutting across rock must be younger than the rock it cuts through."
+      },
+      {
+       "term": "unconformity",
+       "def": "A gap in the rock record representing a period of erosion or non-deposition."
+      },
+      {
+       "term": "index fossil",
+       "def": "A widespread, short-lived, easily identified fossil used to correlate rock layers across locations."
+      },
+      {
+       "term": "faunal succession",
+       "def": "The principle that fossil species appear and disappear from the rock record in a consistent worldwide order."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In an undisturbed sequence of sedimentary rock layers, which layer is the oldest?",
+       "choices": [
+        "The top layer",
+        "The middle layer",
+        "The bottom layer",
+        "They are all exactly the same age"
+       ],
+       "answer": 2,
+       "explain": "The law of superposition states that in an undisturbed sequence, the bottom layer was deposited first and is therefore the oldest."
+      },
+      {
+       "q": "An igneous dike cuts through several sedimentary layers. According to cross-cutting relationships, the dike must be:",
+       "choices": [
+        "Older than all the layers it cuts through",
+        "Younger than all the layers it cuts through",
+        "The same age as the layers it cuts through",
+        "Impossible to date relatively"
+       ],
+       "answer": 1,
+       "explain": "A feature that cuts across existing rock, like an intrusive dike, must have formed after that rock, making it younger than every layer it cuts through."
+      },
+      {
+       "q": "What does an unconformity represent in the rock record?",
+       "choices": [
+        "A period of erosion or non-deposition, a missing chapter in time",
+        "The single youngest possible rock layer",
+        "A specific type of index fossil",
+        "The boundary between igneous and sedimentary rock only"
+       ],
+       "answer": 0,
+       "explain": "An unconformity marks a gap where either no sediment was deposited or existing rock was eroded away, meaning that stretch of time is simply missing from the local rock record."
+      },
+      {
+       "q": "Why are index fossils useful for correlating rock layers across continents?",
+       "choices": [
+        "They are always the largest fossils found in a layer",
+        "They are widespread, short-lived, and easily identified, so finding the same one on two continents proves those layers are the same age",
+        "They only ever appear in igneous rock",
+        "Index fossil species never went extinct"
+       ],
+       "answer": 1,
+       "explain": "Because index fossils are geographically widespread but existed for only a short span of geologic time, matching the same index fossil in distant rock layers proves those layers formed during the same narrow time window."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Absolute Dating: Radiometric Clocks",
+     "minutes": 13,
+     "intro": "Relative dating can tell you that one rock layer is older than another, but it can never tell you how many years separate them. That precision came only after the discovery of radioactivity gave geologists an actual clock buried inside the rock itself.",
+     "sections": [
+      {
+       "heading": "Radioactive Decay and Half-Life",
+       "body": [
+        "**Radiometric dating** relies on the fact that certain unstable (radioactive) isotopes, called **parent isotopes**, decay into stable **daughter isotopes** at a fixed, measurable rate, completely unaffected by heat, pressure, or chemical environment. That rate is expressed as a **half-life**: the time it takes for exactly half of the parent isotope in a sample to decay into the daughter isotope.",
+        "Because decay is a constant, predictable process, measuring the ratio of remaining parent isotope to accumulated daughter isotope in a rock or fossil, and knowing the isotope's half-life, lets geologists calculate exactly how much time has passed since the sample formed (for igneous rock) or since an organism died (for organic material)."
+       ]
+      },
+      {
+       "heading": "Choosing the Right Isotope",
+       "body": [
+        "Different radioactive isotopes suit different materials and time ranges. **Carbon-14**, with a short half-life of 5,730 years, is used to date organic material like bone, shell, or wood, but only works reliably up to about 50,000 years old, after which too little C-14 remains to measure accurately. **Potassium-40**, with a much longer half-life of about 1.25 billion years, dates volcanic rock and is useful across the vast spans of geologic time.",
+        "**Uranium-238**, with a half-life of about 4.5 billion years, roughly the age of the Earth itself, is used to date the very oldest rocks and minerals, including zircon crystals that have yielded some of the oldest known ages on the planet. Geologists match the isotope's half-life to the expected age of the sample: using carbon-14 on a billion-year-old rock, or potassium-40 on a 200-year-old bone, would give a meaningless result."
+       ],
+       "example": {
+        "problem": "A fossil bone contains 25% of the carbon-14 it had when the organism died. Carbon-14 has a half-life of 5,730 years. How old is the fossil?",
+        "steps": [
+         "25% remaining is the same as 1/4 of the original amount.",
+         "1/4 = 1/2 × 1/2, meaning two half-lives have passed.",
+         "Two half-lives = 2 × 5,730 years = 11,460 years."
+        ],
+        "answer": "The fossil is approximately 11,460 years old."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "radiometric dating",
+       "def": "A method of determining a sample's age using the known, constant decay rate of a radioactive isotope."
+      },
+      {
+       "term": "parent isotope",
+       "def": "The original unstable radioactive isotope that decays over time."
+      },
+      {
+       "term": "daughter isotope",
+       "def": "The stable isotope produced when a parent isotope decays."
+      },
+      {
+       "term": "half-life",
+       "def": "The time it takes for exactly half of a radioactive parent isotope in a sample to decay."
+      },
+      {
+       "term": "carbon-14",
+       "def": "A radioactive isotope with a 5,730-year half-life, used to date organic material up to about 50,000 years old."
+      },
+      {
+       "term": "uranium-238",
+       "def": "A radioactive isotope with a 4.5-billion-year half-life, used to date the oldest rocks and minerals."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A sample contains 50% of its original parent isotope remaining. How many half-lives have passed?",
+       "choices": [
+        "0.5",
+        "1",
+        "2",
+        "4"
+       ],
+       "answer": 1,
+       "explain": "50% remaining means exactly half of the original parent isotope has decayed, which by definition is one half-life."
+      },
+      {
+       "q": "Why is carbon-14 unsuitable for dating a 500-million-year-old rock?",
+       "choices": [
+        "Carbon-14's half-life (5,730 years) is far too short — essentially none would remain after that long",
+        "Carbon-14 only exists in igneous rock, not sedimentary rock",
+        "Carbon-14 decays too slowly to be useful for anything",
+        "500 million years is too recent for any radiometric dating method"
+       ],
+       "answer": 0,
+       "explain": "With a half-life of only 5,730 years, carbon-14 would have gone through so many half-lives over 500 million years that no measurable amount would remain, making it useless for that timescale."
+      },
+      {
+       "q": "A rock sample has 12.5% of its original parent isotope remaining. How many half-lives is that?",
+       "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+       ],
+       "answer": 1,
+       "explain": "12.5% equals 1/8 of the original amount, and 1/8 = (1/2)^3, meaning three half-lives have passed."
+      },
+      {
+       "q": "Which isotope's long half-life (about 4.5 billion years) makes it useful for dating the very oldest rocks on Earth?",
+       "choices": [
+        "Carbon-14",
+        "Potassium-40",
+        "Uranium-238",
+        "None — all isotopes decay too fast for this purpose"
+       ],
+       "answer": 2,
+       "explain": "Uranium-238's half-life of about 4.5 billion years, comparable to Earth's own age, makes it ideal for dating the planet's oldest rocks and minerals."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Geologic Time Scale",
+     "minutes": 13,
+     "intro": "If you compressed Earth's entire 4.6-billion-year history into a single 24-hour day, complex animal life would not appear until about 9:00 PM, dinosaurs would go extinct around 11:41 PM, and every moment of recorded human history would fit into the day's final half-second.",
+     "sections": [
+      {
+       "heading": "Eons, Eras, and the Precambrian",
+       "body": [
+        "Geologists divide Earth's history into a nested hierarchy of units, from largest to smallest: eons, eras, periods, and epochs, based on major changes recorded in rock and fossils. The first three eons, the **Hadean**, **Archean**, and **Proterozoic**, are together informally called the **Precambrian**, and they span roughly 4 billion years, an enormous 88% of Earth's total history, yet are represented by comparatively few fossils because complex, hard-shelled life had not yet evolved.",
+        "The Precambrian saw Earth's formation, the origin of life in simple single-celled form roughly 3.5 billion years ago, and the buildup of oxygen in the atmosphere from early photosynthetic bacteria. Life stayed almost entirely microscopic for nearly all of this immense span, which is one reason the Precambrian is often overlooked despite representing the vast majority of Earth's history."
+       ]
+      },
+      {
+       "heading": "The Phanerozoic Eon: Visible Life",
+       "body": [
+        "The current eon, the **Phanerozoic** (meaning \"visible life\"), began about 541 million years ago and is divided into three eras. The **Paleozoic Era** opened with the **Cambrian explosion**, a rapid diversification of complex animal body plans, and ended about 252 million years ago with the largest mass extinction in Earth's history, the Permian extinction, which eliminated roughly 90% of marine species.",
+        "The **Mesozoic Era**, the age of dinosaurs, ran from about 252 to 66 million years ago and ended abruptly with the **Cretaceous-Paleogene (K-Pg) extinction**, caused by a massive asteroid impact that eliminated the non-avian dinosaurs along with roughly three-quarters of all species. The **Cenozoic Era**, the age of mammals, has run from 66 million years ago to the present, the era in which mammals diversified into the dominant large land animals and, eventually, humans evolved."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "eon",
+       "def": "The largest division of geologic time, such as the Phanerozoic."
+      },
+      {
+       "term": "era",
+       "def": "A major division of geologic time within an eon, such as the Mesozoic."
+      },
+      {
+       "term": "Precambrian",
+       "def": "The informal name for the Hadean, Archean, and Proterozoic eons, spanning about 88% of Earth's history."
+      },
+      {
+       "term": "Phanerozoic",
+       "def": "The current eon, meaning visible life, beginning about 541 million years ago."
+      },
+      {
+       "term": "Cambrian explosion",
+       "def": "The rapid diversification of complex animal body plans at the start of the Paleozoic era."
+      },
+      {
+       "term": "K-Pg extinction",
+       "def": "The mass extinction 66 million years ago, caused by an asteroid impact, that ended the Mesozoic and eliminated non-avian dinosaurs."
+      }
+     ],
+     "practice": [
+      {
+       "q": "About what percentage of Earth's history is represented by the Precambrian?",
+       "choices": [
+        "About 10%",
+        "About 50%",
+        "About 88%",
+        "About 99%"
+       ],
+       "answer": 2,
+       "explain": "The Precambrian eons span roughly 4 billion of Earth's 4.6 billion years, about 88% of the planet's total history."
+      },
+      {
+       "q": "The Cambrian explosion refers to:",
+       "choices": [
+        "A volcanic eruption at the start of the Cambrian period",
+        "The rapid diversification of complex animal body plans at the start of the Paleozoic era",
+        "The extinction of the dinosaurs",
+        "The formation of Earth's core"
+       ],
+       "answer": 1,
+       "explain": "The Cambrian explosion describes the relatively rapid appearance of most major complex animal body plans in the fossil record at the start of the Paleozoic era."
+      },
+      {
+       "q": "What event ended the Mesozoic Era and eliminated the non-avian dinosaurs?",
+       "choices": [
+        "The Permian mass extinction",
+        "A massive asteroid impact (the K-Pg extinction)",
+        "The Cambrian explosion",
+        "The formation of the Precambrian"
+       ],
+       "answer": 1,
+       "explain": "The Cretaceous-Paleogene (K-Pg) extinction, triggered by a massive asteroid impact about 66 million years ago, ended the Mesozoic and wiped out the non-avian dinosaurs."
+      },
+      {
+       "q": "Which era is known as the age of mammals and includes the present day?",
+       "choices": [
+        "Paleozoic",
+        "Mesozoic",
+        "Cenozoic",
+        "Precambrian"
+       ],
+       "answer": 2,
+       "explain": "The Cenozoic Era, running from 66 million years ago to today, is called the age of mammals, since mammals diversified into the dominant large land animals after the dinosaurs' extinction."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

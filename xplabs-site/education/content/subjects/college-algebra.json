@@ -1,0 +1,826 @@
+{
+  "id": "college-algebra",
+  "title": "College Algebra",
+  "domain": "math",
+  "level": "Intro college",
+  "description": "A functions-first course: after sharpening exponent rules, inequalities, and complex numbers, it studies polynomial, rational, exponential, and logarithmic functions in depth, then closes with systems of equations and matrices. The emphasis throughout is on graphing, analyzing, and solving with real numeric precision.",
+  "outcomes": [
+    "Apply exponent rules and scientific notation, and perform arithmetic with complex numbers.",
+    "Solve polynomial and rational inequalities and equations involving rational exponents.",
+    "Evaluate and graph functions, including piecewise functions, using function notation, domain and range, and transformations.",
+    "Analyze polynomial functions using end behavior and zeros found via synthetic division, and analyze rational functions using asymptotes.",
+    "Evaluate exponential and logarithmic expressions, apply the properties of logarithms, and solve exponential and logarithmic equations.",
+    "Solve systems of linear equations, including nonlinear systems and systems solved with matrices."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations: Real Numbers, Equations, and Complex Numbers",
+      "summary": "Exponent rules and scientific notation, solving polynomial and rational inequalities and rational-exponent equations, and arithmetic with complex numbers.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Real Numbers and Exponent Rules",
+          "minutes": 15,
+          "intro": "Exponent rules are the grammar of algebra: once you can combine, divide, and raise powers correctly, expressions that look intimidating collapse into a couple of clean lines of work.",
+          "sections": [
+            {
+              "heading": "The Exponent Rules",
+              "body": [
+                "The product rule says xᵃ × xᵇ = xᵃ⁺ᵇ: multiplying same-base powers adds their exponents. The quotient rule says xᵃ / xᵇ = xᵃ⁻ᵇ: dividing same-base powers subtracts exponents. The power rule says (xᵃ)ᵇ = xᵃᵇ: raising a power to a power multiplies exponents.",
+                "When an expression has multiple factors raised to a power, such as (xy)ᵃ, the exponent distributes to each factor: (xy)ᵃ = xᵃyᵃ. Applying these rules in the right order lets you simplify even a dense expression with several variables and exponents in just a few lines."
+              ],
+              "example": {
+                "problem": "Simplify (3x²y⁻¹)² × (2xy³).",
+                "steps": [
+                  "Apply the power rule to the first factor: (3x²y⁻¹)² = 3²x⁴y⁻² = 9x⁴y⁻².",
+                  "Multiply by the second factor: 9x⁴y⁻² × 2xy³.",
+                  "Multiply the numeric coefficients: 9 × 2 = 18.",
+                  "Apply the product rule to each variable: x⁴ × x¹ = x⁵, and y⁻² × y³ = y¹."
+                ],
+                "answer": "18x⁵y"
+              }
+            },
+            {
+              "heading": "Negative and Zero Exponents",
+              "body": [
+                "A negative exponent indicates a reciprocal: x⁻ⁿ = 1/xⁿ, moving the base to the other side of a fraction rather than making the value negative. Any nonzero base raised to the zero power equals 1, since x⁰ = xⁿ⁻ⁿ = xⁿ/xⁿ = 1 by the quotient rule.",
+                "These rules let you rewrite expressions in whichever form — all positive exponents, or a single fraction — best suits the next step of a problem."
+              ]
+            },
+            {
+              "heading": "Scientific Notation",
+              "body": [
+                "Scientific notation writes a number as a × 10ⁿ, where 1 ≤ a < 10 and n is an integer, making very large or very small numbers easy to read and compute with. Multiplying numbers in scientific notation multiplies the coefficients and adds the exponents of 10, exactly following the product rule.",
+                "For (3 × 10⁴)(2 × 10⁻⁶), multiply the coefficients, 3 × 2 = 6, and add the exponents, 4 + (−6) = −2, giving 6 × 10⁻²."
+              ],
+              "example": {
+                "problem": "Multiply (3 × 10⁴)(2 × 10⁻⁶).",
+                "steps": [
+                  "Multiply the coefficients: 3 × 2 = 6.",
+                  "Add the exponents of 10: 4 + (−6) = −2."
+                ],
+                "answer": "6 × 10⁻²"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "product rule (exponents)", "def": "xᵃ × xᵇ = xᵃ⁺ᵇ, combining same-base powers by adding exponents"},
+            {"term": "quotient rule (exponents)", "def": "xᵃ / xᵇ = xᵃ⁻ᵇ, combining same-base powers by subtracting exponents"},
+            {"term": "scientific notation", "def": "a number written as a × 10ⁿ with 1 ≤ a < 10"}
+          ],
+          "practice": [
+            {"q": "Simplify x⁵ × x⁻²  × x³.", "choices": ["x⁶", "x⁰", "x¹⁰", "x⁻⁶"], "answer": 0, "explain": "Add the exponents: 5 + (−2) + 3 = 6, giving x⁶."},
+            {"q": "Simplify (2a³b)⁻² × a².", "choices": ["a⁻⁴/(4b²)", "4a⁶b²/a²", "a⁴/(4b²)", "1/(4a⁴b²)"], "answer": 0, "explain": "(2a³b)⁻² = 1/(4a⁶b²); multiplying by a² gives a²/(4a⁶b²) = 1/(4a⁴b²), which is the same as a⁻⁴/(4b²)."},
+            {"q": "Multiply (4 × 10⁻³)(5 × 10⁷).", "choices": ["2 × 10⁵", "20 × 10⁴", "9 × 10⁴", "2 × 10⁴"], "answer": 0, "explain": "Multiply coefficients: 4 × 5 = 20, and add exponents: −3 + 7 = 4, giving 20 × 10⁴, which in proper scientific notation is 2 × 10⁵."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Polynomial and Rational Inequalities",
+          "minutes": 17,
+          "intro": "Beyond simple linear inequalities, polynomial and rational inequalities are solved with a sign chart: find where an expression can change sign, then test a point in each resulting interval to see which ones satisfy the inequality.",
+          "sections": [
+            {
+              "heading": "Equations with Rational Exponents",
+              "body": [
+                "An equation like x^(2/3) = 4 is solved by raising both sides to the reciprocal power, 3/2, which undoes the 2/3 exponent on the left. Recall that a rational exponent m/n means taking the n-th root and raising to the m-th power (in either order): x^(m/n) = (ⁿ√x)ᵐ.",
+                "Always check solutions to rational-exponent equations, since raising both sides to a power can occasionally introduce extraneous solutions, just as squaring does with radical equations."
+              ],
+              "example": {
+                "problem": "Solve x^(2/3) = 4.",
+                "steps": [
+                  "Raise both sides to the power 3/2 (the reciprocal of 2/3): (x^(2/3))^(3/2) = 4^(3/2).",
+                  "The left side simplifies to x.",
+                  "Compute the right side: 4^(3/2) = (√4)³ = 2³ = 8."
+                ],
+                "answer": "x = 8"
+              }
+            },
+            {
+              "heading": "Solving Polynomial Inequalities",
+              "body": [
+                "To solve a polynomial inequality, move everything to one side so it is compared to zero, factor the polynomial, and find its zeros — these are the critical points that divide the number line into intervals. Test one point from each interval in the factored expression to determine whether that whole interval satisfies the inequality.",
+                "Include the critical points themselves in the solution only if the inequality is ≤ or ≥ (not strict), since at those exact points the expression equals zero rather than being strictly positive or negative."
+              ],
+              "example": {
+                "problem": "Solve (x − 2)(x + 3) ≤ 0.",
+                "steps": [
+                  "Identify the critical points: x = 2 and x = −3.",
+                  "Test x = −4 (left of −3): (−6)(−1) = 6, positive, so this interval does not satisfy ≤ 0.",
+                  "Test x = 0 (between −3 and 2): (−2)(3) = −6, negative, so this interval satisfies the inequality.",
+                  "Test x = 3 (right of 2): (1)(6) = 6, positive, so this interval does not satisfy the inequality.",
+                  "Since the inequality is ≤, include the critical points themselves."
+                ],
+                "answer": "−3 ≤ x ≤ 2"
+              }
+            },
+            {
+              "heading": "Solving Rational Inequalities",
+              "body": [
+                "Rational inequalities use the same sign-chart method, but the critical points come from both the zeros of the numerator and the zeros of the denominator, since the expression can change sign or become undefined at either. A value that makes the denominator zero is always excluded from the solution, even if the inequality is not strict.",
+                "After finding all critical points, test a value in each resulting interval in the original rational expression to see which intervals make the inequality true."
+              ],
+              "example": {
+                "problem": "Solve (x − 1)/(x + 2) > 0.",
+                "steps": [
+                  "Find the critical points: the numerator is zero at x = 1, and the denominator is zero (undefined) at x = −2.",
+                  "Test x = −3: (−4)/(−1) = 4, positive, so this interval satisfies the inequality.",
+                  "Test x = 0: (−1)/(2) = −0.5, negative, so this interval does not satisfy the inequality.",
+                  "Test x = 2: (1)/(4) = 0.25, positive, so this interval satisfies the inequality.",
+                  "Since the inequality is strict (>), exclude both critical points."
+                ],
+                "answer": "x < −2 or x > 1"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "critical point", "def": "a value where a polynomial or rational expression equals zero or is undefined, dividing the number line into test intervals"},
+            {"term": "sign chart", "def": "a method of testing one value in each interval between critical points to determine the sign of an expression there"}
+          ],
+          "practice": [
+            {"q": "Solve x^(3/2) = 8.", "choices": ["x = 4", "x = 2", "x = 16", "x = 6"], "answer": 0, "explain": "Raise both sides to the power 2/3: x = 8^(2/3) = (∛8)² = 2² = 4."},
+            {"q": "Solve (x − 4)(x + 1) > 0.", "choices": ["x < −1 or x > 4", "−1 < x < 4", "x > 4 only", "x < −1 only"], "answer": 0, "explain": "The critical points are −1 and 4. Testing shows the product is positive outside this interval, so the solution is x < −1 or x > 4."},
+            {"q": "Solve (x + 5)/(x − 2) ≤ 0.", "choices": ["−5 ≤ x < 2", "−5 < x ≤ 2", "x ≤ −5 or x > 2", "−5 ≤ x ≤ 2"], "answer": 0, "explain": "Critical points are x = −5 (numerator zero, included since ≤) and x = 2 (denominator zero, always excluded). Testing shows the interval −5 ≤ x < 2 satisfies the inequality."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Complex Numbers",
+          "minutes": 15,
+          "intro": "Every quadratic equation has a solution once you allow one new number, i, defined so that its square is −1, and complex numbers built from i behave almost exactly like the binomials you already know how to multiply and divide.",
+          "sections": [
+            {
+              "heading": "The Imaginary Unit and Powers of i",
+              "body": [
+                "The imaginary unit i is defined by i² = −1, which lets us write the square root of any negative number: √(−9) = √9 × √(−1) = 3i. A complex number has the form a + bi, where a is the real part and b is the imaginary part.",
+                "Powers of i cycle through just four values: i¹ = i, i² = −1, i³ = −i, and i⁴ = 1, after which the pattern repeats. To simplify iⁿ for any large n, divide n by 4 and use the remainder to find the equivalent power in this cycle."
+              ],
+              "example": {
+                "problem": "Simplify i²³.",
+                "steps": [
+                  "Divide 23 by 4: 23 = 4 × 5 + 3, so the remainder is 3.",
+                  "i²³ has the same value as i³, since every group of four powers of i returns to 1."
+                ],
+                "answer": "i²³ = i³ = −i"
+              }
+            },
+            {
+              "heading": "Adding, Subtracting, and Multiplying Complex Numbers",
+              "body": [
+                "Add or subtract complex numbers by combining their real parts together and their imaginary parts together, treating them like like terms. Multiply complex numbers using the distributive property (or FOIL, for two binomial-like complex numbers), then simplify any i² that appears to −1.",
+                "For (3 + 2i)(1 − 4i), FOIL gives 3 − 12i + 2i − 8i², and since i² = −1, the last term −8i² becomes +8, which then combines with the real part."
+              ],
+              "example": {
+                "problem": "Multiply (3 + 2i)(1 − 4i).",
+                "steps": [
+                  "FOIL: (3)(1) + (3)(−4i) + (2i)(1) + (2i)(−4i) = 3 − 12i + 2i − 8i².",
+                  "Replace i² with −1: −8i² becomes −8(−1) = 8.",
+                  "Combine real parts: 3 + 8 = 11. Combine imaginary parts: −12i + 2i = −10i."
+                ],
+                "answer": "11 − 10i"
+              }
+            },
+            {
+              "heading": "Dividing Complex Numbers",
+              "body": [
+                "To divide by a complex number, multiply both the numerator and denominator by the complex conjugate of the denominator — the same real and imaginary parts, with the sign of the imaginary part flipped. Multiplying a complex number by its conjugate always produces a real number, since (a + bi)(a − bi) = a² + b², eliminating i from the denominator.",
+                "This mirrors rationalizing a denominator with radicals: the conjugate plays the same role that a matching radical did there, clearing an unwanted term from the bottom of the fraction."
+              ],
+              "example": {
+                "problem": "Divide (2 + 3i)/(1 − i).",
+                "steps": [
+                  "Multiply numerator and denominator by the conjugate of 1 − i, which is 1 + i: [(2 + 3i)(1 + i)] / [(1 − i)(1 + i)].",
+                  "Expand the numerator: 2 + 2i + 3i + 3i² = 2 + 5i − 3 = −1 + 5i.",
+                  "Expand the denominator: (1)² − (i)² = 1 − (−1) = 2.",
+                  "Divide each part by 2: (−1 + 5i)/2 = −1/2 + (5/2)i."
+                ],
+                "answer": "−1/2 + (5/2)i"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "imaginary unit", "def": "i, defined by i² = −1"},
+            {"term": "complex number", "def": "a number of the form a + bi, with real part a and imaginary part b"},
+            {"term": "complex conjugate", "def": "the complex number a − bi paired with a + bi; their product is always a real number"}
+          ],
+          "practice": [
+            {"q": "Simplify i¹⁰.", "choices": ["1", "−1", "i", "−i"], "answer": 1, "explain": "10 = 4 × 2 + 2, so i¹⁰ equals i², which is −1."},
+            {"q": "Multiply (2 + 5i)(3 − i).", "choices": ["11 + 13i", "1 + 13i", "11 − 13i", "6 − 5i"], "answer": 0, "explain": "FOIL gives 6 − 2i + 15i − 5i², and since i² = −1, −5i² becomes +5; combining gives (6 + 5) + (−2 + 15)i = 11 + 13i."},
+            {"q": "What is the complex conjugate of −4 + 7i?", "choices": ["4 − 7i", "−4 − 7i", "4 + 7i", "7i − 4"], "answer": 1, "explain": "The conjugate keeps the real part the same and flips the sign of the imaginary part: −4 − 7i."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Functions",
+      "summary": "Function notation and piecewise functions, operations and composition of functions, domain and range, and transformations of graphs.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Function Notation, Piecewise Functions, and Composition",
+          "minutes": 17,
+          "intro": "Functions can be combined just like numbers — added, subtracted, multiplied, divided, or chained together so the output of one feeds directly into another — and each of these combinations has its own clean notation.",
+          "sections": [
+            {
+              "heading": "Piecewise Functions",
+              "body": [
+                "A piecewise function uses different rules for different parts of its domain, with each rule labeled by the interval of inputs it applies to. To evaluate a piecewise function at a specific input, first determine which interval that input falls into, then apply only the rule listed for that interval.",
+                "Piecewise functions model real situations with different behaviors in different ranges, such as a shipping cost that is flat below a certain weight and scales per pound above it."
+              ],
+              "example": {
+                "problem": "For f(x) = x + 2 if x < 0, and f(x) = x² if x ≥ 0, find f(−3) and f(2).",
+                "steps": [
+                  "For f(−3): since −3 < 0, use the rule x + 2, giving −3 + 2 = −1.",
+                  "For f(2): since 2 ≥ 0, use the rule x², giving 2² = 4."
+                ],
+                "answer": "f(−3) = −1 and f(2) = 4"
+              }
+            },
+            {
+              "heading": "Operations on Functions",
+              "body": [
+                "Two functions can be combined with the same four operations as numbers: (f + g)(x) = f(x) + g(x), (f − g)(x) = f(x) − g(x), (fg)(x) = f(x)g(x), and (f/g)(x) = f(x)/g(x), with the last requiring g(x) ≠ 0. Evaluate each function separately at the given input, then combine the results.",
+                "These combined functions have their own domains, which must exclude any input that is excluded from either original function, plus any input that makes a denominator zero in the case of division."
+              ],
+              "example": {
+                "problem": "For f(x) = x + 2 and g(x) = x² − 1, find (f + g)(3).",
+                "steps": [
+                  "Evaluate f(3) = 3 + 2 = 5.",
+                  "Evaluate g(3) = 3² − 1 = 8.",
+                  "Add the results: 5 + 8 = 13."
+                ],
+                "answer": "(f + g)(3) = 13"
+              }
+            },
+            {
+              "heading": "Composition of Functions",
+              "body": [
+                "Composition, written (f ∘ g)(x) or f(g(x)), feeds the entire output of g into f as its input, rather than combining the two outputs arithmetically. Evaluate the inner function first, then substitute that result into the outer function.",
+                "Composition is generally not commutative: f(g(x)) usually differs from g(f(x)), so the order in which the functions are applied matters and must be read carefully from the notation."
+              ],
+              "example": {
+                "problem": "For f(x) = 2x + 1 and g(x) = x² − 3, find (f ∘ g)(2).",
+                "steps": [
+                  "Evaluate the inner function first: g(2) = 2² − 3 = 1.",
+                  "Substitute that result into the outer function: f(1) = 2(1) + 1 = 3."
+                ],
+                "answer": "(f ∘ g)(2) = 3"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "piecewise function", "def": "a function defined by different rules on different intervals of its domain"},
+            {"term": "composition of functions", "def": "applying one function to the output of another, written f(g(x))"}
+          ],
+          "practice": [
+            {"q": "For f(x) = 3x − 1 if x ≤ 2, and f(x) = x² + 1 if x > 2, find f(2) and f(5).", "choices": ["f(2) = 5, f(5) = 26", "f(2) = 5, f(5) = 16", "f(2) = 7, f(5) = 26", "f(2) = 5, f(5) = 24"], "answer": 0, "explain": "Since 2 ≤ 2, use 3x − 1: f(2) = 5. Since 5 > 2, use x² + 1: f(5) = 26."},
+            {"q": "For f(x) = x − 4 and g(x) = 2x, find (f ∘ g)(3).", "choices": ["2", "6", "−4", "10"], "answer": 0, "explain": "First g(3) = 6, then f(6) = 6 − 4 = 2."},
+            {"q": "For f(x) = x² and g(x) = x + 1, find (g ∘ f)(3), and compare to (f ∘ g)(3).", "choices": ["(g∘f)(3) = 10, (f∘g)(3) = 16", "(g∘f)(3) = 16, (f∘g)(3) = 10", "Both equal 10", "Both equal 16"], "answer": 0, "explain": "(g∘f)(3): f(3) = 9, then g(9) = 10. (f∘g)(3): g(3) = 4, then f(4) = 16. The two compositions give different results, showing composition is not commutative."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Domain, Range, and Graphs of Functions",
+          "minutes": 15,
+          "intro": "A function's domain and range are best found by hunting for exactly two kinds of trouble: a denominator that could equal zero, and a square root that could go negative.",
+          "sections": [
+            {
+              "heading": "Finding Domain Algebraically",
+              "body": [
+                "To find a function's domain, identify any restrictions caused by its formula: set any denominator not equal to zero and solve, and require the expression under any even-index radical to be greater than or equal to zero. The domain is every real number except values that violate these conditions.",
+                "When a function combines both a radical and a denominator, address both restrictions and combine them, since the domain must satisfy every condition at once."
+              ],
+              "example": {
+                "problem": "Find the domain of f(x) = √(x − 3) / (x − 5).",
+                "steps": [
+                  "The expression under the radical must be nonnegative: x − 3 ≥ 0, so x ≥ 3.",
+                  "The denominator cannot be zero: x − 5 ≠ 0, so x ≠ 5.",
+                  "Combine both conditions: x is at least 3, but cannot equal 5."
+                ],
+                "answer": "Domain: [3, 5) ∪ (5, ∞)"
+              }
+            },
+            {
+              "heading": "Reading Domain and Range from a Graph",
+              "body": [
+                "On a graph, the domain is the complete set of x-values the graph covers, read by scanning left to right, and the range is the complete set of y-values it covers, read by scanning bottom to top. Open circles or arrows indicate values approached but not reached, while closed circles indicate included endpoints.",
+                "A graph that extends forever to the left and right, like a typical parabola opening upward, has a domain of all real numbers, while its range is restricted to y-values at or above its vertex."
+              ]
+            },
+            {
+              "heading": "Increasing and Decreasing Intervals",
+              "body": [
+                "A function is increasing on an interval where its graph rises from left to right, and decreasing where its graph falls from left to right. These intervals are described using the x-values only, since increasing and decreasing describe how outputs change as inputs move rightward.",
+                "A parabola opening upward, for example, decreases on the interval to the left of its vertex and increases on the interval to the right, with the vertex marking the exact turning point between the two behaviors."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "domain", "def": "the complete set of valid input values for a function"},
+            {"term": "range", "def": "the complete set of output values a function produces"},
+            {"term": "increasing interval", "def": "an interval of x-values over which a function's outputs rise from left to right"}
+          ],
+          "practice": [
+            {"q": "Find the domain of f(x) = √(2x + 6).", "choices": ["x ≥ −3", "x ≤ −3", "x ≥ 3", "x > −3"], "answer": 0, "explain": "The radicand must be nonnegative: 2x + 6 ≥ 0, so 2x ≥ −6 and x ≥ −3."},
+            {"q": "Find the domain of g(x) = (x + 1)/(x² − 9).", "choices": ["All reals except x = 3 and x = −3", "All reals except x = −1", "All reals except x = 9", "All reals except x = 3"], "answer": 0, "explain": "The denominator x² − 9 = (x − 3)(x + 3) is zero when x = 3 or x = −3, so both must be excluded."},
+            {"q": "A parabola opens upward with vertex at (2, −5). On which interval is it decreasing?", "choices": ["x < 2", "x > 2", "y < −5", "All real numbers"], "answer": 0, "explain": "An upward parabola falls toward its vertex from the left, so it is decreasing for all x-values less than the vertex's x-coordinate, 2."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Transformations of Functions",
+          "minutes": 16,
+          "intro": "Once you know how one parent function graphs, you can graph dozens of related functions instantly by recognizing shifts, reflections, and stretches layered on top of it, without plotting a single new point.",
+          "sections": [
+            {
+              "heading": "Shifts and Reflections",
+              "body": [
+                "Adding a constant outside a function, f(x) + k, shifts the graph vertically: up if k is positive, down if k is negative. Adding a constant inside, f(x + h), shifts the graph horizontally, but in the opposite direction of the sign: f(x + 3) shifts left, and f(x − 3) shifts right.",
+                "A negative sign outside the function, −f(x), reflects the graph over the x-axis, flipping it vertically. A negative sign applied to the input, f(−x), reflects the graph over the y-axis, flipping it horizontally."
+              ]
+            },
+            {
+              "heading": "Stretches and Compressions",
+              "body": [
+                "Multiplying a function by a constant outside, a·f(x), stretches the graph vertically away from the x-axis if |a| > 1, or compresses it toward the x-axis if 0 < |a| < 1. Multiplying the input by a constant, f(bx), stretches or compresses the graph horizontally, with the effect reversed: a large |b| compresses, and a small |b| stretches.",
+                "Combining a negative sign with a stretch factor, such as −2, both reflects and stretches the graph at once, since the negative sign and the magnitude of the number are applied together."
+              ],
+              "example": {
+                "problem": "Describe the transformations that take f(x) = x² to g(x) = −2(x − 3)² + 4.",
+                "steps": [
+                  "The factor of −2 outside indicates a reflection over the x-axis and a vertical stretch by a factor of 2.",
+                  "The (x − 3) inside indicates a horizontal shift right by 3 units.",
+                  "The + 4 outside indicates a vertical shift up by 4 units."
+                ],
+                "answer": "Reflect over the x-axis, stretch vertically by 2, shift right 3, and shift up 4"
+              }
+            },
+            {
+              "heading": "Combining Transformations in Order",
+              "body": [
+                "When a function includes several transformations at once, they generally apply in this order: horizontal shift and reflection inside the function first, then vertical stretch or reflection, then vertical shift last. Applying transformations out of order can produce a different, incorrect graph.",
+                "A reliable check is to track a single known point through each transformation step by step, confirming its new location matches what the final graph should show."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "vertical shift", "def": "moving a graph up or down by adding a constant outside the function"},
+            {"term": "horizontal shift", "def": "moving a graph left or right by adding a constant inside the function's input"},
+            {"term": "reflection", "def": "flipping a graph over an axis, produced by a negative sign outside (over the x-axis) or on the input (over the y-axis)"}
+          ],
+          "practice": [
+            {"q": "Which transformation describes g(x) = f(x + 5) − 2?", "choices": ["Shift left 5, down 2", "Shift right 5, down 2", "Shift left 5, up 2", "Shift right 5, up 2"], "answer": 0, "explain": "Adding 5 inside the function shifts left (opposite the sign), and subtracting 2 outside shifts down."},
+            {"q": "Which transformation describes g(x) = 3f(x)?", "choices": ["Vertical stretch by a factor of 3", "Horizontal stretch by a factor of 3", "Vertical compression by a factor of 3", "Reflection over the x-axis"], "answer": 0, "explain": "Multiplying the entire function by 3 (outside) stretches the graph vertically by a factor of 3."},
+            {"q": "Starting from f(x) = √x, how do you graph g(x) = −√(x − 2)?", "choices": ["Shift right 2, reflect over the x-axis", "Shift left 2, reflect over the x-axis", "Shift right 2, reflect over the y-axis", "Shift up 2, reflect over the x-axis"], "answer": 0, "explain": "The (x − 2) inside shifts the graph right 2 units, and the negative sign outside reflects it over the x-axis."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Polynomial and Rational Functions",
+      "summary": "End behavior and zeros of polynomial functions, dividing polynomials to find zeros, and analyzing rational functions using asymptotes.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Polynomial Functions and Graphs",
+          "minutes": 16,
+          "intro": "A polynomial's degree and leading coefficient alone tell you what happens at the far left and right edges of its graph, and its zeros — along with how many times each one repeats — tell you exactly how the graph behaves at every point where it crosses or touches the x-axis.",
+          "sections": [
+            {
+              "heading": "End Behavior",
+              "body": [
+                "The end behavior of a polynomial — what happens as x approaches positive and negative infinity — is fully determined by its degree and leading coefficient. An odd-degree polynomial's two ends point in opposite directions, while an even-degree polynomial's two ends point in the same direction; a positive leading coefficient sends the right end upward, and a negative leading coefficient sends it downward.",
+                "For f(x) = −2x³ + 5x² − x + 1, the degree is 3 (odd) and the leading coefficient is −2 (negative), so as x → ∞, f(x) → −∞, and as x → −∞, f(x) → ∞."
+              ],
+              "example": {
+                "problem": "Describe the end behavior of f(x) = −2x³ + 5x² − x + 1.",
+                "steps": [
+                  "Identify the degree: 3, which is odd, so the two ends point in opposite directions.",
+                  "Identify the leading coefficient: −2, which is negative.",
+                  "For an odd-degree polynomial with a negative leading coefficient, the graph falls to the right and rises to the left."
+                ],
+                "answer": "As x → ∞, f(x) → −∞; as x → −∞, f(x) → ∞"
+              }
+            },
+            {
+              "heading": "Zeros and Their Multiplicity",
+              "body": [
+                "A zero's multiplicity is how many times its corresponding factor appears in the polynomial's factored form. At a zero of odd multiplicity, the graph crosses straight through the x-axis; at a zero of even multiplicity, the graph touches the x-axis and turns back without crossing.",
+                "For f(x) = (x − 2)²(x + 1), the zero x = 2 has multiplicity 2 (even), so the graph touches the x-axis and bounces back there, while the zero x = −1 has multiplicity 1 (odd), so the graph crosses straight through the x-axis there."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "end behavior", "def": "how a function's outputs behave as the input approaches positive or negative infinity"},
+            {"term": "multiplicity", "def": "the number of times a given zero's factor appears in a polynomial's factored form"}
+          ],
+          "practice": [
+            {"q": "Describe the end behavior of f(x) = 3x⁴ − x² + 2.", "choices": ["Both ends rise (→ ∞)", "Both ends fall (→ −∞)", "Left falls, right rises", "Left rises, right falls"], "answer": 0, "explain": "The degree 4 is even, so both ends point the same direction, and the leading coefficient 3 is positive, so both ends rise toward positive infinity."},
+            {"q": "For f(x) = (x + 1)(x − 4)², what happens at x = 4?", "choices": ["The graph crosses the x-axis", "The graph touches the x-axis and turns back", "The graph has a vertical asymptote", "The graph is undefined there"], "answer": 1, "explain": "The zero x = 4 has multiplicity 2 (even), so the graph touches the x-axis at that point and turns back rather than crossing through."},
+            {"q": "A polynomial has odd degree and a positive leading coefficient. What is its end behavior?", "choices": ["Rises to the right, falls to the left", "Falls to the right, rises to the left", "Rises on both ends", "Falls on both ends"], "answer": 0, "explain": "Odd-degree polynomials have ends pointing in opposite directions, and a positive leading coefficient makes the right end rise toward positive infinity while the left end falls."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Dividing Polynomials and Finding Zeros",
+          "minutes": 17,
+          "intro": "Synthetic division is a streamlined shortcut for dividing a polynomial by a linear factor, and it turns testing whether a number is a root into a fast, mechanical process instead of a full long division every time.",
+          "sections": [
+            {
+              "heading": "Synthetic Division",
+              "body": [
+                "Synthetic division divides a polynomial by a linear factor (x − c) using only the coefficients. Write the coefficients of the dividend in order, bring down the first coefficient, then repeatedly multiply the most recent result by c and add it to the next coefficient.",
+                "The final numbers produced are the coefficients of the quotient (one degree lower than the original), and the very last number is the remainder. A remainder of 0 confirms that c is a zero of the polynomial and (x − c) is a factor."
+              ],
+              "example": {
+                "problem": "Divide x³ − 4x² + x + 6 by (x − 3) using synthetic division.",
+                "steps": [
+                  "Write the coefficients: 1, −4, 1, 6, and use c = 3.",
+                  "Bring down the first coefficient: 1.",
+                  "Multiply 1 × 3 = 3, add to −4: −4 + 3 = −1.",
+                  "Multiply −1 × 3 = −3, add to 1: 1 + (−3) = −2.",
+                  "Multiply −2 × 3 = −6, add to 6: 6 + (−6) = 0, the remainder."
+                ],
+                "answer": "Quotient x² − x − 2, remainder 0, so x = 3 is a zero"
+              }
+            },
+            {
+              "heading": "Finding All Zeros",
+              "body": [
+                "Once synthetic division confirms one zero and produces a reduced quotient, factor that quotient further (using familiar trinomial factoring, for instance) to find the remaining zeros. Repeating this process breaks a higher-degree polynomial down into a full set of linear factors.",
+                "For x³ − 4x² + x + 6, having found the factor (x − 3) with quotient x² − x − 2, factor the quotient as (x − 2)(x + 1), revealing all three zeros: x = 3, x = 2, and x = −1."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "synthetic division", "def": "a shortcut method for dividing a polynomial by a linear factor (x − c) using only coefficients"},
+            {"term": "zero (root)", "def": "a value of x where a polynomial function equals zero"}
+          ],
+          "practice": [
+            {"q": "Using synthetic division, divide x³ + 2x² − 5x − 6 by (x − 2). What is the remainder?", "choices": ["0", "2", "−6", "4"], "answer": 0, "explain": "Synthetic division with c = 2 on coefficients 1, 2, −5, −6: bring down 1; 1×2+2=4; 4×2−5=3; 3×2−6=0, so the remainder is 0."},
+            {"q": "From the previous division, x³ + 2x² − 5x − 6 = (x − 2)(x² + 4x + 3). What are all the zeros?", "choices": ["2, −1, −3", "2, 1, 3", "−2, 1, 3", "2, −1, 3"], "answer": 0, "explain": "The quotient x² + 4x + 3 factors as (x + 1)(x + 3), giving zeros x = −1 and x = −3, together with x = 2 from the original division."},
+            {"q": "What does a remainder of 0 in synthetic division by (x − c) tell you?", "choices": ["c is a zero of the polynomial", "The polynomial has no real zeros", "c must be negative", "The degree of the polynomial is wrong"], "answer": 0, "explain": "A remainder of 0 means (x − c) divides the polynomial evenly, so c is a zero (root) of the polynomial."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Rational Functions and Asymptotes",
+          "minutes": 16,
+          "intro": "A rational function's graph is shaped by invisible boundary lines it can approach but never cross — vertical asymptotes where the function blows up, and a horizontal asymptote that describes its behavior far out to the left and right.",
+          "sections": [
+            {
+              "heading": "Vertical Asymptotes and Holes",
+              "body": [
+                "A vertical asymptote occurs at any x-value that makes the denominator zero after the expression has been factored and any common factors with the numerator have been canceled. If a factor cancels between numerator and denominator, that x-value instead creates a hole in the graph, not an asymptote.",
+                "Always factor both numerator and denominator fully and cancel common factors before identifying vertical asymptotes, since an uncanceled shared factor is easy to mistake for an additional asymptote."
+              ]
+            },
+            {
+              "heading": "Horizontal Asymptotes",
+              "body": [
+                "Comparing the degrees of the numerator and denominator determines the horizontal asymptote. If the denominator's degree is greater, the horizontal asymptote is y = 0. If the degrees are equal, the horizontal asymptote is the ratio of the leading coefficients. If the numerator's degree is greater, there is no horizontal asymptote (the function grows without bound instead).",
+                "This rule reflects what happens to the fraction as x grows extremely large: lower-order terms become negligible compared to the highest-degree terms, so only the leading terms determine the function's long-run behavior."
+              ],
+              "example": {
+                "problem": "Find the vertical and horizontal asymptotes of f(x) = (2x² − 8)/(x² − x − 6), and note any holes.",
+                "steps": [
+                  "Factor the numerator: 2x² − 8 = 2(x² − 4) = 2(x − 2)(x + 2).",
+                  "Factor the denominator: x² − x − 6 = (x − 3)(x + 2).",
+                  "The factor (x + 2) cancels, creating a hole at x = −2, not an asymptote.",
+                  "The remaining denominator factor gives a vertical asymptote at x = 3.",
+                  "The numerator and denominator both have degree 2, so the horizontal asymptote is the ratio of leading coefficients, 2/1 = 2."
+                ],
+                "answer": "Vertical asymptote x = 3, hole at x = −2, horizontal asymptote y = 2"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "vertical asymptote", "def": "a vertical line the graph approaches but never crosses, where the denominator is zero after simplification"},
+            {"term": "horizontal asymptote", "def": "a horizontal line describing a function's behavior as x approaches positive or negative infinity"},
+            {"term": "hole (removable discontinuity)", "def": "a single missing point on a graph created when a factor cancels between numerator and denominator"}
+          ],
+          "practice": [
+            {"q": "Find the vertical asymptote(s) of f(x) = (x + 3)/(x² − 9).", "choices": ["x = 3 only (hole at x = −3)", "x = −3 only (hole at x = 3)", "x = 3 and x = −3", "No vertical asymptotes"], "answer": 0, "explain": "x² − 9 factors to (x − 3)(x + 3); the (x + 3) cancels with the numerator, creating a hole at x = −3, leaving a vertical asymptote at x = 3."},
+            {"q": "What is the horizontal asymptote of f(x) = (3x + 1)/(x² − 4)?", "choices": ["y = 0", "y = 3", "y = 3/4", "No horizontal asymptote"], "answer": 0, "explain": "The denominator's degree (2) is greater than the numerator's degree (1), so the horizontal asymptote is y = 0."},
+            {"q": "What is the horizontal asymptote of f(x) = (5x² + 1)/(2x² − 3)?", "choices": ["y = 5/2", "y = 0", "y = 5", "No horizontal asymptote"], "answer": 0, "explain": "The degrees are equal (both 2), so the horizontal asymptote is the ratio of leading coefficients, 5/2."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Exponential and Logarithmic Functions",
+      "summary": "Exponential and logarithmic functions and their graphs, the properties of logarithms, and solving exponential and logarithmic equations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Exponential Functions",
+          "minutes": 15,
+          "intro": "An exponential function grows or shrinks by repeated multiplication rather than repeated addition, which is exactly why compound interest, population growth, and radioactive decay all follow this pattern instead of a straight line.",
+          "sections": [
+            {
+              "heading": "Exponential Functions and Their Graphs",
+              "body": [
+                "An exponential function has the form f(x) = ab^x, where a is the initial value (at x = 0) and b is the base, with b > 0 and b ≠ 1. When b > 1, the function models growth and increases as x increases; when 0 < b < 1, the function models decay and decreases as x increases.",
+                "Every exponential function of this form passes through the point (0, a), since any base raised to the zero power equals 1, and it has a horizontal asymptote at y = 0, since the function approaches but never reaches zero."
+              ],
+              "example": {
+                "problem": "Evaluate f(x) = 3(2)^x at x = 4.",
+                "steps": [
+                  "Substitute x = 4: f(4) = 3(2)⁴.",
+                  "Compute 2⁴ = 16.",
+                  "Multiply: 3 × 16 = 48."
+                ],
+                "answer": "f(4) = 48"
+              }
+            },
+            {
+              "heading": "The Natural Exponential Function",
+              "body": [
+                "The number e (approximately 2.71828) is a special irrational base that arises naturally in continuous growth processes, such as interest compounded continuously rather than at fixed intervals. The continuous growth model is A = Pe^(rt), where P is the initial amount, r is the continuous rate, and t is time.",
+                "The natural exponential function f(x) = e^x behaves like any other exponential growth function, just using this particular base that makes calculus-based rates of change especially clean."
+              ],
+              "example": {
+                "problem": "Find the value of a $1,000 investment after 3 years at a continuous interest rate of 5%.",
+                "steps": [
+                  "Substitute into A = Pe^(rt): A = 1000 × e^(0.05 × 3) = 1000 × e^0.15.",
+                  "Compute e^0.15 ≈ 1.1618.",
+                  "Multiply: 1000 × 1.1618 ≈ 1,161.80."
+                ],
+                "answer": "About $1,161.80"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "exponential function", "def": "a function of the form f(x) = ab^x, where b is a positive base not equal to 1"},
+            {"term": "natural exponential function", "def": "f(x) = e^x, using the irrational base e ≈ 2.71828, common in continuous growth models"}
+          ],
+          "practice": [
+            {"q": "Evaluate f(x) = 5(3)^x at x = 2.", "choices": ["45", "30", "15", "25"], "answer": 0, "explain": "f(2) = 5 × 3² = 5 × 9 = 45."},
+            {"q": "Which base indicates exponential decay in f(x) = a(b)^x?", "choices": ["b = 1.5", "b = 0.5", "b = 2", "b = 1"], "answer": 1, "explain": "A base between 0 and 1, like 0.5, makes the function decrease as x increases, which is decay."},
+            {"q": "A sample of $500 grows continuously at 4% for 2 years. Approximately what is its value?", "choices": ["$541.60", "$520.00", "$500.00", "$580.00"], "answer": 0, "explain": "A = 500 × e^(0.04 × 2) = 500 × e^0.08 ≈ 500 × 1.0833 ≈ 541.60."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Logarithmic Functions",
+          "minutes": 15,
+          "intro": "A logarithm answers exactly one question: what power do you have to raise this base to, to get this number? Once that question clicks, logs and exponents become two views of the exact same relationship.",
+          "sections": [
+            {
+              "heading": "Logarithms as Inverse Exponentials",
+              "body": [
+                "The equation log_b(x) = y means exactly the same thing as b^y = x: the logarithm is the exponent needed on base b to produce x. Logarithmic and exponential forms are two ways of writing the identical relationship, and converting between them is often the fastest way to evaluate or solve.",
+                "The common logarithm, written log(x) with no base shown, uses base 10, and the natural logarithm, written ln(x), uses base e. Both appear constantly in science and finance formulas."
+              ],
+              "example": {
+                "problem": "Evaluate log₂(32).",
+                "steps": [
+                  "Rewrite as an exponential equation: 2^y = 32.",
+                  "Recognize 32 as a power of 2: 2⁵ = 32.",
+                  "So y = 5."
+                ],
+                "answer": "log₂(32) = 5"
+              }
+            },
+            {
+              "heading": "Solving for an Unknown Base",
+              "body": [
+                "When the base itself is unknown in a logarithmic equation, convert to exponential form and solve for the base directly, remembering that a logarithmic base must be positive and not equal to 1.",
+                "For log_x(49) = 2, converting gives x² = 49, so x = 7 or x = −7 algebraically, but since a log base cannot be negative, only x = 7 is valid."
+              ],
+              "example": {
+                "problem": "Solve log_x(49) = 2 for x.",
+                "steps": [
+                  "Convert to exponential form: x² = 49.",
+                  "Solve: x = 7 or x = −7.",
+                  "Reject x = −7, since a logarithmic base must be positive."
+                ],
+                "answer": "x = 7"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "logarithm", "def": "log_b(x) is the exponent to which base b must be raised to produce x"},
+            {"term": "common logarithm", "def": "a logarithm with base 10, written log(x)"},
+            {"term": "natural logarithm", "def": "a logarithm with base e, written ln(x)"}
+          ],
+          "practice": [
+            {"q": "Evaluate log₃(81).", "choices": ["4", "3", "27", "9"], "answer": 0, "explain": "3⁴ = 81, so log₃(81) = 4."},
+            {"q": "Rewrite log₅(x) = 3 in exponential form.", "choices": ["5³ = x", "x³ = 5", "3⁵ = x", "x⁵ = 3"], "answer": 0, "explain": "log_b(x) = y converts to b^y = x, so log₅(x) = 3 becomes 5³ = x."},
+            {"q": "Solve log_x(36) = 2 for x.", "choices": ["6", "18", "3", "12"], "answer": 0, "explain": "Converting to exponential form gives x² = 36, so x = 6 (rejecting the negative root since a log base must be positive)."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Properties of Logarithms and Solving Equations",
+          "minutes": 17,
+          "intro": "The properties of logarithms turn multiplication inside a log into addition outside it, and turn exponents inside a log into multipliers outside it — the exact tools needed to solve equations where the variable is trapped in an exponent or inside a log.",
+          "sections": [
+            {
+              "heading": "The Properties of Logarithms",
+              "body": [
+                "The product property says log_b(MN) = log_b(M) + log_b(N): the log of a product is the sum of the logs. The quotient property says log_b(M/N) = log_b(M) − log_b(N): the log of a quotient is the difference of the logs. The power property says log_b(Mᵖ) = p·log_b(M): an exponent inside a log becomes a multiplier outside.",
+                "These properties let you combine several logarithms into a single one, or expand a single complicated logarithm into several simpler pieces, whichever direction a problem requires."
+              ]
+            },
+            {
+              "heading": "Solving Exponential Equations",
+              "body": [
+                "To solve an equation where the variable is in the exponent and the bases cannot easily be matched, take the logarithm of both sides, then use the power property to bring the exponent down as a multiplier, and solve the resulting linear equation.",
+                "For 5^x = 17, taking the natural log of both sides gives ln(5^x) = ln(17), which becomes x·ln(5) = ln(17) by the power property, so x = ln(17)/ln(5)."
+              ],
+              "example": {
+                "problem": "Solve 5^x = 17 for x.",
+                "steps": [
+                  "Take the natural log of both sides: ln(5^x) = ln(17).",
+                  "Apply the power property: x·ln(5) = ln(17).",
+                  "Divide both sides by ln(5): x = ln(17)/ln(5).",
+                  "Compute numerically: ln(17) ≈ 2.833, ln(5) ≈ 1.609, so x ≈ 1.761."
+                ],
+                "answer": "x = ln(17)/ln(5) ≈ 1.761"
+              }
+            },
+            {
+              "heading": "Solving Logarithmic Equations",
+              "body": [
+                "To solve an equation with logarithms on one or both sides, use the properties of logarithms to combine them into a single logarithm, then convert to exponential form to eliminate the log entirely and solve the resulting equation. Always check candidate solutions in the original equation, since a logarithm's input must be positive.",
+                "For log(x) + log(x − 3) = 1, the product property combines the left side into log(x(x − 3)) = 1, which converts to x(x − 3) = 10¹ = 10, a quadratic equation to solve."
+              ],
+              "example": {
+                "problem": "Solve log(x) + log(x − 3) = 1 for x.",
+                "steps": [
+                  "Combine using the product property: log(x(x − 3)) = 1.",
+                  "Convert to exponential form: x(x − 3) = 10¹ = 10.",
+                  "Expand and rearrange: x² − 3x − 10 = 0.",
+                  "Factor: (x − 5)(x + 2) = 0, giving x = 5 or x = −2.",
+                  "Check x = −2: log(−2) is undefined, so this solution is rejected. Check x = 5: both log(5) and log(2) are defined."
+                ],
+                "answer": "x = 5"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "product property of logarithms", "def": "log_b(MN) = log_b(M) + log_b(N)"},
+            {"term": "power property of logarithms", "def": "log_b(Mᵖ) = p·log_b(M)"}
+          ],
+          "practice": [
+            {"q": "Use the properties of logarithms to expand log(x²y).", "choices": ["2log(x) + log(y)", "log(x) + 2log(y)", "2(log(x) + log(y))", "log(2x) + log(y)"], "answer": 0, "explain": "The product property splits the log of a product into a sum, and the power property brings the exponent 2 on x down as a multiplier: 2log(x) + log(y)."},
+            {"q": "Solve 3^x = 40 for x (approximate to two decimal places).", "choices": ["3.36", "2.66", "13.33", "1.86"], "answer": 0, "explain": "Taking logs: x = ln(40)/ln(3) ≈ 3.689/1.099 ≈ 3.36."},
+            {"q": "Solve log₂(x) + log₂(x − 2) = 3 for x.", "choices": ["4", "−2", "4 or −2", "8"], "answer": 0, "explain": "Combine: log₂(x(x−2)) = 3, so x(x−2) = 2³ = 8, giving x² − 2x − 8 = 0, which factors to (x−4)(x+2) = 0. Reject x = −2 since log₂(−2) is undefined, leaving x = 4."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Systems and Matrices",
+      "summary": "Solving linear and simple nonlinear systems, matrix operations, and using augmented matrices to solve systems of equations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Systems of Linear and Nonlinear Equations",
+          "minutes": 15,
+          "intro": "Two equations can describe two lines, or a line and a curve, and in either case their solutions are simply the points where both graphs agree — found algebraically with the same substitution and elimination tools either way.",
+          "sections": [
+            {
+              "heading": "Reviewing Linear Systems",
+              "body": [
+                "A system of two linear equations has one solution where the lines intersect, no solution if the lines are parallel and distinct, or infinitely many solutions if the two equations describe the same line. Substitution and elimination remain the two standard algebraic methods for finding an exact solution.",
+                "Recognizing which case applies before solving — by comparing slopes and intercepts — can save time and helps interpret a strange result, like a false numeric statement, correctly as 'no solution' rather than a mistake."
+              ]
+            },
+            {
+              "heading": "Nonlinear Systems",
+              "body": [
+                "A nonlinear system pairs at least one equation that is not linear, such as a parabola, with another equation, and can be solved with substitution just like a linear system: solve one equation for a variable and substitute it into the other.",
+                "Because one equation is now curved, a nonlinear system can have more than two solutions, or none at all, depending on how many times the curves intersect; always solve the resulting equation completely to find every intersection point."
+              ],
+              "example": {
+                "problem": "Solve the system y = x² and y = x + 2.",
+                "steps": [
+                  "Since both expressions equal y, set them equal to each other: x² = x + 2.",
+                  "Rearrange into standard form: x² − x − 2 = 0.",
+                  "Factor: (x − 2)(x + 1) = 0, giving x = 2 or x = −1.",
+                  "Find y for each: at x = 2, y = 2 + 2 = 4; at x = −1, y = −1 + 2 = 1."
+                ],
+                "answer": "(2, 4) and (−1, 1)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "nonlinear system", "def": "a system of equations in which at least one equation is not linear, such as a parabola or circle"},
+            {"term": "point of intersection", "def": "a point that lies on every graph in a system at once, representing a shared solution"}
+          ],
+          "practice": [
+            {"q": "Solve the system y = x² − 1 and y = 3.", "choices": ["x = 2 or x = −2", "x = 4 or x = −4", "x = 2 only", "No solution"], "answer": 0, "explain": "Setting x² − 1 = 3 gives x² = 4, so x = 2 or x = −2, both paired with y = 3."},
+            {"q": "Solve the system y = x + 1 and y = x² − 1.", "choices": ["(−1, 0) and (2, 3)", "(1, 2) and (−2, −1)", "(0, 1) and (3, 4)", "No solution"], "answer": 0, "explain": "Setting x + 1 = x² − 1 gives x² − x − 2 = 0, which factors as (x − 2)(x + 1) = 0, so x = 2 or x = −1. Substituting into y = x + 1 gives the points (2, 3) and (−1, 0)."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Matrices and Matrix Operations",
+          "minutes": 15,
+          "intro": "A matrix is just a rectangular grid of numbers, but organizing data this way lets you add, scale, and combine whole systems of information in one coordinated operation instead of many separate ones.",
+          "sections": [
+            {
+              "heading": "Matrix Notation and Dimensions",
+              "body": [
+                "A matrix is a rectangular array of numbers arranged in rows and columns, described by its dimensions as rows × columns. Each individual number is called an entry, and its position is identified by its row and column number.",
+                "Two matrices can only be added or subtracted if they have identical dimensions, since these operations combine corresponding entries in matching positions one at a time."
+              ]
+            },
+            {
+              "heading": "Addition, Subtraction, and Scalar Multiplication",
+              "body": [
+                "To add or subtract two matrices of the same dimensions, add or subtract the entries in each matching position. To multiply a matrix by a scalar (an ordinary number), multiply every entry in the matrix by that number.",
+                "These operations behave exactly the way you would expect from ordinary arithmetic, just applied position by position across the entire grid at once."
+              ],
+              "example": {
+                "problem": "Add A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]].",
+                "steps": [
+                  "Add the top-left entries: 1 + 5 = 6.",
+                  "Add the top-right entries: 2 + 6 = 8.",
+                  "Add the bottom-left entries: 3 + 7 = 10.",
+                  "Add the bottom-right entries: 4 + 8 = 12."
+                ],
+                "answer": "A + B = [[6, 8], [10, 12]]"
+              }
+            },
+            {
+              "heading": "Matrix Multiplication",
+              "body": [
+                "Matrix multiplication is not entry-by-entry; instead, each entry of the product is found by multiplying a row of the first matrix by a column of the second matrix and summing those products. Two matrices can only be multiplied if the number of columns in the first equals the number of rows in the second.",
+                "For a 2×2 by 2×2 multiplication, the entry in row i, column j of the product comes from multiplying row i of the first matrix by column j of the second matrix, term by term, and adding the results."
+              ],
+              "example": {
+                "problem": "Multiply A = [[1, 2], [3, 4]] by B = [[2, 0], [1, 3]].",
+                "steps": [
+                  "Top-left entry: (1×2) + (2×1) = 2 + 2 = 4.",
+                  "Top-right entry: (1×0) + (2×3) = 0 + 6 = 6.",
+                  "Bottom-left entry: (3×2) + (4×1) = 6 + 4 = 10.",
+                  "Bottom-right entry: (3×0) + (4×3) = 0 + 12 = 12."
+                ],
+                "answer": "AB = [[4, 6], [10, 12]]"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "matrix", "def": "a rectangular array of numbers arranged in rows and columns"},
+            {"term": "dimensions (of a matrix)", "def": "the size of a matrix, given as rows × columns"},
+            {"term": "scalar multiplication", "def": "multiplying every entry of a matrix by a single number"}
+          ],
+          "practice": [
+            {"q": "Add [[2, 3], [0, 1]] and [[4, 1], [5, 2]].", "choices": ["[[6, 4], [5, 3]]", "[[6, 4], [5, 4]]", "[[8, 3], [0, 2]]", "[[2, 2], [5, 1]]"], "answer": 0, "explain": "Add corresponding entries: 2+4=6, 3+1=4, 0+5=5, 1+2=3, giving [[6, 4], [5, 3]]."},
+            {"q": "Multiply the scalar 3 by the matrix [[1, −2], [0, 4]].", "choices": ["[[3, −6], [0, 12]]", "[[3, −2], [0, 4]]", "[[1, −6], [0, 12]]", "[[4, 1], [3, 7]]"], "answer": 0, "explain": "Scalar multiplication multiplies every entry by 3: 1×3=3, −2×3=−6, 0×3=0, 4×3=12."},
+            {"q": "Multiply A = [[2, 1], [0, 3]] by B = [[1, 4], [2, 0]].", "choices": ["[[4, 8], [6, 0]]", "[[2, 8], [6, 0]]", "[[4, 4], [0, 0]]", "[[6, 8], [4, 0]]"], "answer": 0, "explain": "Top-left: (2×1)+(1×2)=4. Top-right: (2×4)+(1×0)=8. Bottom-left: (0×1)+(3×2)=6. Bottom-right: (0×4)+(3×0)=0, giving [[4, 8], [6, 0]]."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Solving Systems with Matrices",
+          "minutes": 16,
+          "intro": "An augmented matrix packs an entire system of equations into one grid of numbers, and row operations let you simplify that grid step by step until the solution can simply be read off.",
+          "sections": [
+            {
+              "heading": "Writing an Augmented Matrix",
+              "body": [
+                "An augmented matrix represents a system of linear equations by writing only the coefficients and constants, with a vertical line separating the coefficients from the constants on the right side of each equation. Each row corresponds to one equation, and each column (before the line) corresponds to one variable.",
+                "Writing the system this way strips away the variable labels temporarily, letting you focus purely on the numeric relationships between the equations."
+              ]
+            },
+            {
+              "heading": "Row Operations and Solving",
+              "body": [
+                "Three row operations keep a system's solution unchanged: swapping two rows, multiplying a row by a nonzero constant, and adding a multiple of one row to another. Using these operations, you can transform the augmented matrix into a simpler form where one variable's value can be read off directly, then back-substitute to find the rest.",
+                "This process is really elimination, done systematically on the coefficient grid rather than on the original equations, which becomes especially efficient for systems with three or more variables."
+              ],
+              "example": {
+                "problem": "Solve x + y = 7 and 2x − y = 2 using an augmented matrix.",
+                "steps": [
+                  "Write the augmented matrix: [[1, 1, | 7], [2, −1, | 2]].",
+                  "Replace row 2 with row 2 minus 2 times row 1: [2 − 2(1), −1 − 2(1), | 2 − 2(7)] = [0, −3, | −12].",
+                  "The new second row represents −3y = −12, so y = 4.",
+                  "Substitute y = 4 back into the first equation: x + 4 = 7, so x = 3."
+                ],
+                "answer": "x = 3, y = 4"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "augmented matrix", "def": "a matrix representing a system of equations, with coefficients and constants separated by a vertical line"},
+            {"term": "row operations", "def": "swapping rows, scaling a row, or adding a multiple of one row to another, used to simplify a matrix without changing its solution"}
+          ],
+          "practice": [
+            {"q": "Write the augmented matrix for the system 3x + 2y = 11 and x − y = 2.", "choices": ["[[3, 2, | 11], [1, −1, | 2]]", "[[3, 2, | 1], [1, 1, | 2]]", "[[2, 3, | 11], [1, −1, | 2]]", "[[3, 2, | 11], [1, 1, | 2]]"], "answer": 0, "explain": "Each row lists a variable's coefficients in order, followed by the constant after the vertical line: row 1 is 3, 2, | 11 and row 2 is 1, −1, | 2."},
+            {"q": "After row reduction, an augmented matrix's second row reads [0, 4, | 20]. What does this represent, and what is y?", "choices": ["4y = 20, so y = 5", "4y = 20, so y = 80", "y = 4, and the constant is irrelevant", "0 = 20, no solution"], "answer": 0, "explain": "A row [0, 4, | 20] represents the equation 0x + 4y = 20, which simplifies to 4y = 20, giving y = 5."},
+            {"q": "Which operation is NOT a valid row operation for solving a system with an augmented matrix?", "choices": ["Swapping two rows", "Multiplying a row by a nonzero constant", "Adding a multiple of one row to another", "Multiplying a row by zero"], "answer": 3, "explain": "Multiplying a row by zero destroys information (turning an equation into 0 = 0) and is not a valid row operation, unlike the other three, which preserve the system's solution."}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+{
+ "id": "elementary-science",
+ "title": "Elementary Science",
+ "domain": "k8",
+ "level": "Elementary",
+ "description": "A hands-on introduction to life science, earth science, and physical science for young learners. Students learn to think like scientists through careful observation and fair testing, then explore how plants and animals grow and survive, how weather and the seasons work, and what matter is made of. Every lesson builds toward a concrete skill, from classifying animals to reading a thermometer to telling a physical change from a chemical one.",
+ "outcomes": [
+  "You can tell an observation apart from an inference, and design a fair test with a hypothesis and a control group.",
+  "You can name the parts of a plant, explain what a plant needs to grow, and describe a flowering plant's full life cycle from seed to seed.",
+  "You can classify an animal as a vertebrate or invertebrate, describe complete and incomplete metamorphosis, and explain structural and behavioral adaptations.",
+  "You can read basic weather instruments like a thermometer and anemometer, trace the four stages of the water cycle, and explain the real reason Earth has seasons.",
+  "You can describe the three common states of matter, tell a physical change apart from a chemical change, and explain how rocks weather into soil."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Thinking Like a Scientist",
+   "summary": "Science starts with noticing the world carefully, asking testable questions, and running fair tests. This unit builds the habits every scientist uses before diving into plants, animals, weather, and matter.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Observing Like a Scientist",
+     "minutes": 10,
+     "intro": "Before scientists explain anything, they look, listen, touch, and smell with total attention. A sharp observation is the raw material of every discovery, from the shape of a bug's wings to the color of the sky before a storm.",
+     "sections": [
+      {
+       "heading": "What Counts as an Observation",
+       "body": [
+        "An **observation** is information you gather using your senses: what you see, hear, smell, or touch. 'The leaf is green' and 'the rock feels rough' are both observations, because they come straight from your senses, not from a guess about what they mean.",
+        "Scientists sort observations into two kinds. **Qualitative observations** describe qualities in words, like 'the water is cloudy' or 'the bird's song is high-pitched.' **Quantitative observations** use numbers and units, like 'the water is 18°C' or 'the bird sang for 12 seconds.' Good scientists collect both kinds."
+       ]
+      },
+      {
+       "heading": "Observation vs. Inference",
+       "body": [
+        "An **inference** is a guess you make based on an observation, using what you already know. If you see wet grass and a puddle on the sidewalk, you might infer it rained overnight. The wetness is the observation; the story about rain is the inference, and it could turn out to be wrong.",
+        "Mixing up observation and inference causes mistakes. Seeing a broken plant stem is an observation. Deciding a rabbit chewed it is an inference. It could have snapped in the wind instead. Careful scientists label their inferences as inferences, not as facts."
+       ],
+       "example": {
+        "problem": "You find a puddle under a tree and see squirrel-shaped tracks in the mud nearby. What is an observation, and what is an inference?",
+        "steps": [
+         "Observation: there is a puddle of water under the tree, and there are squirrel-shaped tracks in the mud.",
+         "Inference: a squirrel walked through the area, possibly after it rained, but you did not actually see this happen."
+        ],
+        "answer": "The wet ground and tracks are observations; that a squirrel or rain caused them is an inference you reasoned out, not something you directly saw."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "observation", "def": "Information gathered directly through your senses, like sight, hearing, or touch."},
+      {"term": "inference", "def": "A reasoned guess based on an observation, combined with what you already know."},
+      {"term": "qualitative observation", "def": "A description in words, like 'the sky is orange.'"},
+      {"term": "quantitative observation", "def": "A description using numbers and units, like 'the temperature is 24°C.'"}
+     ],
+     "practice": [
+      {"q": "Which of these is an observation, not an inference?", "choices": ["The dog is happy", "The leaf is 6 centimeters long", "The cookies taste better because grandma made them", "The plant died because nobody watered it"], "answer": 1, "explain": "Length measured with a ruler comes straight from your senses, so it's an observation. The others describe feelings or reasons that require guessing beyond what you directly sensed."},
+      {"q": "A puddle formed under a leaky pipe. Which statement is an inference?", "choices": ["The floor is wet", "The pipe has a drip mark on it", "The pipe caused the puddle", "The puddle is circular"], "answer": 2, "explain": "Saying the pipe caused the puddle explains why using reasoning beyond direct observation - that's an inference. The wetness, drip mark, and shape are things directly observed."},
+      {"q": "Which is a quantitative observation?", "choices": ["The rock is bumpy", "The water smells like eggs", "The thermometer reads 15°C", "The sky looks stormy"], "answer": 2, "explain": "A quantitative observation uses numbers and units. '15°C' is a measured number with a unit; the others are word descriptions, which are qualitative."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Asking Questions and Making Predictions",
+     "minutes": 10,
+     "intro": "Every experiment starts with a question a scientist actually wants answered, followed by a prediction: an educated guess about what will happen and why. Turning curiosity into a testable question is a skill you can practice like any other.",
+     "sections": [
+      {
+       "heading": "From Curiosity to a Testable Question",
+       "body": [
+        "Not every question can be tested with an experiment. 'Which color is prettiest?' is a matter of opinion. 'Do plants grow taller with more sunlight?' can be tested, because you can measure plant height and control how much sunlight each plant gets. A **testable question** asks about something you can observe or measure.",
+        "Good testable questions usually mention two things that might be connected: a **variable** you change, like the amount of sunlight, and a variable you measure, like plant height in centimeters. Scientists often phrase it as: 'Does changing ___ affect ___?' For example: 'Does the amount of sunlight affect how tall a bean plant grows in two weeks?'"
+       ]
+      },
+      {
+       "heading": "Making a Hypothesis",
+       "body": [
+        "A **hypothesis** is a prediction that answers your question and explains your thinking, often written as an if-then-because statement. For the sunlight question: 'If a bean plant gets more sunlight, then it will grow taller, because sunlight gives the plant energy to make food.'",
+        "A hypothesis is not a wild guess. It is built from what you already know or have observed, and it has to be testable: you must be able to run an experiment that could prove it wrong. If no experiment could ever disagree with your statement, it is not a scientific hypothesis at all."
+       ],
+       "example": {
+        "problem": "Turn this curiosity into a testable question and hypothesis: 'I wonder if the type of soil matters for growing carrots.'",
+        "steps": [
+         "Identify what changes (the variable): the type of soil, such as sandy soil versus garden soil.",
+         "Identify what you would measure: how tall the carrot plants grow, or how many carrots you harvest.",
+         "Write the testable question: 'Does the type of soil affect how tall carrot plants grow in one month?'",
+         "Write an if-then-because hypothesis: 'If carrots are grown in garden soil instead of sandy soil, then they will grow taller, because garden soil holds more water and nutrients.'"
+        ],
+        "answer": "Testable question: does soil type affect carrot plant height? Hypothesis: if grown in garden soil, then carrots grow taller, because garden soil holds more nutrients and water."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "testable question", "def": "A question that can be answered by making observations or measurements."},
+      {"term": "variable", "def": "Something in an experiment that can change or be measured, like amount of sunlight or plant height."},
+      {"term": "hypothesis", "def": "A testable, educated prediction, often written as an if-then-because statement."},
+      {"term": "prediction", "def": "A statement about what you expect to happen before you actually test it."}
+     ],
+     "practice": [
+      {"q": "Which question is testable with an experiment?", "choices": ["Which season is the best?", "Does adding salt to water change its freezing point?", "Are roses more beautiful than tulips?", "Is science interesting?"], "answer": 1, "explain": "You can measure the freezing point of salt water versus plain water with a thermometer - that's testable. The others are opinions that can't be measured."},
+      {"q": "Which is written correctly as a hypothesis?", "choices": ["Plants are cool.", "I wonder if plants need water.", "If a plant gets no water for a week, then it will wilt, because water carries nutrients the plant needs.", "Water is wet."], "answer": 2, "explain": "This is the only option written as a testable if-then-because prediction based on reasoning about how plants use water."},
+      {"q": "In the question 'Does the amount of fertilizer affect tomato plant height?', what is being measured?", "choices": ["The amount of fertilizer", "The color of the tomatoes", "Tomato plant height", "The type of soil"], "answer": 2, "explain": "The question asks whether fertilizer affects height, so height is the measured variable. Fertilizer amount is the variable being deliberately changed."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Fair Tests and the Scientific Method",
+     "minutes": 12,
+     "intro": "A fair test changes only one thing at a time so you can trust your results. Without fairness rules, an experiment's results mean nothing, because you can never be sure what actually caused the outcome you observed.",
+     "sections": [
+      {
+       "heading": "Controlling Variables for a Fair Test",
+       "body": [
+        "In a **fair test**, you change only one variable, called the **independent variable**, and keep every other condition exactly the same, then measure the result, called the **dependent variable**. If you test sunlight's effect on plant growth, every plant should get the same water, soil, and pot size, except for the amount of sunlight.",
+        "Any variable you deliberately keep the same is called a **controlled variable**. Miss one, and your results become confusing. If one plant also gets more water than the others, you cannot tell whether its taller growth came from the extra sunlight or the extra water.",
+        "Many experiments also use a **control group**, which gets no special treatment at all, for comparison. In a sunlight experiment, a control plant kept in typical light shows what normal growth looks like, so you can judge whether the test plants grew unusually more or less than that baseline."
+       ]
+      },
+      {
+       "heading": "The Steps of the Scientific Method",
+       "body": [
+        "The **scientific method** is a repeatable path from question to conclusion: ask a testable question, form a hypothesis, design and run a fair test, collect and record data, analyze the data, and draw a conclusion about whether the evidence supports the hypothesis.",
+        "A conclusion should always be based on the data collected, not on what you hoped would happen. If your hypothesis was wrong, that is still a valuable result. Many important discoveries began with a hypothesis the data proved false, which pointed scientists toward the real answer instead."
+       ],
+       "example": {
+        "problem": "A student wants to test if warm water dissolves sugar faster than cold water. Design a fair test.",
+        "steps": [
+         "Independent variable, what changes: water temperature, one cup warm and one cup cold.",
+         "Dependent variable, what you measure: time it takes for a teaspoon of sugar to fully dissolve, using a stopwatch.",
+         "Controlled variables, kept the same: same amount of water, same amount of sugar, same size cup, same stirring speed.",
+         "Run the test, time both cups, and record the results in a table to compare."
+        ],
+        "answer": "Keep water amount, sugar amount, cup size, and stirring the same; only change temperature; measure dissolving time for each cup."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "fair test", "def": "An experiment where only one variable changes and all others are controlled."},
+      {"term": "independent variable", "def": "The one variable a scientist deliberately changes in an experiment."},
+      {"term": "dependent variable", "def": "The variable that is measured to see the effect of the change."},
+      {"term": "controlled variable", "def": "A condition kept the same for every group so it doesn't affect the results."},
+      {"term": "control group", "def": "A group that gets no special treatment, used for comparison."}
+     ],
+     "practice": [
+      {"q": "In an experiment testing whether more water makes bean plants grow taller, what should stay the same for all plants?", "choices": ["Nothing - everything should be different", "The amount of water each plant gets", "The type of soil, pot size, and sunlight", "The height each plant starts at only"], "answer": 2, "explain": "Only the amount of water should change (the independent variable). Soil, pot size, and sunlight are controlled variables kept the same, or you couldn't tell what caused any height difference."},
+      {"q": "Which best describes a control group in a fair test?", "choices": ["The group that gets the most of the tested variable", "The group that gets no special treatment, for comparison", "The scientist in charge of the experiment", "The group with the most interesting results"], "answer": 1, "explain": "A control group is a baseline - it receives no special treatment, so you can compare treated groups against normal conditions."},
+      {"q": "A student's hypothesis was not supported by the data. What should the student do?", "choices": ["Change the data to match the hypothesis", "Throw out the experiment because it failed", "Report the actual results and explain that the hypothesis wasn't supported", "Repeat the experiment until the hypothesis is proven true"], "answer": 2, "explain": "Honest science reports what the data actually show, even when a hypothesis is wrong. That is still a useful, real result, not a failure."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Plants: Structure, Needs, and Growth",
+   "summary": "Plants are living things that make their own food and grow through a life cycle. This unit covers what plants are built from, what they need to survive, and how they grow from seed to seed.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Parts of a Plant and Their Jobs",
+     "minutes": 10,
+     "intro": "A plant is a pump, an anchor, and a solar panel all in one, and every part has a specific job. Learn what roots, stems, leaves, and flowers actually do, and you will never look at a garden the same way again.",
+     "sections": [
+      {
+       "heading": "Roots and Stems: Support and Transport",
+       "body": [
+        "**Roots** anchor a plant in the soil and absorb water and dissolved nutrients from the ground. Most roots grow downward and spread out, giving the plant a wide, firm base, which is why pulling up a well-rooted weed can be surprisingly hard.",
+        "**Stems** hold the plant upright and act like plumbing pipes. Inside a stem, tiny tubes carry water and nutrients up from the roots to the leaves, and carry food made in the leaves back down to the rest of the plant. A tree trunk is simply a very thick, woody stem."
+       ]
+      },
+      {
+       "heading": "Leaves and Flowers: Food and Reproduction",
+       "body": [
+        "**Leaves** are the plant's food factories. They capture sunlight and use it, along with water and carbon dioxide from the air, to make sugar the plant uses as food, through a process called **photosynthesis**. Leaves are usually flat and wide to catch as much light as possible.",
+        "**Flowers** are a plant's reproductive parts. They produce seeds, often with the help of pollinators like bees and butterflies that carry pollen from flower to flower. After a flower is pollinated, it can develop into a fruit that holds and protects the seeds inside."
+       ],
+       "example": {
+        "problem": "A student sees a wilted plant sitting in dry, cracked soil. Which plant part likely can't do its job, and why?",
+        "steps": [
+         "Observe: the soil is dry, meaning little to no water is available in the ground.",
+         "Recall the root's job: absorbing water from the soil.",
+         "If there is no water in the soil, the roots have nothing to absorb.",
+         "Without absorbed water, the stem can't transport it to the leaves, so the whole plant wilts."
+        ],
+        "answer": "The roots can't absorb water because the soil is dry, so water can't reach the stem and leaves, and the plant wilts."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "root", "def": "The plant part that anchors it in soil and absorbs water and nutrients."},
+      {"term": "stem", "def": "The plant part that supports the plant and transports water, nutrients, and food."},
+      {"term": "photosynthesis", "def": "The process leaves use to make food from sunlight, water, and carbon dioxide."},
+      {"term": "pollinator", "def": "An animal, like a bee, that carries pollen between flowers."}
+     ],
+     "practice": [
+      {"q": "Which plant part is responsible for making food using sunlight?", "choices": ["Root", "Stem", "Leaf", "Flower"], "answer": 2, "explain": "Leaves carry out photosynthesis, using sunlight, water, and carbon dioxide to make sugar as food for the plant."},
+      {"q": "What is the main job of a plant's roots?", "choices": ["Making food from sunlight", "Absorbing water and nutrients, and anchoring the plant", "Producing seeds", "Attracting pollinators"], "answer": 1, "explain": "Roots grow into the soil to anchor the plant firmly and absorb water and dissolved minerals."},
+      {"q": "Why do many flowers have bright colors or strong scents?", "choices": ["To photosynthesize better", "To store extra water", "To attract pollinators like bees and butterflies", "To anchor the plant in soil"], "answer": 2, "explain": "Bright colors and scents help attract pollinators, which carry pollen between flowers so the plant can produce seeds."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "What Plants Need to Grow",
+     "minutes": 10,
+     "intro": "Water it, give it light, and a tiny seed becomes a towering sunflower - but skip just one ingredient and growth stalls completely. Plants have a short, non-negotiable list of needs, and understanding it explains why some gardens thrive and others fail.",
+     "sections": [
+      {
+       "heading": "The Basic Needs of a Plant",
+       "body": [
+        "Plants need **sunlight** as an energy source for photosynthesis, **water** to transport nutrients and keep cells firm, **air** for carbon dioxide and oxygen, **space** for roots to spread and leaves to catch light, and **nutrients** from soil, like nitrogen and potassium, which act like vitamins for growth.",
+        "Miss one need and a plant shows clear warning signs. Too little light causes tall, pale, weak stems as the plant stretches desperately toward a window. Too little water causes wilting and dry, crispy leaf edges. Too few nutrients often causes yellowing of the older leaves near the bottom first."
+       ]
+      },
+      {
+       "heading": "How Photosynthesis Uses These Ingredients",
+       "body": [
+        "Photosynthesis is the recipe tying these needs together: water from the roots, plus carbon dioxide from the air, plus light energy captured by a green chemical in leaves called **chlorophyll**, produces sugar plus oxygen, which is released back into the air. This is a key reason plants are a major source of the oxygen we breathe.",
+        "This is why a plant placed in a dark closet slowly dies even if watered every day: without light, photosynthesis stops, so the plant cannot make food and eventually uses up its stored energy. A plant given plenty of light but no water also fails, because water is a required ingredient, not an optional extra."
+       ],
+       "example": {
+        "problem": "Two identical bean plants are grown for two weeks. Plant A gets sunlight and water. Plant B gets water but is kept in a dark closet. Predict and explain the result.",
+        "steps": [
+         "Plant A has light, water, air, and nutrients - all needs met - so photosynthesis can happen normally.",
+         "Plant B has water but no light, so it cannot photosynthesize, even though it is not thirsty.",
+         "Without photosynthesis, Plant B cannot make its own food and will weaken, turn pale, and eventually die."
+        ],
+        "answer": "Plant A grows normally; Plant B grows poorly, turns pale, and eventually dies because it cannot photosynthesize without light."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "chlorophyll", "def": "The green chemical in leaves that captures light energy for photosynthesis."},
+      {"term": "nutrient", "def": "A substance, like nitrogen or potassium, that a plant needs from soil to grow well."},
+      {"term": "wilting", "def": "Drooping of a plant's leaves and stem, often from lack of water."},
+      {"term": "respiration (in plants)", "def": "The process where plant cells use oxygen to release energy from sugar, all the time, day and night."}
+     ],
+     "practice": [
+      {"q": "A plant's leaves are turning pale and it's stretching toward the window. What is it most likely missing?", "choices": ["Water", "Sunlight", "Space", "Air"], "answer": 1, "explain": "Stretching toward light and pale leaves are classic signs a plant isn't getting enough sunlight for photosynthesis."},
+      {"q": "Which combination of ingredients does photosynthesis require?", "choices": ["Soil, oxygen, and darkness", "Water, carbon dioxide, and light energy", "Nitrogen, potassium, and shade", "Fruit, seeds, and wind"], "answer": 1, "explain": "Photosynthesis combines water and carbon dioxide, using captured light energy, to produce sugar and release oxygen."},
+      {"q": "A plant is watered daily but kept in a completely dark room. What will happen?", "choices": ["It will grow faster because it isn't stressed by sunlight", "It will grow normally since water is the only need", "It will weaken and eventually die from lack of photosynthesis", "It will change from a plant into a fungus"], "answer": 2, "explain": "Without light, photosynthesis cannot occur, so the plant cannot make food, and it will eventually die even with plenty of water."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Plant Life Cycles: Seed to Seed",
+     "minutes": 10,
+     "intro": "A single sunflower seed the size of a fingernail can grow into a plant taller than an adult, produce thousands of new seeds, and then die, all in one growing season. That entire journey is called a life cycle.",
+     "sections": [
+      {
+       "heading": "The Stages of a Flowering Plant's Life",
+       "body": [
+        "A typical flowering plant's **life cycle** has clear stages: a **seed** contains a tiny, dormant plant embryo and stored food; **germination** is when the seed absorbs water and begins to sprout a root and shoot; the young plant grows into a **seedling** and then a mature plant with leaves, stems, and eventually flowers.",
+        "Once a mature plant flowers, pollination allows it to produce seeds again, often inside a fruit, completing the cycle. Some plants, like beans, complete this whole cycle - seed to seed - in a single growing season. Others, like oak trees, take decades before they first flower and produce acorns."
+       ]
+      },
+      {
+       "heading": "Seed Dispersal: Getting Seeds Away From Home",
+       "body": [
+        "Seeds need to travel away from the parent plant to find their own space, sunlight, and nutrients, a process called **seed dispersal**. Some seeds, like dandelion seeds and maple 'helicopter' seeds, are shaped to catch the wind. Others, like coconuts, float on water to reach new shores.",
+        "Many seeds hitch a ride inside fruit that animals eat; the seeds pass through the animal's digestive system unharmed and are dropped somewhere new, often with a bit of fertilizer. Burr-covered seeds, like burdock, cling to fur or clothing instead. Each strategy solves the same problem: spreading seeds so they don't compete with the parent plant."
+       ],
+       "example": {
+        "problem": "A gardener plants a bean seed on Monday. By day 3 a tiny root pokes out. By week 2 it has leaves. By week 6 it flowers. By week 9 it has bean pods full of new seeds. Put these stages in order and name each one.",
+        "steps": [
+         "Day 3, a root emerges from the seed: this stage is germination.",
+         "Week 2, leaves appear and the plant grows: this stage is seedling growth.",
+         "Week 6, flowers appear: this is the mature, flowering plant stage.",
+         "Week 9, bean pods with new seeds form: this is seed production, completing the cycle."
+        ],
+        "answer": "Order: seed, then germination (day 3), then seedling growth (week 2), then flowering mature plant (week 6), then seed production in pods (week 9)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "germination", "def": "The process of a seed sprouting and beginning to grow into a plant."},
+      {"term": "seedling", "def": "A young plant that has just grown from a germinated seed."},
+      {"term": "life cycle", "def": "The complete series of stages an organism goes through, from birth or seed to producing its own offspring."},
+      {"term": "seed dispersal", "def": "The spreading of seeds away from the parent plant, by wind, water, animals, or other means."}
+     ],
+     "practice": [
+      {"q": "What is the term for a seed beginning to sprout?", "choices": ["Pollination", "Germination", "Dispersal", "Respiration"], "answer": 1, "explain": "Germination is specifically the sprouting stage, when a seed absorbs water and begins growing a root and shoot."},
+      {"q": "Why do maple seeds have wing-like shapes?", "choices": ["To attract pollinators", "To help them catch the wind and disperse away from the parent tree", "To protect them from being eaten", "To help them photosynthesize"], "answer": 1, "explain": "The wing shape lets maple seeds spin and glide on wind currents, carrying them away from the parent tree so they don't compete for the same soil and light."},
+      {"q": "Which correctly orders a flowering plant's life cycle?", "choices": ["Flower, seed, germination, seedling", "Seed, germination, seedling, mature flowering plant, new seeds", "Seedling, seed, flower, germination", "New seeds, seed, flower, seedling"], "answer": 1, "explain": "The cycle begins at the seed, moves through germination and seedling growth, reaches a mature flowering plant, and produces new seeds to start again."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Animals: Groups, Life Cycles, and Adaptations",
+   "summary": "Animals come in astonishing variety, but they share the need to grow, reproduce, and survive. This unit covers how scientists classify animals, how they grow and change, and the clever adaptations that help them survive.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Classifying Animals: Vertebrates and Invertebrates",
+     "minutes": 10,
+     "intro": "There are more than a million known animal species, but scientists sort every single one using just a few big questions, starting with the simplest: does it have a backbone?",
+     "sections": [
+      {
+       "heading": "Vertebrates: Animals With Backbones",
+       "body": [
+        "A **vertebrate** is an animal with a backbone made of connected bones called vertebrae, which protects the spinal cord and supports the body. Vertebrates are grouped into five main classes: **mammals** (fur, live young, nurse with milk), **birds** (feathers, lay hard-shelled eggs), **reptiles** (dry scaly skin, lay leathery eggs), **amphibians** (moist skin, live part of life in water), and **fish** (gills, fins, live in water).",
+        "You can often tell these groups apart with quick clues. A frog's smooth, moist skin and its need to return to water to lay eggs marks it as an amphibian, while a lizard's dry, scaly skin marks it as a reptile, even though both are cold-blooded and both have four legs."
+       ]
+      },
+      {
+       "heading": "Invertebrates: The Backboneless Majority",
+       "body": [
+        "An **invertebrate** is an animal without a backbone, and invertebrates make up roughly 97% of all known animal species. This huge group includes insects (six legs, three body parts, like ants and butterflies), arachnids (eight legs, like spiders), mollusks (soft bodies, like snails and octopuses), and worms.",
+        "Because invertebrates lack an internal skeleton, many rely on other kinds of support. Insects and spiders have a hard outer shell called an **exoskeleton** that protects their soft insides, the way a suit of armor protects a knight. Others, like jellyfish and earthworms, have no hard structure at all and rely on their squishy bodies and watery environments for support."
+       ],
+       "example": {
+        "problem": "Sort these animals into vertebrate or invertebrate, and name the vertebrate class if applicable: eagle, spider, salmon, earthworm, snake.",
+        "steps": [
+         "Eagle: has a backbone and feathers, so vertebrate, class bird.",
+         "Spider: no backbone, eight legs, an exoskeleton, so invertebrate.",
+         "Salmon: has a backbone, gills, fins, lives in water, so vertebrate, class fish.",
+         "Earthworm: no backbone, soft body, so invertebrate.",
+         "Snake: has a backbone, dry scales, so vertebrate, class reptile."
+        ],
+        "answer": "Vertebrates: eagle (bird), salmon (fish), snake (reptile). Invertebrates: spider, earthworm."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "vertebrate", "def": "An animal with a backbone made of connected vertebrae."},
+      {"term": "invertebrate", "def": "An animal without a backbone."},
+      {"term": "exoskeleton", "def": "A hard outer covering that supports and protects some invertebrates, like insects and spiders."},
+      {"term": "amphibian", "def": "A vertebrate with moist skin that typically lives part of its life in water and part on land."}
+     ],
+     "practice": [
+      {"q": "Which feature distinguishes a vertebrate from an invertebrate?", "choices": ["Having legs", "Having a backbone", "Living in water", "Being able to fly"], "answer": 1, "explain": "The defining feature is a backbone made of vertebrae. Many invertebrates have legs, and both groups include water-dwellers and non-flyers."},
+      {"q": "A frog has moist skin and lays eggs in a pond, while an alligator has dry scaly skin and lays leathery eggs on land. Which classes are they?", "choices": ["Frog: reptile, Alligator: amphibian", "Frog: amphibian, Alligator: reptile", "Both are amphibians", "Both are reptiles"], "answer": 1, "explain": "Moist skin and a watery egg-laying habit mark the frog as an amphibian; dry scales and leathery eggs mark the alligator as a reptile."},
+      {"q": "About what fraction of known animal species are invertebrates?", "choices": ["About 3%", "About half", "About 75%", "About 97%"], "answer": 3, "explain": "Roughly 97% of known animal species, including all insects, spiders, mollusks, and worms, are invertebrates."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Animal Life Cycles",
+     "minutes": 10,
+     "intro": "A caterpillar and the butterfly it becomes look so different that early scientists thought they were two separate species. Animal life cycles can involve dramatic transformations, or simply steady growth from small to large.",
+     "sections": [
+      {
+       "heading": "Complete Metamorphosis: A Total Transformation",
+       "body": [
+        "**Metamorphosis** is a dramatic change in body form during an animal's life cycle. In **complete metamorphosis**, seen in butterflies, beetles, and flies, the life cycle has four very different stages: egg, **larva** (an eating machine with a different body plan than the adult, like a caterpillar or maggot), **pupa** (a resting, transforming stage, often in a cocoon or chrysalis), and adult.",
+        "Inside the pupa, the larva's body is almost completely rebuilt at the cell level before it emerges as an adult with wings, different mouthparts, and often a completely different diet. A monarch caterpillar eats milkweed leaves, but the adult butterfly instead sips liquid nectar through a straw-like tube called a proboscis."
+       ]
+      },
+      {
+       "heading": "Incomplete Metamorphosis and Direct Development",
+       "body": [
+        "In **incomplete metamorphosis**, seen in grasshoppers and dragonflies, there are only three stages: egg, **nymph**, and adult. A nymph looks like a small, wingless version of the adult, and it grows bigger through a series of molts, shedding its exoskeleton, until it reaches adult size and grows wings, without ever forming a pupa.",
+        "Many vertebrates instead show **direct development**, where the young hatch or are born already resembling a small version of the adult, with no larval stage at all. A baby robin hatches featherless but is already clearly a bird, and most mammals, like puppies, are simply small, immature versions of the adult from birth."
+       ],
+       "example": {
+        "problem": "Classify each life cycle type: (1) grasshopper egg to nymph to adult; (2) ladybug egg to larva to pupa to adult; (3) puppy born looking like a small dog.",
+        "steps": [
+         "Grasshopper: three stages, nymph resembles a small wingless adult, so incomplete metamorphosis.",
+         "Ladybug: four stages including a pupa where the body totally rebuilds, so complete metamorphosis.",
+         "Puppy: born resembling a small adult, no larval or pupal stage, so direct development."
+        ],
+        "answer": "Grasshopper: incomplete metamorphosis. Ladybug: complete metamorphosis. Puppy: direct development."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "metamorphosis", "def": "A dramatic change in body form during an animal's development."},
+      {"term": "larva", "def": "The eating, growing stage of complete metamorphosis, like a caterpillar or maggot, with a different body plan than the adult."},
+      {"term": "pupa", "def": "The resting, transforming stage of complete metamorphosis, often inside a cocoon or chrysalis."},
+      {"term": "nymph", "def": "A young stage of incomplete metamorphosis that resembles a small, wingless version of the adult."}
+     ],
+     "practice": [
+      {"q": "A caterpillar spins a chrysalis, and weeks later a butterfly emerges. Which stage was the chrysalis?", "choices": ["Larva", "Pupa", "Nymph", "Egg"], "answer": 1, "explain": "The chrysalis is the pupa stage, where the caterpillar's body is rebuilt at the cellular level before emerging as an adult butterfly."},
+      {"q": "Which animal shows incomplete metamorphosis, with only three stages: egg, nymph, adult?", "choices": ["Butterfly", "Housefly", "Grasshopper", "Beetle"], "answer": 2, "explain": "Grasshoppers hatch as nymphs that already resemble small, wingless adults and simply grow through molts - no pupa stage exists, unlike butterflies, flies, and beetles."},
+      {"q": "A puppy is born already looking like a small dog, with no larval stage. This is an example of:", "choices": ["Complete metamorphosis", "Incomplete metamorphosis", "Direct development", "Pupation"], "answer": 2, "explain": "Direct development means the young resemble a small version of the adult from birth, with no larval or pupal transformation stage."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Habitats and Where Animals Live",
+     "minutes": 10,
+     "intro": "A polar bear's thick fur would be a death sentence in a desert, and a camel's water-storing body would be useless on an ice floe. Every animal is matched to the specific place it calls home.",
+     "sections": [
+      {
+       "heading": "What Makes a Habitat",
+       "body": [
+        "A **habitat** is the natural environment where an organism lives, providing everything it needs: food, water, shelter, and space to raise young. Major habitat types include forests, deserts, grasslands, oceans, freshwater rivers and lakes, and polar regions, each with its own temperature range, rainfall, and available resources.",
+        "Within a large habitat, an animal occupies a more specific role called a **niche**, describing exactly what it eats, where it shelters, and when it's active. Owls and hawks may share the same forest habitat, but owls hunt at night while hawks hunt by day, so they fill different niches and don't directly compete for the same mice."
+       ]
+      },
+      {
+       "heading": "Habitat Loss and Why It Matters",
+       "body": [
+        "When a habitat is destroyed, drained, or paved over, called **habitat loss**, the animals depending on it lose their food, shelter, or nesting sites, and often cannot survive nearby, because a different habitat rarely provides the exact resources their niche requires. Habitat loss is one of the biggest threats facing wild animals today.",
+        "Protecting habitats, such as wetlands, forests, and coral reefs, protects every species living within them at once. This is why conservation groups often focus on preserving whole habitats rather than helping one species at a time: a healthy habitat supports its whole community of plants and animals together."
+       ],
+       "example": {
+        "problem": "A local pond is drained to build a parking lot. Predict what happens to the frogs, dragonflies, and ducks that lived there, and explain why.",
+        "steps": [
+         "Frogs need water to lay eggs and keep their skin moist; without the pond, they lose breeding and living space.",
+         "Dragonfly larvae live underwater for most of their life cycle; without the pond, they have nowhere to develop.",
+         "Ducks use the pond for swimming, feeding, and nesting nearby; without it, they must search elsewhere for a new habitat."
+        ],
+        "answer": "All three groups lose critical habitat resources and must relocate or decline, since a parking lot cannot replace what the pond provided."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "habitat", "def": "The natural environment where an organism lives and finds everything it needs to survive."},
+      {"term": "niche", "def": "An organism's specific role in its habitat, including what it eats and when it is active."},
+      {"term": "habitat loss", "def": "The destruction or degradation of a natural environment, reducing or removing resources animals depend on."}
+     ],
+     "practice": [
+      {"q": "What is a habitat?", "choices": ["An animal's diet only", "The natural environment providing everything an organism needs to survive", "A zoo enclosure", "A migration route"], "answer": 1, "explain": "A habitat is the full natural environment, including food, water, shelter, and space, not just a single feature like diet."},
+      {"q": "Owls hunt at night and hawks hunt during the day in the same forest. This is an example of:", "choices": ["The same niche", "Different niches within the same habitat", "Habitat loss", "Metamorphosis"], "answer": 1, "explain": "Sharing a habitat but being active at different times and hunting differently means they occupy different niches, reducing direct competition."},
+      {"q": "Why is habitat loss especially harmful to wildlife?", "choices": ["It only affects one animal at a time", "It removes food, shelter, and space that entire communities of species depend on", "It only affects plants, not animals", "It has no long-term effect on animal populations"], "answer": 1, "explain": "Because many species share a habitat, destroying it removes resources for the whole community at once, not just a single species."}
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Adaptations: Built to Survive",
+     "minutes": 10,
+     "intro": "Why does an arctic fox have short, round ears while a desert fox's ears look enormous? Every strange animal feature exists because it once helped some ancestor survive and have offspring.",
+     "sections": [
+      {
+       "heading": "Structural Adaptations: Body Features",
+       "body": [
+        "A **structural adaptation** is a physical feature of an animal's body that helps it survive in its habitat. Camouflage, like a stick insect's twig-like body or a snowshoe hare's white winter fur, helps an animal hide from predators or sneak up on prey by blending into its surroundings.",
+        "Body shape often solves a specific survival problem. A desert fox's giant ears release extra body heat in hot climates, while an arctic fox's small ears conserve heat in the cold. A woodpecker's chisel-like beak lets it dig insects out of tree bark, a job a duck's flat, wide bill could never do."
+       ]
+      },
+      {
+       "heading": "Behavioral Adaptations: What Animals Do",
+       "body": [
+        "A **behavioral adaptation** is an action or pattern of behavior, rather than a body part, that helps an animal survive. **Migration** is traveling to a different region on a schedule, like Canada geese flying south for winter to reach warmer weather and available food, then returning north to breed in summer.",
+        "**Hibernation** is a deep, energy-saving state some animals enter to survive a season when food is scarce, such as a groundhog's winter hibernation, during which its heart rate and body temperature drop dramatically to conserve energy. Other behavioral adaptations include a squirrel storing nuts for winter, or a pufferfish inflating itself when threatened."
+       ],
+       "example": {
+        "problem": "Classify each as a structural or behavioral adaptation: (1) a chameleon changing skin color to match its surroundings; (2) a bear hibernating through winter; (3) a polar bear's thick layer of blubber.",
+        "steps": [
+         "Chameleon changing color: this is a physical, bodily change, so structural adaptation.",
+         "Bear hibernating: this is an action or pattern the bear does, so behavioral adaptation.",
+         "Polar bear's blubber: this is a physical body feature for insulation, so structural adaptation."
+        ],
+        "answer": "Chameleon color-changing: structural. Bear hibernating: behavioral. Polar bear blubber: structural."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "structural adaptation", "def": "A physical body feature that helps an organism survive in its habitat, like camouflage or a specialized beak."},
+      {"term": "behavioral adaptation", "def": "An action or pattern of behavior that helps an organism survive, like migration or hibernation."},
+      {"term": "migration", "def": "Traveling to a different region, often on a seasonal schedule, to find better resources or conditions."},
+      {"term": "hibernation", "def": "A deep, energy-saving resting state some animals enter to survive a season of scarce food and cold temperatures."}
+     ],
+     "practice": [
+      {"q": "A snowshoe hare's fur turns white in winter and brown in summer. What kind of adaptation is this?", "choices": ["Behavioral adaptation", "Structural adaptation", "Migration", "Hibernation"], "answer": 1, "explain": "Fur color is a physical body feature used as camouflage, making it a structural adaptation, not a behavior."},
+      {"q": "Canada geese flying south every winter and back north every summer is an example of:", "choices": ["Structural adaptation", "Metamorphosis", "Migration", "Hibernation"], "answer": 2, "explain": "Traveling seasonally to a different region for better conditions is migration, a behavioral adaptation."},
+      {"q": "Why does a desert fox have unusually large ears compared to an arctic fox?", "choices": ["Large ears help it hear predators from farther away only", "Large ears release extra body heat, helping it survive in a hot climate", "Large ears are used only for camouflage", "Large ears help it hibernate"], "answer": 1, "explain": "Large, thin ears have lots of surface area with blood vessels close to the skin, which releases excess body heat - useful for surviving hot desert temperatures."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Weather, Water, and Sky",
+   "summary": "Weather changes day to day, but it follows patterns scientists can measure and predict. This unit covers weather instruments, the water cycle, and why Earth has seasons.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Weather Tools and Measuring the Sky",
+     "minutes": 10,
+     "intro": "Meteorologists don't guess about the weather; they measure it, using a toolkit of instruments that turns 'it feels cold' into an exact, useful number anyone can compare and track over time.",
+     "sections": [
+      {
+       "heading": "Measuring Temperature and Precipitation",
+       "body": [
+        "A **thermometer** measures air temperature, usually in degrees Fahrenheit (°F) in the United States or degrees Celsius (°C) in most of the rest of the world. Water freezes at 32°F (0°C) and boils at 212°F (100°C), which gives useful reference points for judging any temperature reading you see.",
+        "A **rain gauge** measures **precipitation**, meaning water that falls from the sky as rain, snow, sleet, or hail, usually recorded in inches or millimeters collected over 24 hours. Meteorologists track precipitation over time to spot droughts, which are long dry stretches, or flooding risks from too much rain too fast."
+       ]
+      },
+      {
+       "heading": "Measuring Wind and Air Pressure",
+       "body": [
+        "An **anemometer** measures wind speed by counting how fast its spinning cups turn in the wind, usually reported in miles per hour. A **wind vane** shows wind direction, always named for the direction the wind is blowing FROM, so a 'north wind' blows from the north toward the south.",
+        "A **barometer** measures **air pressure**, the weight of the air pushing down on a location. Falling air pressure often signals a storm is approaching, because storms are areas where air is rising and pressure is dropping; rising air pressure usually signals clearer, calmer weather is on the way."
+       ],
+       "example": {
+        "problem": "A weather station records: temperature 34°F, rising air pressure, wind from the west at 8 mph, no precipitation. Predict the likely weather trend.",
+        "steps": [
+         "34°F is cold but above freezing (32°F), so any precipitation would likely be cold rain, not snow.",
+         "Rising air pressure typically signals improving, calmer, clearer weather.",
+         "Light wind at 8 mph and no current precipitation support a calm forecast."
+        ],
+        "answer": "The trend suggests clearing, calm, cold weather, since rising pressure and light wind point away from an approaching storm."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "thermometer", "def": "A tool that measures air (or other) temperature."},
+      {"term": "precipitation", "def": "Water that falls from the sky as rain, snow, sleet, or hail."},
+      {"term": "anemometer", "def": "A tool that measures wind speed."},
+      {"term": "air pressure", "def": "The weight of air pushing down on a location, measured with a barometer."}
+     ],
+     "practice": [
+      {"q": "Which instrument measures wind speed?", "choices": ["Thermometer", "Rain gauge", "Anemometer", "Barometer"], "answer": 2, "explain": "An anemometer has spinning cups that turn faster in stronger wind, giving a wind speed reading, usually in miles per hour."},
+      {"q": "At sea level, at what Fahrenheit temperature does water freeze?", "choices": ["0°F", "32°F", "100°F", "212°F"], "answer": 1, "explain": "Water freezes at 32°F, equal to 0°C, at normal sea-level air pressure."},
+      {"q": "A barometer shows rapidly falling air pressure. What does this most likely signal?", "choices": ["Clear, calm weather is coming", "A storm may be approaching", "The temperature will definitely rise", "Wind direction is from the north"], "answer": 1, "explain": "Falling air pressure usually means air is rising in that area, which is associated with approaching storm systems."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Water Cycle",
+     "minutes": 10,
+     "intro": "The water in a puddle today could be part of a cloud tomorrow and rain on a mountain next week. Water on Earth is constantly recycled through the same endless loop: the water cycle.",
+     "sections": [
+      {
+       "heading": "Evaporation and Condensation",
+       "body": [
+        "**Evaporation** happens when the sun heats liquid water on oceans, lakes, and rivers until it turns into invisible water vapor gas and rises into the air. Plants also release water vapor from their leaves in a related process called transpiration. Together, this water vapor becomes the raw material for clouds.",
+        "As water vapor rises, it cools, and cool air can hold less water vapor than warm air. When water vapor cools enough, it changes back into tiny liquid water droplets clinging to dust particles, a process called **condensation**. Billions of these tiny droplets clustered together form the clouds you see in the sky."
+       ]
+      },
+      {
+       "heading": "Precipitation and Collection",
+       "body": [
+        "When cloud droplets combine and grow heavy enough, gravity pulls them down as **precipitation**: rain if the air is warm, or snow, sleet, and hail if the air is cold enough for ice to form. This stage returns water from the sky back down to Earth's surface.",
+        "Once precipitation falls, water collects in a stage called **collection**: it gathers in oceans, lakes, and rivers, soaks into the ground as groundwater, or gets absorbed by plant roots. From any of these, the sun's heat can evaporate the water again, restarting the entire cycle with no beginning and no end."
+       ],
+       "example": {
+        "problem": "Trace a single water molecule that starts in the ocean and ends up as rain falling on a mountain. Name each stage in order.",
+        "steps": [
+         "The sun heats the ocean surface, turning liquid water into water vapor: this is evaporation.",
+         "The water vapor rises and cools in the air, forming tiny droplets around dust: this is condensation, creating a cloud.",
+         "The cloud drifts over the mountain, and droplets combine until they're heavy enough to fall: this is precipitation.",
+         "The water lands as rain on the mountain and can soak into the ground or run into a stream: this is collection."
+        ],
+        "answer": "Order: evaporation (ocean to vapor), then condensation (vapor to cloud droplets), then precipitation (falls as rain), then collection (soaks into ground or streams)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "evaporation", "def": "The change from liquid water to water vapor gas, usually caused by heat from the sun."},
+      {"term": "condensation", "def": "The change from water vapor gas back into tiny liquid water droplets, forming clouds."},
+      {"term": "precipitation", "def": "Water falling from clouds as rain, snow, sleet, or hail."},
+      {"term": "collection", "def": "The stage where fallen water gathers in oceans, lakes, rivers, or groundwater, ready to evaporate again."}
+     ],
+     "practice": [
+      {"q": "What causes water vapor high in the sky to turn into cloud droplets?", "choices": ["The vapor heats up and expands", "The vapor cools down and condenses around dust particles", "The vapor freezes solid immediately", "The vapor evaporates further"], "answer": 1, "explain": "As water vapor rises and cools, it condenses back into tiny liquid droplets clinging to dust particles, forming clouds."},
+      {"q": "Which correctly orders the water cycle?", "choices": ["Precipitation, evaporation, condensation, collection", "Evaporation, condensation, precipitation, collection", "Condensation, collection, evaporation, precipitation", "Collection, precipitation, evaporation, condensation"], "answer": 1, "explain": "Water evaporates from surfaces, condenses into clouds, falls as precipitation, and gathers again in collection, before evaporating once more."},
+      {"q": "Plants releasing water vapor from their leaves is most closely related to which water cycle stage?", "choices": ["Precipitation", "Collection", "Evaporation (transpiration)", "Condensation"], "answer": 2, "explain": "Transpiration is a plant-based process similar to evaporation: it releases water vapor into the air, adding to the moisture that eventually forms clouds."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Seasons and Why They Happen",
+     "minutes": 10,
+     "intro": "It's a common myth that summer happens because Earth moves closer to the sun. The real reason is stranger and more elegant: it's all about a tilt in Earth's axis.",
+     "sections": [
+      {
+       "heading": "Earth's Tilt and Orbit",
+       "body": [
+        "Earth spins on an imaginary line called its **axis**, which is tilted about 23.5° instead of standing straight up. Earth also **orbits** the sun once every year, all while keeping that same tilt pointed in the same direction in space, like a spinning top leaning at a fixed angle.",
+        "Because the tilt always points the same direction, different parts of Earth lean toward or away from the sun at different points in the year-long orbit. This changing lean, not distance from the sun, is what causes the seasons. Earth is actually slightly closer to the sun during the Northern Hemisphere's winter."
+       ]
+      },
+      {
+       "heading": "Why Tilt Changes Temperature and Daylight",
+       "body": [
+        "When the Northern Hemisphere is tilted toward the sun, it receives more direct sunlight and longer daylight hours, causing summer there, while the Southern Hemisphere, tilted away, gets weaker sunlight and shorter days, causing winter. Six months later, Earth has orbited halfway around, and the situation flips completely.",
+        "Direct sunlight hits a smaller area and delivers more energy per square meter, so it heats up faster, similar to how a flashlight held straight above a table makes a small, bright, hot spot, while tilting the same flashlight spreads the light over a larger, dimmer area. This is exactly what happens to sunlight on a tilted Earth."
+       ],
+       "example": {
+        "problem": "It's June in the Northern Hemisphere, and the North Pole is tilted toward the sun. What season is it in Australia, in the Southern Hemisphere, and why?",
+        "steps": [
+         "If the North Pole tilts toward the sun, the South Pole tilts away from the sun at the same time.",
+         "Tilting away from the sun means Australia gets less direct sunlight and shorter daylight hours.",
+         "Less direct sunlight and shorter days mean cooler temperatures."
+        ],
+        "answer": "It is winter in Australia, because the Southern Hemisphere is tilted away from the sun while the Northern Hemisphere tilts toward it."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "axis", "def": "The imaginary tilted line Earth spins around, tilted about 23.5° from straight up."},
+      {"term": "orbit", "def": "The path a planet travels around the sun, taking Earth about one year to complete."},
+      {"term": "hemisphere", "def": "Half of Earth, either Northern or Southern, divided by the equator."},
+      {"term": "direct sunlight", "def": "Sunlight that hits a surface at a steep angle, concentrating more energy on a smaller area and causing more heating."}
+     ],
+     "practice": [
+      {"q": "What actually causes Earth's seasons?", "choices": ["Earth moving closer to and farther from the sun", "The tilt of Earth's axis as it orbits the sun", "The moon blocking sunlight at certain times of year", "Changes in the sun's own brightness"], "answer": 1, "explain": "Earth's consistent axial tilt means different hemispheres receive more or less direct sunlight at different points in its yearly orbit - that's what drives the seasons, not distance from the sun."},
+      {"q": "When the Northern Hemisphere has summer, what season does the Southern Hemisphere have?", "choices": ["Summer", "Winter", "The same season, just later", "There is no season change in the Southern Hemisphere"], "answer": 1, "explain": "The two hemispheres tilt in opposite relative directions to the sun at the same time, so they always experience opposite seasons."},
+      {"q": "Why does direct, concentrated sunlight heat a surface more than spread-out sunlight?", "choices": ["Direct sunlight travels faster", "Direct sunlight delivers more energy per square meter of surface", "Spread-out sunlight is a different color", "There is no actual difference in heating"], "answer": 1, "explain": "When sunlight hits at a steep angle, its energy is concentrated on a smaller area, so that area heats up faster than when the same energy spreads over a larger, angled surface."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Matter and Materials",
+   "summary": "Everything around you, from the air you breathe to the ground you stand on, is made of matter. This unit covers the states of matter, how matter changes, and the natural materials that make up the Earth beneath our feet.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Solids, Liquids, and Gases",
+     "minutes": 10,
+     "intro": "Ice, water, and steam are all made of exactly the same substance, yet one you can stack in a glass, one you can pour, and one disappears into thin air. The secret is how their particles are arranged and moving.",
+     "sections": [
+      {
+       "heading": "The Three Common States of Matter",
+       "body": [
+        "**Matter** is anything that has mass and takes up space. On Earth, matter commonly exists in three **states**: **solid**, **liquid**, and **gas**. A **solid** has a fixed shape and fixed volume, because its particles are packed tightly and vibrate in place without moving past each other, like ice cubes or a wooden block.",
+        "A **liquid** has a fixed volume but no fixed shape; it takes the shape of its container because its particles are close together but can slide past one another, like water poured into any cup. A **gas** has neither a fixed shape nor a fixed volume; it spreads out to fill its entire container because its particles are far apart and move freely and quickly."
+       ]
+      },
+      {
+       "heading": "Changing States with Heat",
+       "body": [
+        "Adding heat energy generally makes particles move faster and spread apart, which can push matter from solid toward liquid toward gas. **Melting** turns a solid into a liquid, like ice into water at 0°C (32°F); boiling turns a liquid into a gas, like water into steam at 100°C (212°F) at sea level.",
+        "Removing heat energy does the reverse: particles slow down and pack closer together. **Freezing** turns a liquid into a solid; **condensation** turns a gas into a liquid, like fog forming on a cold window. These changes are all physical changes: the substance is still water in every state, just arranged differently."
+       ],
+       "example": {
+        "problem": "A pot of water is heated from 20°C until it fully boils away as steam. Describe what happens to the water's state and name each transition.",
+        "steps": [
+         "At 20°C, the water starts as a liquid, taking the shape of the pot.",
+         "As heat is added, particles gain energy and move faster, but the water stays liquid until 100°C.",
+         "At 100°C, the liquid water turns into gas: this transition is called boiling.",
+         "If all the water boils away, it has completely changed from liquid to gas state."
+        ],
+        "answer": "The water stays liquid from 20°C to just below 100°C, then boils, turning from liquid to gas, at 100°C and becomes steam."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "matter", "def": "Anything that has mass and takes up space."},
+      {"term": "solid", "def": "A state of matter with a fixed shape and fixed volume."},
+      {"term": "liquid", "def": "A state of matter with a fixed volume but no fixed shape; it takes its container's shape."},
+      {"term": "gas", "def": "A state of matter with no fixed shape or volume; it spreads to fill its container."},
+      {"term": "state change", "def": "A change from one state of matter to another, such as melting (solid to liquid), freezing (liquid to solid), boiling (liquid to gas), or condensation (gas to liquid)."}
+     ],
+     "practice": [
+      {"q": "Why does a gas fill its entire container, unlike a solid?", "choices": ["Gas particles are packed tightly together", "Gas particles are far apart and move freely and quickly", "Gas has no mass", "Gas particles are frozen in place"], "answer": 1, "explain": "Gas particles are spread far apart and move quickly in all directions, so they spread out to fill whatever space they're in, unlike the tightly packed, vibrating particles of a solid."},
+      {"q": "What is the term for a liquid changing into a gas?", "choices": ["Freezing", "Melting", "Boiling/evaporation", "Condensation"], "answer": 2, "explain": "Boiling, or evaporation when it happens below the boiling point, is the transition from liquid to gas, caused by adding heat energy."},
+      {"q": "Which state of matter has a fixed volume but takes the shape of its container?", "choices": ["Solid", "Liquid", "Gas", "None of these"], "answer": 1, "explain": "A liquid keeps a constant volume, the amount of space it takes up, but flows to match the shape of whatever container holds it."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Changing Matter: Mixtures and Physical Changes",
+     "minutes": 10,
+     "intro": "Stir sugar into lemonade and it disappears, but it's still there - taste it. Tear a sheet of paper in half and it's still paper. Not every change to matter creates something new, and telling the difference is a core science skill.",
+     "sections": [
+      {
+       "heading": "Mixtures: Combined but Not Changed",
+       "body": [
+        "A **mixture** forms when two or more substances are combined but each keeps its own properties and can, at least in principle, be separated back out. In a mixture of sand and dried beans, you can still see individual sand grains and beans, and you could separate them again using a strainer or by hand.",
+        "A **solution** is a special, evenly-mixed kind of mixture where one substance, the **solute**, like sugar or salt, dissolves completely and evenly into another, the **solvent**, usually a liquid like water, becoming invisible to the eye even though it's still there. Saltwater is a solution: evaporating the water leaves the salt behind, proving it never disappeared."
+       ]
+      },
+      {
+       "heading": "Physical Changes vs. Chemical Changes",
+       "body": [
+        "A **physical change** alters how matter looks or is shaped, without changing what substance it fundamentally is. Cutting paper, crushing a cracker, dissolving sugar in water, and freezing water into ice are all physical changes: the paper is still paper, and the water is still H~2~O, just rearranged.",
+        "A **chemical change** creates a genuinely new substance with different properties, and it's usually hard to reverse. Burning wood turns it into ash and smoke, which are not wood anymore. Rust forming on iron creates iron oxide, a new substance that isn't iron anymore. Clues that a chemical change happened include a color change, bubbles or gas forming, a new smell, or heat or light being given off."
+       ],
+       "example": {
+        "problem": "Classify each as a physical change or a chemical change: (1) melting a chocolate bar; (2) toasting a slice of bread until it turns brown and crispy; (3) mixing sand and water.",
+        "steps": [
+         "Melting chocolate: it's still chocolate, just a different state, so a physical change.",
+         "Toasting bread: browning, a new smell, and a texture that can't be un-toasted signal a new substance formed, so a chemical change.",
+         "Mixing sand and water: both can be separated again by letting sand settle and pouring off the water, so a physical change."
+        ],
+        "answer": "Melting chocolate: physical change. Toasting bread: chemical change. Mixing sand and water: physical change."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "mixture", "def": "A combination of two or more substances that each keep their own properties and can be separated."},
+      {"term": "solution", "def": "An evenly-mixed mixture where a solute dissolves completely into a solvent, like sugar in water."},
+      {"term": "physical change", "def": "A change in how matter looks or is arranged, without becoming a new substance."},
+      {"term": "chemical change", "def": "A change that creates a new substance with different properties, usually hard to reverse."}
+     ],
+     "practice": [
+      {"q": "Which of these is a physical change, not a chemical change?", "choices": ["Wood burning into ash", "Iron rusting", "Ice melting into water", "An egg frying and turning solid"], "answer": 2, "explain": "Melting ice is still H~2~O, just changing state from solid to liquid - no new substance forms. Burning, rusting, and frying all create new substances with different properties."},
+      {"q": "In a saltwater solution, what is the salt called?", "choices": ["The solvent", "The solute", "The mixture", "The precipitate"], "answer": 1, "explain": "The substance that dissolves, the salt, is the solute; the substance doing the dissolving, the water, is the solvent."},
+      {"q": "Which is a clue that a chemical change has likely occurred?", "choices": ["The substance changed shape only", "A new smell, color change, or gas bubbles appeared", "The substance can be easily separated back to its parts", "The mass stayed exactly the same"], "answer": 1, "explain": "New smells, color changes, gas bubbles, or heat and light given off usually signal that a new substance formed, which is the hallmark of a chemical change."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Rocks, Soil, and Earth's Materials",
+     "minutes": 10,
+     "intro": "Pick up a handful of dirt in your backyard and you're holding broken-down rock, decayed plants, water, and air, all mixed together over thousands of years. Even solid ground has a life story worth reading.",
+     "sections": [
+      {
+       "heading": "The Three Types of Rock",
+       "body": [
+        "Rocks are classified into three types by how they form. **Igneous rock** forms when melted rock, magma or lava, cools and hardens, like granite, which cools slowly underground with large visible crystals, or obsidian, which cools instantly from lava, forming natural volcanic glass with no crystals at all.",
+        "**Sedimentary rock** forms when layers of sediment, like sand, mud, shells, or pebbles, are pressed and cemented together over long spans of time, like sandstone or limestone; these rocks often show visible layers and sometimes contain fossils. **Metamorphic rock** forms when existing rock is squeezed and heated deep underground, without fully melting, changing its structure, like limestone transforming into marble."
+       ]
+      },
+      {
+       "heading": "How Soil Forms",
+       "body": [
+        "**Weathering** breaks large rocks into smaller and smaller pieces through wind, water, ice, and plant roots, without changing what the rock is made of. Repeated freezing and thawing of water in tiny rock cracks can split solid stone apart over years, a major cause of weathering in cold climates.",
+        "**Soil** forms when weathered rock particles mix with **humus**, decayed leaves, roots, and other organic matter, plus water and air trapped between the particles. Fertile soil typically has three particle sizes: sand (largest, coarse), silt (medium), and clay (finest), and the ideal farming soil, called **loam**, is a balanced mix of all three plus plenty of humus."
+       ],
+       "example": {
+        "problem": "A student finds a rock with clearly visible layers and small fossilized shells embedded in it. Which rock type is it, and how did it likely form?",
+        "steps": [
+         "Visible layers are a strong clue for sedimentary rock, since sediment settles and builds up in layers over time.",
+         "Fossilized shells confirm this: fossils form almost exclusively in sedimentary rock, since igneous and metamorphic processes involve extreme heat that would destroy shells.",
+         "The rock likely formed from layers of sediment, including shells, settling at the bottom of an ancient sea or lake, then being compressed and cemented over a long time."
+        ],
+        "answer": "It is sedimentary rock, formed from layers of sediment, including shells, that were compressed and cemented together over time."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "igneous rock", "def": "Rock formed when melted magma or lava cools and hardens."},
+      {"term": "sedimentary rock", "def": "Rock formed when layers of sediment are pressed and cemented together over time."},
+      {"term": "metamorphic rock", "def": "Rock formed when existing rock is heated and squeezed underground without fully melting."},
+      {"term": "weathering", "def": "The breaking down of rocks into smaller pieces by wind, water, ice, or plant roots."},
+      {"term": "humus", "def": "Decayed leaves, roots, and other organic matter found in soil."}
+     ],
+     "practice": [
+      {"q": "Which rock type most commonly contains fossils?", "choices": ["Igneous rock", "Sedimentary rock", "Metamorphic rock", "All three equally"], "answer": 1, "explain": "Sedimentary rock forms from settling layers of sediment at normal temperatures, gently enough to preserve shells and other fossils; igneous and metamorphic rock involve heat that would destroy them."},
+      {"q": "What process breaks large rocks into smaller pieces without changing what the rock is made of?", "choices": ["Melting", "Weathering", "Condensation", "Metamorphosis"], "answer": 1, "explain": "Weathering physically breaks rock apart using wind, water, ice, and plant roots, without changing the rock's composition - it's a physical change, not a chemical one."},
+      {"q": "What is humus?", "choices": ["A type of igneous rock", "Decayed organic matter like leaves and roots found in soil", "The largest soil particle size", "Melted rock that cools underground"], "answer": 1, "explain": "Humus is the decayed plant and organic material mixed into soil, which along with weathered rock particles, water, and air, makes soil fertile."}
+     ]
+    }
+   ]
+  }
+ ]
+}
