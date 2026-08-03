@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Military Benefits &amp; Resources</title>
+<meta name="description" content="A free directory of __TOTAL__ benefits, programs and discounts for service members, veterans and their families. No signup, no ads. Search or browse __NCATS__ categories.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#14202E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://xplabs.us/military-benefits/">
+<meta property="og:title" content="Military Benefits &amp; Resources">
+<meta property="og:description" content="A free directory of benefits and programs for service members, veterans and their families.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xplabs.us/military-benefits/">
+<script>document.documentElement.className="js";</script>
+<style>
+/* ===================================================================
+   MILITARY BENEFITS & RESOURCES
+   Single file. No external requests. Works with JavaScript disabled.
+
+   TO EDIT TEXT: search for the words you want to change.
+   TO CHANGE COLOURS: edit the values in :root below.
+   Contrast was checked - keep text colours at least as dark as these.
+   =================================================================== */
+:root{
+  --ink:#14202E;        /* headings and link names        15.8:1 on paper */
+  --ink-2:#4A5A6B;      /* supporting text                 6.8:1 on paper */
+  --paper:#FBFAF7;      /* page background                                */
+  --paper-2:#F0ECE4;    /* alternate band                                 */
+  --edge:#7E8790;       /* structural borders              3.5:1 on paper */
+  --edge-soft:#DCD6CA;  /* decorative hairlines only                      */
+  --accent:#12556F;     /* links and interactive           7.9:1 on paper */
+  --accent-wash:#E7F0F4;
+  --gold:#7A5B12;       /* category numbers                6.0:1 on paper */
+  --crisis:#9E1B13;     /* EMERGENCY ONLY - never decorative              */
+  --crisis-paper:#FFF4F2;
+
+  --serif: "Iowan Old Style","Charter","Bitstream Charter",Georgia,"Times New Roman",serif;
+  --sans: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+  --wrap:74rem;
+  --gutter: clamp(1rem,4vw,2.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:1.0625rem;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.012em;text-wrap:balance}
+p{margin:0}
+ul{list-style:none;margin:0;padding:0}
+a{color:var(--accent)}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:.5rem;top:.5rem;z-index:99;background:var(--ink);color:var(--paper);padding:.7rem 1rem}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* ---------- 1. CRISIS. Always first. Never behind a tap. ---------- */
+.crisis{background:var(--crisis-paper);border-bottom:3px solid var(--crisis)}
+.crisis__in{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1.5rem;
+  padding-block:.7rem}
+.crisis__t{font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--crisis);flex:none}
+.crisis__d{font-size:1.0625rem;color:var(--ink)}
+.crisis__d b{white-space:nowrap}
+.crisis__d a{color:var(--crisis);font-weight:600}
+.crisis__note{font-family:var(--sans);font-size:.8125rem;color:var(--ink-2);width:100%}
+
+/* ---------- 2. Masthead ---------- */
+.top{border-bottom:1px solid var(--edge-soft);padding-block:1rem .9rem}
+@media (min-width:700px){.top{padding-block:clamp(1.5rem,4vw,2.5rem) 1.25rem}}
+.top h1{font-size:clamp(1.75rem,1.2rem+2.4vw,2.75rem)}
+.top__lede{font-size:1rem;color:var(--ink-2);max-width:54ch;margin-top:.4rem}
+@media (min-width:700px){.top__lede{font-size:1.125rem;margin-top:.6rem}}
+.top__meta{font-family:var(--sans);font-size:.8125rem;color:var(--ink-2);margin-top:.55rem;
+  display:flex;flex-wrap:wrap;gap:.3rem 1.1rem;font-variant-numeric:tabular-nums}
+
+/* ---------- 3. Search ---------- */
+.search{position:sticky;top:0;z-index:20;background:var(--paper);
+  border-bottom:1px solid var(--edge-soft);padding-block:.7rem}
+.search__box{display:flex;align-items:center;gap:.6rem;border:2px solid var(--edge);
+  background:#fff;padding:.15rem .15rem .15rem .85rem}
+.search__box:focus-within{border-color:var(--accent);outline:2px solid var(--accent);outline-offset:1px}
+.search__box svg{flex:none;width:19px;height:19px;fill:none;stroke:var(--ink-2);stroke-width:2}
+#q{flex:1;min-width:0;border:0;outline:0;background:transparent;font-family:var(--serif);
+  font-size:1.0625rem;padding:.65rem 0;color:var(--ink)}
+#q::placeholder{color:var(--ink-2);opacity:.85}
+#clear{border:0;background:transparent;font-family:var(--sans);font-size:.8125rem;
+  color:var(--accent);padding:.7rem .85rem;cursor:pointer;display:none}
+.js #clear.on{display:block}
+.search__hint{font-family:var(--sans);font-size:.8125rem;color:var(--ink-2);margin-top:.45rem}
+
+/* ---------- 4. Category board ---------- */
+.board{padding-block:1rem 2.5rem}
+.board__grid{display:grid;gap:.75rem;grid-template-columns:1fr}
+@media (min-width:600px){.board__grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.board__grid{grid-template-columns:repeat(3,1fr)}}
+.tile{
+  width:100%;text-align:left;cursor:pointer;font-family:inherit;color:inherit;
+  background:#fff;border:2px solid var(--edge);
+  padding:1rem 1.1rem;
+  display:grid;grid-template-columns:1fr auto;gap:.15rem .9rem;align-items:baseline;
+  transition:border-color .13s,background .13s;
+}
+.tile:hover{border-color:var(--accent);background:var(--accent-wash)}
+.tile__n{font-size:1.1875rem;font-weight:600;letter-spacing:-.01em}
+.tile__c{font-family:var(--sans);font-size:1.0625rem;font-weight:700;color:var(--gold);
+  font-variant-numeric:tabular-nums;justify-self:end}
+.tile__b{grid-column:1/-1;font-family:var(--sans);font-size:.875rem;color:var(--ink-2);line-height:1.45}
+
+/* ---------- 5. Category detail / results ---------- */
+.cat{padding-block:1.5rem;border-top:1px solid var(--edge-soft)}
+.cat:first-child{border-top:0}
+.cat__head{margin-bottom:.9rem}
+.cat__head h2{font-size:clamp(1.375rem,1.1rem+1.1vw,1.875rem)}
+.cat__blurb{font-family:var(--sans);font-size:.9375rem;color:var(--ink-2);margin-top:.3rem;max-width:60ch}
+.cat__n{font-family:var(--sans);font-size:.8125rem;color:var(--gold);font-weight:700;
+  margin-top:.4rem;font-variant-numeric:tabular-nums}
+.rows{display:grid;gap:0;border-top:1px solid var(--edge-soft)}
+@media (min-width:820px){.rows{grid-template-columns:1fr 1fr;column-gap:2.5rem}}
+.row{display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .7rem;
+  padding:.7rem .2rem;border-bottom:1px solid var(--edge-soft);text-decoration:none;color:var(--ink)}
+.row:hover{background:var(--accent-wash)}
+.row:hover .row__n{color:var(--accent);text-decoration:underline}
+.row__n{font-size:1.0625rem;flex:1 1 auto;min-width:0}
+.row__h{font-family:var(--sans);font-size:.8125rem;color:var(--ink-2);word-break:break-all}
+.row__cat{font-family:var(--sans);font-size:.75rem;color:var(--gold);font-weight:700;
+  text-transform:uppercase;letter-spacing:.05em;width:100%}
+
+/* result rows that point at a whole category */
+.catrow{display:flex;align-items:baseline;gap:.7rem;width:100%;text-align:left;cursor:pointer;
+  font-family:inherit;font-size:1.0625rem;color:var(--ink);background:var(--accent-wash);
+  border:2px solid var(--accent);padding:.8rem .9rem;margin-bottom:.5rem}
+.catrow b{flex:1}
+.catrow span{font-family:var(--sans);font-size:.875rem;color:var(--accent);font-weight:700}
+
+.backbar{display:flex;flex-wrap:wrap;gap:.6rem;padding-block:1rem .25rem}
+.back{font-family:var(--sans);font-size:.9375rem;border:2px solid var(--edge);background:#fff;
+  color:var(--ink);padding:.55rem .9rem;cursor:pointer}
+.back:hover{border-color:var(--accent);color:var(--accent)}
+
+.empty{padding:2rem 0 1rem;max-width:56ch}
+.empty h2{font-size:1.375rem}
+.empty p{margin-top:.6rem;color:var(--ink-2)}
+
+/* ---------- 6. Footer ---------- */
+.foot{background:var(--paper-2);border-top:3px solid var(--ink);margin-top:3rem;
+  padding-block:2rem 2.5rem;font-family:var(--sans);font-size:.9375rem}
+.foot__grid{display:grid;gap:1.5rem}
+@media (min-width:780px){.foot__grid{grid-template-columns:1.4fr 1fr}}
+.foot h2{font-family:var(--sans);font-size:.8125rem;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--ink-2);margin-bottom:.5rem}
+.foot p{color:var(--ink-2);max-width:62ch}
+.foot strong{color:var(--ink)}
+.foot__meta{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--edge-soft);
+  color:var(--ink-2);font-size:.8125rem}
+
+.js .nojs-only{display:none}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== CRISIS. Reachable in zero taps, on every view. ===== -->
+<div class="crisis">
+  <div class="wrap crisis__in">
+    <span class="crisis__t">In crisis?</span>
+    <p class="crisis__d">Veterans Crisis Line &mdash; dial <b><a href="tel:988">988</a> then press 1</b>,
+      text <b><a href="sms:838255">838255</a></b>, or
+      <a href="https://www.veteranscrisisline.net/get-help-now/chat/" target="_blank" rel="noopener">chat online</a>.</p>
+    <p class="crisis__note">Free, confidential, 24/7. You do not need to be enrolled in VA benefits or health care.</p>
+  </div>
+</div>
+
+<header class="wrap top">
+  <h1>Military Benefits &amp; Resources</h1>
+  <p class="top__lede">A free directory of programs, benefits and discounts for active-duty
+  service members, veterans, and their families. No signup, no ads, nothing to buy.</p>
+  <p class="top__meta">
+    <span>__TOTAL__ resources</span>
+    <span>__NCATS__ categories</span>
+    <span>Links verified 31 July 2026</span>
+  </p>
+</header>
+
+<div class="search">
+  <div class="wrap">
+    <div class="search__box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Search &mdash; housing, dental, GI Bill&hellip;"
+             aria-label="Search resources" aria-describedby="hint">
+      <button id="clear" type="button">Clear</button>
+    </div>
+    <p class="search__hint" id="hint">Or pick a category below.</p>
+  </div>
+</div>
+
+<main id="main" class="wrap">
+  <div id="backbar" class="backbar" hidden>
+    <button class="back" id="allbtn" type="button">&larr; All categories</button>
+  </div>
+
+  <!-- Category board (default view) -->
+  <div class="board" id="board">
+    <ul class="board__grid">
+__TILES__
+    </ul>
+  </div>
+
+  <!-- Search results render here -->
+  <div id="results" hidden></div>
+
+  <!-- Every category, always in the HTML so the page works without JavaScript -->
+  <div id="all">
+__SECTIONS__
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <h2>Important</h2>
+      <p><strong>This site is not affiliated with or endorsed by the U.S. Department of Defense,
+      the Department of Veterans Affairs, or any government agency.</strong> Programs, eligibility
+      and discounts change without notice. Always confirm details through official channels before
+      relying on them.</p>
+    </div>
+    <div>
+      <h2>Suggest a resource</h2>
+      <p>Know something that belongs here, or found a broken link?
+      Email <a href="mailto:xp.labs.3d@gmail.com?subject=Military%20benefits%20directory">xp.labs.3d@gmail.com</a>
+      with a link and one line about it.</p>
+    </div>
+  </div>
+  <div class="wrap foot__meta">
+    Maintained by XPLabs LLC &middot; __TOTAL__ resources across __NCATS__ categories &middot;
+    Links verified 31 July 2026
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var DATA = __DATA__;
+
+var q=document.getElementById('q'), clear=document.getElementById('clear'),
+    board=document.getElementById('board'), all=document.getElementById('all'),
+    results=document.getElementById('results'), backbar=document.getElementById('backbar'),
+    allbtn=document.getElementById('allbtn'), hint=document.getElementById('hint');
+
+// Sections start hidden; the board is the entry point.
+var SECTIONS={};
+[].forEach.call(all.querySelectorAll('.cat'), function(s){ SECTIONS[s.id]=s; s.hidden=true; });
+
+function toks(s){ return (s.toLowerCase().match(/[a-z0-9]+/g)||[]); }
+
+// Tiered scoring. A whole word in the name beats a prefix beats the host beats
+// category-level relevance. Every search term must match something.
+function scoreLink(l, terms){
+  var name=toks(l.n), host=toks(l.h), concept=l.k.split(' '), total=0;
+  for(var i=0;i<terms.length;i++){
+    var t=terms[i], s=0, j;
+    if(name.indexOf(t)>-1) s=10;
+    else { for(j=0;j<name.length;j++){ if(t.length>=4 && name[j].indexOf(t)===0){ s=7; break; } } }
+    if(!s && host.indexOf(t)>-1) s=5;
+    if(!s && concept.indexOf(t)>-1) s=1;
+    if(!s) return 0;
+    total+=s;
+  }
+  return total;
+}
+function scoreCat(c, terms){
+  var title=toks(c.t), concept=c.k.split(' '), total=0;
+  for(var i=0;i<terms.length;i++){
+    var t=terms[i], s=0;
+    if(title.indexOf(t)>-1) s=10;
+    else if(concept.indexOf(t)>-1) s=4;
+    if(!s) return 0;
+    total+=s;
+  }
+  return total;
+}
+
+var CRISIS=['crisis','suicide','suicidal','988','hotline','kill','harm','die','dying','hopeless','overdose'];
+function isCrisis(terms){
+  for(var i=0;i<terms.length;i++) if(CRISIS.indexOf(terms[i])>-1) return true;
+  return false;
+}
+
+function esc(s){ return s.replace(/[&<>"]/g,function(m){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]; }); }
+
+function show(view){
+  board.hidden = view!=='board';
+  results.hidden = view!=='results';
+  backbar.hidden = view==='board';
+  for(var id in SECTIONS) SECTIONS[id].hidden = true;
+  hint.textContent = view==='board' ? 'Or pick a category below.' : '';
+}
+
+function openCat(id, focus){
+  var s=SECTIONS[id]; if(!s) return;
+  show('cat'); s.hidden=false;
+  if(focus!==false){
+    var h=s.querySelector('h2');
+    if(h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); }
+    window.scrollTo(0,0);
+  }
+  try{ history.pushState({cat:id},'','#'+id); }catch(e){}
+}
+
+function openBoard(){
+  show('board');
+  q.value=''; clear.classList.remove('on');
+  board.setAttribute('tabindex','-1'); board.focus({preventScroll:true});
+  window.scrollTo(0,0);
+  try{ history.pushState({},'',location.pathname); }catch(e){}
+}
+
+function runSearch(){
+  var raw=q.value.trim();
+  clear.classList.toggle('on', raw.length>0);
+  if(!raw){ show('board'); return; }
+  var terms=toks(raw).filter(function(t){ return t.length>1; });
+  if(!terms.length){ show('board'); return; }
+
+  var catHits=[], linkHits=[], i, j, c, l, s;
+  for(i=0;i<DATA.length;i++){
+    c=DATA[i];
+    s=scoreCat(c,terms); if(s) catHits.push({s:s,c:c});
+    for(j=0;j<c.l.length;j++){
+      l=c.l[j]; s=scoreLink(l,terms);
+      if(s>=5) linkHits.push({s:s,l:l,c:c});   // direct hits only; category-level handled above
+    }
+  }
+  catHits.sort(function(a,b){ return b.s-a.s; });
+  linkHits.sort(function(a,b){ return b.s-a.s || a.l.n.localeCompare(b.l.n); });
+
+  var out='';
+  if(isCrisis(terms)){
+    out+='<div class="empty"><h2>If you are in crisis, call now</h2>'+
+      '<p>Veterans Crisis Line &mdash; dial <b>988 then press 1</b>, text <b>838255</b>, or '+
+      '<a href="https://www.veteranscrisisline.net/get-help-now/chat/" target="_blank" rel="noopener">chat online</a>. '+
+      'Free, confidential, 24/7.</p>'+
+      '<p>This directory does not list crisis services, so the line above is the fastest route to a person.</p></div>';
+  }
+  if(catHits.length){
+    out+='<div class="cat"><div class="cat__head"><h2>Categories</h2></div>';
+    for(i=0;i<catHits.length && i<4;i++){
+      c=catHits[i].c;
+      out+='<button class="catrow" data-cat="'+c.id+'"><b>'+esc(c.t)+'</b><span>'+c.n+' resources &rarr;</span></button>';
+    }
+    out+='</div>';
+  }
+  if(linkHits.length){
+    out+='<div class="cat"><div class="cat__head"><h2>Resources</h2>'+
+         '<p class="cat__n">'+linkHits.length+' match'+(linkHits.length===1?'':'es')+'</p></div><ul class="rows">';
+    for(i=0;i<linkHits.length && i<80;i++){
+      l=linkHits[i].l; c=linkHits[i].c;
+      out+='<li><a class="row" href="'+esc(l.u)+'" target="_blank" rel="noopener">'+
+           '<span class="row__cat">'+esc(c.t)+'</span>'+
+           '<span class="row__n">'+esc(l.n)+'</span>'+
+           '<span class="row__h">'+esc(l.h)+'</span></a></li>';
+    }
+    out+='</ul></div>';
+  }
+  if(!catHits.length && !linkHits.length && !isCrisis(terms)){
+    out+='<div class="empty"><h2>Nothing here matches &ldquo;'+esc(raw)+'&rdquo;</h2>'+
+      '<p>This directory does not cover everything. For official benefits, eligibility and claims, '+
+      'search <a href="https://www.va.gov/find-forms/" target="_blank" rel="noopener">VA.gov</a> or the '+
+      '<a href="https://www.usa.gov/benefit-finder" target="_blank" rel="noopener">federal benefit finder</a>.</p>'+
+      '<p>If something belongs here, '+
+      '<a href="mailto:xp.labs.3d@gmail.com?subject=Suggested%20resource">send it over</a> and it will be added.</p></div>';
+  }
+  results.innerHTML=out;
+  show('results');
+}
+
+// events
+var t=null;
+q.addEventListener('input', function(){ clearTimeout(t); t=setTimeout(runSearch,90); });
+q.addEventListener('keydown', function(ev){ if(ev.key==='Escape'){ q.value=''; runSearch(); } });
+clear.addEventListener('click', function(){ q.value=''; runSearch(); q.focus(); });
+allbtn.addEventListener('click', openBoard);
+document.addEventListener('click', function(ev){
+  var b=ev.target.closest ? ev.target.closest('[data-cat]') : null;
+  if(b){ q.value=''; clear.classList.remove('on'); openCat(b.getAttribute('data-cat')); }
+});
+window.addEventListener('popstate', function(ev){
+  if(ev.state && ev.state.cat) openCat(ev.state.cat,false); else show('board');
+});
+document.addEventListener('keydown', function(ev){
+  if(ev.key==='/' && document.activeElement!==q){ ev.preventDefault(); q.focus(); }
+});
+
+// deep link support
+if(location.hash && SECTIONS[location.hash.slice(1)]) openCat(location.hash.slice(1),false);
+else show('board');
+})();
+</script>
+</body>
+</html>
