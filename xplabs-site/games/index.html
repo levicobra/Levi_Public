@@ -73,7 +73,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 
 /* ---------- game cards ---------- */
 .games{padding-bottom:var(--section-y);display:grid;gap:1.25rem}
-.game{
+.game{scroll-margin-top:1.5rem;
   border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
   padding:clamp(1.5rem,3.5vw,2.5rem);
   display:grid;gap:1.5rem;
@@ -122,6 +122,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
     </a>
     <div class="nav-links">
       <a href="/games/">Games</a>
+      <a href="/education/">Education</a>
       <a href="/engineering/">Engineering</a>
       <a href="/military-benefits/">Military benefits</a>
       <a href="/personal/">Personal</a>
@@ -137,15 +138,14 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
     Catalog · four titles
   </p>
   <h1>Four games. Four stacks.</h1>
-  <p class="lead">XPLabs builds sharply scoped games and ships them. Unreal Engine on mobile,
-  native Swift on iPhone, and Roblox — each title chosen to be finishable by a small team
-  rather than impressive on a roadmap.</p>
+  <p class="lead">Four titles across four stacks — Unreal Engine on mobile, native Swift on
+  iPhone, and Roblox. One live, one in release preparation, two in development.</p>
 </section>
 
 <section class="wrap games">
 
   <!-- ===================== 01 — THE LAST STATION ===================== -->
-  <article class="game">
+  <article class="game" id="the-last-station">
     <div>
       <p class="game__num">TITLE 001</p>
       <h2 class="game__title">The Last Station</h2>
@@ -173,7 +173,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
   </article>
 
   <!-- ===================== 02 — SPACE GLYPH ===================== -->
-  <article class="game">
+  <article class="game" id="space-glyph">
     <div>
       <p class="game__num">TITLE 002</p>
       <h2 class="game__title">Space Glyph</h2>
@@ -201,7 +201,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
   </article>
 
   <!-- ===================== 03 — LIFE XP ===================== -->
-  <article class="game">
+  <article class="game" id="life-xp">
     <div>
       <p class="game__num">TITLE 003</p>
       <h2 class="game__title">Life XP</h2>
@@ -230,7 +230,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
   </article>
 
   <!-- ===================== 04 — HEARTH & HUNT ===================== -->
-  <article class="game">
+  <article class="game" id="hearth-and-hunt">
     <div>
       <p class="game__num">TITLE 004</p>
       <h2 class="game__title">Hearth &amp; Hunt</h2>

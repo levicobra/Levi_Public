@@ -59,6 +59,16 @@ a{color:var(--accent)}
 .skip:focus{left:.5rem;top:.5rem;z-index:99;background:var(--ink);color:var(--paper);padding:.7rem 1rem}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 
+/* ---------- 0. Site bar ---------- */
+.sitebar{background:var(--ink);color:#EDEAE4;font-family:var(--sans);font-size:.8125rem}
+.sitebar__in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:.4rem 1rem;padding-block:.55rem}
+.sitebar a{color:#EDEAE4;text-decoration:none}
+.sitebar__logo{font-weight:800;letter-spacing:.02em}
+.sitebar nav{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem}
+.sitebar nav a{border-bottom:2px solid transparent;padding-bottom:1px}
+.sitebar nav a:hover,.sitebar nav a[aria-current]{border-bottom-color:#EDEAE4}
+
 /* ---------- 1. CRISIS. Always first. Never behind a tap. ---------- */
 .crisis{background:var(--crisis-paper);border-bottom:3px solid var(--crisis)}
 .crisis__in{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1.5rem;
@@ -165,6 +175,18 @@ a{color:var(--accent)}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- Site navigation. This page is part of xplabs.us, not a standalone tool. -->
+<div class="sitebar"><div class="wrap sitebar__in">
+  <a class="sitebar__logo" href="/">XPLABS</a>
+  <nav aria-label="Site">
+    <a href="/games/">Games</a>
+    <a href="/education/">Education</a>
+    <a href="/engineering/">Engineering</a>
+    <a href="/military-benefits/" aria-current="page">Benefits</a>
+    <a href="/personal/">Personal</a>
+  </nav>
+</div></div>
 
 <!-- ===== CRISIS. Reachable in zero taps, on every view. ===== -->
 <div class="crisis">

@@ -128,6 +128,30 @@ a{color:inherit}
   font-family:var(--ui);font-size:var(--s-min)}
 .g__specs li{border:2px solid currentColor;padding:.3rem .6rem;white-space:nowrap}
 
+/* ---------- games: four equal cards ---------- */
+.games{padding-block:clamp(2rem,5vw,3.5rem) 0}
+.sec{font-size:var(--s-2);margin-bottom:1.25rem}
+.gamegrid{display:grid;gap:.9rem}
+@media (min-width:760px){.gamegrid{grid-template-columns:repeat(2,1fr)}}
+.gcard{display:flex;flex-direction:column;gap:.35rem;height:100%;
+  padding:clamp(1.15rem,2.5vw,1.6rem);text-decoration:none;color:#fff;
+  transition:transform .13s}
+.gcard:hover{transform:translateY(-2px)}
+.gcard--teal{background:var(--teal)}
+.gcard--ultra{background:var(--ultra)}
+.gcard--mustard{background:var(--mustard);color:var(--ink)}   /* light ground -> dark type */
+.gcard--slate{background:var(--rust)}
+.gcard__label{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;opacity:.85}
+.gcard__name{font-family:var(--display);font-size:var(--s-2);line-height:.98;letter-spacing:-.012em}
+.gcard__kind{font-family:var(--ui);font-size:var(--s-min);opacity:.88}
+.gcard__body{margin-top:.5rem;line-height:1.55;flex:1}
+.gcard__go{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;margin-top:.9rem}
+.gcard:hover .gcard__go{text-decoration:underline;text-underline-offset:3px}
+.games__more{margin-top:1rem;font-family:var(--ui);font-size:var(--s-min)}
+.games__more a{font-weight:700}
+
 /* the flagship gets art and a second column; the others deliberately do not */
 .g--lead{display:grid;gap:clamp(1.5rem,3vw,2.5rem)}
 @media (min-width:900px){.g--lead{grid-template-columns:1.15fr .85fr;align-items:center}}
@@ -207,94 +231,50 @@ a{color:inherit}
   </p>
 </section>
 
-<!-- ===== THE LAST STATION — flagship: art, second column, largest type ===== -->
-<div class="wrap">
-  <section class="slab slab--teal">
-    <div class="slab__in g--lead">
-      <div>
-        <p class="g__label">In development</p>
-        <h2 class="g__name">The Last Station</h2>
-        <p class="g__kind">Unreal Engine 5 &middot; mobile &middot; free to play</p>
-        <p class="g__body">A survivors game built for one thumb. You only steer — your equipped
-        cards fire on tap and aim is automatic. All the depth is in the loadout: five part cards
-        across Power, Weapons, Sensors, Jammers and Drones, plus five stat medallions. Kinetic
-        weapons break armoured brutes, energy weapons melt shields. That is the whole pre-mission
-        read.</p>
-        <p class="g__body">You play <b>C</b>, the last operator of a dying signal station on a
-        refurbished offshore rig. Runs last about three minutes. A restart takes two seconds.</p>
-        <ul class="g__specs">
-          <li>26 cards</li><li>8 medallions</li><li>~3 min runs</li>
-        </ul>
-        <a class="g__go" href="/games/the-last-station/">Open the title page &rarr;</a>
-      </div>
-      <figure>
-        <img src="game-art/da_world_phosphor_station_backdrop.webp" width="1672" height="941"
-             loading="eager" fetchpriority="high"
-             alt="A night-time offshore rig station lit by green phosphor light beneath a teal aurora.">
-        <figcaption>Phosphor Station — the signal you are trying to keep alive.</figcaption>
-      </figure>
-    </div>
-  </section>
-</div>
+<!-- ===== GAMES — all four treated the same. Detail lives on /games/. ===== -->
+<section class="wrap games" id="games">
+  <h2 class="sec">Games</h2>
+  <ul class="gamegrid">
 
-<!-- ===== The middle two share a row — deliberately not the flagship treatment ===== -->
-<div class="wrap">
-  <section class="slab slab--ultra">
-    <div class="slab__in pair">
-      <div>
-        <p class="g__label">Release prep</p>
-        <h2 class="g__name">Space Glyph</h2>
-        <p class="g__kind">Swift 6 &middot; SpriteKit &middot; iPhone</p>
-        <p class="g__body">Matching and shooting are the same act. Your first match locks the
-        board and starts a short timed phase; every follow-up match refills the timer, so a good
-        chain is something you extend under pressure. Bigger connected matches forge stronger
-        gems — the only attack that crosses lanes.</p>
-        <p class="g__body">No ads, no subscriptions, no loot boxes, no tracking. Purchases are
-        cosmetic and never gate progress.</p>
-        <ul class="g__specs">
-          <li>100 missions</li><li>4 sectors</li><li>Premium</li>
-        </ul>
-      </div>
-      <div>
-        <p class="g__label">Playable</p>
-        <h2 class="g__name">Life XP</h2>
-        <p class="g__kind">SwiftUI &middot; SceneKit &middot; iPhone</p>
-        <p class="g__body">An offline life simulator. Walk a small town, step through any door
-        into a full-screen interior, and use the station that belongs there — a bed, a teller
-        window, a weight rack, a gig board.</p>
-        <p class="g__body">Underneath, a deterministic hour-by-hour simulation ties together work,
-        school, banking, housing, health and consequences. Every Monday the world settles up in a
-        fixed order. Money is tracked in whole cents so nothing drifts.</p>
-        <ul class="g__specs">
-          <li>17 locations</li><li>12 jobs</li><li>Fully offline</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</div>
+    <li><a class="gcard gcard--teal" href="/games/#the-last-station">
+      <span class="gcard__label">In development</span>
+      <span class="gcard__name">The Last Station</span>
+      <span class="gcard__kind">Unreal Engine 5 &middot; mobile</span>
+      <span class="gcard__body">A survivors game built for one thumb. You steer; your cards fire
+      on tap. All the depth is in the loadout.</span>
+      <span class="gcard__go">Read more &rarr;</span>
+    </a></li>
 
-<!-- ===== HEARTH & HUNT — mustard, so DARK type. The one live title. ===== -->
-<div class="wrap">
-  <section class="slab slab--mustard">
-    <div class="slab__in">
-      <p class="g__label">Live build</p>
-      <h2 class="g__name">Hearth &amp; Hunt</h2>
-      <p class="g__kind">Roblox &middot; server-authoritative PvPvE</p>
-      <div class="duo">
-        <p>Built for two-player teams who want something relaxed and solo players who want
-        something competitive — in the same match. Keepers stay home, grow magical crops and
-        upgrade the homestead. Hunters go out into the wilds, fight creatures, contest objectives
-        and haul rare materials back. Roles switch freely.</p>
-        <p>Three terrain bands pay 1×, 2× and 3×, so the risk you take is the reward you get.
-        PvP is deliberately non-destructive and low-punishment. Everything resolves in a
-        fifteen-minute match ending in the Grand Bloom.</p>
-      </div>
-      <ul class="g__specs">
-        <li>15 min matches</li><li>Solo or duo</li><li>Keeper &middot; Hunter</li>
-      </ul>
-    </div>
-  </section>
-</div>
+    <li><a class="gcard gcard--ultra" href="/games/#space-glyph">
+      <span class="gcard__label">Release prep</span>
+      <span class="gcard__name">Space Glyph</span>
+      <span class="gcard__kind">Swift 6 &middot; iPhone</span>
+      <span class="gcard__body">Puzzle defense where matching and shooting are the same act.
+      100 missions, four sectors, no ads or loot boxes.</span>
+      <span class="gcard__go">Read more &rarr;</span>
+    </a></li>
+
+    <li><a class="gcard gcard--mustard" href="/games/#life-xp">
+      <span class="gcard__label">Playable</span>
+      <span class="gcard__name">Life XP</span>
+      <span class="gcard__kind">SwiftUI &middot; SceneKit &middot; iPhone</span>
+      <span class="gcard__body">An offline life simulator with a deterministic hour-by-hour
+      economy. Walk the town, enter any building, use what is there.</span>
+      <span class="gcard__go">Read more &rarr;</span>
+    </a></li>
+
+    <li><a class="gcard gcard--slate" href="/games/#hearth-and-hunt">
+      <span class="gcard__label">Live build</span>
+      <span class="gcard__name">Hearth &amp; Hunt</span>
+      <span class="gcard__kind">Roblox &middot; PvPvE</span>
+      <span class="gcard__body">Keepers grow the homestead, Hunters go out and fight. Fifteen
+      minutes, ending in the Grand Bloom.</span>
+      <span class="gcard__go">Read more &rarr;</span>
+    </a></li>
+
+  </ul>
+  <p class="games__more"><a href="/games/">Full catalog, with what each is built on &rarr;</a></p>
+</section>
 
 <!-- ===== XP EDUCATION — rust. Not a game, so not a game slab. ===== -->
 <div class="wrap">
@@ -342,11 +322,6 @@ a{color:inherit}
 
 <section class="wrap dirs">
   <h2>Also here</h2>
-
-  <a class="dir" href="/games/">
-    <span class="dir__row"><span class="dir__n">Games</span><span class="dir__arrow">All four &rarr;</span></span>
-    <span class="dir__b">The full catalog, with what each title is built on and where it stands.</span>
-  </a>
 
   <a class="dir" href="/engineering/">
     <span class="dir__row"><span class="dir__n">Engineering</span><span class="dir__arrow">Read &rarr;</span></span>
