@@ -1,0 +1,1538 @@
+{
+ "id": "university-physics-2",
+ "title": "University Physics II",
+ "domain": "physical",
+ "level": "College",
+ "description": "Calculus-based thermodynamics, electricity, and magnetism for STEM majors. You will move from heat and gas laws through electric charge, circuits, and magnetism, solving numeric problems at every step using the same reasoning professional engineers and physicists use daily.",
+ "outcomes": [
+  "Apply temperature, heat, and the ideal gas law to thermal systems, and use calorimetry to find heat transfer.",
+  "Use the first and second laws of thermodynamics to analyze heat engines and entropy.",
+  "Apply Coulomb's law, the electric field concept, and Gauss's law to charge distributions.",
+  "Calculate electric potential, capacitance, and energy stored in capacitors, including dielectrics.",
+  "Analyze DC circuits with Ohm's law, series/parallel combinations, and Kirchhoff's rules, including RC circuits.",
+  "Apply magnetic force and field laws, and use Faraday's law to analyze electromagnetic induction."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Temperature, Heat, and Kinetic Theory",
+   "summary": "How temperature and heat are defined precisely, and how the random motion of countless particles explains the behavior of gases.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Temperature and Thermal Expansion",
+     "minutes": 14,
+     "intro": "Nearly every material changes size slightly with temperature, a fact engineers must plan for in everything from bridges to eyeglass frames. This lesson builds the precise formula behind that everyday observation.",
+     "sections": [
+      {
+       "heading": "Temperature Scales",
+       "body": [
+        "The **Celsius** scale sets water's freezing point at 0° and boiling point at 100°. The **kelvin** scale shifts this so that 0 K is absolute zero, the coldest possible temperature, with K = °C + 273.15. All thermodynamic equations that involve temperature directly require kelvin, since they depend on distance from true zero energy, not an arbitrary reference point.",
+        "The **Fahrenheit** scale, common in the United States, relates to Celsius by °F = (9/5)°C + 32. A useful mental checkpoint: 20°C (a comfortable room) is 293 K and 68°F, three numbers for the same physical temperature."
+       ]
+      },
+      {
+       "heading": "Thermal Expansion",
+       "body": [
+        "When heated, most materials expand because increased particle kinetic energy pushes average spacing outward. Linear expansion follows ΔL = αL~0~ΔT, where α is the material's coefficient of linear expansion, specific to each substance.",
+        "For expansion in area or volume, the coefficients scale up: area expansion uses roughly 2α, and volume expansion uses roughly 3α, since expansion happens in each of two or three dimensions simultaneously. This is why designers use expansion joints in bridges and slightly oversized holes for bolts that will experience temperature swings."
+       ],
+       "example": {
+        "problem": "An aluminum rod (α = 24 × 10⁻⁶/°C) is 3.0 m long at 15°C. Find its length when heated to 45°C.",
+        "steps": [
+         "Find the temperature change: ΔT = 45 − 15 = 30°C.",
+         "Apply ΔL = αL~0~ΔT.",
+         "ΔL = (24×10⁻⁶)(3.0)(30) = 2.16×10⁻³ m.",
+         "Add to the original length: L~f~ = 3.0 + 0.00216 = 3.00216 m."
+        ],
+        "answer": "The rod lengthens by about 2.16 mm, to 3.00216 m."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "absolute zero",
+       "def": "0 K, the theoretical lowest possible temperature, at which particle kinetic energy is minimized."
+      },
+      {
+       "term": "coefficient of linear expansion",
+       "def": "α, the fractional change in length per degree of temperature change for a material."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Convert 350 K to degrees Celsius.",
+       "choices": [
+        "350°C",
+        "77°C",
+        "623°C",
+        "273°C"
+       ],
+       "answer": 1,
+       "explain": "°C = K − 273.15 ≈ 350 − 273 = 77°C."
+      },
+      {
+       "q": "Why must temperature be in kelvin for thermodynamic equations like the ideal gas law?",
+       "choices": [
+        "Kelvin is simply the international standard with no deeper reason",
+        "These equations depend on distance from true zero energy, which only the kelvin scale measures from zero correctly",
+        "Celsius is only accurate at high temperatures",
+        "Kelvin values are always smaller numbers"
+       ],
+       "answer": 1,
+       "explain": "Kelvin is an absolute scale where 0 K represents minimal particle kinetic energy. Celsius and Fahrenheit have arbitrary zero points, so ratios and proportional relationships in thermodynamics only hold correctly using kelvin."
+      },
+      {
+       "q": "A steel bridge girder (α = 12 × 10⁻⁶/°C) is 40 m long. How much does it lengthen if the temperature rises by 35°C?",
+       "choices": [
+        "0.0168 m",
+        "0.168 m",
+        "1.68 m",
+        "0.00168 m"
+       ],
+       "answer": 0,
+       "explain": "ΔL = αL~0~ΔT = (12×10⁻⁶)(40)(35) = 0.0168 m, about 1.7 cm — enough to require expansion joints on real bridges."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Heat, Heat Transfer, and Calorimetry",
+     "minutes": 16,
+     "intro": "Heating a pot of water takes a predictable, calculable amount of energy, and that calculation is the foundation of calorimetry — using measured temperature changes to determine quantities of heat transferred.",
+     "sections": [
+      {
+       "heading": "Specific Heat and Heat Transfer",
+       "body": [
+        "The heat needed to change a substance's temperature (without a phase change) is Q = mcΔT, where m is mass, c is the substance's **specific heat capacity** (J/(kg·°C) or J/(kg·K)), and ΔT is the temperature change. Water has an unusually high specific heat, c = 4186 J/(kg·°C), which is why oceans moderate coastal climates and why water is so effective at cooling engines.",
+        "During a phase change (melting, freezing, boiling, condensing), temperature stays constant while heat is absorbed or released: Q = mL, where L is the **latent heat** of fusion or vaporization for that substance. All of the added heat goes into breaking or forming intermolecular bonds, not raising temperature."
+       ],
+       "example": {
+        "problem": "Find the heat required to raise the temperature of 0.50 kg of water from 20°C to 80°C.",
+        "steps": [
+         "Apply Q = mcΔT with c~water~ = 4186 J/(kg·°C).",
+         "ΔT = 80 − 20 = 60°C.",
+         "Q = (0.50)(4186)(60) = 125,580 J.",
+         "Convert to more convenient units: 125,580 J ≈ 125.6 kJ."
+        ],
+        "answer": "About 1.26 × 10⁵ J (125.6 kJ)."
+       }
+      },
+      {
+       "heading": "Modes of Heat Transfer",
+       "body": [
+        "Heat transfers by three mechanisms: **conduction** (direct molecular collisions within a substance or between touching objects, described by Fourier's law for the rate of heat flow through a material), **convection** (heat carried by the bulk movement of a fluid, such as warm air rising), and **radiation** (heat transferred by electromagnetic waves, requiring no medium at all, which is how the Sun warms Earth across empty space).",
+        "In **calorimetry**, an isolated system's total heat lost equals total heat gained: heat lost by the hotter object equals heat gained by the cooler one, letting you solve for an unknown final temperature or specific heat by setting these two quantities equal."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "specific heat capacity",
+       "def": "c, the heat needed to raise the temperature of 1 kg of a substance by 1°C."
+      },
+      {
+       "term": "latent heat",
+       "def": "L, the heat per unit mass absorbed or released during a phase change at constant temperature."
+      },
+      {
+       "term": "calorimetry",
+       "def": "The technique of measuring heat transfer using the principle that heat lost equals heat gained in an isolated system."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How much heat is needed to raise the temperature of 2.0 kg of water by 10°C?",
+       "choices": [
+        "4186 J",
+        "8372 J",
+        "41,860 J",
+        "83,720 J"
+       ],
+       "answer": 3,
+       "explain": "Q = mcΔT = (2.0)(4186)(10) = 83,720 J."
+      },
+      {
+       "q": "Which mode of heat transfer requires no medium and can travel through empty space?",
+       "choices": [
+        "Conduction",
+        "Convection",
+        "Radiation",
+        "Calorimetry"
+       ],
+       "answer": 2,
+       "explain": "Radiation transfers heat via electromagnetic waves and needs no material medium, unlike conduction (requires direct contact) or convection (requires a fluid)."
+      },
+      {
+       "q": "In a calorimetry experiment, a hot metal block is placed in cool water in an insulated container. What equation correctly describes the equilibrium condition?",
+       "choices": [
+        "Heat lost by the metal equals heat gained by the water",
+        "The metal's final temperature must be lower than the water's initial temperature",
+        "Heat is created in the process",
+        "The water's specific heat must equal the metal's specific heat"
+       ],
+       "answer": 0,
+       "explain": "For an isolated system, energy is conserved: the heat the hotter object loses exactly equals the heat the cooler object gains, which is the basis for solving for an unknown final temperature or specific heat."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Kinetic Theory of Gases and the Ideal Gas Law",
+     "minutes": 16,
+     "intro": "Trillions of gas particles bouncing around a container in every direction still obey one clean, predictable equation relating pressure, volume, and temperature. Kinetic theory explains why, connecting the microscopic chaos to the macroscopic law.",
+     "sections": [
+      {
+       "heading": "The Ideal Gas Law",
+       "body": [
+        "The **ideal gas law**, PV = nRT, connects pressure (Pa), volume (m³), number of moles n, and absolute temperature T (K), with R = 8.31 J/(mol·K). It models real gases well at moderate pressures and temperatures, where particle size and intermolecular forces are negligible compared to the space between particles.",
+        "This law can also be written per particle rather than per mole: PV = Nk~B~T, where N is the number of individual particles and k~B~ = 1.38 × 10⁻²³ J/K is Boltzmann's constant, related to R by R = N~A~k~B~ (N~A~ being Avogadro's number)."
+       ],
+       "example": {
+        "problem": "3.0 mol of an ideal gas occupies 0.080 m³ at 400 K. Find its pressure.",
+        "steps": [
+         "Apply PV = nRT, solving for P: P = nRT/V.",
+         "P = (3.0)(8.31)(400)/0.080.",
+         "P = 9972/0.080 = 124,650 Pa."
+        ],
+        "answer": "About 1.25 × 10⁵ Pa."
+       }
+      },
+      {
+       "heading": "Kinetic Theory and Molecular Speeds",
+       "body": [
+        "Kinetic theory models a gas as a huge number of point particles in constant, random motion, colliding elastically with each other and the container walls. Pressure arises from the cumulative force of these countless collisions per unit area per unit time.",
+        "Kinetic theory shows that average translational kinetic energy per particle depends only on temperature: KE~avg~ = (3/2)k~B~T. This means temperature is, at its core, a direct measure of average molecular motion — doubling absolute temperature genuinely doubles the average kinetic energy of each gas particle."
+       ],
+       "example": {
+        "problem": "Find the average translational kinetic energy of a gas particle at 300 K.",
+        "steps": [
+         "Apply KE~avg~ = (3/2)k~B~T.",
+         "KE~avg~ = (3/2)(1.38×10⁻²³)(300).",
+         "KE~avg~ = (1.5)(1.38×10⁻²³)(300) = 6.21×10⁻²¹ J."
+        ],
+        "answer": "About 6.2 × 10⁻²¹ J per particle."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ideal gas law",
+       "def": "PV = nRT, relating pressure, volume, moles, and absolute temperature."
+      },
+      {
+       "term": "Boltzmann's constant",
+       "def": "k~B~ = 1.38 × 10⁻²³ J/K, relating temperature to average molecular kinetic energy."
+      },
+      {
+       "term": "kinetic theory",
+       "def": "The model explaining macroscopic gas behavior as the statistical result of countless random particle collisions."
+      }
+     ],
+     "practice": [
+      {
+       "q": "2.0 mol of gas occupies 0.040 m³ at 350 K. Find its pressure.",
+       "choices": [
+        "1.45 × 10⁵ Pa",
+        "1.45 × 10⁴ Pa",
+        "5.82 × 10⁵ Pa",
+        "2.9 × 10⁴ Pa"
+       ],
+       "answer": 0,
+       "explain": "P = nRT/V = (2.0)(8.31)(350)/0.040 = 5817/0.040 = 145,425 Pa ≈ 1.45 × 10⁵ Pa."
+      },
+      {
+       "q": "If the absolute temperature of a gas is doubled, what happens to the average translational kinetic energy of its particles?",
+       "choices": [
+        "It stays the same",
+        "It doubles",
+        "It quadruples",
+        "It is halved"
+       ],
+       "answer": 1,
+       "explain": "KE~avg~ = (3/2)k~B~T is directly proportional to absolute temperature, so doubling T doubles the average kinetic energy per particle."
+      },
+      {
+       "q": "Which assumption does kinetic theory make about real gas particles to model an 'ideal' gas?",
+       "choices": [
+        "Particles have significant size and strong intermolecular attractions",
+        "Particles are treated as point masses with negligible size and no intermolecular forces except during collisions",
+        "Particles never collide with the container walls",
+        "Particles all move at exactly the same speed"
+       ],
+       "answer": 1,
+       "explain": "The ideal gas model assumes particles are effectively points with negligible volume, and interact with each other only through elastic collisions, ignoring any longer-range intermolecular forces."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "The Laws of Thermodynamics",
+   "summary": "Energy conservation applied to heat and work, and the fundamental limits on efficiency that no engine, however clever, can escape.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The First Law of Thermodynamics",
+     "minutes": 14,
+     "intro": "The first law of thermodynamics is energy conservation dressed for thermal systems: heat in, work out, and internal energy keeping the books balanced. Every engine, refrigerator, and living cell obeys this exact accounting.",
+     "sections": [
+      {
+       "heading": "Internal Energy, Heat, and Work",
+       "body": [
+        "The **first law of thermodynamics** states ΔU = Q − W, where ΔU is the change in a system's internal energy, Q is heat added to the system, and W is work done by the system on its surroundings. Sign conventions matter: Q is positive when heat flows into the system, and W is positive when the system expands and pushes outward on its surroundings.",
+        "For an ideal gas, internal energy depends only on temperature, so any process that returns a gas to its starting temperature has ΔU = 0 for that full cycle, regardless of what happened to heat and work along the way."
+       ]
+      },
+      {
+       "heading": "Applying the First Law",
+       "body": [
+        "In an **isothermal** process (constant temperature), ΔU = 0, so Q = W: all heat added becomes work done by the gas. In an **isochoric** process (constant volume), no work is done (W = 0), so ΔU = Q entirely. In an **adiabatic** process, no heat is exchanged (Q = 0), so ΔU = −W, meaning a gas that expands (positive W) must cool.",
+        "Recognizing which quantity is held constant or zero in a given process is the key skill here — once you identify the process type, the first law immediately simplifies to a one-line relationship between the two remaining quantities."
+       ],
+       "example": {
+        "problem": "A gas absorbs 500 J of heat and does 200 J of work on its surroundings during a process. Find the change in its internal energy.",
+        "steps": [
+         "Apply the first law: ΔU = Q − W.",
+         "Q = +500 J (heat added), W = +200 J (work done by the gas).",
+         "ΔU = 500 − 200 = 300 J."
+        ],
+        "answer": "The internal energy increases by 300 J."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "internal energy",
+       "def": "U, the total microscopic kinetic and potential energy of a system's particles."
+      },
+      {
+       "term": "isothermal process",
+       "def": "A process at constant temperature, so ΔU = 0 for an ideal gas and Q = W."
+      },
+      {
+       "term": "adiabatic process",
+       "def": "A process with no heat exchange (Q = 0), so ΔU = −W."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A gas undergoes an isochoric (constant volume) process, absorbing 400 J of heat. What is the change in its internal energy?",
+       "choices": [
+        "0 J",
+        "400 J",
+        "−400 J",
+        "Cannot be determined"
+       ],
+       "answer": 1,
+       "explain": "At constant volume, no work is done (W = 0), so the first law gives ΔU = Q − 0 = Q = 400 J."
+      },
+      {
+       "q": "A gas expands adiabatically, doing 350 J of work on its surroundings. What is its change in internal energy?",
+       "choices": [
+        "+350 J",
+        "−350 J",
+        "0 J",
+        "+700 J"
+       ],
+       "answer": 1,
+       "explain": "Adiabatic means Q = 0, so ΔU = Q − W = 0 − 350 = −350 J; the gas's internal energy decreases as it does work at its own expense."
+      },
+      {
+       "q": "A gas undergoes a full cycle, returning to its exact starting state. What is ΔU for the complete cycle?",
+       "choices": [
+        "Always positive",
+        "Always negative",
+        "Always zero",
+        "Depends on the gas's mass"
+       ],
+       "answer": 2,
+       "explain": "Internal energy is a state function that depends only on the current state (for an ideal gas, only temperature). Returning to the exact starting state means ΔU = 0 for the full cycle, regardless of the path taken."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Thermodynamic Processes and Heat Engines",
+     "minutes": 16,
+     "intro": "A heat engine is any device that converts a flow of heat into useful work, running in a repeating cycle. Understanding how efficiency is defined and calculated is the key to comparing real engines against each other and against fundamental limits.",
+     "sections": [
+      {
+       "heading": "Heat Engines and Efficiency",
+       "body": [
+        "A **heat engine** absorbs heat Q~h~ from a hot reservoir, converts part of it to useful work W, and exhausts the rest, Q~c~, to a cold reservoir, completing a cycle that returns the working substance to its starting state (so ΔU = 0 over the full cycle). Energy conservation requires Q~h~ = W + Q~c~.",
+        "**Thermal efficiency** is the fraction of absorbed heat converted to useful work: e = W/Q~h~ = 1 − Q~c~/Q~h~. No real engine reaches 100% efficiency; some heat is always exhausted to the cold reservoir, a fundamental limit rather than an engineering shortcoming."
+       ],
+       "example": {
+        "problem": "A heat engine absorbs 800 J of heat from a hot reservoir each cycle and does 240 J of useful work. Find its efficiency and the heat exhausted to the cold reservoir.",
+        "steps": [
+         "Apply e = W/Q~h~ = 240/800.",
+         "e = 0.30, or 30%.",
+         "Apply energy conservation: Q~c~ = Q~h~ − W = 800 − 240.",
+         "Q~c~ = 560 J."
+        ],
+        "answer": "Efficiency = 30%; heat exhausted = 560 J."
+       }
+      },
+      {
+       "heading": "PV Diagrams",
+       "body": [
+        "Thermodynamic cycles are often visualized on a **PV diagram** (pressure versus volume). The work done by the gas during any process equals the area under the curve on this diagram, and the net work done over a full cycle equals the enclosed area of the loop the cycle traces.",
+        "A cycle traversed clockwise on a PV diagram represents a heat engine, doing net positive work on the surroundings each cycle; a cycle traversed counterclockwise represents a refrigerator or heat pump, requiring net work input to move heat from cold to hot."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "heat engine",
+       "def": "A device that converts heat into work through a repeating thermodynamic cycle."
+      },
+      {
+       "term": "thermal efficiency",
+       "def": "e = W/Q~h~ = 1 − Q~c~/Q~h~, the fraction of absorbed heat converted into useful work."
+      },
+      {
+       "term": "PV diagram",
+       "def": "A graph of pressure versus volume used to visualize thermodynamic processes; enclosed area equals net work per cycle."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A heat engine absorbs 1000 J of heat and exhausts 700 J to the cold reservoir each cycle. Find its efficiency.",
+       "choices": [
+        "70%",
+        "30%",
+        "43%",
+        "100%"
+       ],
+       "answer": 1,
+       "explain": "W = Q~h~ − Q~c~ = 1000 − 700 = 300 J. Efficiency e = W/Q~h~ = 300/1000 = 0.30, or 30%."
+      },
+      {
+       "q": "On a PV diagram, what does the enclosed area of a cycle represent?",
+       "choices": [
+        "The engine's efficiency",
+        "The net work done over one full cycle",
+        "The total heat absorbed",
+        "The change in internal energy over the cycle"
+       ],
+       "answer": 1,
+       "explain": "Work equals the area under a process curve on a PV diagram; for a closed cycle, the net work equals the enclosed area of the loop."
+      },
+      {
+       "q": "Why can no real heat engine achieve 100% efficiency?",
+       "choices": [
+        "Because engines are always poorly built",
+        "Because some heat must always be exhausted to a cold reservoir, a fundamental thermodynamic limit",
+        "Because friction is the only limiting factor and can be eliminated",
+        "100% efficiency is achievable with a perfect vacuum insulator"
+       ],
+       "answer": 1,
+       "explain": "The second law of thermodynamics guarantees that a heat engine operating in a cycle must exhaust some heat to a cold reservoir; this is a fundamental limit, not merely a practical engineering imperfection."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Second Law of Thermodynamics and Entropy",
+     "minutes": 16,
+     "intro": "Heat never spontaneously flows from cold to hot, ice never spontaneously forms in warm water, and a shuffled deck of cards never spontaneously sorts itself. The second law of thermodynamics is the deep reason why, and entropy is how physicists measure it.",
+     "sections": [
+      {
+       "heading": "The Second Law and the Carnot Limit",
+       "body": [
+        "The **second law of thermodynamics** states that heat spontaneously flows only from hot to cold, and that no cyclic engine can convert heat entirely into work. The **Carnot engine** represents the theoretical maximum efficiency possible between two reservoirs at absolute temperatures T~h~ and T~c~: e~Carnot~ = 1 − T~c~/T~h~.",
+        "Every real engine performs at or below this Carnot limit, since real processes involve friction, turbulence, and other irreversibilities that a perfectly reversible Carnot cycle avoids by definition."
+       ],
+       "example": {
+        "problem": "A heat engine operates between a hot reservoir at 600 K and a cold reservoir at 350 K. Find its maximum possible (Carnot) efficiency.",
+        "steps": [
+         "Apply e~Carnot~ = 1 − T~c~/T~h~.",
+         "e~Carnot~ = 1 − 350/600.",
+         "350/600 ≈ 0.583.",
+         "e~Carnot~ ≈ 1 − 0.583 = 0.417."
+        ],
+        "answer": "About 41.7% maximum efficiency."
+       }
+      },
+      {
+       "heading": "Entropy",
+       "body": [
+        "**Entropy** (S) measures the disorder, or number of ways a system's particles can be arranged consistent with its macroscopic state. For a reversible process at constant temperature, entropy change is ΔS = Q/T. The second law can be restated: the total entropy of an isolated system never decreases.",
+        "This is why processes run in one direction spontaneously — heat flowing from hot to cold increases total entropy, while the reverse would decrease it, which never happens without external work being supplied (as in a refrigerator, which requires an energy input to move heat 'uphill')."
+       ],
+       "example": {
+        "problem": "Find the entropy change when 0.10 kg of ice melts completely at 0°C (273 K). The latent heat of fusion for water is 334,000 J/kg.",
+        "steps": [
+         "Find the heat absorbed: Q = mL = (0.10)(334,000) = 33,400 J.",
+         "Apply ΔS = Q/T at constant temperature T = 273 K.",
+         "ΔS = 33,400/273 ≈ 122 J/K."
+        ],
+        "answer": "About 122 J/K increase in entropy."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Carnot efficiency",
+       "def": "e = 1 − T~c~/T~h~, the maximum possible efficiency of any heat engine operating between two temperatures."
+      },
+      {
+       "term": "entropy",
+       "def": "S, a measure of a system's disorder; ΔS = Q/T for a reversible process at constant temperature."
+      },
+      {
+       "term": "second law of thermodynamics",
+       "def": "The total entropy of an isolated system never decreases; heat flows spontaneously only from hot to cold."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A Carnot engine operates between 900 K and 300 K. What is its maximum efficiency?",
+       "choices": [
+        "33%",
+        "50%",
+        "67%",
+        "75%"
+       ],
+       "answer": 2,
+       "explain": "e = 1 − T~c~/T~h~ = 1 − 300/900 = 1 − 0.333 = 0.667, or about 67%."
+      },
+      {
+       "q": "Why does heat never spontaneously flow from a cold object to a hot one?",
+       "choices": [
+        "It is forbidden by the first law of thermodynamics",
+        "It would decrease the total entropy of an isolated system, violating the second law",
+        "Cold objects have more internal energy than hot ones",
+        "There is no physical reason; it simply has never been observed"
+       ],
+       "answer": 1,
+       "explain": "Spontaneous heat flow from cold to hot would decrease total entropy of an isolated system, which the second law of thermodynamics forbids without external work being done on the system."
+      },
+      {
+       "q": "0.20 kg of water vaporizes at 373 K (latent heat of vaporization ≈ 2.26 × 10⁶ J/kg). Find the entropy change.",
+       "choices": [
+        "About 1212 J/K",
+        "About 121 J/K",
+        "About 606 J/K",
+        "About 2260 J/K"
+       ],
+       "answer": 0,
+       "explain": "Q = mL = (0.20)(2.26×10⁶) = 452,000 J. ΔS = Q/T = 452,000/373 ≈ 1212 J/K."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Electric Charges, Fields, and Gauss's Law",
+   "summary": "The force between charges, the field concept that describes their influence on space, and a powerful shortcut for highly symmetric charge distributions.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Electric Charge and Coulomb's Law",
+     "minutes": 14,
+     "intro": "Every electrical phenomenon you will study, from lightning to microchips, traces back to one simple force law between charged particles. Coulomb's law is where the entire subject of electromagnetism begins.",
+     "sections": [
+      {
+       "heading": "Electric Charge",
+       "body": [
+        "Charge is a fundamental property of matter, measured in coulombs (C), coming in two types: positive and negative. Like charges repel, opposite charges attract, and total charge in an isolated system is always conserved — charge is never created or destroyed, only transferred between objects.",
+        "Charge is also **quantized**: it always comes in whole-number multiples of the elementary charge e = 1.60 × 10⁻¹⁹ C, the magnitude of charge on a single proton or electron. A charge of 3.2 × 10⁻¹⁹ C, for instance, corresponds to exactly two elementary charges."
+       ]
+      },
+      {
+       "heading": "Coulomb's Law",
+       "body": [
+        "**Coulomb's law** gives the force between two point charges: F = k|q~1~q~2~|/r², with k = 8.99 × 10⁹ N·m²/C². This inverse-square relationship means the force falls off rapidly with distance, but can still be enormous at short range, since k is a large constant.",
+        "For multiple charges, the net force on any one charge is the vector sum of the individual Coulomb forces from every other charge — this is the **principle of superposition**, applied here to forces rather than waves."
+       ],
+       "example": {
+        "problem": "Two point charges, q~1~ = 5.0 μC and q~2~ = 3.0 μC, are separated by 0.20 m. Find the magnitude of the force between them.",
+        "steps": [
+         "Apply Coulomb's law: F = k q~1~q~2~/r².",
+         "F = (8.99×10⁹)(5.0×10⁻⁶)(3.0×10⁻⁶)/(0.20)².",
+         "Numerator: (8.99×10⁹)(1.5×10⁻¹¹) = 0.13485.",
+         "F = 0.13485/0.040 = 3.37 N."
+        ],
+        "answer": "About 3.4 N, repulsive (both charges positive)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "elementary charge",
+       "def": "e = 1.60 × 10⁻¹⁹ C, the smallest unit of charge found on a free particle; all charge is a whole-number multiple of it."
+      },
+      {
+       "term": "Coulomb's law",
+       "def": "F = k|q~1~q~2~|/r², the force between two point charges."
+      },
+      {
+       "term": "superposition (forces)",
+       "def": "The net force on a charge is the vector sum of the individual forces from all other charges."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A charge of 8.0 × 10⁻¹⁹ C is measured on an object. How many elementary charges does this correspond to?",
+       "choices": [
+        "2",
+        "5",
+        "8",
+        "16"
+       ],
+       "answer": 1,
+       "explain": "8.0×10⁻¹⁹ C ÷ 1.60×10⁻¹⁹ C = 5, so the object carries exactly 5 elementary charges."
+      },
+      {
+       "q": "Two point charges are moved to three times their original separation. By what factor does the Coulomb force between them change?",
+       "choices": [
+        "1/3",
+        "1/9",
+        "3",
+        "9"
+       ],
+       "answer": 1,
+       "explain": "Coulomb's law follows F ∝ 1/r². Tripling r reduces the force by a factor of 3² = 9, leaving 1/9 of the original force."
+      },
+      {
+       "q": "Charges q~1~ = −2.0 μC and q~2~ = 6.0 μC are separated by 0.30 m. Find the magnitude of the force between them.",
+       "choices": [
+        "1.2 N",
+        "0.40 N",
+        "3.6 N",
+        "12 N"
+       ],
+       "answer": 0,
+       "explain": "F = k|q~1~q~2~|/r² = (8.99×10⁹)(2.0×10⁻⁶)(6.0×10⁻⁶)/(0.30)² = (8.99×10⁹)(1.2×10⁻¹¹)/0.09 ≈ 0.1079/0.09 ≈ 1.2 N."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Electric Field",
+     "minutes": 14,
+     "intro": "Instead of tracking the force between every possible pair of charges, physicists describe the influence of a charge on the space around it directly, using a field. This one shift in perspective makes complex charge arrangements far easier to handle.",
+     "sections": [
+      {
+       "heading": "Defining the Electric Field",
+       "body": [
+        "The **electric field** at a point is defined as the force per unit charge a small positive test charge would feel there: **E** = **F**/q. For a point charge Q, the field it produces at distance r is E = kQ/r², pointing radially outward from a positive charge and radially inward toward a negative one.",
+        "Once you know the field at a point, finding the force on any charge q placed there is immediate: **F** = q**E**. This separation — field first, then force — is what makes analyzing complicated charge distributions tractable."
+       ],
+       "example": {
+        "problem": "Find the electric field at a distance of 0.30 m from a point charge of 2.0 μC.",
+        "steps": [
+         "Apply E = kQ/r².",
+         "E = (8.99×10⁹)(2.0×10⁻⁶)/(0.30)².",
+         "Numerator: (8.99×10⁹)(2.0×10⁻⁶) = 17,980.",
+         "E = 17,980/0.090 ≈ 1.998×10⁵ N/C."
+        ],
+        "answer": "About 2.0 × 10⁵ N/C, directed radially outward."
+       }
+      },
+      {
+       "heading": "Field Lines and Superposition",
+       "body": [
+        "**Electric field lines** provide a visual map: they point in the direction of the field, and their density represents field strength — closely spaced lines mean a strong field, widely spaced lines mean a weak one. Field lines never cross, since the field at any point has only one direction.",
+        "For multiple charges, the total field at a point is the vector sum of the individual fields each charge produces there, a direct consequence of superposition. This lets you build up the field of complex objects, like charged rods or rings, by treating them as collections of point charges."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "electric field",
+       "def": "E = F/q, the force per unit charge at a point in space, produced by other charges."
+      },
+      {
+       "term": "field line",
+       "def": "A curve indicating the direction of the electric field, with density representing field strength."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A charge of 4.0 μC is placed at a point where the electric field is 5.0 × 10⁴ N/C. What force does it experience?",
+       "choices": [
+        "0.20 N",
+        "2.0 N",
+        "20 N",
+        "0.020 N"
+       ],
+       "answer": 0,
+       "explain": "F = qE = (4.0×10⁻⁶)(5.0×10⁴) = 0.20 N."
+      },
+      {
+       "q": "Why do electric field lines never cross one another?",
+       "choices": [
+        "Crossing lines would represent zero field strength",
+        "The field at any point has a single, well-defined direction, and crossing would imply two directions at once",
+        "Field lines only exist near positive charges",
+        "Field lines are just an artistic convention with no physical meaning"
+       ],
+       "answer": 1,
+       "explain": "Since the electric field at a given point is a single vector with one direction, two crossing lines would incorrectly suggest the field pointed two different ways at the same location."
+      },
+      {
+       "q": "Find the electric field 0.50 m from a point charge of 6.0 μC.",
+       "choices": [
+        "2.16 × 10⁵ N/C",
+        "1.08 × 10⁵ N/C",
+        "5.4 × 10⁴ N/C",
+        "4.3 × 10⁵ N/C"
+       ],
+       "answer": 0,
+       "explain": "E = kQ/r² = (8.99×10⁹)(6.0×10⁻⁶)/(0.50)² = 53,940/0.25 ≈ 2.16×10⁵ N/C."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Gauss's Law",
+     "minutes": 16,
+     "intro": "For charge distributions with high symmetry — spheres, cylinders, infinite planes — there is a dramatically faster way to find the electric field than adding up point-charge contributions one at a time. Gauss's law is that shortcut, and it reveals a deep truth about how charge relates to field.",
+     "sections": [
+      {
+       "heading": "Electric Flux and Gauss's Law",
+       "body": [
+        "**Electric flux** through a surface measures how much electric field 'passes through' it: Φ = EA cos θ for a uniform field through a flat surface, where θ is the angle between the field and the surface's normal (perpendicular) direction. **Gauss's law** states that the total electric flux through any closed surface equals the enclosed charge divided by the permittivity of free space: Φ~total~ = Q~enc~/ε~0~, where ε~0~ = 8.85 × 10⁻¹² C²/(N·m²).",
+        "The power of Gauss's law is that it holds for *any* closed surface, but it is only easy to use algebraically when the charge distribution has enough symmetry (spherical, cylindrical, or planar) that the field's magnitude is constant over a cleverly chosen Gaussian surface."
+       ],
+       "example": {
+        "problem": "A closed surface encloses a total charge of 4.0 μC. Find the total electric flux through the surface.",
+        "steps": [
+         "Apply Gauss's law: Φ~total~ = Q~enc~/ε~0~.",
+         "Φ~total~ = (4.0×10⁻⁶)/(8.85×10⁻¹²).",
+         "Φ~total~ ≈ 4.52×10⁵ N·m²/C."
+        ],
+        "answer": "About 4.52 × 10⁵ N·m²/C."
+       }
+      },
+      {
+       "heading": "Using Symmetry to Find Fields",
+       "body": [
+        "For a uniformly charged sphere, a spherical Gaussian surface outside the charge gives E(4πr²) = Q~enc~/ε~0~, which rearranges to E = kQ/r² — exactly Coulomb's law field, confirming that a uniformly charged sphere behaves, from the outside, like a point charge at its center.",
+        "For an infinite charged plane with surface charge density σ, a 'pillbox' Gaussian surface straddling the plane gives a field E = σ/(2ε~0~) that is constant in magnitude and points directly away from the plane on both sides, regardless of distance — a very different behavior from the point-charge case."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "electric flux",
+       "def": "Φ, a measure of the electric field passing through a surface, Φ = EA cos θ for a uniform field."
+      },
+      {
+       "term": "Gauss's law",
+       "def": "Φ~total~ = Q~enc~/ε~0~, relating total electric flux through a closed surface to the enclosed charge."
+      },
+      {
+       "term": "permittivity of free space",
+       "def": "ε~0~ = 8.85 × 10⁻¹² C²/(N·m²), the constant relating electric flux to enclosed charge."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A closed surface encloses a total charge of 2.0 μC. Find the electric flux through it.",
+       "choices": [
+        "1.77 × 10⁵ N·m²/C",
+        "2.26 × 10⁵ N·m²/C",
+        "8.85 × 10⁴ N·m²/C",
+        "4.52 × 10⁵ N·m²/C"
+       ],
+       "answer": 1,
+       "explain": "Φ = Q~enc~/ε~0~ = (2.0×10⁻⁶)/(8.85×10⁻¹²) ≈ 2.26×10⁵ N·m²/C."
+      },
+      {
+       "q": "A closed surface encloses zero net charge (equal positive and negative charge inside). What is the total electric flux through the surface?",
+       "choices": [
+        "Zero",
+        "Positive and large",
+        "Negative and large",
+        "Cannot be determined without more information"
+       ],
+       "answer": 0,
+       "explain": "Gauss's law depends only on the net enclosed charge, Φ = Q~enc~/ε~0~. If the enclosed charge sums to zero, the total flux through the closed surface is exactly zero, even if the field is nonzero at individual points on the surface."
+      },
+      {
+       "q": "Why is Gauss's law most useful for calculating fields from spherical, cylindrical, or planar charge distributions specifically?",
+       "choices": [
+        "Because Gauss's law only applies to those specific shapes",
+        "Because their symmetry allows the field's magnitude to be treated as constant over a well-chosen Gaussian surface",
+        "Because those are the only shapes with any electric flux",
+        "Because irregular shapes do not obey Gauss's law"
+       ],
+       "answer": 1,
+       "explain": "Gauss's law is true for any closed surface and any charge distribution, but it is only algebraically easy to solve when symmetry lets you pull E out of the flux integral as a constant over the chosen Gaussian surface."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Electric Potential and Capacitance",
+   "summary": "The energy perspective on electric fields, and the devices that store electrical energy by separating charge.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Electric Potential Energy and Potential",
+     "minutes": 14,
+     "intro": "Just as gravity has a potential energy, so does the electric force — and dividing that potential energy by charge gives one of the most useful quantities in all of electromagnetism: voltage.",
+     "sections": [
+      {
+       "heading": "Electric Potential Energy",
+       "body": [
+        "Since the electric force is conservative, it has an associated potential energy. For two point charges, U = kq~1~q~2~/r. Like charges (same sign) have positive potential energy that decreases as they move apart; opposite charges have negative potential energy that becomes more negative as they move closer, reflecting their mutual attraction.",
+        "Work done by an external agent to move a charge between two points equals the change in potential energy, W~ext~ = ΔU, when the charge's kinetic energy does not change (moved slowly, or comparing start and end at rest)."
+       ]
+      },
+      {
+       "heading": "Electric Potential (Voltage)",
+       "body": [
+        "**Electric potential** V is potential energy per unit charge, V = U/q, measured in volts (V = J/C). For a point charge, V = kQ/r. Potential, unlike potential energy, does not depend on the charge you place at a point — it is a property of the field itself at that location.",
+        "The potential difference between two points, ΔV, equals the work per unit charge needed to move a charge between them: W = qΔV. This is exactly what a 12 V car battery means: it does 12 joules of work on every coulomb of charge that flows through it."
+       ],
+       "example": {
+        "problem": "Find the electric potential at a distance of 0.50 m from a point charge of 5.0 μC.",
+        "steps": [
+         "Apply V = kQ/r.",
+         "V = (8.99×10⁹)(5.0×10⁻⁶)/0.50.",
+         "Numerator: (8.99×10⁹)(5.0×10⁻⁶) = 44,950.",
+         "V = 44,950/0.50 = 89,900 V."
+        ],
+        "answer": "About 8.99 × 10⁴ V."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "electric potential energy",
+       "def": "U = kq~1~q~2~/r for two point charges, the energy stored due to their relative position."
+      },
+      {
+       "term": "electric potential",
+       "def": "V = U/q, potential energy per unit charge, measured in volts."
+      },
+      {
+       "term": "volt",
+       "def": "The SI unit of electric potential, 1 V = 1 J/C."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A charge of 3.0 × 10⁻⁶ C moves through a potential difference of 6.0 V. How much work is done on the charge?",
+       "choices": [
+        "1.8 × 10⁻⁵ J",
+        "2.0 × 10⁻⁶ J",
+        "18 J",
+        "0.5 J"
+       ],
+       "answer": 0,
+       "explain": "W = qΔV = (3.0×10⁻⁶)(6.0) = 1.8×10⁻⁵ J."
+      },
+      {
+       "q": "Two point charges are both negative. What is the sign of their electric potential energy?",
+       "choices": [
+        "Always positive",
+        "Always negative",
+        "Always zero",
+        "Depends on their masses"
+       ],
+       "answer": 0,
+       "explain": "U = kq~1~q~2~/r. Multiplying two negative charges gives a positive product, so U is positive, reflecting that like charges (both negative) repel and their energy decreases as they separate."
+      },
+      {
+       "q": "Find the electric potential at a distance of 0.20 m from a point charge of 1.0 μC.",
+       "choices": [
+        "4.5 × 10⁴ V",
+        "9.0 × 10⁴ V",
+        "1.8 × 10⁴ V",
+        "2.25 × 10⁴ V"
+       ],
+       "answer": 1,
+       "explain": "V = kQ/r = (8.99×10⁹)(1.0×10⁻⁶)/0.20 = 8990/0.20 = 44,950 ≈ 9.0×10⁴ V."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Capacitors and Dielectrics",
+     "minutes": 16,
+     "intro": "A capacitor is one of the simplest devices in electronics — two conductors separated by a gap — yet it stores real electrical energy and shows up in everything from camera flashes to computer memory. Its behavior comes down to one clean ratio.",
+     "sections": [
+      {
+       "heading": "Capacitance",
+       "body": [
+        "**Capacitance** is the ratio of stored charge to the voltage across a capacitor's plates: C = Q/V, measured in farads (F = C/V). For a parallel-plate capacitor, C = ε~0~A/d, where A is the plate area and d is the separation between plates — capacitance grows with larger plates and shrinks with greater separation.",
+        "Capacitance is a purely geometric property of the capacitor itself; it does not depend on how much charge is currently stored or what voltage is applied, exactly as resistance does not depend on the current flowing through it."
+       ],
+       "example": {
+        "problem": "A parallel-plate capacitor has plate area 0.020 m² and plate separation 1.0 mm (0.0010 m). Find its capacitance.",
+        "steps": [
+         "Apply C = ε~0~A/d.",
+         "C = (8.85×10⁻¹²)(0.020)/(0.0010).",
+         "Numerator: (8.85×10⁻¹²)(0.020) = 1.77×10⁻¹³.",
+         "C = 1.77×10⁻¹³/0.0010 = 1.77×10⁻¹⁰ F."
+        ],
+        "answer": "1.77 × 10⁻¹⁰ F (177 pF)."
+       }
+      },
+      {
+       "heading": "Dielectrics",
+       "body": [
+        "Inserting an insulating material (a **dielectric**) between a capacitor's plates increases its capacitance by a factor κ (the dielectric constant), specific to the material: C' = κC~vacuum~. The dielectric's molecules become polarized in the field, partially canceling it and allowing more charge to be stored for the same voltage.",
+        "Dielectrics also raise the maximum voltage a capacitor can withstand before the insulating material breaks down and current arcs through it, which is why real capacitors almost always contain a dielectric rather than a vacuum or air gap alone."
+       ],
+       "example": {
+        "problem": "The capacitor from the previous example (177 pF in vacuum) has a dielectric with κ = 5.0 inserted between its plates. Find the new capacitance.",
+        "steps": [
+         "Apply C' = κC.",
+         "C' = 5.0 × 177 pF.",
+         "C' = 885 pF."
+        ],
+        "answer": "885 pF (8.85 × 10⁻¹⁰ F)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "capacitance",
+       "def": "C = Q/V, the ratio of stored charge to voltage, measured in farads."
+      },
+      {
+       "term": "dielectric",
+       "def": "An insulating material inserted between capacitor plates that increases capacitance by a factor κ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A capacitor stores 6.0 × 10⁻⁵ C of charge at 12 V. Find its capacitance.",
+       "choices": [
+        "5.0 × 10⁻⁶ F",
+        "7.2 × 10⁻⁴ F",
+        "2.0 × 10⁻⁶ F",
+        "5.0 × 10⁻⁵ F"
+       ],
+       "answer": 0,
+       "explain": "C = Q/V = (6.0×10⁻⁵)/12 = 5.0×10⁻⁶ F."
+      },
+      {
+       "q": "A parallel-plate capacitor's plate separation is doubled, with plate area unchanged. What happens to its capacitance?",
+       "choices": [
+        "It doubles",
+        "It is cut in half",
+        "It stays the same",
+        "It quadruples"
+       ],
+       "answer": 1,
+       "explain": "C = ε~0~A/d is inversely proportional to plate separation d. Doubling d halves the capacitance."
+      },
+      {
+       "q": "A capacitor with vacuum capacitance 40 pF has a dielectric with κ = 3.0 inserted. Find the new capacitance.",
+       "choices": [
+        "13.3 pF",
+        "43 pF",
+        "120 pF",
+        "90 pF"
+       ],
+       "answer": 2,
+       "explain": "C' = κC = 3.0 × 40 pF = 120 pF."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Capacitor Combinations and Stored Energy",
+     "minutes": 16,
+     "intro": "Combine capacitors in series or parallel, exactly as with resistors but with the roles reversed, and you can build any capacitance a circuit needs. Every charged capacitor also stores real energy in its electric field, ready to be released.",
+     "sections": [
+      {
+       "heading": "Series and Parallel Capacitors",
+       "body": [
+        "Capacitors in **parallel** share the same voltage, and their capacitances simply add: C~total~ = C~1~ + C~2~ + ... Capacitors in **series** share the same charge, and their capacitances combine like resistors in parallel: 1/C~total~ = 1/C~1~ + 1/C~2~ + ... This is the opposite pattern from resistor combination rules, and mixing them up is a common source of errors.",
+        "Series capacitors always give a total capacitance smaller than the smallest individual capacitor, while parallel capacitors always give a total larger than the largest individual one."
+       ],
+       "example": {
+        "problem": "Find the equivalent capacitance of a 4.0 μF and a 6.0 μF capacitor connected (a) in parallel and (b) in series.",
+        "steps": [
+         "Parallel: C~total~ = C~1~ + C~2~ = 4.0 + 6.0 = 10.0 μF.",
+         "Series: 1/C~total~ = 1/4.0 + 1/6.0 = 3/12 + 2/12 = 5/12.",
+         "C~total~ (series) = 12/5 = 2.4 μF."
+        ],
+        "answer": "Parallel: 10.0 μF. Series: 2.4 μF."
+       }
+      },
+      {
+       "heading": "Energy Stored in a Capacitor",
+       "body": [
+        "A charged capacitor stores energy U = ½CV² = ½QV = Q²/(2C) in its electric field between the plates. This stored energy is why capacitors are used in camera flashes and defibrillators: they can charge slowly over seconds but release their stored energy in a fraction of a second, delivering a large burst of power.",
+        "The energy is stored in the electric field itself, not in the plates as physical objects — this is more clearly seen by expressing the energy in terms of energy density, u = ½ε~0~E², which shows that any region of space with an electric field carries energy, whether or not a capacitor's plates are physically present there."
+       ],
+       "example": {
+        "problem": "A 100 μF capacitor is charged to 12 V. Find the energy stored.",
+        "steps": [
+         "Apply U = ½CV².",
+         "U = ½(100×10⁻⁶)(12)².",
+         "U = ½(100×10⁻⁶)(144) = ½(0.0144).",
+         "U = 0.0072 J."
+        ],
+        "answer": "7.2 × 10⁻³ J (7.2 mJ)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "capacitors in parallel",
+       "def": "Share the same voltage; total capacitance is the sum of individual capacitances."
+      },
+      {
+       "term": "capacitors in series",
+       "def": "Share the same charge; total capacitance combines as 1/C~total~ = Σ(1/C~i~)."
+      },
+      {
+       "term": "energy stored in a capacitor",
+       "def": "U = ½CV², the electrical energy held in the capacitor's electric field."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Two 8.0 μF capacitors are connected in series. Find the equivalent capacitance.",
+       "choices": [
+        "16.0 μF",
+        "4.0 μF",
+        "8.0 μF",
+        "2.0 μF"
+       ],
+       "answer": 1,
+       "explain": "For two equal capacitors in series, 1/C~total~ = 1/8.0 + 1/8.0 = 2/8.0, so C~total~ = 8.0/2 = 4.0 μF."
+      },
+      {
+       "q": "A 50 μF capacitor is charged to 10 V. How much energy does it store?",
+       "choices": [
+        "2.5 × 10⁻³ J",
+        "5.0 × 10⁻⁴ J",
+        "5.0 × 10⁻³ J",
+        "2.5 × 10⁻⁴ J"
+       ],
+       "answer": 0,
+       "explain": "U = ½CV² = ½(50×10⁻⁶)(10)² = ½(50×10⁻⁶)(100) = ½(5.0×10⁻³) = 2.5×10⁻³ J."
+      },
+      {
+       "q": "Why do capacitors combine oppositely to resistors (parallel capacitors add directly, series capacitors add as reciprocals)?",
+       "choices": [
+        "It is an arbitrary convention with no physical basis",
+        "Parallel capacitors share voltage and add charge storage directly; series capacitors share charge, so adding plate separation effectively reduces total capacitance",
+        "Capacitors do not actually combine differently from resistors",
+        "Capacitance is not a well-defined quantity for combinations"
+       ],
+       "answer": 1,
+       "explain": "In parallel, each capacitor independently stores charge at the same voltage, so total stored charge (and thus capacitance) simply adds. In series, the same charge sits on every capacitor, effectively acting like one capacitor with greater total plate separation, which reduces overall capacitance — hence the reciprocal sum rule."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Current, Resistance, and DC Circuits",
+   "summary": "How charge flows through a circuit, the rules governing series and parallel combinations, and the general method for solving any DC network.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Electric Current and Resistance",
+     "minutes": 14,
+     "intro": "A circuit is only useful once charge is actually moving through it in a controlled way. Current and resistance describe exactly how much charge flows and how strongly a material opposes that flow.",
+     "sections": [
+      {
+       "heading": "Electric Current",
+       "body": [
+        "**Electric current** is the rate at which charge flows past a point, I = ΔQ/Δt, measured in amperes (A = C/s). By convention, current direction is defined as the direction positive charge would flow, even in metals where it is actually negative electrons moving the opposite way.",
+        "For a current to flow continuously, a circuit must form a complete conducting loop, and something (a battery or other source) must maintain a potential difference to keep driving charge around that loop against any resistance."
+       ]
+      },
+      {
+       "heading": "Resistance and Resistivity",
+       "body": [
+        "**Resistance** measures a material's opposition to current flow, related to voltage and current by **Ohm's law**: V = IR, with resistance measured in ohms (Ω). For a uniform wire, resistance depends on the material and geometry: R = ρL/A, where ρ is the material's **resistivity**, L is length, and A is cross-sectional area.",
+        "Longer, thinner wires have more resistance; shorter, thicker wires have less. This is why household wiring uses thick copper (low resistivity, large area) for high-current circuits, while a thin nichrome wire (high resistivity) is chosen for a toaster's heating element, where high resistance is actually desired to generate heat."
+       ],
+       "example": {
+        "problem": "A copper wire (resistivity ρ = 1.68 × 10⁻⁸ Ω·m) is 10 m long with cross-sectional area 1.0 × 10⁻⁶ m². Find its resistance.",
+        "steps": [
+         "Apply R = ρL/A.",
+         "R = (1.68×10⁻⁸)(10)/(1.0×10⁻⁶).",
+         "Numerator: (1.68×10⁻⁸)(10) = 1.68×10⁻⁷.",
+         "R = 1.68×10⁻⁷/1.0×10⁻⁶ = 0.168 Ω."
+        ],
+        "answer": "0.168 Ω."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "electric current",
+       "def": "I = ΔQ/Δt, the rate of charge flow, measured in amperes."
+      },
+      {
+       "term": "Ohm's law",
+       "def": "V = IR, relating voltage, current, and resistance."
+      },
+      {
+       "term": "resistivity",
+       "def": "ρ, a material property determining resistance via R = ρL/A."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A wire carries 3.0 C of charge past a point in 0.50 s. Find the current.",
+       "choices": [
+        "1.5 A",
+        "6.0 A",
+        "0.17 A",
+        "3.5 A"
+       ],
+       "answer": 1,
+       "explain": "I = ΔQ/Δt = 3.0/0.50 = 6.0 A."
+      },
+      {
+       "q": "A wire's length is doubled while its cross-sectional area and material stay the same. What happens to its resistance?",
+       "choices": [
+        "It doubles",
+        "It is halved",
+        "It stays the same",
+        "It quadruples"
+       ],
+       "answer": 0,
+       "explain": "R = ρL/A is directly proportional to length. Doubling L (with A and ρ fixed) doubles the resistance."
+      },
+      {
+       "q": "A 12 V source drives 2.0 A of current through a resistor. Find its resistance.",
+       "choices": [
+        "24 Ω",
+        "6.0 Ω",
+        "0.17 Ω",
+        "14 Ω"
+       ],
+       "answer": 1,
+       "explain": "By Ohm's law, R = V/I = 12/2.0 = 6.0 Ω."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "DC Circuits: Series and Parallel Combinations",
+     "minutes": 18,
+     "intro": "Most real circuits combine series and parallel sections together, and the trick to analyzing them is reducing the network step by step into simpler equivalent resistances before working back to find individual currents and voltages.",
+     "sections": [
+      {
+       "heading": "Series and Parallel Resistors",
+       "body": [
+        "Resistors in **series** share the same current, and total resistance is the direct sum: R~total~ = R~1~ + R~2~ + ... Resistors in **parallel** share the same voltage, and total resistance combines as 1/R~total~ = 1/R~1~ + 1/R~2~ + ..., always giving a total smaller than the smallest individual resistor.",
+        "A useful mental check: adding a resistor in series always increases total resistance (more obstacles in the only path), while adding a resistor in parallel always decreases total resistance (more paths for current to take)."
+       ]
+      },
+      {
+       "heading": "Analyzing Combined Circuits",
+       "body": [
+        "For a circuit combining both series and parallel elements, work from the innermost combination outward: first collapse any purely parallel or purely series groups into single equivalent resistors, then treat that equivalent resistor as part of the next level of the circuit, repeating until one single equivalent resistance remains.",
+        "Once you know the total current from the battery (using Ohm's law on the full equivalent resistance), work backward through the circuit: the same current flows through series sections, while parallel sections share the voltage across them and divide the current according to each branch's resistance."
+       ],
+       "example": {
+        "problem": "In a circuit, a 6.0 Ω and a 3.0 Ω resistor are connected in parallel, and this combination is connected in series with a 4.0 Ω resistor, all across a 12 V battery. Find the total current from the battery and the current through the 6.0 Ω resistor.",
+        "steps": [
+         "Find the parallel combination: 1/R~p~ = 1/6.0 + 1/3.0 = 1/6.0 + 2/6.0 = 3/6.0, so R~p~ = 2.0 Ω.",
+         "Find total resistance: R~total~ = R~p~ + 4.0 = 2.0 + 4.0 = 6.0 Ω.",
+         "Find total current: I~total~ = V/R~total~ = 12/6.0 = 2.0 A.",
+         "Find voltage across the parallel section: V~p~ = I~total~ × R~p~ = 2.0 × 2.0 = 4.0 V. Current through 6.0 Ω: I = V~p~/6.0 = 4.0/6.0 ≈ 0.67 A."
+        ],
+        "answer": "Total current = 2.0 A; current through the 6.0 Ω resistor ≈ 0.67 A."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "series resistors",
+       "def": "Share the same current; total resistance is the direct sum of individual resistances."
+      },
+      {
+       "term": "parallel resistors",
+       "def": "Share the same voltage; total resistance combines as 1/R~total~ = Σ(1/R~i~), always less than the smallest resistor."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Three 6.0 Ω resistors are connected in series. Find the total resistance.",
+       "choices": [
+        "2.0 Ω",
+        "6.0 Ω",
+        "18 Ω",
+        "12 Ω"
+       ],
+       "answer": 2,
+       "explain": "Series resistances add directly: 6.0 + 6.0 + 6.0 = 18 Ω."
+      },
+      {
+       "q": "Two 10 Ω resistors are connected in parallel. Find the equivalent resistance.",
+       "choices": [
+        "20 Ω",
+        "10 Ω",
+        "5.0 Ω",
+        "2.0 Ω"
+       ],
+       "answer": 2,
+       "explain": "For two equal resistors in parallel, 1/R~total~ = 1/10 + 1/10 = 2/10, so R~total~ = 10/2 = 5.0 Ω."
+      },
+      {
+       "q": "Adding a new resistor in parallel to an existing resistor does what to the total resistance of that section?",
+       "choices": [
+        "Always increases it",
+        "Always decreases it",
+        "Has no effect",
+        "Increases it only if the new resistor is larger"
+       ],
+       "answer": 1,
+       "explain": "A parallel branch always provides an additional path for current, which always decreases total resistance below that of any single resistor already present."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Kirchhoff's Rules and RC Circuits",
+     "minutes": 18,
+     "intro": "Some circuits cannot be reduced to simple series and parallel combinations at all, and for those, Kirchhoff's two rules provide a completely general method. Adding a capacitor to a resistor circuit introduces time itself as a variable, producing the smooth charging curves used in timers and camera flashes.",
+     "sections": [
+      {
+       "heading": "Kirchhoff's Rules",
+       "body": [
+        "**Kirchhoff's junction rule** states that the total current flowing into any junction equals the total current flowing out — a direct statement of charge conservation. **Kirchhoff's loop rule** states that the sum of voltage changes around any closed loop in a circuit equals zero — a statement of energy conservation, since a charge returning to its starting point must have zero net change in potential energy.",
+        "For circuits that cannot be simplified with simple series/parallel reduction (such as circuits with multiple batteries or unusual bridge configurations), applying both rules to enough independent junctions and loops produces a system of equations that can be solved for every unknown current."
+       ]
+      },
+      {
+       "heading": "RC Circuits",
+       "body": [
+        "An **RC circuit** (resistor and capacitor in series) does not respond instantly to a change in voltage; instead, the capacitor charges gradually, following V(t) = V~0~(1 − e^(−t/RC)) when charging from a battery. The quantity τ = RC, called the **time constant**, sets the natural timescale: after one time constant, the capacitor has reached about 63% of its final voltage.",
+        "This gradual charging (and, in discharge, gradual decay following V(t) = V~0~e^(−t/RC)) is the basis for timing circuits, camera flash recharge delays, and the smoothing of voltage spikes in power supplies."
+       ],
+       "example": {
+        "problem": "An RC circuit has R = 2000 Ω and C = 500 μF, charging from a 10 V battery. Find the time constant and the capacitor voltage after one time constant has elapsed.",
+        "steps": [
+         "Find the time constant: τ = RC = (2000)(500×10⁻⁶) = 1.0 s.",
+         "After one time constant (t = τ), the charging fraction is 1 − e⁻¹ ≈ 1 − 0.368 = 0.632.",
+         "Find the voltage: V = V~0~ × 0.632 = 10 × 0.632 = 6.32 V."
+        ],
+        "answer": "τ = 1.0 s; voltage after one time constant ≈ 6.3 V."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Kirchhoff's junction rule",
+       "def": "Total current into a junction equals total current out, from conservation of charge."
+      },
+      {
+       "term": "Kirchhoff's loop rule",
+       "def": "The sum of voltage changes around any closed circuit loop equals zero, from conservation of energy."
+      },
+      {
+       "term": "time constant",
+       "def": "τ = RC, the characteristic time over which a capacitor charges or discharges in an RC circuit."
+      }
+     ],
+     "practice": [
+      {
+       "q": "At a circuit junction, 5.0 A flows in from one wire and 2.0 A flows in from a second wire. If only one wire carries current out, how much current flows out?",
+       "choices": [
+        "3.0 A",
+        "7.0 A",
+        "2.5 A",
+        "10 A"
+       ],
+       "answer": 1,
+       "explain": "By Kirchhoff's junction rule, current in equals current out: 5.0 + 2.0 = 7.0 A must flow out."
+      },
+      {
+       "q": "An RC circuit has R = 500 Ω and C = 200 μF. Find its time constant.",
+       "choices": [
+        "0.10 s",
+        "1.0 s",
+        "0.010 s",
+        "10 s"
+       ],
+       "answer": 0,
+       "explain": "τ = RC = (500)(200×10⁻⁶) = 0.10 s."
+      },
+      {
+       "q": "What does Kirchhoff's loop rule express physically?",
+       "choices": [
+        "Conservation of charge at a junction",
+        "Conservation of energy around a closed circuit loop",
+        "Ohm's law for a single resistor",
+        "The definition of capacitance"
+       ],
+       "answer": 1,
+       "explain": "The loop rule says the total change in electric potential around any closed loop is zero, which follows from energy conservation: a charge returning to its start must have zero net potential energy change."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Magnetism and Electromagnetic Induction",
+   "summary": "The forces magnetic fields exert on moving charge, how currents themselves create magnetic fields, and how changing fields generate electricity.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Magnetic Force and Fields",
+     "minutes": 16,
+     "intro": "A magnetic field pushes on moving charge, but only under a very specific geometric condition, which is why compasses, motors, and mass spectrometers all rely on the same underlying force law.",
+     "sections": [
+      {
+       "heading": "Force on a Moving Charge",
+       "body": [
+        "A charge q moving with velocity v through a magnetic field B experiences a force F = qvB sin θ, where θ is the angle between the velocity and field directions. The direction of this force is perpendicular to both v and B, found using the right-hand rule, and it does no work on the charge since it is always perpendicular to velocity.",
+        "A charge moving parallel to a magnetic field (θ = 0°) feels no magnetic force at all, since sin 0° = 0. Only the velocity component perpendicular to the field contributes to the force, which is why a charged particle moving exactly along field lines travels in a straight line rather than curving."
+       ],
+       "example": {
+        "problem": "A proton (q = 1.6 × 10⁻¹⁹ C) moves at 2.0 × 10⁶ m/s perpendicular to a magnetic field of 0.50 T. Find the magnetic force on it.",
+        "steps": [
+         "Apply F = qvB sin θ, with θ = 90° (perpendicular), so sin θ = 1.",
+         "F = (1.6×10⁻¹⁹)(2.0×10⁶)(0.50).",
+         "F = (1.6×10⁻¹⁹)(1.0×10⁶).",
+         "F = 1.6×10⁻¹³ N."
+        ],
+        "answer": "1.6 × 10⁻¹³ N."
+       }
+      },
+      {
+       "heading": "Force on a Current-Carrying Wire",
+       "body": [
+        "A straight wire of length L carrying current I in a magnetic field feels a force F = BIL sin θ, since current is charge in motion. This force is the operating principle of every electric motor: current-carrying loops in a magnetic field experience forces that produce a continuous torque, spinning the motor's shaft.",
+        "Reversing either the current direction or the field direction reverses the force direction, which is exactly how commutators and electronic controllers switch current direction at the right moment to keep a motor spinning in one consistent direction."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "magnetic force on a charge",
+       "def": "F = qvB sin θ, perpendicular to both velocity and field, doing no work on the charge."
+      },
+      {
+       "term": "tesla (T)",
+       "def": "The SI unit of magnetic field strength."
+      },
+      {
+       "term": "force on a current-carrying wire",
+       "def": "F = BIL sin θ, the basis of electric motor operation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An electron moves exactly parallel to a magnetic field's direction. What magnetic force does it experience?",
+       "choices": [
+        "Maximum possible force",
+        "Zero force",
+        "A force perpendicular to its velocity only",
+        "It depends on the electron's charge sign"
+       ],
+       "answer": 1,
+       "explain": "F = qvB sin θ. With velocity parallel to the field, θ = 0° and sin 0° = 0, so the magnetic force is zero regardless of speed or field strength."
+      },
+      {
+       "q": "A wire of length 0.40 m carries 3.0 A of current perpendicular to a 0.25 T magnetic field. Find the force on the wire.",
+       "choices": [
+        "0.30 N",
+        "3.0 N",
+        "0.075 N",
+        "1.2 N"
+       ],
+       "answer": 0,
+       "explain": "F = BIL sin θ = (0.25)(3.0)(0.40)(1) = 0.30 N, since θ = 90° for perpendicular orientation."
+      },
+      {
+       "q": "Why does the magnetic force on a moving charge do no work on that charge?",
+       "choices": [
+        "Because magnetic fields are always zero in practice",
+        "Because the force is always perpendicular to the charge's velocity",
+        "Because the charge is not actually moving",
+        "Because magnetic force only acts on neutral particles"
+       ],
+       "answer": 1,
+       "explain": "Work requires a force component along the direction of displacement. Since F = qv × B is always perpendicular to v, the magnetic force can change a charge's direction but never its speed or kinetic energy."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Sources of Magnetic Field",
+     "minutes": 16,
+     "intro": "Magnetic fields are not fundamental in the way charge is — they are produced by moving charge, meaning every current-carrying wire is secretly an electromagnet. This lesson works out exactly how strong that field is.",
+     "sections": [
+      {
+       "heading": "The Field of a Long Straight Wire",
+       "body": [
+        "A long, straight current-carrying wire produces a magnetic field that circles around it, with magnitude B = μ~0~I/(2πr), where μ~0~ = 4π × 10⁻⁷ T·m/A is the permeability of free space and r is the distance from the wire. The field direction follows a right-hand rule: point your thumb along the current, and your fingers curl in the direction of the field.",
+        "This relationship shows the field weakens with distance (as 1/r, more slowly than the 1/r² of a point charge's electric field) and strengthens directly with current — doubling the current through a wire exactly doubles the magnetic field at any fixed distance from it."
+       ],
+       "example": {
+        "problem": "Find the magnetic field 0.050 m from a long straight wire carrying 10 A of current.",
+        "steps": [
+         "Apply B = μ~0~I/(2πr).",
+         "B = (4π×10⁻⁷)(10)/(2π×0.050).",
+         "The π cancels: B = (4×10⁻⁷×10)/(2×0.050) = (4×10⁻⁶)/(0.10).",
+         "B = 4.0×10⁻⁵ T."
+        ],
+        "answer": "4.0 × 10⁻⁵ T (40 μT), similar in magnitude to Earth's own field."
+       }
+      },
+      {
+       "heading": "Force Between Parallel Wires",
+       "body": [
+        "Two parallel current-carrying wires exert magnetic forces on each other, since each wire's current sits in the magnetic field created by the other. The force per unit length is F/L = μ~0~I~1~I~2~/(2πd), where d is the separation between the wires.",
+        "Currents in the same direction attract; currents in opposite directions repel — the opposite of the rule for like and unlike electric charges. This mutual force between current-carrying wires is, in fact, how the ampere itself was historically defined as a unit."
+       ],
+       "example": {
+        "problem": "Two long parallel wires, each carrying 5.0 A in the same direction, are separated by 0.020 m. Find the force per unit length between them.",
+        "steps": [
+         "Apply F/L = μ~0~I~1~I~2~/(2πd).",
+         "F/L = (4π×10⁻⁷)(5.0)(5.0)/(2π×0.020).",
+         "The π cancels: F/L = (4×10⁻⁷×25)/(2×0.020) = (1.0×10⁻⁵)/(0.040).",
+         "F/L = 2.5×10⁻⁴ N/m."
+        ],
+        "answer": "2.5 × 10⁻⁴ N/m, attractive (same-direction currents)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "permeability of free space",
+       "def": "μ~0~ = 4π × 10⁻⁷ T·m/A, the constant relating current to the magnetic field it produces."
+      },
+      {
+       "term": "field of a long straight wire",
+       "def": "B = μ~0~I/(2πr), circling around the wire, weakening as 1/r."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the magnetic field 0.10 m from a long straight wire carrying 20 A.",
+       "choices": [
+        "4.0 × 10⁻⁵ T",
+        "2.0 × 10⁻⁵ T",
+        "8.0 × 10⁻⁵ T",
+        "1.0 × 10⁻⁴ T"
+       ],
+       "answer": 0,
+       "explain": "B = μ~0~I/(2πr) = (4×10⁻⁷×20)/(2×0.10) = (8×10⁻⁶)/(0.20) = 4.0×10⁻⁵ T."
+      },
+      {
+       "q": "Two parallel wires carry current in opposite directions. Do they attract or repel each other?",
+       "choices": [
+        "Attract",
+        "Repel",
+        "Neither; no force exists",
+        "It depends on the wires' material"
+       ],
+       "answer": 1,
+       "explain": "Parallel wires with currents in opposite directions repel each other, the reverse of the same-direction case, which attracts."
+      },
+      {
+       "q": "If the current in a long straight wire is tripled, what happens to the magnetic field at a fixed distance from the wire?",
+       "choices": [
+        "It triples",
+        "It stays the same",
+        "It is cut to one-third",
+        "It increases ninefold"
+       ],
+       "answer": 0,
+       "explain": "B = μ~0~I/(2πr) is directly proportional to current I. Tripling I triples B at any fixed r."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Electromagnetic Induction and Faraday's Law",
+     "minutes": 18,
+     "intro": "A changing magnetic field can create an electric current all on its own, with no battery required — the discovery that made generators, transformers, and modern electrical power possible.",
+     "sections": [
+      {
+       "heading": "Faraday's Law",
+       "body": [
+        "**Faraday's law of induction** states that a changing magnetic flux through a loop induces an EMF (electromotive force, essentially an induced voltage): EMF = −N(dΦ/dt), where N is the number of loops (turns) and Φ = BA cos θ is the magnetic flux through one loop. The EMF depends only on the *rate* of change of flux, not the flux itself — a large, unchanging field induces nothing.",
+        "Flux can change by varying the field strength, the loop's area, or the angle between them — any of these three changes will induce an EMF, which is exactly why an electric generator works by mechanically rotating a coil within a fixed magnetic field, continuously changing the angle term."
+       ],
+       "example": {
+        "problem": "A 50-turn coil with area 0.020 m² sits in a magnetic field that increases uniformly from 0.20 T to 0.80 T over 0.50 s. Find the induced EMF.",
+        "steps": [
+         "Find the change in flux per loop: ΔΦ = ΔB × A = (0.80 − 0.20)(0.020) = (0.60)(0.020) = 0.012 Wb.",
+         "Find the rate of change: ΔΦ/Δt = 0.012/0.50 = 0.024 Wb/s.",
+         "Apply Faraday's law: EMF = N(ΔΦ/Δt) = 50 × 0.024."
+        ],
+        "answer": "1.2 V induced EMF."
+       }
+      },
+      {
+       "heading": "Lenz's Law",
+       "body": [
+        "**Lenz's law** supplies the negative sign in Faraday's law with physical meaning: the induced current always flows in the direction that opposes the change in flux that created it. If flux through a loop is increasing, the induced current creates its own magnetic field opposing that increase; if flux is decreasing, the induced current tries to maintain it.",
+        "Lenz's law is really a statement of energy conservation: if induced currents reinforced the change instead of opposing it, flux would runaway and generate energy from nothing, which is forbidden. This opposition is also the source of the resistance you feel pushing a magnet quickly into a coil of wire."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "magnetic flux",
+       "def": "Φ = BA cos θ, a measure of the magnetic field passing through a loop."
+      },
+      {
+       "term": "Faraday's law",
+       "def": "EMF = −N(dΦ/dt), an EMF is induced by a changing magnetic flux through a loop."
+      },
+      {
+       "term": "Lenz's law",
+       "def": "The induced current flows in the direction that opposes the change in flux that produced it."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A magnetic field through a stationary loop is constant and unchanging over time. What EMF is induced in the loop?",
+       "choices": [
+        "A large, constant EMF",
+        "Zero EMF",
+        "An EMF proportional to the field strength",
+        "It depends on the loop's resistance"
+       ],
+       "answer": 1,
+       "explain": "Faraday's law depends on the rate of change of flux, dΦ/dt. A constant, unchanging flux has zero rate of change, so no EMF is induced no matter how strong the field is."
+      },
+      {
+       "q": "A bar magnet is pushed into a coil of wire, north pole first. According to Lenz's law, what does the induced current do?",
+       "choices": [
+        "Creates a magnetic field that attracts the magnet further in",
+        "Creates a magnetic field that opposes the magnet's approach, resisting the push",
+        "Has no magnetic effect at all",
+        "Instantly stops the magnet completely"
+       ],
+       "answer": 1,
+       "explain": "Lenz's law states the induced current opposes the change causing it. As the magnet approaches (increasing flux), the induced current creates a field that pushes back against the magnet's motion, opposing its approach."
+      },
+      {
+       "q": "A single loop of area 0.10 m² experiences a flux change from 0.30 Wb to 0.50 Wb over 0.20 s. Find the magnitude of the induced EMF (N = 1).",
+       "choices": [
+        "1.0 V",
+        "0.10 V",
+        "2.0 V",
+        "0.40 V"
+       ],
+       "answer": 0,
+       "explain": "EMF = N(ΔΦ/Δt) = 1 × (0.50 − 0.30)/0.20 = 0.20/0.20 = 1.0 V."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

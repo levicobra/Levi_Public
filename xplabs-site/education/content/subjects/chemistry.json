@@ -1,0 +1,1339 @@
+{
+ "id": "chemistry",
+ "title": "Chemistry",
+ "domain": "physical",
+ "level": "Intro college",
+ "description": "A general chemistry survey covering atomic structure, bonding, chemical reactions, stoichiometry, and the states of matter. Every unit builds quantitative skill: you will balance equations, run mole calculations, and solve real numeric problems from the first lesson onward.",
+ "outcomes": [
+  "Classify matter, apply significant figures correctly, and convert units using dimensional analysis.",
+  "Determine electron configurations and explain periodic trends in atomic radius, ionization energy, and electronegativity.",
+  "Draw Lewis structures, predict molecular geometry with VSEPR, and explain polarity and intermolecular forces.",
+  "Balance chemical equations and solve stoichiometry problems, including limiting reactant and percent yield.",
+  "Apply the ideal gas law and solution concentration formulas (molarity, dilution) to real problems.",
+  "Use Le Chatelier's principle and pH calculations to analyze equilibrium and acid-base systems."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Matter, Measurement, and Atomic Structure",
+   "summary": "The foundational vocabulary of chemistry: how matter is classified and measured, and how atoms are built and named.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Classifying Matter and Scientific Measurement",
+     "minutes": 15,
+     "intro": "Every chemistry problem starts with two questions: what exactly is this substance, and how much of it do I have? This lesson gives you the classification system and the measurement tools — significant figures and dimensional analysis — that make every later calculation trustworthy.",
+     "sections": [
+      {
+       "heading": "Pure Substances and Mixtures",
+       "body": [
+        "Matter divides first into **pure substances**, which have a fixed composition, and **mixtures**, which do not. Pure substances split further into **elements** (cannot be broken down by chemical means, like copper or oxygen) and **compounds** (two or more elements chemically combined in a fixed ratio, like water or table salt, which can only be separated by chemical reactions).",
+        "Mixtures are **homogeneous** when composition is uniform throughout, such as salt water or air, and **heterogeneous** when it is not, such as sand mixed with gravel. Unlike compounds, mixtures can be separated by physical means alone — filtering, evaporating, or distilling — because no chemical bonds are broken in the process."
+       ]
+      },
+      {
+       "heading": "Significant Figures and Unit Conversion",
+       "body": [
+        "**Significant figures** communicate how precisely a quantity is known: a measurement of 12.30 g claims more precision than 12.3 g. When multiplying or dividing, your answer keeps only as many significant figures as the least precise measurement used; when adding or subtracting, it keeps only as many decimal places as the least precise value.",
+        "**Dimensional analysis** converts between units by multiplying by conversion factors written as fractions equal to one, canceling units like algebraic terms until only the target unit remains. This method works for any conversion, from grams to moles to liters, and catching a unit that fails to cancel is the fastest way to catch a setup mistake before you finish the arithmetic."
+       ],
+       "example": {
+        "problem": "Convert 3.75 lb to grams, given that 1 lb = 453.6 g.",
+        "steps": [
+         "Write the conversion factor so pounds cancel: 3.75 lb × (453.6 g / 1 lb).",
+         "The 'lb' units cancel, leaving grams: 3.75 × 453.6 g.",
+         "Multiply: 3.75 × 453.6 = 1701 g."
+        ],
+        "answer": "1701 g (about 1.70 × 10³ g)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "element",
+       "def": "A pure substance that cannot be broken down into simpler substances by chemical means."
+      },
+      {
+       "term": "compound",
+       "def": "A pure substance made of two or more elements chemically combined in a fixed ratio."
+      },
+      {
+       "term": "homogeneous mixture",
+       "def": "A mixture with uniform composition throughout, such as salt water."
+      },
+      {
+       "term": "significant figures",
+       "def": "The digits in a measurement that carry real precision, including the last estimated digit."
+      },
+      {
+       "term": "dimensional analysis",
+       "def": "A method of unit conversion that multiplies by conversion factors so unwanted units cancel."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of these is a compound rather than a mixture?",
+       "choices": [
+        "Salt water",
+        "Air",
+        "Table salt (NaCl)",
+        "Sand and gravel"
+       ],
+       "answer": 2,
+       "explain": "Table salt is a compound: sodium and chlorine are chemically combined in a fixed 1:1 ratio and can only be separated by a chemical reaction, unlike the mixtures in the other choices."
+      },
+      {
+       "q": "A student measures a block's mass as 24.6 g and its volume as 5.15 mL. What density should be reported, respecting significant figures?",
+       "choices": [
+        "4.7767 g/mL",
+        "4.78 g/mL",
+        "4.8 g/mL",
+        "5 g/mL"
+       ],
+       "answer": 1,
+       "explain": "24.6 (3 sig figs) divided by 5.15 (3 sig figs) = 4.7767..., which must be rounded to 3 significant figures: 4.78 g/mL."
+      },
+      {
+       "q": "How many meters are in 250 cm, using dimensional analysis?",
+       "choices": [
+        "0.25 m",
+        "2.5 m",
+        "25 m",
+        "25000 m"
+       ],
+       "answer": 1,
+       "explain": "Set up the factor so cm cancels: 250 cm × (1 m / 100 cm) = 2.5 m."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Atoms, Isotopes, and Atomic Mass",
+     "minutes": 16,
+     "intro": "Everything you classified in the last lesson is ultimately built from atoms, and atoms of the same element are not always identical. This lesson explains the subatomic particles that define an element and shows how isotopes combine to produce the atomic masses on the periodic table.",
+     "sections": [
+      {
+       "heading": "Subatomic Particles and the Nuclear Atom",
+       "body": [
+        "An atom has a tiny, dense **nucleus** containing positively charged **protons** and neutral **neutrons**, surrounded by a cloud of negatively charged **electrons**. The **atomic number (Z)** equals the number of protons and defines which element an atom is — change the proton count and you have a different element entirely.",
+        "The **mass number (A)** is the total count of protons plus neutrons, and it is written as a superscript before the element symbol, like ^14^N. Because electrons have negligible mass compared to protons and neutrons, an atom's mass is essentially the mass of its nucleus."
+       ]
+      },
+      {
+       "heading": "Isotopes and Average Atomic Mass",
+       "body": [
+        "**Isotopes** are atoms of the same element with different numbers of neutrons, so they share the same atomic number but have different mass numbers. Chlorine, for instance, occurs naturally as both chlorine-35 and chlorine-37, and both behave chemically like chlorine because chemistry depends on protons and electrons, not neutrons.",
+        "The atomic mass listed on the periodic table is a **weighted average** of every naturally occurring isotope, weighted by how abundant each one is. This is why chlorine's atomic mass, 35.45 amu, is not a whole number — it reflects a mixture that is mostly chlorine-35 with a smaller share of the heavier chlorine-37."
+       ],
+       "example": {
+        "problem": "Chlorine is 75.76% chlorine-35 (mass 34.97 amu) and 24.24% chlorine-37 (mass 36.97 amu). Find the average atomic mass.",
+        "steps": [
+         "Convert each percentage to a decimal fraction: 0.7576 and 0.2424.",
+         "Multiply each isotope's mass by its fraction: 34.97 × 0.7576 = 26.49; 36.97 × 0.2424 = 8.965.",
+         "Add the weighted masses: 26.49 + 8.965 = 35.45 amu."
+        ],
+        "answer": "35.45 amu, matching the periodic table value for chlorine."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "atomic number",
+       "def": "The number of protons in an atom's nucleus; it defines the element."
+      },
+      {
+       "term": "mass number",
+       "def": "The total number of protons plus neutrons in an atom's nucleus."
+      },
+      {
+       "term": "isotope",
+       "def": "An atom of a given element with a different number of neutrons than other atoms of that element."
+      },
+      {
+       "term": "atomic mass unit",
+       "def": "A unit of mass (amu) equal to 1/12 the mass of a carbon-12 atom, used for atomic and molecular masses."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An atom has 17 protons, 18 neutrons, and 17 electrons. What is its mass number?",
+       "choices": [
+        "17",
+        "18",
+        "35",
+        "52"
+       ],
+       "answer": 2,
+       "explain": "Mass number = protons + neutrons = 17 + 18 = 35. The electron count does not factor into mass number."
+      },
+      {
+       "q": "Two atoms both have atomic number 6 but different mass numbers. What are they?",
+       "choices": [
+        "Different elements",
+        "Isotopes of carbon",
+        "Ions of carbon",
+        "Isomers of carbon"
+       ],
+       "answer": 1,
+       "explain": "Same atomic number (same element, carbon) with different mass numbers means different neutron counts — the definition of isotopes."
+      },
+      {
+       "q": "Why is the atomic mass of chlorine on the periodic table (35.45 amu) not a whole number?",
+       "choices": [
+        "Because electrons contribute significant mass",
+        "Because it is a weighted average of naturally occurring isotopes",
+        "Because chlorine atoms lose mass over time",
+        "Because the periodic table rounds all values to two decimals"
+       ],
+       "answer": 1,
+       "explain": "Atomic masses on the periodic table are weighted averages across all naturally occurring isotopes of an element, which is why they are rarely whole numbers."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Periodic Table, Compounds, and Nomenclature",
+     "minutes": 17,
+     "intro": "The periodic table is not just a chart to memorize — it is a map of chemical behavior, organized so that elements in the same column share properties. This lesson connects that organization to how compounds are built and correctly named.",
+     "sections": [
+      {
+       "heading": "Organizing the Periodic Table",
+       "body": [
+        "Elements are arranged in **periods** (horizontal rows) and **groups** (vertical columns). Elements in the same group share similar chemical behavior because they have the same number of valence electrons — the group 1 alkali metals, for example, all react vigorously with water because each has exactly one valence electron to lose.",
+        "The table also separates elements into **metals** (left and center, shiny, conductive, tend to lose electrons), **nonmetals** (upper right, poor conductors, tend to gain electrons), and **metalloids** (the staircase boundary between them, like silicon, with mixed properties useful in semiconductors)."
+       ]
+      },
+      {
+       "heading": "Naming Ionic and Molecular Compounds",
+       "body": [
+        "**Ionic compounds** form between metals and nonmetals; you name the metal cation first, then the nonmetal anion with an '-ide' ending, as in sodium chloride. When a metal can form more than one charge (many transition metals), a Roman numeral in parentheses shows which charge is present, as in iron(III) oxide.",
+        "**Molecular (covalent) compounds** form between two nonmetals and use Greek prefixes (mono-, di-, tri-, tetra-) to show how many atoms of each element are present, as in carbon dioxide (CO~2~) or dinitrogen tetroxide (N~2~O~4~)."
+       ],
+       "example": {
+        "problem": "Determine the correct name for the ionic compound Fe~2~O~3~.",
+        "steps": [
+         "Oxide ions carry a charge of −2; with 3 oxide ions, total negative charge is −6.",
+         "The 2 iron atoms must together carry +6, so each iron ion is +3.",
+         "Iron is a transition metal with variable charge, so the Roman numeral (III) is required in the name."
+        ],
+        "answer": "Iron(III) oxide."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "group",
+       "def": "A vertical column of the periodic table; elements in a group share the same number of valence electrons."
+      },
+      {
+       "term": "period",
+       "def": "A horizontal row of the periodic table."
+      },
+      {
+       "term": "metalloid",
+       "def": "An element with properties between metals and nonmetals, found along the periodic table's staircase line."
+      },
+      {
+       "term": "ionic compound",
+       "def": "A compound formed by electrostatic attraction between a metal cation and a nonmetal anion."
+      },
+      {
+       "term": "polyatomic ion",
+       "def": "A charged group of covalently bonded atoms that acts as a single ion, such as sulfate (SO~4~^2−^)."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Elements in the same group of the periodic table share similar chemical behavior mainly because they have the same number of what?",
+       "choices": [
+        "Neutrons",
+        "Valence electrons",
+        "Total electrons",
+        "Protons"
+       ],
+       "answer": 1,
+       "explain": "Chemical behavior is driven by valence electrons (the outermost electrons), and elements in the same group share the same valence electron count."
+      },
+      {
+       "q": "What is the correct name for CuO, given that copper can form Cu^+^ or Cu^2+^ ions?",
+       "choices": [
+        "Copper oxide",
+        "Copper(I) oxide",
+        "Copper(II) oxide",
+        "Dicopper oxide"
+       ],
+       "answer": 2,
+       "explain": "Oxide is −2, so copper must be +2 to balance charge in a 1:1 compound, requiring the Roman numeral: copper(II) oxide."
+      },
+      {
+       "q": "Which compound uses Greek prefixes in its name because it forms between two nonmetals?",
+       "choices": [
+        "Sodium chloride",
+        "Iron(III) oxide",
+        "Carbon dioxide",
+        "Magnesium sulfate"
+       ],
+       "answer": 2,
+       "explain": "Carbon dioxide (CO~2~) is a molecular compound between two nonmetals, so it uses the prefix 'di-' to show two oxygen atoms rather than Roman numerals or charge balancing."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "The Mole and Stoichiometry",
+   "summary": "Counting atoms by weighing them, balancing equations, and using those balanced equations to predict exactly how much product a reaction makes.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Mole and Molar Mass",
+     "minutes": 15,
+     "intro": "Atoms are far too small and numerous to count one at a time, so chemists count them by the trillion-trillion using a single convenient unit: the mole. Once you can convert between grams, moles, and number of particles, every later stoichiometry problem becomes a matter of bookkeeping.",
+     "sections": [
+      {
+       "heading": "Avogadro's Number and the Mole",
+       "body": [
+        "A **mole** is defined as exactly 6.022 × 10^23^ particles — **Avogadro's number** — whether those particles are atoms, molecules, or ions. The mole exists so chemists can work with countable, human-scale numbers (like 2.5 moles) instead of astronomically large particle counts.",
+        "Just as 'a dozen' always means 12 regardless of what you are counting, 'a mole' always means 6.022 × 10^23^, whether you have a mole of carbon atoms or a mole of water molecules."
+       ]
+      },
+      {
+       "heading": "Molar Mass Calculations",
+       "body": [
+        "**Molar mass** is the mass in grams of one mole of a substance, and it is numerically equal to the atomic or molecular mass in amu found on the periodic table. Water's molar mass is 18.02 g/mol because two hydrogens (1.01 each) plus one oxygen (16.00) sum to 18.02.",
+        "Molar mass is the bridge between the lab (where you weigh grams on a balance) and the reaction (which happens mole by mole). Dividing a given mass by molar mass converts grams into moles; multiplying moles by molar mass converts back to grams."
+       ],
+       "example": {
+        "problem": "How many moles are in 90.0 g of water (molar mass 18.02 g/mol)?",
+        "steps": [
+         "Set up the conversion: moles = mass ÷ molar mass.",
+         "moles = 90.0 g ÷ 18.02 g/mol.",
+         "moles = 4.99 mol."
+        ],
+        "answer": "4.99 mol of water."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "mole",
+       "def": "A unit representing exactly 6.022 × 10^23^ particles of a substance."
+      },
+      {
+       "term": "Avogadro's number",
+       "def": "6.022 × 10^23^, the number of particles in one mole."
+      },
+      {
+       "term": "molar mass",
+       "def": "The mass in grams of one mole of a substance, numerically equal to its atomic or molecular mass in amu."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many moles are in 88.0 g of CO~2~ (molar mass 44.0 g/mol)?",
+       "choices": [
+        "0.500 mol",
+        "2.00 mol",
+        "44.0 mol",
+        "3872 mol"
+       ],
+       "answer": 1,
+       "explain": "moles = 88.0 g ÷ 44.0 g/mol = 2.00 mol."
+      },
+      {
+       "q": "What is the mass of 3.00 mol of NaCl (molar mass 58.5 g/mol)?",
+       "choices": [
+        "19.5 g",
+        "58.5 g",
+        "175.5 g",
+        "351 g"
+       ],
+       "answer": 2,
+       "explain": "mass = moles × molar mass = 3.00 × 58.5 = 175.5 g."
+      },
+      {
+       "q": "One mole of any substance contains how many particles?",
+       "choices": [
+        "1",
+        "12",
+        "1000",
+        "6.022 × 10^23^"
+       ],
+       "answer": 3,
+       "explain": "By definition, one mole equals Avogadro's number of particles, 6.022 × 10^23^, regardless of the substance."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Balancing Equations and Stoichiometric Calculations",
+     "minutes": 18,
+     "intro": "A chemical equation is a recipe, and like any recipe it must respect conservation of matter: the same atoms that go in as reactants must come out as products. This lesson shows how to balance that recipe and then use it to predict masses of product.",
+     "sections": [
+      {
+       "heading": "Balancing Chemical Equations",
+       "body": [
+        "The **law of conservation of mass** requires that atoms are neither created nor destroyed in a chemical reaction, so a balanced equation must have the same number of each type of atom on both sides. You balance an equation by adjusting **coefficients** (the numbers in front of formulas) — never subscripts, since changing a subscript changes what substance you are describing.",
+        "A reliable strategy is to balance the most complex molecule first, then balance atoms that appear in only one compound on each side, saving elemental oxygen or hydrogen for last since they often appear in multiple places."
+       ],
+       "example": {
+        "problem": "Balance the combustion of propane: C~3~H~8~ + O~2~ → CO~2~ + H~2~O.",
+        "steps": [
+         "Balance carbon first: 3 carbons in propane needs 3 CO~2~.",
+         "Balance hydrogen next: 8 hydrogens in propane needs 4 H~2~O (4 × 2 = 8).",
+         "Count oxygen on the product side: 3 CO~2~ gives 6 O, 4 H~2~O gives 4 O, total 10 O, so use 5 O~2~ on the reactant side."
+        ],
+        "answer": "C~3~H~8~ + 5O~2~ → 3CO~2~ + 4H~2~O."
+       }
+      },
+      {
+       "heading": "Mole-to-Mass Stoichiometry",
+       "body": [
+        "Once an equation is balanced, its coefficients give the **mole ratio** between any two substances in the reaction — the balanced propane equation says 1 mole of propane always requires 5 moles of oxygen and always yields 3 moles of carbon dioxide. Stoichiometry problems convert a known mass to moles, use the mole ratio to find moles of the target substance, then convert that back to mass.",
+        "This grams → moles → moles → grams path works for any pair of substances in a balanced equation, and it is the single most-used calculation in general chemistry."
+       ],
+       "example": {
+        "problem": "How many grams of CO~2~ form when 22.0 g of C~3~H~8~ (molar mass 44.1 g/mol) burns completely, using C~3~H~8~ + 5O~2~ → 3CO~2~ + 4H~2~O?",
+        "steps": [
+         "Convert grams of propane to moles: 22.0 g ÷ 44.1 g/mol = 0.499 mol C~3~H~8~.",
+         "Apply the mole ratio (3 mol CO~2~ per 1 mol C~3~H~8~): 0.499 × 3 = 1.50 mol CO~2~.",
+         "Convert moles of CO~2~ to grams using its molar mass, 44.0 g/mol: 1.50 × 44.0 = 66.0 g."
+        ],
+        "answer": "66.0 g of CO~2~."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "balanced equation",
+       "def": "A chemical equation with equal numbers of each atom on both sides, satisfying conservation of mass."
+      },
+      {
+       "term": "stoichiometric coefficient",
+       "def": "The number placed in front of a formula in a balanced equation, showing relative moles reacting or forming."
+      },
+      {
+       "term": "mole ratio",
+       "def": "The ratio between coefficients of two substances in a balanced equation, used to convert moles of one to moles of another."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In the balanced equation 2H~2~ + O~2~ → 2H~2~O, how many moles of O~2~ are needed to react completely with 6.0 mol H~2~?",
+       "choices": [
+        "1.5 mol",
+        "3.0 mol",
+        "6.0 mol",
+        "12 mol"
+       ],
+       "answer": 1,
+       "explain": "The mole ratio of O~2~ to H~2~ is 1:2, so 6.0 mol H~2~ × (1 mol O~2~ / 2 mol H~2~) = 3.0 mol O~2~."
+      },
+      {
+       "q": "Why must coefficients, not subscripts, be changed when balancing an equation?",
+       "choices": [
+        "Subscripts are always even numbers",
+        "Changing a subscript changes the identity of the substance",
+        "Coefficients cannot be fractions",
+        "Subscripts only apply to elements, not compounds"
+       ],
+       "answer": 1,
+       "explain": "A subscript is part of a formula's identity — changing H~2~O to H~2~O~2~ describes hydrogen peroxide, a different substance, not a balanced amount of water."
+      },
+      {
+       "q": "Using 2Al + 3Cl~2~ → 2AlCl~3~, how many moles of AlCl~3~ form from 4.0 mol Al reacting completely?",
+       "choices": [
+        "2.0 mol",
+        "4.0 mol",
+        "6.0 mol",
+        "8.0 mol"
+       ],
+       "answer": 1,
+       "explain": "The mole ratio of AlCl~3~ to Al is 2:2, or 1:1, so 4.0 mol Al produces 4.0 mol AlCl~3~."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Limiting Reactants and Percent Yield",
+     "minutes": 17,
+     "intro": "Real reactions rarely start with the exact amounts a recipe calls for — one ingredient usually runs out first and shuts the reaction down. This lesson teaches you to find that limiting reactant and to judge how efficiently a real reaction performed against its theoretical best.",
+     "sections": [
+      {
+       "heading": "Identifying the Limiting Reactant",
+       "body": [
+        "When reactants are not present in the exact mole ratio a balanced equation calls for, one runs out first — the **limiting reactant** — and stops the reaction regardless of how much of the other reactant, the **excess reactant**, remains. Comparing the mole ratio you have to the mole ratio the equation requires tells you which one runs out first.",
+        "A convenient method: calculate how much product each reactant could make on its own if it were the only limit, then trust whichever amount is smaller — that reactant is the limiting one, and its smaller product amount is what will actually form."
+       ],
+       "example": {
+        "problem": "In N~2~ + 3H~2~ → 2NH~3~, 1.50 mol N~2~ is mixed with 4.00 mol H~2~. Which is the limiting reactant, and how many moles of NH~3~ form?",
+        "steps": [
+         "Check how much H~2~ the available N~2~ would need: 1.50 mol N~2~ × (3 mol H~2~ / 1 mol N~2~) = 4.50 mol H~2~ needed, but only 4.00 mol is available.",
+         "Since there is not enough H~2~ to use up all the N~2~, H~2~ is the limiting reactant.",
+         "Use H~2~ to calculate NH~3~ formed: 4.00 mol H~2~ × (2 mol NH~3~ / 3 mol H~2~) = 2.67 mol NH~3~."
+        ],
+        "answer": "H~2~ is limiting; 2.67 mol of NH~3~ forms."
+       }
+      },
+      {
+       "heading": "Theoretical Yield and Percent Yield",
+       "body": [
+        "The **theoretical yield** is the maximum product mass predicted from the limiting reactant using pure stoichiometry — it assumes the reaction goes perfectly and every bit of limiting reactant converts to product. Real reactions almost always produce less, because of side reactions, incomplete reactions, or product lost during purification.",
+        "**Percent yield** compares what actually formed to what was theoretically possible: percent yield = (actual yield ÷ theoretical yield) × 100%. A percent yield close to 100% signals an efficient, well-controlled reaction."
+       ],
+       "example": {
+        "problem": "The theoretical yield of NH~3~ from the previous example is 2.67 mol, which is 45.5 g (2.67 mol × 17.03 g/mol). If a lab actually collects 38.0 g of NH~3~, what is the percent yield?",
+        "steps": [
+         "Percent yield = (actual yield ÷ theoretical yield) × 100%.",
+         "Percent yield = (38.0 g ÷ 45.5 g) × 100%.",
+         "Percent yield = 83.5%."
+        ],
+        "answer": "83.5% yield."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "limiting reactant",
+       "def": "The reactant that is completely consumed first, determining the maximum amount of product formed."
+      },
+      {
+       "term": "excess reactant",
+       "def": "A reactant that remains after the limiting reactant is used up."
+      },
+      {
+       "term": "theoretical yield",
+       "def": "The maximum possible amount of product predicted from stoichiometry, based on the limiting reactant."
+      },
+      {
+       "term": "percent yield",
+       "def": "The ratio of actual yield to theoretical yield, expressed as a percentage."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If a reaction has plenty of reactant A but only a small amount of reactant B, and B runs out first, what is B called?",
+       "choices": [
+        "The excess reactant",
+        "The limiting reactant",
+        "The theoretical reactant",
+        "The catalyst"
+       ],
+       "answer": 1,
+       "explain": "The reactant that is completely used up first, capping how much product can form, is by definition the limiting reactant."
+      },
+      {
+       "q": "A reaction has a theoretical yield of 50.0 g of product but only 42.5 g is actually collected. What is the percent yield?",
+       "choices": [
+        "42.5%",
+        "50.0%",
+        "85.0%",
+        "117.6%"
+       ],
+       "answer": 2,
+       "explain": "Percent yield = (actual ÷ theoretical) × 100% = (42.5 ÷ 50.0) × 100% = 85.0%."
+      },
+      {
+       "q": "Why is actual yield almost always less than theoretical yield in a real experiment?",
+       "choices": [
+        "Because theoretical yield ignores the limiting reactant",
+        "Because of side reactions, incomplete reactions, and product lost during purification",
+        "Because balanced equations overstate the mole ratio",
+        "Because percent yield is always capped at 90%"
+       ],
+       "answer": 1,
+       "explain": "Theoretical yield assumes a perfect reaction; real reactions lose product to side reactions, incompleteness, and purification steps, so actual yield is normally lower."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Electron Structure, Periodicity, and Bonding",
+   "summary": "How electrons are arranged inside atoms, how that arrangement creates periodic trends, and how atoms connect through ionic and covalent bonds.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Electron Configurations and the Quantum Model",
+     "minutes": 18,
+     "intro": "The periodic table's shape is not arbitrary — it is a direct picture of how electrons fill quantum-mechanical orbitals around the nucleus. Learning to write an electron configuration lets you predict an atom's chemical behavior just from its position on the table.",
+     "sections": [
+      {
+       "heading": "Orbitals and the Aufbau Principle",
+       "body": [
+        "Electrons occupy **orbitals**, regions of space grouped into **s**, **p**, **d**, and **f** subshells that hold a maximum of 2, 6, 10, and 14 electrons respectively. The **Aufbau principle** states that electrons fill the lowest-energy orbitals available first, building up an atom's configuration one electron at a time in order of increasing energy.",
+        "Two more rules refine this picture: the **Pauli exclusion principle** says no two electrons in an atom can share all four quantum numbers (so each orbital holds at most 2 electrons, with opposite spins), and **Hund's rule** says electrons fill separate orbitals within a subshell singly before pairing up."
+       ],
+       "example": {
+        "problem": "Write the electron configuration of iron (Z = 26).",
+        "steps": [
+         "Fill orbitals in order of increasing energy: 1s, 2s, 2p, 3s, 3p, 4s, 3d.",
+         "Track the running total of electrons placed: 1s^2^ (2), 2s^2^ (4), 2p^6^ (10), 3s^2^ (12), 3p^6^ (18), 4s^2^ (20).",
+         "The remaining 6 electrons (26 − 20) fill the 3d subshell."
+        ],
+        "answer": "1s^2^ 2s^2^ 2p^6^ 3s^2^ 3p^6^ 4s^2^ 3d^6^."
+       }
+      },
+      {
+       "heading": "Valence Electrons and the Periodic Table",
+       "body": [
+        "**Valence electrons** are the electrons in an atom's outermost occupied shell, and they are almost entirely responsible for chemical bonding and reactivity. The periodic table is arranged precisely so that an element's group number tells you its valence electron count for main-group elements — group 1 elements have 1 valence electron, group 17 elements have 7.",
+        "This is why elements in the same group behave alike: sodium and potassium (group 1) both have a single, loosely held valence electron, so both react vigorously by losing that electron to form a +1 ion."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "orbital",
+       "def": "A region of space around the nucleus where an electron is likely to be found, holding at most 2 electrons."
+      },
+      {
+       "term": "electron configuration",
+       "def": "A notation showing how electrons are distributed among an atom's subshells, such as 1s^2^ 2s^2^."
+      },
+      {
+       "term": "Aufbau principle",
+       "def": "The rule that electrons fill the lowest-energy orbitals available before occupying higher-energy ones."
+      },
+      {
+       "term": "valence electron",
+       "def": "An electron in an atom's outermost occupied shell, primarily responsible for chemical bonding."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the maximum number of electrons a p subshell can hold?",
+       "choices": [
+        "2",
+        "6",
+        "8",
+        "10"
+       ],
+       "answer": 1,
+       "explain": "A p subshell has 3 orbitals, each holding 2 electrons, for a maximum of 6 electrons."
+      },
+      {
+       "q": "What is the electron configuration of oxygen (Z = 8)?",
+       "choices": [
+        "1s^2^ 2s^2^ 2p^4^",
+        "1s^2^ 2s^2^ 2p^6^",
+        "1s^2^ 2s^4^ 2p^2^",
+        "1s^2^ 2s^2^ 2p^2^ 3s^2^"
+       ],
+       "answer": 0,
+       "explain": "Filling in order: 1s^2^ (2 electrons), 2s^2^ (4 total), 2p^4^ (8 total) matches oxygen's 8 electrons exactly."
+      },
+      {
+       "q": "Sodium and potassium react similarly with water mainly because they share the same what?",
+       "choices": [
+        "Atomic mass",
+        "Number of neutrons",
+        "Number of valence electrons",
+        "Number of protons"
+       ],
+       "answer": 2,
+       "explain": "Both are group 1 elements with exactly 1 valence electron, which they lose readily, driving their similar reactivity."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Periodic Trends",
+     "minutes": 16,
+     "intro": "The periodic table's layout predicts more than valence electron count — it predicts how big atoms are, how hard they hold onto electrons, and how strongly they attract electrons in a bond. These trends turn the table into a genuine prediction tool rather than a list to memorize.",
+     "sections": [
+      {
+       "heading": "Atomic and Ionic Radius",
+       "body": [
+        "**Atomic radius** decreases moving left to right across a period because each added electron enters the same shell while protons — and therefore nuclear pull — increase, drawing electrons in tighter. Atomic radius increases moving down a group because each row adds an entirely new occupied shell, farther from the nucleus.",
+        "Cations (positive ions) are smaller than their parent atoms because removing electrons reduces electron-electron repulsion and leaves remaining electrons pulled in tighter; anions (negative ions) are larger than their parent atoms because added electrons increase repulsion, pushing the electron cloud outward."
+       ]
+      },
+      {
+       "heading": "Ionization Energy and Electronegativity",
+       "body": [
+        "**Ionization energy**, the energy needed to remove an electron from a gaseous atom, increases across a period (atoms hold their electrons more tightly as nuclear charge grows) and decreases down a group (outer electrons are farther from the nucleus and more shielded). **Electronegativity**, an atom's pull on electrons within a bond, follows the same pattern: it increases across a period and decreases down a group.",
+        "Fluorine, in the upper right of the periodic table, has the highest electronegativity of any element, while francium, in the lower left, has among the lowest — this diagonal contrast is the single most useful periodic trend for predicting how electrons distribute in a bond."
+       ],
+       "example": {
+        "problem": "Explain why chlorine's first ionization energy (1251 kJ/mol) is much higher than sodium's (496 kJ/mol).",
+        "steps": [
+         "Both are in period 3, so compare their positions: sodium is on the far left (group 1), chlorine is on the far right (group 17).",
+         "Moving across period 3, nuclear charge increases while electrons still occupy the same shell, pulling valence electrons in more tightly.",
+         "Chlorine's valence electron is held far more tightly than sodium's lone, loosely bound electron, so removing it costs much more energy."
+        ],
+        "answer": "Chlorine's greater effective nuclear charge across the period makes its valence electron much harder to remove than sodium's."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "atomic radius",
+       "def": "A measure of the size of an atom, generally decreasing across a period and increasing down a group."
+      },
+      {
+       "term": "ionization energy",
+       "def": "The energy required to remove an electron from a gaseous atom or ion."
+      },
+      {
+       "term": "electronegativity",
+       "def": "A measure of an atom's ability to attract shared electrons in a chemical bond."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does atomic radius generally decrease moving left to right across a period?",
+       "choices": [
+        "Electrons are added to a new, farther shell",
+        "Nuclear charge increases while electrons stay in the same shell, pulling them in tighter",
+        "Atoms lose electrons across a period",
+        "Neutrons repel electrons more strongly on the right side"
+       ],
+       "answer": 1,
+       "explain": "Across a period, protons are added to the nucleus while the outer shell stays the same, so increasing nuclear charge pulls the electron cloud inward, shrinking atomic radius."
+      },
+      {
+       "q": "Which element has the highest electronegativity?",
+       "choices": [
+        "Francium",
+        "Sodium",
+        "Fluorine",
+        "Cesium"
+       ],
+       "answer": 2,
+       "explain": "Fluorine sits in the upper right of the periodic table, where electronegativity is highest, giving it the greatest pull on shared electrons of any element."
+      },
+      {
+       "q": "How does ionization energy change moving down a group, and why?",
+       "choices": [
+        "It increases, because atoms get heavier",
+        "It decreases, because outer electrons are farther from the nucleus and more shielded",
+        "It stays the same, because valence electron count is constant",
+        "It increases, because more shells means more attraction"
+       ],
+       "answer": 1,
+       "explain": "Down a group, valence electrons occupy shells farther from the nucleus and are shielded by more inner electrons, so less energy is needed to remove them — ionization energy decreases."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Ionic and Covalent Bonding, Lewis Structures",
+     "minutes": 18,
+     "intro": "Atoms bond because sharing or transferring electrons leaves them more stable than standing alone. This lesson shows the two major bonding strategies atoms use and gives you a step-by-step method for drawing the Lewis structures that represent covalent bonds.",
+     "sections": [
+      {
+       "heading": "Ionic Bonding",
+       "body": [
+        "An **ionic bond** forms when one atom transfers one or more electrons to another, typically a metal transferring to a nonmetal, creating a positive cation and a negative anion that attract each other electrostatically. Sodium (1 valence electron) readily gives that electron to chlorine (7 valence electrons, needing 1 more), producing Na^+^ and Cl^−^.",
+        "The result is not a single molecule but a **crystal lattice**, a repeating three-dimensional array of alternating cations and anions held together by the sum of many electrostatic attractions — which is why ionic compounds like table salt have high melting points and form hard, brittle crystals."
+       ]
+      },
+      {
+       "heading": "Covalent Bonding and Lewis Structures",
+       "body": [
+        "A **covalent bond** forms when two nonmetal atoms share one or more pairs of electrons rather than transferring them outright, each atom counting the shared pair toward its own stability. Most atoms bond to satisfy the **octet rule**, ending up with 8 valence electrons (2 for hydrogen), matching the stable electron arrangement of the nearest noble gas.",
+        "A **Lewis structure** draws every valence electron as either a bonding pair (a line between two atoms) or a lone pair (dots on one atom), giving a complete picture of an molecule's connectivity."
+       ],
+       "example": {
+        "problem": "Draw the Lewis structure of carbon dioxide, CO~2~.",
+        "steps": [
+         "Count total valence electrons: C has 4, each O has 6, so 4 + 6 + 6 = 16 valence electrons.",
+         "Place carbon in the center (least electronegative, bonds to both oxygens) and connect it to each oxygen with a single bond, using 4 electrons.",
+         "Distribute the remaining 12 electrons as lone pairs, then check each atom's octet: with single bonds only, carbon has just 4 electrons around it, so convert one lone pair on each oxygen into a second bond to carbon, forming two double bonds."
+        ],
+        "answer": "O=C=O, with each oxygen carrying two lone pairs and carbon satisfying its octet through two double bonds."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ionic bond",
+       "def": "A bond formed by electron transfer between atoms, creating oppositely charged ions that attract each other."
+      },
+      {
+       "term": "covalent bond",
+       "def": "A bond formed when two atoms share one or more pairs of electrons."
+      },
+      {
+       "term": "Lewis structure",
+       "def": "A diagram showing an atom's or molecule's valence electrons as bonding pairs and lone pairs."
+      },
+      {
+       "term": "octet rule",
+       "def": "The tendency of atoms to bond so as to have 8 valence electrons, matching a noble gas configuration."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What type of bond forms between sodium and chlorine, and why?",
+       "choices": [
+        "Covalent, because both are nonmetals",
+        "Ionic, because sodium transfers its valence electron to chlorine",
+        "Metallic, because sodium is a metal",
+        "Hydrogen bond, because chlorine is electronegative"
+       ],
+       "answer": 1,
+       "explain": "Sodium (1 valence electron, metal) transfers its electron to chlorine (7 valence electrons, nonmetal, needs 1 more), forming Na^+^ and Cl^−^ held together by an ionic bond."
+      },
+      {
+       "q": "How many total valence electrons must be placed when drawing the Lewis structure of ammonia, NH~3~ (N has 5 valence electrons, H has 1 each)?",
+       "choices": [
+        "5",
+        "6",
+        "8",
+        "10"
+       ],
+       "answer": 2,
+       "explain": "5 from nitrogen plus 1 from each of the 3 hydrogens (3 × 1 = 3) gives 5 + 3 = 8 total valence electrons."
+      },
+      {
+       "q": "Why does carbon dioxide need two double bonds instead of two single bonds in its Lewis structure?",
+       "choices": [
+        "Because oxygen never forms single bonds",
+        "Because single bonds would leave carbon with only 4 electrons, short of a full octet",
+        "Because carbon dioxide is an ionic compound",
+        "Because double bonds are required whenever two oxygens are present"
+       ],
+       "answer": 1,
+       "explain": "With only single bonds, carbon would have just 4 electrons around it (2 bonds × 2 electrons), missing the octet — the double bonds give carbon a full 8 electrons."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Molecular Geometry and States of Matter",
+   "summary": "Predicting the 3D shape of molecules, then using that shape and intermolecular attraction to explain gases, liquids, and solids.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "VSEPR Theory and Molecular Polarity",
+     "minutes": 17,
+     "intro": "A Lewis structure tells you which atoms are bonded, but it draws everything flat on the page — real molecules have three-dimensional shapes that determine how they interact with everything around them. This lesson gives you a rule for predicting that shape and for deciding whether the resulting molecule is polar.",
+     "sections": [
+      {
+       "heading": "Predicting Shapes with VSEPR",
+       "body": [
+        "**VSEPR theory** (Valence Shell Electron Pair Repulsion) predicts molecular shape on one simple idea: electron domains — bonding pairs and lone pairs around a central atom — repel each other and arrange themselves as far apart as possible. Counting the electron domains around the central atom tells you the base geometry: 2 domains give linear, 3 give trigonal planar, and 4 give tetrahedral.",
+        "Lone pairs take up more space than bonding pairs and push bonded atoms closer together, so a central atom with 4 domains but 1 lone pair (like nitrogen in NH~3~) is trigonal pyramidal, not tetrahedral, and one with 4 domains and 2 lone pairs (like oxygen in H~2~O) is bent."
+       ]
+      },
+      {
+       "heading": "Molecular Polarity",
+       "body": [
+        "A **bond dipole** exists whenever two bonded atoms have different electronegativities, giving the bond a partial negative end (toward the more electronegative atom) and partial positive end. Whether the whole molecule is polar depends on both bond dipoles and geometry: symmetric arrangements can cause individual bond dipoles to cancel out.",
+        "Carbon dioxide has two polar C=O bonds, but its linear shape points them in exactly opposite directions, so they cancel and CO~2~ is nonpolar overall. Water also has two polar O-H bonds, but its bent shape means the dipoles do not cancel, making water an overall polar molecule."
+       ],
+       "example": {
+        "problem": "Predict the shape and polarity of methane, CH~4~ (4 bonding pairs, no lone pairs on carbon).",
+        "steps": [
+         "Count electron domains on carbon: 4 bonding pairs, 0 lone pairs.",
+         "With 4 domains and no lone pairs, VSEPR predicts a tetrahedral shape.",
+         "The four C-H bond dipoles are arranged symmetrically around the tetrahedron and cancel exactly."
+        ],
+        "answer": "Tetrahedral shape; nonpolar overall, despite each C-H bond having a small individual dipole."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "VSEPR",
+       "def": "A model that predicts molecular shape from the repulsion between electron domains around a central atom."
+      },
+      {
+       "term": "electron domain",
+       "def": "A region of electron density around a central atom — either a bonding pair or a lone pair."
+      },
+      {
+       "term": "bond dipole",
+       "def": "A separation of partial charge along a bond caused by a difference in electronegativity."
+      },
+      {
+       "term": "molecular polarity",
+       "def": "The overall unevenness of charge distribution in a molecule, determined by bond dipoles and geometry together."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A central atom has 3 bonding pairs and 1 lone pair. What shape does VSEPR predict?",
+       "choices": [
+        "Tetrahedral",
+        "Trigonal pyramidal",
+        "Trigonal planar",
+        "Linear"
+       ],
+       "answer": 1,
+       "explain": "4 total electron domains (3 bonding + 1 lone) start from a tetrahedral arrangement, but with one position occupied by a lone pair instead of an atom, the visible molecular shape is trigonal pyramidal — this matches ammonia, NH~3~."
+      },
+      {
+       "q": "Why is CO~2~ nonpolar even though each C=O bond is individually polar?",
+       "choices": [
+        "Carbon and oxygen have equal electronegativity",
+        "The linear shape places the two bond dipoles in exactly opposite directions, canceling them",
+        "CO~2~ has no lone pairs anywhere",
+        "Double bonds cannot be polar"
+       ],
+       "answer": 1,
+       "explain": "CO~2~'s linear geometry points its two equal, opposite bond dipoles directly against each other, so they cancel and the molecule has no net dipole."
+      },
+      {
+       "q": "Water (H~2~O) has 2 bonding pairs and 2 lone pairs on oxygen. What shape and polarity does it have?",
+       "choices": [
+        "Linear, nonpolar",
+        "Bent, polar",
+        "Tetrahedral, nonpolar",
+        "Trigonal planar, polar"
+       ],
+       "answer": 1,
+       "explain": "4 electron domains with 2 lone pairs push the two O-H bonds into a bent shape, and unlike CO~2~, the bond dipoles do not cancel, making water polar."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Gases and the Ideal Gas Law",
+     "minutes": 18,
+     "intro": "Of the three common states of matter, gases are the simplest to describe mathematically because their particles are far apart and barely interact. A single equation, the ideal gas law, lets you predict how pressure, volume, temperature, and amount of gas all relate to each other.",
+     "sections": [
+      {
+       "heading": "Gas Laws and Kinetic Molecular Theory",
+       "body": [
+        "**Kinetic molecular theory** models a gas as a huge number of tiny particles in constant, random motion, colliding elastically with each other and the container walls, with negligible volume and no attraction between particles. This model explains **Boyle's law** (at constant temperature, pressure and volume are inversely related, P~1~V~1~ = P~2~V~2~) and **Charles's law** (at constant pressure, volume and temperature are directly related, V~1~/T~1~ = V~2~/T~2~).",
+        "Temperature in every gas law must be in **kelvin**, not Celsius, because these relationships only hold with an absolute temperature scale that starts at true zero motion. Convert with K = °C + 273."
+       ]
+      },
+      {
+       "heading": "The Ideal Gas Law",
+       "body": [
+        "The **ideal gas law**, PV = nRT, combines all the individual gas laws into one equation relating pressure (P), volume (V), moles (n), and temperature (T), using the gas constant R = 0.08206 L·atm/(mol·K). Given any three of the four variables, you can solve for the fourth.",
+        "At **standard temperature and pressure (STP)** — 0 °C (273 K) and 1 atm — one mole of any ideal gas occupies 22.4 L, a useful benchmark for sanity-checking your answers."
+       ],
+       "example": {
+        "problem": "Find the pressure of 0.500 mol of gas held in a 10.0 L container at 300 K.",
+        "steps": [
+         "Rearrange the ideal gas law to solve for pressure: P = nRT/V.",
+         "Substitute values: P = (0.500 mol)(0.08206 L·atm/mol·K)(300 K) / 10.0 L.",
+         "Compute the numerator: 0.500 × 0.08206 × 300 = 12.31, then divide by 10.0."
+        ],
+        "answer": "P ≈ 1.23 atm."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "pressure",
+       "def": "The force gas particles exert per unit area on their container's walls, often measured in atm."
+      },
+      {
+       "term": "ideal gas law",
+       "def": "The equation PV = nRT relating pressure, volume, moles, and temperature of a gas."
+      },
+      {
+       "term": "STP",
+       "def": "Standard temperature and pressure: 0 °C (273 K) and 1 atm, where one mole of ideal gas occupies 22.4 L."
+      },
+      {
+       "term": "kinetic molecular theory",
+       "def": "A model describing gas particles as constantly moving, colliding elastically, with negligible volume and attraction."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why must temperature be converted to kelvin before using the ideal gas law?",
+       "choices": [
+        "Kelvin is a larger unit than Celsius",
+        "Gas laws require an absolute scale that starts at true zero motion",
+        "R is only valid in Celsius",
+        "It does not matter which scale is used"
+       ],
+       "answer": 1,
+       "explain": "The gas law relationships depend on temperature being proportional to average kinetic energy, which only holds on an absolute scale like kelvin that starts at absolute zero."
+      },
+      {
+       "q": "What volume does 2.00 mol of an ideal gas occupy at STP?",
+       "choices": [
+        "11.2 L",
+        "22.4 L",
+        "44.8 L",
+        "67.2 L"
+       ],
+       "answer": 2,
+       "explain": "One mole occupies 22.4 L at STP, so 2.00 mol occupies 2.00 × 22.4 = 44.8 L."
+      },
+      {
+       "q": "A gas sample is heated at constant pressure, causing its volume to increase. Which gas law describes this directly?",
+       "choices": [
+        "Boyle's law",
+        "Charles's law",
+        "Avogadro's law",
+        "Dalton's law"
+       ],
+       "answer": 1,
+       "explain": "Charles's law relates volume and temperature at constant pressure (V~1~/T~1~ = V~2~/T~2~) — as temperature rises, volume rises proportionally."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Liquids, Solids, and Intermolecular Forces",
+     "minutes": 16,
+     "intro": "If gases are defined by particles that barely interact, liquids and solids are defined by the opposite: intermolecular forces strong enough to hold particles close together. This lesson catalogs those forces and shows how their relative strength explains everyday differences in boiling and melting points.",
+     "sections": [
+      {
+       "heading": "Types of Intermolecular Forces",
+       "body": [
+        "**Dispersion forces** (also called London forces) arise from momentary, shifting electron distributions and exist between all molecules, growing stronger with more electrons and larger surface area. **Dipole-dipole forces** occur between polar molecules, where the positive end of one molecule attracts the negative end of another, and are generally stronger than dispersion forces of similar size.",
+        "**Hydrogen bonding** is an especially strong dipole-dipole attraction that occurs specifically when hydrogen is bonded directly to nitrogen, oxygen, or fluorine — small, highly electronegative atoms that concentrate a large partial charge on a very small hydrogen atom, allowing unusually close, strong attraction to a neighboring molecule."
+       ]
+      },
+      {
+       "heading": "Intermolecular Forces and Phase Changes",
+       "body": [
+        "The strength of intermolecular forces directly sets a substance's melting and boiling point: stronger attractions between molecules require more thermal energy to pull apart, so substances with stronger intermolecular forces have higher boiling and melting points. This is a separate issue from covalent bond strength within a molecule, which does not have to break for boiling to occur.",
+        "Comparing molecules of similar size makes intermolecular force effects clear: bigger, heavier molecules with only dispersion forces can still boil at lower temperatures than smaller molecules capable of hydrogen bonding."
+       ],
+       "example": {
+        "problem": "Explain why water (H~2~O, molar mass 18 g/mol) boils at 100 °C, while hydrogen sulfide (H~2~S, molar mass 34 g/mol, no hydrogen bonding) boils at −60 °C, despite H~2~S being heavier.",
+        "steps": [
+         "Note that heavier molecules generally have stronger dispersion forces, which would predict H~2~S should boil higher if dispersion were the only factor.",
+         "Water has O-H bonds, so it forms strong hydrogen bonds between molecules; H~2~S has S-H bonds, and sulfur is not electronegative enough to support hydrogen bonding.",
+         "The much stronger hydrogen bonding in water requires far more energy to break, outweighing H~2~S's mass advantage in dispersion forces."
+        ],
+        "answer": "Water's hydrogen bonding is far stronger than H~2~S's dispersion and weak dipole-dipole forces, giving water a dramatically higher boiling point despite its lower mass."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "intermolecular force",
+       "def": "An attractive force between separate molecules, distinct from the covalent bonds within a molecule."
+      },
+      {
+       "term": "hydrogen bond",
+       "def": "A strong dipole-dipole attraction between a hydrogen bonded to N, O, or F and a nearby N, O, or F atom."
+      },
+      {
+       "term": "dispersion force",
+       "def": "A weak, temporary attraction from shifting electron distributions, present between all molecules."
+      },
+      {
+       "term": "phase change",
+       "def": "A transition between solid, liquid, and gas states, driven by overcoming or forming intermolecular attractions."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which type of intermolecular force is present between all molecules, polar or nonpolar?",
+       "choices": [
+        "Hydrogen bonding",
+        "Dipole-dipole forces",
+        "Dispersion forces",
+        "Ionic bonding"
+       ],
+       "answer": 2,
+       "explain": "Dispersion forces arise from momentary electron shifts present in every molecule, making them the only intermolecular force common to both polar and nonpolar substances."
+      },
+      {
+       "q": "Which pair of atoms directly bonded to hydrogen can produce hydrogen bonding?",
+       "choices": [
+        "Carbon and sulfur",
+        "Nitrogen, oxygen, and fluorine",
+        "Chlorine and bromine",
+        "Silicon and phosphorus"
+       ],
+       "answer": 1,
+       "explain": "Hydrogen bonding requires hydrogen bonded to one of the three small, highly electronegative atoms N, O, or F, which concentrate enough partial charge to create the effect."
+      },
+      {
+       "q": "Two molecules have similar molar mass, but one is polar and one is nonpolar. Which generally has the higher boiling point?",
+       "choices": [
+        "The nonpolar one, because it is more symmetric",
+        "The polar one, because dipole-dipole forces add to dispersion forces",
+        "They will always be identical",
+        "The nonpolar one, because it has weaker bonds"
+       ],
+       "answer": 1,
+       "explain": "At similar mass (similar dispersion force strength), the polar molecule has additional dipole-dipole attraction, giving it stronger overall intermolecular forces and a higher boiling point."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Solutions, Kinetics, Equilibrium, and Acid-Base Chemistry",
+   "summary": "How dissolved substances are measured, how fast reactions proceed, and how reactions settle into a dynamic balance — including the special equilibrium chemistry of acids and bases.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Solutions and Molarity",
+     "minutes": 16,
+     "intro": "Most chemistry outside the gas phase happens in solution, so precisely describing how concentrated a solution is matters as much as knowing what it contains. This lesson covers molarity and the dilution calculations used constantly in real laboratories.",
+     "sections": [
+      {
+       "heading": "Concentration and Molarity",
+       "body": [
+        "A **solution** is a homogeneous mixture of a **solute** (the substance being dissolved, present in smaller amount) dispersed in a **solvent** (present in larger amount). The most common way chemists express concentration is **molarity (M)**, defined as moles of solute per liter of solution: M = mol solute / L solution.",
+        "Molarity is a ratio, so it lets you convert directly between volume of solution and moles of solute — multiply molarity by volume in liters to get moles, exactly the calculation needed to figure out how much of a stock solution to measure out for an experiment."
+       ],
+       "example": {
+        "problem": "What is the molarity of a solution made by dissolving 58.5 g of NaCl (molar mass 58.5 g/mol) in enough water to make 2.00 L of solution?",
+        "steps": [
+         "Convert grams of NaCl to moles: 58.5 g ÷ 58.5 g/mol = 1.00 mol.",
+         "Apply the molarity formula: M = mol solute / L solution.",
+         "M = 1.00 mol / 2.00 L = 0.500 M."
+        ],
+        "answer": "0.500 M NaCl."
+       }
+      },
+      {
+       "heading": "Dilutions",
+       "body": [
+        "**Dilution** lowers a solution's concentration by adding solvent, without changing the total moles of solute present. Because moles of solute stay constant, the relationship M~1~V~1~ = M~2~V~2~ connects the concentration and volume before dilution (subscript 1) to the concentration and volume after (subscript 2).",
+        "This equation is one of the most-used formulas in a chemistry lab, letting you calculate exactly how much stock solution and water to combine to prepare any target concentration."
+       ],
+       "example": {
+        "problem": "How much water must be added to 25.0 mL of 6.00 M HCl to dilute it to 1.00 M?",
+        "steps": [
+         "Apply M~1~V~1~ = M~2~V~2~: (6.00 M)(25.0 mL) = (1.00 M)(V~2~).",
+         "Solve for V~2~: V~2~ = (6.00 × 25.0) / 1.00 = 150 mL total final volume.",
+         "Subtract the original volume to find water added: 150 mL − 25.0 mL = 125 mL of water."
+        ],
+        "answer": "Add 125 mL of water to reach a total volume of 150 mL at 1.00 M."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "solution",
+       "def": "A homogeneous mixture of a solute dissolved in a solvent."
+      },
+      {
+       "term": "solute",
+       "def": "The substance present in smaller amount that is dissolved in a solution."
+      },
+      {
+       "term": "solvent",
+       "def": "The substance present in larger amount that dissolves the solute."
+      },
+      {
+       "term": "molarity",
+       "def": "Concentration expressed as moles of solute per liter of solution."
+      },
+      {
+       "term": "dilution",
+       "def": "The process of lowering concentration by adding solvent while keeping moles of solute constant."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the molarity of a solution containing 2.00 mol of solute in 4.00 L of solution?",
+       "choices": [
+        "0.500 M",
+        "2.00 M",
+        "4.00 M",
+        "8.00 M"
+       ],
+       "answer": 0,
+       "explain": "M = mol / L = 2.00 mol / 4.00 L = 0.500 M."
+      },
+      {
+       "q": "A 100.0 mL sample of 2.00 M solution is diluted to 400.0 mL. What is the new concentration?",
+       "choices": [
+        "0.500 M",
+        "1.00 M",
+        "2.00 M",
+        "8.00 M"
+       ],
+       "answer": 0,
+       "explain": "M~1~V~1~ = M~2~V~2~: (2.00)(100.0) = M~2~(400.0), so M~2~ = 200/400 = 0.500 M."
+      },
+      {
+       "q": "In a saltwater solution, which component is the solvent?",
+       "choices": [
+        "Salt",
+        "Water",
+        "Both equally",
+        "Neither"
+       ],
+       "answer": 1,
+       "explain": "Water is present in the larger amount and does the dissolving, making it the solvent; salt, present in smaller amount, is the solute."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Reaction Rates, Kinetics, and Equilibrium",
+     "minutes": 17,
+     "intro": "Some reactions finish in a flash, like an explosion, and others take years, like rust forming on iron. This lesson explains what controls that speed, and what happens when a reaction reaches a point where it seems to stop changing at all.",
+     "sections": [
+      {
+       "heading": "Factors Affecting Reaction Rate",
+       "body": [
+        "**Reaction rate** measures how quickly reactants convert to products, and it depends on several controllable factors: higher **concentration** means more frequent collisions between reactant particles, higher **temperature** gives particles more kinetic energy to overcome the reaction's **activation energy** (the minimum energy needed for a collision to succeed), and greater **surface area** exposes more particles to collision at once.",
+        "A **catalyst** speeds up a reaction by providing an alternative pathway with lower activation energy, without being consumed itself — this is why a catalytic converter can process exhaust gases for the life of a car without needing to be replenished."
+       ]
+      },
+      {
+       "heading": "Chemical Equilibrium and Le Chatelier's Principle",
+       "body": [
+        "Many reactions are **reversible**, meaning products can react back into reactants, and they reach **chemical equilibrium** when the forward and reverse reaction rates become equal — concentrations then stay constant, though both reactions keep occurring. **Le Chatelier's principle** predicts how equilibrium shifts when disturbed: if you add more of a substance, the reaction shifts to partially consume it; if you remove a substance, the reaction shifts to partially replace it.",
+        "Temperature changes shift equilibrium too, depending on whether the reaction releases or absorbs heat, and pressure changes shift gas-phase equilibria toward whichever side has fewer total moles of gas when pressure increases."
+       ],
+       "example": {
+        "problem": "For the equilibrium N~2~(g) + 3H~2~(g) ⇌ 2NH~3~(g), predict the shift if additional H~2~ is added to the system.",
+        "steps": [
+         "Identify which side of the equilibrium gained a reactant: H~2~ is a reactant, on the left side.",
+         "Le Chatelier's principle says the system shifts to partially consume the added substance.",
+         "The reaction shifts right (toward products) to consume some of the added H~2~ and form more NH~3~."
+        ],
+        "answer": "The equilibrium shifts to the right, producing more NH~3~ and consuming some of the added H~2~."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "reaction rate",
+       "def": "How quickly reactants are converted into products over time."
+      },
+      {
+       "term": "activation energy",
+       "def": "The minimum energy a collision must have for a reaction to occur."
+      },
+      {
+       "term": "equilibrium",
+       "def": "A state where the forward and reverse reaction rates are equal, so concentrations stay constant."
+      },
+      {
+       "term": "Le Chatelier's principle",
+       "def": "The rule that a system at equilibrium shifts to partially counteract any change imposed on it."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does increasing temperature generally speed up a reaction?",
+       "choices": [
+        "It lowers the activation energy to zero",
+        "It gives particles more kinetic energy, so more collisions exceed the activation energy",
+        "It increases the number of moles of reactant",
+        "It removes the need for collisions entirely"
+       ],
+       "answer": 1,
+       "explain": "Higher temperature increases the average kinetic energy of particles, so a larger fraction of collisions carry enough energy to overcome activation energy, speeding the reaction."
+      },
+      {
+       "q": "A reaction at equilibrium has product removed continuously. According to Le Chatelier's principle, which direction does the equilibrium shift?",
+       "choices": [
+        "Toward reactants, to replace the removed product",
+        "Toward products, to replace the removed product",
+        "It does not shift",
+        "It reverses entirely and stops"
+       ],
+       "answer": 1,
+       "explain": "Removing product disturbs the equilibrium, and the system shifts toward the product side (forward reaction) to partially replace what was removed."
+      },
+      {
+       "q": "What does a catalyst do to a reaction's activation energy?",
+       "choices": [
+        "Increases it, to force faster collisions",
+        "Lowers it, by providing an alternate reaction pathway",
+        "Has no effect on activation energy",
+        "Eliminates it completely, making the reaction instantaneous"
+       ],
+       "answer": 1,
+       "explain": "A catalyst provides an alternate mechanism with a lower activation energy barrier, letting more collisions succeed without being consumed itself."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Acids, Bases, and pH",
+     "minutes": 16,
+     "intro": "From stomach acid to soap, acids and bases are some of the most common chemistry in everyday life, and the pH scale gives you a single number to describe how acidic or basic a solution is. This lesson connects the definitions of acids and bases to the math behind pH.",
+     "sections": [
+      {
+       "heading": "Defining Acids and Bases",
+       "body": [
+        "An **Arrhenius acid** increases the concentration of H^+^ ions in water, while an **Arrhenius base** increases the concentration of OH^−^ ions. The broader **Bronsted-Lowry** definition describes an acid as a proton (H^+^) donor and a base as a proton acceptor, which also explains reactions that do not occur in water.",
+        "Strong acids and bases, like HCl or NaOH, ionize completely in water, while weak acids and bases, like acetic acid, only partially ionize, leaving most of the original molecule intact in solution — this distinction matters far more for a solution's actual acidity than its concentration alone."
+       ]
+      },
+      {
+       "heading": "The pH Scale",
+       "body": [
+        "**pH** is defined as pH = −log[H^+^], compressing the huge range of possible H^+^ concentrations into a manageable 0–14 scale, where 7 is neutral, below 7 is acidic, and above 7 is basic. Because pH is a logarithmic scale, each single-unit drop in pH represents a tenfold increase in H^+^ concentration.",
+        "Pure water at 25 °C has [H^+^] = 1.0 × 10^−7^ M, giving pH = 7.00, and this baseline is what every acidic or basic solution is measured against."
+       ],
+       "example": {
+        "problem": "Calculate the pH of a solution with [H^+^] = 1.0 × 10^−3^ M.",
+        "steps": [
+         "Apply the definition: pH = −log[H^+^].",
+         "Substitute: pH = −log(1.0 × 10^−3^).",
+         "log(1.0 × 10^−3^) = −3, so pH = −(−3) = 3."
+        ],
+        "answer": "pH = 3.00, a strongly acidic solution."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "acid",
+       "def": "A substance that increases H^+^ concentration in water (Arrhenius) or donates a proton (Bronsted-Lowry)."
+      },
+      {
+       "term": "base",
+       "def": "A substance that increases OH^−^ concentration in water (Arrhenius) or accepts a proton (Bronsted-Lowry)."
+      },
+      {
+       "term": "pH",
+       "def": "A logarithmic measure of acidity, defined as pH = −log[H^+^]."
+      },
+      {
+       "term": "Bronsted-Lowry acid",
+       "def": "A substance that donates a proton (H^+^) in a chemical reaction."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A solution has [H^+^] = 1.0 × 10^−10^ M. What is its pH, and is it acidic or basic?",
+       "choices": [
+        "pH = 10, acidic",
+        "pH = 4, acidic",
+        "pH = 10, basic",
+        "pH = 4, basic"
+       ],
+       "answer": 2,
+       "explain": "pH = −log(1.0 × 10^−10^) = 10. Since pH is above 7, the solution is basic."
+      },
+      {
+       "q": "How does the H^+^ concentration change if the pH drops from 5 to 4?",
+       "choices": [
+        "It stays the same",
+        "It doubles",
+        "It increases tenfold",
+        "It decreases tenfold"
+       ],
+       "answer": 2,
+       "explain": "pH is logarithmic, so each 1-unit drop in pH corresponds to a tenfold increase in H^+^ concentration."
+      },
+      {
+       "q": "Under the Bronsted-Lowry definition, what makes a substance a base?",
+       "choices": [
+        "It increases OH^−^ concentration only in water",
+        "It accepts a proton",
+        "It donates a proton",
+        "It has a pH above 14"
+       ],
+       "answer": 1,
+       "explain": "The Bronsted-Lowry definition describes a base as any substance that accepts a proton (H^+^), a broader definition than the water-specific Arrhenius definition."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

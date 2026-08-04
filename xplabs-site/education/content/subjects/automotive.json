@@ -1,0 +1,723 @@
+{
+ "id": "automotive",
+ "title": "Automotive Basics",
+ "domain": "engineering",
+ "level": "All levels",
+ "description": "Automotive Basics explains how a car actually works, from the four-stroke engine and drivetrain to the electrical system that starts it every morning, and teaches the maintenance and basic repairs any owner can safely do at home. You will also learn how to recognize warning signs and decide when a problem is a simple fix versus when it is time to see a professional mechanic.",
+ "outcomes": [
+  "You can describe the four-stroke engine cycle and calculate how many power strokes an engine produces per second at a given RPM.",
+  "You can explain how gear ratios in a transmission and final drive multiply engine torque and reduce output speed, and calculate the result.",
+  "You can perform routine maintenance - checking oil, tires, and fluids - and calculate correct intervals, mixes, and pressures.",
+  "You can explain how disc and drum brakes work and estimate how braking distance depends on speed and road friction.",
+  "You can jump-start a battery safely and change a flat tire with the correct torque and tightening pattern.",
+  "You can interpret dashboard warning lights and common noises, and use a maintenance schedule to decide when a problem needs a professional mechanic."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "How a Car Works: Systems Overview",
+   "summary": "Before you can maintain or troubleshoot a car, you need a working mental model of what is actually happening under the hood: an engine converting fuel into motion, a drivetrain multiplying and delivering that motion to the wheels, and an electrical system running everything else.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Internal Combustion Engine",
+     "minutes": 13,
+     "intro": "Every time you turn a key or push a start button, thousands of tiny, precisely timed explosions begin happening inside your engine every minute, each one contributing a small push that adds up to the power turning your wheels. Understanding the four-stroke cycle that produces those explosions is the foundation for understanding everything else about how a car works.",
+     "sections": [
+      {
+       "heading": "The Four Strokes",
+       "body": [
+        "Most car engines are four-stroke engines, meaning each cylinder's piston completes four distinct movements, or strokes, to produce one burst of power: intake (the piston moves down, drawing an air-fuel mixture into the cylinder), compression (the piston moves up, squeezing that mixture into a small space), power (a spark plug ignites the compressed mixture, and the resulting explosion drives the piston back down), and exhaust (the piston moves up again, pushing the burned gases out).",
+        "Only one of these four strokes, the power stroke, actually generates force to turn the engine; the other three strokes exist to prepare for the next power stroke. This is why an engine has multiple cylinders, commonly four, six, or eight: while one cylinder is on its power stroke, others are on intake, compression, or exhaust, keeping the crankshaft turning smoothly instead of in separate jolts."
+       ]
+      },
+      {
+       "heading": "Counting Power Strokes",
+       "body": [
+        "Because a full four-stroke cycle takes two complete revolutions of the crankshaft, 720° of rotation, to deliver one power stroke per cylinder, engine speed in RPM (revolutions per minute) does not directly equal the number of power strokes per second; you have to account for that factor of two.",
+        "This relationship is also why engine RPM alone does not tell the whole story of an engine's output - a four-cylinder engine and an eight-cylinder engine at the identical RPM produce power strokes at very different total rates, which is part of why more cylinders generally means a smoother-feeling engine at the same RPM."
+       ],
+       "example": {
+        "problem": "A four-cylinder, four-stroke engine runs at 3,000 RPM. How many total power strokes (summed across all four cylinders) occur every second?",
+        "steps": [
+         "Convert RPM to revolutions per second: 3,000 RPM ÷ 60 = 50 rev/s.",
+         "Divide by 2, since each cylinder needs 2 crankshaft revolutions per power stroke: 50 ÷ 2 = 25 power strokes per second, per cylinder.",
+         "Multiply by the number of cylinders: 25 × 4."
+        ],
+        "answer": "100 power strokes per second, across all four cylinders."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "four-stroke cycle", "def": "The intake-compression-power-exhaust sequence a piston completes to produce one burst of power."},
+      {"term": "compression stroke", "def": "The stroke where the piston squeezes the air-fuel mixture into a small space before ignition."},
+      {"term": "power stroke", "def": "The stroke where ignited fuel drives the piston down, the only stroke that produces net force."},
+      {"term": "crankshaft", "def": "The rotating shaft that converts the pistons' up-down motion into rotational motion."}
+     ],
+     "practice": [
+      {
+       "q": "In the four-stroke cycle, which stroke is the only one that produces net force to turn the engine?",
+       "choices": ["Intake", "Compression", "Power", "Exhaust"],
+       "answer": 2,
+       "explain": "Only the power stroke, where ignited fuel drives the piston down, produces net force; the other three strokes prepare the cylinder for the next power stroke."
+      },
+      {
+       "q": "A four-cylinder, four-stroke engine runs at 3,000 RPM. About how many total power strokes occur per second, across all cylinders?",
+       "choices": ["25", "50", "100", "200"],
+       "answer": 2,
+       "explain": "3,000 RPM = 50 rev/s; each cylinder needs 2 revolutions per power stroke, giving 25 power strokes per second per cylinder; ×4 cylinders = 100 power strokes per second total."
+      },
+      {
+       "q": "Why does a four-stroke engine typically have multiple cylinders instead of just one?",
+       "choices": ["To reduce fuel consumption to zero", "So that while one cylinder is on its power stroke, others are on intake, compression, or exhaust, smoothing out the engine's rotation", "Because a single cylinder cannot physically complete a four-stroke cycle", "To eliminate the need for a crankshaft"],
+       "answer": 1,
+       "explain": "Staggering multiple cylinders through the four-stroke cycle means a power stroke is happening more continuously, which keeps the crankshaft turning smoothly instead of in separate jolts."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Drivetrain and Transmission",
+     "minutes": 13,
+     "intro": "An engine spinning at 3,000 RPM would spin the wheels far too fast, and with far too little twisting force, to actually move a car - which is exactly the problem the drivetrain and transmission solve. Gears trade rotational speed for torque, and knowing how to do that math tells you exactly what a car's gearing is doing at any moment.",
+     "sections": [
+      {
+       "heading": "From Engine to Wheels",
+       "body": [
+        "Power leaves the engine and travels through the transmission, which selects a gear ratio suited to the current speed and load, then through a driveshaft or axle, and finally through the final drive, a set of gears often inside the differential, before reaching the wheels. Each stage along this path can change the rotational speed and torque of the power passing through it.",
+        "A gear ratio describes how many times the input gear must turn to turn the output gear once; a 3:1 ratio means the input spins three times for every one turn of the output. Lower gears, meaning higher numerical ratios like 3.5:1, multiply torque and reduce speed, useful for starting from a stop or climbing a hill; higher gears, lower numerical ratios like 0.8:1 in overdrive, do the opposite, useful for efficient highway cruising."
+       ]
+      },
+      {
+       "heading": "Combining Gear Ratios",
+       "body": [
+        "A car's overall gear reduction between the engine and the wheels is the product of every gear ratio power passes through, most importantly the transmission's selected gear ratio multiplied by the final drive ratio. Multiplying these together tells you exactly how much the engine's rotational speed is reduced, and torque increased, by the time it reaches the wheels.",
+        "This is why a car in first gear accelerates so much more strongly than in fifth gear at the same engine RPM: first gear's much higher numerical ratio multiplies torque far more, even though it also means the engine has to spin much faster to reach a given road speed."
+       ],
+       "example": {
+        "problem": "An engine turns at 3,000 RPM. The transmission is in 1st gear (ratio 3.0:1) and the final drive ratio is 3.5:1. What is the resulting output (axle) speed in RPM?",
+        "steps": [
+         "Find the combined gear reduction: 3.0 × 3.5 = 10.5:1.",
+         "Divide the engine speed by the combined ratio: 3,000 ÷ 10.5."
+        ],
+        "answer": "The axle turns at about 285.7 RPM - the engine's speed reduced by a factor of 10.5, with torque increased by roughly the same factor."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "transmission", "def": "The component that selects among a set of gear ratios to match engine output to driving conditions."},
+      {"term": "gear ratio", "def": "The number of turns an input gear makes for one turn of the output gear."},
+      {"term": "final drive", "def": "The last set of gears, often inside the differential, that power passes through before reaching the wheels."},
+      {"term": "differential", "def": "A gear assembly that allows a car's two drive wheels to spin at different speeds, such as while turning."}
+     ],
+     "practice": [
+      {
+       "q": "An engine at 3,000 RPM is in a gear with a combined (transmission × final drive) ratio of 10.5:1. What is the resulting axle speed?",
+       "choices": ["3,000 RPM", "1,050 RPM", "285.7 RPM", "31,500 RPM"],
+       "answer": 2,
+       "explain": "3,000 ÷ 10.5 ≈ 285.7 RPM."
+      },
+      {
+       "q": "What does a lower gear (a higher numerical gear ratio, like 3.5:1) provide, compared to a higher gear (like 0.8:1)?",
+       "choices": ["More torque and lower output speed for the same engine RPM", "Less torque and higher output speed for the same engine RPM", "No change in torque or speed", "Only affects fuel type, not torque or speed"],
+       "answer": 0,
+       "explain": "A higher numerical gear ratio multiplies torque more while reducing output speed more, which is why low gears are used for starting and climbing, not cruising."
+      },
+      {
+       "q": "Which path correctly describes how power generally travels from the engine to the wheels?",
+       "choices": ["Wheels, then differential, then transmission, then engine", "Engine, then transmission, then driveshaft or axle, then final drive, then wheels", "Engine to wheels directly, with no intermediate gearing", "Transmission, then engine, then wheels"],
+       "answer": 1,
+       "explain": "Power flows from the engine through the transmission, then a driveshaft or axle, through the final drive gearing, and finally to the wheels."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Electrical System and the Battery",
+     "minutes": 12,
+     "intro": "A car's electrical system does far more than just start the engine - it powers lights, sensors, infotainment, and dozens of small computers, all while the battery and alternator work together to keep everything charged. Understanding this system explains why a car can fail to start even though the engine itself is perfectly fine.",
+     "sections": [
+      {
+       "heading": "Battery, Alternator, and Starter",
+       "body": [
+        "The battery stores electrical energy chemically and supplies a large burst of current to the starter motor, which physically cranks the engine to get it running. Once the engine is running, the alternator, driven by a belt connected to the engine, generates electricity to recharge the battery and power the car's electrical systems, so the battery is not what runs everything while driving.",
+        "This is why a car with a dead alternator can still run for a while on battery power alone before stalling, while a car with a dead battery but a good alternator often cannot start at all, since the starter needs that initial burst of stored energy the alternator alone cannot supply instantly."
+       ]
+      },
+      {
+       "heading": "Parasitic Draw",
+       "body": [
+        "Even with the engine off, some components draw a small amount of current continuously, such as the clock, alarm system, and computer memory; this is called parasitic draw, and it is normal in small amounts. Leaving a light on accidentally, however, draws far more current than these background systems and can drain a battery significantly overnight.",
+        "Knowing a battery's capacity, measured in amp-hours (Ah), and a draw's current lets you estimate exactly how much charge is being lost over a given time, the same charge-over-time math used for any battery."
+       ],
+       "example": {
+        "problem": "A car's dome light is accidentally left on overnight, drawing 0.5 A for 10 hours, from a 50 Ah battery. What percentage of the battery's capacity was used?",
+        "steps": [
+         "Find the charge used: 0.5 A × 10 h = 5 Ah.",
+         "Divide by the battery's total capacity: 5 Ah ÷ 50 Ah."
+        ],
+        "answer": "5 Ah were used, which is 10% of the battery's 50 Ah capacity - enough to noticeably weaken a start, especially in cold weather."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "alternator", "def": "A belt-driven generator that recharges the battery and powers electrical systems while the engine runs."},
+      {"term": "starter motor", "def": "The motor that uses a burst of battery current to physically crank the engine to start it."},
+      {"term": "parasitic draw", "def": "The small continuous current drawn by systems like the clock or alarm even with the engine off."},
+      {"term": "amp-hour (Ah)", "def": "A unit of battery capacity: the charge delivered by 1 amp of current sustained for one hour."}
+     ],
+     "practice": [
+      {
+       "q": "What is the main job of the alternator once a car's engine is running?",
+       "choices": ["To crank the engine initially", "To recharge the battery and power the car's electrical systems", "To store electrical energy chemically", "To provide the spark for ignition"],
+       "answer": 1,
+       "explain": "Once the engine is running, the alternator generates electricity to recharge the battery and power the car's systems; the battery's stored energy is mainly used for starting."
+      },
+      {
+       "q": "A dome light draws 0.5 A for 10 hours overnight from a 50 Ah battery. About what percentage of the battery's capacity was used?",
+       "choices": ["1%", "5%", "10%", "50%"],
+       "answer": 2,
+       "explain": "0.5 A × 10 h = 5 Ah used; 5 Ah ÷ 50 Ah = 10%."
+      },
+      {
+       "q": "Why can a car with a dead alternator but a healthy battery often still run for a while, whereas a car with a dead battery but a healthy alternator often cannot start at all?",
+       "choices": ["The alternator is not actually needed for the engine to run at all", "The battery supplies the large burst of current the starter needs, which the alternator cannot provide instantly", "A dead alternator has no effect on any car system", "The starter motor runs directly off the alternator, never the battery"],
+       "answer": 1,
+       "explain": "Starting requires a large burst of stored current from the battery; a healthy alternator recharges the battery only after the engine is already running, so it cannot substitute for a dead battery at start-up."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Routine Maintenance Anyone Can Do",
+   "summary": "Most of what keeps a car reliable is not exotic repair work but a short list of checks and services any owner can learn: oil, tires, and fluids, each on its own schedule and each with numbers worth knowing exactly.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Checking and Changing Engine Oil",
+     "minutes": 12,
+     "intro": "Engine oil is the one fluid every internal combustion engine depends on constantly, coating every moving metal surface inside so they slide instead of grind, and letting it run low or old is one of the fastest ways to destroy an engine. Checking and changing it is also one of the simplest maintenance tasks any owner can learn.",
+     "sections": [
+      {
+       "heading": "Checking the Oil",
+       "body": [
+        "With the engine off and the car on level ground, checking after the car has sat for a few minutes lets oil drain back into the pan for an accurate reading, pull the dipstick, wipe it clean, reinsert it fully, then pull it out again and read the level against the two marks near its end. Oil should sit between those marks; below the low mark risks engine damage from insufficient lubrication, and significantly above the high mark can cause its own problems.",
+        "While checking the level, also check the oil's color and texture: clean oil is usually amber to light brown and flows freely; oil that looks black, gritty, or smells burnt has likely broken down and needs changing regardless of how recently it was checked."
+       ]
+      },
+      {
+       "heading": "Oil Grade and Change Intervals",
+       "body": [
+        "An oil's grade, such as 5W-30, describes its viscosity, or thickness, at cold and hot temperatures: the number before the W, which stands for Winter, describes cold-flow behavior, and the number after describes hot-temperature thickness, with lower numbers meaning thinner oil. Using the exact grade recommended in the owner's manual matters, since an engine's tolerances are designed around it.",
+        "Manufacturers specify a recommended oil change interval, commonly every 5,000 to 10,000 miles for modern conventional or synthetic oil, though this varies by vehicle, oil type, and driving conditions, since frequent short trips or extreme heat can shorten the safe interval. Knowing your annual mileage and interval together tells you how many oil changes to plan for each year."
+       ],
+       "example": {
+        "problem": "A manufacturer recommends an oil change every 7,500 miles. You drive about 15,000 miles per year. How many oil changes should you plan for annually?",
+        "steps": [
+         "Identify the annual mileage: 15,000 miles.",
+         "Identify the recommended interval: 7,500 miles.",
+         "Divide: 15,000 ÷ 7,500."
+        ],
+        "answer": "2 oil changes per year, roughly every 6 months at that mileage."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "dipstick", "def": "A marked rod used to check an engine's oil level."},
+      {"term": "viscosity", "def": "A fluid's thickness or resistance to flowing, described by an oil's grade at cold and hot temperatures."},
+      {"term": "oil change interval", "def": "The manufacturer-recommended mileage or time between oil changes."},
+      {"term": "synthetic oil", "def": "A lab-engineered motor oil that typically resists breakdown longer than conventional oil."}
+     ],
+     "practice": [
+      {
+       "q": "You check the dipstick and the oil level sits below the low mark. What does this indicate?",
+       "choices": ["The oil is too thick", "The engine may be running with insufficient lubrication and needs oil added", "The oil grade is wrong for the vehicle", "Nothing; oil level naturally sits below the low mark"],
+       "answer": 1,
+       "explain": "An oil level below the low mark means there is not enough oil coating the engine's moving parts, risking increased wear or damage until oil is added."
+      },
+      {
+       "q": "A manufacturer recommends an oil change every 7,500 miles, and you drive 15,000 miles per year. How many oil changes should you plan for each year?",
+       "choices": ["1", "2", "3", "5"],
+       "answer": 1,
+       "explain": "15,000 ÷ 7,500 = 2 oil changes per year."
+      },
+      {
+       "q": "In an oil grade like 5W-30, what does the number before the 'W' describe?",
+       "choices": ["The oil's price tier", "The oil's cold-temperature flow behavior", "The number of additives in the oil", "The oil's exact change interval"],
+       "answer": 1,
+       "explain": "The number before the W (Winter) describes how the oil flows at cold temperatures; lower numbers mean the oil stays thinner and flows more easily when cold."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Tires: Pressure, Tread, and Rotation",
+     "minutes": 13,
+     "intro": "Tires are the only part of a car actually touching the road, so their pressure and tread condition directly affect handling, braking distance, and fuel economy. This lesson covers checking both correctly, and why rotating tires periodically extends their life.",
+     "sections": [
+      {
+       "heading": "Tire Pressure",
+       "body": [
+        "The correct tire pressure for a vehicle is listed on a placard, usually inside the driver's door jamb, not on the tire itself, since the number printed on a tire's sidewall is its maximum safe pressure, not the recommended one. Most passenger cars call for somewhere around 30 to 35 psi, pounds per square inch, checked when tires are cold, since driving heats the air inside and temporarily raises the reading.",
+        "Underinflated tires wear unevenly on their outer edges, increase fuel consumption, and raise the risk of overheating and blowouts; overinflated tires wear excessively in the center and reduce grip. Checking pressure monthly with a simple gauge takes under a minute per tire and catches slow leaks before they become a flat."
+       ]
+      },
+      {
+       "heading": "Tread Depth and Rotation",
+       "body": [
+        "Tread depth is commonly checked with the penny test: insert a penny into a tread groove with Lincoln's head pointing down; if you can see the top of his head, tread depth is at or below 2/32 of an inch, the widely used legal minimum, and the tire should be replaced. A new passenger tire typically starts around 10/32 of an inch of tread.",
+        "Rotating tires, moving each tire to a different position on the car, typically every 5,000 to 8,000 miles, evens out wear, since front and rear tires usually wear differently due to how weight, steering, and, in front-wheel-drive cars, power delivery are distributed. Even wear extends the useful life of a full set of tires."
+       ],
+       "example": {
+        "problem": "A tire's placard recommends 32 psi. Convert this to kilopascals (kPa), using 1 psi ≈ 6.895 kPa.",
+        "steps": [
+         "Identify the pressure in psi: 32 psi.",
+         "Multiply by the conversion factor: 32 × 6.895."
+        ],
+        "answer": "32 psi ≈ 220.6 kPa."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "tire placard", "def": "The label, usually inside the driver's door jamb, listing a vehicle's recommended tire pressure."},
+      {"term": "psi", "def": "Pounds per square inch, the common unit for tire pressure in the United States."},
+      {"term": "tread depth", "def": "How much rubber remains in a tire's grooves, which determines its grip and legal usability."},
+      {"term": "tire rotation", "def": "Moving each tire to a different wheel position to even out uneven wear."}
+     ],
+     "practice": [
+      {
+       "q": "Where should you look to find a vehicle's recommended tire pressure?",
+       "choices": ["The number printed on the tire's sidewall", "The placard inside the driver's door jamb", "The owner's manual's engine oil section", "There is no standard location"],
+       "answer": 1,
+       "explain": "The sidewall number is the tire's maximum safe pressure, not the recommended one; the correct recommended pressure is listed on a placard, usually inside the driver's door jamb."
+      },
+      {
+       "q": "A tire's placard recommends 32 psi. Approximately what is this in kilopascals, using 1 psi ≈ 6.895 kPa?",
+       "choices": ["46.4 kPa", "220.6 kPa", "320 kPa", "2,206 kPa"],
+       "answer": 1,
+       "explain": "32 × 6.895 ≈ 220.6 kPa."
+      },
+      {
+       "q": "In the penny test, what does it mean if you can see the top of Lincoln's head when the penny is inserted into a tread groove?",
+       "choices": ["The tire has excessive tread and needs to be worn down", "Tread depth is at or below 2/32 inch, and the tire should be replaced", "The tire is overinflated", "The test only checks tire pressure, not tread"],
+       "answer": 1,
+       "explain": "If Lincoln's head is fully visible, tread depth has worn down to about 2/32 inch or less, the widely used legal minimum, signaling it is time to replace the tire."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Fluids and Filters",
+     "minutes": 12,
+     "intro": "Beyond engine oil, a car depends on several other fluids and filters working quietly in the background - coolant preventing overheating, brake fluid transmitting pedal force, and air filters keeping debris out of the engine. Checking each on schedule prevents some of the most common and most expensive roadside breakdowns.",
+     "sections": [
+      {
+       "heading": "Coolant and Brake Fluid",
+       "body": [
+        "Coolant, antifreeze mixed with water, circulates through the engine and radiator to absorb heat and prevent both overheating in summer and freezing in winter; most manufacturers specify a 50/50 mix of concentrate and water, often sold pre-mixed but also mixable by the owner. Coolant level should be checked at the translucent overflow reservoir, not by opening a hot radiator cap, which can cause serious burns from pressurized, scalding coolant.",
+        "Brake fluid transmits the force from pressing the pedal to the brake calipers or wheel cylinders through a sealed, incompressible hydraulic line; it should be checked at its reservoir, usually near the back of the engine bay, and topped off if low, though a fluid level dropping quickly often signals worn brake pads, which require more fluid volume to take up the slack, rather than a leak."
+       ]
+      },
+      {
+       "heading": "Filters",
+       "body": [
+        "The air filter keeps dust, debris, and insects out of the engine's intake, and a clogged one can reduce power and fuel economy; most are simple to inspect, a clean filter should let light pass through easily when held up, and inexpensive to replace, typically every 12,000 to 15,000 miles depending on driving conditions. The cabin air filter, separately, cleans the air entering the car's interior through the ventilation system and should be checked on a similar schedule.",
+        "The engine's oil filter is replaced at every oil change, since it is what removes contaminants from circulating oil, and running an old filter with fresh oil defeats much of the purpose of the oil change itself."
+       ],
+       "example": {
+        "problem": "A car's cooling system holds 12 quarts total and needs a 50/50 mix of antifreeze concentrate and water. How much of each should you use?",
+        "steps": [
+         "Identify the total volume: 12 quarts.",
+         "Apply the 50/50 ratio: half concentrate, half water.",
+         "Divide 12 by 2."
+        ],
+        "answer": "6 quarts of antifreeze concentrate mixed with 6 quarts of water."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "coolant", "def": "An antifreeze-and-water mixture circulated through the engine to prevent overheating and freezing."},
+      {"term": "brake fluid", "def": "The hydraulic fluid that transmits force from the brake pedal to the brakes at each wheel."},
+      {"term": "air filter", "def": "A filter that keeps dust and debris out of the engine's air intake."},
+      {"term": "cabin air filter", "def": "A filter that cleans air entering the car's interior through the ventilation system."}
+     ],
+     "practice": [
+      {
+       "q": "A car's cooling system holds 12 quarts and needs a 50/50 mix of antifreeze concentrate and water. How much concentrate is needed?",
+       "choices": ["3 quarts", "6 quarts", "9 quarts", "12 quarts"],
+       "answer": 1,
+       "explain": "A 50/50 mix of a 12-quart system means 6 quarts of concentrate and 6 quarts of water."
+      },
+      {
+       "q": "Why should you avoid opening a hot radiator cap to check coolant level?",
+       "choices": ["It has no real risk, it is just inconvenient", "Pressurized, scalding coolant can spray out and cause serious burns", "It permanently damages the radiator", "The radiator cap is not connected to coolant level"],
+       "answer": 1,
+       "explain": "A hot cooling system is pressurized, and opening the cap releases scalding coolant that can spray and cause serious burns; coolant level should instead be checked at the translucent overflow reservoir."
+      },
+      {
+       "q": "A brake fluid reservoir is dropping in level relatively quickly over time. What does this most often indicate, rather than a leak?",
+       "choices": ["The engine is overheating", "Worn brake pads, which require more fluid volume to take up the slack", "The air filter needs replacement", "Normal evaporation with no cause for concern"],
+       "answer": 1,
+       "explain": "As brake pads wear thinner, the caliper pistons extend further, which takes up more brake fluid volume in the system, gradually lowering the reservoir level even without a leak."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Brakes, Battery, and Common Repairs",
+   "summary": "This unit covers the systems most directly tied to safety and roadside emergencies: how brakes actually stop a car, how to jump-start a dead battery safely, and how to change a flat tire correctly.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "How Brakes Work",
+     "minutes": 14,
+     "intro": "Every time you press the brake pedal, a car converts your foot's modest force into enough clamping pressure to stop thousands of pounds of moving metal, using nothing but hydraulics and friction. Understanding both, plus what actually determines stopping distance, changes how you think about following distance and speed.",
+     "sections": [
+      {
+       "heading": "Disc and Drum Brakes",
+       "body": [
+        "Most modern cars use disc brakes on at least the front wheels: pressing the pedal pushes brake fluid through hydraulic lines to a caliper, which squeezes two brake pads against a spinning metal disc, the rotor, attached to the wheel, and friction between pad and rotor slows the wheel. Discs shed heat well through open air exposure, which matters since braking converts a large amount of kinetic energy into heat very quickly.",
+        "Drum brakes, more common on rear wheels of economy vehicles, work differently: brake shoes press outward against the inside of a spinning drum rather than squeezing a disc from outside. Drums retain heat more than discs and are somewhat harder to inspect, which is part of why discs have become the dominant design, especially up front where braking force demands are highest."
+       ]
+      },
+      {
+       "heading": "What Determines Stopping Distance",
+       "body": [
+        "Once wheels are braking at their maximum without skidding, stopping distance depends heavily on two things: how fast the car was going, and how much friction exists between tires and road. Because stopping distance grows with the square of speed, doubling your speed roughly quadruples the distance needed to stop under the same braking and road conditions, not merely doubles it.",
+        "This calculated stopping distance only covers the time the brakes are actually engaged; it does not include reaction time, the roughly 1 to 1.5 seconds most drivers take just to perceive a hazard and move their foot to the brake pedal, which adds substantial extra distance, especially at highway speeds, before braking even begins."
+       ],
+       "example": {
+        "problem": "A car traveling at 60 mph, about 26.8 m/s, brakes hard on a road with a tire-road friction coefficient of about 0.7. Using d = v² / (2μg) with g = 9.81 m/s², estimate the braking distance, not counting reaction time.",
+        "steps": [
+         "Square the speed: 26.8² ≈ 719.4.",
+         "Calculate the denominator: 2 × 0.7 × 9.81 ≈ 13.73.",
+         "Divide: 719.4 ÷ 13.73."
+        ],
+        "answer": "About 52 meters, roughly 172 feet, of braking distance - and note this excludes reaction time, which would add substantially more distance in a real stop."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "disc brake", "def": "A brake design where a caliper squeezes pads against a spinning rotor to slow the wheel."},
+      {"term": "rotor", "def": "The spinning metal disc, attached to the wheel, that brake pads clamp against."},
+      {"term": "drum brake", "def": "A brake design where shoes press outward against the inside of a spinning drum."},
+      {"term": "reaction time", "def": "The time a driver takes to perceive a hazard and move their foot to the brake pedal, before braking begins."}
+     ],
+     "practice": [
+      {
+       "q": "In a disc brake system, what physically slows the wheel?",
+       "choices": ["Brake fluid directly contacting the wheel", "Brake pads squeezed by a caliper against a spinning rotor", "A drum pressing outward against shoes", "The engine reversing direction"],
+       "answer": 1,
+       "explain": "Hydraulic pressure pushes a caliper's brake pads against the spinning rotor (disc), and friction between pad and rotor slows the wheel."
+      },
+      {
+       "q": "If a car's speed doubles, what happens to its braking distance, with the same friction and braking conditions?",
+       "choices": ["It stays the same", "It roughly doubles", "It roughly quadruples", "It is cut in half"],
+       "answer": 2,
+       "explain": "Braking distance is proportional to the square of speed (d = v²/(2μg)), so doubling speed roughly quadruples the distance needed to stop."
+      },
+      {
+       "q": "Why does a calculated braking distance often understate a real stop's total distance?",
+       "choices": ["Because tires never actually produce friction", "Because it excludes reaction time, the time needed to perceive a hazard and reach the brake pedal", "Because braking distance calculations are always wrong", "Because rotors do not actually contact brake pads"],
+       "answer": 1,
+       "explain": "The physics-based braking distance only covers the time brakes are actively engaged; it does not include the roughly 1 to 1.5 seconds of reaction time before braking begins, which adds real additional distance."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Jump-Starting a Battery Safely",
+     "minutes": 12,
+     "intro": "A dead battery is one of the most common roadside problems, and jump-starting it safely is a skill worth knowing exactly, because connecting cables in the wrong order can cause sparks, damage electronics, or in rare cases cause a battery to vent or even rupture.",
+     "sections": [
+      {
+       "heading": "Connecting the Cables in the Right Order",
+       "body": [
+        "With both cars off, connect the cables in this order: first, the positive (red) clamp to the dead battery's positive terminal; second, the positive (red) clamp to the good battery's positive terminal; third, the negative (black) clamp to the good battery's negative terminal; and fourth, the negative (black) clamp to an unpainted metal surface on the dead car's engine block or frame, away from the battery itself, rather than to the dead battery's negative terminal directly.",
+        "Grounding that last connection away from the dead battery matters because a small spark is common at that final connection point, and connecting directly at the battery risks igniting hydrogen gas that a battery can vent, especially an older or damaged one. Once connected, start the working car first and let it run a few minutes before attempting to start the dead one."
+       ]
+      },
+      {
+       "heading": "After the Jump",
+       "body": [
+        "Once the dead car starts, remove the cables in exactly the reverse order they were attached: negative from the frame first, then negative from the good battery, then positive from the good battery, then positive from the formerly dead battery. Let the jump-started car run, ideally by driving it, for at least 20 to 30 minutes so its alternator can recharge the battery meaningfully.",
+        "If a battery cannot hold a jump at all, or dies again within a short drive, it likely needs replacement or the charging system needs inspection; a jump-start restores enough charge to run the car, it does not diagnose or fix whatever caused the battery to die in the first place."
+       ],
+       "example": {
+        "problem": "You successfully jump-start your car, drive for 15 minutes, then turn it off. It fails to start again on the next attempt. What does this suggest?",
+        "steps": [
+         "Recall that a jump-start only restores enough charge to run the car temporarily; it does not fix the underlying cause.",
+         "Note that 15 minutes of driving is on the low end of the recommended 20 to 30 minutes needed to meaningfully recharge a battery.",
+         "Consider that a battery unable to hold charge after driving may be failing, or the alternator may not be charging it properly."
+        ],
+        "answer": "The battery likely needs testing, and possibly replacement, or the charging system, the alternator, needs inspection, since a healthy battery and alternator together should hold a charge well beyond one short drive."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "jump-start", "def": "Using another vehicle's battery to temporarily supply current to start a car with a dead battery."},
+      {"term": "positive terminal", "def": "The battery terminal, usually marked with a plus sign, that the red jumper clamp connects to."},
+      {"term": "negative terminal", "def": "The battery terminal, usually marked with a minus sign, that the black jumper clamp connects to."},
+      {"term": "ground connection", "def": "A connection made to an unpainted metal surface on the vehicle's frame or engine, rather than directly to a battery terminal."}
+     ],
+     "practice": [
+      {
+       "q": "When jump-starting a car, where should the final (fourth) cable connection be made?",
+       "choices": ["Directly on the dead battery's negative terminal", "An unpainted metal surface on the dead car's engine block or frame, away from the battery", "The good battery's positive terminal a second time", "The dead car's positive terminal a second time"],
+       "answer": 1,
+       "explain": "Grounding the final connection away from the dead battery reduces the risk of a spark igniting hydrogen gas that a battery can vent, especially an older one."
+      },
+      {
+       "q": "In what order should jumper cables be removed after a successful jump-start?",
+       "choices": ["The same order they were connected", "The exact reverse order they were connected", "Positive cables first, in either order, then negative cables in either order", "It does not matter as long as all four are removed"],
+       "answer": 1,
+       "explain": "Cables should be removed in the exact reverse order of connection: negative from the frame, negative from the good battery, positive from the good battery, then positive from the formerly dead battery."
+      },
+      {
+       "q": "A car is jump-started, driven for 15 minutes, then fails to start again shortly after. What does this most likely suggest?",
+       "choices": ["The jump-start was performed perfectly and no further action is needed", "The battery or charging system likely needs testing, since a healthy system should hold a charge well beyond one short drive", "The car needs new tires", "The engine oil needs to be changed immediately"],
+       "answer": 1,
+       "explain": "A jump-start only restores temporary charge; if the car cannot hold that charge through a short drive, the battery or alternator likely has an underlying problem that a jump alone will not fix."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Changing a Flat Tire",
+     "minutes": 13,
+     "intro": "A flat tire is one of the most common roadside problems, and changing one safely and correctly, including tightening the lug nuts properly, is a skill every driver benefits from knowing before they actually need it on the side of a road.",
+     "sections": [
+      {
+       "heading": "Safety and the Swap",
+       "body": [
+        "Pull well off the road onto flat, stable ground, engage the parking brake, and place wheel chocks or heavy rocks against the tires diagonally opposite the flat if available, since a car can roll while jacked up. Loosen the lug nuts slightly before jacking the car up, not after, since the tire's grip on the ground helps keep the wheel from spinning while you break the nuts loose.",
+        "Raise the car with the jack positioned at the vehicle's designated jack point, check the owner's manual, since jacking at the wrong spot can damage the body or cause instability, remove the lug nuts fully and the flat tire, mount the spare, and hand-tighten the lug nuts before lowering the car most of the way back down."
+       ]
+      },
+      {
+       "heading": "Torque and the Star Pattern",
+       "body": [
+        "Lug nuts should be tightened in a star, or crisscross, pattern rather than around in a circle, alternating across the wheel so the wheel seats evenly against the hub rather than being pulled slightly off-center by uneven pressure. Once the car is fully lowered, a torque wrench should finish the job to the manufacturer's specified torque, commonly around 80 to 100 ft-lb for many passenger cars, since both over- and under-tightened lug nuts create real safety risks.",
+        "Overtightening can stretch or shear a stud, or warp a brake rotor; undertightening risks the wheel loosening while driving. Because torque specs are often given in different unit systems depending on the source, converting between foot-pounds and newton-meters is a common practical need."
+       ],
+       "example": {
+        "problem": "A manufacturer specifies a lug nut torque of 100 ft-lb. Convert this to newton-meters, using 1 ft-lb ≈ 1.356 N·m.",
+        "steps": [
+         "Identify the torque in ft-lb: 100 ft-lb.",
+         "Multiply by the conversion factor: 100 × 1.356."
+        ],
+        "answer": "100 ft-lb ≈ 135.6 N·m."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "lug nut", "def": "The threaded fastener that secures a wheel to the vehicle's hub."},
+      {"term": "torque wrench", "def": "A tool that tightens a fastener to a precise, specified amount of rotational force."},
+      {"term": "star pattern", "def": "A crisscross tightening sequence that seats a wheel evenly against its hub."},
+      {"term": "jack point", "def": "The specific location on a vehicle's frame designated safe for lifting with a jack."}
+     ],
+     "practice": [
+      {
+       "q": "Why should lug nuts be loosened slightly before jacking the car up, not after?",
+       "choices": ["It is purely a matter of convenience", "The tire's grip on the ground helps keep the wheel from spinning while breaking the nuts loose", "Jacking the car up makes the lug nuts impossible to loosen", "It has no effect either way"],
+       "answer": 1,
+       "explain": "With the tire still on the ground, its grip on the pavement resists the wheel spinning as you apply force to loosen the nuts; once jacked up, the wheel can spin freely, making it harder to loosen them."
+      },
+      {
+       "q": "Why are lug nuts tightened in a star (crisscross) pattern instead of straight around the wheel?",
+       "choices": ["It looks more professional", "It seats the wheel evenly against the hub, rather than pulling it slightly off-center", "It reduces the total torque needed", "It only matters for spare tires, not regular ones"],
+       "answer": 1,
+       "explain": "A star pattern applies clamping force evenly across the wheel in stages, so the wheel seats flat and centered on the hub rather than being drawn slightly crooked by uneven tightening."
+      },
+      {
+       "q": "A manufacturer specifies 100 ft-lb of lug nut torque. Approximately what is this in newton-meters?",
+       "choices": ["73.8 N·m", "100 N·m", "135.6 N·m", "200 N·m"],
+       "answer": 2,
+       "explain": "100 ft-lb × 1.356 N·m per ft-lb ≈ 135.6 N·m."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Diagnosing Problems and When to See a Mechanic",
+   "summary": "The most valuable automotive skill for most owners is not fixing everything themselves, but recognizing what a warning light or noise means and knowing when a problem is beyond safe DIY territory.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Warning Lights and Dashboard Gauges",
+     "minutes": 11,
+     "intro": "Modern cars constantly monitor dozens of systems and use a small set of dashboard lights and gauges to tell you, in an instant, whether something needs attention now, soon, or not at all. Learning what each one actually means keeps a minor issue from becoming a breakdown.",
+     "sections": [
+      {
+       "heading": "Reading Warning Light Colors",
+       "body": [
+        "Warning light color is a rough priority system: red generally means stop safely as soon as possible and address the issue immediately, examples include an oil pressure warning or a brake system warning, while yellow or orange generally means something needs attention soon but is not an immediate emergency, examples include the check engine light or a low tire pressure warning, and green or blue lights are simply informational, like headlights being on.",
+        "The check engine light deserves special attention: it can mean anything from a loose gas cap to a serious engine problem, and a steady light usually means get this checked soon, while a flashing check engine light typically signals a more urgent problem, such as a misfire that could damage the catalytic converter, and calls for reducing speed and having it checked promptly."
+       ]
+      },
+      {
+       "heading": "Gauges Worth Watching",
+       "body": [
+        "The temperature gauge shows engine coolant temperature and normally sits comfortably in the middle of its range; a needle climbing toward the hot end or into a red zone means the engine is overheating and should be stopped as soon as it is safe to do so, since continuing to drive can cause serious, expensive engine damage.",
+        "The oil pressure warning light, often shaped like an oil can, is different from the oil level itself; it indicates the oil pump is not maintaining adequate pressure to lubricate the engine, which is a serious condition that calls for stopping the car right away, not just topping off oil at the next convenient stop."
+       ],
+       "example": {
+        "problem": "While driving, your temperature gauge needle climbs from its normal middle position into the red zone. What should you do?",
+        "steps": [
+         "Recognize the red zone as an overheating warning, not a minor issue.",
+         "Find a safe place to pull over and stop the engine as soon as possible, rather than continuing to your destination.",
+         "Avoid opening the hot radiator cap or continuing to drive, both of which risk further engine damage or injury."
+        ],
+        "answer": "Pull over safely and shut off the engine as soon as possible; continuing to drive with a genuinely overheating engine risks warped or cracked engine components."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "check engine light", "def": "A warning light indicating a detected engine or emissions system issue, ranging from minor to serious."},
+      {"term": "temperature gauge", "def": "A dashboard gauge showing engine coolant temperature."},
+      {"term": "oil pressure warning", "def": "A warning light indicating inadequate oil pressure to lubricate the engine, a serious condition."}
+     ],
+     "practice": [
+      {
+       "q": "What does a flashing, as opposed to steady, check engine light typically indicate?",
+       "choices": ["A loose gas cap only, no urgency", "A more urgent problem, such as a misfire that could damage the catalytic converter", "A software update is needed", "The car needs a routine oil change"],
+       "answer": 1,
+       "explain": "A flashing check engine light typically signals a more urgent issue, like an engine misfire, that calls for reducing speed and having the car checked promptly to avoid further damage."
+      },
+      {
+       "q": "The temperature gauge needle climbs into the red zone while driving. What should you do?",
+       "choices": ["Continue driving to your destination since coolant systems are sealed", "Pull over safely and shut off the engine as soon as possible", "Immediately open the radiator cap to check coolant", "Ignore it since temperature gauges are rarely accurate"],
+       "answer": 1,
+       "explain": "A needle in the red zone indicates the engine is actually overheating, and continuing to drive risks serious engine damage; the safe response is to stop as soon as it is safe to do so."
+      },
+      {
+       "q": "What does the oil pressure warning light indicate?",
+       "choices": ["The oil is due for a scheduled change", "The oil pump is not maintaining adequate pressure, a serious lubrication problem", "The oil is simply low and should be topped off at the next stop", "The oil filter needs replacing only"],
+       "answer": 1,
+       "explain": "The oil pressure warning light indicates inadequate oil pressure to lubricate the engine, a serious condition that calls for stopping the car right away, unlike a routine low-oil-level reminder."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Common Noises and What They Mean",
+     "minutes": 11,
+     "intro": "A car often tells you something is wrong through sound before it tells you through a warning light, and learning to recognize a handful of common noises can mean catching a cheap fix before it becomes an expensive one.",
+     "sections": [
+      {
+       "heading": "Braking and Steering Noises",
+       "body": [
+        "A high-pitched squeal when braking is often an intentional wear indicator, a small metal tab built into brake pads that contacts the rotor once the pad material wears thin, telling you the pads need replacement soon. A deep grinding noise while braking, by contrast, usually means the pad material is completely worn away and metal is now contacting metal, which can damage the rotor and calls for prompt attention rather than a routine appointment.",
+        "A rhythmic clunking noise over bumps, especially from the front suspension, often points to worn suspension components, such as a sway bar link or strut mount, while a squeal specifically when turning the steering wheel can indicate a loose or worn power steering belt."
+       ]
+      },
+      {
+       "heading": "Engine Noises",
+       "body": [
+        "A rhythmic knocking or pinging sound under acceleration can indicate the fuel is igniting at the wrong moment in the cycle, sometimes from low-octane fuel or a timing issue, which over time can damage pistons if ignored. A loud, sudden squeal at startup that fades after a few seconds often points to a worn accessory belt, the serpentine belt, which drives the alternator, power steering pump, and other components.",
+        "Any new noise that is loud, sudden, or paired with a warning light deserves more urgency than a noise that has been present, unchanged, for a long time; a good habit is noting when a new noise started, and under what conditions, cold start, turning, braking, accelerating, since that context helps a mechanic diagnose it faster."
+       ],
+       "example": {
+        "problem": "You hear a high-pitched squeal only when braking, and a separate rhythmic grinding sound started yesterday, also only while braking. What do these two noises most likely indicate, and which is more urgent?",
+        "steps": [
+         "Recognize the squeal as the classic sound of a brake wear indicator tab contacting the rotor.",
+         "Recognize the newer grinding sound as likely pad material being fully worn through, metal contacting metal.",
+         "Compare urgency: metal-on-metal contact risks rotor damage and reduced stopping power right now."
+        ],
+        "answer": "The squeal indicates pads are wearing down and should be checked soon; the grinding sound is more urgent, suggesting the pads may already be worn through, and the car should be inspected promptly rather than waiting for a routine appointment."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "wear indicator", "def": "A small tab built into brake pads that squeals against the rotor once pad material wears thin."},
+      {"term": "serpentine belt", "def": "The accessory belt that drives components like the alternator and power steering pump."},
+      {"term": "suspension noise", "def": "A clunking or rattling sound, often from worn suspension components, heard over bumps."},
+      {"term": "engine knock", "def": "A rhythmic knocking sound from fuel igniting at the wrong moment in the combustion cycle."}
+     ],
+     "practice": [
+      {
+       "q": "What does a high-pitched squeal specifically when braking usually indicate?",
+       "choices": ["A failing alternator", "A brake pad wear indicator contacting the rotor, meaning pads need replacement soon", "A transmission problem", "Normal engine operation"],
+       "answer": 1,
+       "explain": "Many brake pads include a small metal wear indicator tab designed to squeal against the rotor once the pad material wears thin, as an early warning to replace the pads."
+      },
+      {
+       "q": "A grinding noise while braking, as opposed to a squeal, most likely means...",
+       "choices": ["The pads still have plenty of material left", "Pad material is worn through and metal is contacting metal", "The tires are underinflated", "The engine oil needs changing"],
+       "answer": 1,
+       "explain": "A deep grinding sound while braking usually means the pad material has worn away completely, so metal is now grinding against the rotor, calling for prompt attention."
+      },
+      {
+       "q": "A loud squeal at startup that fades after a few seconds often points to which component?",
+       "choices": ["A worn serpentine (accessory) belt", "A flat tire", "A dead battery", "An empty coolant reservoir"],
+       "answer": 0,
+       "explain": "A brief loud squeal at startup that fades is a common sign of a worn or loose serpentine belt, which drives the alternator, power steering pump, and other accessories."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Basic Diagnostics and Preventive Maintenance Schedules",
+     "minutes": 12,
+     "intro": "Behind every specific noise or warning light is a bigger habit worth building: following a maintenance schedule so small issues get caught on a normal appointment, rather than becoming a roadside emergency. This closing lesson ties the whole course together with how to actually use that schedule.",
+     "sections": [
+      {
+       "heading": "Reading a Maintenance Schedule",
+       "body": [
+        "Every owner's manual includes a maintenance schedule listing services, oil changes, filter replacements, fluid flushes, belt inspections, at specific mileage or time intervals, whichever comes first; a car driven very few miles per year still needs certain services on a calendar basis, since some fluids and rubber components degrade with age even without much driving.",
+        "Using the schedule well means tracking your current mileage against the next listed interval, rather than waiting for a warning light or noise to prompt action; most serious, expensive repairs are more likely on cars where routine, scheduled items were skipped or delayed."
+       ]
+      },
+      {
+       "heading": "When to See a Professional",
+       "body": [
+        "Certain jobs are reasonable for most owners to do themselves with basic tools and a little research: checking and changing oil, checking tire pressure and tread, and jump-starting a battery, among others covered in this course. Other jobs, brake system work beyond basic pad inspection, anything involving the airbag or supplemental restraint system, transmission internals, or diagnosing an intermittent electrical fault, are usually best left to a trained mechanic with the right tools and diagnostic equipment.",
+        "A useful rule of thumb: if a mistake could affect the car's ability to stop, steer, or protect occupants in a crash, and you are not confident in the specific procedure, it is worth paying a professional rather than risking it. Confidence should come from real knowledge of the specific task, not just general mechanical comfort."
+       ],
+       "example": {
+        "problem": "Your car's odometer reads 42,300 miles, and the maintenance schedule calls for a service every 5,000 miles. How many miles until the next scheduled service?",
+        "steps": [
+         "Find the next multiple of 5,000 above the current mileage: the schedule points are 40,000, 45,000, 50,000, and so on.",
+         "Identify that 45,000 is the next service point above 42,300.",
+         "Subtract: 45,000 - 42,300."
+        ],
+        "answer": "2,700 miles until the next scheduled service, at 45,000 miles."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "maintenance schedule", "def": "A manufacturer's list of services due at specific mileage or time intervals."},
+      {"term": "preventive maintenance", "def": "Scheduled service performed before a part fails, to avoid a larger breakdown."},
+      {"term": "service interval", "def": "The mileage or time gap between scheduled maintenance services."}
+     ],
+     "practice": [
+      {
+       "q": "Your odometer reads 42,300 miles, with scheduled services every 5,000 miles. How many miles remain until the next service?",
+       "choices": ["300 miles", "2,700 miles", "4,700 miles", "5,000 miles"],
+       "answer": 1,
+       "explain": "The next service point above 42,300 is 45,000 miles; 45,000 - 42,300 = 2,700 miles."
+      },
+      {
+       "q": "Why does a maintenance schedule use both a mileage and a time interval, whichever comes first?",
+       "choices": ["Time intervals are never actually used", "Some fluids and rubber components degrade with age even if the car is driven very little", "Mileage intervals are always inaccurate", "It is purely a marketing tactic with no technical basis"],
+       "answer": 1,
+       "explain": "Certain fluids and rubber parts age and degrade over time regardless of mileage, so a car driven few miles per year can still need scheduled service on a calendar basis."
+      },
+      {
+       "q": "Which of these is generally best left to a trained mechanic rather than a home DIY job?",
+       "choices": ["Checking tire pressure", "Checking and changing engine oil", "Diagnosing an intermittent electrical fault or working on the airbag system", "Reading the coolant level at the overflow reservoir"],
+       "answer": 2,
+       "explain": "Complex diagnostic work and safety systems like airbags require specialized tools, training, and knowledge, making them appropriate to leave to a trained mechanic."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

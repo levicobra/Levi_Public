@@ -1,0 +1,1047 @@
+{
+ "id": "marine-biology",
+ "title": "Marine Biology",
+ "domain": "life",
+ "level": "Intro college",
+ "description": "An introductory voyage through ocean life, from the physics of seawater to the creatures of the sunlit reef and the crushing dark of the deep sea. Coral reefs and fisheries are taught through a Pacific Islands lens, connecting the biology to the people who have depended on these waters for centuries.",
+ "outcomes": [
+  "You can explain what makes seawater salty and dense, and how those properties drive ocean layering and circulation.",
+  "You can describe the ocean's light and pressure zones and calculate pressure at a given depth.",
+  "You can explain the coral-algae partnership that builds reefs, and how Pacific Island communities have long managed reef fisheries.",
+  "You can identify major marine invertebrate and vertebrate groups and their key adaptations for ocean life.",
+  "You can explain what causes coral bleaching and evaluate strategies for reef conservation.",
+  "You can describe deep-sea adaptations and evaluate the human impacts of overfishing, bycatch, and pollution."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "The Ocean Environment",
+   "summary": "The physical stage marine life plays out on: what makes seawater salty and layered, how light and pressure change with depth, and what drives currents and waves.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Ocean Basins and the Properties of Seawater",
+     "minutes": 14,
+     "intro": "The ocean covers about 71% of Earth's surface and holds 97% of its water, yet it is really one single connected body of water that we divide by convention into the Pacific, Atlantic, Indian, Southern, and Arctic Oceans. Before meeting the life within it, it helps to understand the water itself.",
+     "sections": [
+      {
+       "heading": "The Global Ocean",
+       "body": [
+        "The Pacific Ocean alone covers more area than all of Earth's landmasses combined, and the global ocean has an average depth of about 3,700 meters (roughly 12,000 feet), deep enough to submerge Mount Rainier with room to spare. The deepest known point, the Challenger Deep in the Mariana Trench, plunges to nearly 10,935 meters, almost as deep as Mount Everest is tall.",
+        "Despite these staggering numbers, the ocean is a single interconnected system: water, heat, and nutrients that enter in one basin eventually circulate to the others. This connectivity is why an event like a volcanic eruption or a shift in a single current can have effects felt across ocean basins thousands of kilometers away."
+       ]
+      },
+      {
+       "heading": "What Makes Seawater Salty",
+       "body": [
+        "Average ocean **salinity** is about 35 parts per thousand (ppt), meaning every kilogram of seawater contains roughly 35 grams of dissolved salts, mostly sodium and chloride ions, along with smaller amounts of magnesium, sulfate, calcium, and potassium. These salts arrive from rock weathering carried by rivers and from chemical reactions at seafloor hydrothermal vents.",
+        "Salinity is not uniform everywhere. Enclosed seas with high evaporation and little freshwater input, like the Red Sea, can reach 40 ppt, while areas near river mouths or melting ice can drop well below 30 ppt. Salinity, along with temperature and pressure, determines seawater **density**, and denser water sinks below less dense water, which is the driving force behind deep ocean circulation."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "salinity",
+       "def": "The total amount of dissolved salts in seawater, typically measured in parts per thousand (ppt)."
+      },
+      {
+       "term": "density (seawater)",
+       "def": "The mass of seawater per unit volume, controlled by its temperature, salinity, and pressure."
+      },
+      {
+       "term": "hydrothermal vent",
+       "def": "A seafloor opening where mineral-rich, heated water escapes from Earth's crust into the ocean."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the average salinity of seawater, in parts per thousand?",
+       "choices": [
+        "3.5 ppt",
+        "35 ppt",
+        "350 ppt",
+        "0.35 ppt"
+       ],
+       "answer": 1,
+       "explain": "Average ocean salinity is about 35 ppt, meaning about 35 grams of dissolved salt per kilogram of seawater."
+      },
+      {
+       "q": "Which three factors together determine the density of seawater?",
+       "choices": [
+        "Temperature, salinity, and pressure",
+        "Color, salinity, and wave height",
+        "Depth, wave speed, and tide",
+        "Only temperature"
+       ],
+       "answer": 0,
+       "explain": "Colder, saltier, and more pressurized water is denser, and these three factors together determine how seawater layers and circulates."
+      },
+      {
+       "q": "Why can enclosed seas like the Red Sea have higher salinity than the open ocean average?",
+       "choices": [
+        "They receive extra salt from the atmosphere",
+        "High evaporation with little freshwater input concentrates the dissolved salts",
+        "They are colder than the open ocean",
+        "They have no connection to the ocean at all"
+       ],
+       "answer": 1,
+       "explain": "With limited fresh water flowing in and high evaporation removing pure water, the remaining water becomes more concentrated with salt, raising its salinity above the ocean average."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Light, Pressure, and Ocean Zones",
+     "minutes": 15,
+     "intro": "Descend from the surface toward the seafloor and two things change relentlessly: light fades to total darkness, and pressure climbs to levels that would crush an unprotected human body. These two gradients divide the ocean into distinct vertical zones, each with life adapted to its own extreme conditions.",
+     "sections": [
+      {
+       "heading": "Zones by Light",
+       "body": [
+        "The **epipelagic zone** (or sunlight zone) extends from the surface to about 200 meters and is the only zone with enough light for photosynthesis, making it home to nearly all marine plant and algal life. Below that, the **mesopelagic zone** (twilight zone, 200 to 1,000 meters) still has faint light, enough for some animals to see by but not enough to support photosynthesis.",
+        "Below 1,000 meters lies complete darkness: the **bathypelagic zone** (1,000 to 4,000 meters), the **abyssopelagic zone** (4,000 to 6,000 meters), and the **hadalpelagic zone** in the deepest ocean trenches, below 6,000 meters. Together these dark zones make up the vast majority of the ocean's total volume, even though most familiar marine life lives near the surface."
+       ]
+      },
+      {
+       "heading": "Pressure With Depth",
+       "body": [
+        "Water pressure increases quickly with depth because water is far denser than air. As a working rule, pressure increases by about 1 atmosphere (atm) for every 10 meters of depth, on top of the 1 atm already exerted by the air at the surface. This means pressure grows linearly and predictably as you descend.",
+        "This steep pressure gradient is why deep-diving submersibles need thick, rounded hulls, and why deep-sea animals have evolved bodies without rigid air spaces (like the swim bladders of shallow fish) that would be crushed or would need constant adjustment as pressure changes."
+       ],
+       "example": {
+        "problem": "What is the approximate total pressure, in atmospheres, at a depth of 2,000 meters?",
+        "steps": [
+         "Start with surface pressure: 1 atm from the atmosphere.",
+         "Add pressure from the water: 2,000 m ÷ 10 m per atm = 200 atm.",
+         "Total pressure: 1 + 200 = 201 atm."
+        ],
+        "answer": "About 201 atmospheres."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "epipelagic zone",
+       "def": "The sunlit surface ocean zone, from the surface to about 200 meters, where photosynthesis occurs."
+      },
+      {
+       "term": "mesopelagic zone",
+       "def": "The twilight zone, from about 200 to 1,000 meters, with faint light but no photosynthesis."
+      },
+      {
+       "term": "bathypelagic zone",
+       "def": "The completely dark ocean zone from about 1,000 to 4,000 meters."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In which zone does nearly all marine photosynthesis take place?",
+       "choices": [
+        "Epipelagic zone",
+        "Mesopelagic zone",
+        "Bathypelagic zone",
+        "Hadalpelagic zone"
+       ],
+       "answer": 0,
+       "explain": "The epipelagic (sunlight) zone, from the surface to about 200 meters, receives enough light to support photosynthesis; deeper zones do not."
+      },
+      {
+       "q": "About what pressure would you experience at a depth of 500 meters?",
+       "choices": [
+        "5 atm",
+        "50 atm",
+        "51 atm",
+        "500 atm"
+       ],
+       "answer": 2,
+       "explain": "500 m ÷ 10 m per atm = 50 atm from the water, plus 1 atm from the surface atmosphere, totaling 51 atm."
+      },
+      {
+       "q": "Why do deep-sea animals typically lack rigid, gas-filled swim bladders like shallow-water fish?",
+       "choices": [
+        "They do not need buoyancy at all",
+        "Gas-filled spaces would be dangerously compressed or require constant adjustment under extreme, changing pressure",
+        "Swim bladders only evolved in freshwater fish",
+        "Deep-sea animals cannot produce gas"
+       ],
+       "answer": 1,
+       "explain": "The immense and rapidly changing pressure at great depth makes a gas-filled swim bladder impractical, so deep-sea animals rely on other strategies, like fats and oils, for buoyancy."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Ocean Circulation and Waves",
+     "minutes": 14,
+     "intro": "The ocean is never still. Wind drags surface water into vast rotating currents, density differences drive a slow deep-water conveyor belt across the entire globe, and every wave that reaches a beach began as energy transferred from wind, sometimes thousands of kilometers away.",
+     "sections": [
+      {
+       "heading": "Currents: Surface and Deep",
+       "body": [
+        "Wind blowing steadily over the ocean drags the surface water along with it, and the rotation of the Earth curves these flows into large circular current systems called **gyres**, such as the North Pacific Gyre. Where these currents pull surface water away from a coastline, deeper, colder, nutrient-rich water rises to replace it, a process called **upwelling** that fuels some of the world's most productive fisheries, such as along the coasts of Peru and California.",
+        "Beneath the surface, a much slower process called **thermohaline circulation** (driven by differences in temperature and salinity, hence density) carries water on a global conveyor-belt path that can take a thousand years or more to complete a full loop, linking the Atlantic, Pacific, Indian, and Southern Oceans into one connected circulation system."
+       ]
+      },
+      {
+       "heading": "Waves and Tides",
+       "body": [
+        "Most ocean waves are generated by wind transferring energy to the water's surface; the size of a wave depends on wind speed, how long it blows, and the distance it travels uninterrupted (called fetch). In shallow water, a wave's speed depends mainly on water depth: the shallower the water, the slower the wave travels, which is why waves slow down and steepen as they approach a beach.",
+        "**Tides** are different from wind waves entirely: they are caused by the gravitational pull of the moon and, to a lesser extent, the sun, on Earth's oceans. When the sun and moon align during a new or full moon, their combined pull produces extra-high **spring tides**; when they are at right angles during a quarter moon, the pull partially cancels, producing smaller **neap tides**."
+       ],
+       "example": {
+        "problem": "In shallow water, wave speed can be estimated as the square root of (gravity × depth), or v = √(g×d), using g ≈ 9.8 m/s². What is the approximate wave speed in water 25 meters deep?",
+        "steps": [
+         "Multiply gravity by depth: 9.8 × 25 = 245.",
+         "Take the square root: √245 ≈ 15.65."
+        ],
+        "answer": "About 15.7 meters per second (roughly 56 km/h)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "gyre",
+       "def": "A large circular ocean current system driven by wind and Earth's rotation."
+      },
+      {
+       "term": "upwelling",
+       "def": "The rising of cold, nutrient-rich deep water to replace surface water pushed away by wind or currents."
+      },
+      {
+       "term": "thermohaline circulation",
+       "def": "Deep, slow global ocean circulation driven by differences in water temperature and salinity."
+      },
+      {
+       "term": "spring tide",
+       "def": "An especially high tide occurring when the sun and moon align during a new or full moon."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does coastal upwelling boost fish populations in places like Peru and California?",
+       "choices": [
+        "It warms the surface water",
+        "It brings cold, nutrient-rich deep water to the surface, fueling phytoplankton growth at the base of the food web",
+        "It reduces salinity to ideal levels",
+        "It increases wave height only"
+       ],
+       "answer": 1,
+       "explain": "Upwelled water carries nutrients from the deep ocean to the sunlit surface, boosting phytoplankton growth, which in turn supports larger fish populations up the food chain."
+      },
+      {
+       "q": "Using v = √(g×d), approximately what is the wave speed in water 100 meters deep (g ≈ 9.8 m/s²)?",
+       "choices": [
+        "About 9.9 m/s",
+        "About 31.3 m/s",
+        "About 98 m/s",
+        "About 980 m/s"
+       ],
+       "answer": 1,
+       "explain": "√(9.8 × 100) = √980 ≈ 31.3 m/s."
+      },
+      {
+       "q": "What causes spring tides, which are unusually high tides?",
+       "choices": [
+        "Strong winds only",
+        "The sun and moon aligning during a new or full moon, combining their gravitational pull",
+        "Cold water sinking",
+        "A full moon blocking sunlight"
+       ],
+       "answer": 1,
+       "explain": "When the sun and moon line up, their gravitational effects on the ocean add together, producing the extra-high spring tides."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Marine Life: Plankton to Invertebrates",
+   "summary": "The organisms that form the base and the backbone of ocean food webs, from microscopic drifting algae to stinging cnidarians and the armored, shelled, and spiny invertebrates that fill every reef and seafloor.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Phytoplankton and Primary Production",
+     "minutes": 14,
+     "intro": "Nearly every calorie of energy in the ocean, from the smallest larval fish to the largest blue whale, traces back to drifting, often single-celled organisms so small that thousands could fit on the head of a pin. Phytoplankton are the ocean's invisible forest, and without them, nothing else in the sea could exist.",
+     "sections": [
+      {
+       "heading": "The Ocean's Invisible Forest",
+       "body": [
+        "**Phytoplankton** are microscopic, photosynthetic organisms, including diatoms, dinoflagellates, and cyanobacteria, that drift near the ocean's sunlit surface. Despite their tiny size, phytoplankton are responsible for roughly half of all photosynthesis on Earth, producing a huge share of the planet's oxygen and forming the base of virtually every marine food web.",
+        "**Zooplankton**, tiny drifting animals ranging from single-celled protozoans to larval fish and crab, graze on phytoplankton and are in turn eaten by small fish, which are eaten by larger fish, building the ocean's food web one trophic level at a time, just as on land."
+       ]
+      },
+      {
+       "heading": "What Limits Ocean Productivity",
+       "body": [
+        "Phytoplankton growth requires sunlight and nutrients, especially nitrogen, phosphorus, and iron. In much of the open ocean, nutrients are the limiting factor, which is why regions far from coastlines or upwelling zones, despite having plenty of sunlight, can be surprisingly unproductive, sometimes called ocean 'deserts.'",
+        "Coastal waters, upwelling zones, and areas where rivers deliver nutrient-rich runoff tend to have far higher productivity, supporting the world's richest fisheries. This is the same energy-flow logic seen on land, applied to a food web that starts with organisms too small to see with the naked eye."
+       ],
+       "example": {
+        "problem": "Using the same ten percent rule that applies to land food chains, how many kilograms of phytoplankton are needed to ultimately support 1 kilogram of tuna, a top predator three trophic levels up (phytoplankton → zooplankton → small fish → tuna)?",
+        "steps": [
+         "Each step up a trophic level keeps only about 10% of the energy, so each step requires roughly 10 times more mass at the level below.",
+         "From tuna (1 kg) back down three steps to phytoplankton: 1 kg × 10 × 10 × 10 = 1,000 kg."
+        ],
+        "answer": "About 1,000 kg of phytoplankton, ultimately, to support 1 kg of tuna."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "phytoplankton",
+       "def": "Microscopic, photosynthetic organisms that drift in the sunlit ocean and form the base of marine food webs."
+      },
+      {
+       "term": "zooplankton",
+       "def": "Small drifting animals that feed on phytoplankton and are eaten by larger marine life."
+      },
+      {
+       "term": "limiting nutrient",
+       "def": "A nutrient, like nitrogen or iron, whose scarcity restricts the growth of phytoplankton even when sunlight is abundant."
+      }
+     ],
+     "practice": [
+      {
+       "q": "About what fraction of Earth's total photosynthesis is carried out by phytoplankton?",
+       "choices": [
+        "About 5%",
+        "About 20%",
+        "About 50%",
+        "About 90%"
+       ],
+       "answer": 2,
+       "explain": "Phytoplankton are responsible for roughly half of all photosynthesis on Earth, despite their microscopic size, making them a major source of atmospheric oxygen."
+      },
+      {
+       "q": "Why can some sunny areas of the open ocean still have very low productivity?",
+       "choices": [
+        "There is too much sunlight",
+        "Nutrients like nitrogen, phosphorus, or iron are scarce, limiting phytoplankton growth",
+        "The water is too warm for any life",
+        "Phytoplankton cannot survive in salt water"
+       ],
+       "answer": 1,
+       "explain": "Even with abundant sunlight, phytoplankton growth stalls without enough dissolved nutrients, which is why some open-ocean regions are much less productive than nutrient-rich coastal or upwelling zones."
+      },
+      {
+       "q": "Using the ten percent rule, how much phytoplankton mass is roughly needed to support 2 kg of a top predator three trophic levels above it?",
+       "choices": [
+        "20 kg",
+        "200 kg",
+        "2,000 kg",
+        "20,000 kg"
+       ],
+       "answer": 2,
+       "explain": "Three trophic level jumps multiply the required mass by 10 three times (10×10×10 = 1,000), so 2 kg × 1,000 = 2,000 kg of phytoplankton."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Cnidarians: Jellyfish, Anemones, and Corals",
+     "minutes": 13,
+     "intro": "Jellyfish, sea anemones, and corals look nothing alike at first glance, yet all three belong to the same animal phylum, built around the same simple body plan and the same stinging weapon that has made this group successful in oceans for over 500 million years.",
+     "sections": [
+      {
+       "heading": "A Shared Body Plan",
+       "body": [
+        "**Cnidarians** share a radially symmetric body built around a central mouth, with tentacles armed with specialized stinging cells called **nematocysts** that fire microscopic, venom-loaded harpoons to capture prey or deter predators. This simple but effective body plan comes in two basic forms: the **polyp**, a stationary, tube-shaped form (like a sea anemone or a coral), and the **medusa**, a free-swimming, bell-shaped form (like a jellyfish).",
+        "Many cnidarians alternate between these two forms across their life cycle: a jellyfish, for example, often begins life as a tiny attached polyp before budding off free-swimming medusae, the stage most people recognize as a jellyfish."
+       ]
+      },
+      {
+       "heading": "Diversity Across the Group",
+       "body": [
+        "Sea anemones are solitary polyps, often forming mutualistic partnerships, such as the clownfish that live protected among an anemone's tentacles while cleaning it and driving off some of its predators. Corals are colonial polyps that secrete a hard calcium carbonate skeleton; over generations, this skeleton accumulates to form the physical structure of a coral reef, a topic covered in depth in Unit 3.",
+        "Jellyfish spend most of their lives as free-swimming medusae, pulsing through the water column and trailing tentacles that can be highly venomous, as in the box jellyfish, or nearly harmless to humans, depending on the species and the potency of its nematocysts."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "cnidarian",
+       "def": "An animal phylum including jellyfish, anemones, and corals, built around radial symmetry and stinging cells."
+      },
+      {
+       "term": "nematocyst",
+       "def": "A specialized stinging cell in cnidarians that fires a venom-loaded thread to capture prey or defend the animal."
+      },
+      {
+       "term": "polyp",
+       "def": "A stationary, tube-shaped cnidarian body form, as seen in anemones and corals."
+      },
+      {
+       "term": "medusa",
+       "def": "A free-swimming, bell-shaped cnidarian body form, as seen in jellyfish."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What structure do cnidarians use to capture prey and defend themselves?",
+       "choices": [
+        "Nematocysts, stinging cells that fire venomous threads",
+        "Gills",
+        "A hard exoskeleton",
+        "Suction-cup tentacles only"
+       ],
+       "answer": 0,
+       "explain": "Nematocysts are specialized cells found only in cnidarians that fire microscopic venom-loaded harpoons, used both for hunting and defense."
+      },
+      {
+       "q": "What is the key difference between a polyp and a medusa?",
+       "choices": [
+        "Polyps are always venomous, medusae are not",
+        "Polyps are stationary and tube-shaped; medusae are free-swimming and bell-shaped",
+        "Medusae are always larger",
+        "There is no real structural difference"
+       ],
+       "answer": 1,
+       "explain": "Polyp and medusa are the two basic cnidarian body forms: the polyp is attached and tube-shaped (like an anemone), while the medusa is free-swimming and bell-shaped (like a jellyfish)."
+      },
+      {
+       "q": "How do reef-building corals contribute to the physical structure of a reef?",
+       "choices": [
+        "They swim in large schools that form reef shapes",
+        "They secrete hard calcium carbonate skeletons that accumulate over generations",
+        "They are the only animals capable of photosynthesis",
+        "They dissolve rock to create reef channels"
+       ],
+       "answer": 1,
+       "explain": "Coral polyps secrete calcium carbonate skeletons; as colonies grow and accumulate over many generations, this skeletal material builds the physical structure of a reef."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Mollusks, Crustaceans, and Echinoderms",
+     "minutes": 14,
+     "intro": "Snails, octopuses, crabs, and sea stars look about as different from each other as animals can look, yet each belongs to one of three major invertebrate groups that dominate the ocean floor and water column, each solving the problems of movement, defense, and feeding in its own distinctive way.",
+     "sections": [
+      {
+       "heading": "Mollusks: Soft Bodies, Hard Shells",
+       "body": [
+        "**Mollusks** include three major marine groups: gastropods (snails and slugs, usually with a single coiled shell), bivalves (clams, oysters, and mussels, with two hinged shells), and cephalopods (octopuses, squid, and cuttlefish, mostly shell-less and highly mobile). All mollusks share a soft body, though many protect it with a hard calcium carbonate shell.",
+        "Cephalopods stand out for their intelligence: octopuses can solve puzzles, open jars, and navigate mazes, and they change both color and skin texture in fractions of a second using specialized pigment cells called chromatophores, an ability used for camouflage, communication, and startling predators."
+       ]
+      },
+      {
+       "heading": "Crustaceans and Echinoderms",
+       "body": [
+        "**Crustaceans**, including crabs, shrimp, and lobsters, have a hard external skeleton called an exoskeleton, jointed legs, and two pairs of antennae. Because their exoskeleton does not grow, crustaceans must periodically **molt**, shedding the old shell and rapidly expanding into a soft new one before it hardens.",
+        "**Echinoderms**, including sea stars, sea urchins, and sea cucumbers, are unique to marine environments and typically show five-part radial symmetry as adults. They move using a unique **water vascular system**: a network of internal, fluid-filled canals that operates hundreds of tiny tube feet, letting a sea star slowly but firmly pry open a clamshell to feed."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "cephalopod",
+       "def": "A mollusk group including octopuses, squid, and cuttlefish, known for intelligence and rapid camouflage."
+      },
+      {
+       "term": "exoskeleton",
+       "def": "A hard external skeleton, as seen in crustaceans, that must be periodically shed to allow growth."
+      },
+      {
+       "term": "molting",
+       "def": "The process by which a crustacean sheds its old exoskeleton to grow a larger new one."
+      },
+      {
+       "term": "water vascular system",
+       "def": "A network of fluid-filled canals unique to echinoderms that operates their tube feet."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why must crabs and lobsters periodically molt?",
+       "choices": [
+        "To change their color for mating season",
+        "Their rigid exoskeleton does not grow, so it must be shed to allow the body underneath to grow larger",
+        "To remove parasites",
+        "To reproduce"
+       ],
+       "answer": 1,
+       "explain": "A crustacean's hard exoskeleton cannot expand on its own, so the animal must shed it and rapidly grow into a larger new shell to increase in size."
+      },
+      {
+       "q": "What structure allows a sea star to pry open a clamshell?",
+       "choices": [
+        "Powerful jaw muscles",
+        "Hundreds of tiny tube feet powered by its water vascular system",
+        "A single strong claw",
+        "Venomous spines"
+       ],
+       "answer": 1,
+       "explain": "Sea stars use their water vascular system to power many small, suction-tipped tube feet, applying steady combined force to slowly open a clam's shell."
+      },
+      {
+       "q": "Which mollusk group is known for high intelligence and rapid color-changing camouflage?",
+       "choices": [
+        "Gastropods",
+        "Bivalves",
+        "Cephalopods",
+        "Crustaceans"
+       ],
+       "answer": 2,
+       "explain": "Cephalopods, such as octopuses and cuttlefish, are the most intelligent mollusks and use specialized skin cells called chromatophores to change color and texture almost instantly."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Coral Reefs: A Pacific Islands Story",
+   "summary": "How a partnership between an animal and an alga builds the most biodiverse ecosystem in the ocean, and how Pacific Island communities have managed reef resources for generations, now facing the modern threat of a warming ocean.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Coral Biology and the Coral-Algae Partnership",
+     "minutes": 15,
+     "intro": "A single coral polyp is a simple animal little bigger than a fingertip, yet colonies of these polyps, working with a microscopic algal partner living inside their own tissue, have built structures visible from space, including Australia's Great Barrier Reef and the reefs ringing islands across the Pacific.",
+     "sections": [
+      {
+       "heading": "What Is a Coral, Really?",
+       "body": [
+        "A coral is a colonial animal made of thousands to millions of genetically identical polyps, each a small cnidarian related to sea anemones. **Stony corals** secrete a hard external skeleton of calcium carbonate beneath their soft tissue; as old polyps die, new ones grow on top of the skeleton left behind, and over centuries this accumulated skeleton becomes a reef.",
+        "Reefs grow slowly by human timescales but relentlessly over geological ones: many fast-growing stony corals add only about 1 to 3 centimeters of skeleton per year, yet given enough time, this slow accretion has produced structures like the Great Barrier Reef, which formed over roughly the last 20,000 years."
+       ],
+       "example": {
+        "problem": "A section of reef grows at an average rate of 1.5 centimeters per year. About how many years would it take to build a reef structure 15 meters thick?",
+        "steps": [
+         "Convert 15 meters to centimeters: 15 × 100 = 1,500 cm.",
+         "Divide the total thickness by the annual growth rate: 1,500 cm ÷ 1.5 cm/year = 1,000 years."
+        ],
+        "answer": "About 1,000 years."
+       }
+      },
+      {
+       "heading": "Zooxanthellae: The Partnership That Builds Reefs",
+       "body": [
+        "Living inside the tissue of most reef-building corals are microscopic photosynthetic algae called **zooxanthellae**. The algae photosynthesize using sunlight and supply the coral with up to 90% of the energy it needs, while the coral provides the algae shelter and a steady supply of carbon dioxide and nutrients from its own waste, a textbook mutualism.",
+        "This partnership is exactly why reef-building corals can only thrive in clear, shallow, sunlit water within a fairly narrow temperature range, typically about 23 to 29°C: the algae need sunlight to photosynthesize, and both partners are sensitive to water that is too warm, too cold, or too murky to support that photosynthesis."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "stony coral",
+       "def": "A coral that secretes a hard calcium carbonate skeleton, the primary reef-building type of coral."
+      },
+      {
+       "term": "coral polyp",
+       "def": "A single small cnidarian individual; corals are colonies of many genetically identical polyps."
+      },
+      {
+       "term": "zooxanthellae",
+       "def": "Microscopic photosynthetic algae living inside coral tissue that supply most of the coral's energy."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What do zooxanthellae provide to the coral they live inside?",
+       "choices": [
+        "Physical protection from predators only",
+        "Up to 90% of the coral's energy through photosynthesis",
+        "A hard calcium carbonate skeleton",
+        "Additional stinging cells"
+       ],
+       "answer": 1,
+       "explain": "Zooxanthellae are photosynthetic algae that supply the coral host with the majority of its energy in exchange for shelter and nutrients."
+      },
+      {
+       "q": "Why can reef-building corals only survive in shallow, clear, sunlit water?",
+       "choices": [
+        "Corals cannot survive underwater at all",
+        "Their zooxanthellae need sunlight for photosynthesis to support the coral",
+        "Deep water is too salty for coral",
+        "Coral skeletons dissolve in sunlight"
+       ],
+       "answer": 1,
+       "explain": "Because the coral depends on its photosynthetic algal partner for most of its energy, it needs to live where enough sunlight penetrates for that partner to photosynthesize."
+      },
+      {
+       "q": "A reef grows at 2 centimeters per year. About how long would it take to build a 20-meter-thick reef structure?",
+       "choices": [
+        "100 years",
+        "500 years",
+        "1,000 years",
+        "2,000 years"
+       ],
+       "answer": 2,
+       "explain": "20 meters = 2,000 cm; dividing by 2 cm per year gives 1,000 years."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Reef Ecosystems and Pacific Island Fisheries",
+     "minutes": 14,
+     "intro": "Coral reefs cover less than 1% of the ocean floor but support roughly a quarter of all known marine species, and across the Pacific, island communities have depended on that abundance for food and culture for well over a thousand years, developing management systems long before the term 'conservation' existed.",
+     "sections": [
+      {
+       "heading": "Reefs as Biodiversity Hotspots",
+       "body": [
+        "The complex, three-dimensional structure of a healthy reef, full of nooks, crevices, and branching corals, creates an enormous number of distinct **microhabitats**, each supporting different species of fish, invertebrates, and algae. This structural complexity is the main reason reefs support such extraordinary biodiversity relative to their small total area.",
+        "A single healthy reef can host thousands of species: parrotfish grazing on algae, cleaner wrasses picking parasites off larger fish, reef sharks patrolling the outer edges, and countless invertebrates hidden within the coral itself. Removing the coral structure, whether through bleaching, breakage, or disease, collapses this entire web of microhabitats at once."
+       ]
+      },
+      {
+       "heading": "Pacific Island Fisheries and Traditional Management",
+       "body": [
+        "Across the Pacific, many island communities, from Hawaiʻi to Palau to Fiji, developed sophisticated systems for managing reef fisheries centuries before modern marine science existed. In Hawaiʻi, the **ahupuaʻa** system divided land into wedge-shaped sections running from mountain to sea, managed as a single unit so that upstream practices, like farming, were directly tied to the health of the reef fisheries downstream.",
+        "In Palau, traditional chiefs have long used the **bul**, a temporary ban on fishing or harvesting in a specific reef area, to let fish and shellfish populations recover after overuse or before ceremonial events. These traditional systems function much like modern rotational closures and marine protected areas, and many Pacific nations today are actively reviving them alongside contemporary conservation science."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "microhabitat",
+       "def": "A small, distinct habitat within a larger ecosystem, such as a single crevice in a coral reef."
+      },
+      {
+       "term": "ahupuaʻa",
+       "def": "A traditional Hawaiian land division running from mountain to sea, managed as one connected resource unit."
+      },
+      {
+       "term": "bul",
+       "def": "A traditional Palauan temporary ban on fishing or harvesting in a reef area, allowing populations to recover."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do coral reefs support such a disproportionately large share of marine biodiversity?",
+       "choices": [
+        "They cover most of the ocean floor",
+        "Their complex three-dimensional structure creates countless microhabitats for different species",
+        "They have the coldest water temperatures",
+        "They are the only ocean ecosystem with fish"
+       ],
+       "answer": 1,
+       "explain": "The intricate physical structure of a healthy reef creates many distinct microhabitats, letting far more species coexist in a small area than a structurally simpler habitat could support."
+      },
+      {
+       "q": "What was the purpose of the Hawaiian ahupuaʻa land-to-sea management system?",
+       "choices": [
+        "To separate mountain and coastal communities completely",
+        "To manage land from mountain to sea as one unit, linking upstream practices to the health of coastal fisheries",
+        "To ban all fishing permanently",
+        "To divide islands by ocean depth"
+       ],
+       "answer": 1,
+       "explain": "The ahupuaʻa system recognized that what happened upstream, like farming practices, directly affected the health of the reef and fisheries downstream, so the whole system was managed together."
+      },
+      {
+       "q": "What is a bul, as traditionally practiced in Palau?",
+       "choices": [
+        "A type of fishing net",
+        "A permanent fishing ban",
+        "A temporary ban on fishing or harvesting in an area to let it recover",
+        "A ceremonial fish species"
+       ],
+       "answer": 2,
+       "explain": "A bul is a temporary closure of a reef area to fishing or harvesting, allowing fish and shellfish populations time to recover, functioning much like a modern rotational marine reserve."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Coral Bleaching and Reef Conservation",
+     "minutes": 15,
+     "intro": "When ocean temperatures climb just a degree or two above a reef's normal summer maximum for a few weeks, corals begin expelling the very algae that feed them, turning ghostly white in a stress response called bleaching. Understanding exactly what triggers this response is central to any strategy for protecting reefs going forward.",
+     "sections": [
+      {
+       "heading": "What Causes Coral Bleaching",
+       "body": [
+        "**Coral bleaching** happens when heat stress causes corals to expel their zooxanthellae, the photosynthetic algae that give them both color and most of their energy. Without the algae, the coral's white calcium carbonate skeleton becomes visible through its now-transparent tissue, and the coral, cut off from its main energy source, becomes far more vulnerable to starvation and disease.",
+        "Scientists track bleaching risk using a metric called **Degree Heating Weeks (DHW)**, which accumulates how far above the normal maximum temperature the water has been, and for how long. A DHW value of about 4 typically signals a significant bleaching risk, and a DHW of about 8 or higher signals a high risk of coral mortality, not just bleaching."
+       ],
+       "example": {
+        "problem": "Sea surface temperature stays 1.5°C above the local bleaching threshold for 6 consecutive weeks. What Degree Heating Weeks (DHW) value does this produce, and what level of risk does it suggest?",
+        "steps": [
+         "Multiply the temperature excess by the number of weeks: 1.5°C × 6 weeks = 9 DHW.",
+         "Compare to the risk thresholds: DHW ≥ 4 signals significant bleaching risk, and DHW ≥ 8 signals high risk of coral mortality.",
+         "9 DHW exceeds both thresholds."
+        ],
+        "answer": "9 DHW — a high risk of significant bleaching and coral mortality, not just temporary stress."
+       }
+      },
+      {
+       "heading": "Protecting Reefs",
+       "body": [
+        "A coral that survives a bleaching event can regain its algae and recover if temperatures return to normal quickly enough, but repeated or prolonged bleaching events, now increasingly common as the ocean warms, leave less and less time for recovery between episodes. Reducing local stressors, like pollution, sedimentation, and overfishing of algae-grazing fish, measurably improves a reef's ability to survive and recover from heat stress.",
+        "Conservation strategies include establishing marine protected areas to reduce local pressures, growing heat-tolerant coral fragments in nurseries for later transplanting onto damaged reefs, and, at the global scale, reducing greenhouse gas emissions to slow ocean warming, since no local protection can fully offset a warming ocean on its own."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "coral bleaching",
+       "def": "The expulsion of zooxanthellae from heat-stressed coral tissue, leaving the coral pale and energy-starved."
+      },
+      {
+       "term": "Degree Heating Weeks (DHW)",
+       "def": "A metric tracking accumulated heat stress on a reef, combining temperature excess and duration."
+      },
+      {
+       "term": "coral nursery",
+       "def": "A facility where coral fragments are grown, often selected for heat tolerance, before transplanting to damaged reefs."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What happens to a coral during bleaching?",
+       "choices": [
+        "It grows a thicker skeleton",
+        "It expels its zooxanthellae, losing color and its main energy source",
+        "It reproduces more rapidly",
+        "It turns from white to bright colors"
+       ],
+       "answer": 1,
+       "explain": "Heat stress causes the coral to expel its symbiotic algae, removing both its color and the majority of its energy supply, leaving it pale and vulnerable."
+      },
+      {
+       "q": "Water temperature stays 2°C above the bleaching threshold for 5 weeks. What DHW value results, and what does it indicate?",
+       "choices": [
+        "7 DHW — below the significant bleaching threshold",
+        "10 DHW — high risk of bleaching and mortality",
+        "2 DHW — no risk at all",
+        "5 DHW — moderate risk only"
+       ],
+       "answer": 1,
+       "explain": "2°C × 5 weeks = 10 DHW, well above the DHW ≥ 8 threshold associated with high risk of coral mortality."
+      },
+      {
+       "q": "Why does reducing local stressors like pollution and overfishing help reefs survive bleaching events?",
+       "choices": [
+        "It directly lowers ocean temperature",
+        "A healthier reef with fewer local stressors has more capacity to recover once temperatures return to normal",
+        "It prevents all future bleaching permanently",
+        "It has no measurable effect"
+       ],
+       "answer": 1,
+       "explain": "While reducing local stress cannot stop ocean warming itself, a reef under less additional pressure is more resilient and better able to recover in the time between heat stress events."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Fish, Marine Mammals, and the Deep Sea",
+   "summary": "The vertebrates that dominate the water column, the extreme adaptations required to survive without sunlight, and the human pressures now reshaping ocean life at every depth.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Fish Diversity and Adaptations",
+     "minutes": 14,
+     "intro": "More than half of all vertebrate species on Earth are fish, and that success comes from a body plan endlessly adapted for one job: moving efficiently through a medium nearly 800 times denser than air.",
+     "sections": [
+      {
+       "heading": "Built for Water",
+       "body": [
+        "A typical fish body is streamlined to reduce drag while swimming, and most fish extract dissolved oxygen from water using **gills**, thin, blood-vessel-rich structures that let oxygen pass efficiently into the bloodstream even though water holds far less oxygen than air. Many bony fish also have a **swim bladder**, a gas-filled internal sac that lets them hover at a chosen depth without constantly swimming to avoid sinking.",
+        "Fish also have a **lateral line**, a row of sensory organs running along each side of the body that detects vibrations and pressure changes in the surrounding water, letting a fish sense a nearby predator, prey, or the presence of other fish in a school even in total darkness or murky water."
+       ]
+      },
+      {
+       "heading": "Adaptations Across Habitats",
+       "body": [
+        "Reef fish show extraordinary color and pattern diversity, much of it used for camouflage against a complex coral background, species recognition, or communication with rivals and potential mates. Fast-swimming open-ocean fish like tuna have evolved **countercurrent heat exchange** in their circulatory system, letting them keep their swimming muscles significantly warmer than the surrounding water, which boosts muscle performance for sustained high-speed swimming.",
+        "Efficient gas exchange matters enormously in water, where oxygen is scarce compared to air: a fish's gills can extract roughly 80% of the dissolved oxygen passing over them, compared to only about 25% of the oxygen a human lung extracts from each breath, a striking difference explained by the gills' countercurrent flow of water and blood moving in opposite directions."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "gill",
+       "def": "A thin, blood-vessel-rich respiratory organ that extracts dissolved oxygen from water."
+      },
+      {
+       "term": "swim bladder",
+       "def": "A gas-filled internal sac in many bony fish used to control buoyancy at different depths."
+      },
+      {
+       "term": "lateral line",
+       "def": "A row of sensory organs along a fish's body that detects vibrations and pressure changes in the water."
+      },
+      {
+       "term": "countercurrent heat exchange",
+       "def": "A circulatory adaptation, seen in tuna, that keeps swimming muscles warmer than the surrounding water."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main function of a fish's lateral line?",
+       "choices": [
+        "Producing electricity",
+        "Detecting vibrations and pressure changes in the surrounding water",
+        "Filtering salt from seawater",
+        "Storing extra oxygen"
+       ],
+       "answer": 1,
+       "explain": "The lateral line is a sensory system that lets a fish detect nearby movement and pressure changes, useful for finding prey, avoiding predators, and coordinating within a school."
+      },
+      {
+       "q": "How efficiently do fish gills typically extract dissolved oxygen from water, compared to human lungs extracting oxygen from air?",
+       "choices": [
+        "Fish gills extract about 80%, versus about 25% for human lungs",
+        "Fish gills and human lungs are about equally efficient",
+        "Human lungs are far more efficient than fish gills",
+        "Fish gills cannot extract oxygen at all"
+       ],
+       "answer": 0,
+       "explain": "Fish gills use a highly efficient countercurrent exchange system, extracting roughly 80% of available dissolved oxygen, far more efficient than the roughly 25% human lungs extract from air."
+      },
+      {
+       "q": "What advantage does countercurrent heat exchange give tuna?",
+       "choices": [
+        "It cools their entire body to match ocean temperature",
+        "It keeps their swimming muscles warmer than the surrounding water, boosting sustained swimming performance",
+        "It allows them to breathe air",
+        "It changes their body color"
+       ],
+       "answer": 1,
+       "explain": "By retaining metabolic heat in their swimming muscles rather than losing it all to the surrounding water, tuna maintain warmer, more powerful muscles for fast, sustained swimming."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Marine Mammals and Sea Turtles",
+     "minutes": 15,
+     "intro": "A sperm whale can dive to depths over 2,000 meters and hold its breath for more than 90 minutes, and a loggerhead sea turtle can navigate thousands of kilometers across open ocean back to the exact beach where it hatched decades earlier. Both feats depend on remarkable, well-understood adaptations.",
+     "sections": [
+      {
+       "heading": "Breath-Holding Mammals",
+       "body": [
+        "**Cetaceans** (whales and dolphins) and **pinnipeds** (seals and sea lions) are air-breathing mammals fully or partly adapted to ocean life. Deep-diving species store extra oxygen in muscle tissue using a protein called **myoglobin**, present in far higher concentrations than in land mammal muscle, and slow their heart rate dramatically during a dive, a response called **diving bradycardia**, to conserve oxygen for the brain and essential organs.",
+        "Thick layers of fat called **blubber** insulate marine mammals against cold water, which conducts heat away from a body roughly 25 times faster than air at the same temperature. Sperm whales, among the deepest-diving mammals, combine all of these adaptations to reach depths past 2,000 meters in search of squid."
+       ]
+      },
+      {
+       "heading": "Sea Turtles: Ancient Ocean Navigators",
+       "body": [
+        "Seven species of sea turtles inhabit the world's oceans, all descended from ancestors that returned to the sea over 100 million years ago while still needing to breathe air and lay eggs on land. Female sea turtles show remarkable **natal homing**, returning as adults to nest on the very beach, or one very close to it, where they themselves hatched decades earlier, guided partly by sensitivity to Earth's magnetic field.",
+        "Sea turtles also show **temperature-dependent sex determination**: the temperature of the sand incubating a turtle's eggs, not any genetic mechanism, determines the hatchlings' sex. Warmer sand (above a pivot temperature around 29°C) produces mostly females, while cooler sand produces mostly males, a system now raising concern as rising global temperatures skew hatchling sex ratios heavily toward females."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "myoglobin",
+       "def": "An oxygen-storing protein found at high concentrations in the muscles of deep-diving marine mammals."
+      },
+      {
+       "term": "diving bradycardia",
+       "def": "A slowing of heart rate during a dive that conserves oxygen for the brain and vital organs."
+      },
+      {
+       "term": "natal homing",
+       "def": "The tendency of adult sea turtles to return to nest at or near the beach where they hatched."
+      },
+      {
+       "term": "temperature-dependent sex determination",
+       "def": "A system, seen in sea turtles, where incubation temperature rather than genetics determines offspring sex."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What adaptation allows deep-diving marine mammals to store extra oxygen in their muscles?",
+       "choices": [
+        "A larger lung volume only",
+        "High concentrations of myoglobin in muscle tissue",
+        "Gills alongside lungs",
+        "A slower metabolism at all times"
+       ],
+       "answer": 1,
+       "explain": "Myoglobin binds and stores oxygen within muscle tissue itself, letting deep-diving mammals sustain long dives without needing to surface for air as frequently."
+      },
+      {
+       "q": "In sea turtles, what determines whether a hatchling develops as male or female?",
+       "choices": [
+        "The mother's diet",
+        "The temperature of the sand incubating the eggs",
+        "Random genetic chance, unrelated to environment",
+        "The turtle's location as an adult"
+       ],
+       "answer": 1,
+       "explain": "Sea turtles use temperature-dependent sex determination: warmer incubation sand produces more females, and cooler sand produces more males, rather than sex being fixed genetically at fertilization."
+      },
+      {
+       "q": "Why is rising global temperature a specific concern for sea turtle populations?",
+       "choices": [
+        "It melts their shells",
+        "It can skew hatchling sex ratios heavily toward females, since warmer sand produces more females",
+        "It prevents them from breathing air",
+        "It has no known effect on turtles"
+       ],
+       "answer": 1,
+       "explain": "Because incubation temperature determines sex, warming beach sand is producing increasingly female-skewed hatchling populations, raising long-term concerns for the reproductive future of some sea turtle populations."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Life in the Deep Sea",
+     "minutes": 14,
+     "intro": "Below about a thousand meters, the ocean is permanently dark, near-freezing, and crushingly pressurized, yet it hosts more habitat volume than any other environment on Earth, and life there survives on a strange mix of falling scraps from above and chemical energy welling up from below.",
+     "sections": [
+      {
+       "heading": "Darkness, Cold, and Extreme Pressure",
+       "body": [
+        "Below roughly 1,000 meters, sunlight is essentially absent, temperatures typically hover just above freezing, and pressure is extreme: at the bottom of the Mariana Trench, nearly 10,935 meters down, pressure reaches over 1,000 atmospheres, more than 1,000 times what we experience at sea level. Deep-sea animals cope with this pressure through flexible, often gelatinous bodies, and flesh and cell membranes chemically adapted to function normally under crushing conditions that would disable most shallow-water life.",
+        "Many deep-sea animals produce their own light through **bioluminescence**, a chemical reaction inside specialized cells or with the help of light-producing bacteria. The anglerfish is a famous example, dangling a glowing lure above its mouth to attract prey in total darkness, while many other species use bioluminescent flashes to startle predators, attract mates, or camouflage their silhouette against the faint light above."
+       ],
+       "example": {
+        "problem": "What is the approximate pressure, in atmospheres, at the bottom of the Mariana Trench, roughly 10,900 meters deep?",
+        "steps": [
+         "Add 1 atm for the surface atmosphere.",
+         "Add pressure from the water: 10,900 m ÷ 10 m per atm = 1,090 atm.",
+         "Total: 1 + 1,090 = 1,091 atm."
+        ],
+        "answer": "About 1,091 atmospheres — over a thousand times surface pressure."
+       }
+      },
+      {
+       "heading": "Food From Above and Below",
+       "body": [
+        "With no sunlight for photosynthesis, most deep-sea animals depend on **marine snow**, a continuous slow fall of dead plankton, fecal matter, and other organic debris sinking down from the sunlit surface waters above, providing a thin but steady food supply to the water column and seafloor below.",
+        "A dramatically different food source exists at **hydrothermal vents**, where mineral-rich, superheated water escapes from cracks in the seafloor. Specialized bacteria there perform **chemosynthesis**, building organic molecules using chemical energy from compounds like hydrogen sulfide instead of sunlight, and these bacteria form the base of an entire ecosystem, including giant tube worms, unique to vent sites and totally independent of the sun."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "bioluminescence",
+       "def": "The production of light by a living organism through an internal chemical reaction."
+      },
+      {
+       "term": "marine snow",
+       "def": "A continuous fall of dead plankton and organic debris from surface waters down through the water column."
+      },
+      {
+       "term": "hydrothermal vent",
+       "def": "A seafloor opening releasing mineral-rich, superheated water, supporting ecosystems based on chemosynthesis."
+      },
+      {
+       "term": "chemosynthesis",
+       "def": "The production of organic molecules using chemical energy instead of sunlight, performed by some bacteria."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Approximately how many atmospheres of pressure exist at 8,000 meters depth?",
+       "choices": [
+        "80 atm",
+        "800 atm",
+        "801 atm",
+        "8,000 atm"
+       ],
+       "answer": 2,
+       "explain": "8,000 m ÷ 10 m per atm = 800 atm from the water, plus 1 atm at the surface, totaling 801 atm."
+      },
+      {
+       "q": "What is marine snow, and why does it matter to deep-sea life?",
+       "choices": [
+        "Frozen seawater falling from icebergs",
+        "A steady fall of dead plankton and organic debris from surface waters, a key food source in the absence of sunlight",
+        "A type of bioluminescent algae",
+        "Sediment stirred up from the seafloor"
+       ],
+       "answer": 1,
+       "explain": "Since deep-sea animals cannot rely on photosynthesis, marine snow sinking from sunlit surface waters provides an essential, steady trickle of food to the deep ocean."
+      },
+      {
+       "q": "What makes hydrothermal vent ecosystems unique compared to nearly every other ecosystem on Earth?",
+       "choices": [
+        "They rely entirely on bioluminescence for energy",
+        "They are based on chemosynthesis, using chemical energy instead of sunlight, at their base",
+        "They contain no bacteria",
+        "They are located in the sunlit zone"
+       ],
+       "answer": 1,
+       "explain": "Unlike almost all other ecosystems, which are ultimately powered by sunlight, hydrothermal vent communities are built on chemosynthetic bacteria that derive energy from chemicals like hydrogen sulfide, independent of the sun."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Human Impact and Marine Protected Areas",
+     "minutes": 15,
+     "intro": "The ocean has absorbed the impact of industrial-scale fishing, an estimated 8 million metric tons of plastic entering it every year, and a changing climate, yet it has also become the site of some of the most ambitious conservation efforts on the planet, including protected areas larger than entire countries.",
+     "sections": [
+      {
+       "heading": "Overfishing, Bycatch, and Plastic Pollution",
+       "body": [
+        "According to United Nations Food and Agriculture Organization assessments, roughly one-third of the world's monitored fish stocks are currently classified as overfished, meaning they are being harvested faster than they can naturally replenish. Beyond the target species themselves, **bycatch**, the unintentional capture of non-target animals like sea turtles, dolphins, and sharks in fishing gear, kills millions of animals each year that were never the intended catch.",
+        "An estimated 8 million metric tons of plastic enter the ocean annually, breaking down over time into **microplastics**, fragments smaller than 5 millimeters that are now found in ocean water, seafloor sediment, and the tissues of marine animals worldwide, from plankton to whales, with impacts on marine life still being actively studied."
+       ]
+      },
+      {
+       "heading": "Marine Protected Areas and Sustainable Solutions",
+       "body": [
+        "A **marine protected area (MPA)** restricts or bans certain activities, like fishing, drilling, or anchoring, within its boundaries to let marine ecosystems recover and thrive. Papahānaumokuākea Marine National Monument, surrounding the northwestern Hawaiian Islands, is one of the largest fully protected marine conservation areas on Earth, covering roughly 583,000 square miles of ocean, an area larger than all of the United States' land national parks combined several times over.",
+        "Alongside large-scale MPAs, sustainable seafood certification programs, bycatch-reduction devices on fishing gear (like turtle excluder devices on shrimp trawls), and consumer choices guided by sustainable seafood guides all contribute to reducing the human footprint on ocean ecosystems, often working best when combined with the kind of community-based management practiced across the Pacific for generations."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "overfished",
+       "def": "A fish stock being harvested faster than it can naturally reproduce and replenish."
+      },
+      {
+       "term": "bycatch",
+       "def": "The unintentional capture of non-target species, such as turtles or dolphins, in fishing gear."
+      },
+      {
+       "term": "microplastic",
+       "def": "A plastic fragment smaller than 5 millimeters, formed as larger plastic debris breaks down in the ocean."
+      },
+      {
+       "term": "marine protected area (MPA)",
+       "def": "A designated ocean area where activities like fishing or drilling are restricted to protect marine ecosystems."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to FAO assessments, roughly what fraction of the world's monitored fish stocks are currently overfished?",
+       "choices": [
+        "About 1 in 20",
+        "About 1 in 10",
+        "About 1 in 3",
+        "About 9 in 10"
+       ],
+       "answer": 2,
+       "explain": "Assessments have found that roughly one-third of monitored global fish stocks are being harvested faster than they can naturally replenish, classifying them as overfished."
+      },
+      {
+       "q": "What is bycatch?",
+       "choices": [
+        "The intended target species of a fishing trip",
+        "The unintentional capture of non-target animals like turtles or dolphins in fishing gear",
+        "Plastic waste caught in fishing nets",
+        "A type of sustainable fishing certification"
+       ],
+       "answer": 1,
+       "explain": "Bycatch refers to animals unintentionally caught in fishing gear that were not the target species, and it is a major source of mortality for species like sea turtles and dolphins."
+      },
+      {
+       "q": "What is the purpose of a marine protected area (MPA)?",
+       "choices": [
+        "To increase commercial fishing activity",
+        "To restrict activities like fishing or drilling so marine ecosystems can recover and thrive",
+        "To relocate all marine life to aquariums",
+        "To study climate change exclusively"
+       ],
+       "answer": 1,
+       "explain": "MPAs limit or ban activities that harm marine ecosystems within their boundaries, giving fish populations and habitats room to recover and remain healthy over time."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

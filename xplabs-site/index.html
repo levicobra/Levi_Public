@@ -117,6 +117,7 @@ a{color:inherit}
 .slab--teal .g__name{font-size:var(--s-4)}    /* flagship reads bigger at every width */
 .g__kind{font-family:var(--ui);font-size:var(--s-min);margin-top:.5rem;opacity:.88}
 .g__body{margin-top:1.1rem;max-width:52ch;line-height:1.6}
+.g__body a{text-decoration:underline;text-underline-offset:2px}
 .g__body + .g__body{margin-top:.8rem}
 .g__go{display:inline-block;margin-top:1.4rem;font-family:var(--ui);font-size:var(--s-min);
   font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
@@ -133,6 +134,14 @@ a{color:inherit}
 .g--lead figure{margin:0}
 .g--lead img{width:100%;border:3px solid rgba(255,255,255,.28)}
 .g--lead figcaption{font-family:var(--ui);font-size:var(--s-min);opacity:.8;margin-top:.5rem}
+
+/* the education plate's second column: a real count per domain, not decoration */
+.domains__t{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;opacity:.82;margin-bottom:.7rem}
+.domains ul{columns:2;column-gap:1.5rem;font-family:var(--ui);font-size:var(--s-min);line-height:1.85}
+.domains li{break-inside:avoid}
+.domains b{display:inline-block;min-width:1.9em;font-variant-numeric:tabular-nums;font-weight:700}
+@media (max-width:520px){.domains ul{columns:1}}
 
 /* the closing slab sets its prose in two columns so it fills the plate
    instead of leaving half of it empty */
@@ -177,6 +186,7 @@ a{color:inherit}
   <a class="logo" href="/">XPLABS</a>
   <nav aria-label="Primary">
     <a href="/games/">Games</a>
+    <a href="/education/">Education</a>
     <a href="/engineering/">Engineering</a>
     <a href="/military-benefits/">Benefits</a>
     <a href="/personal/">Personal</a>
@@ -186,13 +196,14 @@ a{color:inherit}
 <main id="main">
 
 <section class="wrap hero">
-  <h1>XPLabs builds&nbsp;games.<br><em>Four of them.</em></h1>
+  <h1>XPLabs builds games.<br><em>And a free school.</em></h1>
   <p class="hero__sub">A survivors game in Unreal Engine, a puzzle-defense campaign in Swift,
-  an offline life simulator, and a live Roblox world.</p>
+  an offline life simulator, a live Roblox world — and 106 subjects that work with no
+  connection at all.</p>
   <p class="hero__facts">
-    <span><b>4</b> titles</span>
-    <span><b>4</b> engines</span>
-    <span><b>1</b> live, <b>1</b> in release prep</span>
+    <span><b>4</b> games</span>
+    <span><b>106</b> subjects</span>
+    <span><b>0</b> accounts, ads or trackers</span>
   </p>
 </section>
 
@@ -281,6 +292,50 @@ a{color:inherit}
       <ul class="g__specs">
         <li>15 min matches</li><li>Solo or duo</li><li>Keeper &middot; Hunter</li>
       </ul>
+    </div>
+  </section>
+</div>
+
+<!-- ===== XP EDUCATION — rust. Not a game, so not a game slab. ===== -->
+<div class="wrap">
+  <section class="slab slab--rust">
+    <div class="slab__in g--lead">
+      <div>
+        <p class="g__label">Free &middot; no account</p>
+        <h2 class="g__name">XP Education</h2>
+        <p class="g__kind">Offline learning platform &middot; installs as an app</p>
+        <p class="g__body">A whole school that works with no connection. Visit once and the
+        entire library — 106 subjects across 14 domains, from K–8 reading and arithmetic through
+        college calculus, chemistry, accounting and Japanese — lives on your device. Real
+        lessons, worked examples, key terms and practice questions, not link lists.</p>
+        <p class="g__body">College courses follow the scope and sequence of
+        <a href="https://openstax.org" rel="noopener">OpenStax</a> open textbooks and link to
+        the full free book. Progress is stored on your device. There are no accounts, no
+        tracking and no paywall, and there is nothing to buy.</p>
+        <ul class="g__specs">
+          <li>106 subjects</li><li>14 domains</li><li>Works offline</li>
+        </ul>
+        <a class="g__go" href="/education/">Start learning &rarr;</a>
+      </div>
+      <div class="domains">
+        <p class="domains__t">What is in it</p>
+        <ul>
+          <li><b>13</b> Mathematics</li>
+          <li><b>11</b> Business</li>
+          <li><b>10</b> Physical science</li>
+          <li><b>8</b> Life science</li>
+          <li><b>8</b> Computer science</li>
+          <li><b>8</b> Social science</li>
+          <li><b>7</b> Languages</li>
+          <li><b>6</b> K&ndash;8 foundations</li>
+          <li><b>6</b> Engineering &amp; trades</li>
+          <li><b>6</b> History</li>
+          <li><b>6</b> Humanities</li>
+          <li><b>6</b> Health</li>
+          <li><b>6</b> Arts</li>
+          <li><b>5</b> Study skills</li>
+        </ul>
+      </div>
     </div>
   </section>
 </div>

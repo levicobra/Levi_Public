@@ -1,0 +1,1624 @@
+{
+ "id": "trigonometry",
+ "title": "Trigonometry",
+ "domain": "math",
+ "level": "Intro college",
+ "description": "A first course in trigonometry: how angles, triangles, and periodic motion connect through six functions built on the unit circle. You will measure angles in degrees and radians, evaluate trig functions exactly using reference triangles, graph periodic functions, verify identities, and solve any triangle. These are the tools used constantly in physics, engineering, navigation, and anything involving rotation or waves.",
+ "outcomes": [
+  "Convert fluently between degrees and radians and compute arc length, angular velocity, and linear velocity for rotating objects.",
+  "Evaluate all six trigonometric functions for any angle using the unit circle, reference angles, and special triangles, without a calculator.",
+  "Graph sine, cosine, tangent, and their reciprocal functions, correctly showing amplitude, period, phase shift, and vertical shift.",
+  "Verify trigonometric identities and solve trigonometric equations using the Pythagorean, sum-difference, and double-angle formulas.",
+  "Solve any triangle, right or oblique, using right-triangle ratios, the Law of Sines, or the Law of Cosines, and compute its area.",
+  "Model real periodic phenomena, such as tides, sound waves, and rotating machinery, with trigonometric functions."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Angles and Radian Measure",
+   "summary": "How angles are measured in degrees and radians, and how those measures connect to arc length and rotational speed.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Degrees, Radians, and Coterminal Angles",
+     "minutes": 15,
+     "intro": "Every trig function you will ever use starts from one idea: an angle is an amount of rotation, and rotation can be measured with two rulers, degrees or radians. Learning to move fluently between them is the first skill this course builds, because nearly every formula ahead assumes you can switch scales without thinking twice.",
+     "sections": [
+      {
+       "heading": "Standard Position and Coterminal Angles",
+       "body": [
+        "An angle in **standard position** has its vertex at the origin and its initial side along the positive x-axis; the terminal side is wherever the rotation stops. A positive angle rotates counterclockwise and a negative angle rotates clockwise, so −45° and 315° end at the same terminal side even though they describe opposite directions of turning.",
+        "**Coterminal angles** share a terminal side and differ by a whole number of full rotations. To find one, add or subtract 360°·k for any integer k. For example, 400° and −320° are both coterminal with 40°, since 400° − 360° = 40° and −320° + 360° = 40°. In radians the same idea uses 2π·k instead of 360°·k."
+       ]
+      },
+      {
+       "heading": "Radian Measure",
+       "body": [
+        "A **radian** is the angle subtended at a circle's center by an arc whose length equals the radius. Because every circle's circumference is 2πr, a full 360° rotation measures exactly 2π radians — the ratio of circumference to radius, with the units stripped away. This is why radians are called a \"natural\" unit: they come from the circle itself, not from an arbitrary count like 360.",
+        "The conversion rule is 180° = π radians. To go from degrees to radians, multiply by π/180°; to go from radians to degrees, multiply by 180°/π. Radians are the required unit in calculus and physics because they make arc-length and velocity formulas unit-free, so both scales will appear side by side for the rest of this course."
+       ],
+       "example": {
+        "problem": "Convert 150° to radians, and convert 5π/6 radians back to degrees to check your work. Then find one positive and one negative angle coterminal with 150°.",
+        "steps": [
+         "Degrees to radians: 150° × (π/180°) = 150π/180 = 5π/6 radians.",
+         "Check by converting back: 5π/6 × (180°/π) = (5 × 180°)/6 = 150°. It matches.",
+         "Positive coterminal angle: 150° + 360° = 510°.",
+         "Negative coterminal angle: 150° − 360° = −210°."
+        ],
+        "answer": "150° = 5π/6 radians; coterminal angles include 510° and −210°."
+       }
+      },
+      {
+       "heading": "Quadrantal Angles and the Core Radian Values",
+       "body": [
+        "Angles whose terminal side lies exactly on an axis are **quadrantal angles**: 0°, 90°, 180°, 270°, and 360° (0, π/2, π, 3π/2, 2π in radians). They mark the boundary between the four quadrants, and which quadrant an angle's terminal side falls in determines the sign of every trig function value — a fact you will use in nearly every unit ahead.",
+        "Four radian values generate almost every angle used in this course: π/6 (30°), π/4 (45°), π/3 (60°), and π/2 (90°). Memorize these degree–radian pairs now, because building every other common angle, like 2π/3 or 5π/4, is just adding or multiplying these four."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "standard position",
+       "def": "An angle drawn with its vertex at the origin and its initial side on the positive x-axis."
+      },
+      {
+       "term": "coterminal angles",
+       "def": "Angles that share the same terminal side, differing by a whole-number multiple of 360° or 2π radians."
+      },
+      {
+       "term": "radian",
+       "def": "The angle subtended at a circle's center by an arc equal in length to the radius; 2π radians = 360°."
+      },
+      {
+       "term": "quadrantal angle",
+       "def": "An angle whose terminal side lies on a coordinate axis: 0°, 90°, 180°, 270°, or 360°."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which angle is coterminal with 70°?",
+       "choices": [
+        "430°",
+        "290°",
+        "−70°",
+        "160°"
+       ],
+       "answer": 0,
+       "explain": "Adding 360° to 70° gives 430°, the same terminal side. 290° is what you get measuring 70° short of a full clockwise turn — a different terminal side."
+      },
+      {
+       "q": "Convert 3π/4 radians to degrees.",
+       "choices": [
+        "135°",
+        "120°",
+        "150°",
+        "225°"
+       ],
+       "answer": 0,
+       "explain": "3π/4 × 180°/π = (3 × 180°)/4 = 540°/4 = 135°."
+      },
+      {
+       "q": "A full rotation equals how many radians?",
+       "choices": [
+        "π",
+        "2π",
+        "360",
+        "4π"
+       ],
+       "answer": 1,
+       "explain": "Circumference divided by radius is 2πr/r = 2π, so one full turn is 2π radians regardless of the circle's size."
+      },
+      {
+       "q": "Which of these is NOT coterminal with −90°?",
+       "choices": [
+        "270°",
+        "630°",
+        "90°",
+        "−450°"
+       ],
+       "answer": 2,
+       "explain": "−90° + 360° = 270°, and 270° + 360° = 630°, and −90° − 360° = −450°, all valid. But 90° is a different terminal side, directly opposite −90° on the axis."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Arc Length and the Meaning of a Radian",
+     "minutes": 14,
+     "intro": "Because a radian is defined from the radius itself, the formula connecting angle, radius, and arc length is almost embarrassingly simple once you see it — no conversion factor needed, as long as the angle is measured in radians. This lesson turns that simplicity into a tool for real circles, wheels, and orbits.",
+     "sections": [
+      {
+       "heading": "The Arc Length Formula",
+       "body": [
+        "For a circle of radius r, an angle θ measured in **radians** subtends an arc of length s = rθ. This falls directly out of the radian's definition: one radian subtends an arc equal to one radius, so θ radians subtends θ radii of arc. The formula only works directly when θ is in radians — if you're given degrees, convert first.",
+        "Rearranging gives θ = s/r, which is exactly how you can define radian measure from scratch: it is arc length divided by radius, a pure ratio with no units. This is also why radians behave so well in calculus — derivatives of trig functions come out clean only when angles are radians."
+       ],
+       "example": {
+        "problem": "A circle has radius 8 cm. Find the arc length cut off by a central angle of 135°.",
+        "steps": [
+         "Convert 135° to radians: 135° × π/180° = 3π/4 radians.",
+         "Apply s = rθ: s = 8 × 3π/4 = 24π/4 = 6π cm.",
+         "Compute a decimal value: 6π ≈ 18.85 cm."
+        ],
+        "answer": "s = 6π cm ≈ 18.85 cm."
+       }
+      },
+      {
+       "heading": "Sector Area",
+       "body": [
+        "The same idea gives the area of a circular sector (a \"pizza slice\" of the circle). The full circle has area πr² and corresponds to angle 2π, so a sector with central angle θ (radians) is the fraction θ/(2π) of the whole: A = (1/2)r²θ. Notice the parallel to arc length — both formulas need θ in radians, and both come from treating the sector as a fraction of the full circle.",
+        "These two formulas, s = rθ and A = (1/2)r²θ, are used constantly in physics for anything moving along a curved path — headlights sweeping an angle, a robotic arm's tool tracing an arc, or a wedge cut from a pizza of known radius."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "arc length",
+       "def": "The distance along a circular arc; s = rθ when θ is in radians."
+      },
+      {
+       "term": "sector",
+       "def": "The pie-slice region bounded by two radii and the arc between them."
+      },
+      {
+       "term": "sector area",
+       "def": "The area of a circular sector: A = (1/2)r²θ, with θ in radians."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A circle has radius 10 m. What is the arc length for a central angle of π/3 radians?",
+       "choices": [
+        "10π/3 m",
+        "10π m",
+        "π/30 m",
+        "30/π m"
+       ],
+       "answer": 0,
+       "explain": "s = rθ = 10 × π/3 = 10π/3 m ≈ 10.47 m."
+      },
+      {
+       "q": "A central angle of 60° cuts an arc of length 4π cm from a circle. What is the radius?",
+       "choices": [
+        "12 cm",
+        "24 cm",
+        "4 cm",
+        "6 cm"
+       ],
+       "answer": 0,
+       "explain": "60° = π/3 radians. s = rθ gives 4π = r(π/3), so r = 4π ÷ (π/3) = 12 cm."
+      },
+      {
+       "q": "A sector with central angle π/2 radians has radius 6 cm. Find its area.",
+       "choices": [
+        "9π cm²",
+        "18π cm²",
+        "3π cm²",
+        "6π cm²"
+       ],
+       "answer": 0,
+       "explain": "A = (1/2)r²θ = (1/2)(36)(π/2) = 18π/2 = 9π cm²."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Angular and Linear Velocity",
+     "minutes": 14,
+     "intro": "A spinning bicycle wheel and the point on its rim both experience rotation, but they don't move at the same speed in the same sense — the wheel turns at one angular rate while a point near the rim covers far more ground per second than a point near the hub. This lesson makes that distinction precise.",
+     "sections": [
+      {
+       "heading": "Angular Velocity",
+       "body": [
+        "**Angular velocity** ω measures how fast an angle is swept out per unit time: ω = θ/t, typically in radians per second or revolutions per minute (rpm). Every point on a rotating rigid object, from the center to the rim, shares the same angular velocity, because they all sweep through the same angle in the same time.",
+        "To convert rpm to radians per second, remember one revolution is 2π radians and one minute is 60 seconds, so ω (rad/s) = rpm × 2π/60 = rpm × π/30. This conversion appears constantly in engineering problems involving motors, gears, and turntables."
+       ]
+      },
+      {
+       "heading": "Linear Velocity",
+       "body": [
+        "**Linear velocity** v is how fast a point actually travels along its circular path, in units like m/s. Since arc length is s = rθ, dividing both sides by time gives v = rω — linear velocity equals radius times angular velocity. This is why a point farther from the axis (larger r) moves faster in a straight-line sense even though ω is identical for every point on the object.",
+        "This single formula, v = rω, explains why the outer edge of a spinning record moves faster than a point near the label, why a longer wrench arm applies force through a longer arc, and why satellites at different orbital radii need different orbital speeds to complete one revolution in the same period."
+       ],
+       "example": {
+        "problem": "A carousel horse sits 5 m from the center and completes one full revolution every 20 seconds. Find its angular velocity in rad/s and its linear (riding) speed in m/s.",
+        "steps": [
+         "One revolution is 2π radians, completed in 20 s, so ω = 2π/20 = π/10 rad/s.",
+         "Apply v = rω: v = 5 × π/10 = π/2 m/s.",
+         "Compute a decimal: π/2 ≈ 1.57 m/s."
+        ],
+        "answer": "ω = π/10 rad/s ≈ 0.314 rad/s; v = π/2 m/s ≈ 1.57 m/s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "angular velocity (ω)",
+       "def": "The rate at which an angle is swept per unit time, ω = θ/t, usually in rad/s."
+      },
+      {
+       "term": "linear velocity (v)",
+       "def": "The speed of a point moving along a circular path, v = rω, in units like m/s."
+      },
+      {
+       "term": "rpm",
+       "def": "Revolutions per minute, a common angular speed unit converted to rad/s by multiplying by π/30."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A wheel spins at 300 rpm. What is its angular velocity in rad/s?",
+       "choices": [
+        "10π rad/s",
+        "5π rad/s",
+        "300π rad/s",
+        "π/10 rad/s"
+       ],
+       "answer": 0,
+       "explain": "ω = 300 × π/30 = 10π rad/s (about 31.4 rad/s)."
+      },
+      {
+       "q": "Two points sit on the same spinning disk, one at 2 cm from center and one at 8 cm. How do their angular and linear velocities compare?",
+       "choices": [
+        "Same ω, different v",
+        "Different ω, same v",
+        "Both different",
+        "Both the same"
+       ],
+       "answer": 0,
+       "explain": "Every point on a rigid rotating disk shares the same ω, but v = rω, so the point farther out moves faster in a straight-line sense."
+      },
+      {
+       "q": "A point on a wheel of radius 0.3 m has linear velocity 6 m/s. Find the angular velocity.",
+       "choices": [
+        "20 rad/s",
+        "1.8 rad/s",
+        "0.05 rad/s",
+        "6.3 rad/s"
+       ],
+       "answer": 0,
+       "explain": "v = rω, so ω = v/r = 6/0.3 = 20 rad/s."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Right Triangle Trigonometry",
+   "summary": "Defining the six trig ratios from right triangles and using them to find missing sides, angles, and real-world heights and distances.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Six Trigonometric Ratios",
+     "minutes": 16,
+     "intro": "Before the unit circle, trigonometry began with a much older idea: in a right triangle, the ratios of side lengths depend only on the acute angles, never on the triangle's size. That single observation is powerful enough to measure the height of a pyramid without climbing it, and it's where every trig function you'll use starts.",
+     "sections": [
+      {
+       "heading": "Defining Sine, Cosine, and Tangent",
+       "body": [
+        "For an acute angle θ in a right triangle, label the side opposite θ as \"opposite,\" the side next to θ that is not the hypotenuse as \"adjacent,\" and the longest side as the \"hypotenuse.\" Then sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse, and tan θ = opposite/adjacent. The classic memory aid is **SOH-CAH-TOA**: Sine-Opposite-Hypotenuse, Cosine-Adjacent-Hypotenuse, Tangent-Opposite-Adjacent.",
+        "These ratios are well defined precisely because all right triangles with the same acute angle are similar — same shape, different size — so the side ratios never change. A 3-4-5 triangle and a 6-8-10 triangle both give sin θ = 3/5 for their matching angle, even though one triangle is twice the size of the other."
+       ]
+      },
+      {
+       "heading": "The Reciprocal Functions",
+       "body": [
+        "Three more functions are simply reciprocals of the first three: cosecant csc θ = 1/sin θ = hypotenuse/opposite, secant sec θ = 1/cos θ = hypotenuse/adjacent, and cotangent cot θ = 1/tan θ = adjacent/opposite. They are not new ideas, just new names for flipped ratios, but all six appear regularly enough in later identities that they are worth learning by name now.",
+        "Notice that tan θ = sin θ/cos θ and cot θ = cos θ/sin θ, a relationship that will resurface constantly when you simplify trigonometric expressions and prove identities later in this course."
+       ],
+       "example": {
+        "problem": "A right triangle has legs 5 and 12 with hypotenuse 13. For the angle θ opposite the side of length 5, find all six trigonometric ratios.",
+        "steps": [
+         "Identify: opposite = 5, adjacent = 12, hypotenuse = 13.",
+         "sin θ = 5/13, cos θ = 12/13, tan θ = 5/12.",
+         "csc θ = 13/5, sec θ = 13/12, cot θ = 12/5."
+        ],
+        "answer": "sin θ = 5/13, cos θ = 12/13, tan θ = 5/12, csc θ = 13/5, sec θ = 13/12, cot θ = 12/5."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sine (sin)",
+       "def": "In a right triangle, opposite over hypotenuse for a given acute angle."
+      },
+      {
+       "term": "cosine (cos)",
+       "def": "In a right triangle, adjacent over hypotenuse for a given acute angle."
+      },
+      {
+       "term": "tangent (tan)",
+       "def": "In a right triangle, opposite over adjacent; also equal to sin θ/cos θ."
+      },
+      {
+       "term": "reciprocal trig functions",
+       "def": "Cosecant, secant, and cotangent — the flipped ratios of sine, cosine, and tangent."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a right triangle with legs 8 and 15 and hypotenuse 17, what is sin θ for the angle opposite the side of length 8?",
+       "choices": [
+        "8/17",
+        "15/17",
+        "8/15",
+        "17/8"
+       ],
+       "answer": 0,
+       "explain": "Sine is opposite over hypotenuse: 8/17."
+      },
+      {
+       "q": "If tan θ = 3/4, what is cot θ?",
+       "choices": [
+        "4/3",
+        "3/4",
+        "1/3",
+        "4/1"
+       ],
+       "answer": 0,
+       "explain": "Cotangent is the reciprocal of tangent, so cot θ = 1 ÷ (3/4) = 4/3."
+      },
+      {
+       "q": "Which ratio equals hypotenuse/adjacent?",
+       "choices": [
+        "secant",
+        "cosecant",
+        "cosine",
+        "tangent"
+       ],
+       "answer": 0,
+       "explain": "Secant is the reciprocal of cosine (adjacent/hypotenuse), so sec θ = hypotenuse/adjacent."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Special Right Triangles and Exact Values",
+     "minutes": 14,
+     "intro": "Two particular right triangles, the 45-45-90 and the 30-60-90, generate every \"nice\" trig value you'll ever need to memorize. Once you can rebuild these two triangles from memory, you never need a calculator for angles like 30°, 45°, or 60° again.",
+     "sections": [
+      {
+       "heading": "The 45-45-90 Triangle",
+       "body": [
+        "An isosceles right triangle has two 45° angles and legs of equal length. If each leg has length 1, the Pythagorean theorem gives a hypotenuse of √(1² + 1²) = √2. So for 45°: sin 45° = 1/√2 = √2/2, cos 45° = √2/2, and tan 45° = 1/1 = 1. Rationalizing 1/√2 by multiplying top and bottom by √2 gives the standard form √2/2.",
+        "This triangle is the reason tan 45° = 1 exactly: with equal legs, opposite and adjacent are always the same length, regardless of how large you scale the triangle."
+       ]
+      },
+      {
+       "heading": "The 30-60-90 Triangle",
+       "body": [
+        "Split an equilateral triangle with side length 2 down the middle, and you get a right triangle with hypotenuse 2, short leg 1 (half the base), and long leg √(2² − 1²) = √3. This gives sin 30° = 1/2, cos 30° = √3/2, tan 30° = 1/√3 = √3/3, and by swapping opposite/adjacent for the other acute angle, sin 60° = √3/2, cos 60° = 1/2, tan 60° = √3.",
+        "These six exact values, for 30°, 45°, and 60°, are the backbone of the unit circle in the next unit. Memorize the pattern rather than six isolated numbers: sine goes 1/2, √2/2, √3/2 as the angle increases from 30° to 60°, and cosine goes in reverse."
+       ],
+       "example": {
+        "problem": "A ramp makes a 30° angle with the ground and needs to reach a platform 3 m high. Find the exact length of the ramp.",
+        "steps": [
+         "The height (3 m) is opposite the 30° angle; the ramp length is the hypotenuse.",
+         "sin 30° = opposite/hypotenuse, so 1/2 = 3/hypotenuse.",
+         "Solve: hypotenuse = 3 ÷ (1/2) = 6 m."
+        ],
+        "answer": "The ramp is exactly 6 m long."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "45-45-90 triangle",
+       "def": "An isosceles right triangle with legs in ratio 1:1 and hypotenuse 1:1:√2."
+      },
+      {
+       "term": "30-60-90 triangle",
+       "def": "A right triangle with sides in ratio 1 : √3 : 2, opposite the 30°, 60°, and 90° angles."
+      },
+      {
+       "term": "exact value",
+       "def": "A trig function value expressed with radicals and fractions rather than a rounded decimal."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the exact value of tan 60°?",
+       "choices": [
+        "√3",
+        "√3/2",
+        "1/√3",
+        "2"
+       ],
+       "answer": 0,
+       "explain": "In the 30-60-90 triangle, opposite 60° is √3 and adjacent is 1, so tan 60° = √3/1 = √3."
+      },
+      {
+       "q": "What is cos 45° in simplest exact form?",
+       "choices": [
+        "√2/2",
+        "1/2",
+        "1",
+        "√2"
+       ],
+       "answer": 0,
+       "explain": "In the 45-45-90 triangle both legs equal the same length and hypotenuse is √2 times a leg, giving cos 45° = 1/√2 = √2/2."
+      },
+      {
+       "q": "A 60° ramp angle problem gives opposite side 9 m. What is the adjacent side length?",
+       "choices": [
+        "9/√3 m = 3√3 m",
+        "9√3 m",
+        "9/2 m",
+        "18 m"
+       ],
+       "answer": 0,
+       "explain": "tan 60° = opposite/adjacent = √3, so adjacent = 9/√3 = 9√3/3 = 3√3 m."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Solving Right Triangles: Elevation and Depression",
+     "minutes": 16,
+     "intro": "Solving a right triangle means finding every missing side and angle from the information you're given, and it is the tool surveyors, sailors, and architects have used for centuries to measure things they cannot directly reach — a cliff's height, a ship's distance, a tower's shadow.",
+     "sections": [
+      {
+       "heading": "Solving a Right Triangle",
+       "body": [
+        "Given a right triangle, you can find every missing piece from just two more facts (besides the right angle) — typically one side and one angle, or two sides. Choose whichever trig ratio connects the known and unknown quantities: use sine if you know or want the hypotenuse and an opposite side, cosine for hypotenuse and adjacent, tangent for opposite and adjacent with no hypotenuse involved.",
+        "Once one acute angle is known, the other is automatic: the two acute angles of a right triangle always sum to 90°. If you find one missing side using a trig ratio, you can find the last side either with another ratio or with the Pythagorean theorem a² + b² = c² as a check."
+       ]
+      },
+      {
+       "heading": "Angles of Elevation and Depression",
+       "body": [
+        "The **angle of elevation** is measured upward from the horizontal to a line of sight toward something higher, like the top of a building; the **angle of depression** is measured downward from the horizontal to something lower, like a boat seen from a cliff. These two angles are always equal when the same line of sight is involved, because horizontal lines are parallel and alternate interior angles match.",
+        "In application problems, the horizontal distance, the height, and the line of sight form a right triangle in which the elevation or depression angle is one of the acute angles. Draw the triangle first: it turns a wordy paragraph into a diagram with one known side and one known angle, ready for SOH-CAH-TOA."
+       ],
+       "example": {
+        "problem": "From a point 40 m from the base of a lighthouse, the angle of elevation to the top is 35°. Find the lighthouse's height.",
+        "steps": [
+         "The 40 m distance is adjacent to the 35° angle; the height is opposite.",
+         "tan 35° = opposite/adjacent = height/40.",
+         "height = 40 × tan 35° ≈ 40 × 0.7002 ≈ 28.0 m."
+        ],
+        "answer": "The lighthouse is approximately 28.0 m tall."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "solving a triangle",
+       "def": "Finding all missing side lengths and angle measures of a triangle from given information."
+      },
+      {
+       "term": "angle of elevation",
+       "def": "The angle measured upward from horizontal to a line of sight toward a higher object."
+      },
+      {
+       "term": "angle of depression",
+       "def": "The angle measured downward from horizontal to a line of sight toward a lower object."
+      }
+     ],
+     "practice": [
+      {
+       "q": "From the top of a 50 m cliff, the angle of depression to a boat is 20°. Approximately how far is the boat from the base of the cliff?",
+       "choices": [
+        "≈137 m",
+        "≈50 m",
+        "≈18 m",
+        "≈183 m"
+       ],
+       "answer": 0,
+       "explain": "The depression angle equals the elevation angle from the boat, so tan 20° = 50/distance, giving distance = 50/tan 20° ≈ 50/0.364 ≈ 137 m."
+      },
+      {
+       "q": "A right triangle has a 25° angle and the adjacent side is 10 cm. What is the hypotenuse?",
+       "choices": [
+        "≈11.0 cm",
+        "≈4.2 cm",
+        "≈23.7 cm",
+        "≈9.1 cm"
+       ],
+       "answer": 0,
+       "explain": "cos 25° = adjacent/hypotenuse = 10/hyp, so hyp = 10/cos 25° ≈ 10/0.906 ≈ 11.0 cm."
+      },
+      {
+       "q": "In a right triangle, one acute angle is 62°. What is the other acute angle?",
+       "choices": [
+        "28°",
+        "38°",
+        "118°",
+        "62°"
+       ],
+       "answer": 0,
+       "explain": "The two acute angles of a right triangle sum to 90°, so 90° − 62° = 28°."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "The Unit Circle",
+   "summary": "Extending sine and cosine to all angles using the unit circle, and connecting them to reference angles and the Pythagorean identity.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Sine and Cosine on the Unit Circle",
+     "minutes": 16,
+     "intro": "Right-triangle trigonometry only works for angles between 0° and 90°, but waves, rotations, and real motion need angles of any size, even negative ones. The unit circle removes that limit by redefining sine and cosine as coordinates rather than ratios of sides.",
+     "sections": [
+      {
+       "heading": "Defining Sine and Cosine as Coordinates",
+       "body": [
+        "The **unit circle** is the circle of radius 1 centered at the origin. For any angle θ measured from the positive x-axis, let (x, y) be the point where the terminal side crosses the unit circle. Then, by definition, cos θ = x and sin θ = y. This matches the right-triangle definitions for acute angles — in a right triangle inscribed with hypotenuse 1, x is the adjacent side and y is the opposite side — but now it works for every angle, since every angle has a terminal side that crosses the circle somewhere.",
+        "Because the unit circle has radius 1, the point (cos θ, sin θ) always satisfies x² + y² = 1. This single equation is the Pythagorean identity in disguise, and it is why cos θ and sin θ can never exceed 1 or fall below −1: they're just coordinates on a circle of radius 1."
+       ]
+      },
+      {
+       "heading": "Signs by Quadrant",
+       "body": [
+        "Since cos θ = x and sin θ = y, the sign of each function follows directly from which quadrant the terminal side lands in. In Quadrant I (0° to 90°) both x and y are positive, so both sine and cosine are positive. In Quadrant II, x is negative and y positive, so cosine is negative, sine positive. Quadrant III has both negative, and Quadrant IV has cosine positive, sine negative.",
+        "A common memory device is \"All Students Take Calculus\": All functions positive in QI, Sine (and its reciprocal) positive in QII, Tangent (and its reciprocal) positive in QIII, Cosine (and its reciprocal) positive in QIV. This tells you the sign to expect before you even compute a value."
+       ],
+       "example": {
+        "problem": "Without a calculator, determine the sign of sin 200° and cos 200°.",
+        "steps": [
+         "200° is between 180° and 270°, so it lies in Quadrant III.",
+         "In Quadrant III, x is negative and y is negative.",
+         "So cos 200° < 0 and sin 200° < 0."
+        ],
+        "answer": "Both sin 200° and cos 200° are negative."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "unit circle",
+       "def": "The circle of radius 1 centered at the origin, used to define sine and cosine for any angle."
+      },
+      {
+       "term": "cos θ (unit circle)",
+       "def": "The x-coordinate of the point where the terminal side of θ meets the unit circle."
+      },
+      {
+       "term": "sin θ (unit circle)",
+       "def": "The y-coordinate of the point where the terminal side of θ meets the unit circle."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In which quadrant are both sine and cosine negative?",
+       "choices": [
+        "III",
+        "I",
+        "II",
+        "IV"
+       ],
+       "answer": 0,
+       "explain": "Quadrant III has both x and y coordinates negative, so both cosine (x) and sine (y) are negative there."
+      },
+      {
+       "q": "What is the maximum possible value of sin θ for any angle θ?",
+       "choices": [
+        "1",
+        "π",
+        "undefined",
+        "∞"
+       ],
+       "answer": 0,
+       "explain": "Since sin θ is a y-coordinate on a circle of radius 1, it can never exceed 1."
+      },
+      {
+       "q": "An angle of 100° places the terminal side in which quadrant, and what is the sign of cos 100°?",
+       "choices": [
+        "Quadrant II, negative",
+        "Quadrant I, positive",
+        "Quadrant III, negative",
+        "Quadrant II, positive"
+       ],
+       "answer": 0,
+       "explain": "100° is between 90° and 180°, Quadrant II, where x-coordinates (cosine) are negative."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Reference Angles and All Six Functions",
+     "minutes": 16,
+     "intro": "You already know the exact trig values for 30°, 45°, and 60°. Reference angles are the bridge that lets you reuse those same three triangles to find the exact value of any angle at all, like 150°, 240°, or 315°, just by adjusting the sign.",
+     "sections": [
+      {
+       "heading": "Finding the Reference Angle",
+       "body": [
+        "The **reference angle** of θ is the positive acute angle between the terminal side of θ and the x-axis — never the y-axis. In Quadrant I the reference angle is θ itself. In Quadrant II it is 180° − θ; in Quadrant III it is θ − 180°; in Quadrant IV it is 360° − θ (using radian equivalents π − θ, θ − π, 2π − θ when working in radians.",
+        "The reference angle always has the same trig value size (magnitude) as the original angle — only the sign can differ, and that sign is read off from the quadrant rule from the previous lesson. This turns any angle problem into a two-step process: find the reference angle, then attach the correct sign."
+       ]
+      },
+      {
+       "heading": "Evaluating All Six Functions at Any Angle",
+       "body": [
+        "Once you have sin θ and cos θ, all four remaining functions follow from the identities tan θ = sin θ/cos θ, cot θ = cos θ/sin θ, sec θ = 1/cos θ, and csc θ = 1/sin θ. A function is **undefined** wherever its denominator is zero — tangent and secant are undefined at 90° and 270° (where cos θ = 0), while cotangent and cosecant are undefined at 0° and 180° (where sin θ = 0).",
+        "This is why the domain of tangent excludes odd multiples of 90°: as θ approaches 90°, cos θ approaches 0 and tan θ = sin θ/cos θ grows without bound. Keeping track of these gaps in the domain matters again when you graph these functions in the next unit."
+       ],
+       "example": {
+        "problem": "Find the exact value of sin 150°, cos 150°, and tan 150°.",
+        "steps": [
+         "150° is in Quadrant II, so its reference angle is 180° − 150° = 30°.",
+         "In Quadrant II, sine is positive and cosine is negative.",
+         "sin 150° = +sin 30° = 1/2. cos 150° = −cos 30° = −√3/2.",
+         "tan 150° = sin 150°/cos 150° = (1/2)/(−√3/2) = −1/√3 = −√3/3."
+        ],
+        "answer": "sin 150° = 1/2, cos 150° = −√3/2, tan 150° = −√3/3."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "reference angle",
+       "def": "The positive acute angle between an angle's terminal side and the x-axis."
+      },
+      {
+       "term": "undefined (trig function)",
+       "def": "The value a trig function has no output for, because its defining ratio has a zero denominator."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the reference angle of 250°?",
+       "choices": [
+        "70°",
+        "110°",
+        "250°",
+        "20°"
+       ],
+       "answer": 0,
+       "explain": "250° is in Quadrant III, so the reference angle is 250° − 180° = 70°."
+      },
+      {
+       "q": "Find the exact value of cos 300°.",
+       "choices": [
+        "1/2",
+        "−1/2",
+        "√3/2",
+        "−√3/2"
+       ],
+       "answer": 0,
+       "explain": "300° is in Quadrant IV with reference angle 60°; cosine is positive in QIV, so cos 300° = cos 60° = 1/2."
+      },
+      {
+       "q": "At which angle is tan θ undefined?",
+       "choices": [
+        "90°",
+        "0°",
+        "60°",
+        "180°"
+       ],
+       "answer": 0,
+       "explain": "tan θ = sin θ/cos θ, and cos 90° = 0, making the ratio undefined."
+      },
+      {
+       "q": "Find the exact value of sin 225°.",
+       "choices": [
+        "−√2/2",
+        "√2/2",
+        "−1/2",
+        "1/2"
+       ],
+       "answer": 0,
+       "explain": "225° is in Quadrant III with reference angle 45°; sine is negative in QIII, so sin 225° = −sin 45° = −√2/2."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Pythagorean Identity",
+     "minutes": 13,
+     "intro": "One equation, sin²θ + cos²θ = 1, quietly runs through nearly every identity, equation, and simplification in the rest of this course. It's just the Pythagorean theorem wearing a disguise, and this lesson shows you how to use it in both directions.",
+     "sections": [
+      {
+       "heading": "Deriving and Using the Identity",
+       "body": [
+        "Since (cos θ, sin θ) is a point on the unit circle x² + y² = 1, substituting gives the **Pythagorean identity**: sin²θ + cos²θ = 1 for every angle θ. Notice sin²θ means (sin θ)², not sin(θ²) — squaring the output, not the input.",
+        "This identity lets you find cos θ from sin θ (or the reverse) as long as you also know the quadrant, since taking a square root introduces a ± sign that only the quadrant can resolve. It is also the source of two related identities used constantly in calculus: dividing every term by cos²θ gives tan²θ + 1 = sec²θ, and dividing by sin²θ gives 1 + cot²θ = csc²θ."
+       ],
+       "example": {
+        "problem": "Given sin θ = 3/5 and θ is in Quadrant II, find cos θ and tan θ.",
+        "steps": [
+         "Apply the identity: sin²θ + cos²θ = 1, so cos²θ = 1 − (3/5)² = 1 − 9/25 = 16/25.",
+         "cos θ = ±√(16/25) = ±4/5.",
+         "θ is in Quadrant II, where cosine is negative, so cos θ = −4/5.",
+         "tan θ = sin θ/cos θ = (3/5)/(−4/5) = −3/4."
+        ],
+        "answer": "cos θ = −4/5 and tan θ = −3/4."
+       }
+      },
+      {
+       "heading": "Two Companion Identities",
+       "body": [
+        "The identity tan²θ + 1 = sec²θ is especially useful for simplifying expressions involving tangent and secant together, and it shows up directly in a common calculus substitution technique. Likewise 1 + cot²θ = csc²θ pairs cotangent with cosecant the same way.",
+        "All three forms are really the same fact viewed three ways. If a problem gives you information about tan θ or sec θ instead of sin θ or cos θ, reach for the matching companion identity rather than trying to force the original sin²+cos²=1 form."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Pythagorean identity",
+       "def": "sin²θ + cos²θ = 1, true for every angle θ, derived from the unit circle."
+      },
+      {
+       "term": "tan²θ + 1 = sec²θ",
+       "def": "A companion identity found by dividing the Pythagorean identity by cos²θ."
+      },
+      {
+       "term": "1 + cot²θ = csc²θ",
+       "def": "A companion identity found by dividing the Pythagorean identity by sin²θ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If cos θ = −5/13 and θ is in Quadrant III, what is sin θ?",
+       "choices": [
+        "−12/13",
+        "12/13",
+        "−5/12",
+        "5/13"
+       ],
+       "answer": 0,
+       "explain": "sin²θ = 1 − (5/13)² = 1 − 25/169 = 144/169, so sin θ = ±12/13. In Quadrant III sine is negative, giving −12/13."
+      },
+      {
+       "q": "Which identity comes from dividing sin²θ + cos²θ = 1 by cos²θ?",
+       "choices": [
+        "tan²θ + 1 = sec²θ",
+        "1 + cot²θ = csc²θ",
+        "sin θ = cos θ · tan θ",
+        "sec θ = csc θ"
+       ],
+       "answer": 0,
+       "explain": "Dividing every term by cos²θ turns sin²θ/cos²θ into tan²θ, 1 stays 1, and 1/cos²θ becomes sec²θ."
+      },
+      {
+       "q": "If sec θ = 2, what is tan²θ?",
+       "choices": [
+        "3",
+        "4",
+        "1",
+        "−3"
+       ],
+       "answer": 0,
+       "explain": "tan²θ + 1 = sec²θ = 4, so tan²θ = 4 − 1 = 3."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Graphs of Trigonometric Functions",
+   "summary": "Graphing sine, cosine, tangent, and the reciprocal functions, and reading amplitude, period, phase shift, and vertical shift from an equation.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Graphing Sine and Cosine",
+     "minutes": 16,
+     "intro": "As an angle sweeps steadily around the unit circle, its y-coordinate rises and falls in a smooth, repeating wave — that wave, plotted against the angle, is the graph of sine. This lesson builds that picture from the unit circle and shows how to control its height and speed.",
+     "sections": [
+      {
+       "heading": "The Basic Sine and Cosine Curves",
+       "body": [
+        "The graph of y = sin x starts at (0, 0), rises to a maximum of 1 at x = π/2, returns to 0 at x = π, dips to a minimum of −1 at x = 3π/2, and returns to 0 at x = 2π before repeating. The graph of y = cos x follows the same shape shifted left by π/2: it starts at its maximum (0, 1), crosses zero at π/2, hits minimum −1 at π, and returns to maximum at 2π.",
+        "Both graphs are **periodic** with period 2π, meaning the pattern repeats every 2π units, and both have amplitude 1, meaning they oscillate 1 unit above and below their midline y = 0. These two basic curves are the templates every other sine or cosine graph in this course is built from by stretching, compressing, and shifting."
+       ]
+      },
+      {
+       "heading": "Amplitude and Period",
+       "body": [
+        "For y = A sin(Bx), the **amplitude** is |A|, the distance from the midline to the maximum (or minimum). The **period**, the length of one complete cycle, is 2π/|B|. A larger |A| stretches the wave taller; a larger |B| compresses the wave horizontally, fitting more cycles into the same x-interval.",
+        "For example, y = 3 sin(2x) has amplitude 3 (oscillating between −3 and 3) and period 2π/2 = π (one full cycle every π units instead of every 2π). Sketching starts by marking the new maximum and minimum heights, then dividing one period into four equal quarter-marks to place the zero crossings."
+       ],
+       "example": {
+        "problem": "State the amplitude and period of y = 4 cos(3x), and find the x-values of the first two zeros for x > 0.",
+        "steps": [
+         "Amplitude: |A| = 4.",
+         "Period: 2π/|B| = 2π/3.",
+         "Cosine's basic zeros occur at a quarter and three-quarters of the way through a period. One period is 2π/3, so the first zero is at (1/4)(2π/3) = π/6.",
+         "The next zero is three-quarters through the period: (3/4)(2π/3) = π/2."
+        ],
+        "answer": "Amplitude 4, period 2π/3; first two zeros at x = π/6 and x = π/2."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "periodic function",
+       "def": "A function whose values repeat exactly after a fixed interval called the period."
+      },
+      {
+       "term": "amplitude",
+       "def": "Half the distance between a periodic function's maximum and minimum value; |A| in y = A sin(Bx)."
+      },
+      {
+       "term": "period",
+       "def": "The horizontal length of one complete cycle of a periodic function; 2π/|B| for y = sin(Bx) or cos(Bx)."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the period of y = sin(4x)?",
+       "choices": [
+        "π/2",
+        "2π",
+        "4π",
+        "8π"
+       ],
+       "answer": 0,
+       "explain": "Period = 2π/|B| = 2π/4 = π/2."
+      },
+      {
+       "q": "What is the amplitude of y = −5 cos(x)?",
+       "choices": [
+        "5",
+        "−5",
+        "1",
+        "10"
+       ],
+       "answer": 0,
+       "explain": "Amplitude is |A|, so |−5| = 5. The negative sign flips the graph vertically but does not change amplitude."
+      },
+      {
+       "q": "At x = 0, what is the value of y = cos x?",
+       "choices": [
+        "1",
+        "0",
+        "−1",
+        "undefined"
+       ],
+       "answer": 0,
+       "explain": "cos 0 = 1, since the unit circle point at angle 0 is (1, 0)."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Phase Shift and Vertical Shift",
+     "minutes": 15,
+     "intro": "Real periodic phenomena, like daylight hours or tide levels, rarely peak exactly at x = 0 and rarely oscillate around zero. Phase shift and vertical shift move and re-center the basic sine and cosine curves so they can model these situations exactly.",
+     "sections": [
+      {
+       "heading": "Phase Shift",
+       "body": [
+        "For y = A sin(B(x − C)) + D, the **phase shift** is C: the graph of the basic sine curve moves C units to the right (if C is positive) or left (if C is negative). It is critical to factor B out of the parentheses first — for y = sin(2x − π), rewrite as sin(2(x − π/2)) to see the true phase shift is π/2, not π.",
+        "A common mistake is reading the phase shift straight off the unfactored equation. Always isolate B(x − C) completely before identifying C, since the shift is measured in x-units, not in the combined Bx-units."
+       ]
+      },
+      {
+       "heading": "Vertical Shift and Full Graphing",
+       "body": [
+        "The constant D shifts the entire graph up (D > 0) or down (D < 0), moving the midline from y = 0 to y = D. The maximum value becomes D + |A| and the minimum becomes D − |A|. Putting it all together, y = A sin(B(x − C)) + D has amplitude |A|, period 2π/|B|, phase shift C, and midline y = D.",
+        "To graph such a function, first draw the midline y = D, mark the max and min lines at D ± |A|, then place one cycle starting at x = C with length 2π/|B|, dividing it into quarters for the key points (start, max or zero, midline, min or zero, end)."
+       ],
+       "example": {
+        "problem": "Describe the graph of y = 2 sin(x − π/4) + 3: state amplitude, period, phase shift, midline, and max/min values.",
+        "steps": [
+         "Amplitude: |A| = 2.",
+         "Period: 2π/|B| = 2π/1 = 2π.",
+         "Phase shift: C = π/4 (shift right).",
+         "Midline: y = D = 3. Maximum = 3 + 2 = 5. Minimum = 3 − 2 = 1."
+        ],
+        "answer": "Amplitude 2, period 2π, phase shift π/4 right, midline y = 3, max 5, min 1."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "phase shift",
+       "def": "The horizontal displacement C of a periodic graph in y = A sin(B(x − C)) + D."
+      },
+      {
+       "term": "vertical shift",
+       "def": "The value D that moves a periodic graph's midline from y = 0 to y = D."
+      },
+      {
+       "term": "midline",
+       "def": "The horizontal line halfway between a periodic function's maximum and minimum, y = D."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the phase shift of y = cos(x + π/3)?",
+       "choices": [
+        "−π/3",
+        "π/3",
+        "3π",
+        "−3π"
+       ],
+       "answer": 0,
+       "explain": "Rewrite as cos(x − (−π/3)); the phase shift is C = −π/3, a shift to the left."
+      },
+      {
+       "q": "For y = sin(x) − 4, what is the midline?",
+       "choices": [
+        "y = −4",
+        "y = 4",
+        "y = 0",
+        "y = −1"
+       ],
+       "answer": 0,
+       "explain": "The vertical shift D = −4 sets the midline at y = −4."
+      },
+      {
+       "q": "y = 3 sin(2(x − π)) + 1 has what maximum value?",
+       "choices": [
+        "4",
+        "3",
+        "1",
+        "2"
+       ],
+       "answer": 0,
+       "explain": "Maximum = D + |A| = 1 + 3 = 4."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Graphing Tangent, Cotangent, Secant, and Cosecant",
+     "minutes": 16,
+     "intro": "Tangent and its cousins do not oscillate smoothly between a fixed max and min the way sine and cosine do — they shoot off toward infinity at regular intervals. Understanding why reveals a deep connection between these graphs and the ones you already know.",
+     "sections": [
+      {
+       "heading": "The Tangent and Cotangent Graphs",
+       "body": [
+        "Since tan x = sin x/cos x, the graph has a **vertical asymptote** everywhere cos x = 0, at x = π/2 + kπ for any integer k. Between consecutive asymptotes, tangent rises from −∞ to +∞, passing through 0 at each multiple of π. Its period is π, not 2π, because the pattern of the ratio repeats twice as often as sine or cosine alone.",
+        "Cotangent, the reciprocal relationship cos x/sin x, has vertical asymptotes wherever sin x = 0, at x = kπ, and it decreases from +∞ to −∞ between asymptotes, with period π as well. For y = A tan(Bx), the period is π/|B| rather than 2π/|B|, and there is no amplitude, since the graph is unbounded."
+       ]
+      },
+      {
+       "heading": "The Secant and Cosecant Graphs",
+       "body": [
+        "Because sec x = 1/cos x, secant has vertical asymptotes wherever cosine is zero, at x = π/2 + kπ. Between asymptotes, secant traces a U-shape opening away from the x-axis, touching a local minimum of 1 wherever cosine equals 1, and a local maximum of −1 wherever cosine equals −1 — the graph never enters the strip between y = −1 and y = 1.",
+        "Cosecant behaves the same way relative to sine: asymptotes wherever sin x = 0 (at x = kπ), with U-shapes reaching up to y = 1 or down to y = −1 between them. The easiest way to sketch either graph is to lightly sketch its reciprocal (cosine for secant, sine for cosecant) first, then draw asymptotes at that curve's zeros and U-shapes cupped around its peaks and troughs."
+       ],
+       "example": {
+        "problem": "Find the period of y = tan(3x) and locate its first two vertical asymptotes for x > 0.",
+        "steps": [
+         "Period of tangent form A tan(Bx) is π/|B| = π/3.",
+         "Basic tangent has an asymptote at x = π/2; scaling by the period compression, the first positive asymptote of tan(3x) occurs where 3x = π/2, so x = π/6.",
+         "The next asymptote is one period later: π/6 + π/3 = π/6 + 2π/6 = 3π/6 = π/2."
+        ],
+        "answer": "Period π/3; first two asymptotes at x = π/6 and x = π/2."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "vertical asymptote",
+       "def": "A vertical line the graph approaches but never crosses, occurring where a trig ratio's denominator is zero."
+      },
+      {
+       "term": "tangent graph period",
+       "def": "π/|B| for y = A tan(Bx), half the period of sine or cosine with the same B."
+      },
+      {
+       "term": "secant/cosecant graph",
+       "def": "U-shaped branches that never enter the strip −1 < y < 1, with asymptotes at the zeros of cosine/sine respectively."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Where does y = tan x have a vertical asymptote?",
+       "choices": [
+        "x = π/2",
+        "x = π",
+        "x = 0",
+        "x = 2π"
+       ],
+       "answer": 0,
+       "explain": "tan x = sin x/cos x is undefined where cos x = 0, first occurring at x = π/2."
+      },
+      {
+       "q": "What is the period of y = cot(2x)?",
+       "choices": [
+        "π/2",
+        "π",
+        "2π",
+        "π/4"
+       ],
+       "answer": 0,
+       "explain": "Cotangent's period is π/|B|, so π/2 for B = 2."
+      },
+      {
+       "q": "The graph of y = sec x never takes values in which interval?",
+       "choices": [
+        "(−1, 1)",
+        "(−∞, −1)",
+        "(1, ∞)",
+        "(−∞, ∞)"
+       ],
+       "answer": 0,
+       "explain": "Since sec x = 1/cos x and |cos x| ≤ 1, |sec x| ≥ 1 always, so it never lands strictly between −1 and 1."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Trigonometric Identities and Equations",
+   "summary": "Verifying identities and using the sum, difference, double-angle, and half-angle formulas to simplify expressions and solve equations.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Fundamental Identities and Verifying Identities",
+     "minutes": 15,
+     "intro": "Verifying a trigonometric identity means proving two expressions are equal for every valid angle, not just checking a few numbers — and the strategy is always the same: pick one side, usually the more complicated one, and rewrite it step by step until it matches the other side exactly.",
+     "sections": [
+      {
+       "heading": "The Fundamental Identity Toolkit",
+       "body": [
+        "Every identity proof draws from a short list: the reciprocal identities (csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ), the quotient identities (tan θ = sin θ/cos θ, cot θ = cos θ/sin θ), and the three Pythagorean identities (sin²θ + cos²θ = 1, tan²θ + 1 = sec²θ, 1 + cot²θ = csc²θ). Nearly every proof in this course is some combination of these.",
+        "Good strategy: convert everything to sines and cosines first if you're stuck, since that's the common language every other identity reduces to. Then look for opportunities to combine fractions, factor, or substitute a Pythagorean identity to cancel terms."
+       ]
+      },
+      {
+       "heading": "A Worked Verification",
+       "body": [
+        "Never treat the equation you're proving as something you can algebraically manipulate on both sides at once, like cross-multiplying — that risks assuming what you're trying to prove. Work one side only, transforming it step by step using known identities and algebra, until it becomes identical to the other side.",
+        "If you get stuck, try multiplying by a clever form of 1, such as (1 − cos θ)/(1 − cos θ), or rewrite everything over a common denominator. These two moves resolve the majority of identities you'll be asked to verify."
+       ],
+       "example": {
+        "problem": "Verify the identity: (1 − cos²θ)/sin θ = sin θ.",
+        "steps": [
+         "Start with the left side: (1 − cos²θ)/sin θ.",
+         "Apply the Pythagorean identity in the form 1 − cos²θ = sin²θ.",
+         "Substitute: sin²θ/sin θ.",
+         "Simplify: sin²θ/sin θ = sin θ, which matches the right side exactly."
+        ],
+        "answer": "Verified: (1 − cos²θ)/sin θ = sin θ for all θ where sin θ ≠ 0."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "identity",
+       "def": "An equation involving trig functions that is true for every value of the variable where both sides are defined."
+      },
+      {
+       "term": "reciprocal identities",
+       "def": "csc θ = 1/sin θ, sec θ = 1/cos θ, cot θ = 1/tan θ."
+      },
+      {
+       "term": "quotient identities",
+       "def": "tan θ = sin θ/cos θ and cot θ = cos θ/sin θ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which is the correct first move to verify 1/(1 − sin θ) − 1/(1 + sin θ) = 2 tan θ sec θ?",
+       "choices": [
+        "Combine the left side over a common denominator (1 − sin θ)(1 + sin θ)",
+        "Multiply both sides by cos θ",
+        "Square both sides",
+        "Replace tan θ sec θ with 1"
+       ],
+       "answer": 0,
+       "explain": "Combining fractions over a common denominator is the standard first move; it turns the denominator into 1 − sin²θ = cos²θ, which then simplifies nicely."
+      },
+      {
+       "q": "Simplify sin θ · csc θ.",
+       "choices": [
+        "1",
+        "sin²θ",
+        "0",
+        "cos θ"
+       ],
+       "answer": 0,
+       "explain": "csc θ = 1/sin θ, so sin θ · csc θ = sin θ · (1/sin θ) = 1."
+      },
+      {
+       "q": "Which identity would you use to rewrite tan²θ in terms of secant?",
+       "choices": [
+        "tan²θ = sec²θ − 1",
+        "tan²θ = 1 − sec²θ",
+        "tan²θ = sec²θ",
+        "tan²θ = csc²θ − 1"
+       ],
+       "answer": 0,
+       "explain": "From tan²θ + 1 = sec²θ, subtracting 1 gives tan²θ = sec²θ − 1."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Sum and Difference Formulas",
+     "minutes": 16,
+     "intro": "There is no shortcut like sin(A + B) = sin A + sin B — trigonometric functions don't distribute over addition. The actual sum and difference formulas are more interesting than that shortcut would have been, and they unlock exact values for angles like 15° and 75° that aren't on the basic unit circle.",
+     "sections": [
+      {
+       "heading": "The Sum and Difference Identities",
+       "body": [
+        "The core formulas are: sin(A ± B) = sin A cos B ± cos A sin B, and cos(A ± B) = cos A cos B ∓ sin A sin B (note the sign flips for cosine). For tangent, tan(A ± B) = (tan A ± tan B)/(1 ∓ tan A tan B). These let you find exact values for sums or differences of known angles, like 75° = 45° + 30°.",
+        "These formulas are not just calculation shortcuts — they are the algebraic foundation for the double-angle formulas in the next lesson, and they explain why cos(A − B) is what appears in the dot-product formula for vectors and in wave-interference physics."
+       ],
+       "example": {
+        "problem": "Find the exact value of cos 75° using the difference/sum formula, writing 75° = 45° + 30°.",
+        "steps": [
+         "Apply cos(A + B) = cos A cos B − sin A sin B with A = 45°, B = 30°.",
+         "cos 75° = cos 45° cos 30° − sin 45° sin 30°.",
+         "Substitute exact values: (√2/2)(√3/2) − (√2/2)(1/2).",
+         "= √6/4 − √2/4 = (√6 − √2)/4."
+        ],
+        "answer": "cos 75° = (√6 − √2)/4."
+       }
+      },
+      {
+       "heading": "Cofunction and Related Identities",
+       "body": [
+        "Setting A = 90° in the sum formulas produces the **cofunction identities**: sin(90° − θ) = cos θ and cos(90° − θ) = sin θ, which formalize the right-triangle fact that an angle's sine equals its complement's cosine. These identities are useful shortcuts whenever a problem pairs an angle with its complement.",
+        "It's worth memorizing the sign pattern rather than the whole formula from scratch: sine's sum/difference formula keeps the same sign as the original ± sign, while cosine's sum/difference formula flips it. Getting this backwards is the single most common error in this topic."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sum formula",
+       "def": "sin(A + B) = sin A cos B + cos A sin B; cos(A + B) = cos A cos B − sin A sin B."
+      },
+      {
+       "term": "difference formula",
+       "def": "sin(A − B) = sin A cos B − cos A sin B; cos(A − B) = cos A cos B + sin A sin B."
+      },
+      {
+       "term": "cofunction identity",
+       "def": "sin(90° − θ) = cos θ and cos(90° − θ) = sin θ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the exact value of sin 15° using 15° = 45° − 30°.",
+       "choices": [
+        "(√6 − √2)/4",
+        "(√6 + √2)/4",
+        "√2/4",
+        "(√3 − 1)/4"
+       ],
+       "answer": 0,
+       "explain": "sin(A−B) = sin A cos B − cos A sin B = (√2/2)(√3/2) − (√2/2)(1/2) = √6/4 − √2/4 = (√6−√2)/4."
+      },
+      {
+       "q": "Which is the correct expansion of cos(A − B)?",
+       "choices": [
+        "cos A cos B + sin A sin B",
+        "cos A cos B − sin A sin B",
+        "sin A cos B − cos A sin B",
+        "cos A sin B + sin A cos B"
+       ],
+       "answer": 0,
+       "explain": "The difference formula for cosine flips the sign relative to the sum formula: cos(A − B) = cos A cos B + sin A sin B."
+      },
+      {
+       "q": "sin(90° − 40°) equals which value?",
+       "choices": [
+        "cos 40°",
+        "sin 40°",
+        "cos 50°",
+        "−cos 40°"
+       ],
+       "answer": 0,
+       "explain": "By the cofunction identity, sin(90° − θ) = cos θ, so sin(90° − 40°) = cos 40°."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Double-Angle and Half-Angle Formulas",
+     "minutes": 16,
+     "intro": "Doubling an angle doesn't double its sine or cosine — the real relationship is more useful, letting you find sin 2θ or cos 2θ directly from sin θ and cos θ alone, without ever measuring the doubled angle itself.",
+     "sections": [
+      {
+       "heading": "Double-Angle Formulas",
+       "body": [
+        "Setting B = A in the sum formulas gives the **double-angle formulas**: sin 2θ = 2 sin θ cos θ, and cos 2θ has three equivalent forms: cos²θ − sin²θ, or 2cos²θ − 1, or 1 − 2sin²θ (the last two come from substituting the Pythagorean identity). Choose whichever form matches the information you already have.",
+        "For tangent, tan 2θ = 2 tan θ/(1 − tan²θ). These formulas let you find exact values for angles like 120° from known values at 60°, and they're essential for simplifying expressions in calculus, especially integrals involving sin²x or cos²x."
+       ],
+       "example": {
+        "problem": "Given sin θ = 3/5 with θ in Quadrant I, find sin 2θ and cos 2θ.",
+        "steps": [
+         "Find cos θ using the Pythagorean identity: cos θ = √(1 − 9/25) = √(16/25) = 4/5 (positive, Quadrant I).",
+         "sin 2θ = 2 sin θ cos θ = 2 (3/5)(4/5) = 24/25.",
+         "cos 2θ = 1 − 2sin²θ = 1 − 2(9/25) = 1 − 18/25 = 7/25."
+        ],
+        "answer": "sin 2θ = 24/25, cos 2θ = 7/25."
+       }
+      },
+      {
+       "heading": "Half-Angle Formulas",
+       "body": [
+        "Solving the cos 2θ forms for sin θ and cos θ, then replacing θ with θ/2, gives the **half-angle formulas**: sin(θ/2) = ±√((1 − cos θ)/2) and cos(θ/2) = ±√((1 + cos θ)/2), where the sign is chosen based on which quadrant θ/2 lands in. For tangent, tan(θ/2) = sin θ/(1 + cos θ), which conveniently has no square root or ambiguous sign.",
+        "These are used to find exact values at angles like 15° (half of 30°) or 22.5° (half of 45°) directly from a known value, and they reappear in calculus as substitution tools (the Weierstrass substitution) for integrating rational functions of sine and cosine."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "double-angle formula",
+       "def": "Formulas for sin 2θ and cos 2θ in terms of sin θ and cos θ alone, e.g. sin 2θ = 2 sin θ cos θ."
+      },
+      {
+       "term": "half-angle formula",
+       "def": "Formulas for sin(θ/2) and cos(θ/2) derived from the double-angle formulas, using a ± sign fixed by quadrant."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If cos θ = 3/5 with θ in Quadrant I, what is cos 2θ?",
+       "choices": [
+        "−7/25",
+        "7/25",
+        "24/25",
+        "1/5"
+       ],
+       "answer": 0,
+       "explain": "cos 2θ = 2cos²θ − 1 = 2(9/25) − 1 = 18/25 − 25/25 = −7/25."
+      },
+      {
+       "q": "Which formula correctly represents sin 2θ?",
+       "choices": [
+        "2 sin θ cos θ",
+        "sin²θ − cos²θ",
+        "2 sin θ",
+        "sin θ + cos θ"
+       ],
+       "answer": 0,
+       "explain": "The double-angle formula for sine is sin 2θ = 2 sin θ cos θ, derived by setting A = B = θ in the sum formula."
+      },
+      {
+       "q": "Using cos 60° = 1/2, what is cos 30° via the half-angle formula (30° in QI)?",
+       "choices": [
+        "√3/2",
+        "1/2",
+        "√2/2",
+        "√3/4"
+       ],
+       "answer": 0,
+       "explain": "cos(60°/2) = √((1+cos60°)/2) = √((1+1/2)/2) = √(3/4) = √3/2."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Inverse Trig Functions and Solving Trig Equations",
+     "minutes": 18,
+     "intro": "Because sine and cosine repeat forever, no single number can \"undo\" them without extra rules restricting the output range — this lesson defines those restricted inverse functions and then uses them as the key that unlocks solving trig equations.",
+     "sections": [
+      {
+       "heading": "Inverse Trigonometric Functions",
+       "body": [
+        "Since sin x is not one-to-one over all real numbers, sin⁻¹x (also written arcsin x) is defined only after restricting sine's domain to [−π/2, π/2], where it is one-to-one. So sin⁻¹x returns the unique angle in [−π/2, π/2] whose sine is x. Similarly cos⁻¹x is restricted to give outputs in [0, π], and tan⁻¹x gives outputs in (−π/2, π/2).",
+        "sin⁻¹x is defined only for −1 ≤ x ≤ 1 (and likewise for cos⁻¹x), since sine and cosine themselves never leave that range. tan⁻¹x, by contrast, accepts any real input, since tangent's range is all real numbers."
+       ],
+       "example": {
+        "problem": "Find sin⁻¹(1/2) and cos⁻¹(−√2/2), giving answers in radians within each function's defined range.",
+        "steps": [
+         "sin⁻¹(1/2): find the angle in [−π/2, π/2] with sine 1/2. That is π/6.",
+         "cos⁻¹(−√2/2): find the angle in [0, π] with cosine −√2/2. Cosine is negative in QII, and the reference angle for √2/2 is π/4, so the angle is π − π/4 = 3π/4."
+        ],
+        "answer": "sin⁻¹(1/2) = π/6; cos⁻¹(−√2/2) = 3π/4."
+       }
+      },
+      {
+       "heading": "Solving Trigonometric Equations",
+       "body": [
+        "To solve an equation like 2 sin θ − 1 = 0 over one full period, isolate the trig function first: sin θ = 1/2. Then find all solutions in [0, 2π) by identifying every angle with that sine value — usually two, one in each of two quadrants sharing the same reference angle (here, θ = π/6 and θ = 5π/6, since sine is positive in QI and QII).",
+        "If the problem asks for all solutions, not just those in one period, add 2πk (or 360°k) to each base solution, where k is any integer. When the equation involves an identity (like sin 2θ = sin θ), first rewrite using a double-angle or Pythagorean identity to get everything in terms of one function before isolating and solving, and always check for extraneous solutions introduced by squaring."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "inverse sine (arcsin)",
+       "def": "sin⁻¹x, the angle in [−π/2, π/2] whose sine equals x, defined for −1 ≤ x ≤ 1."
+      },
+      {
+       "term": "inverse cosine (arccos)",
+       "def": "cos⁻¹x, the angle in [0, π] whose cosine equals x, defined for −1 ≤ x ≤ 1."
+      },
+      {
+       "term": "general solution",
+       "def": "All solutions to a trig equation, obtained by adding 2πk (or 360°k) to each base solution."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is tan⁻¹(1)?",
+       "choices": [
+        "π/4",
+        "π/2",
+        "π",
+        "3π/4"
+       ],
+       "answer": 0,
+       "explain": "tan(π/4) = 1, and π/4 lies in the defined range (−π/2, π/2) for arctan, so tan⁻¹(1) = π/4."
+      },
+      {
+       "q": "Solve 2 cos θ + 1 = 0 for θ in [0, 2π).",
+       "choices": [
+        "2π/3 and 4π/3",
+        "π/3 and 5π/3",
+        "π/6 and 11π/6",
+        "π/2 and 3π/2"
+       ],
+       "answer": 0,
+       "explain": "cos θ = −1/2. Cosine is negative in QII and QIII with reference angle π/3, giving θ = π − π/3 = 2π/3 and θ = π + π/3 = 4π/3."
+      },
+      {
+       "q": "Why is sin⁻¹(2) undefined?",
+       "choices": [
+        "Sine never outputs a value greater than 1",
+        "2 radians is out of range",
+        "Sine is not periodic",
+        "There's a typo; it should be tan⁻¹"
+       ],
+       "answer": 0,
+       "explain": "The domain of arcsin is limited to [−1, 1] because sin θ itself never exceeds 1 or goes below −1."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Oblique Triangles and Applications",
+   "summary": "Solving triangles that have no right angle using the Law of Sines and Law of Cosines, and computing triangle area from angle-side information.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Law of Sines",
+     "minutes": 16,
+     "intro": "Right-triangle trigonometry breaks down the moment a triangle has no right angle — surveying a plot of land, navigating between two landmarks, or triangulating a cell signal all involve oblique triangles, and the Law of Sines is the first tool built to handle them.",
+     "sections": [
+      {
+       "heading": "Stating the Law of Sines",
+       "body": [
+        "For any triangle with angles A, B, C opposite sides a, b, c respectively, the **Law of Sines** states sin A/a = sin B/b = sin C/c (equivalently a/sin A = b/sin B = c/sin C). It works for every triangle, not just right triangles, because it comes from dropping an altitude and expressing that altitude's length two different ways using sine.",
+        "Use the Law of Sines whenever you know an angle and its opposite side, plus one more piece of information — this is called the AAS (angle-angle-side) or ASA (angle-side-angle) case. Once two angles are known, the third follows immediately, since all three angles of any triangle sum to 180°."
+       ],
+       "example": {
+        "problem": "In triangle ABC, angle A = 40°, angle B = 65°, and side a = 12. Find side b.",
+        "steps": [
+         "Apply the Law of Sines: a/sin A = b/sin B, so 12/sin 40° = b/sin 65°.",
+         "Solve for b: b = 12 × sin 65°/sin 40°.",
+         "b ≈ 12 × 0.9063/0.6428 ≈ 12 × 1.4100 ≈ 16.9."
+        ],
+        "answer": "b ≈ 16.9."
+       }
+      },
+      {
+       "heading": "The Ambiguous Case (SSA)",
+       "body": [
+        "When you're given two sides and a non-included angle (SSA), the Law of Sines can produce zero, one, or two valid triangles — this is the **ambiguous case**. After solving for the unknown angle using sin B = (b sin A)/a, check whether that sine value is valid (≤ 1), and if it is, remember that an angle and its supplement (180° minus that angle) share the same sine, so you must check whether both possibilities keep the triangle's angles summing to less than 180°.",
+        "In practice: find B using sin⁻¹, then also test 180° − B as a second candidate. If A plus that second B value is still less than 180°, a second valid triangle exists; if it's not, only the first solution stands. Always sketch the given information first to build intuition for whether one or two triangles seem geometrically possible."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Law of Sines",
+       "def": "sin A/a = sin B/b = sin C/c for any triangle, relating each angle to its opposite side."
+      },
+      {
+       "term": "AAS/ASA case",
+       "def": "Triangle information given as two angles and a side, solvable directly with the Law of Sines."
+      },
+      {
+       "term": "ambiguous case (SSA)",
+       "def": "Given two sides and a non-included angle, where zero, one, or two triangles may satisfy the given information."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a triangle, angle A = 30°, angle C = 100°, and side a = 8. What is angle B?",
+       "choices": [
+        "50°",
+        "70°",
+        "130°",
+        "150°"
+       ],
+       "answer": 0,
+       "explain": "All angles sum to 180°, so B = 180° − 30° − 100° = 50°."
+      },
+      {
+       "q": "When is the Law of Sines the right tool to solve a triangle?",
+       "choices": [
+        "When you know two angles and a side (AAS or ASA)",
+        "When you know all three sides (SSS)",
+        "When you know two sides and the included angle (SAS)",
+        "Only for right triangles"
+       ],
+       "answer": 0,
+       "explain": "The Law of Sines needs a matched angle-side pair, which AAS or ASA directly provides; SSS and SAS require the Law of Cosines instead."
+      },
+      {
+       "q": "Given a/sin A = b/sin B, if a = 10, sin A = 0.5, and sin B = 0.8, find b.",
+       "choices": [
+        "16",
+        "6.25",
+        "10",
+        "12.5"
+       ],
+       "answer": 0,
+       "explain": "10/0.5 = 20, so b = 20 × 0.8 = 16."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Law of Cosines",
+     "minutes": 16,
+     "intro": "When a triangle gives you three sides with no angle at all, or two sides with the angle trapped between them, the Law of Sines has nothing to grab onto — the Law of Cosines, a generalized Pythagorean theorem, is built exactly for these cases.",
+     "sections": [
+      {
+       "heading": "Stating the Law of Cosines",
+       "body": [
+        "The **Law of Cosines** states c² = a² + b² − 2ab cos C, where C is the angle opposite side c (and the formula holds with any letter permutation). Notice that when C = 90°, cos C = 0 and the formula collapses to c² = a² + b², the ordinary Pythagorean theorem — the Law of Cosines is a direct generalization of it to any triangle.",
+        "Use this law for the SAS case (two sides and the included angle) to find the third side directly, or for the SSS case (all three sides known) solved for cosine: cos C = (a² + b² − c²)/(2ab), to find any angle."
+       ],
+       "example": {
+        "problem": "A triangle has sides a = 7, b = 9, and the included angle C = 60°. Find side c.",
+        "steps": [
+         "Apply c² = a² + b² − 2ab cos C.",
+         "c² = 7² + 9² − 2(7)(9)cos 60° = 49 + 81 − 126(0.5).",
+         "c² = 130 − 63 = 67.",
+         "c = √67 ≈ 8.19."
+        ],
+        "answer": "c ≈ 8.19."
+       }
+      },
+      {
+       "heading": "Choosing Between the Two Laws",
+       "body": [
+        "A quick decision rule: if you know an angle and its opposite side (AAS, ASA, or SSA), start with the Law of Sines. If you know two sides and the included angle (SAS), or all three sides (SSS), start with the Law of Cosines, since neither of those cases gives you a matched angle-opposite-side pair to plug into sines.",
+        "A practical strategy for SSS or SAS triangles: use the Law of Cosines once to find the one missing piece (a side for SAS, or the largest angle for SSS, since it's the one most likely to be obtuse), then switch to the Law of Sines for the remaining angles, since it involves simpler arithmetic once one angle is known."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Law of Cosines",
+       "def": "c² = a² + b² − 2ab cos C, a generalization of the Pythagorean theorem to any triangle."
+      },
+      {
+       "term": "SAS case",
+       "def": "Two sides and the angle between them known — solved with the Law of Cosines for the third side."
+      },
+      {
+       "term": "SSS case",
+       "def": "All three side lengths known — solved with the Law of Cosines for any angle."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A triangle has a = 5, b = 6, c = 7. Using the Law of Cosines, cos C equals which expression (C opposite side c)?",
+       "choices": [
+        "(25 + 36 − 49)/(2·5·6)",
+        "(25 + 36 + 49)/(2·5·6)",
+        "(49 − 25 − 36)/(2·5·6)",
+        "(5+6)/7"
+       ],
+       "answer": 0,
+       "explain": "Solving c² = a² + b² − 2ab cos C for cos C gives cos C = (a² + b² − c²)/(2ab) = (25+36−49)/(2·5·6)."
+      },
+      {
+       "q": "Which case requires the Law of Cosines rather than the Law of Sines?",
+       "choices": [
+        "SAS",
+        "AAS",
+        "ASA",
+        "Any case with a known right angle"
+       ],
+       "answer": 0,
+       "explain": "SAS (two sides, included angle) has no angle-opposite-side pair, so it needs the Law of Cosines to find the third side first."
+      },
+      {
+       "q": "In the Law of Cosines formula, what does it reduce to when C = 90°?",
+       "choices": [
+        "The Pythagorean theorem, c² = a² + b²",
+        "The Law of Sines",
+        "c = a + b",
+        "It becomes undefined"
+       ],
+       "answer": 0,
+       "explain": "cos 90° = 0, so the term −2ab cos C vanishes, leaving c² = a² + b²."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Area of a Triangle and Heron's Formula",
+     "minutes": 14,
+     "intro": "The familiar area formula, half base times height, requires a height you don't always have. Trigonometry offers two alternatives that work directly from the information a triangle actually gives you: two sides and an angle, or three sides alone.",
+     "sections": [
+      {
+       "heading": "Area from Two Sides and the Included Angle",
+       "body": [
+        "When two sides a and b and the included angle C are known, the triangle's area is Area = (1/2)ab sin C. This comes from treating b sin C as the triangle's height relative to base a — no separate height measurement needed, since the sine ratio extracts it directly from the given angle.",
+        "This formula works for any triangle, not just right triangles, and it is often faster than computing the missing side first with the Law of Cosines when area, not the side length, is what's actually being asked for."
+       ],
+       "example": {
+        "problem": "A triangular lot has two sides of length 40 m and 65 m, with an included angle of 50°. Find its area.",
+        "steps": [
+         "Apply Area = (1/2)ab sin C = (1/2)(40)(65) sin 50°.",
+         "(1/2)(40)(65) = 1300.",
+         "Area ≈ 1300 × 0.766 ≈ 996 m²."
+        ],
+        "answer": "Area ≈ 996 m²."
+       }
+      },
+      {
+       "heading": "Heron's Formula",
+       "body": [
+        "When only the three side lengths a, b, c are known, **Heron's formula** gives the area without needing any angle: first compute the semi-perimeter s = (a + b + c)/2, then Area = √(s(s − a)(s − b)(s − c)). This formula is remarkably old, attributed to the Greek mathematician Heron of Alexandria, and it's the go-to tool whenever a problem hands you SSS with no angle at all.",
+        "Heron's formula is especially convenient in surveying and construction, where side lengths are easy to measure directly with tape but angles require more specialized equipment."
+       ],
+       "example": {
+        "problem": "Find the area of a triangle with sides 13, 14, and 15 using Heron's formula.",
+        "steps": [
+         "Semi-perimeter: s = (13 + 14 + 15)/2 = 42/2 = 21.",
+         "Compute each factor: s − a = 21 − 13 = 8; s − b = 21 − 14 = 7; s − c = 21 − 15 = 6.",
+         "Area = √(21 × 8 × 7 × 6) = √7056 = 84."
+        ],
+        "answer": "Area = 84 square units."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Area = (1/2)ab sin C",
+       "def": "The area of a triangle given two sides and the included angle between them."
+      },
+      {
+       "term": "Heron's formula",
+       "def": "Area = √(s(s−a)(s−b)(s−c)) where s is the semi-perimeter, used when only three sides are known."
+      },
+      {
+       "term": "semi-perimeter",
+       "def": "Half the perimeter of a triangle, s = (a + b + c)/2."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A triangle has sides 6 and 10 with an included angle of 30°. What is its area?",
+       "choices": [
+        "15",
+        "30",
+        "60",
+        "7.5"
+       ],
+       "answer": 0,
+       "explain": "Area = (1/2)(6)(10)sin 30° = 30 × 0.5 = 15."
+      },
+      {
+       "q": "A triangle has sides 9, 10, 11. What is the semi-perimeter?",
+       "choices": [
+        "15",
+        "30",
+        "10",
+        "20"
+       ],
+       "answer": 0,
+       "explain": "s = (9 + 10 + 11)/2 = 30/2 = 15."
+      },
+      {
+       "q": "Using Heron's formula with sides 5, 5, 6 (s = 8), what is the area?",
+       "choices": [
+        "12",
+        "8",
+        "15",
+        "24"
+       ],
+       "answer": 0,
+       "explain": "Area = √(8 × 3 × 3 × 2) = √144 = 12."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

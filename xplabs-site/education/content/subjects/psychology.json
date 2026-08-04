@@ -1,0 +1,1152 @@
+{
+ "id": "psychology",
+ "title": "Psychology",
+ "domain": "social",
+ "level": "Intro college",
+ "description": "A survey of scientific psychology from the neuron to the social group. You will learn how psychologists study the mind and behavior, how the brain and senses build experience, how learning and memory work, and how development, motivation, personality, and mental illness shape a human life.",
+ "outcomes": [
+  "You can explain psychology's major perspectives and describe how experiments isolate cause from correlation.",
+  "You can trace how a neural signal travels through a neuron and identify the brain structures behind major behaviors.",
+  "You can distinguish classical and operant conditioning and predict how a reinforcement schedule will change behavior.",
+  "You can describe how memory is encoded, stored, and retrieved, and explain why forgetting happens.",
+  "You can apply major theories of motivation, emotion, and personality to real behavior.",
+  "You can identify classic social psychology findings on conformity and obedience, and describe evidence-based approaches to psychological disorders and therapy."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Foundations of Psychology",
+   "summary": "Before studying the mind, psychology needed a history of competing ideas about what causes behavior, and a toolkit of methods for testing those ideas rigorously and ethically.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "History and Perspectives",
+     "minutes": 15,
+     "intro": "Psychology only became a science in 1879, and the century since has been a running argument between schools of thought that each claim to explain the same behavior in a completely different way.",
+     "sections": [
+      {
+       "heading": "From Introspection to Behavior",
+       "body": [
+        "Wilhelm Wundt opened the first psychology lab in 1879 and used **structuralism**, training observers to report their raw inner sensations, to find the basic elements of the mind. William James's **functionalism** asked a different question: what is a mental process *for*? Shaped by Darwin, functionalism looked at how thoughts and habits help an organism adapt, a question that still drives psychology today.",
+        "Sigmund Freud's **psychoanalysis** argued unconscious childhood conflicts drive adult behavior. John Watson and B. F. Skinner's **behaviorism** rejected talk of an unobservable mind entirely, insisting psychology study only observable behavior and its rewards and punishments."
+       ],
+       "example": {
+        "problem": "A structuralist and a functionalist both study fear. How does each ask about it differently?",
+        "steps": [
+         "Structuralism looks for the basic sensations that make up an experience.",
+         "A structuralist asks what raw feelings compose fear: racing heart, tight chest, dread.",
+         "Functionalism looks for the adaptive purpose behind a mental process.",
+         "A functionalist asks instead what fear does for survival: does it trigger escape or warn others?"
+        ],
+        "answer": "The structuralist decomposes fear into sensations; the functionalist asks what survival purpose it serves."
+       }
+      },
+      {
+       "heading": "Modern Perspectives",
+       "body": [
+        "**Humanistic psychology** (Rogers, Maslow) pushed back on behaviorism, emphasizing free will and self-actualization. The **cognitive perspective**, emerging mid-century, studies memory, attention, and thought as information processing. Today most psychologists also draw on the **biological perspective** (genes, brain, hormones) and the **sociocultural perspective** (how culture shapes thought and behavior).",
+        "No single perspective is simply correct; each highlights different causes of the same behavior. A clinician treating depression might combine biological treatment (medication), cognitive techniques (challenging negative thoughts), and sociocultural awareness (a client's cultural context) rather than picking just one lens."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "structuralism",
+       "def": "Wundt's approach using introspection to find the basic elements of the mind."
+      },
+      {
+       "term": "functionalism",
+       "def": "James's approach asking how a mental process helps an organism adapt."
+      },
+      {
+       "term": "behaviorism",
+       "def": "The view that psychology should study only observable behavior and its environmental causes."
+      },
+      {
+       "term": "psychoanalysis",
+       "def": "Freud's approach emphasizing unconscious conflict, often from childhood, as a driver of behavior."
+      },
+      {
+       "term": "cognitive perspective",
+       "def": "The approach studying thinking, memory, and attention as information processing."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which perspective explains a fear of dogs by pointing to a buried childhood conflict?",
+       "choices": [
+        "Behaviorism",
+        "Psychoanalysis",
+        "Cognitive perspective",
+        "Functionalism"
+       ],
+       "answer": 1,
+       "explain": "Psychoanalysis looks for unconscious conflicts, often from early childhood, as the hidden cause of behavior."
+      },
+      {
+       "q": "A researcher will discuss only observable stimuli and responses, never unobservable mental states. This is which tradition?",
+       "choices": [
+        "Humanistic psychology",
+        "Behaviorism",
+        "Structuralism",
+        "Psychoanalysis"
+       ],
+       "answer": 1,
+       "explain": "Behaviorism restricts study to observable behavior and its rewards or punishments, avoiding claims about the unobservable mind."
+      },
+      {
+       "q": "Which question is most characteristic of functionalism?",
+       "choices": [
+        "What raw sensations make up this experience?",
+        "What childhood conflict caused this behavior?",
+        "How does this mental process help the organism adapt?",
+        "What reward is reinforcing this behavior?"
+       ],
+       "answer": 2,
+       "explain": "Functionalism, influenced by Darwin, asks what adaptive purpose a mental process or behavior serves."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Research Methods and Scientific Thinking",
+     "minutes": 18,
+     "intro": "Everyday intuition about people is often wrong, which is exactly why psychology relies on methods that separate a genuine cause from a coincidence, and on habits of thought that guard against fooling ourselves.",
+     "sections": [
+      {
+       "heading": "Describing Behavior and Correlation",
+       "body": [
+        "Descriptive methods include the **case study** (deep look at one person, hard to generalize), **naturalistic observation** (watching behavior in its normal setting), and the **survey** (asking many people to self-report). These can reveal a **correlation**, a measurable relationship from −1 to +1 between two variables — but correlation never proves causation, since a hidden third variable can drive both."
+       ],
+       "example": {
+        "problem": "Ice cream sales and drowning deaths both rise every summer. Does ice cream cause drowning?",
+        "steps": [
+         "A positive correlation only means the variables rise and fall together.",
+         "Ask whether a third variable explains both.",
+         "Hot weather increases both ice cream sales and swimming, and swimming raises drowning risk.",
+         "Conclude hot weather, not ice cream, is the likely hidden variable."
+        ],
+        "answer": "No — the correlation is explained by a third variable, warm weather, not a causal link."
+       }
+      },
+      {
+       "heading": "The Experiment and Critical Thinking",
+       "body": [
+        "To establish cause, psychologists run an **experiment**: participants are randomly assigned to an experimental or control group, an **independent variable** is manipulated, and a **dependent variable** is measured. Random assignment spreads outside traits evenly across groups, and a **double-blind procedure**, where neither participant nor researcher knows who got the real treatment, prevents expectations from biasing results.",
+        "Good research also runs through an **Institutional Review Board (IRB)**, requiring **informed consent** and, if deception was used, a **debriefing** afterward. Critical thinkers watch for **hindsight bias** (an outcome feels obvious only after it happens) and **confirmation bias** (noticing evidence that fits what you already believe). A good scientific claim is **falsifiable** — specific enough that evidence could, in principle, prove it wrong."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "correlation",
+       "def": "A measurable relationship between two variables, from −1 to +1, that does not by itself show causation."
+      },
+      {
+       "term": "experiment",
+       "def": "A method that manipulates an independent variable and randomly assigns participants to isolate cause and effect."
+      },
+      {
+       "term": "independent variable",
+       "def": "The factor a researcher deliberately manipulates."
+      },
+      {
+       "term": "dependent variable",
+       "def": "The outcome measured to see if it was affected by the independent variable."
+      },
+      {
+       "term": "hindsight bias",
+       "def": "Seeing a past outcome as having been obvious, only after already knowing it occurred."
+      },
+      {
+       "term": "falsifiable",
+       "def": "Specific enough that evidence could, in principle, prove a claim wrong."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A study finds towns with more churches also have more bars, and concludes churches cause bars. What is the error?",
+       "choices": [
+        "Sample size too large",
+        "Correlation mistaken for causation",
+        "No independent variable was measured",
+        "Random assignment was reversed"
+       ],
+       "answer": 1,
+       "explain": "Both numbers likely rise because bigger towns have more of everything; a correlation alone cannot prove one causes the other."
+      },
+      {
+       "q": "In an experiment testing whether a study app improves test scores, what is the dependent variable?",
+       "choices": [
+        "Whether a student used the app",
+        "The test scores",
+        "The random assignment procedure",
+        "The IRB approval"
+       ],
+       "answer": 1,
+       "explain": "The outcome being measured, test scores, is the dependent variable — it is what may depend on the independent variable, app use."
+      },
+      {
+       "q": "After a plane crash, someone says, I knew that airline was unsafe all along, though they never said so before. What bias is this?",
+       "choices": [
+        "Confirmation bias",
+        "Hindsight bias",
+        "The double-blind procedure",
+        "A falsifiable claim"
+       ],
+       "answer": 1,
+       "explain": "The outcome now feels obvious only because it is already known — that is hindsight bias, not genuine foresight."
+      },
+      {
+       "q": "Which claim is falsifiable and therefore scientifically testable?",
+       "choices": [
+        "Everything happens for a reason",
+        "Dreams have hidden meaning only a gifted interpreter can see",
+        "Sleep-deprived people make more errors on a memory test than rested people",
+        "True happiness cannot be measured"
+       ],
+       "answer": 2,
+       "explain": "This claim predicts a specific, measurable outcome that data could confirm or refute, unlike the vague, untestable alternatives."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Biopsychology and Consciousness",
+   "summary": "Every thought and feeling runs through biological hardware: the neuron, the brain's major structures, and the changing states of consciousness we cycle through daily.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Neurons and the Nervous System",
+     "minutes": 16,
+     "intro": "A thought is really a wave of electricity and chemistry racing across billions of tiny cells — understanding that cell, the neuron, is the starting point for biological psychology.",
+     "sections": [
+      {
+       "heading": "Inside the Neuron",
+       "body": [
+        "A **neuron** sends information: **dendrites** receive signals, the **cell body** integrates them, and the **axon**, often wrapped in a **myelin sheath** that speeds transmission, carries the signal away. Once incoming signals push the charge past a threshold, the neuron fires an **action potential**, an all-or-nothing electrical impulse.",
+        "Neurons don't touch. At the **synapse**, the arriving impulse triggers release of **neurotransmitters**, chemicals that cross the gap and either excite or inhibit the next neuron. **Dopamine** drives reward and movement; **serotonin** regulates mood and sleep; **acetylcholine** enables muscle movement and memory."
+       ],
+       "example": {
+        "problem": "Order these events: (a) neurotransmitters cross the synapse, (b) dendrites receive the signal, (c) an action potential travels the axon, (d) the cell body reaches threshold.",
+        "steps": [
+         "Dendrites always receive input first (b).",
+         "That input is combined at the cell body, which decides whether to fire (d).",
+         "If threshold is reached, the action potential fires down the axon (c).",
+         "At the axon's end, neurotransmitters cross the synapse to the next neuron (a)."
+        ],
+        "answer": "Order: (b) dendrites receive, (d) cell body reaches threshold, (c) action potential fires, (a) neurotransmitters cross the synapse."
+       }
+      },
+      {
+       "heading": "Mapping the Nervous System",
+       "body": [
+        "The **central nervous system (CNS)** is the brain and spinal cord. The **peripheral nervous system (PNS)** connects the CNS to the body, splitting into the somatic system (voluntary muscle movement) and the autonomic system (involuntary functions). The autonomic system further divides into the **sympathetic** branch (fight-or-flight arousal) and the **parasympathetic** branch (rest-and-digest calming).",
+        "These branches typically work as counterweights: a racing heart before a speech reflects sympathetic activation, and the calm that follows once the speech ends reflects parasympathetic recovery. Damage to specific neurotransmitter systems has clear behavioral consequences: low dopamine is linked to Parkinson's disease, and low acetylcholine is linked to Alzheimer's disease."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "neuron",
+       "def": "A nerve cell specialized to receive, integrate, and transmit electrochemical signals."
+      },
+      {
+       "term": "action potential",
+       "def": "The all-or-nothing electrical impulse a neuron fires once its charge crosses a threshold."
+      },
+      {
+       "term": "synapse",
+       "def": "The gap between neurons where chemical neurotransmitters carry the signal across."
+      },
+      {
+       "term": "neurotransmitter",
+       "def": "A chemical messenger, like dopamine or serotonin, that crosses the synapse and affects the next neuron."
+      },
+      {
+       "term": "sympathetic nervous system",
+       "def": "The autonomic branch that produces fight-or-flight arousal."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which part of the neuron receives incoming signals from other neurons?",
+       "choices": [
+        "The axon",
+        "The myelin sheath",
+        "The dendrites",
+        "The synapse"
+       ],
+       "answer": 2,
+       "explain": "Dendrites are specialized to receive incoming signals, which are then integrated in the cell body."
+      },
+      {
+       "q": "A person's heart races right before a speech. Which branch of the nervous system is responsible?",
+       "choices": [
+        "The parasympathetic nervous system",
+        "The sympathetic nervous system",
+        "The somatic system's voluntary control",
+        "The CNS alone, without the PNS"
+       ],
+       "answer": 1,
+       "explain": "The sympathetic branch of the autonomic nervous system produces fight-or-flight arousal, including a racing heart."
+      },
+      {
+       "q": "A medication raises serotonin levels in the brain. Which condition does it most likely treat?",
+       "choices": [
+        "Parkinson's disease",
+        "Depression",
+        "A broken bone",
+        "Color blindness"
+       ],
+       "answer": 1,
+       "explain": "Serotonin regulates mood, and many antidepressants work by increasing its availability at the synapse."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Brain, Sleep, and Consciousness",
+     "minutes": 18,
+     "intro": "Three pounds of tissue plans your day, recognizes faces, and keeps your heart beating without being asked — and that same tissue cycles every night through the strange, distinct stages of sleep and dreaming.",
+     "sections": [
+      {
+       "heading": "Brain Structures and the Cortex",
+       "body": [
+        "The **hindbrain** (medulla, cerebellum) controls heartbeat, breathing, and balance. The **limbic system** handles emotion and memory: the **amygdala** processes fear, and the **hippocampus** is essential for forming new long-term memories — patients with hippocampal damage can no longer store new facts even though old memories remain. The **hypothalamus** regulates hunger, thirst, and hormones.",
+        "The wrinkled **cerebral cortex** has four lobes: **frontal** (planning, decision-making, includes Broca's area for speech production), **parietal** (touch, spatial awareness), **temporal** (hearing, includes Wernicke's area for language comprehension), and **occipital** (vision). The **corpus callosum** connects the left and right hemispheres, which for most people lean toward language/logic (left) and spatial/emotional reasoning (right)."
+       ],
+       "example": {
+        "problem": "A patient with hippocampal damage cannot recall any new conversation minutes later, though childhood memories remain intact. What function is impaired?",
+        "steps": [
+         "The hippocampus is essential for forming new long-term memories.",
+         "Old memories, formed before the damage, don't depend on an intact hippocampus to retrieve.",
+         "The symptom matches hippocampal damage exactly."
+        ],
+        "answer": "The ability to form new long-term memories is impaired, while older memories remain accessible."
+       }
+      },
+      {
+       "heading": "Sleep, Dreams, and Altered States",
+       "body": [
+        "Sleep follows the **circadian rhythm**, an internal ~24-hour clock synced by light. A night cycles through lighter NREM stages, deep slow-wave sleep (physical restoration), and **REM sleep**, when the brain is highly active and most vivid dreaming occurs. The **activation-synthesis hypothesis** proposes dreams are the forebrain making sense of random REM neural activity; Freud instead argued dreams disguise unconscious wishes.",
+        "**Psychoactive drugs** alter consciousness via neurotransmitter systems: **depressants** (alcohol) slow CNS activity, **stimulants** (caffeine) increase alertness, and **hallucinogens** (LSD) distort perception. Repeated use can produce **tolerance** (needing more for the same effect) and **dependence** (withdrawal symptoms upon stopping)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "amygdala",
+       "def": "A limbic structure central to processing fear and threat."
+      },
+      {
+       "term": "hippocampus",
+       "def": "A limbic structure essential for forming new long-term memories."
+      },
+      {
+       "term": "frontal lobe",
+       "def": "The cortical lobe responsible for planning, decision-making, and voluntary movement."
+      },
+      {
+       "term": "REM sleep",
+       "def": "The sleep stage with rapid eye movement, high brain activity, and most vivid dreaming."
+      },
+      {
+       "term": "tolerance",
+       "def": "The need for increasing doses of a drug to produce the same effect."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Damage to which structure would most likely leave someone unable to register appropriate fear?",
+       "choices": [
+        "The occipital lobe",
+        "The amygdala",
+        "The corpus callosum",
+        "The parietal lobe"
+       ],
+       "answer": 1,
+       "explain": "The amygdala is central to detecting threat and generating fear; damage there can blunt normal fear responses."
+      },
+      {
+       "q": "Which sleep stage is most associated with vivid dreaming and rapid eye movement?",
+       "choices": [
+        "Stage 1 NREM",
+        "Slow-wave sleep",
+        "REM sleep",
+        "The moment of falling asleep"
+       ],
+       "answer": 2,
+       "explain": "REM sleep is marked by high brain activity and darting eye movements, and is when most vivid dreaming occurs."
+      },
+      {
+       "q": "A person now needs two cups of coffee instead of one to feel the same alertness. What explains this?",
+       "choices": [
+        "Dependence",
+        "Tolerance",
+        "REM rebound",
+        "Activation-synthesis"
+       ],
+       "answer": 1,
+       "explain": "Tolerance is the need for a larger dose to produce the same effect after repeated use."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Sensing, Perceiving, and Learning",
+   "summary": "The senses turn raw energy into experience, and learning is how experience reshapes future behavior — the two core mechanisms being classical and operant conditioning.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Sensation and Perception",
+     "minutes": 16,
+     "intro": "Light and sound waves carry no color or melody in themselves; your senses and brain build the vivid world you experience out of raw physical energy.",
+     "sections": [
+      {
+       "heading": "From Stimulus to Sensation",
+       "body": [
+        "**Sensation** is detecting physical energy and converting it to neural signals, called **transduction**. The **absolute threshold** is the minimum stimulation needed to detect a stimulus at all; the **difference threshold** is the smallest detectable change between two stimuli. **Sensory adaptation** explains why a constant stimulus, like a ticking clock, fades from awareness even though it hasn't changed."
+       ]
+      },
+      {
+       "heading": "Perception: Organizing the Signal",
+       "body": [
+        "**Perception** organizes sensory information into meaning. **Gestalt principles** describe how the brain groups pieces into wholes: proximity groups nearby things, similarity groups alike things, and **closure** fills in gaps to perceive a complete shape. **Perceptual constancy** lets us recognize an object as stable despite a changing sensory image — a door viewed at an angle still looks rectangular even though its image on the retina is a trapezoid."
+       ],
+       "example": {
+        "problem": "You see dots arranged in a circle with small gaps, but perceive a complete circle. Which Gestalt principle explains this?",
+        "steps": [
+         "The sensory input is actually incomplete, with gaps.",
+         "Closure is the principle where the brain fills in missing information to perceive a whole shape.",
+         "The perception of a complete circle from incomplete dots matches closure."
+        ],
+        "answer": "This is closure: the brain fills in gaps between the dots to perceive one continuous circle."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sensation",
+       "def": "Detecting physical energy with sensory organs and converting it into neural signals."
+      },
+      {
+       "term": "absolute threshold",
+       "def": "The minimum stimulation needed for a stimulus to be detected at all."
+      },
+      {
+       "term": "sensory adaptation",
+       "def": "Decreased sensitivity to an unchanging stimulus over time."
+      },
+      {
+       "term": "perceptual constancy",
+       "def": "Recognizing an object as stable despite changes in the sensory image it produces."
+      }
+     ],
+     "practice": [
+      {
+       "q": "You stop noticing a refrigerator's hum minutes after entering a kitchen, though it never stopped. What explains this?",
+       "choices": [
+        "Perceptual constancy",
+        "Sensory adaptation",
+        "Closure",
+        "Transduction"
+       ],
+       "answer": 1,
+       "explain": "Sensory adaptation describes reduced sensitivity to a constant, unchanging stimulus over time."
+      },
+      {
+       "q": "A road sign viewed at a sharp angle still looks rectangular, though its retinal image is a trapezoid. This is an example of what?",
+       "choices": [
+        "Sensory adaptation",
+        "The difference threshold",
+        "Perceptual constancy",
+        "Transduction"
+       ],
+       "answer": 2,
+       "explain": "Perceptual constancy lets the brain recognize an object's true shape as stable despite a distorted retinal image."
+      },
+      {
+       "q": "What does transduction refer to?",
+       "choices": [
+        "Converting physical energy into neural signals",
+        "Filling in gaps to perceive a complete shape",
+        "Comparing two stimuli to find a noticeable difference",
+        "Storing information in long-term memory"
+       ],
+       "answer": 0,
+       "explain": "Transduction is the conversion of stimulus energy, like light or sound, into neural signals the brain can process."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Conditioning and Observational Learning",
+     "minutes": 18,
+     "intro": "Ivan Pavlov's dogs learned to salivate at a lab assistant's footsteps, and B. F. Skinner's rats learned to press levers for food — two different mechanisms by which consequences and associations reshape behavior.",
+     "sections": [
+      {
+       "heading": "Classical Conditioning",
+       "body": [
+        "**Classical conditioning** is learning through association. Food, an **unconditioned stimulus (UCS)**, naturally triggers salivation, an **unconditioned response (UCR)**. Pairing a neutral stimulus, like a bell, with the UCS repeatedly makes the bell a **conditioned stimulus (CS)** that alone triggers salivation, now a **conditioned response (CR)**. Without reinforcement, the CR weakens through **extinction**, and a similar stimulus can trigger the CR through **stimulus generalization**."
+       ],
+       "example": {
+        "problem": "A trainer rings a bell before every treat; eventually the dog salivates at the bell alone. Label the UCS, UCR, CS, and CR.",
+        "steps": [
+         "The treat naturally causes salivation with no learning: UCS.",
+         "The natural salivation to the treat: UCR.",
+         "The originally neutral bell, now triggering salivation through pairing: CS.",
+         "The learned salivation to the bell alone: CR."
+        ],
+        "answer": "UCS = the treat, UCR = original salivation, CS = the bell, CR = learned salivation to the bell."
+       }
+      },
+      {
+       "heading": "Operant Conditioning and Observational Learning",
+       "body": [
+        "**Operant conditioning** is learning where consequences change behavior frequency. **Positive reinforcement** adds something desirable to increase a behavior; **negative reinforcement** removes something unpleasant to increase a behavior. **Positive punishment** adds something unpleasant to decrease a behavior; **negative punishment** removes something desirable to decrease it. A **variable-ratio schedule**, rewarding after an unpredictable number of responses like a slot machine, produces the highest and most extinction-resistant response rate.",
+        "Not all learning needs direct consequences: Bandura's Bobo doll study showed children who watched an adult act aggressively later imitated that aggression themselves, without being reinforced for it — **observational learning**, acquiring behavior by watching and later imitating a model."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "classical conditioning",
+       "def": "Learning in which a neutral stimulus comes to trigger a response through pairing with a stimulus that already triggers it."
+      },
+      {
+       "term": "extinction",
+       "def": "The weakening of a conditioned response when the CS is repeatedly presented without the UCS."
+      },
+      {
+       "term": "operant conditioning",
+       "def": "Learning in which the consequences of a behavior change how often it occurs."
+      },
+      {
+       "term": "negative reinforcement",
+       "def": "Removing an unpleasant stimulus after a behavior to increase that behavior."
+      },
+      {
+       "term": "observational learning",
+       "def": "Learning a behavior by watching a model perform it and later imitating it."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In Pavlov's experiment, what role does the bell play once the dog salivates at the sound alone?",
+       "choices": [
+        "Unconditioned stimulus",
+        "Unconditioned response",
+        "Conditioned stimulus",
+        "Conditioned response"
+       ],
+       "answer": 2,
+       "explain": "The bell became the conditioned stimulus (CS) once it alone could trigger salivation, through repeated pairing with food."
+      },
+      {
+       "q": "A driver's seatbelt alarm stops buzzing once they buckle up, and they start buckling faster each time. What is this?",
+       "choices": [
+        "Positive punishment",
+        "Negative reinforcement",
+        "Positive reinforcement",
+        "Negative punishment"
+       ],
+       "answer": 1,
+       "explain": "An unpleasant stimulus (the buzzing) is removed after the behavior, increasing that behavior — negative reinforcement."
+      },
+      {
+       "q": "Why do slot machines, paying out on a variable-ratio schedule, produce such persistent play?",
+       "choices": [
+        "Payouts happen after a fixed number of pulls",
+        "Unpredictable reward timing makes responding highly resistant to extinction",
+        "They use negative punishment",
+        "Players are using observational learning only"
+       ],
+       "answer": 1,
+       "explain": "Variable-ratio schedules produce the highest, most persistent responding because the learner cannot predict which attempt will pay off."
+      },
+      {
+       "q": "In Bandura's Bobo doll study, children who watched an adult act aggressively later did too, without direct reward. This demonstrates what?",
+       "choices": [
+        "Classical conditioning",
+        "Negative reinforcement",
+        "Observational learning",
+        "Extinction"
+       ],
+       "answer": 2,
+       "explain": "The children learned the behavior simply by observing a model and then imitating it — the definition of observational learning."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Cognition and Development",
+   "summary": "How information is stored and retrieved, how people think and solve problems, and how the mind develops from infancy through adulthood.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Memory and Thinking",
+     "minutes": 18,
+     "intro": "Memory feels like a video recording of your life, but it is closer to a reconstruction built from fragments — and the same mind that stores those fragments also relies on fast mental shortcuts that can mislead it.",
+     "sections": [
+      {
+       "heading": "Encoding, Storage, and Forgetting",
+       "body": [
+        "The **Atkinson-Shiffrin model** describes memory flowing through three stores: **sensory memory** (a near-exact copy for seconds), **short-term memory** (about 7 items for 20-30 seconds without rehearsal), and **long-term memory** (essentially unlimited, reached through **elaborative rehearsal**, connecting new information to existing knowledge). Long-term memory splits into **explicit memory** (facts and events) and **implicit memory** (skills like riding a bike).",
+        "Ebbinghaus's **forgetting curve** shows memory loss is steepest right after learning, which is why **spaced practice** across several sessions beats cramming. **Retrieval failure** occurs when a stored memory can't be accessed without the right cue, and **interference** describes memories competing: **retroactive interference** is new information disrupting recall of old information, and **proactive interference** is the reverse."
+       ],
+       "example": {
+        "problem": "You repeat a phone number silently while walking to dial it, then forget it five minutes later. Why did it not become a lasting memory?",
+        "steps": [
+         "The number was held briefly in short-term memory.",
+         "Simple repetition (maintenance rehearsal) keeps information active but doesn't reliably transfer it to long-term storage.",
+         "Without elaborative rehearsal connecting it to meaning, no lasting trace formed."
+        ],
+        "answer": "It stayed in short-term memory; without elaborative rehearsal, it never transferred to long-term memory."
+       }
+      },
+      {
+       "heading": "Thinking and Intelligence",
+       "body": [
+        "We organize the world using **concepts**, often built around a **prototype**, the most typical example of a category. An **algorithm** is a step-by-step procedure guaranteed to work; a **heuristic** is a faster but fallible shortcut. The **availability heuristic** judges likelihood by how easily examples come to mind (vivid news coverage makes rare events feel common); the **representativeness heuristic** judges likelihood by similarity to a prototype, sometimes ignoring real statistics.",
+        "Spearman proposed a single general intelligence factor, **g**. Gardner instead proposed **multiple intelligences** (linguistic, spatial, musical, interpersonal, and more). Sternberg's **triarchic theory** proposed analytical, creative, and practical intelligence. Modern IQ tests report a **deviation IQ score**, standardized so the population average is 100 with a standard deviation of 15."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "short-term memory",
+       "def": "The memory store holding about 7 items for roughly 20-30 seconds without rehearsal."
+      },
+      {
+       "term": "elaborative rehearsal",
+       "def": "Connecting new information to existing knowledge to encode it into long-term memory."
+      },
+      {
+       "term": "interference",
+       "def": "Competition between memories, where old or new information disrupts recall of the other."
+      },
+      {
+       "term": "heuristic",
+       "def": "A mental shortcut that is usually fast but not guaranteed to produce a correct answer."
+      },
+      {
+       "term": "availability heuristic",
+       "def": "Judging the likelihood of an event by how easily examples of it come to mind."
+      },
+      {
+       "term": "g factor",
+       "def": "Spearman's proposed single general intelligence factor underlying many mental tasks."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A student learning a new language finds it harder to recall vocabulary from a language studied years earlier. What is this?",
+       "choices": [
+        "Retroactive interference",
+        "Proactive interference",
+        "Encoding failure",
+        "The g factor"
+       ],
+       "answer": 0,
+       "explain": "New learning disrupting recall of older information is retroactive interference."
+      },
+      {
+       "q": "Which study strategy, based on the forgetting curve, produces the best long-term retention?",
+       "choices": [
+        "Cramming the night before",
+        "Spacing study sessions out over several days",
+        "Reading the material once, slowly",
+        "Studying only right before sleep"
+       ],
+       "answer": 1,
+       "explain": "Spaced practice across multiple sessions produces stronger long-term retention than cramming, consistent with the forgetting curve."
+      },
+      {
+       "q": "After extensive news coverage of a shark attack, a swimmer overestimates how common shark attacks are. Which heuristic explains this?",
+       "choices": [
+        "Representativeness heuristic",
+        "Availability heuristic",
+        "An algorithm",
+        "The g factor"
+       ],
+       "answer": 1,
+       "explain": "Vivid, memorable coverage makes a rare event feel more probable than it is — the availability heuristic."
+      },
+      {
+       "q": "Which theory of intelligence specifically proposes analytical, creative, and practical components?",
+       "choices": [
+        "Spearman's g factor",
+        "Gardner's multiple intelligences",
+        "Sternberg's triarchic theory",
+        "The Atkinson-Shiffrin model"
+       ],
+       "answer": 2,
+       "explain": "Sternberg's triarchic theory identifies analytical, creative, and practical intelligence as three distinct components."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Lifespan Development",
+     "minutes": 17,
+     "intro": "A newborn can't grasp that a toy hidden under a blanket still exists, but within two years that same child will understand it instantly — development tracks these predictable shifts across a lifetime.",
+     "sections": [
+      {
+       "heading": "Cognitive and Social Development in Childhood",
+       "body": [
+        "Piaget proposed four stages: **sensorimotor** (birth-2, develops **object permanence**), **preoperational** (2-7, symbolic thought but lacks **conservation**, the understanding that quantity stays the same despite a change in shape, and shows **egocentrism**), **concrete operational** (7-11, masters conservation and logic about concrete objects), and **formal operational** (12+, abstract reasoning). Ainsworth's Strange Situation studies identified **secure attachment**, where a child uses a caregiver as a safe base and is easily comforted by their return."
+       ],
+       "example": {
+        "problem": "A researcher pours water from a short, wide glass into a tall, thin glass; a 4-year-old insists the tall glass has more water. What does this reveal?",
+        "steps": [
+         "The child fails to recognize the water quantity is unchanged despite the container's shape — a failure of conservation.",
+         "Children in the preoperational stage typically lack conservation."
+        ],
+        "answer": "The child is likely in Piaget's preoperational stage, since conservation has not yet developed."
+       }
+      },
+      {
+       "heading": "Adolescence, Adulthood, and Aging",
+       "body": [
+        "Erikson proposed eight psychosocial stages, each centered on a key conflict: infancy brings trust versus mistrust, adolescence brings **identity versus role confusion** as teens work out who they are, and late adulthood brings integrity versus despair, looking back to evaluate whether life felt meaningful. Success at each stage builds a foundation, though Erikson believed conflicts could be revisited later.",
+        "Adulthood continues through career and relationship milestones, and healthy aging is linked to continued social engagement, physical activity, and mental stimulation rather than simple decline."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "object permanence",
+       "def": "The understanding, developed in infancy, that objects continue to exist even when out of sight."
+      },
+      {
+       "term": "conservation",
+       "def": "Understanding that a quantity stays the same despite changes in its shape or arrangement."
+      },
+      {
+       "term": "secure attachment",
+       "def": "An attachment style in which a child uses a caregiver as a safe base and is easily comforted by their return."
+      },
+      {
+       "term": "identity versus role confusion",
+       "def": "Erikson's adolescent-stage conflict centered on developing a stable sense of self."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An 8-month-old searches for a toy hidden under a blanket. What has this infant developed?",
+       "choices": [
+        "Conservation",
+        "Object permanence",
+        "Egocentrism",
+        "Formal operational reasoning"
+       ],
+       "answer": 1,
+       "explain": "Searching for a hidden object shows the infant understands it still exists out of sight — object permanence."
+      },
+      {
+       "q": "According to Erikson, which conflict is most central during the teenage years?",
+       "choices": [
+        "Trust versus mistrust",
+        "Identity versus role confusion",
+        "Integrity versus despair",
+        "Autonomy versus shame and doubt"
+       ],
+       "answer": 1,
+       "explain": "Erikson placed identity versus role confusion in adolescence, as teens develop a stable sense of self."
+      },
+      {
+       "q": "A toddler explores confidently while a caregiver is present and is easily soothed when the caregiver returns. Which attachment style is this?",
+       "choices": [
+        "Avoidant attachment",
+        "Secure attachment",
+        "Resistant attachment",
+        "Egocentrism"
+       ],
+       "answer": 1,
+       "explain": "Confident exploration with easy comfort upon reunion is the hallmark of secure attachment."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Motivation, Personality, and Social Behavior",
+   "summary": "Why people act as they do: what drives behavior, how personality forms, and how our behavior shifts in the presence of other people.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Motivation, Emotion, and Personality",
+     "minutes": 18,
+     "intro": "Two people can feel the same racing heart and label it fear or excitement depending only on the situation around them — and a similar puzzle applies to personality: is it buried conflict, measurable traits, or constant learning from those around us?",
+     "sections": [
+      {
+       "heading": "Motivation and Emotion",
+       "body": [
+        "Maslow's **hierarchy of needs** arranges motivation in a pyramid from physiological needs up to **self-actualization**, fulfilling one's full potential. **Drive-reduction theory** says unmet biological needs create tension that motivates behavior restoring **homeostasis**. For emotion, the **James-Lange theory** says arousal comes first and is interpreted as emotion after; the **Cannon-Bard theory** says arousal and feeling occur simultaneously; and the **Schachter-Singer two-factor theory** says emotion needs both arousal and a cognitive label drawn from context — the same racing heart could be labeled excitement at a concert or fear in a dark alley."
+       ],
+       "example": {
+        "problem": "A hiker's heart pounds crossing a rickety bridge, and they feel strong attraction to a stranger met right after. Which theory explains the arousal being relabeled as attraction?",
+        "steps": [
+         "A single physiological state is being interpreted two different ways depending on context.",
+         "The two-factor theory says emotion requires both arousal and a cognitive label from context.",
+         "The stranger's presence right after the arousal makes it plausible the leftover arousal gets relabeled as attraction."
+        ],
+        "answer": "The Schachter-Singer two-factor theory: the same arousal can be labeled differently depending on context."
+       }
+      },
+      {
+       "heading": "Personality",
+       "body": [
+        "Freud's **psychodynamic** theory describes the **id** (demanding immediate pleasure), **superego** (conscience), and **ego** (mediating between them), with **defense mechanisms** like repression protecting against anxiety. **Trait theory**'s **Big Five** (OCEAN: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism) measures personality along continuous dimensions. Rogers's humanistic view emphasizes **unconditional positive regard** supporting growth toward self-actualization. Bandura's social-cognitive theory highlights **self-efficacy**, belief in one's own ability to succeed at a task, which predicts effort and persistence."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "hierarchy of needs",
+       "def": "Maslow's pyramid of human motivations, from physiological needs up to self-actualization."
+      },
+      {
+       "term": "Schachter-Singer two-factor theory",
+       "def": "The theory that emotion results from both physiological arousal and a cognitive label for that arousal."
+      },
+      {
+       "term": "id",
+       "def": "In Freudian theory, the primitive part of personality demanding immediate gratification."
+      },
+      {
+       "term": "Big Five",
+       "def": "The trait model measuring Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism."
+      },
+      {
+       "term": "self-efficacy",
+       "def": "Bandura's concept of a person's belief in their own ability to succeed at a specific task."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to Maslow, which needs generally must be reasonably met before self-actualization becomes strongly motivating?",
+       "choices": [
+        "Safety and physiological needs",
+        "Only self-actualization matters on its own",
+        "Esteem needs must be ignored entirely",
+        "None of the lower needs matter"
+       ],
+       "answer": 0,
+       "explain": "Maslow's hierarchy proposes lower needs like safety and physiological needs generally must be reasonably met before higher needs become strongly motivating."
+      },
+      {
+       "q": "According to the James-Lange theory, what happens first when you encounter a threat?",
+       "choices": [
+        "You consciously decide to feel afraid, then your heart races",
+        "Physiological arousal occurs first, interpreted as fear afterward",
+        "Arousal and fear occur with no order at all",
+        "You label the situation before any arousal begins"
+       ],
+       "answer": 1,
+       "explain": "James-Lange holds that bodily arousal happens first, and the emotion is the brain's interpretation of that arousal afterward."
+      },
+      {
+       "q": "A person represses a painful memory so thoroughly they have no conscious awareness of it. In Freudian terms, this is what?",
+       "choices": [
+        "Self-efficacy",
+        "A defense mechanism",
+        "Unconditional positive regard",
+        "The Big Five"
+       ],
+       "answer": 1,
+       "explain": "Repression, pushing a distressing memory from awareness, is a classic Freudian defense mechanism."
+      },
+      {
+       "q": "Which Big Five trait describes someone highly organized, disciplined, and reliable?",
+       "choices": [
+        "Openness",
+        "Extraversion",
+        "Conscientiousness",
+        "Neuroticism"
+       ],
+       "answer": 2,
+       "explain": "Conscientiousness is the Big Five trait tied to organization, self-discipline, and reliability."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Social Psychology",
+     "minutes": 16,
+     "intro": "Put an ordinary, decent person in the wrong social situation, and famous studies show they may deliver what they believe are painful shocks to a stranger, or deny an obviously wrong answer, simply because of pressure the situation created.",
+     "sections": [
+      {
+       "heading": "Explaining Others' Behavior",
+       "body": [
+        "**Attribution theory** describes how we explain behavior: a **dispositional attribution** blames a person's character; a **situational attribution** blames circumstances. The **fundamental attribution error** is the common tendency to overemphasize dispositional causes and underemphasize situational ones when judging others, while making the opposite mistake about ourselves."
+       ],
+       "example": {
+        "problem": "A coworker snaps angrily at you in a meeting. What situational factors should you consider before assuming they are simply hostile, and what error would you commit by skipping that step?",
+        "steps": [
+         "Consider situational explanations: sleep deprivation, a family emergency, deadline pressure.",
+         "Jumping straight to they must be hostile is a dispositional attribution.",
+         "Skipping situational explanations is the fundamental attribution error."
+        ],
+        "answer": "Consider stress or personal problems first; assuming rudeness reflects character without considering these is the fundamental attribution error."
+       }
+      },
+      {
+       "heading": "Conformity, Obedience, and Group Behavior",
+       "body": [
+        "Asch's line studies showed **conformity**: about a third of participants agreed with an obviously wrong group answer at least once. Milgram's obedience studies found roughly two-thirds of participants, under a legitimate-seeming authority figure, delivered what they believed were dangerous shocks simply because told to continue. **Groupthink** occurs when a group's desire for harmony overrides realistic evaluation of alternatives. The **bystander effect** shows a person is less likely to help in an emergency when other bystanders are present, since responsibility feels diffused across the group."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "fundamental attribution error",
+       "def": "The tendency to overemphasize personal traits and underemphasize situational factors when explaining others' behavior."
+      },
+      {
+       "term": "conformity",
+       "def": "Adjusting one's behavior or judgment to match a group, as shown in Asch's line studies."
+      },
+      {
+       "term": "obedience",
+       "def": "Following the orders of an authority figure, as demonstrated in Milgram's shock studies."
+      },
+      {
+       "term": "bystander effect",
+       "def": "The finding that a person is less likely to help in an emergency when other bystanders are present."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In Asch's line studies, why did many participants give an answer they privately knew was wrong?",
+       "choices": [
+        "They could not see the lines clearly",
+        "Social pressure led them to conform to an incorrect group answer",
+        "They were following direct orders from an authority",
+        "They were experiencing the bystander effect"
+       ],
+       "answer": 1,
+       "explain": "Asch's studies demonstrated conformity: participants matched an incorrect group consensus even when the correct answer was visually obvious."
+      },
+      {
+       "q": "A person collapses on a crowded sidewalk, and no bystander steps forward because each assumes someone else will help. This illustrates what?",
+       "choices": [
+        "Groupthink",
+        "The bystander effect",
+        "The fundamental attribution error",
+        "Obedience"
+       ],
+       "answer": 1,
+       "explain": "The bystander effect describes reduced likelihood of helping when other bystanders are present, since responsibility feels diffused."
+      },
+      {
+       "q": "A committee approves a risky plan several members privately doubted, without seriously debating alternatives, to preserve group harmony. This is best described as what?",
+       "choices": [
+        "Conformity in the Asch sense",
+        "Groupthink",
+        "Dispositional attribution",
+        "The bystander effect"
+       ],
+       "answer": 1,
+       "explain": "Groupthink describes a group prioritizing consensus over realistic evaluation of alternatives, exactly as here."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Stress, Disorders, and Treatment",
+   "summary": "How the body responds to chronic stress, how psychologists classify psychological disorders, and the major evidence-based approaches used to treat them.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Stress and Psychological Disorders",
+     "minutes": 18,
+     "intro": "Stress triggers a real physiological cascade, and when a pattern of thoughts, feelings, or behavior becomes distressing and disruptive enough, psychologists classify it using a shared, evidence-based system rather than gut impressions.",
+     "sections": [
+      {
+       "heading": "Stress and Coping",
+       "body": [
+        "Selye's **general adaptation syndrome (GAS)** describes three stages: **alarm** (sympathetic fight-or-flight activation), **resistance** (the body adapts and copes), and **exhaustion** (resources deplete and immune function declines if the stressor continues too long). **Problem-focused coping** directly addresses a stressor's source; **emotion-focused coping** manages the emotional reaction without changing the stressor. Strong **social support** is one of the most consistently protective factors against chronic stress's harmful effects."
+       ],
+       "example": {
+        "problem": "An employee facing months of unrelenting overtime begins getting sick often, feels perpetually exhausted, and struggles to concentrate. Which GAS stage best matches this?",
+        "steps": [
+         "The stressor has been ongoing for months, not brief.",
+         "The symptoms show depletion — weak immunity, low energy — rather than active coping.",
+         "This pattern matches the exhaustion stage."
+        ],
+        "answer": "This matches the exhaustion stage, when prolonged stress has depleted the body's resources."
+       }
+      },
+      {
+       "heading": "Classifying Psychological Disorders",
+       "body": [
+        "A **psychological disorder** is a pattern of thoughts, feelings, or behaviors that is distressing, dysfunctional, and deviates from cultural norms in a harmful way. The **DSM-5** provides standard diagnostic criteria so clinicians reach consistent diagnoses. **Anxiety disorders** include **generalized anxiety disorder** (persistent excessive worry) and **panic disorder** (recurrent panic attacks). **Mood disorders** include **major depressive disorder** (persistent sadness and loss of interest lasting at least two weeks) and **bipolar disorder** (alternating depression and mania). **Schizophrenia** shows **positive symptoms** (hallucinations, delusions) and **negative symptoms** (flattened emotion, withdrawal)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "general adaptation syndrome (GAS)",
+       "def": "Selye's three-stage model of the body's stress response: alarm, resistance, and exhaustion."
+      },
+      {
+       "term": "problem-focused coping",
+       "def": "A coping strategy that directly addresses and tries to change the source of a stressor."
+      },
+      {
+       "term": "DSM-5",
+       "def": "The Diagnostic and Statistical Manual of Mental Disorders, 5th edition, providing standard diagnostic criteria."
+      },
+      {
+       "term": "major depressive disorder",
+       "def": "A mood disorder involving persistent sadness, loss of interest, and physical symptoms lasting at least two weeks."
+      },
+      {
+       "term": "schizophrenia",
+       "def": "A severe disorder marked by positive symptoms like hallucinations and negative symptoms like flattened emotion."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A student facing an exam makes a detailed study plan and starts reviewing each night. What kind of coping is this?",
+       "choices": [
+        "Emotion-focused coping",
+        "Problem-focused coping",
+        "The exhaustion stage",
+        "A positive symptom"
+       ],
+       "answer": 1,
+       "explain": "Creating a study plan directly addresses the source of stress, making it problem-focused coping."
+      },
+      {
+       "q": "Which GAS stage involves the initial fight-or-flight activation of the sympathetic nervous system?",
+       "choices": [
+        "The resistance stage",
+        "The exhaustion stage",
+        "The alarm stage",
+        "Eustress"
+       ],
+       "answer": 2,
+       "explain": "The alarm stage is the first stage of the GAS, marked by initial sympathetic activation."
+      },
+      {
+       "q": "A person has two weeks of persistent sadness, loss of interest in hobbies, low energy, and trouble sleeping, interfering with work. Which disorder fits best?",
+       "choices": [
+        "Generalized anxiety disorder",
+        "Major depressive disorder",
+        "Schizophrenia",
+        "Bipolar disorder"
+       ],
+       "answer": 1,
+       "explain": "This exact pattern — sadness, loss of interest, physical symptoms, lasting two weeks — defines major depressive disorder."
+      },
+      {
+       "q": "Hallucinations and delusions are classified as which type of symptom in schizophrenia?",
+       "choices": [
+        "Negative symptoms",
+        "Positive symptoms",
+        "Mood symptoms",
+        "Anxiety symptoms"
+       ],
+       "answer": 1,
+       "explain": "Positive symptoms refer to experiences added beyond typical functioning, such as hallucinations and delusions."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Approaches to Therapy",
+     "minutes": 15,
+     "intro": "If someone is struggling with a psychological disorder, what actually helps? Decades of research point to several genuinely effective approaches, each built on a different theory of what causes psychological suffering.",
+     "sections": [
+      {
+       "heading": "Talk-Based Therapies",
+       "body": [
+        "**Psychodynamic therapy** aims to bring unconscious conflicts into awareness. **Client-centered therapy** (Rogers) provides unconditional positive regard, trusting the client to find their own path. **Cognitive-behavioral therapy (CBT)**, the most researched approach for many disorders, combines correcting distorted thoughts (like assuming one mistake means total failure) with behavioral techniques like gradual exposure to a feared situation."
+       ],
+       "example": {
+        "problem": "A client fears public speaking, believing I will completely embarrass myself. How would CBT address this, combining both components?",
+        "steps": [
+         "Cognitively, the therapist helps the client identify this belief as distorted and examine evidence against it, replacing it with a balanced thought.",
+         "Behaviorally, the therapist uses gradual exposure: practicing speaking in front of progressively larger audiences.",
+         "Combining both changes the thought pattern while building direct evidence that disconfirms the original fear."
+        ],
+        "answer": "CBT combines correcting the distorted belief with gradual, structured practice speaking in front of others."
+       }
+      },
+      {
+       "heading": "Biomedical Treatment and Choosing an Approach",
+       "body": [
+        "**Biomedical therapy** treats disorders through the body: antidepressants (serotonin) for depression, antipsychotics (dopamine) for schizophrenia's positive symptoms, mood stabilizers for bipolar disorder — often combined with psychotherapy for better results than either alone. Many clinicians take an **eclectic approach**, drawing techniques from multiple traditions. Across approaches, the **therapeutic alliance**, the trust and collaboration between client and therapist, is one of the strongest predictors of successful treatment."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "cognitive-behavioral therapy (CBT)",
+       "def": "A widely used therapy combining correction of distorted thoughts with structured behavioral techniques."
+      },
+      {
+       "term": "client-centered therapy",
+       "def": "Rogers's humanistic therapy providing unconditional positive regard to support a client's own growth."
+      },
+      {
+       "term": "eclectic approach",
+       "def": "Drawing techniques from multiple therapeutic traditions to match an individual client's needs."
+      },
+      {
+       "term": "therapeutic alliance",
+       "def": "The trust and collaborative relationship between client and therapist, a strong predictor of treatment success."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which therapy specifically combines correcting distorted thoughts with structured behavioral techniques like gradual exposure?",
+       "choices": [
+        "Client-centered therapy",
+        "Cognitive-behavioral therapy",
+        "Biomedical therapy alone",
+        "Psychodynamic therapy"
+       ],
+       "answer": 1,
+       "explain": "CBT is defined by combining a cognitive component (correcting distorted thoughts) with a behavioral component (like exposure)."
+      },
+      {
+       "q": "A medication targeting dopamine is prescribed to reduce hallucinations and delusions. Which disorder is it treating?",
+       "choices": [
+        "Generalized anxiety disorder",
+        "Major depressive disorder",
+        "Schizophrenia",
+        "A specific phobia"
+       ],
+       "answer": 2,
+       "explain": "Antipsychotics targeting dopamine are the standard biomedical treatment for schizophrenia's positive symptoms."
+      },
+      {
+       "q": "Which factor is one of the strongest predictors of successful therapy, often regardless of specific technique?",
+       "choices": [
+        "The number of medications prescribed",
+        "The therapeutic alliance between client and therapist",
+        "The client's commute time to sessions",
+        "The client's IQ score"
+       ],
+       "answer": 1,
+       "explain": "A strong, trusting, collaborative therapeutic alliance is consistently one of the best predictors of successful outcomes."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

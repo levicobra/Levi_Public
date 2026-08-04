@@ -1,0 +1,678 @@
+{
+ "id": "macroeconomics",
+ "title": "Macroeconomics",
+ "domain": "social",
+ "level": "Intro college",
+ "description": "A study of the economy as a whole: how GDP, unemployment, and inflation are measured, why economies grow and swing through booms and recessions, and how fiscal and monetary policy try to steer them. You will compute real GDP, unemployment rates, multipliers, and money creation, and use those tools to evaluate real policy debates.",
+ "outcomes": [
+  "You can compute GDP from its components and convert nominal GDP into real GDP using a price index.",
+  "You can calculate the unemployment rate and the inflation rate from labor-market and price data.",
+  "You can use the rule of 70 and the aggregate demand-aggregate supply model to analyze economic growth and the business cycle.",
+  "You can calculate the government spending multiplier and tax multiplier and use them to predict fiscal policy's effect on GDP.",
+  "You can explain how the Federal Reserve changes the money supply and calculate the effect of the money multiplier.",
+  "You can analyze the short-run tradeoff between inflation and unemployment and explain exchange rates and trade balances."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Measuring the Economy",
+   "summary": "The three core measurements of macroeconomics: how big the economy is, how many people are working, and how fast prices are rising.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "GDP: Measuring Total Output",
+     "minutes": 15,
+     "intro": "How do you put a single number on everything an entire country produced this year? Gross domestic product tries to do exactly that, and its formula reveals what actually drives the size of an economy.",
+     "sections": [
+      {
+       "heading": "GDP and Its Components",
+       "body": [
+        "**Gross domestic product (GDP)** is the market value of all final goods and services produced within a country's borders in a given period. It is calculated using the expenditure approach: GDP = C + I + G + NX, where C is consumer spending, I is business investment, G is government spending, and NX is net exports (exports minus imports).",
+        "Only **final goods**, sold to their end user, are counted, to avoid double-counting; the steel a car company buys is an **intermediate good** whose value is already captured when the finished car is sold. GDP also only counts production within a country's borders, regardless of who owns the factories, distinguishing it from GNP, which counts production by a country's citizens regardless of location."
+       ]
+      },
+      {
+       "heading": "Nominal vs. Real GDP",
+       "body": [
+        "**Nominal GDP** values output at current prices, so it can rise just because prices rose, even if the economy produced no more stuff. **Real GDP** adjusts for price changes using a **GDP deflator**, isolating the actual change in output.",
+        "The GDP deflator is an index where the base year equals 100; dividing nominal GDP by the deflator and multiplying by 100 converts it to real GDP, measured in base-year dollars. Comparing real GDP across years, not nominal GDP, is the correct way to measure actual economic growth."
+       ],
+       "example": {
+        "problem": "A country's consumer spending is $8,000 billion, investment is $2,000 billion, government spending is $3,000 billion, exports are $1,500 billion, and imports are $1,800 billion. Find GDP. Then, if next year's nominal GDP is $24,000 billion and the GDP deflator is 120 (base year = 100), find real GDP.",
+        "steps": [
+         "Find net exports: NX = exports − imports = $1,500 − $1,800 = −$300 billion.",
+         "Apply the GDP formula: GDP = C + I + G + NX = 8,000 + 2,000 + 3,000 + (−300) = $12,700 billion.",
+         "For the second part, apply the real GDP formula: Real GDP = (Nominal GDP ÷ Deflator) × 100.",
+         "Calculate: Real GDP = (24,000 ÷ 120) × 100 = $20,000 billion."
+        ],
+        "answer": "GDP is $12,700 billion; with a deflator of 120, the $24,000 billion nominal GDP converts to $20,000 billion in real GDP."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "gross domestic product (GDP)", "def": "The market value of all final goods and services produced within a country's borders in a given period."},
+      {"term": "net exports", "def": "Exports minus imports; a negative value means a country imports more than it exports."},
+      {"term": "nominal GDP", "def": "GDP measured using current-year prices, which can rise from price increases alone."},
+      {"term": "real GDP", "def": "GDP adjusted for price changes using a price index, isolating actual changes in output."},
+      {"term": "GDP deflator", "def": "A price index, with the base year set to 100, used to convert nominal GDP into real GDP."}
+     ],
+     "practice": [
+      {"q": "C = $8,000B, I = $2,000B, G = $3,000B, exports = $1,500B, imports = $1,800B. What is GDP?", "choices": ["$12,700 billion", "$14,500 billion", "$13,000 billion", "$11,000 billion"], "answer": 0, "explain": "Net exports = 1,500 − 1,800 = −300. GDP = 8,000 + 2,000 + 3,000 + (−300) = $12,700 billion."},
+      {"q": "Nominal GDP is $24,000 billion and the GDP deflator is 120. What is real GDP?", "choices": ["$28,800 billion", "$20,000 billion", "$24,000 billion", "$120,000 billion"], "answer": 1, "explain": "Real GDP = (Nominal GDP ÷ Deflator) × 100 = (24,000 ÷ 120) × 100 = $20,000 billion."},
+      {"q": "Why does GDP only count final goods and not intermediate goods like the steel used to build a car?", "choices": ["Intermediate goods have no market value", "Counting both would double-count the value already included in the price of the final good", "Intermediate goods are always imported", "GDP only measures services, not goods"], "answer": 1, "explain": "The value of intermediate goods like steel is already embedded in the final price of the car, so counting both separately would overstate total output."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Unemployment",
+     "minutes": 13,
+     "intro": "Not everyone without a job counts as 'unemployed' in the economic sense. The precise definitions behind the monthly jobs report change how you should read that number.",
+     "sections": [
+      {
+       "heading": "Defining and Calculating Unemployment",
+       "body": [
+        "The **labor force** includes everyone who is either employed or actively looking for work (unemployed); people who are not working and not looking, like retirees, students, or discouraged workers who have given up searching, are **not in the labor force** and are excluded from the labor force entirely.",
+        "The **unemployment rate** equals the number of unemployed people divided by the labor force, times 100. The **labor force participation rate** equals the labor force divided by the total working-age population, times 100, showing what share of potential workers are even in the labor market."
+       ]
+      },
+      {
+       "heading": "Types of Unemployment",
+       "body": [
+        "**Frictional unemployment** is short-term, from workers between jobs or new graduates searching for their first position; it is generally healthy for a dynamic economy. **Structural unemployment** arises when workers' skills no longer match available jobs, often due to technology or long-term industry decline.",
+        "**Cyclical unemployment** rises and falls with the business cycle, spiking during recessions and falling during expansions. The **natural rate of unemployment** is the sum of frictional and structural unemployment that persists even when the economy is at full employment, since cyclical unemployment is essentially zero at that point."
+       ],
+       "example": {
+        "problem": "A country's working-age population is 250 million. Of these, 50 million are not in the labor force. Of those in the labor force, 180 million are employed and the rest are unemployed. Find the labor force, the unemployment rate, and the labor force participation rate.",
+        "steps": [
+         "Find the labor force: working-age population − not in labor force = 250 − 50 = 200 million.",
+         "Find the number unemployed: labor force − employed = 200 − 180 = 20 million.",
+         "Calculate the unemployment rate: (unemployed ÷ labor force) × 100 = (20 ÷ 200) × 100 = 10%.",
+         "Calculate the labor force participation rate: (labor force ÷ working-age population) × 100 = (200 ÷ 250) × 100 = 80%."
+        ],
+        "answer": "The labor force is 200 million, the unemployment rate is 10%, and the labor force participation rate is 80%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "labor force", "def": "The total number of people who are either employed or actively seeking work."},
+      {"term": "unemployment rate", "def": "The percentage of the labor force that is unemployed."},
+      {"term": "labor force participation rate", "def": "The percentage of the working-age population that is in the labor force."},
+      {"term": "natural rate of unemployment", "def": "The sum of frictional and structural unemployment that persists even when the economy is at full employment."}
+     ],
+     "practice": [
+      {"q": "A country has 200 million in its labor force and 20 million unemployed. What is the unemployment rate?", "choices": ["5%", "10%", "20%", "90%"], "answer": 1, "explain": "Unemployment rate = (unemployed ÷ labor force) × 100 = (20 ÷ 200) × 100 = 10%."},
+      {"q": "A discouraged worker who has stopped looking for a job is classified as:", "choices": ["Unemployed", "Employed", "Not in the labor force", "Structurally unemployed"], "answer": 2, "explain": "Because the discouraged worker is no longer actively searching for work, they are removed from the labor force entirely, not counted as unemployed."},
+      {"q": "A factory closes because its products have been replaced by new technology, and its workers lack the skills for other available jobs. This is an example of:", "choices": ["Frictional unemployment", "Structural unemployment", "Cyclical unemployment", "Seasonal unemployment"], "answer": 1, "explain": "Structural unemployment occurs when workers' existing skills no longer match the jobs available, often due to technological change, as in this example."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Inflation and the Consumer Price Index",
+     "minutes": 13,
+     "intro": "A dollar today buys less than a dollar did ten years ago, but exactly how much less is something you can calculate precisely using the same basket-of-goods method the government uses every month.",
+     "sections": [
+      {
+       "heading": "The Consumer Price Index",
+       "body": [
+        "The **Consumer Price Index (CPI)** tracks the cost of a fixed basket of goods and services that a typical household buys, comparing its cost over time to a base period set at an index value of 100. The **inflation rate** is the percentage change in the CPI (or in the cost of the basket) from one period to the next.",
+        "Inflation is not the same as high prices; it is the rate at which prices are rising. A country can have high prices but low inflation (prices stable at a high level) or low prices but high inflation (prices rising rapidly from a low starting point)."
+       ]
+      },
+      {
+       "heading": "The Costs of Inflation",
+       "body": [
+        "Unexpected inflation redistributes wealth from lenders to borrowers, since loans are repaid in dollars worth less than when borrowed, and it erodes the purchasing power of anyone on a fixed income, like retirees living on a fixed pension. Even fully expected inflation imposes **menu costs**, the real resources businesses spend updating prices, and **shoe-leather costs**, the time and effort people spend minimizing cash holdings as money loses value.",
+        "**Hyperinflation**, extremely rapid and out-of-control inflation, can destroy a currency's usefulness entirely, as seen in historical episodes in Weimar Germany and Zimbabwe, where prices rose so fast that money became nearly worthless within days."
+       ],
+       "example": {
+        "problem": "A fixed basket of goods costs $200 in the base year and $210 the following year. Find the CPI for the following year (base year CPI = 100) and the inflation rate.",
+        "steps": [
+         "Find the CPI for the following year: (cost of basket ÷ cost in base year) × 100 = (210 ÷ 200) × 100 = 105.",
+         "Find the inflation rate: percentage change in the CPI = (105 − 100) ÷ 100 × 100 = 5%.",
+         "Alternatively, calculate directly from cost: (210 − 200) ÷ 200 × 100 = 5%, the same result."
+        ],
+        "answer": "The CPI rises to 105, and the inflation rate is 5%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Consumer Price Index (CPI)", "def": "An index tracking the cost of a fixed basket of goods and services over time relative to a base period."},
+      {"term": "inflation rate", "def": "The percentage change in the price level (such as the CPI) from one period to the next."},
+      {"term": "menu costs", "def": "The real resources businesses spend updating prices in response to inflation."},
+      {"term": "hyperinflation", "def": "Extremely rapid, out-of-control inflation that can render a currency nearly worthless."}
+     ],
+     "practice": [
+      {"q": "A basket of goods costs $200 in the base year and $210 the next year. What is the inflation rate?", "choices": ["5%", "10%", "50%", "105%"], "answer": 0, "explain": "Inflation rate = (210 − 200) ÷ 200 × 100 = 5%."},
+      {"q": "Unexpected inflation tends to benefit which group?", "choices": ["Lenders, since they are repaid the same dollar amount", "Borrowers, since they repay loans in dollars worth less than when borrowed", "Retirees on a fixed pension", "No one; inflation harms everyone equally"], "answer": 1, "explain": "Because borrowers repay loans with dollars that have lost purchasing power, unexpected inflation effectively transfers value from lenders to borrowers."},
+      {"q": "What are 'menu costs' of inflation?", "choices": ["The cost of dining out during inflation", "The real resources businesses spend updating prices due to inflation", "Government spending to reduce inflation", "The cost of printing new currency"], "answer": 1, "explain": "Menu costs refer to the time and resources firms spend physically or digitally updating prices as inflation makes old prices outdated."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Growth and the Business Cycle",
+   "summary": "Why economies grow larger over decades, why they wobble through booms and recessions over shorter periods, and the AD-AS model that ties both patterns together.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Economic Growth and the Rule of 70",
+     "minutes": 12,
+     "intro": "A small difference in a country's annual growth rate compounds into an enormous difference within a single working lifetime. A shortcut called the rule of 70 makes that compounding easy to see.",
+     "sections": [
+      {
+       "heading": "What Drives Long-Run Growth",
+       "body": [
+        "Long-run **economic growth**, sustained increases in real GDP per capita, comes primarily from growth in **productivity**, output per worker, which itself comes from more physical capital (machines, infrastructure), more human capital (education, skills), and better technology.",
+        "Because population also grows, **real GDP per capita** (real GDP divided by population) is usually the better measure of whether typical living standards are actually improving, rather than total real GDP alone, which could rise from population growth even if living standards for the average person stayed flat."
+       ]
+      },
+      {
+       "heading": "The Rule of 70",
+       "body": [
+        "The **rule of 70** is a quick way to estimate how long it takes a growing quantity to double: divide 70 by the annual percentage growth rate. It works for GDP, GDP per capita, prices, or any quantity growing at a roughly constant percentage rate.",
+        "Small differences in growth rates compound dramatically over decades: an economy growing at 2% doubles roughly every 35 years, while one growing at 7% doubles roughly every 10 years, meaning the faster-growing economy could become many times larger within a single lifetime."
+       ],
+       "example": {
+        "problem": "An economy's real GDP per capita grows from $40,000 to $42,000 in one year. Find the annual growth rate and use the rule of 70 to estimate how many years it would take real GDP per capita to double at that rate.",
+        "steps": [
+         "Find the growth rate: (new value − old value) ÷ old value × 100 = (42,000 − 40,000) ÷ 40,000 × 100 = 5%.",
+         "Apply the rule of 70: doubling time ≈ 70 ÷ growth rate.",
+         "Calculate: 70 ÷ 5 = 14 years."
+        ],
+        "answer": "The growth rate is 5%, and at that rate, real GDP per capita would take about 14 years to double."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "economic growth", "def": "A sustained increase in a country's real GDP per capita over time."},
+      {"term": "productivity", "def": "Output produced per worker, the primary long-run driver of economic growth."},
+      {"term": "real GDP per capita", "def": "Real GDP divided by population, a common measure of average living standards."},
+      {"term": "rule of 70", "def": "A shortcut estimating doubling time by dividing 70 by the annual percentage growth rate."}
+     ],
+     "practice": [
+      {"q": "Real GDP per capita grows from $40,000 to $42,000 in a year. What is the growth rate?", "choices": ["2%", "5%", "10%", "20%"], "answer": 1, "explain": "Growth rate = (42,000 − 40,000) ÷ 40,000 × 100 = 5%."},
+      {"q": "Using the rule of 70, how long would it take an economy growing at 7% per year to double?", "choices": ["7 years", "10 years", "35 years", "70 years"], "answer": 1, "explain": "Rule of 70: doubling time ≈ 70 ÷ growth rate = 70 ÷ 7 = 10 years."},
+      {"q": "Why is real GDP per capita usually a better measure of living standards than total real GDP?", "choices": ["Real GDP per capita ignores inflation entirely", "Total real GDP could rise just from population growth without improving the average person's living standard", "Real GDP per capita is always higher than total GDP", "Total GDP cannot be measured accurately"], "answer": 1, "explain": "Dividing by population isolates whether output per person is actually rising, since total GDP alone can grow simply because there are more people, without any gain for the average resident."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Business Cycle",
+     "minutes": 12,
+     "intro": "Economies do not grow in a smooth, straight line; they lurch through booms and busts. The business cycle gives that lurching a vocabulary, and economists track specific signals to spot where in the cycle we currently sit.",
+     "sections": [
+      {
+       "heading": "Phases of the Business Cycle",
+       "body": [
+        "The **business cycle** describes recurring, irregular swings in real GDP around its long-run growth trend, moving through four phases: **expansion** (growing output and falling unemployment), **peak** (the high point before a downturn), **contraction or recession** (falling output and rising unemployment), and **trough** (the low point before the next expansion begins).",
+        "A commonly used informal signal of a recession is two consecutive quarters of falling real GDP, though the official U.S. body that dates recessions, the National Bureau of Economic Research, considers a broader range of indicators, including employment, income, and production, not just GDP alone."
+       ]
+      },
+      {
+       "heading": "Reading the Signals",
+       "body": [
+        "**Leading indicators**, like stock prices, building permits, and new manufacturing orders, tend to change before the overall economy does, making them useful for forecasting. **Lagging indicators**, like the unemployment rate, tend to change only after the economy has already turned, confirming a trend rather than predicting it.",
+        "No single indicator is perfectly reliable, which is why economists and policymakers track a broad basket of data together rather than reacting to any one signal in isolation."
+       ],
+       "example": {
+        "problem": "A country's real GDP is $21.0 trillion in Q1, $20.8 trillion in Q2, and $20.6 trillion in Q3. Using the common two-consecutive-quarters rule of thumb, would this economy be considered in a recession by Q3?",
+        "steps": [
+         "Find the Q1-to-Q2 growth rate: (20.8 − 21.0) ÷ 21.0 × 100 ≈ −0.95%, a decline.",
+         "Find the Q2-to-Q3 growth rate: (20.6 − 20.8) ÷ 20.8 × 100 ≈ −0.96%, another decline.",
+         "Since real GDP fell in two consecutive quarters (Q2 and Q3), the common informal rule of thumb would label this a recession."
+        ],
+        "answer": "Yes, by the two-consecutive-quarters rule of thumb, this economy would be considered in a recession, having posted GDP declines of about 0.95% and 0.96% in consecutive quarters."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "business cycle", "def": "Recurring, irregular swings in real GDP around its long-run trend, moving through expansion, peak, contraction, and trough."},
+      {"term": "recession", "def": "A significant, widespread decline in economic activity, often approximated by two consecutive quarters of falling real GDP."},
+      {"term": "leading indicator", "def": "An economic measure, like stock prices, that tends to change before the overall economy does."},
+      {"term": "lagging indicator", "def": "An economic measure, like the unemployment rate, that tends to change only after the economy has already turned."}
+     ],
+     "practice": [
+      {"q": "Real GDP falls in both Q2 and Q3 compared to the prior quarter. By the common rule of thumb, this would be considered:", "choices": ["An expansion", "A recession", "A peak", "Hyperinflation"], "answer": 1, "explain": "Two consecutive quarters of falling real GDP is a commonly used informal signal of a recession."},
+      {"q": "Which of these is typically considered a leading indicator?", "choices": ["The unemployment rate", "New building permits", "Last year's GDP", "Total government debt"], "answer": 1, "explain": "New building permits tend to change before broader economic activity shifts, since construction plans reflect expectations about future demand, making them a leading indicator."},
+      {"q": "What is the correct order of business cycle phases?", "choices": ["Trough, peak, expansion, contraction", "Expansion, peak, contraction, trough", "Peak, trough, contraction, expansion", "Contraction, expansion, trough, peak"], "answer": 1, "explain": "The standard business cycle sequence is expansion (growth), peak (high point), contraction/recession (decline), and trough (low point), before the cycle begins again."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Aggregate Demand, Aggregate Supply, and the Multiplier",
+     "minutes": 14,
+     "intro": "One graph explains both a recession and a recovery: the aggregate demand and aggregate supply model, and it comes with a built-in amplifier called the multiplier that magnifies small spending changes into big GDP swings.",
+     "sections": [
+      {
+       "heading": "The AD-AS Model",
+       "body": [
+        "**Aggregate demand (AD)** is the total quantity of goods and services all buyers in an economy want to purchase at each price level, sloping downward much like an individual demand curve. **Aggregate supply (AS)** is the total quantity firms are willing to produce at each price level; in the short run it slopes upward, but in the long run it is often modeled as vertical at the economy's full-employment output.",
+        "Equilibrium occurs where AD and AS cross, determining the overall price level and real GDP. A rightward shift in AD, from more consumer spending, investment, government spending, or net exports, raises both the price level and real GDP in the short run; a leftward shift does the reverse, which is exactly what happens during a recession."
+       ]
+      },
+      {
+       "heading": "The Multiplier Effect",
+       "body": [
+        "An initial change in spending does not just add its own amount to GDP; it ripples through the economy as one person's spending becomes another person's income, who then spends part of that too. The **spending multiplier** captures this ripple, calculated as 1 ÷ (1 − MPC), where MPC is the **marginal propensity to consume**, the share of each extra dollar of income that a household spends rather than saves.",
+        "A higher MPC means people save less and spend more of each new dollar, producing a larger multiplier and a bigger ripple effect through the economy from any initial change in spending."
+       ],
+       "example": {
+        "problem": "The marginal propensity to consume (MPC) in an economy is 0.8. If government spending rises by $200 billion, find the spending multiplier and the total resulting change in real GDP.",
+        "steps": [
+         "Calculate the spending multiplier: 1 ÷ (1 − MPC) = 1 ÷ (1 − 0.8) = 1 ÷ 0.2 = 5.",
+         "Apply the multiplier to the initial spending change: ΔGDP = multiplier × ΔG = 5 × $200 billion.",
+         "Calculate: 5 × 200 = $1,000 billion."
+        ],
+        "answer": "The spending multiplier is 5, so the $200 billion increase in government spending is estimated to raise real GDP by $1,000 billion in total."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "aggregate demand (AD)", "def": "The total quantity of goods and services all buyers in an economy want to purchase at each price level."},
+      {"term": "aggregate supply (AS)", "def": "The total quantity of goods and services firms are willing to produce at each price level."},
+      {"term": "marginal propensity to consume (MPC)", "def": "The share of each extra dollar of income that a household spends rather than saves."},
+      {"term": "spending multiplier", "def": "The factor, equal to 1 ÷ (1 − MPC), by which an initial change in spending is magnified into a larger total change in GDP."}
+     ],
+     "practice": [
+      {"q": "MPC is 0.8. What is the spending multiplier?", "choices": ["0.2", "1.25", "5", "8"], "answer": 2, "explain": "Spending multiplier = 1 ÷ (1 − MPC) = 1 ÷ (1 − 0.8) = 1 ÷ 0.2 = 5."},
+      {"q": "With a spending multiplier of 5, a $200 billion increase in government spending is estimated to raise real GDP by:", "choices": ["$40 billion", "$200 billion", "$1,000 billion", "$5 billion"], "answer": 2, "explain": "ΔGDP = multiplier × ΔG = 5 × $200 billion = $1,000 billion."},
+      {"q": "A rightward shift in aggregate demand, holding aggregate supply fixed, generally causes:", "choices": ["Lower price level and lower real GDP", "Higher price level and higher real GDP in the short run", "No change in price level or GDP", "Only a change in the unemployment rate"], "answer": 1, "explain": "A rightward AD shift moves the economy along the upward-sloping short-run aggregate supply curve to a point with both a higher price level and higher real GDP."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Fiscal Policy",
+   "summary": "How government spending and taxation are used to try to smooth out the business cycle, and the real-world limits and debates surrounding those tools.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Government Budgets, Deficits, and Debt",
+     "minutes": 12,
+     "intro": "A government's budget is really just a household budget scaled up to trillions of dollars, with one crucial difference: governments can borrow across generations in ways most households never could.",
+     "sections": [
+      {
+       "heading": "Deficits and Surpluses",
+       "body": [
+        "A **budget deficit** occurs when government spending exceeds government revenue (mainly taxes) in a given year; a **budget surplus** occurs when revenue exceeds spending. The **national debt** is the accumulated total of all past deficits minus surpluses, essentially the sum total the government still owes.",
+        "Running a deficit in any one year is not automatically alarming, especially during a recession when tax revenue naturally falls and spending on programs like unemployment insurance naturally rises; the more important long-run question is whether debt is growing faster or slower than the overall economy."
+       ]
+      },
+      {
+       "heading": "Measuring Debt Relative to the Economy",
+       "body": [
+        "Economists compare the national debt to the size of the economy using the **debt-to-GDP ratio**, since a larger economy can sustainably carry a larger absolute debt than a smaller one. A rising debt-to-GDP ratio over time signals that debt is growing faster than the economy's capacity to eventually service it.",
+        "High and rising debt-to-GDP ratios can eventually crowd out other government spending through interest payments, raise borrowing costs, or constrain a government's ability to respond to future crises, though there is ongoing debate among economists about exactly how high a ratio becomes genuinely risky."
+       ],
+       "example": {
+        "problem": "In a given year, a government collects $4.4 trillion in revenue and spends $5.8 trillion. Its total national debt is $28 trillion, and GDP is $25 trillion. Find the budget deficit and the debt-to-GDP ratio.",
+        "steps": [
+         "Find the budget deficit: spending − revenue = $5.8 trillion − $4.4 trillion = $1.4 trillion.",
+         "Find the debt-to-GDP ratio: (debt ÷ GDP) × 100 = (28 ÷ 25) × 100.",
+         "Calculate: 28 ÷ 25 = 1.12, so the ratio is 112%."
+        ],
+        "answer": "The budget deficit is $1.4 trillion, and the debt-to-GDP ratio is 112%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "budget deficit", "def": "The amount by which government spending exceeds government revenue in a given year."},
+      {"term": "national debt", "def": "The accumulated total of all past budget deficits minus surpluses."},
+      {"term": "debt-to-GDP ratio", "def": "A country's total debt divided by its GDP, used to assess debt relative to the size of the economy."}
+     ],
+     "practice": [
+      {"q": "A government collects $4.4 trillion in revenue and spends $5.8 trillion. What is the budget deficit?", "choices": ["$1.4 trillion", "$4.4 trillion", "$10.2 trillion", "$0.4 trillion"], "answer": 0, "explain": "Deficit = spending − revenue = 5.8 − 4.4 = $1.4 trillion."},
+      {"q": "A country has $28 trillion in debt and $25 trillion in GDP. What is its debt-to-GDP ratio?", "choices": ["89%", "100%", "112%", "150%"], "answer": 2, "explain": "Debt-to-GDP ratio = (28 ÷ 25) × 100 = 112%."},
+      {"q": "Why do economists track the debt-to-GDP ratio rather than just the total dollar amount of debt?", "choices": ["Because GDP and debt always move in opposite directions", "Because a larger economy can sustainably carry a larger absolute debt than a smaller one", "Because the ratio is always exactly 100%", "Because total debt is impossible to measure"], "answer": 1, "explain": "Comparing debt to the size of the economy (GDP) gives a more meaningful sense of whether debt is manageable, since a bigger economy has more capacity to service a larger debt."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Fiscal Policy Tools: Spending and Tax Multipliers",
+     "minutes": 14,
+     "intro": "When the economy slumps, government has two main levers to pull: spend more, or tax less. They are not equally powerful, and knowing why reveals something important about how people actually respond to a tax cut.",
+     "sections": [
+      {
+       "heading": "Expansionary and Contractionary Fiscal Policy",
+       "body": [
+        "**Expansionary fiscal policy**, increasing government spending or cutting taxes, aims to boost aggregate demand and GDP during a slowdown. **Contractionary fiscal policy**, decreasing spending or raising taxes, aims to cool an overheating economy or reduce inflation, though it is politically harder to enact than expansionary policy.",
+        "**Automatic stabilizers**, like unemployment insurance and progressive income taxes, are fiscal tools that kick in without any new legislation: during a downturn, tax revenue naturally falls (people earn less) and transfer payments naturally rise (more people claim unemployment benefits), automatically cushioning the economy without Congress passing a single new law."
+       ]
+      },
+      {
+       "heading": "Comparing the Spending and Tax Multipliers",
+       "body": [
+        "The **tax multiplier** measures how much GDP changes per dollar of tax change, calculated as −MPC ÷ (1 − MPC). It is smaller in magnitude than the spending multiplier, because a tax cut only affects GDP indirectly: households save part of any tax cut rather than spending all of it, so less of a tax cut ripples through the economy compared to an equivalent direct dollar of government spending.",
+        "This is why, dollar for dollar, government spending increases are generally considered a more powerful (larger multiplier) tool for stimulating GDP than an equivalently sized tax cut, though tax cuts have their own advantages, including leaving spending decisions in the hands of households rather than the government."
+       ],
+       "example": {
+        "problem": "The MPC is 0.75. Compare the effect on GDP of a $50 billion increase in government spending versus a $50 billion tax cut.",
+        "steps": [
+         "Find the spending multiplier: 1 ÷ (1 − 0.75) = 1 ÷ 0.25 = 4. Effect of spending increase: 4 × $50 billion = $200 billion.",
+         "Find the tax multiplier: −MPC ÷ (1 − MPC) = −0.75 ÷ 0.25 = −3.",
+         "Apply the tax multiplier to a $50 billion tax cut (a decrease in taxes, ΔT = −$50 billion): ΔGDP = −3 × (−50) = $150 billion.",
+         "Compare: the $50 billion spending increase raises GDP by $200 billion, while the equally sized $50 billion tax cut raises GDP by only $150 billion."
+        ],
+        "answer": "The $50 billion spending increase raises GDP by $200 billion, more than the $150 billion increase from an equally sized $50 billion tax cut, because some of the tax cut is saved rather than spent."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "expansionary fiscal policy", "def": "Increasing government spending or cutting taxes to boost aggregate demand and GDP."},
+      {"term": "automatic stabilizers", "def": "Fiscal mechanisms, like unemployment insurance and progressive taxes, that automatically counteract the business cycle without new legislation."},
+      {"term": "tax multiplier", "def": "The factor, equal to −MPC ÷ (1 − MPC), by which a change in taxes is magnified into a change in GDP."}
+     ],
+     "practice": [
+      {"q": "With MPC = 0.75, what is the tax multiplier?", "choices": ["4", "−3", "0.75", "3"], "answer": 1, "explain": "Tax multiplier = −MPC ÷ (1 − MPC) = −0.75 ÷ 0.25 = −3."},
+      {"q": "Why is the spending multiplier generally larger in magnitude than the tax multiplier for the same dollar amount?", "choices": ["Because tax cuts are always saved entirely, not spent", "Because a tax cut only affects GDP indirectly, and households save part of it rather than spending all of it", "Because government spending is illegal to reduce", "Because taxes and spending always have identical effects"], "answer": 1, "explain": "Government spending enters the economy directly and fully, while a tax cut first passes through household saving decisions, so part of it leaks out of the spending stream, making its multiplier effect smaller."},
+      {"q": "Which of these is an example of an automatic stabilizer?", "choices": ["A new infrastructure bill passed by Congress", "Unemployment insurance payments rising automatically as more people lose jobs in a recession", "The Federal Reserve raising interest rates", "A new tariff on imported steel"], "answer": 1, "explain": "Unemployment insurance is a program that automatically pays out more during downturns without requiring new legislation, making it a classic automatic stabilizer."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Fiscal Policy Debates: Crowding Out and Its Limits",
+     "minutes": 12,
+     "intro": "The multiplier makes fiscal policy sound like a free lunch: spend a dollar, get several dollars of GDP back. Critics point to a real complication that can shrink, though rarely erase, that gain.",
+     "sections": [
+      {
+       "heading": "The Crowding-Out Effect",
+       "body": [
+        "**Crowding out** occurs when increased government borrowing to fund a deficit pushes up interest rates, which discourages private investment spending that would otherwise have occurred. This offsets part of the stimulus from higher government spending, since the same interest-rate rise that finances the deficit also makes business loans and mortgages more expensive.",
+        "The size of crowding out is debated: in a deep recession with idle savings and low loan demand, crowding out tends to be small, since there is plenty of available credit without much upward pressure on rates. In a fully employed economy already near capacity, crowding out tends to be larger, since new government borrowing competes more directly with private borrowers for a limited pool of loanable funds."
+       ]
+      },
+      {
+       "heading": "Other Limits on Fiscal Policy",
+       "body": [
+        "Fiscal policy also faces **implementation lags**: recognizing a recession, passing legislation, and having the spending actually reach the economy can take many months, sometimes arriving only after the downturn has already started to reverse on its own. **Supply-side** economists emphasize that tax and regulatory policy can also shift aggregate supply itself, not just aggregate demand, by changing incentives to work, save, and invest.",
+        "Because of these lags and offsetting effects, most economists view fiscal policy as a useful but imperfect and politically constrained tool, best combined with monetary policy rather than relied on alone to manage the business cycle."
+       ],
+       "example": {
+        "problem": "A $200 billion increase in government spending is estimated, through the multiplier alone, to raise GDP by $800 billion. However, the resulting government borrowing pushes the interest rate up by 1 percentage point, and each 1-point rise in interest rates is estimated to reduce private investment by $150 billion. Estimate the net effect on GDP after accounting for crowding out.",
+        "steps": [
+         "Start with the multiplier estimate of the spending increase's effect: +$800 billion.",
+         "Subtract the crowded-out private investment: −$150 billion.",
+         "Calculate the net effect: $800 billion − $150 billion = $650 billion."
+        ],
+        "answer": "Accounting for crowding out, the net effect on GDP is approximately +$650 billion, smaller than the $800 billion multiplier estimate alone, but still a net increase."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "crowding out", "def": "The reduction in private investment caused by higher interest rates resulting from increased government borrowing."},
+      {"term": "implementation lag", "def": "The delay between recognizing an economic problem and a fiscal policy response actually affecting the economy."},
+      {"term": "supply-side economics", "def": "An approach emphasizing that tax and regulatory policy can shift aggregate supply by changing incentives to work, save, and invest."}
+     ],
+     "practice": [
+      {"q": "A spending increase raises GDP by $800 billion through the multiplier, but crowds out $150 billion in private investment. What is the estimated net effect on GDP?", "choices": ["$950 billion", "$800 billion", "$650 billion", "$150 billion"], "answer": 2, "explain": "Net effect = multiplier effect − crowded-out investment = $800 billion − $150 billion = $650 billion."},
+      {"q": "In which situation would crowding out likely be SMALLEST?", "choices": ["An economy at full employment with high loan demand", "A deep recession with idle savings and low loan demand", "An economy with no government borrowing at all", "A period of hyperinflation"], "answer": 1, "explain": "In a deep recession, there is typically ample idle savings and weak private loan demand, so government borrowing does not push interest rates up much, keeping crowding out small."},
+      {"q": "What is an 'implementation lag' in fiscal policy?", "choices": ["The time between an interest rate change and its effect on inflation", "The delay between recognizing an economic problem and the policy response actually reaching the economy", "A lag in calculating the unemployment rate", "The time it takes prices to adjust to a tariff"], "answer": 1, "explain": "Implementation lag refers to the months it can take to recognize a downturn, pass legislation, and have the spending or tax change actually affect economic activity."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Money and Monetary Policy",
+   "summary": "What money actually is, how the banking system creates it, and how the Federal Reserve uses its tools to influence the whole economy.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Money and the Banking System",
+     "minutes": 13,
+     "intro": "Banks do not keep your deposit sitting in a vault. They lend most of it out, and that simple fact means every dollar deposited in the banking system can turn into several dollars of new money.",
+     "sections": [
+      {
+       "heading": "What Money Does and Fractional-Reserve Banking",
+       "body": [
+        "Money serves three functions: a **medium of exchange** (accepted in trade), a **unit of account** (a common measure of value), and a **store of value** (holds value over time). Modern banking is **fractional-reserve banking**: banks keep only a fraction of deposits on hand as **reserves** and lend out the rest.",
+        "The **reserve requirement**, set by the central bank, is the minimum fraction of deposits banks must hold as reserves rather than lend out. Reserves beyond that minimum, called **excess reserves**, are generally available for banks to lend."
+       ]
+      },
+      {
+       "heading": "The Money Multiplier",
+       "body": [
+        "When a bank lends out deposited money, the borrower typically spends it, and that money often gets redeposited into the banking system, where a fraction becomes reserves and the rest gets loaned out again, repeating many times over. This chain means an initial deposit can expand into a much larger increase in the total money supply.",
+        "The **money multiplier** measures this expansion, calculated as 1 divided by the reserve requirement (expressed as a decimal). It shows the maximum possible increase in the money supply generated by a given change in reserves, assuming banks lend out all their excess reserves and none of the new money is held as cash outside the banking system."
+       ],
+       "example": {
+        "problem": "The reserve requirement is 10%. A new deposit of $1,000 enters the banking system. Find the money multiplier and the maximum possible increase in the money supply this deposit can generate.",
+        "steps": [
+         "Calculate the money multiplier: 1 ÷ reserve requirement = 1 ÷ 0.10 = 10.",
+         "Apply the multiplier to the initial deposit: maximum increase in money supply = initial deposit × multiplier.",
+         "Calculate: $1,000 × 10 = $10,000."
+        ],
+        "answer": "The money multiplier is 10, and the $1,000 deposit can generate a maximum possible increase in the money supply of $10,000, as it works its way through the banking system."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "fractional-reserve banking", "def": "A banking system in which banks hold only a fraction of deposits as reserves and lend out the rest."},
+      {"term": "reserve requirement", "def": "The minimum fraction of deposits banks must hold as reserves rather than lend out."},
+      {"term": "excess reserves", "def": "Bank reserves held beyond the required minimum, generally available to be lent out."},
+      {"term": "money multiplier", "def": "The factor, equal to 1 divided by the reserve requirement, by which a change in reserves can expand the money supply."}
+     ],
+     "practice": [
+      {"q": "The reserve requirement is 10%. What is the money multiplier?", "choices": ["1", "5", "10", "100"], "answer": 2, "explain": "Money multiplier = 1 ÷ reserve requirement = 1 ÷ 0.10 = 10."},
+      {"q": "With a money multiplier of 10, a new deposit of $1,000 can generate a maximum money supply increase of:", "choices": ["$100", "$1,000", "$10,000", "$100,000"], "answer": 2, "explain": "Maximum increase = initial deposit × multiplier = $1,000 × 10 = $10,000."},
+      {"q": "What does 'fractional-reserve banking' mean?", "choices": ["Banks must hold 100% of deposits as reserves", "Banks hold only a fraction of deposits as reserves and lend out the rest", "Banks are not allowed to make loans", "Only a fraction of banks are allowed to accept deposits"], "answer": 1, "explain": "Fractional-reserve banking describes a system where banks keep just a portion of deposits on hand and lend the remainder, which is how the money supply expands beyond the physical currency in circulation."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Federal Reserve and Monetary Policy Tools",
+     "minutes": 13,
+     "intro": "A handful of decisions made in a Washington, D.C. boardroom ripple out to change mortgage rates, credit card interest, and hiring decisions across the entire country. These are the tools that make that possible.",
+     "sections": [
+      {
+       "heading": "The Fed's Structure and Goals",
+       "body": [
+        "The **Federal Reserve (the Fed)** is the central bank of the United States, tasked with a **dual mandate**: promoting maximum employment and maintaining stable prices (low, predictable inflation). Its main policy-making body, the Federal Open Market Committee (FOMC), meets regularly to set monetary policy direction.",
+        "**Monetary policy** refers to the Fed's actions to influence the money supply and interest rates. **Expansionary monetary policy** increases the money supply and lowers interest rates to stimulate a weak economy; **contractionary monetary policy** decreases the money supply and raises interest rates to cool an overheating, inflation-prone economy."
+       ]
+      },
+      {
+       "heading": "The Fed's Main Tools",
+       "body": [
+        "**Open market operations**, buying and selling government bonds, are the Fed's primary and most frequently used tool: buying bonds injects new reserves into the banking system (expansionary), while selling bonds withdraws reserves (contractionary). The **discount rate**, the interest rate the Fed charges banks for direct short-term loans, and the **reserve requirement** are two additional, less frequently adjusted tools.",
+        "Because of the money multiplier, a relatively small open market operation can produce a much larger change in the total money supply, which is exactly why the Fed can move the whole economy without literally printing an amount of cash equal to its ultimate effect."
+       ],
+       "example": {
+        "problem": "The reserve requirement is 10% (money multiplier = 10). The Fed conducts an open market purchase of $500 million in government bonds from banks, injecting that amount in new reserves into the banking system. Find the maximum possible resulting increase in the money supply.",
+        "steps": [
+         "Identify the new reserves injected: $500 million.",
+         "Apply the money multiplier: maximum increase in money supply = new reserves × multiplier.",
+         "Calculate: $500 million × 10 = $5,000 million, or $5 billion."
+        ],
+        "answer": "The Fed's $500 million bond purchase can generate a maximum possible increase in the money supply of $5 billion, given a money multiplier of 10."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Federal Reserve", "def": "The central bank of the United States, responsible for monetary policy under a dual mandate of maximum employment and stable prices."},
+      {"term": "open market operations", "def": "The Fed's buying and selling of government bonds, its primary tool for changing bank reserves and the money supply."},
+      {"term": "discount rate", "def": "The interest rate the Federal Reserve charges banks for direct short-term loans."},
+      {"term": "expansionary monetary policy", "def": "Fed actions that increase the money supply and lower interest rates to stimulate the economy."}
+     ],
+     "practice": [
+      {"q": "What is the Federal Reserve's 'dual mandate'?", "choices": ["Balancing the federal budget and reducing the national debt", "Maximum employment and stable prices", "Regulating the stock market and taxing banks", "Setting the minimum wage and tax rates"], "answer": 1, "explain": "The Fed's dual mandate, set by Congress, is to pursue maximum employment and maintain stable prices (low, predictable inflation)."},
+      {"q": "With a money multiplier of 10, a $500 million open market bond purchase can generate a maximum money supply increase of:", "choices": ["$50 million", "$500 million", "$5 billion", "$50 billion"], "answer": 2, "explain": "Maximum increase = new reserves × multiplier = $500 million × 10 = $5 billion."},
+      {"q": "Which of the following is the Fed's most frequently used monetary policy tool?", "choices": ["Changing the reserve requirement", "Open market operations (buying and selling government bonds)", "Changing the federal income tax rate", "Setting the minimum wage"], "answer": 1, "explain": "Open market operations are used far more frequently than changes to the discount rate or reserve requirement, making them the Fed's primary day-to-day monetary policy tool."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Monetary Policy Effects and the Phillips Curve",
+     "minutes": 13,
+     "intro": "Central bankers often face an uncomfortable tradeoff: policies that cool inflation tend to raise unemployment, at least in the short run. The Phillips curve is the tool economists use to think through that tradeoff explicitly.",
+     "sections": [
+      {
+       "heading": "How Monetary Policy Affects the Economy",
+       "body": [
+        "When the Fed lowers interest rates, borrowing becomes cheaper, encouraging both business investment and consumer spending on big-ticket items like cars and homes, shifting aggregate demand rightward and raising both output and, potentially, the price level. Raising interest rates works in reverse, cooling spending and aggregate demand to fight inflation, but at the risk of slowing growth or even triggering a recession.",
+        "Because interest rate changes take time to filter through business and consumer decisions, monetary policy affects the economy with a lag, often estimated at many months to over a year, meaning the Fed must act based on forecasts, not just current conditions."
+       ]
+      },
+      {
+       "heading": "The Short-Run Phillips Curve",
+       "body": [
+        "The **Phillips curve** describes an observed short-run tradeoff: periods of lower unemployment tend to coincide with higher inflation, and periods of higher unemployment tend to coincide with lower inflation, since a tighter labor market gives workers more bargaining power to demand higher wages, which businesses pass on as higher prices.",
+        "In the long run, most economists believe this tradeoff disappears: the **long-run Phillips curve** is vertical at the natural rate of unemployment, because once workers and businesses fully expect a given inflation rate, it gets built into wage and price contracts and no longer buys any reduction in unemployment."
+       ],
+       "example": {
+        "problem": "In an economy, expected inflation is 2%, the natural rate of unemployment is 5%, and each 1 percentage point that unemployment falls below the natural rate is estimated to add 0.5 percentage points to actual inflation (and vice versa when unemployment is above the natural rate). Find actual inflation if unemployment is 7%, and if unemployment is 3%.",
+        "steps": [
+         "Use the relationship: actual inflation = expected inflation − 0.5 × (unemployment rate − natural rate).",
+         "For unemployment = 7%: actual inflation = 2 − 0.5 × (7 − 5) = 2 − 0.5 × 2 = 2 − 1 = 1%.",
+         "For unemployment = 3%: actual inflation = 2 − 0.5 × (3 − 5) = 2 − 0.5 × (−2) = 2 + 1 = 3%."
+        ],
+        "answer": "At 7% unemployment, actual inflation is 1%; at 3% unemployment, actual inflation is 3%, illustrating the short-run tradeoff: lower unemployment coincides with higher inflation."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Phillips curve", "def": "A curve depicting the short-run tradeoff between the unemployment rate and the inflation rate."},
+      {"term": "long-run Phillips curve", "def": "A vertical curve at the natural rate of unemployment, reflecting the idea that the inflation-unemployment tradeoff disappears once inflation expectations adjust."},
+      {"term": "policy lag", "def": "The delay between a monetary policy action and its full effect on the economy."}
+     ],
+     "practice": [
+      {"q": "According to the short-run Phillips curve, periods of lower unemployment tend to coincide with:", "choices": ["Lower inflation", "Higher inflation", "No change in inflation", "Higher interest rates only"], "answer": 1, "explain": "The short-run Phillips curve shows an inverse relationship: as unemployment falls, workers gain bargaining power and inflation tends to rise."},
+      {"q": "Using actual inflation = 2 − 0.5 × (unemployment − 5), what is actual inflation when unemployment is 7%?", "choices": ["0%", "1%", "2%", "3%"], "answer": 1, "explain": "Actual inflation = 2 − 0.5 × (7 − 5) = 2 − 1 = 1%."},
+      {"q": "Why is the long-run Phillips curve considered vertical at the natural rate of unemployment?", "choices": ["Because inflation is always zero in the long run", "Because once inflation expectations adjust, the short-run tradeoff between inflation and unemployment disappears", "Because unemployment can never change in the long run", "Because the Fed sets unemployment directly"], "answer": 1, "explain": "In the long run, workers and firms build expected inflation into contracts and prices, so a given inflation rate no longer buys any reduction in unemployment, leaving unemployment at its natural rate regardless of inflation."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "The Global Economy",
+   "summary": "How exchange rates are set, what a trade deficit actually means, and why growth rates matter so much for closing the gap between rich and poor countries.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Exchange Rates and International Trade",
+     "minutes": 12,
+     "intro": "The price of a dollar, measured in euros or yen, changes every single day, and that price affects everything from the cost of a European vacation to whether a factory finds it cheaper to build cars at home or abroad.",
+     "sections": [
+      {
+       "heading": "How Exchange Rates Are Determined",
+       "body": [
+        "An **exchange rate** is the price of one currency in terms of another, determined in foreign exchange markets mainly by the supply and demand for each currency, which in turn reflect trade flows, interest rate differences, and investor expectations. A currency **appreciates** when it becomes worth more relative to another currency, and **depreciates** when it becomes worth less.",
+        "Higher relative interest rates tend to attract foreign investment, increasing demand for a currency and causing it to appreciate; strong export demand for a country's goods has a similar appreciating effect, since foreign buyers must acquire that currency to pay for the goods."
+       ]
+      },
+      {
+       "heading": "Exchange Rates and Prices",
+       "body": [
+        "When a country's currency appreciates, its exports become more expensive for foreigners to buy (since foreign currency now buys less of it), while imports become cheaper for its own residents (since the strong currency buys more foreign currency per unit). A depreciation works in reverse, making exports cheaper for foreigners and imports more expensive at home."
+       ],
+       "example": {
+        "problem": "The exchange rate is $1 = 0.90 euros. A European item costs 50 euros. Find its price in U.S. dollars. Then, if the dollar appreciates to $1 = 0.95 euros, find the item's new dollar price.",
+        "steps": [
+         "At $1 = 0.90 euros, find the dollar cost of a 50-euro item: 50 ÷ 0.90 ≈ $55.56.",
+         "After appreciation, the exchange rate becomes $1 = 0.95 euros, meaning each dollar now buys more euros.",
+         "Find the new dollar cost of the same 50-euro item: 50 ÷ 0.95 ≈ $52.63."
+        ],
+        "answer": "The item initially costs about $55.56. After the dollar appreciates to $1 = 0.95 euros, the same item costs about $52.63, cheaper for U.S. buyers because the stronger dollar buys more euros."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "exchange rate", "def": "The price of one currency in terms of another currency."},
+      {"term": "appreciation", "def": "An increase in a currency's value relative to another currency."},
+      {"term": "depreciation", "def": "A decrease in a currency's value relative to another currency."}
+     ],
+     "practice": [
+      {"q": "At an exchange rate of $1 = 0.90 euros, how much does a 50-euro item cost in dollars?", "choices": ["$45.00", "$50.00", "$55.56", "$90.00"], "answer": 2, "explain": "Dollar cost = 50 ÷ 0.90 ≈ $55.56."},
+      {"q": "If the dollar appreciates from $1 = 0.90 euros to $1 = 0.95 euros, what happens to the dollar price of European goods for U.S. buyers?", "choices": ["It rises", "It falls", "It stays exactly the same", "European goods become unavailable"], "answer": 1, "explain": "As the dollar appreciates, it buys more euros, so the same euro-priced good now costs fewer dollars, as shown by the example (from $55.56 to $52.63)."},
+      {"q": "Higher interest rates in a country tend to cause its currency to:", "choices": ["Depreciate, since investors avoid high-rate countries", "Appreciate, since higher rates attract foreign investment and increase demand for the currency", "Have no effect on the exchange rate", "Become fixed to the U.S. dollar"], "answer": 1, "explain": "Higher relative interest rates attract foreign capital seeking better returns, increasing demand for the currency and causing it to appreciate."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Balance of Payments and Trade Policy",
+     "minutes": 12,
+     "intro": "A trade deficit sounds alarming, but it is just an accounting fact, not automatically a sign of economic weakness. Understanding what the number actually measures, and what tariffs do in response, clears up a lot of confused headlines.",
+     "sections": [
+      {
+       "heading": "The Trade Balance",
+       "body": [
+        "A country's **trade balance** is the value of its exports minus its imports. A **trade deficit** (negative trade balance) means a country imports more than it exports; a **trade surplus** (positive trade balance) means the reverse. A trade deficit is financed by capital inflows, foreigners investing in or lending to the deficit country, which is why the broader **balance of payments**, covering both trade and financial flows, always balances overall even when the trade portion alone does not.",
+        "A trade deficit is not inherently bad; it can reflect a country attracting strong foreign investment because of an appealing economy, though persistent, very large deficits can raise concerns about a growing reliance on foreign borrowing."
+       ]
+      },
+      {
+       "heading": "Tariffs and Trade Policy",
+       "body": [
+        "A **tariff** is a tax on imported goods, raising their price to domestic buyers and typically reducing the quantity imported. Tariffs can protect specific domestic industries and raise government revenue, but they also raise costs for domestic consumers and businesses that rely on imported inputs, and they generate a deadweight loss just like any other tax, since some mutually beneficial trades no longer occur.",
+        "Other countries frequently respond to tariffs with retaliatory tariffs of their own, which can escalate into a broader trade war that raises costs and reduces trade volume for everyone involved, a dynamic that has played out repeatedly in economic history."
+       ],
+       "example": {
+        "problem": "A country exports $2.5 trillion in goods and imports $3.1 trillion. Find its trade balance. Separately, the government imposes a 20% tariff on an imported good priced at $50 before the tariff, and the country imports $100 billion worth of this good category. Find the new price after the tariff and the government's tariff revenue.",
+        "steps": [
+         "Find the trade balance: exports − imports = $2.5 trillion − $3.1 trillion = −$0.6 trillion (a $600 billion deficit).",
+         "Find the new price after the 20% tariff: $50 × 1.20 = $60.",
+         "Find tariff revenue: tariff rate × value of imports = 20% × $100 billion = $20 billion."
+        ],
+        "answer": "The trade balance is a $600 billion deficit. The tariff raises the good's price from $50 to $60 and generates about $20 billion in government revenue."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "trade balance", "def": "The value of a country's exports minus its imports."},
+      {"term": "trade deficit", "def": "A negative trade balance, meaning a country imports more than it exports."},
+      {"term": "tariff", "def": "A tax on imported goods, raising their price to domestic buyers."}
+     ],
+     "practice": [
+      {"q": "A country exports $2.5 trillion and imports $3.1 trillion. What is its trade balance?", "choices": ["A $600 billion surplus", "A $600 billion deficit", "Exactly balanced", "A $5.6 trillion surplus"], "answer": 1, "explain": "Trade balance = exports − imports = 2.5 − 3.1 = −$0.6 trillion, a $600 billion deficit."},
+      {"q": "A 20% tariff is applied to a good priced at $50. What is the new price?", "choices": ["$40", "$50", "$60", "$70"], "answer": 2, "explain": "New price = $50 × 1.20 = $60, since the 20% tariff is added on top of the original price."},
+      {"q": "Is a trade deficit automatically a sign of a weak economy?", "choices": ["Yes, it always means the economy is failing", "No, it can reflect strong foreign investment inflows attracted by an appealing economy", "Yes, because it means the country has no exports", "No, because trade deficits are impossible to measure"], "answer": 1, "explain": "A trade deficit is financed by capital inflows and can occur even in strong economies that attract significant foreign investment; it is an accounting relationship, not automatically a sign of weakness."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Growth, Development, and Globalization",
+     "minutes": 12,
+     "intro": "Why do some countries seem to catch up to rich ones within a generation, while others stay poor for a century? Growth rates, compounded over time, are a large part of the answer.",
+     "sections": [
+      {
+       "heading": "Measuring Development",
+       "body": [
+        "Economists compare countries' development using measures like **GDP per capita** (adjusted for differences in local prices using purchasing power parity) and the **Human Development Index (HDI)**, which combines income with life expectancy and education to capture a broader picture of well-being than income alone.",
+        "**Globalization**, the growing economic interconnection of countries through trade, investment, and financial flows, has coincided with rapid poverty reduction in many developing economies over recent decades, particularly those that opened up to international trade and investment, though it has also been linked to job losses in specific industries within wealthier countries."
+       ]
+      },
+      {
+       "heading": "Catch-Up Growth",
+       "body": [
+        "Poorer countries can sometimes grow faster than rich ones through **catch-up growth** (or convergence): adopting existing technology and practices already proven in richer countries is often faster and cheaper than the original invention process, allowing developing economies to close some of the gap over time, though catch-up is far from automatic and depends heavily on institutions, education, and stable governance.",
+        "Applying the rule of 70 makes the stakes vivid: sustained differences in growth rates compound into vastly different living standards within a single generation, which is exactly why growth policy is treated as one of the highest-stakes questions in all of economics."
+       ],
+       "example": {
+        "problem": "A developing economy grows at 7% per year, while a developed economy grows at 2% per year. Using the rule of 70, find each economy's approximate doubling time and compare them.",
+        "steps": [
+         "Apply the rule of 70 to the developing economy: 70 ÷ 7 = 10 years.",
+         "Apply the rule of 70 to the developed economy: 70 ÷ 2 = 35 years.",
+         "Compare: the developing economy would double its output roughly 3.5 times faster than the developed economy at these growth rates."
+        ],
+        "answer": "The developing economy doubles in about 10 years, versus about 35 years for the developed economy — a striking illustration of how a growth rate gap compounds into very different outcomes over time."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Human Development Index (HDI)", "def": "A measure of development combining income, life expectancy, and education."},
+      {"term": "globalization", "def": "The growing economic interconnection of countries through trade, investment, and financial flows."},
+      {"term": "catch-up growth", "def": "Faster growth in poorer countries from adopting technology and practices already developed elsewhere, allowing them to narrow the gap with richer countries."}
+     ],
+     "practice": [
+      {"q": "Using the rule of 70, how long would it take a developing economy growing at 7% per year to double its output?", "choices": ["2 years", "7 years", "10 years", "70 years"], "answer": 2, "explain": "Rule of 70: doubling time ≈ 70 ÷ 7 = 10 years."},
+      {"q": "What does 'catch-up growth' refer to?", "choices": ["Rich countries growing faster than poor countries", "Poorer countries growing faster by adopting technology and practices already proven elsewhere", "A country's currency catching up to another in value", "The unemployment rate catching up to the inflation rate"], "answer": 1, "explain": "Catch-up growth describes how developing economies can grow faster by adopting existing technology and practices rather than having to invent them, allowing convergence toward richer countries' living standards."},
+      {"q": "Why do economists use the Human Development Index (HDI) in addition to GDP per capita?", "choices": ["HDI ignores income entirely", "HDI combines income with life expectancy and education for a broader picture of well-being", "HDI is only used for wealthy countries", "HDI replaces the need for any trade statistics"], "answer": 1, "explain": "HDI captures dimensions of well-being, like health and education, that pure income measures like GDP per capita can miss on their own."}
+     ]
+    }
+   ]
+  }
+ ]
+}

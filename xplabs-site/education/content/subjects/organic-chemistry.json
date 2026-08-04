@@ -1,0 +1,1022 @@
+{
+ "id": "organic-chemistry",
+ "title": "Organic Chemistry",
+ "domain": "physical",
+ "level": "Advanced",
+ "description": "A first course in the chemistry of carbon: structure and bonding, naming and identifying functional groups, the major reaction mechanisms (substitution, elimination, addition, aromatic substitution), and the spectroscopic tools used to determine what a molecule actually is.",
+ "outcomes": [
+  "Predict hybridization and 3D shape at any carbon and name simple alkanes, alkenes, and alkynes.",
+  "Identify the major functional groups and recognize constitutional isomers and stereoisomers, including R/S chirality.",
+  "Predict SN1, SN2, E1, and E2 outcomes for alkyl halide reactions based on substrate, nucleophile, and conditions.",
+  "Predict Markovnikov addition products for alkenes and explain aromaticity and electrophilic aromatic substitution.",
+  "Interpret basic IR and ^1^H NMR data to support a proposed molecular structure.",
+  "Predict the products of alcohol, aldehyde/ketone, and carboxylic acid derivative reactions."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Structure, Bonding, and Nomenclature",
+   "summary": "How carbon's bonding geometry builds organic molecules, and the systematic rules for naming them.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Hybridization and Molecular Shape in Organic Molecules",
+     "minutes": 16,
+     "intro": "Nearly every shape you will see in this course — chains, rings, flat aromatic systems — traces back to just three ways carbon can arrange its bonding orbitals.",
+     "sections": [
+      {
+       "heading": "sp^3^, sp^2^, and sp Hybridization",
+       "body": [
+        "Carbon forms **sp^3^** hybrid orbitals when bonded to 4 groups by single bonds, giving a tetrahedral shape with 109.5° bond angles, as in methane. It forms **sp^2^** orbitals when involved in one double bond, giving a trigonal planar shape with 120° angles and leaving one unhybridized p orbital to form the pi bond.",
+        "Carbon forms **sp** orbitals when involved in a triple bond or two double bonds, giving a linear shape with 180° angles and two unhybridized p orbitals for two pi bonds. Counting a carbon's attached groups (not counting lone pairs, since carbon rarely has them) tells you its hybridization directly."
+       ]
+      },
+      {
+       "heading": "Sigma and Pi Bonds",
+       "body": [
+        "A **sigma bond** forms from direct, head-on orbital overlap and allows free rotation around the bond axis; a **pi bond** forms from sideways overlap of unhybridized p orbitals above and below the sigma bond, and it locks the two carbons into a fixed, non-rotating plane.",
+        "Every single bond is one sigma bond; a double bond is one sigma plus one pi; a triple bond is one sigma plus two pi. This is why double and triple bonds are shorter and stronger than single bonds, but also more reactive, since pi electrons sit farther from the nuclei and are more exposed to attack."
+       ],
+       "example": {
+        "problem": "Determine the hybridization of each carbon in propene, CH~2~=CH-CH~3~.",
+        "steps": [
+         "The two carbons in the C=C double bond are each attached to 3 groups (one double-bonded partner counts once, plus 2 others), giving sp^2^ hybridization.",
+         "The terminal CH~3~ carbon is attached to 4 single-bonded groups, giving sp^3^ hybridization."
+        ],
+        "answer": "The two alkene carbons are sp^2^; the methyl carbon is sp^3^."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sp^3^ hybridization",
+       "def": "Carbon bonding to 4 groups by single bonds only, giving a tetrahedral, 109.5° geometry."
+      },
+      {
+       "term": "sp^2^ hybridization",
+       "def": "Carbon involved in one double bond, giving a trigonal planar, 120° geometry."
+      },
+      {
+       "term": "sigma bond",
+       "def": "A bond from direct end-to-end orbital overlap, allowing free rotation around its axis."
+      },
+      {
+       "term": "pi bond",
+       "def": "A bond from sideways overlap of unhybridized p orbitals, locking the bonded atoms into a fixed plane."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the hybridization of a carbon triple-bonded to another carbon, as in acetylene, HC≡CH?",
+       "choices": [
+        "sp^3^",
+        "sp^2^",
+        "sp",
+        "d^2^sp^3^"
+       ],
+       "answer": 2,
+       "explain": "A carbon in a triple bond is attached to only 2 groups total (one triple-bonded partner, one other), giving sp hybridization and a linear, 180° shape."
+      },
+      {
+       "q": "Why can a molecule not freely rotate around a carbon-carbon double bond?",
+       "choices": [
+        "The sigma bond is too short",
+        "The pi bond's sideways p-orbital overlap would break if the carbons rotated",
+        "Double bonds have no sigma bond component",
+        "sp^2^ carbons cannot form sigma bonds"
+       ],
+       "answer": 1,
+       "explain": "Rotating around a double bond would misalign the p orbitals forming the pi bond, breaking that bond — so double bonds are rotationally locked, unlike single bonds."
+      },
+      {
+       "q": "How many total bonds (sigma plus pi) make up a carbon-carbon double bond?",
+       "choices": [
+        "1 sigma only",
+        "1 sigma, 1 pi",
+        "2 sigma",
+        "1 sigma, 2 pi"
+       ],
+       "answer": 1,
+       "explain": "A double bond consists of exactly one sigma bond (direct overlap) plus one pi bond (sideways p-orbital overlap)."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Functional Groups",
+     "minutes": 15,
+     "intro": "Organic molecules can look overwhelming until you learn to spot the small, reactive clusters of atoms — functional groups — that determine almost all of a molecule's chemistry, regardless of how long its carbon chain is.",
+     "sections": [
+      {
+       "heading": "Hydrocarbon Functional Groups",
+       "body": [
+        "**Alkanes** contain only single C-C and C-H bonds and are relatively unreactive. **Alkenes** contain at least one C=C double bond, and **alkynes** contain at least one C≡C triple bond; both are far more reactive than alkanes because their pi electrons are exposed and easily attacked.",
+        "**Aromatic** compounds contain a benzene-like ring of alternating double bonds with special extra stability, reacting by a distinct mechanism (substitution) rather than the addition reactions typical of alkenes."
+       ]
+      },
+      {
+       "heading": "Oxygen- and Nitrogen-Containing Groups",
+       "body": [
+        "An **alcohol** has an -OH group on an sp^3^ carbon; an **amine** has a nitrogen bonded to one, two, or three carbon groups. A **carbonyl** (C=O) is the core of several groups: an **aldehyde** has the carbonyl at the end of a chain (bonded to at least one H), a **ketone** has it between two carbons, and a **carboxylic acid** has a carbonyl plus an -OH on the same carbon.",
+        "Esters and amides are carboxylic acid derivatives where the -OH is replaced by -OR or -NR~2~ respectively — recognizing this family relationship is the fastest way to predict how one carbonyl compound converts into another."
+       ],
+       "example": {
+        "problem": "Identify the functional groups present in CH~3~-CH(OH)-CHO (a molecule with both an -OH and a terminal C=O bonded to H).",
+        "steps": [
+         "The -OH group on the middle carbon is an alcohol.",
+         "The terminal carbon has a C=O bonded to a hydrogen, which is the defining feature of an aldehyde."
+        ],
+        "answer": "The molecule contains both an alcohol group and an aldehyde group."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "functional group",
+       "def": "A specific cluster of atoms within a molecule that determines its characteristic chemical reactions."
+      },
+      {
+       "term": "carbonyl",
+       "def": "A carbon-oxygen double bond (C=O), the reactive core of aldehydes, ketones, and carboxylic acids."
+      },
+      {
+       "term": "aldehyde",
+       "def": "A carbonyl group at the end of a carbon chain, bonded to at least one hydrogen."
+      },
+      {
+       "term": "carboxylic acid",
+       "def": "A functional group with a carbonyl and a hydroxyl on the same carbon, -COOH."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A molecule has a C=O group located between two carbon chains (not at the end). What functional group is this?",
+       "choices": [
+        "Aldehyde",
+        "Ketone",
+        "Carboxylic acid",
+        "Ester"
+       ],
+       "answer": 1,
+       "explain": "A carbonyl flanked by two carbon groups, rather than terminal with a hydrogen, defines a ketone."
+      },
+      {
+       "q": "Why are alkenes generally more reactive than alkanes?",
+       "choices": [
+        "Alkenes have more carbon atoms",
+        "The exposed pi electrons in the C=C double bond are easily attacked",
+        "Alkanes contain oxygen, which stabilizes them",
+        "Alkenes are always aromatic"
+       ],
+       "answer": 1,
+       "explain": "The pi bond's electrons sit farther from the nuclei and are more exposed, making alkenes far more reactive toward addition reactions than saturated alkanes."
+      },
+      {
+       "q": "What distinguishes a carboxylic acid from an aldehyde?",
+       "choices": [
+        "A carboxylic acid has no carbonyl group",
+        "A carboxylic acid has an additional -OH group on the carbonyl carbon",
+        "An aldehyde always has more carbons",
+        "A carboxylic acid cannot be at the end of a chain"
+       ],
+       "answer": 1,
+       "explain": "Both contain a carbonyl, but a carboxylic acid additionally has a hydroxyl group on the same carbon, forming the -COOH group."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Naming Alkanes, Alkenes, and Alkynes",
+     "minutes": 17,
+     "intro": "IUPAC nomenclature turns any hydrocarbon structure into one unambiguous name, and once you can name a chain you can also read a name backward into a structure — a skill you will use in every remaining unit.",
+     "sections": [
+      {
+       "heading": "Naming Alkanes",
+       "body": [
+        "To name an alkane: find the longest continuous carbon chain (the parent, named with a root like meth-, eth-, prop-, but-, pent-, hex- for 1 through 6 carbons plus the suffix -ane), number the chain to give substituents the lowest possible locants, and list substituents alphabetically with their locant numbers.",
+        "Branches use the same root names with an '-yl' ending (methyl, ethyl, propyl), and identical substituents are combined with di-, tri-, tetra- prefixes, which are ignored when alphabetizing."
+       ]
+      },
+      {
+       "heading": "Naming Alkenes and Alkynes",
+       "body": [
+        "Alkenes and alkynes follow the same parent-chain method but use the suffix **-ene** or **-yne**, and the chain must be numbered to give the double or triple bond the lowest possible locant, taking priority over substituent locants. The locant given is the lower-numbered carbon of the multiple bond.",
+        "When more than one double bond is present, use di-, tri- before '-ene' (as in 1,3-butadiene), and cis/trans or E/Z descriptors specify the geometry around a double bond when needed."
+       ],
+       "example": {
+        "problem": "Name the alkene CH~3~-CH~2~-CH=CH-CH~3~.",
+        "steps": [
+         "Count the longest chain: 5 carbons, so the parent is pentene.",
+         "Number from whichever end gives the double bond the lower locant: numbering from the right gives the double bond between C2 and C3, locant 2; numbering from the left also gives locant 2, so either direction works here.",
+         "The double bond is between carbons 2 and 3, so the locant is 2."
+        ],
+        "answer": "2-pentene (also written pent-2-ene)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "parent chain",
+       "def": "The longest continuous carbon chain in a molecule, used as the base of its IUPAC name."
+      },
+      {
+       "term": "substituent",
+       "def": "A branch or group attached to the parent chain, named with a locant number and prefix."
+      },
+      {
+       "term": "locant",
+       "def": "The number identifying which carbon in the chain a substituent or multiple bond is attached to."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the IUPAC name for CH~3~-CH~2~-CH~2~-CH~3~?",
+       "choices": [
+        "Propane",
+        "Butane",
+        "Pentane",
+        "Butene"
+       ],
+       "answer": 1,
+       "explain": "A 4-carbon chain with only single bonds uses the root 'but-' plus the alkane suffix '-ane', giving butane."
+      },
+      {
+       "q": "Why is the multiple bond given priority over substituents when numbering an alkene or alkyne chain?",
+       "choices": [
+        "Because substituents are always named first alphabetically",
+        "Because IUPAC rules require the lowest locant to go to the double or triple bond first",
+        "Because alkenes never have substituents",
+        "Because numbering always starts from the most complex end"
+       ],
+       "answer": 1,
+       "explain": "IUPAC rules give numbering priority to the principal characteristic group (here, the multiple bond) so it receives the lowest possible locant."
+      },
+      {
+       "q": "What suffix is used for a hydrocarbon containing a carbon-carbon triple bond?",
+       "choices": [
+        "-ane",
+        "-ene",
+        "-yne",
+        "-ol"
+       ],
+       "answer": 2,
+       "explain": "The suffix -yne indicates a triple bond, as in ethyne (also called acetylene)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Stereochemistry and Alkyl Halide Reactions",
+   "summary": "How molecules with identical formulas can differ in 3D arrangement, and how that arrangement controls substitution reaction pathways.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Isomers and Stereochemistry",
+     "minutes": 18,
+     "intro": "Two molecules can share the exact same formula and still be entirely different substances, or even mirror images of each other with no way to superimpose one on the other — a distinction that turns out to matter enormously in biology and drug design.",
+     "sections": [
+      {
+       "heading": "Constitutional Isomers and Conformations",
+       "body": [
+        "**Constitutional isomers** share a molecular formula but differ in how their atoms are connected, like butane and isobutane (both C~4~H~10~). **Conformations** are different 3D arrangements of the same molecule reached by rotating around single bonds, such as staggered versus eclipsed ethane — these are not isomers, since no bonds break to interconvert them.",
+        "Staggered conformations are lower in energy than eclipsed ones because they minimize repulsion between electron clouds on adjacent atoms, which is why molecules spend most of their time in staggered arrangements."
+       ]
+      },
+      {
+       "heading": "Chirality and R/S Configuration",
+       "body": [
+        "A carbon bonded to 4 different groups is a **stereocenter**, and a molecule containing one is **chiral** — it has a non-superimposable mirror image called an **enantiomer**. Enantiomers have identical physical properties (melting point, boiling point) but rotate plane-polarized light in opposite directions and can behave completely differently in biological systems.",
+        "The **R/S system** names a stereocenter's configuration by ranking its 4 attached groups by atomic number (highest first), orienting the lowest-priority group away from you, and tracing 1→2→3: clockwise is R, counterclockwise is S."
+       ],
+       "example": {
+        "problem": "A stereocenter has four different groups: -OH, -CH~3~, -H, and -Cl. Rank them by priority for R/S assignment.",
+        "steps": [
+         "Compare the atoms directly attached to the stereocenter: Cl, O, C, H.",
+         "Rank by atomic number: Cl (17) > O (8) > C (6) > H (1)."
+        ],
+        "answer": "Priority order: -Cl (1st) > -OH (2nd) > -CH~3~ (3rd) > -H (4th, lowest)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "constitutional isomer",
+       "def": "A molecule sharing a formula with another but differing in atom connectivity."
+      },
+      {
+       "term": "stereocenter",
+       "def": "An atom, typically carbon, bonded to 4 different groups, capable of two distinct spatial arrangements."
+      },
+      {
+       "term": "chiral",
+       "def": "Describing a molecule that is not superimposable on its mirror image."
+      },
+      {
+       "term": "enantiomer",
+       "def": "One of a pair of non-superimposable mirror-image stereoisomers."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Butane and isobutane share the formula C~4~H~10~ but have different connectivity. What relationship do they have?",
+       "choices": [
+        "Enantiomers",
+        "Conformations",
+        "Constitutional isomers",
+        "Identical molecules"
+       ],
+       "answer": 2,
+       "explain": "Same formula, different atom-to-atom connectivity defines constitutional isomers; converting between them requires breaking bonds, unlike conformations."
+      },
+      {
+       "q": "What makes a carbon atom a stereocenter?",
+       "choices": [
+        "It is bonded to exactly 2 other atoms",
+        "It is bonded to 4 different groups",
+        "It is part of a double bond",
+        "It is bonded to only hydrogen atoms"
+       ],
+       "answer": 1,
+       "explain": "A stereocenter is defined by having 4 distinct groups attached, allowing two different, non-superimposable spatial arrangements."
+      },
+      {
+       "q": "Two enantiomers of the same compound will differ in which property?",
+       "choices": [
+        "Boiling point",
+        "Melting point",
+        "Direction they rotate plane-polarized light",
+        "Molecular formula"
+       ],
+       "answer": 2,
+       "explain": "Enantiomers share identical physical properties like boiling and melting point, but rotate polarized light in opposite directions and can differ sharply in biological activity."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "SN1 and SN2 Substitution Reactions",
+     "minutes": 18,
+     "intro": "When a nucleophile attacks a carbon bearing a leaving group, the reaction can proceed by one of two very different pathways — and predicting which one happens is one of the most tested skills in organic chemistry.",
+     "sections": [
+      {
+       "heading": "The SN2 Mechanism",
+       "body": [
+        "**SN2** (substitution, nucleophilic, bimolecular) happens in one concerted step: the nucleophile attacks the carbon from the side directly opposite the leaving group as the leaving group departs, inverting the carbon's configuration like an umbrella flipping in the wind. Its rate depends on the concentration of both the nucleophile and the substrate.",
+        "SN2 favors **methyl and primary substrates** with little steric bulk near the reaction site, strong nucleophiles, and polar aprotic solvents, which do not trap the nucleophile in solvent cages."
+       ]
+      },
+      {
+       "heading": "The SN1 Mechanism",
+       "body": [
+        "**SN1** (unimolecular) happens in two steps: the leaving group departs first, forming a flat, planar **carbocation** intermediate, and then the nucleophile attacks from either face, producing a racemic mixture of both stereochemical outcomes. Its rate depends only on substrate concentration, since carbocation formation is the slow step.",
+        "SN1 favors **tertiary substrates**, where the resulting carbocation is most stabilized by neighboring alkyl groups, weak nucleophiles, and polar protic solvents, which stabilize the charged intermediate."
+       ],
+       "example": {
+        "problem": "Predict whether (CH~3~)~3~C-Br reacting with a weak nucleophile in methanol (a polar protic solvent) proceeds by SN1 or SN2.",
+        "steps": [
+         "The substrate is tertiary (CH~3~)~3~C-Br, which is far too sterically hindered for backside attack required by SN2.",
+         "A tertiary carbocation would be well stabilized by 3 surrounding alkyl groups, and the polar protic solvent further stabilizes that charged intermediate.",
+         "Both the substrate structure and solvent point toward the same mechanism."
+        ],
+        "answer": "SN1: a stable tertiary carbocation forms first, then the weak nucleophile attacks it."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "SN2",
+       "def": "A one-step nucleophilic substitution with backside attack and inversion of configuration, favored by unhindered substrates."
+      },
+      {
+       "term": "SN1",
+       "def": "A two-step nucleophilic substitution via a carbocation intermediate, favored by stabilized (tertiary) substrates."
+      },
+      {
+       "term": "carbocation",
+       "def": "A positively charged carbon with only 3 bonds, an intermediate in SN1 and E1 reactions."
+      },
+      {
+       "term": "nucleophile",
+       "def": "An electron-rich species that attacks an electron-poor carbon to form a new bond."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which substrate type reacts fastest by the SN2 mechanism?",
+       "choices": [
+        "Tertiary",
+        "Secondary",
+        "Primary and methyl",
+        "None react by SN2"
+       ],
+       "answer": 2,
+       "explain": "SN2 requires backside attack, which is only feasible when the carbon is not crowded by bulky groups — primary and methyl substrates have the least steric hindrance."
+      },
+      {
+       "q": "Why does SN1 substitution produce a racemic mixture at the reacting carbon?",
+       "choices": [
+        "The nucleophile always attacks from the same side",
+        "The flat carbocation intermediate can be attacked from either face with equal likelihood",
+        "SN1 does not involve a stereocenter",
+        "SN1 only occurs with achiral substrates"
+       ],
+       "answer": 1,
+       "explain": "The carbocation intermediate is planar (sp^2^), so the nucleophile can approach from either face with roughly equal probability, producing both stereochemical outcomes."
+      },
+      {
+       "q": "What kind of solvent favors the SN1 mechanism?",
+       "choices": [
+        "Polar aprotic",
+        "Nonpolar",
+        "Polar protic",
+        "Any solvent works equally"
+       ],
+       "answer": 2,
+       "explain": "Polar protic solvents (like methanol or water) stabilize the charged carbocation intermediate through hydrogen bonding, favoring the SN1 pathway."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "E1 and E2 Elimination Reactions",
+     "minutes": 17,
+     "intro": "The same alkyl halides that undergo substitution can instead eliminate, kicking out a hydrogen and a leaving group together to form a double bond — often competing directly with SN1 and SN2 under the same conditions.",
+     "sections": [
+      {
+       "heading": "The E2 Mechanism",
+       "body": [
+        "**E2** (bimolecular elimination) removes a proton and a leaving group in one concerted step, requiring the H and leaving group to be **anti-periplanar** (180° apart) for the electrons to flow smoothly into a new pi bond. A strong, bulky base favors E2 over substitution because bulky bases struggle to attack a crowded carbon but can still easily grab an accessible hydrogen.",
+        "Like SN2, E2 rate depends on both base and substrate concentration, and it works on primary, secondary, and tertiary substrates alike, unlike SN2 which is blocked by steric bulk at tertiary centers."
+       ]
+      },
+      {
+       "heading": "The E1 Mechanism and Zaitsev's Rule",
+       "body": [
+        "**E1** proceeds through the same carbocation intermediate as SN1: the leaving group departs first, then a base removes a proton from a carbon adjacent to the cation, forming the double bond. Because it shares an intermediate with SN1, E1 and SN1 often occur together as a mixture of products under the same conditions.",
+        "When more than one elimination product is possible, **Zaitsev's rule** predicts the more substituted (more stable) alkene will predominate, since more alkyl groups around a double bond stabilize it through hyperconjugation."
+       ],
+       "example": {
+        "problem": "2-bromobutane reacts with a strong, bulky base (potassium tert-butoxide). Predict the major mechanism and the favored product.",
+        "steps": [
+         "A strong, bulky base strongly favors E2 elimination over SN2 substitution, since it cannot easily attack the crowded carbon but can remove a proton.",
+         "Two elimination products are possible depending on which adjacent hydrogen is removed: 1-butene (less substituted) or 2-butene (more substituted).",
+         "Zaitsev's rule favors the more substituted, more stable alkene."
+        ],
+        "answer": "E2 elimination occurs, favoring 2-butene as the major product."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "E2",
+       "def": "A one-step, concerted elimination requiring an anti-periplanar H and leaving group, favored by strong bulky bases."
+      },
+      {
+       "term": "E1",
+       "def": "A two-step elimination through a carbocation intermediate, competing with SN1 under the same conditions."
+      },
+      {
+       "term": "Zaitsev's rule",
+       "def": "The rule that the more substituted, more stable alkene is favored as the major elimination product."
+      },
+      {
+       "term": "anti-periplanar",
+       "def": "A geometric arrangement where two groups are 180° apart, required for the E2 mechanism."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does a strong, bulky base favor elimination (E2) over substitution (SN2)?",
+       "choices": [
+        "Bulky bases cannot remove protons",
+        "Bulky bases struggle to attack a crowded carbon but can still remove an accessible hydrogen",
+        "Bulky bases only work with tertiary substrates",
+        "Elimination never competes with substitution"
+       ],
+       "answer": 1,
+       "explain": "A bulky base is sterically blocked from backside attack on carbon (needed for SN2) but can still reach and remove a proton, favoring E2."
+      },
+      {
+       "q": "According to Zaitsev's rule, which alkene is favored as the major elimination product?",
+       "choices": [
+        "The least substituted alkene",
+        "The most substituted alkene",
+        "Whichever forms fastest regardless of stability",
+        "Only terminal alkenes"
+       ],
+       "answer": 1,
+       "explain": "Zaitsev's rule predicts the more substituted, thermodynamically more stable alkene predominates as the major product."
+      },
+      {
+       "q": "E1 and SN1 often occur as a mixture of products under the same conditions because they share what?",
+       "choices": [
+        "The same base",
+        "The same carbocation intermediate",
+        "The same solvent only",
+        "They never occur together"
+       ],
+       "answer": 1,
+       "explain": "Both E1 and SN1 begin with the leaving group departing to form a carbocation, so the same intermediate can proceed to either elimination or substitution products."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Alkene Reactions and Aromatic Chemistry",
+   "summary": "How the C=C double bond reacts by addition, and how benzene's special stability leads to a completely different reaction pattern.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Addition Reactions of Alkenes",
+     "minutes": 17,
+     "intro": "An alkene's exposed pi bond is an electron-rich target, and this lesson shows the addition reactions that convert that double bond into new single bonds, with a regiochemistry rule that is one of the most useful predictions in the whole course.",
+     "sections": [
+      {
+       "heading": "Hydrohalogenation and Markovnikov's Rule",
+       "body": [
+        "When HX (like HBr) adds across a double bond, the H^+^ adds first, forming the more stable carbocation, and then the halide ion attacks that cation. **Markovnikov's rule** summarizes the result: the hydrogen ends up on the carbon that already has more hydrogens, and the halogen ends up on the more substituted carbon, because that is where the more stable carbocation forms.",
+        "This regiochemistry follows directly from carbocation stability: tertiary carbocations are more stable than secondary, which are more stable than primary, because more alkyl groups donate electron density toward the positive charge."
+       ]
+      },
+      {
+       "heading": "Hydration and Catalytic Hydrogenation",
+       "body": [
+        "**Acid-catalyzed hydration** adds H~2~O across a double bond following the same Markovnikov regiochemistry, converting an alkene into an alcohol. **Catalytic hydrogenation** adds H~2~ across a double bond using a metal catalyst (Pt, Pd, or Ni), converting an alkene fully into an alkane with no regiochemistry to worry about, since both new bonds are to identical hydrogen atoms.",
+        "Hydrogenation is exothermic, and the amount of heat released (the heat of hydrogenation) is actually a measure of how stable the starting alkene was — less stable alkenes release more heat when they are reduced to the same alkane product."
+       ],
+       "example": {
+        "problem": "Predict the major product when HBr adds to 2-methylpropene, (CH~3~)~2~C=CH~2~.",
+        "steps": [
+         "H^+^ adds to the CH~2~ end (already has more hydrogens), generating a carbocation on the more substituted carbon.",
+         "This carbocation is tertiary, the most stable option, confirming this is the pathway that occurs.",
+         "Br^−^ then attacks the tertiary carbocation."
+        ],
+        "answer": "2-bromo-2-methylpropane, (CH~3~)~3~C-Br, following Markovnikov's rule."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Markovnikov's rule",
+       "def": "In HX addition to an alkene, H bonds to the carbon with more hydrogens, and X bonds to the more substituted carbon."
+      },
+      {
+       "term": "hydration",
+       "def": "Addition of water (H-OH) across a double bond, typically converting an alkene to an alcohol."
+      },
+      {
+       "term": "hydrogenation",
+       "def": "Addition of H~2~ across a double bond using a metal catalyst, converting an alkene to an alkane."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to Markovnikov's rule, when HCl adds to propene (CH~3~-CH=CH~2~), where does the chlorine end up?",
+       "choices": [
+        "On the terminal CH~2~ carbon",
+        "On the internal, more substituted carbon",
+        "It adds to both carbons equally",
+        "Chlorine never adds to alkenes"
+       ],
+       "answer": 1,
+       "explain": "H adds to the carbon with more existing hydrogens (the terminal CH~2~), forming the more stable secondary carbocation on the internal carbon, which Cl^−^ then attacks."
+      },
+      {
+       "q": "Why does Markovnikov addition favor forming the more substituted carbocation?",
+       "choices": [
+        "More substituted carbocations are less stable",
+        "More alkyl groups donate electron density, stabilizing the positive charge",
+        "Substitution has no effect on carbocation stability",
+        "Only primary carbocations can form"
+       ],
+       "answer": 1,
+       "explain": "Alkyl groups are electron-donating relative to hydrogen, so more alkyl substitution around the positive carbon spreads out and stabilizes the charge."
+      },
+      {
+       "q": "What metal catalysts are commonly used for catalytic hydrogenation of alkenes?",
+       "choices": [
+        "Na, K, Li",
+        "Pt, Pd, Ni",
+        "Fe, Cu, Zn",
+        "Ca, Mg, Ba"
+       ],
+       "answer": 1,
+       "explain": "Platinum, palladium, and nickel are the standard heterogeneous catalysts used to add H~2~ across a double bond."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Aromaticity and Benzene",
+     "minutes": 16,
+     "intro": "Benzene looks like it should react like a very unsaturated alkene, yet it is remarkably unreactive toward the addition reactions alkenes undergo easily — the reason lies in a special kind of electron delocalization called aromaticity.",
+     "sections": [
+      {
+       "heading": "What Makes a Ring Aromatic",
+       "body": [
+        "A ring is **aromatic** if it is cyclic, planar, fully conjugated (every ring atom has a p orbital), and contains 4n+2 pi electrons for some whole number n (**Huckel's rule**) — benzene, with 6 pi electrons (n=1), fits perfectly. These delocalized electrons spread evenly around the ring, giving aromatic systems unusual extra stability compared to a hypothetical ring with isolated double bonds.",
+        "This extra stability, called **resonance stabilization**, is why benzene resists the addition reactions that consume typical alkenes: adding across one of its bonds would destroy the aromatic system and its stabilization, so the ring reacts instead by substitution, which preserves aromaticity."
+       ]
+      },
+      {
+       "heading": "Representing Benzene",
+       "body": [
+        "Benzene is drawn either as a hexagon with three alternating double bonds or as a hexagon with a circle inside, representing the pi electrons as delocalized evenly around all six carbons rather than fixed in place. Both drawings represent the same real structure, in which all six carbon-carbon bonds are actually identical in length, intermediate between a single and double bond.",
+        "Substituted benzene rings are named with the substituent position given as ortho (1,2), meta (1,3), or para (1,4) relative to a reference group, or by numbering the ring positions directly."
+       ],
+       "example": {
+        "problem": "Does cyclobutadiene (a 4-carbon ring with 4 pi electrons) satisfy Huckel's rule for aromaticity?",
+        "steps": [
+         "Huckel's rule requires 4n+2 pi electrons for a whole number n.",
+         "Check n=0: 4(0)+2=2 electrons; check n=1: 4(1)+2=6 electrons. Cyclobutadiene has 4 pi electrons, which fits neither."
+        ],
+        "answer": "No — cyclobutadiene has 4 pi electrons, which does not fit the 4n+2 pattern, so it is not aromatic (it is in fact anti-aromatic and highly unstable)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "aromatic",
+       "def": "Describing a cyclic, planar, fully conjugated ring with 4n+2 pi electrons, giving it extra stability."
+      },
+      {
+       "term": "Huckel's rule",
+       "def": "The rule that a ring is aromatic if it has 4n+2 pi electrons for some whole number n."
+      },
+      {
+       "term": "resonance stabilization",
+       "def": "Extra stability gained when electrons are delocalized across multiple atoms rather than fixed in one place."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many pi electrons does benzene have, and does it satisfy Huckel's rule?",
+       "choices": [
+        "4 electrons; no",
+        "6 electrons; yes, with n=1",
+        "8 electrons; yes, with n=2",
+        "6 electrons; no"
+       ],
+       "answer": 1,
+       "explain": "Benzene's 3 double bonds contribute 6 pi electrons, matching 4n+2 with n=1, confirming aromaticity."
+      },
+      {
+       "q": "Why does benzene react by substitution rather than addition, unlike a typical alkene?",
+       "choices": [
+        "Benzene has no pi electrons to react with",
+        "Addition would destroy the aromatic ring's resonance stabilization",
+        "Benzene's carbons are sp^3^ hybridized",
+        "Substitution is always faster than addition for any molecule"
+       ],
+       "answer": 1,
+       "explain": "Adding across one of benzene's bonds would break the delocalized aromatic system and lose its extra stability, so the ring instead undergoes substitution, which keeps the ring aromatic."
+      },
+      {
+       "q": "What must be true of every atom in a ring for it to be considered fully conjugated, a requirement for aromaticity?",
+       "choices": [
+        "Every atom must be sp^3^ hybridized",
+        "Every atom must have an available p orbital",
+        "Every atom must be a carbon",
+        "Every atom must carry a lone pair"
+       ],
+       "answer": 1,
+       "explain": "Full conjugation requires every ring atom to contribute a p orbital so the pi electrons can delocalize continuously around the entire ring."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Electrophilic Aromatic Substitution",
+     "minutes": 16,
+     "intro": "Since benzene resists addition, it needs its own reaction type — electrophilic aromatic substitution replaces a hydrogen on the ring while keeping the aromatic system fully intact.",
+     "sections": [
+      {
+       "heading": "The General EAS Mechanism",
+       "body": [
+        "**Electrophilic aromatic substitution (EAS)** begins when a strong electrophile (generated with a catalyst, since benzene itself is a weak nucleophile) attacks the ring, temporarily breaking aromaticity to form a positively charged intermediate. A base then removes a proton from that same carbon, restoring full aromaticity and yielding the substituted product.",
+        "Common EAS reactions include halogenation (Br~2~ with a FeBr~3~ catalyst), nitration (HNO~3~/H~2~SO~4~), and Friedel-Crafts alkylation or acylation (using AlCl~3~ as catalyst) — each generates a different electrophile but follows the same attack-then-deprotonate pattern."
+       ]
+      },
+      {
+       "heading": "Directing Effects of Substituents",
+       "body": [
+        "Groups already on the ring change where the next substitution occurs. **Activating, ortho/para-directing** groups (like -OH and -NH~2~, which donate electron density into the ring) speed up EAS and direct new substituents to the ortho and para positions. **Deactivating, meta-directing** groups (like -NO~2~ and -C=O, which pull electron density out) slow EAS and direct new substituents to the meta position.",
+        "Halogens are an exception worth remembering: they are weakly deactivating overall but still ortho/para-directing, because their lone pairs can still donate into the ring even though their electronegativity withdraws density overall."
+       ],
+       "example": {
+        "problem": "Predict where a second nitration occurs on nitrobenzene (benzene with one -NO~2~ group already attached).",
+        "steps": [
+         "The -NO~2~ group is strongly deactivating and meta-directing, since it withdraws electron density from the ring.",
+         "A meta-directing group sends the next electrophile to the position 1,3 relative to itself."
+        ],
+        "answer": "The second nitro group attaches at the meta position, giving meta-dinitrobenzene."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "electrophilic aromatic substitution",
+       "def": "A reaction where an electrophile replaces a hydrogen on an aromatic ring while preserving aromaticity."
+      },
+      {
+       "term": "activating group",
+       "def": "A substituent that donates electron density into the ring, speeding EAS and directing ortho/para."
+      },
+      {
+       "term": "deactivating group",
+       "def": "A substituent that withdraws electron density from the ring, slowing EAS and directing meta."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What step restores full aromaticity after an electrophile attacks the benzene ring in EAS?",
+       "choices": [
+        "A second electrophile attacks",
+        "A base removes a proton from the carbon that was attacked",
+        "The ring absorbs a hydrogen atom",
+        "Nothing — aromaticity is permanently lost"
+       ],
+       "answer": 1,
+       "explain": "After the electrophile adds, deprotonation of that same carbon restores the fully conjugated, aromatic ring system."
+      },
+      {
+       "q": "A ring already bears an -OH group. Where does the next EAS substituent most likely attach?",
+       "choices": [
+        "Meta",
+        "Ortho and para",
+        "It blocks all further substitution",
+        "Only ipso"
+       ],
+       "answer": 1,
+       "explain": "-OH is a strong activating, ortho/para-directing group because its lone pairs donate electron density into the ring at those positions."
+      },
+      {
+       "q": "Why are halogens on a benzene ring ortho/para-directing despite being deactivating overall?",
+       "choices": [
+        "Halogens have no effect on directing",
+        "Their lone pairs can still donate into the ring even though their electronegativity withdraws density overall",
+        "Halogens are always strongly activating",
+        "Deactivating groups are always meta-directing with no exceptions"
+       ],
+       "answer": 1,
+       "explain": "Halogens withdraw electron density inductively (deactivating) but can still donate lone-pair electron density into the ring by resonance, which directs ortho/para despite the overall deactivation."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Spectroscopy and Carbonyl Chemistry",
+   "summary": "How to determine a molecule's structure from spectroscopic data, and how alcohols, aldehydes, ketones, and carboxylic acid derivatives react.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "IR and ^1^H NMR Spectroscopy",
+     "minutes": 18,
+     "intro": "You cannot see a molecule directly, but infrared and NMR spectroscopy let you infer its structure indirectly, by reading how it absorbs different kinds of energy — skills every practicing organic chemist uses daily.",
+     "sections": [
+      {
+       "heading": "Infrared (IR) Spectroscopy",
+       "body": [
+        "**IR spectroscopy** measures which infrared frequencies a molecule absorbs as its bonds stretch and bend, and different functional groups absorb at characteristic, recognizable frequencies. A broad peak around 3300 cm^−1^ signals an O-H (alcohol or acid), a sharp strong peak near 1700 cm^−1^ signals a C=O (carbonyl), and a sharp peak near 2250 cm^−1^ signals a C≡C or C≡N.",
+        "IR is best used to quickly confirm or rule out the presence of a specific functional group rather than to determine an entire structure, since many different carbonyl-containing compounds all show a peak in the same general region."
+       ]
+      },
+      {
+       "heading": "^1^H NMR Spectroscopy",
+       "body": [
+        "**^1^H NMR** detects hydrogen atoms in different chemical environments, reporting each set as a peak at a characteristic **chemical shift** (in ppm), with the peak's area (integration) proportional to the number of equivalent hydrogens producing it. Hydrogens near electronegative atoms or aromatic rings shift downfield (higher ppm); alkyl hydrogens sit upfield (lower ppm, typically 0.5–2 ppm).",
+        "**Splitting patterns** follow the n+1 rule: a hydrogen's peak splits into n+1 smaller peaks, where n is the number of nonequivalent hydrogens on adjacent carbons, letting you deduce exactly which hydrogens sit next to which."
+       ],
+       "example": {
+        "problem": "A compound shows a broad IR peak near 3300 cm^−1^ and no peak near 1700 cm^−1^. What functional group is likely present, and what is likely absent?",
+        "steps": [
+         "A broad peak near 3300 cm^−1^ is characteristic of an O-H stretch, pointing to an alcohol.",
+         "The absence of a peak near 1700 cm^−1^ rules out a carbonyl group, so this is not a carboxylic acid (which would show both an O-H and a C=O peak)."
+        ],
+        "answer": "The compound is most likely a simple alcohol, not a carboxylic acid."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "IR spectroscopy",
+       "def": "A technique measuring which infrared frequencies a molecule absorbs, identifying functional groups by characteristic peaks."
+      },
+      {
+       "term": "chemical shift",
+       "def": "The position (in ppm) of an NMR signal, indicating a hydrogen's electronic environment."
+      },
+      {
+       "term": "integration",
+       "def": "The area under an NMR peak, proportional to the number of equivalent hydrogens producing it."
+      },
+      {
+       "term": "splitting pattern",
+       "def": "The division of an NMR peak into n+1 smaller peaks based on n adjacent, nonequivalent hydrogens."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A sharp, strong IR peak appears near 1700 cm^−1^. What functional group does this most strongly suggest?",
+       "choices": [
+        "Alcohol (O-H)",
+        "Carbonyl (C=O)",
+        "Alkyne (C≡C)",
+        "Aromatic ring"
+       ],
+       "answer": 1,
+       "explain": "A strong, sharp absorption near 1700 cm^−1^ is the classic signature of a carbonyl stretch, present in aldehydes, ketones, acids, esters, and amides."
+      },
+      {
+       "q": "In ^1^H NMR, what does the area under a peak (its integration) tell you?",
+       "choices": [
+        "The exact chemical shift value",
+        "The relative number of equivalent hydrogens producing that peak",
+        "The molecule's total molecular weight",
+        "Whether the compound is chiral"
+       ],
+       "answer": 1,
+       "explain": "Integration is proportional to the number of hydrogens contributing to a given peak, letting you compare relative hydrogen counts across a spectrum."
+      },
+      {
+       "q": "A hydrogen has 2 nonequivalent hydrogens on an adjacent carbon. Into how many peaks does its signal split, according to the n+1 rule?",
+       "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+       ],
+       "answer": 2,
+       "explain": "The n+1 rule gives n+1 = 2+1 = 3 peaks (a triplet) when there are 2 adjacent, nonequivalent hydrogens."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Alcohols and Nucleophilic Addition to Carbonyls",
+     "minutes": 17,
+     "intro": "Alcohols and carbonyl compounds are close relatives — alcohols can be made from carbonyls and can be converted into them, and understanding nucleophilic addition to a carbonyl unlocks nearly every reaction in this final stretch of the course.",
+     "sections": [
+      {
+       "heading": "Alcohol Reactions",
+       "body": [
+        "Alcohols can be **oxidized**: primary alcohols oxidize to aldehydes and then further to carboxylic acids, while secondary alcohols oxidize only to ketones (they cannot go further, since the carbon has no additional H to remove); tertiary alcohols resist oxidation entirely, since their carbon has no H to remove at all.",
+        "Alcohols can also be converted to good leaving groups (for example, to alkyl halides using reagents like SOCl~2~ or PBr~3~), letting them then undergo the SN1, SN2, E1, or E2 reactions covered earlier in the course."
+       ]
+      },
+      {
+       "heading": "Nucleophilic Addition to Aldehydes and Ketones",
+       "body": [
+        "The carbonyl carbon in an aldehyde or ketone is electrophilic because oxygen pulls electron density away from it, so nucleophiles attack that carbon directly, pushing the C=O pi electrons onto oxygen to form an alkoxide, which is then protonated to give an alcohol. Aldehydes react faster than ketones because they are less sterically hindered and less stabilized by only one alkyl group instead of two.",
+        "A Grignard reagent (R-MgX) is a strong carbon nucleophile that adds to a carbonyl this way, forming a new carbon-carbon bond — one of the most important ways organic chemists build larger molecules from smaller pieces."
+       ],
+       "example": {
+        "problem": "Predict the product when methylmagnesium bromide (CH~3~MgBr) reacts with formaldehyde (H~2~C=O), followed by aqueous acid workup.",
+        "steps": [
+         "The Grignard's carbon nucleophile (CH~3~^−^) attacks the electrophilic carbonyl carbon of formaldehyde.",
+         "The C=O pi electrons shift onto oxygen, forming a magnesium alkoxide intermediate.",
+         "Aqueous acid workup protonates the alkoxide to give the final alcohol."
+        ],
+        "answer": "Ethanol, CH~3~-CH~2~-OH, formed by adding one carbon from the Grignard reagent to formaldehyde."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "oxidation (alcohol)",
+       "def": "Conversion of a primary alcohol to an aldehyde or acid, or a secondary alcohol to a ketone, by removing H atoms."
+      },
+      {
+       "term": "nucleophilic addition",
+       "def": "A reaction where a nucleophile attacks a carbonyl carbon, converting the C=O to a C-O single bond."
+      },
+      {
+       "term": "Grignard reagent",
+       "def": "An organomagnesium compound (R-MgX) that acts as a strong carbon nucleophile, forming new C-C bonds with carbonyls."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can a tertiary alcohol not be oxidized to a ketone or aldehyde?",
+       "choices": [
+        "Tertiary alcohols are too unreactive to bond with oxygen",
+        "The carbon bearing the -OH has no hydrogen atom to remove during oxidation",
+        "Tertiary alcohols do not exist in nature",
+        "Oxidation only works on aromatic alcohols"
+       ],
+       "answer": 1,
+       "explain": "Oxidation of an alcohol removes a hydrogen from the carbon bearing the -OH; a tertiary carbon has no such hydrogen, so it cannot be oxidized this way."
+      },
+      {
+       "q": "Why do aldehydes react faster than ketones in nucleophilic addition?",
+       "choices": [
+        "Aldehydes have a more electrophilic, less hindered carbonyl carbon",
+        "Ketones have no carbonyl group",
+        "Aldehydes are always more electronegative",
+        "Ketones react only with Grignard reagents"
+       ],
+       "answer": 0,
+       "explain": "Aldehydes have only one alkyl group (versus two for ketones) providing less steric hindrance and less electron donation, leaving the carbonyl carbon more exposed and electrophilic."
+      },
+      {
+       "q": "What kind of reagent is a Grignard reagent (R-MgX) in a nucleophilic addition reaction?",
+       "choices": [
+        "An electrophile",
+        "A strong carbon nucleophile",
+        "A leaving group",
+        "An oxidizing agent"
+       ],
+       "answer": 1,
+       "explain": "The carbon attached to magnesium in a Grignard reagent is strongly nucleophilic, attacking electrophilic carbonyl carbons to form new C-C bonds."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Carboxylic Acids and Their Derivatives",
+     "minutes": 17,
+     "intro": "Carboxylic acids sit at the head of a family of related compounds — esters, amides, and more — all built around the same carbonyl core, and converting between family members is one of the most practical reaction sequences in organic synthesis.",
+     "sections": [
+      {
+       "heading": "Carboxylic Acid Acidity and Derivatives",
+       "body": [
+        "Carboxylic acids are far more acidic than alcohols because losing a proton produces a **carboxylate** anion whose negative charge is delocalized equally over both oxygens by resonance, spreading out and stabilizing the charge. This resonance stabilization is absent in a simple alkoxide, which is why carboxylic acids (pKa around 4-5) are so much more acidic than alcohols (pKa around 16-18).",
+        "**Acid derivatives** — esters (-COOR), amides (-CONR~2~), and acid chlorides (-COCl) — all share the same carbonyl core with a different group replacing the -OH, and their reactivity toward nucleophiles follows the leaving-group ability of that replaced group: acid chlorides are most reactive, amides are least."
+       ]
+      },
+      {
+       "heading": "Interconverting Derivatives: Fischer Esterification",
+       "body": [
+        "**Fischer esterification** converts a carboxylic acid plus an alcohol into an ester plus water, using an acid catalyst; because the reaction is an equilibrium, using excess alcohol or removing water drives the reaction toward more ester product. Esters can be converted back to the acid by **hydrolysis**, simply running the same reaction in reverse with excess water.",
+        "Because acid derivatives interconvert through the same core nucleophilic acyl substitution mechanism, memorizing this one reactivity ladder — acid chloride > anhydride > ester > amide — lets you predict nearly every carboxylic acid derivative reaction in the course."
+       ],
+       "example": {
+        "problem": "Predict the product of acetic acid (CH~3~COOH) reacting with ethanol (CH~3~CH~2~OH) under acid catalysis (Fischer esterification).",
+        "steps": [
+         "The alcohol oxygen attacks the protonated carbonyl carbon of the acid.",
+         "Water is eliminated, and the -OH of the original acid is replaced by the -OR group from the alcohol."
+        ],
+        "answer": "Ethyl acetate (CH~3~COOCH~2~CH~3~) plus water."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "carboxylate",
+       "def": "The resonance-stabilized anion formed when a carboxylic acid loses its acidic proton."
+      },
+      {
+       "term": "acid derivative",
+       "def": "A compound sharing a carboxylic acid's carbonyl core with a different group replacing the -OH (esters, amides, acid chlorides)."
+      },
+      {
+       "term": "Fischer esterification",
+       "def": "An acid-catalyzed equilibrium reaction converting a carboxylic acid and an alcohol into an ester and water."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why are carboxylic acids much more acidic than simple alcohols?",
+       "choices": [
+        "Carboxylic acids contain more carbon atoms",
+        "The carboxylate anion delocalizes its negative charge over two oxygens by resonance",
+        "Alcohols do not have any acidic hydrogens",
+        "Carboxylic acids are always aromatic"
+       ],
+       "answer": 1,
+       "explain": "Losing a proton from a carboxylic acid gives a carboxylate anion whose charge is spread evenly over two oxygens by resonance, a stabilization simple alkoxides lack."
+      },
+      {
+       "q": "Which carboxylic acid derivative is generally the most reactive toward nucleophiles?",
+       "choices": [
+        "Amide",
+        "Ester",
+        "Acid chloride",
+        "Carboxylate salt"
+       ],
+       "answer": 2,
+       "explain": "Acid chlorides have the best leaving group (chloride) of the common derivatives, making them the most reactive toward nucleophilic acyl substitution."
+      },
+      {
+       "q": "In Fischer esterification, what two products form from a carboxylic acid and an alcohol?",
+       "choices": [
+        "An ester and water",
+        "An amide and water",
+        "An acid chloride and HCl",
+        "A ketone and an alcohol"
+       ],
+       "answer": 0,
+       "explain": "Fischer esterification combines a carboxylic acid and an alcohol under acid catalysis to form an ester, releasing water as the byproduct."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

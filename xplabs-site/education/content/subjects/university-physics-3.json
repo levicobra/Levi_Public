@@ -1,0 +1,1513 @@
+{
+ "id": "university-physics-3",
+ "title": "University Physics III",
+ "domain": "physical",
+ "level": "College",
+ "description": "The physics that overturned classical intuition: how light behaves as both wave and particle, how space and time bend at high speed, and how atoms and nuclei really work. Calculus-based, with worked numerical problems throughout, including real physical constants and checks against known experimental results.",
+ "outcomes": [
+  "Apply reflection, refraction, and polarization to predict how light behaves at interfaces and through optical devices.",
+  "Use the mirror and thin-lens equations to locate and characterize images formed by optical instruments.",
+  "Apply interference and diffraction to double-slit, thin-film, and grating problems.",
+  "Use time dilation, length contraction, and relativistic energy-momentum relations to solve problems in special relativity.",
+  "Apply the photon model, matter waves, and the uncertainty principle to quantum phenomena.",
+  "Use the Bohr model and nuclear decay laws to analyze atomic spectra and radioactivity."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "The Nature and Propagation of Light",
+   "summary": "How light reflects, bends, and polarizes as it moves between materials, laying the groundwork for both geometric and wave optics.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Reflection and Refraction",
+     "minutes": 14,
+     "intro": "Every mirror, lens, and prism you will study depends on just two rules for what light does at a boundary between materials. Getting comfortable with Snell's law here pays off across the rest of the course.",
+     "sections": [
+      {
+       "heading": "The Law of Reflection",
+       "body": [
+        "The **law of reflection** states that the angle of incidence equals the angle of reflection, both measured from the normal (a line perpendicular to the surface). This holds for any smooth, reflective surface, whether a bathroom mirror or the polished surface of still water.",
+        "**Specular reflection** (a single, well-defined reflected ray, as from a mirror) differs from **diffuse reflection** (light scattered in many directions from a rough surface, like paper), even though both obey the law of reflection at the microscopic level, point by point."
+       ]
+      },
+      {
+       "heading": "Snell's Law of Refraction",
+       "body": [
+        "**Refraction** is light bending as it crosses into a material with a different index of refraction n = c/v, where c is the speed of light in vacuum and v is its speed in that material. **Snell's law** governs the bending: n~1~ sin θ~1~ = n~2~ sin θ~2~.",
+        "Light bends toward the normal entering a denser medium (higher n) and away from the normal entering a less dense one. This single rule explains why a straw looks bent at the water's surface and why a lens can bring parallel rays to a single focus."
+       ],
+       "example": {
+        "problem": "Light traveling in water (n = 1.33) strikes the water-air surface at an angle of incidence of 40° from the normal. Find the angle of refraction in air (n = 1.00).",
+        "steps": [
+         "Apply Snell's law: n~1~ sin θ~1~ = n~2~ sin θ~2~.",
+         "(1.33)(sin 40°) = (1.00)(sin θ~2~).",
+         "sin θ~2~ = (1.33)(0.643) = 0.855.",
+         "θ~2~ = sin⁻¹(0.855) ≈ 58.7°."
+        ],
+        "answer": "About 58.7°, bent away from the normal (water is denser than air)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "index of refraction",
+       "def": "n = c/v, the ratio of light's speed in vacuum to its speed in a given material."
+      },
+      {
+       "term": "Snell's law",
+       "def": "n~1~ sin θ~1~ = n~2~ sin θ~2~, describing how light bends at a boundary between media."
+      },
+      {
+       "term": "specular reflection",
+       "def": "Reflection that produces a single, well-defined reflected ray from a smooth surface."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Light passes from air (n = 1.00) into glass (n = 1.50) at an angle of incidence of 45°. What happens to the refracted ray?",
+       "choices": [
+        "It bends away from the normal, at an angle greater than 45°",
+        "It bends toward the normal, at an angle less than 45°",
+        "It does not bend at all",
+        "It reflects entirely back into the air"
+       ],
+       "answer": 1,
+       "explain": "Moving into a denser medium (higher n), light bends toward the normal, meaning the refraction angle is smaller than the incidence angle."
+      },
+      {
+       "q": "Which of the following best distinguishes specular from diffuse reflection?",
+       "choices": [
+        "Specular reflection violates the law of reflection",
+        "Diffuse reflection scatters light in many directions from a rough surface, while specular reflection produces one clear reflected ray from a smooth surface",
+        "Diffuse reflection only happens in darkness",
+        "Specular reflection never occurs in nature"
+       ],
+       "answer": 1,
+       "explain": "Both obey the law of reflection microscopically, but a rough surface's many small facets scatter light in many directions (diffuse), while a smooth surface preserves a single well-defined reflected ray (specular)."
+      },
+      {
+       "q": "Light in glass (n = 1.50) strikes a glass-air boundary at 20° from the normal. Find the angle of refraction in air.",
+       "choices": [
+        "About 13.2°",
+        "About 20°",
+        "About 31.2°",
+        "About 45°"
+       ],
+       "answer": 2,
+       "explain": "sin θ~2~ = n~1~ sin θ~1~/n~2~ = (1.50)(sin 20°)/1.00 = (1.50)(0.342) = 0.513, so θ~2~ = sin⁻¹(0.513) ≈ 30.9°, closest to 31.2°."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Total Internal Reflection and Dispersion",
+     "minutes": 16,
+     "intro": "Push refraction to its limit and light stops crossing a boundary altogether, reflecting completely back into its original material. This single effect is the entire basis of fiber-optic communication.",
+     "sections": [
+      {
+       "heading": "Total Internal Reflection",
+       "body": [
+        "When light travels from a denser to a less dense medium (n~1~ > n~2~), there exists a **critical angle** θ~c~ beyond which no light refracts out at all: sin θ~c~ = n~2~/n~1~. Past this angle, 100% of the light reflects back into the denser medium — **total internal reflection (TIR)**.",
+        "TIR is the operating principle of optical fibers: light bounces down a glass core surrounded by cladding of lower index, undergoing repeated total internal reflection, allowing it to travel enormous distances with very little loss."
+       ],
+       "example": {
+        "problem": "An optical fiber has a core with n = 1.50 and cladding with n = 1.45. Find the critical angle at the core-cladding boundary.",
+        "steps": [
+         "Apply sin θ~c~ = n~2~/n~1~, with n~1~ = 1.50 (core) and n~2~ = 1.45 (cladding).",
+         "sin θ~c~ = 1.45/1.50 = 0.967.",
+         "θ~c~ = sin⁻¹(0.967) ≈ 75.2°."
+        ],
+        "answer": "About 75.2°. Light hitting the boundary at angles greater than this undergoes total internal reflection."
+       }
+      },
+      {
+       "heading": "Dispersion",
+       "body": [
+        "A material's index of refraction actually depends slightly on wavelength — a phenomenon called **dispersion**. Violet light typically has a higher index of refraction than red light in ordinary glass, so it bends more at a boundary.",
+        "This is exactly why a glass prism spreads white light into a rainbow spectrum: each color refracts by a slightly different amount, fanning the colors out at different angles, with violet bending the most and red the least."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "critical angle",
+       "def": "θ~c~, the angle of incidence in a denser medium beyond which total internal reflection occurs, sin θ~c~ = n~2~/n~1~."
+      },
+      {
+       "term": "total internal reflection",
+       "def": "Complete reflection of light at a boundary when it strikes at an angle beyond the critical angle, traveling from higher to lower index."
+      },
+      {
+       "term": "dispersion",
+       "def": "The variation of a material's index of refraction with wavelength, causing different colors to refract by different amounts."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For total internal reflection to be possible at a boundary, which condition must be true?",
+       "choices": [
+        "Light must move from a lower-index to a higher-index medium",
+        "Light must move from a higher-index to a lower-index medium",
+        "The two materials must have equal indices of refraction",
+        "The light must be polarized"
+       ],
+       "answer": 1,
+       "explain": "A critical angle (and thus total internal reflection) only exists when light travels from a denser medium (higher n) toward a less dense one (lower n); the reverse direction always refracts out at some angle."
+      },
+      {
+       "q": "A material boundary has critical angle 42°. What happens to light hitting the boundary from the denser side at 50°?",
+       "choices": [
+        "It refracts out normally",
+        "It undergoes total internal reflection",
+        "It is absorbed completely",
+        "It splits into two equal beams"
+       ],
+       "answer": 1,
+       "explain": "Since 50° exceeds the critical angle of 42°, the light cannot refract out and instead undergoes total internal reflection back into the denser medium."
+      },
+      {
+       "q": "Why does a prism separate white light into a rainbow of colors?",
+       "choices": [
+        "Because glass absorbs some colors completely",
+        "Because the index of refraction varies slightly with wavelength, so each color bends by a different amount",
+        "Because red light travels faster than violet light in vacuum",
+        "Because prisms only allow certain colors to pass through"
+       ],
+       "answer": 1,
+       "explain": "Dispersion means the index of refraction (and thus the amount of bending via Snell's law) is slightly different for each wavelength, spreading white light into its component colors."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Polarization and Huygens's Principle",
+     "minutes": 14,
+     "intro": "Light waves oscillate in a direction perpendicular to their travel, and that orientation — polarization — can be selected, blocked, or rotated with the right materials. A simple model of wavefronts as sources of tiny new waves also explains why light bends around obstacles at all.",
+     "sections": [
+      {
+       "heading": "Polarization",
+       "body": [
+        "Light is a transverse wave, and its electric field oscillates in some direction perpendicular to its travel direction. **Unpolarized** light (like sunlight) has its field oscillating randomly in all perpendicular directions; a **polarizer** transmits only the field component along its transmission axis, producing **polarized** light.",
+        "**Malus's law** gives the intensity transmitted through a second polarizer (an analyzer) set at angle θ to the first: I = I~0~ cos² θ. When two polarizers are crossed at 90°, cos² 90° = 0, and essentially no light passes through — the basis of polarized sunglasses reducing glare and of many LCD screens."
+       ],
+       "example": {
+        "problem": "Unpolarized light of intensity I~0~ passes through a polarizer (transmitting half the intensity), then through a second polarizer at 30° to the first. Find the final intensity as a fraction of I~0~.",
+        "steps": [
+         "After the first polarizer, unpolarized light is reduced to half intensity: I~1~ = I~0~/2.",
+         "Apply Malus's law for the second polarizer: I~2~ = I~1~ cos²(30°).",
+         "cos 30° ≈ 0.866, so cos²(30°) = 0.75.",
+         "I~2~ = (I~0~/2)(0.75) = 0.375 I~0~."
+        ],
+        "answer": "37.5% of the original intensity."
+       }
+      },
+      {
+       "heading": "Huygens's Principle",
+       "body": [
+        "**Huygens's principle** models wave propagation by treating every point on a wavefront as a source of tiny secondary spherical wavelets; the new wavefront a moment later is the surface tangent to all these wavelets. This model correctly predicts both the law of reflection and Snell's law of refraction from first principles.",
+        "Huygens's principle also explains diffraction: when a wavefront passes through a narrow opening, only a small patch of secondary wavelets survives, and their combined effect spreads out into the region behind the opening rather than continuing in a perfectly straight beam."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "polarization",
+       "def": "The orientation of the oscillation direction of a transverse wave's electric field."
+      },
+      {
+       "term": "Malus's law",
+       "def": "I = I~0~ cos² θ, the intensity transmitted through a polarizer at angle θ to the incoming polarization direction."
+      },
+      {
+       "term": "Huygens's principle",
+       "def": "Every point on a wavefront acts as a source of secondary wavelets; the new wavefront is tangent to all of them."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Polarized light of intensity I~0~ passes through an analyzer whose transmission axis is perpendicular (90°) to the light's polarization. What intensity emerges?",
+       "choices": [
+        "I~0~",
+        "I~0~/2",
+        "Zero",
+        "I~0~/4"
+       ],
+       "answer": 2,
+       "explain": "Malus's law gives I = I~0~ cos²(90°) = I~0~(0) = 0; crossed polarizers block essentially all the light."
+      },
+      {
+       "q": "Polarized light of intensity 8.0 W/m² passes through an analyzer at 60° to its polarization direction. Find the transmitted intensity.",
+       "choices": [
+        "2.0 W/m²",
+        "4.0 W/m²",
+        "6.9 W/m²",
+        "8.0 W/m²"
+       ],
+       "answer": 0,
+       "explain": "I = I~0~ cos²(60°) = 8.0 × (0.5)² = 8.0 × 0.25 = 2.0 W/m², since cos 60° = 0.5."
+      },
+      {
+       "q": "How does Huygens's principle explain diffraction around an obstacle or through a narrow opening?",
+       "choices": [
+        "It does not; diffraction has no wave explanation",
+        "Every point on the wavefront passing the opening acts as a new wave source, and their combination spreads into the region behind the opening",
+        "Diffraction only occurs because of reflection, not wave behavior",
+        "Huygens's principle applies only to particles, not waves"
+       ],
+       "answer": 1,
+       "explain": "By treating each point on the transmitted wavefront as a new wavelet source, Huygens's principle naturally predicts that the wave spreads into the geometric shadow region behind an opening or obstacle, which is exactly what diffraction describes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Geometric Optics and Optical Instruments",
+   "summary": "Using mirrors and lenses to locate and characterize images, and how combinations of them build real optical instruments.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Images Formed by Mirrors",
+     "minutes": 16,
+     "intro": "A curved mirror can form a real image floating in space or a virtual image that only appears to be behind the glass, and one equation predicts exactly which, and where.",
+     "sections": [
+      {
+       "heading": "The Mirror Equation",
+       "body": [
+        "For a spherical mirror, the **mirror equation** relates object distance d~o~, image distance d~i~, and focal length f: 1/d~o~ + 1/d~i~ = 1/f. For a concave (converging) mirror, f is positive; for a convex (diverging) mirror, f is negative. Magnification is m = −d~i~/d~o~, where negative m means an inverted image and |m| > 1 means enlargement.",
+        "A positive d~i~ indicates a **real image** (light rays actually converge there, projectable onto a screen); a negative d~i~ indicates a **virtual image** (rays only appear to diverge from that point, as with your reflection in a flat mirror)."
+       ],
+       "example": {
+        "problem": "An object is placed 30 cm in front of a concave mirror with focal length 20 cm. Find the image distance and magnification.",
+        "steps": [
+         "Apply the mirror equation: 1/d~i~ = 1/f − 1/d~o~.",
+         "1/d~i~ = 1/20 − 1/30 = 3/60 − 2/60 = 1/60.",
+         "d~i~ = 60 cm.",
+         "Find magnification: m = −d~i~/d~o~ = −60/30 = −2."
+        ],
+        "answer": "Image forms 60 cm in front of the mirror (real), inverted, and magnified 2×."
+       }
+      },
+      {
+       "heading": "Concave and Convex Mirrors",
+       "body": [
+        "A **concave mirror** can form either a real, inverted image (object beyond the focal point) or a virtual, upright, magnified image (object inside the focal point, as in a shaving or makeup mirror). A **convex mirror** always forms a virtual, upright, reduced image, regardless of object distance, which is why convex mirrors are used for wide-angle views in car side mirrors and store security mirrors.",
+        "This is also the source of the familiar warning printed on car passenger-side mirrors: 'objects in mirror are closer than they appear' — a convex mirror's reduced image makes distant objects look farther away than they truly are."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "mirror equation",
+       "def": "1/d~o~ + 1/d~i~ = 1/f, relating object distance, image distance, and focal length for a spherical mirror."
+      },
+      {
+       "term": "real image",
+       "def": "An image where light rays actually converge, which can be projected onto a screen; positive image distance."
+      },
+      {
+       "term": "virtual image",
+       "def": "An image where light rays only appear to diverge from, cannot be projected onto a screen; negative image distance."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An object is placed inside the focal point of a concave mirror. What type of image forms?",
+       "choices": [
+        "Real and inverted",
+        "Virtual, upright, and magnified",
+        "Virtual and reduced",
+        "No image forms"
+       ],
+       "answer": 1,
+       "explain": "When an object is closer to a concave mirror than the focal point, the mirror produces a virtual, upright, magnified image, exactly the effect used in shaving and makeup mirrors."
+      },
+      {
+       "q": "Why are convex mirrors commonly used for car side mirrors and store security mirrors?",
+       "choices": [
+        "They always form real, inverted images",
+        "They always form a virtual, upright, reduced image, giving a wider field of view",
+        "They magnify objects far more than concave mirrors",
+        "They are cheaper to manufacture, with no optical benefit"
+       ],
+       "answer": 1,
+       "explain": "A convex mirror always produces a virtual, upright, reduced image regardless of object position, which effectively compresses a wider field of view into the mirror, useful for both driving safety and store surveillance."
+      },
+      {
+       "q": "An object is placed 40 cm from a concave mirror with focal length 10 cm. Find the image distance.",
+       "choices": [
+        "8.0 cm",
+        "13.3 cm",
+        "50 cm",
+        "−13.3 cm"
+       ],
+       "answer": 1,
+       "explain": "1/d~i~ = 1/f − 1/d~o~ = 1/10 − 1/40 = 4/40 − 1/40 = 3/40, so d~i~ = 40/3 ≈ 13.3 cm."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Images Formed by Thin Lenses",
+     "minutes": 16,
+     "intro": "A lens bends light through refraction rather than reflection, but the underlying algebra is nearly identical to the mirror equation, and mastering it explains everything from reading glasses to camera lenses.",
+     "sections": [
+      {
+       "heading": "The Thin Lens Equation",
+       "body": [
+        "The **thin lens equation** is 1/d~o~ + 1/d~i~ = 1/f, exactly matching the mirror equation's form, with magnification again m = −d~i~/d~o~. A **converging lens** (thicker in the middle, positive f) bends parallel rays toward a real focal point; a **diverging lens** (thinner in the middle, negative f) spreads parallel rays apart as if they came from a virtual focal point.",
+        "A converging lens behaves much like a concave mirror: an object beyond the focal point produces a real, inverted image, while an object inside the focal point produces a virtual, upright, magnified image (the magnifying glass case). A diverging lens, like a convex mirror, always produces a virtual, upright, reduced image."
+       ],
+       "example": {
+        "problem": "An object is placed 20 cm in front of a converging lens with focal length 15 cm. Find the image distance and magnification.",
+        "steps": [
+         "Apply the thin lens equation: 1/d~i~ = 1/f − 1/d~o~.",
+         "1/d~i~ = 1/15 − 1/20 = 4/60 − 3/60 = 1/60.",
+         "d~i~ = 60 cm.",
+         "Find magnification: m = −d~i~/d~o~ = −60/20 = −3."
+        ],
+        "answer": "Image forms 60 cm behind the lens (real), inverted, magnified 3×."
+       }
+      },
+      {
+       "heading": "Lenses in Combination",
+       "body": [
+        "When two or more lenses are used together (as in a compound microscope or a camera zoom lens), the image formed by the first lens becomes the object for the second lens. This lets designers combine multiple lens elements to correct aberrations and achieve magnifications no single lens could provide well on its own.",
+        "**Lensmaker's equation** relates a lens's focal length to its curvature and the refractive index of the glass, which is how optical engineers design a lens shape to hit a target focal length before it is ever manufactured."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "thin lens equation",
+       "def": "1/d~o~ + 1/d~i~ = 1/f, relating object distance, image distance, and focal length for a thin lens."
+      },
+      {
+       "term": "converging lens",
+       "def": "A lens (thicker at the center) with positive focal length that bends parallel rays toward a real focal point."
+      },
+      {
+       "term": "diverging lens",
+       "def": "A lens (thinner at the center) with negative focal length that spreads parallel rays apart."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An object is placed at exactly the focal point of a converging lens. Where does the image form?",
+       "choices": [
+        "At the same focal point on the other side",
+        "At infinity (rays leave parallel, no image forms at a finite distance)",
+        "Exactly at the lens itself",
+        "The image is always virtual"
+       ],
+       "answer": 1,
+       "explain": "At d~o~ = f, the thin lens equation gives 1/d~i~ = 1/f − 1/f = 0, so d~i~ is infinite: the outgoing rays are parallel and no finite image forms."
+      },
+      {
+       "q": "A diverging lens is used to view an object. What type of image does it always produce?",
+       "choices": [
+        "Real and inverted",
+        "Virtual, upright, and reduced",
+        "Real and magnified",
+        "No image is ever formed"
+       ],
+       "answer": 1,
+       "explain": "A diverging lens has negative focal length and always produces a virtual, upright, reduced image regardless of object distance."
+      },
+      {
+       "q": "An object is placed 12 cm from a converging lens with focal length 8.0 cm. Find the image distance.",
+       "choices": [
+        "4.8 cm",
+        "24 cm",
+        "20 cm",
+        "9.6 cm"
+       ],
+       "answer": 1,
+       "explain": "1/d~i~ = 1/8.0 − 1/12 = 3/24 − 2/24 = 1/24, so d~i~ = 24 cm."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Eye and Optical Instruments",
+     "minutes": 14,
+     "intro": "The eye is itself a lens system, and magnifiers, microscopes, and telescopes all extend its capabilities using the same lens equations you have already learned, just combined cleverly.",
+     "sections": [
+      {
+       "heading": "The Simple Magnifier",
+       "body": [
+        "The human eye focuses images onto the retina using a variable-focus lens, but it cannot focus clearly on objects closer than its **near point** (about 25 cm for a typical unaided eye). A **simple magnifier** is a single converging lens that lets an object be placed inside the eye's near point while the lens still forms a usable virtual image.",
+        "The **angular magnification** of a simple magnifier used to view an object at its focal point is M = 25 cm/f (with f in centimeters), comparing the angular size of the magnified virtual image to the angular size of the object viewed at the unaided near point."
+       ],
+       "example": {
+        "problem": "A magnifying glass has a focal length of 5.0 cm. Find its angular magnification.",
+        "steps": [
+         "Apply M = 25 cm/f.",
+         "M = 25/5.0.",
+         "M = 5.0."
+        ],
+        "answer": "5.0×, meaning objects appear 5 times larger in angular size than to the unaided eye at the near point."
+       }
+      },
+      {
+       "heading": "Microscopes and Telescopes",
+       "body": [
+        "A **compound microscope** uses two lenses: a short-focal-length objective lens forms a real, magnified image of a nearby small object, which the eyepiece then magnifies further as a simple magnifier, multiplying the two magnifications together for very high total magnification of small objects.",
+        "A **refracting telescope** instead uses a long-focal-length objective lens to form a real image of a distant object, magnified by a short-focal-length eyepiece; overall angular magnification is approximately M = f~objective~/f~eyepiece~, which is why telescope objectives are built as large and long-focus as practical."
+       ],
+       "example": {
+        "problem": "A refracting telescope has an objective lens with focal length 100 cm and an eyepiece with focal length 2.0 cm. Find its angular magnification.",
+        "steps": [
+         "Apply M = f~objective~/f~eyepiece~.",
+         "M = 100/2.0.",
+         "M = 50."
+        ],
+        "answer": "50×."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "near point",
+       "def": "The closest distance (about 25 cm for a typical eye) at which an unaided eye can focus clearly."
+      },
+      {
+       "term": "angular magnification",
+       "def": "The ratio of the angular size of a magnified image to the angular size of the object at the unaided near point."
+      },
+      {
+       "term": "compound microscope",
+       "def": "An instrument using an objective and eyepiece lens together to achieve very high magnification of small, nearby objects."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A magnifying glass has focal length 2.5 cm. Find its angular magnification.",
+       "choices": [
+        "2.5×",
+        "10×",
+        "62.5×",
+        "27.5×"
+       ],
+       "answer": 1,
+       "explain": "M = 25 cm/f = 25/2.5 = 10×."
+      },
+      {
+       "q": "A telescope's objective focal length is increased while the eyepiece focal length stays the same. What happens to angular magnification?",
+       "choices": [
+        "It decreases",
+        "It increases",
+        "It stays the same",
+        "It becomes negative"
+       ],
+       "answer": 1,
+       "explain": "M = f~objective~/f~eyepiece~ increases directly with objective focal length, for a fixed eyepiece focal length."
+      },
+      {
+       "q": "Why does a compound microscope achieve higher total magnification than a single magnifying lens?",
+       "choices": [
+        "It uses a single lens with unusually high curvature",
+        "It combines an objective lens's magnification with an eyepiece's magnification, multiplying the two together",
+        "Microscopes do not actually magnify more than a simple lens",
+        "It relies on total internal reflection rather than refraction"
+       ],
+       "answer": 1,
+       "explain": "A compound microscope's objective lens forms an enlarged real image, which the eyepiece then magnifies further as a simple magnifier, so the two magnifications multiply for a much larger total than either lens alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Interference and Diffraction",
+   "summary": "The wave behavior of light revealed through overlapping beams, thin films, and narrow slits and gratings.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Young's Double-Slit Experiment",
+     "minutes": 16,
+     "intro": "In 1801, Thomas Young shone light through two narrow slits and saw a striped pattern that only a wave could produce. That single result settled, for over a century, the debate over whether light was a wave or a stream of particles.",
+     "sections": [
+      {
+       "heading": "The Double-Slit Interference Pattern",
+       "body": [
+        "When coherent light (a fixed phase relationship, as from a laser) passes through two closely spaced slits, light from each slit spreads out and overlaps on a screen beyond. Bright fringes appear where the path length difference between the two slits equals a whole number of wavelengths: d sin θ = mλ, where d is the slit separation and m = 0, ±1, ±2, ...",
+        "Dark fringes fall exactly between bright ones, where the path difference is a half-integer number of wavelengths, producing perfectly destructive interference. This alternating bright-dark pattern is direct, unmistakable evidence of wave behavior — particles alone could never produce it."
+       ]
+      },
+      {
+       "heading": "Fringe Spacing",
+       "body": [
+        "For small angles (screen distance L much greater than slit separation d), the spacing between adjacent bright fringes on the screen is approximately Δy = λL/d. This shows fringe spacing grows with wavelength and screen distance, but shrinks as the slits are placed farther apart.",
+        "This formula also runs in reverse: by measuring fringe spacing on a screen at a known distance, with slits of known separation, physicists can determine the wavelength of an unknown light source with high precision — historically one of the first accurate ways to measure the wavelength of visible light."
+       ],
+       "example": {
+        "problem": "Light of wavelength 500 nm passes through two slits separated by 0.15 mm, projected onto a screen 2.5 m away. Find the spacing between adjacent bright fringes.",
+        "steps": [
+         "Apply Δy = λL/d.",
+         "Convert units: λ = 500×10⁻⁹ m, d = 0.15×10⁻³ m.",
+         "Δy = (500×10⁻⁹)(2.5)/(0.15×10⁻³) = (1.25×10⁻⁶)/(1.5×10⁻⁴).",
+         "Δy ≈ 8.33×10⁻³ m."
+        ],
+        "answer": "About 8.3 mm between adjacent bright fringes."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "coherent light",
+       "def": "Light with a fixed, consistent phase relationship, necessary for producing a stable interference pattern."
+      },
+      {
+       "term": "fringe",
+       "def": "A bright or dark band in an interference pattern."
+      },
+      {
+       "term": "fringe spacing",
+       "def": "Δy = λL/d, the distance between adjacent bright (or dark) fringes on a distant screen."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a double-slit experiment, what condition produces a dark fringe on the screen?",
+       "choices": [
+        "The path difference is a whole number of wavelengths",
+        "The path difference is a half-integer number of wavelengths",
+        "The slits must be infinitely narrow",
+        "Dark fringes never actually occur"
+       ],
+       "answer": 1,
+       "explain": "Dark (destructive interference) fringes occur where the path difference between the two slits is a half-integer number of wavelengths, so a crest from one slit meets a trough from the other."
+      },
+      {
+       "q": "If the slit separation d in a double-slit experiment is increased, with wavelength and screen distance unchanged, what happens to the fringe spacing?",
+       "choices": [
+        "It increases",
+        "It decreases",
+        "It stays the same",
+        "The fringes disappear entirely"
+       ],
+       "answer": 1,
+       "explain": "Fringe spacing Δy = λL/d is inversely proportional to slit separation d, so increasing d decreases the fringe spacing."
+      },
+      {
+       "q": "Light of wavelength 600 nm passes through slits separated by 0.20 mm, projected on a screen 3.0 m away. Find the fringe spacing.",
+       "choices": [
+        "4.0 mm",
+        "9.0 mm",
+        "6.0 mm",
+        "1.8 mm"
+       ],
+       "answer": 1,
+       "explain": "Δy = λL/d = (600×10⁻⁹)(3.0)/(0.20×10⁻³) = (1.8×10⁻⁶)/(2.0×10⁻⁴) = 9.0×10⁻³ m = 9.0 mm."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Thin-Film Interference",
+     "minutes": 14,
+     "intro": "The shimmering colors on a soap bubble or an oil slick are not dyes or pigments — they are interference between light reflecting off the front and back surfaces of an extremely thin film. Getting the phase shifts right is the key to predicting which colors appear.",
+     "sections": [
+      {
+       "heading": "Interference in Thin Films",
+       "body": [
+        "When light reflects off both the top and bottom surfaces of a thin film (like a soap bubble or an oil layer on water), the two reflected waves can interfere constructively or destructively depending on the extra path length light travels inside the film, 2nt (twice the film's thickness times its index of refraction, for near-normal incidence).",
+        "A crucial extra detail is the **phase shift on reflection**: light reflecting off a boundary where it moves from a lower to a higher index of refraction picks up an extra half-wavelength phase shift, while reflecting off a boundary into a lower index does not. Getting this phase-shift bookkeeping right is essential to correctly predicting bright versus dark bands."
+       ]
+      },
+      {
+       "heading": "Applying the Thin-Film Condition",
+       "body": [
+        "For a soap film in air, the top surface reflection (air to film, low to high index) gains a phase shift, while the bottom surface reflection (film to air, high to low index) does not — a net single phase shift between the two reflected waves. This means the condition for constructive interference (bright reflection) becomes 2nt = (m + ½)λ, the opposite of what you might expect without tracking the phase shift.",
+        "This is why a soap film that becomes vanishingly thin appears dark, not bright: at t → 0, the single phase shift alone produces destructive interference for all visible wavelengths."
+       ],
+       "example": {
+        "problem": "Find the minimum non-zero thickness of a soap film (n = 1.33) that produces constructive interference (a bright reflection) for light of wavelength 500 nm at near-normal incidence.",
+        "steps": [
+         "Apply the constructive-interference condition with a single net phase shift: 2nt = (m + ½)λ, using the smallest case m = 0.",
+         "2nt = λ/2, so t = λ/(4n).",
+         "t = 500/(4×1.33) = 500/5.32.",
+         "t ≈ 94.0 nm."
+        ],
+        "answer": "About 94 nm, an extraordinarily thin film."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "thin-film interference",
+       "def": "Interference between light reflected from the top and bottom surfaces of a thin transparent layer."
+      },
+      {
+       "term": "phase shift on reflection",
+       "def": "A half-wavelength phase shift gained when light reflects off a boundary into a higher index of refraction; no shift when reflecting into a lower index."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does an extremely thin soap film (thickness approaching zero) appear dark rather than bright?",
+       "choices": [
+        "The film absorbs all light at that thickness",
+        "The single net phase shift between the two reflected waves causes destructive interference as thickness approaches zero",
+        "Thin films cannot reflect any light at all",
+        "The film's index of refraction becomes zero"
+       ],
+       "answer": 1,
+       "explain": "With one reflection producing a phase shift and the other not, the two reflected waves are out of phase when the path length difference (2nt) approaches zero, producing destructive interference and a dark appearance."
+      },
+      {
+       "q": "A phase shift on reflection occurs when light reflects off a boundary moving:",
+       "choices": [
+        "From a higher index to a lower index",
+        "From a lower index to a higher index",
+        "Between two identical materials",
+        "Only when the film is colored"
+       ],
+       "answer": 1,
+       "explain": "A half-wavelength phase shift occurs specifically when light reflects at a boundary going from a lower-index medium into a higher-index medium; the reverse direction produces no such shift."
+      },
+      {
+       "q": "A soap film (n = 1.33) is illuminated by light of wavelength 600 nm. Find the minimum thickness for constructive interference (bright reflection).",
+       "choices": [
+        "112.8 nm",
+        "225.6 nm",
+        "451.1 nm",
+        "56.4 nm"
+       ],
+       "answer": 0,
+       "explain": "t = λ/(4n) = 600/(4×1.33) = 600/5.32 ≈ 112.8 nm."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Diffraction and Diffraction Gratings",
+     "minutes": 16,
+     "intro": "Shrink an opening down toward the size of a light wave's own wavelength, and the light spreads out dramatically instead of casting a sharp shadow. Diffraction gratings put this effect to work, splitting light into a precise, measurable spectrum.",
+     "sections": [
+      {
+       "heading": "Single-Slit Diffraction",
+       "body": [
+        "Light passing through a single narrow slit produces its own diffraction pattern: a wide, bright central maximum flanked by much dimmer secondary maxima. Dark fringes (minima) occur where a sin θ = mλ, with a the slit width and m = ±1, ±2, ... — note this looks like the double-slit bright-fringe formula, but here it locates the *dark* fringes.",
+        "Narrower slits produce wider diffraction patterns; this is a general wave property (also seen with sound and water waves) — the smaller the opening relative to the wavelength, the more the wave spreads out beyond it."
+       ]
+      },
+      {
+       "heading": "Diffraction Gratings",
+       "body": [
+        "A **diffraction grating** contains many thousands of closely, evenly spaced slits, producing much sharper and more widely separated bright fringes than a simple double slit, following the same condition d sin θ = mλ, but now with d equal to the spacing between adjacent grating lines.",
+        "Because grating fringes are so sharp, gratings are the standard tool for precisely measuring wavelengths and for separating light sources into detailed spectra, used everywhere from chemistry labs identifying elements to astronomical spectrometers analyzing starlight."
+       ],
+       "example": {
+        "problem": "A diffraction grating has 500 lines per millimeter. Find the angle of the first-order (m = 1) bright fringe for light of wavelength 600 nm.",
+        "steps": [
+         "Find the grating spacing: d = 1/(500 lines/mm) = 0.0020 mm = 2.0×10⁻⁶ m.",
+         "Apply d sin θ = mλ, solving for θ: sin θ = mλ/d.",
+         "sin θ = (1)(600×10⁻⁹)/(2.0×10⁻⁶) = 0.30.",
+         "θ = sin⁻¹(0.30) ≈ 17.5°."
+        ],
+        "answer": "About 17.5°."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "single-slit diffraction",
+       "def": "The spreading of light passing through a narrow slit, with dark fringes at a sin θ = mλ."
+      },
+      {
+       "term": "diffraction grating",
+       "def": "A device with many closely spaced slits producing sharp, widely separated bright fringes, d sin θ = mλ."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A single slit is made narrower, with wavelength unchanged. What happens to its diffraction pattern?",
+       "choices": [
+        "It becomes narrower (less spreading)",
+        "It becomes wider (more spreading)",
+        "It disappears entirely",
+        "It is unaffected by slit width"
+       ],
+       "answer": 1,
+       "explain": "Narrower slits produce more diffraction spreading; the central maximum and overall pattern become wider as the slit width shrinks relative to the wavelength."
+      },
+      {
+       "q": "A diffraction grating has 1000 lines per millimeter. Find its line spacing d.",
+       "choices": [
+        "1.0 × 10⁻⁶ m",
+        "1.0 × 10⁻³ m",
+        "1.0 × 10⁻⁹ m",
+        "1.0 mm"
+       ],
+       "answer": 0,
+       "explain": "d = 1/(1000 lines/mm) = 0.0010 mm = 1.0×10⁻⁶ m."
+      },
+      {
+       "q": "Why do diffraction gratings produce much sharper bright fringes than a simple two-slit setup?",
+       "choices": [
+        "Gratings block most of the light",
+        "Interference from thousands of slits reinforces constructively only at very precise angles, narrowing the bright fringes",
+        "Gratings use a different physical principle entirely, unrelated to interference",
+        "Gratings only work with a single wavelength of light"
+       ],
+       "answer": 1,
+       "explain": "With many slits interfering simultaneously, constructive interference is only strong at very precisely defined angles (where all slits' contributions align), while at nearby angles the many contributions cancel almost completely, producing much narrower and brighter fringes than two slits alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Special Relativity",
+   "summary": "How space and time transform for observers in relative motion, and why mass and energy turn out to be two forms of the same thing.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Time Dilation",
+     "minutes": 16,
+     "intro": "Two clocks, perfectly synchronized, disagree once one of them travels at high speed and returns — not because either clock is broken, but because time itself passes differently for the two of them. This is one of the most well-tested predictions in all of physics.",
+     "sections": [
+      {
+       "heading": "Einstein's Postulates",
+       "body": [
+        "Special relativity rests on two postulates: the laws of physics are identical in all inertial (non-accelerating) reference frames, and the speed of light in vacuum, c = 3.00 × 10⁸ m/s, is the same for every observer, regardless of the observer's or source's motion. This second postulate, confirmed experimentally many times, forces a complete rethinking of space and time.",
+        "If light's speed cannot change no matter how an observer moves, then something else must give: time and length themselves must adjust for observers in relative motion, in exactly the way needed to keep light's speed constant for everyone."
+       ]
+      },
+      {
+       "heading": "Time Dilation",
+       "body": [
+        "**Time dilation** states that a moving clock runs slow, as measured by a stationary observer: Δt = γΔt~0~, where Δt~0~ is the **proper time** (measured in the clock's own rest frame) and γ = 1/√(1 − v²/c²) is the **Lorentz factor**, always ≥ 1. The faster an object moves, the more its clock appears to run slow to a stationary observer.",
+        "This is not a trick of light travel time or an illusion — it is confirmed directly by experiments with fast-moving unstable particles like muons, created high in the atmosphere by cosmic rays, which survive to reach Earth's surface far more often than their short rest-frame lifetime alone would predict."
+       ],
+       "example": {
+        "problem": "A muon has a proper lifetime of 2.2 μs. If it moves at 0.995c, find its lifetime as measured by an observer on Earth.",
+        "steps": [
+         "Find the Lorentz factor: γ = 1/√(1 − v²/c²) = 1/√(1 − 0.995²).",
+         "0.995² = 0.990025, so 1 − 0.990025 = 0.009975.",
+         "√0.009975 ≈ 0.09987, so γ ≈ 1/0.09987 ≈ 10.01.",
+         "Apply time dilation: Δt = γΔt~0~ = (10.01)(2.2 μs) ≈ 22.0 μs."
+        ],
+        "answer": "About 22 μs, roughly 10 times longer than the muon's proper lifetime — long enough for many of them to reach the ground."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Lorentz factor",
+       "def": "γ = 1/√(1 − v²/c²), always ≥ 1, governing the size of relativistic effects."
+      },
+      {
+       "term": "proper time",
+       "def": "Δt~0~, the time interval measured in the rest frame of the clock or event itself."
+      },
+      {
+       "term": "time dilation",
+       "def": "Δt = γΔt~0~, a moving clock runs slow as measured by a stationary observer."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A spaceship travels at 0.80c. Find its Lorentz factor γ.",
+       "choices": [
+        "1.25",
+        "1.67",
+        "0.60",
+        "2.00"
+       ],
+       "answer": 1,
+       "explain": "γ = 1/√(1 − 0.80²) = 1/√(1 − 0.64) = 1/√0.36 = 1/0.60 ≈ 1.67."
+      },
+      {
+       "q": "A clock at rest on a fast-moving spaceship reads a proper time of 10 s for an event. An observer on Earth watching the spaceship pass by will measure that same event as taking:",
+       "choices": [
+        "Exactly 10 s",
+        "Less than 10 s",
+        "More than 10 s",
+        "It depends on the direction of motion"
+       ],
+       "answer": 2,
+       "explain": "Time dilation says the moving clock's time interval, as measured by a stationary (Earth) observer, is Δt = γΔt~0~, and since γ ≥ 1, the Earth observer measures a longer time than the proper time of 10 s."
+      },
+      {
+       "q": "Why do fast-moving cosmic-ray muons reach Earth's surface far more often than their short 2.2 μs rest-frame lifetime would suggest without relativity?",
+       "choices": [
+        "Muons travel faster than light",
+        "Time dilation makes their lifetime, as measured from Earth, much longer than their proper lifetime",
+        "Muons are actually created at ground level, not in the atmosphere",
+        "The muon lifetime measurement is simply wrong"
+       ],
+       "answer": 1,
+       "explain": "From Earth's frame, the muons' internal clock (governing their decay) runs slow due to time dilation, extending their observed lifetime enough for a significant fraction to survive the trip from the upper atmosphere to the ground."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Length Contraction and Velocity Addition",
+     "minutes": 16,
+     "intro": "Length dilates the opposite way that time does: an object moving relative to an observer appears shortened along its direction of motion. And oddly, velocities do not simply add the way everyday intuition expects, once speeds get close to that of light.",
+     "sections": [
+      {
+       "heading": "Length Contraction",
+       "body": [
+        "**Length contraction** states that a moving object's length, measured along its direction of motion, appears shortened to a stationary observer: L = L~0~/γ, where L~0~ is the **proper length** (measured in the object's own rest frame). Length perpendicular to the motion is unaffected — only the dimension along the direction of travel contracts.",
+        "Like time dilation, this is not an optical illusion but a real effect on the measured length in different reference frames, growing more dramatic as speed approaches c. At everyday speeds, γ is so close to 1 that the contraction is utterly unmeasurable, which is why we never notice it in daily life."
+       ],
+       "example": {
+        "problem": "A spaceship has a proper length of 100 m. Find its length as measured by an observer on Earth, if it travels at 0.80c.",
+        "steps": [
+         "Find the Lorentz factor: γ = 1/√(1 − 0.80²) = 1/√0.36 = 1/0.60 ≈ 1.67.",
+         "Apply length contraction: L = L~0~/γ.",
+         "L = 100/1.67 ≈ 60 m."
+        ],
+        "answer": "About 60 m, as measured from Earth — noticeably shorter than the ship's 100 m proper length."
+       }
+      },
+      {
+       "heading": "Relativistic Velocity Addition",
+       "body": [
+        "Ordinary velocities add simply (10 m/s + 5 m/s = 15 m/s), but this breaks down near the speed of light. The correct **relativistic velocity addition** formula for velocities along the same line is u' = (u + v)/(1 + uv/c²), where u is a velocity measured in a frame that is itself moving at velocity v relative to a third frame.",
+        "This formula guarantees that combining any two velocities each below c always yields a result below c — nothing you add can ever reach or exceed the speed of light, preserving the second postulate exactly."
+       ],
+       "example": {
+        "problem": "A rocket moves at 0.50c relative to Earth. It launches a probe forward at 0.50c relative to the rocket. Find the probe's speed relative to Earth.",
+        "steps": [
+         "Apply u' = (u + v)/(1 + uv/c²), with u = v = 0.50c.",
+         "Numerator: 0.50c + 0.50c = 1.00c.",
+         "Denominator: 1 + (0.50)(0.50) = 1 + 0.25 = 1.25.",
+         "u' = 1.00c/1.25 = 0.80c."
+        ],
+        "answer": "0.80c — notably less than the naive sum of 1.00c, and safely below the speed of light."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "length contraction",
+       "def": "L = L~0~/γ, the shortening of a moving object's length along its direction of motion, as measured by a stationary observer."
+      },
+      {
+       "term": "proper length",
+       "def": "L~0~, the length of an object measured in its own rest frame."
+      },
+      {
+       "term": "relativistic velocity addition",
+       "def": "u' = (u + v)/(1 + uv/c²), the correct formula for combining velocities, ensuring the result never exceeds c."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A meter stick (proper length 1.0 m) moves at 0.60c relative to an observer. Find its measured length (γ = 1.25 at this speed).",
+       "choices": [
+        "1.25 m",
+        "0.80 m",
+        "0.60 m",
+        "1.0 m"
+       ],
+       "answer": 1,
+       "explain": "L = L~0~/γ = 1.0/1.25 = 0.80 m."
+      },
+      {
+       "q": "Two spaceships each move at 0.60c relative to Earth, in the same direction, one launching a probe forward at 0.60c relative to itself. What must be true of the probe's speed relative to Earth?",
+       "choices": [
+        "Exactly 1.2c",
+        "Greater than c",
+        "Less than c, by the relativistic velocity addition formula",
+        "Exactly c"
+       ],
+       "answer": 2,
+       "explain": "Relativistic velocity addition guarantees that combining any two sub-light speeds always yields a result strictly less than c, unlike simple classical addition, which would incorrectly predict 1.2c here."
+      },
+      {
+       "q": "Length contraction affects which dimension(s) of a moving object?",
+       "choices": [
+        "Only the dimension along the direction of motion",
+        "All three spatial dimensions equally",
+        "Only dimensions perpendicular to the motion",
+        "No real dimension; it is purely an illusion"
+       ],
+       "answer": 0,
+       "explain": "Length contraction only shortens the dimension parallel to the direction of relative motion; dimensions perpendicular to the motion remain unchanged."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Relativistic Momentum and Energy",
+     "minutes": 16,
+     "intro": "Newton's momentum and kinetic energy formulas quietly break down as speeds approach that of light, and fixing them reveals Einstein's most famous equation, connecting mass and energy as two faces of one quantity.",
+     "sections": [
+      {
+       "heading": "Relativistic Momentum and Total Energy",
+       "body": [
+        "**Relativistic momentum** is p = γmv, which reduces to the familiar p = mv at low speeds (where γ ≈ 1) but grows without bound as v approaches c, which is exactly why no massive object can actually reach the speed of light — it would require infinite momentum, and infinite energy, to do so.",
+        "**Total relativistic energy** is E = γmc², which splits naturally into **rest energy** E~0~ = mc² (the energy an object has simply by having mass, even at rest) and **relativistic kinetic energy** KE = (γ − 1)mc² = E − E~0~."
+       ]
+      },
+      {
+       "heading": "Mass-Energy Equivalence",
+       "body": [
+        "The famous equation **E = mc²** (an object's rest energy) reveals that mass itself is a concentrated form of energy — an enormous amount, since c² ≈ 9 × 10¹⁶ m²/s² is such a large number. Even a tiny mass converted entirely to energy releases a staggering amount, which is the basis of both nuclear power and nuclear weapons.",
+        "At low speeds, the relativistic kinetic energy formula KE = (γ − 1)mc² reduces mathematically to the familiar Newtonian KE = ½mv², so relativity does not replace Newtonian mechanics so much as correct and extend it at high speed, while agreeing with it at everyday speeds."
+       ],
+       "example": {
+        "problem": "An electron (rest energy 0.511 MeV) moves at 0.60c (γ = 1.25 at this speed). Find its relativistic kinetic energy.",
+        "steps": [
+         "Apply KE = (γ − 1)mc² = (γ − 1)E~0~.",
+         "γ − 1 = 1.25 − 1 = 0.25.",
+         "KE = (0.25)(0.511 MeV).",
+         "KE = 0.128 MeV."
+        ],
+        "answer": "About 0.128 MeV (128 keV) of kinetic energy."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "relativistic momentum",
+       "def": "p = γmv, growing without bound as speed approaches c."
+      },
+      {
+       "term": "rest energy",
+       "def": "E~0~ = mc², the energy an object has due to its mass alone, even at rest."
+      },
+      {
+       "term": "relativistic kinetic energy",
+       "def": "KE = (γ − 1)mc², reducing to ½mv² at low speeds."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can no massive object ever be accelerated to exactly the speed of light?",
+       "choices": [
+        "There is a law specifically forbidding it with no deeper reason",
+        "As v approaches c, γ approaches infinity, requiring infinite momentum and energy to reach c",
+        "Light itself prevents other objects from matching its speed",
+        "Massive objects can reach c, just not exceed it"
+       ],
+       "answer": 1,
+       "explain": "Since γ = 1/√(1 − v²/c²) grows without bound as v → c, both relativistic momentum (γmv) and energy (γmc²) would need to become infinite, which is physically impossible for any object with nonzero mass."
+      },
+      {
+       "q": "A particle with rest energy 1.0 MeV has a Lorentz factor of γ = 2.0. Find its relativistic kinetic energy.",
+       "choices": [
+        "1.0 MeV",
+        "2.0 MeV",
+        "0.5 MeV",
+        "3.0 MeV"
+       ],
+       "answer": 0,
+       "explain": "KE = (γ − 1)E~0~ = (2.0 − 1)(1.0 MeV) = 1.0 MeV."
+      },
+      {
+       "q": "What does the equation E = mc² fundamentally express?",
+       "choices": [
+        "That energy and mass are unrelated quantities",
+        "That mass is a concentrated form of energy, with even small masses corresponding to enormous energy",
+        "That the speed of light changes with an object's mass",
+        "That only massless particles carry energy"
+       ],
+       "answer": 1,
+       "explain": "E = mc² shows that mass itself represents a store of energy, and because c² is such a large number, even a small mass corresponds to a very large amount of energy — a completely new insight from special relativity."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Quantum Mechanics",
+   "summary": "The discovery that light and matter both behave sometimes like particles, sometimes like waves, and the fundamental limits on what can be known simultaneously.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Photons and the Photoelectric Effect",
+     "minutes": 16,
+     "intro": "Shine light on a metal surface and, under the right conditions, electrons pop out — but the details of exactly which conditions matter stunned physicists in 1905 and could only be explained by treating light as a stream of particles.",
+     "sections": [
+      {
+       "heading": "The Photoelectric Effect",
+       "body": [
+        "When light shines on certain metals, electrons are ejected from the surface — the **photoelectric effect**. Classical wave theory predicted that brighter light (more energy delivered) should always eject electrons, given enough time, and that ejected electron energy should increase with brightness. Experiments showed neither prediction held.",
+        "Instead, electrons are ejected only if light's frequency exceeds a **threshold frequency** specific to the metal, no matter how bright the light; and above that threshold, ejected electron energy depends only on frequency, not brightness. Einstein explained this in 1905 by proposing light itself is quantized into discrete packets called **photons**, each with energy E = hf, where h = 6.626 × 10⁻³⁴ J·s is Planck's constant."
+       ],
+       "example": {
+        "problem": "Light of frequency 8.0 × 10¹⁴ Hz strikes a metal with work function 2.0 eV. Find the photon energy (using h = 4.136 × 10⁻¹⁵ eV·s) and the maximum kinetic energy of ejected electrons.",
+        "steps": [
+         "Find the photon energy: E = hf = (4.136×10⁻¹⁵)(8.0×10¹⁴).",
+         "E = 3.31 eV.",
+         "Apply the photoelectric equation: KE~max~ = E − φ, where φ is the metal's work function.",
+         "KE~max~ = 3.31 − 2.0 = 1.31 eV."
+        ],
+        "answer": "Photon energy ≈ 3.31 eV; maximum ejected electron kinetic energy ≈ 1.31 eV."
+       }
+      },
+      {
+       "heading": "The Work Function and Threshold Frequency",
+       "body": [
+        "The **work function** φ is the minimum energy needed to free an electron from a particular metal's surface. Since a photon must supply at least this much energy, the threshold frequency is f~0~ = φ/h — below this frequency, absolutely no electrons are ejected, no matter how intense the light.",
+        "This single-photon, single-electron interaction (rather than energy building up gradually from many photons) is the key insight: an individual photon either has enough energy to free an electron or it does not, and a million too-weak photons arriving together still cannot combine their energy in the way classical wave theory would predict."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "photon",
+       "def": "A discrete quantum (packet) of light energy, E = hf, where h is Planck's constant."
+      },
+      {
+       "term": "work function",
+       "def": "φ, the minimum energy needed to eject an electron from a particular metal's surface."
+      },
+      {
+       "term": "photoelectric effect",
+       "def": "The ejection of electrons from a metal by light above a threshold frequency, explained by the photon model."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Light below a metal's threshold frequency shines on it, and the intensity is increased dramatically. What happens?",
+       "choices": [
+        "Electrons are ejected with higher kinetic energy",
+        "No electrons are ejected, regardless of intensity",
+        "Electrons are ejected, but more slowly",
+        "The metal begins to glow brighter"
+       ],
+       "answer": 1,
+       "explain": "Each photon's energy depends only on frequency (E = hf), not intensity. Below the threshold frequency, no single photon carries enough energy to eject an electron, so increasing intensity (more photons, each still too weak) ejects no electrons at all."
+      },
+      {
+       "q": "A metal has a work function of 3.0 eV. Photons of energy 4.5 eV strike it. Find the maximum kinetic energy of ejected electrons.",
+       "choices": [
+        "1.5 eV",
+        "4.5 eV",
+        "3.0 eV",
+        "7.5 eV"
+       ],
+       "answer": 0,
+       "explain": "KE~max~ = E~photon~ − φ = 4.5 − 3.0 = 1.5 eV."
+      },
+      {
+       "q": "What core assumption did Einstein introduce to explain the photoelectric effect?",
+       "choices": [
+        "Light travels slower through a vacuum than through matter",
+        "Light energy is quantized into discrete photons, each interacting with a single electron",
+        "Electrons in metals have no binding energy at all",
+        "Brighter light always ejects electrons with more energy"
+       ],
+       "answer": 1,
+       "explain": "Einstein proposed that light delivers energy in discrete quanta (photons) rather than continuously, with each photon capable of transferring its full energy to a single electron — explaining the threshold frequency and independence from intensity."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Matter Waves and the de Broglie Wavelength",
+     "minutes": 14,
+     "intro": "If light, normally thought of as a wave, can behave like a particle, physicist Louis de Broglie asked in 1924 whether particles like electrons might behave like waves too. The answer, confirmed by experiment, reshaped how we think about matter itself.",
+     "sections": [
+      {
+       "heading": "The de Broglie Hypothesis",
+       "body": [
+        "De Broglie proposed that every particle with momentum p has an associated wavelength, λ = h/p, exactly mirroring the photon momentum relation run in reverse. For everyday objects, this wavelength is absurdly small (far smaller than any measurable scale) because their momentum is enormous compared to Planck's constant, which is why we never notice matter waves in daily life.",
+        "For subatomic particles like electrons, however, the de Broglie wavelength can be comparable to atomic dimensions, which is exactly what was needed to explain electron diffraction patterns observed when electron beams pass through crystals — direct experimental confirmation that matter genuinely has wave properties."
+       ],
+       "example": {
+        "problem": "Find the de Broglie wavelength of an electron (mass 9.11 × 10⁻³¹ kg) moving at 2.0 × 10⁶ m/s.",
+        "steps": [
+         "Find the electron's momentum: p = mv = (9.11×10⁻³¹)(2.0×10⁶).",
+         "p = 1.822×10⁻²⁴ kg·m/s.",
+         "Apply λ = h/p = (6.626×10⁻³⁴)/(1.822×10⁻²⁴).",
+         "λ ≈ 3.64×10⁻¹⁰ m."
+        ],
+        "answer": "About 0.36 nm — comparable to the spacing between atoms in a crystal, which is why electrons diffract off crystal lattices."
+       }
+      },
+      {
+       "heading": "Wave-Particle Duality",
+       "body": [
+        "**Wave-particle duality** is the recognition that both light and matter exhibit wave-like behavior (interference, diffraction) and particle-like behavior (discrete energy packets, localized detection), depending on the experiment performed. Neither description alone is complete; each captures part of the underlying quantum reality.",
+        "This duality is not a contradiction to be resolved but a genuine feature of nature at the quantum scale — a photon or electron does not 'choose' to be a wave or particle; rather, the type of measurement performed determines which aspect of its behavior becomes apparent."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "de Broglie wavelength",
+       "def": "λ = h/p, the wavelength associated with any particle's momentum."
+      },
+      {
+       "term": "wave-particle duality",
+       "def": "The principle that light and matter both exhibit wave-like and particle-like behavior, depending on the experiment."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do everyday macroscopic objects, like a thrown baseball, show no observable wave behavior?",
+       "choices": [
+        "Macroscopic objects have no momentum",
+        "Their de Broglie wavelength is far too small to detect, because their momentum is enormous compared to Planck's constant",
+        "Wave-particle duality only applies to light",
+        "Baseballs do not obey quantum mechanics at all"
+       ],
+       "answer": 1,
+       "explain": "λ = h/p, and with h extremely small and macroscopic momentum extremely large by comparison, the resulting wavelength is far too tiny to ever produce a measurable diffraction or interference effect."
+      },
+      {
+       "q": "A particle's momentum is doubled. What happens to its de Broglie wavelength?",
+       "choices": [
+        "It doubles",
+        "It is halved",
+        "It stays the same",
+        "It quadruples"
+       ],
+       "answer": 1,
+       "explain": "λ = h/p is inversely proportional to momentum, so doubling p halves the wavelength."
+      },
+      {
+       "q": "What experimental result provided direct confirmation of matter waves?",
+       "choices": [
+        "The photoelectric effect",
+        "Electron beams producing diffraction patterns when passed through crystals",
+        "The Doppler effect for sound",
+        "Newton's prism experiments with light"
+       ],
+       "answer": 1,
+       "explain": "Electron diffraction experiments (such as the Davisson-Germer experiment) showed electron beams producing interference patterns just like waves, directly confirming de Broglie's matter-wave hypothesis."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Uncertainty Principle and Wave Functions",
+     "minutes": 16,
+     "intro": "Quantum mechanics places a hard limit on how precisely you can simultaneously know certain pairs of properties, no matter how good your instruments become. This is not a practical limitation of measurement — it is a fundamental feature of nature itself.",
+     "sections": [
+      {
+       "heading": "The Heisenberg Uncertainty Principle",
+       "body": [
+        "The **Heisenberg uncertainty principle** states that position and momentum cannot both be known with arbitrary precision simultaneously: Δx · Δp ≥ ħ/2, where ħ = h/(2π) ≈ 1.055 × 10⁻³⁴ J·s. Making a particle's position measurement more precise (smaller Δx) necessarily increases the uncertainty in its momentum (larger Δp), and vice versa.",
+        "This is not a statement about the limits of measuring instruments — it reflects a genuine property of quantum particles, which do not possess simultaneously well-defined position and momentum values at all, in stark contrast to classical objects."
+       ],
+       "example": {
+        "problem": "An electron is confined within a region of width 1.0 × 10⁻¹⁰ m (roughly atomic size). Find the minimum uncertainty in its momentum, and the corresponding minimum uncertainty in its speed.",
+        "steps": [
+         "Apply Δp ≥ ħ/(2Δx), using the minimum case: Δp = ħ/(2Δx).",
+         "Δp = (1.055×10⁻³⁴)/(2×1.0×10⁻¹⁰) = 5.28×10⁻²⁵ kg·m/s.",
+         "Find the speed uncertainty: Δv = Δp/m = (5.28×10⁻²⁵)/(9.11×10⁻³¹).",
+         "Δv ≈ 5.79×10⁵ m/s."
+        ],
+        "answer": "Δp ≈ 5.3 × 10⁻²⁵ kg·m/s; Δv ≈ 5.8 × 10⁵ m/s, a substantial speed uncertainty for an electron confined to atomic dimensions."
+       }
+      },
+      {
+       "heading": "The Wave Function",
+       "body": [
+        "In quantum mechanics, a particle is described by a **wave function** ψ, whose squared magnitude |ψ|² gives the probability density of finding the particle at a given position. Rather than following one definite trajectory, a quantum particle is described only by the probabilities of where measurements might find it.",
+        "This probabilistic description is genuinely fundamental, not a placeholder for missing information — repeated identical experiments on identically prepared quantum systems produce a range of outcomes matching the probabilities |ψ|² predicts, a result confirmed overwhelmingly by decades of experiments."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Heisenberg uncertainty principle",
+       "def": "Δx · Δp ≥ ħ/2, a fundamental limit on simultaneously knowing a particle's position and momentum."
+      },
+      {
+       "term": "wave function",
+       "def": "ψ, a mathematical description of a quantum particle, with |ψ|² giving the probability density of its position."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to the uncertainty principle, if a particle's position is measured with extremely high precision, what happens to the uncertainty in its momentum?",
+       "choices": [
+        "It also becomes extremely small",
+        "It becomes extremely large",
+        "It is unaffected",
+        "Momentum becomes exactly zero"
+       ],
+       "answer": 1,
+       "explain": "Since Δx · Δp ≥ ħ/2, making Δx very small forces Δp to become very large to keep the product at or above ħ/2 — the two uncertainties trade off against each other."
+      },
+      {
+       "q": "What does the squared magnitude of a particle's wave function, |ψ|², represent?",
+       "choices": [
+        "The particle's exact position at all times",
+        "The probability density of finding the particle at a given location",
+        "The particle's total energy",
+        "The particle's electric charge"
+       ],
+       "answer": 1,
+       "explain": "|ψ|² gives the probability density for finding the particle at a particular position upon measurement; quantum mechanics describes only the probabilities of outcomes, not a single definite trajectory."
+      },
+      {
+       "q": "Is the Heisenberg uncertainty principle a limitation of current measurement technology?",
+       "choices": [
+        "Yes, better instruments could eventually eliminate it",
+        "No, it reflects a fundamental property of quantum particles themselves, not a technological limitation",
+        "It only applies to macroscopic objects",
+        "It has been disproven by modern experiments"
+       ],
+       "answer": 1,
+       "explain": "The uncertainty principle is a fundamental feature of quantum mechanics, not a practical limitation — quantum particles genuinely do not possess simultaneously precise position and momentum values, regardless of instrument quality."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Atoms, Nuclei, and Particles",
+   "summary": "How quantum ideas explain atomic spectra, the structure and decay of atomic nuclei, and the reactions that power stars and reactors.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Bohr Model and Atomic Spectra",
+     "minutes": 16,
+     "intro": "Every element glows with its own unmistakable set of colors when heated, a fingerprint so precise that astronomers use it to identify elements in stars light-years away. Niels Bohr's model of the atom explained exactly why those fingerprints exist.",
+     "sections": [
+      {
+       "heading": "The Bohr Model of Hydrogen",
+       "body": [
+        "Bohr proposed that an electron in a hydrogen atom can only occupy specific, quantized circular orbits, each with a fixed energy: E~n~ = −13.6 eV/n², where n = 1, 2, 3, ... is the principal quantum number. The negative sign reflects that the electron is bound to the nucleus; n = 1 (the ground state) is the most tightly bound, lowest-energy state.",
+        "An electron can jump between energy levels only by absorbing or emitting a photon whose energy exactly matches the energy difference between the two levels, ΔE = E~final~ − E~initial~. This quantization is precisely why atoms absorb and emit light only at specific wavelengths, producing each element's characteristic spectral lines."
+       ],
+       "example": {
+        "problem": "Find the wavelength of light emitted when a hydrogen electron falls from the n = 3 to the n = 2 energy level (using hc ≈ 1240 eV·nm).",
+        "steps": [
+         "Find the energy levels: E~2~ = −13.6/4 = −3.4 eV, E~3~ = −13.6/9 ≈ −1.511 eV.",
+         "Find the energy released: ΔE = E~3~ − E~2~ = −1.511 − (−3.4) = 1.889 eV.",
+         "Apply λ = hc/ΔE = 1240/1.889.",
+         "λ ≈ 656.5 nm."
+        ],
+        "answer": "About 656.5 nm — this is the famous red hydrogen-alpha (Hα) spectral line, confirmed by real hydrogen spectra."
+       }
+      },
+      {
+       "heading": "Spectral Lines and the Limits of the Bohr Model",
+       "body": [
+        "The Bohr model correctly predicts hydrogen's spectral lines with remarkable accuracy, providing early strong evidence for quantization in atoms. However, it fails for atoms with more than one electron, since it does not properly account for electron-electron interactions or the full quantum mechanical wave nature of electrons.",
+        "The full quantum mechanical treatment (using the Schrödinger equation) replaces Bohr's fixed circular orbits with probability clouds (orbitals) but preserves the essential insight: electrons in atoms occupy quantized energy levels, and transitions between them absorb or emit photons of specific, predictable energies."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "principal quantum number",
+       "def": "n, labeling the quantized energy levels of an electron in the Bohr model, E~n~ = −13.6 eV/n²."
+      },
+      {
+       "term": "spectral line",
+       "def": "A specific wavelength of light absorbed or emitted by an atom, corresponding to a transition between quantized energy levels."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Find the energy of the n = 4 level in hydrogen using E~n~ = −13.6 eV/n².",
+       "choices": [
+        "−3.4 eV",
+        "−0.85 eV",
+        "−13.6 eV",
+        "−1.7 eV"
+       ],
+       "answer": 1,
+       "explain": "E~4~ = −13.6/4² = −13.6/16 = −0.85 eV."
+      },
+      {
+       "q": "An electron falls from a higher to a lower energy level in an atom. What happens?",
+       "choices": [
+        "A photon is absorbed, matching the energy difference",
+        "A photon is emitted, with energy exactly equal to the energy difference between levels",
+        "The electron's energy stays constant",
+        "Nothing observable happens"
+       ],
+       "answer": 1,
+       "explain": "Falling to a lower (more negative) energy level releases the energy difference as an emitted photon, with photon energy exactly equal to that energy gap."
+      },
+      {
+       "q": "Why does the Bohr model fail to correctly predict spectral lines for atoms with more than one electron?",
+       "choices": [
+        "It works perfectly for all atoms",
+        "It does not properly account for electron-electron interactions and the full quantum wave nature of electrons",
+        "Multi-electron atoms do not emit light",
+        "The model only applies to atoms at absolute zero temperature"
+       ],
+       "answer": 1,
+       "explain": "Bohr's model was built specifically around a single electron orbiting a nucleus; once multiple electrons interact with each other and the full quantum mechanical treatment is needed, the simple fixed-orbit picture breaks down."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Nuclear Structure and Radioactivity",
+     "minutes": 16,
+     "intro": "Deep inside every atom, the nucleus holds nearly all its mass in an incredibly small volume, bound by a force strong enough to overcome the electrical repulsion between its positively charged protons. Some nuclei are unstable, decaying at a precisely predictable statistical rate.",
+     "sections": [
+      {
+       "heading": "Nuclear Structure",
+       "body": [
+        "A nucleus contains protons and neutrons (collectively, **nucleons**), held together by the **strong nuclear force**, which is powerful enough at very short range to overcome the electrical repulsion between protons, but negligible beyond about the size of a nucleus. The number of protons (atomic number Z) defines the element; the number of neutrons can vary, giving different **isotopes** of the same element.",
+        "Some combinations of protons and neutrons are stable indefinitely; others are unstable and undergo **radioactive decay**, spontaneously transforming into a different nucleus while emitting particles or energy, in one of three main forms: alpha decay (emitting a helium nucleus), beta decay (emitting an electron or positron), or gamma decay (emitting a high-energy photon)."
+       ]
+      },
+      {
+       "heading": "Half-Life and Exponential Decay",
+       "body": [
+        "Radioactive decay is a statistical process: any individual unstable nucleus has a fixed probability of decaying in a given time, but exactly when any single nucleus decays cannot be predicted. For a large sample, this produces a precise exponential decay law: N(t) = N~0~(1/2)^(t/T), where T is the **half-life**, the time for half of a sample to decay.",
+        "Half-life is a property of the specific isotope and does not change with the amount of material present or its chemical environment, which is why radioactive dating techniques (like carbon-14 dating) can reliably estimate the age of a sample from the fraction of the original isotope remaining."
+       ],
+       "example": {
+        "problem": "A radioactive sample has a half-life of 10 days and an initial mass of 80 mg. Find the remaining mass after 30 days.",
+        "steps": [
+         "Find the number of half-lives elapsed: 30 days/10 days per half-life = 3 half-lives.",
+         "Apply N(t) = N~0~(1/2)^(t/T) = 80 mg × (1/2)³.",
+         "(1/2)³ = 1/8.",
+         "N(t) = 80/8 = 10 mg."
+        ],
+        "answer": "10 mg remaining after 30 days."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "isotope",
+       "def": "A version of an element with a specific number of neutrons, differing from other isotopes of the same element only in neutron number."
+      },
+      {
+       "term": "half-life",
+       "def": "T, the time required for half of a radioactive sample to decay, a fixed property of each isotope."
+      },
+      {
+       "term": "strong nuclear force",
+       "def": "The short-range force binding protons and neutrons together in a nucleus, strong enough to overcome proton-proton electrical repulsion."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A radioactive isotope has a half-life of 5.0 years. What fraction of an original sample remains after 20 years?",
+       "choices": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16"
+       ],
+       "answer": 3,
+       "explain": "20 years/5.0 years per half-life = 4 half-lives. Remaining fraction = (1/2)⁴ = 1/16."
+      },
+      {
+       "q": "Two isotopes of the same element differ in which property?",
+       "choices": [
+        "Number of protons",
+        "Number of neutrons",
+        "Number of electrons in a neutral atom",
+        "Total electric charge of the nucleus"
+       ],
+       "answer": 1,
+       "explain": "Isotopes of the same element share the same number of protons (defining the element) but differ in the number of neutrons in the nucleus."
+      },
+      {
+       "q": "Why is half-life useful for dating ancient samples, such as with carbon-14?",
+       "choices": [
+        "Half-life changes depending on the sample's age, revealing the date directly",
+        "Half-life is a fixed, known property of the isotope, so the remaining fraction of the original isotope reveals how much time has passed",
+        "Carbon-14 does not actually decay",
+        "Half-life only applies to samples younger than one year"
+       ],
+       "answer": 1,
+       "explain": "Since half-life is constant and known for a given isotope, measuring the surviving fraction of that isotope in a sample lets scientists calculate, using the known exponential decay law, how many half-lives (and thus how much time) have elapsed."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Fission, Fusion, and Particle Physics",
+     "minutes": 16,
+     "intro": "Splitting a heavy nucleus apart and fusing light nuclei together both release enormous energy, powering everything from nuclear reactors to the Sun itself. Both processes trace directly back to Einstein's mass-energy equivalence.",
+     "sections": [
+      {
+       "heading": "Fission and Fusion",
+       "body": [
+        "**Nuclear fission** splits a heavy nucleus (such as uranium-235) into two lighter nuclei, releasing energy because the resulting nuclei are, in total, more tightly bound (have lower mass per nucleon) than the original heavy nucleus. This is the process used in nuclear power plants and early nuclear weapons.",
+        "**Nuclear fusion** combines light nuclei (such as hydrogen isotopes) into a heavier nucleus, also releasing energy, because very light nuclei are relatively loosely bound compared to medium-mass nuclei. Fusion powers the Sun and all stars, and is the goal of experimental fusion reactors seeking a cleaner energy source on Earth."
+       ]
+      },
+      {
+       "heading": "Mass Defect and Binding Energy",
+       "body": [
+        "In both fission and fusion, the total mass of the products is slightly less than the total mass of the starting materials. This missing **mass defect**, Δm, converts directly into released energy via E = Δmc², a direct application of mass-energy equivalence at the nuclear scale.",
+        "**Particle physics** goes a level deeper still, describing protons and neutrons as themselves built from smaller particles called quarks, held together by the strong force, and cataloging the fundamental particles (quarks, leptons, and force carriers) that make up the **Standard Model**, humanity's most complete description of matter's basic building blocks to date."
+       ],
+       "example": {
+        "problem": "A nuclear reaction has a measured mass defect of 3.0 × 10⁻²⁸ kg. Find the energy released, in both joules and mega-electron-volts (1 MeV = 1.602 × 10⁻¹³ J).",
+        "steps": [
+         "Apply E = Δmc².",
+         "E = (3.0×10⁻²⁸)(3.0×10⁸)² = (3.0×10⁻²⁸)(9.0×10¹⁶).",
+         "E = 2.7×10⁻¹¹ J.",
+         "Convert to MeV: E = (2.7×10⁻¹¹)/(1.602×10⁻¹³) ≈ 168.5 MeV."
+        ],
+        "answer": "2.7 × 10⁻¹¹ J, or about 169 MeV — comparable to the energy released per event in real nuclear fission."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "nuclear fission",
+       "def": "The splitting of a heavy nucleus into lighter nuclei, releasing energy from the mass defect."
+      },
+      {
+       "term": "nuclear fusion",
+       "def": "The combination of light nuclei into a heavier nucleus, releasing energy; the process powering stars."
+      },
+      {
+       "term": "mass defect",
+       "def": "Δm, the missing mass between reactants and products in a nuclear reaction, converted to energy via E = Δmc²."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does nuclear fission of a heavy nucleus like uranium-235 release energy?",
+       "choices": [
+        "The products have more total mass than the original nucleus",
+        "The products are, in total, more tightly bound (lower mass per nucleon) than the original nucleus, releasing the mass difference as energy",
+        "Fission always requires an input of energy rather than releasing it",
+        "Uranium atoms contain stored chemical energy released by fission"
+       ],
+       "answer": 1,
+       "explain": "The fission products have slightly less total mass than the original nucleus because they are more tightly bound on average; this mass defect converts to released energy via E = Δmc²."
+      },
+      {
+       "q": "What powers the Sun and other main-sequence stars?",
+       "choices": [
+        "Nuclear fission of heavy elements",
+        "Nuclear fusion of light nuclei, primarily hydrogen into helium",
+        "Chemical combustion of stellar gases",
+        "Gravitational collapse alone, with no nuclear reactions"
+       ],
+       "answer": 1,
+       "explain": "Stars like the Sun are powered by nuclear fusion, primarily fusing hydrogen nuclei into helium in their cores, releasing energy from the resulting mass defect."
+      },
+      {
+       "q": "A nuclear reaction has a mass defect of 2.0 × 10⁻²⁸ kg. Find the energy released.",
+       "choices": [
+        "1.8 × 10⁻¹¹ J",
+        "6.0 × 10⁻²⁰ J",
+        "9.0 × 10⁻¹² J",
+        "2.0 × 10⁻²⁸ J"
+       ],
+       "answer": 0,
+       "explain": "E = Δmc² = (2.0×10⁻²⁸)(3.0×10⁸)² = (2.0×10⁻²⁸)(9.0×10¹⁶) = 1.8×10⁻¹¹ J."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

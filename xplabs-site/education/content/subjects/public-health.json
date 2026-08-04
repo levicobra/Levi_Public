@@ -1,0 +1,1622 @@
+{
+ "id": "public-health",
+ "title": "Public Health",
+ "domain": "health",
+ "level": "Intro college",
+ "description": "A practical introduction to public health: the population-level science of preventing disease and promoting health, distinct from treating one patient at a time. You will calculate real incidence, prevalence, relative risk, and odds ratios; trace how infectious disease spreads and how herd immunity actually works; and examine the social, environmental, and policy forces, from tobacco taxes to health systems financing, that shape a population's health.",
+ "outcomes": [
+  "You can distinguish public health's population-level prevention approach from clinical medicine's individual patient care.",
+  "You can calculate and interpret incidence, prevalence, relative risk, odds ratios, and attack rates from real numbers.",
+  "You can explain how infectious disease spreads and use R0 to estimate a herd immunity threshold.",
+  "You can describe leading behavior-change models and evidence-based tobacco and alcohol policies.",
+  "You can identify major social determinants of health and distinguish health equity from health equality.",
+  "You can compare how different countries organize and finance their health systems."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Foundations of Public Health",
+   "summary": "What public health is, how it differs from medicine, the historical wins that built the field, and the social conditions that shape health outcomes today.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Is Public Health?",
+     "minutes": 12,
+     "intro": "Most of the roughly 30 extra years of life expectancy gained over the 20th century trace back not to dramatic hospital cures but to invisible prevention: clean water, vaccines, and seatbelt laws. That is public health's core bet, and it works through a very different playbook than medicine.",
+     "sections": [
+      {
+       "heading": "Public Health vs. Medicine",
+       "body": [
+        "**Public health** is the science and practice of protecting and improving the health of populations, working through prevention, policy, and health promotion across whole communities rather than treating one patient at a time. Clinical medicine treats individual patients after illness strikes; public health tries to prevent illness across a population before it happens. The two fields are complementary, not competing: a doctor treats the patient in front of them, while a public health agency asks how to keep the next thousand people from ever needing that visit.",
+        "The Institute of Medicine identifies three core functions of public health: **assessment** (monitoring health status and collecting data on a population), **policy development** (using that evidence to set priorities and shape policy), and **assurance** (making sure needed health services are actually available and accessible to the community)."
+       ]
+      },
+      {
+       "heading": "The Population Perspective and Levels of Prevention",
+       "body": [
+        "Public health treats the population, not the individual, as its main unit of analysis, which is why the field leans so heavily on statistics and epidemiology to track rates and patterns across whole groups. Interventions are commonly organized into three levels: **primary prevention** stops disease before it starts (vaccination, clean water, health education), **secondary prevention** catches disease early through screening so it can be treated before it worsens (mammograms, blood pressure checks), and **tertiary prevention** manages an already-established disease to reduce its impact (rehabilitation, chronic disease management)."
+       ],
+       "example": {
+        "problem": "A public health team is choosing among three interventions: (1) providing free chlorine tablets so a village can disinfect its drinking water before anyone gets sick, (2) offering free stool tests to catch cholera cases early, and (3) running a rehydration clinic for villagers already suffering severe diarrhea. Classify each intervention as primary, secondary, or tertiary prevention.",
+        "steps": [
+         "Chlorine tablets act before disease occurs, preventing the initial infection: this is primary prevention.",
+         "Free stool tests catch infection early, before severe symptoms develop, allowing earlier treatment: this is secondary prevention.",
+         "The rehydration clinic manages people who are already sick with the disease: this is tertiary prevention."
+        ],
+        "answer": "(1) Chlorine tablets = primary prevention; (2) stool tests = secondary prevention; (3) rehydration clinic = tertiary prevention."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "public health",
+       "def": "The science and practice of protecting and improving the health of populations through prevention and policy."
+      },
+      {
+       "term": "primary prevention",
+       "def": "Action taken to stop a disease from occurring in the first place, such as vaccination."
+      },
+      {
+       "term": "secondary prevention",
+       "def": "Early detection of disease, such as screening, allowing treatment before it worsens."
+      },
+      {
+       "term": "tertiary prevention",
+       "def": "Managing an already-established disease to reduce its ongoing impact."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How does public health primarily differ from clinical medicine?",
+       "choices": [
+        "Public health treats one patient at a time; medicine treats populations",
+        "Public health focuses on preventing disease across populations; medicine focuses on treating individual patients",
+        "There is no real difference between the two fields",
+        "Public health only deals with infectious disease"
+       ],
+       "answer": 1,
+       "explain": "Public health's core unit of analysis is the population, aiming to prevent illness broadly, while clinical medicine centers on diagnosing and treating the individual patient in front of a provider."
+      },
+      {
+       "q": "Administering a vaccine to prevent a disease from ever occurring is an example of",
+       "choices": [
+        "Tertiary prevention",
+        "Secondary prevention",
+        "Primary prevention",
+        "No prevention at all"
+       ],
+       "answer": 2,
+       "explain": "Vaccination stops disease before it ever starts, which is the defining feature of primary prevention."
+      },
+      {
+       "q": "A cancer screening test that catches a tumor early, before symptoms appear, is an example of",
+       "choices": [
+        "Primary prevention",
+        "Secondary prevention",
+        "Tertiary prevention",
+        "Population health"
+       ],
+       "answer": 1,
+       "explain": "Screening tests are the classic example of secondary prevention: catching an existing but early-stage disease before it progresses."
+      },
+      {
+       "q": "Which of these best describes the 'assurance' core function of public health?",
+       "choices": [
+        "Collecting data on disease rates",
+        "Making sure needed health services are actually available and accessible to the community",
+        "Passing new tax laws",
+        "Treating individual hospital patients"
+       ],
+       "answer": 1,
+       "explain": "Assurance is specifically about guaranteeing that necessary services exist and reach the people who need them, distinct from assessment (data collection) or policy development."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "A Short History of Public Health",
+     "minutes": 13,
+     "intro": "Some of history's biggest health gains came not from a new drug but from a sewer pipe, a hand-washing rule, or a single mapped street corner, decades before anyone understood the germs actually responsible.",
+     "sections": [
+      {
+       "heading": "The Sanitation Revolution and John Snow",
+       "body": [
+        "Nineteenth-century cities suffered rampant infectious disease from crowding and contaminated water, at a time when **miasma theory** (the idea that 'bad air' caused disease) still dominated medical thinking, well before germ theory took hold. In 1854, physician John Snow mapped cholera deaths across a London neighborhood and traced the outbreak to a single contaminated water pump on Broad Street; he had the pump handle removed, and the outbreak subsequently declined, a landmark early success for the field now called epidemiology. Broad sanitation reforms followed later in the century: citywide sewage systems and water treatment dramatically cut waterborne disease deaths as cities modernized."
+       ]
+      },
+      {
+       "heading": "Vaccination and 20th-Century Milestones",
+       "body": [
+        "Edward Jenner's 1796 smallpox vaccine, using cowpox exposure to build immunity, was the earliest vaccination and eventually led to global **smallpox eradication**, declared by the WHO in 1980, the only human disease ever fully eradicated to date. The 20th century added widespread childhood vaccination programs, seatbelt and auto safety laws, workplace safety regulation, the 1964 U.S. Surgeon General's report establishing the smoking-cancer link, and water fluoridation to prevent tooth decay. The CDC has estimated that public health measures like these contributed roughly 25 of the roughly 30 years gained in average U.S. life expectancy across the 20th century, more than clinical medicine contributed on its own for most of that period."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "miasma theory",
+       "def": "The historical belief that disease was caused by 'bad air,' before germ theory was established."
+      },
+      {
+       "term": "germ theory",
+       "def": "The scientific understanding that specific microorganisms cause specific diseases."
+      },
+      {
+       "term": "smallpox eradication",
+       "def": "The global elimination of smallpox, declared by the WHO in 1980, the only human disease eradicated to date."
+      }
+     ],
+     "practice": [
+      {
+       "q": "John Snow's famous 1854 investigation is best known for",
+       "choices": [
+        "Discovering the smallpox vaccine",
+        "Mapping cholera deaths to trace an outbreak to a contaminated water pump",
+        "Inventing the microscope",
+        "Passing the first food safety law"
+       ],
+       "answer": 1,
+       "explain": "Snow's map of cholera deaths around the Broad Street pump, and his removal of its handle, is a foundational moment in the history of epidemiology."
+      },
+      {
+       "q": "Which disease has been fully eradicated worldwide, as declared by the WHO in 1980?",
+       "choices": [
+        "Polio",
+        "Smallpox",
+        "Measles",
+        "Cholera"
+       ],
+       "answer": 1,
+       "explain": "Smallpox remains the only human disease ever declared fully eradicated worldwide, achieved through a sustained global vaccination campaign."
+      },
+      {
+       "q": "According to CDC estimates, how much did public health measures (sanitation, vaccination, safety regulation) contribute to the roughly 30-year gain in U.S. life expectancy during the 20th century?",
+       "choices": [
+        "Almost none of it",
+        "About 25 of the roughly 30 years",
+        "Exactly half",
+        "All 30 years came from surgery alone"
+       ],
+       "answer": 1,
+       "explain": "The CDC has credited public health interventions, not clinical medicine alone, with the large majority of the 20th century's life expectancy gains."
+      },
+      {
+       "q": "Before germ theory was established, the dominant explanation for disease was",
+       "choices": [
+        "Genetic theory",
+        "Miasma theory (the idea that 'bad air' caused disease)",
+        "Vaccination theory",
+        "Nutrition theory"
+       ],
+       "answer": 1,
+       "explain": "Miasma theory attributed disease to foul air rather than specific microorganisms, and it shaped public health responses until germ theory gained acceptance later in the 19th century."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Social Determinants of Health",
+     "minutes": 13,
+     "intro": "A person's zip code can predict their life expectancy better than their genetic code can, and understanding why is central to modern public health.",
+     "sections": [
+      {
+       "heading": "What Social Determinants Are",
+       "body": [
+        "**Social determinants of health (SDOH)** are the conditions in which people are born, grow, live, work, and age that shape health outcomes, distinct from genetics or medical care alone. The WHO and CDC organize these into domains including economic stability, education access, healthcare access, the neighborhood and built environment, and social and community context, covering everything from income and housing to food access and social support."
+       ]
+      },
+      {
+       "heading": "How Social Determinants Produce Health Inequities",
+       "body": [
+        "A **health inequity** is an avoidable, unfair difference in health outcomes between groups linked to social disadvantage, distinct from ordinary biological variation. Chronic stress from poverty or discrimination has measurable physiological effects (elevated cortisol, inflammation) that contribute to higher rates of hypertension and heart disease; **food deserts**, areas with limited access to affordable healthy food, contribute to diet-related disease; and educational attainment correlates strongly with life expectancy even independent of income. Public health increasingly treats addressing social determinants directly, through policies like housing assistance, minimum wage laws, and transportation access, as essential to improving population health, not a side issue separate from medical care."
+       ],
+       "example": {
+        "problem": "Two neighborhoods in the same city have very different average life expectancies: Neighborhood A averages 85 years, Neighborhood B averages 71 years, a 14-year gap. Neighborhood B has higher poverty, fewer grocery stores with fresh produce, and a higher high-school dropout rate. From a social determinants of health perspective, what best explains this gap, and what kind of intervention would this framework suggest, beyond just building more hospitals?",
+        "steps": [
+         "The gap correlates with several social determinants (income, food access, education) rather than genetic differences between neighborhoods.",
+         "Chronic stress from poverty, limited access to healthy food, and lower educational attainment are each independently linked to worse health outcomes.",
+         "A social determinants framework suggests interventions targeting these upstream conditions, such as job programs, grocery access, and school investment, not just expanding medical treatment capacity, since medical care alone cannot fully close a gap rooted in social and economic conditions."
+        ],
+        "answer": "The gap is best explained by differences in social determinants of health (income, food access, education), and the framework suggests addressing those upstream social and economic conditions, not just adding more hospital care."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "social determinants of health (SDOH)",
+       "def": "The conditions in which people are born, grow, live, work, and age that shape health outcomes."
+      },
+      {
+       "term": "health inequity",
+       "def": "An avoidable, unfair difference in health outcomes between groups linked to social disadvantage."
+      },
+      {
+       "term": "food desert",
+       "def": "An area with limited access to affordable, healthy food such as fresh produce."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Social determinants of health refer to",
+       "choices": [
+        "Only a person's genetic makeup",
+        "The conditions in which people are born, grow, live, work, and age that shape health outcomes",
+        "Only the quality of a person's doctor",
+        "A synonym for medical insurance"
+       ],
+       "answer": 1,
+       "explain": "SDOH cover the broad social and economic conditions of daily life, not genetics, insurance, or provider quality alone."
+      },
+      {
+       "q": "A 'health inequity' is best defined as",
+       "choices": [
+        "Any difference in health outcomes between two people",
+        "An avoidable, unfair difference in health outcomes linked to social disadvantage",
+        "A difference in height between two populations",
+        "A rare genetic disease"
+       ],
+       "answer": 1,
+       "explain": "Not all health differences are inequities; the term specifically refers to avoidable, unfair gaps rooted in social disadvantage, not natural biological variation."
+      },
+      {
+       "q": "A 'food desert' refers to an area with",
+       "choices": [
+        "No restaurants of any kind",
+        "Limited access to affordable, healthy food, such as fresh produce",
+        "Only high-income residents",
+        "Excess agricultural land"
+       ],
+       "answer": 1,
+       "explain": "Food deserts are defined by limited access to affordable, healthy options like fresh produce, not by the total absence of any food outlets."
+      },
+      {
+       "q": "From a social determinants of health perspective, closing a large life-expectancy gap between two neighborhoods primarily requires",
+       "choices": [
+        "Building more hospitals alone",
+        "Addressing upstream social and economic conditions like income, education, and food access",
+        "Ignoring the neighborhoods with worse outcomes",
+        "Waiting for genetic differences to resolve"
+       ],
+       "answer": 1,
+       "explain": "Because SDOH-driven gaps are rooted in social and economic conditions, closing them requires upstream policy interventions, not medical care expansion alone."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Epidemiology: Measuring Health and Disease",
+   "summary": "The core math of public health: how to measure how much disease exists, how researchers study its causes, and how outbreaks get solved.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Measuring Disease: Incidence and Prevalence",
+     "minutes": 14,
+     "intro": "Before epidemiologists can say a disease is a big deal, they need a number, and there are two very different numbers to choose from that answer two very different questions.",
+     "sections": [
+      {
+       "heading": "Incidence: How Fast New Cases Appear",
+       "body": [
+        "**Incidence** counts the number of new cases of a disease occurring in a population during a specified period, divided by the population at risk during that period: incidence rate = new cases ÷ population at risk. It answers the question 'how fast is this disease appearing right now,' which makes it especially useful for tracking outbreaks and evaluating prevention efforts."
+       ],
+       "example": {
+        "problem": "In a town of 10,000 people, 50 new cases of flu are diagnosed in one month. Calculate the incidence rate per 1,000 people for the month.",
+        "steps": [
+         "Incidence rate = new cases ÷ population at risk = 50 ÷ 10,000 = 0.005.",
+         "Multiply by 1,000 to express per 1,000 people: 0.005 × 1,000 = 5."
+        ],
+        "answer": "5 new cases per 1,000 people per month"
+       }
+      },
+      {
+       "heading": "Prevalence: How Big the Existing Burden Is",
+       "body": [
+        "**Prevalence** counts the total number of existing cases, both new and old, at a given point in time, divided by the total population: prevalence = existing cases ÷ total population. It answers the question 'how big is the current burden of this disease,' which makes it useful for planning treatment capacity and resources. A disease with low incidence but a long duration, such as a chronic condition, can still build up a high prevalence over time, since cases accumulate rather than resolve quickly."
+       ],
+       "example": {
+        "problem": "A county of 50,000 people has 40 new cases of a disease diagnosed this year, and 600 people currently living with the disease this year. Calculate both the incidence rate and the prevalence, each per 1,000 people.",
+        "steps": [
+         "Incidence rate = 40 ÷ 50,000 = 0.0008; × 1,000 = 0.8 per 1,000 per year.",
+         "Prevalence = 600 ÷ 50,000 = 0.012; × 1,000 = 12 per 1,000."
+        ],
+        "answer": "Incidence ≈ 0.8 per 1,000 per year; prevalence = 12 per 1,000."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "incidence",
+       "def": "The number of new cases of a disease occurring in a population during a specified time period."
+      },
+      {
+       "term": "prevalence",
+       "def": "The total number of existing cases of a disease in a population at a given point in time."
+      },
+      {
+       "term": "population at risk",
+       "def": "The group of people who could potentially develop the disease being measured."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Incidence measures",
+       "choices": [
+        "The total number of existing cases at one point in time",
+        "The number of new cases occurring during a specified time period",
+        "Only cases that result in death",
+        "The total population of a country"
+       ],
+       "answer": 1,
+       "explain": "Incidence specifically tracks new cases over a defined period, distinguishing it from prevalence, which counts all existing cases at one moment."
+      },
+      {
+       "q": "A town of 20,000 people has 100 new cases of a disease diagnosed in one year. What is the incidence rate per 1,000 people per year?",
+       "choices": [
+        "0.5 per 1,000",
+        "2 per 1,000",
+        "5 per 1,000",
+        "10 per 1,000"
+       ],
+       "answer": 2,
+       "explain": "100 ÷ 20,000 = 0.005; × 1,000 = 5 new cases per 1,000 people per year."
+      },
+      {
+       "q": "A city of 15,000 has 450 people currently living with a chronic condition. What is the prevalence, expressed as a percentage?",
+       "choices": [
+        "1%",
+        "3%",
+        "6%",
+        "9%"
+       ],
+       "answer": 1,
+       "explain": "450 ÷ 15,000 = 0.03, which is 3%."
+      },
+      {
+       "q": "A disease with a low incidence rate but a very long duration (patients live with it for decades) will tend to have",
+       "choices": [
+        "Low prevalence as well",
+        "High prevalence, since existing cases accumulate over time",
+        "No relationship between incidence and prevalence",
+        "Always zero prevalence"
+       ],
+       "answer": 1,
+       "explain": "Because prevalence reflects all existing cases, a disease that people live with for a long time builds up a large prevalence even if relatively few new cases appear each year."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Study Designs in Epidemiology",
+     "minutes": 15,
+     "intro": "Epidemiologists cannot always run a lab experiment on humans, so the field has built a toolkit of study designs, each with its own strengths, weaknesses, and best use case.",
+     "sections": [
+      {
+       "heading": "Observational Designs",
+       "body": [
+        "A **cohort study** follows a group, often an exposed group and an unexposed group, forward over time, tracking who develops disease; it is well suited to calculating incidence and relative risk directly, but can be slow and expensive, especially for rare diseases. A **case-control study** starts with people who already have the disease (cases) and compares them to similar people without it (controls), looking backward at exposure history; it is efficient and fast for rare diseases, but relies on participants accurately remembering past exposures, creating a risk of **recall bias**. A **cross-sectional study** measures exposure and disease at a single point in time, useful for quickly estimating prevalence, but unable to establish which came first, exposure or disease, making it weak for causal claims."
+       ]
+      },
+      {
+       "heading": "Experimental Designs and the Evidence Hierarchy",
+       "body": [
+        "A **randomized controlled trial (RCT)** actively assigns exposure, such as a treatment, at random, making it the strongest design for establishing causation, since randomization balances both known and unknown confounding factors between groups. RCTs are often not ethical or feasible for harmful exposures (researchers cannot randomly assign people to smoke). Roughly from weakest to strongest, the evidence hierarchy runs: case reports, cross-sectional studies, case-control studies, cohort studies, randomized controlled trials, and systematic reviews or meta-analyses, which combine results from many individual studies at the very top."
+       ],
+       "example": {
+        "problem": "Researchers want to study whether a rare form of childhood cancer (about 2 cases per 100,000 children per year) is linked to a specific pesticide exposure. Explain why a case-control design is a more practical choice here than a prospective cohort study.",
+        "steps": [
+         "Because the disease is very rare, a prospective cohort study would need an enormous, extremely expensive sample followed for years to accumulate even a handful of cases.",
+         "A case-control study instead starts by identifying children who already have the cancer and compares their past pesticide exposure to similar children without the cancer, requiring far fewer participants and much less time.",
+         "This efficiency for rare diseases is the primary reason case-control designs are preferred here, even though they carry a higher risk of recall bias."
+        ],
+        "answer": "A case-control study is far more practical for a rare disease because it does not require waiting years to accumulate enough new cases in a large cohort; it instead starts from existing cases and looks backward at exposure."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "cohort study",
+       "def": "A study that follows a group forward over time to observe who develops disease."
+      },
+      {
+       "term": "case-control study",
+       "def": "A study that compares people with a disease (cases) to similar people without it (controls), looking backward at exposure."
+      },
+      {
+       "term": "randomized controlled trial (RCT)",
+       "def": "A study that randomly assigns exposure, the strongest design for establishing causation."
+      },
+      {
+       "term": "recall bias",
+       "def": "Systematic error from participants inaccurately remembering past exposures, common in case-control studies."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A study that starts by identifying people who already have a disease and compares their past exposures to a similar group without the disease is called a",
+       "choices": [
+        "Cohort study",
+        "Case-control study",
+        "Randomized controlled trial",
+        "Cross-sectional study"
+       ],
+       "answer": 1,
+       "explain": "This backward-looking comparison of past exposure between existing cases and controls is the defining feature of a case-control study."
+      },
+      {
+       "q": "Which study design is generally considered the strongest for establishing that an exposure causes a disease?",
+       "choices": [
+        "Case-control study",
+        "Cross-sectional study",
+        "Randomized controlled trial",
+        "Case report"
+       ],
+       "answer": 2,
+       "explain": "Random assignment in an RCT balances both known and unknown confounders between groups, which is what makes causal conclusions possible."
+      },
+      {
+       "q": "Why is a case-control design especially well-suited to studying a very rare disease?",
+       "choices": [
+        "It requires an enormous sample size",
+        "It starts from existing cases, requiring far fewer participants than waiting for new cases to accumulate in a cohort",
+        "It is the only design that can measure prevalence",
+        "It eliminates all forms of bias"
+       ],
+       "answer": 1,
+       "explain": "By starting from people who already have the rare disease, a case-control study avoids the impractically large sample a cohort study would need to accumulate enough new cases."
+      },
+      {
+       "q": "A major limitation of case-control studies is",
+       "choices": [
+        "They take decades to complete",
+        "Recall bias, since participants must remember and accurately report past exposures",
+        "They cannot be used for any disease",
+        "They always require random assignment"
+       ],
+       "answer": 1,
+       "explain": "Because case-control studies rely on participants' memory of past exposures, inaccurate recall can systematically distort results, a limitation known as recall bias."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Risk: Relative Risk, Odds Ratios, and Bias",
+     "minutes": 15,
+     "intro": "Knowing that smokers get lung cancer more often than nonsmokers is not useful until you can say exactly how much more, which is precisely what relative risk and odds ratios are built to do.",
+     "sections": [
+      {
+       "heading": "Relative Risk",
+       "body": [
+        "**Relative risk (RR)** is the incidence of disease in an exposed group divided by the incidence in an unexposed group. An RR of 1 means no association, RR greater than 1 means the exposure increases risk, and RR less than 1 means the exposure appears protective. RR is calculated directly from cohort studies, where the incidence in each group is already known."
+       ],
+       "example": {
+        "problem": "Among smokers, lung cancer incidence is 20 per 1,000 per year; among nonsmokers, incidence is 1 per 1,000 per year. Calculate the relative risk.",
+        "steps": [
+         "Relative risk = incidence in exposed ÷ incidence in unexposed = 20 ÷ 1 = 20."
+        ],
+        "answer": "RR = 20; smokers are about 20 times as likely to develop lung cancer as nonsmokers over that period."
+       }
+      },
+      {
+       "heading": "Odds Ratios, Confounding, and Bias",
+       "body": [
+        "Because case-control studies do not measure true incidence directly, they instead use the **odds ratio (OR)**: the odds of exposure among cases divided by the odds of exposure among controls. When the disease being studied is rare, OR closely approximates RR. **Confounding** occurs when a third variable is associated with both the exposure and the outcome, distorting the apparent relationship, such as age being linked to both higher coffee consumption and higher heart disease risk, creating a false coffee-heart disease association unless age is accounted for. **Bias** is systematic error in how a study is designed or conducted, such as recall bias, that skews results in a particular direction; unlike confounding, bias is a flaw in method rather than a real third-variable effect."
+       ],
+       "example": {
+        "problem": "A case-control study of a rare disease finds: among 100 cases, 80 report the exposure and 20 do not. Among 100 controls, 30 report the exposure and 70 do not. Calculate the odds ratio.",
+        "steps": [
+         "Odds of exposure among cases = 80 ÷ 20 = 4.",
+         "Odds of exposure among controls = 30 ÷ 70 ≈ 0.429.",
+         "Odds ratio = 4 ÷ 0.429 ≈ 9.3."
+        ],
+        "answer": "OR ≈ 9.3, meaning the odds of exposure were about 9 times higher among cases than controls."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "relative risk (RR)",
+       "def": "The incidence of disease in an exposed group divided by the incidence in an unexposed group."
+      },
+      {
+       "term": "odds ratio (OR)",
+       "def": "In a case-control study, the odds of exposure among cases divided by the odds of exposure among controls."
+      },
+      {
+       "term": "confounding",
+       "def": "Distortion of an apparent exposure-disease relationship caused by a third variable linked to both."
+      },
+      {
+       "term": "bias (in research)",
+       "def": "Systematic error in study design or conduct that skews results in a particular direction."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Among exposed workers, a disease's incidence is 15 per 1,000 per year; among unexposed workers, it is 3 per 1,000 per year. What is the relative risk?",
+       "choices": [
+        "3",
+        "5",
+        "12",
+        "18"
+       ],
+       "answer": 1,
+       "explain": "Relative risk = 15 ÷ 3 = 5."
+      },
+      {
+       "q": "An odds ratio (OR) of 1.0 indicates",
+       "choices": [
+        "The exposure strongly increases risk",
+        "No association between exposure and outcome",
+        "The exposure is highly protective",
+        "The study design was flawed"
+       ],
+       "answer": 1,
+       "explain": "An OR of exactly 1.0 means the odds of exposure are equal in cases and controls, indicating no association between the exposure and the outcome."
+      },
+      {
+       "q": "A study finds that people who drink more coffee have higher rates of heart disease, but this relationship disappears once age is accounted for, since older people both drink more coffee and have more heart disease. This is an example of",
+       "choices": [
+        "Recall bias",
+        "Confounding",
+        "Selection bias",
+        "Relative risk"
+       ],
+       "answer": 1,
+       "explain": "Age is a third variable linked to both coffee consumption and heart disease risk, distorting the apparent relationship, which is the definition of confounding."
+      },
+      {
+       "q": "In a case-control study of 100 cases (60 exposed, 40 unexposed) and 100 controls (20 exposed, 80 unexposed), what is the odds ratio?",
+       "choices": [
+        "3",
+        "4.5",
+        "6",
+        "8"
+       ],
+       "answer": 2,
+       "explain": "Odds among cases = 60 ÷ 40 = 1.5. Odds among controls = 20 ÷ 80 = 0.25. Odds ratio = 1.5 ÷ 0.25 = 6."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Outbreak Investigation and Surveillance",
+     "minutes": 14,
+     "intro": "When a mysterious cluster of illness appears, epidemiologists follow a specific, almost detective-like sequence of steps, and the numbers from a first attack-rate table often point straight at the culprit food or source.",
+     "sections": [
+      {
+       "heading": "Steps of an Outbreak Investigation",
+       "body": [
+        "A standard outbreak investigation follows a sequence: confirm the outbreak is real (verify diagnoses and confirm case counts exceed the expected baseline), define a case using a specific, consistent **case definition**, find and count cases, describe the outbreak by person, place, and time (often plotted as an **epidemic curve**), develop and test hypotheses about the source, implement control measures, and communicate findings. **Surveillance**, the ongoing, systematic collection and analysis of health data, such as routine flu case reports from clinics, allows public health agencies to detect unusual patterns early, sometimes before a full investigation is even triggered."
+       ]
+      },
+      {
+       "heading": "Attack Rate and Hypothesis Testing",
+       "body": [
+        "The **attack rate** is a form of incidence specific to an outbreak: the number of new cases divided by the population at risk during the outbreak period, usually expressed as a percentage. Comparing the attack rate among people exposed to a suspected source with the attack rate among people not exposed is a standard way to test hypotheses about what caused an outbreak, since a much higher attack rate among the exposed group points strongly toward that source."
+       ],
+       "example": {
+        "problem": "At a company picnic, 45 people ate the potato salad and 55 people did not. Among those who ate it, 30 got sick; among those who did not, 5 got sick. Calculate the attack rate for each group and the relative risk, and state what this suggests about the outbreak's source.",
+        "steps": [
+         "Attack rate among exposed (ate potato salad) = 30 ÷ 45 = 0.667, or 66.7%.",
+         "Attack rate among unexposed (did not eat it) = 5 ÷ 55 ≈ 0.091, or 9.1%.",
+         "Relative risk = 66.7 ÷ 9.1 ≈ 7.3."
+        ],
+        "answer": "Attack rate: 66.7% among those exposed, 9.1% among those unexposed; relative risk ≈ 7.3, strongly implicating the potato salad as the outbreak source."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "case definition",
+       "def": "A specific, consistent set of criteria used to decide who counts as a case in an outbreak investigation."
+      },
+      {
+       "term": "attack rate",
+       "def": "The proportion of an at-risk population that becomes ill during a specific outbreak."
+      },
+      {
+       "term": "surveillance",
+       "def": "Ongoing, systematic collection and analysis of health data to detect unusual disease patterns."
+      },
+      {
+       "term": "epidemic curve",
+       "def": "A graph of the number of outbreak cases plotted over time."
+      }
+     ],
+     "practice": [
+      {
+       "q": "The first step in a standard outbreak investigation is typically to",
+       "choices": [
+        "Implement control measures immediately",
+        "Confirm that a true outbreak exists, verifying the diagnosis and that case counts exceed the expected baseline",
+        "Publish results in a journal",
+        "Contact the media"
+       ],
+       "answer": 1,
+       "explain": "Investigators first verify that reported cases represent a genuine increase above the expected baseline before proceeding to define cases and search for a source."
+      },
+      {
+       "q": "At a wedding reception, 60 guests ate the shrimp cocktail and 20 got sick; 40 guests did not eat it and 2 got sick. What is the attack rate among those who ate the shrimp?",
+       "choices": [
+        "5%",
+        "20%",
+        "33%",
+        "50%"
+       ],
+       "answer": 2,
+       "explain": "20 ÷ 60 ≈ 0.333, or about 33%."
+      },
+      {
+       "q": "Ongoing, systematic collection of health data that allows early detection of unusual disease patterns is called",
+       "choices": [
+        "An attack rate",
+        "Surveillance",
+        "A case-control study",
+        "Confounding"
+       ],
+       "answer": 1,
+       "explain": "Surveillance is the routine, continuous monitoring system that flags unusual patterns, sometimes before a formal outbreak investigation even begins."
+      },
+      {
+       "q": "In an outbreak investigation, plotting the number of cases over time to visualize how the outbreak unfolded is called",
+       "choices": [
+        "An epidemic curve",
+        "An odds ratio",
+        "A case definition",
+        "A cohort study"
+       ],
+       "answer": 0,
+       "explain": "An epidemic curve graphs case counts against time, helping investigators identify the outbreak's pattern, such as a single point-source exposure versus ongoing person-to-person spread."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Infectious Disease Control",
+   "summary": "How infectious diseases actually spread, why vaccines protect more than just the people who receive them, and how public health prepares for new and emerging threats.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "How Infectious Disease Spreads",
+     "minutes": 14,
+     "intro": "A single sneeze, a contaminated needle, or a mosquito bite can each start a chain of infection, and knowing exactly which link is breakable is the whole game of infectious disease control.",
+     "sections": [
+      {
+       "heading": "The Chain of Infection",
+       "body": [
+        "The **chain of infection** has six links: the infectious agent (pathogen), the **reservoir** (where it lives: a human, animal, or the environment), the portal of exit (how it leaves the reservoir), the **mode of transmission** (direct contact, droplet, airborne, vector-borne through something like a mosquito, or a common vehicle like contaminated food or water), the portal of entry (how it enters a new host), and a susceptible host capable of being infected. Breaking any single link stops transmission: hand hygiene interrupts contact transmission, mosquito nets interrupt vector-borne transmission, food safety interrupts common-vehicle transmission, and vaccination reduces the pool of susceptible hosts."
+       ]
+      },
+      {
+       "heading": "R0 and the Herd Immunity Threshold",
+       "body": [
+        "The **basic reproduction number (R0)** is the average number of new infections caused by one infectious person in a fully susceptible population, with no immunity or interventions in place. R0 greater than 1 means an outbreak tends to grow; R0 less than 1 means it tends to die out. Commonly cited reference values include seasonal flu around 1.3, and measles around 12 to 18, one of the most contagious human diseases known. The **herd immunity threshold**, the proportion of a population that must be immune to stop sustained spread, is approximated by 1 − 1/R0: the higher the R0, the higher the immunity threshold required."
+       ],
+       "example": {
+        "problem": "Measles has an R0 of about 15. Using the formula herd immunity threshold = 1 − 1/R0, calculate the approximate percentage of a population that must be immune to stop sustained measles transmission.",
+        "steps": [
+         "Herd immunity threshold = 1 − 1/R0 = 1 − 1/15.",
+         "1 ÷ 15 ≈ 0.067.",
+         "1 − 0.067 = 0.933, or about 93.3%."
+        ],
+        "answer": "≈ 93% of the population must be immune to reliably stop sustained measles transmission."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "chain of infection",
+       "def": "The six-link sequence (agent, reservoir, exit, transmission, entry, host) required for infection to spread."
+      },
+      {
+       "term": "reservoir",
+       "def": "The place, such as a human, animal, or environment, where an infectious agent normally lives and multiplies."
+      },
+      {
+       "term": "mode of transmission",
+       "def": "The specific way a pathogen travels from one host to the next, such as through contact, droplets, or a vector."
+      },
+      {
+       "term": "basic reproduction number (R0)",
+       "def": "The average number of new infections caused by one infectious person in a fully susceptible population."
+      }
+     ],
+     "practice": [
+      {
+       "q": "The 'chain of infection' link that describes how a pathogen actually travels from one host to the next, such as through the air, direct contact, or a mosquito bite, is called the",
+       "choices": [
+        "Reservoir",
+        "Mode of transmission",
+        "Portal of entry",
+        "Susceptible host"
+       ],
+       "answer": 1,
+       "explain": "Mode of transmission specifically names the pathway of spread, distinct from the reservoir (where the agent lives) or the portal of entry (how it gets into the next host)."
+      },
+      {
+       "q": "An R0 value greater than 1 indicates that",
+       "choices": [
+        "The outbreak will die out on its own",
+        "Each infected person, on average, infects more than one other person, so the outbreak tends to grow",
+        "The disease is not contagious",
+        "Vaccination is not needed"
+       ],
+       "answer": 1,
+       "explain": "An R0 above 1 means transmission is, on average, replacing itself more than once per infected person, which drives outbreak growth rather than decline."
+      },
+      {
+       "q": "A disease has an R0 of 4. Using the herd immunity threshold formula (1 − 1/R0), approximately what percentage of the population needs immunity to stop sustained spread?",
+       "choices": [
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+       ],
+       "answer": 2,
+       "explain": "1 − 1/4 = 1 − 0.25 = 0.75, or 75%."
+      },
+      {
+       "q": "Handwashing primarily interrupts which link in the chain of infection for many gastrointestinal diseases?",
+       "choices": [
+        "The reservoir",
+        "Mode of transmission (contact transmission)",
+        "The pathogen's genetic structure",
+        "The susceptible host's immune system"
+       ],
+       "answer": 1,
+       "explain": "Handwashing removes pathogens from the hands before they can be transferred to the mouth or another portal of entry, directly interrupting the contact transmission link."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Vaccines and Herd Immunity",
+     "minutes": 13,
+     "intro": "A vaccine does not just protect the person who receives it; once enough of a community is immune, it protects the people who cannot be vaccinated at all, a collective effect with its own math.",
+     "sections": [
+      {
+       "heading": "How Vaccines Work",
+       "body": [
+        "Vaccines expose the immune system to a harmless version or piece of a pathogen, such as a weakened live virus, an inactivated virus, a protein subunit, or mRNA instructions to build a viral protein, training the immune system to recognize and respond quickly to the real pathogen later without causing the actual disease. **Vaccine effectiveness** measures the percentage reduction in disease among vaccinated people compared to unvaccinated people under real-world conditions; no vaccine is 100% effective, so some vaccinated individuals can still become infected, though typically with milder illness."
+       ]
+      },
+      {
+       "heading": "Herd Immunity in Practice",
+       "body": [
+        "**Herd immunity** occurs when enough of a population is immune, through vaccination or prior infection, that transmission chains break down even among the remaining susceptible individuals, indirectly protecting people who cannot be vaccinated themselves, such as newborns or people who are immunocompromised. Because no vaccine is perfectly effective, actual vaccination coverage needed to reach a given herd immunity threshold must run a bit above the raw calculation, and immunity that is not evenly distributed across a community can leave local pockets of susceptibility even when the population-wide average looks sufficient."
+       ],
+       "example": {
+        "problem": "A disease has a herd immunity threshold of 90%, and the vaccine used against it is 95% effective. If 92% of the population is vaccinated, estimate the percentage of the total population that is actually immune, and determine whether this meets the 90% herd immunity threshold.",
+        "steps": [
+         "Effectively immune percentage = vaccinated percentage × vaccine effectiveness = 0.92 × 0.95.",
+         "0.92 × 0.95 = 0.874, or 87.4%.",
+         "87.4% is below the 90% threshold."
+        ],
+        "answer": "Only about 87.4% of the population is actually immune, which falls short of the 90% herd immunity threshold, so sustained transmission could still occur despite high vaccination coverage."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "vaccine effectiveness",
+       "def": "The percentage reduction in disease among vaccinated people compared to unvaccinated people in real-world conditions."
+      },
+      {
+       "term": "herd immunity",
+       "def": "Indirect protection of a population that occurs when enough people are immune to break transmission chains."
+      },
+      {
+       "term": "vaccination coverage",
+       "def": "The percentage of a population that has been vaccinated against a given disease."
+      },
+      {
+       "term": "contraindication",
+       "def": "A medical reason, such as a severe allergy, that a person should not receive a particular vaccine or treatment."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Herd immunity primarily protects",
+       "choices": [
+        "Only the people who are vaccinated",
+        "People who cannot be vaccinated themselves, by reducing overall transmission in the community",
+        "No one, since it is a theoretical concept only",
+        "Only animals, not humans"
+       ],
+       "answer": 1,
+       "explain": "Herd immunity's key benefit is indirect protection for people who cannot be vaccinated, since reduced overall transmission lowers their chance of exposure too."
+      },
+      {
+       "q": "A vaccine is 90% effective and 95% of a population is vaccinated. What percentage of the total population is actually immune (assuming no prior natural immunity)?",
+       "choices": [
+        "80.5%",
+        "85.5%",
+        "90%",
+        "95%"
+       ],
+       "answer": 1,
+       "explain": "0.95 × 0.90 = 0.855, or 85.5%."
+      },
+      {
+       "q": "Why can a disease still spread in 'pockets' even when a population's overall vaccination rate is above the herd immunity threshold?",
+       "choices": [
+        "Herd immunity does not really exist",
+        "Immunity may not be evenly distributed; unvaccinated clusters can sustain local transmission even with a high overall average",
+        "Vaccines work differently in different countries",
+        "This never actually happens"
+       ],
+       "answer": 1,
+       "explain": "Herd immunity calculations assume immunity is evenly spread; in reality, geographic or social clusters of unvaccinated people can sustain local outbreaks despite a high national average."
+      },
+      {
+       "q": "A person who cannot receive a certain vaccine due to a severe allergy has a medical",
+       "choices": [
+        "Contraindication",
+        "Contamination",
+        "Confounding factor",
+        "Case definition"
+       ],
+       "answer": 0,
+       "explain": "A contraindication is a specific medical reason, such as a severe allergy, that makes a particular vaccine or treatment inappropriate for a person."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Emerging Diseases and Pandemic Preparedness",
+     "minutes": 13,
+     "intro": "Most new infectious disease threats to humans do not arise from nowhere; they jump from animals, and knowing that pattern is central to how public health agencies watch for the next pandemic before it starts.",
+     "sections": [
+      {
+       "heading": "Zoonotic Spillover",
+       "body": [
+        "A **zoonotic disease** is one that can jump from animals to humans, called zoonotic spillover; the large majority of newly emerging infectious diseases in humans originate this way, including HIV (from primates), many influenza strains (from birds and pigs), and SARS-CoV-2, believed to have originated in bats. Drivers of spillover risk include deforestation and land-use change, which bring humans and livestock into closer contact with wildlife, live-animal markets, and global travel and trade, which can carry a local spillover worldwide within days."
+       ]
+      },
+      {
+       "heading": "Preparedness and Nonpharmaceutical Interventions",
+       "body": [
+        "A **pandemic** is an epidemic that has spread across multiple countries or continents, distinct from a localized epidemic and from an **endemic** disease, one that is consistently present at a predictable baseline level in a given area, such as malaria in parts of sub-Saharan Africa. Public health preparedness relies on disease surveillance networks (domestic and international), stockpiles of medical countermeasures, rapid vaccine and diagnostic development platforms, and clear risk communication. **Nonpharmaceutical interventions (NPIs)**, such as isolating sick individuals, quarantining exposed contacts, physical distancing, and mask use, reduce transmission without a drug or vaccine and are especially valuable early in a novel outbreak, before one exists."
+       ],
+       "example": {
+        "problem": "A new respiratory virus is detected in humans, and genetic analysis shows it is closely related to a virus previously found only in bats. Public health officials confirm cases are now appearing in multiple countries across different continents. Classify this situation using the correct epidemiological terms, and name one nonpharmaceutical intervention that could help slow spread before a vaccine exists.",
+        "steps": [
+         "A virus jumping from an animal reservoir (bats) to humans is a zoonotic spillover event.",
+         "Because cases are appearing across multiple countries and continents, this situation has become a pandemic, not merely a localized epidemic.",
+         "A nonpharmaceutical intervention like physical distancing, isolating known cases, or mask use could help slow transmission before a vaccine is available."
+        ],
+        "answer": "This is a zoonotic spillover event that has become a pandemic; nonpharmaceutical interventions such as isolation, quarantine, physical distancing, or mask use can slow spread before a vaccine exists."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "zoonotic disease",
+       "def": "A disease that can jump from animals to humans."
+      },
+      {
+       "term": "pandemic",
+       "def": "An epidemic that has spread across multiple countries or continents."
+      },
+      {
+       "term": "endemic",
+       "def": "A disease consistently present at a predictable baseline level in a given area."
+      },
+      {
+       "term": "nonpharmaceutical intervention (NPI)",
+       "def": "A measure, such as isolation or physical distancing, that reduces disease transmission without a drug or vaccine."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 'zoonotic' disease is one that",
+       "choices": [
+        "Only affects animals, never humans",
+        "Can jump from animals to humans",
+        "Is always fatal",
+        "Cannot be prevented by any means"
+       ],
+       "answer": 1,
+       "explain": "Zoonotic diseases specifically cross from an animal reservoir into human hosts, which describes the origin of many major emerging infections."
+      },
+      {
+       "q": "Which term describes a disease that is consistently present at a predictable baseline level in a given area, such as malaria in parts of sub-Saharan Africa?",
+       "choices": [
+        "Pandemic",
+        "Epidemic",
+        "Endemic",
+        "Zoonotic"
+       ],
+       "answer": 2,
+       "explain": "Endemic describes a steady, expected baseline level of disease in a given area, distinct from an epidemic's sudden rise above that baseline."
+      },
+      {
+       "q": "What distinguishes a pandemic from a (regional) epidemic?",
+       "choices": [
+        "A pandemic must be caused by a virus specifically",
+        "A pandemic has spread across multiple countries or continents, rather than staying localized to one region",
+        "An epidemic always has more total cases than a pandemic",
+        "There is no real difference"
+       ],
+       "answer": 1,
+       "explain": "The key distinction is geographic scope: an epidemic is a localized or regional rise above baseline, while a pandemic has spread across multiple countries or continents."
+      },
+      {
+       "q": "Which of the following is a nonpharmaceutical intervention (NPI)?",
+       "choices": [
+        "A newly developed vaccine",
+        "Physical distancing and isolating sick individuals",
+        "An antiviral medication",
+        "A monoclonal antibody treatment"
+       ],
+       "answer": 1,
+       "explain": "NPIs are measures that reduce transmission without relying on a drug or vaccine, which is exactly what physical distancing and isolation accomplish."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Chronic Disease and Health Behavior",
+   "summary": "The growing burden of chronic disease, the models public health uses to explain and change health behavior, and the policies proven to reduce tobacco and alcohol harm.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Burden of Chronic Disease",
+     "minutes": 14,
+     "intro": "Infectious disease used to dominate mortality statistics, but today, in most of the world, chronic disease quietly does far more damage over a person's lifetime, and it hits some communities much harder than others.",
+     "sections": [
+      {
+       "heading": "What Counts as Chronic Disease",
+       "body": [
+        "**Chronic diseases** are long-lasting conditions, generally defined as lasting a year or more, that require ongoing medical attention or limit daily activities, including heart disease, stroke, type 2 diabetes, many cancers, and chronic respiratory disease, in contrast to acute conditions that resolve relatively quickly. In the United States, chronic diseases account for the majority of deaths and healthcare spending; heart disease and cancer alone account for roughly 4 in 10 deaths nationally, and chronic disease management over decades makes it the leading driver of healthcare costs."
+       ]
+      },
+      {
+       "heading": "Measuring Disease Burden with DALYs",
+       "body": [
+        "A **Disability-Adjusted Life Year (DALY)** combines years of life lost to early death with years lived with disability from a condition into a single summary measure, letting public health agencies compare very different diseases, such as a fatal cancer versus a disabling but non-fatal chronic pain condition, on the same scale; one DALY represents one lost year of healthy life. The four **modifiable risk factors** most strongly linked to the leading chronic diseases are tobacco use, poor diet, physical inactivity, and excessive alcohol use, and these behaviors are unevenly distributed across income and education levels, contributing to health inequities in chronic disease rates."
+       ],
+       "example": {
+        "problem": "A public health agency compares two conditions in a population: Condition A causes 500 years of life lost to early death and 200 years lived with disability, for a total of 700 DALYs. Condition B causes far fewer deaths but leaves many more people with long-term disability: 50 years of life lost plus 900 years lived with disability, for 950 DALYs. Despite Condition A killing far more people, which condition has the greater overall disease burden by DALYs, and what does this illustrate about why DALYs are used?",
+        "steps": [
+         "Condition A totals 500 + 200 = 700 DALYs.",
+         "Condition B totals 50 + 900 = 950 DALYs.",
+         "Even though Condition A causes more deaths, Condition B's larger disability burden gives it a higher total DALY count."
+        ],
+        "answer": "Condition B has the greater overall burden at 950 DALYs versus 700, illustrating that a disease causing widespread long-term disability can outweigh one causing more deaths, once both fatal and non-fatal impact are combined on a common scale."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "chronic disease",
+       "def": "A long-lasting condition, generally a year or more, requiring ongoing medical attention or limiting daily activities."
+      },
+      {
+       "term": "Disability-Adjusted Life Year (DALY)",
+       "def": "A summary measure combining years of life lost to early death with years lived with disability, on one common scale."
+      },
+      {
+       "term": "modifiable risk factor",
+       "def": "A behavior or exposure, such as tobacco use or physical inactivity, that can be changed to reduce disease risk."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which best defines a chronic disease?",
+       "choices": [
+        "Any illness lasting less than a week",
+        "A long-lasting condition, generally a year or more, requiring ongoing medical attention or limiting daily activities",
+        "A disease that only affects children",
+        "A disease that is always fatal within a year"
+       ],
+       "answer": 1,
+       "explain": "Chronic disease is defined by its duration and ongoing impact, generally a year or longer, distinguishing it from short-lived acute illness."
+      },
+      {
+       "q": "A Disability-Adjusted Life Year (DALY) combines",
+       "choices": [
+        "Only years of life lost to death",
+        "Years of life lost to early death plus years lived with disability",
+        "Only healthcare spending",
+        "Only the number of hospital visits"
+       ],
+       "answer": 1,
+       "explain": "DALYs deliberately combine both fatal impact (years of life lost) and non-fatal impact (years lived with disability) into one comparable measure."
+      },
+      {
+       "q": "Which four behaviors are most strongly linked to the leading chronic diseases?",
+       "choices": [
+        "Reading, sleeping, walking, and swimming",
+        "Tobacco use, poor diet, physical inactivity, and excessive alcohol use",
+        "Only genetics-related factors",
+        "Only environmental pollution"
+       ],
+       "answer": 1,
+       "explain": "These four modifiable behaviors are consistently identified as the strongest behavioral contributors to the leading causes of chronic disease and death."
+      },
+      {
+       "q": "Condition X causes 300 DALYs from early death and 100 DALYs from disability. Condition Y causes 50 DALYs from early death and 500 DALYs from disability. Which condition has the higher total disease burden?",
+       "choices": [
+        "Condition X (400 total)",
+        "Condition Y (550 total)",
+        "They are exactly equal",
+        "DALYs cannot be added together"
+       ],
+       "answer": 1,
+       "explain": "Condition X totals 300 + 100 = 400 DALYs, while Condition Y totals 50 + 500 = 550 DALYs, giving Condition Y the higher overall burden."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Health Behavior Change",
+     "minutes": 14,
+     "intro": "Telling someone that smoking causes cancer rarely makes them quit on the spot, so public health has had to build real theories of how people actually change deeply ingrained habits, one stage at a time.",
+     "sections": [
+      {
+       "heading": "The Health Belief Model",
+       "body": [
+        "The **Health Belief Model** proposes that people are more likely to take a protective health action when they believe they are personally susceptible to a threat, the threat is serious, the recommended action would meaningfully reduce their risk, and the barriers to acting are outweighed by those benefits. A **cue to action**, such as a doctor's warning or a public awareness campaign, often triggers the actual behavior once these beliefs are already in place."
+       ]
+      },
+      {
+       "heading": "The Transtheoretical Model (Stages of Change)",
+       "body": [
+        "The **Transtheoretical Model** describes behavior change as a process moving through distinct stages rather than a single event: precontemplation (not yet considering change), contemplation (aware of the problem and considering change, but not yet committed), preparation (intending to act soon, taking small initial steps), action (actively practicing the new behavior, typically within the last 6 months), and maintenance (sustained for 6 months or more, working to prevent relapse). Relapse is treated as a normal, expected part of this process rather than total failure; effective interventions are tailored to a person's current stage, since someone in precontemplation needs different support than someone already taking action."
+       ],
+       "example": {
+        "problem": "A smoker says, 'I know smoking is bad, and honestly I've been thinking about quitting for a couple months, but I haven't set a quit date or bought any nicotine patches yet.' Using the Transtheoretical Model, which stage of change is this person in, and what kind of intervention would be most appropriate?",
+        "steps": [
+         "The person is aware of the problem and considering change, but has not yet taken concrete preparatory steps like setting a quit date or acquiring cessation aids.",
+         "This matches the contemplation stage, not yet preparation (which involves concrete initial steps) or action.",
+         "An appropriate intervention would help build motivation and resolve ambivalence, rather than jumping straight to an action-stage tool like a detailed quit plan."
+        ],
+        "answer": "This person is in the contemplation stage; interventions should focus on building motivation and resolving ambivalence rather than assuming they are ready for an action-stage quit plan."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Health Belief Model",
+       "def": "A model proposing that health action depends on perceived susceptibility, severity, benefits, and barriers."
+      },
+      {
+       "term": "Transtheoretical Model (Stages of Change)",
+       "def": "A model describing behavior change as a process through the stages precontemplation, contemplation, preparation, action, and maintenance."
+      },
+      {
+       "term": "perceived susceptibility",
+       "def": "A person's belief that they are personally at risk for a health problem."
+      },
+      {
+       "term": "relapse",
+       "def": "A return to a previous behavior during the change process, treated as normal rather than total failure."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In the Health Belief Model, a person's belief that they are personally at risk for a health problem is called",
+       "choices": [
+        "Perceived severity",
+        "Perceived susceptibility",
+        "Perceived benefit",
+        "A cue to action"
+       ],
+       "answer": 1,
+       "explain": "Perceived susceptibility is specifically the belief in one's own personal risk, distinct from perceived severity (how serious the threat is) or perceived benefit (how much acting would help)."
+      },
+      {
+       "q": "In the Transtheoretical Model, a person who has just started actively practicing a new behavior within the last few months is in which stage?",
+       "choices": [
+        "Precontemplation",
+        "Contemplation",
+        "Action",
+        "Maintenance"
+       ],
+       "answer": 2,
+       "explain": "The action stage is defined by actively practicing the new behavior, typically within the past 6 months, before it becomes sustained maintenance."
+      },
+      {
+       "q": "According to the Transtheoretical Model, relapse during behavior change is generally treated as",
+       "choices": [
+        "Total failure requiring the person to start over from precontemplation permanently",
+        "A normal, expected part of the change process that most people experience",
+        "Proof that behavior change is impossible",
+        "Something that only happens to a small minority"
+       ],
+       "answer": 1,
+       "explain": "The model treats relapse as a common, expected part of the cycle of change, not as a permanent failure, and many people cycle through the stages more than once."
+      },
+      {
+       "q": "A public health message specifically designed to trigger someone who already believes they are at risk to finally take action, such as a doctor directly recommending a screening, functions as a",
+       "choices": [
+        "Perceived barrier",
+        "Cue to action",
+        "Stage of relapse",
+        "Case definition"
+       ],
+       "answer": 1,
+       "explain": "A cue to action is the specific trigger that prompts someone with already-formed beliefs about risk and benefit to actually act."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Tobacco, Alcohol, and Policy",
+     "minutes": 14,
+     "intro": "Some of the most effective tools against tobacco and alcohol harm were never medical at all; they were taxes, warning labels, and where you're allowed to smoke, which is exactly why public health spends so much energy on policy, not just education.",
+     "sections": [
+      {
+       "heading": "Tobacco Control",
+       "body": [
+        "Tobacco use remains the leading preventable cause of death in the United States, contributing to heart disease, stroke, many cancers, and chronic respiratory disease; the 1964 U.S. Surgeon General's report on smoking and health was a landmark moment establishing the causal link in official public health guidance. Evidence-based tobacco control policies include raising cigarette taxes (higher prices reliably reduce consumption, especially among price-sensitive youth), smoke-free indoor air laws, graphic warning labels, restrictions on advertising and youth access, and coverage for cessation aids like nicotine replacement therapy and counseling."
+       ]
+      },
+      {
+       "heading": "Alcohol Policy",
+       "body": [
+        "Alcohol misuse contributes to liver disease, several cancers, motor vehicle crashes, and injury; excessive drinking is commonly defined for surveillance purposes as **binge drinking**, 5 or more drinks for men or 4 or more for women on one occasion. Effective alcohol policies include minimum legal drinking age laws, alcohol taxation, restrictions on outlet density and hours of sale, and enforced drunk-driving laws using a **blood alcohol concentration (BAC)** limit, commonly 0.08% in the United States; as with tobacco, price- and access-based policies tend to be among the most effective and cost-effective tools available, more so than education campaigns alone."
+       ],
+       "example": {
+        "problem": "A state raises its cigarette tax so that prices rise by 20%. Public health researchers commonly estimate that, for every 10% increase in cigarette price, overall consumption drops by roughly 3 to 5%, and youth consumption drops by roughly double that rate. Using the low end of these estimates, roughly how much would overall consumption and youth consumption be expected to fall?",
+        "steps": [
+         "A 20% price increase is double the 10% reference increase used in the estimate.",
+         "At the low end, overall consumption falls about 3% per 10% price rise, so a 20% rise gives roughly 6% overall consumption drop.",
+         "Youth consumption drops roughly double the overall rate, so roughly 12% drop in youth consumption."
+        ],
+        "answer": "Roughly a 6% drop in overall consumption and roughly a 12% drop in youth consumption, at the low end of typical estimates."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "tobacco control policy",
+       "def": "Government measures, such as taxation and smoke-free laws, aimed at reducing tobacco use."
+      },
+      {
+       "term": "binge drinking",
+       "def": "Consuming 5 or more drinks (men) or 4 or more drinks (women) on a single occasion."
+      },
+      {
+       "term": "blood alcohol concentration (BAC)",
+       "def": "A measure of alcohol in the bloodstream, used to define legal limits for driving."
+      },
+      {
+       "term": "outlet density",
+       "def": "The number of stores or establishments selling alcohol within a given area."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of the following is considered one of the most effective tobacco control policies for reducing consumption, especially among youth?",
+       "choices": [
+        "Voluntary educational pamphlets only",
+        "Raising cigarette taxes to increase price",
+        "Lowering the legal smoking age",
+        "Removing all warning labels"
+       ],
+       "answer": 1,
+       "explain": "Price increases through taxation are consistently found to be among the most effective tools for reducing tobacco consumption, with an especially strong effect on price-sensitive youth."
+      },
+      {
+       "q": "Binge drinking is commonly defined, for public health surveillance, as",
+       "choices": [
+        "Any alcohol consumption at all",
+        "5 or more drinks for men (4 or more for women) on a single occasion",
+        "Drinking every day regardless of amount",
+        "Only drinking hard liquor"
+       ],
+       "answer": 1,
+       "explain": "This specific threshold, 5+ drinks for men or 4+ for women on one occasion, is the standard surveillance definition of binge drinking."
+      },
+      {
+       "q": "The legal blood alcohol concentration (BAC) limit for driving in most U.S. states is",
+       "choices": [
+        "0.02%",
+        "0.08%",
+        "0.15%",
+        "0.25%"
+       ],
+       "answer": 1,
+       "explain": "0.08% is the standard legal BAC limit for driving in the large majority of U.S. states."
+      },
+      {
+       "q": "Research on tobacco and alcohol policy generally finds that price-based policies (taxes) are",
+       "choices": [
+        "Less effective than education campaigns alone",
+        "Among the most effective and cost-effective tools for reducing consumption, especially among youth",
+        "Completely ineffective",
+        "Only effective for adults over 65"
+       ],
+       "answer": 1,
+       "explain": "Across both tobacco and alcohol, raising prices through taxation is repeatedly found to be one of the most effective and cost-effective levers for reducing harmful consumption."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Environment, Systems, and Equity",
+   "summary": "The environmental and workplace exposures that shape health, the systems that keep water and food safe, how countries organize and pay for healthcare, and the pursuit of health equity worldwide.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Environmental and Occupational Health",
+     "minutes": 14,
+     "intro": "Where you work and the air you breathe outside your control every day shape your health just as much as any personal choice, which is why public health treats environments, not just individuals, as something to be made safer.",
+     "sections": [
+      {
+       "heading": "Environmental Exposures",
+       "body": [
+        "**Environmental health** studies how physical, chemical, and biological factors outside the body affect human health: air pollution (particulate matter and ozone) is linked to asthma, heart disease, and premature death; lead exposure, from old paint, pipes, or contaminated soil, causes irreversible cognitive harm in children even at low levels, with no established safe threshold; and water contaminants from industrial chemicals or agricultural runoff pose further risk. Environmental exposures often disproportionately burden lower-income communities and communities of color, an issue described as **environmental justice**."
+       ]
+      },
+      {
+       "heading": "Occupational Health and Safety",
+       "body": [
+        "Occupational health and safety focuses on hazards tied specifically to a workplace: physical hazards (noise, machinery, repetitive strain), chemical hazards (solvents, fumes), biological hazards (bloodborne pathogens in healthcare settings), and ergonomic hazards (poor workstation design causing musculoskeletal injury). In the U.S., the **Occupational Safety and Health Administration (OSHA)**, created in 1970, sets and enforces workplace safety standards, and its creation is associated with a large, sustained decline in U.S. workplace fatality rates over subsequent decades, even as the overall workforce grew substantially."
+       ],
+       "example": {
+        "problem": "A children's health clinic tests blood lead levels in two neighborhoods: Neighborhood A (built mostly after 2000, updated plumbing) averages 1.2 micrograms per deciliter (µg/dL); Neighborhood B (older housing stock with lead paint and lead pipes) averages 4.8 µg/dL. The current CDC reference level flagging elevated blood lead in children is 3.5 µg/dL. Which neighborhood's average falls above the level warranting public health follow-up, and by roughly what multiple does it exceed the other neighborhood's average?",
+        "steps": [
+         "Neighborhood B's average (4.8 µg/dL) exceeds the CDC reference level of 3.5 µg/dL, while Neighborhood A's average (1.2 µg/dL) does not.",
+         "Multiple: 4.8 ÷ 1.2 = 4, so Neighborhood B's average is 4 times higher than Neighborhood A's."
+        ],
+        "answer": "Neighborhood B's average (4.8 µg/dL) exceeds the CDC reference level and warrants follow-up; it is 4 times higher than Neighborhood A's average."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "environmental health",
+       "def": "The study of how physical, chemical, and biological factors outside the body affect human health."
+      },
+      {
+       "term": "environmental justice",
+       "def": "The disproportionate burden of environmental hazards on lower-income communities and communities of color."
+      },
+      {
+       "term": "occupational health",
+       "def": "The field focused on preventing hazards and injuries specifically tied to the workplace."
+      },
+      {
+       "term": "OSHA",
+       "def": "The U.S. Occupational Safety and Health Administration, which sets and enforces workplace safety standards."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is lead exposure considered especially concerning in young children?",
+       "choices": [
+        "It has a well-established completely safe low-dose threshold",
+        "It can cause irreversible cognitive harm, and no safe exposure threshold has been established",
+        "It only affects adults, not children",
+        "It has no known health effects"
+       ],
+       "answer": 1,
+       "explain": "No level of lead exposure has been established as safe for children, and even low-level exposure is linked to irreversible cognitive harm."
+      },
+      {
+       "q": "The disproportionate burden of environmental hazards on lower-income communities and communities of color is described using the term",
+       "choices": [
+        "Occupational hazard",
+        "Environmental justice",
+        "Herd immunity",
+        "Relative risk"
+       ],
+       "answer": 1,
+       "explain": "Environmental justice specifically names the unequal distribution of environmental hazards and burdens across different communities."
+      },
+      {
+       "q": "OSHA, created in 1970, is primarily responsible for",
+       "choices": [
+        "Approving new vaccines",
+        "Setting and enforcing workplace safety standards",
+        "Regulating food nutrition labels",
+        "Managing international disease surveillance"
+       ],
+       "answer": 1,
+       "explain": "OSHA's core mission is setting and enforcing safety standards specifically for workplaces, distinct from agencies focused on food, drugs, or global disease surveillance."
+      },
+      {
+       "q": "A neighborhood's average blood lead level is 6 µg/dL, and the CDC reference level is 3.5 µg/dL. By roughly what multiple does this neighborhood's level exceed the reference level?",
+       "choices": [
+        "About 1.7 times",
+        "About 3 times",
+        "About 6 times",
+        "About 10 times"
+       ],
+       "answer": 0,
+       "explain": "6 ÷ 3.5 ≈ 1.71, so the neighborhood's average is about 1.7 times the reference level."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Water, Sanitation, and Food Safety",
+     "minutes": 13,
+     "intro": "Clean drinking water and safe food are so reliable in much of the world that they're easy to take for granted, yet the systems behind them, quietly running every single day, still rank among public health's greatest achievements.",
+     "sections": [
+      {
+       "heading": "Water Treatment and Sanitation",
+       "body": [
+        "Modern drinking water treatment typically involves coagulation and flocculation (clumping fine particles together), sedimentation (letting clumped particles settle out), filtration (removing remaining particles and microbes), and **disinfection**, commonly chlorination, which kills remaining pathogens and leaves a small protective residual as water travels through pipes. Sanitation systems separate human waste from drinking water sources, preventing waterborne diseases like cholera and typhoid; the WHO estimates a substantial share of the world's population still lacks access to **safely managed sanitation**, making diarrheal disease a leading cause of death in some low-resource regions, especially among young children."
+       ]
+      },
+      {
+       "heading": "Food Safety Systems",
+       "body": [
+        "Food safety relies on a farm-to-fork approach: safe agricultural practices, proper handling and temperature control during processing and transport, and inspection systems, in the U.S. primarily the FDA and USDA, that set and enforce standards. The **danger zone**, roughly 40°F to 140°F, is the temperature range in which bacteria multiply rapidly, which is why perishable food left in that range for too long becomes unsafe. Leading **foodborne pathogens** of public health concern include Salmonella, Campylobacter, certain E. coli strains, and Listeria, with symptoms ranging from mild gastrointestinal illness to severe, occasionally fatal infection in vulnerable groups like pregnant people, young children, older adults, and people who are immunocompromised."
+       ],
+       "example": {
+        "problem": "A batch of chicken salad is left out at room temperature (about 70°F) for 5 hours during an outdoor event before being refrigerated. Given that the food safety danger zone for rapid bacterial growth is between 40°F and 140°F, and USDA guidance recommends discarding perishable food left in that range for more than 2 hours, should this batch be considered safe to serve, and why?",
+        "steps": [
+         "70°F falls within the 40-140°F danger zone where bacteria can multiply rapidly.",
+         "The chicken salad was left in that zone for 5 hours, well beyond the 2-hour guidance limit.",
+         "Because it exceeded the safe time window in the danger zone, it should be discarded rather than served, since dangerous bacterial growth is not always detectable by sight or smell."
+        ],
+        "answer": "The batch should be discarded, since it sat in the 40-140°F danger zone for 5 hours, well past the 2-hour safety guidance."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "disinfection (water treatment)",
+       "def": "The final water treatment step, commonly chlorination, that kills remaining pathogens."
+      },
+      {
+       "term": "danger zone (food safety)",
+       "def": "The temperature range, roughly 40°F to 140°F, in which bacteria multiply rapidly on perishable food."
+      },
+      {
+       "term": "foodborne pathogen",
+       "def": "A microorganism, such as Salmonella or Listeria, that causes illness through contaminated food."
+      },
+      {
+       "term": "safely managed sanitation",
+       "def": "Sanitation service that safely separates human waste from human contact, still lacking for a large share of the world's population."
+      }
+     ],
+     "practice": [
+      {
+       "q": "The final step in most drinking water treatment, which kills remaining pathogens before the water enters the distribution system, is called",
+       "choices": [
+        "Sedimentation",
+        "Disinfection (commonly chlorination)",
+        "Coagulation",
+        "Flocculation"
+       ],
+       "answer": 1,
+       "explain": "Disinfection, most commonly through chlorination, is the final treatment step that kills remaining pathogens before water is distributed."
+      },
+      {
+       "q": "The food safety 'danger zone,' where bacteria multiply rapidly on perishable food, is generally defined as",
+       "choices": [
+        "Below 32°F",
+        "Between 40°F and 140°F",
+        "Above 200°F",
+        "Between 0°F and 32°F"
+       ],
+       "answer": 1,
+       "explain": "The 40°F to 140°F range is where bacteria on perishable food multiply fastest, which is why food safety guidance limits time spent in that range."
+      },
+      {
+       "q": "Which of these is a common foodborne pathogen of public health concern?",
+       "choices": [
+        "Influenza virus",
+        "Salmonella",
+        "Presbyopia",
+        "Measles"
+       ],
+       "answer": 1,
+       "explain": "Salmonella is one of the leading bacterial causes of foodborne illness, unlike influenza and measles, which are not foodborne, or presbyopia, which is not a pathogen at all."
+      },
+      {
+       "q": "Perishable food left in the danger zone for how long is generally considered unsafe and should be discarded, per USDA guidance?",
+       "choices": [
+        "30 minutes",
+        "2 hours",
+        "6 hours",
+        "24 hours"
+       ],
+       "answer": 1,
+       "explain": "USDA guidance generally recommends discarding perishable food left in the 40-140°F danger zone for more than 2 hours."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Health Systems and Financing",
+     "minutes": 14,
+     "intro": "Two countries can spend wildly different amounts on healthcare and get startlingly similar, or different, results, which is exactly why public health pays close attention not just to medicine, but to how a health system is organized and paid for.",
+     "sections": [
+      {
+       "heading": "How Health Systems Are Organized",
+       "body": [
+        "A **health system** includes all the organizations, people, and actions whose primary intent is to promote, restore, or maintain health, spanning hospitals, clinics, public health departments, insurers, and the workforce that runs them. Financing models vary widely: **single-payer systems**, where one public entity, usually government, pays for most care (as in Canada or the UK's National Health Service); social health insurance, mandatory insurance funded through payroll contributions, often with multiple competing insurers (as in Germany); and mixed, market-based systems combining private insurance, employer-based coverage, and public programs (as in the United States, with Medicare, Medicaid, and private insurance coexisting)."
+       ]
+      },
+      {
+       "heading": "Comparing Systems and Costs",
+       "body": [
+        "Despite spending far more per person on healthcare than any other high-income country, the United States does not consistently achieve the best health outcomes on population-level measures like life expectancy or infant mortality, a gap often attributed to higher prices for the same services, more fragmented coverage leaving some people without adequate access, and the added administrative complexity of a multi-payer system with many private insurers. Common cost-control tools across systems include negotiated or regulated pricing for services and drugs, primary-care-centered models that emphasize prevention to avoid expensive complications later, and **universal coverage**, extending insurance to the whole population, which supporters argue improves both equity and long-run cost efficiency by catching problems earlier."
+       ],
+       "example": {
+        "problem": "Country A spends about $12,000 per person per year on healthcare and has a life expectancy of 78.5 years. Country B spends about $5,500 per person per year and has a life expectancy of 81 years. Using only these two figures, what does this comparison suggest about the relationship between healthcare spending and population health outcomes, and what other public health explanation, beyond the medical system alone, might account for the gap?",
+        "steps": [
+         "Country A spends more than twice as much per person as Country B, yet has a lower life expectancy.",
+         "This shows that higher healthcare spending alone does not guarantee better population health outcomes.",
+         "Public health explanations beyond the medical system, such as differences in social determinants of health or in the completeness of insurance coverage, often account for a large part of this kind of gap."
+        ],
+        "answer": "Higher spending does not guarantee better outcomes; differences in social determinants of health and in the equity and completeness of coverage often explain more of the gap than spending alone."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "health system",
+       "def": "All organizations, people, and actions whose primary intent is to promote, restore, or maintain health."
+      },
+      {
+       "term": "single-payer system",
+       "def": "A health financing model in which one public entity, usually government, pays for most care."
+      },
+      {
+       "term": "social health insurance",
+       "def": "A financing model using mandatory payroll-funded insurance, often with multiple competing insurers."
+      },
+      {
+       "term": "universal coverage",
+       "def": "A health system in which the entire population has access to health insurance coverage."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a single-payer health system, healthcare is primarily funded by",
+       "choices": [
+        "Many competing private insurers only",
+        "One public entity, usually the government",
+        "Employers alone",
+        "Out-of-pocket payment only"
+       ],
+       "answer": 1,
+       "explain": "A single-payer system is defined by one public entity, typically the government, serving as the primary payer for most healthcare services."
+      },
+      {
+       "q": "Despite spending far more per person on healthcare than other high-income countries, the United States",
+       "choices": [
+        "Consistently has the best outcomes on measures like life expectancy",
+        "Does not consistently achieve the best outcomes on population-level measures like life expectancy or infant mortality",
+        "Has the lowest healthcare spending in the world",
+        "Has no private insurance at all"
+       ],
+       "answer": 1,
+       "explain": "Despite its high per-person spending, the U.S. does not consistently lead on population health measures like life expectancy, a gap often linked to pricing, coverage gaps, and administrative complexity."
+      },
+      {
+       "q": "Which of these is a common cost-control tool used across various health systems?",
+       "choices": [
+        "Removing all forms of insurance",
+        "Negotiated or regulated pricing for services and drugs",
+        "Eliminating primary care entirely",
+        "Banning preventive care"
+       ],
+       "answer": 1,
+       "explain": "Negotiated or regulated pricing is a widely used lever for controlling healthcare costs across many different types of health systems."
+      },
+      {
+       "q": "'Universal coverage' refers to a health system in which",
+       "choices": [
+        "Only wealthy citizens have insurance",
+        "The entire population has access to health insurance coverage",
+        "Only emergency care is covered",
+        "Coverage varies randomly by lottery"
+       ],
+       "answer": 1,
+       "explain": "Universal coverage specifically means the whole population, not just a select subset, has access to health insurance."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Health Equity and Global Health",
+     "minutes": 13,
+     "intro": "Public health's ultimate measure of success is not just the average health of a population, but whether that health is shared fairly, and increasingly, whether gains reach every country, not just wealthy ones.",
+     "sections": [
+      {
+       "heading": "Health Equity vs. Health Equality",
+       "body": [
+        "**Health equity** means everyone has a fair and just opportunity to be as healthy as possible, which requires removing avoidable, unfair barriers, such as poverty, discrimination, and lack of access to care, that stand in the way for some groups. This differs from **health equality**, which simply means treating everyone the same regardless of their differing starting points and needs. Giving every community the exact same number of health clinics is equality; ensuring every community actually has adequate access to care given differences in population, infrastructure, and need is equity, and equity sometimes requires directing more resources to communities facing greater barriers, not identical resources to all."
+       ]
+      },
+      {
+       "heading": "Global Health and International Cooperation",
+       "body": [
+        "**Global health** addresses health issues that cross national borders or require international cooperation, including infectious disease pandemics, maternal and child mortality in low-resource countries, malnutrition, and access to essential medicines. Major global health actors include the World Health Organization (WHO), UNICEF, and large public-private partnerships like **Gavi, the Vaccine Alliance**, which funds childhood immunization in lower-income countries. Progress has been substantial but uneven: global child mortality has fallen sharply since 1990, yet large gaps in life expectancy and access to basic health services persist between high-income and low-income countries, and events like pandemics can reverse hard-won gains quickly if the global response is not well coordinated."
+       ],
+       "example": {
+        "problem": "A country has two regions: Region A has 1 clinic per 5,000 people and low rates of chronic disease; Region B also has 1 clinic per 5,000 people, but has much higher rates of poverty, chronic disease, and no public transportation to reach the clinic. A policymaker says, 'We've achieved equity, since both regions have identical clinic ratios.' Explain why this claim actually describes equality rather than true equity, and what a genuinely equitable approach might look like instead.",
+        "steps": [
+         "Identical clinic-to-population ratios represent equal treatment (equality), not necessarily equal access or health opportunity.",
+         "Region B's higher disease burden, higher poverty, and lack of transportation mean the same number of clinics does not translate into the same real-world access or health outcomes.",
+         "A genuinely equitable approach would allocate more resources, such as more clinics, transportation support, or outreach services, to Region B to offset its additional barriers, rather than giving both regions identical resources."
+        ],
+        "answer": "This describes equality, not equity; true equity would direct additional resources to Region B to offset its greater barriers, rather than giving both regions the exact same resources."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "health equity",
+       "def": "Ensuring everyone has a fair and just opportunity to be as healthy as possible by removing avoidable barriers."
+      },
+      {
+       "term": "health equality",
+       "def": "Treating everyone the same regardless of differing starting points and needs, distinct from equity."
+      },
+      {
+       "term": "global health",
+       "def": "The field addressing health issues that cross national borders or require international cooperation."
+      },
+      {
+       "term": "Gavi, the Vaccine Alliance",
+       "def": "A major public-private partnership that funds childhood immunization in lower-income countries."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Health equity is best defined as",
+       "choices": [
+        "Giving every community the exact same resources regardless of need",
+        "Ensuring everyone has a fair and just opportunity to be as healthy as possible, by removing avoidable barriers",
+        "A synonym for health equality",
+        "A measure of average national income"
+       ],
+       "answer": 1,
+       "explain": "Equity specifically requires removing avoidable barriers so everyone has a fair opportunity for health, which can mean unequal resource allocation to offset unequal starting points."
+      },
+      {
+       "q": "Which organization is a major public-private partnership that funds childhood immunization in lower-income countries?",
+       "choices": [
+        "OSHA",
+        "Gavi, the Vaccine Alliance",
+        "The FDA",
+        "The USDA"
+       ],
+       "answer": 1,
+       "explain": "Gavi is specifically a global public-private partnership focused on expanding childhood vaccine access in lower-income countries, unlike the domestically focused OSHA, FDA, or USDA."
+      },
+      {
+       "q": "Giving two regions with very different levels of need the exact same number of clinics is an example of",
+       "choices": [
+        "Health equity",
+        "Health equality, which is not the same as equity",
+        "Universal coverage",
+        "Herd immunity"
+       ],
+       "answer": 1,
+       "explain": "Identical treatment regardless of differing needs describes equality, which is distinct from equity, since equity would direct more resources to the region with greater barriers."
+      },
+      {
+       "q": "Since 1990, global child mortality has generally",
+       "choices": [
+        "Risen sharply",
+        "Fallen sharply, though large gaps between countries persist",
+        "Stayed exactly the same",
+        "Become impossible to measure"
+       ],
+       "answer": 1,
+       "explain": "Global child mortality has declined substantially since 1990 due to public health progress, though significant disparities between high-income and low-income countries remain."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

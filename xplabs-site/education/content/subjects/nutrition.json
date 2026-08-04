@@ -1,0 +1,1549 @@
+{
+ "id": "nutrition",
+ "title": "Nutrition",
+ "domain": "health",
+ "level": "Intro college",
+ "description": "An evidence-based tour of human nutrition: what the macronutrients and micronutrients actually do in the body, how to read the numbers on a food label, and how energy balance, metabolism, and life stage shape what a person needs to eat. You will finish able to build and evaluate a real diet, not just memorize a food pyramid.",
+ "outcomes": [
+  "You can calculate the calories in a food from its grams of carbohydrate, protein, and fat.",
+  "You can read a Nutrition Facts label and compute % Daily Value for any nutrient.",
+  "You can estimate a person's daily energy needs using BMR and an activity factor.",
+  "You can state the function, food sources, and deficiency risks of the major vitamins and minerals.",
+  "You can compare diet patterns, such as Mediterranean, vegetarian, and low-carb, using evidence rather than hype.",
+  "You can spot the red flags of a bad nutrition claim and explain what stronger evidence would look like."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Foundations of Nutrition Science",
+   "summary": "What nutrients are, how scientists study diet and health, and how to read the label that comes on every packaged food.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Nutrition Science Studies",
+     "minutes": 14,
+     "intro": "Every bite you take is a chemistry lesson: your body breaks food into pieces it can burn for energy, build into tissue, or use to run its machinery. Nutrition science studies which pieces matter, how much you need, and what happens when you get too little or too much.",
+     "sections": [
+      {
+       "heading": "Nutrients: The Body's Raw Materials",
+       "body": [
+        "A **nutrient** is any substance in food the body needs to survive and function. Nutrients split into two groups. **Macronutrients** (carbohydrate, protein, and fat) are needed in large amounts, measured in grams per day, and supply energy. **Micronutrients** (vitamins and minerals) are needed in tiny amounts, measured in milligrams or micrograms, and mostly regulate processes rather than supply fuel.",
+        "Water and fiber round out the picture. Water supplies no calories but is required for nearly every reaction in the body, and most adults need roughly 2 to 3 liters a day from food and drink combined. Fiber is a carbohydrate the body cannot digest, yet it feeds gut bacteria, slows sugar absorption, and keeps digestion moving.",
+        "Only three things in food supply meaningful energy: carbohydrate (4 kcal per gram), protein (4 kcal per gram), and fat (9 kcal per gram). Alcohol also supplies energy, 7 kcal per gram, but it is not a nutrient because the body has no requirement for it."
+       ]
+      },
+      {
+       "heading": "How We Know What We Know",
+       "body": [
+        "Nutrition claims rest on different kinds of evidence, and not all of it is equally trustworthy. At the base are cell and animal studies, which suggest mechanisms but do not prove effects in humans. Above that sit observational studies, which track what real people eat and what happens to their health over years, but cannot rule out that some other habit, not the food, caused the outcome.",
+        "At the top of the evidence ladder are randomized controlled trials, where researchers assign people to different diets by chance and compare results. Randomization is what lets scientists say a diet *caused* a change rather than merely being linked to it. Few nutrition trials run for decades, though, so long-term claims often still rest on observational data.",
+        "This is why nutrition advice can seem to flip-flop: a single new study rarely overturns a pattern seen across dozens of studies. The strongest guidance comes from systematic reviews that pool many studies together, not from one headline."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "nutrient",
+       "def": "A substance in food the body needs for energy, growth, or regulation."
+      },
+      {
+       "term": "macronutrient",
+       "def": "A nutrient needed in large amounts that supplies energy: carbohydrate, protein, or fat."
+      },
+      {
+       "term": "micronutrient",
+       "def": "A nutrient needed in tiny amounts that regulates body processes: a vitamin or mineral."
+      },
+      {
+       "term": "randomized controlled trial",
+       "def": "A study that assigns people to conditions by chance, allowing cause-and-effect conclusions."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of these is classified as a macronutrient?",
+       "choices": [
+        "Vitamin C",
+        "Protein",
+        "Iron",
+        "Zinc"
+       ],
+       "answer": 1,
+       "explain": "Protein, along with carbohydrate and fat, is needed in gram-level amounts and supplies energy, which makes it a macronutrient. Vitamin C, iron, and zinc are micronutrients."
+      },
+      {
+       "q": "Why are randomized controlled trials considered stronger evidence than observational studies for nutrition claims?",
+       "choices": [
+        "They always involve more people",
+        "Random assignment lets researchers rule out that some other habit caused the result",
+        "They are cheaper to run",
+        "They never disagree with each other"
+       ],
+       "answer": 1,
+       "explain": "Randomly assigning diets means the groups should be similar in every other way, so any difference in outcome can be attributed to the diet itself rather than a confounding habit."
+      },
+      {
+       "q": "Which nutrient supplies no calories but is still required daily in large amounts?",
+       "choices": [
+        "Fat",
+        "Water",
+        "Carbohydrate",
+        "Protein"
+       ],
+       "answer": 1,
+       "explain": "Water has zero calories yet is essential for nearly every body process, and most adults need about 2 to 3 liters a day."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Reading Food Labels and the Nutrition Facts Panel",
+     "minutes": 16,
+     "intro": "The Nutrition Facts label is the most powerful nutrition tool most people never learn to read. In under a minute you can find out how many calories a serving actually contains, whether it is high in sodium, and how it fits into your day, if you know what the numbers mean.",
+     "sections": [
+      {
+       "heading": "Serving Size Changes Everything",
+       "body": [
+        "Every number on the label refers to one **serving size**, listed at the top, not the whole package. A bag of chips might list 15 chips as a serving even though the bag holds 45. Eat the whole bag and you have eaten 3 servings' worth of everything on the label: 3 times the calories, 3 times the sodium.",
+        "Below serving size sits calories per serving, then a breakdown of total fat, saturated fat, trans fat, cholesterol, sodium, total carbohydrate (with fiber and sugars broken out), and protein. Added sugars are listed separately from total sugars so you can tell how much sugar was mixed in versus occurring naturally, as in the sugar in plain milk or fruit."
+       ]
+      },
+      {
+       "heading": "Percent Daily Value: Your Shortcut",
+       "body": [
+        "**% Daily Value (%DV)** shows what share of a full day's recommended amount one serving provides, based on a standard 2,000-calorie diet. A quick rule: 5% DV or less is low, 20% DV or more is high. This lets you scan any label in seconds without memorizing milligram targets for every nutrient.",
+        "%DV is the nutrient amount in the food divided by the Daily Value for that nutrient, times 100. Sodium's Daily Value is 2,300 mg. A soup with 460 mg of sodium per serving provides 460 ÷ 2,300 × 100 = 20% DV, right at the high-sodium threshold from a single bowl."
+       ],
+       "example": {
+        "problem": "A cereal serving has 40 g total carbohydrate, 5 g protein, and 3 g fat. Calculate the total calories per serving from macronutrients.",
+        "steps": [
+         "Carbohydrate: 40 g × 4 kcal/g = 160 kcal.",
+         "Protein: 5 g × 4 kcal/g = 20 kcal.",
+         "Fat: 3 g × 9 kcal/g = 27 kcal.",
+         "Add the three: 160 + 20 + 27 = 207 kcal per serving."
+        ],
+        "answer": "≈ 207 kcal per serving"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "serving size",
+       "def": "The reference amount of food all other numbers on the label are based on."
+      },
+      {
+       "term": "% Daily Value",
+       "def": "The percentage of a full day's recommended nutrient amount one serving provides, based on 2,000 calories."
+      },
+      {
+       "term": "added sugars",
+       "def": "Sugars put into food during processing or preparation, listed separately from naturally occurring sugars."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A can of soup lists 2.5 servings per container. If you eat the entire can, and one serving has 460 mg sodium, how much sodium have you eaten?",
+       "choices": [
+        "460 mg",
+        "920 mg",
+        "1,150 mg",
+        "2,300 mg"
+       ],
+       "answer": 2,
+       "explain": "460 mg × 2.5 servings = 1,150 mg of sodium, exactly half of the 2,300 mg Daily Value, from one can most people would eat in a single sitting."
+      },
+      {
+       "q": "Using the 5%/20% rule, a nutrient at 18% DV per serving is best described as",
+       "choices": [
+        "Negligible",
+        "Low",
+        "Moderate-to-high, worth noticing",
+        "Impossible to interpret"
+       ],
+       "answer": 2,
+       "explain": "18% DV is well above the 5% 'low' cutoff and close to the 20% 'high' cutoff, so it deserves attention, especially for nutrients like sodium or saturated fat you want to limit."
+      },
+      {
+       "q": "A food has 30 g total carbohydrate, 4 g protein, and 8 g fat per serving. What is its calorie count from macronutrients?",
+       "choices": [
+        "150 kcal",
+        "178 kcal",
+        "208 kcal",
+        "224 kcal"
+       ],
+       "answer": 2,
+       "explain": "Carbohydrate: 30 g × 4 kcal/g = 120 kcal. Protein: 4 g × 4 kcal/g = 16 kcal. Fat: 8 g × 9 kcal/g = 72 kcal. Total: 120 + 16 + 72 = 208 kcal."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Energy Balance: Calories In, Calories Out",
+     "minutes": 15,
+     "intro": "Body weight changes according to one stubborn rule: energy in versus energy out. It is simple to state and hard to manage, because both sides of the equation move: your body adapts, hunger shifts, and calories out is not just exercise. Understanding the full picture explains why crash diets so often fail.",
+     "sections": [
+      {
+       "heading": "Where Calories Out Actually Goes",
+       "body": [
+        "Total daily energy expenditure has three main pieces. **Basal metabolic rate (BMR)** is the energy used just to stay alive (breathing, circulation, cell repair) and makes up roughly 60 to 70% of total calories burned for most people. **Thermic effect of food** is the energy spent digesting and absorbing what you eat, about 8 to 10% of intake. **Activity energy expenditure** covers everything from formal exercise to fidgeting, and is the most variable piece.",
+        "Because BMR dominates the total, two people who look similar can have very different calorie needs. A person with more muscle mass burns more at rest than a person of the same weight with more body fat, because muscle is metabolically more active tissue."
+       ]
+      },
+      {
+       "heading": "The 3,500-Calorie Rule and Its Limits",
+       "body": [
+        "A traditional rule of thumb says one pound of body fat stores about 3,500 kcal, so a sustained daily deficit of 500 kcal should produce about one pound of loss per week (500 × 7 = 3,500). This rule is a reasonable starting estimate but overpredicts long-term results, because as the body loses weight its BMR drops too. A lighter body needs fewer calories to run, so the deficit shrinks on its own even if intake stays the same.",
+        "This is why weight loss commonly slows down and plateaus even when someone sticks to their plan; it is a predictable physiological response, not a failure of willpower, and it is why sustainable plans reassess calorie targets every several weeks rather than fixing one number forever."
+       ],
+       "example": {
+        "problem": "A person maintaining weight at 2,400 kcal/day cuts to 1,900 kcal/day and holds that intake steady. Using the 3,500 kcal-per-pound rule, estimate the weight loss after 2 weeks.",
+        "steps": [
+         "Daily deficit: 2,400 − 1,900 = 500 kcal/day.",
+         "Total deficit over 14 days: 500 × 14 = 7,000 kcal.",
+         "Convert to pounds: 7,000 ÷ 3,500 = 2 pounds."
+        ],
+        "answer": "≈ 2 pounds over 2 weeks (an estimate; real loss typically runs a bit lower as BMR adapts)"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "basal metabolic rate (BMR)",
+       "def": "The energy the body uses at rest to maintain basic life functions."
+      },
+      {
+       "term": "thermic effect of food",
+       "def": "The energy spent digesting, absorbing, and processing food, roughly 8-10% of intake."
+      },
+      {
+       "term": "energy balance",
+       "def": "The relationship between calories consumed and calories expended, which determines weight change."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which component typically makes up the largest share of total daily energy expenditure?",
+       "choices": [
+        "Thermic effect of food",
+        "Formal exercise",
+        "Basal metabolic rate",
+        "Fidgeting alone"
+       ],
+       "answer": 2,
+       "explain": "BMR, the energy used simply to keep the body running at rest, accounts for roughly 60 to 70% of total calories burned in most people."
+      },
+      {
+       "q": "Why does weight loss commonly slow down over time even without cheating on a diet?",
+       "choices": [
+        "The 3,500-calorie rule is completely wrong",
+        "BMR decreases as body weight decreases, shrinking the deficit",
+        "Fiber blocks calorie absorption",
+        "Metabolism only changes with age"
+       ],
+       "answer": 1,
+       "explain": "A smaller, lighter body requires less energy to maintain, so the same calorie intake produces a smaller deficit over time, a real physiological adaptation, not a lack of discipline."
+      },
+      {
+       "q": "A person cuts 250 kcal/day below maintenance for 4 weeks. Using the 3,500 kcal-per-pound rule, about how much weight would this predict losing?",
+       "choices": [
+        "0.5 lb",
+        "1 lb",
+        "2 lb",
+        "4 lb"
+       ],
+       "answer": 2,
+       "explain": "250 kcal/day × 28 days = 7,000 kcal total deficit; 7,000 ÷ 3,500 = 2 lb."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "The Macronutrients",
+   "summary": "Carbohydrate, fat, and protein each play a distinct role in the body: how much of each you need, where it comes from, and how to balance them.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Carbohydrates: Sugars, Starches, and Fiber",
+     "minutes": 15,
+     "intro": "Carbohydrate is the body's preferred quick fuel, but the word covers everything from table sugar to broccoli, and those foods behave very differently once you swallow them. Understanding the three types of carbohydrate explains why a candy bar and a bowl of lentils affect you so differently, gram for gram.",
+     "sections": [
+      {
+       "heading": "Sugars, Starches, and Fiber Are All Carbohydrate",
+       "body": [
+        "**Sugars** are the simplest carbohydrates (single or double sugar units like glucose, fructose, and the table sugar sucrose) and are absorbed fastest. **Starches** are long chains of glucose units, found in grains, potatoes, and legumes; the body must break these chains apart with digestive enzymes first, so they raise blood sugar more slowly than pure sugar. **Fiber** is also a chain of sugar units, but the bonds holding it together resist human digestive enzymes entirely, so it passes largely intact into the large intestine.",
+        "This structural difference is why nutrition labels separate total carbohydrate into sugars and fiber: a food's fiber content should be subtracted from total carbohydrate when estimating how much actually converts to blood glucose, since fiber contributes almost no usable glucose."
+       ]
+      },
+      {
+       "heading": "Fiber's Job and How Much You Need",
+       "body": [
+        "Fiber comes in two forms with different jobs. **Soluble fiber** (found in oats, beans, and apples) dissolves into a gel in water, which slows digestion, blunts blood sugar spikes, and can lower LDL cholesterol. **Insoluble fiber** (found in wheat bran and vegetable skins) does not dissolve; it adds bulk to stool and speeds material through the intestines, easing constipation.",
+        "Adult recommendations are about 25 g/day for women and 38 g/day for men, though a simpler benchmark dietitians use is 14 g of fiber per 1,000 kcal eaten. Most adults in the United States get well under half the recommended amount, largely because refined grains have had their fiber-rich bran and germ removed."
+       ],
+       "example": {
+        "problem": "A person eats 2,200 kcal/day. Using the 14 g fiber per 1,000 kcal benchmark, how much fiber should they aim for daily?",
+        "steps": [
+         "Divide calories by 1,000: 2,200 ÷ 1,000 = 2.2.",
+         "Multiply by the benchmark: 2.2 × 14 g = 30.8 g."
+        ],
+        "answer": "≈ 31 g of fiber per day"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "starch",
+       "def": "A carbohydrate made of long chains of glucose, found in grains, potatoes, and legumes."
+      },
+      {
+       "term": "soluble fiber",
+       "def": "Fiber that dissolves into a gel in water, slowing digestion and helping lower LDL cholesterol."
+      },
+      {
+       "term": "insoluble fiber",
+       "def": "Fiber that does not dissolve, adding bulk to stool and speeding digestion."
+      },
+      {
+       "term": "glycemic response",
+       "def": "How quickly and how much a food raises blood glucose after eating."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does fiber pass through much of the digestive tract largely intact?",
+       "choices": [
+        "It has no chemical bonds at all",
+        "Human digestive enzymes cannot break the bonds linking its sugar units",
+        "It is not actually a carbohydrate",
+        "It dissolves before reaching the stomach"
+       ],
+       "answer": 1,
+       "explain": "Fiber is built from sugar units joined by bonds that human enzymes cannot cleave, unlike the bonds in starch, so it reaches the large intestine largely undigested."
+      },
+      {
+       "q": "Which type of fiber is most associated with lowering LDL cholesterol?",
+       "choices": [
+        "Insoluble fiber",
+        "Soluble fiber",
+        "Refined starch",
+        "Table sugar"
+       ],
+       "answer": 1,
+       "explain": "Soluble fiber dissolves into a gel that can bind cholesterol-related compounds in the gut, helping lower LDL levels."
+      },
+      {
+       "q": "A person eating 3,000 kcal/day uses the 14 g per 1,000 kcal benchmark. What is their fiber target?",
+       "choices": [
+        "28 g",
+        "36 g",
+        "42 g",
+        "50 g"
+       ],
+       "answer": 2,
+       "explain": "3,000 ÷ 1,000 = 3, and 3 × 14 g = 42 g of fiber per day."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Fats: Saturated, Unsaturated, and Trans",
+     "minutes": 14,
+     "intro": "Fat has the worst reputation of any macronutrient, yet it is essential: it builds cell membranes, cushions organs, and carries the fat-soluble vitamins. The real story is not fat versus no fat; it is which kinds of fat, and how much of the harmful kind you can avoid.",
+     "sections": [
+      {
+       "heading": "Saturated and Unsaturated: What the Chemistry Means",
+       "body": [
+        "Fat molecules are chains of carbon atoms. In **saturated fat**, every carbon is bonded to as many hydrogen atoms as possible, with no double bonds; this makes the chain straight and lets molecules pack tightly, which is why saturated fats (butter, coconut oil, fatty meat) are solid at room temperature. In **unsaturated fat**, one or more double bonds create a kink in the chain, so molecules pack loosely, which is why unsaturated fats (olive oil, canola oil, fish oil) stay liquid at room temperature.",
+        "Unsaturated fat splits further into **monounsaturated** (one double bond, as in olive oil and avocados) and **polyunsaturated** (multiple double bonds, as in fish, walnuts, and sunflower oil). Two polyunsaturated fats, omega-3 and omega-6, are called **essential fatty acids** because the body cannot make them at all; they must come from food."
+       ]
+      },
+      {
+       "heading": "Trans Fat: The One to Avoid",
+       "body": [
+        "**Trans fat** forms mainly when liquid oil is artificially hardened through partial hydrogenation, historically used to make shelf-stable margarines and fried, packaged foods. Trans fat raises LDL ('bad') cholesterol while also lowering HDL ('good') cholesterol, a double blow no other common fat produces, which is why the FDA banned partially hydrogenated oils as a food additive in the United States as of 2018, and why current guidance treats trans fat as having no safe level of intake.",
+        "For the fats that remain in the diet, most major guidelines suggest keeping saturated fat under about 10% of total calories and replacing it where possible with unsaturated fat, which lowers LDL cholesterol without the drawbacks of trans fat."
+       ],
+       "example": {
+        "problem": "On a 2,000 kcal/day diet, what is the upper limit of saturated fat in grams if it should stay under 10% of calories?",
+        "steps": [
+         "10% of 2,000 kcal = 200 kcal from saturated fat.",
+         "Fat provides 9 kcal per gram, so divide: 200 ÷ 9 ≈ 22.2 g."
+        ],
+        "answer": "≈ 22 g of saturated fat per day or less"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "saturated fat",
+       "def": "Fat with no double bonds between carbons, typically solid at room temperature."
+      },
+      {
+       "term": "unsaturated fat",
+       "def": "Fat with one or more double bonds, typically liquid at room temperature."
+      },
+      {
+       "term": "trans fat",
+       "def": "Fat altered by partial hydrogenation that raises LDL and lowers HDL cholesterol."
+      },
+      {
+       "term": "essential fatty acid",
+       "def": "A fat (omega-3 or omega-6) the body cannot make and must get from food."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why are saturated fats typically solid at room temperature?",
+       "choices": [
+        "They contain trans bonds",
+        "Their straight chains lack double bonds and pack tightly together",
+        "They are artificially hydrogenated",
+        "They contain more calories per gram"
+       ],
+       "answer": 1,
+       "explain": "Without double bonds to create kinks, saturated fat chains are straight and pack closely, giving them a higher melting point than unsaturated fats."
+      },
+      {
+       "q": "What makes trans fat uniquely harmful compared to saturated fat?",
+       "choices": [
+        "It has more calories per gram",
+        "It raises LDL and lowers HDL cholesterol at the same time",
+        "It is always found in fish",
+        "It cannot be digested at all"
+       ],
+       "answer": 1,
+       "explain": "Trans fat is the only common dietary fat that simultaneously raises harmful LDL cholesterol and lowers protective HDL cholesterol, which is why guidelines treat it as having no safe intake level."
+      },
+      {
+       "q": "A person eats 15 g of saturated fat. How many calories does that contribute?",
+       "choices": [
+        "60 kcal",
+        "105 kcal",
+        "135 kcal",
+        "150 kcal"
+       ],
+       "answer": 2,
+       "explain": "Fat provides 9 kcal per gram, so 15 g × 9 kcal/g = 135 kcal."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Protein: Amino Acids and Requirements",
+     "minutes": 14,
+     "intro": "Protein builds and repairs nearly every structure in your body, from muscle fiber to immune antibodies to the enzymes that run digestion. But protein needs vary hugely by person, and the popular idea that more is always better runs well ahead of the evidence for most people.",
+     "sections": [
+      {
+       "heading": "Amino Acids: Protein's Building Blocks",
+       "body": [
+        "Proteins are chains of smaller units called **amino acids**. The body uses 20 amino acids to build its proteins; it can manufacture 11 of them internally, but the other 9, the **essential amino acids**, must come from food because the body cannot synthesize them. A **complete protein** contains all 9 essential amino acids in adequate amounts; animal proteins (meat, eggs, dairy) and a few plant sources like soy and quinoa qualify on their own.",
+        "Most single plant proteins are low in at least one essential amino acid, but eating a variety of plant foods across the day, such as beans with rice, or peanut butter with whole-wheat bread, supplies the full set, a strategy called **protein complementing**. This does not require pairing them in the same meal, only within the same day."
+       ]
+      },
+      {
+       "heading": "How Much Protein Do You Actually Need?",
+       "body": [
+        "The RDA for protein is 0.8 grams per kilogram of body weight per day for a sedentary adult, an amount set to prevent deficiency in nearly everyone, not to optimize performance. People who are more active have higher needs: endurance athletes generally do well around 1.2 to 1.4 g/kg, and strength athletes building muscle typically benefit from about 1.6 to 2.2 g/kg.",
+        "Above roughly 2.2 g/kg per day, research finds little to no additional benefit for muscle growth in most people, even though extra protein is not dangerous for someone with healthy kidneys; it is simply used for energy like any other calorie source once the body's needs for building tissue are met."
+       ],
+       "example": {
+        "problem": "A 70 kg recreational strength trainee wants to eat within the effective range for muscle building. Calculate the lower and upper end of a 1.6-2.2 g/kg target.",
+        "steps": [
+         "Lower end: 70 kg × 1.6 g/kg = 112 g protein/day.",
+         "Upper end: 70 kg × 2.2 g/kg = 154 g protein/day."
+        ],
+        "answer": "About 112-154 g of protein per day"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "essential amino acid",
+       "def": "One of 9 amino acids the body cannot make and must get from food."
+      },
+      {
+       "term": "complete protein",
+       "def": "A protein source containing all 9 essential amino acids in adequate amounts."
+      },
+      {
+       "term": "protein complementing",
+       "def": "Combining different plant proteins across a day to supply all essential amino acids."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What defines a complete protein?",
+       "choices": [
+        "It comes only from animals",
+        "It contains all 9 essential amino acids in adequate amounts",
+        "It has more than 20 g of protein per serving",
+        "It has zero fat"
+       ],
+       "answer": 1,
+       "explain": "Completeness refers to amino acid content, not source; soy and quinoa are complete plant proteins, while most single plant foods are missing or low in at least one essential amino acid."
+      },
+      {
+       "q": "A 60 kg sedentary adult wants to meet the standard RDA for protein. How many grams per day does that require?",
+       "choices": [
+        "36 g",
+        "48 g",
+        "60 g",
+        "96 g"
+       ],
+       "answer": 1,
+       "explain": "The RDA is 0.8 g/kg/day: 60 kg × 0.8 g/kg = 48 g/day."
+      },
+      {
+       "q": "Why might eating far more protein than 2.2 g/kg fail to build extra muscle?",
+       "choices": [
+        "Protein above that range becomes toxic immediately",
+        "The body has a limited capacity to use protein for tissue-building; excess is simply used for energy",
+        "Muscle can only be built from carbohydrate",
+        "The kidneys stop absorbing amino acids"
+       ],
+       "answer": 1,
+       "explain": "Once the body's tissue-building needs are met, additional protein calories are used for energy or stored like any other excess calories, rather than translating into more muscle."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Balancing Macronutrients: The AMDR",
+     "minutes": 12,
+     "intro": "There is no single perfect ratio of carbs, fat, and protein that works for everyone, but there is a wide, evidence-based range within which healthy diets fall. Learning to work in percentages, not just grams, is what lets you translate any diet plan into an actual day of meals.",
+     "sections": [
+      {
+       "heading": "The Acceptable Macronutrient Distribution Range",
+       "body": [
+        "The **Acceptable Macronutrient Distribution Range (AMDR)** is the range of intake for each macronutrient associated with good health while supplying adequate nutrients: carbohydrate 45-65% of calories, fat 20-35% of calories, and protein 10-35% of calories. Diets within these bounds (Mediterranean, DASH, many vegetarian patterns, and moderate low-carb plans) are all supported by research, which is why nutrition science does not endorse one single best ratio.",
+        "Falling outside the AMDR for a sustained period is linked to problems: chronically very-low-fat diets can shortchange fat-soluble vitamin absorption and essential fatty acids, while chronically very-high-fat, very-low-carb diets can be hard to sustain and may affect performance in endurance sports that rely heavily on glycogen."
+       ]
+      },
+      {
+       "heading": "Converting Percentages to Grams",
+       "body": [
+        "To build a real meal plan you need to convert a percentage target into grams, which takes two steps: multiply total calories by the percentage to get calories from that macronutrient, then divide by that macronutrient's calories per gram (carbohydrate and protein: 4 kcal/g; fat: 9 kcal/g). This is the exact reverse of the calculation used to check a food label."
+       ],
+       "example": {
+        "problem": "A person eats 2,000 kcal/day and targets 50% carbohydrate, 20% protein, and 30% fat. Find the grams of each.",
+        "steps": [
+         "Carbohydrate calories: 2,000 × 0.50 = 1,000 kcal; grams: 1,000 ÷ 4 = 250 g.",
+         "Protein calories: 2,000 × 0.20 = 400 kcal; grams: 400 ÷ 4 = 100 g.",
+         "Fat calories: 2,000 × 0.30 = 600 kcal; grams: 600 ÷ 9 ≈ 67 g.",
+         "Check the percentages sum to 100%: 50 + 20 + 30 = 100%."
+        ],
+        "answer": "250 g carbohydrate, 100 g protein, ≈ 67 g fat"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Acceptable Macronutrient Distribution Range (AMDR)",
+       "def": "The evidence-based range of intake for each macronutrient linked to good health: 45-65% carbohydrate, 20-35% fat, 10-35% protein."
+      },
+      {
+       "term": "glycogen",
+       "def": "The stored form of carbohydrate in muscle and liver, used as a fuel reserve."
+      },
+      {
+       "term": "kilocalorie (kcal)",
+       "def": "The standard unit of food energy; what everyday nutrition labels call a 'Calorie'."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to the AMDR, which fat intake percentage falls within the acceptable range?",
+       "choices": [
+        "10% of calories",
+        "28% of calories",
+        "45% of calories",
+        "60% of calories"
+       ],
+       "answer": 1,
+       "explain": "The AMDR for fat is 20-35% of calories, and 28% falls within that range; 10% is below it and 45-60% are well above it."
+      },
+      {
+       "q": "A person eating 2,400 kcal/day targets 30% of calories from protein. How many grams of protein is that?",
+       "choices": [
+        "120 g",
+        "160 g",
+        "180 g",
+        "200 g"
+       ],
+       "answer": 2,
+       "explain": "30% of 2,400 kcal = 720 kcal from protein; protein provides 4 kcal/g, so 720 ÷ 4 = 180 g."
+      },
+      {
+       "q": "A person eats 1,800 kcal/day and targets 45% carbohydrate, the low end of the AMDR. How many grams of carbohydrate is that (rounded)?",
+       "choices": [
+        "162 g",
+        "203 g",
+        "225 g",
+        "250 g"
+       ],
+       "answer": 1,
+       "explain": "45% of 1,800 kcal = 810 kcal; carbohydrate provides 4 kcal/g, so 810 ÷ 4 = 202.5, which rounds to about 203 g."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "The Micronutrients",
+   "summary": "Vitamins and minerals work in tiny amounts but with outsized effects: how the fat-soluble and water-soluble vitamins differ, and what calcium, iron, sodium, and potassium do in the body.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Fat-Soluble Vitamins: A, D, E, and K",
+     "minutes": 14,
+     "intro": "Vitamins A, D, E, and K share a defining trait: they dissolve in fat, not water, which means they travel with dietary fat, get stored in body fat and the liver, and can build up to toxic levels in a way water-soluble vitamins almost never do.",
+     "sections": [
+      {
+       "heading": "Vitamin A and Vitamin D",
+       "body": [
+        "**Vitamin A** supports vision (it forms part of the light-detecting pigment in the retina), immune function, and skin health; a deficiency classically causes night blindness. It comes from animal sources as retinol (liver, eggs, dairy) and from plants as provitamin A carotenoids like beta-carotene (carrots, sweet potatoes), which the body converts as needed.",
+        "**Vitamin D** functions more like a hormone than a typical vitamin, regulating calcium absorption and bone mineralization; the skin also makes it from sunlight exposure. Deficiency causes rickets in children (soft, deformed bones) and osteomalacia in adults. Because few foods naturally contain much vitamin D, milk and some plant milks are fortified with it in many countries."
+       ]
+      },
+      {
+       "heading": "Vitamin E and Vitamin K",
+       "body": [
+        "**Vitamin E** is an antioxidant that protects cell membranes from damage; it is found in vegetable oils, nuts, and seeds, and true deficiency is rare in people who eat a varied diet. **Vitamin K** is essential for blood clotting, activating proteins that stop bleeding; it comes mainly from leafy greens and is also produced by gut bacteria.",
+        "Because vitamin K drives clotting, sudden large changes in leafy-green intake can interfere with blood-thinning medications like warfarin, which work by blocking vitamin K's clotting action; patients on such medications are usually advised to keep their vitamin K intake steady rather than avoiding it entirely."
+       ],
+       "example": {
+        "problem": "A vitamin D supplement label lists 25 micrograms (mcg) per capsule. Convert this to International Units (IU), using the standard conversion 1 mcg = 40 IU.",
+        "steps": [
+         "Multiply the mcg amount by the conversion factor: 25 mcg × 40 IU/mcg = 1,000 IU."
+        ],
+        "answer": "1,000 IU"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "fat-soluble vitamin",
+       "def": "A vitamin (A, D, E, or K) that dissolves in fat, is stored in the body, and can reach toxic levels if overconsumed."
+      },
+      {
+       "term": "rickets",
+       "def": "A childhood bone-softening disease caused by vitamin D deficiency."
+      },
+      {
+       "term": "provitamin A carotenoid",
+       "def": "A plant compound like beta-carotene that the body can convert into vitamin A."
+      },
+      {
+       "term": "anticoagulant",
+       "def": "A medication such as warfarin that slows blood clotting, whose effect interacts with vitamin K intake."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why are fat-soluble vitamins more likely than water-soluble vitamins to reach toxic levels?",
+       "choices": [
+        "They are used up immediately by the body",
+        "Excess amounts are stored in body fat rather than excreted in urine",
+        "They cannot be absorbed from food at all",
+        "They only occur in synthetic supplements"
+       ],
+       "answer": 1,
+       "explain": "Because fat-soluble vitamins are stored in fatty tissue and the liver rather than flushed out in urine, excess intake, especially from supplements, can accumulate over time."
+      },
+      {
+       "q": "A patient taking the blood thinner warfarin should be cautious about sudden changes in intake of which vitamin?",
+       "choices": [
+        "Vitamin C",
+        "Vitamin K",
+        "Vitamin B12",
+        "Vitamin A"
+       ],
+       "answer": 1,
+       "explain": "Vitamin K activates clotting factors, directly opposing warfarin's blood-thinning action, so a sudden spike or drop in vitamin K intake can throw off the medication's effect."
+      },
+      {
+       "q": "A supplement contains 10 mcg of vitamin D. Using 1 mcg = 40 IU, how many IU is that?",
+       "choices": [
+        "100 IU",
+        "250 IU",
+        "400 IU",
+        "1,000 IU"
+       ],
+       "answer": 2,
+       "explain": "10 mcg × 40 IU/mcg = 400 IU."
+      },
+      {
+       "q": "Night blindness and dry eyes are classic signs of deficiency in which vitamin?",
+       "choices": [
+        "Vitamin A",
+        "Vitamin D",
+        "Vitamin E",
+        "Vitamin K"
+       ],
+       "answer": 0,
+       "explain": "Vitamin A is required to make the light-sensitive pigment in the retina, so deficiency impairs vision in low light first."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Water-Soluble Vitamins: B-Complex and C",
+     "minutes": 14,
+     "intro": "Unlike vitamins A, D, E, and K, most B vitamins and vitamin C dissolve in water and are not stored in meaningful amounts, so the body excretes what it does not use. That makes consistent daily intake far more important than it is for the fat-soluble vitamins.",
+     "sections": [
+      {
+       "heading": "Key B Vitamins",
+       "body": [
+        "**Thiamin (B1)** helps convert carbohydrate into usable energy; severe deficiency causes beriberi, a disease affecting the nerves and heart. **Folate (B9)** is essential for DNA synthesis and cell division, which is why adequate folate before and during early pregnancy sharply reduces the risk of neural tube defects like spina bifida.",
+        "**Vitamin B12** is needed for nerve function and red blood cell formation, and it is found almost exclusively in animal foods, which puts vegans at risk without fortified foods or supplements. Absorbing B12 also requires a stomach protein called **intrinsic factor**; without it, B12 cannot be absorbed no matter how much is eaten, which is why some people need B12 injections rather than pills."
+       ]
+      },
+      {
+       "heading": "Vitamin C",
+       "body": [
+        "**Vitamin C** is required to build collagen, the structural protein in skin, blood vessels, and connective tissue; it also acts as an antioxidant and enhances the absorption of non-heme iron from plant foods when eaten in the same meal. Severe deficiency causes scurvy, historically common among sailors on long voyages before citrus fruit was carried to prevent it.",
+        "Because vitamin C is water-soluble and easily destroyed by heat and prolonged storage, raw or lightly cooked fruits and vegetables generally retain more of it than food that has been cooked for a long time or reheated repeatedly."
+       ],
+       "example": {
+        "problem": "A pregnant person needs 600 micrograms (mcg) of dietary folate equivalents (DFE) per day. Their prenatal vitamin supplies 800 mcg DFE. What percentage of the daily requirement does the vitamin alone provide?",
+        "steps": [
+         "Divide the amount supplied by the requirement: 800 ÷ 600 = 1.333.",
+         "Convert to a percentage: 1.333 × 100 ≈ 133%."
+        ],
+        "answer": "≈ 133% of the daily requirement"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "coenzyme",
+       "def": "A helper molecule, often derived from a vitamin, that an enzyme needs to function."
+      },
+      {
+       "term": "intrinsic factor",
+       "def": "A protein made in the stomach that is required to absorb vitamin B12."
+      },
+      {
+       "term": "neural tube defect",
+       "def": "A birth defect of the brain or spine linked to low folate intake in early pregnancy."
+      },
+      {
+       "term": "scurvy",
+       "def": "A disease caused by severe vitamin C deficiency, marked by bleeding gums and poor wound healing."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do B vitamins and vitamin C generally need to be consumed daily rather than stored for later?",
+       "choices": [
+        "They cannot dissolve in food",
+        "They are water-soluble, so the body excretes excess in urine rather than storing it in fat",
+        "They are destroyed by stomach acid",
+        "The body converts them all into vitamin A"
+       ],
+       "answer": 1,
+       "explain": "Because these vitamins dissolve in water rather than fat, the kidneys filter out what the body does not immediately use, so there is little reserve to draw on later."
+      },
+      {
+       "q": "Which vitamin's deficiency during early pregnancy is strongly linked to neural tube defects?",
+       "choices": [
+        "Vitamin C",
+        "Folate (B9)",
+        "Thiamin (B1)",
+        "Vitamin B12"
+       ],
+       "answer": 1,
+       "explain": "Folate is required for DNA synthesis during the rapid cell division of early fetal development, and low levels in the first weeks of pregnancy raise the risk of neural tube defects."
+      },
+      {
+       "q": "A supplement provides 500 mcg DFE of folate. If the pregnancy recommendation is 600 mcg DFE per day, what percentage of the requirement does it supply?",
+       "choices": [
+        "63%",
+        "83%",
+        "100%",
+        "120%"
+       ],
+       "answer": 1,
+       "explain": "500 ÷ 600 = 0.833, or about 83% of the daily requirement."
+      },
+      {
+       "q": "Sailors on long voyages historically developed scurvy due to lack of which vitamin?",
+       "choices": [
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin B12"
+       ],
+       "answer": 1,
+       "explain": "Without fresh fruits or vegetables for weeks at sea, sailors lacked vitamin C, leading to the connective-tissue breakdown seen in scurvy."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Minerals: Calcium, Iron, Sodium, and Potassium",
+     "minutes": 15,
+     "intro": "Minerals are simple elements, not complex molecules, yet they run some of the body's most important jobs: building bone, carrying oxygen in blood, and keeping every nerve signal and heartbeat firing on schedule.",
+     "sections": [
+      {
+       "heading": "Calcium",
+       "body": [
+        "**Calcium** builds and maintains bone, and also enables muscle contraction and nerve signaling; when blood calcium runs low, the body pulls calcium out of bone to keep those processes running, which is why chronically low intake weakens bone over years. The RDA is 1,000 mg/day for most adults, rising to 1,200 mg/day for women over 50 and men over 70.",
+        "Absorbing calcium depends on adequate vitamin D, which is why the two nutrients are usually discussed together; dairy, fortified plant milks, canned fish with bones, and leafy greens like kale are major dietary sources."
+       ]
+      },
+      {
+       "heading": "Iron",
+       "body": [
+        "Iron comes in two dietary forms. **Heme iron**, found in meat, fish, and poultry, is absorbed relatively efficiently (roughly 15-35%). **Non-heme iron**, found in beans, spinach, and fortified grains, is absorbed far less efficiently (roughly 2-20%) and its absorption is boosted by vitamin C and blocked by compounds in tea, coffee, and whole grains. The RDA is 18 mg/day for women of reproductive age (to replace menstrual losses) and 8 mg/day for adult men and postmenopausal women; deficiency leads to iron-deficiency anemia, causing fatigue and pale skin."
+       ]
+      },
+      {
+       "heading": "Sodium and Potassium",
+       "body": [
+        "**Sodium** and **potassium** are electrolytes that balance fluid levels and blood pressure. Most public health guidance recommends limiting sodium to under 2,300 mg/day, roughly one level teaspoon of table salt, because excess sodium is strongly linked to high blood pressure. **Potassium**, found in bananas, potatoes, beans, and leafy greens, works in the opposite direction, helping the kidneys excrete sodium and relax blood vessel walls, and most adults fall well short of the recommended 2,600-3,400 mg/day."
+       ],
+       "example": {
+        "problem": "A vegetarian eats a meal supplying 10 mg of non-heme iron. Baseline absorption without any enhancer is about 5%. Vitamin C in the same meal roughly doubles absorption to about 10%. How much iron, in mg, is actually absorbed with and without the vitamin C?",
+        "steps": [
+         "Without vitamin C: 10 mg × 0.05 = 0.5 mg absorbed.",
+         "With vitamin C: 10 mg × 0.10 = 1.0 mg absorbed."
+        ],
+        "answer": "0.5 mg without vitamin C; 1.0 mg with vitamin C, twice as much"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "heme iron",
+       "def": "Iron from animal foods, absorbed relatively efficiently by the body."
+      },
+      {
+       "term": "non-heme iron",
+       "def": "Iron from plant foods, absorbed less efficiently and boosted by vitamin C."
+      },
+      {
+       "term": "electrolyte",
+       "def": "A mineral, like sodium or potassium, that carries an electrical charge in body fluids and regulates fluid balance and nerve signals."
+      },
+      {
+       "term": "iron-deficiency anemia",
+       "def": "A condition of low iron stores causing fatigue and reduced oxygen-carrying capacity in the blood."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do premenopausal women have a higher RDA for iron (18 mg/day) than adult men (8 mg/day)?",
+       "choices": [
+        "Women absorb iron less efficiently in general",
+        "Menstrual blood loss increases women's iron needs",
+        "Men need more iron for bone growth",
+        "Iron RDA is unrelated to biological sex"
+       ],
+       "answer": 1,
+       "explain": "Regular menstrual blood loss removes iron from the body, so premenopausal women need a higher intake to maintain adequate stores."
+      },
+      {
+       "q": "Which nutrient, when eaten in the same meal, enhances absorption of non-heme iron from plant foods?",
+       "choices": [
+        "Calcium",
+        "Vitamin C",
+        "Sodium",
+        "Fiber"
+       ],
+       "answer": 1,
+       "explain": "Vitamin C converts iron into a form the intestine absorbs more easily, roughly doubling non-heme iron absorption in the same meal."
+      },
+      {
+       "q": "Public health guidance often says the 2,300 mg/day sodium limit is about how much table salt?",
+       "choices": [
+        "1 teaspoon",
+        "1 tablespoon",
+        "2 teaspoons",
+        "1/4 teaspoon"
+       ],
+       "answer": 0,
+       "explain": "About one level teaspoon of table salt contains roughly 2,300 mg of sodium, which is why it is used as an intuitive benchmark for the daily limit."
+      },
+      {
+       "q": "A vegetarian meal supplies 10 mg of non-heme iron with baseline 5% absorption. How much iron, in mg, is actually absorbed without a vitamin C boost?",
+       "choices": [
+        "0.2 mg",
+        "0.5 mg",
+        "1.0 mg",
+        "2.0 mg"
+       ],
+       "answer": 1,
+       "explain": "10 mg × 0.05 = 0.5 mg of iron absorbed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Digestion, Metabolism, and Body Weight",
+   "summary": "How food actually gets broken down and absorbed, how to estimate a real person's energy needs, and how to think about healthy weight beyond a single number.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Digestive System: From Mouth to Absorption",
+     "minutes": 14,
+     "intro": "Digestion is a roughly 30-foot journey through a muscular tube, and nearly every stop along the way has a specific job: breaking large food molecules down into pieces small enough to cross into the bloodstream.",
+     "sections": [
+      {
+       "heading": "Mouth, Esophagus, and Stomach",
+       "body": [
+        "Digestion begins in the mouth, where chewing physically breaks food apart and an enzyme in saliva, salivary amylase, starts breaking down starch. The esophagus then moves food to the stomach through rhythmic muscle contractions called peristalsis, not gravity alone (you can swallow upside down).",
+        "The stomach churns food with hydrochloric acid and the enzyme pepsin, which begins breaking proteins into smaller fragments, turning the meal into a thick liquid called **chyme**. The stomach also releases chyme into the small intestine gradually rather than all at once, a process called gastric emptying, whose speed depends heavily on the meal's fat and fiber content."
+       ]
+      },
+      {
+       "heading": "Small Intestine and Large Intestine",
+       "body": [
+        "The small intestine is where the majority of digestion and nearly all nutrient absorption happens. The pancreas releases enzymes that break down carbohydrate, protein, and fat, along with bicarbonate to neutralize stomach acid, while the liver and gallbladder supply **bile** to emulsify fat into tiny droplets so fat-digesting enzymes can act on it. Finger-like projections called **villi**, covered in even smaller microvilli, line the small intestine and dramatically increase its absorptive surface area.",
+        "Whatever is not absorbed moves into the large intestine, where water is reabsorbed, gut bacteria ferment remaining fiber (producing some short-chain fatty acids the body can use), and the remaining waste is compacted into stool."
+       ],
+       "example": {
+        "problem": "Two 600 kcal meals are compared: Meal A is mostly carbohydrate (rice and vegetables); Meal B is mostly fat (fried chicken and cheese). Which will likely empty from the stomach faster, and why?",
+        "steps": [
+         "Carbohydrate is digested and moves through the stomach relatively quickly.",
+         "High fat content slows gastric emptying, because the small intestine signals the stomach to release food more slowly when it detects a lot of fat, giving bile and pancreatic lipase time to work on it.",
+         "Therefore the carbohydrate-heavy meal empties from the stomach faster than the fat-heavy meal."
+        ],
+        "answer": "Meal A, the carbohydrate-heavy meal, empties from the stomach faster."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "chyme",
+       "def": "The thick, semi-liquid mixture of partly digested food released from the stomach."
+      },
+      {
+       "term": "villi",
+       "def": "Finger-like projections lining the small intestine that increase surface area for absorption."
+      },
+      {
+       "term": "bile",
+       "def": "A fluid made by the liver and stored in the gallbladder that emulsifies fat for digestion."
+      },
+      {
+       "term": "gastric emptying",
+       "def": "The rate at which the stomach releases its contents into the small intestine."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Where does the majority of nutrient digestion and absorption occur?",
+       "choices": [
+        "Mouth",
+        "Stomach",
+        "Small intestine",
+        "Large intestine"
+       ],
+       "answer": 2,
+       "explain": "The small intestine, with its enzyme-rich environment and huge villi-covered surface area, is where most carbohydrate, protein, and fat digestion and nearly all nutrient absorption take place."
+      },
+      {
+       "q": "What is the primary role of bile in digestion?",
+       "choices": [
+        "Breaking down starch into sugar",
+        "Emulsifying fat into smaller droplets so lipase can act on it",
+        "Killing bacteria in the stomach",
+        "Absorbing water from stool"
+       ],
+       "answer": 1,
+       "explain": "Bile does not chemically digest fat itself; it breaks large fat globules into smaller droplets, giving digestive enzymes far more surface area to work on."
+      },
+      {
+       "q": "Why does a high-fat meal typically empty from the stomach more slowly than a high-carbohydrate meal?",
+       "choices": [
+        "Fat is heavier and sinks to the bottom",
+        "The small intestine signals the stomach to slow release when it detects high fat, allowing time for bile and lipase to act",
+        "Fat cannot be digested by the stomach at all",
+        "Carbohydrate requires more stomach acid"
+       ],
+       "answer": 1,
+       "explain": "Fat detected in the small intestine triggers hormonal signals that slow gastric emptying, which is why very fatty meals can feel like they 'sit' longer."
+      },
+      {
+       "q": "What do the villi and microvilli lining the small intestine primarily accomplish?",
+       "choices": [
+        "They produce insulin",
+        "They dramatically increase the surface area available for absorption",
+        "They store excess fat",
+        "They neutralize stomach acid"
+       ],
+       "answer": 1,
+       "explain": "By folding the intestinal lining into millions of tiny projections, villi and microvilli multiply the absorptive surface area far beyond what a smooth tube could provide."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Metabolism and Basal Metabolic Rate",
+     "minutes": 16,
+     "intro": "Metabolism gets blamed for weight gain and credited for weight loss constantly, but it is not a mystery: it is a measurable, calculable quantity, and estimating your own is the first real step toward setting an accurate calorie target.",
+     "sections": [
+      {
+       "heading": "What Metabolism Actually Is",
+       "body": [
+        "**Metabolism** is the sum of all chemical reactions that convert food into usable energy and the building blocks of tissue. It has two directions: **anabolism** builds larger molecules from smaller ones (like assembling amino acids into new muscle protein), and **catabolism** breaks larger molecules down (like breaking glycogen back into glucose for fuel). **Basal metabolic rate (BMR)** measures the energy spent on catabolism and anabolism just to keep the body alive at complete rest, and is shaped by body size, muscle mass, age, sex, and genetics."
+       ]
+      },
+      {
+       "heading": "Estimating BMR and Total Daily Energy Needs",
+       "body": [
+        "The **Mifflin-St Jeor equation**, widely used by dietitians, estimates BMR from weight, height, age, and sex. For men: BMR = 10 × weight in kg + 6.25 × height in cm − 5 × age in years + 5. For women: the same formula but subtract 161 instead of adding 5.",
+        "To estimate **total daily energy expenditure (TDEE)**, multiply BMR by an **activity factor**: about 1.2 for sedentary, 1.375 for lightly active, 1.55 for moderately active, 1.725 for very active, and 1.9 for extremely active lifestyles. This single number is the most useful real-world starting point for setting a calorie target."
+       ],
+       "example": {
+        "problem": "Estimate BMR and TDEE for a 30-year-old woman who weighs 65 kg, is 165 cm tall, and is moderately active (activity factor 1.55).",
+        "steps": [
+         "BMR = 10(65) + 6.25(165) − 5(30) − 161.",
+         "= 650 + 1,031.25 − 150 − 161 = 1,370.25 kcal/day.",
+         "TDEE = BMR × activity factor = 1,370.25 × 1.55 ≈ 2,124 kcal/day."
+        ],
+        "answer": "BMR ≈ 1,370 kcal/day; TDEE ≈ 2,124 kcal/day"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "metabolism",
+       "def": "The sum of chemical reactions in the body that convert food into energy and tissue."
+      },
+      {
+       "term": "anabolism",
+       "def": "Metabolic reactions that build larger molecules from smaller ones, such as building muscle protein."
+      },
+      {
+       "term": "catabolism",
+       "def": "Metabolic reactions that break larger molecules down into smaller ones for energy."
+      },
+      {
+       "term": "activity factor",
+       "def": "A multiplier applied to BMR to estimate total daily energy expenditure based on activity level."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Using Mifflin-St Jeor (men: BMR = 10W + 6.25H − 5A + 5), estimate BMR for a 25-year-old man weighing 80 kg and 180 cm tall.",
+       "choices": [
+        "1,650 kcal",
+        "1,805 kcal",
+        "1,950 kcal",
+        "2,100 kcal"
+       ],
+       "answer": 1,
+       "explain": "10(80) + 6.25(180) − 5(25) + 5 = 800 + 1,125 − 125 + 5 = 1,805 kcal."
+      },
+      {
+       "q": "Which factor generally increases BMR the most, all else equal?",
+       "choices": [
+        "Higher body fat percentage",
+        "Higher muscle mass",
+        "Older age",
+        "Smaller body size"
+       ],
+       "answer": 1,
+       "explain": "Muscle tissue burns more calories at rest than fat tissue, so a person with more muscle mass has a higher BMR even at the same body weight."
+      },
+      {
+       "q": "A sedentary person (activity factor 1.2) has a BMR of 1,500 kcal. What is their estimated TDEE?",
+       "choices": [
+        "1,500 kcal",
+        "1,650 kcal",
+        "1,800 kcal",
+        "2,000 kcal"
+       ],
+       "answer": 2,
+       "explain": "1,500 kcal × 1.2 = 1,800 kcal estimated total daily energy expenditure."
+      },
+      {
+       "q": "Building new muscle tissue from amino acids is an example of",
+       "choices": [
+        "Catabolism",
+        "Anabolism",
+        "Gastric emptying",
+        "Basal rate alone"
+       ],
+       "answer": 1,
+       "explain": "Anabolism refers to metabolic reactions that build larger molecules, like muscle protein, from smaller building blocks."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Body Composition and Healthy Weight",
+     "minutes": 13,
+     "intro": "Weight alone does not tell the whole story. Two people at the exact same weight can have very different health profiles depending on how much of that weight is muscle versus fat, which is why nutrition science looks well beyond the number on a scale.",
+     "sections": [
+      {
+       "heading": "BMI: A Useful but Limited Screening Tool",
+       "body": [
+        "**Body Mass Index (BMI)** is calculated as weight in kilograms divided by height in meters squared. The standard categories are underweight (below 18.5), normal weight (18.5-24.9), overweight (25-29.9), and obese (30 and above). BMI is inexpensive and correlates with health risk across large populations, which is why it is used so widely in research and screening.",
+        "Its major limitation is that it cannot distinguish muscle from fat: a very muscular athlete can register as 'overweight' or 'obese' by BMI despite low body fat, and an older adult who has lost muscle mass can have a 'normal' BMI while carrying an unhealthy amount of fat."
+       ]
+      },
+      {
+       "heading": "Better Context: Waist Circumference and Body Composition",
+       "body": [
+        "**Waist circumference** adds useful information because fat stored around the abdomen (visceral fat) carries more metabolic risk than fat stored elsewhere; a waist above about 40 inches in men or 35 inches in women is generally considered to signal elevated health risk. Direct measures of **body fat percentage**, using methods like DEXA scans, skinfold calipers, or bioelectrical impedance, give an even clearer picture, though these tools vary in accuracy and accessibility.",
+        "Current guidance treats a healthy weight as a combination of measures, not one number: BMI plus waist circumference plus attention to actual health behaviors, such as diet quality, physical activity, sleep, and stress, matter more for long-term health than chasing a single ideal figure."
+       ],
+       "example": {
+        "problem": "Calculate the BMI of a person who weighs 70 kg and is 1.75 m tall, and identify their BMI category.",
+        "steps": [
+         "BMI = weight ÷ height² = 70 ÷ (1.75)².",
+         "(1.75)² = 3.0625, so BMI = 70 ÷ 3.0625 ≈ 22.9."
+        ],
+        "answer": "BMI ≈ 22.9, in the normal weight range (18.5-24.9)"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Body Mass Index (BMI)",
+       "def": "Weight in kg divided by height in meters squared, used as a population-level health screening tool."
+      },
+      {
+       "term": "waist circumference",
+       "def": "A measure of abdominal fat that adds health-risk information beyond BMI alone."
+      },
+      {
+       "term": "visceral fat",
+       "def": "Fat stored around the abdominal organs, associated with higher metabolic health risk."
+      },
+      {
+       "term": "DEXA scan",
+       "def": "A dual-energy X-ray scan that can precisely measure body fat, muscle, and bone."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A person weighs 90 kg and is 1.80 m tall. Calculate their BMI, rounded to the nearest whole number.",
+       "choices": [
+        "24",
+        "28",
+        "31",
+        "35"
+       ],
+       "answer": 1,
+       "explain": "1.80² = 3.24; 90 ÷ 3.24 ≈ 27.8, which rounds to 28."
+      },
+      {
+       "q": "What is a key limitation of BMI as a health measure?",
+       "choices": [
+        "It requires expensive equipment to calculate",
+        "It cannot distinguish between muscle mass and fat mass",
+        "It only applies to children",
+        "It measures blood pressure instead of weight"
+       ],
+       "answer": 1,
+       "explain": "BMI uses only height and weight, so it cannot tell whether a given weight comes from muscle or fat, which can misclassify very muscular or very frail people."
+      },
+      {
+       "q": "A waist circumference above which threshold is generally considered to indicate elevated health risk in men?",
+       "choices": [
+        "30 inches",
+        "35 inches",
+        "40 inches",
+        "45 inches"
+       ],
+       "answer": 2,
+       "explain": "A waist circumference above about 40 inches in men (35 inches in women) is generally used as a threshold signaling elevated metabolic risk."
+      },
+      {
+       "q": "Which of these best reflects current guidance on defining a healthy weight?",
+       "choices": [
+        "A single ideal number on the scale for everyone",
+        "A combination of measures, such as BMI, waist circumference, and body composition, plus health behaviors",
+        "Only body fat percentage matters",
+        "Whatever weight a person weighed in high school"
+       ],
+       "answer": 1,
+       "explain": "Modern guidance treats healthy weight as multidimensional, combining several measurements with attention to diet quality, activity, sleep, and stress rather than one fixed number."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Diets, Life Stages, and Evaluating Claims",
+   "summary": "How nutrient needs shift across the lifespan, how to compare popular diet patterns fairly, how diet connects to chronic disease, and how to evaluate a nutrition claim like a scientist.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Nutrition Across the Lifespan",
+     "minutes": 15,
+     "intro": "A toddler, a teenager, and an 80-year-old can all be eating 'healthy' diets that look almost nothing alike, because nutrient priorities shift dramatically across the lifespan, driven by growth, hormonal change, and the body's changing ability to absorb and use nutrients.",
+     "sections": [
+      {
+       "heading": "Pregnancy and Infancy",
+       "body": [
+        "Pregnancy raises needs for folate (600 mcg DFE/day, to support neural tube formation), iron (to build the expanded blood volume and support fetal growth), and calories (roughly +340 kcal/day in the second trimester and +450 kcal/day in the third). Exclusive breastfeeding is generally recommended for about the first 6 months of life; a baby's iron stores from birth start to run low around 4 to 6 months, which is one reason iron-rich complementary foods are introduced around that age."
+       ]
+      },
+      {
+       "heading": "Childhood Through Older Adulthood",
+       "body": [
+        "Growth spurts in childhood and adolescence increase calcium, iron, and calorie needs; menstruating teenage girls in particular need enough iron to offset new monthly losses, and habits formed in these years often persist for life. In older adulthood, total calorie needs typically decline as muscle mass and activity fall, but several micronutrient needs stay the same or rise: calcium and vitamin D remain important for bone health, and **age-related declines in stomach acid** can impair absorption of vitamin B12 that is bound to protein in food.",
+        "Because of that B12 absorption issue, adults over 50 are generally advised to get most of their B12 from fortified foods or supplements, which contain a free (unbound) form that does not require stomach acid to be released. Protein also remains critical in older age to counteract **sarcopenia**, the gradual loss of muscle mass, even as total calorie needs go down."
+       ],
+       "example": {
+        "problem": "A 75-year-old has reduced stomach acid production, which impairs B12 absorption from meat and dairy. What form of B12 is recommended instead, and why does it work when food-bound B12 does not absorb well?",
+        "steps": [
+         "Food-bound B12 must be released from protein by stomach acid before the body can absorb it.",
+         "Synthetic (crystalline) B12 in fortified foods and supplements is not bound to protein, so it does not require stomach acid to be released.",
+         "Therefore older adults are advised to meet the B12 RDA mainly through fortified foods or supplements."
+        ],
+        "answer": "Crystalline (synthetic) B12 from fortified foods or supplements, because it does not need stomach acid to be released before absorption"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sarcopenia",
+       "def": "The gradual, age-related loss of muscle mass and strength."
+      },
+      {
+       "term": "exclusive breastfeeding",
+       "def": "Feeding an infant only breast milk, with no other liquids or solids, generally recommended for about 6 months."
+      },
+      {
+       "term": "dietary folate equivalent (DFE)",
+       "def": "The unit used to express folate intake, accounting for the higher absorbability of synthetic folic acid versus natural folate."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is folate intake especially critical in the weeks before and during early pregnancy?",
+       "choices": [
+        "It prevents morning sickness",
+        "It reduces the risk of neural tube defects during early fetal development",
+        "It increases birth weight only",
+        "It replaces the need for iron"
+       ],
+       "answer": 1,
+       "explain": "The neural tube forms in the first few weeks of pregnancy, often before a person knows they are pregnant, which is why folate intake matters even before conception is confirmed."
+      },
+      {
+       "q": "Why are older adults specifically advised to get vitamin B12 from fortified foods or supplements rather than relying on food sources alone?",
+       "choices": [
+        "Fortified B12 tastes better",
+        "Reduced stomach acid with age impairs release of B12 that is bound to protein in food",
+        "Older adults are allergic to meat",
+        "B12 needs decrease sharply with age"
+       ],
+       "answer": 1,
+       "explain": "As stomach acid production declines with age, less protein-bound B12 gets released for absorption, so the free form found in fortified foods and supplements becomes the more reliable source."
+      },
+      {
+       "q": "Approximately when do exclusively breastfed infants typically need iron-rich complementary foods introduced?",
+       "choices": [
+        "At birth",
+        "Around 4-6 months",
+        "At 2 years",
+        "Only if formula-fed"
+       ],
+       "answer": 1,
+       "explain": "An infant's birth iron stores begin to run low around 4 to 6 months of age, which is why iron-rich solid foods are typically introduced around that time."
+      },
+      {
+       "q": "Why does protein remain important for older adults even as total calorie needs decline?",
+       "choices": [
+        "Protein has no calories so it doesn't affect weight",
+        "It helps counteract sarcopenia, the age-related loss of muscle mass",
+        "Older adults cannot digest carbohydrate",
+        "Protein needs disappear after age 60"
+       ],
+       "answer": 1,
+       "explain": "Adequate protein intake, combined with resistance activity, helps preserve muscle mass and strength that would otherwise decline with age."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Popular Diet Patterns",
+     "minutes": 15,
+     "intro": "Mediterranean, vegan, and low-carb diets get argued about constantly, but each has a real evidence base behind it, and comparing them fairly means asking what kind of evidence exists and what nutrients each pattern needs extra planning to cover.",
+     "sections": [
+      {
+       "heading": "The Mediterranean Diet",
+       "body": [
+        "The Mediterranean diet emphasizes olive oil, vegetables, legumes, whole grains, fish, and moderate wine, with limited red meat and added sugar. It has some of the strongest trial evidence of any diet pattern: the landmark **PREDIMED trial** randomly assigned thousands of participants at high cardiovascular risk to a Mediterranean diet supplemented with olive oil or nuts, versus a lower-fat control diet, and found significantly fewer heart attacks, strokes, and cardiovascular deaths in the Mediterranean diet groups."
+       ]
+      },
+      {
+       "heading": "Vegetarian, Vegan, and Low-Carbohydrate Patterns",
+       "body": [
+        "Well-planned vegetarian and vegan diets can meet nutrient needs at every life stage, but a few nutrients need deliberate attention: vitamin B12 (found almost only in animal foods, requiring fortified foods or a supplement on a vegan diet), iron and zinc (less bioavailable from plants), and the omega-3 fats EPA and DHA (found mainly in fish, though algae-based supplements provide a plant source).",
+        "Low-carbohydrate and ketogenic diets restrict carbohydrate low enough, commonly under about 50 g/day, that the body shifts toward burning fat and producing ketones for fuel, a state called **ketosis**. For weight loss, well-controlled studies generally find low-carb diets produce results similar to other calorie-matched diets over the long term, though the initial drop on the scale is often faster because carbohydrate restriction also causes the body to shed stored water."
+       ],
+       "example": {
+        "problem": "The PREDIMED trial randomly assigned participants to a Mediterranean diet or a low-fat control diet. Why does this design let researchers claim the diet caused a reduction in cardiovascular events, rather than merely being associated with fewer events?",
+        "steps": [
+         "Random assignment means the groups should be similar in other health-related factors at the start of the study.",
+         "Because chance, not personal choice, determined which diet a participant followed, it is far less likely that some other factor explains the difference in outcomes.",
+         "This allows researchers to attribute the difference in cardiovascular events to the diet itself."
+        ],
+        "answer": "Randomization balances other variables between groups, which supports a causal conclusion rather than just an association."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "PREDIMED trial",
+       "def": "A large randomized controlled trial that found a Mediterranean diet reduced cardiovascular events."
+      },
+      {
+       "term": "ketosis",
+       "def": "A metabolic state, triggered by very low carbohydrate intake, in which the body burns fat and produces ketones for fuel."
+      },
+      {
+       "term": "nutrient of concern",
+       "def": "A nutrient that requires deliberate planning to obtain enough of on a particular diet pattern, such as B12 on a vegan diet."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the strongest form of evidence supporting cardiovascular benefits of the Mediterranean diet?",
+       "choices": [
+        "Testimonials from restaurant reviews",
+        "The PREDIMED randomized controlled trial",
+        "A single case report",
+        "Sales data from olive oil companies"
+       ],
+       "answer": 1,
+       "explain": "PREDIMED randomly assigned thousands of high-risk participants to different diets and tracked real cardiovascular outcomes, making it far stronger evidence than testimonials or sales figures."
+      },
+      {
+       "q": "Which nutrient is a vegan diet most likely to lack without fortified foods or supplements?",
+       "choices": [
+        "Vitamin C",
+        "Vitamin B12",
+        "Carbohydrate",
+        "Fiber"
+       ],
+       "answer": 1,
+       "explain": "Vitamin B12 occurs almost exclusively in animal foods, so a diet with no animal products needs fortified foods or a supplement to reliably meet requirements."
+      },
+      {
+       "q": "What triggers the metabolic state of ketosis?",
+       "choices": [
+        "Eating very high amounts of protein only",
+        "Restricting carbohydrate low enough (commonly under about 50 g/day) that the body shifts to burning fat for fuel",
+        "Eating only at night",
+        "Avoiding all dietary fat"
+       ],
+       "answer": 1,
+       "explain": "When carbohydrate intake drops low enough that glucose and glycogen can no longer meet the body's energy needs, the liver starts converting fat into ketones for fuel."
+      },
+      {
+       "q": "For long-term weight loss, how do well-designed studies generally find low-carb diets compare to other calorie-matched diets?",
+       "choices": [
+        "Low-carb always produces dramatically more fat loss",
+        "Results are generally similar once calories are matched, though early water-weight loss can be higher on low-carb",
+        "Low-carb diets always fail within a week",
+        "Calories do not matter if carbs are low"
+       ],
+       "answer": 1,
+       "explain": "When total calories are equated, long-term fat loss tends to be similar across diet patterns; low-carb diets often show a faster initial drop on the scale mainly due to water loss, not extra fat loss."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Diet and Chronic Disease",
+     "minutes": 15,
+     "intro": "Heart disease, type 2 diabetes, and certain cancers rank among the leading causes of death worldwide, and diet is one of the most modifiable risk factors involved in all three, which is exactly why nutrition science devotes so much attention to them.",
+     "sections": [
+      {
+       "heading": "Cardiovascular Disease and Diabetes",
+       "body": [
+        "Diets high in saturated and trans fat raise LDL cholesterol, a major driver of the artery plaque buildup behind heart attacks and strokes, while diets high in sodium raise blood pressure, another major cardiovascular risk factor; the **DASH diet**, rich in fruits, vegetables, whole grains, and low-fat dairy, was specifically designed and tested to lower blood pressure.",
+        "Type 2 diabetes develops when cells become less responsive to insulin, a state called **insulin resistance**, forcing the pancreas to produce more and more insulin until it can no longer keep blood sugar in a healthy range. Excess body weight is the single largest risk factor, and diets high in refined carbohydrate, added sugar, and sugar-sweetened beverages are consistently linked to higher risk, independent of body weight."
+       ]
+      },
+      {
+       "heading": "Cancer and Diet",
+       "body": [
+        "No single food causes or cures cancer, but major research bodies, including the World Cancer Research Fund, find that overall dietary patterns matter: diets rich in fruits, vegetables, whole grains, and fiber are associated with lower risk of several cancers, while high intake of processed meat, excess alcohol, and obesity are associated with higher risk. These patterns are consistent across large, long-running observational studies, even though no single trial can ethically randomize people to 'eat processed meat for 20 years' to prove causation directly."
+       ],
+       "example": {
+        "problem": "A person drinks two 12-oz sugar-sweetened sodas per day, each supplying about 150 kcal and 40 g of added sugar. How many total kcal and grams of added sugar does this add daily, and how does the sugar compare to the American Heart Association's suggested limit of about 25 g/day for women?",
+        "steps": [
+         "Total kcal: 150 kcal × 2 = 300 kcal.",
+         "Total added sugar: 40 g × 2 = 80 g.",
+         "Compare to the limit: 80 ÷ 25 = 3.2, so this is more than 3 times the suggested daily limit."
+        ],
+        "answer": "≈ 300 kcal and 80 g of added sugar per day, over 3 times the AHA's suggested 25 g/day limit for women, from soda alone"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "LDL cholesterol",
+       "def": "A cholesterol-carrying particle that, at high levels, contributes to artery plaque buildup and cardiovascular risk."
+      },
+      {
+       "term": "insulin resistance",
+       "def": "A state in which cells respond poorly to insulin, forcing the pancreas to produce more to control blood sugar."
+      },
+      {
+       "term": "DASH diet",
+       "def": "An eating pattern rich in fruits, vegetables, whole grains, and low-fat dairy, tested and shown to lower blood pressure."
+      }
+     ],
+     "practice": [
+      {
+       "q": "The DASH diet was originally designed to help manage which condition?",
+       "choices": [
+        "Iron deficiency",
+        "High blood pressure",
+        "Lactose intolerance",
+        "Food allergies"
+       ],
+       "answer": 1,
+       "explain": "DASH stands for Dietary Approaches to Stop Hypertension, and it was developed and clinically tested specifically to lower blood pressure."
+      },
+      {
+       "q": "What does insulin resistance mean in the context of type 2 diabetes risk?",
+       "choices": [
+        "The body produces no insulin at all",
+        "Cells respond less effectively to insulin, requiring the pancreas to produce more to manage blood sugar",
+        "Insulin resistance only affects the liver",
+        "Insulin is only relevant to type 1 diabetes"
+       ],
+       "answer": 1,
+       "explain": "In insulin resistance, cells need more insulin than normal to take up glucose from the blood, so the pancreas works harder until it may eventually be unable to keep up, raising blood sugar."
+      },
+      {
+       "q": "According to major cancer research organizations, which dietary pattern is associated with lower cancer risk?",
+       "choices": [
+        "High intake of processed and red meat",
+        "High intake of fruits, vegetables, and fiber with limited processed meat and alcohol",
+        "Very high alcohol intake",
+        "Skipping meals entirely"
+       ],
+       "answer": 1,
+       "explain": "Large observational studies consistently associate diets rich in fruits, vegetables, and fiber, with limited processed meat and alcohol, with lower rates of several cancers."
+      },
+      {
+       "q": "A person drinks one 12-oz sugar-sweetened soda daily, supplying 40 g of added sugar. Compared to the AHA's suggested 25 g/day added-sugar limit for women, this one drink represents about what fraction of that limit?",
+       "choices": [
+        "40%",
+        "100%",
+        "160%",
+        "250%"
+       ],
+       "answer": 2,
+       "explain": "40 ÷ 25 = 1.6, or 160% of the suggested daily limit, from a single soda."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Evaluating Nutrition Science and Claims",
+     "minutes": 13,
+     "intro": "Headlines love a simple nutrition villain or miracle food, but real science is rarely that tidy. Learning to spot the red flags of a bad claim protects both your wallet and your health, and it is a skill you can build in a single lesson.",
+     "sections": [
+      {
+       "heading": "Red Flags in Nutrition Claims",
+       "body": [
+        "Be skeptical of claims using words like 'miracle,' 'detox,' or 'superfood,' since real foods do not single-handedly cure disease. Be skeptical of a claim based on one small study, especially if it was conducted in animals or cells rather than humans, or if the study was funded by a company that sells the product being praised, a **conflict of interest** that can bias how a study is designed, analyzed, or reported.",
+        "Testimonials ('it worked for me!') are **anecdotal evidence**: compelling as a story, but useless as proof, because they cannot rule out coincidence, the placebo effect, or other lifestyle changes happening at the same time."
+       ]
+      },
+      {
+       "heading": "How to Actually Evaluate a Claim",
+       "body": [
+        "Ask who funded the study and who benefits from the result. Check the study design: was it a randomized controlled trial in humans, an observational study, or an animal study being stretched, or **extrapolated**, into a human recommendation it was never designed to support? Look for whether the finding has been replicated across multiple independent studies, ideally summarized in a **systematic review**, rather than resting on one paper.",
+        "This does not mean living in constant nutrition paralysis. The habits with the strongest, most repeated evidence, eating more fiber-rich whole foods, limiting added sugar, sodium, and alcohol, and maintaining a healthy weight, remain solid ground even while flashier individual claims come and go."
+       ],
+       "example": {
+        "problem": "A magazine article claims 'New study proves Food X cures inflammation!' based on a study of 12 mice given extremely high doses of Food X's extract for two weeks, funded by the company that sells Food X supplements. List three reasons to be skeptical of this claim.",
+        "steps": [
+         "Animal studies, especially with only 12 subjects, do not reliably predict effects in humans.",
+         "Extremely high doses used in a lab study rarely reflect realistic amounts a person would eat.",
+         "The study's funding by the company selling the product is a conflict of interest that can bias the design, analysis, or reporting of results."
+        ],
+        "answer": "Small non-human sample size, unrealistic dosing, and a clear funding conflict of interest all warrant skepticism before trusting or repeating the claim."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "conflict of interest",
+       "def": "A situation where a party with a financial stake in a study's outcome funded or influenced the research."
+      },
+      {
+       "term": "systematic review",
+       "def": "A study that pools and evaluates results from many independent studies on the same question."
+      },
+      {
+       "term": "anecdotal evidence",
+       "def": "Evidence based on individual stories or testimonials, which cannot rule out coincidence or other causes."
+      },
+      {
+       "term": "extrapolation",
+       "def": "Applying a result from one context, such as an animal study, to a different context it was not designed to test, such as humans."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of these is the strongest red flag in a nutrition news headline?",
+       "choices": [
+        "It cites a peer-reviewed systematic review",
+        "It claims a single food 'cures' a disease based on one small study funded by the company selling it",
+        "It notes the limitations of the study",
+        "It recommends consulting a registered dietitian"
+       ],
+       "answer": 1,
+       "explain": "A sweeping cure claim, a tiny study, and a funding conflict of interest together are exactly the combination that should trigger skepticism before accepting or sharing the claim."
+      },
+      {
+       "q": "Why is a study conducted only in mice not sufficient on its own to make a recommendation for humans?",
+       "choices": [
+        "Mice cannot be studied ethically",
+        "Animal physiology and metabolism can differ significantly from humans, so effects don't always translate",
+        "Mice studies are always fraudulent",
+        "Mice cannot eat food at all"
+       ],
+       "answer": 1,
+       "explain": "Differences in metabolism, dose sensitivity, and physiology mean an effect seen in mice may not appear, or may appear very differently, in humans, so results need human trials before becoming a recommendation."
+      },
+      {
+       "q": "What does it mean when a nutrition study has a conflict of interest?",
+       "choices": [
+        "The researchers disagree with each other",
+        "A party with a financial stake in the results, such as the manufacturer, funded or influenced the study",
+        "The study was conducted in a foreign country",
+        "The study used a placebo group"
+       ],
+       "answer": 1,
+       "explain": "When the entity funding a study stands to profit from a favorable result, that financial interest can subtly shape study design, data analysis, or how results are reported, even without outright fraud."
+      },
+      {
+       "q": "Which of the following is the most reliable single source of nutrition guidance?",
+       "choices": [
+        "A supplement company's website",
+        "A testimonial video on social media",
+        "A systematic review pooling many peer-reviewed studies",
+        "A blog post by an untrained influencer"
+       ],
+       "answer": 2,
+       "explain": "A systematic review combines results across many independent studies, reducing the influence of any single study's flaws, bias, or chance findings."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

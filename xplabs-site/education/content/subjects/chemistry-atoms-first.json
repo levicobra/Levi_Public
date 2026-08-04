@@ -1,0 +1,1032 @@
+{
+ "id": "chemistry-atoms-first",
+ "title": "Chemistry: Atoms First",
+ "domain": "physical",
+ "level": "Intro college",
+ "description": "General chemistry built outward from the atom: you start with atomic structure and electron configuration, move into bonding and molecular shape, and only then quantify reactions with moles and stoichiometry before finishing with gases, phases, and equilibrium.",
+ "outcomes": [
+  "Determine electron configurations and predict periodic trends directly from an element's position on the table.",
+  "Draw Lewis structures and predict 3D molecular shape and polarity using VSEPR theory.",
+  "Name ionic and molecular compounds and convert between grams, moles, and particles.",
+  "Balance equations and solve stoichiometry problems including limiting reactant and percent yield.",
+  "Apply the ideal gas law and explain how intermolecular forces set boiling and melting points.",
+  "Use Le Chatelier's principle and the pH scale to analyze equilibrium and acid-base systems."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Atoms, Molecules, and Ions",
+   "summary": "Start from the atom itself: its subatomic structure, its isotopes, and the electron arrangement that makes the periodic table predictive.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Atomic Structure, Isotopes, and Atomic Mass",
+     "minutes": 14,
+     "intro": "Every chemical fact you will learn traces back to the structure of a single atom — its nucleus, its electrons, and the small variations called isotopes that give elements their listed atomic mass.",
+     "sections": [
+      {
+       "heading": "Protons, Neutrons, and Electrons",
+       "body": [
+        "An atom has a dense central **nucleus** holding positive **protons** and neutral **neutrons**, surrounded by a cloud of negative **electrons**. The **atomic number** equals the proton count and is what defines an element — change it and you have a different element.",
+        "The **mass number** is the sum of protons and neutrons, written as a superscript before the symbol, like ^63^Cu. Electrons contribute almost no mass, so an atom's mass comes almost entirely from its nucleus."
+       ]
+      },
+      {
+       "heading": "Isotopes and Weighted Atomic Mass",
+       "body": [
+        "**Isotopes** are atoms of one element with different neutron counts, so they share an atomic number but differ in mass number. They behave identically in chemical reactions because chemistry depends on protons and electrons, not neutrons.",
+        "The atomic mass on the periodic table is a **weighted average** across all naturally occurring isotopes, which is why it is rarely a whole number."
+       ],
+       "example": {
+        "problem": "Copper is 69.15% Cu-63 (62.93 amu) and 30.85% Cu-65 (64.93 amu). Find the average atomic mass.",
+        "steps": [
+         "Multiply each isotope's mass by its decimal fraction: 62.93 × 0.6915 = 43.52; 64.93 × 0.3085 = 20.03.",
+         "Add the weighted masses: 43.52 + 20.03 = 63.55 amu."
+        ],
+        "answer": "63.55 amu, matching copper's periodic table value."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "atomic number",
+       "def": "The number of protons in an atom's nucleus; it defines the element."
+      },
+      {
+       "term": "mass number",
+       "def": "The total number of protons plus neutrons in an atom."
+      },
+      {
+       "term": "isotope",
+       "def": "An atom of a given element with a different neutron count than other atoms of that element."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An atom has 29 protons and 34 neutrons. What is its mass number?",
+       "choices": [
+        "29",
+        "34",
+        "63",
+        "92"
+       ],
+       "answer": 2,
+       "explain": "Mass number = protons + neutrons = 29 + 34 = 63."
+      },
+      {
+       "q": "Two atoms have the same atomic number but different mass numbers. What relationship do they have?",
+       "choices": [
+        "Different elements",
+        "Isotopes",
+        "Isomers",
+        "Ions of different elements"
+       ],
+       "answer": 1,
+       "explain": "Same atomic number (same element) with different mass numbers means different neutron counts, the definition of isotopes."
+      },
+      {
+       "q": "Why is copper's listed atomic mass (63.55 amu) not a whole number?",
+       "choices": [
+        "Electrons add significant mass",
+        "It is a weighted average of copper's naturally occurring isotopes",
+        "Copper atoms decay over time",
+        "The periodic table always rounds to two decimals"
+       ],
+       "answer": 1,
+       "explain": "Listed atomic masses are weighted averages across all naturally occurring isotopes, so they land between whole numbers."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Electron Configurations and the Quantum Model",
+     "minutes": 16,
+     "intro": "Electrons do not orbit randomly — they fill a predictable sequence of orbitals, and that sequence is the real reason the periodic table has the shape it does.",
+     "sections": [
+      {
+       "heading": "Orbitals and the Aufbau Principle",
+       "body": [
+        "Electrons occupy **orbitals** grouped into s, p, d, and f subshells, holding a maximum of 2, 6, 10, and 14 electrons respectively. The **Aufbau principle** says electrons fill the lowest-energy orbitals first, building a configuration one electron at a time.",
+        "The **Pauli exclusion principle** limits each orbital to 2 electrons with opposite spins, and **Hund's rule** says electrons fill separate orbitals within a subshell singly before any pairing up."
+       ]
+      },
+      {
+       "heading": "Valence Electrons and Chemical Behavior",
+       "body": [
+        "**Valence electrons** occupy an atom's outermost shell and are almost entirely responsible for how it bonds and reacts. For main-group elements, the periodic table's group number directly tells you the valence electron count.",
+        "This is why elements in the same group behave alike: both have the same valence count and therefore similar bonding tendencies, regardless of how many total electrons or neutrons they carry."
+       ],
+       "example": {
+        "problem": "Write the electron configuration of sulfur (Z = 16) and state its valence electron count.",
+        "steps": [
+         "Fill in order: 1s^2^ (2), 2s^2^ (4), 2p^6^ (10), 3s^2^ (12), 3p^4^ (16).",
+         "The full configuration is 1s^2^ 2s^2^ 2p^6^ 3s^2^ 3p^4^; the outermost shell (n=3) holds 2 + 4 = 6 electrons."
+        ],
+        "answer": "1s^2^ 2s^2^ 2p^6^ 3s^2^ 3p^4^, with 6 valence electrons, matching sulfur's group 16 position."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "orbital",
+       "def": "A region of space around the nucleus where an electron is likely found, holding at most 2 electrons."
+      },
+      {
+       "term": "Aufbau principle",
+       "def": "The rule that electrons fill the lowest-energy orbitals available before higher-energy ones."
+      },
+      {
+       "term": "valence electron",
+       "def": "An electron in an atom's outermost occupied shell, primarily responsible for bonding."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the maximum number of electrons a d subshell can hold?",
+       "choices": [
+        "2",
+        "6",
+        "10",
+        "14"
+       ],
+       "answer": 2,
+       "explain": "A d subshell has 5 orbitals, each holding 2 electrons, for a maximum of 10 electrons."
+      },
+      {
+       "q": "What is the electron configuration of nitrogen (Z = 7)?",
+       "choices": [
+        "1s^2^ 2s^2^ 2p^3^",
+        "1s^2^ 2s^2^ 2p^5^",
+        "1s^2^ 2s^3^ 2p^2^",
+        "1s^2^ 2s^2^ 2p^2^ 3s^1^"
+       ],
+       "answer": 0,
+       "explain": "Filling in order: 1s^2^ (2 electrons), 2s^2^ (4 total), 2p^3^ (7 total) matches nitrogen's 7 electrons."
+      },
+      {
+       "q": "For main-group elements, what does the group number directly tell you?",
+       "choices": [
+        "Neutron count",
+        "Mass number",
+        "Number of valence electrons",
+        "Number of isotopes"
+       ],
+       "answer": 2,
+       "explain": "For main-group elements, the group number equals the valence electron count, which is why elements in the same group behave alike chemically."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Periodic Trends and Element Classification",
+     "minutes": 15,
+     "intro": "With electron configuration in hand, the periodic table stops being a chart to memorize and becomes a tool for predicting how big an atom is and how strongly it holds its electrons.",
+     "sections": [
+      {
+       "heading": "Metals, Nonmetals, and Metalloids",
+       "body": [
+        "The periodic table separates **metals** (left and center, shiny, conductive, tend to lose electrons), **nonmetals** (upper right, poor conductors, tend to gain electrons), and **metalloids** (the staircase boundary, like silicon, with mixed properties used in semiconductors).",
+        "Reactivity follows position too: group 1 alkali metals react vigorously because each has one loosely held valence electron to give away, while group 18 noble gases are nearly inert because their outer shells are already full."
+       ]
+      },
+      {
+       "heading": "Radius, Ionization Energy, and Electronegativity",
+       "body": [
+        "**Atomic radius** shrinks across a period (rising nuclear charge pulls the same shell in tighter) and grows down a group (each row adds a new, farther shell). **Ionization energy** and **electronegativity** both rise across a period and fall down a group, following the same nuclear-charge logic.",
+        "Fluorine, upper right of the table, has the highest electronegativity of any element; francium, lower left, has among the lowest — the clearest diagonal trend on the entire table."
+       ],
+       "example": {
+        "problem": "Explain why fluorine's electronegativity (4.0) is far higher than sodium's (0.9).",
+        "steps": [
+         "Locate each element: sodium is group 1, period 3; fluorine is group 17, period 2.",
+         "Fluorine sits much farther right (higher nuclear pull on valence electrons) and one period higher (less shielding) than sodium."
+        ],
+        "answer": "Fluorine's position, far right and near the top of the table, gives it much stronger pull on shared electrons than sodium."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "metalloid",
+       "def": "An element with properties between metals and nonmetals, found along the periodic table's staircase line."
+      },
+      {
+       "term": "atomic radius",
+       "def": "A measure of atomic size, decreasing across a period and increasing down a group."
+      },
+      {
+       "term": "electronegativity",
+       "def": "A measure of an atom's ability to attract shared electrons in a chemical bond."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does atomic radius generally shrink moving left to right across a period?",
+       "choices": [
+        "Electrons move to a farther shell",
+        "Nuclear charge rises while electrons stay in the same shell, pulling them inward",
+        "Neutrons repel electrons more on the right",
+        "Atoms lose an electron shell across a period"
+       ],
+       "answer": 1,
+       "explain": "Across a period, added protons increase nuclear charge while the outer shell stays the same, pulling electrons in and shrinking the atom."
+      },
+      {
+       "q": "Which element class includes silicon and sits along the periodic table's staircase line?",
+       "choices": [
+        "Alkali metals",
+        "Noble gases",
+        "Metalloids",
+        "Halogens"
+       ],
+       "answer": 2,
+       "explain": "Metalloids, like silicon, straddle the boundary between metals and nonmetals and show mixed conductive properties."
+      },
+      {
+       "q": "How does ionization energy change moving down a group?",
+       "choices": [
+        "It increases, because atoms are heavier",
+        "It decreases, because valence electrons are farther out and more shielded",
+        "It stays constant across a group",
+        "It becomes negative"
+       ],
+       "answer": 1,
+       "explain": "Down a group, valence electrons occupy shells farther from the nucleus with more shielding, so less energy is needed to remove them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Chemical Bonding and Molecular Geometry",
+   "summary": "With atomic structure established, see how atoms connect through ionic and covalent bonds, and how to predict the resulting 3D shape.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Ionic Bonding and Lattice Energy",
+     "minutes": 15,
+     "intro": "When a metal atom's loosely held valence electron meets a nonmetal desperate for one more, the result is not a shared bond but a full transfer, locking the two into a rigid, repeating crystal.",
+     "sections": [
+      {
+       "heading": "How Ionic Bonds Form",
+       "body": [
+        "An **ionic bond** forms when a metal transfers one or more electrons to a nonmetal, producing a positive **cation** and a negative **anion** that attract each other electrostatically. Sodium (1 valence electron) hands it to chlorine (needs 1 more), producing Na^+^ and Cl^−^.",
+        "The result is not a single molecule but a repeating three-dimensional **crystal lattice** of alternating cations and anions, held together by the combined pull of every ion on every neighboring ion of opposite charge."
+       ]
+      },
+      {
+       "heading": "Lattice Energy and Ionic Properties",
+       "body": [
+        "**Lattice energy** is the energy released when gaseous ions come together to form a solid lattice, and it grows with higher ion charge and smaller ion size. Higher lattice energy means a stronger lattice, which shows up as a higher melting point.",
+        "This is why compounds with +2/−2 ions have dramatically higher melting points than +1/−1 compounds of similar size — doubling both charges roughly quadruples the electrostatic attraction."
+       ],
+       "example": {
+        "problem": "Explain why magnesium oxide (MgO, Mg^2+^ and O^2−^) melts at 2852 °C while sodium chloride (NaCl, Na^+^ and Cl^−^) melts at only 801 °C.",
+        "steps": [
+         "Compare ion charges: MgO has +2/−2 ions; NaCl has +1/−1 ions.",
+         "Lattice energy scales with the product of the ion charges, so MgO's lattice energy is far larger than NaCl's.",
+         "A far larger lattice energy means far more thermal energy is needed to break the lattice apart, giving MgO its much higher melting point."
+        ],
+        "answer": "MgO's doubly charged ions create a much stronger lattice than NaCl's singly charged ions, explaining its far higher melting point."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ionic bond",
+       "def": "A bond formed by electron transfer between atoms, creating oppositely charged ions that attract each other."
+      },
+      {
+       "term": "lattice energy",
+       "def": "The energy released when gaseous ions combine to form a solid ionic lattice."
+      },
+      {
+       "term": "cation",
+       "def": "A positively charged ion, formed when an atom loses one or more electrons."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What type of ion forms when a metal atom loses an electron?",
+       "choices": [
+        "Anion",
+        "Cation",
+        "Isotope",
+        "Radical"
+       ],
+       "answer": 1,
+       "explain": "Losing a negatively charged electron leaves the atom with a net positive charge, making it a cation."
+      },
+      {
+       "q": "Why does MgO have a much higher melting point than NaCl?",
+       "choices": [
+        "MgO ions are larger",
+        "MgO has weaker lattice energy",
+        "MgO's higher ion charges give it much greater lattice energy",
+        "NaCl is a covalent compound"
+       ],
+       "answer": 2,
+       "explain": "Lattice energy scales with the product of ion charges; MgO's +2/−2 ions produce far greater lattice energy than NaCl's +1/−1 ions."
+      },
+      {
+       "q": "An ionic compound forms a repeating three-dimensional structure rather than individual molecules. What is this structure called?",
+       "choices": [
+        "A polymer",
+        "A crystal lattice",
+        "An isotope chain",
+        "An orbital"
+       ],
+       "answer": 1,
+       "explain": "Ionic compounds form a crystal lattice, a repeating array of alternating cations and anions extending in three dimensions."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Covalent Bonding and Lewis Structures",
+     "minutes": 17,
+     "intro": "Two nonmetals cannot transfer electrons the way a metal and nonmetal do — instead they share, and Lewis structures give you a way to draw exactly how that sharing is arranged.",
+     "sections": [
+      {
+       "heading": "Sharing Electrons: The Covalent Bond",
+       "body": [
+        "A **covalent bond** forms when two atoms share one or more pairs of electrons, each counting the shared pair toward its own stability. Bonds can be single (one shared pair), double (two pairs), or triple (three pairs), with bond strength and shortness increasing from single to triple.",
+        "Most atoms bond to satisfy the **octet rule**, reaching 8 valence electrons (2 for hydrogen) to match the nearest noble gas — though a few elements, like boron, are stable with fewer."
+       ]
+      },
+      {
+       "heading": "Drawing Lewis Structures",
+       "body": [
+        "To draw a **Lewis structure**, count total valence electrons, connect atoms with single bonds, then distribute remaining electrons as lone pairs while checking that every atom reaches an octet, converting lone pairs into extra bonds where needed.",
+        "This step-by-step count-then-check method works for any molecule and is the fastest way to catch an incomplete octet before you move on to predicting shape."
+       ],
+       "example": {
+        "problem": "Draw the Lewis structure of nitrogen gas, N~2~ (each N atom has 5 valence electrons).",
+        "steps": [
+         "Total valence electrons: 5 + 5 = 10.",
+         "A single bond between the two N atoms uses 2 electrons, leaving each N with only 3 nonbonding electrons — not enough for an octet, so upgrade to a triple bond, using 6 electrons.",
+         "Distribute the remaining 4 electrons as one lone pair on each nitrogen, giving both atoms a full octet."
+        ],
+        "answer": "N≡N, a triple bond, with one lone pair on each nitrogen atom."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "covalent bond",
+       "def": "A bond formed when two atoms share one or more pairs of electrons."
+      },
+      {
+       "term": "Lewis structure",
+       "def": "A diagram showing an atom's or molecule's valence electrons as bonding pairs and lone pairs."
+      },
+      {
+       "term": "octet rule",
+       "def": "The tendency of atoms to bond so as to have 8 valence electrons, matching a noble gas configuration."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many electrons are shared in a triple covalent bond?",
+       "choices": [
+        "2",
+        "4",
+        "6",
+        "8"
+       ],
+       "answer": 2,
+       "explain": "A triple bond consists of three shared pairs of electrons, or 6 electrons total."
+      },
+      {
+       "q": "Why does N~2~ form a triple bond instead of a single bond?",
+       "choices": [
+        "A single bond would leave each nitrogen short of a full octet",
+        "Nitrogen atoms repel each other unless triple-bonded",
+        "Triple bonds are required whenever two identical atoms bond",
+        "Nitrogen has 8 valence electrons on its own"
+       ],
+       "answer": 0,
+       "explain": "With only a single bond, each nitrogen would have just 3 nonbonding electrons plus 1 bonding pair, short of the 8 needed — the triple bond completes both octets."
+      },
+      {
+       "q": "In the Lewis structure counting method, what is the first step?",
+       "choices": [
+        "Predict the molecular shape",
+        "Count the total number of valence electrons",
+        "Assign formal charges",
+        "Determine the boiling point"
+       ],
+       "answer": 1,
+       "explain": "Lewis structures start by totaling all valence electrons from every atom in the molecule before any bonds are drawn."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "VSEPR Geometry and Molecular Polarity",
+     "minutes": 16,
+     "intro": "A Lewis structure is flat, but real molecules occupy three dimensions — VSEPR theory tells you exactly what shape a molecule takes and whether that shape leaves it electrically lopsided.",
+     "sections": [
+      {
+       "heading": "Predicting Shape with VSEPR",
+       "body": [
+        "**VSEPR theory** predicts shape from one idea: electron domains — bonding pairs and lone pairs around a central atom — repel each other and spread out as far apart as possible. Counting domains gives the base geometry: 2 gives linear, 3 gives trigonal planar, 4 gives tetrahedral.",
+        "Lone pairs take up more space than bonding pairs, so a central atom with 4 domains but 1 lone pair is trigonal pyramidal (like NH~3~), and one with 4 domains and 2 lone pairs is bent (like H~2~O)."
+       ]
+      },
+      {
+       "heading": "Polarity from Shape and Bond Dipoles",
+       "body": [
+        "A **bond dipole** arises whenever bonded atoms differ in electronegativity, giving the bond a partial negative and partial positive end. Whether the whole molecule is polar depends on geometry: symmetric arrangements can make individual bond dipoles cancel completely.",
+        "A molecule with no lone pairs on its central atom and identical surrounding atoms, arranged symmetrically, is typically nonpolar even if every individual bond is polar."
+       ],
+       "example": {
+        "problem": "Predict the shape and polarity of BF~3~ (3 bonding pairs, 0 lone pairs on boron).",
+        "steps": [
+         "Count electron domains on boron: 3 bonding pairs, 0 lone pairs.",
+         "With 3 domains and no lone pairs, VSEPR predicts trigonal planar geometry.",
+         "The three identical, symmetric B-F bond dipoles point 120° apart and cancel exactly."
+        ],
+        "answer": "Trigonal planar shape; nonpolar overall, despite each B-F bond being individually polar."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "VSEPR",
+       "def": "A model predicting molecular shape from repulsion between electron domains around a central atom."
+      },
+      {
+       "term": "electron domain",
+       "def": "A region of electron density around a central atom — either a bonding pair or a lone pair."
+      },
+      {
+       "term": "molecular polarity",
+       "def": "The overall unevenness of charge distribution in a molecule, set by bond dipoles and geometry together."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A central atom has 4 electron domains with 2 lone pairs. What shape results?",
+       "choices": [
+        "Tetrahedral",
+        "Trigonal pyramidal",
+        "Bent",
+        "Linear"
+       ],
+       "answer": 2,
+       "explain": "4 domains with 2 lone pairs push the remaining 2 bonded atoms into a bent arrangement, as in water."
+      },
+      {
+       "q": "Why is BF~3~ nonpolar despite having 3 polar B-F bonds?",
+       "choices": [
+        "Boron and fluorine have equal electronegativity",
+        "Its symmetric trigonal planar shape causes the bond dipoles to cancel",
+        "BF~3~ has no valence electrons",
+        "Single bonds are never polar"
+       ],
+       "answer": 1,
+       "explain": "BF~3~'s three identical bond dipoles, spaced 120° apart in a symmetric plane, cancel out exactly, leaving no net molecular dipole."
+      },
+      {
+       "q": "Why does a lone pair change a molecule's shape compared to an identical bonding-pair count with no lone pairs?",
+       "choices": [
+        "Lone pairs have no effect on geometry",
+        "Lone pairs take up more space and compress the angles between bonded atoms",
+        "Lone pairs always create a linear shape",
+        "Lone pairs cancel bond dipoles automatically"
+       ],
+       "answer": 1,
+       "explain": "Lone pairs occupy more space than bonding pairs, pushing bonded atoms closer together and distorting the shape away from the base geometry."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Quantifying Reactions: Moles, Stoichiometry, and Solutions",
+   "summary": "With structure and bonding established, now count: moles, balanced equations, limiting reactants, and concentration in solution.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Mole, Molar Mass, and Compound Naming",
+     "minutes": 15,
+     "intro": "Atoms are too small to count one at a time, so chemists count them in moles, and every mole calculation depends on being able to name and identify the compound you are working with.",
+     "sections": [
+      {
+       "heading": "Avogadro's Number and Molar Mass",
+       "body": [
+        "A **mole** is exactly 6.022 × 10^23^ particles, **Avogadro's number**, giving chemists a human-scale unit for astronomically large particle counts. **Molar mass** is the mass in grams of one mole of a substance, numerically equal to its atomic or molecular mass in amu.",
+        "Molar mass converts between the lab (grams on a balance) and the reaction (moles): divide mass by molar mass to get moles, multiply moles by molar mass to get mass back."
+       ],
+       "example": {
+        "problem": "How many moles are in 36.0 g of water (molar mass 18.0 g/mol)?",
+        "steps": [
+         "moles = mass ÷ molar mass = 36.0 g ÷ 18.0 g/mol.",
+         "moles = 2.00 mol."
+        ],
+        "answer": "2.00 mol of water."
+       }
+      },
+      {
+       "heading": "Naming Ionic and Molecular Compounds",
+       "body": [
+        "**Ionic compounds** form between metals and nonmetals: name the metal cation first, then the nonmetal anion ending in '-ide'; a Roman numeral shows the charge when the metal is variable, as in copper(I) oxide. **Molecular compounds** form between two nonmetals and use Greek prefixes (mono-, di-, tri-) to count atoms.",
+        "Correctly naming a compound is not just vocabulary — it tells you the exact ratio of atoms you need for every stoichiometry calculation that follows."
+       ],
+       "example": {
+        "problem": "Name the ionic compound Cu~2~O, given that copper forms Cu^+^ or Cu^2+^.",
+        "steps": [
+         "Oxide carries a −2 charge; with 1 oxide ion, the compound needs +2 total positive charge.",
+         "That +2 is split across 2 copper atoms, so each copper ion is +1."
+        ],
+        "answer": "Copper(I) oxide."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "mole",
+       "def": "A unit representing exactly 6.022 × 10^23^ particles of a substance."
+      },
+      {
+       "term": "molar mass",
+       "def": "The mass in grams of one mole of a substance, numerically equal to its atomic or molecular mass."
+      },
+      {
+       "term": "ionic compound",
+       "def": "A compound formed by electrostatic attraction between a metal cation and a nonmetal anion."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many moles are in 22.0 g of CO~2~ (molar mass 44.0 g/mol)?",
+       "choices": [
+        "0.500 mol",
+        "2.00 mol",
+        "22.0 mol",
+        "44.0 mol"
+       ],
+       "answer": 0,
+       "explain": "moles = 22.0 g ÷ 44.0 g/mol = 0.500 mol."
+      },
+      {
+       "q": "What is the mass of 4.00 mol of NaCl (molar mass 58.5 g/mol)?",
+       "choices": [
+        "14.6 g",
+        "58.5 g",
+        "234 g",
+        "468 g"
+       ],
+       "answer": 2,
+       "explain": "mass = moles × molar mass = 4.00 × 58.5 = 234 g."
+      },
+      {
+       "q": "What is the correct name for FeCl~3~, given iron can form Fe^2+^ or Fe^3+^?",
+       "choices": [
+        "Iron chloride",
+        "Iron(II) chloride",
+        "Iron(III) chloride",
+        "Triiron chloride"
+       ],
+       "answer": 2,
+       "explain": "Three chloride ions (−1 each) require +3 total charge on one iron ion, so the name must specify iron(III) chloride."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Balancing Equations and Stoichiometric Calculations",
+     "minutes": 18,
+     "intro": "A chemical equation is a recipe that must obey conservation of mass — the atoms you start with are exactly the atoms you end with, just rearranged, and balancing the equation is how you prove it.",
+     "sections": [
+      {
+       "heading": "Balancing for Conservation of Mass",
+       "body": [
+        "The **law of conservation of mass** requires equal numbers of each atom on both sides of a chemical equation. You balance by adjusting **coefficients** — the numbers in front of formulas — never subscripts, since changing a subscript changes which substance you are describing entirely.",
+        "A reliable order: balance the most complex molecule first, then elements appearing in only one compound per side, saving elemental oxygen or hydrogen for last since they often appear in several places."
+       ],
+       "example": {
+        "problem": "Balance the combustion of methane: CH~4~ + O~2~ → CO~2~ + H~2~O.",
+        "steps": [
+         "Carbon is already balanced: 1 CH~4~ gives 1 CO~2~.",
+         "Balance hydrogen: 4 H in methane needs 2 H~2~O (2 × 2 = 4).",
+         "Count oxygen on the product side: 1 CO~2~ gives 2 O, 2 H~2~O gives 2 O, total 4 O, so use 2 O~2~."
+        ],
+        "answer": "CH~4~ + 2O~2~ → CO~2~ + 2H~2~O."
+       }
+      },
+      {
+       "heading": "Mole Ratio Calculations",
+       "body": [
+        "Once balanced, an equation's coefficients give the **mole ratio** between any two substances — the methane equation says 1 mole of methane always requires 2 moles of oxygen and always yields 1 mole of carbon dioxide. Stoichiometry converts a known mass to moles, applies the mole ratio, then converts back to mass.",
+        "This grams → moles → moles → grams path is the single most-used calculation pattern in general chemistry, and it works for any two substances in a balanced equation."
+       ],
+       "example": {
+        "problem": "How many grams of CO~2~ form when 16.0 g of CH~4~ (molar mass 16.0 g/mol) burns completely?",
+        "steps": [
+         "Convert grams to moles: 16.0 g ÷ 16.0 g/mol = 1.00 mol CH~4~.",
+         "Apply the 1:1 mole ratio of CO~2~ to CH~4~: 1.00 mol CO~2~ forms.",
+         "Convert moles of CO~2~ to grams using its molar mass, 44.0 g/mol: 1.00 × 44.0 = 44.0 g."
+        ],
+        "answer": "44.0 g of CO~2~."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "balanced equation",
+       "def": "A chemical equation with equal numbers of each atom on both sides, satisfying conservation of mass."
+      },
+      {
+       "term": "mole ratio",
+       "def": "The ratio between coefficients of two substances in a balanced equation."
+      },
+      {
+       "term": "conservation of mass",
+       "def": "The principle that atoms are neither created nor destroyed in a chemical reaction."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In 2H~2~ + O~2~ → 2H~2~O, how many moles of O~2~ react completely with 8.0 mol H~2~?",
+       "choices": [
+        "2.0 mol",
+        "4.0 mol",
+        "8.0 mol",
+        "16 mol"
+       ],
+       "answer": 1,
+       "explain": "The mole ratio of O~2~ to H~2~ is 1:2, so 8.0 mol H~2~ × (1 mol O~2~ / 2 mol H~2~) = 4.0 mol O~2~."
+      },
+      {
+       "q": "Why must you adjust coefficients rather than subscripts when balancing an equation?",
+       "choices": [
+        "Subscripts must always be even",
+        "Changing a subscript changes the identity of the substance",
+        "Coefficients cannot be whole numbers",
+        "Subscripts only apply to single elements"
+       ],
+       "answer": 1,
+       "explain": "A subscript is part of a formula's identity — changing it describes a different substance entirely, not a balanced amount of the same one."
+      },
+      {
+       "q": "Using 2Al + 3Cl~2~ → 2AlCl~3~, how many moles of AlCl~3~ form from 6.0 mol Al reacting completely?",
+       "choices": [
+        "3.0 mol",
+        "6.0 mol",
+        "9.0 mol",
+        "12 mol"
+       ],
+       "answer": 1,
+       "explain": "The mole ratio of AlCl~3~ to Al is 2:2, or 1:1, so 6.0 mol Al produces 6.0 mol AlCl~3~."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Limiting Reactants, Percent Yield, and Molarity",
+     "minutes": 17,
+     "intro": "Real reactions rarely start with reactants in the exact ratio a recipe calls for, and real yields rarely hit the theoretical maximum — this lesson ties those realities together with the concentration math used to measure solutions.",
+     "sections": [
+      {
+       "heading": "Finding the Limiting Reactant",
+       "body": [
+        "When reactants are not present in the exact mole ratio the equation requires, one runs out first — the **limiting reactant** — capping how much product can form, while the **excess reactant** remains partly unused. Compare the mole ratio you have to the ratio the equation demands to find which one runs out first.",
+        "Once you know the limiting reactant, use only its moles (with the balanced equation's ratio) to calculate the amount of product — the excess reactant's leftover amount is irrelevant to that calculation."
+       ],
+       "example": {
+        "problem": "In 2H~2~ + O~2~ → 2H~2~O, 5.00 mol H~2~ is mixed with 2.00 mol O~2~. Which is limiting, and how many moles of H~2~O form?",
+        "steps": [
+         "Check O~2~ needed for all the H~2~: 5.00 mol H~2~ ÷ 2 = 2.50 mol O~2~ needed, but only 2.00 mol is available.",
+         "Since there is not enough O~2~ to use up all the H~2~, O~2~ is the limiting reactant.",
+         "Use O~2~ to find H~2~O formed: 2.00 mol O~2~ × (2 mol H~2~O / 1 mol O~2~) = 4.00 mol H~2~O."
+        ],
+        "answer": "O~2~ is limiting; 4.00 mol of H~2~O forms."
+       }
+      },
+      {
+       "heading": "Percent Yield and Solution Molarity",
+       "body": [
+        "**Percent yield** compares the actual mass of product collected to the **theoretical yield** predicted from the limiting reactant: percent yield = (actual ÷ theoretical) × 100%. A value near 100% signals an efficient reaction; real reactions almost always fall short due to side reactions or product lost during purification.",
+        "**Molarity** (M = mol solute / L solution) measures how concentrated a solution is, and it is the same mole-counting logic applied to substances dissolved in a liquid rather than substances reacting as pure solids or gases."
+       ],
+       "example": {
+        "problem": "The theoretical yield from the previous example is 4.00 mol H~2~O, or 72.0 g (4.00 × 18.0 g/mol). If a lab collects 61.2 g, what is the percent yield?",
+        "steps": [
+         "Percent yield = (actual ÷ theoretical) × 100%.",
+         "Percent yield = (61.2 g ÷ 72.0 g) × 100%.",
+         "Percent yield = 85.0%."
+        ],
+        "answer": "85.0% yield."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "limiting reactant",
+       "def": "The reactant completely consumed first, capping how much product can form."
+      },
+      {
+       "term": "percent yield",
+       "def": "The ratio of actual yield to theoretical yield, expressed as a percentage."
+      },
+      {
+       "term": "molarity",
+       "def": "Concentration expressed as moles of solute per liter of solution."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A reaction has a theoretical yield of 40.0 g but only 34.0 g is actually collected. What is the percent yield?",
+       "choices": [
+        "34.0%",
+        "40.0%",
+        "85.0%",
+        "117.6%"
+       ],
+       "answer": 2,
+       "explain": "Percent yield = (actual ÷ theoretical) × 100% = (34.0 ÷ 40.0) × 100% = 85.0%."
+      },
+      {
+       "q": "If reactant A is present in excess and reactant B runs out first, what is B called?",
+       "choices": [
+        "The excess reactant",
+        "The limiting reactant",
+        "The catalyst",
+        "The theoretical reactant"
+       ],
+       "answer": 1,
+       "explain": "The reactant that is completely used up first, capping product formation, is the limiting reactant by definition."
+      },
+      {
+       "q": "What is the molarity of a solution with 3.00 mol of solute dissolved in 1.50 L of solution?",
+       "choices": [
+        "0.500 M",
+        "1.50 M",
+        "2.00 M",
+        "4.50 M"
+       ],
+       "answer": 2,
+       "explain": "M = mol solute / L solution = 3.00 mol ÷ 1.50 L = 2.00 M."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Phases of Matter and Reaction Dynamics",
+   "summary": "How matter behaves in bulk as gases, liquids, and solids, and how reactions settle into a dynamic equilibrium including acid-base systems.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Gases and the Ideal Gas Law",
+     "minutes": 17,
+     "intro": "Gases are the simplest state of matter to describe mathematically because their particles barely interact, and a single equation lets you connect pressure, volume, temperature, and amount for any gas.",
+     "sections": [
+      {
+       "heading": "Kinetic Molecular Theory and the Basic Gas Laws",
+       "body": [
+        "**Kinetic molecular theory** models a gas as countless tiny particles in constant random motion, colliding elastically with negligible volume and no attraction between them. This explains **Boyle's law** (P and V inversely related at constant T) and **Charles's law** (V and T directly related at constant P).",
+        "Every gas law calculation requires temperature in **kelvin**, since only an absolute scale starting at true zero motion makes these proportional relationships hold; convert with K = °C + 273."
+       ]
+      },
+      {
+       "heading": "The Ideal Gas Law",
+       "body": [
+        "The **ideal gas law**, PV = nRT, unifies pressure, volume, moles, and temperature using the gas constant R = 0.08206 L·atm/(mol·K). Given any three variables, you can solve for the fourth.",
+        "At **STP** (0 °C, 1 atm), one mole of any ideal gas occupies 22.4 L — a quick way to sanity-check any gas calculation."
+       ],
+       "example": {
+        "problem": "Find the number of moles in a gas sample at P = 2.00 atm, V = 5.00 L, and T = 298 K.",
+        "steps": [
+         "Rearrange PV = nRT to solve for n: n = PV / RT.",
+         "Substitute: n = (2.00 × 5.00) / (0.08206 × 298) = 10.00 / 24.45."
+        ],
+        "answer": "n ≈ 0.409 mol."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ideal gas law",
+       "def": "The equation PV = nRT relating pressure, volume, moles, and temperature of a gas."
+      },
+      {
+       "term": "STP",
+       "def": "Standard temperature and pressure: 0 °C (273 K) and 1 atm, where one mole of ideal gas occupies 22.4 L."
+      },
+      {
+       "term": "kinetic molecular theory",
+       "def": "A model describing gas particles as constantly moving, colliding elastically, with negligible volume and attraction."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why must temperature be in kelvin, not Celsius, in the ideal gas law?",
+       "choices": [
+        "Kelvin values are always larger",
+        "Only an absolute scale starting at true zero makes the proportional gas relationships hold",
+        "R is defined only for Celsius",
+        "It makes no real difference"
+       ],
+       "answer": 1,
+       "explain": "Gas law relationships depend on temperature being proportional to particle kinetic energy, which requires an absolute scale like kelvin."
+      },
+      {
+       "q": "What volume does 3.00 mol of an ideal gas occupy at STP?",
+       "choices": [
+        "22.4 L",
+        "44.8 L",
+        "67.2 L",
+        "89.6 L"
+       ],
+       "answer": 2,
+       "explain": "One mole occupies 22.4 L at STP, so 3.00 mol occupies 3.00 × 22.4 = 67.2 L."
+      },
+      {
+       "q": "At constant pressure, a gas sample is cooled and its volume shrinks. Which law describes this?",
+       "choices": [
+        "Boyle's law",
+        "Charles's law",
+        "Dalton's law",
+        "Avogadro's law"
+       ],
+       "answer": 1,
+       "explain": "Charles's law relates volume and temperature at constant pressure — cooling a gas at constant pressure proportionally shrinks its volume."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Liquids, Solids, and Intermolecular Forces",
+     "minutes": 16,
+     "intro": "Liquids and solids exist because intermolecular forces are strong enough to hold particles close together, and the strength of those forces directly explains why some substances boil at room temperature and others do not.",
+     "sections": [
+      {
+       "heading": "Types of Intermolecular Forces",
+       "body": [
+        "**Dispersion forces** arise from momentary shifting electron distributions and exist between all molecules, growing stronger with more electrons and larger size. **Dipole-dipole forces** occur between polar molecules and are generally stronger than dispersion forces of similar size.",
+        "**Hydrogen bonding** is an especially strong dipole-dipole attraction that occurs specifically when hydrogen bonds directly to nitrogen, oxygen, or fluorine, concentrating a large partial charge on a very small atom."
+       ]
+      },
+      {
+       "heading": "Intermolecular Forces and Boiling Points",
+       "body": [
+        "Stronger intermolecular forces require more thermal energy to overcome, so substances with stronger attractions between molecules have higher boiling and melting points — a separate issue from how strong the covalent bonds inside each molecule are.",
+        "Comparing molecules of similar mass makes the effect obvious: a molecule capable of hydrogen bonding can boil far above a similarly sized molecule that only has dispersion forces available."
+       ],
+       "example": {
+        "problem": "Explain why ammonia (NH~3~, molar mass 17, boils at −33 °C) boils so much higher than methane (CH~4~, molar mass 16, boils at −161 °C), despite their nearly identical mass.",
+        "steps": [
+         "Note the molar masses are almost the same, so dispersion forces should be similar in strength for both.",
+         "Ammonia has N-H bonds, allowing strong hydrogen bonding between molecules; methane has only nonpolar C-H bonds and no hydrogen bonding."
+        ],
+        "answer": "Ammonia's hydrogen bonding is far stronger than methane's dispersion-only forces, giving ammonia a much higher boiling point at nearly the same mass."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "intermolecular force",
+       "def": "An attractive force between separate molecules, distinct from the covalent bonds within a molecule."
+      },
+      {
+       "term": "hydrogen bond",
+       "def": "A strong dipole-dipole attraction between a hydrogen bonded to N, O, or F and a nearby N, O, or F atom."
+      },
+      {
+       "term": "dispersion force",
+       "def": "A weak, temporary attraction from shifting electron distributions, present between all molecules."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which intermolecular force exists between every pair of molecules, polar or nonpolar?",
+       "choices": [
+        "Hydrogen bonding",
+        "Dipole-dipole forces",
+        "Dispersion forces",
+        "Ionic bonding"
+       ],
+       "answer": 2,
+       "explain": "Dispersion forces come from momentary electron shifts present in all molecules, making them universal regardless of polarity."
+      },
+      {
+       "q": "Which three elements, when bonded directly to hydrogen, allow hydrogen bonding?",
+       "choices": [
+        "Carbon, sulfur, phosphorus",
+        "Nitrogen, oxygen, fluorine",
+        "Chlorine, bromine, iodine",
+        "Silicon, boron, aluminum"
+       ],
+       "answer": 1,
+       "explain": "Hydrogen bonding requires hydrogen bonded to one of the three small, highly electronegative atoms N, O, or F."
+      },
+      {
+       "q": "Why does ammonia boil at a much higher temperature than methane despite similar molar mass?",
+       "choices": [
+        "Ammonia has stronger dispersion forces",
+        "Ammonia can form hydrogen bonds, which methane cannot",
+        "Methane has a higher molar mass",
+        "Ammonia is an ionic compound"
+       ],
+       "answer": 1,
+       "explain": "Ammonia's N-H bonds enable hydrogen bonding between molecules, a much stronger intermolecular force than the dispersion-only forces available to methane."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Equilibrium, Le Chatelier's Principle, and Acid-Base pH",
+     "minutes": 17,
+     "intro": "Many reactions never fully finish — they settle into a dynamic balance between forward and reverse processes, and that balance can be pushed in either direction, a fact that also explains how acids and bases behave in water.",
+     "sections": [
+      {
+       "heading": "Reversible Reactions and Le Chatelier's Principle",
+       "body": [
+        "A reversible reaction reaches **equilibrium** when the forward and reverse rates become equal, so concentrations stop changing even though both reactions keep occurring. **Le Chatelier's principle** predicts the response to a disturbance: adding a substance shifts the reaction to partially consume it; removing one shifts the reaction to partially replace it.",
+        "Gas-phase equilibria also shift with pressure, favoring whichever side has fewer total moles of gas when pressure increases, and with temperature, depending on whether the reaction releases or absorbs heat."
+       ],
+       "example": {
+        "problem": "For 2SO~2~(g) + O~2~(g) ⇌ 2SO~3~(g), predict the shift when extra O~2~ is added.",
+        "steps": [
+         "O~2~ is a reactant, so adding more of it disturbs the equilibrium on the reactant side.",
+         "Le Chatelier's principle says the system shifts to partially consume the added substance."
+        ],
+        "answer": "The equilibrium shifts right, producing more SO~3~ and consuming some of the added O~2~."
+       }
+      },
+      {
+       "heading": "Acids, Bases, and the pH Scale",
+       "body": [
+        "A **Bronsted-Lowry acid** donates a proton (H^+^) and a **Bronsted-Lowry base** accepts one, a broader definition than describing acids and bases only by their behavior in water. **pH** compresses the huge range of possible H^+^ concentrations into a 0–14 scale using pH = −log[H^+^], where 7 is neutral.",
+        "Because pH is logarithmic, each single-unit drop represents a tenfold increase in H^+^ concentration, and pure water at 25 °C sits exactly at pH 7.00."
+       ],
+       "example": {
+        "problem": "Calculate the pH of a solution with [H^+^] = 1.0 × 10^−5^ M.",
+        "steps": [
+         "Apply pH = −log[H^+^].",
+         "log(1.0 × 10^−5^) = −5, so pH = −(−5) = 5."
+        ],
+        "answer": "pH = 5.00, a moderately acidic solution."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "equilibrium",
+       "def": "A state where the forward and reverse reaction rates are equal, so concentrations stay constant."
+      },
+      {
+       "term": "Le Chatelier's principle",
+       "def": "The rule that a system at equilibrium shifts to partially counteract any change imposed on it."
+      },
+      {
+       "term": "pH",
+       "def": "A logarithmic measure of acidity, defined as pH = −log[H^+^]."
+      }
+     ],
+     "practice": [
+      {
+       "q": "At chemical equilibrium, what is true of the forward and reverse reaction rates?",
+       "choices": [
+        "The forward rate is always faster",
+        "The reverse rate is always faster",
+        "They are equal",
+        "Both rates are zero"
+       ],
+       "answer": 2,
+       "explain": "Equilibrium is defined by the forward and reverse rates being equal, so net concentrations stop changing even though both reactions still occur."
+      },
+      {
+       "q": "A solution has [H^+^] = 1.0 × 10^−9^ M. What is its pH, and is it acidic or basic?",
+       "choices": [
+        "pH = 9, acidic",
+        "pH = 5, basic",
+        "pH = 9, basic",
+        "pH = 5, acidic"
+       ],
+       "answer": 2,
+       "explain": "pH = −log(1.0 × 10^−9^) = 9, which is above 7, meaning the solution is basic."
+      },
+      {
+       "q": "If product is continuously removed from a system at equilibrium, which direction does it shift?",
+       "choices": [
+        "Toward reactants, to replace the removed product",
+        "Toward products, to replace the removed product",
+        "It stops reacting entirely",
+        "It does not shift at all"
+       ],
+       "answer": 1,
+       "explain": "Removing product disturbs equilibrium; the system shifts toward products (favoring the forward reaction) to partially replace what was removed."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

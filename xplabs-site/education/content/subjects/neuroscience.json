@@ -1,0 +1,1098 @@
+{
+ "id": "neuroscience",
+ "title": "Introduction to Neuroscience",
+ "domain": "life",
+ "level": "College",
+ "description": "A college-level introduction to the nervous system, from the electrical and chemical signaling of a single neuron up through the brain systems that produce sensation, movement, memory, and emotion. Along the way you will work real numbers: conduction velocities, synaptic thresholds, sleep cycles, and the neuron loss behind Parkinson's disease.",
+ "outcomes": [
+  "You can describe neuron structure and explain how the resting and action potentials are generated and propagated.",
+  "You can explain synaptic transmission and calculate whether summed signals reach the threshold to fire an action potential.",
+  "You can identify the major divisions of the nervous system and the functions of the brain's lobes and subcortical structures.",
+  "You can trace how vision, hearing, and touch information travels from receptor to cortex, and how the brain controls voluntary movement.",
+  "You can describe the stages of memory formation, sleep, and circadian rhythm regulation.",
+  "You can explain the neural basis of major neurological and psychiatric disorders and identify when professional help is needed."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "The Neuron",
+   "summary": "The basic unit of the nervous system: its structure, the electrical signal it generates and sends, and the chemical handoff that carries that signal to the next cell.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Neuron Structure and Types",
+     "minutes": 13,
+     "intro": "Your brain contains roughly 86 billion neurons, each a living wire specialized to receive, process, and transmit electrical and chemical signals. Nearly everything the nervous system does, from a reflex to a memory, ultimately comes down to these cells passing information to one another.",
+     "sections": [
+      {
+       "heading": "Anatomy of a Neuron",
+       "body": [
+        "A typical neuron has four key parts. The **dendrites** are branching extensions that receive signals from other neurons. The **soma** (cell body) contains the nucleus and integrates incoming signals. The **axon** is a long, thin fiber that carries the neuron's output signal away from the soma, sometimes over a meter in the case of neurons running from the spinal cord to the foot. At the axon's end, **axon terminals** release chemical signals to the next cell.",
+        "Many axons are wrapped in **myelin**, a fatty insulating sheath produced by glial cells, with small gaps called **nodes of Ranvier** exposed along the way. Myelin dramatically speeds up signal conduction, which is why diseases that damage myelin, like multiple sclerosis, cause such significant disruptions to movement and sensation."
+       ]
+      },
+      {
+       "heading": "Types of Neurons and Glia",
+       "body": [
+        "Neurons are classified functionally into three broad types: **sensory neurons** carry signals from sensory receptors toward the central nervous system, **motor neurons** carry signals from the central nervous system out to muscles and glands, and **interneurons**, by far the most numerous type, connect neurons to each other within the brain and spinal cord, doing the bulk of the nervous system's actual processing.",
+        "Neurons are outnumbered by **glial cells**, which support, insulate, and nourish neurons rather than transmitting signals directly. Key types include **astrocytes** (which regulate the neuron's chemical environment and help form the blood-brain barrier), **oligodendrocytes and Schwann cells** (which produce myelin in the central and peripheral nervous systems respectively), and **microglia** (the immune cells of the brain, which clear debris and pathogens)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "dendrite",
+       "def": "A branching extension of a neuron that receives signals from other neurons."
+      },
+      {
+       "term": "axon",
+       "def": "The long fiber of a neuron that carries its output signal to other cells."
+      },
+      {
+       "term": "myelin",
+       "def": "A fatty insulating sheath around many axons that speeds up signal conduction."
+      },
+      {
+       "term": "glial cell",
+       "def": "A non-neuron support cell in the nervous system, including astrocytes, oligodendrocytes, and microglia."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which part of a neuron typically receives incoming signals from other neurons?",
+       "choices": [
+        "The axon terminal",
+        "The dendrites",
+        "The myelin sheath",
+        "The node of Ranvier"
+       ],
+       "answer": 1,
+       "explain": "Dendrites are the branching structures specialized to receive chemical and electrical input from other neurons' axon terminals."
+      },
+      {
+       "q": "What is the main function of myelin?",
+       "choices": [
+        "Storing memories",
+        "Producing neurotransmitters",
+        "Insulating the axon to speed up signal conduction",
+        "Generating new neurons"
+       ],
+       "answer": 2,
+       "explain": "Myelin is a fatty insulating layer that dramatically increases the speed at which an axon can conduct its electrical signal."
+      },
+      {
+       "q": "Which type of glial cell acts as the immune system of the brain, clearing debris and pathogens?",
+       "choices": [
+        "Astrocytes",
+        "Oligodendrocytes",
+        "Schwann cells",
+        "Microglia"
+       ],
+       "answer": 3,
+       "explain": "Microglia are the brain's resident immune cells, responsible for clearing cellular debris, dead cells, and pathogens."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Resting Membrane Potential",
+     "minutes": 14,
+     "intro": "Even when a neuron is doing nothing at all, it maintains a small voltage difference across its membrane, about -70 millivolts, like a battery held at partial charge and ready to fire. Understanding where that voltage comes from is the key to understanding every signal the nervous system sends.",
+     "sections": [
+      {
+       "heading": "Ion Gradients Across the Membrane",
+       "body": [
+        "A resting neuron has more **sodium ions (Na+)** outside the cell than inside, and more **potassium ions (K+)** inside the cell than outside. These gradients are actively maintained by the **sodium-potassium pump**, a membrane protein that uses energy from ATP to pump 3 sodium ions out of the cell for every 2 potassium ions it pumps in, against both ions' natural concentration gradients.",
+        "Because this pump moves 3 positive charges out for every 2 positive charges in, each cycle removes one net positive charge from inside the cell, directly contributing a small amount to making the inside of the neuron more negative than the outside."
+       ]
+      },
+      {
+       "heading": "Why the Inside Is Negative",
+       "body": [
+        "At rest, the neuron's membrane is far more permeable to K+ than to Na+, because many more potassium 'leak' channels are open than sodium channels. Potassium ions, driven by their concentration gradient, constantly leak out of the cell, carrying positive charge with them and leaving the inside of the cell relatively negative compared to the outside.",
+        "The result is the **resting membrane potential**, typically about -70 millivolts (mV), meaning the inside of the neuron is 70 mV more negative than the outside. This resting potential is not a static accident; it is an actively maintained, energy-consuming state that sets the stage for the neuron to fire an action potential when it is sufficiently stimulated."
+       ],
+       "example": {
+        "problem": "The sodium-potassium pump moves 3 Na+ ions out and 2 K+ ions in per cycle, using one molecule of ATP. If the pump runs through 100 cycles, what is the net number of positive charges moved out of the cell?",
+        "steps": [
+         "Each cycle moves 3 positive charges out (Na+) and 2 positive charges in (K+).",
+         "Net positive charge moved out per cycle: 3 − 2 = 1.",
+         "Over 100 cycles: 100 × 1 = 100 net positive charges moved out of the cell."
+        ],
+        "answer": "100 net positive charges are moved out of the cell, contributing to its negative interior."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sodium-potassium pump",
+       "def": "A membrane protein that uses ATP to pump 3 Na+ out and 2 K+ into the cell each cycle."
+      },
+      {
+       "term": "resting membrane potential",
+       "def": "The voltage difference across a neuron's membrane at rest, typically about -70 mV."
+      },
+      {
+       "term": "leak channel",
+       "def": "A membrane channel that allows a specific ion to cross the membrane passively, down its concentration gradient."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For every cycle of the sodium-potassium pump, how many net positive charges leave the cell?",
+       "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+       ],
+       "answer": 1,
+       "explain": "The pump moves 3 Na+ out and 2 K+ in per cycle; since 3 minus 2 equals 1, one net positive charge leaves the cell each cycle."
+      },
+      {
+       "q": "Why is the resting membrane potential negative on the inside of the neuron?",
+       "choices": [
+        "The membrane is impermeable to all ions",
+        "Potassium leaks out of the cell more easily than sodium leaks in, carrying positive charge outward",
+        "Sodium constantly floods into the cell at rest",
+        "The cell contains no charged particles"
+       ],
+       "answer": 1,
+       "explain": "Because far more K+ leak channels than Na+ channels are open at rest, potassium ions leak outward down their concentration gradient, leaving the cell interior relatively negative."
+      },
+      {
+       "q": "What is the typical resting membrane potential of a neuron?",
+       "choices": [
+        "+70 mV",
+        "0 mV",
+        "-30 mV",
+        "-70 mV"
+       ],
+       "answer": 3,
+       "explain": "A resting neuron typically maintains a membrane potential of about -70 mV, with the inside of the cell negative relative to the outside."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Action Potential",
+     "minutes": 15,
+     "intro": "When a neuron's input pushes its voltage past a critical threshold, it fires a brief, dramatic electrical spike called an action potential, and it fires that spike the exact same way every single time, no matter how strong the triggering stimulus was. This all-or-nothing signal is how neurons communicate over distance.",
+     "sections": [
+      {
+       "heading": "Threshold and the All-or-None Rule",
+       "body": [
+        "If a neuron's membrane potential depolarizes (becomes less negative) enough to reach a **threshold**, typically around -55 mV, **voltage-gated sodium channels** snap open, and Na+ rushes into the cell, rapidly driving the membrane potential up to around +30 mV. This rapid depolarization is the rising phase of the **action potential**. Voltage-gated potassium channels then open, K+ rushes out, and the membrane potential falls back toward resting level, a phase called repolarization.",
+        "Crucially, an action potential follows the **all-or-none rule**: if the stimulus does not reach threshold, no action potential fires at all; if it does reach threshold, a full-sized action potential fires every time, always the same size, regardless of how far above threshold the stimulus was. Stronger stimuli are instead encoded by firing action potentials more frequently, not by firing bigger ones."
+       ]
+      },
+      {
+       "heading": "Propagation and Myelin",
+       "body": [
+        "Once triggered, an action potential propagates down the axon as each segment of membrane depolarizes the segment ahead of it in a self-regenerating chain reaction, arriving at the axon terminal at essentially the same strength it started with. In unmyelinated axons, this propagation is continuous and relatively slow, often around 1 meter per second.",
+        "In myelinated axons, the action potential effectively jumps from one node of Ranvier to the next, a process called **saltatory conduction**, since myelin prevents current leakage in between. This can push conduction velocity to over 100 meters per second, roughly a hundredfold speed increase, which is why myelin damage in diseases like multiple sclerosis causes such pronounced slowing of nerve signals."
+       ],
+       "example": {
+        "problem": "A myelinated motor neuron axon runs 1.2 meters from the spinal cord to a foot muscle, conducting at 100 meters per second. How long does it take the action potential to travel the full length of the axon?",
+        "steps": [
+         "Use time = distance ÷ speed.",
+         "Time = 1.2 m ÷ 100 m/s = 0.012 seconds.",
+         "Convert to milliseconds: 0.012 s × 1,000 = 12 ms."
+        ],
+        "answer": "About 12 milliseconds."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "threshold",
+       "def": "The membrane potential, typically around -55 mV, that must be reached to trigger an action potential."
+      },
+      {
+       "term": "action potential",
+       "def": "A rapid, all-or-none electrical spike in membrane potential that carries a neuron's signal down its axon."
+      },
+      {
+       "term": "all-or-none rule",
+       "def": "The principle that an action potential either fires at full strength or does not fire at all."
+      },
+      {
+       "term": "saltatory conduction",
+       "def": "The rapid jumping of an action potential between nodes of Ranvier in a myelinated axon."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to the all-or-none rule, what happens if a stimulus is far above the threshold needed to trigger an action potential?",
+       "choices": [
+        "A much larger action potential fires",
+        "No action potential fires at all",
+        "A normal, full-sized action potential fires, the same as with a stimulus just above threshold",
+        "The neuron fires continuously without stopping"
+       ],
+       "answer": 2,
+       "explain": "Once threshold is reached, the resulting action potential is always the same size; stronger stimuli are instead signaled by a higher frequency of action potentials, not larger ones."
+      },
+      {
+       "q": "An unmyelinated axon conducts at 1 meter per second. How long would it take a signal to travel 0.5 meters?",
+       "choices": [
+        "0.05 seconds",
+        "0.5 seconds",
+        "5 seconds",
+        "50 seconds"
+       ],
+       "answer": 1,
+       "explain": "Time = distance ÷ speed = 0.5 m ÷ 1 m/s = 0.5 seconds, about 500 milliseconds — far slower than the same distance in a myelinated axon."
+      },
+      {
+       "q": "What makes saltatory conduction faster than continuous conduction in an unmyelinated axon?",
+       "choices": [
+        "The action potential skips directly from node to node instead of regenerating continuously along the whole membrane",
+        "Myelinated axons use a different type of ion entirely",
+        "Saltatory conduction avoids the all-or-none rule",
+        "Myelinated neurons have larger cell bodies"
+       ],
+       "answer": 0,
+       "explain": "Because myelin insulates the axon between nodes of Ranvier, the signal effectively jumps from node to node rather than regenerating at every point along the membrane, greatly increasing speed."
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "title": "Synaptic Transmission and Neurotransmitters",
+     "minutes": 15,
+     "intro": "An action potential eventually reaches the end of the axon, but it cannot leap the tiny gap to the next neuron on its own. Instead, the neuron switches from an electrical signal to a chemical one, releasing a precise burst of neurotransmitter molecules that the next cell must add up correctly to decide whether to fire.",
+     "sections": [
+      {
+       "heading": "Crossing the Synaptic Gap",
+       "body": [
+        "When an action potential reaches the axon terminal, it triggers voltage-gated calcium channels to open, and the resulting influx of Ca2+ causes synaptic vesicles filled with **neurotransmitter** molecules to fuse with the membrane and release their contents into the **synaptic cleft**, the narrow gap between neurons. The neurotransmitter diffuses across this gap and binds to specific receptors on the **postsynaptic** neuron's membrane.",
+        "Once neurotransmitter has delivered its signal, it is cleared from the synapse, either by being broken down by enzymes, reabsorbed by the releasing neuron through **reuptake**, or diffusing away, resetting the synapse for the next signal."
+       ]
+      },
+      {
+       "heading": "Excitation, Inhibition, and Summation",
+       "body": [
+        "Neurotransmitter binding can produce either an **excitatory postsynaptic potential (EPSP)**, a small depolarization that pushes the neuron's membrane potential closer to threshold (commonly triggered by the neurotransmitter glutamate), or an **inhibitory postsynaptic potential (IPSP)**, a small hyperpolarization that pushes the membrane potential further from threshold (commonly triggered by GABA).",
+        "A single EPSP is rarely enough to reach threshold on its own. Instead, the postsynaptic neuron performs **summation**, adding up EPSPs and IPSPs arriving close together in time (**temporal summation**) or from different locations on the dendrites (**spatial summation**). Only if the combined effect pushes the membrane potential to threshold does the postsynaptic neuron fire its own action potential."
+       ],
+       "example": {
+        "problem": "A neuron rests at -70 mV and needs to reach a threshold of -55 mV to fire. Each EPSP that arrives adds about +2 mV, and no IPSPs are currently active. How many EPSPs, arriving close enough together to summate, are needed to reach threshold?",
+        "steps": [
+         "Find the total depolarization needed: -55 mV − (−70 mV) = 15 mV.",
+         "Divide by the depolarization per EPSP: 15 mV ÷ 2 mV per EPSP = 7.5.",
+         "Since a fraction of an EPSP cannot occur, round up to the next whole EPSP: 8."
+        ],
+        "answer": "8 EPSPs, summating together, are needed to reach threshold."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "neurotransmitter",
+       "def": "A chemical messenger released by a neuron that binds receptors on the next cell."
+      },
+      {
+       "term": "EPSP (excitatory postsynaptic potential)",
+       "def": "A small depolarization that pushes a neuron's membrane potential closer to threshold."
+      },
+      {
+       "term": "IPSP (inhibitory postsynaptic potential)",
+       "def": "A small hyperpolarization that pushes a neuron's membrane potential further from threshold."
+      },
+      {
+       "term": "summation",
+       "def": "The combining of multiple EPSPs and IPSPs, over time or across dendrite locations, to determine whether a neuron fires."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What triggers the release of neurotransmitter from a presynaptic axon terminal?",
+       "choices": [
+        "A drop in temperature",
+        "Calcium influx triggered by an arriving action potential",
+        "Direct electrical contact with the next neuron",
+        "Glucose entering the terminal"
+       ],
+       "answer": 1,
+       "explain": "When an action potential reaches the axon terminal, voltage-gated calcium channels open, and the resulting Ca2+ influx causes synaptic vesicles to release their neurotransmitter."
+      },
+      {
+       "q": "A neuron at -70 mV needs to reach a -58 mV threshold, and each EPSP adds 3 mV. How many EPSPs are needed to reach threshold?",
+       "choices": [
+        "2",
+        "3",
+        "4",
+        "6"
+       ],
+       "answer": 2,
+       "explain": "The needed depolarization is -58 − (−70) = 12 mV; dividing by 3 mV per EPSP gives exactly 4 EPSPs."
+      },
+      {
+       "q": "What effect does an IPSP have on a postsynaptic neuron?",
+       "choices": [
+        "It depolarizes the membrane toward threshold",
+        "It hyperpolarizes the membrane, moving it further from threshold",
+        "It directly triggers an action potential",
+        "It has no effect on membrane potential"
+       ],
+       "answer": 1,
+       "explain": "An IPSP moves the membrane potential further from threshold (more negative), making the neuron less likely to fire, the opposite effect of an EPSP."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Brain Anatomy and Organization",
+   "summary": "How the nervous system is divided into major structures, from the central and peripheral systems down to the specific jobs of the cortex's lobes and the structures buried beneath it.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Central and Peripheral Nervous Systems",
+     "minutes": 14,
+     "intro": "Every nerve signal in your body ultimately belongs to one of two great divisions: the central command center of the brain and spinal cord, and the vast peripheral network of nerves that connects that command center to every muscle, organ, and sensory receptor in the body.",
+     "sections": [
+      {
+       "heading": "CNS and PNS",
+       "body": [
+        "The **central nervous system (CNS)** consists of the brain and spinal cord, where the vast majority of signal processing and decision-making occurs. The **peripheral nervous system (PNS)** consists of all the nerves outside the CNS, carrying information to and from the body's muscles, organs, and sensory receptors.",
+        "Within the PNS, **afferent (sensory) neurons** carry information from sensory receptors toward the CNS, while **efferent (motor) neurons** carry commands from the CNS out to muscles and glands. A simple mnemonic: afferent signals arrive at the CNS, while efferent signals exit it."
+       ]
+      },
+      {
+       "heading": "Somatic and Autonomic Systems",
+       "body": [
+        "The PNS's efferent pathways split further into the **somatic nervous system**, which controls voluntary movement of skeletal muscle, and the **autonomic nervous system**, which controls involuntary functions like heart rate, digestion, and breathing rate without conscious control.",
+        "The autonomic nervous system itself divides into the **sympathetic** division, which mobilizes the body for action ('fight or flight'), increasing heart rate and redirecting blood to muscles, and the **parasympathetic** division, which promotes calm, restorative functions ('rest and digest'), such as slowing the heart and stimulating digestion. These two divisions typically work in opposition, balancing the body's internal state."
+       ],
+       "example": {
+        "problem": "A person's resting heart rate is 70 beats per minute. Sudden sympathetic activation (the fight-or-flight response) raises it to 150 beats per minute. What percentage increase does this represent?",
+        "steps": [
+         "Find the increase: 150 − 70 = 80 beats per minute.",
+         "Divide by the original rate: 80 ÷ 70 ≈ 1.14.",
+         "Convert to a percentage: 1.14 × 100 ≈ 114%."
+        ],
+        "answer": "About a 114% increase in heart rate."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "central nervous system (CNS)",
+       "def": "The brain and spinal cord, where most nervous system processing occurs."
+      },
+      {
+       "term": "peripheral nervous system (PNS)",
+       "def": "All nerves outside the brain and spinal cord, connecting the CNS to the rest of the body."
+      },
+      {
+       "term": "sympathetic division",
+       "def": "The branch of the autonomic nervous system that mobilizes the body for action ('fight or flight')."
+      },
+      {
+       "term": "parasympathetic division",
+       "def": "The branch of the autonomic nervous system that promotes calm, restorative functions ('rest and digest')."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which system carries voluntary commands to skeletal muscle?",
+       "choices": [
+        "The autonomic nervous system",
+        "The somatic nervous system",
+        "The sympathetic division only",
+        "The parasympathetic division only"
+       ],
+       "answer": 1,
+       "explain": "The somatic nervous system controls voluntary movement of skeletal muscles, in contrast to the autonomic nervous system, which controls involuntary functions."
+      },
+      {
+       "q": "A resting heart rate of 60 bpm rises to 120 bpm during a stress response. What percentage increase is this?",
+       "choices": [
+        "50%",
+        "100%",
+        "60%",
+        "120%"
+       ],
+       "answer": 1,
+       "explain": "The increase is 120 − 60 = 60 bpm; dividing by the original 60 bpm gives 1.0, or a 100% increase."
+      },
+      {
+       "q": "Which division of the autonomic nervous system promotes 'rest and digest' functions?",
+       "choices": [
+        "Sympathetic",
+        "Parasympathetic",
+        "Somatic",
+        "Afferent"
+       ],
+       "answer": 1,
+       "explain": "The parasympathetic division slows the heart and promotes digestion and other restorative processes, opposing the sympathetic 'fight or flight' response."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Cerebral Cortex and Lobes",
+     "minutes": 14,
+     "intro": "The wrinkled outer layer of the brain, the cerebral cortex, is where most of what we consider distinctly human mental life happens: planning, language, conscious perception, and voluntary action. It is organized into four lobes, each with its own specialty, though they constantly work together.",
+     "sections": [
+      {
+       "heading": "Four Lobes, Four Jobs",
+       "body": [
+        "The **frontal lobe**, at the front of the brain, handles executive functions like planning, decision-making, impulse control, and personality, and contains the primary motor cortex that initiates voluntary movement. The **parietal lobe**, just behind it, contains the primary somatosensory cortex, processing touch, temperature, and body position, and contributes to spatial awareness.",
+        "The **temporal lobe**, on the sides of the brain, houses the primary auditory cortex and areas critical for language comprehension and memory formation (it sits near the hippocampus, covered in Unit 4). The **occipital lobe**, at the very back of the brain, is devoted almost entirely to processing visual information from the eyes."
+       ]
+      },
+      {
+       "heading": "Gray Matter, White Matter, and Hemispheres",
+       "body": [
+        "The brain's outer cortex is **gray matter**, made up mostly of neuron cell bodies and their connections, where signal processing happens. Beneath it lies **white matter**, made up of myelinated axons that connect different brain regions to each other, its pale color coming from the fatty myelin sheaths.",
+        "The brain is divided into left and right **cerebral hemispheres**, connected by a thick band of white matter called the **corpus callosum** that allows constant communication between them. Some functions show **lateralization**, a tendency to rely more heavily on one hemisphere, such as language processing typically relying more on the left hemisphere in most people, but the popular idea of people being strictly 'left-brained' or 'right-brained' oversimplifies a much more integrated reality."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "frontal lobe",
+       "def": "The brain region handling executive function, planning, and voluntary motor control."
+      },
+      {
+       "term": "occipital lobe",
+       "def": "The brain region at the back of the brain devoted mainly to processing visual information."
+      },
+      {
+       "term": "corpus callosum",
+       "def": "The band of white matter connecting the brain's left and right hemispheres."
+      },
+      {
+       "term": "lateralization",
+       "def": "The tendency for certain brain functions to rely more heavily on one hemisphere than the other."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which lobe contains the primary motor cortex and handles executive functions like planning?",
+       "choices": [
+        "Occipital lobe",
+        "Temporal lobe",
+        "Frontal lobe",
+        "Parietal lobe"
+       ],
+       "answer": 2,
+       "explain": "The frontal lobe houses the primary motor cortex and is central to executive functions such as planning, decision-making, and impulse control."
+      },
+      {
+       "q": "What is the primary role of the corpus callosum?",
+       "choices": [
+        "Processing visual information",
+        "Connecting and allowing communication between the two cerebral hemispheres",
+        "Producing neurotransmitters",
+        "Regulating heart rate"
+       ],
+       "answer": 1,
+       "explain": "The corpus callosum is a thick band of white matter that links the left and right hemispheres, enabling them to share information constantly."
+      },
+      {
+       "q": "Why is the popular idea of being strictly 'left-brained' or 'right-brained' considered an oversimplification?",
+       "choices": [
+        "The brain has no hemispheres at all",
+        "While some functions show lateralization, most mental tasks involve integrated activity across both hemispheres",
+        "Only the left hemisphere is ever active",
+        "Lateralization does not exist in humans"
+       ],
+       "answer": 1,
+       "explain": "Although some functions, like language, tend to rely more on one hemisphere, most complex mental activities draw on coordinated processing from both hemispheres working together."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Subcortical Structures, Brainstem, and Cerebellum",
+     "minutes": 15,
+     "intro": "Beneath the wrinkled cortex lies a cluster of older, deeply interconnected structures that regulate emotion, memory, movement, and the basic biological rhythms that keep you alive without any conscious effort at all.",
+     "sections": [
+      {
+       "heading": "The Limbic System and Basal Ganglia",
+       "body": [
+        "The **thalamus** acts as a relay station, routing most sensory information (except smell) to the appropriate area of the cortex for processing. The **hypothalamus**, just below it, regulates homeostasis, controlling hunger, thirst, body temperature, and hormone release through its connection to the pituitary gland.",
+        "The **amygdala**, part of the limbic system, plays a central role in processing emotion, especially fear and threat detection, while the **hippocampus**, discussed in depth in Unit 4, is essential for forming new long-term memories. The **basal ganglia**, a group of structures involved in initiating and selecting voluntary movement and forming habits, will reappear in Unit 4 when discussing Parkinson's disease."
+       ]
+      },
+      {
+       "heading": "Brainstem and Cerebellum",
+       "body": [
+        "The **brainstem**, connecting the brain to the spinal cord, includes the medulla (regulating breathing, heart rate, and blood pressure), the pons (relaying signals between brain regions and involved in sleep regulation), and the midbrain (involved in vision and hearing reflexes and movement). Damage to the brainstem is often life-threatening, since it controls functions essential for survival.",
+        "The **cerebellum**, tucked beneath the back of the cerebrum, fine-tunes movement, coordination, balance, and motor timing. Despite making up only about 10% of the brain's total volume, the cerebellum contains roughly half of all neurons in the entire brain, reflecting the sheer computational demand of precisely coordinating movement."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "thalamus",
+       "def": "A brain structure that relays most incoming sensory information to the appropriate cortical area."
+      },
+      {
+       "term": "hypothalamus",
+       "def": "A brain structure that regulates homeostasis, including hunger, thirst, temperature, and hormone release."
+      },
+      {
+       "term": "amygdala",
+       "def": "A limbic system structure central to processing emotion, especially fear and threat detection."
+      },
+      {
+       "term": "cerebellum",
+       "def": "A brain structure that fine-tunes movement, coordination, and balance, containing about half of the brain's neurons."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which brain structure acts as a relay station, routing most sensory information to the cortex?",
+       "choices": [
+        "Amygdala",
+        "Thalamus",
+        "Cerebellum",
+        "Hypothalamus"
+       ],
+       "answer": 1,
+       "explain": "The thalamus receives incoming sensory signals (except smell) and relays them to the appropriate region of the cerebral cortex for processing."
+      },
+      {
+       "q": "Which structure regulates homeostasis, including hunger, thirst, and body temperature?",
+       "choices": [
+        "Hippocampus",
+        "Amygdala",
+        "Hypothalamus",
+        "Basal ganglia"
+       ],
+       "answer": 2,
+       "explain": "The hypothalamus is the brain's homeostasis control center, regulating hunger, thirst, temperature, and hormone release via the pituitary gland."
+      },
+      {
+       "q": "What is notable about the cerebellum's neuron count relative to its size?",
+       "choices": [
+        "It contains almost no neurons",
+        "It makes up about 10% of brain volume but contains roughly half of all the brain's neurons",
+        "It has more volume than the entire cerebral cortex",
+        "Its neuron count is proportional to its small volume"
+       ],
+       "answer": 1,
+       "explain": "Despite its relatively small size, about 10% of total brain volume, the cerebellum packs in roughly half of the brain's total neurons, reflecting the complexity of precise motor coordination."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Sensation, Perception, and Movement",
+   "summary": "How raw physical energy, light, sound, and pressure, is converted into neural signals and routed to the cortex, and how the brain turns intention into precise, coordinated movement.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Vision: From Eye to Brain",
+     "minutes": 15,
+     "intro": "Light entering your eye is just electromagnetic radiation until your retina converts it into neural signals and your brain reconstructs it into the rich, detailed visual world you experience, all within a fraction of a second.",
+     "sections": [
+      {
+       "heading": "The Eye as an Optical Instrument",
+       "body": [
+        "Light passes through the **cornea** and **lens**, which together focus it onto the **retina** at the back of the eye. The retina contains two types of photoreceptor cells: **rods**, which are highly sensitive to dim light but cannot distinguish color, and **cones**, which detect color but require brighter light to function well. Rods vastly outnumber cones, roughly 120 million rods to about 6 million cones per eye, which is why peripheral, rod-dominated vision works far better in near-darkness than central, cone-dominated vision.",
+        "Cones are concentrated in the **fovea**, a small central pit in the retina responsible for our sharpest, most detailed, and most color-accurate vision, which is why you naturally turn your eyes to look directly at something you want to see clearly."
+       ]
+      },
+      {
+       "heading": "From Retina to Visual Cortex",
+       "body": [
+        "Signals from the retina travel along the **optic nerve** to the **optic chiasm**, where the nerve fibers carrying information from the outer (temporal) half of each retina continue to the same side of the brain, while fibers from the inner (nasal) half of each retina cross to the opposite side. The practical result is that each hemisphere of the brain receives visual information from the opposite side of the visual field.",
+        "From there, signals relay through the thalamus (specifically a region called the lateral geniculate nucleus) before arriving at the **primary visual cortex** in the occipital lobe, where the earliest stages of conscious visual processing, like detecting edges, orientation, and motion, begin."
+       ],
+       "example": {
+        "problem": "A human retina contains about 120 million rods and 6 million cones. What is the ratio of rods to cones, and what does that suggest about vision in dim light versus bright light?",
+        "steps": [
+         "Divide rods by cones: 120,000,000 ÷ 6,000,000 = 20.",
+         "This gives a ratio of 20 rods for every 1 cone.",
+         "Since rods handle dim-light vision and cones handle color and detail, the much larger number of rods explains why peripheral, low-light vision is more sensitive than color vision in darkness."
+        ],
+        "answer": "A ratio of 20:1 (rods to cones), reflecting the retina's much greater sensitivity to dim light than to color detail."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "rod",
+       "def": "A retinal photoreceptor highly sensitive to dim light but unable to detect color."
+      },
+      {
+       "term": "cone",
+       "def": "A retinal photoreceptor that detects color, concentrated in the fovea, requiring brighter light."
+      },
+      {
+       "term": "optic chiasm",
+       "def": "The point where some optic nerve fibers cross to the opposite side of the brain."
+      },
+      {
+       "term": "primary visual cortex",
+       "def": "The region of the occipital lobe where the earliest conscious visual processing occurs."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is peripheral vision generally better than central vision in very dim light?",
+       "choices": [
+        "The periphery has more cones than the center",
+        "The periphery is dominated by rods, which are far more numerous and more sensitive to dim light than cones",
+        "Central vision shuts off completely in darkness",
+        "The fovea contains no photoreceptors at all"
+       ],
+       "answer": 1,
+       "explain": "Rods vastly outnumber cones and are much more sensitive in low light, and rods dominate the peripheral retina, which is why looking slightly away from a dim object can make it easier to see."
+      },
+      {
+       "q": "What happens at the optic chiasm?",
+       "choices": [
+        "Light is focused onto the retina",
+        "Some optic nerve fibers cross to the opposite hemisphere of the brain",
+        "Rods and cones are created",
+        "Visual information is permanently stored"
+       ],
+       "answer": 1,
+       "explain": "At the optic chiasm, fibers carrying information from the inner half of each retina cross sides, so each brain hemisphere ends up processing the opposite side of the visual field."
+      },
+      {
+       "q": "If a retina had 100 million rods and 5 million cones, what would the rod-to-cone ratio be?",
+       "choices": [
+        "10:1",
+        "20:1",
+        "50:1",
+        "100:1"
+       ],
+       "answer": 1,
+       "explain": "100,000,000 ÷ 5,000,000 = 20, giving the same 20:1 ratio as the worked example, since the proportion is the same."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Hearing, Balance, and Touch",
+     "minutes": 14,
+     "intro": "Sound is nothing more than vibrating air, gravity is a constant invisible pull, and touch is just pressure on skin, yet the nervous system converts all three into rich, precise streams of information the brain uses continuously without you ever noticing the work involved.",
+     "sections": [
+      {
+       "heading": "Hearing: Sound to Signal",
+       "body": [
+        "Sound waves funnel through the outer ear and vibrate the eardrum, and three tiny middle-ear bones called ossicles amplify these vibrations and transmit them to the fluid-filled **cochlea** in the inner ear. Inside the cochlea, thousands of tiny **hair cells** are arranged along its length in a **tonotopic** map, meaning different locations respond to different sound frequencies, with high frequencies detected near the cochlea's base and low frequencies near its tip.",
+        "Human hearing typically spans a range of about 20 Hz to 20,000 Hz, meaning the highest frequency we can hear is about 1,000 times higher than the lowest, a remarkably wide range that narrows somewhat with age, especially at the high-frequency end."
+       ]
+      },
+      {
+       "heading": "Balance and Touch",
+       "body": [
+        "The **vestibular system**, located in the inner ear alongside the cochlea, includes the semicircular canals, which detect rotational head movements, and the otolith organs, which detect linear acceleration and the constant pull of gravity, together giving the brain a continuous sense of head position and motion, essential for balance.",
+        "Touch relies on various **mechanoreceptors** in the skin, sensitive to pressure, vibration, and stretch, but these receptors are not evenly distributed: fingertips and lips have extremely high receptor density, allowing fine two-point discrimination (telling apart two close points touching the skin), while areas like the back have far lower density and much poorer spatial resolution for touch."
+       ],
+       "example": {
+        "problem": "Human hearing spans roughly 20 Hz to 20,000 Hz. How many times higher is the upper limit than the lower limit?",
+        "steps": [
+         "Divide the upper limit by the lower limit: 20,000 ÷ 20 = 1,000."
+        ],
+        "answer": "The upper limit of human hearing is about 1,000 times higher than the lower limit."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "cochlea",
+       "def": "The fluid-filled, spiral-shaped inner ear structure containing hair cells that convert sound vibrations into neural signals."
+      },
+      {
+       "term": "tonotopic map",
+       "def": "An arrangement in the cochlea where different locations respond to different sound frequencies."
+      },
+      {
+       "term": "vestibular system",
+       "def": "The inner ear system, including semicircular canals and otolith organs, that senses head position and motion for balance."
+      },
+      {
+       "term": "mechanoreceptor",
+       "def": "A sensory receptor in the skin that responds to pressure, vibration, or stretch."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does it mean that the cochlea has a 'tonotopic' organization?",
+       "choices": [
+        "Every hair cell responds equally to all frequencies",
+        "Different locations along the cochlea respond to different sound frequencies",
+        "The cochlea only detects loudness, not pitch",
+        "Tonotopic organization applies only to vision"
+       ],
+       "answer": 1,
+       "explain": "Tonotopic organization means specific positions along the cochlea are tuned to specific frequencies, with high frequencies detected near the base and low frequencies near the tip."
+      },
+      {
+       "q": "Why do fingertips have much better two-point touch discrimination than the skin on your back?",
+       "choices": [
+        "Fingertips have a much higher density of mechanoreceptors",
+        "The back has no mechanoreceptors at all",
+        "Fingertips are covered by more skin layers",
+        "Two-point discrimination does not vary by body location"
+       ],
+       "answer": 0,
+       "explain": "Areas like the fingertips pack in far more mechanoreceptors per square centimeter than areas like the back, allowing much finer spatial resolution for distinguishing close touch points."
+      },
+      {
+       "q": "Which inner ear structures specifically detect linear acceleration and the pull of gravity?",
+       "choices": [
+        "The cochlea's hair cells",
+        "The semicircular canals",
+        "The otolith organs",
+        "The eardrum"
+       ],
+       "answer": 2,
+       "explain": "The otolith organs detect linear acceleration and gravity, while the semicircular canals (a separate vestibular structure) detect rotational head movements."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Motor Control and Movement",
+     "minutes": 14,
+     "intro": "Deciding to pick up a cup and actually picking it up smoothly are two very different problems for the nervous system to solve, one of intention and one of exquisitely timed coordination, and different brain structures specialize in each.",
+     "sections": [
+      {
+       "heading": "The Motor Pathway",
+       "body": [
+        "Voluntary movement begins in the **primary motor cortex**, a strip of frontal lobe tissue that maps roughly onto specific body parts, with more cortical area devoted to body parts capable of fine, precise movement, like the fingers and lips, than to those capable of only coarse movement, like the torso. Signals from the motor cortex travel down the **corticospinal tract** to the spinal cord and out to the muscles.",
+        "Most corticospinal fibers cross to the opposite side of the body at the medulla, a crossover called **decussation**. This is why the left hemisphere of the brain primarily controls voluntary movement on the right side of the body, and vice versa, a pattern called **contralateral control**."
+       ]
+      },
+      {
+       "heading": "Fine-Tuning Movement: Basal Ganglia and Cerebellum",
+       "body": [
+        "The **basal ganglia** help initiate and select appropriate voluntary movements while suppressing unwanted ones, relying heavily on the neurotransmitter dopamine; damage to dopamine-producing neurons here underlies Parkinson's disease, covered in Unit 4. The **cerebellum**, introduced in Unit 2, continuously compares intended movement to actual movement, using sensory feedback to fine-tune timing, force, and coordination in real time.",
+        "Damage to the cerebellum typically does not cause paralysis, since the basic motor commands still originate correctly in the motor cortex, but it produces **ataxia**, a loss of smooth coordination that makes movements jerky, overshooting, or poorly timed, revealing just how much precision work the cerebellum quietly performs."
+       ],
+       "example": {
+        "problem": "A voluntary motor signal travels from the motor cortex down a 1-meter myelinated corticospinal pathway at 100 meters per second to reach a hand muscle. How long does the conduction itself take, and why is total reaction time (commonly 150 to 200 ms) so much longer than this?",
+        "steps": [
+         "Calculate conduction time: 1 m ÷ 100 m/s = 0.01 seconds = 10 milliseconds.",
+         "Compare to typical total reaction time of 150 to 200 ms.",
+         "The extra time (roughly 140 to 190 ms) is mostly spent on sensory processing, decision-making in the cortex, and synaptic delays at each junction, not on axon conduction itself, which is comparatively fast."
+        ],
+        "answer": "Conduction takes about 10 ms; the rest of the 150–200 ms reaction time is dominated by sensory processing and decision-making, not signal travel time."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "primary motor cortex",
+       "def": "A strip of frontal lobe cortex that initiates voluntary movement, mapped to specific body parts."
+      },
+      {
+       "term": "decussation",
+       "def": "The crossing of most motor (and sensory) nerve fibers to the opposite side of the body, typically at the medulla."
+      },
+      {
+       "term": "contralateral control",
+       "def": "The pattern where each brain hemisphere primarily controls the opposite side of the body."
+      },
+      {
+       "term": "ataxia",
+       "def": "A loss of smooth movement coordination, often caused by cerebellar damage."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does damage to the left hemisphere's motor cortex typically impair movement on the right side of the body?",
+       "choices": [
+        "The two hemispheres are not connected",
+        "Most corticospinal fibers cross to the opposite side at the medulla (decussation)",
+        "The right side of the body has no motor cortex representation",
+        "Movement is controlled entirely by the spinal cord"
+       ],
+       "answer": 1,
+       "explain": "Because most motor fibers cross sides at the medulla, the left hemisphere ends up controlling voluntary movement on the right side of the body, and vice versa."
+      },
+      {
+       "q": "What is the primary role of the cerebellum in movement, as distinct from the motor cortex?",
+       "choices": [
+        "Initiating the decision to move",
+        "Fine-tuning timing, force, and coordination using ongoing sensory feedback",
+        "Producing all the neurotransmitters used in muscles",
+        "Storing long-term memories of movements"
+       ],
+       "answer": 1,
+       "explain": "While the motor cortex initiates voluntary movement, the cerebellum continuously compares intended and actual movement, adjusting timing and coordination in real time."
+      },
+      {
+       "q": "A myelinated pathway conducts at 100 m/s over a distance of 0.8 meters. How long does conduction take?",
+       "choices": [
+        "0.8 ms",
+        "8 ms",
+        "80 ms",
+        "800 ms"
+       ],
+       "answer": 1,
+       "explain": "Time = distance ÷ speed = 0.8 m ÷ 100 m/s = 0.008 s, which equals 8 milliseconds."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Memory, Behavior, and Disorders",
+   "summary": "How experiences become lasting memories, how sleep and emotion are regulated by the brain, and what goes wrong in some of the nervous system's most significant disorders.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Learning, Memory, and the Hippocampus",
+     "minutes": 15,
+     "intro": "A phone number you glance at and forget thirty seconds later, and the memory of your first day of school years ago, rely on entirely different memory systems in the brain, one of which depends critically on a small, seahorse-shaped structure called the hippocampus.",
+     "sections": [
+      {
+       "heading": "Types of Memory",
+       "body": [
+        "**Short-term (working) memory** holds a small amount of information actively in mind for roughly 20 to 30 seconds without rehearsal, and its capacity is famously limited to about 7 (plus or minus 2) items at once, a finding often called Miller's Magic Number. **Long-term memory** has a much larger capacity and can last a lifetime, and it splits into **declarative memory** (explicit facts and events, further divided into episodic memories of personal experiences and semantic memories of general facts) and **procedural memory** (implicit skills and habits, like riding a bicycle).",
+        "Grouping information into meaningful chunks, such as remembering a 10-digit phone number as three chunks (area code, exchange, line number) rather than 10 separate digits, effectively increases the amount of information that fits within short-term memory's fixed-item limit."
+       ]
+      },
+      {
+       "heading": "The Hippocampus and Long-Term Potentiation",
+       "body": [
+        "The **hippocampus**, a structure within the temporal lobe, is essential for forming new declarative memories, though it is not where those memories are permanently stored. Over time, memories are gradually transferred to distributed storage across the cortex in a process called **memory consolidation**.",
+        "At the cellular level, memory formation relies on **long-term potentiation (LTP)**: when two connected neurons are repeatedly activated together, the synapse between them becomes measurably stronger and more responsive, a lasting change often summarized as 'neurons that fire together, wire together.' LTP is considered the leading cellular mechanism underlying how experiences become lasting memories."
+       ],
+       "example": {
+        "problem": "The famous patient H.M. had his hippocampus surgically removed on both sides to treat severe epilepsy. Afterward, he could not form new long-term declarative memories, yet he could still learn new motor skills (like tracing a shape in a mirror) with practice, even though he had no memory of ever practicing. What does this reveal about the organization of memory in the brain?",
+        "steps": [
+         "H.M.'s inability to form new declarative memories points to the hippocampus as essential for that specific memory type.",
+         "His preserved ability to learn new motor skills shows that procedural memory relies on a different system, one that does not require the hippocampus (largely the basal ganglia and cerebellum).",
+         "Together, this shows memory is not a single unified system but multiple, separable systems that can be selectively damaged."
+        ],
+        "answer": "Memory is composed of separate systems: declarative memory depends on the hippocampus, while procedural memory does not, so damage can impair one while sparing the other."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "working memory",
+       "def": "The active, limited-capacity holding of information in mind for a short period, typically 20-30 seconds."
+      },
+      {
+       "term": "declarative memory",
+       "def": "Explicit long-term memory for facts and events, including episodic and semantic memory."
+      },
+      {
+       "term": "procedural memory",
+       "def": "Implicit long-term memory for skills and habits, such as riding a bicycle."
+      },
+      {
+       "term": "long-term potentiation (LTP)",
+       "def": "The lasting strengthening of a synapse following repeated simultaneous activation, the leading cellular basis of memory."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to Miller's Magic Number, roughly how many items can working memory hold at once?",
+       "choices": [
+        "1-2",
+        "7 (plus or minus 2)",
+        "20-30",
+        "Unlimited"
+       ],
+       "answer": 1,
+       "explain": "Working memory capacity is famously limited to about 7 items, plus or minus 2, a finding known as Miller's Magic Number."
+      },
+      {
+       "q": "Patient H.M. lost the ability to form new declarative memories but could still learn new motor skills. What does this best demonstrate?",
+       "choices": [
+        "The hippocampus is not involved in any type of memory",
+        "Declarative and procedural memory rely on separate brain systems",
+        "Memory cannot be studied through case studies",
+        "Motor skills require conscious memory to be learned"
+       ],
+       "answer": 1,
+       "explain": "H.M.'s case is a classic demonstration that declarative memory (dependent on the hippocampus) and procedural memory (dependent on other systems) are dissociable, separate systems in the brain."
+      },
+      {
+       "q": "What is long-term potentiation (LTP)?",
+       "choices": [
+        "The gradual decay of unused synapses",
+        "The lasting strengthening of a synapse after repeated simultaneous activation of two neurons",
+        "A type of short-term memory",
+        "The process of forgetting"
+       ],
+       "answer": 1,
+       "explain": "LTP describes how repeated, simultaneous firing of two connected neurons strengthens their synaptic connection, providing a cellular explanation for how memories form and persist."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Emotion, Sleep, and Circadian Rhythms",
+     "minutes": 14,
+     "intro": "Every night, your brain cycles through distinct stages of sleep roughly every 90 minutes, guided by an internal clock that runs independently of whether you actually feel tired, while a small almond-shaped structure keeps constant, largely unconscious watch for threats even while you are wide awake.",
+     "sections": [
+      {
+       "heading": "The Amygdala and Emotional Processing",
+       "body": [
+        "The **amygdala** rapidly evaluates incoming sensory information for emotional significance, especially potential threats, often triggering a fear or stress response before the cortex has even finished consciously processing what was seen or heard. This speed is adaptive: reacting to a possible threat quickly, even before full conscious analysis, can be lifesaving in truly dangerous situations.",
+        "The **prefrontal cortex**, part of the frontal lobe, works to regulate and, when appropriate, override these amygdala-driven emotional responses through top-down control, which is part of why deliberately pausing to think through a strong emotional reaction can reduce its intensity; the connection between these two regions is central to how humans regulate emotion."
+       ]
+      },
+      {
+       "heading": "Sleep Stages and Circadian Rhythms",
+       "body": [
+        "Sleep alternates between **non-REM (NREM) sleep**, which includes progressively deeper stages associated with physical restoration, and **REM (rapid eye movement) sleep**, associated with vivid dreaming and important for memory consolidation. A full sleep cycle through these stages takes roughly 90 minutes and repeats several times per night, with REM periods typically becoming longer in later cycles.",
+        "This nightly rhythm is coordinated by the **circadian rhythm**, an internal roughly 24-hour clock regulated by the **suprachiasmatic nucleus (SCN)** in the hypothalamus. The SCN is directly entrained (synchronized) by light detected through the retina, which is why exposure to bright light, especially in the morning, and avoiding it at night, helps keep the circadian clock properly aligned with the actual day-night cycle."
+       ],
+       "example": {
+        "problem": "If a person sleeps for 7.5 hours and each full sleep cycle takes about 90 minutes, approximately how many complete sleep cycles do they experience?",
+        "steps": [
+         "Convert 7.5 hours to minutes: 7.5 × 60 = 450 minutes.",
+         "Divide by the length of one cycle: 450 ÷ 90 = 5."
+        ],
+        "answer": "About 5 complete sleep cycles."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "amygdala",
+       "def": "A limbic structure that rapidly evaluates sensory input for emotional significance, especially threat."
+      },
+      {
+       "term": "REM sleep",
+       "def": "A sleep stage associated with vivid dreaming, rapid eye movement, and memory consolidation."
+      },
+      {
+       "term": "circadian rhythm",
+       "def": "An internal, roughly 24-hour biological clock regulating sleep, alertness, and other body functions."
+      },
+      {
+       "term": "suprachiasmatic nucleus (SCN)",
+       "def": "A hypothalamic structure that regulates circadian rhythm, entrained by light detected through the retina."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can the amygdala trigger a fear response before the cortex finishes consciously processing a stimulus?",
+       "choices": [
+        "The amygdala only responds to sounds",
+        "It rapidly evaluates sensory input for threat, allowing a fast protective reaction even before full conscious analysis",
+        "It only functions during sleep",
+        "It has no connection to sensory input"
+       ],
+       "answer": 1,
+       "explain": "The amygdala's rapid threat evaluation can trigger a protective response very quickly, which is adaptive in genuinely dangerous situations, even though it sometimes overreacts to non-threats."
+      },
+      {
+       "q": "If someone sleeps for 6 hours and each sleep cycle takes about 90 minutes, approximately how many cycles do they complete?",
+       "choices": [
+        "2",
+        "3",
+        "4",
+        "6"
+       ],
+       "answer": 2,
+       "explain": "6 hours = 360 minutes; 360 ÷ 90 = 4 complete cycles."
+      },
+      {
+       "q": "What role does the suprachiasmatic nucleus (SCN) play in the body?",
+       "choices": [
+        "It processes visual detail",
+        "It regulates the circadian rhythm and is entrained by light detected through the retina",
+        "It stores long-term declarative memories",
+        "It controls voluntary movement"
+       ],
+       "answer": 1,
+       "explain": "The SCN, located in the hypothalamus, acts as the body's master clock, synchronizing the roughly 24-hour circadian rhythm to the external light-dark cycle via direct retinal input."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Neurological and Psychiatric Disorders",
+     "minutes": 16,
+     "intro": "Parkinson's and Alzheimer's disease attack the brain's physical structure in specific, identifiable ways, while conditions like depression and anxiety involve more diffuse changes in brain chemistry and circuitry, but all of them are real, treatable medical conditions, not personal failings.",
+     "sections": [
+      {
+       "heading": "Neurodegenerative Disorders",
+       "body": [
+        "**Parkinson's disease** results from the progressive loss of dopamine-producing neurons in a midbrain structure called the substantia nigra, part of the basal ganglia's movement circuit introduced in Unit 3. Because the brain can compensate for a while, motor symptoms like tremor, rigidity, and slowed movement (bradykinesia) typically do not appear until a substantial share of these neurons has already been lost.",
+        "**Alzheimer's disease**, the most common cause of dementia, involves the buildup of abnormal amyloid protein plaques between neurons and tau protein tangles within them, along with progressive loss of neurons and synapses, especially in the hippocampus and cortex. This produces the disease's hallmark progressive decline in memory, and later, in language, reasoning, and other cognitive functions."
+       ],
+       "example": {
+        "problem": "Researchers estimate that Parkinson's motor symptoms typically appear only after a patient has lost about 60% of the roughly 400,000 dopamine-producing neurons in the substantia nigra. Approximately how many neurons have been lost, and how many remain, at that point?",
+        "steps": [
+         "Calculate neurons lost: 400,000 × 0.60 = 240,000.",
+         "Calculate neurons remaining: 400,000 − 240,000 = 160,000."
+        ],
+        "answer": "About 240,000 neurons lost, with roughly 160,000 remaining — illustrating why symptoms often appear only after the disease has already progressed significantly."
+       }
+      },
+      {
+       "heading": "Psychiatric Conditions and Getting Help",
+       "body": [
+        "**Depression** has traditionally been linked to imbalances in monoamine neurotransmitters like serotonin, norepinephrine, and dopamine, which is the basis for common antidepressant medications, though current research suggests the full picture also involves altered neural connectivity and impaired neuroplasticity, not simply a single chemical shortage. **Anxiety disorders** are associated with an overactive amygdala and reduced regulatory control from the prefrontal cortex, consistent with the fear-processing circuitry covered earlier in this unit.",
+        "Both conditions are treatable, commonly with a combination of psychotherapy and medication, and effectiveness varies by individual, which is why professional evaluation matters rather than self-diagnosis. If you or someone you know is in emotional crisis or having thoughts of suicide, call or text 988 to reach the Suicide & Crisis Lifeline in the United States; call 911 for any immediate, life-threatening emergency."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Parkinson's disease",
+       "def": "A neurodegenerative disorder caused by loss of dopamine-producing neurons in the substantia nigra."
+      },
+      {
+       "term": "Alzheimer's disease",
+       "def": "The most common cause of dementia, involving amyloid plaques, tau tangles, and progressive neuron loss."
+      },
+      {
+       "term": "neuroplasticity",
+       "def": "The brain's capacity to reorganize and change its connections in response to experience or injury."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do Parkinson's disease motor symptoms typically appear only after significant disease progression?",
+       "choices": [
+        "Symptoms appear immediately with any neuron loss",
+        "The brain can compensate for a while, so symptoms often emerge only after a large share of dopamine neurons has already been lost",
+        "Parkinson's has no relationship to neuron loss",
+        "Symptoms only appear in the final hours of life"
+       ],
+       "answer": 1,
+       "explain": "Because the brain compensates for gradual neuron loss for some time, noticeable motor symptoms like tremor and rigidity often do not appear until a substantial majority of dopamine-producing neurons have already died."
+      },
+      {
+       "q": "If a patient starts with 500,000 dopamine neurons and loses 60% of them, how many remain?",
+       "choices": [
+        "100,000",
+        "200,000",
+        "300,000",
+        "400,000"
+       ],
+       "answer": 1,
+       "explain": "500,000 × 0.60 = 300,000 lost; 500,000 − 300,000 = 200,000 remaining."
+      },
+      {
+       "q": "What should someone do if they or someone they know is having thoughts of suicide?",
+       "choices": [
+        "Wait to see if the feeling passes on its own",
+        "Call or text 988 to reach the Suicide & Crisis Lifeline, or call 911 for an immediate emergency",
+        "Only discuss it with friends, never a professional",
+        "Avoid mentioning it to prevent making things worse"
+       ],
+       "answer": 1,
+       "explain": "988 connects to the Suicide & Crisis Lifeline for support during an emotional crisis, and 911 should be called for any immediate, life-threatening emergency; reaching out for help is the safe and appropriate response."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

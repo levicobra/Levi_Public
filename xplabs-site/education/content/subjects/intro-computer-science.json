@@ -1,0 +1,1531 @@
+{
+ "id": "intro-computer-science",
+ "title": "Introduction to Computer Science",
+ "domain": "cs",
+ "level": "Intro college",
+ "description": "A broad tour of computer science: how computers represent and process information, how hardware and operating systems work together, how algorithms and data structures let you reason about efficiency, how the Internet and the web function, and how software gets built and secured. No prior programming experience is required.",
+ "outcomes": [
+  "You can explain computational thinking and break a real-world problem into a step-by-step algorithm before writing any code.",
+  "You can convert whole numbers between binary, decimal, and hexadecimal, and explain how computers encode text, images, and sound as bits.",
+  "You can describe the roles of the CPU, memory, and storage in the fetch-decode-execute cycle, and what an operating system manages for you.",
+  "You can trace how data travels from a browser to a web server and back, naming the roles of IP addresses, packets, DNS, and HTTP.",
+  "You can compare algorithms and data structures using Big-O notation and pick a reasonable one for a given task.",
+  "You can describe the stages of the software development lifecycle and name common cybersecurity threats and defenses."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "What Is Computer Science?",
+   "summary": "Computer science is the study of problems and the systematic ways of solving them, not just typing code. This unit introduces the field's big ideas and the mental habit at its center: computational thinking.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "More Than Coding: What Computer Scientists Do",
+     "minutes": 10,
+     "intro": "Ask ten computer scientists what they do all day and you get ten different answers: designing databases, training models, securing networks, building games, proving what a computer can never compute. Programming is the shared tool, not the destination.",
+     "sections": [
+      {
+       "heading": "A Field Built on Abstraction",
+       "body": [
+        "Computer science studies information and computation: how to represent problems as data, and how to solve them with repeatable procedures. It borrows rigor from mathematics and construction discipline from engineering, but its central object, the *algorithm*, belongs to neither field alone.",
+        "The field splits into overlapping specialties. Software engineers build applications people use directly. Systems programmers write operating systems and compilers. Data scientists find patterns in numbers. Security researchers try to break systems before criminals do. Theoreticians ask what is even possible to compute, and how fast.",
+        "A useful habit for this whole course: whenever you meet a new sub-field, ask what problem it exists to solve and what tools it reaches for. Databases exist to keep data safe, consistent, and searchable. Networking exists to move that data between machines reliably."
+       ]
+      },
+      {
+       "heading": "Why 'It Depends' Is a Real Answer",
+       "body": [
+        "Beginners want a single best way to sort a list or store data. Professionals answer 'it depends,' because the right tool changes with the size of the data, how often it changes, and which operation matters most: reading, writing, or searching.",
+        "This course builds the vocabulary to make that judgment for yourself. By the end, when someone says a website is slow because of an inefficient database query, or that a phone stores photos as compressed bits, you will know exactly what that means and why it matters."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "algorithm",
+       "def": "A finite, ordered sequence of steps that solves a problem or performs a task."
+      },
+      {
+       "term": "abstraction",
+       "def": "Hiding unnecessary detail so you can reason about a problem at a higher, simpler level."
+      },
+      {
+       "term": "software engineering",
+       "def": "The discipline of designing, building, testing, and maintaining software systems."
+      },
+      {
+       "term": "theoretical computer science",
+       "def": "The branch of CS that studies what can be computed at all, and how efficiently."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A researcher spends her time proving that no algorithm can solve a certain problem faster than a given speed. Which sub-field is she working in?",
+       "choices": [
+        "Theoretical computer science",
+        "Web development",
+        "Database administration",
+        "Graphic design"
+       ],
+       "answer": 0,
+       "explain": "Studying the limits of what can be computed, and how fast, is the core work of theoretical computer science."
+      },
+      {
+       "q": "Why do professionals often answer 'it depends' when asked for the single best data structure?",
+       "choices": [
+        "They are avoiding the question",
+        "The best choice changes with data size and which operations matter most",
+        "There is always exactly one correct answer they are hiding",
+        "Data structures do not actually matter in practice"
+       ],
+       "answer": 1,
+       "explain": "The right structure trades off speed of reading, writing, and searching differently, so the answer depends on the situation."
+      },
+      {
+       "q": "What does 'abstraction' mean in computer science?",
+       "choices": [
+        "Writing code as fast as possible",
+        "Hiding unnecessary detail so you can reason at a simpler level",
+        "Making a program run on more devices",
+        "Using more computer memory than needed"
+       ],
+       "answer": 1,
+       "explain": "Abstraction lets you work with a simplified view of a system, like calling a function without knowing its internal code."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Computational Thinking: Decompose, Recognize, Abstract",
+     "minutes": 12,
+     "intro": "Before a computer can solve a problem, a person has to think about it the right way. Computational thinking is a habit of mind that turns messy, real-world problems into something a machine, or another person, can execute exactly.",
+     "sections": [
+      {
+       "heading": "Decomposition and Pattern Recognition",
+       "body": [
+        "**Decomposition** means breaking a big problem into smaller, more manageable pieces. Planning a road trip is not one task; it is choosing stops, estimating driving time between them, and budgeting for gas and food, each solvable on its own.",
+        "**Pattern recognition** means noticing that a new problem resembles one you, or someone else, has already solved. Once you see a route-planning problem as a version of a known 'shortest path' problem, you can reuse existing strategies instead of starting from zero."
+       ],
+       "example": {
+        "problem": "You need to plan a route that visits the post office, the grocery store, and the pharmacy, then returns home, using the shortest total driving distance. Describe the first two computational thinking steps you would apply.",
+        "steps": [
+         "Decompose the problem into pieces: list the stops and figure out the driving distance between every pair of them.",
+         "Recognize the pattern: this is a 'visit several fixed stops with shortest total distance' problem, a well-known type with existing strategies."
+        ],
+        "answer": "Decomposition breaks the trip into pairwise distances; pattern recognition identifies it as a shortest-route problem other people have already studied."
+       }
+      },
+      {
+       "heading": "Abstraction and Algorithm Design",
+       "body": [
+        "**Abstraction** means stripping away details that do not matter for solving the problem. For the road trip, the color of your car and the radio station you listen to are irrelevant; only stop locations and distances matter.",
+        "The final step is **algorithm design**: writing an exact, ordered sequence of actions that uses the pattern you recognized and only the details abstraction kept. Computational thinking is these four steps used together, not in strict order, until a fuzzy problem becomes a precise procedure."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "decomposition",
+       "def": "Breaking a large problem into smaller, more manageable sub-problems."
+      },
+      {
+       "term": "pattern recognition",
+       "def": "Noticing that a new problem resembles one already solved."
+      },
+      {
+       "term": "abstraction",
+       "def": "Stripping away details that do not matter for solving the problem at hand."
+      },
+      {
+       "term": "algorithm design",
+       "def": "Writing an exact, ordered sequence of steps that solves a problem."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Splitting 'plan a birthday party' into 'book a venue,' 'send invitations,' and 'order a cake' is an example of which computational thinking step?",
+       "choices": [
+        "Pattern recognition",
+        "Decomposition",
+        "Abstraction",
+        "Debugging"
+       ],
+       "answer": 1,
+       "explain": "Decomposition breaks one large task into smaller, separately solvable sub-tasks."
+      },
+      {
+       "q": "Ignoring the color of a delivery truck while designing a route-optimization algorithm is an example of which step?",
+       "choices": [
+        "Abstraction",
+        "Decomposition",
+        "Pattern recognition",
+        "Testing"
+       ],
+       "answer": 0,
+       "explain": "Abstraction means deliberately dropping details that do not affect the solution, like truck color for a routing problem."
+      },
+      {
+       "q": "Realizing that scheduling exams is similar to a class-scheduling problem you already solved is an example of which step?",
+       "choices": [
+        "Decomposition",
+        "Abstraction",
+        "Pattern recognition",
+        "Algorithm design"
+       ],
+       "answer": 2,
+       "explain": "Pattern recognition means noticing a new problem resembles one you have already solved, so its solution strategy can be reused."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "From Idea to Algorithm: Pseudocode and Flowcharts",
+     "minutes": 12,
+     "intro": "An algorithm is only useful if someone else, human or machine, can follow it exactly. Pseudocode and flowcharts are two ways to write algorithms down before you commit to any particular programming language.",
+     "sections": [
+      {
+       "heading": "Writing Pseudocode",
+       "body": [
+        "**Pseudocode** is a mix of plain English and code-like structure: keywords like `if`, `for each`, and `set`, but no strict syntax rules. It lets you plan logic without worrying about semicolons or brackets, then translate it into any language later.",
+        "Good pseudocode is specific enough that two different people would write the same real code from it. Vague pseudocode like 'process the data somehow' fails that test; precise pseudocode names exactly what changes at each step."
+       ],
+       "example": {
+        "problem": "Write pseudocode for an algorithm that finds the largest number in a list of numbers.",
+        "steps": [
+         "Set max to the first number in the list.",
+         "For each remaining number in the list, compare it to max.",
+         "If the number is greater than max, set max to that number.",
+         "After checking every number, max holds the largest value."
+        ],
+        "answer": "max starts at the first item and is replaced whenever a bigger item is found; after one pass through the list, max is the largest value."
+       }
+      },
+      {
+       "heading": "Flowcharts and Tracing by Hand",
+       "body": [
+        "A **flowchart** draws the same logic as shapes: an oval for start and end, a rectangle for an action, and a diamond for a yes/no decision, connected by arrows showing the order things happen. Flowcharts make branching and loops easy to see at a glance.",
+        "Before typing any code, professionals **trace** (or 'desk-check') an algorithm by hand: they pick sample input, follow every step exactly, and write down each variable's value as it changes. Tracing catches logic errors far cheaper than debugging a running program."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "pseudocode",
+       "def": "A plain-English, code-like way of describing an algorithm without strict syntax rules."
+      },
+      {
+       "term": "flowchart",
+       "def": "A diagram that shows an algorithm's steps using shapes for actions, decisions, and start/end points."
+      },
+      {
+       "term": "decision point",
+       "def": "A branch in an algorithm, drawn as a diamond in a flowchart, where the next step depends on a condition."
+      },
+      {
+       "term": "trace / desk-check",
+       "def": "Following an algorithm by hand with sample input to verify it works before coding it."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Tracing the max-finding pseudocode above on the list [3, 7, 2, 9, 4], what is the final value of max?",
+       "choices": [
+        "3",
+        "7",
+        "9",
+        "4"
+       ],
+       "answer": 2,
+       "explain": "max starts at 3, updates to 7 when 7 is seen, stays 7 through 2, updates to 9 when 9 is seen, and stays 9 through 4."
+      },
+      {
+       "q": "In a flowchart, which shape represents a yes/no decision?",
+       "choices": [
+        "Oval",
+        "Rectangle",
+        "Diamond",
+        "Circle"
+       ],
+       "answer": 2,
+       "explain": "Diamonds represent decision points where the algorithm branches based on a condition."
+      },
+      {
+       "q": "What is the main advantage of writing pseudocode before real code?",
+       "choices": [
+        "Pseudocode runs faster than compiled code",
+        "It lets you plan the logic without worrying about a specific language's syntax",
+        "It automatically finds all bugs",
+        "It replaces the need for testing"
+       ],
+       "answer": 1,
+       "explain": "Pseudocode separates the thinking about logic from the syntax rules of any one programming language."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Representing Data as Bits",
+   "summary": "Everything inside a computer, numbers, letters, photos, songs, is stored as sequences of 0s and 1s. This unit teaches you to read, convert, and reason about that representation.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Bits, Bytes, and Binary Numbers",
+     "minutes": 12,
+     "intro": "A transistor is just a tiny switch: on or off. Computers build every number, letter, and image out of billions of these two-state switches. Understanding binary is understanding the computer's native language.",
+     "sections": [
+      {
+       "heading": "Why Computers Count in Twos",
+       "body": [
+        "A **bit** (binary digit) is a single 0 or 1, matching a transistor's off/on state. Eight bits grouped together form a **byte**, the standard unit computers use to measure and address memory and storage. Four bits form a **nibble**, exactly half a byte.",
+        "A byte can represent 2^8 = 256 different values, since each of its 8 bits can independently be 0 or 1. That is enough to represent every letter, digit, and common symbol in the English alphabet, with room to spare."
+       ]
+      },
+      {
+       "heading": "Reading a Binary Number",
+       "body": [
+        "Binary place value works exactly like decimal place value, but each place is worth a power of 2 instead of a power of 10. Reading right to left, an 8-bit byte's places are worth 128, 64, 32, 16, 8, 4, 2, and 1.",
+        "To read a binary number, multiply each bit by its place value and add the results. This is the same idea as reading 347 in decimal as 3 hundreds plus 4 tens plus 7 ones, just with a different set of place values."
+       ],
+       "example": {
+        "problem": "Convert the binary number 1011 to decimal.",
+        "steps": [
+         "Write the place values under each bit, right to left: 8, 4, 2, 1.",
+         "Multiply each bit by its place value: 1×8=8, 0×4=0, 1×2=2, 1×1=1.",
+         "Add the results: 8 + 0 + 2 + 1 = 11."
+        ],
+        "answer": "1011~2~ = 11 in decimal"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "bit",
+       "def": "A single binary digit, 0 or 1; the smallest unit of digital information."
+      },
+      {
+       "term": "byte",
+       "def": "A group of 8 bits, the standard unit for measuring memory and storage."
+      },
+      {
+       "term": "nibble",
+       "def": "A group of 4 bits, exactly half a byte."
+      },
+      {
+       "term": "binary number system",
+       "def": "A number system with only two digits, 0 and 1, where each place is worth a power of 2."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many different values can a single byte (8 bits) represent?",
+       "choices": [
+        "8",
+        "16",
+        "128",
+        "256"
+       ],
+       "answer": 3,
+       "explain": "Each of the 8 bits can independently be 0 or 1, giving 2^8 = 256 possible combinations."
+      },
+      {
+       "q": "What is the decimal value of the binary number 101?",
+       "choices": [
+        "3",
+        "5",
+        "6",
+        "10"
+       ],
+       "answer": 1,
+       "explain": "Place values right to left are 4, 2, 1. So 1×4 + 0×2 + 1×1 = 4 + 0 + 1 = 5."
+      },
+      {
+       "q": "How many bits are in a nibble?",
+       "choices": [
+        "2",
+        "4",
+        "8",
+        "16"
+       ],
+       "answer": 1,
+       "explain": "A nibble is defined as 4 bits, exactly half of an 8-bit byte."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Converting Between Binary, Decimal, and Hexadecimal",
+     "minutes": 14,
+     "intro": "Programmers write memory addresses, color codes, and error codes in hexadecimal because it is far more compact than binary but still translates to it perfectly. Converting between all three number systems is a core computing skill.",
+     "sections": [
+      {
+       "heading": "Decimal to Binary: Repeated Division",
+       "body": [
+        "To convert a decimal number to binary, repeatedly divide by 2 and record the remainder at each step, stopping once the quotient reaches 0. Reading the remainders from the bottom up gives the binary number.",
+        "This works because each division by 2 asks 'is there one more of this power of 2 in the remaining amount?', which is exactly how binary place value is built, one power of two at a time."
+       ],
+       "example": {
+        "problem": "Convert the decimal number 37 to binary.",
+        "steps": [
+         "37 ÷ 2 = 18 remainder 1",
+         "18 ÷ 2 = 9 remainder 0",
+         "9 ÷ 2 = 4 remainder 1",
+         "4 ÷ 2 = 2 remainder 0",
+         "2 ÷ 2 = 1 remainder 0",
+         "1 ÷ 2 = 0 remainder 1",
+         "Read the remainders bottom to top: 100101."
+        ],
+        "answer": "37 = 100101~2~"
+       }
+      },
+      {
+       "heading": "Hexadecimal: Binary in Disguise",
+       "body": [
+        "**Hexadecimal** (base 16) uses sixteen digits: 0 through 9, then A through F standing for 10 through 15. Its superpower is that one hex digit encodes exactly one nibble (4 bits), so any binary number splits neatly into hex digits, 4 bits at a time.",
+        "To convert binary to hex, group the bits into sets of 4 from the right, padding the leftmost group with zeros if needed, then convert each group to its single hex digit."
+       ],
+       "example": {
+        "problem": "Convert the binary number 10111010 to hexadecimal.",
+        "steps": [
+         "Split the binary digits into groups of 4, from the right: 1011 and 1010.",
+         "Convert each group: 1011 = 11 = B, and 1010 = 10 = A.",
+         "Combine the hex digits in order: BA."
+        ],
+        "answer": "10111010~2~ = BA~16~"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "hexadecimal",
+       "def": "A base-16 number system using digits 0-9 and letters A-F, where each digit encodes exactly 4 bits."
+      },
+      {
+       "term": "repeated division method",
+       "def": "Converting decimal to binary by dividing repeatedly by 2 and reading the remainders bottom to top."
+      },
+      {
+       "term": "base (radix)",
+       "def": "The number of unique digits a number system uses; 2 for binary, 10 for decimal, 16 for hexadecimal."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Convert the decimal number 10 to binary.",
+       "choices": [
+        "1010",
+        "1001",
+        "1100",
+        "0101"
+       ],
+       "answer": 0,
+       "explain": "10 ÷ 2 = 5 r0, 5 ÷ 2 = 2 r1, 2 ÷ 2 = 1 r0, 1 ÷ 2 = 0 r1. Reading remainders bottom to top gives 1010, and 8+0+2+0=10."
+      },
+      {
+       "q": "What decimal value does the hex digit A represent?",
+       "choices": [
+        "9",
+        "10",
+        "11",
+        "16"
+       ],
+       "answer": 1,
+       "explain": "In hexadecimal, letters extend past 9: A=10, B=11, C=12, D=13, E=14, F=15."
+      },
+      {
+       "q": "Why does one hexadecimal digit always correspond to exactly 4 binary bits?",
+       "choices": [
+        "Because hexadecimal only has 4 digits total",
+        "Because 4 bits can represent 16 values (0-15), matching hexadecimal's 16 digits",
+        "Because computers only use 4-bit bytes",
+        "It is just a convention with no mathematical reason"
+       ],
+       "answer": 1,
+       "explain": "4 bits give 2^4 = 16 possible combinations, exactly matching the 16 digits (0-9, A-F) of hexadecimal."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Encoding Text, Images, and Sound",
+     "minutes": 12,
+     "intro": "A computer never actually stores the letter A, the color red, or a guitar note. It stores numbers, and agreed-upon rules for turning those numbers back into letters, colors, and sounds we recognize.",
+     "sections": [
+      {
+       "heading": "Text as Numbers: ASCII and Unicode",
+       "body": [
+        "**ASCII** assigns every English letter, digit, and common symbol a number from 0 to 127, small enough to fit in 7 bits. The letters are assigned in alphabetical order, so 'A' is 65, 'B' is 66, and so on.",
+        "ASCII cannot represent accented letters, Chinese characters, or emoji. **Unicode** solves this by assigning a unique number to essentially every character in every writing system in use, using more bits per character so the numbering can go far beyond 127."
+       ],
+       "example": {
+        "problem": "The ASCII code for the uppercase letter A is 65. What is the ASCII code for the letter D, and what does that tell you about how ASCII orders the alphabet?",
+        "steps": [
+         "ASCII assigns consecutive numbers to consecutive letters: A=65, B=66, C=67, D=68.",
+         "D is the 4th letter of the alphabet, 3 positions after A, so its code is 65 + 3 = 68."
+        ],
+        "answer": "68 — ASCII lists the alphabet in order, so each letter's code is exactly the previous letter's code plus 1."
+       }
+      },
+      {
+       "heading": "Pixels and Samples",
+       "body": [
+        "A digital image is a grid of **pixels**, and each pixel is stored as numbers representing its color, commonly three numbers for the red, green, and blue (RGB) light intensities that mix to form the pixel's exact color.",
+        "Digital audio works by **sampling**: measuring the sound wave's height thousands of times per second and storing each measurement as a number. CD-quality audio samples 44,100 times per second, which is fast enough that the human ear hears smooth sound, not individual clicks."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ASCII",
+       "def": "A character encoding that assigns numbers 0-127 to English letters, digits, and symbols."
+      },
+      {
+       "term": "Unicode",
+       "def": "A character encoding standard covering nearly every writing system and symbol in the world."
+      },
+      {
+       "term": "pixel",
+       "def": "One small colored dot in a grid that makes up a digital image."
+      },
+      {
+       "term": "sample rate",
+       "def": "How many times per second a sound wave's amplitude is measured and stored digitally."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can ASCII not represent emoji or Chinese characters?",
+       "choices": [
+        "ASCII only allows lowercase letters",
+        "ASCII's range of numbers (0-127) is too small to cover all of them",
+        "Emoji are not made of numbers at all",
+        "ASCII was designed only for images"
+       ],
+       "answer": 1,
+       "explain": "ASCII fits in 7 bits (0-127 values), nowhere near enough codes for the tens of thousands of characters and symbols Unicode covers."
+      },
+      {
+       "q": "A pixel's color is commonly stored as three numbers. What do those three numbers represent?",
+       "choices": [
+        "Width, height, and depth",
+        "Row, column, and layer",
+        "Red, green, and blue light intensities",
+        "The pixel's x, y, and z position in 3D space"
+       ],
+       "answer": 2,
+       "explain": "RGB (red, green, blue) intensities mix together to produce the pixel's visible color."
+      },
+      {
+       "q": "What does a higher sample rate mean for digital audio?",
+       "choices": [
+        "The sound wave's amplitude is measured more often per second",
+        "The audio file uses fewer bits",
+        "The recording is automatically louder",
+        "The song plays back faster"
+       ],
+       "answer": 0,
+       "explain": "Sample rate is how many measurements of the sound wave are taken each second; more samples per second capture the wave more accurately."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Computer Hardware and How Programs Run",
+   "summary": "Behind every running program are physical parts working together at incredible speed. This unit opens up the machine: the CPU, memory, storage, and the translation from source code to something hardware can execute.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Inside the Machine: CPU, Memory, and Storage",
+     "minutes": 10,
+     "intro": "Open up any computer, phone, or laptop and you find the same three roles played by different parts: something that calculates, something that remembers temporarily, and something that remembers permanently.",
+     "sections": [
+      {
+       "heading": "The CPU: Where Calculation Happens",
+       "body": [
+        "The **CPU** (central processing unit) executes instructions, additions, comparisons, data moves, one at a time, at staggering speed. Clock speed, measured in gigahertz (GHz), tells you roughly how many billions of cycles the CPU can perform each second.",
+        "Modern CPUs have multiple **cores**, each capable of executing its own stream of instructions. A 4-core CPU can genuinely run four separate tasks in parallel, rather than just switching between them extremely fast."
+       ]
+      },
+      {
+       "heading": "Memory and Storage: Fast-and-Temporary vs Slow-and-Permanent",
+       "body": [
+        "**RAM** (random access memory) is fast, working memory the CPU reads and writes to constantly while a program runs. It is **volatile**: everything in it disappears the instant power is lost, which is why unsaved documents vanish in a crash.",
+        "**Storage** (an SSD or hard drive) is slower than RAM but **non-volatile**, keeping data safely after the power turns off. Programs and files live in storage and get loaded into RAM only while they are actively being used."
+       ],
+       "example": {
+        "problem": "A high-resolution photo is 6 megabytes. Roughly how many such photos fit on a phone with 32 gigabytes of storage, leaving 2 gigabytes free for the operating system?",
+        "steps": [
+         "Available space for photos: 32 GB − 2 GB = 30 GB.",
+         "Convert to megabytes: 30 GB × 1,000 MB/GB = 30,000 MB.",
+         "Divide by the size of one photo: 30,000 MB ÷ 6 MB = 5,000 photos."
+        ],
+        "answer": "About 5,000 photos."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "CPU",
+       "def": "The central processing unit; the chip that executes a computer's instructions."
+      },
+      {
+       "term": "RAM",
+       "def": "Random access memory; fast, volatile memory the CPU uses while programs are running."
+      },
+      {
+       "term": "volatile memory",
+       "def": "Memory that loses its contents when power is removed, like RAM."
+      },
+      {
+       "term": "storage (SSD/HDD)",
+       "def": "Non-volatile memory that keeps data after power is removed, used for long-term file storage."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do unsaved changes in a document disappear if the computer suddenly loses power?",
+       "choices": [
+        "Storage drives always erase themselves on power loss",
+        "The document was open in RAM, which is volatile and clears on power loss",
+        "The CPU deletes unsaved files automatically",
+        "Word processors are designed to lose data on purpose"
+       ],
+       "answer": 1,
+       "explain": "RAM only holds data while powered; because the unsaved document existed only in RAM, losing power erases it before it can reach non-volatile storage."
+      },
+      {
+       "q": "A phone has 64 GB of storage and 4 GB is used by the operating system. How many 8 MB photos fit in the remaining space?",
+       "choices": [
+        "600",
+        "6,000",
+        "7,500",
+        "60,000"
+       ],
+       "answer": 2,
+       "explain": "Remaining space: 64 GB − 4 GB = 60 GB = 60,000 MB. 60,000 MB ÷ 8 MB per photo = 7,500 photos."
+      },
+      {
+       "q": "What is the main advantage of a CPU having 4 cores instead of 1?",
+       "choices": [
+        "It uses less electricity",
+        "It can genuinely run multiple instruction streams in parallel",
+        "It never needs RAM",
+        "It automatically runs at a higher clock speed"
+       ],
+       "answer": 1,
+       "explain": "Each core can independently execute its own instructions, so a 4-core CPU can truly do four things at once rather than rapidly switching between one thing at a time."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Fetch-Decode-Execute Cycle",
+     "minutes": 12,
+     "intro": "Billions of times per second, a CPU repeats the same three-step ritual: grab the next instruction, figure out what it means, and do it. This tiny loop is the heartbeat underneath every program you have ever run.",
+     "sections": [
+      {
+       "heading": "Fetch, Decode, Execute",
+       "body": [
+        "**Fetch**: the CPU reads the next instruction from the memory address stored in the **program counter**, a register that always points to 'what comes next.' **Decode**: the control unit figures out which operation the instruction represents. **Execute**: the CPU actually performs that operation.",
+        "After execution, the program counter advances to the next instruction's address, and the cycle repeats. A CPU running at 3 GHz can complete billions of these cycles every second."
+       ],
+       "example": {
+        "problem": "A CPU's program counter points to an instruction ADD R1, R2, R3, meaning add the values in registers R1 and R2, storing the result in R3. Walk through one fetch-decode-execute cycle.",
+        "steps": [
+         "Fetch: the CPU reads the instruction ADD R1, R2, R3 from the memory address in the program counter.",
+         "Decode: the control unit determines this is an addition operation on registers R1, R2, and R3.",
+         "Execute: the arithmetic logic unit adds the values in R1 and R2 and writes the sum into R3.",
+         "The program counter advances to the next instruction's address."
+        ],
+        "answer": "R3 now holds R1 + R2, and the CPU is ready to fetch the next instruction."
+       }
+      },
+      {
+       "heading": "Registers and the ALU",
+       "body": [
+        "**Registers** are a tiny handful of storage slots built directly into the CPU, far faster than RAM but able to hold only a few values at a time, like a few sticky notes on a desk instead of a filing cabinet down the hall.",
+        "The **arithmetic logic unit (ALU)** is the part of the CPU that actually performs math and comparisons, addition, subtraction, greater-than checks, during the execute step of the cycle."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "fetch-decode-execute cycle",
+       "def": "The repeating three-step process a CPU uses to run each instruction: retrieve it, interpret it, then perform it."
+      },
+      {
+       "term": "program counter",
+       "def": "A CPU register that holds the memory address of the next instruction to run."
+      },
+      {
+       "term": "register",
+       "def": "A tiny, extremely fast storage location built into the CPU itself."
+      },
+      {
+       "term": "arithmetic logic unit (ALU)",
+       "def": "The part of the CPU that performs arithmetic and comparison operations."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which step of the fetch-decode-execute cycle actually performs the addition in an ADD instruction?",
+       "choices": [
+        "Fetch",
+        "Decode",
+        "Execute",
+        "The program counter update"
+       ],
+       "answer": 2,
+       "explain": "Fetch retrieves the instruction and decode interprets it; the actual arithmetic happens during execute, performed by the ALU."
+      },
+      {
+       "q": "What does the program counter keep track of?",
+       "choices": [
+        "How many programs are currently open",
+        "The memory address of the next instruction to run",
+        "The CPU's current temperature",
+        "How much RAM is free"
+       ],
+       "answer": 1,
+       "explain": "The program counter always points to where the next instruction to fetch lives in memory."
+      },
+      {
+       "q": "Why are CPU registers faster than RAM?",
+       "choices": [
+        "They are built directly into the CPU chip, far closer than RAM",
+        "They use a completely different, slower kind of electricity",
+        "Registers do not actually store any data",
+        "RAM is always faster than registers, not the other way around"
+       ],
+       "answer": 0,
+       "explain": "Registers sit inside the CPU itself, avoiding the delay of communicating across the bus to separate RAM chips."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "From Source Code to Running Program",
+     "minutes": 12,
+     "intro": "A CPU cannot read the word 'print' or the symbol '+'. Somewhere between you typing code and a program running, every line of human-readable source code gets translated into instructions the hardware actually understands.",
+     "sections": [
+      {
+       "heading": "Compilers: Translate Once, Run Many Times",
+       "body": [
+        "A **compiler** reads an entire program's source code and translates all of it into **machine code**, instructions expressed as raw binary numbers the CPU executes directly, producing a standalone executable file. Languages like C and C++ work this way.",
+        "Compiled programs tend to run fast, since translation happens once, ahead of time. The tradeoff is that every change to the source code requires recompiling the whole program before you can run it again."
+       ]
+      },
+      {
+       "heading": "Interpreters: Translate as You Go",
+       "body": [
+        "An **interpreter** reads and executes source code directly, translating and running it line by line each time the program is launched, with no separate compiled file produced. Python and JavaScript typically work this way, which is why you can run a script the instant you save it.",
+        "Some languages, including Python and Java, use a hybrid approach: source code compiles to an intermediate **bytecode**, which a virtual machine then interprets. This keeps the flexibility of interpretation while getting some of a compiler's speed benefits."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "compiler",
+       "def": "A program that translates entire source code into machine code before the program runs."
+      },
+      {
+       "term": "interpreter",
+       "def": "A program that translates and executes source code directly, line by line, each time it runs."
+      },
+      {
+       "term": "machine code",
+       "def": "Binary instructions a CPU can execute directly, with no further translation needed."
+      },
+      {
+       "term": "bytecode",
+       "def": "An intermediate, compiled form of code that a virtual machine interprets rather than the raw hardware."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main tradeoff of using a compiled language like C?",
+       "choices": [
+        "Programs run slower but need no recompiling",
+        "Programs tend to run fast, but must be recompiled after every source code change",
+        "There is no way to produce a standalone executable",
+        "Compiled code cannot use variables"
+       ],
+       "answer": 1,
+       "explain": "Compiling translates the whole program ahead of time for speed, but any edit requires recompiling before the change takes effect."
+      },
+      {
+       "q": "Why can you run a Python script the moment you save it, without a separate build step?",
+       "choices": [
+        "Python code is not really a programming language",
+        "An interpreter reads and executes the source code directly, line by line",
+        "Python secretly compiles in the background the night before",
+        "Python files are actually pre-compiled machine code"
+       ],
+       "answer": 1,
+       "explain": "Interpreted languages skip a separate ahead-of-time compilation step; the interpreter translates and runs code as it goes."
+      },
+      {
+       "q": "What is bytecode?",
+       "choices": [
+        "Raw binary machine code with no translation layer",
+        "The original, unmodified source code a programmer types",
+        "An intermediate compiled form that a virtual machine interprets",
+        "A type of hardware register"
+       ],
+       "answer": 2,
+       "explain": "Bytecode is a compiled-but-not-machine-specific form; a virtual machine interprets it, combining benefits of both compiling and interpreting."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Operating Systems and the Internet",
+   "summary": "An operating system quietly manages every program's access to hardware, while a vast, decentralized network of protocols lets your device talk to servers anywhere on Earth. This unit covers both.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What an Operating System Does",
+     "minutes": 10,
+     "intro": "Every program on your device thinks it has the CPU, memory, and screen all to itself. The operating system is the referee making that illusion possible, sharing real hardware among many programs at once.",
+     "sections": [
+      {
+       "heading": "Managing Programs: Processes and Scheduling",
+       "body": [
+        "Each running program is a **process**. Since most computers have far more processes wanting CPU time than they have cores, the operating system's **scheduler** rapidly switches which process gets the CPU, giving each one a small time slice before moving to the next.",
+        "This switching happens so fast that dozens of processes appear to run simultaneously, even on a single core. The scheduler's job is to keep every process making progress without any one process hogging the CPU forever."
+       ],
+       "example": {
+        "problem": "Three programs, A, B, and C, are waiting for CPU time in a round-robin scheduler that gives each program a 10-millisecond time slice, in the order A, B, C. How long until Program C gets its first turn?",
+        "steps": [
+         "Program A runs first, for its full 10 ms slice.",
+         "Program B runs next, for its full 10 ms slice.",
+         "Only after both A and B have had one turn does Program C's turn begin.",
+         "Total wait for C: 10 ms + 10 ms = 20 ms."
+        ],
+        "answer": "20 milliseconds."
+       }
+      },
+      {
+       "heading": "Managing Memory, Files, and Devices",
+       "body": [
+        "The OS gives each process the illusion of its own private memory space through **virtual memory**, even though many processes actually share the same physical RAM. It also organizes your files into a navigable **file system** of folders and names.",
+        "Finally, the OS uses **device drivers**, small translator programs, to convert generic requests like 'print this page' into the exact commands a specific printer model understands, so applications never need to know hardware details."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "operating system",
+       "def": "The software that manages a computer's hardware and shares it among running programs."
+      },
+      {
+       "term": "process",
+       "def": "An instance of a program currently running on a computer."
+      },
+      {
+       "term": "scheduling",
+       "def": "The operating system's method of deciding which process gets the CPU and for how long."
+      },
+      {
+       "term": "device driver",
+       "def": "Software that translates generic OS requests into commands a specific piece of hardware understands."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Four programs share a round-robin scheduler with a 5 ms time slice, running in order A, B, C, D. How long before Program D gets its first turn?",
+       "choices": [
+        "5 ms",
+        "10 ms",
+        "15 ms",
+        "20 ms"
+       ],
+       "answer": 2,
+       "explain": "A, B, and C each take one 5 ms slice before D's turn: 5 + 5 + 5 = 15 ms."
+      },
+      {
+       "q": "What is the main job of a device driver?",
+       "choices": [
+        "Scheduling which process runs next on the CPU",
+        "Translating generic requests into commands a specific hardware device understands",
+        "Storing files permanently on disk",
+        "Compiling source code into machine code"
+       ],
+       "answer": 1,
+       "explain": "Drivers act as translators so software can talk to hardware, like printers or graphics cards, without knowing every device's specific commands."
+      },
+      {
+       "q": "Why can dozens of programs appear to run at once even on a single-core CPU?",
+       "choices": [
+        "Single-core CPUs secretly contain hidden extra cores",
+        "The scheduler switches between processes so quickly it creates the illusion of simultaneity",
+        "Only one program is ever actually running; the rest are frozen",
+        "Modern software no longer needs a CPU to run"
+       ],
+       "answer": 1,
+       "explain": "Rapid time-slicing by the scheduler makes many processes appear to progress together, even though only one runs on a given core at any instant."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "How the Internet Works: IP Addresses and Packets",
+     "minutes": 12,
+     "intro": "The Internet has no central control room. It works because every device agrees on the same addressing scheme and the same rules for chopping data into small, independently routable pieces.",
+     "sections": [
+      {
+       "heading": "Addresses for Every Device",
+       "body": [
+        "Every device on a network needs a unique **IP address**. An IPv4 address is written as four numbers separated by dots, like 192.168.1.10, where each number is stored in a single byte and can therefore only range from 0 to 255.",
+        "Because the world now has far more devices than IPv4's roughly 4 billion addresses can cover, **IPv6** uses a much longer address format to provide a vastly larger address space for the future."
+       ],
+       "example": {
+        "problem": "Explain why 300.10.5.2 could never be a valid IPv4 address.",
+        "steps": [
+         "Each of the four numbers in an IPv4 address is stored in a single byte.",
+         "A byte holds 8 bits, which can represent values from 0 to 255 (2^8 = 256 possible values, numbered 0 through 255).",
+         "300 is greater than 255, so it cannot fit in one byte."
+        ],
+        "answer": "300 exceeds the maximum value a single byte can hold (255), so the address is invalid."
+       }
+      },
+      {
+       "heading": "Breaking Data into Packets",
+       "body": [
+        "Data sent over a network is chopped into **packets**, each carrying a small piece of the data plus a header listing the source and destination addresses. Different packets from the same message can travel entirely different physical routes and still arrive at the right place.",
+        "**Routers** read each packet's destination address and forward it toward that destination, one hop at a time. The receiving device collects all the packets and reassembles them into the original message, even if they arrived out of order."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "IP address",
+       "def": "A unique numeric address identifying a device on a network."
+      },
+      {
+       "term": "packet",
+       "def": "A small chunk of data, with header information, sent independently across a network."
+      },
+      {
+       "term": "router",
+       "def": "A device that reads a packet's destination address and forwards it toward that destination."
+      },
+      {
+       "term": "IPv4 / IPv6",
+       "def": "The two main IP addressing formats; IPv6 offers a vastly larger address space than the older IPv4."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is 192.168.500.1 not a valid IPv4 address?",
+       "choices": [
+        "IPv4 addresses cannot contain the number 1",
+        "500 is larger than 255, the maximum value a single byte can hold",
+        "IPv4 addresses only allow three numbers, not four",
+        "There is nothing wrong with it"
+       ],
+       "answer": 1,
+       "explain": "Each of the four numbers in an IPv4 address must fit in one byte, meaning it can be at most 255."
+      },
+      {
+       "q": "Why can different packets from the same downloaded file take different physical paths across the network?",
+       "choices": [
+        "Each packet independently carries its own destination address and is routed on its own",
+        "Packets are not allowed to take different paths",
+        "Only the first packet contains a destination address",
+        "Routers ignore packet headers entirely"
+       ],
+       "answer": 0,
+       "explain": "Because every packet carries its own header with source and destination, routers can forward each one independently, sometimes along different paths."
+      },
+      {
+       "q": "What is the main reason IPv6 was created?",
+       "choices": [
+        "To make websites load with better graphics",
+        "IPv4's roughly 4 billion addresses are not enough for the number of devices online today",
+        "To replace HTTP with a faster protocol",
+        "To eliminate the need for routers"
+       ],
+       "answer": 1,
+       "explain": "IPv6's much longer address format provides a vastly larger pool of unique addresses than IPv4 can offer."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Web: DNS, HTTP, and Browsers",
+     "minutes": 12,
+     "intro": "Typing a web address and pressing Enter kicks off a small chain of network conversations, translating a name into an address, requesting a page, and rendering the response, all in a fraction of a second.",
+     "sections": [
+      {
+       "heading": "DNS: The Internet's Phone Book",
+       "body": [
+        "Domain names like example.com exist because IP addresses are hard for humans to remember. The **Domain Name System (DNS)** translates a domain name into the IP address of the server that hosts it, much like looking up a name in a phone book to find a number.",
+        "Your browser performs a DNS lookup before it can contact a website at all; without knowing the destination IP address, it has nowhere to send the request."
+       ]
+      },
+      {
+       "heading": "HTTP Requests and Responses",
+       "body": [
+        "Once the browser has an IP address, it sends an **HTTP** request, most commonly a `GET` request asking for a specific page, to the server. The server replies with an HTTP response containing a **status code** (200 for success, 404 for not found) and, on success, the page's HTML.",
+        "The browser then parses that HTML and any linked CSS and JavaScript, and **renders** it into the visual page you see and interact with."
+       ],
+       "example": {
+        "problem": "Put these steps in the order they actually happen when you type a URL and press Enter: (1) the browser sends an HTTP GET request to the server's IP address, (2) the browser looks up the domain name via DNS to find an IP address, (3) the browser renders the HTML the server sends back, (4) the server sends back an HTTP response with a status code and the page's HTML.",
+        "steps": [
+         "Step 2 happens first: DNS translates the domain name into an IP address.",
+         "Step 1 happens next: the browser sends an HTTP GET request to that IP address.",
+         "Step 4 happens next: the server responds with a status code and HTML.",
+         "Step 3 happens last: the browser renders the HTML into the page you see."
+        ],
+        "answer": "Order: DNS lookup, then HTTP GET request, then HTTP response, then render the page."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "DNS",
+       "def": "The Domain Name System; translates human-readable domain names into IP addresses."
+      },
+      {
+       "term": "HTTP",
+       "def": "HyperText Transfer Protocol; the rules browsers and servers use to request and send web pages."
+      },
+      {
+       "term": "HTTP status code",
+       "def": "A number in an HTTP response indicating the result of a request, like 200 (success) or 404 (not found)."
+      },
+      {
+       "term": "render",
+       "def": "The browser's process of turning received HTML, CSS, and JavaScript into the visible page."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does DNS actually do?",
+       "choices": [
+        "Encrypts data sent between browser and server",
+        "Translates a domain name into the IP address of the server hosting it",
+        "Renders HTML into a visible web page",
+        "Compiles JavaScript into machine code"
+       ],
+       "answer": 1,
+       "explain": "DNS acts like a phone book, converting a human-readable name into the numeric IP address a browser needs to connect to the right server."
+      },
+      {
+       "q": "What does an HTTP status code of 404 mean?",
+       "choices": [
+        "The request succeeded and the page is loading",
+        "The server could not find the requested page",
+        "The browser lost its Internet connection",
+        "The DNS lookup failed"
+       ],
+       "answer": 1,
+       "explain": "404 is the standard HTTP status code meaning the requested resource was not found on the server."
+      },
+      {
+       "q": "Which happens first when you visit a website: the DNS lookup or the HTTP GET request?",
+       "choices": [
+        "The HTTP GET request always happens first",
+        "The DNS lookup happens first, since the browser needs an IP address before it can send a request",
+        "They always happen at the exact same instant",
+        "Neither is needed if you know the website's name"
+       ],
+       "answer": 1,
+       "explain": "The browser cannot send an HTTP request without an IP address to send it to, so DNS resolution comes first."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Algorithms, Data Structures, and Efficiency",
+   "summary": "Two algorithms can solve the exact same problem while one finishes in a heartbeat and the other takes hours. This unit teaches you the vocabulary, Big-O notation, that lets you predict and compare that difference.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Comparing Algorithms: Why Efficiency Matters",
+     "minutes": 12,
+     "intro": "Imagine searching a phone book by reading every single entry from the start versus flipping straight to the right letter. Both find the name eventually, but one takes a fraction of the effort. That difference is what algorithm efficiency measures.",
+     "sections": [
+      {
+       "heading": "Two Ways to Search",
+       "body": [
+        "**Linear search** checks a list one item at a time from the start until it finds a match, or reaches the end. It works on any list, sorted or not, but in the worst case, it must check every single item.",
+        "**Binary search** only works on a *sorted* list, but it is far faster: check the middle item, and depending on whether the target is bigger or smaller, throw away half the remaining list and repeat, in the remaining half."
+       ],
+       "example": {
+        "problem": "A sorted list has 1,000 names. Roughly how many comparisons does linear search need in the worst case, versus binary search?",
+        "steps": [
+         "Linear search may need to check every entry in the worst case: up to 1,000 comparisons.",
+         "Binary search halves the remaining entries each time: 1,000 → 500 → 250 → 125 → 63 → 32 → 16 → 8 → 4 → 2 → 1, about 10 comparisons.",
+         "Binary search needs roughly log₂(1000) ≈ 10 comparisons, dramatically fewer than linear search's worst case."
+        ],
+        "answer": "Linear search: up to 1,000 comparisons. Binary search: about 10 comparisons."
+       }
+      },
+      {
+       "heading": "Best, Worst, and Average Case",
+       "body": [
+        "The **best case** is the luckiest possible input, like finding the target on the very first check. The **worst case** is the unluckiest, like the target being last or entirely absent. The **average case** describes typical performance across many random inputs.",
+        "Computer scientists usually focus on the worst case, since it guarantees an upper bound on how bad performance can get, which matters most for reliability in real systems."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "linear search",
+       "def": "Checking each item in a list one at a time until a match is found."
+      },
+      {
+       "term": "binary search",
+       "def": "Repeatedly halving a sorted list by comparing the target to the middle item."
+      },
+      {
+       "term": "worst case",
+       "def": "The input that makes an algorithm take the longest possible time."
+      },
+      {
+       "term": "best case",
+       "def": "The input that makes an algorithm finish in the least possible time."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why must a list be sorted before you can use binary search on it?",
+       "choices": [
+        "Sorting is not actually required for binary search",
+        "Binary search relies on comparing to the middle to eliminate half the remaining items, which only works if order is guaranteed",
+        "Sorted lists take up less memory",
+        "Binary search only works on lists of numbers, never names"
+       ],
+       "answer": 1,
+       "explain": "Binary search's halving trick depends on knowing that everything below the middle is smaller and everything above is larger, which is only true in a sorted list."
+      },
+      {
+       "q": "A sorted list has about 1,000,000 items. Roughly how many comparisons does binary search need in the worst case?",
+       "choices": [
+        "About 20",
+        "About 1,000",
+        "About 500,000",
+        "About 1,000,000"
+       ],
+       "answer": 0,
+       "explain": "Binary search needs roughly log₂(1,000,000) ≈ 20 comparisons, since halving 1,000,000 about 20 times brings it down to 1."
+      },
+      {
+       "q": "Which case does computer science usually focus on when analyzing an algorithm's efficiency, and why?",
+       "choices": [
+        "Best case, because it shows the algorithm's full potential",
+        "Worst case, because it guarantees an upper bound on how bad performance can get",
+        "Average case only, since real inputs are always typical",
+        "None of these cases matter in practice"
+       ],
+       "answer": 1,
+       "explain": "Worst-case analysis gives a guarantee that performance will never be worse than a known bound, which matters most for reliability."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Big-O Notation",
+     "minutes": 14,
+     "intro": "Big-O notation is the shorthand computer scientists use to describe how an algorithm's run time grows as its input grows, without getting bogged down in exact seconds or the specific computer running it.",
+     "sections": [
+      {
+       "heading": "Describing Growth, Not Exact Time",
+       "body": [
+        "**Big-O notation** describes how the number of operations an algorithm performs grows as the input size, usually called n, grows large. It ignores constant factors and smaller terms, focusing on the dominant trend as n gets huge.",
+        "Common classes, from fastest-growing time to slowest, include O(1) constant time, O(log n) logarithmic time, O(n) linear time, O(n log n), O(n²) quadratic time, and O(2ⁿ) exponential time."
+       ],
+       "example": {
+        "problem": "An algorithm's run time roughly doubles every time you double the input size n. Which Big-O class best describes it: O(1), O(log n), O(n), or O(n²)?",
+        "steps": [
+         "O(1) would take the same time regardless of n, so it does not match.",
+         "O(log n) grows very slowly as n doubles, adding only about one more step, so it does not match either.",
+         "O(n) means run time scales directly with n, so doubling n doubles the time, which matches exactly.",
+         "O(n²) would roughly quadruple the time when n doubles, not just double it."
+        ],
+        "answer": "O(n), linear time."
+       }
+      },
+      {
+       "heading": "Common Growth Rates, Ranked",
+       "body": [
+        "From best to worst for large n: O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ). A constant-time O(1) lookup, like accessing an array by index, stays instant no matter how large the array grows.",
+        "An O(n²) algorithm, like comparing every pair of items in a list, becomes painfully slow as n grows: doubling n roughly quadruples the work, so a list of 10,000 items can take 100 times longer than a list of 1,000."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Big-O notation",
+       "def": "A way of describing how an algorithm's run time or memory use grows as input size grows."
+      },
+      {
+       "term": "time complexity",
+       "def": "A measure of how the number of operations an algorithm performs scales with input size."
+      },
+      {
+       "term": "growth rate",
+       "def": "How quickly an algorithm's run time increases as the input size increases."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An algorithm checks every possible pair of items in a list of n items. What is its Big-O time complexity?",
+       "choices": [
+        "O(1)",
+        "O(n)",
+        "O(n²)",
+        "O(log n)"
+       ],
+       "answer": 2,
+       "explain": "Comparing every pair means roughly n × n comparisons, which is O(n²), quadratic time."
+      },
+      {
+       "q": "Which of these growth rates is the fastest (best) for large inputs?",
+       "choices": [
+        "O(n²)",
+        "O(2ⁿ)",
+        "O(log n)",
+        "O(n log n)"
+       ],
+       "answer": 2,
+       "explain": "O(log n) grows extremely slowly as n increases, making it far faster than O(n log n), O(n²), or O(2ⁿ) for large inputs."
+      },
+      {
+       "q": "Doubling the input size n roughly quadruples an algorithm's run time. What Big-O class does this suggest?",
+       "choices": [
+        "O(1)",
+        "O(n)",
+        "O(n²)",
+        "O(log n)"
+       ],
+       "answer": 2,
+       "explain": "O(n²) scales with the square of n, so doubling n multiplies the run time by 2² = 4, matching quadrupling exactly."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Core Data Structures: Arrays and Dictionaries",
+     "minutes": 12,
+     "intro": "Choosing where to put your data matters as much as choosing what algorithm to run on it. Arrays and dictionaries are two of the most common data structures, and they excel at very different jobs.",
+     "sections": [
+      {
+       "heading": "Arrays: Fast Access by Position",
+       "body": [
+        "An **array** stores items in a single contiguous block of memory, one after another, each reachable instantly by its numeric **index**. Because the computer can calculate exactly where index 47 lives in memory, reading `array[47]` is O(1), constant time, regardless of how large the array is.",
+        "The tradeoff comes when searching for a *value* rather than a known index: if the array is unsorted, finding whether it contains a particular value requires checking items one at a time, an O(n) linear search."
+       ]
+      },
+      {
+       "heading": "Dictionaries: Fast Access by Key",
+       "body": [
+        "A **dictionary** (also called a hash map) stores data as key-value pairs and is built so that looking up a value by its key is close to O(1) on average, no matter how many entries it holds, using a technique called hashing covered in a later course.",
+        "The tradeoff is that a dictionary is not naturally ordered by position the way an array is, and it uses more memory overhead per item to make that fast key-based lookup possible."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "array",
+       "def": "A data structure that stores items contiguously in memory, each reachable instantly by numeric index."
+      },
+      {
+       "term": "index",
+       "def": "The numeric position of an item within an array, usually starting at 0."
+      },
+      {
+       "term": "dictionary / hash map",
+       "def": "A data structure that stores key-value pairs and looks up values by key in close to constant time."
+      },
+      {
+       "term": "key-value pair",
+       "def": "A single entry in a dictionary: a unique key mapped to an associated value."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is reading array[47] considered O(1), constant time, even in a huge array?",
+       "choices": [
+        "Arrays automatically sort themselves",
+        "The computer can calculate the exact memory location of index 47 directly, without checking other items",
+        "Index 47 is always the middle of the array",
+        "Arrays never actually store more than 100 items"
+       ],
+       "answer": 1,
+       "explain": "Because array elements sit contiguously in memory, the address of any index can be computed directly, making access constant time regardless of array size."
+      },
+      {
+       "q": "Which task is a dictionary (hash map) specifically optimized for?",
+       "choices": [
+        "Keeping items in a strict numeric order",
+        "Looking up a value quickly using an associated key",
+        "Using the least possible memory of any data structure",
+        "Storing only numbers, never text"
+       ],
+       "answer": 1,
+       "explain": "Dictionaries are built so that looking up a value by its key is close to O(1) on average, which is their main strength."
+      },
+      {
+       "q": "You need to check whether the value 42 exists anywhere in an unsorted array of 10,000 numbers. What is the worst-case time complexity?",
+       "choices": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+       ],
+       "answer": 2,
+       "explain": "Without sorting, you may need to check every element once before concluding whether 42 is present, which is O(n) linear time."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Building and Protecting Software",
+   "summary": "Writing code is only one stage in delivering software that works, stays reliable, and resists attackers. This closing unit covers the software lifecycle, cybersecurity basics, and where computing is headed.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Software Development Lifecycle",
+     "minutes": 12,
+     "intro": "No serious piece of software is written in one sitting. It moves through predictable stages, from understanding what users need to shipping a product and keeping it working for years afterward.",
+     "sections": [
+      {
+       "heading": "From Requirements to Release",
+       "body": [
+        "The **software development lifecycle (SDLC)** typically includes requirements gathering (what should this software do?), design (how will it be structured, including how its data will be stored, often in a database), implementation (writing the code), testing (finding what is broken), and deployment (releasing it to users.)",
+        "Skipping stages is tempting under deadline pressure but expensive later: a bug caught during design costs far less to fix than the same bug discovered after millions of people are already using the software."
+       ]
+      },
+      {
+       "heading": "Why Testing and Maintenance Never Really End",
+       "body": [
+        "**Testing** happens throughout development, not just at the end, checking that new code does what it should without breaking what already worked. Even after release, **maintenance** continues indefinitely: fixing bugs users discover, patching newly found security holes, and adapting to changing requirements.",
+        "This is why software lifecycles are often drawn as a loop rather than a straight line: feedback from maintenance regularly feeds back into new requirements for the next version."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "software development lifecycle (SDLC)",
+       "def": "The stages software passes through: requirements, design, implementation, testing, deployment, and maintenance."
+      },
+      {
+       "term": "requirements",
+       "def": "A clear description of what a piece of software must do, gathered before design begins."
+      },
+      {
+       "term": "testing",
+       "def": "The process of checking software for defects before and after release."
+      },
+      {
+       "term": "maintenance",
+       "def": "Ongoing work after release: fixing bugs, patching security issues, and adapting to new needs."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is a bug caught during the design stage generally cheaper to fix than one found after release?",
+       "choices": [
+        "Design-stage bugs are always smaller in size",
+        "Fixing a released product requires patching code already running on many users' devices, testing again, and redeploying",
+        "Bugs found during design do not need to be fixed at all",
+        "There is no real difference in cost"
+       ],
+       "answer": 1,
+       "explain": "A design flaw can be corrected on paper or in early code; a released bug requires patching, retesting, and redistributing software already in the hands of users."
+      },
+      {
+       "q": "Which SDLC stage involves deciding how the software will be structured, including how its data will be stored?",
+       "choices": [
+        "Requirements gathering",
+        "Design",
+        "Deployment",
+        "Maintenance"
+       ],
+       "answer": 1,
+       "explain": "Design is where structural decisions are made, including choosing how the data the software will manage gets organized and stored."
+      },
+      {
+       "q": "Why is the SDLC often drawn as a loop instead of a straight line?",
+       "choices": [
+        "Because software is always rewritten from scratch every year",
+        "Because maintenance feedback regularly becomes input for the next round of requirements",
+        "Because testing is skipped in most real projects",
+        "Because deployment always happens before design"
+       ],
+       "answer": 1,
+       "explain": "Issues discovered during maintenance often become requirements for the next version, so the process cycles rather than ending after one release."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Cybersecurity Fundamentals",
+     "minutes": 12,
+     "intro": "Every connected system is a target. Understanding the handful of attack patterns that cause most breaches, and the defenses that block them, is essential knowledge for anyone building or using software.",
+     "sections": [
+      {
+       "heading": "Common Threats",
+       "body": [
+        "**Phishing** tricks a person into revealing passwords or clicking malicious links by impersonating a trusted sender. **Malware** is malicious software, viruses, ransomware, spyware, that installs itself to damage a system or steal data. Both rely on tricking a human, a device, or both.",
+        "A **brute-force attack** tries enormous numbers of password guesses until one works. A **man-in-the-middle attack** secretly intercepts communication between two parties who believe they are talking directly to each other."
+       ]
+      },
+      {
+       "heading": "Basic Defenses",
+       "body": [
+        "Strong, unique passwords combined with **two-factor authentication (2FA)**, a second proof of identity like a code sent to your phone, make stolen passwords far less useful to an attacker. **Encryption**, especially HTTPS on the web, scrambles data so a man-in-the-middle attacker cannot read intercepted traffic.",
+        "Keeping software patched closes known vulnerabilities before attackers can exploit them, and a **firewall** filters incoming and outgoing network traffic, blocking connections that do not match trusted rules."
+       ],
+       "example": {
+        "problem": "A 4-digit numeric PIN has how many possible combinations, and how does that compare to an 8-character password using letters and digits (36 possible characters)?",
+        "steps": [
+         "A 4-digit PIN: each digit has 10 possibilities (0-9), so 10 × 10 × 10 × 10 = 10,000 combinations.",
+         "An 8-character password from 36 possible characters has 36⁸ combinations.",
+         "36⁸ is approximately 2.8 × 10¹², over 280 million times more combinations than the 4-digit PIN."
+        ],
+        "answer": "10,000 versus about 2.8 trillion — the longer password with more character types is vastly harder to guess by brute force."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "phishing",
+       "def": "Tricking someone into revealing sensitive information by impersonating a trusted sender."
+      },
+      {
+       "term": "malware",
+       "def": "Malicious software designed to damage a system or steal data."
+      },
+      {
+       "term": "two-factor authentication (2FA)",
+       "def": "Requiring a second proof of identity beyond a password, like a code sent to a phone."
+      },
+      {
+       "term": "encryption",
+       "def": "Scrambling data so it can only be read by someone with the correct key."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An email pretending to be your bank asks you to click a link and enter your password. What kind of attack is this?",
+       "choices": [
+        "Brute-force attack",
+        "Phishing",
+        "Man-in-the-middle attack",
+        "Firewall breach"
+       ],
+       "answer": 1,
+       "explain": "Phishing impersonates a trusted sender to trick a person into revealing sensitive information."
+      },
+      {
+       "q": "Why does two-factor authentication protect an account even if the password is stolen?",
+       "choices": [
+        "It makes the password itself unguessable",
+        "It requires a second proof of identity the attacker likely does not have, like a phone code",
+        "It deletes the account automatically after a breach",
+        "It replaces the need for a password entirely"
+       ],
+       "answer": 1,
+       "explain": "2FA adds a second, separate proof of identity, so a stolen password alone is not enough to log in."
+      },
+      {
+       "q": "What does HTTPS encryption protect against on a public Wi-Fi network?",
+       "choices": [
+        "It prevents phishing emails from being sent",
+        "It prevents someone intercepting the traffic from reading its contents",
+        "It makes your device immune to malware",
+        "It speeds up your Internet connection"
+       ],
+       "answer": 1,
+       "explain": "Encryption scrambles data in transit, so even if a man-in-the-middle attacker intercepts it, they cannot read the contents."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "AI, Ethics, and Careers in Computing",
+     "minutes": 10,
+     "intro": "Computer science does not stop at technical correctness. The systems this field builds shape real people's opportunities, privacy, and safety, which is why ethics is now as core to the discipline as algorithms are.",
+     "sections": [
+      {
+       "heading": "What 'AI' Actually Means Today",
+       "body": [
+        "Most systems called **AI** today use **machine learning**: instead of a programmer writing explicit rules, the system finds patterns by analyzing huge amounts of example data, then applies those patterns to new, unseen cases, like recognizing faces in photos or recommending videos.",
+        "Machine learning systems are only as good as their training data. If that data reflects historical **bias**, the system will often reproduce, and sometimes amplify, that same bias in its predictions."
+       ]
+      },
+      {
+       "heading": "Ethics and Where This Field Can Take You",
+       "body": [
+        "Computing ethics asks who is accountable when an algorithm makes a harmful decision, how to protect personal **data privacy**, and how to test systems for bias before they affect real people's jobs, loans, or freedom.",
+        "The careers built on the ideas in this course are wide open: software engineer, data scientist, security analyst, database administrator, UX designer, and many more, all sharing the computational thinking foundation this course introduced."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "machine learning",
+       "def": "A branch of AI where systems find patterns from data rather than following explicit programmed rules."
+      },
+      {
+       "term": "algorithmic bias",
+       "def": "Systematic, unfair patterns in an algorithm's output, often inherited from biased training data."
+      },
+      {
+       "term": "data privacy",
+       "def": "The principle that personal information should be collected, stored, and used responsibly and with consent."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How does a machine learning system typically learn to recognize patterns, compared to traditional programming?",
+       "choices": [
+        "A programmer writes an explicit rule for every possible case",
+        "It analyzes large amounts of example data to find patterns on its own",
+        "It is not actually different from traditional programming",
+        "It requires no data at all to function"
+       ],
+       "answer": 1,
+       "explain": "Machine learning finds patterns from data rather than relying on a programmer writing every rule by hand."
+      },
+      {
+       "q": "Why can a machine learning system trained on biased historical data produce biased predictions?",
+       "choices": [
+        "Machine learning systems are immune to any bias in their input data",
+        "The system learns patterns from its training data, so bias present in that data can be reproduced or amplified",
+        "Bias only affects data stored in databases, not machine learning models",
+        "This only happens if the programmer intentionally adds bias"
+       ],
+       "answer": 1,
+       "explain": "Because the system learns from the patterns in its training data, any bias baked into that data can show up, and even be magnified, in its outputs."
+      },
+      {
+       "q": "Which of these careers builds most directly on computational thinking and the topics in this course?",
+       "choices": [
+        "Only software engineering",
+        "Software engineering, data science, security analysis, and database administration, among others",
+        "None; this course is purely theoretical",
+        "Only careers that involve writing code all day"
+       ],
+       "answer": 1,
+       "explain": "The foundational ideas in this course, algorithms, data, hardware, and systems thinking, underpin a wide range of computing careers, not just one job title."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

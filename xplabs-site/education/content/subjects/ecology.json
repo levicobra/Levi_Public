@@ -1,0 +1,982 @@
+{
+ "id": "ecology",
+ "title": "Ecology & Conservation",
+ "domain": "life",
+ "level": "Intro college",
+ "description": "An introductory college course in ecology: how populations grow and crash, how energy and nutrients move through ecosystems, and how species interact, compete, and coexist. The final unit turns those tools toward the biodiversity crisis and the strategies conservation biologists actually use to slow it.",
+ "outcomes": [
+  "You can describe the levels of ecological organization and distinguish an organism's habitat from its niche.",
+  "You can trace energy flow through trophic levels and apply the ten percent rule to a food chain.",
+  "You can model population growth with the exponential and logistic equations and calculate carrying capacity effects.",
+  "You can classify species interactions as competition, predation, or symbiosis, and interpret survivorship curves.",
+  "You can explain the major biogeochemical cycles and the leading human-driven threats to biodiversity.",
+  "You can evaluate conservation strategies, from protected areas to climate adaptation, using real population data."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Foundations of Ecology",
+   "summary": "The scales ecologists study, how energy flows and dwindles through a food web, and how carbon, nitrogen, and water cycle through the living world.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Levels of Ecological Organization and the Niche",
+     "minutes": 13,
+     "intro": "Ecology can be studied at the scale of one animal's daily routine or at the scale of the entire planet's carbon budget. Learning to name and move between these scales, and to separate where an organism lives from what it actually does there, is the first skill every ecologist needs.",
+     "sections": [
+      {
+       "heading": "The Scales of Ecology",
+       "body": [
+        "Ecologists organize life into nested levels. A single **organism**, like one green sea turtle, belongs to a **population**: all the green sea turtles nesting on the same beach. Multiple populations of different species interacting in the same area form a **community**, such as the turtles, fish, and algae sharing a reef.",
+        "Add in the non-living environment, the water, sunlight, and nutrients, and the community becomes an **ecosystem**. Group similar ecosystems by climate and vegetation across a large region and you get a **biome**, like tropical coral reefs or temperate forests. All of Earth's biomes together make up the **biosphere**, the thin living layer wrapping the planet."
+       ]
+      },
+      {
+       "heading": "Habitat Versus Niche",
+       "body": [
+        "An organism's **habitat** is simply the physical place it lives, such as a coral reef or a tide pool. Its **ecological niche** is much bigger: the full set of resources it uses, conditions it tolerates, and roles it plays, including what it eats, when it is active, and how it interacts with predators and competitors.",
+        "No two species can occupy the exact same niche in the same place indefinitely; this is the **competitive exclusion principle**. If two species compete too directly for identical resources, one will eventually outcompete the other, drive it to local extinction, or force it to shift its niche slightly to reduce overlap."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "population",
+       "def": "All the individuals of one species living in the same area at the same time."
+      },
+      {
+       "term": "community",
+       "def": "All the different species populations interacting in the same area."
+      },
+      {
+       "term": "ecosystem",
+       "def": "A community together with the non-living environment it interacts with."
+      },
+      {
+       "term": "ecological niche",
+       "def": "The full role a species plays in its environment, including resources used and conditions tolerated."
+      },
+      {
+       "term": "competitive exclusion principle",
+       "def": "The idea that two species cannot indefinitely occupy the exact same niche in the same place."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which level of organization includes both living organisms and the non-living environment they interact with?",
+       "choices": [
+        "Population",
+        "Community",
+        "Ecosystem",
+        "Species"
+       ],
+       "answer": 2,
+       "explain": "An ecosystem is defined as a community of interacting species plus the physical and chemical environment around them."
+      },
+      {
+       "q": "What is the key difference between an organism's habitat and its niche?",
+       "choices": [
+        "They mean the same thing",
+        "Habitat is the physical place it lives; niche is its full functional role, including resources and interactions",
+        "Niche only applies to plants",
+        "Habitat only matters for migratory species"
+       ],
+       "answer": 1,
+       "explain": "Habitat answers 'where,' while niche answers 'what it does there' — its diet, activity patterns, and relationships with other species."
+      },
+      {
+       "q": "According to the competitive exclusion principle, what happens when two species compete for an identical niche?",
+       "choices": [
+        "They merge into one species",
+        "They always coexist peacefully forever",
+        "One outcompetes the other, or their niches shift to reduce overlap",
+        "Neither species survives"
+       ],
+       "answer": 2,
+       "explain": "Complete niche overlap is unstable; over time one species typically wins out, or natural selection pushes the species toward using slightly different resources."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Energy Flow and Trophic Levels",
+     "minutes": 14,
+     "intro": "Every calorie of energy in an ecosystem starts with the sun and ends as heat, but along the way it passes through a chain of eaters and eaten, losing most of its value at every single step. That loss is the reason food chains rarely run longer than four or five links.",
+     "sections": [
+      {
+       "heading": "Trophic Levels and Food Webs",
+       "body": [
+        "**Producers**, mainly plants and algae, capture energy from sunlight through photosynthesis and form the base of every food chain. **Primary consumers** (herbivores) eat producers; **secondary consumers** eat primary consumers; **tertiary consumers** sit at the top, eating other consumers. **Decomposers**, like fungi and bacteria, break down dead matter at every level, recycling nutrients back into the system.",
+        "A single food chain is a simplification; in reality, most organisms eat and are eaten by several different species, forming an interconnected **food web**. Each organism's position is described by its **trophic level**, a number that starts at 1 for producers and increases by one at each step up the chain."
+       ]
+      },
+      {
+       "heading": "The Ten Percent Rule",
+       "body": [
+        "When energy moves from one trophic level to the next, only about 10% of it is typically captured in the bodies of the next level's consumers; the other roughly 90% is lost as heat from metabolism, used for movement, or never eaten at all. This is called the **ten percent rule**, and it is why energy pyramids get dramatically narrower toward the top.",
+        "The ten percent rule explains two everyday facts: top predators like sharks and eagles are always rare compared to the plants and small animals below them, and eating foods lower on the food chain (plants) feeds far more people per acre than eating foods higher on the chain (meat from grain-fed animals)."
+       ],
+       "example": {
+        "problem": "A patch of grassland producers captures 10,000 kilocalories of energy. Using the ten percent rule, how much energy is available to secondary consumers (two trophic levels up)?",
+        "steps": [
+         "Producers (trophic level 1): 10,000 kcal.",
+         "Primary consumers (trophic level 2) capture about 10% of that: 10,000 × 0.10 = 1,000 kcal.",
+         "Secondary consumers (trophic level 3) capture about 10% of the primary consumers' energy: 1,000 × 0.10 = 100 kcal."
+        ],
+        "answer": "About 100 kcal is available to secondary consumers."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "producer",
+       "def": "An organism, like a plant or alga, that captures energy from sunlight to make its own food."
+      },
+      {
+       "term": "trophic level",
+       "def": "An organism's position in a food chain, numbered from 1 for producers upward."
+      },
+      {
+       "term": "food web",
+       "def": "The interconnected network of who eats whom in a community, made of many overlapping food chains."
+      },
+      {
+       "term": "ten percent rule",
+       "def": "The pattern that only about 10% of energy transfers from one trophic level to the next."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Using the ten percent rule, if producers hold 5,000 kcal of energy, about how much reaches primary consumers?",
+       "choices": [
+        "50 kcal",
+        "500 kcal",
+        "1,000 kcal",
+        "4,500 kcal"
+       ],
+       "answer": 1,
+       "explain": "About 10% of 5,000 kcal transfers to the next trophic level: 5,000 × 0.10 = 500 kcal."
+      },
+      {
+       "q": "Why are top predators like eagles and great white sharks always relatively rare?",
+       "choices": [
+        "They reproduce very slowly by choice",
+        "Only about 10% of energy transfers between each trophic level, so very little energy remains at the top",
+        "They are protected by law everywhere",
+        "They only eat producers"
+       ],
+       "answer": 1,
+       "explain": "Because energy shrinks by roughly 90% at each step up the food chain, there is only enough total energy to support small numbers of top-level consumers."
+      },
+      {
+       "q": "What role do decomposers play in an ecosystem's energy flow?",
+       "choices": [
+        "They capture sunlight directly",
+        "They break down dead organic matter, recycling nutrients back into the system",
+        "They only consume producers",
+        "They convert CO2 into oxygen exclusively"
+       ],
+       "answer": 1,
+       "explain": "Decomposers like fungi and bacteria break down dead organisms and waste at every trophic level, releasing nutrients that producers can use again."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Biogeochemical Cycles",
+     "minutes": 14,
+     "intro": "Unlike energy, which flows through an ecosystem once and is lost as heat, matter is reused over and over. The same carbon atom in your body today may once have been part of a dinosaur, a redwood tree, or the atmosphere itself, cycling endlessly through what are called biogeochemical cycles.",
+     "sections": [
+      {
+       "heading": "The Carbon and Water Cycles",
+       "body": [
+        "The **carbon cycle** moves carbon between the atmosphere (as CO2), living organisms, oceans, and rock. Photosynthesis pulls carbon out of the air into plants; respiration and decomposition return it to the atmosphere; and burning fossil fuels releases carbon that had been locked underground for millions of years, faster than natural processes can absorb it back.",
+        "The **water cycle** moves water between oceans, atmosphere, land, and living things through evaporation, transpiration (water release from plants), condensation, and precipitation. Because water dissolves and transports nutrients as it moves, the water cycle is tightly linked to how nutrients reach ecosystems far from where they originated."
+       ]
+      },
+      {
+       "heading": "The Nitrogen Cycle",
+       "body": [
+        "All organisms need nitrogen to build proteins and DNA, but the nitrogen gas (N2) that makes up 78% of the atmosphere is unusable to nearly all living things in that form. **Nitrogen fixation**, performed mainly by specialized soil bacteria (some living in partnership with legume plant roots), converts N2 into ammonium, a form plants can absorb.",
+        "From there, **nitrification** converts ammonium into nitrites and then nitrates, which plants also use directly. Eventually, **denitrification** by other bacteria converts nitrates back into N2 gas, releasing it to the atmosphere and completing the cycle. Human fertilizer production has roughly doubled the amount of nitrogen fixed globally each year compared to natural processes alone."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "carbon cycle",
+       "def": "The movement of carbon between the atmosphere, living things, oceans, and rock."
+      },
+      {
+       "term": "nitrogen fixation",
+       "def": "The conversion of atmospheric nitrogen gas (N2) into ammonium, a form usable by plants."
+      },
+      {
+       "term": "nitrification",
+       "def": "The conversion of ammonium into nitrites and then nitrates by soil bacteria."
+      },
+      {
+       "term": "denitrification",
+       "def": "The conversion of nitrates back into nitrogen gas, returning it to the atmosphere."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is nitrogen fixation necessary even though nitrogen gas makes up most of the atmosphere?",
+       "choices": [
+        "Nitrogen gas is toxic to plants",
+        "Most organisms cannot use nitrogen in its N2 gas form; it must be converted to ammonium first",
+        "There isn't enough nitrogen gas in the atmosphere",
+        "Nitrogen gas only exists in the ocean"
+       ],
+       "answer": 1,
+       "explain": "N2 gas is chemically stable and unusable by most life; nitrogen-fixing bacteria convert it into ammonium, a form plants can actually absorb and use."
+      },
+      {
+       "q": "What human activity has significantly accelerated the release of ancient carbon into the atmosphere?",
+       "choices": [
+        "Photosynthesis by crops",
+        "Burning fossil fuels",
+        "Ocean evaporation",
+        "Animal respiration"
+       ],
+       "answer": 1,
+       "explain": "Fossil fuels store carbon that took millions of years to accumulate underground; burning them releases that carbon into the atmosphere far faster than natural cycles remove it."
+      },
+      {
+       "q": "Which process returns nitrogen from the soil back into the atmosphere as N2 gas?",
+       "choices": [
+        "Nitrogen fixation",
+        "Nitrification",
+        "Denitrification",
+        "Transpiration"
+       ],
+       "answer": 2,
+       "explain": "Denitrification, carried out by certain bacteria, converts soil nitrates back into nitrogen gas, completing the nitrogen cycle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Population Ecology",
+   "summary": "The mathematics of growth and decline: how populations expand exponentially, level off at carrying capacity, and follow predictable patterns of survival across a lifespan.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Exponential and Logistic Population Growth",
+     "minutes": 16,
+     "intro": "A single bacterium dividing every 20 minutes could, in theory, outweigh the Earth within days. It never happens, because real environments run out of room and resources — but the two simple equations that describe unlimited growth and limited growth are the backbone of population ecology.",
+     "sections": [
+      {
+       "heading": "Exponential Growth",
+       "body": [
+        "When resources are unlimited, a population grows **exponentially**, described by the equation dN/dt = rN, where N is population size, r is the per capita growth rate, and dN/dt is the rate of change in population size. Plotted over time, exponential growth produces a J-shaped curve that gets steeper and steeper as N grows.",
+        "A useful shortcut for exponential growth is the **rule of 70**: divide 70 by the percentage growth rate to estimate the doubling time in years. A population growing at 7% per year, for instance, doubles roughly every ten years. Exponential growth is realistic only briefly, such as when a species colonizes a new, resource-rich habitat."
+       ]
+      },
+      {
+       "heading": "Logistic Growth",
+       "body": [
+        "Real environments have limits, captured by the **logistic growth** equation: dN/dt = rN(K−N)/K, where K is the **carrying capacity**, the maximum population size an environment can sustainably support. As N approaches K, the term (K−N)/K shrinks toward zero, slowing growth until the population levels off, producing an S-shaped curve rather than a J-shaped one.",
+        "Near N = 0, logistic growth behaves almost like exponential growth, because (K−N)/K is close to 1. But as the population fills up available resources, growth rate declines steadily until it reaches zero right at carrying capacity, where births and deaths balance."
+       ],
+       "example": {
+        "problem": "A population of 500 animals lives in an environment with a carrying capacity of 1,000 and an intrinsic growth rate r = 0.2 per year. Using the logistic equation, what is the population's growth rate right now?",
+        "steps": [
+         "Write the logistic equation: dN/dt = rN(K−N)/K.",
+         "Substitute the values: dN/dt = 0.2 × 500 × (1,000 − 500) / 1,000.",
+         "Simplify step by step: 0.2 × 500 = 100; (1,000 − 500)/1,000 = 0.5; then 100 × 0.5 = 50."
+        ],
+        "answer": "The population is growing by about 50 individuals per year."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "exponential growth",
+       "def": "Unlimited population growth described by dN/dt = rN, producing a J-shaped curve."
+      },
+      {
+       "term": "carrying capacity (K)",
+       "def": "The maximum population size an environment can sustainably support."
+      },
+      {
+       "term": "logistic growth",
+       "def": "Population growth that slows as it approaches carrying capacity, described by dN/dt = rN(K−N)/K, producing an S-shaped curve."
+      },
+      {
+       "term": "rule of 70",
+       "def": "A shortcut estimating doubling time in years as 70 divided by the percentage growth rate."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A population is growing exponentially at 10% per year. About how many years until it doubles, using the rule of 70?",
+       "choices": [
+        "3.5 years",
+        "7 years",
+        "10 years",
+        "70 years"
+       ],
+       "answer": 1,
+       "explain": "The rule of 70 divides 70 by the growth rate percentage: 70 ÷ 10 = 7 years."
+      },
+      {
+       "q": "In the logistic growth equation dN/dt = rN(K−N)/K, what happens to the growth rate as N approaches K?",
+       "choices": [
+        "It increases sharply",
+        "It approaches zero, since (K−N)/K approaches zero",
+        "It becomes negative immediately",
+        "It stays constant"
+       ],
+       "answer": 1,
+       "explain": "As N gets closer to K, the term (K−N)/K shrinks toward zero, slowing the growth rate until it levels off at carrying capacity."
+      },
+      {
+       "q": "A population of 800 lives in a habitat with K = 1,000 and r = 0.3. Using dN/dt = rN(K−N)/K, what is the current growth rate?",
+       "choices": [
+        "24",
+        "48",
+        "60",
+        "240"
+       ],
+       "answer": 1,
+       "explain": "dN/dt = 0.3 × 800 × (1,000−800)/1,000 = 0.3 × 800 × 0.2 = 48 individuals per time period."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Carrying Capacity and Density-Dependent Factors",
+     "minutes": 14,
+     "intro": "Carrying capacity is not a fixed ceiling like a room's ceiling; it moves with resources, and populations can temporarily overshoot it before crashing back down. Understanding which factors depend on population density, and which do not, explains both slow, steady limits and sudden collapses.",
+     "sections": [
+      {
+       "heading": "Density-Dependent and Density-Independent Factors",
+       "body": [
+        "**Density-dependent factors** intensify as a population grows more crowded: food and water competition, spread of disease, buildup of waste, and predation all become more severe at high density. These factors are the main reason populations tend to stabilize near carrying capacity rather than growing forever.",
+        "**Density-independent factors** affect a population regardless of how crowded it is, such as a severe winter storm, a wildfire, or a volcanic eruption. These can cause a population crash even when resources were previously abundant, since they are not driven by the population's own size."
+       ]
+      },
+      {
+       "heading": "Overshoot and Population Crashes",
+       "body": [
+        "Populations do not always stop exactly at K. If growth is fast and there is a delay before density-dependent effects kick in (such as disease taking time to spread), a population can temporarily **overshoot** carrying capacity, depleting resources faster than they can regenerate, and then crash to a level below K.",
+        "A well-documented case is the reindeer herd introduced to St. Matthew Island, Alaska, in 1944: without predators, the herd grew from 29 animals to about 6,000 by 1963, far past what the island's lichen (their main food) could regrow each year. The lichen collapsed, and by 1966 the herd had crashed to just 42 animals."
+       ],
+       "example": {
+        "problem": "A population of 1,200 has overshot its carrying capacity of K = 1,000, with r = 0.2. What does the logistic equation predict for its current growth rate?",
+        "steps": [
+         "Apply dN/dt = rN(K−N)/K with N = 1,200, K = 1,000, r = 0.2.",
+         "Calculate (K−N)/K = (1,000 − 1,200)/1,000 = −0.2, a negative value since N exceeds K.",
+         "dN/dt = 0.2 × 1,200 × (−0.2) = −48."
+        ],
+        "answer": "The population is predicted to shrink by about 48 individuals, since it has exceeded carrying capacity."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "density-dependent factor",
+       "def": "A limiting factor, like disease or competition, whose effect grows stronger as population density increases."
+      },
+      {
+       "term": "density-independent factor",
+       "def": "A limiting factor, like a storm or wildfire, that affects a population regardless of its density."
+      },
+      {
+       "term": "overshoot",
+       "def": "When a population temporarily exceeds carrying capacity before crashing back down."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of these is a density-dependent limiting factor?",
+       "choices": [
+        "A hurricane",
+        "A volcanic eruption",
+        "Competition for food that intensifies as population grows",
+        "A random cold snap"
+       ],
+       "answer": 2,
+       "explain": "Competition for food becomes more intense specifically because the population is crowded, making it density-dependent, unlike weather events that strike regardless of population size."
+      },
+      {
+       "q": "What caused the St. Matthew Island reindeer population to crash from about 6,000 to 42?",
+       "choices": [
+        "A sudden disease outbreak",
+        "Introduction of wolves",
+        "The herd overshot carrying capacity and depleted its lichen food supply",
+        "Hunting by humans"
+       ],
+       "answer": 2,
+       "explain": "Without predators to limit the herd, it grew far beyond what the island's slow-growing lichen could sustain, leading to starvation and a dramatic population crash."
+      },
+      {
+       "q": "A population exceeds its carrying capacity (N > K). What does the logistic equation predict?",
+       "choices": [
+        "Growth rate becomes negative, and the population shrinks",
+        "Growth rate stays at its maximum",
+        "The population grows even faster",
+        "Carrying capacity increases automatically"
+       ],
+       "answer": 0,
+       "explain": "When N > K, the term (K−N)/K becomes negative, making dN/dt negative and predicting a population decline back toward carrying capacity."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Life History Strategies and Survivorship Curves",
+     "minutes": 13,
+     "intro": "A dandelion produces thousands of seeds and gives none of them any care; an elephant produces one calf every few years and protects it fiercely for over a decade. Both strategies work, and ecologists classify them, along with the age-specific patterns of death they produce, using two related tools.",
+     "sections": [
+      {
+       "heading": "r-Selected and K-Selected Life Histories",
+       "body": [
+        "Species with an **r-selected** life history produce many offspring, invest little care in each one, mature quickly, and thrive in unstable or unpredictable environments; insects, dandelions, and mice are classic examples. Their strategy bets on quantity: even if most offspring die, a few will survive to reproduce.",
+        "Species with a **K-selected** life history produce few offspring, invest heavily in parental care, mature slowly, and thrive in stable environments near carrying capacity; elephants, whales, and humans fit this pattern. Their strategy bets on quality: each offspring gets a much higher chance of surviving to adulthood."
+       ]
+      },
+      {
+       "heading": "Survivorship Curves",
+       "body": [
+        "A **survivorship curve** plots the number of individuals from a starting group who are still alive at each age, revealing when in life death is most likely to strike. **Type I** curves show high survival through most of life with mortality concentrated in old age, typical of K-selected species like humans and elephants.",
+        "**Type II** curves show a roughly constant death rate at every age, seen in some birds and rodents. **Type III** curves show very high mortality early in life (many offspring die young) with the few survivors then living relatively long, the pattern typical of r-selected species like fish, insects, and most plants, which produce huge numbers of offspring expecting few to survive."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "r-selected species",
+       "def": "A species with many offspring, little parental care, and fast maturation, favored in unstable environments."
+      },
+      {
+       "term": "K-selected species",
+       "def": "A species with few offspring, high parental investment, and slow maturation, favored near carrying capacity."
+      },
+      {
+       "term": "survivorship curve",
+       "def": "A graph showing the number of individuals from a group still alive at each age."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A species produces thousands of offspring with no parental care and matures quickly. What life history strategy does it show?",
+       "choices": [
+        "K-selected",
+        "r-selected",
+        "Type I survivorship only",
+        "Density-independent"
+       ],
+       "answer": 1,
+       "explain": "High offspring number, low parental investment, and fast maturation are the hallmarks of an r-selected life history strategy."
+      },
+      {
+       "q": "Humans and elephants typically show which type of survivorship curve?",
+       "choices": [
+        "Type I, with high survival until old age",
+        "Type II, with constant mortality at every age",
+        "Type III, with high early mortality",
+        "No consistent pattern"
+       ],
+       "answer": 0,
+       "explain": "K-selected species with high parental investment, like humans and elephants, tend to survive well through most of life, with mortality concentrated at the oldest ages, the Type I pattern."
+      },
+      {
+       "q": "Which survivorship curve pattern is typical of most fish and insects, which produce huge numbers of offspring?",
+       "choices": [
+        "Type I",
+        "Type II",
+        "Type III, with very high mortality early in life",
+        "None, they show a flat line"
+       ],
+       "answer": 2,
+       "explain": "Type III species have very high mortality among the young, with the small fraction of survivors then living relatively long — consistent with an r-selected strategy of many offspring and little care."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Community and Ecosystem Ecology",
+   "summary": "How species compete, hunt, and cooperate with each other; how communities rebuild after disturbance; and how climate sorts life into the world's major biomes.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Species Interactions: Competition, Predation, and Symbiosis",
+     "minutes": 14,
+     "intro": "No species lives in isolation. Every organism is locked into a web of relationships — some hostile, some helpful, some indifferent — that shape where it can live and how large its population can grow.",
+     "sections": [
+      {
+       "heading": "Competition and Predation",
+       "body": [
+        "**Competition** occurs when two or more organisms need the same limited resource. **Intraspecific competition** happens between members of the same species, such as two oak trees competing for the same patch of sunlight. **Interspecific competition** happens between different species, such as invasive kudzu vines competing with native plants for light and space.",
+        "**Predation** is an interaction where one organism (the predator) kills and eats another (the prey). Predator and prey populations often cycle together over time: the classic Canada lynx and snowshoe hare data show hare numbers rising when lynx are scarce, then lynx numbers rising in response, then hares crashing from overpredation, and the cycle repeating roughly every 8 to 11 years."
+       ]
+      },
+      {
+       "heading": "Symbiotic Relationships",
+       "body": [
+        "**Symbiosis** describes any long-term, close relationship between two different species. In **mutualism**, both species benefit, as when clownfish gain protection among a sea anemone's stinging tentacles while the anemone gains food scraps and cleaning from the fish. In **commensalism**, one species benefits and the other is largely unaffected, as when barnacles attach to a whale for transport without helping or harming it.",
+        "In **parasitism**, one species (the parasite) benefits at the direct expense of the other (the host), as when a tapeworm absorbs nutrients from inside an animal's digestive tract, weakening the host without immediately killing it. Unlike predators, parasites usually keep their host alive as a long-term resource."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "interspecific competition",
+       "def": "Competition for a shared resource between individuals of different species."
+      },
+      {
+       "term": "predation",
+       "def": "An interaction where one organism kills and eats another."
+      },
+      {
+       "term": "mutualism",
+       "def": "A symbiotic relationship in which both species benefit."
+      },
+      {
+       "term": "parasitism",
+       "def": "A symbiotic relationship in which the parasite benefits at the host's expense."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Two species of ants compete for the same limited nesting sites in a forest. What type of interaction is this?",
+       "choices": [
+        "Intraspecific competition",
+        "Interspecific competition",
+        "Mutualism",
+        "Commensalism"
+       ],
+       "answer": 1,
+       "explain": "Because the competition is between two different ant species over a shared resource, it is interspecific competition."
+      },
+      {
+       "q": "A clownfish gets protection from an anemone's stinging tentacles, while the anemone gets food scraps and cleaning. What kind of relationship is this?",
+       "choices": [
+        "Commensalism",
+        "Parasitism",
+        "Mutualism",
+        "Predation"
+       ],
+       "answer": 2,
+       "explain": "Both species benefit from the relationship, which is the definition of mutualism."
+      },
+      {
+       "q": "How does parasitism typically differ from predation?",
+       "choices": [
+        "Parasites usually keep the host alive as a long-term resource, while predators kill prey outright",
+        "Parasites are always larger than their host",
+        "Predation only occurs between plants",
+        "There is no meaningful difference"
+       ],
+       "answer": 0,
+       "explain": "A parasite generally benefits by draining resources from a living host over time, rather than killing it immediately the way a predator kills its prey."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Succession, Disturbance, and Biodiversity",
+     "minutes": 13,
+     "intro": "A lava field looks lifeless, and a clear-cut forest looks devastated, yet both are simply at the starting line of a long, predictable rebuilding process called succession. Occasional disturbance, it turns out, can actually help maintain the very diversity it seems to destroy.",
+     "sections": [
+      {
+       "heading": "Primary and Secondary Succession",
+       "body": [
+        "**Primary succession** begins on bare, lifeless substrate with no soil at all, such as new volcanic rock or land exposed by a retreating glacier. **Pioneer species**, often lichens and mosses, are the first colonizers; they slowly break down rock and add organic matter, gradually building soil that later allows grasses, shrubs, and eventually trees to take hold.",
+        "**Secondary succession** begins where soil already exists but the community has been disturbed or destroyed, such as after a wildfire, hurricane, or abandoned farm field. Because soil is already present, secondary succession proceeds much faster than primary succession, often reaching a mature, relatively stable **climax community** within decades rather than centuries."
+       ]
+      },
+      {
+       "heading": "Disturbance and Keystone Species",
+       "body": [
+        "Not all disturbance is bad for biodiversity. The **intermediate disturbance hypothesis** proposes that biodiversity is highest at moderate levels of disturbance: too little disturbance lets a few competitively dominant species take over, while too much disturbance eliminates species that cannot recover quickly, so a middle amount allows the most species to coexist.",
+        "A **keystone species** has an outsized effect on its community relative to its abundance. Sea otters are a classic example: by eating sea urchins, they keep urchin populations in check, which protects kelp forests from being overgrazed. Remove sea otters, and urchin populations explode, destroying the kelp forest that many other species depend on."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "primary succession",
+       "def": "Ecological succession that begins on bare substrate with no existing soil."
+      },
+      {
+       "term": "secondary succession",
+       "def": "Ecological succession that begins where soil already exists after a disturbance."
+      },
+      {
+       "term": "climax community",
+       "def": "The relatively stable, mature community that succession eventually produces."
+      },
+      {
+       "term": "keystone species",
+       "def": "A species whose impact on its community is disproportionately large relative to its abundance."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does secondary succession typically proceed faster than primary succession?",
+       "choices": [
+        "Secondary succession has no pioneer species",
+        "Soil is already present, so plants do not need to wait for rock to weather into soil first",
+        "Secondary succession only happens in deserts",
+        "Primary succession skips the pioneer stage"
+       ],
+       "answer": 1,
+       "explain": "Primary succession must start from bare rock and slowly build soil; secondary succession starts with soil already in place, letting plant life reestablish much faster."
+      },
+      {
+       "q": "According to the intermediate disturbance hypothesis, when is biodiversity typically highest?",
+       "choices": [
+        "At very low disturbance only",
+        "At very high disturbance only",
+        "At a moderate, intermediate level of disturbance",
+        "Disturbance has no effect on biodiversity"
+       ],
+       "answer": 2,
+       "explain": "Too little disturbance allows dominant competitors to exclude others, while too much disturbance wipes out slow-recovering species; a moderate level allows the greatest number of species to persist."
+      },
+      {
+       "q": "Why are sea otters considered a keystone species in kelp forest ecosystems?",
+       "choices": [
+        "They are the most abundant species in the ecosystem",
+        "Their predation on sea urchins prevents urchins from overgrazing and destroying the kelp forest",
+        "They compete directly with kelp for sunlight",
+        "They are a primary producer"
+       ],
+       "answer": 1,
+       "explain": "Despite not being especially numerous, sea otters have an outsized effect: removing them lets urchin populations explode and destroy the kelp forest many other species rely on."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Biomes and Aquatic Ecosystems",
+     "minutes": 13,
+     "intro": "Fly from the equator to the poles and you will pass through rainforest, grassland, desert, and tundra, each shaped by the same two forces: temperature and precipitation. Dip below the surface of any lake or ocean, and a different set of forces, light and depth, sorts life into its own set of zones.",
+     "sections": [
+      {
+       "heading": "Terrestrial Biomes",
+       "body": [
+        "A **biome** is a large-scale community type defined mainly by its climate, especially average temperature and annual precipitation. Tropical rainforests, near the equator, combine high temperature and heavy rainfall to support the greatest biodiversity of any terrestrial biome. Deserts receive very little precipitation regardless of temperature, favoring drought-tolerant plants and animals.",
+        "Temperate grasslands have moderate precipitation, too little to support many trees but enough for deep-rooted grasses, while temperate forests receive more rain and support broadleaf trees that drop their leaves seasonally. Tundra, found at high latitudes or elevations, has extremely cold temperatures and a permanently frozen subsoil layer called permafrost, limiting plant life mostly to low shrubs, mosses, and lichens."
+       ]
+      },
+      {
+       "heading": "Aquatic Ecosystems",
+       "body": [
+        "Freshwater ecosystems include lakes, rivers, and wetlands. Lakes are divided into zones by light: the sunlit **photic zone**, where photosynthesis occurs, and the darker **aphotic zone** below it where light cannot penetrate enough to support plant growth. Rivers differ from lakes mainly in their constant one-directional flow of water.",
+        "Marine ecosystems range from nutrient-rich coastal areas to the vast, less productive open ocean. **Estuaries**, where rivers meet the sea, mix fresh water and salt water and are among the most productive ecosystems on Earth, serving as nurseries for many fish and shellfish species before they move to the open ocean or deeper reef habitats."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "biome",
+       "def": "A large-scale community type defined mainly by regional temperature and precipitation patterns."
+      },
+      {
+       "term": "permafrost",
+       "def": "A permanently frozen layer of subsoil found in tundra biomes."
+      },
+      {
+       "term": "photic zone",
+       "def": "The upper, sunlit layer of a body of water where photosynthesis can occur."
+      },
+      {
+       "term": "estuary",
+       "def": "A highly productive ecosystem where a river's fresh water mixes with the ocean's salt water."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What two climate factors mainly determine which terrestrial biome develops in a region?",
+       "choices": [
+        "Elevation and latitude only",
+        "Temperature and precipitation",
+        "Soil color and wind speed",
+        "Ocean currents only"
+       ],
+       "answer": 1,
+       "explain": "Biomes are primarily defined by average temperature and annual precipitation, which together determine what kind of vegetation and animal life the climate can support."
+      },
+      {
+       "q": "Why are estuaries considered among the most productive ecosystems on Earth?",
+       "choices": [
+        "They have the coldest water temperatures",
+        "The mixing of fresh water and salt water creates nutrient-rich conditions that support abundant life",
+        "They contain no predators",
+        "They are the deepest parts of the ocean"
+       ],
+       "answer": 1,
+       "explain": "The mixing of nutrients from rivers with ocean water creates exceptionally productive conditions, making estuaries important nurseries for many marine species."
+      },
+      {
+       "q": "What limits plant growth below the photic zone in a lake or ocean?",
+       "choices": [
+        "Excess sunlight",
+        "Insufficient light for photosynthesis",
+        "Extremely high temperatures",
+        "Lack of oxygen only"
+       ],
+       "answer": 1,
+       "explain": "The aphotic zone lies below the depth light can effectively penetrate, so there is not enough light for photosynthesis to support plant or algal growth."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Conservation Biology",
+   "summary": "The measurable threats driving today's biodiversity loss, how a warming climate compounds them, and the conservation tools being used to respond.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Threats to Biodiversity",
+     "minutes": 14,
+     "intro": "Species are currently going extinct at a rate scientists estimate to be tens to hundreds of times higher than the natural background rate, and the causes are consistent enough that conservation biologists group them under a small set of well-documented categories.",
+     "sections": [
+      {
+       "heading": "Habitat Loss and Invasive Species",
+       "body": [
+        "**Habitat loss**, through deforestation, agriculture, and urban development, is the single leading cause of biodiversity decline worldwide, because it removes the physical space and resources a species needs to survive. Habitat **fragmentation**, breaking a large habitat into smaller disconnected patches, compounds the problem by isolating populations and preventing them from finding mates or resources across the landscape.",
+        "**Invasive species**, introduced to a new region where they have no natural predators, can outcompete, prey on, or introduce disease to native species that never evolved defenses against them. The brown tree snake, accidentally introduced to Guam after World War II, has driven several native bird species to extinction on the island."
+       ]
+      },
+      {
+       "heading": "Overharvesting and Pollution",
+       "body": [
+        "**Overharvesting**, taking individuals from a population faster than it can reproduce, has driven species from the passenger pigeon (once numbering in the billions, extinct by 1914) to numerous overfished ocean stocks toward collapse. Even species that reproduce quickly can be pushed toward extinction if harvest rates consistently exceed the population's growth rate.",
+        "**Pollution**, including pesticides, plastic waste, and excess nutrients from fertilizer runoff, harms species directly through toxicity and indirectly by degrading habitat quality, such as fertilizer runoff causing oxygen-depleted 'dead zones' in coastal waters where most marine life cannot survive."
+       ],
+       "example": {
+        "problem": "A fish population declines from 10,000 individuals to 2,000 over a decade of overharvesting. What percentage decline does this represent?",
+        "steps": [
+         "Find the change in population: 10,000 − 2,000 = 8,000 fewer fish.",
+         "Divide the change by the original population: 8,000 ÷ 10,000 = 0.8.",
+         "Convert to a percentage: 0.8 × 100 = 80%."
+        ],
+        "answer": "An 80% decline over the decade."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "habitat fragmentation",
+       "def": "The breaking of a large habitat into smaller, disconnected patches."
+      },
+      {
+       "term": "invasive species",
+       "def": "A species introduced to a new region where it lacks natural predators and can harm native species."
+      },
+      {
+       "term": "overharvesting",
+       "def": "Removing individuals from a population faster than it can reproduce and replace them."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is generally considered the single leading cause of biodiversity decline worldwide?",
+       "choices": [
+        "Habitat loss",
+        "Volcanic eruptions",
+        "Predation by native species",
+        "Genetic drift"
+       ],
+       "answer": 0,
+       "explain": "Habitat loss through deforestation, agriculture, and development removes the space and resources species need, making it the top overall driver of biodiversity decline."
+      },
+      {
+       "q": "A fish population drops from 8,000 to 3,200 due to overharvesting. What percentage decline is this?",
+       "choices": [
+        "25%",
+        "40%",
+        "60%",
+        "75%"
+       ],
+       "answer": 2,
+       "explain": "The decline is 8,000 − 3,200 = 4,800; dividing by the original 8,000 gives 0.6, or a 60% decline."
+      },
+      {
+       "q": "Why is the brown tree snake's introduction to Guam a classic example of an invasive species problem?",
+       "choices": [
+        "It is a native predator kept in check by other native species",
+        "It had no natural predators on Guam and drove several native bird species to extinction",
+        "It only affects plant life",
+        "It was intentionally introduced for conservation"
+       ],
+       "answer": 1,
+       "explain": "Native Guam birds had no evolved defenses against the accidentally introduced brown tree snake, which lacked natural predators there and caused severe declines and extinctions."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Climate Change and Ecosystems",
+     "minutes": 14,
+     "intro": "Atmospheric CO2 has risen from about 280 parts per million before the Industrial Revolution to over 420 parts per million today, and that single number ripples out into range shifts, mismatched timing between species, and dissolving coral reefs.",
+     "sections": [
+      {
+       "heading": "Greenhouse Gases and Warming",
+       "body": [
+        "**Greenhouse gases**, mainly carbon dioxide, methane, and water vapor, trap heat radiating from Earth's surface, warming the planet through the **greenhouse effect**. Since the Industrial Revolution, burning fossil fuels has sharply increased atmospheric CO2 concentration, and global average temperature has risen alongside it, by roughly 1.1°C so far.",
+        "This warming is not distributed evenly: polar regions are warming two to three times faster than the global average, a pattern called **polar amplification**, driven partly by melting ice and snow exposing darker land and water that absorb more heat than the reflective ice they replace."
+       ]
+      },
+      {
+       "heading": "Ecological Impacts",
+       "body": [
+        "As temperatures shift, many species are undergoing **range shifts**, moving toward the poles or to higher elevations to stay within their tolerable temperature zone. This can cause **phenological mismatch**, where the timing of key life events, like flowering or migration, no longer lines up with the species a plant or animal depends on, such as pollinators arriving after flowers have already bloomed.",
+        "The ocean absorbs about a quarter of human CO2 emissions, which reacts with seawater to lower its pH, a process called **ocean acidification**, making it harder for corals and shellfish to build their calcium carbonate skeletons and shells. Combined with warmer water triggering **coral bleaching**, in which corals expel the algae that feed and color them, climate change is one of the most severe current threats to reef ecosystems."
+       ],
+       "example": {
+        "problem": "Atmospheric CO2 was about 280 parts per million (ppm) before the Industrial Revolution and is about 420 ppm today. What percentage increase does this represent?",
+        "steps": [
+         "Find the increase: 420 − 280 = 140 ppm.",
+         "Divide by the original value: 140 ÷ 280 = 0.5.",
+         "Convert to a percentage: 0.5 × 100 = 50%."
+        ],
+        "answer": "About a 50% increase in atmospheric CO2."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "greenhouse effect",
+       "def": "The trapping of heat near Earth's surface by gases like CO2 and methane in the atmosphere."
+      },
+      {
+       "term": "polar amplification",
+       "def": "The pattern of polar regions warming faster than the global average."
+      },
+      {
+       "term": "phenological mismatch",
+       "def": "A timing mismatch between interdependent species caused by shifting seasonal cues."
+      },
+      {
+       "term": "ocean acidification",
+       "def": "The lowering of ocean pH as seawater absorbs excess atmospheric CO2."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If atmospheric CO2 rises from 300 ppm to 450 ppm, what percentage increase is that?",
+       "choices": [
+        "25%",
+        "33%",
+        "50%",
+        "150%"
+       ],
+       "answer": 2,
+       "explain": "The increase is 450 − 300 = 150 ppm; dividing by the original 300 ppm gives 0.5, a 50% increase."
+      },
+      {
+       "q": "What is phenological mismatch?",
+       "choices": [
+        "A mismatch in body size between predator and prey",
+        "A timing mismatch between interdependent species caused by shifting seasonal cues",
+        "A genetic mismatch preventing reproduction",
+        "A mismatch in habitat elevation"
+       ],
+       "answer": 1,
+       "explain": "Phenological mismatch occurs when climate change shifts the timing of events like flowering or migration so that dependent species, such as pollinators and flowers, are no longer synchronized."
+      },
+      {
+       "q": "Why does ocean acidification make it harder for corals to build their skeletons?",
+       "choices": [
+        "It raises ocean temperature too high for coral cells to survive",
+        "Lower ocean pH from absorbed CO2 makes it chemically harder to form calcium carbonate structures",
+        "It removes oxygen from the water",
+        "It increases coral growth rates uncontrollably"
+       ],
+       "answer": 1,
+       "explain": "As the ocean absorbs excess CO2, its pH drops, and that more acidic chemistry interferes with the process corals and shellfish use to build calcium carbonate skeletons and shells."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Conservation Strategies and Protected Areas",
+     "minutes": 13,
+     "intro": "Knowing what threatens biodiversity is only half the job; conservation biology is also an applied science, testing which interventions actually slow or reverse species decline in the real world, from fenced-off reserves to fishing quotas set by the numbers.",
+     "sections": [
+      {
+       "heading": "Protecting Species and Habitats",
+       "body": [
+        "**Protected areas**, such as national parks and marine reserves, set aside land or water where development, hunting, or fishing is restricted or banned, giving species room to recover. Because isolated protected areas can still trap small populations, conservationists increasingly design **wildlife corridors**, strips of connected habitat that let animals move between reserves, maintaining genetic diversity and access to resources.",
+        "For species reduced to critically small numbers, **captive breeding** programs raise individuals in zoos or dedicated facilities before reintroducing their offspring to the wild; the California condor, down to just 27 birds in 1987, has been rebuilt to several hundred individuals today through exactly this kind of intensive program."
+       ]
+      },
+      {
+       "heading": "Sustainable Solutions",
+       "body": [
+        "**Sustainable harvest** sets fishing or hunting quotas based on a population's actual growth rate, aiming to remove no more individuals than the population can naturally replace, keeping it stable rather than declining. This requires ongoing population monitoring, since a quota that was sustainable last year may not be if the population itself has already declined.",
+        "**Community-based conservation** involves local people, who depend on an ecosystem for their livelihoods, directly in managing and benefiting from its protection, often through ecotourism revenue or sustainable resource-use agreements. This approach has proven more durable in many regions than conservation imposed from the outside, because local communities have a direct stake in the ecosystem's long-term health."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "protected area",
+       "def": "Land or water where development, hunting, or fishing is restricted to conserve species and habitat."
+      },
+      {
+       "term": "wildlife corridor",
+       "def": "A strip of connected habitat that allows animals to move safely between separated protected areas."
+      },
+      {
+       "term": "captive breeding",
+       "def": "Raising individuals of an endangered species in captivity for later reintroduction to the wild."
+      },
+      {
+       "term": "sustainable harvest",
+       "def": "Setting hunting or fishing quotas no higher than a population's natural rate of replacement."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do conservationists build wildlife corridors between protected areas?",
+       "choices": [
+        "To increase tourism revenue only",
+        "To let animals move between reserves, maintaining genetic diversity and access to resources",
+        "To separate predator and prey species",
+        "To reduce the total protected land area needed"
+       ],
+       "answer": 1,
+       "explain": "Isolated protected areas can trap small, genetically limited populations; corridors let animals travel between reserves, supporting healthier, more resilient populations."
+      },
+      {
+       "q": "What does a sustainable harvest quota aim to do?",
+       "choices": [
+        "Remove as many individuals as possible each year",
+        "Remove no more individuals than the population can naturally replace",
+        "Eliminate the population entirely over time",
+        "Ignore population growth rate entirely"
+       ],
+       "answer": 1,
+       "explain": "A sustainable quota is set based on the population's actual reproductive rate so that harvesting does not outpace natural replacement, keeping the population stable."
+      },
+      {
+       "q": "What made the California condor recovery program successful?",
+       "choices": [
+        "Banning all human contact with the species",
+        "Intensive captive breeding followed by reintroduction to the wild",
+        "Relocating the species to a different continent",
+        "Eliminating all of its natural predators"
+       ],
+       "answer": 1,
+       "explain": "With only 27 birds remaining in 1987, conservationists used captive breeding to rebuild numbers before reintroducing offspring into the wild, growing the population to several hundred today."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

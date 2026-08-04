@@ -1,0 +1,1307 @@
+{
+ "id": "networking-security",
+ "title": "Networking & Cybersecurity",
+ "domain": "cs",
+ "level": "Intro college",
+ "description": "This course explains how data actually travels from your device to a server and back, then turns that understanding into a practical defense toolkit. You will trace a request through the TCP/IP layers, see how DNS and HTTPS work, and learn to recognize common attacks and the principles and tools used to stop them. By the end you can reason clearly about how a network works and where its weak points are.",
+ "outcomes": [
+  "You can explain how data moves through the layers of the TCP/IP model, from application to physical link.",
+  "You can describe IP addressing, subnet masks, and how routers move packets between networks.",
+  "You can explain how DNS, TCP/UDP ports, and HTTPS work together to load a web page securely.",
+  "You can identify common attacks — phishing, malware, SQL injection, and DDoS — and describe a defense for each.",
+  "You can apply core security principles: least privilege, defense in depth, strong authentication, and encryption basics."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "How Networks Work",
+   "summary": "Before defending a network, you need to see how it actually moves data: as small packets, following layered protocols, addressed with IP.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Packets, Protocols, and the Internet's Plumbing",
+     "minutes": 10,
+     "intro": "Every email, video call, and web page you've ever loaded arrived broken into thousands of small pieces, reassembled instantly on the other end — understanding why reveals the whole logic of networking.",
+     "sections": [
+      {
+       "heading": "Breaking Data into Packets",
+       "body": [
+        "A **packet** is a small chunk of data with a **header** (metadata: source, destination, sequence number) and a **payload** (the actual data). Large files are broken into many packets rather than sent as one continuous stream, a technique called **packet switching**.",
+        "Packet switching lets a network share its links efficiently among many conversations at once, and lets packets from the same file take different physical routes and still arrive correctly, since sequence numbers let the receiving end reassemble them in order."
+       ]
+      },
+      {
+       "heading": "Protocols: Agreed-Upon Rules",
+       "body": [
+        "A **protocol** is a shared set of rules two systems agree to follow so they can understand each other, covering things like how a header is formatted, how to signal 'start' and 'end,' and how to handle errors. Without a common protocol, a sender's packets would be meaningless noise to the receiver.",
+        "The internet layers dozens of protocols together, each responsible for one job, which the next lesson organizes into the TCP/IP model."
+       ],
+       "example": {
+        "problem": "A 1,500,000-byte file is sent over a network using packets that each carry 1,500 bytes of payload. How many packets are needed?",
+        "steps": [
+         "Divide the total size by the payload per packet: 1,500,000 ÷ 1,500.",
+         "1,500,000 ÷ 1,500 = 1,000.",
+         "1,000 packets are needed to carry the whole file."
+        ],
+        "answer": "1,000 packets."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "packet",
+       "def": "A small chunk of data with a header and payload, the basic unit networks transmit."
+      },
+      {
+       "term": "packet switching",
+       "def": "Breaking data into packets that can travel independently and be reassembled at the destination."
+      },
+      {
+       "term": "protocol",
+       "def": "A shared set of rules two systems follow so they can exchange data meaningfully."
+      },
+      {
+       "term": "header / payload",
+       "def": "Header: the metadata in a packet (source, destination, order). Payload: the actual data being carried."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 6,000-byte file is sent in packets carrying 1,500 bytes of payload each. How many packets are needed?",
+       "choices": [
+        "2",
+        "3",
+        "4",
+        "6"
+       ],
+       "answer": 2,
+       "explain": "6,000 ÷ 1,500 = 4, so the file requires 4 packets."
+      },
+      {
+       "q": "What information does a packet's header typically carry?",
+       "choices": [
+        "Only the actual message content",
+        "Metadata like source, destination, and sequence order",
+        "Nothing; headers are optional",
+        "The recipient's password"
+       ],
+       "answer": 1,
+       "explain": "The header carries metadata needed for routing and reassembly, while the payload carries the actual data."
+      },
+      {
+       "q": "Why do two computers need a shared protocol to communicate?",
+       "choices": [
+        "They don't; any data format works",
+        "Without agreed-upon rules for formatting and interpreting data, the receiver couldn't make sense of what arrives",
+        "Protocols are only needed for encryption",
+        "Protocols only matter for wireless connections"
+       ],
+       "answer": 1,
+       "explain": "A protocol is the agreed rulebook that makes a sender's packets interpretable and usable by the receiver."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The TCP/IP Model (Layers)",
+     "minutes": 12,
+     "intro": "The internet's protocols are organized into layers, each with one job, stacked so that a request built at the top eventually becomes electrical or radio signals at the bottom — and back again on the other end.",
+     "sections": [
+      {
+       "heading": "Four Layers, One Job Each",
+       "body": [
+        "The **application layer** carries the actual content your programs care about (HTTP for web pages, SMTP for email). The **transport layer** (TCP or UDP) breaks that content into segments and adds **port numbers**, identifying which program on the destination machine should receive it.",
+        "The **internet layer** (IP) adds source and destination IP addresses so packets can be routed across networks. The **link layer** handles the physical transmission on the local network segment, like Wi-Fi radio signals or Ethernet electrical pulses."
+       ]
+      },
+      {
+       "heading": "Encapsulation: Wrapping Data Layer by Layer",
+       "body": [
+        "As data moves down the stack to be sent, each layer wraps the previous layer's output in its own header, a process called **encapsulation** — like nesting an envelope inside another envelope. On arrival, the receiving computer reverses the process, called **decapsulation**, peeling off one header per layer as it moves back up to the application.",
+        "This layering means each protocol only has to solve one problem: TCP doesn't need to know about Wi-Fi, and Wi-Fi doesn't need to understand HTTP — each layer trusts the one below it to deliver the bytes."
+       ],
+       "example": {
+        "problem": "When your browser sends an HTTP request, which layer adds the port number, and which layer adds the IP addresses?",
+        "steps": [
+         "Port numbers identify which program on a machine should receive data — that is the transport layer's job (TCP or UDP).",
+         "IP addresses identify which machine on the network to deliver to — that is the internet layer's job (IP).",
+         "So both are added, but at different layers, as the request moves down the stack for sending."
+        ],
+        "answer": "The transport layer adds the port number; the internet layer adds the IP addresses."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "TCP/IP model",
+       "def": "A four-layer model (application, transport, internet, link) describing how network protocols cooperate."
+      },
+      {
+       "term": "encapsulation",
+       "def": "Wrapping data in a new header at each layer as it moves down the stack for transmission."
+      },
+      {
+       "term": "application layer",
+       "def": "The top layer carrying the actual content of programs, like web pages or email."
+      },
+      {
+       "term": "transport layer",
+       "def": "The layer (TCP or UDP) that segments data and adds port numbers identifying the destination program."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which layer of the TCP/IP model is responsible for adding IP addresses to outgoing data?",
+       "choices": [
+        "Application layer",
+        "Transport layer",
+        "Internet layer",
+        "Link layer"
+       ],
+       "answer": 2,
+       "explain": "The internet layer (IP) is responsible for addressing packets so they can be routed to the correct machine."
+      },
+      {
+       "q": "What is 'encapsulation' in networking?",
+       "choices": [
+        "Deleting a packet's header",
+        "Wrapping data in a new header at each layer as it moves down the stack",
+        "Encrypting data with a password",
+        "Compressing a file before sending it"
+       ],
+       "answer": 1,
+       "explain": "Encapsulation is the process of adding a new layer-specific header around the data as it descends through the model."
+      },
+      {
+       "q": "Which layer adds port numbers to identify which program on a machine should receive the data?",
+       "choices": [
+        "Link layer",
+        "Internet layer",
+        "Transport layer",
+        "Application layer"
+       ],
+       "answer": 2,
+       "explain": "The transport layer (TCP or UDP) attaches port numbers, distinguishing, for example, a web server on port 80 from an email server on port 25."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "IP Addresses and Subnetting Basics",
+     "minutes": 12,
+     "intro": "Every device on a network needs an address, and understanding how those addresses are structured explains why your home router can hand out addresses to a dozen devices without any of them colliding.",
+     "sections": [
+      {
+       "heading": "IPv4 Addresses and Address Ranges",
+       "body": [
+        "An **IPv4 address** is a 32-bit number written as four decimal numbers separated by dots (like 192.168.1.10), each ranging 0-255. Certain ranges, like 192.168.0.0-192.168.255.255 and 10.0.0.0-10.255.255.255, are reserved as **private addresses**, usable only inside local networks and never routed on the public internet.",
+        "Public addresses are globally unique and routable across the internet, while private addresses are reused by millions of home and office networks simultaneously, translated to a single public address at the router via NAT (network address translation)."
+       ]
+      },
+      {
+       "heading": "Subnet Masks and CIDR Notation",
+       "body": [
+        "A **subnet mask** splits an IP address into a network portion and a host portion. **CIDR notation** like `/24` states how many leading bits belong to the network, leaving the rest for individual hosts on that subnet.",
+        "A `/24` subnet reserves 24 bits for the network and 8 bits for hosts, giving 2^8 = 256 total addresses, though the very first (the network address) and very last (the broadcast address) are reserved, leaving 254 usable host addresses."
+       ],
+       "example": {
+        "problem": "A device has IP 192.168.1.10 with subnet mask /24. What is the network address, and how many usable host addresses does this subnet have?",
+        "steps": [
+         "A /24 mask means the first 24 bits (192.168.1) are the network portion, leaving the last 8 bits for hosts.",
+         "The network address is formed by zeroing out the host bits: 192.168.1.0.",
+         "8 host bits give 2^8 = 256 total addresses; subtracting the network address and the broadcast address (192.168.1.255) leaves 254 usable host addresses."
+        ],
+        "answer": "Network address 192.168.1.0; 254 usable host addresses."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "IPv4 address",
+       "def": "A 32-bit address written as four dotted decimal numbers, identifying a device on a network."
+      },
+      {
+       "term": "private address range",
+       "def": "IP ranges reserved for use inside local networks only, never routed on the public internet."
+      },
+      {
+       "term": "subnet mask",
+       "def": "A value that splits an IP address into a network portion and a host portion."
+      },
+      {
+       "term": "CIDR notation",
+       "def": "A shorthand like /24 stating how many leading bits of an address belong to the network."
+      }
+     ],
+     "practice": [
+      {
+       "q": "How many total addresses does a /24 subnet contain?",
+       "choices": [
+        "16",
+        "254",
+        "256",
+        "65,536"
+       ],
+       "answer": 2,
+       "explain": "A /24 leaves 8 bits for hosts, and 2^8 = 256 total addresses in that subnet."
+      },
+      {
+       "q": "Why is 192.168.1.10 never directly reachable from the public internet?",
+       "choices": [
+        "It is a broadcast address",
+        "It falls in a reserved private address range, meant only for local networks",
+        "It is an invalid IP address",
+        "IPv4 addresses can never start with 192"
+       ],
+       "answer": 1,
+       "explain": "192.168.x.x is one of the ranges reserved for private, local-network-only use and is not routed publicly."
+      },
+      {
+       "q": "For the subnet 192.168.1.0/24, how many usable host addresses are available after reserving the network and broadcast addresses?",
+       "choices": [
+        "256",
+        "255",
+        "254",
+        "128"
+       ],
+       "answer": 2,
+       "explain": "256 total addresses minus the network address and the broadcast address leaves 254 usable for hosts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "From URL to Web Page",
+   "summary": "Loading a single web page quietly involves DNS lookups, port numbers, and an encrypted handshake — this unit walks through each step.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "DNS: The Internet's Phone Book",
+     "minutes": 10,
+     "intro": "Nobody types an IP address into their browser; DNS is the system quietly translating human-friendly names into the numeric addresses computers actually use.",
+     "sections": [
+      {
+       "heading": "How DNS Resolution Works",
+       "body": [
+        "**DNS (Domain Name System)** translates a domain name like example.com into an IP address. A **resolver** queries a hierarchy of servers: a root server points to the right **top-level domain (TLD)** server (for .com, .org, etc.), which points to the domain's **authoritative name server**, which finally returns the actual IP address.",
+        "This lookup normally takes only milliseconds and happens before your browser can even open a connection to the site, since it first needs to know where to connect."
+       ]
+      },
+      {
+       "heading": "Record Types and Caching",
+       "body": [
+        "DNS stores different **record types** for different purposes: an **A record** maps a name to an IPv4 address, a **CNAME** record maps one name to another name (an alias), and an **MX record** points to a domain's mail servers.",
+        "To avoid repeating the full lookup on every request, resolvers cache the answer for a period called the **TTL (time to live)**, given in seconds; once the TTL expires, the resolver must look the record up again."
+       ],
+       "example": {
+        "problem": "A DNS A record for example.com has a TTL of 3,600 seconds. If a resolver caches the answer at 2:00 PM, at what time will it need to look it up again?",
+        "steps": [
+         "3,600 seconds ÷ 60 = 60 minutes, so the TTL equals exactly 1 hour.",
+         "Add 1 hour to the caching time: 2:00 PM + 1 hour.",
+         "The cached answer expires at 3:00 PM, after which a fresh lookup is required."
+        ],
+        "answer": "3:00 PM."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "DNS",
+       "def": "The Domain Name System, which translates human-readable domain names into IP addresses."
+      },
+      {
+       "term": "A record",
+       "def": "A DNS record type mapping a domain name to an IPv4 address."
+      },
+      {
+       "term": "TTL",
+       "def": "Time to live: how many seconds a cached DNS answer remains valid before it must be looked up again."
+      },
+      {
+       "term": "authoritative name server",
+       "def": "The server that holds the official, definitive DNS records for a specific domain."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does DNS primarily do?",
+       "choices": [
+        "Encrypts web traffic",
+        "Translates domain names into IP addresses",
+        "Blocks malicious traffic",
+        "Compresses files before sending"
+       ],
+       "answer": 1,
+       "explain": "DNS is the lookup system that converts human-readable names into the numeric IP addresses computers use to connect."
+      },
+      {
+       "q": "A DNS record has a TTL of 600 seconds, cached at 9:00 AM. When does it need to be looked up again?",
+       "choices": [
+        "9:01 AM",
+        "9:06 AM",
+        "9:10 AM",
+        "10:00 AM"
+       ],
+       "answer": 2,
+       "explain": "600 seconds is 10 minutes, so the cached record is valid until 9:10 AM."
+      },
+      {
+       "q": "Which DNS record type maps a name to an IPv4 address?",
+       "choices": [
+        "MX record",
+        "CNAME record",
+        "A record",
+        "TTL record"
+       ],
+       "answer": 2,
+       "explain": "An A record is specifically the mapping from a domain name to an IPv4 address."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "TCP, UDP, and Ports",
+     "minutes": 12,
+     "intro": "Once a browser knows a server's IP address, it still needs to open a reliable connection and reach the right program on that machine — that's the job of TCP and port numbers.",
+     "sections": [
+      {
+       "heading": "TCP: Reliable, Ordered Delivery",
+       "body": [
+        "**TCP** guarantees delivery: it numbers every segment, confirms receipt, and retransmits anything lost, so data always arrives complete and in order — at the cost of some extra overhead and a setup step called the **three-way handshake**: SYN, then SYN-ACK, then ACK, establishing the connection before any actual data is sent.",
+        "TCP is what web browsing, email, and file transfers rely on, since losing or scrambling part of a web page or a document is unacceptable."
+       ]
+      },
+      {
+       "heading": "UDP and Port Numbers",
+       "body": [
+        "**UDP** trades reliability for speed: it sends data without confirming receipt or guaranteeing order, ideal for live video calls or online games where a late, retransmitted packet is worse than a dropped one. Neither protocol works without **port numbers**, which identify which specific program on a machine should receive incoming data.",
+        "Well-known ports are standardized: port 80 for unencrypted HTTP, port 443 for HTTPS, port 53 for DNS, so a server can run many services simultaneously on one IP address, sorted by port."
+       ],
+       "example": {
+        "problem": "A browser opens a reliable connection to a web server. List the three steps of the TCP handshake used to establish it, in order.",
+        "steps": [
+         "The client sends a SYN (synchronize) packet, proposing to start a connection.",
+         "The server responds with a SYN-ACK, acknowledging the client's SYN and proposing its own.",
+         "The client responds with an ACK, acknowledging the server's SYN — the connection is now established."
+        ],
+        "answer": "SYN → SYN-ACK → ACK."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "TCP",
+       "def": "A transport protocol guaranteeing reliable, ordered delivery of data, used for web browsing and email."
+      },
+      {
+       "term": "UDP",
+       "def": "A transport protocol favoring speed over reliability, used for live video and gaming."
+      },
+      {
+       "term": "three-way handshake",
+       "def": "The SYN, SYN-ACK, ACK exchange that establishes a TCP connection before data is sent."
+      },
+      {
+       "term": "port number",
+       "def": "A number identifying which specific program on a machine should receive incoming network data."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why would a live video call typically use UDP instead of TCP?",
+       "choices": [
+        "UDP is more secure",
+        "UDP favors speed, and a dropped frame is less disruptive than the delay caused by TCP retransmitting it late",
+        "TCP cannot be used for video at all",
+        "UDP guarantees perfect delivery, unlike TCP"
+       ],
+       "answer": 1,
+       "explain": "For live media, a late retransmitted packet is often worse than simply dropping it, which is why UDP's speed is preferred over TCP's reliability guarantees."
+      },
+      {
+       "q": "What is the correct order of the TCP three-way handshake?",
+       "choices": [
+        "ACK, SYN, SYN-ACK",
+        "SYN, SYN-ACK, ACK",
+        "SYN-ACK, SYN, ACK",
+        "ACK, ACK, SYN"
+       ],
+       "answer": 1,
+       "explain": "The client sends SYN, the server replies SYN-ACK, and the client confirms with ACK, completing the handshake."
+      },
+      {
+       "q": "What is the standard port number for unencrypted HTTP traffic?",
+       "choices": [
+        "21",
+        "25",
+        "80",
+        "443"
+       ],
+       "answer": 2,
+       "explain": "Port 80 is the well-known standard port for unencrypted HTTP; 443 is reserved for HTTPS."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "HTTP, HTTPS, and TLS",
+     "minutes": 10,
+     "intro": "The final step in loading a page is a request-and-response conversation between your browser and a server, and whether that conversation is private depends entirely on one extra layer of encryption.",
+     "sections": [
+      {
+       "heading": "HTTP: Requests, Responses, and Status Codes",
+       "body": [
+        "**HTTP** is a request-response protocol: the browser sends a request (a method like GET or POST, plus a URL), and the server replies with a **status code** and content. Status codes are grouped by meaning: 200s mean success, 300s mean redirection, 400s mean a client error (like 404 Not Found), and 500s mean a server error.",
+        "A status code tells you which side of the conversation had the problem, if any, which is essential for debugging why a page failed to load."
+       ]
+      },
+      {
+       "heading": "HTTPS and TLS",
+       "body": [
+        "**HTTPS** is HTTP layered on top of **TLS** (Transport Layer Security), which encrypts the connection so a third party intercepting the traffic sees only scrambled data, not the actual request or response content. TLS also verifies the server's identity using a certificate issued by a trusted **certificate authority (CA)**.",
+        "Without this verification, an attacker could impersonate a legitimate site; the padlock icon in a browser's address bar signals that TLS encryption and identity verification both succeeded for that connection."
+       ],
+       "example": {
+        "problem": "A browser requests a page and receives status code 404. What does this mean, and is the server functioning correctly?",
+        "steps": [
+         "404 falls in the 400s range, meaning a client-side error, specifically 'Not Found.'",
+         "This means the server received and processed the request successfully — it simply has no resource at that URL.",
+         "So the server is working correctly; the problem is that the requested resource doesn't exist there."
+        ],
+        "answer": "404 means Not Found; the server is functioning correctly, but the requested resource doesn't exist at that URL."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "HTTP status code",
+       "def": "A three-digit code in an HTTP response indicating success, redirection, or an error."
+      },
+      {
+       "term": "TLS",
+       "def": "Transport Layer Security, the encryption protocol underlying HTTPS."
+      },
+      {
+       "term": "certificate authority",
+       "def": "A trusted organization that issues digital certificates verifying a website's identity."
+      },
+      {
+       "term": "HTTPS",
+       "def": "HTTP layered over TLS, providing encryption and identity verification for web traffic."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does a 500-range HTTP status code generally indicate?",
+       "choices": [
+        "The request succeeded",
+        "A problem on the client's side",
+        "A problem on the server's side",
+        "A redirection to another page"
+       ],
+       "answer": 2,
+       "explain": "500-range codes signal that the server itself encountered an error while trying to fulfill the request."
+      },
+      {
+       "q": "What does TLS add on top of plain HTTP?",
+       "choices": [
+        "Faster loading with no other change",
+        "Encryption of the connection and verification of the server's identity",
+        "A larger page size limit",
+        "Automatic translation of the page's content"
+       ],
+       "answer": 1,
+       "explain": "TLS encrypts traffic so it can't be read in transit, and verifies the server's identity through a certificate."
+      },
+      {
+       "q": "What role does a certificate authority play in HTTPS?",
+       "choices": [
+        "It hosts the website's files",
+        "It issues trusted certificates that verify a site's identity",
+        "It blocks malware automatically",
+        "It assigns a site's IP address"
+       ],
+       "answer": 1,
+       "explain": "A CA vouches for a site's identity by issuing a certificate, which a browser checks before trusting the connection."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Understanding Threats",
+   "summary": "You cannot defend against what you cannot name. This unit surveys the main categories of attack: malicious software, human manipulation, and attacks on web applications directly.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Malware: Viruses, Worms, Trojans, and Ransomware",
+     "minutes": 10,
+     "intro": "'Malware' is an umbrella term, and knowing exactly which kind you're facing changes what defense actually works.",
+     "sections": [
+      {
+       "heading": "Viruses, Worms, and Trojans",
+       "body": [
+        "A **virus** attaches itself to a legitimate file or program and spreads only when that host file is run or shared. A **worm** spreads on its own across a network without needing a host file or human action, exploiting vulnerabilities to jump from machine to machine. A **trojan** disguises itself as legitimate, useful software while secretly performing malicious actions once installed.",
+        "The distinction matters for defense: worms are stopped by patching the network vulnerability they exploit, while trojans are stopped by scrutinizing what software you actually install and where it comes from."
+       ]
+      },
+      {
+       "heading": "Ransomware and Backups",
+       "body": [
+        "**Ransomware** encrypts a victim's files and demands payment (often cryptocurrency) for the decryption key, frequently delivered via a trojan or a phishing email attachment. Paying is discouraged, since it funds further attacks and does not guarantee the files are actually recovered.",
+        "The single most reliable defense against ransomware is maintaining regular, offline (or immutable) backups, so encrypted files can simply be restored from a clean copy without ever needing the attacker's key."
+       ],
+       "example": {
+        "problem": "An employee downloads a 'free' invoice-viewer app that secretly encrypts their files and then demands payment. Classify this malware, and name one defense that would have prevented data loss.",
+        "steps": [
+         "The malicious payload (encrypting files for payment) is the defining behavior of ransomware.",
+         "It was delivered disguised as legitimate software, which is the trojan delivery method.",
+         "A defense that neutralizes the damage regardless of the infection: maintaining regular offline backups, so files can be restored without paying."
+        ],
+        "answer": "Ransomware, delivered via a trojan; regular offline backups would let the employee restore files without paying."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "virus",
+       "def": "Malware that attaches to a legitimate file and spreads when that file is run or shared."
+      },
+      {
+       "term": "worm",
+       "def": "Malware that spreads on its own across a network without needing a host file or user action."
+      },
+      {
+       "term": "trojan",
+       "def": "Malware disguised as legitimate software that performs malicious actions once installed."
+      },
+      {
+       "term": "ransomware",
+       "def": "Malware that encrypts a victim's files and demands payment for the decryption key."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What distinguishes a worm from a virus?",
+       "choices": [
+        "A worm always demands payment",
+        "A worm spreads on its own across a network without needing a host file",
+        "A worm only affects mobile devices",
+        "There is no real difference"
+       ],
+       "answer": 1,
+       "explain": "Unlike a virus, which needs a host file to be shared or run, a worm actively spreads itself across a network on its own."
+      },
+      {
+       "q": "What is the most reliable defense against ransomware, regardless of how it got in?",
+       "choices": [
+        "Paying the ransom immediately",
+        "Maintaining regular offline backups so files can be restored",
+        "Disconnecting the internet permanently",
+        "Ignoring the encrypted files"
+       ],
+       "answer": 1,
+       "explain": "Backups let a victim restore their data from a clean copy, neutralizing the ransom demand entirely."
+      },
+      {
+       "q": "What defines a trojan?",
+       "choices": [
+        "Software that spreads without any user action",
+        "Software disguised as something legitimate that secretly performs malicious actions",
+        "A weakness in network hardware",
+        "A type of encryption algorithm"
+       ],
+       "answer": 1,
+       "explain": "A trojan's defining trait is deception: it appears to be useful software while hiding a malicious purpose."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Social Engineering and Phishing",
+     "minutes": 10,
+     "intro": "The easiest way into a secured system is often not a technical exploit at all, but simply convincing a person to open the door themselves.",
+     "sections": [
+      {
+       "heading": "Social Engineering Tactics",
+       "body": [
+        "**Social engineering** manipulates people into taking an action or revealing information they otherwise wouldn't, using tactics like manufactured urgency ('act now or lose access'), impersonating authority (posing as IT support or a manager), or exploiting trust and helpfulness.",
+        "These attacks work because they target human psychology, not a software flaw, which is exactly why technical defenses alone (firewalls, antivirus) cannot fully stop them."
+       ]
+      },
+      {
+       "heading": "Phishing and Its Variants",
+       "body": [
+        "**Phishing** is social engineering delivered by email, typically impersonating a trusted sender and urging the target to click a link or open an attachment. **Spear phishing** targets a specific individual using personal details for credibility; **smishing** and **vishing** deliver the same tactic via text message and phone call.",
+        "Common red flags include urgent deadlines, mismatched or slightly-off sender domains, requests for credentials via a link instead of an official portal, and generic greetings on a message claiming to be personal."
+       ],
+       "example": {
+        "problem": "An email claims to be from 'IT Support,' urgently demanding you click a link to 'verify your password' within 10 minutes or lose account access. Identify two red flags in this message.",
+        "steps": [
+         "The artificial time pressure ('within 10 minutes') is a classic urgency tactic designed to short-circuit careful thinking.",
+         "Requesting a password be entered via an email link, rather than the organization's official login portal, is itself suspicious behavior real IT departments avoid.",
+         "Both patterns together strongly suggest phishing rather than a legitimate request."
+        ],
+        "answer": "Manufactured urgency (a 10-minute deadline) and a credential request via an email link, which legitimate IT support rarely does."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "social engineering",
+       "def": "Manipulating people into taking an action or revealing information, rather than exploiting a technical flaw."
+      },
+      {
+       "term": "phishing",
+       "def": "Social engineering delivered by email, typically impersonating a trusted sender to steal information."
+      },
+      {
+       "term": "spear phishing",
+       "def": "Phishing targeted at a specific individual using personal details to appear credible."
+      },
+      {
+       "term": "red flag",
+       "def": "A warning sign, like urgency or a suspicious sender, suggesting a message may be a social engineering attempt."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can't firewalls and antivirus software fully stop social engineering attacks?",
+       "choices": [
+        "Those tools are outdated technology",
+        "Social engineering targets human psychology and decision-making, not a technical vulnerability",
+        "Social engineering only happens over the phone",
+        "Antivirus software causes social engineering"
+       ],
+       "answer": 1,
+       "explain": "Social engineering manipulates a person directly, which purely technical defenses aren't designed to address."
+      },
+      {
+       "q": "What is 'spear phishing'?",
+       "choices": [
+        "Phishing sent to millions of random addresses",
+        "Phishing targeted at a specific individual using personal details for credibility",
+        "A type of firewall rule",
+        "Phishing that only happens by phone call"
+       ],
+       "answer": 1,
+       "explain": "Spear phishing is a personalized, targeted version of phishing aimed at one specific person or organization."
+      },
+      {
+       "q": "Which of these is a classic phishing red flag?",
+       "choices": [
+        "A message from a known colleague sent during business hours",
+        "Manufactured urgency combined with a request to click a link and enter credentials",
+        "A message with no links or attachments at all",
+        "An email confirming an order you actually placed"
+       ],
+       "answer": 1,
+       "explain": "Urgency paired with a credential request via a link is one of the most common and reliable phishing patterns."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Web Attacks: SQL Injection and XSS",
+     "minutes": 12,
+     "intro": "When a web application trusts user input a little too much, that trust becomes the exact crack an attacker slips through.",
+     "sections": [
+      {
+       "heading": "SQL Injection",
+       "body": [
+        "**SQL injection** happens when user input is inserted directly into a SQL query without sanitization, letting an attacker inject their own SQL logic. A vulnerable login might build the query as `\"SELECT * FROM users WHERE username = '\" + input + \"'\"`, trusting that input is only ever a plain username.",
+        "The fix is **parameterized queries** (also called prepared statements), where user input is always treated strictly as data, never as executable SQL code, regardless of what characters it contains."
+       ]
+      },
+      {
+       "heading": "Cross-Site Scripting (XSS)",
+       "body": [
+        "**XSS** happens when an attacker injects malicious script into a page that other users later view, letting that script run in the victim's browser with their session's privileges, potentially stealing cookies or credentials. It commonly occurs when user-submitted content (like a comment) is displayed on a page without escaping special characters.",
+        "The primary defense is **input sanitization** and **output escaping**: treating user-submitted content as plain text to display, never as executable HTML or JavaScript, unless explicitly and carefully allowed."
+       ],
+       "example": {
+        "problem": "A login form builds this query by concatenating input: SELECT * FROM users WHERE username = '\" + input + \"'; What could an attacker type as the username to bypass the check, and why does it work?",
+        "steps": [
+         "Entering `' OR '1'='1` as the input turns the final query into: SELECT * FROM users WHERE username = '' OR '1'='1';",
+         "'1'='1' is always true, so the WHERE clause becomes true for every row, regardless of the actual username.",
+         "This works because the raw input was inserted directly into the SQL text instead of being treated strictly as data."
+        ],
+        "answer": "Entering something like `' OR '1'='1` makes the WHERE clause always evaluate true, because unsanitized input was inserted directly into the query."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "SQL injection",
+       "def": "An attack that inserts malicious SQL logic through unsanitized user input in a query."
+      },
+      {
+       "term": "parameterized query",
+       "def": "A query technique that treats user input strictly as data, never as executable SQL, preventing injection."
+      },
+      {
+       "term": "XSS (cross-site scripting)",
+       "def": "An attack that injects malicious script into a page, which then runs in other users' browsers."
+      },
+      {
+       "term": "input sanitization",
+       "def": "Cleaning or escaping user input so it cannot be interpreted as executable code."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does entering `' OR '1'='1` into a vulnerable login form often bypass authentication?",
+       "choices": [
+        "It crashes the server, granting access by default",
+        "It makes the WHERE clause of the underlying SQL query always evaluate as true",
+        "It deletes the users table",
+        "It only works on encrypted connections"
+       ],
+       "answer": 1,
+       "explain": "The injected text turns the query's condition into something always true, matching every row regardless of the real username."
+      },
+      {
+       "q": "What is the standard defense against SQL injection?",
+       "choices": [
+        "Blocking all user input entirely",
+        "Using parameterized queries that treat input strictly as data, never as executable SQL",
+        "Only allowing numeric input",
+        "Disabling the database"
+       ],
+       "answer": 1,
+       "explain": "Parameterized queries separate code from data structurally, so injected SQL syntax in the input can never be executed as part of the query."
+      },
+      {
+       "q": "What does an XSS attack do?",
+       "choices": [
+        "Encrypts a website's database",
+        "Injects malicious script into a page so it runs in other users' browsers",
+        "Overloads a server with traffic",
+        "Guesses user passwords"
+       ],
+       "answer": 1,
+       "explain": "XSS plants script in content other users view, letting it execute with their browser session's privileges."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Core Security Principles",
+   "summary": "Behind every specific defense is a small set of principles — knowing them lets you reason about new threats you haven't seen a name for yet.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The CIA Triad and Least Privilege",
+     "minutes": 10,
+     "intro": "Security professionals judge almost every incident against the same three-part yardstick, and understanding it clarifies what actually went wrong in any given breach.",
+     "sections": [
+      {
+       "heading": "Confidentiality, Integrity, Availability",
+       "body": [
+        "The **CIA triad** names the three properties security aims to protect: **confidentiality** (only authorized people can read the data), **integrity** (data is accurate and hasn't been tampered with), and **availability** (authorized people can access the data and systems when they need to).",
+        "Different attacks threaten different legs of the triad: a data breach threatens confidentiality, a tampered record threatens integrity, and a denial-of-service attack threatens availability — naming which leg is affected clarifies exactly what defense is needed."
+       ]
+      },
+      {
+       "heading": "Least Privilege",
+       "body": [
+        "The **principle of least privilege** grants every user and system only the minimum access necessary to do its job, nothing more. An intern doesn't need administrator access to the entire payroll database just to update their own timesheet.",
+        "This limits the damage from any single compromised account: if an attacker steals a low-privilege account's credentials, they inherit only that account's narrow access, not the whole system."
+       ],
+       "example": {
+        "problem": "A hospital's patient database goes offline for 6 hours during a ransomware attack, though no data is actually stolen or altered. Which leg of the CIA triad is most directly violated?",
+        "steps": [
+         "Confidentiality: no data was stolen or read by the attacker, so confidentiality remains intact.",
+         "Integrity: no data was altered or corrupted, so integrity remains intact.",
+         "Availability: authorized staff could not access the system for 6 hours, which is exactly what availability protects."
+        ],
+        "answer": "Availability."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "CIA triad",
+       "def": "Confidentiality, Integrity, Availability — the three properties information security aims to protect."
+      },
+      {
+       "term": "confidentiality",
+       "def": "Ensuring only authorized people can access or read data."
+      },
+      {
+       "term": "availability",
+       "def": "Ensuring authorized people can access data and systems when needed."
+      },
+      {
+       "term": "least privilege",
+       "def": "Granting users and systems only the minimum access necessary to do their job."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A hacker alters financial records without stealing anything or taking systems offline. Which leg of the CIA triad is violated?",
+       "choices": [
+        "Confidentiality",
+        "Integrity",
+        "Availability",
+        "None of the three"
+       ],
+       "answer": 1,
+       "explain": "Altering data without authorization is precisely an integrity violation, since the data is no longer accurate and trustworthy."
+      },
+      {
+       "q": "What does the principle of least privilege recommend?",
+       "choices": [
+        "Every user should have administrator access by default",
+        "Users and systems should get only the minimum access needed to do their job",
+        "Passwords should never be changed",
+        "Only IT staff should ever log in to any system"
+       ],
+       "answer": 1,
+       "explain": "Least privilege limits each account's access to just what's necessary, reducing the damage any single compromised account can cause."
+      },
+      {
+       "q": "A confidential customer database is copied and leaked by an attacker, but no records are changed and the system stays online. Which CIA property is violated?",
+       "choices": [
+        "Availability",
+        "Integrity",
+        "Confidentiality",
+        "All three equally"
+       ],
+       "answer": 2,
+       "explain": "Unauthorized reading/copying of data is a direct violation of confidentiality, while integrity and availability remain unaffected here."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Authentication: Passwords, MFA, and Hashing",
+     "minutes": 12,
+     "intro": "Passwords are the oldest form of authentication and, badly implemented, one of the weakest — small design choices in how they're stored make the difference between a minor breach and a catastrophic one.",
+     "sections": [
+      {
+       "heading": "Multi-Factor Authentication",
+       "body": [
+        "Authentication factors fall into three categories: something you know (a password), something you have (a phone generating a code, a hardware key), and something you are (a fingerprint). **Multi-factor authentication (MFA)** requires at least two of these categories, so a stolen password alone is not enough to log in.",
+        "MFA dramatically reduces account takeover risk, since an attacker who phishes a password still needs physical access to the second factor, which is far harder to obtain remotely."
+       ]
+      },
+      {
+       "heading": "Password Hashing and Salting",
+       "body": [
+        "Storing passwords in plain text is a critical mistake: anyone who breaches the database instantly has every user's actual password. Instead, systems store a **hash** of the password, a one-way transformation that cannot be reversed back into the original.",
+        "A **salt**, a random value unique to each user, is mixed in before hashing so that two users with the identical password produce different stored hashes, defeating precomputed **rainbow table** attacks that would otherwise instantly reveal common passwords."
+       ],
+       "example": {
+        "problem": "A site stores passwords as plain, unsalted SHA-256 hashes. Two users both pick the password 'password123'. What problem does this create, and how does adding a per-user salt fix it?",
+        "steps": [
+         "Without a salt, hashing the same input always produces the same output, so both users end up with identical stored hashes.",
+         "An attacker who breaches the database can see that these two hashes match, revealing that both users share the same password, and can use precomputed rainbow tables to crack common passwords instantly.",
+         "Adding a unique random salt per user means the hash function's input differs even for identical passwords, producing different stored hashes and defeating rainbow tables entirely."
+        ],
+        "answer": "Identical passwords produce identical, crackable hashes; a unique salt per user makes each stored hash different even for the same password."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "multi-factor authentication (MFA)",
+       "def": "Authentication requiring two or more independent factors, such as a password plus a code from a phone."
+      },
+      {
+       "term": "password hashing",
+       "def": "Storing a one-way transformation of a password instead of the password itself."
+      },
+      {
+       "term": "salt",
+       "def": "A random, unique value mixed into a password before hashing so identical passwords produce different hashes."
+      },
+      {
+       "term": "rainbow table",
+       "def": "A precomputed table of hashes used to quickly reverse unsalted password hashes."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is MFA more secure than a password alone?",
+       "choices": [
+        "MFA makes passwords unnecessary to remember",
+        "An attacker who steals only the password still lacks the second factor needed to log in",
+        "MFA eliminates the need for encryption",
+        "MFA is only used for banking websites"
+       ],
+       "answer": 1,
+       "explain": "Requiring a second, independent factor means a stolen password alone is no longer sufficient for an attacker to gain access."
+      },
+      {
+       "q": "What problem does storing passwords as unsalted hashes create?",
+       "choices": [
+        "Passwords become impossible to check at login",
+        "Identical passwords produce identical hashes, exposing shared passwords and enabling rainbow table attacks",
+        "Hashing makes login slower with no security benefit",
+        "Unsalted hashes cannot be stored in a database"
+       ],
+       "answer": 1,
+       "explain": "Without a per-user salt, two users with the same password get the same hash, which a rainbow table can crack in an instant."
+      },
+      {
+       "q": "What is a 'salt' in the context of password storage?",
+       "choices": [
+        "A second password required at login",
+        "A random, unique value mixed in before hashing so identical passwords produce different stored hashes",
+        "An encryption key shared by all users",
+        "A backup copy of the password database"
+       ],
+       "answer": 1,
+       "explain": "A salt is unique per user and combined with the password before hashing, ensuring even identical passwords hash differently."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Encryption Basics: Symmetric vs Asymmetric",
+     "minutes": 12,
+     "intro": "Encryption is how confidentiality gets enforced mathematically, and the two main families of encryption solve two very different problems.",
+     "sections": [
+      {
+       "heading": "Symmetric Encryption",
+       "body": [
+        "**Symmetric encryption** uses one shared key for both encrypting and decrypting data (like AES). It is fast and efficient for encrypting large amounts of data, but it has a key distribution problem: both parties must somehow already share that same secret key, safely, before communicating.",
+        "If the shared key is intercepted in transit, every message encrypted with it is compromised, which is exactly the problem asymmetric encryption was invented to solve."
+       ]
+      },
+      {
+       "heading": "Asymmetric Encryption",
+       "body": [
+        "**Asymmetric encryption** uses a mathematically linked pair of keys: a **public key**, freely shared with anyone, and a **private key**, kept secret by its owner. Data encrypted with someone's public key can only be decrypted with their matching private key.",
+        "This solves the key distribution problem, since the public key never needs to be kept secret to be useful. In practice, HTTPS uses asymmetric encryption briefly during the TLS handshake to securely exchange a temporary symmetric key, then switches to fast symmetric encryption for the rest of the session."
+       ],
+       "example": {
+        "problem": "Alice wants to send Bob a confidential message using asymmetric encryption. Whose key should she use to encrypt the message, and whose key decrypts it?",
+        "steps": [
+         "The message must be readable only by Bob, so it should be encrypted with a key that only Bob can reverse.",
+         "Alice encrypts using Bob's public key, which anyone can freely obtain and use to encrypt something meant for Bob.",
+         "Only Bob's matching private key, which he alone holds, can decrypt it."
+        ],
+        "answer": "Alice encrypts with Bob's public key; Bob decrypts it with his own private key."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "symmetric encryption",
+       "def": "Encryption using one shared key for both encrypting and decrypting data."
+      },
+      {
+       "term": "asymmetric encryption",
+       "def": "Encryption using a linked public/private key pair, where each key can only be reversed by the other."
+      },
+      {
+       "term": "public key",
+       "def": "The freely shareable half of an asymmetric key pair, used to encrypt data meant for its owner."
+      },
+      {
+       "term": "private key",
+       "def": "The secret half of an asymmetric key pair, used to decrypt data encrypted with the matching public key."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main drawback of symmetric encryption?",
+       "choices": [
+        "It is too slow for large amounts of data",
+        "Both parties must securely share the same secret key before communicating",
+        "It cannot be used for stored data",
+        "It requires no key at all"
+       ],
+       "answer": 1,
+       "explain": "Symmetric encryption's core challenge is safely getting the same shared key to both parties without it being intercepted."
+      },
+      {
+       "q": "To send Bob a confidential message using asymmetric encryption, which key does Alice encrypt it with?",
+       "choices": [
+        "Her own private key",
+        "Her own public key",
+        "Bob's public key",
+        "Bob's private key"
+       ],
+       "answer": 2,
+       "explain": "Encrypting with Bob's public key ensures only Bob's matching private key can decrypt the message."
+      },
+      {
+       "q": "Why does HTTPS use asymmetric encryption only briefly, then switch to symmetric encryption?",
+       "choices": [
+        "Asymmetric encryption is illegal for long sessions",
+        "Asymmetric encryption solves the key exchange problem, then fast symmetric encryption handles the bulk of the session efficiently",
+        "Symmetric encryption cannot be used with TLS",
+        "Browsers do not support asymmetric encryption"
+       ],
+       "answer": 1,
+       "explain": "Asymmetric encryption securely establishes a shared secret, after which faster symmetric encryption handles ongoing traffic."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Defending Networks and Systems",
+   "summary": "Principles become concrete tools here: firewalls, VPNs, and the practical habits (patching, incident response) that keep real systems resilient.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Firewalls and Network Segmentation",
+     "minutes": 10,
+     "intro": "A firewall is the network's front door policy, deciding which traffic is allowed in or out before it ever reaches the systems behind it.",
+     "sections": [
+      {
+       "heading": "What a Firewall Does",
+       "body": [
+        "A **firewall** filters network traffic based on rules like source/destination IP address, port number, and protocol, blocking anything that doesn't match an allowed rule. A rule might allow inbound traffic on port 443 (HTTPS) while blocking port 23 (Telnet) entirely.",
+        "Firewalls can sit at the edge of a whole network or on an individual device, and modern firewalls can also inspect traffic content, not just headers, to catch more sophisticated threats."
+       ]
+      },
+      {
+       "heading": "Network Segmentation",
+       "body": [
+        "**Network segmentation** divides a network into isolated zones, so a breach in one zone (like a guest Wi-Fi network) cannot directly reach sensitive systems in another zone (like an internal payroll server). A **DMZ (demilitarized zone)** is a common pattern: public-facing servers sit in their own segment, isolated from the internal network behind an additional firewall layer.",
+        "This limits the **blast radius** of any single compromise, a core application of defense in depth: even if one layer fails, segmentation contains the damage rather than letting it spread freely."
+       ],
+       "example": {
+        "problem": "A firewall rule blocks all inbound traffic on port 23 (Telnet) but allows port 22 (SSH). An attacker tries to Telnet into the server. What happens, and why is this a reasonable policy?",
+        "steps": [
+         "The firewall rule explicitly denies inbound traffic on port 23, so the Telnet connection attempt is blocked before it reaches the server.",
+         "Telnet sends usernames and passwords in plain, unencrypted text, while SSH encrypts the entire session.",
+         "Blocking the insecure protocol (Telnet) while allowing its secure equivalent (SSH) is a reasonable, common hardening policy."
+        ],
+        "answer": "The Telnet attempt is blocked; SSH is allowed instead because it encrypts traffic, unlike unencrypted Telnet."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "firewall",
+       "def": "A system that filters network traffic based on rules like IP address, port, and protocol."
+      },
+      {
+       "term": "network segmentation",
+       "def": "Dividing a network into isolated zones to contain the impact of a breach in any one zone."
+      },
+      {
+       "term": "DMZ",
+       "def": "A network segment holding public-facing servers, isolated from the more sensitive internal network."
+      },
+      {
+       "term": "blast radius",
+       "def": "The extent of damage a single compromised system or account can cause."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does a firewall use to decide whether to allow or block traffic?",
+       "choices": [
+        "The color of the network cable",
+        "Rules based on things like IP address, port number, and protocol",
+        "The user's typing speed",
+        "The time zone of the sender"
+       ],
+       "answer": 1,
+       "explain": "Firewalls make allow/block decisions based on structured rules referencing addresses, ports, and protocols."
+      },
+      {
+       "q": "What is the purpose of network segmentation?",
+       "choices": [
+        "To make the network run faster in all cases",
+        "To isolate zones so a breach in one area cannot directly reach sensitive systems in another",
+        "To eliminate the need for firewalls entirely",
+        "To assign public IP addresses to every device"
+       ],
+       "answer": 1,
+       "explain": "Segmentation limits how far an attacker can move after breaching one part of the network, containing the damage."
+      },
+      {
+       "q": "Why would a firewall policy allow SSH (port 22) but block Telnet (port 23)?",
+       "choices": [
+        "Telnet uses more bandwidth",
+        "Telnet sends credentials unencrypted, while SSH encrypts the entire session",
+        "SSH is an older protocol than Telnet",
+        "Telnet cannot be blocked by firewalls"
+       ],
+       "answer": 1,
+       "explain": "SSH's encryption makes it far safer than Telnet's plaintext credentials, justifying blocking the insecure option."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "VPNs and Secure Remote Access",
+     "minutes": 10,
+     "intro": "Working from a coffee shop or connecting two office networks across the internet both share the same risk: untrusted networks in between — a VPN is how you make that middle stretch safe.",
+     "sections": [
+      {
+       "heading": "How a VPN Protects Traffic",
+       "body": [
+        "A **VPN (virtual private network)** creates an encrypted **tunnel** between a device and a remote network, so any traffic passing through it is unreadable to anyone else on the networks in between, including an untrusted public Wi-Fi network.",
+        "From the perspective of internal company resources, a device connected through a VPN effectively behaves as if it were plugged directly into the internal network, even from across the world."
+       ]
+      },
+      {
+       "heading": "Common VPN Use Cases",
+       "body": [
+        "Remote employees use a VPN to securely reach internal systems (file shares, internal tools) that are not exposed to the public internet. A **site-to-site VPN** permanently links two office networks over the internet as if they were one network.",
+        "VPNs are not a complete security solution on their own; they protect data in transit, but a compromised device connected through a VPN can still carry malware onto the internal network it now has access to."
+       ],
+       "example": {
+        "problem": "An employee connects to public café Wi-Fi and needs to securely access internal company files. What technology should they use, and specifically what threat does it protect against?",
+        "steps": [
+         "Public Wi-Fi is an untrusted network where other users could potentially intercept unencrypted traffic.",
+         "A VPN encrypts the connection in a tunnel between the laptop and the company's network.",
+         "This protects specifically against eavesdropping by other people on that same open Wi-Fi network."
+        ],
+        "answer": "A VPN; it encrypts the connection so others on the same open Wi-Fi cannot read the traffic."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "VPN",
+       "def": "A virtual private network that creates an encrypted tunnel between a device and a remote network."
+      },
+      {
+       "term": "tunnel",
+       "def": "The encrypted path a VPN creates for traffic to travel through an untrusted network safely."
+      },
+      {
+       "term": "site-to-site VPN",
+       "def": "A VPN that permanently links two separate office networks over the internet as one network."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What specific threat does a VPN protect against on public Wi-Fi?",
+       "choices": [
+        "Power outages",
+        "Eavesdropping by other users on the same untrusted network",
+        "Slow internet speeds",
+        "Running out of storage space"
+       ],
+       "answer": 1,
+       "explain": "A VPN's encrypted tunnel prevents others sharing the same network from reading the traffic passing through it."
+      },
+      {
+       "q": "What does a site-to-site VPN accomplish?",
+       "choices": [
+        "It blocks all inbound traffic to a network",
+        "It permanently links two office networks over the internet as if they were one network",
+        "It replaces the need for any firewall",
+        "It only works for a single device"
+       ],
+       "answer": 1,
+       "explain": "A site-to-site VPN connects two separate networks together securely over the internet, functioning as a unified network."
+      },
+      {
+       "q": "Is a VPN alone a complete security solution?",
+       "choices": [
+        "Yes, a VPN eliminates all risk automatically",
+        "No, a compromised device connected through a VPN can still introduce malware to the internal network",
+        "Yes, because VPNs block all malware",
+        "No, VPNs provide no protection at all"
+       ],
+       "answer": 1,
+       "explain": "A VPN protects data in transit, but it doesn't clean an already-infected device, which can still bring threats onto the network it connects to."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "DDoS, Patching, and Incident Response Basics",
+     "minutes": 12,
+     "intro": "Even a well-designed, well-encrypted system can be brought down simply by overwhelming it, and staying resilient also means having a plan ready for the day something does go wrong.",
+     "sections": [
+      {
+       "heading": "DDoS Attacks",
+       "body": [
+        "A **DDoS (distributed denial-of-service)** attack floods a target with traffic from many distributed sources at once, often a **botnet** of compromised devices, overwhelming its capacity to respond to legitimate requests. The 'distributed' part matters: traffic from thousands of different sources is far harder to block than traffic from one.",
+        "Defenses include **rate limiting** (capping how much traffic a single source can send), traffic-scrubbing services, and content delivery networks (CDNs) that absorb and filter excess traffic before it ever reaches the origin server."
+       ]
+      },
+      {
+       "heading": "Patch Management and Incident Response",
+       "body": [
+        "**Patch management** is the discipline of promptly applying security updates that fix known vulnerabilities, since attackers actively scan for and exploit systems still running unpatched, known-vulnerable software. Delaying patches is one of the most common ways organizations get breached through already-fixed holes.",
+        "**Incident response** is the planned process for handling a breach once it happens: detect it, contain it (stop it from spreading further), eradicate the cause, recover normal operations, and review what happened afterward to prevent a repeat."
+       ],
+       "example": {
+        "problem": "A company's web server crashes after receiving 50 times its normal traffic, arriving simultaneously from thousands of different IP addresses. What is this attack called, and name one defense.",
+        "steps": [
+         "Traffic arriving from thousands of distributed sources at once, aimed at overwhelming the server, is the defining pattern of a DDoS attack.",
+         "A single-source flood would be a simpler denial-of-service attack, but the distributed, many-source nature here specifically makes it DDoS.",
+         "A defense is routing traffic through a CDN or traffic-scrubbing service that can absorb and filter the flood before it reaches the origin server."
+        ],
+        "answer": "A DDoS attack; a defense is using a CDN or traffic-scrubbing service to absorb and filter the flood."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "DDoS",
+       "def": "A distributed denial-of-service attack flooding a target with traffic from many sources to overwhelm it."
+      },
+      {
+       "term": "botnet",
+       "def": "A network of compromised devices controlled remotely, often used to launch DDoS attacks."
+      },
+      {
+       "term": "patch management",
+       "def": "The practice of promptly applying updates that fix known security vulnerabilities."
+      },
+      {
+       "term": "incident response",
+       "def": "The planned process of detecting, containing, eradicating, and recovering from a security breach."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What makes a DDoS attack 'distributed'?",
+       "choices": [
+        "It only ever targets one specific file",
+        "The flood of traffic comes from many different sources at once, often a botnet",
+        "It uses encryption to hide itself",
+        "It requires physical access to the server"
+       ],
+       "answer": 1,
+       "explain": "The 'distributed' part refers to traffic arriving from many different sources simultaneously, which is much harder to block than a single source."
+      },
+      {
+       "q": "Why is prompt patch management important for security?",
+       "choices": [
+        "Patches make software run faster only",
+        "Attackers actively scan for and exploit systems still running unpatched, known-vulnerable software",
+        "Patching is only relevant for mobile devices",
+        "Unpatched systems automatically shut down"
+       ],
+       "answer": 1,
+       "explain": "Delaying known security patches leaves already-identified vulnerabilities open for attackers to exploit."
+      },
+      {
+       "q": "In incident response, what does 'containment' refer to?",
+       "choices": [
+        "Deleting all logs immediately",
+        "Stopping the breach from spreading further before fully removing its cause",
+        "Ignoring the incident until it resolves itself",
+        "Publicly announcing the breach immediately"
+       ],
+       "answer": 1,
+       "explain": "Containment focuses on limiting further spread and damage, a distinct step that comes before eradication and recovery."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
