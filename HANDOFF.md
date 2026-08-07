@@ -60,20 +60,27 @@ Paste this into a fresh session, along with a clone of this repository.
 
 ## 2. What this is
 
-XPLabs LLC is an independent studio. The site is its hub and hosts two free
-public resources.
+XPLabs LLC is a consulting studio — government contract consulting, custom
+software and AI implementation. It also builds four games of its own, and runs
+two free public initiatives.
 
 Six origins, all on the one domain. Subdomains are free, so this costs nothing
-extra — but each is a **separate Cloudflare Pages project**.
+extra — but each is a separate Cloudflare project. **The four public ones are
+Pages projects from this repository. The two private ones are not, and must
+never be** — see DEPLOY.md.
 
 | Origin | Source | What it is | Status |
 |---|---|---|---|
-| `xplabs.us` | `sites/www` | Company hub, consulting, initiatives, invest, about | Built |
-| `play.xplabs.us` | `sites/play` | Games catalog — all four titles, equal depth | Built |
-| `learn.xplabs.us` | `sites/learn` | XP Education — 106 subjects, 14 domains | Built |
-| `mil.xplabs.us` | `sites/mil` | Military benefits — 279 resources, 13 categories | Built |
-| `levi.xplabs.us` | — | Private personal dashboard (section 5) | **Not built** |
-| `colby.xplabs.us` | — | Private family ancestry tree (section 5) | **Not built** |
+| `xplabs.us` | `sites/www` | Company hub, consulting, initiatives, invest, about | Live |
+| `play.xplabs.us` | `sites/play` | Games catalog — all four titles, equal depth | Live |
+| `learn.xplabs.us` | `sites/learn` | XP Education — 106 subjects, 14 domains | Live |
+| `mil.xplabs.us` | `sites/mil` | Military Freebies — 279 resources, 13 categories | Live |
+| `colby.xplabs.us` | `colby-fager-genealogy` (private) | Family genealogy, password gated | Live, media pending |
+| `levi.xplabs.us` | `Levi_Priv` (private) | Personal dashboard, Cloudflare Access | Built, not bound |
+
+The games origin was `game.xplabs.us` until 2026-08; it is `play.xplabs.us` now.
+The old host was never publicly live, so there is no redirect for it — but the
+Pages project's output directory must be `sites/play`, not `sites/game`.
 
 The benefits directory used to live at `xplabs.us/military-benefits/`. It is its
 own origin now; `sites/www/_redirects` 301s the old path so existing links and
@@ -95,10 +102,17 @@ them.
 
 ```
 HANDOFF.md                        this file
-tools/sync_nav.py                 copies the shared header/footer/nav script
-                                  from sites/www/index.html to every other page
 DEPLOY.md                         how the four origins get published
 README.md                         GitHub profile-facing summary
+tools/
+  sync_nav.py                     copies the shared header, footer and nav
+                                  script from sites/www/index.html to every
+                                  other page. RUN THIS after touching the nav —
+                                  hand-syncing six copies is how one page ends
+                                  up with five menu items and another with six
+  apply_themes.py                 the per-property accent map. Each property
+                                  overrides --signal only; everything else in
+                                  the design system is shared on purpose
 archive/                          not deployed — nothing here is served
   servestuff-webflow-mirror/      the Webflow site this replaced
   xplabs-chatgpt-site-original.html
@@ -438,17 +452,60 @@ These are the rules the site is built on. Each exists for a reason.
    for doing so must list *every* place that needs changing, not just the
    heading.
 
-6. **The hub's colour rule.** Each game owns one colour. Teal, ultramarine and
-   rust are dark enough for white type. **Mustard is not** — that card uses dark
-   type, and mustard must never be used as text on the bone background, where it
-   measures 2.5:1. This rule is written into `index.html` so it survives editing.
+6. **One design system, one accent per property.** `xplabs.us` and
+   `play.xplabs.us` share the same `:root` block, header, footer and type scale.
+   The ONLY thing that varies per property is `--signal`:
 
-7. **Never claim capability that does not exist.** The consulting page describes
-   defense and government technology as background and capability, explicitly not
-   as availability, with no contract vehicle or engagement claimed. The benefits
-   directory carries a disclaimer that it is not affiliated with or endorsed by
-   the DoD, the VA, or any government agency. Both are deliberate. Do not
-   "improve" either into a claim.
+   | Property | Accent | On `--ink` |
+   |---|---|---|
+   | Hub, About, Invest | `#3FAC33` brand green | 6.80:1 |
+   | Consulting | `#4DA3FF` azure | 7.60:1 |
+   | Public Initiatives | `#2FD4B6` aqua | 10.65:1 |
+   | Games | `#A98BFF` violet | 7.43:1 |
+
+   `--amber #F5A524` deliberately does **not** vary — it is the constant
+   metadata colour, and holding one thing steady is part of what makes four
+   origins read as one company. `learn` and `mil` keep their own palettes:
+   `mil` reserves a crisis red used for one purpose and never decoratively,
+   and `learn` assigns a colour per subject domain. Do not repaint either to
+   match a brand sweep. The map lives in `tools/apply_themes.py`.
+
+7. **The navigation is generated, not hand-edited.** `sites/www/index.html` is
+   the source for the header, footer and nav script; `tools/sync_nav.py` copies
+   them to the other five pages and rewrites the links for `play`'s origin.
+   Edit the nav there and re-run the script. Editing one page's nav by hand is
+   how the estate drifts apart one page at a time, and nobody notices because
+   you always enter the site on the same page.
+
+8. **Anything you change under `sites/learn/` requires re-running its build
+   script.** `sw.js` derives its precache list AND `VERSION` from the content,
+   and `VERSION` *is* the cache name. The `activate` handler only deletes caches
+   whose name differs from the current one, so leaving `VERSION` alone after a
+   content change means the old cache can never be evicted — every returning
+   visitor is served the pre-edit shell, permanently. This has already happened
+   once and presented as the site being down. Always finish with:
+
+   ```sh
+   cd sites/learn && python tools/build_index.py
+   ```
+
+   And never let the promise passed to `respondWith()` reject. A rejection is
+   not a fallback to the network; it is a bare `ERR_FAILED` page on every
+   navigation for as long as the worker stays installed.
+
+9. **Never claim capability that does not exist.** The consulting page describes
+   government and defense work as capability, explicitly not as availability,
+   and states plainly that there is no contract vehicle, no CAGE code, no
+   registration and no completed federal engagement. The benefits directory
+   carries a disclaimer that it is not affiliated with or endorsed by the DoD,
+   the VA, or any government agency. Both are deliberate. Do not "improve"
+   either into a claim — an implied past-performance claim to a federal buyer
+   is not a marketing risk, it is a legal one.
+
+10. **The invest page carries no figures.** No stage, raise size, valuation,
+    revenue or projection. Numbers shown to investors are representations and
+    belong in materials sent to a named person on a known date, not on an open
+    page that goes stale silently and cannot be withdrawn once screenshotted.
 
 ---
 
