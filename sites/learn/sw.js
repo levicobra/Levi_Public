@@ -137,7 +137,28 @@ const CACHE = VERSION;
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
-    const cache = await caches.open(CACHE);
+    // TAKE OVER FIRST, CACHE SECOND. The order matters more than it looks.
+    //
+    // Everything below this line can fail — caches.open() itself rejects when
+    // the origin's storage is unavailable or wedged. If skipWaiting() came
+    // afterwards, that rejection would fail the install, skipWaiting() would
+    // never run, and the PREVIOUS worker would stay in control. Which means a
+    // broken worker could never be replaced by a fixed one: every visit would
+    // try to install, hit the same storage error, give up, and hand the page
+    // back to the broken worker. That is a permanently bricked origin, curable
+    // only by the visitor knowing to clear site data.
+    //
+    // Claiming control first makes the fix always reachable. The worst case is
+    // a worker with no offline library, which is a slower site, not a dead one.
+    await self.skipWaiting();
+
+    let cache;
+    try {
+      cache = await caches.open(CACHE);
+    } catch (err) {
+      return; // No storage. The fetch handler falls through to the network.
+    }
+
     // Chunked addAll so one flaky request doesn't abort the whole install.
     //
     // The chunking alone did NOT achieve that: cache.addAll() rejects if any
@@ -163,16 +184,31 @@ self.addEventListener('install', (event) => {
         // install leaves the previous worker in charge indefinitely.
       }
     }
-    await self.skipWaiting();
   })());
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
-    const names = await caches.keys();
-    await Promise.all(names.filter(n => n !== CACHE && n.startsWith('xped-'))
-      .map(n => caches.delete(n)));
-    await self.clients.claim();
+    // Claim first, for the same reason install skipWaiting()s first: if the
+    // cleanup below throws, this worker must still end up in charge of the
+    // open pages. Otherwise a storage error hands them back to whatever was
+    // controlling them before, which is the worker we are trying to replace.
+    try {
+      await self.clients.claim();
+    } catch (err) {
+      /* nothing useful to do; carry on and try the cleanup anyway */
+    }
+
+    try {
+      const names = await caches.keys();
+      // Delete EVERY cache this origin owns, not just the xped- ones. A cache
+      // left behind by an older or half-written worker is exactly the kind of
+      // state that makes caches.open() fail later, and there is nothing else
+      // on this origin whose caches we could destroy by mistake.
+      await Promise.all(names.filter(n => n !== CACHE).map(n => caches.delete(n)));
+    } catch (err) {
+      /* a stale cache is survivable; a failed activate is not */
+    }
   })());
 });
 
