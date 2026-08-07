@@ -8,7 +8,7 @@
 'use strict';
 
 /* @VERSION */
-const VERSION = 'xped-415d8b76a38b';
+const VERSION = 'xped-1636cc7760c6';
 /* @END-VERSION */
 
 /* @PRECACHE */
@@ -146,10 +146,18 @@ self.addEventListener('install', (event) => {
     // claimed resilience the code did not have. Now a bad chunk costs us those
     // twenty files — they get fetched on demand later by the fetch handler —
     // instead of costing us the entire offline library.
+    // cache: 'reload' forces each precache request past the browser's ordinary
+    // HTTP cache. Without it, a NEW worker version repopulates its fresh cache
+    // from whatever the HTTP cache is already holding — and _headers gives
+    // css/*, js/* and content/* a 24-hour max-age. So a deploy could install a
+    // new VERSION whose contents were up to a day stale, which defeats the
+    // entire point of bumping the version and is invisible from the outside.
     const chunk = 20;
     for (let i = 0; i < PRECACHE.length; i += chunk) {
       try {
-        await cache.addAll(PRECACHE.slice(i, i + chunk));
+        await cache.addAll(
+          PRECACHE.slice(i, i + chunk).map(u => new Request(u, { cache: 'reload' }))
+        );
       } catch (err) {
         // Deliberately swallowed. An incomplete cache still works; a failed
         // install leaves the previous worker in charge indefinitely.
