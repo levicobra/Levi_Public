@@ -14,16 +14,18 @@ kind has to come from the owner directly.
 Paste this into a fresh session, along with a clone of this repository.
 
 > You are taking over the XPLabs website. The repository is `levicobra/Levi_Public`.
-> The site source is the `xplabs-site/` directory. It deploys to `xplabs.us`.
+> The source is the `sites/` directory. It is **three separate origins**, each a
+> deployable root: `sites/www` → `xplabs.us`, `sites/game` → `game.xplabs.us`,
+> `sites/learn` → `learn.xplabs.us`. Each needs its own Cloudflare Pages project.
 >
 > Read `HANDOFF.md` in the repository root first. It describes what exists, the
 > rules the codebase follows, the facts that have been verified, and the
 > decisions still open. Follow the constraints in section 6 — they are not
 > stylistic preferences, they are the reason the site still works.
 >
-> The site is six static pages plus a self-contained offline learning app, plus two
-> private subdomains (`levi.xplabs.us` and `colby.xplabs.us`, section 5) that do
-> not exist yet.
+> Live areas: four pages on `xplabs.us`, a games catalog on `game.xplabs.us`, and
+> a self-contained offline learning app on `learn.xplabs.us`. Two further private
+> subdomains (`levi.` and `colby.`, section 5) do not exist yet.
 > There is no build step, no package manager, and no framework. Every page is a
 > single HTML file with inline CSS, and must load with zero external network
 > requests. Do not introduce a bundler, a CSS framework, a web font, or an npm
@@ -49,16 +51,20 @@ Paste this into a fresh session, along with a clone of this repository.
 XPLabs LLC is an independent studio. The site is its hub and hosts two free
 public resources.
 
-| Area | Path | What it is |
-|---|---|---|
-| Hub | `/` | Company front page; four games, education, three directories |
-| Games catalog | `/games/` | **All four titles, at equal depth.** There is no per-game page |
-| XP Education | `/education/` | Offline learning app, 106 subjects, 14 domains |
-| Military benefits | `/military-benefits/` | Free directory, 279 resources, 13 categories |
-| Engineering | `/engineering/` | How things are built, plus consulting |
-| Personal | `/personal/` | About the founder |
-| Dashboard | `levi.xplabs.us` | **Not built.** Private personal dashboard — section 5 |
-| Ancestry | `colby.xplabs.us` | **Not built.** Private family genealogy tree — section 5 |
+Five origins, all on the one domain. Subdomains are free, so this costs nothing
+extra — but each is a **separate Cloudflare Pages project**.
+
+| Origin | Source | What it is | Status |
+|---|---|---|---|
+| `xplabs.us` | `sites/www` | Hub, engineering, personal, military benefits | Built |
+| `game.xplabs.us` | `sites/game` | Games catalog — all four titles, equal depth | Built |
+| `learn.xplabs.us` | `sites/learn` | XP Education — 106 subjects, 14 domains | Built |
+| `levi.xplabs.us` | — | Private personal dashboard (section 5) | **Not built** |
+| `colby.xplabs.us` | — | Private family ancestry tree (section 5) | **Not built** |
+
+**Cross-origin links must be absolute.** Within an origin they stay relative; a
+link from `xplabs.us` to the catalog is `https://game.xplabs.us/`, not `/games/`.
+The nav on every page follows this rule — if you add a page, match it.
 
 The four games are **The Last Station** (Unreal Engine 5, mobile),
 **Space Glyph** (Swift 6 / SpriteKit, iPhone), **Life XP** (SwiftUI / SceneKit,
@@ -74,28 +80,33 @@ them.
 HANDOFF.md                        this file
 README.md                         GitHub profile-facing summary
 archive/                          backups of the two sites this replaced
-  servestuff-webflow-mirror/      complete pre-migration Webflow mirror
-  xplabs-chatgpt-site-original.html
-subdomain-starter/                reusable password gate for the two subdomains
+subdomain-starter/                password gate for the two private subdomains
                                   (copy into their own private repos; not deployed)
-xplabs-site/                      THE SITE — everything below deploys
-  index.html                      hub
-  favicon-32.png  apple-touch-icon.png  og.jpg
-  robots.txt  sitemap.xml
-  game-art/                       WebP, production
-  game-art-src/                   original PNG masters (not deployed)
-  games/index.html                catalog — all four titles
-  education/                      offline learning app (see section 4)
-  engineering/index.html
-  personal/index.html
-  military-benefits/
-    index.html                    GENERATED — do not hand-edit
-    directory_template.html       edit this
-    gen_directory.py              then run this
-    data.json                     the 279 resources
-    linkcheck.py                  link rot auditor
-    LINK-AUDIT.md                 last audit result
+sites/
+  www/                            -> xplabs.us
+    index.html                    hub
+    engineering/index.html        how things are built, consulting, open role
+    personal/index.html
+    military-benefits/
+      index.html                  GENERATED — do not hand-edit
+      directory_template.html     edit this
+      gen_directory.py            then run this
+      data.json                   the 279 resources
+      linkcheck.py                link rot auditor
+    favicon-32.png  apple-touch-icon.png  og.jpg  robots.txt  sitemap.xml
+  game/                           -> game.xplabs.us
+    index.html                    catalog — all four titles
+    game-art/                     WebP, production
+    game-art-src/                 original PNG masters (not deployed)
+    favicon-32.png  apple-touch-icon.png  og.jpg  robots.txt  sitemap.xml
+  learn/                          -> learn.xplabs.us
+    index.html  css/  js/  content/  icons/  tools/
+    sw.js  manifest.webmanifest   PWA; scope is the whole origin
+    robots.txt  sitemap.xml
 ```
+
+Each of `www`, `game` and `learn` is a Cloudflare Pages project whose **root
+directory** is that folder. One repository, three projects.
 
 ---
 
@@ -113,7 +124,7 @@ overwritten. The real sources are:
 - `gen_directory.py` — combines them
 
 ```sh
-cd xplabs-site/military-benefits && python3 gen_directory.py
+cd sites/www/military-benefits && python3 gen_directory.py
 ```
 
 The search is not a substring filter. It scores each result: a whole word in the
@@ -131,10 +142,12 @@ tap, and do not remove the search interception.
 
 ### XP Education
 
-`education/` is a self-contained single-page app. It has its own pipeline:
+`sites/learn/` is a self-contained single-page app, and now owns a whole origin
+— its service worker and manifest scope are `/`, which is simpler than the
+`/education/` sub-path it used to live under. It has its own pipeline:
 
 ```sh
-cd xplabs-site/education
+cd sites/learn
 python3 tools/validate_content.py && python3 tools/build_index.py
 ```
 
@@ -145,7 +158,7 @@ them by hand.
 
 XP Education was built on the branch **`claude/offline-education-platform-c3u3yl`**
 and merged into the working branch. That branch is the origin of every file under
-`education/`; its history is worth reading before making structural changes,
+`sites/learn/`; its history is worth reading before making structural changes,
 because the content pipeline and the service worker were developed together.
 
 Content lives in `content/subjects/<id>.json`, one file per subject, indexed by
@@ -406,9 +419,9 @@ to be recreated. Connect the repository from the start.
 Branch `claude/github-repo-content-h574sv`, open as pull request #1 against
 `main`.
 
-Verified at handoff: six pages, 49 internal links, **zero dead**; zero horizontal
-overflow at 320, 360, 768, 1440 and 2560; zero console errors; zero external
-requests; 284 outbound links on the benefits directory, all carrying
+Verified at handoff: three origins each rendering standalone; zero horizontal
+overflow at 320, 360, 768, 1440 and 2560 on every page; zero console errors; zero
+failed requests; 284 outbound links on the benefits directory, all carrying
 `target="_blank" rel="noopener"`; 106 subject files matching the 106 subjects
 declared in the education catalog.
 

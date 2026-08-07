@@ -1,6 +1,8 @@
 import json, html, re
-S="/tmp/claude-0/-home-user-Levi-Public/83eb0e9d-716c-5dee-885b-a0cc28f020b5/scratchpad"
-cats=json.load(open(f"{S}/milben_clean.json"))
+import os
+HERE=os.path.dirname(os.path.abspath(__file__))
+S=HERE
+cats=json.load(open(f"{HERE}/data.json"))
 e=lambda s: html.escape(s, quote=True)
 
 ORDER=["important-links","directories","health","housing","financial","career","education",
@@ -76,14 +78,14 @@ def tile(c):
         <span class="tile__b">{e(BLURB.get(c['id'],''))}</span>
       </button></li>"""
 
-TPL = open(f"{S}/build/directory_template.html", encoding="utf-8").read()
+TPL = open(f"{HERE}/directory_template.html", encoding="utf-8").read()
 out = (TPL
   .replace("__TILES__", "\n".join(tile(c) for c in cats))
   .replace("__SECTIONS__", "\n".join(section(c) for c in cats))
   .replace("__DATA__", json.dumps(payload, separators=(",",":")))
   .replace("__TOTAL__", str(tot))
   .replace("__NCATS__", str(len(cats))))
-p="/home/user/Levi_Public/xplabs-site/military-benefits/index.html"
+p=f"{HERE}/index.html"
 open(p,"w",encoding="utf-8").write(out)
 print(f"wrote {p}  ({len(out)/1024:.1f} KB)")
 print(f"  {tot} links, {len(cats)} categories")
