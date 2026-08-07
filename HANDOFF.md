@@ -18,10 +18,18 @@ Paste this into a fresh session, along with a clone of this repository.
 > deployable root: `sites/www` → `xplabs.us`, `sites/game` → `game.xplabs.us`,
 > `sites/learn` → `learn.xplabs.us`. Each needs its own Cloudflare Pages project.
 >
+> Everything is on `main`; there is no work sitting on another branch.
+>
 > Read `HANDOFF.md` in the repository root first. It describes what exists, the
 > rules the codebase follows, the facts that have been verified, and the
 > decisions still open. Follow the constraints in section 6 — they are not
-> stylistic preferences, they are the reason the site still works.
+> stylistic preferences, they are the reason the site still works. `DEPLOY.md`
+> covers publishing.
+>
+> Each origin has a `_headers` file carrying a strict Content-Security-Policy.
+> If something you add stops working, check for a CSP violation in the console
+> before assuming the code is wrong — and if the fix is to loosen the policy,
+> that is a signal the addition does not belong here.
 >
 > Live areas: four pages on `xplabs.us`, a games catalog on `game.xplabs.us`, and
 > a self-contained offline learning app on `learn.xplabs.us`. Two further private
@@ -78,6 +86,7 @@ them.
 
 ```
 HANDOFF.md                        this file
+DEPLOY.md                         how the three origins get published
 README.md                         GitHub profile-facing summary
 archive/                          not deployed — nothing here is served
   servestuff-webflow-mirror/      the Webflow site this replaced
@@ -87,6 +96,9 @@ archive/                          not deployed — nothing here is served
 docs/                             design records
   levi-dashboard-architecture.md  recommended build for levi.xplabs.us
 subdomain-starter/                PIN gate for colby.xplabs.us
+  functions/_middleware.js        the gate — covers every route
+  test/middleware.test.mjs        63 checks, plain Node, no install
+  gitignore-template
                                   (copy into its own private repo; not deployed)
 sites/
   www/                            -> xplabs.us
@@ -99,19 +111,38 @@ sites/
       gen_directory.py            then run this
       data.json                   the 279 resources
       linkcheck.py                link rot auditor
-    favicon-32.png  apple-touch-icon.png  og.jpg  robots.txt  sitemap.xml
+    _headers                      CSP, HSTS, cache policy
+    favicon-32.png  favicon.ico  apple-touch-icon.png
+    og.jpg  robots.txt  sitemap.xml
   game/                           -> game.xplabs.us
     index.html                    catalog — all four titles
     game-art/                     WebP, production
-    favicon-32.png  apple-touch-icon.png  og.jpg  robots.txt  sitemap.xml
+    _headers
+    favicon-32.png  favicon.ico  apple-touch-icon.png
+    og.jpg  robots.txt  sitemap.xml
   learn/                          -> learn.xplabs.us
-    index.html  css/  js/  content/  icons/  tools/
+    index.html  css/  js/  content/  icons/
+    tools/gen_og.py               regenerates og.jpg from the catalog
+    tools/build_index.py  tools/gen_catalog.py  tools/validate_content.py
     sw.js  manifest.webmanifest   PWA; scope is the whole origin
-    robots.txt  sitemap.xml
+    _headers                      note: sw.js must stay no-store
+    og.jpg  robots.txt  sitemap.xml
 ```
 
-Each of `www`, `game` and `learn` is a Cloudflare Pages project whose **root
-directory** is that folder. One repository, three projects.
+Each of `www`, `game` and `learn` is a Cloudflare Pages project whose **build
+output directory** is that folder, with an empty build command. One repository,
+three projects. `DEPLOY.md` has the settings.
+
+**`_headers` is part of the deployable root and must stay there.** It is where
+the Content-Security-Policy lives. The policy is close to pure `'self'` with
+nothing allowlisted, which these sites can afford because they make no external
+requests — if a rule ever has to be loosened to make something work, that is the
+signal something was added that does not belong here.
+
+**Nothing outside `sites/` is deployed.** Pages uploads the whole output
+directory, so anything placed inside one of those three folders is published,
+whatever the documentation says about it. Art masters lived in `sites/game/` for
+a while, described as "not deployed"; they would have shipped.
 
 ---
 
@@ -409,7 +440,7 @@ Do not guess at any of them.
 
 | # | Decision | Why it is blocked |
 |---|---|---|
-| 1 | **Platform claim for The Last Station.** The site and `README.md` say iOS, Nintendo Switch and Switch 2. The game's own design documentation says Unreal Engine 5 mobile, with the Android build live and iOS pending. Switch appears nowhere in it. | This is a factual claim on a public marketing page and the two sources disagree. Only the owner knows which is true. |
+| 1 | **Platform claim for The Last Station.** `README.md` used to say iOS, Nintendo Switch and Switch 2; the game's own design documentation says Unreal Engine 5 mobile, Android live and iOS pending, with Switch appearing nowhere. The README now matches the design docs rather than repeating an unverified console claim. **If the console launch is real, the games catalog needs updating too — not just the README.** | A factual claim on a public marketing page, with two sources disagreeing. Only the owner knows which is true. |
 | 2 | **Space Glyph naming.** Its release checklist requires professional trademark and marketplace clearance before substantial marketing spend. The title currently appears on the public catalog. | Legal/commercial judgement, not a technical one. |
 | 3 | **Hearth & Hunt link.** The card says "Live build" but links nowhere, because the Roblox URL is not recorded anywhere in this repository. | Must not be invented. |
 | 4 | **Scope of `/personal/`.** Currently a short honest stub. | It is a page about a person, written from repository contents. It needs his voice. |
@@ -437,6 +468,21 @@ with `alt` and explicit `width`/`height`.
 
 **Link check** — crawl every internal link from every page and assert 200.
 Ignore JavaScript template strings, which look like links and are not.
+
+**Asset-reference check** — walk every `href`, `src`, manifest icon and image
+meta tag and resolve it against the files that actually ship. This catches the
+failure a link check cannot: a reference to something that was never built. It
+has caught two real ones here — four game images referenced as `.png` when only
+`.webp` shipped, and an `og:image` in the meta tags with no file behind it.
+
+Follow only the tags that carry URLs. A first attempt at this check followed
+every `<meta content="...">` and reported 48 false positives, because viewport
+strings and page descriptions look like paths.
+
+**CSP check** — serve each origin with its own `_headers` applied and load it in
+a real browser, listening for `securitypolicyviolation`. A Content-Security-Policy
+does not fail loudly; it silently declines to run something. Reasoning about the
+policy is not the same as running it.
 
 **Behavioural check** — this is the one that matters. Click the real path a user
 takes. For the benefits directory: search *rent*, *dental*, *suicide* and a
@@ -474,6 +520,19 @@ Each of these cost real time. They are recorded so they cost nobody else.
   plan to non-commercial personal use, which a studio site with a job posting is
   not. Another pauses *every* project on the account when one exceeds its
   allowance — including your ability to deploy a fix.
+- **A comment saying "not deployed" does not stop a file being deployed.** Pages
+  uploads the entire build output directory. 7.2 MB of full-resolution art
+  masters sat inside `sites/game/` labelled "(not deployed)" and would have been
+  published on the first deploy. If it must not ship, it cannot live under
+  `sites/`.
+- **`SameSite=Strict` drops the cookie on arrival from an external link.** A
+  session cookie set Strict is withheld when someone clicks through from a text
+  message or an email — which is how most people reach a link you sent them. It
+  looks like the login is broken, or worse, like it silently forgot them. `Lax`
+  still blocks the cross-site POST that matters.
+- **A cached service worker is a site that can never be updated.** Give `sw.js`
+  any `max-age` and readers stay pinned to whatever version they first
+  installed, with no way to reach them. It must be `no-store`.
 
 ---
 
@@ -481,13 +540,21 @@ Each of these cost real time. They are recorded so they cost nobody else.
 
 Checked against primary sources on 2026-08-07.
 
-**Domain.** `xplabs.us`, registered 2025-05-14, expires **2027-05-14**,
-registrar Gandi SAS, nameservers `a/b/c.dns.gandi.net`. Registry status is
-**active** — the transfer lock has been removed.
+**Domain.** `xplabs.us`, registered 2025-05-14. Held at Gandi SAS for most of
+this project's life, with nameservers `a/b/c.dns.gandi.net` and no payment
+method on file — which meant it would not have auto-renewed.
 
-There is no payment method on the registrar account, which means the domain
-**will not auto-renew**. It lapses on its expiry date unless transferred or
-renewed. This is the single most important operational fact in this document.
+**The owner has since transferred it to Cloudflare Registrar and paid for a
+further year.** At the time of writing the transfer was still completing, so the
+following need confirming once it lands, in the Cloudflare dashboard rather than
+from this file:
+
+- the new expiry date (a transfer normally adds a year to the existing one);
+- that auto-renew is on and a payment method is attached;
+- that the nameservers have moved off Gandi.
+
+The lapse risk that dominated earlier versions of this document is the thing
+that transfer was meant to remove. Verify it actually did.
 
 `.us` carries a continuing nexus requirement: the registrant must remain a US
 citizen, permanent resident, or US-domiciled organisation. It is not a one-time
@@ -508,20 +575,45 @@ to be recreated. Connect the repository from the start.
 
 ## 11. State at handoff
 
-Branch `claude/github-repo-content-h574sv`, open as pull request #1 against
-`main`.
+**Everything is on `main`.** Pull request #1 was merged; the working branch
+`claude/github-repo-content-h574sv` is spent. `claude/offline-education-platform-c3u3yl`
+is where XP Education was built and is already merged. There is no work sitting
+outside `main`.
 
-Verified at handoff: three origins each rendering standalone; zero horizontal
-overflow at 320, 360, 768, 1440 and 2560 on every page; zero console errors; zero
-failed requests; 284 outbound links on the benefits directory, all carrying
-`target="_blank" rel="noopener"`; 106 subject files matching the 106 subjects
-declared in the education catalog.
+### Verified
 
-Branches that matter: `claude/github-repo-content-h574sv` is the working branch
-and pull request #1. `claude/offline-education-platform-c3u3yl` is where XP
-Education was built, already merged.
+- Three origins each rendering standalone; zero horizontal overflow at 320, 360,
+  768, 1440 and 2560 on every page; zero console errors; zero failed requests.
+- Every `href`, `src`, manifest icon and image meta tag across all three roots
+  resolved against the files that actually ship — 60 references, all resolve.
+- Each origin served locally under its own `_headers` and loaded in Chromium:
+  six pages, **zero CSP violations**. Then the education app walked the way a
+  reader walks it — home → Languages → American Sign Language → lesson, 4,662
+  characters rendered — because hash routing under a strict CSP is exactly where
+  this breaks quietly.
+- The PIN gate: 63 checks, all passing.
+- 284 outbound links on the benefits directory, all carrying `target="_blank"
+  rel="noopener"`; 106 subject files matching the 106 subjects the catalog
+  declares.
 
-**Not done.** The site has never been deployed — it has only ever run on a local
-server, so treat first deployment as unproven work rather than a formality.
-Neither `levi.xplabs.us` nor `colby.xplabs.us` exists. Nothing in section 7
-is answered.
+### Not done
+
+- **The site has never been deployed.** It has only ever run on a local server.
+  Treat first deployment as unproven work, not a formality. `DEPLOY.md`.
+- Neither `levi.xplabs.us` nor `colby.xplabs.us` exists.
+- Nothing in section 7 is answered.
+
+### Tooling notes for whoever picks this up
+
+The Cloudflare skills and MCP servers are installed per Cloudflare's official
+setup instructions at `developers.cloudflare.com/agent-setup/prompt.md`. Of the
+five servers, only `cloudflare-docs` works without authentication; the four that
+touch the account (`cloudflare-api`, `bindings`, `builds`, `observability`)
+need an interactive OAuth login and are unavailable in a headless session.
+**No agent has ever had write access to this Cloudflare account.** Every
+dashboard step in `DEPLOY.md` is written to be done by a person, because that is
+the only way it has been possible.
+
+Do not paste an API token into a chat session to work around this. Connect the
+repository to Pages instead — it needs no token at all, and it is what
+`DEPLOY.md` describes.
