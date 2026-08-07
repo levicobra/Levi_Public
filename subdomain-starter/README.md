@@ -28,12 +28,17 @@ genealogy site is the entire dataset.
 Nothing secret is in these files. Both values live in the Cloudflare dashboard:
 
 1. Workers & Pages → your project → **Settings**
-2. **Variables and Secrets** → Add variable → type **Secret** (not Plaintext)
+2. **Variables and Secrets → Add.** Set the name and value, then press
+   **Encrypt** before saving — a variable saved without it is stored as plain
+   text and readable from the dashboard afterwards.
    - `ACCESS_PIN` — the code you give the family
    - `COOKIE_SECRET` — a long random string, unrelated to the PIN
-3. **Settings → Functions → KV namespace bindings** → bind one as `RATE`
-   (this is what locks out brute-force guessing)
-4. Redeploy once for all three to take effect
+3. **Settings → Bindings → Add → KV namespace**, variable name `RATE`.
+   This is what locks out brute-force guessing. Create the namespace first
+   under Workers & Pages → KV if you have not already.
+4. **Redeploy once.** None of the three take effect until you do — bindings and
+   secrets attach at deploy time, so a project configured but not redeployed
+   will keep returning the 503.
 
 Generate the cookie secret with something like:
 

@@ -8,11 +8,12 @@
  * ── SETUP ────────────────────────────────────────────────────────────────
  * In the Cloudflare dashboard, on this Pages project:
  *
- *   Settings → Variables and Secrets → add as type SECRET (never Plaintext):
+ *   Settings → Variables and Secrets → Add. Set the name and value, then press
+ *   ENCRYPT before saving — an unencrypted variable is stored as plain text.
  *     ACCESS_PIN     the code you give the family
  *     COOKIE_SECRET  a long random string, unrelated to the PIN
  *
- *   Settings → Functions → KV namespace bindings → bind one as:
+ *   Settings → Bindings → Add → KV namespace, with the variable name:
  *     RATE           used to lock out brute-force attempts
  *
  * Redeploy once after adding them.
