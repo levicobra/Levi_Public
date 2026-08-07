@@ -79,9 +79,15 @@ them.
 ```
 HANDOFF.md                        this file
 README.md                         GitHub profile-facing summary
-archive/                          backups of the two sites this replaced
-subdomain-starter/                password gate for the two private subdomains
-                                  (copy into their own private repos; not deployed)
+archive/                          not deployed — nothing here is served
+  servestuff-webflow-mirror/      the Webflow site this replaced
+  xplabs-chatgpt-site-original.html
+  game-art-src/                   full-resolution PNG masters; game-art/ WebP
+                                  are lossy derivatives of these
+docs/                             design records
+  levi-dashboard-architecture.md  recommended build for levi.xplabs.us
+subdomain-starter/                PIN gate for colby.xplabs.us
+                                  (copy into its own private repo; not deployed)
 sites/
   www/                            -> xplabs.us
     index.html                    hub
@@ -97,7 +103,6 @@ sites/
   game/                           -> game.xplabs.us
     index.html                    catalog — all four titles
     game-art/                     WebP, production
-    game-art-src/                 original PNG masters (not deployed)
     favicon-32.png  apple-touch-icon.png  og.jpg  robots.txt  sitemap.xml
   learn/                          -> learn.xplabs.us
     index.html  css/  js/  content/  icons/  tools/
