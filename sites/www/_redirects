@@ -1,8 +1,8 @@
 # Cloudflare Pages reads this file. Max 2100 static rules, 100 dynamic.
 #
-# These are not optional cleanup. Both old paths are in the README, in things
-# already printed, and in whatever anyone has bookmarked or linked. 301 so
-# search engines transfer the ranking rather than treating it as a new page.
+# These are not optional cleanup. Every old path below is in the README, in
+# things already printed, or in whatever anyone has bookmarked or linked. 301
+# so search engines transfer the ranking rather than treating it as a new page.
 #
 # The bare path needs its own rule in each pair: /military-benefits/* matches
 # the trailing slash and anything deeper, but not /military-benefits alone.
@@ -14,3 +14,8 @@
 # /personal/ was renamed /about/ when the root became a company hub.
 /personal               /about/                         301
 /personal/*             /about/:splat                   301
+
+# /engineering/ became /consulting/ when the page was refocused on
+# government, software and AI work. It was the most-linked internal page.
+/engineering            /consulting/                    301
+/engineering/*          /consulting/:splat              301

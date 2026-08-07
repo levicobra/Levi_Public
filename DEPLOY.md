@@ -74,7 +74,8 @@ Not "does it return 200." This project has already shipped a page where every
 link was a dead end and every check passed.
 
 ```sh
-for u in https://xplabs.us/ https://xplabs.us/engineering/ \
+for u in https://xplabs.us/ https://xplabs.us/consulting/ \
+         https://xplabs.us/initiatives/ \
          https://xplabs.us/about/ https://xplabs.us/invest/ \
          https://mil.xplabs.us/ \
          https://play.xplabs.us/ https://learn.xplabs.us/; do

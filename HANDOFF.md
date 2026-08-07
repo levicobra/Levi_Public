@@ -32,7 +32,7 @@ Paste this into a fresh session, along with a clone of this repository.
 > before assuming the code is wrong — and if the fix is to loosen the policy,
 > that is a signal the addition does not belong here.
 >
-> Live areas: `xplabs.us` is a company hub plus engineering, about and invest
+> Live areas: `xplabs.us` is a company hub plus consulting, initiatives, invest and about
 > pages; a games catalog on `play.xplabs.us`; a self-contained offline learning
 > app on `learn.xplabs.us`; a benefits directory on `mil.xplabs.us`. The hub
 > carries no detail about the games, the subject list or the benefits categories
@@ -68,7 +68,7 @@ extra — but each is a **separate Cloudflare Pages project**.
 
 | Origin | Source | What it is | Status |
 |---|---|---|---|
-| `xplabs.us` | `sites/www` | Company hub, engineering, about, invest | Built |
+| `xplabs.us` | `sites/www` | Company hub, consulting, initiatives, invest, about | Built |
 | `play.xplabs.us` | `sites/play` | Games catalog — all four titles, equal depth | Built |
 | `learn.xplabs.us` | `sites/learn` | XP Education — 106 subjects, 14 domains | Built |
 | `mil.xplabs.us` | `sites/mil` | Military benefits — 279 resources, 13 categories | Built |
@@ -95,6 +95,8 @@ them.
 
 ```
 HANDOFF.md                        this file
+tools/sync_nav.py                 copies the shared header/footer/nav script
+                                  from sites/www/index.html to every other page
 DEPLOY.md                         how the four origins get published
 README.md                         GitHub profile-facing summary
 archive/                          not deployed — nothing here is served
@@ -112,11 +114,12 @@ subdomain-starter/                PIN gate for colby.xplabs.us
 sites/
   www/                            -> xplabs.us
     index.html                    HUB ONLY — no game/subject/benefit detail
-    engineering/index.html        how things are built, consulting
+    consulting/index.html         government, software, AI (was engineering/)
+    initiatives/index.html        the two free products
     about/index.html              Levi Colby (was personal/)
     invest/index.html             investor contact — carries no figures
     _headers                      CSP, HSTS, cache policy
-    _redirects                    301s /military-benefits/ -> mil., /personal/ -> /about/
+    _redirects                    301s the three retired paths (see the file)
     favicon-32.png  favicon.ico  apple-touch-icon.png
     og.jpg  robots.txt  sitemap.xml
   mil/                            -> mil.xplabs.us

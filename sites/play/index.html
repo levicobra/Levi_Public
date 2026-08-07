@@ -52,16 +52,63 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
 
 /* ---------- header ---------- */
-.site-header{position:sticky;top:0;z-index:40;background:rgba(7,9,10,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--header-h)}
-.brand{display:inline-flex;align-items:center;text-decoration:none}
+/* ===== NAV — shared block. Sync with tools/sync_nav.py. ================
+   Below 900px the links live in a panel behind the Menu button. The
+   previous header simply set display:none at that width, which left every
+   phone with no navigation at all except the logo. */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(7,9,10,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--header-h)}
+.brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}
 /* The logo is a fixed-ratio bitmap (440x107). Set height only and let width
    follow, so it never distorts when the header height changes. */
 .brand__logo{height:21px;width:auto;display:block}
-.nav-links{display:none;gap:1.75rem}
-@media (min-width:820px){.nav-links{display:flex}}
-.nav-links a{font-size:.9375rem;color:var(--muted);text-decoration:none;transition:color .16s}
-.nav-links a:hover{color:var(--paper)}
+
+.nav-toggle{display:inline-flex;align-items:center;gap:.55rem;cursor:pointer;
+  background:none;border:1px solid var(--line);border-radius:var(--radius);
+  color:var(--paper);font-family:var(--mono);font-size:var(--t-micro);
+  letter-spacing:.14em;text-transform:uppercase;padding:.5rem .7rem}
+.nav-toggle__bars{display:inline-flex;flex-direction:column;gap:3px}
+.nav-toggle__bars i{display:block;width:14px;height:2px;background:var(--signal)}
+
+.nav-links{
+  display:none;position:absolute;left:0;right:0;top:100%;
+  flex-direction:column;align-items:stretch;
+  background:var(--ink-2);border-bottom:1px solid var(--line);
+  padding:.25rem var(--gutter) 1rem;
+}
+.nav-links.is-open{display:flex}
+.nav-links > a,.menu__btn{
+  padding:.75rem 0;border:0;border-top:1px solid var(--line-soft);
+  font-family:inherit;font-size:1rem;color:var(--muted);text-decoration:none;
+  background:none;text-align:left;width:100%}
+.nav-links > a:hover,.nav-links > a[aria-current]{color:var(--paper)}
+.menu{position:relative}
+.menu__btn{display:flex;align-items:center;gap:.45rem;cursor:pointer}
+.menu__btn:hover,.menu__btn[aria-expanded="true"]{color:var(--paper)}
+.menu__caret{width:0;height:0;flex:none;
+  border-left:4px solid transparent;border-right:4px solid transparent;
+  border-top:5px solid currentColor;transition:transform .16s}
+.menu__btn[aria-expanded="true"] .menu__caret{transform:rotate(180deg)}
+.menu__panel{display:grid;padding-left:.9rem}
+.menu__panel[hidden]{display:none}
+.menu__panel a{display:grid;gap:.1rem;padding:.6rem 0;text-decoration:none}
+.menu__panel a b{font-weight:600;color:var(--paper);font-size:.9375rem}
+.menu__panel a span{font-family:var(--mono);font-size:var(--t-micro);color:var(--muted-dim);letter-spacing:.05em}
+.menu__panel a:hover b{color:var(--signal)}
+
+@media (min-width:900px){
+  .nav-toggle{display:none}
+  .nav-links{display:flex;position:static;flex-direction:row;align-items:center;
+    gap:1.6rem;background:none;border:0;padding:0}
+  .nav-links > a,.menu__btn{padding:0;border-top:0;width:auto;font-size:.9375rem}
+  .menu__panel{position:absolute;top:calc(100% + 1.05rem);left:-1.1rem;min-width:272px;
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:.35rem 1.1rem .6rem;box-shadow:0 14px 34px rgba(0,0,0,.55)}
+  .menu__panel a{border-top:1px solid var(--line-soft)}
+  .menu__panel a:first-child{border-top:0}
+}
+/* ===== end shared nav block ===== */
+
 .tick{display:inline-flex;align-items:flex-end;gap:2px;height:11px}
 .tick i{width:2px;background:var(--signal);border-radius:1px;display:block}
 .tick i:nth-child(1){height:35%}.tick i:nth-child(2){height:65%}
@@ -126,13 +173,29 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
     <a class="brand" href="https://xplabs.us/">
       <img class="brand__logo" src="/logo.png" alt="XP Labs" width="440" height="107">
     </a>
-    <div class="nav-links">
-      <a href="https://xplabs.us/">Games</a>
-      <a href="https://learn.xplabs.us/">Education</a>
-      <a href="https://xplabs.us/engineering/">Engineering</a>
-      <a href="https://mil.xplabs.us/">Military Freebies</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      Menu
+    </button>
+
+    <div class="nav-links" id="primary-nav">
+      <a href="https://xplabs.us/">Home</a>
+
+      <div class="menu">
+        <button class="menu__btn" type="button" aria-expanded="false" aria-controls="menu-businesses">
+          XPLabs Businesses <span class="menu__caret" aria-hidden="true"></span>
+        </button>
+        <div class="menu__panel" id="menu-businesses" hidden>
+          <a href="/"><b>Games</b><span>Four titles, four stacks</span></a>
+          <a href="https://xplabs.us/consulting/"><b>Consulting</b><span>Government · software · AI</span></a>
+          <a href="https://xplabs.us/initiatives/"><b>Public Initiatives</b><span>Free education and benefits</span></a>
+        </div>
+      </div>
+
       <a href="https://xplabs.us/about/">About</a>
       <a href="https://xplabs.us/invest/">Invest</a>
+      <a href="https://xplabs.us/initiatives/">Public Initiatives</a>
     </div>
   </nav>
 </header>
@@ -274,17 +337,70 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 </main>
 
 <footer class="site-footer">
-  <div class="wrap foot-row">
-    <div>
-      <strong style="color:var(--paper)">XPLabs Games</strong><br>
-      Independent games. Persistent worlds. Strong signals.
-    </div>
-    <div>
-      <a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a><br>
-      © 2026 XPLabs LLC · Honolulu, HI
+  <div class="wrap">
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="https://xplabs.us/">Home</a>
+      <a href="https://xplabs.us/consulting/">Consulting</a>
+      <a href="/">Games</a>
+      <a href="https://xplabs.us/initiatives/">Public Initiatives</a>
+      <a href="https://learn.xplabs.us/">Education</a>
+      <a href="https://mil.xplabs.us/">Military Freebies</a>
+      <a href="https://xplabs.us/about/">About</a>
+      <a href="https://xplabs.us/invest/">Invest</a>
+    </nav>
+    <div class="foot-row">
+      <span>© 2026 XPLabs LLC · Honolulu, HI</span>
+      <span><a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a></span>
     </div>
   </div>
 </footer>
+
+<script>
+/* Header behaviour. Small and dependency-free on purpose.
+   Everything the menu hides is also a plain link in the footer, so the site
+   stays fully navigable if this script never runs. */
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var toggle = header.querySelector('.nav-toggle');
+  var links = header.querySelector('.nav-links');
+  var menuBtn = header.querySelector('.menu__btn');
+  var panel = menuBtn && document.getElementById(menuBtn.getAttribute('aria-controls'));
+  var desktop = window.matchMedia('(min-width: 900px)');
+
+  function setMenu(open) {
+    if (!menuBtn || !panel) return;
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) { panel.removeAttribute('hidden'); } else { panel.setAttribute('hidden', ''); }
+  }
+  function setNav(open) {
+    if (!toggle || !links) return;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    links.classList.toggle('is-open', open);
+    if (!open) setMenu(false);
+  }
+
+  if (toggle) toggle.addEventListener('click', function () {
+    setNav(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+  if (menuBtn) menuBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (header.contains(e.target)) return;
+    setMenu(false);
+    if (!desktop.matches) setNav(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    setMenu(false);
+    if (!desktop.matches && toggle) { setNav(false); toggle.focus(); }
+  });
+  desktop.addEventListener('change', function () { setNav(false); setMenu(false); });
+})();
+</script>
 
 </body>
 </html>

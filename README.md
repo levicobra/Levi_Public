@@ -67,7 +67,7 @@ is in the repo.
 The sites above are built here as four static roots, one per origin:
 
 ```
-sites/www/     → xplabs.us        company hub, engineering, about, invest
+sites/www/     → xplabs.us        hub, consulting, initiatives, invest, about
 sites/play/    → play.xplabs.us
 sites/learn/   → learn.xplabs.us
 sites/mil/     → mil.xplabs.us
