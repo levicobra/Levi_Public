@@ -21,8 +21,9 @@ Paste this into a fresh session, along with a clone of this repository.
 > decisions still open. Follow the constraints in section 6 — they are not
 > stylistic preferences, they are the reason the site still works.
 >
-> The site is six static pages plus a self-contained offline learning app, with a
-> seventh area (`levi.xplabs.us`, section 5) still to be built.
+> The site is six static pages plus a self-contained offline learning app, plus two
+> private subdomains (`levi.xplabs.us` and `colby.xplabs.us`, section 5) that do
+> not exist yet.
 > There is no build step, no package manager, and no framework. Every page is a
 > single HTML file with inline CSS, and must load with zero external network
 > requests. Do not introduce a bundler, a CSS framework, a web font, or an npm
@@ -56,7 +57,8 @@ public resources.
 | Military benefits | `/military-benefits/` | Free directory, 279 resources, 13 categories |
 | Engineering | `/engineering/` | How things are built, plus consulting |
 | Personal | `/personal/` | About the founder |
-| Dashboard | `levi.xplabs.us` | **Not built.** Private personal dashboard — see section 5 |
+| Dashboard | `levi.xplabs.us` | **Not built.** Private personal dashboard — section 5 |
+| Ancestry | `colby.xplabs.us` | **Not built.** Private family genealogy tree — section 5 |
 
 The four games are **The Last Station** (Unreal Engine 5, mobile),
 **Space Glyph** (Swift 6 / SpriteKit, iPhone), **Life XP** (SwiftUI / SceneKit,
@@ -74,6 +76,8 @@ README.md                         GitHub profile-facing summary
 archive/                          backups of the two sites this replaced
   servestuff-webflow-mirror/      complete pre-migration Webflow mirror
   xplabs-chatgpt-site-original.html
+subdomain-starter/                reusable password gate for the two subdomains
+                                  (copy into their own private repos; not deployed)
 xplabs-site/                      THE SITE — everything below deploys
   index.html                      hub
   favicon-32.png  apple-touch-icon.png  og.jpg
@@ -151,55 +155,104 @@ on every subject page. Keep that attribution.
 
 ---
 
-## 5. `levi.xplabs.us` — personal dashboard (to be built)
+## 5. The two subdomains (not built)
 
-Not built. This section is the brief.
+Two private subdomains are planned. Neither exists yet, and neither is part of
+the public site. This section is the brief for both.
 
-A private dashboard for the owner's own use, to be engineered separately. It is
-**not** part of the public site and should not be linked from it.
+Subdomains are free on the hosting plan in section 10 — no new domain, no new
+bill. Give each its own Cloudflare Pages project and its own **private**
+repository.
 
-**Where it goes.** A subdomain of `xplabs.us`. Subdomains cost nothing on the
-hosting plan in section 10, so this needs no new domain and no new bill. Give it
-its own Cloudflare Pages project and its own repository.
+### Both of them: how to gate a subdomain
 
-**It must be access-controlled.** A personal dashboard aggregates things a
-stranger should not see. Two workable options:
+Two workable options:
 
-- *Cloudflare Access* (Zero Trust) — email one-time-PIN, no password to manage,
-  per-person revocation. Better if more than one person ever needs in.
-- *HTTP Basic Auth via Pages middleware* — one shared username and password held
-  as Cloudflare secrets, never in the repository. Simpler, and enough for one
-  user.
+- **Cloudflare Access** (Zero Trust) — email one-time-PIN. No password to
+  manage, per-person revocation, and non-technical people can use it without
+  being issued credentials. Better when more than one person needs in.
+- **HTTP Basic Auth via Pages middleware** — one shared username and password,
+  held as Cloudflare **secrets**, never in the repository. Simpler, and enough
+  for a single user or a family who will all use the same password.
 
-Two traps, both of which have caught people on this project's sibling work:
+Three traps, in order of how badly they bite:
 
-1. Cloudflare Pages has an **"Enable access policy"** toggle in project settings.
-   It protects **preview deployments only** — not the production custom domain.
-   Flipping it, seeing a login screen on a preview URL, and assuming the site is
-   protected leaves the real subdomain wide open. Create a Zero Trust Access
-   application against the custom domain itself.
-2. **Whatever gates the site does not gate the repository.** If the dashboard's
-   repo is public, its contents are readable regardless of any password. The
-   repository must be private, and anything sensitive it consumes must be
-   gitignored.
+1. **Cloudflare Pages has an "Enable access policy" toggle in project settings.
+   It protects preview deployments only — not your production custom domain.**
+   Cloudflare's own documentation says so plainly. Flip it, see a login screen
+   on a preview URL, assume you are protected, and the real subdomain is open to
+   the world. You must create a Zero Trust Access application against the custom
+   domain itself.
+2. **Whatever gates the site does not gate the repository.** A public repo with
+   the generated pages in it is readable by anyone regardless of any password.
+   Both repositories must be private.
+3. **Fail closed.** If the credentials or configuration are missing, serve an
+   error. Never fall through to serving the content.
 
-Fail closed: if the credentials or configuration are missing, serve an error
-rather than serving the dashboard.
+Verify the gate before sharing any link:
 
-**Open questions the owner must answer before building:**
+```sh
+curl -sI https://<subdomain>.xplabs.us | head -1        # expect 401
+curl -sI -u 'USER:PASS' https://<subdomain>.xplabs.us | head -1   # expect 200
+```
 
-- What does it actually show? Candidates from this project alone: game build and
-  release status, XP Education content coverage, benefits-directory link rot,
-  domain expiry, and open decisions. None of that is settled.
-- Where does the data come from — manual entry, files committed to its repo, or
+If the first command returns 200, the gate is not active. Stop.
+
+### `levi.xplabs.us` — personal dashboard
+
+A private dashboard for the owner's own use. Single user, so Basic Auth is
+sufficient.
+
+**Open questions to answer before building:**
+
+- What does it show? Candidates from this project alone: game build and release
+  status, XP Education content coverage, benefits-directory link rot, domain
+  expiry, open decisions. None of that is settled.
+- Where does the data come from — manual entry, a file committed to its repo, or
   live APIs? This decides whether it can stay static.
-- Is it one user or several? That decides Basic Auth versus Access.
 - Does it need to work offline, as XP Education does?
 
-**Recommended starting point.** Static, no build step, matching the rest of the
-site's conventions in section 6, reading from a committed JSON file. Add live
-data sources only when a specific one proves necessary. A dashboard that renders
-from a file cannot break at 2am; one that depends on five APIs can.
+**Recommended starting point.** Static, no build step, matching the conventions
+in section 6, rendering from a committed JSON file. Add live data sources only
+when a specific one proves necessary. A dashboard that renders from a file
+cannot break at 2am; one that depends on five APIs can.
+
+### `colby.xplabs.us` — family ancestry tree
+
+A genealogy site for the owner's family, generated from a **GEDCOM** export. The
+repository will be supplied separately.
+
+**This one has a privacy problem the dashboard does not.** A GEDCOM contains full
+legal names, dates of birth, birthplaces and family relationships for **living**
+people. That combination is the answer key to most bank security questions, and
+those relatives did not consent to publication. A public genealogy site is
+indexed and scraped within days.
+
+So, three requirements that are not negotiable:
+
+1. **The site is gated.** Family only. Basic Auth is the right fit — one password
+   the owner can text to relatives, no accounts for anyone to create.
+2. **The repository is private.** Non-negotiable for the reason in trap 2 above.
+3. **Living people are privatized.** Standard genealogy practice: suppress detail
+   for anyone living, or born within roughly the last 100 years with no recorded
+   death. Names may remain; dates, places and personal detail are withheld. Most
+   genealogy software can privatize on export, and `Ged2Site` does it by default.
+
+**The raw GEDCOM must never be committed** — not even to a private repo. Gitignore
+`*.ged`, `*.gedcom`, `*.ftm`, `*.gramps` and any `raw/` or `originals/` directory.
+The published pages are a privatized derivative; the source stays on the owner's
+machine.
+
+Add `X-Robots-Tag: noindex, nofollow, noarchive` and `Cache-Control: no-store` to
+every response as defence in depth, so that if the gate is ever misconfigured the
+damage is bounded.
+
+A working Basic Auth middleware for Cloudflare Pages — constant-time comparison,
+fail-closed behaviour, and those headers — is kept in **`subdomain-starter/`** in
+this repository, together with a `.gitignore` template that blocks raw GEDCOM
+files. Copy it into each subdomain's own private repo. It lives here so it does
+not get lost, not because it belongs to the public site; nothing in it is
+deployed as part of `xplabs.us`.
 
 ---
 
@@ -365,4 +418,5 @@ Education was built, already merged.
 
 **Not done.** The site has never been deployed — it has only ever run on a local
 server, so treat first deployment as unproven work rather than a formality.
-`levi.xplabs.us` does not exist. Nothing in section 7 is answered.
+Neither `levi.xplabs.us` nor `colby.xplabs.us` exists. Nothing in section 7
+is answered.

@@ -1,0 +1,18 @@
+# Raw genealogy data must never be committed, even to a private repo.
+# A GEDCOM contains full names, birthdates, and birthplaces for LIVING people.
+# The published site shows a privatized version; these are the raw sources.
+*.ged
+*.gedcom
+*.GED
+*.ftm
+*.gramps
+*.gpkg
+/raw/
+/private/
+
+# Scans and family photos - keep the originals off the repo, they are large
+# and often contain document images with sensitive detail.
+/originals/
+
+.DS_Store
+Thumbs.db
