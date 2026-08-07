@@ -65,7 +65,8 @@ a{color:var(--accent)}
 .sitebar__in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
   gap:.4rem 1rem;padding-block:.55rem}
 .sitebar a{color:#EDEAE4;text-decoration:none}
-.sitebar__logo{font-weight:800;letter-spacing:.02em}
+.sitebar__logo{display:inline-flex;align-items:center}
+.sitebar__logo img{height:17px;width:auto;display:block}
 .sitebar nav{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem}
 .sitebar nav a{border-bottom:2px solid transparent;padding-bottom:1px}
 .sitebar nav a:hover,.sitebar nav a[aria-current]{border-bottom-color:#EDEAE4}
@@ -181,12 +182,12 @@ a{color:var(--accent)}
      absolute — a root-relative href here would resolve against this origin and
      dead-end. Only the Benefits link stays relative, because it is this page. -->
 <div class="sitebar"><div class="wrap sitebar__in">
-  <a class="sitebar__logo" href="https://xplabs.us/">XPLABS</a>
+  <a class="sitebar__logo" href="https://xplabs.us/"><img src="/logo.png" alt="XP Labs" width="440" height="107"></a>
   <nav aria-label="Site">
     <a href="https://play.xplabs.us/">Games</a>
     <a href="https://learn.xplabs.us/">Education</a>
     <a href="https://xplabs.us/engineering/">Engineering</a>
-    <a href="/" aria-current="page">Benefits</a>
+    <a href="/" aria-current="page">Military Freebies</a>
     <a href="https://xplabs.us/about/">About</a>
     <a href="https://xplabs.us/invest/">Invest</a>
   </nav>
