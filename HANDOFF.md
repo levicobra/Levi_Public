@@ -179,19 +179,22 @@ repository.
 
 ### Both of them: how to gate a subdomain
 
-Two workable options:
+The two subdomains want different answers, and the deciding factor is who is on
+the other side. Do not pick one mechanism for both.
 
-- **Cloudflare Access** (Zero Trust) — email one-time-PIN. No password to
-  manage, per-person revocation, and non-technical people can use it without
-  being issued credentials. Better when more than one person needs in.
-- **A PIN gate via Pages middleware** — one shared access code, held as a
-  Cloudflare **secret**, never in the repository. Simpler, and enough for a
-  single user or a family who will all use the same code. This is what is
-  implemented in `subdomain-starter/`.
+- **`levi.xplabs.us` → Cloudflare Access** (Zero Trust), Cloudflare as the
+  identity provider, with a hardware security key on the Cloudflare account.
+  One user, who already has that account. No login form, no session table, no
+  password comparison in the code at all. **Do not enable one-time PIN on this
+  policy** — it makes his email inbox the credential.
+- **`colby.xplabs.us` → the PIN gate in `subdomain-starter/`.** A group of
+  relatives who will not create accounts and who need one code that can be
+  texted to them. Access would mean issuing every relative an identity; a
+  shared code is the right shape for a family archive.
 
-Basic Auth was the earlier choice here and was replaced. The browser credential
-box reads like an error to anyone non-technical, cannot be styled or explained,
-and offers no way to sign out.
+Basic Auth was the earlier choice for both and was replaced. The browser
+credential box reads like an error to anyone non-technical, cannot be styled or
+explained, and offers no way to sign out.
 
 Four traps, in order of how badly they bite:
 
@@ -225,9 +228,32 @@ it. Stop.
 
 ### `levi.xplabs.us` — personal dashboard
 
-A private dashboard for the owner's own use. Single user, so the same PIN gate
-in `subdomain-starter/` is sufficient — with its own separate access code and
-cookie secret, so that sharing the family code never exposes the dashboard.
+A private dashboard for the owner's own use.
+
+**Use Cloudflare Access here, not the PIN gate** — the two subdomains want
+different answers, and the difference is who is on the other side.
+
+`colby.xplabs.us` is a group of relatives who will not create accounts and who
+need one code the owner can text them. A shared PIN is genuinely the right shape
+for that.
+
+`levi.xplabs.us` has exactly one user, who already has a Cloudflare account.
+Access with Cloudflare as the identity provider means there is **no login form,
+no session table, and no password comparison anywhere in the code** — the whole
+category of bug the PIN gate has to be tested against stops existing, and a
+hardware security key on the Cloudflare account protects it far better than any
+string he would actually be willing to type. Do not enable one-time PIN on the
+Access policy; that makes his email inbox the credential.
+
+Add in-Worker verification of the `Cf-Access-Jwt-Assertion` header as a
+backstop, and put Access on the `*.pages.dev` hostnames too — an unprotected
+preview URL is a second front door to the same D1 and R2 bindings.
+
+A full architecture — storage model, encryption envelope, recurrence handling,
+document upload, cost analysis against the free tier, and the build order — is
+in **`docs/levi-dashboard-architecture.md`**. It is a recommendation, not a
+decision; its section 9 lists six questions only the owner can answer, the first
+of which changes the whole design.
 
 **What it contains** — specified by the owner:
 
