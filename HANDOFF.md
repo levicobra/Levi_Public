@@ -18,10 +18,11 @@ Paste this into a fresh session, along with a clone of this repository.
 >
 > Read `HANDOFF.md` in the repository root first. It describes what exists, the
 > rules the codebase follows, the facts that have been verified, and the
-> decisions still open. Follow the constraints in section 5 — they are not
+> decisions still open. Follow the constraints in section 6 — they are not
 > stylistic preferences, they are the reason the site still works.
 >
-> The site is seven static pages plus a self-contained offline learning app.
+> The site is six static pages plus a self-contained offline learning app, with a
+> seventh area (`levi.xplabs.us`, section 5) still to be built.
 > There is no build step, no package manager, and no framework. Every page is a
 > single HTML file with inline CSS, and must load with zero external network
 > requests. Do not introduce a bundler, a CSS framework, a web font, or an npm
@@ -35,9 +36,9 @@ Paste this into a fresh session, along with a clone of this repository.
 > Verify your work by rendering it in a real browser at 320, 360, 768, 1440 and
 > 2560 pixels wide and confirming zero horizontal overflow, zero console errors
 > and zero failed requests — then by clicking through the actual user path.
-> Checking HTTP status codes is not verification. Section 7 has the procedure.
+> Checking HTTP status codes is not verification. Section 8 has the procedure.
 >
-> Before starting, tell me which of the open decisions in section 6 you need
+> Before starting, tell me which of the open decisions in section 7 you need
 > answered, and do not invent answers to them.
 
 ---
@@ -50,12 +51,12 @@ public resources.
 | Area | Path | What it is |
 |---|---|---|
 | Hub | `/` | Company front page; four games, education, three directories |
-| Games catalog | `/games/` | All four titles, with stack and status |
-| The Last Station | `/games/the-last-station/` | Title page for the flagship game |
+| Games catalog | `/games/` | **All four titles, at equal depth.** There is no per-game page |
 | XP Education | `/education/` | Offline learning app, 106 subjects, 14 domains |
 | Military benefits | `/military-benefits/` | Free directory, 279 resources, 13 categories |
 | Engineering | `/engineering/` | How things are built, plus consulting |
 | Personal | `/personal/` | About the founder |
+| Dashboard | `levi.xplabs.us` | **Not built.** Private personal dashboard — see section 5 |
 
 The four games are **The Last Station** (Unreal Engine 5, mobile),
 **Space Glyph** (Swift 6 / SpriteKit, iPhone), **Life XP** (SwiftUI / SceneKit,
@@ -79,8 +80,7 @@ xplabs-site/                      THE SITE — everything below deploys
   robots.txt  sitemap.xml
   game-art/                       WebP, production
   game-art-src/                   original PNG masters (not deployed)
-  games/index.html                catalog
-  games/the-last-station/index.html
+  games/index.html                catalog — all four titles
   education/                      offline learning app (see section 4)
   engineering/index.html
   personal/index.html
@@ -139,6 +139,11 @@ a content hash, which is how deployed clients pick up new content. Run it after
 any content change. The markers it writes between are generated — never edit
 them by hand.
 
+XP Education was built on the branch **`claude/offline-education-platform-c3u3yl`**
+and merged into the working branch. That branch is the origin of every file under
+`education/`; its history is worth reading before making structural changes,
+because the content pipeline and the service worker were developed together.
+
 Content lives in `content/subjects/<id>.json`, one file per subject, indexed by
 `content/catalog.json`. College subjects follow the scope and sequence of
 OpenStax open textbooks (CC BY 4.0) with attribution and a link to the free book
@@ -146,7 +151,59 @@ on every subject page. Keep that attribution.
 
 ---
 
-## 5. Constraints — read before changing anything
+## 5. `levi.xplabs.us` — personal dashboard (to be built)
+
+Not built. This section is the brief.
+
+A private dashboard for the owner's own use, to be engineered separately. It is
+**not** part of the public site and should not be linked from it.
+
+**Where it goes.** A subdomain of `xplabs.us`. Subdomains cost nothing on the
+hosting plan in section 10, so this needs no new domain and no new bill. Give it
+its own Cloudflare Pages project and its own repository.
+
+**It must be access-controlled.** A personal dashboard aggregates things a
+stranger should not see. Two workable options:
+
+- *Cloudflare Access* (Zero Trust) — email one-time-PIN, no password to manage,
+  per-person revocation. Better if more than one person ever needs in.
+- *HTTP Basic Auth via Pages middleware* — one shared username and password held
+  as Cloudflare secrets, never in the repository. Simpler, and enough for one
+  user.
+
+Two traps, both of which have caught people on this project's sibling work:
+
+1. Cloudflare Pages has an **"Enable access policy"** toggle in project settings.
+   It protects **preview deployments only** — not the production custom domain.
+   Flipping it, seeing a login screen on a preview URL, and assuming the site is
+   protected leaves the real subdomain wide open. Create a Zero Trust Access
+   application against the custom domain itself.
+2. **Whatever gates the site does not gate the repository.** If the dashboard's
+   repo is public, its contents are readable regardless of any password. The
+   repository must be private, and anything sensitive it consumes must be
+   gitignored.
+
+Fail closed: if the credentials or configuration are missing, serve an error
+rather than serving the dashboard.
+
+**Open questions the owner must answer before building:**
+
+- What does it actually show? Candidates from this project alone: game build and
+  release status, XP Education content coverage, benefits-directory link rot,
+  domain expiry, and open decisions. None of that is settled.
+- Where does the data come from — manual entry, files committed to its repo, or
+  live APIs? This decides whether it can stay static.
+- Is it one user or several? That decides Basic Auth versus Access.
+- Does it need to work offline, as XP Education does?
+
+**Recommended starting point.** Static, no build step, matching the rest of the
+site's conventions in section 6, reading from a committed JSON file. Add live
+data sources only when a specific one proves necessary. A dashboard that renders
+from a file cannot break at 2am; one that depends on five APIs can.
+
+---
+
+## 6. Constraints — read before changing anything
 
 These are the rules the site is built on. Each exists for a reason.
 
@@ -188,7 +245,7 @@ These are the rules the site is built on. Each exists for a reason.
 
 ---
 
-## 6. Open decisions — the owner must answer these
+## 7. Open decisions — the owner must answer these
 
 Do not guess at any of them.
 
@@ -203,7 +260,7 @@ Do not guess at any of them.
 
 ---
 
-## 7. How to verify work
+## 8. How to verify work
 
 Checking that a URL returns 200 is not verification. It was done on this project
 and it missed that every page was a dead end.
@@ -234,7 +291,7 @@ two domains that had been taken over by unrelated third parties.
 
 ---
 
-## 8. Traps that have already caught someone
+## 9. Traps that have already caught someone
 
 Each of these cost real time. They are recorded so they cost nobody else.
 
@@ -262,7 +319,7 @@ Each of these cost real time. They are recorded so they cost nobody else.
 
 ---
 
-## 9. Verified facts
+## 10. Verified facts
 
 Checked against primary sources on 2026-08-07.
 
@@ -291,16 +348,21 @@ to be recreated. Connect the repository from the start.
 
 ---
 
-## 10. State at handoff
+## 11. State at handoff
 
 Branch `claude/github-repo-content-h574sv`, open as pull request #1 against
 `main`.
 
-Verified at handoff: seven pages, 55 internal links, **zero dead**; zero
-horizontal overflow at all five test widths; zero console errors; zero external
+Verified at handoff: six pages, 49 internal links, **zero dead**; zero horizontal
+overflow at 320, 360, 768, 1440 and 2560; zero console errors; zero external
 requests; 284 outbound links on the benefits directory, all carrying
 `target="_blank" rel="noopener"`; 106 subject files matching the 106 subjects
 declared in the education catalog.
 
-Not done: the site has never been deployed. It has only ever run on a local
-server. Nothing in section 6 is answered.
+Branches that matter: `claude/github-repo-content-h574sv` is the working branch
+and pull request #1. `claude/offline-education-platform-c3u3yl` is where XP
+Education was built, already merged.
+
+**Not done.** The site has never been deployed — it has only ever run on a local
+server, so treat first deployment as unproven work rather than a formality.
+`levi.xplabs.us` does not exist. Nothing in section 7 is answered.

@@ -20,8 +20,7 @@
 <style>
 /* =====================================================================
    XPLabs — Games index
-   Design tokens are identical to games/the-last-station/index.html.
-   To restyle both pages, change the values in BOTH :root blocks.
+   This is the only games page. Every title lives here, at the same depth.
    ===================================================================== */
 :root {
   --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;
@@ -86,6 +85,11 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 .game__body strong{color:var(--paper);font-weight:600}
 .game__link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;color:var(--signal);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .16s}
 .game__link:hover{border-bottom-color:var(--signal)}
+
+.keyart{margin:0 0 1rem}
+.keyart img{width:100%;border:1px solid var(--line);border-radius:var(--radius)}
+.keyart figcaption{font-family:var(--mono);font-size:var(--t-micro);color:var(--muted-dim);
+  margin-top:.5rem;line-height:1.5}
 
 /* spec table — the card's right column */
 .spec{border:1px solid var(--line-soft);border-radius:var(--radius);background:var(--ink-2);align-self:start}
@@ -158,8 +162,14 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
       <p class="game__body">You play <strong>C</strong>, the last operator of a dying signal station
       on a refurbished offshore rig. Expeditions run about three minutes, campaign levels about
       ninety seconds, and a restart takes under two.</p>
-      <a class="game__link" href="/games/the-last-station/">View the title page <span aria-hidden="true">→</span></a>
     </div>
+    <div>
+      <figure class="keyart">
+        <img src="../game-art/da_world_phosphor_station_backdrop.webp" width="1672" height="941"
+             loading="lazy" decoding="async"
+             alt="A night-time offshore rig station lit by green phosphor light beneath a teal aurora.">
+        <figcaption>Phosphor Station &mdash; the signal you are trying to keep alive.</figcaption>
+      </figure>
     <div class="spec">
       <dl>
         <dt>Status</dt><dd><span class="status"><span class="dot" aria-hidden="true"></span>In development</span></dd>
@@ -169,6 +179,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
         <dt>Session</dt><dd>~3 min</dd>
         <dt>Model</dt><dd>Free to play</dd>
       </dl>
+    </div>
     </div>
   </article>
 
