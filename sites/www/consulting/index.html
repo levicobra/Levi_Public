@@ -37,10 +37,19 @@
    ../index.html. Run tools/sync_nav.py rather than editing the nav here.
    ===================================================================== */
 :root {
-  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;
+  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0D1218; --surface-2:#131A22;
   --line:#1E2527; --line-soft:#161C1D;
   --paper:#E9EFEC; --muted:#9BA8A3; --muted-dim:#7E8B86;
-  --signal:#3FAC33; --amber:#F5A524;
+  /* ---- Consulting theme ----------------------------------------------
+     Azure. Reads institutional rather than startup, which is the register
+   a public-sector or enterprise buyer is reading this page in.
+     Accent measures 7.60:1 on --ink, so it stays legible on the 11px
+     monospace labels it is used for. The surfaces are the shared
+     near-black nudged a few points toward the accent hue: felt
+     rather than seen, which is the point.
+     --amber does not vary across the estate. Leave it alone. */
+  --signal:#4DA3FF;     /* 7.60:1 on --ink */
+  --amber:#F5A524;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --t-micro:0.6875rem; --t-small:0.8125rem; --t-body:1.0625rem;
