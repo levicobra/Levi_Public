@@ -1,0 +1,827 @@
+{
+ "id": "differential-equations",
+ "title": "Differential Equations",
+ "domain": "math",
+ "level": "Advanced",
+ "description": "A working course in ordinary differential equations: what they model, how to solve first-order and second-order equations by hand, how Laplace transforms turn calculus into algebra, how systems of equations describe interacting quantities, and how power series and numerical methods handle equations with no elementary solution. Every technique is carried through to a checked, numerical answer.",
+ "outcomes": [
+  "You can classify a differential equation, verify a proposed solution, and solve separable equations by hand.",
+  "You can solve linear and exact first-order equations, and model growth, decay, and mixing problems with them.",
+  "You can solve second-order linear equations with constant coefficients, both homogeneous and nonhomogeneous, and apply them to springs and circuits.",
+  "You can use Laplace transforms to convert an initial value problem into algebra, solve it, and transform back.",
+  "You can write a system of differential equations in matrix form, solve it with eigenvalues and eigenvectors, and classify its equilibrium using a phase plane.",
+  "You can find a power series solution to an equation with no elementary solution, and approximate any equation numerically with Euler's method."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Introduction to Differential Equations",
+   "summary": "What a differential equation is, how to verify and interpret its solutions, and how to solve the simplest type: separable equations.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Is a Differential Equation",
+     "minutes": 14,
+     "intro": "A differential equation almost never tells you a quantity's value directly - instead, it tells you the rule its rate of change obeys, and asks you to reconstruct the quantity itself. That reversal is what makes this subject the mathematical language of change, from radioactive decay to orbital mechanics.",
+     "sections": [
+      {
+       "heading": "Defining a Differential Equation",
+       "body": [
+        "A **differential equation** is an equation involving an unknown function and one or more of its derivatives. An **ordinary differential equation (ODE)** involves derivatives with respect to a single variable, like dy/dx; a **partial differential equation (PDE)** involves derivatives with respect to more than one variable. This course focuses entirely on ODEs.",
+        "The **order** of a differential equation is the highest derivative appearing in it. dy/dx = 3y is first-order; y'' + 4y = 0 is second-order. Order matters because it determines how many arbitrary constants - and how much extra information, like initial conditions - are needed to pin down one specific solution."
+       ]
+      },
+      {
+       "heading": "Verifying and Classifying Solutions",
+       "body": [
+        "A **solution** to a differential equation is any function that makes the equation true when substituted in, along with its derivatives. The **general solution** contains arbitrary constants (one per order, typically) and represents an entire family of functions satisfying the equation; a **particular solution** fixes those constants using extra given information, usually an **initial condition** like y(0) = 5.",
+        "Verifying a proposed solution is always a direct check: compute the needed derivatives and substitute them into the original equation to confirm both sides match. This is worth doing as a habit - it catches algebra mistakes immediately and builds trust in every technique that follows."
+       ],
+       "example": {
+        "problem": "Show that y = Ce^(2x) is a solution of dy/dx = 2y for any constant C, and find the particular solution satisfying y(0) = 5.",
+        "steps": [
+         "Differentiate the proposed solution: if y = Ce^(2x), then dy/dx = 2Ce^(2x).",
+         "Compare to the right side of the equation, 2y = 2Ce^(2x). Both sides match for any value of C, so y = Ce^(2x) is indeed a general solution.",
+         "Apply the initial condition y(0) = 5: substitute x = 0 into y = Ce^(2x), giving 5 = Ce^0 = C, so C = 5."
+        ],
+        "answer": "The particular solution is y = 5e^(2x)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "differential equation", "def": "An equation relating an unknown function to one or more of its derivatives."},
+      {"term": "order", "def": "The highest derivative appearing in a differential equation."},
+      {"term": "general solution", "def": "A family of solutions containing arbitrary constants."},
+      {"term": "particular solution", "def": "A single solution obtained by fixing the constants using given conditions."},
+      {"term": "initial condition", "def": "A given value of the solution (and possibly its derivatives) at a specific point, used to find a particular solution."}
+     ],
+     "practice": [
+      {"q": "What is the order of the differential equation y''' + 2y'' - y = x?", "choices": ["1", "2", "3", "4"], "answer": 2, "explain": "The order is determined by the highest derivative present, which here is y''' (the third derivative)."},
+      {"q": "Verify: is y = 3x^2 a solution of y' = 2y/x (for x ≠ 0)?", "choices": ["No, the derivatives don't match", "Yes, both sides equal 6x when substituted", "Only when x = 0", "Cannot be determined"], "answer": 1, "explain": "y' = 6x. Check the right side: 2y/x = 2(3x²)/x = 6x. Both sides equal 6x, so y = 3x² is indeed a solution."},
+      {"q": "A general solution to a first-order differential equation typically contains how many arbitrary constants?", "choices": ["Zero", "One", "Two", "As many as the equation has terms"], "answer": 1, "explain": "The order of the equation typically matches the number of arbitrary constants needed; a first-order equation needs exactly one constant, later fixed by one initial condition."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Slope Fields and Equilibrium Solutions",
+     "minutes": 13,
+     "intro": "You can sketch what a solution looks like without solving a single equation, just by drawing a short line segment at every point showing the slope the solution must have there. Zoom out from enough of these segments and the shape of every solution curve becomes visible.",
+     "sections": [
+      {
+       "heading": "Reading a Slope Field",
+       "body": [
+        "A **slope field** (or direction field) for dy/dx = f(x, y) draws a short line segment at many points (x, y), with slope equal to f(x, y) at that exact point. A solution curve must be tangent to these segments everywhere it passes - so tracing a smooth path that follows the segments sketches an approximate solution without any algebra.",
+        "Slope fields are especially valuable for equations that cannot be solved with elementary techniques: even when no formula for y(x) exists, the slope field still reveals the qualitative shape - whether solutions grow, decay, oscillate, or level off."
+       ]
+      },
+      {
+       "heading": "Equilibrium Solutions",
+       "body": [
+        "An **autonomous equation** has the form dy/dt = f(y), where the rate of change depends only on y, not on t directly. An **equilibrium solution** is a constant solution y = k where f(k) = 0 - the slope is zero everywhere along that horizontal line, so a solution starting exactly there never moves.",
+        "An equilibrium is **stable** if nearby solutions move toward it over time, and **unstable** if nearby solutions move away. You can determine this just from the sign of f(y) on either side of the equilibrium: if f(y) pushes solutions back toward k from both sides, it is stable."
+       ],
+       "example": {
+        "problem": "For the autonomous equation dy/dt = y(3 - y), find the equilibrium solutions and describe the behavior of solutions starting near each one.",
+        "steps": [
+         "Set f(y) = y(3-y) = 0: this gives y = 0 or y = 3. These are the two equilibrium solutions.",
+         "For 0 < y < 3, both factors y and (3-y) are positive, so f(y) > 0: solutions in this range increase, moving up toward y = 3.",
+         "For y > 3, the factor (3-y) is negative while y is positive, so f(y) < 0: solutions above 3 decrease, also moving down toward y = 3.",
+         "For y < 0, y is negative and (3-y) is positive, so f(y) < 0: solutions below 0 decrease further, moving away from y = 0."
+        ],
+        "answer": "y = 0 is an unstable equilibrium (nearby solutions move away from it); y = 3 is a stable equilibrium (nearby solutions move toward it from both sides)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "slope field", "def": "A diagram of short line segments showing the slope dy/dx at many points, without solving the equation."},
+      {"term": "autonomous equation", "def": "A differential equation of the form dy/dt = f(y), depending only on y."},
+      {"term": "equilibrium solution", "def": "A constant solution y = k where f(k) = 0."},
+      {"term": "stable equilibrium", "def": "An equilibrium that nearby solutions move toward over time."}
+     ],
+     "practice": [
+      {"q": "In a slope field for dy/dx = f(x,y), what does the segment drawn at a point (x,y) represent?", "choices": ["The value of y at that point", "The slope any solution curve must have if it passes through that point", "The second derivative at that point", "The equilibrium solution nearest that point"], "answer": 1, "explain": "Each segment shows the required slope f(x,y) at that location; any solution curve passing through must be tangent to it."},
+      {"q": "For the autonomous equation dy/dt = 2 - y, what is the equilibrium solution?", "choices": ["y = 0", "y = 1", "y = 2", "There is no equilibrium"], "answer": 2, "explain": "Setting f(y) = 2 - y = 0 gives y = 2 as the constant equilibrium solution."},
+      {"q": "For dy/dt = 2 - y, is the equilibrium at y = 2 stable or unstable?", "choices": ["Stable, since f(y) > 0 for y < 2 and f(y) < 0 for y > 2, pushing solutions back toward 2", "Unstable, since all nearby solutions move away", "Neither - equilibria of linear equations have no stability", "Cannot be determined without solving the equation"], "answer": 0, "explain": "For y < 2, f(y) = 2-y > 0, so y increases toward 2. For y > 2, f(y) < 0, so y decreases toward 2. Both sides push toward the equilibrium, making it stable."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Separable Equations",
+     "minutes": 15,
+     "intro": "Some differential equations can be pulled apart entirely, with every x on one side of the equation and every y on the other. Once separated, solving the equation is nothing more than two ordinary integrals - the first and most direct solving technique in the entire subject.",
+     "sections": [
+      {
+       "heading": "Separating the Variables",
+       "body": [
+        "A first-order equation is **separable** if it can be written as dy/dx = g(x)h(y) - the right side factors cleanly into a piece depending only on x and a piece depending only on y. To solve it, rearrange algebraically so all y-terms (including dy) sit on one side and all x-terms (including dx) sit on the other: dy/h(y) = g(x) dx.",
+        "Once separated, integrate both sides independently: ∫ dy/h(y) = ∫ g(x) dx. Each integral produces its own constant of integration, but since both constants are arbitrary, they can be combined into a single constant C on one side of the resulting equation."
+       ]
+      },
+      {
+       "heading": "Implicit and Explicit Solutions",
+       "body": [
+        "Integrating often leaves the solution in **implicit** form, like ln|y| = x²/2 + C, with y not isolated. Solving for y explicitly, when possible, gives the **explicit solution**: exponentiating both sides of ln|y| = x²/2 + C gives |y| = e^C e^(x²/2), and absorbing the constant e^C into a new constant A gives y = Ae^(x²/2).",
+        "Not every implicit solution can be solved explicitly for y - some are left in implicit form permanently, and that is a perfectly acceptable final answer. When an explicit form is available, though, it is usually preferred because it directly shows y as a function of x."
+       ],
+       "example": {
+        "problem": "Solve the initial value problem dy/dx = xy, y(0) = 2.",
+        "steps": [
+         "Separate variables: divide both sides by y and multiply by dx: dy/y = x dx.",
+         "Integrate both sides: ∫ dy/y = ∫ x dx gives ln|y| = x²/2 + C.",
+         "Exponentiate to solve explicitly: |y| = e^(x²/2 + C) = e^C · e^(x²/2). Let A = ±e^C, so y = Ae^(x²/2).",
+         "Apply the initial condition y(0) = 2: 2 = Ae^0 = A, so A = 2."
+        ],
+        "answer": "y = 2e^(x²/2)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "separable equation", "def": "An equation dy/dx = g(x)h(y) that can be split so all y-terms and all x-terms are on opposite sides."},
+      {"term": "implicit solution", "def": "A solution left in a form where y is not isolated, like an equation relating x and y."},
+      {"term": "explicit solution", "def": "A solution solved directly for y as a function of x."}
+     ],
+     "practice": [
+      {"q": "Which equation is separable?", "choices": ["dy/dx = x + y", "dy/dx = xy^2", "dy/dx = sin(x + y)", "dy/dx = e^(x+y) + x^2y"], "answer": 1, "explain": "dy/dx = xy² factors cleanly as g(x)h(y) = x · y², with x and y in separate factors; the others mix x and y in ways that cannot be split into a product of single-variable functions."},
+      {"q": "Solve dy/dx = 3x^2/y, y(0) = 2. What is y^2 in terms of x?", "choices": ["y^2 = x^3 + 4", "y^2 = 2x^3 + 4", "y^2 = 3x^3 + 4", "y^2 = x^2 + 4"], "answer": 1, "explain": "Separate: y dy = 3x² dx. Integrate both sides: y²/2 = x³ + C, so y² = 2x³ + 2C. Applying y(0)=2 gives 4 = 2C, so C = 2, and y² = 2x³ + 4."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "First-Order Equations",
+   "summary": "Solving equations that aren't separable using integrating factors and exactness, then applying both to real growth, decay, and mixing problems.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Linear First-Order Equations and Integrating Factors",
+     "minutes": 16,
+     "intro": "Not every first-order equation can be separated, but a huge class of them - the linear ones - can be solved with a clever trick: multiply the whole equation by exactly the right function, and the left side collapses into the derivative of a single product.",
+     "sections": [
+      {
+       "heading": "Standard Form and the Integrating Factor",
+       "body": [
+        "A first-order linear equation can always be written in **standard form**: dy/dx + P(x)y = Q(x). The trick that solves it is the **integrating factor** μ(x) = e^(∫P(x)dx). Multiplying both sides of the standard form by μ(x) makes the left side collapse exactly into d/dx[μ(x)y] - a fact you can verify by expanding the product rule and comparing.",
+        "Once the left side is a single derivative, both sides can be integrated directly: μ(x)y = ∫μ(x)Q(x)dx + C, and dividing by μ(x) isolates y. This method works for every linear first-order equation, regardless of whether it happens to also be separable."
+       ]
+      },
+      {
+       "heading": "Working Through the Steps",
+       "body": [
+        "The full procedure has four steps: rewrite the equation into standard form if needed, compute P(x) and the integrating factor μ(x) = e^(∫P dx), multiply through by μ(x) and rewrite the left side as d/dx[μy], then integrate both sides and solve for y.",
+        "A common shortcut when P(x) is just a constant is that ∫P dx = Px, so μ(x) = e^(Px) - no more complicated integration is required. This constant-coefficient case shows up constantly in mixing and cooling problems later in this unit."
+       ],
+       "example": {
+        "problem": "Solve the initial value problem dy/dx + 3y = 6, y(0) = 1.",
+        "steps": [
+         "The equation is already in standard form with P(x) = 3 and Q(x) = 6.",
+         "Compute the integrating factor: μ(x) = e^(∫3dx) = e^(3x).",
+         "Multiply through by e^(3x): d/dx[y·e^(3x)] = 6e^(3x). Integrate both sides: y·e^(3x) = 2e^(3x) + C, so y = 2 + Ce^(-3x).",
+         "Apply y(0) = 1: 1 = 2 + C, so C = -1."
+        ],
+        "answer": "y = 2 - e^(-3x)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "standard form", "def": "The form dy/dx + P(x)y = Q(x) required before applying the integrating factor method."},
+      {"term": "integrating factor", "def": "The function μ(x) = e^(∫P(x)dx) that, when multiplied through, makes the left side a single derivative."}
+     ],
+     "practice": [
+      {"q": "What is the integrating factor for dy/dx + 5y = 10?", "choices": ["e^(5x)", "e^(-5x)", "5e^x", "e^(10x)"], "answer": 0, "explain": "P(x) = 5, so μ(x) = e^(∫5dx) = e^(5x)."},
+      {"q": "After multiplying a linear equation by its integrating factor μ(x), the left side always simplifies to:", "choices": ["μ(x) + y", "d/dx[μ(x)y]", "y'/μ(x)", "μ(x)²y"], "answer": 1, "explain": "The integrating factor is specifically chosen so the left side collapses into the derivative of a single product, μ(x)y, by the product rule."},
+      {"q": "Solve dy/dx + 2y = 4, y(0) = 5. What is y?", "choices": ["y = 2 + 3e^(-2x)", "y = 2 - 3e^(-2x)", "y = 4 + e^(-2x)", "y = 5e^(-2x)"], "answer": 0, "explain": "μ = e^(2x); d/dx[ye^(2x)] = 4e^(2x), so ye^(2x) = 2e^(2x)+C, giving y = 2+Ce^(-2x). Applying y(0)=5: 5=2+C, so C=3, and y = 2+3e^(-2x)."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Exact Equations",
+     "minutes": 15,
+     "intro": "Some equations written as M(x,y)dx + N(x,y)dy = 0 are secretly the total derivative of a single hidden function - find that function, set it equal to a constant, and the equation is solved without ever separating a single variable.",
+     "sections": [
+      {
+       "heading": "Testing for Exactness",
+       "body": [
+        "An equation M(x,y)dx + N(x,y)dy = 0 is **exact** if there exists a function F(x,y) with ∂F/∂x = M and ∂F/∂y = N - meaning M dx + N dy is the total differential of F. The quick test for exactness, which avoids guessing F directly, is to check whether ∂M/∂y = ∂N/∂x; if these match, the equation is exact.",
+        "This test works because mixed partial derivatives of a well-behaved function are always equal (∂²F/∂y∂x = ∂²F/∂x∂y), so if F exists, its cross-partials of M and N must agree. If they do not agree, the equation is simply not exact and this method does not apply."
+       ]
+      },
+      {
+       "heading": "Finding the Potential Function",
+       "body": [
+        "Once exactness is confirmed, find F by integrating M with respect to x (treating y as constant), which gives F = ∫M dx + g(y) for some unknown function g(y) depending only on y. Differentiate this F with respect to y, set it equal to N, and solve for g'(y); integrating g'(y) completes F.",
+        "The final implicit solution is simply F(x, y) = C, since the original equation M dx + N dy = 0 is equivalent to dF = 0, meaning F stays constant along any solution curve."
+       ],
+       "example": {
+        "problem": "Solve the exact equation (2xy + 3)dx + (x² - 1)dy = 0.",
+        "steps": [
+         "Check exactness: ∂M/∂y = ∂/∂y(2xy+3) = 2x. ∂N/∂x = ∂/∂x(x²-1) = 2x. They match, so the equation is exact.",
+         "Integrate M with respect to x: F = ∫(2xy+3)dx = x²y + 3x + g(y).",
+         "Differentiate with respect to y and match N: ∂F/∂y = x² + g'(y) = x² - 1, so g'(y) = -1, giving g(y) = -y.",
+         "Assemble F: F(x,y) = x²y + 3x - y."
+        ],
+        "answer": "The implicit solution is x²y + 3x - y = C."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "exact equation", "def": "An equation M dx + N dy = 0 where M and N are the partial derivatives of a single function F."},
+      {"term": "potential function", "def": "The function F(x,y) whose total differential equals M dx + N dy for an exact equation."}
+     ],
+     "practice": [
+      {"q": "What is the test for whether M dx + N dy = 0 is exact?", "choices": ["Check if M = N", "Check if ∂M/∂y = ∂N/∂x", "Check if M and N are both polynomials", "Check if M dx = N dy"], "answer": 1, "explain": "Exactness requires M and N to be the partial derivatives of a common function F, which (by equality of mixed partials) forces ∂M/∂y to equal ∂N/∂x."},
+      {"q": "Is (3x^2 + y)dx + (x + 2y)dy = 0 exact?", "choices": ["Yes, since ∂M/∂y = 1 = ∂N/∂x", "No, since ∂M/∂y ≠ ∂N/∂x", "Cannot be tested without solving it", "Yes, but only when x = 0"], "answer": 0, "explain": "∂M/∂y = ∂/∂y(3x²+y) = 1. ∂N/∂x = ∂/∂x(x+2y) = 1. They are equal, so the equation is exact."},
+      {"q": "After confirming an equation is exact and finding F(x,y), what is the final solution?", "choices": ["y = F(x)", "F(x,y) = C, an implicit solution", "x = F(y)", "There is no solution without more integration"], "answer": 1, "explain": "Since the original equation is equivalent to dF = 0, F must remain constant along any solution curve, giving the implicit solution F(x,y) = C."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Applications: Growth, Decay, and Mixing",
+     "minutes": 17,
+     "intro": "The same handful of differential equation techniques quietly run radioactive dating labs, population models, and the tank-mixing problems that show up in every chemical engineering course. Seeing them applied to real numbers is where the abstract algebra finally earns its keep.",
+     "sections": [
+      {
+       "heading": "Exponential Growth and Decay",
+       "body": [
+        "Many quantities change at a rate proportional to their current amount: dy/dt = ky. This separable equation solves to y(t) = y~0~e^(kt), where y~0~ is the initial amount. If k > 0, the quantity grows exponentially; if k < 0, it decays exponentially. For decay problems, the **half-life** T is the time for the quantity to drop to half its value, related to k by k = -ln(2)/T.",
+        "Once k (or the half-life) is known, the same formula predicts the amount at any future time - this is exactly how radiocarbon dating estimates the age of ancient organic material, and how pharmacologists predict how a drug concentration falls in the bloodstream over time."
+       ],
+       "example": {
+        "problem": "A radioactive sample has a half-life of 10 days and starts at 80 grams. How much remains after 25 days?",
+        "steps": [
+         "Since the sample loses half its mass every 10 days, use y(t) = y~0~(1/2)^(t/T) with y~0~=80, T=10, t=25.",
+         "Compute the exponent: t/T = 25/10 = 2.5.",
+         "Compute (1/2)^2.5 = (1/2)^2 × (1/2)^0.5 = 0.25 × 0.7071 ≈ 0.1768.",
+         "Multiply: y(25) = 80 × 0.1768 ≈ 14.1 grams."
+        ],
+        "answer": "About 14.1 grams remain after 25 days."
+       }
+      },
+      {
+       "heading": "Mixing Problems",
+       "body": [
+        "A **mixing problem** models a tank of liquid where a solution flows in at some rate and concentration, and a mixed solution flows out at another rate. If y(t) is the amount of dissolved substance, the governing equation is dy/dt = (rate in) − (rate out), where the rate out depends on the current concentration y divided by the tank's volume, times the outflow rate.",
+        "When inflow and outflow rates are equal, the tank's volume stays constant, and the resulting equation is a standard linear first-order equation, solved exactly like the integrating factor problems from the previous lesson."
+       ],
+       "example": {
+        "problem": "A 100 L tank starts with 5 kg of dissolved salt. Brine at 0.1 kg/L flows in at 2 L/min, and the well-mixed solution flows out at 2 L/min. Find the amount of salt y(t), and evaluate at t = 50 minutes.",
+        "steps": [
+         "Rate in = 0.1 kg/L × 2 L/min = 0.2 kg/min. Rate out = (y/100) kg/L × 2 L/min = 0.02y kg/min. So dy/dt = 0.2 - 0.02y, or dy/dt + 0.02y = 0.2.",
+         "Integrating factor: μ = e^(0.02t). Then d/dt[y·e^(0.02t)] = 0.2e^(0.02t), giving y·e^(0.02t) = 10e^(0.02t) + C, so y = 10 + Ce^(-0.02t).",
+         "Apply y(0) = 5: 5 = 10 + C, so C = -5, giving y(t) = 10 - 5e^(-0.02t).",
+         "Evaluate at t = 50: y(50) = 10 - 5e^(-1) = 10 - 5(0.3679) ≈ 10 - 1.84 = 8.16 kg."
+        ],
+        "answer": "y(t) = 10 - 5e^(-0.02t); after 50 minutes, about 8.16 kg of salt remains in the tank."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "exponential growth/decay", "def": "A quantity changing at a rate proportional to itself: dy/dt = ky."},
+      {"term": "half-life", "def": "The time for a decaying quantity to fall to half its initial value."},
+      {"term": "mixing problem", "def": "A model of a tank where inflow and outflow determine the rate of change of a dissolved substance."}
+     ],
+     "practice": [
+      {"q": "A substance decays with dy/dt = ky and a half-life of 20 years. What is k?", "choices": ["k = -ln(2)/20", "k = -20/ln(2)", "k = ln(2)/20", "k = -20 ln(2)"], "answer": 0, "explain": "The half-life relates to k by k = -ln(2)/T, so with T=20, k = -ln(2)/20 (a small negative number, since the quantity decays)."},
+      {"q": "In a mixing problem where inflow and outflow rates are equal, why does the tank volume stay constant?", "choices": ["Because the concentration never changes", "Because liquid enters and leaves at the same rate, so the net volume change is zero", "Because dy/dt is always zero", "It doesn't - volume always changes in mixing problems"], "answer": 1, "explain": "If liquid flows in and out at the same rate, the total volume in the tank neither grows nor shrinks over time, even though the concentration of the dissolved substance can still change."},
+      {"q": "A population grows according to dy/dt = 0.05y with y(0) = 200. What is y(t)?", "choices": ["y = 200e^(0.05t)", "y = 200 + 0.05t", "y = 0.05e^(200t)", "y = 200e^(-0.05t)"], "answer": 0, "explain": "This is exponential growth, dy/dt = ky with k=0.05, which solves to y = y₀e^(kt) = 200e^(0.05t)."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Second-Order Linear Equations",
+   "summary": "Solving equations with a second derivative, both without and with an external forcing term, and applying them to springs and electrical circuits.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Homogeneous Equations with Constant Coefficients",
+     "minutes": 17,
+     "intro": "A second-order equation might look twice as hard as a first-order one, but for constant-coefficient homogeneous equations, the entire solution boils down to factoring a single quadratic - the same skill from algebra, repurposed to solve calculus problems.",
+     "sections": [
+      {
+       "heading": "The Characteristic Equation and Real Roots",
+       "body": [
+        "A **homogeneous** second-order linear equation with constant coefficients has the form ay'' + by' + cy = 0. Guessing a solution of the form y = e^(rx) and substituting in gives the **characteristic equation** ar² + br + c = 0 - an ordinary quadratic in r. If it has two distinct real roots r~1~ and r~2~, the general solution is y = C~1~e^(r1x) + C~2~e^(r2x).",
+        "If the characteristic equation has a **repeated root** r (a double root), the second solution is not simply another exponential - it requires an extra factor of x: the general solution becomes y = (C~1~ + C~2~x)e^(rx), which arises from a more careful derivation using reduction of order."
+       ],
+       "example": {
+        "problem": "Solve y'' - 5y' + 6y = 0 with initial conditions y(0) = 1, y'(0) = 0.",
+        "steps": [
+         "Form the characteristic equation: r² - 5r + 6 = 0, which factors as (r-2)(r-3) = 0, giving r = 2 and r = 3.",
+         "Since the roots are real and distinct, the general solution is y = C~1~e^(2x) + C~2~e^(3x).",
+         "Apply y(0) = 1: C~1~ + C~2~ = 1. Differentiate: y' = 2C~1~e^(2x) + 3C~2~e^(3x); apply y'(0) = 0: 2C~1~ + 3C~2~ = 0.",
+         "Solve the system: from the first equation, C~1~ = 1 - C~2~. Substitute: 2(1-C~2~) + 3C~2~ = 0 → 2 + C~2~ = 0 → C~2~ = -2, so C~1~ = 3."
+        ],
+        "answer": "y = 3e^(2x) - 2e^(3x)."
+       }
+      },
+      {
+       "heading": "Complex Roots and Oscillation",
+       "body": [
+        "If the characteristic equation has **complex roots** r = α ± βi (which happens when the discriminant b² - 4ac is negative), the general solution takes the oscillating form y = e^(αx)(C~1~cos(βx) + C~2~sin(βx)). The real part α controls exponential growth or decay of the oscillation's envelope, while the imaginary part β controls the oscillation frequency.",
+        "This case is the mathematical foundation of every vibrating or oscillating physical system - a mass on a spring, current in an LC circuit, or a swinging pendulum for small angles all produce characteristic equations with complex roots, and all show this same oscillating exponential behavior."
+       ],
+       "example": {
+        "problem": "Solve y'' + 4y' + 13y = 0.",
+        "steps": [
+         "Form the characteristic equation: r² + 4r + 13 = 0. Use the quadratic formula: r = (-4 ± √(16-52))/2 = (-4 ± √(-36))/2.",
+         "Since √(-36) = 6i, r = (-4 ± 6i)/2 = -2 ± 3i. So α = -2 and β = 3."
+        ],
+        "answer": "y = e^(-2x)(C~1~cos(3x) + C~2~sin(3x))."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "homogeneous equation", "def": "A linear equation ay''+by'+cy=0 with no separate forcing term on the right side."},
+      {"term": "characteristic equation", "def": "The quadratic ar²+br+c=0 obtained by substituting y=e^(rx)."},
+      {"term": "repeated root", "def": "A double root of the characteristic equation, requiring a solution term of the form xe^(rx)."},
+      {"term": "complex roots", "def": "Roots r=α±βi arising when the discriminant is negative, giving oscillating solutions."}
+     ],
+     "practice": [
+      {"q": "What is the characteristic equation of y'' + 7y' + 10y = 0?", "choices": ["r^2 + 7r + 10 = 0", "r + 7 + 10 = 0", "10r^2 + 7r + 1 = 0", "r^2 - 7r - 10 = 0"], "answer": 0, "explain": "Substituting y = e^(rx) into ay''+by'+cy=0 directly gives the quadratic ar²+br+c=0, here r²+7r+10=0."},
+      {"q": "The characteristic equation of a differential equation has a repeated root r = -3. What is the general solution?", "choices": ["y = C~1~e^(-3x) + C~2~e^(3x)", "y = (C~1~ + C~2~x)e^(-3x)", "y = C~1~cos(3x) + C~2~sin(3x)", "y = C~1~e^(-3x)"], "answer": 1, "explain": "A repeated root requires the extra factor of x on the second term: y = (C~1~ + C~2~x)e^(rx), here with r = -3."},
+      {"q": "y'' + 9y = 0 has characteristic equation r^2 + 9 = 0, with roots r = ±3i. What is the general solution?", "choices": ["y = C~1~e^(3x) + C~2~e^(-3x)", "y = (C~1~ + C~2~x)e^(3x)", "y = C~1~cos(3x) + C~2~sin(3x)", "y = C~1~cos(9x) + C~2~sin(9x)"], "answer": 2, "explain": "The roots are purely imaginary, r = 0 ± 3i, so α=0 and β=3, giving y = e^(0x)(C~1~cos3x+C~2~sin3x) = C~1~cos3x+C~2~sin3x."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Nonhomogeneous Equations: Undetermined Coefficients",
+     "minutes": 17,
+     "intro": "Add an external force - a push, a voltage source, a driving term - to a second-order equation, and the solution now has two parts: the equation's natural behavior, plus a specific response to that external push. Undetermined coefficients is the fastest way to find that second part.",
+     "sections": [
+      {
+       "heading": "Complementary and Particular Solutions",
+       "body": [
+        "A **nonhomogeneous** equation has the form ay'' + by' + cy = f(x), with f(x) not identically zero. Its general solution is always y = y~h~ + y~p~, where y~h~ is the **complementary solution** (the general solution of the matching homogeneous equation, found exactly as in the previous lesson) and y~p~ is any single **particular solution** satisfying the full equation with f(x) included.",
+        "The **method of undetermined coefficients** guesses a form for y~p~ based on the form of f(x): a polynomial forcing term suggests a polynomial guess, an exponential e^(kx) suggests Ae^(kx), and sin or cos terms suggest a combination of both sine and cosine. Substituting the guess into the full equation and matching coefficients pins down the unknown constants."
+       ]
+      },
+      {
+       "heading": "Solving a Full Nonhomogeneous Equation",
+       "body": [
+        "One important adjustment: if the natural guess for y~p~ already appears in y~h~ (for example, guessing Ae^(kx) when e^(kx) is already part of the homogeneous solution), the guess must be multiplied by x (or x² for a repeated overlap) to avoid a guess that automatically solves the homogeneous equation and cannot possibly satisfy the full one.",
+        "Once y~p~ is found, adding it to y~h~ gives the complete general solution, and any initial conditions are applied to this full combined solution - not to y~p~ or y~h~ separately - since only the sum is guaranteed to actually solve the original equation."
+       ],
+       "example": {
+        "problem": "Solve y'' - 3y' + 2y = 4e^(3x).",
+        "steps": [
+         "Find the complementary solution: the characteristic equation r² - 3r + 2 = 0 factors as (r-1)(r-2) = 0, giving r = 1, 2, so y~h~ = C~1~e^x + C~2~e^(2x).",
+         "Since the forcing term is 4e^(3x) and 3 is not a root of the characteristic equation, guess y~p~ = Ae^(3x). Then y~p~' = 3Ae^(3x) and y~p~'' = 9Ae^(3x).",
+         "Substitute into the equation: 9Ae^(3x) - 3(3Ae^(3x)) + 2(Ae^(3x)) = (9A - 9A + 2A)e^(3x) = 2Ae^(3x). Set equal to 4e^(3x): 2A = 4, so A = 2.",
+         "So y~p~ = 2e^(3x), and the general solution is y = y~h~ + y~p~."
+        ],
+        "answer": "y = C~1~e^x + C~2~e^(2x) + 2e^(3x)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "nonhomogeneous equation", "def": "An equation ay''+by'+cy=f(x) with a nonzero forcing term f(x)."},
+      {"term": "complementary solution", "def": "The general solution y~h~ of the matching homogeneous equation."},
+      {"term": "particular solution", "def": "Any single solution y~p~ satisfying the full nonhomogeneous equation."},
+      {"term": "undetermined coefficients", "def": "A method that guesses a form for y~p~ based on f(x), then solves for the unknown coefficients."}
+     ],
+     "practice": [
+      {"q": "For a nonhomogeneous equation, the general solution is always:", "choices": ["y = y~p~ only", "y = y~h~ + y~p~", "y = y~h~ − y~p~", "y = y~h~ × y~p~"], "answer": 1, "explain": "The general solution combines the complementary solution (capturing the homogeneous behavior and its constants) with any one particular solution satisfying the full equation."},
+      {"q": "For y'' + y = 3x, what is a reasonable guess for y~p~?", "choices": ["y~p~ = Ae^x", "y~p~ = A + Bx", "y~p~ = A cos(x)", "y~p~ = Ax^2e^x"], "answer": 1, "explain": "The forcing term 3x is a first-degree polynomial, so the standard guess is a general first-degree polynomial, A + Bx, with A and B to be determined."},
+      {"q": "Why must the guess for y~p~ be modified (multiplied by x) if it overlaps with y~h~?", "choices": ["To make the arithmetic simpler", "Because the un-modified guess would automatically satisfy the homogeneous equation and could never match a nonzero forcing term", "Because y~h~ must always be zero", "This modification is never actually necessary"], "answer": 1, "explain": "If the guessed form is already a solution of the homogeneous equation, substituting it into the full equation makes the left side collapse to zero, which can never equal a nonzero f(x) - multiplying by x breaks that automatic cancellation."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Applications: Springs and Circuits",
+     "minutes": 15,
+     "intro": "A mass bouncing on a spring and an electrical current oscillating in a circuit are described by the exact same differential equation, just with different letters for the variables - a striking reminder that mathematics doesn't care what field it's borrowed from.",
+     "sections": [
+      {
+       "heading": "The Mass-Spring System",
+       "body": [
+        "A mass m attached to a spring with stiffness k, with damping coefficient c and external force F(t), obeys mx'' + cx' + kx = F(t), where x(t) is displacement from equilibrium. With no damping and no force (c = 0, F = 0), the equation reduces to mx'' + kx = 0, giving purely oscillating solutions with **natural frequency** ω = √(k/m).",
+        "With damping present, the system is classified by the sign of the discriminant of its characteristic equation: **overdamped** (two distinct real roots, no oscillation, slow return to equilibrium), **critically damped** (a repeated real root, the fastest possible return without oscillating), or **underdamped** (complex roots, oscillation that gradually decays)."
+       ]
+      },
+      {
+       "heading": "The RLC Circuit Analogy",
+       "body": [
+        "An electrical circuit with an inductor (L), resistor (R), and capacitor (C) in series obeys Lq'' + Rq' + (1/C)q = E(t), where q(t) is charge and E(t) is the applied voltage - structurally identical to the spring equation, with L playing the role of mass, R playing the role of damping, and 1/C playing the role of spring stiffness.",
+        "This analogy is not just a coincidence of notation: it means every technique developed for mechanical vibrations - natural frequency, damping classification, resonance under a periodic force - applies directly, unchanged, to analyzing electrical circuits."
+       ],
+       "example": {
+        "problem": "A 1 kg mass on a spring with stiffness k = 4 N/m, with no damping or external force, is pulled to x = 1 m and released from rest. Find x(t).",
+        "steps": [
+         "The equation is x'' + 4x = 0 (dividing mx''+kx=0 by m=1). Characteristic equation: r² + 4 = 0, giving r = ±2i.",
+         "Since the roots are purely imaginary (α=0, β=2), the general solution is x(t) = C~1~cos(2t) + C~2~sin(2t).",
+         "Apply x(0) = 1: C~1~ = 1. Differentiate: x'(t) = -2C~1~sin(2t) + 2C~2~cos(2t); apply x'(0) = 0 (released from rest): 2C~2~ = 0, so C~2~ = 0."
+        ],
+        "answer": "x(t) = cos(2t); the mass oscillates forever with natural frequency ω = 2 rad/s, since there is no damping to dissipate energy."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "natural frequency", "def": "The frequency ω = √(k/m) at which an undamped mass-spring system oscillates."},
+      {"term": "overdamped", "def": "A damped system with two distinct real characteristic roots; returns to equilibrium without oscillating."},
+      {"term": "underdamped", "def": "A damped system with complex characteristic roots; oscillates with a decaying envelope."},
+      {"term": "RLC circuit", "def": "A series circuit with inductor, resistor, and capacitor, mathematically analogous to a damped mass-spring system."}
+     ],
+     "practice": [
+      {"q": "A mass-spring system has m = 2 kg and k = 8 N/m, with no damping. What is its natural frequency?", "choices": ["1 rad/s", "2 rad/s", "4 rad/s", "16 rad/s"], "answer": 1, "explain": "ω = √(k/m) = √(8/2) = √4 = 2 rad/s."},
+      {"q": "A damped spring system has a characteristic equation with two distinct real roots. How would you classify it?", "choices": ["Underdamped", "Critically damped", "Overdamped", "Undamped"], "answer": 2, "explain": "Two distinct real roots (a positive discriminant) correspond to the overdamped case: the system returns to equilibrium without any oscillation."},
+      {"q": "In the RLC circuit analogy, which mechanical quantity does the resistor R correspond to?", "choices": ["Mass", "Spring stiffness", "Damping", "Displacement"], "answer": 2, "explain": "R appears in the same position as the damping coefficient c in the mass-spring equation, so it plays the role of damping - dissipating energy from the oscillation."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Laplace Transforms",
+   "summary": "A transform that turns differential equations into algebra: define it, use it to solve initial value problems, and extend it to handle sudden jumps and impulses.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Definition and Basic Transforms",
+     "minutes": 15,
+     "intro": "The Laplace transform takes a function of time and rewrites it as a function of a new variable s, in a way that turns differentiation into multiplication. That single trade is powerful enough to convert an entire differential equation into ordinary algebra.",
+     "sections": [
+      {
+       "heading": "The Definition",
+       "body": [
+        "The **Laplace transform** of a function f(t), defined for t ≥ 0, is L{f(t)} = F(s) = ∫~0~^∞ e^(-st)f(t)dt, an improper integral in the variable s. The transform is **linear**: L{af(t) + bg(t)} = aF(s) + bG(s) for constants a, b, which lets you transform sums and scaled functions term by term.",
+        "Rather than computing this integral from scratch every time, practitioners build a **transform table** of common functions once, then look up (or combine) results from the table for new problems - much like a table of derivatives or integrals."
+       ]
+      },
+      {
+       "heading": "Basic Transforms from the Table",
+       "body": [
+        "A few workhorse entries: L{1} = 1/s, L{t^n} = n!/s^(n+1), L{e^(at)} = 1/(s-a), L{sin(at)} = a/(s²+a²), and L{cos(at)} = s/(s²+a²) - each valid for s greater than some threshold that keeps the defining integral finite.",
+        "Combined with linearity, this small table already handles a surprising number of functions: any polynomial, exponential, or sinusoid (and sums of them) can be transformed immediately without ever touching the defining integral directly."
+       ],
+       "example": {
+        "problem": "Use the definition of the Laplace transform to derive L{e^(at)}.",
+        "steps": [
+         "Set up the defining integral: L{e^(at)} = ∫~0~^∞ e^(-st)e^(at)dt = ∫~0~^∞ e^(-(s-a)t)dt.",
+         "Integrate: ∫~0~^∞ e^(-(s-a)t)dt = [-1/(s-a) · e^(-(s-a)t)]~0~^∞.",
+         "Evaluate the limits: as t→∞, e^(-(s-a)t)→0 (assuming s > a), leaving 0 − (−1/(s-a)) = 1/(s-a)."
+        ],
+        "answer": "L{e^(at)} = 1/(s-a), valid for s > a."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Laplace transform", "def": "L{f(t)} = ∫~0~^∞ e^(-st)f(t)dt, converting a function of t into a function of s."},
+      {"term": "linearity (of transforms)", "def": "L{af+bg} = aL{f}+bL{g}, allowing term-by-term transformation."},
+      {"term": "transform table", "def": "A reference list of Laplace transforms for common functions, avoiding repeated direct integration."}
+     ],
+     "practice": [
+      {"q": "Using L{1}=1/s and L{e^(at)}=1/(s-a), what is L{5 - 2e^(3t)}?", "choices": ["5/s - 2/(s-3)", "5s - 2(s-3)", "5/s + 2/(s-3)", "3/(s-5)"], "answer": 0, "explain": "By linearity, L{5 - 2e^(3t)} = 5L{1} - 2L{e^(3t)} = 5/s - 2/(s-3)."},
+      {"q": "What is L{t^3}, using L{t^n} = n!/s^(n+1)?", "choices": ["3/s^4", "6/s^4", "6/s^3", "3!/s^3"], "answer": 1, "explain": "With n=3: L{t^3} = 3!/s^(3+1) = 6/s^4, since 3! = 6."},
+      {"q": "What is L{cos(2t)}, using L{cos(at)} = s/(s²+a²)?", "choices": ["2/(s²+4)", "s/(s²+2)", "s/(s²+4)", "s/(s²+2t)"], "answer": 2, "explain": "With a=2: L{cos(2t)} = s/(s² + 2²) = s/(s²+4)."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Solving Initial Value Problems with Laplace Transforms",
+     "minutes": 17,
+     "intro": "The real payoff of the Laplace transform is what it does to derivatives: it turns them into simple algebraic terms involving the initial conditions. That means an entire initial value problem - equation and conditions together - can be solved in one algebraic pass.",
+     "sections": [
+      {
+       "heading": "Transforming Derivatives",
+       "body": [
+        "The Laplace transform of a derivative brings the initial conditions along for free: L{y'} = sY(s) - y(0), and L{y''} = s²Y(s) - sy(0) - y'(0), where Y(s) = L{y(t)}. This is what makes the method so powerful for initial value problems - the conditions y(0) and y'(0) are built directly into the transformed equation, with no separate step needed to apply them later.",
+        "The overall procedure: take the Laplace transform of every term in the differential equation (using the derivative rules and the basic transform table), solve the resulting algebraic equation for Y(s), and then find y(t) by taking the **inverse Laplace transform** of Y(s) - usually with the help of partial fractions."
+       ]
+      },
+      {
+       "heading": "Partial Fractions and Inverting",
+       "body": [
+        "After solving for Y(s), it typically appears as a ratio of polynomials in s. **Partial fraction decomposition** breaks this ratio into simpler pieces, each matching an entry in the transform table (like 1/(s-a) or s/(s²+a²)), so the inverse transform can be read off piece by piece.",
+        "This method solves the initial value problem in one pass, without ever separately finding a general solution and then applying initial conditions - a genuine shortcut for problems where the conditions are already known at the start."
+       ],
+       "example": {
+        "problem": "Use Laplace transforms to solve y'' - 3y' + 2y = 0, y(0) = 1, y'(0) = 0.",
+        "steps": [
+         "Transform each term: L{y''} = s²Y - s(1) - 0 = s²Y - s. L{y'} = sY - 1. L{2y} = 2Y. The equation becomes (s²Y - s) - 3(sY - 1) + 2Y = 0.",
+         "Expand and collect: s²Y - s - 3sY + 3 + 2Y = 0 → Y(s² - 3s + 2) = s - 3, so Y = (s-3)/((s-1)(s-2)).",
+         "Partial fractions: (s-3)/((s-1)(s-2)) = A/(s-1) + B/(s-2). Multiply through: s-3 = A(s-2)+B(s-1). At s=1: -2 = -A, so A=2. At s=2: -1 = B.",
+         "So Y = 2/(s-1) - 1/(s-2). Taking the inverse transform of each term using L^-1^{1/(s-a)} = e^(at) gives y(t)."
+        ],
+        "answer": "y(t) = 2e^t - e^(2t)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Laplace transform of a derivative", "def": "L{y'} = sY(s)-y(0); L{y''} = s²Y(s)-sy(0)-y'(0), building in initial conditions."},
+      {"term": "inverse Laplace transform", "def": "The operation recovering y(t) from its transform Y(s)."},
+      {"term": "partial fraction decomposition", "def": "Breaking a ratio of polynomials into simpler fractions matching entries in a transform table."}
+     ],
+     "practice": [
+      {"q": "What is L{y''} in terms of Y(s), y(0), and y'(0)?", "choices": ["sY(s) - y(0)", "s²Y(s) - sy(0) - y'(0)", "s²Y(s) + y(0)", "Y(s)/s²"], "answer": 1, "explain": "The second-derivative rule builds in both initial conditions: L{y''} = s²Y(s) - sy(0) - y'(0)."},
+      {"q": "Why is partial fraction decomposition typically needed when solving an IVP with Laplace transforms?", "choices": ["Because Y(s) usually appears as a single simple term already in the table", "Because Y(s) is usually a ratio of polynomials that must be broken into pieces matching table entries before inverting", "Because it eliminates the need for initial conditions", "It is never actually needed"], "answer": 1, "explain": "Solving the transformed algebraic equation typically produces Y(s) as a ratio of polynomials in s, which must be decomposed into simpler recognizable pieces before the inverse transform can be read from a table."},
+      {"q": "For y' + 4y = 0, y(0) = 3, transforming gives sY - 3 + 4Y = 0. What is Y(s)?", "choices": ["3/(s+4)", "3/(s-4)", "(s+4)/3", "4/(s+3)"], "answer": 0, "explain": "sY - 3 + 4Y = 0 → Y(s+4) = 3 → Y = 3/(s+4), which inverts to y(t) = 3e^(-4t)."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Step Functions and Discontinuous Forcing",
+     "minutes": 14,
+     "intro": "Real-world forces are rarely smooth - a switch flips on at a specific moment, a hammer strikes instantaneously, a valve opens partway through an experiment. The Laplace transform handles these abrupt changes as easily as it handles smooth functions.",
+     "sections": [
+      {
+       "heading": "The Unit Step Function",
+       "body": [
+        "The **unit step function** (or Heaviside function) u(t-a) equals 0 for t < a and 1 for t ≥ a - it switches on abruptly at time a. It is the standard tool for building piecewise forcing functions: a force that turns on at t = 2 and stays on can be written simply as u(t-2), without needing separate equations for before and after.",
+        "Its Laplace transform is L{u(t-a)} = e^(-as)/s, found directly from the definition: the integral only contributes from t = a onward, since u(t-a) is zero before that."
+       ]
+      },
+      {
+       "heading": "Shifting and Impulses",
+       "body": [
+        "The **shifting theorem** extends this: L{u(t-a)f(t-a)} = e^(-as)F(s), where F(s) is the transform of f(t). This lets you transform any function that has been delayed by a time and switched on with a step function, which is exactly the pattern of many real forcing terms.",
+        "For an idealized instantaneous jolt - like a hammer strike - the **impulse function** (Dirac delta) δ(t-a) models a force concentrated entirely at a single instant, with transform L{δ(t-a)} = e^(-as). It is the mathematical idealization of 'all the force, delivered in zero time.'"
+       ],
+       "example": {
+        "problem": "A forcing function is 0 for t < 2 and equals the constant 5 for t ≥ 2. Write it using a step function and find its Laplace transform.",
+        "steps": [
+         "Since the function switches on to a constant value of 5 starting at t=2, write it as f(t) = 5u(t-2).",
+         "Apply the transform of the step function, L{u(t-a)} = e^(-as)/s, with a = 2: L{u(t-2)} = e^(-2s)/s.",
+         "Use linearity: L{5u(t-2)} = 5 · e^(-2s)/s."
+        ],
+        "answer": "L{f(t)} = 5e^(-2s)/s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "unit step function (Heaviside function)", "def": "u(t-a): equals 0 for t<a and 1 for t≥a, modeling a sudden switch-on."},
+      {"term": "shifting theorem", "def": "L{u(t-a)f(t-a)} = e^(-as)F(s), transforming a delayed, switched-on function."},
+      {"term": "impulse function (Dirac delta)", "def": "δ(t-a), an idealized instantaneous force with transform e^(-as)."}
+     ],
+     "practice": [
+      {"q": "What is L{u(t-5)}?", "choices": ["e^(-5s)/s", "e^(5s)/s", "5/s", "e^(-5s)"], "answer": 0, "explain": "Using L{u(t-a)}=e^(-as)/s with a=5 gives e^(-5s)/s."},
+      {"q": "A force is 0 until t = 3, then switches on to a constant value of 7. How is this written using a step function?", "choices": ["7u(t)", "7u(t-3)", "u(t-7)", "3u(t-7)"], "answer": 1, "explain": "The function switches on at t=3 to the value 7, so it is written as 7 times the step function delayed to start at t=3: 7u(t-3)."},
+      {"q": "What does the Dirac delta function δ(t-a) idealize?", "choices": ["A force applied gradually over a long time", "A force applied at a constant rate forever", "An instantaneous force or impulse concentrated at a single moment t=a", "A force that is always zero"], "answer": 2, "explain": "The impulse function models an idealized force delivered entirely in an instant, such as a sudden hammer strike or a sharp jolt, concentrated at exactly t=a."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Systems of Differential Equations",
+   "summary": "Writing multiple interacting equations as a single matrix equation, solving them with eigenvalues, and classifying their long-run behavior with a phase plane.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Systems as Matrices",
+     "minutes": 14,
+     "intro": "Two tanks draining into each other, two populations of predator and prey, or simply a single higher-order equation rewritten in pieces - all of these become a system of first-order equations, and every system of linear first-order equations can be packed into one clean matrix equation.",
+     "sections": [
+      {
+       "heading": "Writing a System in Matrix Form",
+       "body": [
+        "A **system of differential equations** describes several unknown functions whose derivatives depend on the current values of all of them. For a linear system with constant coefficients, this can always be written as x'(t) = Ax(t), where x(t) is a **state vector** collecting all the unknown functions and A is a constant matrix of coefficients.",
+        "This compact form treats an entire system exactly like a single equation, just with vectors and matrices standing in for scalars - and, remarkably, most of the solution techniques from single-variable calculus carry over almost unchanged, once you know how to handle vectors and matrices."
+       ]
+      },
+      {
+       "heading": "Converting a Higher-Order Equation into a System",
+       "body": [
+        "Any single higher-order linear equation can be rewritten as a first-order system through **order reduction**: introduce a new variable for each derivative up to one less than the equation's order. For a second-order equation in y, let x~1~ = y and x~2~ = y'; then x~1~' = x~2~ (by definition) and x~2~' = y'', which the original equation lets you rewrite in terms of x~1~ and x~2~.",
+        "This trick means systems and higher-order equations are really the same subject viewed from two angles - anything learned about one applies directly to the other, and computer software for numerically solving differential equations almost always expects the first-order system form."
+       ],
+       "example": {
+        "problem": "Convert the second-order equation y'' + 3y' + 2y = 0 into a first-order system of two equations, in matrix form.",
+        "steps": [
+         "Let x~1~ = y and x~2~ = y'. By definition, x~1~' = x~2~.",
+         "From the original equation, y'' = -3y' - 2y, so x~2~' = -3x~2~ - 2x~1~, or equivalently x~2~' = -2x~1~ - 3x~2~.",
+         "Assemble both equations into matrix form: x' = Ax where x = (x~1~, x~2~) and A = [[0, 1], [-2, -3]]."
+        ],
+        "answer": "x' = [[0, 1], [-2, -3]] x."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "system of differential equations", "def": "Multiple equations describing several interdependent unknown functions and their derivatives."},
+      {"term": "state vector", "def": "A vector collecting all unknown functions in a system, written x(t)."},
+      {"term": "order reduction", "def": "Rewriting a higher-order equation as a first-order system by introducing a variable for each derivative."}
+     ],
+     "practice": [
+      {"q": "To convert y'' - 4y = 0 into a first-order system, you would let x~1~=y, x~2~=y'. What is x~2~'?", "choices": ["x~2~' = 4x~1~", "x~2~' = -4x~1~", "x~2~' = x~1~", "x~2~' = 4x~2~"], "answer": 0, "explain": "From y'' = 4y (rearranging y''-4y=0), and since x~2~' = y'', substituting y = x~1~ gives x~2~' = 4x~1~."},
+      {"q": "In the matrix system x' = Ax, what does the vector x typically represent?", "choices": ["The coefficients of the system", "The state vector, collecting all unknown functions and their needed derivatives", "The eigenvalues of A", "A single scalar solution"], "answer": 1, "explain": "x(t) is the state vector holding every unknown function in the system (and often lower-order derivatives introduced during order reduction)."},
+      {"q": "Why is order reduction useful for numerical software solving differential equations?", "choices": ["Because higher-order equations cannot be solved at all", "Because most numerical solvers are built to handle first-order systems directly", "Because it eliminates the need for initial conditions", "Because it removes all nonlinearity from an equation"], "answer": 1, "explain": "Standard numerical methods (like those built into most software) are designed around first-order systems x'=f(t,x), so higher-order equations are converted into that form before being solved numerically."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Eigenvalue Method for Linear Systems",
+     "minutes": 17,
+     "intro": "Solving a system x' = Ax comes down to a single, elegant guess: try a solution built from one of A's eigenvectors, growing or shrinking exponentially at the rate of its eigenvalue. Add up enough of these building-block solutions and you have solved the entire system at once.",
+     "sections": [
+      {
+       "heading": "Building Solutions from Eigenvectors",
+       "body": [
+        "For the system x' = Ax, try a solution of the form x(t) = ve^(λt), where v is a constant vector. Substituting in gives λve^(λt) = Ave^(λt), which simplifies to Av = λv - exactly the eigenvalue equation. So each eigenvalue-eigenvector pair (λ, v) of A produces one building-block solution x(t) = ve^(λt).",
+        "If A (an n×n matrix) has n linearly independent eigenvectors v~1~,...,v~n~ with eigenvalues λ~1~,...,λ~n~, the general solution is the combination x(t) = C~1~v~1~e^(λ1t) + C~2~v~2~e^(λ2t) + ... + C~n~v~n~e^(λnt), with the constants C~i~ determined by initial conditions."
+       ]
+      },
+      {
+       "heading": "Applying Initial Conditions",
+       "body": [
+        "To find the specific constants C~i~, evaluate the general solution at t = 0 (where every exponential becomes 1) and set it equal to the given initial state vector x(0). This produces a system of linear equations in the C~i~'s - solvable with the same techniques from the earlier matrix unit.",
+        "This method mirrors, and generalizes, the characteristic-equation approach for a single higher-order equation: in fact, converting a single equation to a system (as in the previous lesson) and then applying the eigenvalue method reproduces exactly the same characteristic roots found by the direct method."
+       ],
+       "example": {
+        "problem": "Solve x' = Ax for A = [[0, 1], [-2, -3]] (from the previous lesson's y''+3y'+2y=0), with initial condition x(0) = (1, 0).",
+        "steps": [
+         "Find eigenvalues: det(A-λI) = det([[-λ,1],[-2,-3-λ]]) = λ(λ+3)+2 = λ²+3λ+2 = (λ+1)(λ+2) = 0, giving λ=-1, -2.",
+         "For λ=-1: (A+I)v=0 gives [[1,1],[-2,-2]]v=0, so v~1~+v~2~=0; eigenvector (1,-1). For λ=-2: (A+2I)v=0 gives [[2,1],[-2,-1]]v=0, so 2v~1~+v~2~=0; eigenvector (1,-2).",
+         "General solution: x(t) = C~1~(1,-1)e^(-t) + C~2~(1,-2)e^(-2t). Apply x(0)=(1,0): C~1~+C~2~=1 and -C~1~-2C~2~=0.",
+         "From the second equation, C~1~=-2C~2~. Substitute: -2C~2~+C~2~=1 → -C~2~=1 → C~2~=-1, so C~1~=2."
+        ],
+        "answer": "x(t) = 2(1,-1)e^(-t) - (1,-2)e^(-2t), so y(t) = x~1~(t) = 2e^(-t) - e^(-2t)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "eigenvalue method", "def": "Solving x'=Ax using solutions of the form ve^(λt) built from A's eigenvalue-eigenvector pairs."},
+      {"term": "general solution of a system", "def": "A linear combination of eigen-solutions, C~1~v~1~e^(λ1t)+...+C~n~v~n~e^(λnt)."}
+     ],
+     "practice": [
+      {"q": "Substituting x(t) = ve^(λt) into x' = Ax leads to which equation?", "choices": ["Av = λv", "A = λ", "v = λA", "Ax = λ"], "answer": 0, "explain": "Differentiating x=ve^(λt) gives x'=λve^(λt); substituting into x'=Ax and cancelling the common e^(λt) factor gives λv = Av, the eigenvalue equation."},
+      {"q": "A 2×2 system has eigenvalues -1 and -3, with eigenvectors (1,1) and (1,-1). What is the general solution?", "choices": ["x(t) = C~1~(1,1)e^t + C~2~(1,-1)e^(3t)", "x(t) = C~1~(1,1)e^(-t) + C~2~(1,-1)e^(-3t)", "x(t) = C~1~(1,1) + C~2~(1,-1)", "x(t) = C~1~e^(-t) + C~2~e^(-3t)"], "answer": 1, "explain": "Each eigen-solution has the form (eigenvector)×e^(eigenvalue·t); combining both gives C~1~(1,1)e^(-t) + C~2~(1,-1)e^(-3t)."},
+      {"q": "How are the constants C~i~ in a system's general solution determined?", "choices": ["By guessing", "By evaluating the general solution at t=0 and matching it to the given initial state vector", "They are always equal to the eigenvalues", "They cannot be determined for systems"], "answer": 1, "explain": "Setting t=0 makes every exponential term equal 1, turning the general solution into a linear combination of eigenvectors that must equal x(0) - solving that system pins down each C~i~."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Phase Plane Analysis",
+     "minutes": 14,
+     "intro": "Instead of tracking each variable of a system separately over time, a phase plane plots them against each other, revealing the system's entire long-run behavior in a single picture - whether it spirals in, spirals out, or gets pulled apart in two different directions.",
+     "sections": [
+      {
+       "heading": "The Phase Plane",
+       "body": [
+        "For a two-variable system x' = Ax, the **phase plane** plots x~1~ against x~2~, and each solution traces out a **trajectory** - a curve showing how the state moves over time, without explicitly showing t. The origin (where x~1~=x~2~=0) is always an **equilibrium point** for a homogeneous linear system, since x=0 makes x'=A(0)=0.",
+        "The overall pattern of trajectories near the origin, called a **phase portrait**, is entirely determined by the eigenvalues of A - so once the eigenvalues are known, the qualitative shape of every possible trajectory is known too, without solving for any specific one."
+       ]
+      },
+      {
+       "heading": "Classifying Equilibria by Eigenvalues",
+       "body": [
+        "Real eigenvalues of the same sign give a **node**: both negative gives a stable node (all trajectories flow into the origin), both positive gives an unstable node (all trajectories flow away). Real eigenvalues of opposite signs give a **saddle point** - unstable, since almost every trajectory eventually moves away, even though one special direction moves in.",
+        "Complex eigenvalues α ± βi give spiraling trajectories: a negative real part α gives a stable spiral (spiraling into the origin), a positive real part gives an unstable spiral (spiraling outward), and a zero real part (purely imaginary eigenvalues) gives a **center** - closed elliptical orbits that neither grow nor decay."
+       ],
+       "example": {
+        "problem": "Classify the equilibrium at the origin for the system from the previous lesson, which had eigenvalues -1 and -2.",
+        "steps": [
+         "Both eigenvalues are real and negative.",
+         "Real eigenvalues of the same sign correspond to a node; since both are negative, it is specifically a stable node."
+        ],
+        "answer": "Stable node - every trajectory in the phase plane flows into the origin as t → ∞, regardless of starting point."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "phase plane", "def": "A plot of one state variable against another, showing trajectories without explicit time."},
+      {"term": "equilibrium point", "def": "A constant solution where x'=0, such as the origin for a homogeneous linear system."},
+      {"term": "stable node", "def": "An equilibrium with two negative real eigenvalues, into which all nearby trajectories flow."},
+      {"term": "saddle point", "def": "An equilibrium with real eigenvalues of opposite sign, unstable along most directions."}
+     ],
+     "practice": [
+      {"q": "A system has eigenvalues 2 and 5 (both real and positive). How is the origin classified?", "choices": ["Stable node", "Unstable node", "Saddle point", "Center"], "answer": 1, "explain": "Two positive real eigenvalues mean every nearby trajectory moves away from the origin over time - an unstable node."},
+      {"q": "A system has eigenvalues -3 and 4 (real, opposite signs). What is the equilibrium?", "choices": ["Stable node", "Center", "Saddle point", "Stable spiral"], "answer": 2, "explain": "Real eigenvalues of opposite sign always produce a saddle point: trajectories are drawn in along one direction but pushed away along another, making it unstable overall."},
+      {"q": "A system has purely imaginary eigenvalues ±3i. What kind of equilibrium is this?", "choices": ["Stable spiral", "Unstable spiral", "Center - closed orbits that neither grow nor shrink", "Saddle point"], "answer": 2, "explain": "A zero real part (purely imaginary eigenvalues) gives a center: trajectories form closed loops around the origin, neither spiraling in nor out."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Series Solutions and Numerical Methods",
+   "summary": "Handling equations with no elementary closed-form solution: building a solution term by term as a power series, or stepping forward numerically with Euler's method.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Power Series Solutions",
+     "minutes": 16,
+     "intro": "Many important differential equations - including some that describe vibrating drumheads and quantum particles - have no solution expressible in elementary functions at all. The way forward is to build the solution one coefficient at a time, as an infinite power series.",
+     "sections": [
+      {
+       "heading": "The Power Series Method",
+       "body": [
+        "The method assumes a solution of the form y = Σ~n=0~^∞ a~n~x^n^ - an unknown power series with coefficients a~n~ to be determined. Substituting this series (and its derivatives, also written as series) into the differential equation and collecting like powers of x produces a **recurrence relation**: a formula expressing later coefficients in terms of earlier ones.",
+        "This technique is essential around an **ordinary point** (roughly, a point where the equation's coefficients are well-behaved), and it is exactly how classical equations without elementary solutions - like Legendre's equation or Bessel's equation, both central to physics and engineering - are actually solved in practice."
+       ]
+      },
+      {
+       "heading": "Deriving and Solving a Recurrence",
+       "body": [
+        "Once the recurrence relation is found, it is applied repeatedly starting from one or two free coefficients (usually a~0~, sometimes a~1~ too), generating every other coefficient in sequence. Recognizing the resulting pattern often reveals that the series is secretly a Taylor series for a familiar elementary function - a nice way to double-check the method against a case you could otherwise solve directly.",
+        "When the recurrence does not simplify to a recognizable elementary function, the resulting power series simply is the solution, and it can still be used for approximation, differentiation, or further analysis, just like any other function defined by its series expansion."
+       ],
+       "example": {
+        "problem": "Find a power series solution to y' - 2xy = 0.",
+        "steps": [
+         "Assume y = Σ~n=0~^∞ a~n~x^n^, so y' = Σ~n=0~^∞ (n+1)a~n+1~x^n^. Also, 2xy = Σ~n=0~^∞ 2a~n~x^(n+1)^, which reindexes to Σ~k=1~^∞ 2a~k-1~x^k^.",
+         "Substituting into y'-2xy=0 and matching powers of x: the x^0^ term gives a~1~=0, and for each power x^k^ with k≥1, (k+1)a~k+1~ = 2a~k-1~.",
+         "This recurrence links coefficients two indices apart. Since a~1~=0, every odd-indexed coefficient is forced to 0. Solving the recurrence for even indices gives a~2n~ = a~0~/n!.",
+         "So y = a~0~ Σ~n=0~^∞ x^(2n)^/n! = a~0~e^(x²)."
+        ],
+        "answer": "y = Ce^(x²) (writing C for the arbitrary constant a~0~) - matching the solution you'd get by separating variables directly, confirming the method."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "power series solution", "def": "A solution built as y = Σa~n~x^n^, with coefficients found from a recurrence relation."},
+      {"term": "ordinary point", "def": "A point where a differential equation's coefficients are well-behaved, allowing a power series solution."},
+      {"term": "recurrence relation", "def": "A formula expressing later series coefficients in terms of earlier ones."}
+     ],
+     "practice": [
+      {"q": "In the power series method, what is a recurrence relation used for?", "choices": ["Finding the equation's order", "Expressing later coefficients a~n~ in terms of earlier ones", "Computing the Laplace transform", "Finding eigenvalues"], "answer": 1, "explain": "Substituting the series into the equation and matching powers of x produces a formula linking coefficients, allowing every coefficient to be generated in sequence from a starting one or two."},
+      {"q": "Why is the power series method especially useful for equations like Bessel's equation?", "choices": ["Because Bessel's equation has no coefficients", "Because such equations have no solution in terms of elementary functions, so a series is the only way to express the solution", "Because it avoids initial conditions entirely", "Because it only works for first-order equations"], "answer": 1, "explain": "Certain important equations from physics and engineering simply cannot be solved with elementary functions like polynomials, exponentials, or trig functions - a power series is often the only way to represent their solutions."},
+      {"q": "A power series solution's recurrence gives a~0~ free, with all odd coefficients equal to 0, and a~2n~ = a~0~/(2^n · n!). What does this pattern's series represent?", "choices": ["y = a~0~sin(x)", "y = a~0~e^(x^2/2)", "y = a~0~e^x", "y = a~0~cos(x)"], "answer": 1, "explain": "The Taylor series for e^u is Σu^n/n!; setting u = x²/2 gives Σ(x²/2)^n/n! = Σx^(2n)/(2^n n!), matching the coefficient pattern a~2n~=a~0~/(2^n n!), so the series represents a~0~e^(x²/2)."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Euler's Method and Numerical Approximation",
+     "minutes": 14,
+     "intro": "When an equation has no elementary solution and a power series is overkill, you can still trace out an approximate answer numerically - one small, straight step at a time, using nothing more than the equation's own slope at each point.",
+     "sections": [
+      {
+       "heading": "Stepping Forward with Euler's Method",
+       "body": [
+        "**Euler's method** approximates a solution to y' = f(t, y), y(t~0~) = y~0~, by taking small steps of size h: at each step, move along the tangent line using the current slope, y~n+1~ = y~n~ + h·f(t~n~, y~n~), and advance t~n+1~ = t~n~ + h. Repeating this process traces out an approximate solution curve, point by point, without ever finding a formula for y(t).",
+        "Euler's method requires no integration or algebra beyond repeated arithmetic, which is exactly why it (and its more refined relatives) are the backbone of computer software that solves differential equations numerically, especially ones too complicated to solve by hand at all."
+       ]
+      },
+      {
+       "heading": "Accuracy and Step Size",
+       "body": [
+        "Because Euler's method follows a straight tangent line instead of the true curving solution, each step introduces a small **truncation error**, which accumulates over many steps. Using a smaller step size h reduces the error per step, but requires more steps to cover the same interval - a fundamental accuracy-versus-computation tradeoff.",
+        "In practice, Euler's method is rarely used for serious numerical work because more refined methods (like the Runge-Kutta family) achieve much better accuracy for the same computational effort - but Euler's method remains the clearest starting point for understanding how any numerical ODE solver works."
+       ],
+       "example": {
+        "problem": "Use Euler's method with step size h = 0.5 to approximate y(1) for y' = y, y(0) = 1, and compare to the exact solution y = e^t.",
+        "steps": [
+         "Start at t~0~=0, y~0~=1. First step: y~1~ = y~0~ + h·f(t~0~,y~0~) = 1 + 0.5(1) = 1.5, at t~1~=0.5.",
+         "Second step: y~2~ = y~1~ + h·f(t~1~,y~1~) = 1.5 + 0.5(1.5) = 1.5 + 0.75 = 2.25, at t~2~=1.0.",
+         "Compare to the exact solution: y(1) = e^1 ≈ 2.71828."
+        ],
+        "answer": "Euler's method gives y(1) ≈ 2.25, versus the exact value ≈ 2.71828 - an error of about 0.47, showing why smaller step sizes (or better methods) matter."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Euler's method", "def": "A numerical method approximating y(t) by stepping along tangent lines: y~n+1~=y~n~+h·f(t~n~,y~n~)."},
+      {"term": "step size", "def": "The fixed increment h between successive t-values in a numerical method."},
+      {"term": "truncation error", "def": "The error introduced at each step of a numerical method from following a straight line instead of the true curve."}
+     ],
+     "practice": [
+      {"q": "In Euler's method, what is the formula for the next y-value, y~n+1~?", "choices": ["y~n+1~ = y~n~ - h·f(t~n~,y~n~)", "y~n+1~ = y~n~ + h·f(t~n~,y~n~)", "y~n+1~ = h·f(t~n~,y~n~)", "y~n+1~ = y~n~/h"], "answer": 1, "explain": "Euler's method steps forward along the current tangent line: add the step size times the current slope to the current y-value."},
+      {"q": "Using Euler's method with h=1 on y'=y, y(0)=1, what is the approximation for y(1)?", "choices": ["1", "2", "e", "2.5"], "answer": 1, "explain": "One step: y~1~ = y~0~ + h·f(t~0~,y~0~) = 1 + 1(1) = 2 (a rough approximation compared to the exact e ≈ 2.718)."},
+      {"q": "Why does reducing the step size h generally improve Euler's method's accuracy?", "choices": ["Because it eliminates truncation error entirely", "Because smaller steps stay closer to the true curving solution, reducing the error introduced at each straight-line step", "Because larger step sizes are mathematically undefined", "It doesn't - step size has no effect on accuracy"], "answer": 1, "explain": "Each step follows a straight tangent line rather than the true curve; smaller steps mean less curving is missed per step, reducing the accumulated error, though at the cost of needing more steps overall."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Equilibrium Solutions and Stability",
+     "minutes": 13,
+     "intro": "Long before you can solve most nonlinear equations explicitly, a single derivative test can tell you everything about their long-run behavior near an equilibrium - whether nearby solutions settle down or run away, no calculus of the full solution required.",
+     "sections": [
+      {
+       "heading": "The Phase Line",
+       "body": [
+        "For an autonomous equation dy/dt = f(y), the **phase line** is a single number line marking every equilibrium (where f(y)=0), with arrows showing whether f(y) is positive (y increasing, arrow pointing right) or negative (y decreasing, arrow pointing left) in each interval between equilibria. This one-dimensional picture is the direct analog of the phase plane used for systems.",
+        "Reading the phase line reveals stability immediately: an equilibrium with arrows pointing toward it from both sides is stable; arrows pointing away on both sides make it unstable; arrows pointing the same direction on both sides make it **semi-stable** (attracting from one side, repelling from the other)."
+       ]
+      },
+      {
+       "heading": "The Derivative Test for Stability",
+       "body": [
+        "Rather than checking signs on both sides by hand, a faster shortcut uses **linearization**: evaluate f'(y) at the equilibrium y*. If f'(y*) < 0, the equilibrium is stable (small perturbations shrink back toward y*); if f'(y*) > 0, it is unstable (small perturbations grow away from y*). This mirrors exactly the eigenvalue sign test used for systems in the phase plane lesson.",
+        "This derivative test is fast, reliable for f'(y*) ≠ 0, and connects the qualitative phase-line picture directly to ordinary single-variable calculus - one derivative computation replaces checking the sign of f(y) at points on either side."
+       ],
+       "example": {
+        "problem": "For the logistic equation dy/dt = y(3-y) = 3y - y², use the derivative test to classify the stability of its equilibria y=0 and y=3.",
+        "steps": [
+         "Compute f'(y) for f(y) = 3y - y²: f'(y) = 3 - 2y.",
+         "Evaluate at y=0: f'(0) = 3 - 0 = 3, which is positive, so y=0 is unstable.",
+         "Evaluate at y=3: f'(3) = 3 - 6 = -3, which is negative, so y=3 is stable."
+        ],
+        "answer": "y=0 is an unstable equilibrium; y=3 is a stable equilibrium - confirming the same conclusion reached earlier by checking signs of f(y) directly on the phase line."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "phase line", "def": "A number line marking equilibria and the direction of change between them, for an autonomous equation."},
+      {"term": "semi-stable equilibrium", "def": "An equilibrium attracting from one side and repelling from the other."},
+      {"term": "linearization (stability test)", "def": "Evaluating f'(y*) at an equilibrium: negative means stable, positive means unstable."}
+     ],
+     "practice": [
+      {"q": "For dy/dt = f(y) with equilibrium y*, what does f'(y*) < 0 indicate?", "choices": ["y* is unstable", "y* is stable", "y* is not actually an equilibrium", "f(y) must be increasing everywhere"], "answer": 1, "explain": "A negative derivative at the equilibrium means small deviations shrink back toward y*, which is exactly the definition of a stable equilibrium."},
+      {"q": "For dy/dt = y² (note: y=0 is the only equilibrium), f'(y) = 2y, so f'(0) = 0. What must you do since the derivative test is inconclusive here?", "choices": ["Assume it is automatically stable", "Assume it is automatically unstable", "Check the sign of f(y) directly on both sides of the equilibrium", "The equation cannot have an equilibrium"], "answer": 2, "explain": "When f'(y*) = 0, the derivative test gives no information, so you must fall back on checking the sign of f(y) directly above and below the equilibrium (as done with phase lines and slope fields)."},
+      {"q": "For dy/dt = y(2-y), what is f'(y), and is the equilibrium y=2 stable or unstable?", "choices": ["f'(y) = 2-2y; f'(2) = -2, stable", "f'(y) = 2y; f'(2) = 4, unstable", "f'(y) = 2-y; f'(2) = 0, inconclusive", "f'(y) = -2y; f'(2) = -4, stable"], "answer": 0, "explain": "f(y) = 2y - y², so f'(y) = 2 - 2y. At y=2: f'(2) = 2-4 = -2, which is negative, meaning y=2 is a stable equilibrium."}
+     ]
+    }
+   ]
+  }
+ ]
+}

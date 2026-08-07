@@ -1,0 +1,579 @@
+{
+ "id": "entrepreneurship",
+ "title": "Entrepreneurship",
+ "domain": "business",
+ "level": "All levels",
+ "description": "Entrepreneurship is the practical craft of turning an idea into a working venture. This course walks the full arc: recognizing real opportunities, shaping a business model, financing the venture, launching it, and growing or exiting it - with worked numbers at every quantitative step, from unit economics to equity dilution.",
+ "outcomes": [
+  "You can describe the entrepreneurial process as a cycle of opportunity recognition, resourcing, and testing - not a single flash of inspiration.",
+  "You can turn a customer problem into a tested value proposition using real customer discovery methods.",
+  "You can compare legal structures (sole proprietorship, LLC, corporation) and explain their liability and tax tradeoffs with real numbers.",
+  "You can build a lean business plan and decide between bootstrapping, debt, equity, and crowdfunding for a given venture.",
+  "You can calculate contribution margin, break-even volume, and equity dilution for a funding round.",
+  "You can explain how founders protect ideas with IP tools and how ventures scale, harvest, or exit."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "The Entrepreneurial Mindset",
+   "summary": "What entrepreneurship actually is, where new ideas come from, and the different shapes a venture can take - from side hustle to scalable startup to social enterprise.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Entrepreneurship Really Is",
+     "minutes": 10,
+     "intro": "Every product you use once started as someone's untested guess about what people needed. Entrepreneurship is the discipline of turning that guess into something real, fast and cheap enough that being wrong doesn't sink you.",
+     "sections": [
+      {
+       "heading": "Value Creation Under Uncertainty",
+       "body": [
+        "Entrepreneurship is the process of identifying an opportunity and organizing people, money, and effort to pursue it before anyone can prove it will work. That last part is the key difference from most jobs: an entrepreneur commits resources to a plan while the biggest questions - will customers pay, will it scale, will it break even - are still unanswered.",
+        "This is why entrepreneurship is often described as decision-making under uncertainty rather than under risk. Risk means you know the odds, like a coin flip. Uncertainty means you don't even know the odds yet, so the entrepreneur's real job is not eliminating uncertainty through more planning, but reducing it quickly and cheaply through small, real-world tests."
+       ]
+      },
+      {
+       "heading": "The Entrepreneurial Process, Not a Single Moment",
+       "body": [
+        "Popular stories describe entrepreneurship as a single lightning-bolt idea. In practice it is a repeating loop: notice an opportunity, assemble just enough resources to test it, launch a small version, learn from real customers, and adjust. Successful founders run this loop many times before the venture takes its final shape.",
+        "That loop matters because it changes what a beginner should actually do first. Instead of writing a long plan for an unproven idea, the entrepreneurial move is to find the cheapest possible test of the riskiest assumption - usually 'will anyone pay for this' - and run it before spending real money."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "entrepreneurship", "def": "Organizing resources to pursue an opportunity before it is proven, accepting uncertainty in exchange for the chance to create value."},
+      {"term": "uncertainty", "def": "A situation where the odds of success are unknown, unlike risk, where the odds are known."},
+      {"term": "opportunity recognition", "def": "Noticing a gap between what people need and what currently exists, in a way that could become a venture."},
+      {"term": "iteration", "def": "Repeating the loop of testing, learning, and adjusting a venture idea based on real evidence."}
+     ],
+     "practice": [
+      {"q": "What best distinguishes entrepreneurial decision-making from routine business decision-making?", "choices": ["Entrepreneurs always have more money to work with", "Entrepreneurs commit resources under real uncertainty, not just known risk", "Entrepreneurs never write plans", "Entrepreneurs only work alone"], "answer": 1, "explain": "The defining feature is committing time and money before key questions - like whether customers will actually pay - are answered, which is uncertainty rather than measurable risk."},
+      {"q": "Why is entrepreneurship better described as a loop than a single moment?", "choices": ["Because the same product is sold to the same customer twice", "Because founders repeat opportunity-test-learn cycles many times before a venture finds its shape", "Because businesses must be re-registered every year", "Because ideas are illegal to change once written down"], "answer": 1, "explain": "Real ventures rarely arrive fully formed; founders test small versions, learn from real customers, and revise repeatedly."},
+      {"q": "A founder wants to open a bakery but is unsure people will pay $6 for a specialty muffin. What is the most entrepreneurial first move?", "choices": ["Sign a 5-year lease on a large storefront", "Sell a small batch at a farmers market this weekend to see if people buy", "Wait until she has $50,000 saved", "Hire a full staff before selling anything"], "answer": 1, "explain": "A cheap, fast, real-world test of the riskiest assumption - will people actually pay $6 - beats committing to large fixed costs before that question is answered."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Creativity, Invention, and Innovation",
+     "minutes": 10,
+     "intro": "People often use creativity, invention, and innovation as if they mean the same thing. They don't - and knowing the difference tells you where value actually gets created and captured in a venture.",
+     "sections": [
+      {
+       "heading": "Three Different Things",
+       "body": [
+        "**Creativity** is generating a novel idea - a new combination of existing pieces. **Invention** is creating something that did not exist before, like a new device or process. **Innovation** is putting an invention or idea to productive use in a way that creates value someone will pay for. Most fortunes are made at the innovation stage, not the invention stage.",
+        "Consider the smartphone touchscreen: capacitive touch technology existed in labs for years before it was refined into a usable form. The real leap that created enormous value was the innovation - combining touch, a phone, and an app ecosystem into something ordinary people would buy and use daily."
+       ]
+      },
+      {
+       "heading": "Where Entrepreneurs Actually Add Value",
+       "body": [
+        "Entrepreneurs rarely invent from nothing. Far more often they take an existing invention or idea and innovate: they find a market, a business model, or a distribution channel nobody else had tried. Ride-hailing did not invent the car, the smartphone, or GPS - it innovated by combining all three into a new service.",
+        "This means you do not need a patentable invention to be a legitimate entrepreneur. Recognizing an underused combination of existing tools, and being the one who organizes them into something people will pay for, is itself the entrepreneurial contribution."
+       ],
+       "example": {
+        "problem": "A founder sees that small farms have surplus produce and city restaurants want fresher ingredients, but no easy way connects them. Is this invention or innovation?",
+        "steps": [
+         "No new technology is created - farms, restaurants, and delivery already exist.",
+         "The founder is combining existing pieces (farms, delivery, restaurants) into a new value-creating connection.",
+         "That combination, if it creates value someone pays for, is innovation - not invention."
+        ],
+        "answer": "It is innovation: an existing set of pieces, newly combined and put to productive use."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "creativity", "def": "The generation of a novel idea or combination of existing pieces."},
+      {"term": "invention", "def": "The creation of something - a device, process, or method - that did not exist before."},
+      {"term": "innovation", "def": "Putting an invention or idea to practical use in a way that creates value people will pay for."}
+     ],
+     "practice": [
+      {"q": "Which statement correctly separates invention from innovation?", "choices": ["Invention and innovation are the same word for the same thing", "Invention is creating something new; innovation is putting it to value-creating use", "Innovation always requires a patent", "Invention only applies to software"], "answer": 1, "explain": "Invention is the creation of something new; innovation is what happens when that thing (or an existing idea) gets applied in a way that creates real value."},
+      {"q": "A founder combines an existing food truck, a mobile payment app, and a social media platform into a new pop-up dinner service. This is best described as:", "choices": ["Invention, because a new company was formed", "Innovation, because existing pieces were combined into new value", "Neither, because nothing physical was built", "Creativity only, with no business value"], "answer": 1, "explain": "No new technology was invented; the founder combined existing tools into a new, value-creating service - the definition of innovation."},
+      {"q": "Why does the invention-versus-innovation distinction matter to a would-be entrepreneur?", "choices": ["Because only inventors can start companies", "Because most venture value is captured at the innovation stage, not by inventing new technology", "Because it determines which country you can incorporate in", "Because innovations cannot be sold"], "answer": 1, "explain": "Most successful founders innovate with existing technology rather than inventing new technology, which means you don't need a lab breakthrough to build a valuable venture."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Types of Entrepreneurial Ventures",
+     "minutes": 11,
+     "intro": "A neighborhood coffee shop, a fast-growing software startup, and a nonprofit-minded clean water company are all entrepreneurship - but they play by different rules for growth, funding, and what counts as success.",
+     "sections": [
+      {
+       "heading": "Small Business vs. Scalable Startup",
+       "body": [
+        "A **small business** is built to serve a local or steady market profitably: a plumber, a restaurant, a salon. Growth is often gradual - one more truck, one more location - and the owner typically funds it with savings, loans, and reinvested profit. Most entrepreneurial ventures in the world are small businesses.",
+        "A **scalable startup** is designed from day one to grow very large very fast, often by solving a problem with a product that can serve many more customers without a proportional increase in cost - think software, where serving 10 customers or 10 million costs nearly the same. Scalable startups usually chase outside investment because the founders are betting on speed over steady profit."
+       ]
+      },
+      {
+       "heading": "Intrapreneurship and Social Entrepreneurship",
+       "body": [
+        "**Intrapreneurship** is entrepreneurial behavior inside an existing company: an employee who identifies an opportunity and is given resources to build a new product or unit under the company's umbrella. It carries less personal financial risk than founding your own venture, but also less ownership of the upside.",
+        "**Social entrepreneurship** applies the same opportunity-recognition and resourcing process to a social or environmental problem, measuring success by impact as well as (or sometimes instead of) profit. A company selling affordable solar lanterns in off-grid villages is pursuing both a market opportunity and a mission."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "small business", "def": "A venture built to serve a steady market profitably, usually growing gradually and funded by the owner's savings, loans, or reinvested profit."},
+      {"term": "scalable startup", "def": "A venture designed to grow very large very fast, typically funded by outside investors betting on rapid growth."},
+      {"term": "intrapreneurship", "def": "Entrepreneurial activity carried out by an employee inside an existing company, using the company's resources."},
+      {"term": "social entrepreneurship", "def": "Venture creation aimed at solving a social or environmental problem, measuring success by impact as well as profit."}
+     ],
+     "practice": [
+      {"q": "Which venture is the clearest example of a scalable startup rather than a small business?", "choices": ["A local dry-cleaning shop with one location", "A software app that can serve one million users at almost the same cost as serving one thousand", "A family-owned hardware store", "A single freelance graphic designer"], "answer": 1, "explain": "Scalable startups are defined by the ability to serve dramatically more customers without a proportional rise in cost - the hallmark of many software businesses."},
+      {"q": "An employee at a large bank proposes a new mobile-only savings product, and the bank funds her team to build it under the bank's brand. This is an example of:", "choices": ["A small business", "Intrapreneurship", "Social entrepreneurship", "Franchising"], "answer": 1, "explain": "She is behaving entrepreneurially - spotting an opportunity and organizing resources to pursue it - but doing so inside an existing company, which is intrapreneurship."},
+      {"q": "What is the defining feature of social entrepreneurship?", "choices": ["It cannot legally make a profit", "Success is measured by social or environmental impact as well as (or instead of) profit", "It only exists in nonprofit organizations", "It requires government funding"], "answer": 1, "explain": "Social entrepreneurship applies the same venture-building process to a social or environmental goal, judging success partly or wholly by impact rather than profit alone."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Finding and Testing Opportunities",
+   "summary": "Ideas are cheap; validated opportunities are not. This unit teaches how to spot real problems, listen to customers without leading them, and test feasibility before committing real money.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Spotting Problems Worth Solving",
+     "minutes": 10,
+     "intro": "Founders don't fall in love with ideas - they fall in love with problems. A problem that is widespread, painful, and currently solved badly is worth far more than a clever idea nobody asked for.",
+     "sections": [
+      {
+       "heading": "What Makes a Problem Worth Solving",
+       "body": [
+        "A strong opportunity usually has three traits: it affects a large enough group of people (**market size**), it causes real pain - wasted time, money, or frustration - and the current alternatives are weak, expensive, or nonexistent. Missing any one of the three should make a founder cautious.",
+        "It helps to separate a symptom from the underlying problem. Someone complaining 'grocery delivery is too slow' may really be saying 'I don't have time to plan meals during the week.' Solving the deeper problem often opens more options than solving the literal complaint."
+       ]
+      },
+      {
+       "heading": "Sources of Opportunity",
+       "body": [
+        "Opportunities commonly appear at points of change: a new technology becomes cheap enough for mass use, a regulation shifts, a demographic group's habits change, or an existing industry has been ignoring a segment of customers. Founders who pay close attention to their own frustrations, or to an industry they've worked in, often spot these shifts before outsiders do.",
+        "A useful discipline is keeping a running list of everyday annoyances - anything that made you or someone nearby think 'why is this still so hard?' Most of these will not become companies, but scanning many small frictions is how real opportunities get found."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "market size", "def": "How many people or organizations are affected by a given problem, and how much they would spend to solve it."},
+      {"term": "pain point", "def": "A specific, real frustration - lost time, money, or effort - caused by a problem."},
+      {"term": "symptom vs. underlying problem", "def": "The stated complaint (symptom) may point to a deeper need (underlying problem) that opens more solution options."}
+     ],
+     "practice": [
+      {"q": "A founder notices commuters complaining about slow bus wait times. What is the most useful next question to ask?", "choices": ["What color should the bus be?", "What is the deeper need behind the complaint - reliable arrival, or just something to do while waiting?", "How many buses does the city currently own?", "Should the company be a nonprofit?"], "answer": 1, "explain": "Digging past the stated complaint (slow buses) toward the underlying need (reliable, predictable commuting) opens more possible solutions than fixing the literal wait time."},
+      {"q": "Which combination of traits makes a problem worth pursuing as a venture?", "choices": ["Affects very few people but is mildly annoying", "Affects many people, causes real pain, and current alternatives are weak", "Is something only the founder personally dislikes", "Has already been perfectly solved by three competitors"], "answer": 1, "explain": "A strong opportunity needs enough affected people, genuine pain, and weak existing alternatives - missing any one weakens the opportunity."},
+      {"q": "Why do points of change - new technology, shifting regulation, changing demographics - often create opportunity?", "choices": ["They make all existing businesses illegal", "They open gaps between what people now need and what currently exists to serve them", "They guarantee government funding", "They eliminate competition permanently"], "answer": 1, "explain": "When technology, rules, or habits shift, existing products and services can suddenly fail to fit the new reality, creating a gap an entrepreneur can fill."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Market Research and Customer Discovery",
+     "minutes": 12,
+     "intro": "The fastest way to build the wrong product is to ask people what they want and then build exactly that. Good customer discovery listens for problems and behavior, not opinions about your solution.",
+     "sections": [
+      {
+       "heading": "Primary vs. Secondary Research",
+       "body": [
+        "**Secondary research** uses information other people already gathered: industry reports, census data, competitor pricing, online reviews. It's fast and cheap, and a good starting point to size a market and see who else is already competing. **Primary research** means gathering new information directly - interviews, surveys, observing behavior - because secondary sources won't tell you whether a specific customer will actually buy your specific product.",
+        "Both matter, but they answer different questions. Secondary research tells you the market probably exists and roughly how big it is. Primary research tells you whether the particular problem you plan to solve, and the particular way you plan to solve it, actually fits a real customer's life."
+       ]
+      },
+      {
+       "heading": "Interviewing Without Leading the Witness",
+       "body": [
+        "The single biggest mistake in early customer interviews is pitching the idea and asking 'would you use this?' Almost everyone says yes to be polite, which produces false confidence. Instead, ask about past behavior: 'walk me through the last time you dealt with this problem' or 'what did you try, and why didn't it work?'",
+        "Past behavior is far more predictive than a future hypothetical. If ten people describe genuinely trying and failing to solve a problem last month, that is real evidence. If ten people say 'sure, I'd probably use an app for that,' that is close to no evidence at all."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "secondary research", "def": "Using existing information - reports, data, reviews - that someone else already collected."},
+      {"term": "primary research", "def": "Gathering new information directly from potential customers through interviews, surveys, or observation."},
+      {"term": "leading question", "def": "A question that hints at the desired answer, such as pitching an idea and asking if someone would buy it."}
+     ],
+     "practice": [
+      {"q": "Which is an example of primary research?", "choices": ["Reading a government report on industry size", "Interviewing ten small restaurant owners about how they currently order supplies", "Looking up a competitor's prices online", "Reading a magazine article about the industry"], "answer": 1, "explain": "Directly interviewing potential customers is primary research - new information gathered firsthand, rather than reused from an existing source."},
+      {"q": "A founder asks, 'Would you use an app that saves you time on grocery shopping?' What is the main problem with this question?", "choices": ["It is too short", "It leads the interviewee toward a polite 'yes' rather than revealing real past behavior", "It cannot legally be asked", "It only works for tech products"], "answer": 1, "explain": "Pitching the idea and asking for agreement invites a polite, low-information 'yes' - past-behavior questions reveal much more."},
+      {"q": "Why is a description of past behavior more valuable in an interview than a hypothetical answer?", "choices": ["Past behavior is illegal to ignore", "What someone actually did under real constraints predicts future behavior far better than a guess about a hypothetical product", "Hypothetical answers are always false", "Past behavior is easier to write down"], "answer": 1, "explain": "People are unreliable predictors of their own future behavior but fairly reliable narrators of what they already tried and why it did or didn't work."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Testing Feasibility Before You Build",
+     "minutes": 11,
+     "intro": "Before writing a single line of code or ordering inventory, a founder should ask three separate feasibility questions - because a great idea that fails even one of them will not survive contact with the real world.",
+     "sections": [
+      {
+       "heading": "Three Kinds of Feasibility",
+       "body": [
+        "**Market feasibility** asks whether enough people will actually pay, at a price that covers costs. **Operational feasibility** asks whether the venture can actually be built and delivered with the technology, skills, and suppliers available. **Financial feasibility** asks whether the venture can be funded long enough to reach a sustainable size, given realistic costs and how long sales take to ramp up.",
+        "A venture can look fantastic on one dimension and fail on another. A subscription meal-kit idea might have huge customer demand (market feasibility) but require a cold-chain delivery network the founder cannot build affordably (operational feasibility) - which kills the venture just as surely as no demand would."
+       ]
+      },
+      {
+       "heading": "Cheap Tests Before Expensive Commitments",
+       "body": [
+        "Feasibility is tested cheaply through small, real experiments: a landing page that collects email signups before the product exists, a hand-built prototype sold to a handful of real customers, or a 'concierge' version where the founder manually delivers the service to prove people will pay before automating anything.",
+        "The goal of these tests is not to prove the idea is perfect - it's to find the single assumption most likely to be wrong, and test that one first. If the riskiest assumption is 'restaurants will pay $200 a month for this,' the cheapest real test is asking ten restaurants to pay, not building software for six months."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "market feasibility", "def": "Whether enough customers will pay a price that covers the venture's costs."},
+      {"term": "operational feasibility", "def": "Whether the venture can actually be built and delivered with available technology, skills, and suppliers."},
+      {"term": "financial feasibility", "def": "Whether the venture can be funded long enough to reach a sustainable size given realistic costs and ramp-up time."},
+      {"term": "concierge test", "def": "A feasibility test where the founder manually delivers the service to real customers before building automated systems."}
+     ],
+     "practice": [
+      {"q": "A founder has strong evidence customers want her idea, but discovers the only supplier who can make the product affordably is unreliable and often out of stock. Which feasibility question has failed?", "choices": ["Market feasibility", "Operational feasibility", "Financial feasibility", "None - customer demand is all that matters"], "answer": 1, "explain": "Whether the venture can be built and delivered reliably is an operational feasibility question, and an unreliable supplier threatens exactly that, regardless of how strong demand is."},
+      {"q": "What is the main purpose of a 'concierge' test?", "choices": ["To make the product feel luxurious to customers", "To manually deliver the service to real paying customers before investing in automation", "To hire a hotel concierge as a co-founder", "To avoid ever talking to customers"], "answer": 1, "explain": "A concierge test proves customers will actually pay for the outcome by delivering it manually first, before spending time and money automating a product nobody has paid for yet."},
+      {"q": "Why should a founder test the riskiest assumption first, rather than the easiest one to test?", "choices": ["Because investors require it by law", "Because the riskiest assumption is most likely to kill the venture, so learning early avoids wasted months building on a false premise", "Because easy tests are always misleading", "Because it makes the business plan longer"], "answer": 1, "explain": "If the single assumption most likely to be wrong turns out false, the founder wants to learn that in a week, not after six months of building."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Business Model and Legal Foundations",
+   "summary": "Turning an opportunity into a real venture means designing how it creates and captures value, choosing a legal structure, and protecting what makes it defensible.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Value Proposition and Business Model Canvas",
+     "minutes": 12,
+     "intro": "A business model answers one question with many moving parts: how does this venture create value for a specific customer, and capture enough of that value to survive? The business model canvas makes all the parts visible on one page.",
+     "sections": [
+      {
+       "heading": "The Value Proposition: Why Customers Choose You",
+       "body": [
+        "A **value proposition** states, precisely, which customer segment's which problem you solve, and why your solution beats the alternatives they use today - including 'doing nothing.' A weak value proposition describes features ('cloud-based inventory software'); a strong one describes an outcome ('cuts restaurant food waste in half without hiring extra staff').",
+        "Customers rarely compare you only to direct competitors. A meal-kit service competes with cooking from scratch, ordering delivery, and eating out - each with its own cost, time, and effort tradeoff. A sharp value proposition names the specific alternative it beats and the specific reason it wins."
+       ]
+      },
+      {
+       "heading": "The Business Model Canvas",
+       "body": [
+        "The **business model canvas** lays out nine building blocks on one page: customer segments, value propositions, channels, customer relationships, revenue streams, key resources, key activities, key partners, and cost structure. Filling it out forces a founder to state assumptions explicitly instead of leaving them implicit and untested.",
+        "The canvas is meant to be redrawn, not framed. Early versions are full of guesses; each customer interview or test should change at least one box. A founder who has not touched their canvas in months is probably not learning anything new about the venture."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "value proposition", "def": "A precise statement of which customer's which problem you solve, and why your solution beats their current alternative."},
+      {"term": "business model canvas", "def": "A one-page framework of nine building blocks - customers, value, channels, relationships, revenue, resources, activities, partners, and costs - used to map and test a business model."},
+      {"term": "revenue stream", "def": "A specific way the venture earns money from a customer segment, such as a subscription fee or per-transaction charge."}
+     ],
+     "practice": [
+      {"q": "Which value proposition is written correctly - naming a specific customer, problem, and outcome?", "choices": ["'We use advanced machine learning.'", "'Our app has 40 features.'", "'We help busy parents get dinner on the table in 20 minutes without takeout prices.'", "'We are passionate about food.'"], "answer": 2, "explain": "It names the customer (busy parents), the problem (getting dinner on the table quickly), and the outcome versus the alternative (without takeout prices) - the other options describe features or feelings, not outcomes."},
+      {"q": "What is the main purpose of the business model canvas?", "choices": ["To replace the need for customer interviews entirely", "To make every assumption about the venture explicit on one page so it can be tested and revised", "To calculate exact tax liability", "To register a legal business entity"], "answer": 1, "explain": "The canvas exists to surface assumptions across all nine building blocks so they can be tested with real customers, not to serve as a final, fixed plan."},
+      {"q": "A meal-kit startup competes mainly against cooking from scratch and ordering takeout, not other meal-kit companies. What does this tell the founder?", "choices": ["The business has no real competition", "The value proposition should explain why the service beats those specific everyday alternatives, not just rival meal-kit brands", "Meal kits are illegal to sell", "Pricing should always match takeout exactly"], "answer": 1, "explain": "Customers weigh your offer against whatever they'd do instead - here, cooking or takeout - so the value proposition needs to beat those specific alternatives."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Choosing a Legal Structure",
+     "minutes": 12,
+     "intro": "The legal structure a founder picks decides who is personally on the hook if the business is sued or can't pay its debts, and how much of the profit disappears into taxes before anyone sees it.",
+     "sections": [
+      {
+       "heading": "Liability: What's at Stake if Things Go Wrong",
+       "body": [
+        "A **sole proprietorship** or general partnership is the simplest to set up, but offers no separation between business and personal assets: if the business is sued or can't pay a debt, the owner's personal savings, car, or house can be at risk. An **LLC** (limited liability company) and a corporation create a legal wall, so in most cases only the money invested in the business is at risk, not personal assets.",
+        "That protection isn't automatic or absolute - courts can 'pierce the corporate veil' if an owner mixes personal and business finances carelessly, such as paying personal bills straight from the business account. Keeping separate bank accounts and real records is what makes the legal wall hold up."
+       ]
+      },
+      {
+       "heading": "Taxes: Pass-Through vs. Double Taxation",
+       "body": [
+        "Sole proprietorships, partnerships, and LLCs are usually **pass-through entities**: the business itself pays no separate income tax, and profit is taxed once, on the owner's personal tax return. A standard C-corporation is taxed twice: the corporation pays corporate income tax on its profit, and then shareholders pay tax again on any dividends they receive from what's left.",
+        "Consider $100,000 of profit. As an LLC taxed at the owner's 24% personal rate, tax owed is $24,000, paid once. As a C-corp paying 21% corporate tax, tax is $21,000, leaving $79,000; if all of that is paid out as dividends taxed at 15%, shareholders owe another $11,850, for a combined $32,850 - roughly 33% total, even though neither individual rate looks that high."
+       ],
+       "example": {
+        "problem": "$100,000 of profit is earned by (a) an LLC whose owner pays 24% personal tax, and (b) a C-corp paying 21% corporate tax that distributes 100% of after-tax profit as dividends taxed at 15%. Compare total tax paid.",
+        "steps": [
+         "LLC: 100,000 × 0.24 = $24,000 total tax, paid once on the owner's return.",
+         "C-corp step 1: 100,000 × 0.21 = $21,000 corporate tax, leaving $79,000.",
+         "C-corp step 2: 79,000 × 0.15 = $11,850 dividend tax.",
+         "C-corp total: 21,000 + 11,850 = $32,850."
+        ],
+        "answer": "The LLC pays $24,000 total; the C-corp pays $32,850 total - about $8,850 more, illustrating double taxation."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "sole proprietorship", "def": "An unincorporated business with one owner and no legal separation between business and personal assets."},
+      {"term": "LLC (limited liability company)", "def": "A business structure that shields the owner's personal assets from most business debts and lawsuits while usually keeping pass-through taxation."},
+      {"term": "pass-through taxation", "def": "Business profit taxed once, on the owner's personal return, rather than at the business level."},
+      {"term": "double taxation", "def": "Profit taxed once at the corporate level and again when paid to shareholders as dividends, as in a standard C-corporation."}
+     ],
+     "practice": [
+      {"q": "Why might a freelance consultant with no employees choose an LLC over a sole proprietorship?", "choices": ["LLCs pay no taxes at all", "An LLC shields her personal assets - like her house - from most business debts and lawsuits, while a sole proprietorship does not", "LLCs are required by law for any business", "Sole proprietorships cannot legally have customers"], "answer": 1, "explain": "The core benefit of an LLC over a sole proprietorship is the liability wall between business debts and the owner's personal assets."},
+      {"q": "Using the worked example, why does the C-corp end up paying more total tax on $100,000 of profit than the LLC?", "choices": ["C-corp tax rates are always higher on paper", "The C-corp's profit is taxed once at the corporate level and again as dividends, while the LLC's profit is taxed only once", "LLCs are exempt from all state taxes", "The example assumes the C-corp cheats on its taxes"], "answer": 1, "explain": "Double taxation - corporate tax on profit, then personal tax on dividends from what's left - pushes the C-corp's combined tax above the LLC's single layer of tax."},
+      {"q": "What can cause a court to 'pierce the corporate veil' and hold an LLC or corporation owner personally liable anyway?", "choices": ["Having more than 10 customers", "Mixing personal and business finances carelessly, such as paying personal bills from the business account", "Earning a profit in the first year", "Hiring an accountant"], "answer": 1, "explain": "Liability protection depends on treating the business as genuinely separate; commingling personal and business money is the classic way that separation collapses in court."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Protecting Ideas: Intellectual Property Basics",
+     "minutes": 10,
+     "intro": "Not every idea can be legally protected, and founders who assume everything is - or nothing is - end up making costly mistakes. Four tools cover almost every situation: patents, trademarks, copyrights, and trade secrets.",
+     "sections": [
+      {
+       "heading": "Four Tools, Four Different Jobs",
+       "body": [
+        "A **patent** protects a new, useful invention - a device, process, or method - giving the owner the exclusive right to make or sell it for a set period, typically 20 years for a utility patent, in exchange for publicly disclosing how it works. A **trademark** protects a brand identifier - a name, logo, or slogan - that customers use to recognize your business, and can last indefinitely as long as it stays in use.",
+        "**Copyright** protects original creative expression - writing, code, music, images - automatically the moment it's created, without needing to register anything (though registering strengthens your ability to sue). A **trade secret** protects confidential business information, like a recipe or an algorithm, for as long as you keep it genuinely secret - the moment it leaks, the protection is gone."
+       ]
+      },
+      {
+       "heading": "Choosing the Right Tool",
+       "body": [
+        "The choice often comes down to whether disclosure helps or hurts you. A patent requires publishing exactly how your invention works, which is worth it if the protection is strong and you'd rather stop copycats than keep it hidden. A trade secret is the opposite bet: no filing, no expiration, but it only works if you can actually keep the information from leaking - which is why a famous soft-drink formula has stayed a trade secret for over a century rather than a long-expired patent.",
+        "Many ventures use several tools at once: a startup might patent a novel mechanism, trademark its brand name and logo, copyright its software and marketing content, and keep its customer algorithm as a trade secret. None of these tools substitutes for the others."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "patent", "def": "Exclusive legal rights to a new invention for a set period (commonly 20 years), granted in exchange for publicly disclosing how it works."},
+      {"term": "trademark", "def": "Legal protection for a brand identifier - name, logo, or slogan - that can last indefinitely as long as it remains in use."},
+      {"term": "copyright", "def": "Automatic protection for original creative expression, such as writing, code, or images, from the moment it is created."},
+      {"term": "trade secret", "def": "Protection for confidential business information that lasts only as long as the information is actually kept secret."}
+     ],
+     "practice": [
+      {"q": "A founder writes original software code for her app. When does copyright protection begin?", "choices": ["Only after she pays a registration fee", "Automatically, the moment the original code is created", "Only after the app has 1,000 users", "Never - software cannot be copyrighted"], "answer": 1, "explain": "Copyright attaches automatically at the moment of creation of original expression, though formal registration strengthens the ability to sue over infringement."},
+      {"q": "Why might a company choose to protect a formula as a trade secret rather than patenting it?", "choices": ["Trade secrets last forever as long as secrecy is maintained, while a patent would require publicly disclosing the formula and would eventually expire", "Trade secrets are cheaper to sue over", "Patents cannot protect formulas", "Trade secrets require government registration"], "answer": 0, "explain": "A patent requires public disclosure and expires (commonly after 20 years); a trade secret can last indefinitely, but only as long as the information stays genuinely confidential."},
+      {"q": "A startup's name and logo are most appropriately protected by which tool?", "choices": ["A patent", "A trademark", "A trade secret", "None - names cannot be protected"], "answer": 1, "explain": "Trademarks exist specifically to protect the brand identifiers - names, logos, slogans - that customers use to recognize a business."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Funding and Planning the Venture",
+   "summary": "Turning a tested idea into a funded venture means writing a plan investors and partners can act on, and choosing the right mix of your own money, debt, and equity.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Writing a Lean Business Plan",
+     "minutes": 11,
+     "intro": "A 40-page business plan written before you've talked to a single customer is a work of fiction. A lean plan forces you to state your riskiest assumptions on one page, so you know exactly what to test next.",
+     "sections": [
+      {
+       "heading": "Why Lean Beats Long",
+       "body": [
+        "Traditional business plans are long documents built for a one-time pitch, often written before the founder has real customer evidence. Investors and mentors have learned that most of the numbers in those plans are guesses dressed up as certainty - so a growing number of founders instead use lean formats, like a one-page business model canvas, paired with evidence from real tests.",
+        "A lean plan still needs the essentials: what problem you solve, for whom, how you make money, what it costs to acquire and serve a customer, and what evidence you already have that people will pay. The difference is length and honesty about which numbers are proven versus assumed."
+       ]
+      },
+      {
+       "heading": "What Belongs in Every Plan, Long or Short",
+       "body": [
+        "Whatever the format, a credible plan answers: who exactly is the customer, what alternative are they using today, why will they switch, how will the venture reach them, what does it cost to deliver the product, and what has to be true for the numbers to work. Vague answers here - 'everyone is our customer' - are the single biggest red flag to an experienced reader.",
+        "A plan should also state its key risks openly rather than hiding them. Founders who name their biggest unknowns ('we don't yet know if restaurants will pay $200 a month, but ten early conversations suggest yes') come across as far more credible than founders who claim certainty on everything."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "lean business plan", "def": "A short-form plan, often one page, focused on stated assumptions and real evidence rather than long-form projections."},
+      {"term": "customer acquisition cost", "def": "The average cost of getting one new paying customer, including marketing and sales expenses."},
+      {"term": "key risk", "def": "A stated, honest unknown that must resolve favorably for the venture's plan to work."}
+     ],
+     "practice": [
+      {"q": "Why do many modern founders prefer a lean business plan over a traditional 40-page plan?", "choices": ["Lean plans are required by law", "A lean plan focuses on stated, testable assumptions instead of long, often-guessed projections written before real customer evidence exists", "Lean plans never mention money", "Long plans are illegal for startups"], "answer": 1, "explain": "Long plans often bake in unproven numbers as if they were certain; a lean plan makes the assumptions explicit so they can be tested."},
+      {"q": "A founder's plan claims 'everyone will want our product.' What is the problem with this statement?", "choices": ["It is too specific", "It fails to name a specific customer segment, which is the biggest red flag in a business plan", "It uses too much jargon", "It should be replaced with a patent filing"], "answer": 1, "explain": "A vague, universal customer claim signals the founder hasn't actually identified who will pay and why - specificity is what makes a plan credible."},
+      {"q": "Which is the strongest way for a founder to present a major unknown in her plan?", "choices": ["Omit it so investors don't worry", "State it honestly along with any early evidence gathered so far", "Claim it is already fully solved", "Replace it with an unrelated strength of the product"], "answer": 1, "explain": "Naming key risks honestly, along with whatever real evidence exists, builds more credibility than pretending every question is already answered."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Bootstrapping vs. Outside Capital",
+     "minutes": 11,
+     "intro": "Every founder faces the same fork: fund the venture yourself and grow slowly but keep full control, or take outside money and grow faster while giving up a piece of ownership and a say in decisions.",
+     "sections": [
+      {
+       "heading": "Bootstrapping: Funding It Yourself",
+       "body": [
+        "**Bootstrapping** means funding the venture from personal savings, credit, and - most importantly - early revenue, rather than outside investors. It forces financial discipline early, because every dollar spent has to be earned or personally risked, and it lets the founder keep full ownership and control over decisions.",
+        "The tradeoff is speed and scale. A bootstrapped business generally grows only as fast as its own cash flow allows, which can mean losing a market opportunity to a better-funded competitor. Bootstrapping fits ventures where growth can be gradual and profitable early - a consulting practice, a local service business, many software tools with paying customers from month one."
+       ]
+      },
+      {
+       "heading": "Outside Capital: Trading Ownership for Speed",
+       "body": [
+        "Taking outside capital - from angel investors, venture capital funds, or other investors - trades a slice of ownership (**equity**) for cash that lets the venture grow faster than its own revenue would allow. It fits ventures chasing a large, fast-moving opportunity where being slow means losing the market to a competitor, but it comes with real cost: founders give up a portion of ownership, and often a seat on decisions, in exchange.",
+        "Outside investors, especially venture capital funds, are usually looking for the small number of companies that can grow extremely large, because their model depends on a few big wins covering many losses. That means outside capital fits ventures aiming for large, fast scale far more than it fits a steady, profitable local business - and taking VC money for a lifestyle business often creates pressure the founder never wanted."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "bootstrapping", "def": "Funding a venture from personal savings, credit, and early revenue rather than outside investors."},
+      {"term": "equity", "def": "An ownership stake in a company, given up in exchange for outside investment."},
+      {"term": "angel investor", "def": "An individual who invests personal money in early-stage startups, usually in exchange for equity."},
+      {"term": "venture capital", "def": "Funds that invest pooled money into startups believed capable of very large, fast growth, in exchange for equity."}
+     ],
+     "practice": [
+      {"q": "Which venture is the best fit for bootstrapping rather than outside capital?", "choices": ["A biotech company needing years of expensive clinical trials before any revenue", "A freelance consultant who already has paying clients and modest overhead", "A company racing three well-funded rivals to dominate a new global market", "A satellite manufacturer needing billions in upfront R&D"], "answer": 1, "explain": "Bootstrapping fits ventures that can grow gradually on their own cash flow - a consultant with paying clients and low overhead is a natural fit, unlike capital-intensive or race-to-scale ventures."},
+      {"q": "What do founders typically give up in exchange for venture capital funding?", "choices": ["Nothing - VC money has no strings attached", "A portion of ownership (equity) and often some say in company decisions", "Their company's name", "Access to future revenue"], "answer": 1, "explain": "Outside investors provide cash in exchange for equity - partial ownership - and often board seats or approval rights over major decisions."},
+      {"q": "Why does venture capital tend to fit only a narrow slice of startups?", "choices": ["VC funds only invest in software", "VC funds need a small number of investments to grow extremely large, since a few big wins must cover many losses", "VC funding is illegal for most industries", "VC funds require the founder to quit"], "answer": 1, "explain": "Because most startups a VC fund backs will fail or underperform, the fund's model depends on a few investments growing enormously - so VCs seek startups capable of very large, fast scale, not steady modest businesses."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Equity, Debt, and Crowdfunding",
+     "minutes": 12,
+     "intro": "When a venture does raise outside money, the terms of the deal change everything - how much ownership a founder keeps, who gets paid first if things go wrong, and what happens to control as more rounds are raised.",
+     "sections": [
+      {
+       "heading": "Debt vs. Equity",
+       "body": [
+        "**Debt financing** (a loan) must be repaid with interest on a schedule regardless of how the business performs, but the lender gets no ownership stake and no say in decisions - the founder keeps 100% of the company. **Equity financing** never has to be 'repaid' on a schedule, but it permanently gives up a percentage of ownership and future profit, plus often some decision rights, in exchange for cash.",
+        "The right mix usually depends on cash flow predictability and risk tolerance for fixed payments. A business with steady, predictable revenue (a laundromat, an established consulting firm) can often safely take on debt, since it can reliably make the payments. A pre-revenue startup with uncertain, lumpy cash flow is a poor fit for debt, since a bad quarter could mean missing a loan payment - equity is more forgiving because investors only get paid if and when the company succeeds."
+       ]
+      },
+      {
+       "heading": "Equity Dilution and Crowdfunding",
+       "body": [
+        "Raising equity means new shares are created for investors, which **dilutes** - shrinks - the percentage every existing owner holds, even though their dollar value can still grow if the company's total value rises enough. A founder who owned 100% before a raise still owns real value afterward, just a smaller slice of a (hopefully) larger pie.",
+        "**Crowdfunding** raises smaller amounts from many people, typically online, and comes in different flavors: reward-based (backers get the product, not equity, common on platforms built for creative and consumer products), and equity crowdfunding (backers actually receive small ownership stakes, allowed under specific securities regulations). It's often used to validate demand and raise modest capital without giving up a large equity stake to a single investor."
+       ],
+       "example": {
+        "problem": "A founder owns 100% of her startup, currently valued at $2,000,000 before any outside money (the 'pre-money valuation'). She raises $500,000 from an investor. What percentage of the company does the investor now own, and what percentage does the founder retain?",
+        "steps": [
+         "Post-money valuation = pre-money valuation + new investment = 2,000,000 + 500,000 = $2,500,000.",
+         "Investor's ownership percentage = investment ÷ post-money valuation = 500,000 ÷ 2,500,000 = 20%.",
+         "Founder's remaining ownership = 100% − 20% = 80%."
+        ],
+        "answer": "The investor owns 20% of the company; the founder retains 80%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "debt financing", "def": "Borrowed money that must be repaid with interest on a schedule, without giving up ownership."},
+      {"term": "equity financing", "def": "Money raised by selling a percentage of ownership in the company, with no fixed repayment schedule."},
+      {"term": "dilution", "def": "The reduction in an existing owner's percentage stake caused by issuing new shares to investors."},
+      {"term": "pre-money / post-money valuation", "def": "A company's agreed value before (pre-money) and after (post-money) a new round of investment is added."}
+     ],
+     "practice": [
+      {"q": "Using the worked example's method, a founder with a $3,000,000 pre-money valuation raises $1,000,000. What percentage does the new investor own?", "choices": ["10%", "20%", "25%", "33%"], "answer": 2, "explain": "Post-money valuation = 3,000,000 + 1,000,000 = $4,000,000. Investor share = 1,000,000 ÷ 4,000,000 = 25%."},
+      {"q": "Why might a business with steady, predictable revenue prefer debt over equity financing?", "choices": ["Debt never has to be repaid", "It can reliably make scheduled payments, keep full ownership, and avoid permanently giving up a share of profit", "Debt automatically converts to equity", "Lenders always offer better advice than investors"], "answer": 1, "explain": "Predictable cash flow makes fixed loan payments manageable, letting the owner keep 100% of the company rather than permanently diluting ownership."},
+      {"q": "In reward-based crowdfunding, what do backers typically receive in exchange for their money?", "choices": ["A percentage of company ownership", "The product itself or another non-equity reward, once it is made", "A guaranteed loan repayment with interest", "A seat on the board of directors"], "answer": 1, "explain": "Reward-based crowdfunding (common on platforms for creative and consumer products) gives backers the product or another reward, not equity - that is what separates it from equity crowdfunding."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Launching and Growing the Venture",
+   "summary": "Getting to market means building the smallest real version of the product, pricing it so the math works, and knowing how to grow, protect, and eventually exit what you've built.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The MVP and the Build-Measure-Learn Loop",
+     "minutes": 10,
+     "intro": "A minimum viable product is not a cheap, broken version of your dream product - it's the smallest thing you can put in front of real customers to learn whether your riskiest assumption is true.",
+     "sections": [
+      {
+       "heading": "What an MVP Actually Is",
+       "body": [
+        "A **minimum viable product (MVP)** is the version of a product with just enough features to be usable by early customers and to generate real, honest feedback - not a demo, and not the full vision. The point isn't to ship something impressive; it's to ship something fast enough to learn from before spending months building features nobody asked for.",
+        "MVPs can look very different depending on what needs testing. A software MVP might be a simple form backed by a founder manually doing the work behind the scenes (a 'concierge MVP'). A physical product MVP might be a hand-made prototype sold to twenty real customers before any factory is involved. What makes it an MVP is the learning goal, not the technology."
+       ]
+      },
+      {
+       "heading": "Build, Measure, Learn",
+       "body": [
+        "The **build-measure-learn loop** is the cycle behind the MVP: build the smallest testable version, measure how real customers actually respond (not how they say they'll respond), and learn whether to keep the current direction, adjust it, or **pivot** - change a core part of the strategy based on what was learned. Each loop should be fast enough that a wrong guess costs weeks, not years.",
+        "A pivot is not a failure; it's the system working as intended. Many well-known companies pivoted from their original idea after their first MVP revealed the real opportunity was somewhere else - the loop exists precisely to catch that early, while it's still cheap to change direction."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "minimum viable product (MVP)", "def": "The smallest version of a product that lets a team learn something real from actual customers."},
+      {"term": "concierge MVP", "def": "An MVP where the founder manually delivers the service behind a simple front end, before building automation."},
+      {"term": "build-measure-learn loop", "def": "The cycle of building a small testable version, measuring real customer behavior, and learning what to do next."},
+      {"term": "pivot", "def": "A deliberate change to a core part of the venture's strategy based on evidence from the build-measure-learn loop."}
+     ],
+     "practice": [
+      {"q": "What is the primary purpose of an MVP?", "choices": ["To impress investors with a polished final product", "To learn something real from actual customer behavior as cheaply and quickly as possible", "To avoid ever talking to customers", "To delay launching as long as possible"], "answer": 1, "explain": "An MVP exists to generate real evidence from customers quickly and cheaply, before a founder invests months building features that may not be needed."},
+      {"q": "A founder manually fulfills orders by hand while customers interact with a simple web form. This is an example of:", "choices": ["A pivot", "A concierge MVP", "A patent application", "A cap table"], "answer": 1, "explain": "Manually delivering the service behind a simple front end, before building automation, is the definition of a concierge MVP."},
+      {"q": "Why is a pivot considered a normal, even healthy, part of building a venture rather than a failure?", "choices": ["Because it means the founder gives up", "Because the build-measure-learn loop is designed to surface evidence early, while changing direction is still cheap", "Because investors require at least one pivot by law", "Because pivots always increase revenue immediately"], "answer": 1, "explain": "The whole point of testing early and cheaply is to catch a wrong direction while it still costs little to change - a pivot means the process worked."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Pricing and Unit Economics",
+     "minutes": 12,
+     "intro": "A venture can have thrilled customers and still go bankrupt if the math per unit sold doesn't work. Unit economics tells you, in hard numbers, whether growth will make the business healthier or just lose money faster.",
+     "sections": [
+      {
+       "heading": "Contribution Margin: What Each Sale Actually Earns",
+       "body": [
+        "**Variable costs** are costs that scale directly with each unit sold - materials, packaging, shipping, per-transaction fees. **Fixed costs** stay roughly the same no matter how many units are sold - rent, salaries, software subscriptions. The **contribution margin** on one unit is its selling price minus its variable cost, showing how much each sale contributes toward covering fixed costs before any profit begins.",
+        "A high price with a thin contribution margin can be more dangerous than a lower price with a fat one, because contribution margin - not revenue - is what actually pays down fixed costs. A business can have rising sales and a shrinking bank account if its contribution margin doesn't clear fixed costs."
+       ]
+      },
+      {
+       "heading": "Break-Even: How Many Units Until Profit Starts",
+       "body": [
+        "Once you know the contribution margin per unit, the **break-even point** - the sales volume at which total contribution margin exactly covers fixed costs - is fixed costs divided by contribution margin per unit. Below that volume, the venture loses money; above it, each additional unit sold adds pure profit (ignoring any new fixed costs).",
+        "Break-even isn't just a milestone to celebrate; it's a planning tool. If break-even requires selling more units per month than the realistic market can absorb, the business model itself - price, cost structure, or both - needs to change before launch, not after the money runs out."
+       ],
+       "example": {
+        "problem": "A subscription snack box costs $12 per unit to produce and ship (variable cost) and sells for $30. Monthly fixed costs (software, salaries, rent) total $18,000. Find the contribution margin per unit and the break-even number of subscribers per month.",
+        "steps": [
+         "Contribution margin per unit = selling price − variable cost = 30 − 12 = $18.",
+         "Break-even units = fixed costs ÷ contribution margin per unit = 18,000 ÷ 18 = 1,000 units.",
+         "Break-even revenue = 1,000 units × $30 = $30,000 per month."
+        ],
+        "answer": "The business needs about 1,000 subscribers per month (generating $30,000 in revenue) just to cover its fixed costs and reach break-even."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "variable cost", "def": "A cost that scales directly with each unit sold, like materials or shipping."},
+      {"term": "fixed cost", "def": "A cost that stays roughly the same regardless of sales volume, like rent or salaries."},
+      {"term": "contribution margin", "def": "Selling price minus variable cost per unit - what each sale contributes toward covering fixed costs."},
+      {"term": "break-even point", "def": "The sales volume at which total contribution margin exactly equals fixed costs, so profit is zero."}
+     ],
+     "practice": [
+      {"q": "Using the worked example's method, a product sells for $50 with a variable cost of $20, and monthly fixed costs are $24,000. What is the break-even number of units?", "choices": ["480", "600", "800", "1,200"], "answer": 2, "explain": "Contribution margin = 50 − 20 = $30. Break-even units = 24,000 ÷ 30 = 800 units."},
+      {"q": "Why can a business with rising sales still be running out of cash?", "choices": ["Rising sales always mean rising profit", "If the contribution margin per unit is too thin, more sales may not generate enough combined margin to cover fixed costs", "Fixed costs disappear once sales rise", "This situation is impossible in a real business"], "answer": 1, "explain": "Contribution margin, not revenue, is what pays down fixed costs - a thin margin can mean growing sales still fail to cover the bills."},
+      {"q": "A founder's break-even point requires selling 5,000 units per month, but realistic market research suggests demand tops out around 1,500 units per month. What should the founder do?", "choices": ["Launch anyway and hope demand grows", "Reconsider the price, variable cost, or fixed cost structure before launching", "Ignore the break-even calculation entirely", "Increase fixed costs to compensate"], "answer": 1, "explain": "When break-even volume clearly exceeds realistic demand, the business model itself - price, costs, or both - needs to change before real money is committed."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Scaling, Hiring, and Exit Strategies",
+     "minutes": 11,
+     "intro": "The skills that get a venture launched - doing everything yourself, moving fast, deciding alone - are often the exact skills that stop it from growing past a certain size. Scaling means changing how the business runs, not just doing more of the same.",
+     "sections": [
+      {
+       "heading": "Scaling Means Changing How Work Gets Done",
+       "body": [
+        "Early on, a founder is the product, the salesperson, and the support team. **Scaling** means replacing founder-dependent processes with systems and people who can deliver consistent quality without the founder personally touching every transaction - documented processes, training, software, and a first real hire. Growth that still depends entirely on the founder's personal effort isn't scaling; it's just working longer hours.",
+        "The first hires matter enormously because they set the culture and standards for everyone who follows. A common mistake is hiring too late, out of a fear of giving up control, which caps growth right at the point the founder becomes the bottleneck for every decision."
+       ]
+      },
+      {
+       "heading": "Harvesting and Exit Strategies",
+       "body": [
+        "An **exit strategy** is how the founders and early investors eventually turn their ownership stake into cash - because equity in a private company is only valuable on paper until it's sold or the company goes public. Common exits include an **acquisition** (a larger company buys the venture), an **IPO** (initial public offering, selling shares to the public on a stock exchange), or a management buyout, where existing leaders purchase the founders' stake.",
+        "Not every venture needs to sell or go public. A **lifestyle business** may be built to run indefinitely, paying its owner a steady income rather than aiming for a big sale. The right exit strategy - or the choice to have none - should match what the founder and any investors actually want, since investors who put in equity capital are usually counting on some future exit to realize a return."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "scaling", "def": "Growing a venture by building systems, processes, and a team that can deliver consistent quality without the founder personally handling every transaction."},
+      {"term": "exit strategy", "def": "The plan for how founders and investors eventually convert their ownership stake into cash, such as through acquisition or an IPO."},
+      {"term": "acquisition", "def": "A larger company buying a venture, giving founders and investors a payout for their ownership stakes."},
+      {"term": "lifestyle business", "def": "A venture built to provide steady income indefinitely, rather than to be sold or scaled dramatically."}
+     ],
+     "practice": [
+      {"q": "A founder still personally reviews and approves every single customer order after three years in business, and growth has stalled. What does this suggest?", "choices": ["The business has successfully scaled", "The founder has not scaled - growth still depends entirely on her personal effort rather than systems or a team", "The business needs to lower its prices", "The business should immediately IPO"], "answer": 1, "explain": "True scaling replaces founder-dependent steps with systems, processes, and people; a business still bottlenecked on the founder's personal review has not scaled, regardless of revenue growth."},
+      {"q": "Why do outside equity investors usually care about a venture's eventual exit strategy?", "choices": ["Exits are legally required within one year", "Their ownership stake is only realized as cash through some future event like an acquisition or IPO", "Exits guarantee the founder's salary", "Investors are only repaid through debt, never equity"], "answer": 1, "explain": "Equity is illiquid until there's an exit event - an acquisition, IPO, or similar - so investors typically expect a plan for how that eventually happens."},
+      {"q": "A founder wants to run a profitable single-location bakery indefinitely, with no plan to sell or expand widely. What is this best described as?", "choices": ["A failed startup", "A lifestyle business", "An IPO candidate", "A venture capital-backed scale-up"], "answer": 1, "explain": "A venture built to provide steady income indefinitely, without aiming for a big sale or rapid scale, is a lifestyle business - a legitimate and common entrepreneurial choice."}
+     ]
+    }
+   ]
+  }
+ ]
+}

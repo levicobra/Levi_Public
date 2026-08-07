@@ -1,0 +1,713 @@
+{
+ "id": "statistics",
+ "title": "Introductory Statistics",
+ "domain": "math",
+ "level": "Intro college",
+ "description": "A first course in making sense of data: how to describe it, how chance and probability behave, how sampling distributions connect a single sample to a whole population, and how to use that connection to estimate unknowns and test claims with real numbers, not guesswork. Every method here is built toward one goal — drawing conclusions you can actually justify.",
+ "outcomes": [
+  "Summarize and visualize data using measures of center, spread, and appropriate graphs, recognizing shape and outliers.",
+  "Compute and interpret probabilities, including conditional probability and expected value, for discrete events.",
+  "Apply the binomial and normal distributions to compute probabilities and use the Central Limit Theorem for sampling distributions.",
+  "Construct and interpret confidence intervals for a population mean or proportion.",
+  "Conduct hypothesis tests for a mean or proportion, correctly stating hypotheses, computing test statistics, and interpreting p-values.",
+  "Perform and interpret linear regression and correlation between two quantitative variables."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Describing Data",
+   "summary": "Organizing and summarizing data with graphs, measures of center, and measures of spread.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Types of Data and Sampling",
+     "minutes": 14,
+     "intro": "Before any calculation, statistics asks a more basic question: what kind of data is this, and where did it come from? The answer determines which graphs and calculations are even valid, and a badly collected sample can make every later number meaningless no matter how carefully it's computed.",
+     "sections": [
+      {
+       "heading": "Quantitative and Qualitative Data",
+       "body": [
+        "**Quantitative data** consists of numbers that represent measurable quantities, like height or income, and splits further into **discrete** data (countable, like number of siblings) and **continuous** data (measurable to any precision, like weight). **Qualitative** (or categorical) data consists of labels or categories, like eye color or favorite genre, which cannot be meaningfully averaged.",
+        "The distinction matters immediately: means and standard deviations are computed on quantitative data, while categorical data is summarized with counts, proportions, and bar charts instead. Mistaking a coded categorical variable (like zip codes, which are numbers but not quantities) for quantitative data is a classic early error."
+       ]
+      },
+      {
+       "heading": "Sampling Methods",
+       "body": [
+        "A **population** is the complete group you want to learn about; a **sample** is the subset you actually collect data from. A **simple random sample (SRS)** gives every member of the population an equal chance of selection and is the gold standard because it avoids systematic bias. **Stratified sampling** divides the population into subgroups (strata) and samples randomly within each, ensuring every subgroup is represented proportionally.",
+        "**Convenience sampling** (using whoever is easiest to reach) and **voluntary response sampling** (letting people opt in) are both prone to serious bias and generally should not be used to draw conclusions about a broader population, since the people who show up or volunteer are rarely representative of everyone else."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "quantitative data", "def": "Numerical data representing measurable amounts, further split into discrete (countable) and continuous (measurable to any precision)."},
+      {"term": "qualitative data", "def": "Categorical data consisting of labels or groups rather than measurable quantities."},
+      {"term": "simple random sample", "def": "A sample in which every member of the population has an equal chance of being selected, minimizing selection bias."},
+      {"term": "voluntary response bias", "def": "Bias arising when a sample consists of people who chose to participate, who often differ systematically from the full population."}
+     ],
+     "practice": [
+      {"q": "Number of pets owned by a household is what type of data?", "choices": ["Quantitative, discrete", "Quantitative, continuous", "Qualitative", "Neither quantitative nor qualitative"], "answer": 0, "explain": "The number of pets is a countable whole number (0, 1, 2, ...), making it quantitative and discrete rather than continuous."},
+      {"q": "A radio station asks listeners to call in and vote on their favorite song. This is an example of:", "choices": ["Voluntary response sampling, prone to bias", "A simple random sample", "Stratified sampling", "An unbiased census"], "answer": 0, "explain": "Listeners choose whether to call in, so the sample consists only of people motivated enough to respond — a classic case of voluntary response bias, not a representative sample."},
+      {"q": "Which sampling method gives every population member an equal chance of selection?", "choices": ["Simple random sampling", "Convenience sampling", "Voluntary response sampling", "None of these guarantee equal chance"], "answer": 0, "explain": "By definition, a simple random sample selects members so that every individual (and every possible sample of a given size) has an equal chance of being chosen."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Measures of Center",
+     "minutes": 15,
+     "intro": "When someone asks for a 'typical' value in a dataset, they're usually asking for one of three numbers: the mean, median, or mode — and choosing the wrong one can badly misrepresent the data, especially when outliers or skew are involved.",
+     "sections": [
+      {
+       "heading": "Mean, Median, and Mode",
+       "body": [
+        "The **mean** (x̄ for a sample, μ for a population) is the arithmetic average: sum all values and divide by how many there are. The **median** is the middle value when data is sorted (or the average of the two middle values for an even count); it splits the dataset exactly in half. The **mode** is the most frequently occurring value, useful mainly for categorical data or datasets with a clear repeated value.",
+        "The mean uses every data point in its calculation, which makes it sensitive to extreme values (outliers); the median only depends on the middle position(s) and ignores how extreme the outer values are, making it **resistant** to outliers. For skewed distributions or data with outliers, the median is usually the more representative measure of center."
+       ],
+       "example": {
+        "problem": "Find the mean and median of the dataset: 4, 7, 7, 9, 12, 50.",
+        "steps": [
+         "Compute the mean: sum = 4+7+7+9+12+50 = 89. Divide by n=6: 89/6 ≈ 14.83.",
+         "Sort the data (already sorted): 4, 7, 7, 9, 12, 50.",
+         "With n=6 (even), the median is the average of the 3rd and 4th values: (7+9)/2 = 8.",
+         "Compare: the mean (14.83) is pulled upward by the outlier 50, while the median (8) better reflects the typical value in the bulk of the data."
+        ],
+        "answer": "Mean ≈ 14.83; median = 8. The median better represents this data because of the outlier 50."
+       }
+      },
+      {
+       "heading": "Choosing the Right Measure",
+       "body": [
+        "For symmetric distributions without outliers, the mean and median are close together and either works well. For distributions that are strongly skewed (a long tail in one direction) or contain outliers, the mean gets pulled toward the tail or outlier while the median stays anchored near the bulk of the data — this is why income data, which is right-skewed with a few very high earners, is almost always reported using the median rather than the mean.",
+        "A dataset can have no mode (all values distinct), one mode (unimodal), or multiple modes (bimodal, multimodal) — and unlike mean and median, mode applies naturally to categorical data, where averaging or sorting isn't meaningful."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "mean", "def": "The arithmetic average of a dataset, sensitive to outliers because every value contributes to the sum."},
+      {"term": "median", "def": "The middle value of sorted data, resistant to outliers because it depends only on position, not magnitude."},
+      {"term": "mode", "def": "The most frequently occurring value in a dataset; applicable to both quantitative and categorical data."},
+      {"term": "resistant statistic", "def": "A statistic, like the median, whose value is not strongly affected by extreme outliers."}
+     ],
+     "practice": [
+      {"q": "For the data 2, 3, 3, 3, 100, which measure of center is least affected by the outlier 100?", "choices": ["Median", "Mean", "Both are affected equally", "Neither can be computed"], "answer": 0, "explain": "The median (3, the middle value) ignores how far away 100 is, while the mean (sum=111, divided by 5 = 22.2) is dragged upward substantially by that single outlier."},
+      {"q": "Why is median income typically reported instead of mean income?", "choices": ["Income distributions are right-skewed, and the mean is pulled upward by high earners", "The mean cannot be computed for income data", "Median is easier to calculate", "There is no difference between them for income data"], "answer": 0, "explain": "A small number of very high earners drag the mean well above what a 'typical' person earns, so the median, which reflects the middle earner, is considered more representative."},
+      {"q": "A dataset has two values that each occur most frequently and equally often. This dataset is:", "choices": ["Bimodal", "Unimodal", "Symmetric", "Impossible to have a mode"], "answer": 0, "explain": "When two distinct values tie for the highest frequency, the dataset is called bimodal, having two modes rather than one."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Measures of Spread",
+     "minutes": 17,
+     "intro": "Two datasets can share the exact same mean while looking completely different — one tightly clustered, one wildly scattered. Measures of spread capture that difference, and standard deviation is the single most important number in all of statistics for describing how spread out data really is.",
+     "sections": [
+      {
+       "heading": "Range, Variance, and Standard Deviation",
+       "body": [
+        "The **range** (max − min) is the simplest spread measure but uses only two data points and ignores everything in between. The **variance** measures the average squared distance of each data point from the mean: for a sample, s² = Σ(x−x̄)²/(n−1) (dividing by n−1, not n, corrects for the fact that a sample tends to underestimate population variance). The **standard deviation** s = √(s²) returns the spread to the original units, which is why it's reported far more often than variance.",
+        "A small standard deviation means data clusters tightly around the mean; a large standard deviation means data is spread widely. Standard deviation is always non-negative, and it equals zero only when every data point is identical."
+       ],
+       "example": {
+        "problem": "Find the sample standard deviation of the dataset: 2, 4, 6, 8.",
+        "steps": [
+         "Compute the mean: (2+4+6+8)/4 = 20/4 = 5.",
+         "Compute each squared deviation from the mean: (2−5)²=9, (4−5)²=1, (6−5)²=1, (8−5)²=9.",
+         "Sum the squared deviations: 9+1+1+9 = 20. Divide by n−1 = 3 to get the sample variance: s² = 20/3 ≈ 6.67.",
+         "Take the square root: s = √6.67 ≈ 2.58."
+        ],
+        "answer": "The sample standard deviation is approximately 2.58."
+       }
+      },
+      {
+       "heading": "The Five-Number Summary and IQR",
+       "body": [
+        "The **five-number summary** consists of the minimum, first quartile (Q1, the median of the lower half), median (Q2), third quartile (Q3, the median of the upper half), and maximum. The **interquartile range (IQR) = Q3 − Q1** measures the spread of the middle 50% of the data and, like the median, is resistant to outliers.",
+        "A common outlier rule flags any value below Q1 − 1.5×IQR or above Q3 + 1.5×IQR as a potential outlier. This 1.5×IQR rule is exactly what a **box plot** (or box-and-whisker plot) visualizes: a box from Q1 to Q3 with a line at the median, and whiskers extending to the most extreme non-outlier values, with any flagged outliers plotted as individual points."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "variance", "def": "The average of squared deviations from the mean; for a sample, s²=Σ(x−x̄)²/(n−1)."},
+      {"term": "standard deviation", "def": "s=√(s²), the square root of variance, expressing spread in the original units of the data."},
+      {"term": "interquartile range (IQR)", "def": "Q3−Q1, the range of the middle 50% of the data, resistant to outliers."},
+      {"term": "1.5×IQR rule", "def": "A convention flagging values below Q1−1.5(IQR) or above Q3+1.5(IQR) as potential outliers."}
+     ],
+     "practice": [
+      {"q": "Why does sample variance divide by n−1 instead of n?", "choices": ["To correct for the tendency of a sample to underestimate population variance", "Because n−1 is always an integer", "It is simply a convention with no mathematical reason", "To make variance always smaller than the range"], "answer": 0, "explain": "Using n in the denominator systematically underestimates the true population variance on average; dividing by n−1 (Bessel's correction) produces an unbiased estimate."},
+      {"q": "For a dataset with Q1=10 and Q3=22, a value of 45 would be flagged as an outlier if it exceeds:", "choices": ["Q3 + 1.5×IQR = 22 + 1.5(12) = 40", "Q3 + IQR = 34", "The maximum value only", "Q1 − 1.5×IQR"], "answer": 0, "explain": "IQR = 22−10 = 12; the upper outlier boundary is Q3+1.5(12) = 22+18 = 40, and since 45 > 40, it would be flagged as an outlier."},
+      {"q": "A dataset with standard deviation 0 means:", "choices": ["Every value in the dataset is identical", "The dataset has no data", "The mean is 0", "The data is perfectly normal"], "answer": 0, "explain": "Standard deviation measures spread around the mean; it can only be exactly 0 when there is no variation at all — every data point equals the mean."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Probability",
+   "summary": "The rules of probability, conditional probability, independence, and expected value for discrete random variables.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Basic Probability Rules",
+     "minutes": 16,
+     "intro": "Probability gives a precise number, between 0 and 1, to how likely an event is — and a small set of rules for combining events (and, or, not) lets you compute the probability of complex situations from simpler building blocks.",
+     "sections": [
+      {
+       "heading": "Sample Spaces and Basic Rules",
+       "body": [
+        "The **sample space** S is the set of all possible outcomes of a random process; an **event** is any subset of that sample space. For equally likely outcomes, P(event) = (number of favorable outcomes)/(total number of outcomes in S). Every probability satisfies 0 ≤ P(event) ≤ 1, and the probabilities of all outcomes in a sample space sum to 1.",
+        "The **complement rule** states P(not A) = 1 − P(A), useful whenever 'at least one' or 'none' language makes the direct calculation awkward but the opposite event is easy to compute. For example, finding P(at least one head in 3 coin flips) is easiest via 1 − P(no heads)."
+       ]
+      },
+      {
+       "heading": "The Addition Rule",
+       "body": [
+        "For any two events A and B, the **general addition rule** is P(A or B) = P(A) + P(B) − P(A and B); the subtraction avoids double-counting outcomes that belong to both events. When A and B are **mutually exclusive** (cannot happen simultaneously, so P(A and B) = 0), this simplifies to P(A or B) = P(A) + P(B).",
+        "Recognizing mutual exclusivity is the key judgment call: rolling a 2 and rolling a 5 on a single die are mutually exclusive (can't both happen), but drawing a heart and drawing a face card from a deck are not (the jack, queen, and king of hearts belong to both events)."
+       ],
+       "example": {
+        "problem": "In a standard deck of 52 cards, find P(drawing a heart or a face card).",
+        "steps": [
+         "Count hearts: 13 out of 52, so P(heart) = 13/52.",
+         "Count face cards (jack, queen, king in each of 4 suits): 12 out of 52, so P(face card) = 12/52.",
+         "Count the overlap: hearts that are also face cards (jack, queen, king of hearts) = 3, so P(heart and face) = 3/52.",
+         "Apply the general addition rule: P(heart or face) = 13/52 + 12/52 − 3/52 = 22/52 = 11/26."
+        ],
+        "answer": "P(heart or face card) = 22/52 = 11/26 ≈ 0.423."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "sample space", "def": "The complete set of all possible outcomes of a random process."},
+      {"term": "mutually exclusive events", "def": "Two events that cannot occur at the same time, so P(A and B) = 0."},
+      {"term": "complement rule", "def": "P(not A) = 1 − P(A), giving the probability an event does not occur."},
+      {"term": "general addition rule", "def": "P(A or B) = P(A) + P(B) − P(A and B), correcting for double-counted overlap between events."}
+     ],
+     "practice": [
+      {"q": "A fair die is rolled once. What is P(rolling a 3 or a 5)?", "choices": ["2/6 = 1/3", "1/6", "1/2", "5/6"], "answer": 0, "explain": "Rolling a 3 and rolling a 5 are mutually exclusive on a single roll, so P(3 or 5) = P(3)+P(5) = 1/6+1/6 = 2/6 = 1/3."},
+      {"q": "If P(A) = 0.4, what is P(not A)?", "choices": ["0.6", "0.4", "1.4", "0"], "answer": 0, "explain": "By the complement rule, P(not A) = 1 − P(A) = 1 − 0.4 = 0.6."},
+      {"q": "For events A and B with P(A)=0.3, P(B)=0.5, and P(A and B)=0.1, what is P(A or B)?", "choices": ["0.7", "0.8", "0.9", "0.4"], "answer": 0, "explain": "General addition rule: P(A or B) = P(A)+P(B)−P(A and B) = 0.3+0.5−0.1 = 0.7."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Conditional Probability and Independence",
+     "minutes": 18,
+     "intro": "Learning that one event has occurred often changes the probability you'd assign to another — a positive medical test raises the chance of actually having a disease, for instance. Conditional probability formalizes exactly how much that new information should shift your estimate.",
+     "sections": [
+      {
+       "heading": "Conditional Probability",
+       "body": [
+        "The **conditional probability** of A given B, written P(A|B), is the probability A occurs given that B is known to have occurred: P(A|B) = P(A and B)/P(B), provided P(B) > 0. It restricts the sample space to just the outcomes where B happened, then asks what fraction of those also satisfy A.",
+        "Rearranging the definition gives the **general multiplication rule**: P(A and B) = P(A|B)·P(B), useful for computing the probability of two events both happening when their conditional relationship is easier to describe directly than their joint probability."
+       ],
+       "example": {
+        "problem": "In a group of 100 people, 40 own a dog, 25 own a cat, and 10 own both. If a person is chosen at random and is known to own a dog, what is the probability they also own a cat?",
+        "steps": [
+         "Identify the needed probabilities: P(dog)=40/100=0.4, P(dog and cat)=10/100=0.1.",
+         "Apply the conditional probability formula: P(cat|dog) = P(cat and dog)/P(dog) = 0.1/0.4.",
+         "Compute the division: 0.1/0.4 = 0.25.",
+         "So given that a person owns a dog, there is a 25% chance they also own a cat."
+        ],
+        "answer": "P(cat | dog) = 0.25, or 25%."
+       }
+      },
+      {
+       "heading": "Independence",
+       "body": [
+        "Two events A and B are **independent** if knowing one occurred doesn't change the probability of the other: P(A|B) = P(A) (equivalently, P(A and B) = P(A)·P(B)). Independence is a strong, specific claim and should be verified with this equation rather than assumed just because two events seem unrelated.",
+        "This gives a simplified multiplication rule for independent events: P(A and B) = P(A)·P(B), without needing conditional probabilities at all. Confusing independence with mutual exclusivity is a very common error: mutually exclusive events with nonzero probabilities are actually the opposite of independent, since knowing one occurred makes the other's probability drop to exactly zero."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "conditional probability", "def": "P(A|B) = P(A and B)/P(B), the probability of A given that B has occurred."},
+      {"term": "independent events", "def": "Events where P(A|B) = P(A), equivalently P(A and B) = P(A)·P(B); one event's occurrence provides no information about the other."},
+      {"term": "general multiplication rule", "def": "P(A and B) = P(A|B)·P(B), derived by rearranging the definition of conditional probability."}
+     ],
+     "practice": [
+      {"q": "If P(A)=0.5 and P(A|B)=0.5, what can you conclude about A and B?", "choices": ["A and B are independent", "A and B are mutually exclusive", "A causes B", "P(B) must equal 0.5 too"], "answer": 0, "explain": "Independence is defined precisely by P(A|B)=P(A) — knowing B occurred doesn't change the probability of A, which is exactly the case here."},
+      {"q": "For mutually exclusive events A and B with P(A)>0 and P(B)>0, P(A|B) equals:", "choices": ["0, since A cannot occur if B has occurred", "P(A)", "P(A)+P(B)", "1"], "answer": 0, "explain": "If A and B are mutually exclusive, they cannot both happen, so P(A and B)=0, making P(A|B)=P(A and B)/P(B)=0/P(B)=0 — confirming mutually exclusive events (with positive probabilities) are never independent."},
+      {"q": "Two fair coins are flipped. What is P(both heads)?", "choices": ["0.25", "0.5", "1", "0.75"], "answer": 0, "explain": "The two flips are independent, so P(both heads) = P(head)·P(head) = 0.5×0.5 = 0.25."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Discrete Random Variables and Expected Value",
+     "minutes": 17,
+     "intro": "A random variable turns the outcomes of a chance process into numbers you can compute with, and expected value gives you a single number summarizing what that process pays off, or costs, on average over the long run — the mathematical backbone of insurance, gambling odds, and risk assessment.",
+     "sections": [
+      {
+       "heading": "Probability Distributions",
+       "body": [
+        "A **discrete random variable** X takes on a countable set of numeric values, each with an associated probability, forming a **probability distribution**. Every valid probability distribution must satisfy two conditions: each probability P(X=x) is between 0 and 1, and the sum of all probabilities across every possible value equals exactly 1.",
+        "Probability distributions are often displayed in a table listing each possible value of X alongside its probability, and this table is the starting point for computing any summary statistic of the random variable, including its expected value and variance."
+       ]
+      },
+      {
+       "heading": "Expected Value",
+       "body": [
+        "The **expected value** E(X) = Σ[x·P(X=x)], summing each possible value multiplied by its probability, represents the long-run average outcome if the random process were repeated many, many times. It is not necessarily a value X can actually take (a game might have an expected value of 1.5 even though outcomes are always whole numbers).",
+        "In games of chance, a positive expected value favors the player over the long run, a negative expected value favors the house, and an expected value of exactly zero describes a **fair game**. This single number is exactly what casinos, insurers, and lotteries build their profit models around."
+       ],
+       "example": {
+        "problem": "A game costs $2 to play. You draw a card from a standard deck: if it's an ace, you win $20; otherwise, you win nothing. Find the expected net value of playing.",
+        "steps": [
+         "Find P(ace) = 4/52 = 1/13, and P(not ace) = 48/52 = 12/13.",
+         "Compute the net winnings for each outcome: winning an ace nets $20−$2=$18; not winning an ace nets $0−$2=−$2.",
+         "Compute the expected value: E(X) = (18)(1/13) + (−2)(12/13) = 18/13 − 24/13.",
+         "Combine the fractions: 18/13 − 24/13 = −6/13 ≈ −$0.46."
+        ],
+        "answer": "The expected net value is about −$0.46 per play — the game favors the house."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "discrete random variable", "def": "A variable that takes on a countable set of numeric outcomes, each with an associated probability."},
+      {"term": "probability distribution", "def": "A complete listing of a random variable's possible values and their probabilities, summing to exactly 1."},
+      {"term": "expected value", "def": "E(X) = Σ[x·P(X=x)], the long-run average outcome of a random variable over many repetitions."},
+      {"term": "fair game", "def": "A game whose expected net value is exactly 0, favoring neither the player nor the house."}
+     ],
+     "practice": [
+      {"q": "A probability distribution lists P(X=1)=0.2, P(X=2)=0.5, P(X=3)=0.2. What must P(X=4) be for this to be valid?", "choices": ["0.1", "0.3", "0", "It cannot be determined"], "answer": 0, "explain": "All probabilities must sum to 1: 0.2+0.5+0.2=0.9, so the remaining probability must be 1−0.9=0.1."},
+      {"q": "A raffle ticket costs $5. There's a 1/100 chance of winning $300, otherwise you win nothing. What is the expected net value?", "choices": ["−$2.00", "$3.00", "$0.00", "−$5.00"], "answer": 0, "explain": "Net winnings are $295 with probability 1/100, and −$5 with probability 99/100: E(X) = 295(0.01) + (−5)(0.99) = 2.95 − 4.95 = −$2.00."},
+      {"q": "An expected value of exactly 0 in a game means:", "choices": ["The game is fair, favoring neither player nor house over the long run", "Every outcome pays exactly $0", "The game is impossible to analyze", "The player always breaks even on every single play"], "answer": 0, "explain": "An expected value of 0 describes the long-run average over many repetitions, not the outcome of any single play — individual plays can still win or lose, but they average out to break-even."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Probability Distributions",
+   "summary": "The binomial distribution for discrete counts and the normal distribution for continuous, bell-shaped data.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Binomial Distribution",
+     "minutes": 18,
+     "intro": "Many real situations boil down to a fixed number of independent yes/no trials, each with the same success probability, like counting how many out of 20 flipped coins land heads. The binomial distribution gives you the exact probability of any particular count of successes.",
+     "sections": [
+      {
+       "heading": "Binomial Conditions and Formula",
+       "body": [
+        "A random variable X follows a **binomial distribution** when four conditions hold: there are a fixed number n of trials, each trial has only two possible outcomes (success/failure), the trials are independent, and the probability of success p is the same on every trial. Under these conditions, X counts the number of successes in n trials.",
+        "The probability of exactly k successes is P(X=k) = C(n,k)·p^k·(1−p)^(n−k), where C(n,k) = n!/[k!(n−k)!] counts the number of ways to choose which k of the n trials are the successes. This single formula covers everything from coin flips to quality-control defect rates to multiple-choice guessing."
+       ],
+       "example": {
+        "problem": "A multiple-choice quiz has 5 questions, each with 4 choices, and a student guesses randomly on every question. Find the probability the student gets exactly 2 correct.",
+        "steps": [
+         "Identify the binomial parameters: n=5 trials, p=1/4 (probability of guessing correctly), k=2 successes.",
+         "Compute C(5,2) = 5!/(2!3!) = (5×4)/(2×1) = 10.",
+         "Compute p^k(1−p)^(n−k) = (1/4)²(3/4)³ = (1/16)(27/64) = 27/1024.",
+         "Multiply: P(X=2) = 10 × 27/1024 = 270/1024 ≈ 0.264."
+        ],
+        "answer": "P(exactly 2 correct) ≈ 0.264, or about 26.4%."
+       }
+      },
+      {
+       "heading": "Mean and Standard Deviation of a Binomial",
+       "body": [
+        "For a binomial distribution with n trials and success probability p, the mean (expected number of successes) is μ = np, and the standard deviation is σ = √(np(1−p)). These formulas avoid computing the full expected-value sum term by term, since they follow directly from the binomial's structure.",
+        "These shortcuts are especially useful for quickly sanity-checking results: for the quiz example above with n=5, p=0.25, the mean number correct is μ=5(0.25)=1.25, and the standard deviation is σ=√(5(0.25)(0.75))=√0.9375≈0.968 — telling you that getting 2 correct (as computed above) is a bit above the average but well within one standard deviation."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "binomial distribution", "def": "The distribution of the number of successes in n independent trials, each with the same success probability p."},
+      {"term": "binomial coefficient", "def": "C(n,k) = n!/[k!(n−k)!], the number of ways to choose which k of n trials are successes."},
+      {"term": "binomial mean", "def": "μ = np, the expected number of successes in a binomial distribution."},
+      {"term": "binomial standard deviation", "def": "σ = √(np(1−p)), measuring the typical spread of the number of successes around the mean."}
+     ],
+     "practice": [
+      {"q": "Which scenario satisfies the conditions for a binomial distribution?", "choices": ["Flipping a fair coin 10 times and counting the number of heads", "Rolling a die until a 6 appears (no fixed number of trials)", "Drawing 5 cards from a deck without replacement and counting red cards", "Measuring the heights of 10 randomly selected people"], "answer": 0, "explain": "Coin flips have a fixed number of trials (10), two outcomes each (heads/tails), independence between flips, and constant probability (0.5) each time — meeting all four binomial conditions. Drawing without replacement violates independence/constant probability."},
+      {"q": "For a binomial distribution with n=20 and p=0.3, what is the mean number of successes?", "choices": ["6", "0.3", "20", "14"], "answer": 0, "explain": "The binomial mean is μ = np = 20(0.3) = 6."},
+      {"q": "C(4,2), the number of ways to choose 2 successes out of 4 trials, equals:", "choices": ["6", "4", "8", "2"], "answer": 0, "explain": "C(4,2) = 4!/(2!2!) = 24/(2×2) = 6."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Normal Distribution",
+     "minutes": 19,
+     "intro": "The normal distribution's bell curve shows up everywhere, from test scores to measurement errors to biological traits, and its predictability is what makes it the backbone of the rest of this course: knowing a distribution is normal lets you compute exact probabilities using just the mean and standard deviation.",
+     "sections": [
+      {
+       "heading": "Properties of the Normal Distribution",
+       "body": [
+        "The **normal distribution** is a continuous, symmetric, bell-shaped distribution fully determined by its mean μ (center) and standard deviation σ (spread). The **empirical rule (68-95-99.7 rule)** states that approximately 68% of data falls within 1σ of the mean, 95% within 2σ, and 99.7% within 3σ — a quick way to gauge how unusual a given value is without any formal calculation.",
+        "The **standard normal distribution** is the special case with μ=0 and σ=1. Any normal variable X can be converted to this standard scale using the **z-score** formula z = (x−μ)/σ, which measures how many standard deviations x is above or below the mean — a universal scale that lets you compare values from different normal distributions directly."
+       ]
+      },
+      {
+       "heading": "Computing Normal Probabilities",
+       "body": [
+        "To find the probability that a normal variable falls below, above, or between certain values, convert each boundary to a z-score, then look up the corresponding area under the standard normal curve using a z-table or calculator function (commonly `normalcdf`). The area to the left of a z-score gives the cumulative probability P(Z<z), and areas can be added or subtracted to find probabilities for any interval.",
+        "For P(a<X<b), convert both a and b to z-scores z_a and z_b, then compute P(Z<z_b) − P(Z<z_a). For P(X>b), compute 1 − P(Z<z_b), using the fact that the total area under the curve is exactly 1."
+       ],
+       "example": {
+        "problem": "Adult male heights are normally distributed with μ=70 inches and σ=3 inches. Find the probability a randomly selected man is taller than 76 inches.",
+        "steps": [
+         "Compute the z-score: z = (76−70)/3 = 6/3 = 2.",
+         "This means 76 inches is exactly 2 standard deviations above the mean.",
+         "Using a standard normal table, P(Z<2) ≈ 0.9772 (the area to the left of z=2).",
+         "The probability of being taller than 76 inches is P(Z>2) = 1 − 0.9772 = 0.0228."
+        ],
+        "answer": "P(height > 76 inches) ≈ 0.0228, or about 2.28%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "normal distribution", "def": "A continuous, symmetric, bell-shaped distribution fully described by its mean μ and standard deviation σ."},
+      {"term": "empirical rule", "def": "For normal data, approximately 68% falls within 1σ, 95% within 2σ, and 99.7% within 3σ of the mean."},
+      {"term": "z-score", "def": "z=(x−μ)/σ, the number of standard deviations a value x is above or below the mean, used to standardize any normal distribution."},
+      {"term": "standard normal distribution", "def": "The normal distribution with μ=0 and σ=1, used as the reference for computing probabilities via z-scores."}
+     ],
+     "practice": [
+      {"q": "A value with z-score = −1 is located:", "choices": ["1 standard deviation below the mean", "1 standard deviation above the mean", "Equal to the mean", "Cannot be determined without more information"], "answer": 0, "explain": "A negative z-score indicates the value is below the mean, and its magnitude (1) tells you the number of standard deviations away — so −1 means exactly 1σ below the mean."},
+      {"q": "By the empirical rule, approximately what percent of normal data falls within 2 standard deviations of the mean?", "choices": ["95%", "68%", "99.7%", "50%"], "answer": 0, "explain": "The 68-95-99.7 rule states that about 95% of data in a normal distribution falls within 2 standard deviations of the mean."},
+      {"q": "Test scores are normal with μ=75, σ=5. What is the z-score for a score of 85?", "choices": ["2", "10", "0.5", "1"], "answer": 0, "explain": "z = (85−75)/5 = 10/5 = 2, meaning a score of 85 is 2 standard deviations above the mean."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Sampling Distributions and the Central Limit Theorem",
+     "minutes": 19,
+     "intro": "A single sample mean is just one number drawn from a whole universe of possible sample means you could have gotten instead — and the Central Limit Theorem describes exactly how those possible sample means are distributed, which is the mathematical bridge connecting one sample to conclusions about an entire population.",
+     "sections": [
+      {
+       "heading": "The Sampling Distribution of the Mean",
+       "body": [
+        "The **sampling distribution of the sample mean** describes how x̄ (computed from a random sample of size n) would vary if you repeated the sampling process over and over. Its mean equals the population mean μ, and its standard deviation, called the **standard error**, is σ/√n — meaning larger samples produce sample means that cluster more tightly around the true population mean.",
+        "This shrinking standard error as n grows is the mathematical reason larger samples give more precise estimates: quadrupling the sample size only halves the standard error, since it depends on √n rather than n directly."
+       ]
+      },
+      {
+       "heading": "The Central Limit Theorem",
+       "body": [
+        "The **Central Limit Theorem (CLT)** states that for a sufficiently large sample size (a common rule of thumb is n ≥ 30), the sampling distribution of the sample mean x̄ is approximately normal, regardless of the shape of the original population's distribution. If the original population is itself normal, x̄ is exactly normal for any sample size, even small ones.",
+        "The CLT is the single most important theorem in introductory statistics because it justifies using normal-distribution-based methods (z-scores, confidence intervals, hypothesis tests) on sample means even when the underlying population data is skewed, bimodal, or otherwise non-normal — as long as the sample is large enough."
+       ],
+       "example": {
+        "problem": "A population has mean μ=50 and standard deviation σ=12. For a random sample of size n=36, find the probability that the sample mean x̄ is greater than 53.",
+        "steps": [
+         "Since n=36≥30, the CLT applies: x̄ is approximately normal with mean μ=50 and standard error σ/√n = 12/√36 = 12/6 = 2.",
+         "Compute the z-score for x̄=53 using the standard error: z = (53−50)/2 = 3/2 = 1.5.",
+         "Using a standard normal table, P(Z<1.5) ≈ 0.9332.",
+         "The probability x̄>53 is 1 − 0.9332 = 0.0668."
+        ],
+        "answer": "P(x̄ > 53) ≈ 0.0668, or about 6.68%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "sampling distribution", "def": "The distribution of a statistic (like the sample mean) across all possible samples of a given size from a population."},
+      {"term": "standard error", "def": "σ/√n, the standard deviation of the sampling distribution of the sample mean, which shrinks as sample size n grows."},
+      {"term": "Central Limit Theorem", "def": "For sufficiently large n (commonly n≥30), the sampling distribution of x̄ is approximately normal regardless of the population's original shape."}
+     ],
+     "practice": [
+      {"q": "If a population's standard deviation is σ=20 and a sample has n=100, what is the standard error of the sample mean?", "choices": ["2", "20", "0.2", "200"], "answer": 0, "explain": "Standard error = σ/√n = 20/√100 = 20/10 = 2."},
+      {"q": "The Central Limit Theorem says that as sample size grows large, the sampling distribution of x̄ becomes approximately:", "choices": ["Normal, regardless of the population's original shape", "Binomial", "Identical in shape to the original population", "Uniform"], "answer": 0, "explain": "The CLT's key claim is that averaging many observations produces an approximately normal sampling distribution even when the underlying population distribution is not normal."},
+      {"q": "Increasing the sample size from n=25 to n=100 (4 times larger) does what to the standard error?", "choices": ["Cuts it in half, since standard error depends on √n", "Cuts it to a quarter", "Leaves it unchanged", "Quadruples it"], "answer": 0, "explain": "Standard error is σ/√n; increasing n by a factor of 4 increases √n by a factor of 2, so the standard error is divided by 2, not by 4."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Confidence Intervals",
+   "summary": "Using sample data to construct interval estimates for a population mean or proportion, with a stated level of confidence.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Confidence Intervals for a Mean",
+     "minutes": 18,
+     "intro": "A single sample mean is just an estimate, and any estimate needs a margin of error attached to be genuinely useful. A confidence interval gives you a range of plausible values for the true population mean, along with a precise statement of how confident you can be that the method captured it.",
+     "sections": [
+      {
+       "heading": "Constructing the Interval",
+       "body": [
+        "A confidence interval for a population mean has the form point estimate ± margin of error, or x̄ ± E, where the margin of error E = t*·(s/√n) uses a critical value t* from the t-distribution (with n−1 degrees of freedom) when the population standard deviation σ is unknown, which is the typical real-world case. When σ is known, a z* critical value is used instead of t*.",
+        "The **confidence level** (commonly 90%, 95%, or 99%) describes the long-run success rate of the method itself, not the probability that any single computed interval contains the true mean: a 95% confidence level means that if you repeated this sampling and interval-construction process many times, about 95% of the resulting intervals would contain the true population mean μ."
+       ],
+       "example": {
+        "problem": "A sample of n=25 batteries has a mean life of x̄=40 hours with sample standard deviation s=5 hours. Construct a 95% confidence interval for the true mean battery life (using t* ≈ 2.064 for df=24).",
+        "steps": [
+         "Compute the standard error: s/√n = 5/√25 = 5/5 = 1.",
+         "Compute the margin of error: E = t*·(s/√n) = 2.064 × 1 = 2.064.",
+         "Construct the interval: x̄ − E to x̄ + E = 40 − 2.064 to 40 + 2.064.",
+         "Simplify: (37.936, 42.064)."
+        ],
+        "answer": "We are 95% confident the true mean battery life is between 37.94 and 42.06 hours."
+       }
+      },
+      {
+       "heading": "Interpreting Confidence Level and Interval Width",
+       "body": [
+        "Increasing the confidence level (say from 95% to 99%) increases the critical value t* (or z*), which widens the interval — greater confidence requires a wider net to be that sure of capturing the true parameter. Increasing the sample size n shrinks the standard error s/√n, which narrows the interval for a fixed confidence level, giving a more precise estimate.",
+        "A correct interpretation names the specific population parameter and confidence level explicitly, for example: 'We are 95% confident the true mean battery life is between 37.94 and 42.06 hours.' It is incorrect to say there's a 95% probability the true mean falls in this specific interval, since the true mean is a fixed (though unknown) number — it's the method's long-run success rate that carries the 95%, not any individual interval."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "confidence interval", "def": "An interval x̄ ± E constructed from sample data, estimating a range of plausible values for a population parameter."},
+      {"term": "margin of error", "def": "E = t*·(s/√n) (or z*·(σ/√n)), the half-width of a confidence interval."},
+      {"term": "confidence level", "def": "The long-run percentage of similarly constructed intervals that would contain the true population parameter, such as 95%."},
+      {"term": "t-distribution", "def": "A distribution similar to the standard normal but with heavier tails, used for confidence intervals and tests when the population standard deviation is unknown."}
+     ],
+     "practice": [
+      {"q": "Increasing the confidence level from 90% to 99% (holding sample size fixed) does what to the confidence interval's width?", "choices": ["Widens it, since a larger critical value is needed", "Narrows it", "Leaves it unchanged", "Makes the interval invalid"], "answer": 0, "explain": "A higher confidence level requires a larger critical value (t* or z*), which increases the margin of error and widens the interval — you trade precision for greater confidence."},
+      {"q": "A 95% confidence interval for a mean is correctly interpreted as:", "choices": ["We are 95% confident the interval contains the true population mean, based on the method's long-run success rate", "There is a 95% probability the sample mean equals the population mean", "95% of the population falls within this interval", "The interval will contain the true mean 95% of the time it's recalculated from the same sample"], "answer": 0, "explain": "The confidence level describes the reliability of the interval-construction method over many repeated samples, not a probability statement about this one fixed interval or about individual data values."},
+      {"q": "If sample size n increases while everything else stays the same, the margin of error E:", "choices": ["Decreases, since E depends on s/√n", "Increases", "Stays exactly the same", "Becomes undefined"], "answer": 0, "explain": "As n grows, √n grows, making s/√n (the standard error) smaller, which directly shrinks the margin of error E = t*(s/√n)."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Confidence Intervals for a Proportion",
+     "minutes": 16,
+     "intro": "Many real questions are about proportions rather than means, like what percentage of voters support a candidate, and the confidence interval formula for a proportion follows the same point-estimate-plus-margin-of-error structure, adapted for the special variance formula of a binomial proportion.",
+     "sections": [
+      {
+       "heading": "Constructing the Interval for a Proportion",
+       "body": [
+        "The sample proportion p̂ = x/n (number of successes divided by sample size) estimates the true population proportion p. A confidence interval for p is p̂ ± z*·√[p̂(1−p̂)/n], where z* is the critical value from the standard normal distribution corresponding to the chosen confidence level (z*≈1.96 for 95% confidence, z*≈1.645 for 90%, z*≈2.576 for 99%).",
+        "This method requires the **success/failure condition**: both n·p̂ ≥ 10 and n·(1−p̂) ≥ 10, ensuring the sampling distribution of p̂ is close enough to normal for the z*-based formula to be reliable. When this condition fails (small samples or extreme proportions), other specialized methods are needed instead."
+       ],
+       "example": {
+        "problem": "In a survey of 400 voters, 220 said they support a proposal. Construct a 95% confidence interval for the true proportion of supporters.",
+        "steps": [
+         "Compute the sample proportion: p̂ = 220/400 = 0.55.",
+         "Check the success/failure condition: n·p̂ = 400(0.55)=220 ≥10, and n(1−p̂)=400(0.45)=180≥10 — both satisfied.",
+         "Compute the standard error: √[p̂(1−p̂)/n] = √[(0.55)(0.45)/400] = √(0.2475/400) = √0.00061875 ≈ 0.02487.",
+         "Compute the margin of error with z*=1.96: E = 1.96×0.02487 ≈ 0.0487. Interval: 0.55 ± 0.0487 = (0.5013, 0.5987)."
+        ],
+        "answer": "We are 95% confident the true proportion of supporters is between about 50.1% and 59.9%."
+       }
+      },
+      {
+       "heading": "Sample Size and Margin of Error for Proportions",
+       "body": [
+        "Since the margin of error for a proportion is E = z*·√[p̂(1−p̂)/n], reducing the margin of error to a target value requires solving for n: n = (z*/E)²·p̂(1−p̂). When no prior estimate of p̂ is available, using p̂=0.5 gives the most conservative (largest) required sample size, since p̂(1−p̂) is maximized at p̂=0.5.",
+        "This sample-size calculation is exactly what pollsters use before conducting a survey: deciding on a target margin of error and confidence level first, then computing the minimum number of respondents needed to achieve that precision."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "sample proportion", "def": "p̂ = x/n, the fraction of successes observed in a sample, used to estimate the true population proportion p."},
+      {"term": "success/failure condition", "def": "The requirement n·p̂≥10 and n(1−p̂)≥10, ensuring the normal approximation is valid for a proportion confidence interval."},
+      {"term": "critical value (z*)", "def": "The z-score boundary corresponding to a chosen confidence level, such as 1.96 for 95% confidence."}
+     ],
+     "practice": [
+      {"q": "In a sample of 50 people, 45 prefer brand A. Does this sample satisfy the success/failure condition?", "choices": ["No, since n(1−p̂) = 50(0.1) = 5, which is less than 10", "Yes, both conditions are satisfied", "Yes, because the sample size is large enough on its own", "The condition does not apply to proportions"], "answer": 0, "explain": "p̂=45/50=0.9, so n(1−p̂)=50(0.1)=5, which fails the requirement of being at least 10 — the normal approximation may not be reliable here."},
+      {"q": "Using p̂=0.5 when calculating a required sample size for a target margin of error gives:", "choices": ["The most conservative (largest) sample size estimate", "The smallest possible sample size", "An invalid calculation", "The exact sample size regardless of the true p"], "answer": 0, "explain": "p̂(1−p̂) is maximized when p̂=0.5, which maximizes the required n for a given margin of error — using 0.5 without prior information guarantees the interval will be at least as precise as needed."},
+      {"q": "For a 90% confidence interval, the approximate critical value z* is:", "choices": ["1.645", "1.96", "2.576", "1.0"], "answer": 0, "explain": "The standard critical values are z*≈1.645 for 90% confidence, z*≈1.96 for 95%, and z*≈2.576 for 99%."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Hypothesis Testing",
+   "summary": "The logic and mechanics of testing claims about a population mean or proportion using sample data and p-values.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Logic of Hypothesis Testing",
+     "minutes": 17,
+     "intro": "Hypothesis testing is how statisticians formally decide whether sample data provides enough evidence to challenge a default assumption — and understanding the underlying logic, rather than just plugging into a formula, is what prevents the single most common misinterpretation in all of introductory statistics: treating a p-value as the probability the claim is true.",
+     "sections": [
+      {
+       "heading": "Null and Alternative Hypotheses",
+       "body": [
+        "The **null hypothesis** (H₀) represents the default assumption, typically a statement of no effect or no difference (like μ=100), and is assumed true until the evidence says otherwise. The **alternative hypothesis** (Hₐ or H₁) is the claim being tested for, stated as μ≠100 (two-tailed), μ>100 (right-tailed), or μ<100 (left-tailed), depending on the direction of the research question.",
+        "The entire test is built around asking: assuming H₀ is true, how unusual is the sample result we actually observed? If the result would be very unusual under H₀, that's evidence against H₀ — a form of proof by contradiction applied to probability rather than certainty."
+       ]
+      },
+      {
+       "heading": "P-values and Decisions",
+       "body": [
+        "The **p-value** is the probability of obtaining a sample result at least as extreme as the one observed, assuming H₀ is true. A small p-value means the observed data would be quite unusual if H₀ were really true, which counts as evidence against H₀. The decision rule compares the p-value to a pre-chosen **significance level α** (commonly 0.05): if p-value < α, **reject H₀**; if p-value ≥ α, **fail to reject H₀**.",
+        "'Fail to reject H₀' is deliberately not the same as 'accept H₀' or 'prove H₀ true' — it simply means the sample data didn't provide strong enough evidence against it. A **Type I error** is rejecting a true H₀ (a false alarm), with probability α; a **Type II error** is failing to reject a false H₀ (a missed detection)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "null hypothesis", "def": "H₀, the default claim of no effect or no difference, assumed true unless the data provides strong evidence otherwise."},
+      {"term": "alternative hypothesis", "def": "Hₐ, the claim being tested for, representing an effect, difference, or direction contrary to H₀."},
+      {"term": "p-value", "def": "The probability of observing a result at least as extreme as the sample data, assuming H₀ is true; small p-values are evidence against H₀."},
+      {"term": "significance level (α)", "def": "The pre-chosen threshold (commonly 0.05) below which the p-value leads to rejecting H₀."},
+      {"term": "Type I error", "def": "Rejecting a true null hypothesis (a false positive), occurring with probability α."},
+      {"term": "Type II error", "def": "Failing to reject a false null hypothesis (a false negative, or missed detection)."}
+     ],
+     "practice": [
+      {"q": "A p-value of 0.02 with significance level α=0.05 leads to which decision?", "choices": ["Reject H₀, since 0.02 < 0.05", "Fail to reject H₀", "Accept H₀ as definitely true", "The test is inconclusive"], "answer": 0, "explain": "Since the p-value (0.02) is less than the significance level (0.05), the data is considered unusual enough under H₀ to reject it in favor of the alternative."},
+      {"q": "Rejecting a null hypothesis that is actually true is called:", "choices": ["A Type I error", "A Type II error", "A correct decision", "A p-value error"], "answer": 0, "explain": "A Type I error occurs when you reject H₀ even though it was actually true — a false alarm, occurring with probability equal to the significance level α."},
+      {"q": "'Fail to reject H₀' means:", "choices": ["The data did not provide strong enough evidence against H₀, not that H₀ is proven true", "H₀ has been proven correct", "The alternative hypothesis is definitely false", "No conclusion of any kind can be drawn"], "answer": 0, "explain": "Hypothesis testing never proves a null hypothesis true; failing to reject it simply means the observed evidence wasn't strong enough to overturn the default assumption."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Testing a Population Mean",
+     "minutes": 19,
+     "intro": "With the logic of hypothesis testing established, this lesson works through the concrete mechanics: computing a test statistic from sample data, converting it to a p-value, and reaching a decision — all for the common case of testing a claim about a population mean.",
+     "sections": [
+      {
+       "heading": "The Test Statistic",
+       "body": [
+        "To test H₀: μ = μ₀ using a sample of size n with sample mean x̄ and sample standard deviation s, compute the test statistic t = (x̄ − μ₀)/(s/√n), which follows a t-distribution with n−1 degrees of freedom under H₀. This statistic measures how many standard errors the sample mean is away from the hypothesized value μ₀.",
+        "The larger |t| is, the further the sample mean is from what H₀ predicts, in standard-error units — and larger |t| values correspond to smaller p-values, since they represent more extreme, less likely results under the assumption that H₀ is true."
+       ],
+       "example": {
+        "problem": "A cereal box is labeled as containing 16 oz. A sample of n=36 boxes has mean x̄=15.7 oz and standard deviation s=0.9 oz. Test H₀: μ=16 against Hₐ: μ<16 at α=0.05 (use t-critical ≈ −1.69 for df=35, one-tailed).",
+        "steps": [
+         "Compute the test statistic: t = (15.7−16)/(0.9/√36) = (−0.3)/(0.9/6) = (−0.3)/0.15 = −2.0.",
+         "Since this is a left-tailed test (Hₐ: μ<16), compare t=−2.0 to the critical value t*≈−1.69.",
+         "Because −2.0 is more extreme (further left) than −1.69, t falls in the rejection region.",
+         "Reject H₀: there is significant evidence at α=0.05 that the true mean box weight is less than 16 oz."
+        ],
+        "answer": "Reject H₀ (t = −2.0 is more extreme than the critical value −1.69); there is evidence the boxes are underfilled on average."
+       }
+      },
+      {
+       "heading": "One-Tailed vs. Two-Tailed Tests",
+       "body": [
+        "A **one-tailed test** (Hₐ: μ>μ₀ or μ<μ₀) places the entire rejection region in one tail of the distribution, appropriate when the research question specifically asks about a direction. A **two-tailed test** (Hₐ: μ≠μ₀) splits the rejection region between both tails, appropriate when any difference from μ₀, in either direction, would be meaningful.",
+        "Choosing the tail(s) must be decided before looking at the sample data, based on the actual research question — choosing the direction after seeing which way the data leans inflates the true error rate and is considered poor statistical practice."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "test statistic", "def": "t=(x̄−μ₀)/(s/√n), measuring how many standard errors the sample mean is from the hypothesized population mean."},
+      {"term": "one-tailed test", "def": "A hypothesis test with a directional alternative (μ>μ₀ or μ<μ₀), placing the entire rejection region in one tail."},
+      {"term": "two-tailed test", "def": "A hypothesis test with a non-directional alternative (μ≠μ₀), splitting the rejection region between both tails."}
+     ],
+     "practice": [
+      {"q": "For H₀: μ=50 vs Hₐ: μ≠50, this is a:", "choices": ["Two-tailed test", "One-tailed, right-tailed test", "One-tailed, left-tailed test", "Not a valid hypothesis test"], "answer": 0, "explain": "The alternative μ≠50 allows for a difference in either direction, so evidence must be considered in both tails of the distribution — a two-tailed test."},
+      {"q": "A larger |t| test statistic (further from 0) generally corresponds to:", "choices": ["A smaller p-value, providing stronger evidence against H₀", "A larger p-value", "No relationship to the p-value", "Always failing to reject H₀"], "answer": 0, "explain": "A larger |t| means the sample result is more standard errors away from the hypothesized value, which is a rarer (more extreme) outcome under H₀, translating to a smaller p-value."},
+      {"q": "Why must the tail direction of a hypothesis test be chosen before examining the sample data?", "choices": ["Choosing it afterward based on which way the data leans inflates the actual error rate", "It has no effect on the test's validity", "One-tailed tests are always invalid", "The formula for t changes depending on when the tail is chosen"], "answer": 0, "explain": "Deciding the direction after seeing the data effectively gives you extra chances to find significance, distorting the true Type I error rate beyond the stated α — the direction must follow from the research question, decided in advance."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Testing a Population Proportion",
+     "minutes": 17,
+     "intro": "Claims about proportions, like 'more than half of customers prefer the new packaging,' are tested with the same core logic as mean tests, but the test statistic is built from the special variance formula for a proportion rather than a sample standard deviation.",
+     "sections": [
+      {
+       "heading": "The Test Statistic for a Proportion",
+       "body": [
+        "To test H₀: p = p₀ using a sample proportion p̂ = x/n, compute the test statistic z = (p̂ − p₀)/√[p₀(1−p₀)/n]. Notice the denominator uses the hypothesized proportion p₀, not the sample proportion p̂ — this is different from the confidence interval formula, which uses p̂ in its standard error because there is no hypothesized value to test against there.",
+        "Since this test statistic follows a standard normal distribution (not a t-distribution), p-values are found directly from the standard normal table using the computed z, following the same one-tailed or two-tailed logic as any other hypothesis test."
+       ],
+       "example": {
+        "problem": "A company claims that 70% of its customers are satisfied. In a sample of 200 customers, 126 report being satisfied. Test H₀: p=0.70 vs Hₐ: p≠0.70 at α=0.05 (two-tailed critical z ≈ ±1.96).",
+        "steps": [
+         "Compute the sample proportion: p̂ = 126/200 = 0.63.",
+         "Compute the test statistic: z = (0.63−0.70)/√[(0.70)(0.30)/200] = (−0.07)/√(0.21/200) = (−0.07)/√0.00105.",
+         "Compute √0.00105 ≈ 0.0324, so z ≈ −0.07/0.0324 ≈ −2.16.",
+         "Since |z|=2.16 > 1.96, the result falls in the rejection region: reject H₀. There is significant evidence that the true satisfaction proportion differs from 70%."
+        ],
+        "answer": "Reject H₀ (z ≈ −2.16); the data suggests true satisfaction differs significantly from the claimed 70%."
+       }
+      },
+      {
+       "heading": "Statistical vs. Practical Significance",
+       "body": [
+        "A result can be statistically significant (a small p-value) without being practically important, especially with very large sample sizes, which can detect tiny, real-world-irrelevant differences as significant. Conversely, a real and meaningful effect might fail to reach statistical significance in a small sample simply because the sample didn't provide enough power to detect it.",
+        "Good statistical practice reports both the p-value and the size of the effect (like the actual difference p̂−p₀, or a confidence interval for it), since the p-value alone answers only 'is there evidence of some difference,' not 'how large or important is that difference.'"
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "proportion test statistic", "def": "z=(p̂−p₀)/√[p₀(1−p₀)/n], using the hypothesized proportion p₀ in the standard error, unlike the confidence interval formula."},
+      {"term": "statistical significance", "def": "A result unlikely to occur by chance alone under H₀ (small p-value), not necessarily indicating practical importance."},
+      {"term": "practical significance", "def": "Whether an effect or difference is large enough to matter in real-world terms, independent of whether it is statistically significant."}
+     ],
+     "practice": [
+      {"q": "The proportion hypothesis test statistic uses which value in its standard error denominator?", "choices": ["The hypothesized proportion p₀", "The sample proportion p̂", "The sample mean", "The sample standard deviation s"], "answer": 0, "explain": "Unlike the confidence interval formula (which uses p̂ since there's no hypothesized value), the hypothesis test standard error uses p₀, the value being tested under H₀."},
+      {"q": "A study with an enormous sample size finds a statistically significant but tiny (0.1%) difference in effectiveness. This illustrates:", "choices": ["Statistical significance without necessarily meaningful practical significance", "A calculation error", "That large samples always produce meaningless results", "That p-values are irrelevant for large samples"], "answer": 0, "explain": "Very large samples can detect even trivially small true differences as statistically significant, which is exactly why researchers report effect size alongside the p-value to judge practical importance."},
+      {"q": "For H₀: p=0.5 vs Hₐ: p>0.5, with computed z=1.5 and critical value z*=1.645 (α=0.05, one-tailed), the decision is:", "choices": ["Fail to reject H₀, since 1.5 < 1.645", "Reject H₀", "The test is invalid", "Accept H₀ as proven"], "answer": 0, "explain": "Since the test statistic (1.5) does not exceed the critical value (1.645) required for the right-tailed rejection region, there isn't enough evidence to reject H₀."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Correlation and Regression",
+   "summary": "Measuring and modeling the linear relationship between two quantitative variables.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Scatterplots and Correlation",
+     "minutes": 16,
+     "intro": "When two quantitative variables are measured on the same set of individuals, a scatterplot reveals whether they move together, and the correlation coefficient turns that visual impression into a single precise number measuring the strength and direction of any linear relationship.",
+     "sections": [
+      {
+       "heading": "Reading a Scatterplot",
+       "body": [
+        "A **scatterplot** displays each individual as a point, with one variable on the horizontal axis (the explanatory variable) and the other on the vertical axis (the response variable). Look for three features: **direction** (positive, where both variables tend to increase together, or negative, where one increases as the other decreases), **form** (linear or curved), and **strength** (how closely the points cluster around a clear pattern versus scattering widely).",
+        "A relationship can be strong but not linear (like a clear U-shape), in which case correlation, which specifically measures linear association, would badly understate how related the variables actually are — always look at the scatterplot before trusting a correlation number."
+       ]
+      },
+      {
+       "heading": "The Correlation Coefficient",
+       "body": [
+        "The **correlation coefficient r** measures the strength and direction of the linear relationship between two quantitative variables, always satisfying −1 ≤ r ≤ 1. Values near +1 indicate a strong positive linear relationship, values near −1 indicate a strong negative linear relationship, and values near 0 indicate little to no linear relationship (though a strong nonlinear relationship could still exist).",
+        "Correlation has two properties worth remembering: it has no units (it's a pure number regardless of what units the original variables were measured in), and it is symmetric (the correlation between X and Y equals the correlation between Y and X). Critically, correlation measures association, not causation — a strong correlation never by itself proves that one variable causes changes in the other."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "scatterplot", "def": "A graph displaying paired quantitative data as points, used to visually assess direction, form, and strength of a relationship."},
+      {"term": "correlation coefficient (r)", "def": "A number between −1 and 1 measuring the strength and direction of the linear relationship between two quantitative variables."},
+      {"term": "correlation vs. causation", "def": "The principle that a strong correlation between two variables does not by itself establish that one causes the other."}
+     ],
+     "practice": [
+      {"q": "A correlation coefficient of r = −0.9 indicates:", "choices": ["A strong negative linear relationship", "A strong positive linear relationship", "No relationship at all", "A perfect nonlinear relationship"], "answer": 0, "explain": "The negative sign shows the variables move in opposite directions, and the magnitude close to 1 (0.9) indicates the linear relationship is strong."},
+      {"q": "Two variables have a clear U-shaped relationship, and their correlation coefficient is calculated to be r ≈ 0.02. What does this suggest?", "choices": ["Correlation understates the relationship, since it only measures linear association", "There is truly no relationship between the variables", "The calculation must be wrong", "The variables are causally unrelated"], "answer": 0, "explain": "Correlation specifically captures linear association; a strong curved (nonlinear) pattern like a U-shape can produce a correlation near 0 even though the variables are clearly related — this is exactly why you always check the scatterplot."},
+      {"q": "Ice cream sales and drowning incidents are positively correlated. The best explanation is:", "choices": ["A lurking variable (hot weather) drives both, not that one causes the other", "Ice cream causes drowning", "Drowning causes people to buy ice cream", "The correlation must be a calculation error"], "answer": 0, "explain": "This is a classic example of correlation without causation: warmer weather independently increases both ice cream sales and swimming (and thus drowning risk), creating a correlation between the two without any direct causal link."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Linear Regression",
+     "minutes": 19,
+     "intro": "Once a scatterplot shows a roughly linear pattern, the least-squares regression line gives you the single best-fitting straight line through the data, letting you predict one variable from the other and quantify exactly how much of the variation in the response is explained by the explanatory variable.",
+     "sections": [
+      {
+       "heading": "The Least-Squares Regression Line",
+       "body": [
+        "The **least-squares regression line** ŷ = b₀ + b₁x is the line that minimizes the sum of squared vertical distances (residuals) between the actual data points and the line's predictions. The slope is b₁ = r·(s_y/s_x), where r is the correlation coefficient and s_y, s_x are the standard deviations of y and x; the intercept is b₀ = ȳ − b₁x̄, chosen so the line passes through the point (x̄, ȳ).",
+        "The slope b₁ is interpreted as: for each one-unit increase in x, the predicted value of y changes by b₁ units (increasing if b₁>0, decreasing if b₁<0). The intercept b₀ is the predicted value of y when x=0, though this interpretation is only meaningful if x=0 actually falls within (or near) the range of observed data."
+       ],
+       "example": {
+        "problem": "A study finds r=0.8 between study hours (x) and exam score (y), with x̄=5 hours, s_x=2 hours, ȳ=75 points, s_y=10 points. Find the regression line and predict the score for a student who studies 8 hours.",
+        "steps": [
+         "Compute the slope: b₁ = r(s_y/s_x) = 0.8(10/2) = 0.8(5) = 4.",
+         "Compute the intercept: b₀ = ȳ − b₁x̄ = 75 − 4(5) = 75 − 20 = 55.",
+         "Write the regression equation: ŷ = 55 + 4x.",
+         "Predict for x=8: ŷ = 55 + 4(8) = 55+32 = 87."
+        ],
+        "answer": "The regression line is ŷ = 55 + 4x, predicting a score of 87 for 8 hours of study."
+       }
+      },
+      {
+       "heading": "R-squared and Residuals",
+       "body": [
+        "**R-squared (r²)**, the correlation coefficient squared, gives the proportion of variation in y that is explained by the linear relationship with x — for example, r=0.8 gives r²=0.64, meaning 64% of the variation in exam scores is explained by study hours (with the remaining 36% due to other factors or randomness). Higher r² indicates the line fits the data more closely.",
+        "A **residual** is the difference between an actual observed value and the value the regression line predicts: residual = y − ŷ. Plotting residuals against x (a residual plot) is the standard check for whether a linear model is appropriate — a random scatter of residuals around zero supports the linear model, while a clear curved or fanning pattern in the residual plot signals that a straight line is not a good fit."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "least-squares regression line", "def": "ŷ=b₀+b₁x, the line minimizing the sum of squared residuals between actual data and predictions."},
+      {"term": "slope (regression)", "def": "b₁ = r(s_y/s_x), the predicted change in y for each one-unit increase in x."},
+      {"term": "r-squared", "def": "The square of the correlation coefficient, giving the proportion of variation in y explained by the linear relationship with x."},
+      {"term": "residual", "def": "y − ŷ, the difference between an observed value and the value predicted by the regression line."}
+     ],
+     "practice": [
+      {"q": "If r = 0.6, what proportion of the variation in y is explained by the linear relationship with x?", "choices": ["0.36, or 36%", "0.6, or 60%", "0.06, or 6%", "1.0, or 100%"], "answer": 0, "explain": "R-squared is the correlation coefficient squared: 0.6² = 0.36, meaning 36% of the variation in y is explained by x."},
+      {"q": "A regression line has slope b₁ = −3. What does this mean?", "choices": ["For each one-unit increase in x, the predicted y decreases by 3 units", "For each one-unit increase in x, y increases by 3 units", "There is no relationship between x and y", "The correlation must be exactly −3"], "answer": 0, "explain": "The slope of a regression line gives the predicted change in y per one-unit increase in x; a negative slope of −3 means y is predicted to decrease by 3 units for each unit increase in x."},
+      {"q": "A residual plot shows a clear curved (U-shaped) pattern rather than random scatter. This suggests:", "choices": ["A linear model may not be appropriate for this data", "The regression line is a perfect fit", "R-squared must be exactly 1", "Residuals should always show this pattern"], "answer": 0, "explain": "A patterned (non-random) residual plot, especially a curve, indicates the linear model is systematically missing some structure in the data — a different (nonlinear) model would likely fit better."}
+     ]
+    }
+   ]
+  }
+ ]
+}

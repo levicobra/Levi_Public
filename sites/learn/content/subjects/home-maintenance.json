@@ -1,0 +1,777 @@
+{
+ "id": "home-maintenance",
+ "title": "Home & DIY Maintenance",
+ "domain": "engineering",
+ "level": "All levels",
+ "description": "Home & DIY Maintenance teaches you the repairs that actually save money: unclogging drains, stopping a running toilet, patching drywall, replacing an outlet safely, and knowing when a job is truly a job for a licensed professional. Every lesson works through a real household problem step by step, with the tools, parts, and safety checks you need before you start.",
+ "outcomes": [
+  "You can diagnose and fix common plumbing problems: a clogged drain, a running toilet, and a leaking supply line.",
+  "You can safely shut off power at the breaker, test a circuit with a non-contact tester, and replace a switch or outlet.",
+  "You can patch drywall holes from nail-size to fist-size and get a paint-ready finish.",
+  "You can identify the tools in a basic home toolkit and choose the right fastener for a given material.",
+  "You can spot warning signs that a repair is beyond DIY and requires a licensed plumber, electrician, or contractor.",
+  "You can perform seasonal maintenance checks that prevent the most expensive home failures."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Shop Setup and Safety",
+   "summary": "Before any repair, you need the right tools, the right fasteners, and a clear sense of which jobs are safe to do yourself. This unit builds that foundation.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Basic Home Toolkit",
+     "minutes": 12,
+     "intro": "Most home repairs use the same dozen tools over and over, and buying good versions of those tools once is far cheaper than buying cheap ones three times. This lesson builds your starter toolkit and explains what each tool is actually for.",
+     "sections": [
+      {
+       "heading": "Tools You Will Reach for Constantly",
+       "body": [
+        "A claw hammer drives and pulls nails; a 16-ounce curved-claw model suits most household work. A set of screwdrivers in both Phillips and flathead, in at least two sizes each, handles most screws you will meet, though a cordless drill with a driver bit set does the same job faster and with less wrist strain on bigger projects.",
+        "An adjustable wrench and a set of pliers (regular, needle-nose, and locking) cover plumbing and general gripping tasks. A tape measure (25-foot is a good all-purpose length), a level, and a utility knife round out the tools you will use in nearly every project in this course."
+       ]
+      },
+      {
+       "heading": "Fasteners: Matching the Fastener to the Job",
+       "body": [
+        "Nails are fast to drive and hold well against forces along the wood grain, but they resist being pulled straight out poorly, which is why framing uses nails but cabinet hardware uses screws. Screws thread into material and resist pulling out far better than nails, at the cost of taking longer to drive; they are the right choice whenever a joint needs to be removable or will be under tension.",
+        "Wall anchors matter whenever you are fastening into drywall rather than a stud, because drywall alone cannot hold much weight. A plastic anchor rated for 25 pounds suits a picture frame; a toggle bolt, which spreads its load behind the wall, is needed for anything heavier, like a shelf or a TV mount, and finding the stud with a stud finder is the strongest option of all whenever it is available."
+       ],
+       "example": {
+        "problem": "You want to hang a 30-pound mirror on a section of drywall where there is no stud within 6 inches. What fastening approach should you use?",
+        "steps": [
+         "Rule out a plastic anchor, since those are typically rated up to about 25 pounds, less than the mirror's weight.",
+         "Choose a toggle bolt or similar heavy-duty anchor, which spreads the load across a wider area behind the drywall and is commonly rated for 50 to 100 pounds per anchor.",
+         "Use at least two anchors spread across the mirror's mounting hardware so no single anchor bears the full load."
+        ],
+        "answer": "Use two toggle bolts (or equivalent heavy-duty drywall anchors) rated well above 30 pounds combined, rather than a standard plastic anchor."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "claw hammer", "def": "A hammer with a curved claw on the back for pulling nails, standard for general home use."},
+      {"term": "wall anchor", "def": "A fastener inserted into drywall that grips or spreads behind the wall to support weight a screw alone could not hold."},
+      {"term": "toggle bolt", "def": "A heavy-duty wall anchor with spring-loaded wings that open behind the drywall, distributing load over a wide area."},
+      {"term": "stud finder", "def": "A handheld tool that detects the wooden or metal framing members behind drywall, the strongest place to anchor a fastener."}
+     ],
+     "practice": [
+      {
+       "q": "Why does framing lumber typically get joined with nails while cabinet doors get attached with screws?",
+       "choices": ["Nails are always stronger than screws", "Screws resist being pulled straight out far better, which matters for removable, load-bearing joints like hinges", "Screws are cheaper than nails", "Nails hold better in metal than in wood"],
+       "answer": 1,
+       "explain": "Screws thread into the material and resist withdrawal much better than nails, which is important for hardware like hinges that must stay fastened under repeated stress and sometimes be removed."
+      },
+      {
+       "q": "You need to hang a 40-pound shelf on drywall with no stud nearby. What is the best choice?",
+       "choices": ["A single plastic anchor rated for 25 pounds", "Toggle bolts rated to support the load, spread across multiple anchor points", "Drywall screws driven directly into the wall with no anchor", "Double-sided tape"],
+       "answer": 1,
+       "explain": "A plastic anchor's 25-pound rating is under the shelf's weight, and screws alone or tape provide no real holding power in drywall; toggle bolts spread the load behind the wall and are rated for heavier items."
+      },
+      {
+       "q": "Which tool would you use to locate the strongest possible anchor point behind a wall before hanging something heavy?",
+       "choices": ["A level", "A stud finder", "A utility knife", "An adjustable wrench"],
+       "answer": 1,
+       "explain": "A stud finder detects the framing behind drywall, and fastening directly into a stud is stronger than any anchor in drywall alone."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Electrical and Ladder Safety",
+     "minutes": 14,
+     "intro": "More home DIY injuries come from electrical shock and falls than from any power tool, and both are almost entirely preventable with a few non-negotiable habits. This lesson covers the safety rules you must follow before touching a wire or climbing a ladder.",
+     "sections": [
+      {
+       "heading": "Before You Touch Any Wire",
+       "body": [
+        "Always shut off power at the breaker panel before working on an outlet, switch, or fixture, never just at a wall switch, because switches only interrupt one wire and outlets are frequently wired so power still reaches the box even when a switch is off. Label the breaker panel ahead of time so you can find the right breaker quickly, and turn off the main breaker if you are ever unsure which circuit controls a given outlet.",
+        "After shutting off the breaker, always confirm the circuit is dead with a non-contact voltage tester before touching any wire, since breaker labels are sometimes wrong and a tester takes ten seconds to use. Treat every wire as live until your tester proves otherwise, every single time, even on a circuit you just tested minutes ago."
+       ]
+      },
+      {
+       "heading": "Ladder Safety Rules",
+       "body": [
+        "Use the 4-to-1 rule for extension ladders: for every 4 feet of height to the top support point, the base should be 1 foot away from the wall, which keeps the ladder from sliding out or tipping backward. Always maintain three points of contact (two hands and a foot, or two feet and a hand) while climbing, and never stand on the top two rungs of a stepladder or the top three rungs of an extension ladder.",
+        "Set ladders only on firm, level ground, and have a second person hold or spot the base whenever possible on an extension ladder. Never lean out to the side to reach something; instead, climb down and reposition the ladder, since overreaching is the single most common cause of ladder falls."
+       ],
+       "example": {
+        "problem": "You need an extension ladder to reach a gutter 16 feet up. How far from the wall should the base sit?",
+        "steps": [
+         "Apply the 4-to-1 rule: base distance = height ÷ 4.",
+         "Divide: 16 ÷ 4 = 4."
+        ],
+        "answer": "The ladder's base should sit about 4 feet from the wall."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "breaker panel", "def": "The electrical panel containing circuit breakers that control power to different areas of a home."},
+      {"term": "non-contact voltage tester", "def": "A pen-shaped tool that detects live voltage in a wire or outlet without needing direct contact with the conductor."},
+      {"term": "4-to-1 rule", "def": "A ladder safety guideline: the base should be positioned 1 foot from the wall for every 4 feet of height to the support point."},
+      {"term": "three points of contact", "def": "Maintaining two hands and one foot, or two feet and one hand, on a ladder at all times while climbing."}
+     ],
+     "practice": [
+      {
+       "q": "Before replacing an outlet, what is the correct safety sequence?",
+       "choices": ["Flip the wall switch off, then start work immediately", "Turn off the breaker for that circuit, then confirm with a non-contact voltage tester before touching wires", "Unplug nearby lamps, then start work", "Test with a voltage tester first, then turn off the breaker"],
+       "answer": 1,
+       "explain": "Wall switches do not fully de-energize an outlet box, so the breaker must be shut off first; a voltage tester should then confirm the circuit is actually dead before any wire is touched, since breaker labels can be wrong."
+      },
+      {
+       "q": "Using the 4-to-1 rule, how far from the wall should an extension ladder's base sit to reach a point 20 feet up?",
+       "choices": ["2 feet", "4 feet", "5 feet", "10 feet"],
+       "answer": 2,
+       "explain": "Base distance = height ÷ 4 = 20 ÷ 4 = 5 feet."
+      },
+      {
+       "q": "While on a ladder, you need to reach a spot 2 feet to your left. What should you do?",
+       "choices": ["Lean and stretch to the left while holding on with one hand", "Climb down and reposition the ladder closer to the target", "Stand on the very top rung to gain height and reach", "Have someone push the ladder sideways while you remain on it"],
+       "answer": 1,
+       "explain": "Overreaching is the leading cause of ladder falls; repositioning the ladder is slower but far safer than leaning to the side."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Know When to Call a Pro",
+     "minutes": 10,
+     "intro": "Part of doing your own home repairs well is knowing which jobs are not DIY jobs. This lesson covers the warning signs that mean it is time to call a licensed plumber, electrician, or contractor instead of continuing yourself.",
+     "sections": [
+      {
+       "heading": "Electrical Red Flags",
+       "body": [
+        "Call a licensed electrician if you see warm or discolored outlets, a persistent burning smell, breakers that trip repeatedly, flickering lights across multiple rooms, or any work involving the main panel, aluminum wiring, or knob-and-tube wiring from an older home. These signs can indicate an overloaded circuit or a failing connection that risks fire, and they require diagnosis beyond a simple part swap.",
+        "Simple swaps like a like-for-like outlet, switch, or light fixture replacement on a circuit you have safely confirmed dead are reasonable DIY jobs in most areas. Adding a new circuit, working in a panel, or rewiring a room, however, typically requires a permit and licensed work, both for safety and because it usually must pass inspection to be legal in your area."
+       ]
+      },
+      {
+       "heading": "Plumbing and Structural Red Flags",
+       "body": [
+        "Call a licensed plumber for sewer line backups, a water heater that needs replacing, gas line work of any kind, or any leak you cannot find and stop within a reasonable time, since water damage compounds quickly and gas leaks are a life-safety emergency. A small supply-line leak or a clogged drain is a fair DIY job; a main line backup affecting multiple fixtures at once usually is not.",
+        "Structural issues such as a sagging floor, a cracked foundation, bowing walls, or evidence of a load-bearing wall being altered call for a structural engineer or licensed contractor before any further work continues, because misjudging the extent of these problems risks the safety of the whole home. When you smell gas indoors, leave the house immediately, do not operate any switch or phone inside, and call your gas utility or 911 from outside."
+       ],
+       "example": {
+        "problem": "You notice the kitchen breaker trips every time you run the microwave and toaster together, and the outlet feels slightly warm afterward.",
+        "steps": [
+         "Recognize two red flags together: repeated tripping plus a warm outlet.",
+         "Rule out a simple DIY fix, since a warm outlet suggests a wiring or connection problem, not just an overloaded circuit that a different outlet would solve.",
+         "Decide to call a licensed electrician to inspect the circuit rather than continuing to use it."
+        ],
+        "answer": "This combination of symptoms is an electrical red flag; stop using that outlet and call a licensed electrician."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "knob-and-tube wiring", "def": "An early 20th-century wiring method found in some older homes that lacks a ground wire and is considered a fire risk by modern standards."},
+      {"term": "load-bearing wall", "def": "A wall that supports the structural weight of the building above it; altering one without engineering review can cause structural failure."},
+      {"term": "permit", "def": "Official municipal authorization required for certain electrical, plumbing, or structural work, usually followed by an inspection."}
+     ],
+     "practice": [
+      {
+       "q": "Which situation is a reasonable DIY job for most homeowners?",
+       "choices": ["Replacing a like-for-like light switch on a circuit you have confirmed is off", "Adding a new circuit to the main panel", "Repairing a suspected gas line leak", "Fixing a sagging, cracked foundation"],
+       "answer": 0,
+       "explain": "A simple like-for-like switch replacement on a de-energized circuit is standard DIY work; panel work, gas lines, and foundation issues all require licensed professionals."
+      },
+      {
+       "q": "What should you do immediately if you smell gas inside your home?",
+       "choices": ["Check the stove burners one by one to find the source", "Open windows and turn on the exhaust fan", "Leave the house immediately and call your gas utility or 911 from outside", "Light a match to test the smell's strength"],
+       "answer": 2,
+       "explain": "A suspected gas leak is a life-safety emergency; you should evacuate immediately and call for help from outside, without operating switches or flames that could ignite gas."
+      },
+      {
+       "q": "A breaker trips repeatedly and the outlet feels warm. What does this most likely indicate?",
+       "choices": ["Nothing unusual — outlets often feel warm", "A possible wiring or connection fault that needs a licensed electrician", "A simple case of using too many extension cords", "A problem that will resolve itself over time"],
+       "answer": 1,
+       "explain": "Repeated tripping combined with a warm outlet suggests a fault beyond simple overload, such as a loose or damaged connection, and should be inspected by a licensed electrician."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Plumbing Repairs",
+   "summary": "Most plumbing emergencies are actually simple fixes once you understand how a drain, a toilet tank, and a supply line work. This unit walks through the most common household plumbing repairs.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Clearing a Clogged Drain",
+     "minutes": 12,
+     "intro": "A slow or blocked drain is one of the most common household problems, and it is almost always caused by hair, grease, or soap buildup that you can clear yourself with the right technique, before ever reaching for a bottle of drain cleaner.",
+     "sections": [
+      {
+       "heading": "Start Mechanical, Not Chemical",
+       "body": [
+        "Chemical drain cleaners can damage older pipes, react dangerously if mixed with other cleaners already in the drain, and often fail on solid clogs like hair, so they should be a last resort rather than a first step. A plunger, a zip-it (barbed plastic drain stick), or a hand auger (also called a drain snake) clear the vast majority of clogs mechanically and safely.",
+        "For a sink or tub, start with a zip-it pushed past the stopper to hook and pull out hair, which resolves a large share of slow drains in under a minute. If that fails, a plunger with the overflow hole covered by a wet rag creates a proper seal for suction; for a toilet, a flanged plunger seals the drain opening more effectively than a flat cup plunger."
+       ]
+      },
+      {
+       "heading": "Using a Hand Auger",
+       "body": [
+        "A hand auger is a flexible metal cable on a hand-cranked reel that you feed into the drain until it meets resistance, then crank to break up or hook the clog before pulling it out. Feed the cable slowly, and once you feel resistance, crank a few turns clockwise to engage the clog, then pull back gently; repeat feeding and cranking until the cable moves freely again.",
+        "After clearing a clog with any method, run hot water for a minute to flush remaining debris, and consider a monthly preventive habit of hot water and a small amount of baking soda and vinegar to keep grease and soap scum from rebuilding. If a drain clogs repeatedly despite clearing it, that recurring pattern often signals a clog further down the line or a venting problem, which is a sign to call a plumber."
+       ],
+       "example": {
+        "problem": "A bathroom sink drains very slowly. A zip-it pulls out some hair but the sink still drains slowly. What should you try next?",
+        "steps": [
+         "Recognize the zip-it only reached the clog near the stopper, so the remaining slowness suggests buildup further down.",
+         "Try a plunger next, covering the overflow hole with a wet rag to create suction, and plunge several times.",
+         "If the plunger does not fully clear it, use a hand auger, feeding the cable until you meet resistance, cranking to engage the clog, and pulling it out."
+        ],
+        "answer": "Move from the zip-it to a plunger, and if needed, to a hand auger, working from the least to most invasive mechanical tool before considering a chemical cleaner."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "zip-it", "def": "A thin, barbed plastic stick designed to be pushed into a drain to hook and pull out hair and debris."},
+      {"term": "hand auger", "def": "A flexible metal cable on a hand-cranked reel, fed into a drain to break up or hook clogs; also called a drain snake."},
+      {"term": "flanged plunger", "def": "A plunger with an extended rubber flange designed to seal effectively against a toilet's curved drain opening."}
+     ],
+     "practice": [
+      {
+       "q": "Why should chemical drain cleaner generally be a last resort rather than a first step?",
+       "choices": ["It is always more expensive than mechanical tools", "It can damage older pipes and often fails on solid clogs like hair, while mechanical tools clear most clogs safely", "It works too quickly and is hard to control", "It is illegal in most areas"],
+       "answer": 1,
+       "explain": "Chemical cleaners can corrode aging pipes and typically do not break up solid hair clogs well, while a plunger, zip-it, or auger clear most clogs mechanically and without that risk."
+      },
+      {
+       "q": "When plunging a sink to clear a clog, why should the overflow hole be covered with a wet rag?",
+       "choices": ["It prevents water from splashing on the floor", "It creates a sealed system so the plunger's suction is not lost through the overflow opening", "It makes the water hotter", "It is only necessary for toilets, not sinks"],
+       "answer": 1,
+       "explain": "The overflow hole lets air and suction escape, weakening the plunger's effect; covering it with a wet rag seals the system so full suction reaches the clog."
+      },
+      {
+       "q": "A drain clogs repeatedly within days of being cleared each time. What does this pattern most likely suggest?",
+       "choices": ["The household is using too much soap", "A clog further down the line or a venting problem, worth calling a plumber for", "The auger was used incorrectly", "This is completely normal and needs no attention"],
+       "answer": 1,
+       "explain": "Repeated, fast-returning clogs point to a deeper blockage or a plumbing vent issue rather than surface buildup, which is beyond a simple mechanical clearing and worth a plumber's diagnosis."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Fixing a Running Toilet",
+     "minutes": 13,
+     "intro": "A toilet that keeps running after flushing can waste hundreds of gallons of water a day, and the fix is almost always one of three cheap, replaceable parts inside the tank. This lesson teaches you to diagnose which part is failing and replace it.",
+     "sections": [
+      {
+       "heading": "How a Toilet Tank Works",
+       "body": [
+        "Lifting the tank lid reveals three key parts: the fill valve, which refills the tank after a flush and shuts off at a set water level; the flapper, a rubber seal at the tank's bottom that lifts to release water into the bowl and should reseal after flushing; and the float, which rises with the water level and tells the fill valve when to stop.",
+        "A running toilet usually means one of these three is failing: a worn flapper that does not seal, letting water leak into the bowl continuously; a float set too high, causing water to spill into the overflow tube; or a fill valve that will not fully shut off."
+       ]
+      },
+      {
+       "heading": "Diagnosing and Fixing the Problem",
+       "body": [
+        "To test the flapper, add a few drops of food coloring to the tank water and wait 10 minutes without flushing; if color appears in the bowl, the flapper is leaking and needs replacing, a $5 to $10 part that requires no tools beyond unhooking the old flapper from its pegs and the flush chain, then hooking on the new one sized to match.",
+        "If the water level sits at or above the overflow tube, lower the float (by adjusting the screw on an older ballcock-style valve, or sliding the clip on a modern fill valve) until the water level sits about 1 inch below the top of the overflow tube. If the fill valve itself will not shut off even after these adjustments, the fill valve assembly needs replacing, a slightly bigger job but still well within reach for a beginner."
+       ],
+       "example": {
+        "problem": "A toilet keeps running quietly. A food-coloring test shows no color in the bowl after 10 minutes, but you notice water trickling into the overflow tube.",
+        "steps": [
+         "Rule out the flapper, since the food-coloring test showed no leak past it.",
+         "Identify the overflow tube trickle as a sign the water level is set too high.",
+         "Lower the float until the water level sits about 1 inch below the top of the overflow tube."
+        ],
+        "answer": "The float is set too high; lowering it to bring the water level about 1 inch below the overflow tube's top should stop the running."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "flapper", "def": "The rubber seal at the bottom of a toilet tank that lifts during a flush to release water and should reseal afterward."},
+      {"term": "fill valve", "def": "The mechanism that refills a toilet tank after flushing and shuts off once the water reaches the correct level."},
+      {"term": "float", "def": "A component that rises with the tank's water level and signals the fill valve to stop filling."},
+      {"term": "overflow tube", "def": "A vertical tube in the tank that drains excess water into the bowl if the water level rises too high, preventing tank overflow."}
+     ],
+     "practice": [
+      {
+       "q": "You add food coloring to the tank and see color in the bowl 10 minutes later without flushing. What does this indicate?",
+       "choices": ["The fill valve is stuck open", "The flapper is not sealing and is leaking water into the bowl", "The float is set too low", "Nothing is wrong; this is normal"],
+       "answer": 1,
+       "explain": "Colored water appearing in the bowl without a flush means water is passing the flapper seal continuously, indicating a worn flapper that needs replacing."
+      },
+      {
+       "q": "Water is trickling into the overflow tube even though the flapper seals properly. What is the most likely fix?",
+       "choices": ["Replace the flapper", "Lower the float so the water level sits below the top of the overflow tube", "Raise the float to increase water pressure", "Replace the entire toilet"],
+       "answer": 1,
+       "explain": "Water reaching the overflow tube means the fill valve is filling too high; lowering the float brings the shutoff level down below the tube's opening."
+      },
+      {
+       "q": "Roughly how far below the top of the overflow tube should the water level sit once the float is adjusted correctly?",
+       "choices": ["Exactly level with the top", "About 1 inch below the top", "About 6 inches below the top", "It does not matter as long as the tank is full"],
+       "answer": 1,
+       "explain": "A water level about 1 inch below the overflow tube's top gives a safety margin so the tank fills fully without spilling into the tube."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Stopping a Leak and Shutting Off Water",
+     "minutes": 11,
+     "intro": "Knowing where your shutoff valves are and how to stop a leak in the first sixty seconds can be the difference between a minor repair and thousands of dollars in water damage. This lesson covers emergency response and simple supply-line fixes.",
+     "sections": [
+      {
+       "heading": "Finding and Using Shutoff Valves",
+       "body": [
+        "Most sinks and toilets have a local shutoff valve on the supply line beneath or behind the fixture; turning this clockwise (righty-tighty) stops water to that fixture alone without affecting the rest of the house. Every home also has a main shutoff valve, often near where the water line enters the house (in a basement, utility closet, or outside near the street), which stops all water to the home and should be located and tested before an emergency, not during one.",
+        "When you discover an active leak, your first move is always to stop the water at the nearest shutoff, local first if it is enough to solve the problem, main shutoff if the leak is large, its source is unclear, or the local valve does not fully stop the flow. Only after the water is stopped should you assess the damage and begin the repair."
+       ]
+      },
+      {
+       "heading": "Fixing a Leaking Supply Line",
+       "body": [
+        "A common supply-line leak happens at the compression fitting connecting the flexible line to the shutoff valve or the fixture, often because the nut has loosened or the internal ferrule has worn. With the water off and the line drained, hand-tighten the compression nut first, then snug it a quarter turn further with a wrench; over-tightening can crack the fitting, so stop as soon as the leak resists a small increase in pressure.",
+        "If tightening does not stop the leak, replace the supply line itself, a braided stainless steel line rated for the fixture, which is an inexpensive part that threads on by hand and then snugs with a wrench, no soldering or specialized tools required. Always turn the water back on slowly and check the connection for drips before leaving the area unattended."
+       ],
+       "example": {
+        "problem": "You notice water pooling under a bathroom sink. Following the trail, you find it coming from where the flexible supply line meets the shutoff valve.",
+        "steps": [
+         "Immediately turn the local shutoff valve clockwise to stop water to that sink.",
+         "Dry the area and run a paper towel along the fitting to confirm exactly where the drip originates.",
+         "Hand-tighten the compression nut, then add a quarter turn with a wrench, and slowly turn the water back on to test."
+        ],
+        "answer": "Shut off the local valve first, then tighten the compression fitting; if the leak persists, replace the supply line with a new braided line."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "local shutoff valve", "def": "A valve located at an individual fixture that stops water to that fixture alone."},
+      {"term": "main shutoff valve", "def": "The valve that stops all water entering a home, typically located where the main water line enters the building."},
+      {"term": "compression fitting", "def": "A plumbing connection that seals by compressing a ferrule against a pipe or line when a nut is tightened."},
+      {"term": "supply line", "def": "The flexible tube connecting a fixture's shutoff valve to the fixture itself, carrying water to a sink, toilet, or appliance."}
+     ],
+     "practice": [
+      {
+       "q": "What is the very first action you should take upon discovering an active water leak under a sink?",
+       "choices": ["Start mopping up the water", "Shut off the nearest local shutoff valve (or the main, if needed) before doing anything else", "Call a plumber and wait for them to arrive before touching anything", "Take photos for insurance first"],
+       "answer": 1,
+       "explain": "Stopping the water source is the priority, since every additional minute of flow increases water damage; documentation and cleanup come after the leak is stopped."
+      },
+      {
+       "q": "Why should you find and test your home's main shutoff valve before an emergency happens?",
+       "choices": ["It is required by law in most areas", "So you already know its exact location and that it works, saving critical time during a real leak", "It needs to be tested only once when the home is built", "Local shutoff valves do not exist, so only the main matters"],
+       "answer": 1,
+       "explain": "Searching for a shutoff valve for the first time during an active leak wastes precious time; testing it in advance confirms both its location and that it functions."
+      },
+      {
+       "q": "After hand-tightening a leaking compression nut, how much further should you turn it with a wrench?",
+       "choices": ["As tight as physically possible", "About a quarter turn past hand-tight, stopping once the leak resists", "Do not use a wrench at all, ever", "Several full turns to guarantee no leak"],
+       "answer": 1,
+       "explain": "Over-tightening a compression fitting can crack it; a modest quarter turn past hand-tight is usually enough to seal a leak without damaging the fitting."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Electrical Repairs",
+   "summary": "With the safety rules from Unit 1 in place, this unit covers the electrical repairs a homeowner can safely and legally do: replacing switches and outlets, and understanding your breaker panel.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Replacing a Switch or Outlet",
+     "minutes": 15,
+     "intro": "Replacing a worn-out switch or outlet is one of the most useful electrical skills a homeowner can learn, and done carefully, with the power off and confirmed dead, it is a straightforward fifteen-minute job.",
+     "sections": [
+      {
+       "heading": "Preparing for the Swap",
+       "body": [
+        "After shutting off the breaker and confirming the circuit is dead with a non-contact voltage tester, remove the cover plate and the two screws holding the device to the electrical box, then gently pull it out. Take a photo of the wiring before disconnecting anything, since this gives you a reference for reconnecting the new device exactly the same way.",
+        "A standard outlet has a black (hot) wire, a white (neutral) wire, and a bare or green (ground) wire; a switch typically has two black wires plus a ground, since a switch interrupts the hot wire rather than connecting to neutral at all. Loosen the screw terminals or press the release slot to free each wire, keeping track of which wire came from which terminal."
+       ]
+      },
+      {
+       "heading": "Connecting the New Device",
+       "body": [
+        "Wrap each wire clockwise around its matching screw terminal (black to the brass/gold screw, white to the silver screw, ground to the green screw) so that tightening the screw draws the wire in rather than pushing it out; alternatively, use the back-wire push-in terminals if the new device has them and the wire is stripped to the correct length shown on the device.",
+        "Tighten each screw firmly, gently tuck the wires back into the box in a neat fold so nothing pinches, then screw the device back into the box and reattach the cover plate. Only after everything is reassembled should you restore power at the breaker, then test the outlet with a plug-in tester or the switch by operating it."
+       ],
+       "example": {
+        "problem": "You are replacing an outlet and see two black wires, two white wires, and a bare copper wire in the box.",
+        "steps": [
+         "Recognize this as a pass-through configuration, where power feeds through this outlet to another one further down the circuit.",
+         "Connect both black wires to the brass screws (using the two screw terminals, or pigtailing them together with a short wire to one terminal if the device only has one terminal per side).",
+         "Connect both white wires to the silver screws in the same way, and connect the bare copper wire to the green ground screw."
+        ],
+        "answer": "Both black wires go to the brass terminals, both white wires to the silver terminals, and the bare ground wire to the green terminal, preserving the pass-through connection for the next outlet on the circuit."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "hot wire", "def": "The wire (typically black) that carries current from the electrical panel to a device or fixture."},
+      {"term": "neutral wire", "def": "The wire (typically white) that completes the circuit, carrying current back toward the panel."},
+      {"term": "ground wire", "def": "A bare or green wire that provides a safe path for fault current, protecting against shock if a hot wire contacts a metal part."},
+      {"term": "pass-through", "def": "A wiring configuration where power passes through one outlet or switch box to continue on to additional devices further down the circuit."}
+     ],
+     "practice": [
+      {
+       "q": "On a standard outlet, which color wire connects to the brass (gold-colored) screw terminal?",
+       "choices": ["White (neutral)", "Black (hot)", "Bare copper (ground)", "Any color, it does not matter"],
+       "answer": 1,
+       "explain": "The black hot wire connects to the brass terminal, the white neutral wire to the silver terminal, and the bare or green ground wire to the green terminal — matching colors and terminals prevents miswiring."
+      },
+      {
+       "q": "Why is it useful to take a photo of the wiring before disconnecting an old outlet or switch?",
+       "choices": ["It is required by electrical code", "It gives you a reference to reconnect the new device exactly the same way", "It cools down the wires before handling them", "It has no real purpose"],
+       "answer": 1,
+       "explain": "A photo preserves exactly how each wire was connected, which is especially useful in pass-through boxes with multiple wires of the same color."
+      },
+      {
+       "q": "Which best describes the difference in wiring between a standard outlet and a standard single-pole switch?",
+       "choices": ["A switch has no ground wire while an outlet does", "A switch typically has two hot (black) wires and a ground, interrupting the hot conductor, while an outlet has hot, neutral, and ground", "An outlet only has one wire total", "There is no meaningful difference"],
+       "answer": 1,
+       "explain": "A switch interrupts the hot conductor and so connects to two black wires (line and load) plus ground, with no neutral connection at the switch itself, while an outlet connects to hot, neutral, and ground."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Understanding Your Breaker Panel",
+     "minutes": 12,
+     "intro": "The breaker panel is the control center for every circuit in your home, and understanding what each breaker does turns a mysterious metal box into a tool you can use confidently during both routine repairs and emergencies.",
+     "sections": [
+      {
+       "heading": "How Breakers Protect a Circuit",
+       "body": [
+        "A circuit breaker is a safety switch that automatically shuts off power to a circuit when the current flowing through it exceeds a safe level, protecting the wiring from overheating and potentially starting a fire. A typical household circuit is protected by a 15-amp or 20-amp breaker, and a breaker trips when the connected devices draw more current than that rating allows, often from running too many high-draw appliances (like a space heater and a hair dryer) on the same circuit at once.",
+        "A tripped breaker is not damaged; it has simply done its job, and can be reset by first unplugging or turning off some of the load on that circuit, then firmly switching the breaker fully to off and back to on. If a breaker trips repeatedly with only a normal, light load connected, that suggests a wiring fault rather than simple overload, and it is a sign to call an electrician rather than keep resetting it."
+       ]
+      },
+      {
+       "heading": "Mapping and Labeling Your Panel",
+       "body": [
+        "Most panels come with a poorly or incompletely labeled directory, so mapping your own panel accurately is one of the most useful hours you can spend as a homeowner. With a helper, flip one breaker at a time and check which outlets, switches, and fixtures lose power, updating the directory as you go.",
+        "Keep a flashlight near the panel, since panels are often in a basement, garage, or closet that goes dark exactly when the power goes out. Never remove the panel's outer cover to access the breakers' internal wiring yourself; that area carries exposed high voltage, even with the main breaker off, and is worked on only by a licensed electrician."
+       ],
+       "example": {
+        "problem": "You are running a space heater and a vacuum cleaner in the same room and the breaker for that room trips.",
+        "steps": [
+         "Recognize this as a normal overload trip, since space heaters and vacuums both draw significant current.",
+         "Unplug one of the two high-draw appliances before resetting.",
+         "Reset the breaker by switching it fully to off, then firmly back to on."
+        ],
+        "answer": "This is expected overload behavior, not a fault; unplug one appliance and reset the breaker normally, and avoid running both on the same circuit again."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "circuit breaker", "def": "A safety switch that automatically interrupts power to a circuit when current exceeds a safe level."},
+      {"term": "amperage rating", "def": "The maximum current, in amps, a circuit or breaker is designed to carry safely; commonly 15 or 20 amps for household circuits."},
+      {"term": "panel directory", "def": "The labeled list on the inside of a breaker panel's door indicating which breaker controls which area or circuit of the home."}
+     ],
+     "practice": [
+      {
+       "q": "A breaker trips while a space heater and a hair dryer run on the same outlet strip. What does this most likely indicate?",
+       "choices": ["A dangerous wiring fault requiring immediate professional repair", "Normal overload protection working as intended, since both appliances draw high current", "A broken breaker that needs replacing", "A problem with the outlet, not the breaker"],
+       "answer": 1,
+       "explain": "High-draw appliances run together commonly exceed a 15- or 20-amp circuit's rating; the breaker tripping is the safety system working correctly, not a sign of damage."
+      },
+      {
+       "q": "A breaker trips repeatedly even with only a lamp plugged into that circuit. What should you do?",
+       "choices": ["Keep resetting it since lamps use very little power, so it will eventually stop", "Call a licensed electrician, since tripping under a light load suggests a wiring fault", "Replace the lamp with a different one and try again", "Tape the breaker in the on position"],
+       "answer": 1,
+       "explain": "A trip under a genuinely light load is not explained by overload and suggests a fault such as a short or ground fault in the wiring, which requires a licensed electrician to diagnose."
+      },
+      {
+       "q": "Why should a homeowner never remove a breaker panel's outer cover to access its internals?",
+       "choices": ["It voids the warranty on the lightbulbs in the house", "The area behind the cover carries exposed high voltage even when the main breaker is off, and requires a licensed electrician", "It is only a cosmetic cover with no safety purpose", "It automatically resets all circuits when removed"],
+       "answer": 1,
+       "explain": "The wiring behind a panel's cover, including the main lugs, remains energized even with the main breaker switched off, making it dangerous for anyone but a licensed electrician to access."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Ceiling Fixtures and GFCI Outlets",
+     "minutes": 13,
+     "intro": "Two of the most requested upgrades in any home are a new light fixture and safer outlets in wet areas, and both are within reach once you understand ground-fault protection and how to support a fixture's weight safely.",
+     "sections": [
+      {
+       "heading": "GFCI Outlets: Extra Protection Near Water",
+       "body": [
+        "A GFCI (ground-fault circuit interrupter) outlet monitors the current going out on the hot wire against the current returning on the neutral wire, and if it detects even a tiny imbalance, as little as 4 to 6 milliamps, indicating current may be leaking through a person's body to ground, it cuts power in a fraction of a second. This makes GFCI outlets essential, and required by code, in kitchens, bathrooms, garages, and outdoor outlets, anywhere water is likely to be present.",
+        "A GFCI outlet has \"test\" and \"reset\" buttons; pressing test should cut power immediately (verify with a plug-in tester), and pressing reset restores it. Testing your GFCI outlets monthly is a simple habit that confirms this protection is still working, since a GFCI can fail over years of use without any other visible sign."
+       ]
+      },
+      {
+       "heading": "Installing a Ceiling Fixture Safely",
+       "body": [
+        "Before installing any ceiling fixture heavier than a basic light, confirm the electrical box is rated and mounted to support that weight; a standard light fixture box handles light fixtures up to about 50 pounds, but a ceiling fan requires a fan-rated box specifically braced to a joist, since fans add vibration and rotating load a standard box cannot handle safely.",
+        "With power off and confirmed dead, most fixtures connect the same way as an outlet: black to black (or the fixture's hot lead), white to white, and ground to ground, using wire nuts twisted clockwise until snug and covered by their full length. Support the fixture's weight (a helper's hands, or a temporary hook) while making connections, since a hanging fixture pulling on unconnected wires can strain or break them."
+       ],
+       "example": {
+        "problem": "You want to replace a light fixture in a bathroom with a small ceiling fan. The existing electrical box is a standard light box.",
+        "steps": [
+         "Recognize a ceiling fan needs a fan-rated box, braced to a joist, because of the added vibration and rotational load.",
+         "Turn off power and confirm dead before removing the old box.",
+         "Replace the standard box with a fan-rated box, secured according to its bracing instructions, before installing the fan."
+        ],
+        "answer": "The standard box must be replaced with a fan-rated, joist-braced box before the fan is installed; a standard light box is not adequate for fan-specific loads."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "GFCI", "def": "Ground-fault circuit interrupter; an outlet or breaker that detects a small current imbalance and cuts power to prevent electric shock."},
+      {"term": "fan-rated box", "def": "An electrical box specifically braced to structural framing to safely support the weight and vibration of a ceiling fan."},
+      {"term": "wire nut", "def": "A twist-on connector used to join two or more electrical wires securely and insulate the connection."}
+     ],
+     "practice": [
+      {
+       "q": "What does a GFCI outlet actually detect to decide when to cut power?",
+       "choices": ["Whether the outlet is overloaded past its amp rating", "A small imbalance between the current going out on hot and returning on neutral, suggesting a shock hazard", "Whether the outlet is more than five years old", "The room's humidity level directly"],
+       "answer": 1,
+       "explain": "A GFCI compares outgoing and returning current; an imbalance of just a few milliamps suggests current is leaking to ground, possibly through a person, and triggers a fast shutoff."
+      },
+      {
+       "q": "Why does a ceiling fan require a fan-rated electrical box instead of a standard light fixture box?",
+       "choices": ["Fans use less power than light fixtures", "Standard boxes cannot safely handle the added vibration and rotational load of a spinning fan", "Fan-rated boxes are simply a marketing term with no real difference", "All ceiling boxes are already fan-rated by default"],
+       "answer": 1,
+       "explain": "A spinning fan introduces vibration and dynamic load that a standard light box, designed only for a static fixture's weight, is not braced to handle safely over time."
+      },
+      {
+       "q": "Where does electrical code typically require GFCI protection?",
+       "choices": ["Only in bedrooms", "Kitchens, bathrooms, garages, and outdoor outlets — anywhere water is likely present", "Only on outlets used for major appliances", "Nowhere; GFCI is optional everywhere"],
+       "answer": 1,
+       "explain": "GFCI protection is required in areas where water exposure raises shock risk, including kitchens, bathrooms, garages, and outdoor locations."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Drywall and Interior Repair",
+   "summary": "Dents, holes, and cracks in drywall are inevitable in any lived-in home. This unit teaches patching techniques scaled to the size of the damage, finishing to a paint-ready surface.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Patching Small Holes",
+     "minutes": 10,
+     "intro": "Nail holes, small dents, and doorknob dings are the most common drywall damage, and they can be fixed in minutes with just spackle, a putty knife, and a little patience for drying time.",
+     "sections": [
+      {
+       "heading": "Filling Small Holes and Dents",
+       "body": [
+        "For holes under about half an inch, lightweight spackle applied with a flexible putty knife is all you need: press the spackle into the hole, scrape the excess flush with the wall using firm, even strokes, and let it dry according to the product's label, typically 30 minutes to a few hours. Spackle shrinks slightly as it dries, so a second thin coat is often needed to fully level a hole once the first coat has dried.",
+        "Once fully dry and level with the surrounding wall, sand lightly with fine-grit sandpaper (220-grit is a good choice) until smooth to the touch, wipe away the dust with a slightly damp cloth, then prime the spot before painting, since unprimed spackle can absorb paint differently and show as a slightly different sheen or shade."
+       ]
+      },
+      {
+       "heading": "Handling Cracks",
+       "body": [
+        "Hairline cracks, common near doorways and ceiling corners from a house settling, need a flexible approach rather than rigid spackle alone, since a rigid patch can crack again as the house continues to shift slightly with temperature and humidity. Widen the crack slightly with the tip of a utility knife, apply a thin layer of spackle or joint compound with fiberglass mesh tape embedded in it for reinforcement, then feather the edges out wide and thin so the patch blends invisibly into the surrounding wall.",
+        "Feathering means spreading the compound progressively thinner as you move away from the repair's center, over a foot or more on each side for a good finish, rather than building a hard-edged patch that will show as a visible bump or shadow line under angled light."
+       ],
+       "example": {
+        "problem": "A picture-hanger nail left a small round hole in a hallway wall.",
+        "steps": [
+         "Apply lightweight spackle into the hole with a putty knife, scraping flush with the surrounding wall.",
+         "Let it dry fully, then apply a thin second coat if the first coat sank in as it dried.",
+         "Sand smooth with 220-grit sandpaper, wipe with a damp cloth, prime, and paint to match."
+        ],
+        "answer": "A single small nail hole is fully repaired with spackle, light sanding, priming, and paint — no mesh tape or joint compound needed."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "spackle", "def": "A lightweight paste used to fill small holes and dents in drywall, sanded smooth once dry."},
+      {"term": "feathering", "def": "Spreading a patching compound progressively thinner toward its edges so the repair blends invisibly into the surrounding surface."},
+      {"term": "fiberglass mesh tape", "def": "A self-adhesive reinforcing tape applied over drywall cracks or seams before compound, preventing the crack from reopening."}
+     ],
+     "practice": [
+      {
+       "q": "Why is a second thin coat of spackle often needed after the first coat dries?",
+       "choices": ["Spackle is always applied in exactly two coats by rule", "Spackle shrinks slightly as it dries, often leaving a small depression that needs filling", "The first coat is only a primer, not real spackle", "It has no real purpose and is optional cosmetic step"],
+       "answer": 1,
+       "explain": "As spackle dries it shrinks somewhat, which can leave the patch slightly recessed; a thin second coat brings it back flush with the wall."
+      },
+      {
+       "q": "Why should a hairline crack be reinforced with fiberglass mesh tape rather than filled with spackle alone?",
+       "choices": ["Mesh tape looks better under paint", "A rigid patch alone can crack again as the house continues to shift slightly, while the tape reinforces and spans the crack", "Spackle cannot stick to cracks at all", "Mesh tape is required by law for any drywall repair"],
+       "answer": 1,
+       "explain": "Cracks from settling often reopen because the underlying movement continues; mesh tape embedded in compound spans and reinforces the crack so a rigid patch alone would not hold as well over time."
+      },
+      {
+       "q": "What does \"feathering\" a patch mean, and why does it matter?",
+       "choices": ["Sanding aggressively in one spot only", "Spreading the compound progressively thinner toward the edges so no hard edge or bump shows under angled light", "Applying feathers as texture to disguise the repair", "Painting the patch a slightly different color on purpose"],
+       "answer": 1,
+       "explain": "Feathering avoids a visible ridge by tapering the patch thickness gradually over a wide area, so the repair blends smoothly rather than standing out as a raised or shadowed patch."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Patching Medium and Large Holes",
+     "minutes": 15,
+     "intro": "A doorknob punched through drywall or a fist-sized hole needs more than spackle: it needs a backing material and joint compound applied in thin coats. This lesson walks through a repair that comes out paint-ready.",
+     "sections": [
+      {
+       "heading": "Adding Backing for the Patch",
+       "body": [
+        "For holes larger than about 2 inches, spackle alone has nothing to grip, so you need a backing material behind the hole first. A popular option for holes up to roughly 6 inches is a self-adhesive mesh patch, stuck directly over the hole so its edges overlap the surrounding intact drywall; for larger holes, cut a piece of new drywall slightly bigger than the hole, and use a \"California patch\" technique, scoring the drywall's paper backing larger than the cut piece and pressing the paper flap flush against the wall to hold the patch in place without needing internal wood backing.",
+        "For structural support on bigger repairs, cutting a clean rectangular opening and screwing in backing strips of wood or drywall clips behind the edges gives the new drywall piece something solid to be screwed into, producing a much sturdier, longer-lasting repair than backing alone."
+       ]
+      },
+      {
+       "heading": "Building Up Joint Compound in Coats",
+       "body": [
+        "Apply joint compound over the patch in three thin coats rather than one thick one: the first coat embeds the mesh or paper edges and fills the deepest part of the repair, the second coat widens and feathers the edges further out, and the third coat feathers even wider and smooths any remaining imperfections. Let each coat dry fully, typically overnight, before sanding lightly and applying the next; rushing coats leads to cracking as the thick compound dries unevenly.",
+        "After the final coat dries and is sanded smooth, wipe away dust, apply a coat of primer (drywall compound is porous and will flash differently than paint without it), and then paint to match. A well-feathered three-coat patch, primed properly, should be completely invisible once painted, even under angled light."
+       ],
+       "example": {
+        "problem": "A doorknob punched a 3-inch hole through a bedroom wall.",
+        "steps": [
+         "Apply a self-adhesive mesh patch centered over the hole, pressed flat so its edges bond to the surrounding drywall.",
+         "Apply a first thin coat of joint compound over the mesh, let it dry fully, then sand lightly.",
+         "Apply a second, wider coat, feathering the edges further, let dry, sand, then apply a third coat feathered even wider for a seamless blend.",
+         "Sand smooth, wipe with a damp cloth, prime, and paint to match."
+        ],
+        "answer": "A mesh-patch repair built up in three progressively wider coats of joint compound, then primed and painted, produces an invisible, durable repair for a 3-inch hole."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "California patch", "def": "A drywall repair technique using a cut piece of new drywall with its paper backing scored and folded outward to adhere flat against the surrounding wall without internal backing."},
+      {"term": "joint compound", "def": "A gypsum-based paste used to finish drywall seams and patches, applied in thin coats and sanded smooth."},
+      {"term": "backing strip", "def": "A piece of wood or a drywall clip installed behind a cut opening to give a new drywall patch a solid surface to be screwed into."}
+     ],
+     "practice": [
+      {
+       "q": "Why is a self-adhesive mesh patch or backing material needed for holes larger than about 2 inches?",
+       "choices": ["It is purely decorative", "Spackle alone has nothing solid to grip across a larger opening and would simply fall through", "It changes the color of the repair", "It is only needed for holes in ceilings, not walls"],
+       "answer": 1,
+       "explain": "Spackle needs a surface to adhere to; across a larger gap there is no backing, so a mesh patch, drywall piece, or backing strip is needed to give the compound something to bond and span."
+      },
+      {
+       "q": "Why apply joint compound in three thin coats rather than one thick coat?",
+       "choices": ["It uses less material overall", "Thick compound dries unevenly and is prone to cracking, while thin coats let each layer dry properly and feather wider for a seamless blend", "Building codes require exactly three coats", "It makes the compound a different color"],
+       "answer": 1,
+       "explain": "Thin coats dry more evenly and allow progressively wider feathering with each pass, avoiding the cracking that a single thick application is prone to."
+      },
+      {
+       "q": "What is the purpose of priming a drywall patch before painting?",
+       "choices": ["Primer is purely optional and has no functional purpose", "Drywall compound is porous and absorbs paint differently than the surrounding wall, so priming evens out the finish and prevents a visible sheen difference", "Primer replaces the need for sanding", "Primer is only needed on ceilings"],
+       "answer": 1,
+       "explain": "Unprimed joint compound absorbs paint at a different rate than the painted wall around it, which can show as a flat or duller patch even after painting; priming equalizes absorption so the finish matches."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Seasonal and Preventive Maintenance",
+   "summary": "The cheapest repair is the one you prevent. This unit covers the seasonal checks that catch small problems before they become expensive emergencies.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Gutters, Roof, and Exterior Checks",
+     "minutes": 12,
+     "intro": "Water is the single most destructive force against a home, and most of the expensive water damage homeowners face traces back to a gutter, roof, or grading problem that could have been caught during a simple seasonal walk-around.",
+     "sections": [
+      {
+       "heading": "Gutters and Downspouts",
+       "body": [
+        "Clean gutters at least twice a year, in late spring and late fall, removing leaves and debris by hand or with a small scoop, then flushing with a hose to confirm water flows freely to and out of each downspout. Clogged gutters overflow behind the gutter itself, which can rot fascia boards and drive water into the roof edge or foundation, exactly the kind of damage regular cleaning prevents.",
+        "Downspouts should direct water at least 4 to 6 feet away from the foundation, using extensions if necessary, since water pooling right against the foundation is a leading cause of basement leaks and, over years, foundation cracking. Check that splash blocks or extensions are still positioned correctly after storms, since they are easily kicked or washed out of place."
+       ]
+      },
+      {
+       "heading": "Roof and Exterior Walk-Around",
+       "body": [
+        "From the ground, using binoculars, scan the roof twice a year for missing, curled, or cracked shingles, and check for granules collecting in the gutters, a sign shingles are aging and losing their protective coating. Also check flashing (the metal strips sealing joints around chimneys, vents, and skylights) for gaps or rust, since flashing failures are a common source of hidden roof leaks long before shingles themselves visibly fail.",
+        "Walk the full exterior checking that caulk around windows and doors is intact, that exterior wood shows no soft or rotting spots when pressed with a screwdriver tip, and that the ground slopes away from the foundation on all sides. Address small caulk gaps and soft wood immediately, since both problems, ignored, tend to grow directly into far costlier repairs."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "flashing", "def": "Metal strips installed at roof joints, chimneys, and vents to seal against water intrusion at vulnerable transition points."},
+      {"term": "fascia board", "def": "The trim board running along a roof's edge, behind the gutters, that can rot if gutters overflow repeatedly."},
+      {"term": "grading", "def": "The slope of the ground around a home's foundation; correct grading directs water away from the foundation rather than toward it."}
+     ],
+     "practice": [
+      {
+       "q": "How far should downspouts direct water away from a home's foundation?",
+       "choices": ["No distance matters, any direction is fine", "At least 4 to 6 feet away", "Exactly 1 foot away", "Downspouts should point directly at the foundation for drainage"],
+       "answer": 1,
+       "explain": "Water discharged right at the foundation is a leading cause of basement leaks and long-term foundation damage; directing it 4 to 6 feet away, using extensions if needed, keeps it clear of the foundation."
+      },
+      {
+       "q": "Finding roof shingle granules collecting in the gutters is a sign of what?",
+       "choices": ["Normal new-shingle installation residue only", "Aging shingles losing their protective coating", "A sign the gutters need to be replaced, unrelated to the roof", "Nothing significant; granules always appear regardless of shingle age"],
+       "answer": 1,
+       "explain": "Granule loss indicates shingles are aging and their protective surface is wearing away, which is worth monitoring or having a roofer inspect before leaks develop."
+      },
+      {
+       "q": "Why are roof flashing failures often a more urgent concern than shingles that merely look a bit worn?",
+       "choices": ["Flashing is more expensive to replace than shingles", "Flashing seals critical joints around chimneys, vents, and skylights, and its failure is a common source of hidden leaks even while shingles still look fine", "Flashing has no real function and is purely decorative", "Shingles never actually fail on a roof"],
+       "answer": 1,
+       "explain": "Flashing protects the vulnerable transition points where a roof meets a chimney, vent, or skylight; a gap or rust spot there can let water in well before the surrounding shingles show visible wear."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "HVAC, Water Heater, and Safety Devices",
+     "minutes": 13,
+     "intro": "The systems that heat, cool, and protect your home need regular, simple attention to keep running efficiently and safely, and skipping that attention is one of the most common ways homeowners end up with an expensive emergency repair.",
+     "sections": [
+      {
+       "heading": "HVAC Filters and Water Heater Maintenance",
+       "body": [
+        "Check your furnace or air handler's air filter monthly and replace it roughly every 1 to 3 months, more often if you have pets or allergies, since a clogged filter restricts airflow, forces the system to work harder, and can shorten its lifespan significantly. A clean filter is one of the cheapest, easiest maintenance tasks in the whole home and directly affects both energy bills and equipment life.",
+        "Drain a few gallons from your water heater's tank twice a year through its drain valve at the bottom, which flushes out sediment that settles over time; excess sediment buildup reduces efficiency and can eventually cause popping or rumbling noises as water boils under the sediment layer. Check that the temperature and pressure relief (T&P) valve on the water heater still opens and closes freely by lifting its test lever briefly, since a stuck valve cannot relieve dangerous pressure buildup in an emergency."
+       ]
+      },
+      {
+       "heading": "Smoke Detectors and Carbon Monoxide Alarms",
+       "body": [
+        "Test every smoke detector and carbon monoxide alarm monthly by pressing the test button, and replace batteries at least once a year, a common habit being to change them when clocks change for daylight saving time. Replace smoke detectors entirely every 10 years and carbon monoxide alarms every 5 to 7 years (check the manufacturer's date on the back), since the sensors inside degrade over time even if the unit still beeps during a button test.",
+        "Install smoke detectors in every bedroom, outside each sleeping area, and on every level of the home, and install carbon monoxide alarms near sleeping areas, especially if the home has a fuel-burning furnace, water heater, fireplace, or an attached garage. If a carbon monoxide alarm ever sounds, get everyone outside immediately into fresh air and call 911 from outside; do not investigate the source yourself, since carbon monoxide is invisible and odorless and can incapacitate quickly."
+       ],
+       "example": {
+        "problem": "It is the fall time change, and you are doing your seasonal home maintenance walk-through.",
+        "steps": [
+         "Replace batteries in all smoke detectors and carbon monoxide alarms as part of this seasonal routine.",
+         "Press the test button on each detector to confirm the alarm sounds.",
+         "Check the manufacture date on the back of each unit, replacing any smoke detector older than 10 years or CO alarm older than 5 to 7 years."
+        ],
+        "answer": "Time changes are a reliable, memorable trigger for the twice-yearly battery replacement and testing routine, and also a good prompt to check each unit's age against replacement guidelines."
+       }
+      }
+     ]
+     ,
+     "keyTerms": [
+      {"term": "T&P valve", "def": "Temperature and pressure relief valve on a water heater, designed to release excess pressure or temperature to prevent tank failure."},
+      {"term": "sediment", "def": "Mineral deposits that settle at the bottom of a water heater tank over time, reducing efficiency if not periodically flushed."},
+      {"term": "carbon monoxide", "def": "A colorless, odorless gas produced by incomplete combustion in fuel-burning appliances, dangerous because it is undetectable without an alarm."}
+     ],
+     "practice": [
+      {
+       "q": "Why should a furnace air filter be checked monthly and typically replaced every 1 to 3 months?",
+       "choices": ["Filters are decorative and have no functional impact", "A clogged filter restricts airflow, forces the system to work harder, and can shorten its lifespan and raise energy bills", "Filters never actually need replacing, only cleaning", "It is purely a manufacturer's suggestion with no real consequence"],
+       "answer": 1,
+       "explain": "Airflow restriction from a dirty filter makes the HVAC system work harder to move air, increasing energy use and wear, so regular replacement protects both efficiency and equipment lifespan."
+      },
+      {
+       "q": "What should you do immediately if a carbon monoxide alarm sounds in your home?",
+       "choices": ["Open a window in the room where it is loudest and wait to see if it stops", "Get everyone outside into fresh air immediately and call 911 from outside", "Investigate each fuel-burning appliance yourself to find the source", "Ignore it if you do not smell anything unusual"],
+       "answer": 1,
+       "explain": "Carbon monoxide is invisible and odorless and can incapacitate quickly; the correct response is to evacuate immediately into fresh air and call for help from outside, not to investigate the source yourself."
+      },
+      {
+       "q": "Why does a water heater need a few gallons drained from its tank twice a year?",
+       "choices": ["It has no real benefit and is an outdated recommendation", "It flushes out sediment that settles over time, which otherwise reduces efficiency and can cause noise or damage", "It is required to reset the thermostat", "It permanently empties the tank for winter storage"],
+       "answer": 1,
+       "explain": "Mineral sediment settles at the tank's bottom over time; periodic draining flushes it out, preserving efficiency and preventing the popping or rumbling noises and potential damage that heavy sediment buildup can cause."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

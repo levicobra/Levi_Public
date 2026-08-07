@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engineering — XPLabs</title>
+<meta name="description" content="How XPLabs builds across Unreal Engine, Swift, Roblox and dependency-free static web — plus game design and defense technology consulting.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#17171B">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://xplabs.us/engineering/">
+<meta property="og:title" content="Engineering — XPLabs">
+<meta property="og:description" content="How XPLabs builds across Unreal Engine, Swift, Roblox and dependency-free static web — plus game design and defense technology consulting.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xplabs.us/engineering/">
+<meta property="og:image" content="https://xplabs.us/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Tokens match the site root. Change a colour here and change it there too. */
+:root{
+  --ink:#17171B; --ink-2:#4E4E56; --bone:#F0EBE0; --bone-2:#E6E0D2;
+  --teal:#0B6155; --ultra:#20338C; --rust:#A63423; --mustard:#C98A06;
+  --display:"Arial Black","Arial Bold",Impact,"Helvetica Neue",Arial,sans-serif;
+  --text:Georgia,"Iowan Old Style",Charter,"Times New Roman",serif;
+  --ui:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --s-0:1.0625rem;
+  --s-1:clamp(1.25rem,1.14rem + 0.48vw,1.5rem);
+  --s-2:clamp(1.5rem,1.3rem + 0.9vw,2rem);
+  --s-3:clamp(1.875rem,1.5rem + 1.7vw,2.75rem);
+  --s-4:clamp(2.25rem,1.6rem + 2.9vw,4rem);
+  --s-min:0.8125rem;
+  --wrap:72rem; --gutter:clamp(1.15rem,4vw,3rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--text);
+  font-size:var(--s-0);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+p{margin:0}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:900;line-height:.98;
+  letter-spacing:-.012em;text-wrap:balance}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:.6rem;top:.6rem;z-index:99;background:var(--ink);color:var(--bone);padding:.7rem 1rem}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.slab :focus-visible{outline-color:#fff}
+.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+  gap:.5rem 1rem;padding-block:1.1rem;border-bottom:3px solid var(--ink)}
+.logo{font-family:var(--display);font-size:var(--s-1);letter-spacing:-.02em;text-decoration:none}
+.top nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--ui);font-size:var(--s-min)}
+.top nav a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
+.top nav a:hover,.top nav a[aria-current]{border-bottom-color:var(--ink)}
+.head{padding-block:clamp(2.25rem,6vw,4rem) clamp(1.5rem,3vw,2.5rem)}
+.head h1{font-size:var(--s-4)}
+.head .lede{font-size:var(--s-1);max-width:44ch;margin-top:1.1rem;line-height:1.45}
+.slab{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+  padding-left:calc(50vw - 50% + var(--gutter));padding-right:calc(50vw - 50% + var(--gutter));
+  padding-block:clamp(2rem,4.5vw,3.25rem);color:#fff}
+.slab--teal{background:var(--teal)}
+.slab--ultra{background:var(--ultra)}
+.slab--rust{background:var(--rust)}
+.slab__in{max-width:var(--wrap);margin-inline:auto}
+.sec{padding-block:clamp(2rem,5vw,3.5rem)}
+.sec h2{font-size:var(--s-2);margin-bottom:1rem}
+.body{max-width:58ch}
+.body p + p{margin-top:.9rem}
+.body a{text-decoration:underline;text-underline-offset:2px}
+.rule{border:0;border-top:3px solid var(--ink);margin:0}
+.stack{display:grid;gap:.75rem;margin-top:1.25rem}
+@media (min-width:700px){.stack{grid-template-columns:repeat(2,1fr)}}
+.item{border-top:2px solid currentColor;padding-top:.7rem}
+.item b{display:block;font-family:var(--ui);font-size:var(--s-min);font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:.3rem}
+.item span{display:block;font-size:.9375rem;line-height:1.5;opacity:.92}
+.note{font-family:var(--ui);font-size:var(--s-min);color:var(--ink-2);margin-top:1.25rem;max-width:60ch}
+.links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem;font-family:var(--ui);font-size:var(--s-min)}
+.links a{border:2px solid var(--ink);padding:.45rem .8rem;text-decoration:none;font-weight:700}
+.links a:hover{background:var(--ink);color:var(--bone)}
+.foot{background:var(--ink);color:var(--bone);padding-block:2.25rem 2.75rem;margin-top:2rem}
+.foot a{color:var(--bone)}
+.foot__meta{margin-top:1.25rem;padding-top:1rem;border-top:1px solid #3A3A42;
+  font-family:var(--ui);font-size:var(--s-min);color:#9A958A}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap top">
+  <a class="logo" href="/">XPLABS</a>
+  <nav aria-label="Primary">
+    <a href="https://game.xplabs.us/">Games</a>
+    <a href="https://learn.xplabs.us/">Education</a>
+    <a href="/engineering/" aria-current="page">Engineering</a>
+    <a href="/military-benefits/">Benefits</a>
+    <a href="/personal/">Personal</a>
+  </nav>
+</header>
+<main id="main">
+<section class="wrap head">
+  <h1>Engineering</h1>
+  <p class="lede">Four games, an offline school and a public benefits directory &mdash; built and
+  shipped by a small team across five different stacks.</p>
+</section>
+
+<div class="wrap">
+  <section class="slab slab--teal">
+    <div class="slab__in">
+      <h2 style="font-size:var(--s-3)">What gets used</h2>
+      <div class="body" style="margin-top:1rem;max-width:56ch">
+        <p>Each project uses whatever actually suits it rather than one house stack. That is a
+        deliberate choice: a survivors game and a benefits directory have nothing in common, and
+        pretending otherwise costs more than it saves.</p>
+      </div>
+      <div class="stack">
+        <div class="item"><b>Unreal Engine 5 &middot; C++</b><span>The Last Station. Mobile-first,
+        forward renderer, small handcrafted zones, async-only backend.</span></div>
+        <div class="item"><b>Swift 6 &middot; SpriteKit</b><span>Space Glyph. Deterministic game
+        engine with its own test suite, StoreKit 2, on-device analytics only.</span></div>
+        <div class="item"><b>SwiftUI &middot; SceneKit</b><span>Life XP. A pure simulation core
+        that does not depend on the UI layer, so saves survive a rewrite of the front end.</span></div>
+        <div class="item"><b>Roblox &middot; Luau</b><span>Hearth &amp; Hunt. Server-authoritative,
+        versioned player profiles, validation on the server side.</span></div>
+        <div class="item"><b>Static HTML &middot; no build</b><span>XP Education and this site.
+        No framework, no npm, no build step &mdash; nothing that can rot between releases.</span></div>
+        <div class="item"><b>AI-augmented pipeline</b><span>Used throughout, with human review
+        gates. It is how a team this size ships across five stacks at once.</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="wrap sec">
+  <h2>How it is built</h2>
+  <div class="body">
+    <p>Everything ships behind an automated test suite and a versioned build that lands on a real
+    device. Content and code are separated so a designer can change a card, a lesson or a
+    resource without touching a line of logic.</p>
+    <p>The web work is deliberately dependency-free. XP Education serves 106 subjects as plain
+    files with a service worker; this site is hand-written HTML. Neither has a package manager,
+    a bundler, or a version that can drift. That is a maintenance decision, not a technical
+    limitation &mdash; the hard part of a small project is not building it, it is opening it again
+    six months later.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- TO CLOSE THIS ROLE: delete this whole <section>, and delete the "Hiring"
+     block in the footer of index.html at the site root. Those are the only
+     two places the job is advertised. -->
+<section class="wrap sec" id="hiring">
+  <h2>Open role &mdash; lead developer</h2>
+  <div class="body">
+    <p>Lead development in Unreal Engine on <strong>The Last Station</strong>. XPLabs funds the
+    core AI toolchain and handles the business side; you earn a royalty share of what the games
+    make.</p>
+  </div>
+  <div class="stack">
+    <div class="item"><b>Remote</b><span>Work from wherever you are.</span></div>
+    <div class="item"><b>1099 contractor</b><span>Independent contractor, not an employee.</span></div>
+    <div class="item"><b>Royalty based</b><span>A share of revenue rather than a salary.</span></div>
+    <div class="item"><b>XPLabs-owned IP</b><span>The studio retains the intellectual property.</span></div>
+  </div>
+  <p class="note">Studio-funded tools, roughly $350/month &mdash; Cursor, OpenAI / Codex, Claude Max.</p>
+  <p class="note">Send a short note, your resume, and a link to something you have made.</p>
+  <p class="links"><a href="mailto:xp.labs.3d@gmail.com?subject=Lead%20developer">Apply</a></p>
+</section>
+
+<hr class="rule">
+
+<section class="wrap sec" id="consulting">
+  <h2>Consulting</h2>
+  <div class="body">
+    <p><strong>Game design and development.</strong> Open to contract work: systems and economy
+    design, prototyping, mobile performance, shipping to the App Store and Roblox, and setting up
+    AI-augmented pipelines that a small team can actually maintain.</p>
+    <p><strong>Defense and government technology.</strong> Background in the military community,
+    and the tooling above transfers &mdash; deterministic simulation, offline-first software for
+    places with no connectivity, and training and education systems. This is described as
+    capability, not availability: there is no contract vehicle, no registration, and no active
+    engagement to point at yet.</p>
+  </div>
+  <p class="note">If you want to talk about either, email is the fastest route. Rates and
+  availability depend on the work &mdash; ask.</p>
+  <p class="links"><a href="mailto:xp.labs.3d@gmail.com?subject=Consulting">Get in touch</a>
+    <a href="https://game.xplabs.us/">See the work</a></p>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>XPLabs LLC</strong> &mdash; games, an offline school, and a free benefits directory.</p>
+    <p style="margin-top:.4rem"><a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a></p>
+    <div class="foot__meta">&copy; 2026 XPLabs LLC &middot; Honolulu, HI</div>
+  </div>
+</footer>
+</body>
+</html>

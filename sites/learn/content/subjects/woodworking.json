@@ -1,0 +1,729 @@
+{
+ "id": "woodworking",
+ "title": "Woodworking",
+ "domain": "engineering",
+ "level": "All levels",
+ "description": "Woodworking teaches you how to read wood, choose the right tool for a cut or joint, and build furniture-grade projects that last, starting from safe shop habits and working up through joinery and finishing. Every lesson centers on real measurements and real technique, so you leave able to plan, cut, join, and finish a project with confidence rather than guesswork.",
+ "outcomes": [
+  "You can identify common softwoods and hardwoods, read wood grain, and select stock appropriate for a project.",
+  "You can safely operate a table saw, miter saw, and drill press, and set up a shop that minimizes kickback and injury risk.",
+  "You can measure and mark accurately, then make straight, square cuts by hand and by machine.",
+  "You can cut and assemble butt, rabbet, dado, and mortise-and-tenon joints appropriate to a project's strength needs.",
+  "You can sand, prepare, and apply a stain and finish to produce a smooth, protected, professional-looking surface.",
+  "You can plan a simple furniture project, including a cut list and joinery choices, before ever picking up a saw."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Shop Safety and Wood Basics",
+   "summary": "Every good woodworker starts with the same two things: respect for the tools and an understanding of the material. This unit covers shop safety and how to read wood before you make a single cut.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Shop Safety Fundamentals",
+     "minutes": 13,
+     "intro": "Woodworking tools are designed to cut through wood fibers with ease, and they show no more hesitation with skin, which is why safety habits are not optional extras but the actual first skill of the craft.",
+     "sections": [
+      {
+       "heading": "Personal Protective Equipment",
+       "body": [
+        "Safety glasses or a full face shield are required any time a blade, bit, or bladed tool is spinning, since wood chips and dust fly at high speed and can cause permanent eye injury in an instant. Hearing protection matters too; most shop tools run well above 85 decibels, the level at which regular exposure causes gradual, permanent hearing loss over years.",
+        "Never wear loose sleeves, dangling jewelry, or gloves near any spinning blade or bit, since all three can catch and pull a hand directly into the cutting edge; gloves are appropriate for handling rough lumber or sanding, but should come off before running a table saw, router, or drill press. Tie back long hair for the same reason."
+       ]
+      },
+      {
+       "heading": "The Table Saw and Kickback",
+       "body": [
+        "Kickback happens when a workpiece binds against the blade and is thrown violently back toward the operator, and it is the single most common cause of serious table saw injuries. Always use the rip fence or miter gauge, never both at once for the same cut, keep the blade guard installed whenever the cut allows it, and stand slightly to one side of the blade's direct line rather than directly behind it.",
+        "Use a push stick for any cut that brings your hand within about 6 inches of the blade, and never reach over a spinning blade to retrieve a cutoff piece; wait until the blade fully stops. A sharp blade, a properly aligned fence, and dry, unwarped wood all reduce the binding that causes kickback in the first place."
+       ],
+       "example": {
+        "problem": "You are ripping a narrow strip of wood on the table saw, and your hand would need to pass within 3 inches of the blade to finish the cut.",
+        "steps": [
+         "Recognize 3 inches is well within the 6-inch push-stick zone.",
+         "Stop and use a push stick to guide the final inches of the cut instead of your bare hand.",
+         "Keep your body positioned slightly to the side of the blade's line, not directly behind it, in case of kickback."
+        ],
+        "answer": "Use a push stick for the final pass rather than guiding the narrow strip by hand, since the cut brings your hand too close to the blade."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "kickback", "def": "A dangerous event where a workpiece binds against a spinning blade and is thrown back toward the operator at high speed."},
+      {"term": "push stick", "def": "A shaped tool used to guide a workpiece through a saw blade, keeping hands a safe distance from the cutting edge."},
+      {"term": "rip fence", "def": "An adjustable guide on a table saw that keeps a workpiece a set, parallel distance from the blade during a rip cut."}
+     ],
+     "practice": [
+      {
+       "q": "What is the main cause of kickback on a table saw?",
+       "choices": ["The blade spinning too slowly", "A workpiece binding against the blade and being thrown back toward the operator", "Using a push stick incorrectly", "Wearing safety glasses while cutting"],
+       "answer": 1,
+       "explain": "Kickback occurs when the workpiece binds against the blade, often from an unaligned fence, warped wood, or twisting during the cut, and the blade throws it violently backward."
+      },
+      {
+       "q": "When should you use a push stick instead of your bare hand on a table saw?",
+       "choices": ["Only on the very last cut of the day", "Whenever a cut would bring your hand within about 6 inches of the blade", "Never — push sticks are only for beginners", "Only when cutting plywood, not solid wood"],
+       "answer": 1,
+       "explain": "A roughly 6-inch safety margin from the blade is the standard guideline; a push stick maintains that distance for the final part of a cut where a hand would otherwise get dangerously close."
+      },
+      {
+       "q": "Why should gloves be removed before operating a table saw or router, even though they help when handling rough lumber?",
+       "choices": ["Gloves make cuts less accurate", "Gloves can catch on a spinning blade or bit and pull the hand directly into the cutting edge", "Gloves are too expensive to risk damaging", "There is no real reason; gloves are always fine"],
+       "answer": 1,
+       "explain": "Loose material like a glove can snag on a spinning blade or bit, and unlike bare skin, it grips and pulls, dragging the hand into the cutter before you can react."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Reading Wood: Species and Grain",
+     "minutes": 12,
+     "intro": "Not all wood behaves the same way under a saw or a finish, and choosing the right species and reading its grain direction before you cut will save you from splintered edges, warped panels, and joints that never quite fit right.",
+     "sections": [
+      {
+       "heading": "Softwoods vs. Hardwoods",
+       "body": [
+        "Softwoods come from coniferous (needle-bearing) trees like pine, cedar, and fir; they are generally less expensive, easier to cut, and common in framing and simple builds, though they dent and scratch more easily than hardwoods. Hardwoods come from deciduous (broad-leaved) trees like oak, maple, walnut, and cherry; they are denser, more durable, and typically more expensive, and are the traditional choice for furniture meant to last generations.",
+        "The softwood/hardwood distinction is botanical, not about actual hardness (balsa wood is technically a hardwood despite being extremely soft), but as a practical rule of thumb, hardwoods do tend to be harder, heavier, and more resistant to dents than common softwoods."
+       ]
+      },
+      {
+       "heading": "Grain Direction",
+       "body": [
+        "Wood grain is the direction the wood fibers run, visible as the pattern of lines on a board's surface, and cutting or planing against the grain (in the direction the fibers point up and out of the surface) causes tearout: rough, splintered chunks pulled up rather than a clean cut. Running a hand or a plane along the board and feeling for smoothness versus catching is a quick way to sense grain direction before cutting.",
+        "Grain direction also affects strength: wood is far stronger along the grain than across it, which is why a table leg is oriented with the grain running vertically (along its length) rather than horizontally, and why a board is much easier to split along the grain than across it. Understanding grain direction is essential before choosing how to orient parts in any joint."
+       ],
+       "example": {
+        "problem": "You are planing a walnut board and notice it planes smoothly moving one direction but tears out roughly when you plane the opposite direction.",
+        "steps": [
+         "Recognize this as a sign of grain direction: the smooth direction is planing with the grain.",
+         "Identify the rough direction as planing against the grain, which lifts and tears fibers instead of shearing them cleanly.",
+         "Continue planing only in the smooth direction, or flip the board end for end if working the opposite face."
+        ],
+        "answer": "Always plane (and generally cut) in the direction that runs smoothly; that is planing with the grain, and it avoids the torn, splintered surface that planing against the grain produces."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "softwood", "def": "Wood from coniferous trees like pine and fir; generally less expensive and easier to work, though softer and more prone to denting."},
+      {"term": "hardwood", "def": "Wood from deciduous trees like oak and maple; generally denser, more durable, and more expensive, favored for furniture."},
+      {"term": "grain", "def": "The direction wood fibers run within a board, visible as surface lines, affecting both cutting behavior and strength."},
+      {"term": "tearout", "def": "Rough, splintered wood surface caused by cutting or planing against the grain, which lifts fibers instead of shearing them cleanly."}
+     ],
+     "practice": [
+      {
+       "q": "What is the main practical difference between softwoods and hardwoods in a woodworking project?",
+       "choices": ["Softwoods are always literally softer in every case, no exceptions", "Softwoods generally cost less and are easier to work but dent more easily; hardwoods are denser and more durable, common in furniture", "Hardwoods can never be cut with hand tools", "There is no meaningful difference for a woodworker"],
+       "answer": 1,
+       "explain": "The softwood/hardwood split is technically about tree type (coniferous vs. deciduous), but as a practical rule softwoods tend to be less expensive and easier to cut while denting more easily, and hardwoods tend to be denser and more durable, which is why furniture often uses hardwoods."
+      },
+      {
+       "q": "What causes tearout when planing a board?",
+       "choices": ["Planing with the grain direction", "Planing against the grain direction, which lifts and splinters fibers instead of shearing them cleanly", "Using a dull blade only, regardless of grain direction", "Planing softwood instead of hardwood"],
+       "answer": 1,
+       "explain": "Tearout happens specifically when the cutting direction runs against the grain, catching and lifting fibers rather than slicing across them cleanly; a dull blade can make this worse but grain direction is the root cause."
+      },
+      {
+       "q": "Why is a table leg typically oriented with the grain running vertically along its length?",
+       "choices": ["It looks better with no functional reason", "Wood is far stronger along the grain than across it, so vertical grain gives the leg more strength to bear weight", "Vertical grain is required to apply finish evenly", "It has no effect on strength either way"],
+       "answer": 1,
+       "explain": "Wood resists compressive and bending loads much better along the grain than across it, so orienting a leg's length with the grain gives it far more strength to support weight than if the grain ran across the leg."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Measuring, Marking, and Cutting",
+   "summary": "Accurate measuring and marking come before every good cut, and this unit builds the layout and cutting skills that every later project depends on.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Measuring and Marking Accurately",
+     "minutes": 11,
+     "intro": "The old rule \"measure twice, cut once\" exists because a small marking error compounds into a part that does not fit, and this lesson teaches the layout habits that prevent that from happening.",
+     "sections": [
+      {
+       "heading": "Choosing the Right Marking Tools",
+       "body": [
+        "A tape measure works for rough layout, but for precision joinery a combination square or a marking gauge gives a cleaner, more repeatable line than a tape and pencil alone. A sharp pencil (or better, a marking knife for fine joinery) drawn against the edge of a square produces a thinner, more accurate line than a thick pencil mark, which can be off by 1/16 inch or more just from the width of the lead.",
+        "Always measure from the same reference edge for every mark on a single piece, rather than measuring from different edges for different marks, since inconsistent reference points are the most common source of layout error compounding across a project."
+       ]
+      },
+      {
+       "heading": "Marking for a Cut",
+       "body": [
+        "Use a try square or combination square to mark a line fully square across the board's width before cutting, and mark an \"X\" or shading on the waste side of the line so there is no confusion, mid-cut, about which side of the line to cut on. For cuts that must match another already-cut piece exactly, hold the two pieces together and mark directly from the existing piece rather than re-measuring, which eliminates any small error from reading a tape measure twice.",
+        "When multiple identical pieces are needed, cutting one first and using it as a template to mark the rest keeps every piece consistent, even if the very first measurement had a small error, since all the pieces will at least match each other."
+       ],
+       "example": {
+        "problem": "You need to cut four identical shelf boards to the same length for a bookcase.",
+        "steps": [
+         "Measure and mark the first board carefully from a single reference edge, then cut it.",
+         "Use the finished first board as a template, laying it against each remaining board and marking directly from it, rather than re-measuring with a tape each time.",
+         "Cut each remaining board at its marked line."
+        ],
+        "answer": "Cutting one board first and using it as a marking template for the rest guarantees all four shelves match exactly, even better than re-measuring each one independently with a tape measure."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "combination square", "def": "A layout tool with an adjustable ruler and a fixed 90-degree (and often 45-degree) head, used for marking square lines and checking angles."},
+      {"term": "marking gauge", "def": "A tool that scores a precise line parallel to an edge at a set distance, used for fine joinery layout."},
+      {"term": "reference edge", "def": "The single edge of a board from which all measurements on that piece are taken, ensuring consistency."}
+     ],
+     "practice": [
+      {
+       "q": "Why should all measurements on a single board be taken from the same reference edge?",
+       "choices": ["It makes no real difference which edge is used", "Measuring from different edges for different marks is the most common source of compounding layout error", "It is required only for hardwood, not softwood", "It only matters when using a marking gauge, not a tape measure"],
+       "answer": 1,
+       "explain": "Using a consistent reference edge for every mark on a piece prevents small inconsistencies between edges (which are rarely perfectly parallel) from creating cumulative measurement errors."
+      },
+      {
+       "q": "When cutting a piece that needs to match an already-finished piece exactly, what is the best approach?",
+       "choices": ["Re-measure with a tape measure and trust the numbers exactly", "Hold the two pieces together and mark directly from the finished piece", "Estimate the length by eye", "Always add an extra 1/8 inch for safety"],
+       "answer": 1,
+       "explain": "Marking directly from an existing piece transfers its exact length without introducing a new tape-measure reading error, guaranteeing the new piece matches."
+      },
+      {
+       "q": "Why mark an X or shading on the waste side of a cut line?",
+       "choices": ["It has no functional purpose, only decoration", "It prevents confusion mid-cut about which side of the line the saw should remove", "It marks which board is hardwood versus softwood", "It indicates which tool to use for the cut"],
+       "answer": 1,
+       "explain": "Marking the waste side clearly avoids the common and costly mistake of cutting on the wrong side of a layout line, which would make the finished piece too short."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Hand Saws and Miter Cuts",
+     "minutes": 13,
+     "intro": "Before power tools, every woodworker relied on hand saws to make straight cuts and precise angles, and that skill remains essential today for fine work, tight spaces, and situations where a power saw is not the right tool.",
+     "sections": [
+      {
+       "heading": "Rip Cuts vs. Crosscuts",
+       "body": [
+        "A rip cut runs parallel to the wood grain (along the length of a board), while a crosscut runs perpendicular to the grain (across the width). Rip saws have larger, more widely spaced teeth designed to chisel out material along the grain, while crosscut saws have smaller, more numerous teeth designed to slice cleanly across the grain fibers; using the wrong saw type works, but produces a rougher cut and takes more effort.",
+        "A Japanese-style pull saw cuts on the pull stroke rather than the push stroke, which keeps the thin blade under tension rather than compression, allowing for a thinner kerf and often a straighter, more controlled cut, especially useful for fine joinery work."
+       ]
+      },
+      {
+       "heading": "Cutting Accurate Miters",
+       "body": [
+        "A miter box or a power miter saw holds the workpiece and guides the saw at a fixed angle, most commonly 45 degrees, so that two pieces cut at matching miters join to form a 90-degree corner, as seen in picture frames and baseboard trim. Because two 45-degree cuts must add up exactly to the 90-degree corner, even a 1-degree error on each cut compounds into a visible 2-degree gap at the joint, so miter cuts demand more precision than a simple square crosscut.",
+        "To check a miter cut's accuracy before committing to a full project, cut two test pieces and hold them together at the intended corner; any gap reveals an angle error to correct on the saw before cutting the actual project pieces."
+       ],
+       "example": {
+        "problem": "You are building a square picture frame and need each corner to close with no visible gap.",
+        "steps": [
+         "Set the miter saw to exactly 45 degrees for both cuts meeting at each corner.",
+         "Cut two scrap test pieces at 45 degrees and hold them together to check for a gap before cutting the actual frame pieces.",
+         "Adjust the saw's angle slightly if a gap appears, then re-test until the corner closes fully."
+        ],
+        "answer": "Testing the miter angle on scrap first catches any small angle error before it is cut into the final frame pieces, where a 1-degree error per cut would show as a visible 2-degree gap."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "rip cut", "def": "A cut made parallel to the wood grain, along the length of a board."},
+      {"term": "crosscut", "def": "A cut made perpendicular to the wood grain, across the width of a board."},
+      {"term": "miter cut", "def": "An angled cut, most commonly 45 degrees, used so two pieces join to form a corner, typically 90 degrees total."},
+      {"term": "kerf", "def": "The width of material removed by a saw blade during a cut."}
+     ],
+     "practice": [
+      {
+       "q": "What is the key difference between a rip cut and a crosscut?",
+       "choices": ["A rip cut is always faster regardless of direction", "A rip cut runs parallel to the grain, while a crosscut runs perpendicular to it, and each uses a saw with different tooth design", "There is no real difference between them", "A crosscut can only be made with a power saw"],
+       "answer": 1,
+       "explain": "Rip cuts follow the grain's length and use widely spaced teeth suited to chiseling along the fibers, while crosscuts go across the grain and use finer, more numerous teeth suited to slicing across fibers cleanly."
+      },
+      {
+       "q": "For a picture frame with square corners, why is testing a 45-degree miter cut on scrap pieces recommended before cutting the final pieces?",
+       "choices": ["It saves time by skipping actual measurement", "Small angle errors on each of the two mating cuts compound, so even a 1-degree error per cut can leave a visible 2-degree gap at the corner", "Miter saws are always inaccurate by default", "Scrap testing is only relevant for hand saws, not power miter saws"],
+       "answer": 1,
+       "explain": "Because two 45-degree cuts must sum to exactly 90 degrees at the corner, any small error is doubled at the joint; testing on scrap catches this before it ruins the actual project pieces."
+      },
+      {
+       "q": "What advantage does a Japanese-style pull saw offer compared to a traditional push-stroke saw?",
+       "choices": ["It requires no skill to use accurately", "Cutting on the pull stroke keeps the thin blade in tension rather than compression, allowing a thinner kerf and more control", "It can only be used for crosscuts, never rip cuts", "It eliminates the need for any marking before cutting"],
+       "answer": 1,
+       "explain": "Pulling the blade keeps it taut under tension instead of pushing it (which can cause a thin blade to buckle under compression), enabling a thinner, straighter cut with a finer kerf."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Power Saws: Table Saw and Miter Saw",
+     "minutes": 14,
+     "intro": "A table saw and a power miter saw handle the bulk of cutting in most shops, turning tasks that take minutes by hand into seconds, but only when set up and used correctly.",
+     "sections": [
+      {
+       "heading": "Setting Up a Rip Cut on the Table Saw",
+       "body": [
+        "Before ripping a board, set the rip fence to the desired width by measuring from the fence to the blade's teeth (not the blade's body, which can be slightly wider than the actual kerf, or the fence's edge closest to the operator), and lock the fence firmly so it cannot shift during the cut. Raise the blade so it sits about 1/4 inch above the top of the workpiece, which is the standard guideline for balancing a clean cut against exposed blade height.",
+        "Feed the board steadily at a consistent pace, using a push stick for the final portion of the cut, and let the offcut fall away freely rather than pinning it between blade and fence, which is a common trigger for kickback."
+       ]
+      },
+      {
+       "heading": "Making Angled Cuts on the Miter Saw",
+       "body": [
+        "A power miter saw pivots to cut at a set angle across the width of a board, and most models also bevel (tilt the blade itself), allowing compound cuts that combine an angled cut with a tilted blade, used for crown molding and other trim work. Always clamp or firmly hold the workpiece flat against the saw's fence and table before cutting, since a board that shifts mid-cut produces an inaccurate angle and risks a dangerous bind.",
+        "Let the blade come to full speed before it contacts the wood, and let it stop spinning completely before lifting it back up after the cut, since raising a still-spinning blade can catch the wood and throw it or the offcut unexpectedly."
+       ],
+       "example": {
+        "problem": "You need to rip a 3/4-inch thick board down to a 2-inch wide strip on the table saw.",
+        "steps": [
+         "Measure from the blade's teeth to the fence, setting the fence to exactly 2 inches, and lock it in place.",
+         "Raise the blade to about 1/4 inch above the top surface of the 3/4-inch board.",
+         "Feed the board steadily with a push stick for the final portion of the cut, letting the narrow offcut fall away freely."
+        ],
+        "answer": "Set the fence to 2 inches measured from the blade teeth, raise the blade about 1/4 inch above the workpiece, and feed with a push stick, letting the cutoff strip fall away without pinning it against the fence."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "bevel cut", "def": "A cut made with the saw blade tilted from vertical, used alone or combined with an angled cut for compound miters."},
+      {"term": "compound cut", "def": "A cut combining both a miter angle and a bevel angle, common in crown molding and angled trim."},
+      {"term": "offcut", "def": "The waste piece removed from a board during a cut, distinct from the workpiece being kept."}
+     ],
+     "practice": [
+      {
+       "q": "When setting the rip fence for a cut, where should you measure from to set the width accurately?",
+       "choices": ["From the fence to the far side of the saw table", "From the fence to the blade's teeth, since that determines the actual kerf width", "From the fence to the motor housing under the table", "It does not matter as long as the fence is locked"],
+       "answer": 1,
+       "explain": "The teeth define the actual cutting width; measuring to the blade's body or another reference point can introduce a small but real error compared to measuring to the teeth."
+      },
+      {
+       "q": "Why should you wait for a miter saw blade to come to a complete stop before lifting it after a cut?",
+       "choices": ["It is only a suggestion with no real risk", "A still-spinning blade lifted early can catch the wood or offcut and throw it unexpectedly", "It saves electricity", "It only matters for compound cuts, not simple miters"],
+       "answer": 1,
+       "explain": "A blade that is still spinning as it is lifted can catch the workpiece or a loose offcut piece and throw it, creating a real injury risk; waiting for it to fully stop avoids this."
+      },
+      {
+       "q": "What is a compound cut on a miter saw?",
+       "choices": ["A cut made twice for extra precision", "A cut combining a miter (angled) cut with a bevel (tilted blade) cut, used for trim like crown molding", "A rip cut performed on a miter saw", "Any cut deeper than 1 inch"],
+       "answer": 1,
+       "explain": "A compound cut combines an angle across the board's width (the miter) with a tilt of the blade itself (the bevel), producing the two-way angled cut needed for crown molding and similar trim."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Joinery",
+   "summary": "A joint is only as strong as its design and fit, and this unit covers the four joints that cover most furniture and shop projects: butt, rabbet, dado, and mortise-and-tenon.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Butt Joints and Reinforcement",
+     "minutes": 12,
+     "intro": "The butt joint, where two square-cut pieces simply meet edge to edge or end to end, is the simplest joint in woodworking, and understanding both its weaknesses and how to reinforce it teaches the fundamentals every stronger joint builds on.",
+     "sections": [
+      {
+       "heading": "Why Butt Joints Are Weak Alone",
+       "body": [
+        "A basic butt joint relies entirely on glue and mechanical fasteners for strength, since there is no interlocking geometry helping to resist the joint being pulled or twisted apart; end grain, in particular, glues poorly because it absorbs glue like a straw rather than forming a strong film bond across the fibers, so an end-grain butt joint (like two boards joined end to end) is especially weak.",
+        "Edge-grain butt joints (two boards joined along their long edges, as in gluing up a wide panel from narrower boards) glue far more strongly than end-grain joints, since the glue bonds across the full length of the fibers rather than into their open ends, and a well-clamped edge-grain glue joint can be as strong as the surrounding wood itself."
+       ]
+      },
+      {
+       "heading": "Reinforcing a Butt Joint",
+       "body": [
+        "Pocket screws (angled screws driven through a hidden pocket drilled at roughly 15 degrees) are a fast, strong, common way to reinforce a butt joint, especially useful in cabinet face frames and shelving where the screw holes will not be visible. Dowels or biscuits (thin wooden or wood-composite reinforcements set into matching holes or slots on both mating pieces) add mechanical strength and, just as importantly, help align the pieces precisely during glue-up, when clamping pressure alone can cause parts to slide out of alignment.",
+        "For a corner butt joint under significant load, such as a drawer box, combining glue with either screws or dowels is standard practice, since glue alone on a low-strength joint type like a butt joint is rarely sufficient for anything that will see regular stress or racking."
+       ],
+       "example": {
+        "problem": "You are building a simple shelf unit and need to join the side panels to the top and bottom, hiding the fasteners from view.",
+        "steps": [
+         "Recognize this as a case where visible screw heads are undesirable, ruling out simple exposed screws.",
+         "Choose pocket screws, drilled at a hidden angle from the inside face of the joint, or dowels set into blind holes not visible from outside.",
+         "Apply glue to the joint faces in addition to the mechanical fastener, since glue alone on end grain would be weak but combined with pocket screws or dowels gives a strong, hidden joint."
+        ],
+        "answer": "Pocket screws or dowels, combined with glue, reinforce the butt joint invisibly from outside the shelf unit."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "butt joint", "def": "The simplest joint, where two square-cut pieces meet edge to edge or end to end with no interlocking geometry."},
+      {"term": "end grain", "def": "The exposed cross-section of wood fibers at the end of a board, which absorbs glue poorly and forms weak glued joints."},
+      {"term": "pocket screw", "def": "A screw driven at an angle through a drilled pocket hole, commonly used to join boards in a hidden, strong butt joint."},
+      {"term": "dowel", "def": "A cylindrical wood peg inserted into matching holes in two mating pieces, adding strength and alignment to a joint."}
+     ],
+     "practice": [
+      {
+       "q": "Why is an end-grain butt joint (two boards joined end to end) particularly weak when glued alone?",
+       "choices": ["End grain repels glue completely and no bond forms at all", "End grain absorbs glue like a straw rather than forming a strong film bond across intact fibers, weakening the glue joint", "End grain is always rougher than edge grain", "There is no real difference between end-grain and edge-grain glue joints"],
+       "answer": 1,
+       "explain": "End grain's open fiber tubes soak up glue rather than letting it form a continuous bonding film across the surface, which is why end-grain butt joints need mechanical reinforcement like screws or dowels rather than relying on glue alone."
+      },
+      {
+       "q": "What is a key benefit of using dowels or biscuits in a butt joint beyond adding strength?",
+       "choices": ["They eliminate the need for glue entirely", "They help align the mating pieces precisely during glue-up, when clamping pressure alone can let parts slide", "They are only decorative and add no functional benefit", "They make the joint weaker but faster to assemble"],
+       "answer": 1,
+       "explain": "Beyond adding mechanical strength, dowels and biscuits fit into matching holes or slots that keep both pieces registered in place, preventing the slipping that can happen under clamping pressure during glue-up."
+      },
+      {
+       "q": "Why do edge-grain butt joints (like boards glued edge to edge into a wide panel) hold up so much better than end-grain butt joints?",
+       "choices": ["Edge grain is always thicker than end grain", "Glue bonds across the length of the fibers rather than into their open ends, making the bond nearly as strong as the wood itself", "Edge-grain joints always include pocket screws by default", "There is no real strength difference between the two"],
+       "answer": 1,
+       "explain": "Gluing along the edge grain lets the adhesive bond across intact fiber lengths rather than soaking into open fiber ends, producing a much stronger joint that can approach the strength of solid wood."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Rabbets and Dadoes",
+     "minutes": 13,
+     "intro": "Rabbets and dadoes cut a step or a channel directly into the wood so a mating piece nests inside rather than simply butting against a flat face, adding real mechanical strength and precise alignment to joints like drawer bottoms and shelving.",
+     "sections": [
+      {
+       "heading": "The Rabbet Joint",
+       "body": [
+        "A rabbet is an L-shaped notch cut along the edge or end of a board, sized so a second board's edge fits into the notch, commonly used where the back panel of a cabinet meets its sides, or where a drawer front meets its sides. Because the rabbet leaves a shoulder that resists the joint racking side to side, a rabbet joint is meaningfully stronger than a plain butt joint even before adding glue or fasteners, though it is still usually reinforced with glue and brads or screws for full strength.",
+        "A rabbet is typically cut with a table saw (using two passes to remove the waste in an L-shape), a router with a rabbeting bit, or a dado stack, and its depth is usually set to about half the thickness of the board being notched, leaving enough material on both the shoulder and the remaining face for strength."
+       ]
+      },
+      {
+       "heading": "The Dado Joint",
+       "body": [
+        "A dado is a flat-bottomed channel cut across the grain of a board (as opposed to a groove, the same cut running with the grain), sized so a second board's full thickness slides into it, commonly used for fixed shelves let into the sides of a bookcase. Because the shelf is captured on three sides by the surrounding wood rather than just resting against a single flat face, a dado joint resists both vertical load and racking far better than a butt joint or even a rabbet.",
+        "A dado stack (a set of stacked saw blades that together cut a wide, flat-bottomed channel in one or two passes) or a router with a straight bit and a fence are the two most common ways to cut dadoes, and the dado's width should be tested on scrap wood first, since a dado cut even slightly too tight or too loose for the shelf's actual thickness will either force-fit and crack the sides or leave a sloppy, weak fit."
+       ],
+       "example": {
+        "problem": "You are building a bookcase and want the fixed shelves to be strong enough to hold heavy books without the sides eventually bowing or the shelf coming loose.",
+        "steps": [
+         "Rule out a simple butt joint, since it relies on glue and fasteners alone with no interlocking support.",
+         "Choose a dado joint, cutting a flat-bottomed channel across the grain of each side panel sized to the shelf's thickness.",
+         "Test the dado's width on a scrap piece matching the shelf's actual thickness before cutting the real side panels, to ensure a snug but not overly tight fit."
+        ],
+        "answer": "A dado joint captures the shelf on three sides, resisting both the downward load of books and side-to-side racking far better than a butt joint, and testing the fit on scrap avoids cutting the channel too tight or too loose."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "rabbet", "def": "An L-shaped notch cut along the edge or end of a board so a mating piece's edge fits into it."},
+      {"term": "dado", "def": "A flat-bottomed channel cut across the grain of a board, sized to receive the full thickness of a mating piece, commonly used for fixed shelves."},
+      {"term": "groove", "def": "A flat-bottomed channel cut with the grain of a board, as distinct from a dado, which runs across the grain."},
+      {"term": "dado stack", "def": "A set of stacked saw blades and chippers used on a table saw to cut a wide, flat-bottomed channel in one or two passes."}
+     ],
+     "practice": [
+      {
+       "q": "What is the key difference between a dado and a groove?",
+       "choices": ["A dado is always deeper than a groove", "A dado runs across the grain of a board, while a groove runs with the grain", "A groove can only be cut with a router, never a table saw", "There is no real difference; the terms are interchangeable"],
+       "answer": 1,
+       "explain": "Both are flat-bottomed channels, but the distinguishing feature is orientation relative to the grain: a dado crosses the grain, while a groove runs parallel to it."
+      },
+      {
+       "q": "Why is a dado joint typically stronger for a fixed bookshelf than a simple rabbet or butt joint?",
+       "choices": ["Dado joints use more glue by volume", "The shelf is captured on three sides by surrounding wood, resisting both vertical load and racking far better", "Dado joints are always reinforced with metal brackets", "There is no meaningful strength difference between the joint types"],
+       "answer": 1,
+       "explain": "Because the shelf's full thickness sits inside a channel on both side panels, the surrounding wood physically supports it on three sides, resisting downward load and side-to-side racking better than a joint relying only on a flat glued face or a single shoulder."
+      },
+      {
+       "q": "Why should a dado's width be tested on scrap wood before cutting the actual project pieces?",
+       "choices": ["It has no real benefit and wastes material", "A dado cut too tight can force-fit and crack the side panel, while one cut too loose leaves a weak, sloppy joint", "Scrap testing is only necessary for rabbets, not dadoes", "Dado width never varies and testing is unnecessary"],
+       "answer": 1,
+       "explain": "Since the dado must match the actual thickness of the shelf stock precisely, testing on scrap of the same thickness catches a too-tight or too-loose fit before it is cut irreversibly into the real project pieces."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Mortise-and-Tenon Joints",
+     "minutes": 15,
+     "intro": "The mortise-and-tenon joint has held furniture together for thousands of years, and for good reason: a well-fit tenon glued into a matching mortise creates one of the strongest, most durable joints in all of woodworking.",
+     "sections": [
+      {
+       "heading": "Anatomy of the Joint",
+       "body": [
+        "A mortise is a rectangular hole or slot cut into one piece of wood, and a tenon is a matching rectangular tongue cut on the end of the second piece, sized to fit snugly into the mortise; together they are the classic joint connecting a table or chair leg to its rail. A good structural tenon is typically about one-third the thickness of the rail it is cut from, which balances tenon strength against leaving enough wood in the mortised piece surrounding the hole for its own strength.",
+        "The joint's strength comes from the large glued surface area between the tenon's cheeks and the mortise's walls, combined with the mechanical resistance to twisting and pulling apart that the interlocking shape provides, resistance a simple butt joint has none of."
+       ]
+      },
+      {
+       "heading": "Cutting and Fitting the Joint",
+       "body": [
+        "Mortises are commonly cut with a drill press and chisel (drilling out most of the waste, then squaring the corners by hand), a dedicated mortising machine, or a router with a plunge base and edge guide; tenons are commonly cut on a table saw with a dado stack or tenoning jig, or by hand with a backsaw. Cut the mortise first, then fit the tenon to it by sneaking up on the final thickness with test cuts, since a mortise is much harder to enlarge after the fact than a tenon is to trim down.",
+        "A well-fit tenon should slide into its mortise with hand pressure and light mallet taps, snug enough that there is no wobble but not so tight that it requires force that risks splitting the mortised piece; a joint that is too loose can be shimmed with thin veneer glued to the tenon's cheek, but a joint that is far too tight should have the tenon pared down rather than forced."
+       ],
+       "example": {
+        "problem": "You are building a chair and need to join a 3/4-inch thick rail to a leg with a mortise-and-tenon joint.",
+        "steps": [
+         "Size the tenon to about one-third the rail's thickness: 3/4 ÷ 3 = 1/4 inch thick tenon.",
+         "Cut the mortise into the leg first, sized to match the planned 1/4-inch tenon thickness and the desired depth.",
+         "Cut the tenon on the rail's end, sneaking up on the final fit with test cuts, checking it slides into the mortise snugly with hand pressure and light mallet taps."
+        ],
+        "answer": "A 1/4-inch thick tenon (about one-third of the 3/4-inch rail) fit to a mortise cut first in the leg gives a strong, traditional joint for the chair."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "mortise", "def": "A rectangular hole or slot cut into a piece of wood to receive a matching tenon."},
+      {"term": "tenon", "def": "A rectangular tongue cut on the end of a piece of wood, sized to fit snugly into a matching mortise."},
+      {"term": "tenoning jig", "def": "A table saw accessory that holds a workpiece vertically and guides it past the blade to cut accurate tenon cheeks."}
+     ],
+     "practice": [
+      {
+       "q": "For a 3/4-inch thick rail, roughly how thick should the tenon be, following the standard one-third guideline?",
+       "choices": ["About 1/8 inch", "About 1/4 inch", "About 1/2 inch", "About 3/4 inch, the same as the rail"],
+       "answer": 1,
+       "explain": "One-third of 3/4 inch is 1/4 inch (3/4 ÷ 3 = 1/4), which balances tenon strength against leaving enough surrounding wood in the mortised piece."
+      },
+      {
+       "q": "Why is it recommended to cut the mortise first and then fit the tenon to it, rather than the reverse order?",
+       "choices": ["It makes no difference which is cut first", "A mortise is much harder to enlarge after cutting than a tenon is to trim down, so fitting the tenon to the mortise avoids ruining the harder-to-fix piece", "Tenons must always be cut with a router, requiring the mortise to exist first", "Cutting the tenon first prevents any glue from being used"],
+       "answer": 1,
+       "explain": "Since a mortise is essentially fixed once cut (enlarging it removes material from the leg permanently and can weaken it), sneaking up on the tenon's thickness with test cuts to match the existing mortise is the safer, more forgiving order."
+      },
+      {
+       "q": "What should you do if a tenon is fitting far too tight in its mortise?",
+       "choices": ["Force it in with heavy mallet blows regardless of resistance", "Pare the tenon down slightly rather than forcing it, since forcing risks splitting the mortised piece", "Glue thin veneer onto the tenon to make it even tighter", "Drill out the mortise larger without measuring"],
+       "answer": 1,
+       "explain": "A tenon that is too tight should be trimmed down with test-fitting along the way; forcing an overly tight tenon risks splitting the mortised piece, which is far harder to repair than removing a bit more material from the tenon."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Sanding and Finishing",
+   "summary": "A well-built project still needs a smooth surface and a protective finish to look and perform its best. This unit covers sanding technique, staining, and applying a durable topcoat.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Sanding Technique and Grit Progression",
+     "minutes": 11,
+     "intro": "Sanding is not just a final cleanup step; done in the right order with the right grits, it removes machining marks, levels joints, and prepares wood to accept stain and finish evenly rather than blotchy.",
+     "sections": [
+      {
+       "heading": "Understanding Sandpaper Grit",
+       "body": [
+        "Sandpaper grit numbers indicate how coarse or fine the abrasive is: lower numbers (like 80 or 100 grit) are coarser and remove material quickly but leave larger scratches, while higher numbers (like 220 or 320 grit) are finer and leave a smoother surface but remove very little material per pass. Working through a grit progression, coarse to fine, each step removing the scratches left by the previous grit, produces a far smoother final surface than jumping straight to a fine grit on rough wood.",
+        "A typical progression for a project needing a fine finish might be 100, 150, then 220 grit, skipping no more than one grit level at a time; skipping too many levels (say, 100 straight to 220) leaves the coarser scratches from the first grit still visible beneath the finer one, since the finer grit cannot remove scratches deeper than its own cutting ability."
+       ]
+      },
+      {
+       "heading": "Sanding Technique",
+       "body": [
+        "Always sand with the grain, not across or diagonal to it, since sanding across the grain leaves scratches that are highly visible once stain or finish is applied and catches light differently than the surrounding wood. Use a sanding block or a random-orbit sander rather than a bare sheet of sandpaper held in the fingers whenever possible, since a block or sander distributes pressure evenly and avoids the uneven, wavy surface that finger-sanding tends to create over a larger area.",
+        "Between grits, wipe away dust with a tack cloth or a slightly damp rag, since leftover coarse grit dust can scratch the surface again when the next, finer grit pad passes over it. Stop sanding once the surface feels uniformly smooth to the touch across the whole piece and any visible machine marks or tearout are gone; sanding well past this point wastes time without meaningfully improving the result."
+       ],
+       "example": {
+        "problem": "You have a tabletop with visible planer marks (shallow ripples from a power planer) that need to be fully removed before finishing.",
+        "steps": [
+         "Start with a coarser grit, such as 100, sanding with the grain until the planer marks are no longer visible.",
+         "Move to 150 grit, sanding with the grain again, to remove the scratches left by the 100-grit pass.",
+         "Finish with 220 grit for a smooth, finish-ready surface, wiping away dust between each grit change."
+        ],
+        "answer": "A 100 → 150 → 220 grit progression, sanding with the grain and cleaning dust between steps, removes the planer marks and leaves a smooth surface ready for stain or finish."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "grit", "def": "A number indicating sandpaper coarseness; lower numbers are coarser and cut faster, higher numbers are finer and smoother."},
+      {"term": "grit progression", "def": "Sanding through a sequence of increasingly fine grits, each removing the scratches left by the previous grit."},
+      {"term": "tack cloth", "def": "A slightly sticky cloth used to remove fine sanding dust from a wood surface before applying stain or finish."}
+     ],
+     "practice": [
+      {
+       "q": "Why is it a problem to sand directly from 100 grit to 220 grit, skipping 150 grit?",
+       "choices": ["It is not actually a problem; grits can always be skipped freely", "The finer 220 grit cannot remove the deeper scratches left by 100 grit, so those scratches remain visible beneath the surface", "220 grit will damage the wood if used after 100 grit", "Skipping grits makes the wood too smooth"],
+       "answer": 1,
+       "explain": "Each grit can only remove scratches roughly as deep as its own abrasive size; jumping too many levels leaves the coarser scratches from the earlier grit still present, visible especially once stain highlights them."
+      },
+      {
+       "q": "Why should you always sand with the grain rather than across it?",
+       "choices": ["Sanding across the grain is always faster and preferred", "Cross-grain scratches are highly visible once stain or finish is applied, catching light differently than the surrounding wood", "It has no visible effect either way", "Sanding with the grain only matters for hardwoods, not softwoods"],
+       "answer": 1,
+       "explain": "Scratches that run across the grain stand out sharply once a stain or finish highlights the wood's surface texture, while scratches running with the grain blend into the natural grain lines and are far less noticeable."
+      },
+      {
+       "q": "Why wipe away dust with a tack cloth between grit changes?",
+       "choices": ["It is purely a cosmetic habit with no functional benefit", "Leftover coarse-grit dust can scratch the surface again when a finer grit pad passes over it", "It changes the color of the wood", "It is only necessary on the final grit, not in between"],
+       "answer": 1,
+       "explain": "Coarse dust particles left on the surface act like loose abrasive under the next sanding pad, potentially reintroducing scratches the finer grit is meant to remove."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Staining and Applying a Finish",
+     "minutes": 13,
+     "intro": "Stain adds color and finish adds protection and sheen, and applying both correctly is what turns a well-built, well-sanded project into one that looks professional and holds up for years of use.",
+     "sections": [
+      {
+       "heading": "Applying Wood Stain",
+       "body": [
+        "Wood stain penetrates the wood's surface to add color while leaving the grain visible, and it should always be tested on a scrap piece of the same wood species first, since different species (and even different boards of the same species) absorb stain at different rates and can produce noticeably different final colors. Apply stain with a brush or rag, working with the grain, then wipe off the excess with a clean rag after the time specified on the product label, typically 5 to 15 minutes; leaving stain to sit too long makes it dry tacky and blotchy rather than penetrating evenly.",
+        "Softwoods like pine are especially prone to blotchy stain absorption because of uneven grain density, so applying a pre-stain wood conditioner first (which partially seals the wood to even out absorption) is standard practice on pine and similar species, even though it is often unnecessary on denser, more evenly grained hardwoods like maple or oak."
+       ]
+      },
+      {
+       "heading": "Choosing and Applying a Topcoat",
+       "body": [
+        "A topcoat protects the wood and stain from moisture, scratches, and UV fading; polyurethane is durable and water-resistant, good for tabletops and floors, while a wipe-on oil finish like Danish oil is easier to apply and repair but offers less protection against water and heat than a film finish like polyurethane. Apply thin, even coats rather than one thick coat, since a thick coat is prone to drips, bubbles, and a much longer, uneven drying time.",
+        "Lightly sand between coats of a film finish like polyurethane, using a very fine grit such as 320 or 400, to knock down any dust nibs and help the next coat bond, then wipe away the dust before applying the next coat. Most projects look and perform best with two to three thin coats total, allowing full drying time between each according to the product's label."
+       ],
+       "example": {
+        "problem": "You are finishing a pine bookshelf and want an even color without the blotchy patches pine is known for.",
+        "steps": [
+         "Sand the wood through a full grit progression and remove all dust before applying anything.",
+         "Apply a pre-stain wood conditioner and let it penetrate according to the product's instructions, since pine's uneven grain density causes blotchy stain absorption without it.",
+         "Apply the stain with a rag, working with the grain, then wipe off the excess after the recommended dwell time.",
+         "Once the stain is fully dry, apply two to three thin coats of polyurethane, sanding lightly with 320-grit paper between coats."
+        ],
+        "answer": "A pre-stain conditioner on the pine, followed by an even stain application and two to three thin polyurethane coats, produces a smooth, even, protected finish instead of the blotchy result pine often gives without conditioning."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "wood conditioner", "def": "A pre-stain product that partially seals wood to even out stain absorption, especially useful on blotch-prone softwoods like pine."},
+      {"term": "polyurethane", "def": "A durable, film-forming topcoat finish offering strong protection against moisture, scratches, and wear."},
+      {"term": "wipe-on oil finish", "def": "A finish like Danish oil applied by hand and wiped in, offering easier application and repair but less protection than a film finish."}
+     ],
+     "practice": [
+      {
+       "q": "Why is pine especially prone to blotchy stain absorption compared to a hardwood like maple?",
+       "choices": ["Pine always rejects stain completely", "Pine has uneven grain density, causing some areas to absorb far more stain than others, unlike more evenly grained hardwoods", "Pine cannot be stained under any circumstances", "There is no real difference between pine and maple for staining"],
+       "answer": 1,
+       "explain": "Pine's grain density varies noticeably across a board, so softer, more porous areas soak up much more stain than denser areas, producing blotches; a pre-stain conditioner evens out this absorption before staining."
+      },
+      {
+       "q": "Why should a topcoat like polyurethane be applied in multiple thin coats rather than one thick coat?",
+       "choices": ["Thin coats always look identical to one thick coat in every way", "A thick coat is prone to drips, bubbles, and uneven, prolonged drying, while thin coats build protection cleanly", "Thin coats are required by the manufacturer's warranty only", "One thick coat always dries faster than multiple thin coats"],
+       "answer": 1,
+       "explain": "A heavy application of film finish struggles to dry and cure evenly, leading to drips, trapped bubbles, and an uneven surface, while several thin coats each dry properly and build up a smoother, more durable protective layer."
+      },
+      {
+       "q": "Why is testing stain on a scrap piece of the same wood species recommended before staining the actual project?",
+       "choices": ["It has no real value and is unnecessary", "Different species, and even different boards, absorb stain at different rates and can produce noticeably different final colors", "Stain always looks the same regardless of the wood used", "Scrap testing is only useful for checking topcoat sheen, not stain color"],
+       "answer": 1,
+       "explain": "Stain color outcome depends heavily on the specific wood's density and grain, so a test on genuine scrap from the same project reveals the true final color before it is committed to the actual piece."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Planning and Building a Project",
+   "summary": "Every successful project starts on paper, not at the saw. This unit ties together measuring, joinery, and finishing into a full project workflow, from design through assembly.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Planning a Project and Making a Cut List",
+     "minutes": 12,
+     "intro": "The most common cause of a ruined project is not a bad cut, it is a plan that was never made in the first place, and a cut list turns a vague idea into an exact, buildable set of parts.",
+     "sections": [
+      {
+       "heading": "From Sketch to Cut List",
+       "body": [
+        "Start any project with a simple sketch showing overall dimensions and how the major parts fit together, even a rough one on graph paper, since this catches design problems (like a shelf that will not clear a doorway, or proportions that look off) before any wood is cut. From the sketch, build a cut list: a table of every individual part, its finished length, width, and thickness, and how many of that part are needed.",
+        "Account for joinery in your cut list dimensions; a shelf that will sit in a 1/4-inch-deep dado on each side needs to be cut 1/2 inch longer than the visible opening between the sides, since 1/4 inch of its length disappears into the dado on each end. Forgetting to account for joinery depth this way is one of the most common cut-list mistakes for beginners."
+       ]
+      },
+      {
+       "heading": "Ordering and Milling Lumber",
+       "body": [
+        "Buy lumber slightly oversized in length and width compared to your cut list's final dimensions, since boards are rarely perfectly straight or flat from the store, and you will plane, joint, and trim them down to true, flat, square stock before cutting to final size. A good rule of thumb is to buy boards at least 1 inch longer and 1/2 inch wider than the largest finished part they will yield, giving room to true up the edges.",
+        "Group your cut list by which parts can come from the same board efficiently, minimizing waste, and always cut the longest parts first, since a mis-cut long part can sometimes still be salvaged into one of the shorter parts on the list, but the reverse is not true."
+       ],
+       "example": {
+        "problem": "You are building a bookcase with two side panels 30 inches tall, and a fixed shelf that sits in a 1/4-inch-deep dado cut into each side panel, with the sides spaced 24 inches apart on the outside faces of the dadoes.",
+        "steps": [
+         "Recognize the shelf's visible span between the dado bottoms is 24 inches.",
+         "Add the depth the shelf extends into each dado: 1/4 inch on the left plus 1/4 inch on the right.",
+         "Calculate the total cut length: 24 + 1/4 + 1/4 = 24.5 inches."
+        ],
+        "answer": "The shelf should be cut 24 1/2 inches long, accounting for 1/4 inch of length disappearing into the dado on each side."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "cut list", "def": "A table listing every part needed for a project, with each part's finished dimensions and quantity."},
+      {"term": "milling", "def": "The process of planing, jointing, and trimming rough lumber down to flat, square, accurately sized stock."},
+      {"term": "jointing", "def": "Flattening one face and squaring one edge of a board as a reference before further milling or cutting."}
+     ],
+     "practice": [
+      {
+       "q": "Two side panels are spaced 20 inches apart on the outside faces of their dadoes, and a shelf sits in a 1/4-inch-deep dado on each side. How long should the shelf be cut?",
+       "choices": ["20 inches", "20.25 inches", "20.5 inches", "21 inches"],
+       "answer": 2,
+       "explain": "The shelf must span the 20-inch gap plus extend 1/4 inch into the dado on each side: 20 + 1/4 + 1/4 = 20.5 inches."
+      },
+      {
+       "q": "Why should lumber typically be purchased slightly oversized compared to a cut list's final dimensions?",
+       "choices": ["Oversized lumber is always cheaper per board foot", "Boards are rarely perfectly straight or flat, and extra material is needed to plane, joint, and trim them true before final cutting", "It is required by most lumber yards regardless of the project", "Final dimensions in a cut list already include this extra margin"],
+       "answer": 1,
+       "explain": "Rough lumber needs to be milled flat and square first, a process that removes some material; buying boards larger than the final part size leaves room for that truing-up process without falling short of the needed dimension."
+      },
+      {
+       "q": "Why is it generally a good idea to cut the longest parts on a cut list first?",
+       "choices": ["Longer parts are always easier to cut accurately", "A mis-cut long part can sometimes still be salvaged into a shorter part on the list, but a mis-cut short part cannot become a longer one", "Shorter parts require sharper blades", "There is no real benefit to cutting order"],
+       "answer": 1,
+       "explain": "Cutting longest-to-shortest preserves the option to recover from a mistake, since an oversized or mis-cut long piece may still yield one of the shorter parts, while a piece already cut too short is simply wasted."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Glue-Up and Assembly",
+     "minutes": 14,
+     "intro": "Glue-up is the moment a pile of individual parts becomes an actual piece of furniture, and it is also the step where rushed work is hardest to fix afterward, so a dry run and a clear plan matter more here than anywhere else in the build.",
+     "sections": [
+      {
+       "heading": "Dry-Fitting Before Glue",
+       "body": [
+        "Always dry-fit an entire assembly, clamps and all, before any glue touches the wood, checking that every joint closes fully, that the assembly sits flat without rocking, and that you have every clamp, clamp pad, and tool you will need within reach. Glue has open time, typically 5 to 15 minutes for common wood glue before it begins to set, and discovering a problem mid-glue-up, with glue already drying in a joint, is a far worse position than catching it during a dry run with no time pressure.",
+        "During the dry fit, measure the assembly's diagonals corner to corner; if the two diagonal measurements match, the assembly is square, and if they differ, the frame is skewed into a parallelogram shape, which needs a clamp adjusted or repositioned before gluing locks in that skew permanently."
+       ]
+      },
+      {
+       "heading": "Applying Glue and Clamping",
+       "body": [
+        "Apply glue to both mating surfaces of a joint, spread in a thin, even layer, since too little glue starves the joint of adhesive while too much simply squeezes out and wastes material (some squeeze-out is normal and expected, and should be wiped away with a damp rag before it dries). Clamp with even, moderate pressure, checking the diagonal measurements again once clamps are on, since clamping pressure itself can shift an assembly out of square if it is not distributed evenly.",
+        "Most wood glues need clamping for at least 30 minutes to reach handling strength, and 24 hours to reach full cured strength, so a project should not be moved roughly, planed, or put under load until that full cure time has passed, even if it feels solid after the clamps come off."
+       ],
+       "example": {
+        "problem": "You dry-fit a picture frame and measure the two corner-to-corner diagonals: one measures 14 1/8 inches and the other measures 14 3/8 inches.",
+        "steps": [
+         "Recognize the 1/4-inch difference between diagonals means the frame is not square; it has been pulled into a slight parallelogram shape.",
+         "Loosen the clamps slightly and adjust pressure, typically pushing gently on the longer diagonal's corners, until both diagonals measure the same.",
+         "Re-measure both diagonals to confirm they now match before proceeding to actually glue the joints."
+        ],
+        "answer": "The mismatched diagonals (14 1/8 versus 14 3/8 inches) reveal the frame is out of square; clamp pressure should be adjusted until both diagonals measure equal before applying glue for real."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "dry-fit", "def": "Assembling a project with clamps but no glue, to check fit and squareness before committing to the permanent glued assembly."},
+      {"term": "open time", "def": "The window after glue is applied during which it can still be adjusted before it begins to set."},
+      {"term": "squeeze-out", "def": "Excess glue that emerges from a joint under clamping pressure, normal in a properly glued joint and wiped away before drying."}
+     ],
+     "practice": [
+      {
+       "q": "Why is dry-fitting an assembly before applying any glue so important?",
+       "choices": ["It has no real benefit and just delays the project", "It lets you catch fit and squareness problems with no time pressure, before glue's limited open time forces a rushed decision", "Dry-fitting replaces the need for clamps entirely", "It is only useful for very large furniture pieces"],
+       "answer": 1,
+       "explain": "Glue's open time is short, so discovering a problem after glue is already applied leaves little time to fix it properly; a dry run reveals the same issues with no such pressure."
+      },
+      {
+       "q": "During a dry-fit of a rectangular frame, the two corner-to-corner diagonal measurements come out different. What does this indicate?",
+       "choices": ["Nothing; diagonals are not expected to match", "The frame is out of square, skewed into a parallelogram shape, and needs clamp adjustment", "The glue has already begun to set", "The wood species used was incorrect"],
+       "answer": 1,
+       "explain": "For a true rectangle, both diagonals must be equal in length; a mismatch means the shape has been pulled out of square, and clamp pressure should be adjusted until the diagonals match before gluing."
+      },
+      {
+       "q": "Why should a freshly glued project not be put under load or moved roughly even after it feels solid once clamps are removed?",
+       "choices": ["Wood glue only needs a few minutes to reach handling strength and no more", "Most wood glues reach handling strength in about 30 minutes but need roughly 24 hours to reach full cured strength", "Clamps are only cosmetic and glue cures instantly", "It is only a concern for outdoor projects"],
+       "answer": 1,
+       "explain": "Handling strength (enough to gently remove clamps) develops faster than full cured strength, which typically takes about 24 hours; loading the joint before then risks weakening or failing the glue bond."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

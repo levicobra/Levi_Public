@@ -1,0 +1,1466 @@
+{
+ "id": "meteorology",
+ "title": "Weather & Climate",
+ "domain": "physical",
+ "level": "High school",
+ "description": "A high school course in meteorology and climate science: the structure of the atmosphere, how air pressure, humidity, and fronts create everyday weather, the physics behind thunderstorms, tornadoes, and hurricanes, how meteorologists actually build a forecast, and how Earth's climate system works and is changing.",
+ "outcomes": [
+  "You can describe the atmosphere's layered structure and explain how pressure, temperature, and humidity interact to form clouds and precipitation.",
+  "You can identify air masses and fronts on a weather map and predict the type of weather each front typically brings.",
+  "You can explain global wind patterns and the Coriolis effect, and distinguish high-pressure from low-pressure systems.",
+  "You can explain what conditions produce thunderstorms, tornadoes, and hurricanes, and rank storms using the EF and Saffir-Simpson scales.",
+  "You can read a station model and weather map and explain the tools and limits behind a modern weather forecast.",
+  "You can explain the natural greenhouse effect, the evidence for human-driven climate change, and its major observed impacts."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "The Atmosphere",
+   "summary": "What the atmosphere is made of, how it is organized into layers, and how pressure, temperature, and humidity interact to create clouds and precipitation.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Composition and Layers of the Atmosphere",
+     "minutes": 11,
+     "intro": "The thin envelope of gas surrounding Earth is astonishingly shallow: if Earth were shrunk to the size of a basketball, the entire atmosphere where weather happens would be thinner than a coat of varnish, yet it is the stage for every storm, breeze, and sunset.",
+     "sections": [
+      {
+       "heading": "What the Atmosphere Is Made Of",
+       "body": [
+        "Dry air is about 78% **nitrogen** (N~2~) and 21% **oxygen** (O~2~), with the remaining roughly 1% made up of argon and trace gases. Among those trace gases, **carbon dioxide** (CO~2~) and **water vapor** make up a tiny fraction of the total by volume, yet they matter enormously to weather and climate because they absorb and trap heat far more effectively than nitrogen or oxygen do.",
+        "Water vapor is the only atmospheric gas that changes phase (solid, liquid, gas) under everyday conditions on Earth, which is exactly why it drives essentially all of the weather we experience: clouds, rain, snow, fog, and humidity are all, at their core, water vapor changing state. Unlike nitrogen and oxygen, water vapor's concentration varies enormously by location and by the hour, from nearly zero over a cold desert to several percent over a warm tropical ocean."
+       ]
+      },
+      {
+       "heading": "The Five Layers of the Atmosphere",
+       "body": [
+        "The atmosphere is organized into five layers based on how temperature changes with altitude. The **troposphere**, extending from the surface up to about 12 kilometers, is where essentially all weather occurs; temperature drops steadily with altitude here (roughly 6.5°C per kilometer) because the ground, heated by sunlight, is the primary heat source, and air gets colder the farther it sits from that source. Above it, the **stratosphere** (12-50 km) contains the ozone layer, and temperature actually increases with altitude because ozone absorbs incoming ultraviolet radiation directly.",
+        "Higher still, the **mesosphere** (50-85 km) is the coldest layer, where temperatures again fall with altitude and most meteors burn up on entry; the **thermosphere** (85-600 km) sees temperatures rise dramatically as thin, sparse gas molecules absorb intense solar radiation, and it is also where auroras occur and satellites like the International Space Station orbit; and the outermost **exosphere** gradually thins into the vacuum of space."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "troposphere",
+       "def": "The lowest atmospheric layer, up to about 12 km, where nearly all weather occurs."
+      },
+      {
+       "term": "stratosphere",
+       "def": "The layer from about 12-50 km containing the ozone layer, where temperature increases with altitude."
+      },
+      {
+       "term": "mesosphere",
+       "def": "The coldest atmospheric layer, about 50-85 km, where most meteors burn up."
+      },
+      {
+       "term": "thermosphere",
+       "def": "The layer from about 85-600 km where temperature rises sharply and auroras occur."
+      },
+      {
+       "term": "ozone layer",
+       "def": "A region of the stratosphere rich in ozone that absorbs incoming ultraviolet radiation."
+      },
+      {
+       "term": "lapse rate",
+       "def": "The rate at which temperature changes with altitude, roughly 6.5°C per km in the troposphere."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Roughly what percentage of dry air is nitrogen?",
+       "choices": [
+        "21%",
+        "50%",
+        "78%",
+        "99%"
+       ],
+       "answer": 2,
+       "explain": "Dry air is about 78% nitrogen and 21% oxygen, with the remaining roughly 1% made up of argon and trace gases."
+      },
+      {
+       "q": "Which atmospheric gas drives nearly all weather, since it is the only one that commonly changes phase between solid, liquid, and gas?",
+       "choices": [
+        "Nitrogen",
+        "Oxygen",
+        "Water vapor",
+        "Argon"
+       ],
+       "answer": 2,
+       "explain": "Water vapor's ability to condense, freeze, and evaporate under everyday conditions is what produces clouds, rain, snow, and fog, the raw material of weather."
+      },
+      {
+       "q": "In the troposphere, temperature generally:",
+       "choices": [
+        "Increases with altitude because of ozone absorption",
+        "Decreases with altitude because the ground is the primary heat source",
+        "Stays exactly constant with altitude",
+        "Decreases, then increases, twice"
+       ],
+       "answer": 1,
+       "explain": "Because sunlight heats the ground and the ground heats the air above it, temperature in the troposphere drops the farther you get from that surface heat source."
+      },
+      {
+       "q": "Why does temperature increase with altitude in the stratosphere, unlike in the troposphere below it?",
+       "choices": [
+        "The stratosphere is closer to the sun",
+        "Ozone in the stratosphere absorbs UV radiation directly, warming that layer",
+        "The stratosphere contains far more water vapor",
+        "The ground heats the stratosphere directly"
+       ],
+       "answer": 1,
+       "explain": "Ozone molecules in the stratosphere absorb incoming ultraviolet radiation directly, which is why that layer warms with altitude instead of cooling like the troposphere."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Air Pressure and Temperature",
+     "minutes": 12,
+     "intro": "You are, at this moment, supporting roughly one kilogram of air pressing down on every square centimeter of your body, about 14.7 pounds per square inch at sea level, and you don't notice it only because the air inside your body pushes back with equal force.",
+     "sections": [
+      {
+       "heading": "What Air Pressure Is and How It Changes",
+       "body": [
+        "**Air pressure** (or atmospheric pressure) is the weight of the column of air above a given point, measured with a **barometer**. Standard sea-level pressure is 1013.25 hectopascals (also expressed as millibars, or as 29.92 inches of mercury), and pressure drops rapidly with altitude as there is less air above to weigh down on you; pressure at the summit of Mount Everest is only about a third of sea-level pressure.",
+        "Air pressure also varies horizontally across the surface due to temperature and other factors, and these variations are exactly what create wind and weather: air always flows from areas of higher pressure toward areas of lower pressure, in an attempt to equalize the difference. The larger the pressure difference over a given distance, called the **pressure gradient**, the stronger the resulting wind."
+       ]
+      },
+      {
+       "heading": "Temperature and Density",
+       "body": [
+        "Warm air is less dense than cold air because heat causes air molecules to spread farther apart, which is why warm air tends to rise while cooler, denser air sinks beneath it, a behavior called **convection**. This same principle explains why hot air balloons rise: air heated inside the balloon becomes less dense than the surrounding cooler air, generating lift.",
+        "This warm-air-rises, cold-air-sinks relationship is the basic engine behind nearly every weather process in this course, from the daily sea breeze along a coastline (cool ocean air pushing inland to replace rising warm air over land) to the towering vertical development of a thunderstorm cloud. Wherever you see strong vertical air motion in weather, look first for a temperature, and therefore density, difference driving it."
+       ],
+       "example": {
+        "problem": "A location at sea level has a pressure of about 1013 hPa. Mount Everest's summit sits at an altitude where pressure drops to roughly a third of sea-level pressure. Approximately what is the pressure at the summit?",
+        "steps": [
+         "Sea-level pressure is about 1013 hPa.",
+         "At Everest's summit, pressure is roughly 1/3 of sea-level pressure.",
+         "1013 hPa ÷ 3 ≈ 338 hPa."
+        ],
+        "answer": "Roughly 338 hPa, about a third of sea-level pressure, which is why climbers need supplemental oxygen at that altitude."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "air pressure",
+       "def": "The weight of the column of air above a given point, measured with a barometer."
+      },
+      {
+       "term": "barometer",
+       "def": "An instrument used to measure air pressure."
+      },
+      {
+       "term": "pressure gradient",
+       "def": "The rate of change of pressure over distance, which determines wind strength."
+      },
+      {
+       "term": "convection",
+       "def": "The rising of warm, less dense air and sinking of cool, denser air."
+      },
+      {
+       "term": "density",
+       "def": "Mass per unit volume; warm air is less dense than cold air at the same pressure."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is standard air pressure at sea level, in hectopascals (millibars)?",
+       "choices": [
+        "About 100 hPa",
+        "About 500 hPa",
+        "About 1013 hPa",
+        "About 2000 hPa"
+       ],
+       "answer": 2,
+       "explain": "Standard sea-level pressure is defined as 1013.25 hectopascals, also expressed as 29.92 inches of mercury."
+      },
+      {
+       "q": "Wind is created because air flows:",
+       "choices": [
+        "From low pressure to high pressure",
+        "From high pressure to low pressure",
+        "Only from north to south",
+        "Air never actually flows due to pressure differences"
+       ],
+       "answer": 1,
+       "explain": "Air flows from areas of higher pressure toward areas of lower pressure in an attempt to equalize the difference, and this flow is what we experience as wind."
+      },
+      {
+       "q": "Why does warm air rise above cooler air?",
+       "choices": [
+        "Warm air is denser than cold air",
+        "Warm air is less dense than cold air because its molecules spread farther apart",
+        "Warm air contains more oxygen than cold air",
+        "Warm air always contains more water vapor than cold air"
+       ],
+       "answer": 1,
+       "explain": "Heating causes air molecules to spread apart, lowering the air's density, so warm air is buoyant relative to the denser, cooler air around it and rises."
+      },
+      {
+       "q": "A larger pressure difference over a given distance, a steeper pressure gradient, results in:",
+       "choices": [
+        "Weaker wind",
+        "No wind at all",
+        "Stronger wind",
+        "Only vertical wind, never horizontal"
+       ],
+       "answer": 2,
+       "explain": "The pressure gradient determines the force pushing air from high to low pressure; a steeper gradient over a shorter distance produces stronger winds."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Humidity, Clouds, and Precipitation",
+     "minutes": 13,
+     "intro": "Every cloud in the sky, from a wisp of cirrus to a towering thunderhead, is really just water vapor giving up and condensing back into visible liquid or ice, and understanding why that happens where and when it does explains most of what you see when you look up.",
+     "sections": [
+      {
+       "heading": "Humidity and Dew Point",
+       "body": [
+        "**Relative humidity** expresses how much water vapor the air is holding compared to the maximum it could hold at that temperature, as a percentage; warmer air can hold more water vapor than cooler air, which is why the same amount of moisture produces a lower relative humidity reading on a hot day than on a cool one. The **dew point** is the temperature air would need to cool to in order to become fully saturated (100% relative humidity) at its current moisture content.",
+        "When actual air temperature drops to meet the dew point, the air can no longer hold all its water vapor, and condensation begins, forming dew on grass, fog near the ground, or clouds higher up. The closer the air temperature is to the dew point, the higher the relative humidity and the more likely condensation or precipitation becomes."
+       ]
+      },
+      {
+       "heading": "How Clouds Form",
+       "body": [
+        "Clouds form as rising air expands and cools, since air pressure drops with altitude; this process is called **adiabatic cooling** because the air cools due to expansion alone, without losing heat to its surroundings. Unsaturated rising air cools quickly, at roughly 10°C per kilometer, but once it cools enough to reach its dew point and water vapor begins condensing, the release of latent heat during condensation slows the cooling rate to roughly 6°C per kilometer.",
+        "Clouds are classified by both shape and altitude: **cirrus** clouds are high, thin, and wispy, made of ice crystals; **cumulus** clouds are puffy and cotton-like, often signaling fair weather unless they build vertically; and **stratus** clouds form flat, gray layers that often bring steady, widespread precipitation. Adding \"nimbo-\" or \"-nimbus\" to a cloud's name signals it is actively producing precipitation, as in towering **cumulonimbus** thunderstorm clouds or the gray, rain-bearing **nimbostratus**."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "relative humidity",
+       "def": "The percentage of water vapor the air holds compared to the maximum it could hold at that temperature."
+      },
+      {
+       "term": "dew point",
+       "def": "The temperature air must cool to in order to become fully saturated with water vapor."
+      },
+      {
+       "term": "adiabatic cooling",
+       "def": "The cooling of rising air caused by expansion alone, without losing heat to its surroundings."
+      },
+      {
+       "term": "cirrus",
+       "def": "High, thin, wispy clouds made of ice crystals."
+      },
+      {
+       "term": "cumulus",
+       "def": "Puffy, cotton-like clouds, often signaling fair weather unless they build vertically."
+      },
+      {
+       "term": "cumulonimbus",
+       "def": "A towering cloud that actively produces thunderstorms, heavy rain, and lightning."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does relative humidity actually measure?",
+       "choices": [
+        "The total mass of water vapor in the air, regardless of temperature",
+        "How much water vapor the air holds compared to the maximum it could hold at that temperature",
+        "The air's current temperature only",
+        "The height of clouds above the ground"
+       ],
+       "answer": 1,
+       "explain": "Relative humidity is a ratio: the actual water vapor present compared to the maximum the air could hold at its current temperature, expressed as a percentage."
+      },
+      {
+       "q": "If air temperature cools until it matches the dew point, what happens?",
+       "choices": [
+        "Nothing changes at all",
+        "Relative humidity drops to 0%",
+        "The air becomes saturated and condensation begins",
+        "Air pressure instantly increases"
+       ],
+       "answer": 2,
+       "explain": "When temperature reaches the dew point, the air is fully saturated (100% relative humidity), and any further cooling causes excess water vapor to condense."
+      },
+      {
+       "q": "Why does rising air cool as it moves to higher altitude, even with no heat loss to its surroundings?",
+       "choices": [
+        "It loses water vapor as it rises",
+        "It expands as pressure drops, and that expansion cools it (adiabatic cooling)",
+        "It always loses heat directly to space",
+        "Rising air actually warms, not cools"
+       ],
+       "answer": 1,
+       "explain": "As air rises into lower pressure, it expands, and that expansion alone lowers its temperature, a process called adiabatic cooling, independent of any heat exchange with the surroundings."
+      },
+      {
+       "q": "A towering, dark cloud actively producing heavy rain and lightning is most likely classified as:",
+       "choices": [
+        "Cirrus",
+        "Cumulus (fair weather)",
+        "Cumulonimbus",
+        "Stratus"
+       ],
+       "answer": 2,
+       "explain": "Cumulonimbus clouds are the towering, vertically developed storm clouds responsible for heavy rain, hail, and lightning."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Weather Systems",
+   "summary": "How air masses and the fronts between them create day-to-day weather, why global winds blow the way they do, and how high and low pressure systems organize storms and clear skies.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Air Masses and Fronts",
+     "minutes": 12,
+     "intro": "The dramatic weather change you feel when a cold snap arrives after a mild week is not random: it is the arrival of a distinct pocket of air, thousands of kilometers across, that formed somewhere else entirely and has been slowly sliding into your region.",
+     "sections": [
+      {
+       "heading": "Air Masses",
+       "body": [
+        "An **air mass** is a huge body of air that takes on the temperature and humidity of the surface it sits over for an extended time, called its **source region**. Air masses are classified with two letters: the first (lowercase) describes moisture, m for maritime (formed over ocean, humid) or c for continental (formed over land, dry); the second (uppercase) describes temperature, P for polar (cold) or T for tropical (warm).",
+        "This gives four main combinations that dominate North American weather: **cP** (continental polar, cold and dry, forming over northern Canada), **cT** (continental tropical, hot and dry, forming over the desert Southwest), **mP** (maritime polar, cool and humid, forming over the northern Pacific or Atlantic), and **mT** (maritime tropical, warm and humid, forming over the Gulf of Mexico or tropical Atlantic)."
+       ]
+      },
+      {
+       "heading": "Fronts: Where Air Masses Meet",
+       "body": [
+        "A **front** is the boundary between two air masses of different temperature and density, and fronts are where most day-to-day weather change happens. A **cold front** occurs when a faster-moving cold air mass wedges beneath a warm air mass it is overtaking, forcing that warm air up sharply; this produces a narrow band of intense but brief weather, heavy showers or thunderstorms, followed by a sudden temperature drop.",
+        "A **warm front** occurs when a warm air mass advances over a retreating cold air mass, riding up over it along a gentle slope; because the warm air rises so gradually, warm fronts produce widespread, steady, lighter precipitation over a much broader area, often lasting many hours. A **stationary front** occurs when neither air mass advances, sometimes stalling rainy weather over one location for days, and an **occluded front** occurs when a fast cold front catches up to and overtakes a slower warm front, lifting the warm air mass entirely off the ground."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "air mass",
+       "def": "A huge body of air that takes on the temperature and humidity of the surface it forms over."
+      },
+      {
+       "term": "source region",
+       "def": "The surface area where an air mass develops its characteristic temperature and moisture."
+      },
+      {
+       "term": "cold front",
+       "def": "A boundary where a fast-moving cold air mass wedges beneath and lifts a warm air mass, producing brief, intense weather."
+      },
+      {
+       "term": "warm front",
+       "def": "A boundary where a warm air mass gradually rises over a retreating cold air mass, producing widespread, steady precipitation."
+      },
+      {
+       "term": "stationary front",
+       "def": "A front where neither air mass is advancing, which can stall rainy weather over one area for days."
+      },
+      {
+       "term": "occluded front",
+       "def": "A front formed when a fast cold front overtakes a slower warm front, lifting the warm air entirely off the ground."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An air mass labeled cP that formed over northern Canada would be described as:",
+       "choices": [
+        "Warm and humid",
+        "Cold and dry",
+        "Hot and dry",
+        "Cool and humid"
+       ],
+       "answer": 1,
+       "explain": "The label cP means continental (dry, formed over land) and polar (cold), matching an air mass that develops over cold, dry northern Canada."
+      },
+      {
+       "q": "Why do cold fronts typically bring brief, intense weather while warm fronts bring widespread, steady weather?",
+       "choices": [
+        "Cold fronts force warm air up sharply over a narrow zone, while warm fronts rise gradually over a broad area",
+        "There is no real difference between the two",
+        "Warm fronts always move faster than cold fronts",
+        "Cold fronts never produce any precipitation"
+       ],
+       "answer": 0,
+       "explain": "The steep, fast-moving slope of a cold front forces warm air upward abruptly, producing a narrow band of intense weather, while the gentle, slow slope of a warm front produces gradual lift and precipitation over a much wider area."
+      },
+      {
+       "q": "An occluded front forms when:",
+       "choices": [
+        "Two air masses of the exact same type meet",
+        "A fast-moving cold front overtakes a slower warm front, lifting the warm air off the ground",
+        "No front is actually present at that location",
+        "A warm front stalls without moving for days"
+       ],
+       "answer": 1,
+       "explain": "An occluded front occurs specifically when a faster cold front catches up to a slower warm front ahead of it, lifting the warm air mass entirely off the surface."
+      },
+      {
+       "q": "An mT air mass, forming over the Gulf of Mexico, would be:",
+       "choices": [
+        "Cold and dry",
+        "Warm and humid",
+        "Cool and humid",
+        "Hot and dry"
+       ],
+       "answer": 1,
+       "explain": "The label mT means maritime (humid, formed over ocean) and tropical (warm), matching the warm, moist air mass that develops over the Gulf of Mexico."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Global Wind Patterns and the Coriolis Effect",
+     "minutes": 13,
+     "intro": "If Earth did not spin, wind would simply blow in a straight line from the equator to the poles and back. Because Earth does spin, every large-scale wind on the planet curves, and that single fact organizes the entire global wind system into a predictable pattern of belts.",
+     "sections": [
+      {
+       "heading": "Global Circulation Cells",
+       "body": [
+        "Solar heating is far more intense at the equator than at the poles, and this uneven heating drives large-scale circulation. Warm equatorial air rises, flows toward the poles at high altitude, cools, and sinks back down around 30° latitude, completing a loop called a **Hadley cell**; two more cells, the **Ferrel cell** (roughly 30-60°) and the **polar cell** (60-90°), complete the pattern in each hemisphere, though the Ferrel cell is driven more by the cells on either side of it than by direct heating.",
+        "Where these cells rise and sink at the surface creates predictable pressure and rainfall bands: rising air near the equator produces the low-pressure, rainy **doldrums** (the intertropical convergence zone), while sinking air near 30° latitude produces the dry, high-pressure **horse latitudes**, home to most of the world's major deserts, including the Sahara and the deserts of the American Southwest and Australia."
+       ]
+      },
+      {
+       "heading": "The Coriolis Effect",
+       "body": [
+        "Wind does not simply flow straight from high to low pressure because Earth's rotation deflects moving air, a phenomenon called the **Coriolis effect**: air is deflected to the right of its direction of motion in the Northern Hemisphere and to the left in the Southern Hemisphere. The effect is zero at the equator and strongest at the poles, and it only becomes noticeable over long distances and time, which is why it shapes large weather systems and ocean currents but has no measurable effect on something as small and brief as water draining from a sink.",
+        "The Coriolis effect combines with the circulation cells to produce Earth's named wind belts: the **trade winds** (equator to 30°, blowing from the northeast in the Northern Hemisphere and southeast in the Southern Hemisphere, historically used by sailing ships crossing the tropics), the **westerlies** (30-60°, blowing from the southwest in the Northern Hemisphere, which is why most weather in the continental United States moves from west to east), and the **polar easterlies** (60-90°)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Hadley cell",
+       "def": "The tropical atmospheric circulation loop between the equator and about 30° latitude."
+      },
+      {
+       "term": "doldrums",
+       "def": "The low-pressure, rainy zone near the equator where trade winds converge and air rises."
+      },
+      {
+       "term": "horse latitudes",
+       "def": "The dry, high-pressure zone near 30° latitude where air sinks, associated with major deserts."
+      },
+      {
+       "term": "Coriolis effect",
+       "def": "The apparent deflection of moving air (right in the Northern Hemisphere, left in the Southern) caused by Earth's rotation."
+      },
+      {
+       "term": "trade winds",
+       "def": "Winds blowing from about 30° toward the equator, deflected into a northeast or southeast flow."
+      },
+      {
+       "term": "westerlies",
+       "def": "Winds blowing roughly from the southwest between 30° and 60° latitude in the Northern Hemisphere."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do most of the world's major deserts (Sahara, American Southwest, Australian outback) cluster near 30° latitude?",
+       "choices": [
+        "That is where the doldrums produce constant rain",
+        "That is where sinking air in the horse latitudes creates dry, high-pressure conditions",
+        "Deserts only ever form near the equator",
+        "The Coriolis effect creates deserts directly"
+       ],
+       "answer": 1,
+       "explain": "Near 30° latitude, air from the Hadley cell sinks back to the surface, warming and drying as it descends, producing the persistent high pressure and low rainfall of the horse latitudes and the deserts found there."
+      },
+      {
+       "q": "In the Northern Hemisphere, the Coriolis effect deflects moving air:",
+       "choices": [
+        "To the left",
+        "To the right",
+        "Straight down toward the surface",
+        "It has no effect in either hemisphere"
+       ],
+       "answer": 1,
+       "explain": "Earth's rotation deflects moving air to the right of its direction of travel in the Northern Hemisphere, and to the left in the Southern Hemisphere."
+      },
+      {
+       "q": "Why does most weather in the continental United States move from west to east?",
+       "choices": [
+        "The trade winds blow west to east there",
+        "The polar easterlies dominate the mid-latitudes",
+        "The westerlies, found roughly between 30-60° latitude, blow from the southwest",
+        "The Coriolis effect has no influence on U.S. weather"
+       ],
+       "answer": 2,
+       "explain": "Most of the continental United States sits within the westerlies belt, where prevailing winds blow from the southwest, steering weather systems generally west to east."
+      },
+      {
+       "q": "Where is the Coriolis effect strongest, and where is it exactly zero?",
+       "choices": [
+        "Strongest at the equator, zero at the poles",
+        "Strongest at the poles, zero at the equator",
+        "Equally strong everywhere on Earth",
+        "It only exists in the Southern Hemisphere"
+       ],
+       "answer": 1,
+       "explain": "The Coriolis effect is zero right at the equator and increases in strength toward the poles, where it is strongest."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "High and Low Pressure Systems",
+     "minutes": 12,
+     "intro": "Meteorologists watching a weather map look first for two symbols, a blue H and a red L, because those two letters alone predict most of what the sky will do over the next few days across an entire region.",
+     "sections": [
+      {
+       "heading": "Low Pressure Systems (Cyclones)",
+       "body": [
+        "A **low pressure system** (also called a **cyclone**, or an area of low pressure) forms where air converges at the surface and is forced to rise, cooling as it goes and often condensing into clouds and precipitation; this is why low pressure is strongly associated with unsettled, stormy weather. Due to the Coriolis effect, surface winds spiral counterclockwise into a low in the Northern Hemisphere (clockwise in the Southern Hemisphere).",
+        "Because rising air is the key ingredient for cloud formation and precipitation, virtually every major storm system, from a routine rainy weekend to a hurricane, is fundamentally a low pressure system. Meteorologists track the central pressure of a low as one measure of its intensity: the lower the pressure at its center, generally, the stronger the associated winds."
+       ]
+      },
+      {
+       "heading": "High Pressure Systems (Anticyclones)",
+       "body": [
+        "A **high pressure system** (or **anticyclone**) forms where air sinks and diverges outward at the surface; sinking air warms and dries as it descends, the reverse of the cooling that forms clouds, which is why high pressure is strongly associated with clear skies and calm, settled weather. Surface winds spiral clockwise out of a high in the Northern Hemisphere (counterclockwise in the Southern Hemisphere), the mirror image of a low's rotation.",
+        "A strong, stationary high pressure system parked over a region can bring days or weeks of unbroken clear skies, but it can also trap pollution or heat near the surface since sinking air suppresses the vertical mixing that would otherwise disperse it, contributing to prolonged heat waves and poor air quality events."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "low pressure system",
+       "def": "A weather system where air converges and rises, associated with clouds and unsettled weather."
+      },
+      {
+       "term": "cyclone",
+       "def": "Another name for a low pressure system."
+      },
+      {
+       "term": "high pressure system",
+       "def": "A weather system where air sinks and diverges, associated with clear, calm weather."
+      },
+      {
+       "term": "anticyclone",
+       "def": "Another name for a high pressure system."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In the Northern Hemisphere, surface winds spiral which direction into a low pressure system?",
+       "choices": [
+        "Clockwise",
+        "Counterclockwise",
+        "Straight inward with no rotation",
+        "They do not rotate in the Northern Hemisphere"
+       ],
+       "answer": 1,
+       "explain": "The Coriolis effect deflects converging surface winds into a counterclockwise spiral around a low pressure center in the Northern Hemisphere."
+      },
+      {
+       "q": "Why is high pressure associated with clear, calm weather?",
+       "choices": [
+        "Air rises and cools there, forming clouds",
+        "Air sinks and warms and dries as it descends, suppressing cloud formation",
+        "High pressure always brings heavy precipitation",
+        "High pressure has no relationship to cloud cover"
+       ],
+       "answer": 1,
+       "explain": "Sinking air within a high pressure system warms and dries as it descends, the opposite of the rising, cooling, cloud-forming air found in a low, which is why highs bring clear skies."
+      },
+      {
+       "q": "Nearly every major storm, from routine rain to a hurricane, is fundamentally what kind of pressure system?",
+       "choices": [
+        "High pressure",
+        "Low pressure",
+        "Neutral pressure",
+        "It depends entirely on temperature, not pressure"
+       ],
+       "answer": 1,
+       "explain": "Storms require rising, cooling, condensing air, which is the defining feature of a low pressure system, making virtually all major storms fundamentally low pressure systems."
+      },
+      {
+       "q": "A stationary high pressure system parked over a city for weeks could contribute to which secondary effect?",
+       "choices": [
+        "Frequent thunderstorms",
+        "A heat wave and poor air quality from trapped, stagnant air",
+        "An immediate sharp drop in temperature",
+        "Increased tornado activity"
+       ],
+       "answer": 1,
+       "explain": "Because sinking air in a high suppresses vertical mixing, pollutants and heat can build up near the surface, contributing to prolonged heat waves and degraded air quality."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Storms",
+   "summary": "The ingredients and life cycle of thunderstorms and lightning, how tornadoes form and are rated, and what fuels hurricanes and makes them so destructive.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Thunderstorms and Lightning",
+     "minutes": 12,
+     "intro": "A single thunderstorm cloud can hold the energy of several atomic bombs and dump millions of liters of water in under an hour, and it all starts with nothing more exotic than warm, moist, unstable air being forced to rise.",
+     "sections": [
+      {
+       "heading": "The Ingredients and Life Cycle of a Thunderstorm",
+       "body": [
+        "Every thunderstorm needs three ingredients: **moisture** (usually from warm, humid low-level air), **instability** (air that keeps rising on its own once given a push, because it stays warmer, and therefore less dense, than the air around it), and a **lifting mechanism** to get that first push, whether a front, a mountain range, or simple daytime surface heating. A storm progresses through three stages: the **cumulus stage**, dominated by a strengthening updraft as the cloud builds vertically; the **mature stage**, when both updrafts and downdrafts coexist and the storm produces its heaviest rain, hail, and lightning; and the **dissipating stage**, when downdrafts choke off the updraft and the storm rains itself out.",
+        "Most thunderstorms are relatively brief, ordinary, single-cell events that run through their whole life cycle in under an hour, but under the right conditions, especially strong wind shear (winds changing speed or direction with height), storms can organize into long-lived, rotating **supercells**, the parent storm type behind most strong tornadoes and giant hail."
+       ]
+      },
+      {
+       "heading": "Lightning and Thunder",
+       "body": [
+        "Inside a mature thunderstorm cloud, collisions between rising ice crystals and falling graupel (soft hail) build up a strong electric charge separation, typically leaving the upper cloud positively charged and the lower cloud negatively charged. When that charge difference grows large enough, it discharges as **lightning**, an enormous spark that can travel cloud-to-cloud or cloud-to-ground, briefly heating the air along its path to roughly 30,000 Kelvin, several times hotter than the surface of the sun.",
+        "That instantaneous heating causes the air to expand explosively, producing the sound wave we hear as **thunder**. Because light travels essentially instantaneously while sound travels at only about 343 meters per second (roughly one mile per five seconds), you can estimate your distance from a lightning strike by counting the seconds between the flash and the thunder and dividing by five (for miles) or three (for kilometers)."
+       ],
+       "example": {
+        "problem": "You see a lightning flash and count 15 seconds before you hear the thunder. Roughly how far away, in miles, did the lightning strike?",
+        "steps": [
+         "Sound travels about 1 mile every 5 seconds.",
+         "Divide the counted seconds by 5: 15 ÷ 5 = 3.",
+         "The strike occurred roughly 3 miles away."
+        ],
+        "answer": "The lightning struck approximately 3 miles away."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "instability",
+       "def": "A state of the atmosphere where rising air keeps accelerating upward because it remains warmer than its surroundings."
+      },
+      {
+       "term": "lifting mechanism",
+       "def": "A trigger, such as a front or surface heating, that gives rising air its initial push."
+      },
+      {
+       "term": "supercell",
+       "def": "A long-lived, rotating thunderstorm, the parent storm type behind most strong tornadoes."
+      },
+      {
+       "term": "wind shear",
+       "def": "A change in wind speed or direction with height, which can organize storms into supercells."
+      },
+      {
+       "term": "lightning",
+       "def": "A discharge of built-up electric charge within or between clouds and the ground."
+      },
+      {
+       "term": "thunder",
+       "def": "The sound wave produced by the explosive expansion of air heated by a lightning strike."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which three ingredients does every thunderstorm require?",
+       "choices": [
+        "Cold air, high pressure, and low humidity",
+        "Moisture, instability, and a lifting mechanism",
+        "Wind shear, tornadoes, and hail only",
+        "A cold front and nothing else"
+       ],
+       "answer": 1,
+       "explain": "Thunderstorms form only when moisture, an unstable atmosphere, and a mechanism to trigger the initial lift are all present together."
+      },
+      {
+       "q": "Strong wind shear can organize an ordinary thunderstorm into a long-lived, rotating storm called a:",
+       "choices": [
+        "Cumulus cloud",
+        "Supercell",
+        "Stratus front",
+        "Occluded front"
+       ],
+       "answer": 1,
+       "explain": "Wind shear, changing wind speed or direction with height, can tilt and organize a storm's updraft into rotation, producing a supercell."
+      },
+      {
+       "q": "You count 10 seconds between a lightning flash and the thunder. About how far away did the lightning strike?",
+       "choices": [
+        "1 mile",
+        "2 miles",
+        "5 miles",
+        "10 miles"
+       ],
+       "answer": 1,
+       "explain": "Dividing the counted seconds by 5 (since sound travels roughly 1 mile per 5 seconds) gives 10 ÷ 5 = 2 miles."
+      },
+      {
+       "q": "Why does thunder occur after a lightning strike?",
+       "choices": [
+        "Lightning has no real connection to thunder",
+        "The extreme, instantaneous heating of air along the lightning's path causes explosive expansion, producing a sound wave",
+        "Thunder always occurs before lightning",
+        "Thunder is caused by wind alone, unrelated to lightning"
+       ],
+       "answer": 1,
+       "explain": "The lightning channel heats surrounding air to roughly 30,000 Kelvin almost instantly, and that air's explosive expansion generates the sound wave heard as thunder."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Tornadoes",
+     "minutes": 12,
+     "intro": "The most violent winds on Earth, over 300 kilometers per hour, occur not in hurricanes but in the narrow, spinning funnel of a tornado, a storm that can form, strike, and vanish in a matter of minutes.",
+     "sections": [
+      {
+       "heading": "How Tornadoes Form",
+       "body": [
+        "Most strong tornadoes form within **supercell thunderstorms**, where strong wind shear (winds changing speed and direction at different heights) causes the storm's updraft to begin rotating, forming a broad, rotating column of air called a **mesocyclone**. As the mesocyclone tightens and intensifies, a lowering, rotating cloud base called a **wall cloud** often develops beneath the storm, and if the rotation stretches downward and narrows enough to reach the ground, it becomes a **tornado**; before touching down, the same rotating funnel visible in the cloud is called a **funnel cloud**.",
+        "The exact process that finally connects a rotating mesocyclone to the ground is still an active area of research, but Doppler radar can often detect the telltale **hook echo**, a hook-shaped signature in the radar reflectivity pattern that reveals rotation within a storm, giving forecasters critical extra minutes of warning before a tornado forms or touches ground."
+       ]
+      },
+      {
+       "heading": "The Enhanced Fujita Scale",
+       "body": [
+        "Tornado intensity is rated after the fact, based on a damage survey, using the **Enhanced Fujita (EF) scale**, which runs from EF0 (winds of roughly 65-85 mph, causing light damage like broken branches) to EF5 (winds over 200 mph, causing total destruction of well-built houses). Because the scale is based on surveyed damage rather than a direct wind measurement, the same wind speed can sometimes be rated differently depending on what it actually struck.",
+        "The United States sees far more tornadoes than any other country, concentrated especially in a region nicknamed **Tornado Alley**, stretching roughly from Texas through Oklahoma, Kansas, and Nebraska, where cold, dry continental polar air regularly collides with warm, moist maritime tropical air from the Gulf of Mexico, the exact ingredients supercells need."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "supercell",
+       "def": "A long-lived, rotating thunderstorm and the parent storm type behind most strong tornadoes."
+      },
+      {
+       "term": "mesocyclone",
+       "def": "A broad, rotating column of air within a supercell that can develop into a tornado."
+      },
+      {
+       "term": "wall cloud",
+       "def": "A lowering, rotating cloud base beneath a supercell that often precedes tornado formation."
+      },
+      {
+       "term": "funnel cloud",
+       "def": "A rotating funnel of cloud extending from a storm base that has not yet touched the ground."
+      },
+      {
+       "term": "hook echo",
+       "def": "A hook-shaped radar reflectivity signature that reveals rotation within a storm."
+      },
+      {
+       "term": "Enhanced Fujita scale",
+       "def": "A scale from EF0 to EF5 that rates tornado intensity based on surveyed damage."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What atmospheric feature, common in supercells, describes the broad rotating column of air that can eventually produce a tornado?",
+       "choices": [
+        "Hook echo",
+        "Mesocyclone",
+        "Wind shear",
+        "Dew point"
+       ],
+       "answer": 1,
+       "explain": "The mesocyclone is the broad, rotating updraft within a supercell that can tighten and stretch downward into a tornado."
+      },
+      {
+       "q": "What radar signature helps forecasters detect rotation within a storm and issue earlier tornado warnings?",
+       "choices": [
+        "Cumulonimbus signature",
+        "Hook echo",
+        "Dew point depression",
+        "Isobar pattern"
+       ],
+       "answer": 1,
+       "explain": "A hook echo is a distinctive hook-shaped pattern in radar reflectivity that reveals rotation within a storm, often before a tornado is visible."
+      },
+      {
+       "q": "The Enhanced Fujita scale rates tornado intensity based primarily on:",
+       "choices": [
+        "Direct wind speed measurements taken during the tornado",
+        "A post-event survey of the damage caused",
+        "The size of the funnel cloud only",
+        "How long the tornado stayed on the ground"
+       ],
+       "answer": 1,
+       "explain": "Because direct wind measurements inside a tornado are rare, the EF scale instead estimates intensity from a survey of the damage left behind."
+      },
+      {
+       "q": "Why does Tornado Alley (Texas through Nebraska) see so many tornadoes?",
+       "choices": [
+        "It has essentially no air masses at all",
+        "Cold, dry continental polar air regularly collides there with warm, moist maritime tropical air, the ingredients supercells need",
+        "It is entirely covered by mountains that trigger tornadoes",
+        "The Coriolis effect is unusually strong there"
+       ],
+       "answer": 1,
+       "explain": "Tornado Alley sits where cold, dry cP air from Canada frequently meets warm, moist mT air from the Gulf of Mexico, producing the unstable conditions supercells and tornadoes require."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Hurricanes",
+     "minutes": 13,
+     "intro": "A hurricane is essentially a heat engine that runs on warm ocean water, and the same storm that meteorologists call a hurricane in the Atlantic is called a typhoon in the western Pacific and a cyclone in the Indian Ocean, three names for the exact same phenomenon.",
+     "sections": [
+      {
+       "heading": "How Hurricanes Form and Are Structured",
+       "body": [
+        "Hurricanes require ocean water at least about 26.5°C (80°F) to a depth of roughly 50 meters, which provides the enormous heat and moisture that fuels the storm, along with low wind shear (so the storm's structure is not torn apart as it develops) and enough distance from the equator for the Coriolis effect to start the storm rotating (hurricanes essentially never form within about 5° of the equator, where the Coriolis effect is too weak). Storms are named as they intensify: a **tropical depression** (winds under 39 mph) strengthens into a **tropical storm** (39-73 mph, when it receives an official name), and finally into a **hurricane** once sustained winds reach 74 mph.",
+        "A mature hurricane has a distinctive structure: the **eye**, a calm, often clear center a few dozen kilometers wide where air is actually sinking; the **eyewall** surrounding it, a ring of the storm's most intense wind and rainfall, where air rises most violently; and spiraling **rainbands** extending outward from the eyewall for hundreds of kilometers, alternating bands of heavy rain and relative calm."
+       ]
+      },
+      {
+       "heading": "The Saffir-Simpson Scale and Hazards",
+       "body": [
+        "Hurricane intensity is ranked by sustained wind speed on the **Saffir-Simpson scale**: Category 1 (74-95 mph) causes some damage; Category 2 (96-110 mph) causes extensive damage; Category 3 (111-129 mph) is considered a **major hurricane** with devastating damage, as are the stronger Category 4 (130-156 mph) and Category 5 (157 mph and above), which can cause catastrophic, long-lasting destruction.",
+        "Wind is often not a hurricane's deadliest hazard. **Storm surge**, the abnormal rise of ocean water pushed ashore by the storm's winds and low central pressure, has historically caused the majority of hurricane deaths in the United States, since it can flood coastal areas many kilometers inland with little warning. Heavy inland rainfall and resulting freshwater flooding, which can persist for days after the winds die down, is another major and frequently underestimated hazard."
+       ],
+       "example": {
+        "problem": "A hurricane has sustained winds of 120 mph. Using the Saffir-Simpson scale, what category is it, and is it considered a major hurricane?",
+        "steps": [
+         "Category 3 covers sustained winds of 111-129 mph.",
+         "120 mph falls within that range.",
+         "Category 3 and above (3, 4, 5) are classified as major hurricanes."
+        ],
+        "answer": "The storm is a Category 3 hurricane, which is classified as a major hurricane."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "tropical depression",
+       "def": "An organized tropical storm system with sustained winds under 39 mph."
+      },
+      {
+       "term": "tropical storm",
+       "def": "A tropical system with sustained winds of 39-73 mph, at which point it receives an official name."
+      },
+      {
+       "term": "eye",
+       "def": "The calm, often clear center of a mature hurricane, where air is sinking."
+      },
+      {
+       "term": "eyewall",
+       "def": "The ring surrounding a hurricane's eye with the storm's most intense wind and rain."
+      },
+      {
+       "term": "Saffir-Simpson scale",
+       "def": "A five-category scale ranking hurricane intensity by sustained wind speed."
+      },
+      {
+       "term": "storm surge",
+       "def": "The abnormal rise of ocean water pushed ashore by a hurricane's winds and low pressure, historically its deadliest hazard."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why don't hurricanes form within about 5° of the equator?",
+       "choices": [
+        "Ocean water is too cold there",
+        "The Coriolis effect is too weak there to start the storm rotating",
+        "Wind shear is always too strong there",
+        "There is no moisture available near the equator"
+       ],
+       "answer": 1,
+       "explain": "The Coriolis effect, needed to organize a storm's rotation, is essentially zero at the equator and only strengthens with distance from it, so hurricanes cannot spin up that close to it."
+      },
+      {
+       "q": "What part of a mature hurricane is calm, often clear, and features sinking air?",
+       "choices": [
+        "The eyewall",
+        "The rainbands",
+        "The eye",
+        "The storm surge"
+       ],
+       "answer": 2,
+       "explain": "The eye is the calm center of a hurricane, where air is actually sinking, in contrast to the violent rising air in the surrounding eyewall."
+      },
+      {
+       "q": "A hurricane with sustained winds of 120 mph would be classified as which Saffir-Simpson category?",
+       "choices": [
+        "Category 1",
+        "Category 2",
+        "Category 3",
+        "Category 5"
+       ],
+       "answer": 2,
+       "explain": "Category 3 covers sustained winds of 111-129 mph, which includes 120 mph, and is classified as a major hurricane."
+      },
+      {
+       "q": "Which hazard has historically caused the majority of hurricane deaths in the United States?",
+       "choices": [
+        "High winds directly",
+        "Storm surge flooding coastal areas",
+        "Lightning",
+        "Tornadoes spawned by the hurricane"
+       ],
+       "answer": 1,
+       "explain": "Storm surge, the wind- and pressure-driven rise of ocean water pushed onto the coast, has historically been the deadliest hurricane hazard in the U.S., often exceeding wind and inland flooding deaths combined."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Forecasting",
+   "summary": "How meteorologists read weather maps and station models, the tools used to observe and predict the atmosphere, and why forecasts get less certain the further out they look.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Reading Weather Maps and Station Models",
+     "minutes": 11,
+     "intro": "A single weather map can pack in temperature, pressure, wind, and cloud cover for hundreds of cities at once, all condensed into a tiny cluster of numbers and symbols called a station model, once you learn to read the code.",
+     "sections": [
+      {
+       "heading": "Isobars, Isotherms, and Fronts",
+       "body": [
+        "Weather maps use lines connecting points of equal value to reveal patterns at a glance. **Isobars** connect points of equal air pressure, and where isobars are packed tightly together, the pressure gradient is steep and winds are strong; where they are spread far apart, winds are light. **Isotherms** connect points of equal temperature, revealing where cold and warm air masses sit relative to each other.",
+        "Fronts are drawn as specific symbols: a cold front is a line with solid triangles pointing in the direction of movement; a warm front is a line with solid semicircles; a stationary front alternates triangles and semicircles pointing opposite directions; and an occluded front combines triangle and semicircle symbols on the same side of the line. H and L symbols mark the centers of high and low pressure systems."
+       ]
+      },
+      {
+       "heading": "Station Models",
+       "body": [
+        "A **station model** packs a full weather report for one location into a compact symbol cluster: temperature in the upper left, dew point in the lower left, current sky and weather symbol in the center, and total cloud cover shown by how much the central circle is filled in, from clear to fully overcast. A **wind barb** extending from the circle shows both wind direction (the barb points toward where the wind is coming from) and wind speed, using small flags: a short barb represents 5 knots, a long barb 10 knots, and a filled triangular flag 50 knots, combined and added together.",
+        "Reading dozens of station models across a region at once lets a forecaster instantly spot patterns; clusters of high dew points and southerly wind barbs converging ahead of an advancing cold front, for example, are exactly the setup that produces severe thunderstorms, and recognizing that pattern quickly is a core forecasting skill."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "isobar",
+       "def": "A line on a weather map connecting points of equal air pressure."
+      },
+      {
+       "term": "isotherm",
+       "def": "A line on a weather map connecting points of equal temperature."
+      },
+      {
+       "term": "station model",
+       "def": "A compact symbol cluster representing a full weather report for one location."
+      },
+      {
+       "term": "wind barb",
+       "def": "A symbol on a station model showing wind direction and speed using small flags."
+      },
+      {
+       "term": "dew point",
+       "def": "The temperature air must cool to in order to become fully saturated with water vapor."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Where isobars on a weather map are packed tightly together, this indicates:",
+       "choices": [
+        "No wind at all",
+        "A weak pressure gradient and light wind",
+        "A steep pressure gradient and strong wind",
+        "High temperature only"
+       ],
+       "answer": 2,
+       "explain": "Tightly spaced isobars mean pressure changes rapidly over a short distance, a steep pressure gradient, which produces strong winds."
+      },
+      {
+       "q": "On a station model, a wind barb's direction shows:",
+       "choices": [
+        "Where the wind is blowing toward",
+        "Where the wind is coming from",
+        "The current temperature",
+        "The total cloud cover"
+       ],
+       "answer": 1,
+       "explain": "By meteorological convention, a wind barb points in the direction the wind is blowing from, not the direction it is heading toward."
+      },
+      {
+       "q": "Which symbol represents a cold front on a weather map?",
+       "choices": [
+        "A line with solid semicircles",
+        "A line with solid triangles pointing in the direction of movement",
+        "A plain dashed line with no markings",
+        "An H symbol"
+       ],
+       "answer": 1,
+       "explain": "Cold fronts are drawn as a line with solid triangle points showing the direction the front is moving; warm fronts use semicircles instead."
+      },
+      {
+       "q": "On a station model, where is dew point typically shown?",
+       "choices": [
+        "Upper right",
+        "Center",
+        "Lower left",
+        "It is not shown on a station model"
+       ],
+       "answer": 2,
+       "explain": "The standard station model places temperature in the upper left and dew point in the lower left, framing the central sky-cover symbol."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Forecasting Tools: Radar, Satellites, and Models",
+     "minutes": 13,
+     "intro": "Modern forecasts draw on a layered network of observation tools, from ground-level thermometers to satellites parked 35,786 kilometers above the equator, feeding a supercomputer that solves the physics of the atmosphere many times per second.",
+     "sections": [
+      {
+       "heading": "Surface, Radar, and Upper-Air Observations",
+       "body": [
+        "Ground-based automated weather stations continuously record temperature, pressure, humidity, wind, and precipitation, and **weather balloons** (carrying instrument packages called **radiosondes**) are launched twice daily from hundreds of sites worldwide to profile temperature, humidity, and wind through the entire depth of the atmosphere, data that is otherwise very difficult to gather. **Doppler radar** sends out pulses of radio waves that bounce off precipitation, revealing both where precipitation is falling (reflectivity) and, using the Doppler shift of the returning signal, whether air within a storm is moving toward or away from the radar, which is how forecasters detect the rotation inside a tornado-producing supercell.",
+        "Satellites offer two complementary viewpoints. **Geostationary satellites** orbit at about 35,786 kilometers, matching Earth's rotation so they hover continuously over the same spot, ideal for tracking how storms evolve over time. **Polar-orbiting satellites** fly much lower, around 800 kilometers, passing over any given location only about twice a day, but they capture much higher-resolution images and different types of data during each pass."
+       ]
+      },
+      {
+       "heading": "Numerical Weather Prediction",
+       "body": [
+        "All of this observational data feeds into **numerical weather prediction (NWP)** models: computer programs that divide the atmosphere into a three-dimensional grid and use the physical equations governing motion, pressure, and heat to calculate how conditions will evolve forward in time, one time-step after another, on some of the world's fastest supercomputers. Because these models are extremely sensitive to their starting conditions, meteorologists run many slightly varied versions of the same model, called an **ensemble**, to see how much the forecasts diverge and gauge how confident they can be in the outcome.",
+        "If nearly all ensemble members agree on a similar outcome, forecasters can issue a confident forecast; if the ensemble members diverge widely, sending the storm in very different directions, forecasters communicate that uncertainty explicitly, often as a spread of possible tracks, like the well-known hurricane cone of uncertainty, rather than a single confident line."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "radiosonde",
+       "def": "An instrument package carried by a weather balloon that profiles temperature, humidity, and wind."
+      },
+      {
+       "term": "Doppler radar",
+       "def": "Radar that detects both precipitation location and motion within a storm using frequency shifts."
+      },
+      {
+       "term": "geostationary satellite",
+       "def": "A satellite orbiting at about 35,786 km that stays over the same spot, tracking storm evolution over time."
+      },
+      {
+       "term": "polar-orbiting satellite",
+       "def": "A lower-altitude satellite offering higher resolution but passing over any location only about twice daily."
+      },
+      {
+       "term": "numerical weather prediction",
+       "def": "Computer models that use physical equations to calculate how atmospheric conditions will evolve."
+      },
+      {
+       "term": "ensemble forecast",
+       "def": "Multiple slightly varied model runs used to gauge forecast confidence and uncertainty."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does Doppler radar detect that traditional radar reflectivity alone cannot?",
+       "choices": [
+        "Temperature at ground level",
+        "Whether air within a storm is moving toward or away from the radar, revealing rotation",
+        "The exact dew point of a location",
+        "The color of clouds"
+       ],
+       "answer": 1,
+       "explain": "Doppler radar uses the frequency shift of returning radio waves to measure motion toward or away from the radar, which is how forecasters detect rotation within a storm."
+      },
+      {
+       "q": "A geostationary satellite is useful mainly because it:",
+       "choices": [
+        "Orbits close to Earth for high resolution but only passes over twice a day",
+        "Hovers continuously over the same spot, ideal for tracking storm evolution over time",
+        "Measures wind speed directly at the surface",
+        "Replaces the need for radar entirely"
+       ],
+       "answer": 1,
+       "explain": "Because a geostationary satellite orbits at the same rate Earth rotates, it stays fixed over one location, letting forecasters watch a storm's development continuously."
+      },
+      {
+       "q": "Why do meteorologists run an ensemble of many slightly varied model forecasts instead of just one?",
+       "choices": [
+        "To save computing power",
+        "Because models are highly sensitive to starting conditions, and the spread of outcomes reveals forecast confidence",
+        "Ensembles are only used for hurricanes",
+        "One model run is always perfectly accurate"
+       ],
+       "answer": 1,
+       "explain": "Because small differences in starting data can grow into very different forecasts, running many slightly varied versions shows how much the outcomes diverge, which is itself a measure of forecast confidence."
+      },
+      {
+       "q": "What instrument, carried by a weather balloon, profiles temperature, humidity, and wind through the depth of the atmosphere?",
+       "choices": [
+        "Barometer",
+        "Radiosonde",
+        "Doppler radar",
+        "Station model"
+       ],
+       "answer": 1,
+       "explain": "A radiosonde is the instrument package a weather balloon carries aloft, transmitting a vertical profile of temperature, humidity, and wind back to the ground."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Forecast Uncertainty and Interpreting a Forecast",
+     "minutes": 12,
+     "intro": "When a forecast says 30% chance of rain, it is not saying rain will cover 30% of the sky or last 30% of the day; it is stating a precise probability that has a specific, often misunderstood, meaning.",
+     "sections": [
+      {
+       "heading": "What 'Percent Chance of Rain' Actually Means",
+       "body": [
+        "The **probability of precipitation (PoP)** shown in a forecast is typically calculated as the forecaster's confidence that precipitation will occur, multiplied by the fraction of the forecast area expected to receive it. A forecaster who is 100% certain that rain will fall, but only over 30% of the forecast zone, would issue the same 30% PoP as a forecaster who is only 30% confident that rain will fall evenly across the entire zone; the same number can represent two very different situations.",
+        "This is why a 30% chance of rain does not mean it definitely will not rain, and a 90% chance does not guarantee rain everywhere in the forecast area; it means that, statistically, on many days with these exact atmospheric conditions, measurable rain occurred at any given point within the forecast area about 30%, or 90%, of the time."
+       ]
+      },
+      {
+       "heading": "Why Forecasts Get Less Certain Further Out",
+       "body": [
+        "The atmosphere is a chaotic system: tiny, unmeasurable differences in starting conditions can grow into large differences in outcome over time, a sensitivity often called the **butterfly effect**. Because of this, even a perfect model with a perfect (but still finite) amount of starting data will inevitably diverge from reality more and more as it projects further into the future, which is why forecast confidence and accuracy consistently decline the further out a forecast reaches.",
+        "In practice, forecasts are highly reliable through about 3-5 days, reasonably useful (though increasingly general) through about 7-10 days, and beyond that, forecasters shift to describing broad patterns and probabilities, such as warmer and wetter than average, rather than day-specific predictions, since the chaotic growth of small errors makes precise day-by-day predictions unreliable that far out."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "probability of precipitation",
+       "def": "A forecast value combining confidence that rain will occur with the fraction of the area expected to receive it."
+      },
+      {
+       "term": "chaos theory",
+       "def": "The study of systems, like the atmosphere, where small differences in starting conditions grow into large differences over time."
+      },
+      {
+       "term": "butterfly effect",
+       "def": "The idea that tiny, unmeasurable initial differences can grow into major differences in outcome in a chaotic system."
+      },
+      {
+       "term": "forecast skill",
+       "def": "A measure of how much more accurate a forecast is compared to simple climatological averages, which declines with time."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A forecast shows a 40% chance of rain. What does this most precisely represent?",
+       "choices": [
+        "It will rain for exactly 40% of the day, guaranteed",
+        "40% of the sky will be cloudy",
+        "A combined measure of confidence and areal coverage that measurable rain will occur at a given point",
+        "There is no rain expected at all"
+       ],
+       "answer": 2,
+       "explain": "Probability of precipitation combines the forecaster's confidence that rain will occur with the fraction of the area expected to see it, giving a single number that represents the chance of rain at any specific point."
+      },
+      {
+       "q": "Why do forecasts become less reliable the further into the future they project?",
+       "choices": [
+        "Meteorologists intentionally make long-range forecasts vague",
+        "Small, unmeasurable errors in starting conditions grow rapidly over time in a chaotic atmosphere",
+        "Computers used for forecasting get slower over time",
+        "Long-range forecasts always use worse-quality data than short-range ones"
+       ],
+       "answer": 1,
+       "explain": "Because the atmosphere is chaotic, tiny errors in the starting data amplify over time, so even a highly accurate model diverges more from reality the further ahead it projects."
+      },
+      {
+       "q": "Roughly how many days out are forecasts generally considered highly reliable?",
+       "choices": [
+        "30-60 days",
+        "3-5 days",
+        "About 1 hour only",
+        "Forecasts are equally reliable at any range"
+       ],
+       "answer": 1,
+       "explain": "Forecast accuracy is generally high through about 3-5 days, becomes more general through 7-10 days, and declines sharply beyond that."
+      },
+      {
+       "q": "Beyond about 7-10 days, forecasters typically shift to describing:",
+       "choices": [
+        "Exact hourly temperatures for each day",
+        "Broad patterns and probabilities rather than day-specific predictions",
+        "Nothing — forecasts stop being issued entirely",
+        "Only wind speed, with no other variables"
+       ],
+       "answer": 1,
+       "explain": "Past about a week to ten days, chaotic error growth makes day-specific predictions unreliable, so forecasters instead describe general trends, like warmer or wetter than average."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Earth's Climate System",
+   "summary": "The difference between weather and climate, how the greenhouse effect keeps Earth livable, and the observed evidence and impacts of human-driven climate change.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Weather vs. Climate and Climate Zones",
+     "minutes": 11,
+     "intro": "\"Climate is what you expect; weather is what you get\" is a favorite saying among meteorologists, and the difference between those two ideas, one describing a single day and the other describing decades of typical patterns, is essential to understanding both.",
+     "sections": [
+      {
+       "heading": "Weather Versus Climate",
+       "body": [
+        "**Weather** describes the atmospheric conditions at a specific place and moment: today's temperature, this afternoon's rain, this week's wind. **Climate** describes the long-term average pattern of weather in a region, typically calculated over a 30-year period, along with its typical variability and extremes. A single unusually cold week does not disprove a warming climate trend any more than one hot day proves it; climate is about the statistics of weather over decades, not any individual event.",
+        "Climate is shaped by several major factors, including **latitude** (controlling how directly sunlight strikes the surface), **elevation** (higher places are generally cooler), **proximity to oceans** (large water bodies moderate temperature swings compared to inland areas), and prevailing **ocean currents** and wind patterns, which transport heat around the globe, such as the warm Gulf Stream moderating winters in western Europe."
+       ]
+      },
+      {
+       "heading": "Major Climate Zones",
+       "body": [
+        "The **Köppen climate classification**, still widely used today, groups the world's climates into broad zones based primarily on temperature and precipitation patterns. **Tropical** climates, found near the equator, are warm year-round with high rainfall; **dry** climates (arid deserts and semi-arid steppes), found mainly near 30° latitude and in continental interiors, receive very little precipitation.",
+        "**Temperate** climates, found in the mid-latitudes, have four distinct seasons and moderate precipitation; **continental** climates, found in the interior of large landmasses at mid-to-high latitudes, have more extreme temperature swings between summer and winter than temperate coastal zones; and **polar** climates, found near the poles, stay cold year-round with minimal precipitation, most of it falling as snow."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "weather",
+       "def": "The atmospheric conditions at a specific place and moment."
+      },
+      {
+       "term": "climate",
+       "def": "The long-term average pattern of weather in a region, typically calculated over 30 years."
+      },
+      {
+       "term": "latitude",
+       "def": "Distance from the equator, a major factor controlling how directly sunlight strikes the surface and thus climate."
+      },
+      {
+       "term": "ocean current",
+       "def": "A large-scale flow of ocean water that transports heat around the globe, shaping regional climate."
+      },
+      {
+       "term": "Köppen climate classification",
+       "def": "A widely used system grouping world climates into zones based on temperature and precipitation."
+      },
+      {
+       "term": "polar climate",
+       "def": "A climate zone near the poles that stays cold year-round with minimal precipitation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the key difference between weather and climate?",
+       "choices": [
+        "They mean exactly the same thing",
+        "Weather is a specific moment's conditions; climate is the long-term average pattern over decades",
+        "Climate only applies to the tropics",
+        "Weather always predicts climate exactly"
+       ],
+       "answer": 1,
+       "explain": "Weather describes conditions at a specific place and time, while climate describes the long-term statistical average and variability of weather over roughly 30 years."
+      },
+      {
+       "q": "Does one unusually cold week disprove a long-term warming climate trend?",
+       "choices": [
+        "Yes, always",
+        "No — climate describes decades-long statistical patterns, not any single event",
+        "Only in tropical climates",
+        "Yes, if it happens in winter"
+       ],
+       "answer": 1,
+       "explain": "A single event, no matter how extreme, is weather, not climate; climate trends are judged over decades of data, not individual days or weeks."
+      },
+      {
+       "q": "Why do coastal regions typically have milder, less extreme temperature swings than continental interiors at similar latitudes?",
+       "choices": [
+        "Large water bodies absorb and release heat slowly, moderating nearby temperatures",
+        "Coastal regions receive no sunlight",
+        "Continental interiors are always closer to the equator",
+        "Ocean currents have no effect on climate"
+       ],
+       "answer": 0,
+       "explain": "Water heats and cools much more slowly than land, so nearby coastal air is buffered against extreme seasonal temperature swings compared to inland areas far from that moderating influence."
+      },
+      {
+       "q": "Which climate zone, found mainly near 30° latitude and in continental interiors, receives very little precipitation?",
+       "choices": [
+        "Tropical",
+        "Dry (arid/semi-arid)",
+        "Temperate",
+        "Polar"
+       ],
+       "answer": 1,
+       "explain": "Dry climates, including deserts and semi-arid steppes, dominate near 30° latitude (the horse latitudes) and in continental interiors far from moisture sources."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Greenhouse Effect and Earth's Energy Budget",
+     "minutes": 12,
+     "intro": "Without any greenhouse effect at all, Earth's average surface temperature would sit around -18°C, a frozen, largely uninhabitable world; the natural greenhouse effect is the only reason Earth's actual average surface temperature is a comfortable 15°C instead.",
+     "sections": [
+      {
+       "heading": "How the Greenhouse Effect Works",
+       "body": [
+        "The sun emits energy mostly as visible, **shortwave radiation**, which passes fairly freely through the atmosphere and warms Earth's surface. That warmed surface, in turn, re-radiates energy back outward, but at a much longer wavelength, **longwave (infrared) radiation**, since cooler objects radiate at longer wavelengths than hot ones. **Greenhouse gases**, mainly water vapor, carbon dioxide, methane, and nitrous oxide, are especially good at absorbing this outgoing longwave radiation and re-emitting it in all directions, including back down toward the surface, trapping heat that would otherwise escape directly to space.",
+        "This natural **greenhouse effect** is not a flaw or a problem in itself; it is the reason Earth is habitable at all. Without it, calculations based on the sun's energy output and Earth's reflectivity put the planet's average surface temperature at roughly -18°C, but the actual observed global average is about 15°C, meaning the natural greenhouse effect provides roughly 33°C of warming that life on Earth depends on."
+       ],
+       "example": {
+        "problem": "Earth's actual average surface temperature is about 15°C. Physics-based calculations, using only incoming solar energy and Earth's reflectivity (with no greenhouse effect), predict an average surface temperature of about -18°C. How many degrees of warming does the natural greenhouse effect provide?",
+        "steps": [
+         "Actual average surface temperature: 15°C.",
+         "Predicted temperature with no greenhouse effect: -18°C.",
+         "Warming provided by the greenhouse effect: 15 − (−18) = 33°C."
+        ],
+        "answer": "The natural greenhouse effect provides about 33°C of warming."
+       }
+      },
+      {
+       "heading": "The Enhanced Greenhouse Effect",
+       "body": [
+        "Before large-scale industrialization, atmospheric carbon dioxide sat at roughly 280 parts per million (ppm) for thousands of years. Since the mid-1800s, burning fossil fuels (coal, oil, and natural gas) for energy, along with deforestation and other land-use changes, has pushed atmospheric CO~2~ above 420 ppm today, a rise of roughly 50% above pre-industrial levels, and it continues climbing each year.",
+        "Adding more greenhouse gases does not change how the greenhouse effect works; it strengthens it, trapping additional outgoing longwave radiation and adding extra warming on top of the natural, life-sustaining baseline. This human-caused strengthening of the natural greenhouse effect, called the **enhanced greenhouse effect**, is the primary physical mechanism driving modern climate change."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "shortwave radiation",
+       "def": "The mostly visible-light energy emitted by the sun that warms Earth's surface."
+      },
+      {
+       "term": "longwave radiation",
+       "def": "The infrared energy Earth's surface re-radiates outward after being warmed."
+      },
+      {
+       "term": "greenhouse gas",
+       "def": "A gas, such as CO2 or methane, that absorbs and re-emits outgoing longwave radiation, trapping heat."
+      },
+      {
+       "term": "greenhouse effect",
+       "def": "The natural process by which greenhouse gases trap heat, warming Earth's surface by about 33°C."
+      },
+      {
+       "term": "enhanced greenhouse effect",
+       "def": "The human-caused strengthening of the natural greenhouse effect from added greenhouse gas emissions."
+      },
+      {
+       "term": "parts per million (ppm)",
+       "def": "A unit measuring the concentration of a gas, such as CO2, in the atmosphere."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Without any greenhouse effect, Earth's average surface temperature is calculated to be about -18°C, compared to the actual observed 15°C. How much warming does the natural greenhouse effect provide?",
+       "choices": [
+        "About 3°C",
+        "About 15°C",
+        "About 33°C",
+        "About 100°C"
+       ],
+       "answer": 2,
+       "explain": "Subtracting the no-greenhouse prediction (-18°C) from the actual observed average (15°C) gives 15 − (−18) = 33°C of warming provided by the natural greenhouse effect."
+      },
+      {
+       "q": "Why are greenhouse gases able to trap heat near Earth's surface?",
+       "choices": [
+        "They block incoming sunlight completely",
+        "They absorb outgoing longwave (infrared) radiation from the surface and re-emit some of it back down",
+        "They reflect all radiation directly into space",
+        "They only affect the stratosphere, not the surface"
+       ],
+       "answer": 1,
+       "explain": "Greenhouse gases are largely transparent to incoming shortwave sunlight but absorb outgoing longwave radiation from the surface, re-emitting part of it back downward and trapping heat."
+      },
+      {
+       "q": "Roughly how has atmospheric CO2 changed from pre-industrial times (about 280 ppm) to today?",
+       "choices": [
+        "It has decreased to about 200 ppm",
+        "It has stayed exactly the same",
+        "It has risen to above 420 ppm, about 50% higher",
+        "It has risen to about 1,000 ppm"
+       ],
+       "answer": 2,
+       "explain": "Atmospheric CO2 has climbed from roughly 280 ppm before industrialization to over 420 ppm today, an increase of about 50%, driven mainly by fossil fuel combustion."
+      },
+      {
+       "q": "What is the enhanced greenhouse effect?",
+       "choices": [
+        "A totally different process unrelated to the natural greenhouse effect",
+        "The human-caused strengthening of the natural greenhouse effect by adding extra greenhouse gases",
+        "The cooling effect of atmospheric aerosols",
+        "Another name for the ozone layer"
+       ],
+       "answer": 1,
+       "explain": "The enhanced greenhouse effect refers to how human emissions of greenhouse gases amplify the same natural mechanism, trapping additional heat beyond the natural baseline."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Climate Change: Evidence and Impacts",
+     "minutes": 13,
+     "intro": "Multiple independent lines of evidence, collected by different instruments, in different places, by scientists who often never worked together, all point to the same conclusion: Earth's climate is warming, and the pace of that warming is unusual by any historical standard.",
+     "sections": [
+      {
+       "heading": "The Evidence for Warming",
+       "body": [
+        "Direct thermometer records, kept consistently since the late 1800s, show Earth's global average surface temperature has risen by about 1.1-1.2°C since the pre-industrial era, with the majority of that increase occurring in just the last several decades. This warming is confirmed independently by other physical measurements: global average sea level has risen roughly 20-25 centimeters since 1900 (from both thermal expansion of warming ocean water and melting land ice), mountain glaciers are retreating on nearly every continent, and Arctic sea ice extent has declined by roughly 13% per decade since satellite records began in 1979.",
+        "The ocean, which has absorbed the large majority of the extra heat trapped by the enhanced greenhouse effect, has also become measurably more acidic as it absorbs more CO~2~ from the atmosphere, with ocean pH dropping by about 0.1 units, corresponding to roughly a 30% increase in acidity, since the pre-industrial era, since CO~2~ dissolving in seawater forms carbonic acid. These independent data sets, temperature, sea level, ice extent, and ocean chemistry, all show consistent, mutually reinforcing trends."
+       ]
+      },
+      {
+       "heading": "Attribution and Impacts",
+       "body": [
+        "Scientific organizations worldwide, drawing on decades of physical evidence and climate modeling, have concluded with very high confidence that the observed warming since the mid-20th century is primarily caused by human greenhouse gas emissions rather than natural causes like solar variation or volcanic activity, which cannot explain the pattern, timing, or magnitude of the observed changes.",
+        "Observed and projected impacts include more frequent and intense extreme heat events, shifting precipitation patterns (some regions getting wetter, others drier), more intense and further-reaching wildfire seasons, stronger and wetter tropical storms and hurricanes fueled by warmer ocean water, and continued sea level rise threatening coastal communities. These impacts do not affect every region equally; low-lying island nations and coastal cities face disproportionately severe risk from sea level rise, while some inland and higher-latitude regions face intensifying drought or heat risk instead."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "global average temperature",
+       "def": "The worldwide average surface temperature, which has risen about 1.1-1.2°C since pre-industrial times."
+      },
+      {
+       "term": "sea level rise",
+       "def": "The measured rise in global average ocean level from thermal expansion and melting ice, roughly 20-25 cm since 1900."
+      },
+      {
+       "term": "ocean acidification",
+       "def": "The measurable drop in ocean pH as seawater absorbs more atmospheric CO2, forming carbonic acid."
+      },
+      {
+       "term": "attribution",
+       "def": "The scientific process of determining the primary cause of an observed climate change."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Roughly how much has Earth's global average surface temperature risen since the pre-industrial era?",
+       "choices": [
+        "About 0.1°C",
+        "About 1.1-1.2°C",
+        "About 10°C",
+        "It has not changed measurably"
+       ],
+       "answer": 1,
+       "explain": "Direct thermometer records since the late 1800s show global average surface temperature has risen by roughly 1.1-1.2°C, with most of that increase in recent decades."
+      },
+      {
+       "q": "Ocean acidification occurs because:",
+       "choices": [
+        "The ocean is heating up directly from sunlight only",
+        "The ocean absorbs CO2 from the atmosphere, which forms carbonic acid and lowers pH",
+        "Melting sea ice directly makes ocean water more acidic",
+        "Acidification is unrelated to atmospheric CO2"
+       ],
+       "answer": 1,
+       "explain": "As the ocean absorbs more atmospheric CO2, the dissolved gas forms carbonic acid in seawater, measurably lowering ocean pH and increasing acidity."
+      },
+      {
+       "q": "What is the scientific consensus on the primary cause of the warming observed since the mid-20th century?",
+       "choices": [
+        "Primarily natural solar variation",
+        "Primarily volcanic activity",
+        "Primarily human greenhouse gas emissions",
+        "There is no scientific consensus on the cause"
+       ],
+       "answer": 2,
+       "explain": "Climate scientists worldwide have concluded with very high confidence that human greenhouse gas emissions, not natural factors like solar variation or volcanoes, are the primary driver of recent warming."
+      },
+      {
+       "q": "Which of these is a widely observed or projected impact of climate change?",
+       "choices": [
+        "Cooler, calmer oceans worldwide",
+        "Declining sea levels",
+        "More frequent extreme heat events and stronger, wetter tropical storms",
+        "A sudden decrease in atmospheric CO2 levels"
+       ],
+       "answer": 2,
+       "explain": "Observed and projected impacts include more frequent extreme heat, shifting precipitation patterns, and stronger, wetter tropical storms fueled by warmer ocean water, alongside continued sea level rise."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

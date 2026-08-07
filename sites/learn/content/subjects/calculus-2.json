@@ -1,0 +1,656 @@
+{
+ "id": "calculus-2",
+ "title": "Calculus II",
+ "domain": "math",
+ "level": "College",
+ "description": "The sequel to first-semester calculus: a deep toolkit for integration, the applications that toolkit unlocks, and the theory of infinite series. You will learn to integrate functions that direct substitution can't touch, use integrals to measure arc length and volume, and determine whether an infinite sum of numbers or functions actually settles on a finite value.",
+ "outcomes": [
+  "Integrate using integration by parts, trigonometric substitution, partial fractions, and a working strategy for choosing among techniques.",
+  "Evaluate improper integrals and determine convergence or divergence using limits and comparison.",
+  "Apply definite integrals to compute arc length, surface area, work, and volumes by shells and washers.",
+  "Determine convergence or divergence of infinite series using the comparison, ratio, root, integral, and alternating series tests.",
+  "Represent functions as power series and Taylor series, and use them to approximate values and evaluate limits.",
+  "Work with parametric equations and polar coordinates, including area and arc length in polar form."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Integration Techniques I",
+   "summary": "Integration by parts and trigonometric integrals extend the basic antiderivative rules to products and powers of functions.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Integration by Parts",
+     "minutes": 18,
+     "intro": "Substitution undoes the chain rule, but many integrals come from the product rule instead — a function multiplied by another function that doesn't simplify with a single substitution. Integration by parts is the technique built to reverse the product rule, and it becomes one of the most-used tools in the rest of this course.",
+     "sections": [
+      {
+       "heading": "The Formula and Where It Comes From",
+       "body": [
+        "Starting from the product rule d/dx[uv] = u'v + uv', integrate both sides with respect to x: uv = ∫u'v dx + ∫uv' dx. Rearranging gives the integration by parts formula ∫u dv = uv − ∫v du, where you split the original integrand into a piece called u (which you differentiate) and a piece called dv (which you integrate).",
+        "The whole technique succeeds or fails on the split. A good choice makes ∫v du simpler than the original integral ∫u dv; a bad choice makes it more complicated or identical in difficulty. The acronym **LIATE** (Logarithmic, Inverse trig, Algebraic, Trigonometric, Exponential) ranks which factor to choose as u — pick u from whichever category appears first in that list, since those functions tend to simplify nicely under differentiation."
+       ]
+      },
+      {
+       "heading": "Working an Example Start to Finish",
+       "body": [
+        "Consider ∫x·e^x dx. Following LIATE, x is algebraic and e^x is exponential, so algebraic comes first: let u = x (so du = dx) and dv = e^x dx (so v = e^x). The formula gives ∫x e^x dx = x e^x − ∫e^x dx = x e^x − e^x + C.",
+        "Some integrals need integration by parts more than once, and a few — like ∫e^x sin(x) dx — require applying it twice and then solving algebraically for the original integral when it reappears on both sides of the equation. Recognizing that reappearance, rather than integrating forever, is the key skill in those harder cases."
+       ],
+       "example": {
+        "problem": "Evaluate ∫x cos(x) dx.",
+        "steps": [
+         "Choose u = x (algebraic, differentiates to something simpler) and dv = cos(x) dx.",
+         "Then du = dx and v = ∫cos(x) dx = sin(x).",
+         "Apply the formula: ∫x cos(x) dx = x sin(x) − ∫sin(x) dx.",
+         "Integrate the remaining piece: ∫sin(x) dx = −cos(x), so the result is x sin(x) − (−cos(x)) + C = x sin(x) + cos(x) + C."
+        ],
+        "answer": "∫x cos(x) dx = x sin(x) + cos(x) + C."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "integration by parts", "def": "The technique ∫u dv = uv − ∫v du, derived from reversing the product rule, used to integrate products of functions."},
+      {"term": "LIATE", "def": "A priority order (Logarithmic, Inverse trig, Algebraic, Trigonometric, Exponential) for choosing which factor to call u in integration by parts."},
+      {"term": "reduction", "def": "Applying integration by parts to lower the power or complexity of an integrand, sometimes repeatedly, until the integral can be evaluated directly."}
+     ],
+     "practice": [
+      {"q": "In ∫x ln(x) dx, which choice of u follows LIATE?", "choices": ["u = ln(x)", "u = x", "u = x ln(x)", "u = 1"], "answer": 0, "explain": "Logarithmic functions rank above algebraic ones in LIATE, and ln(x) differentiates to the simpler 1/x, so u = ln(x) is the right choice."},
+      {"q": "After choosing u = x and dv = e^(2x) dx for ∫x e^(2x) dx, what is v?", "choices": ["e^(2x)/2", "2e^(2x)", "e^(2x)", "x²e^(2x)/2"], "answer": 0, "explain": "v = ∫e^(2x) dx = e^(2x)/2 by reversing the chain rule (the inner derivative 2 requires dividing by 2)."},
+      {"q": "∫x sin(x) dx equals which of the following?", "choices": ["−x cos(x) + sin(x) + C", "x cos(x) + sin(x) + C", "−x cos(x) − sin(x) + C", "x sin(x) − cos(x) + C"], "answer": 0, "explain": "With u = x, dv = sin(x) dx, du = dx, v = −cos(x): ∫x sin(x) dx = −x cos(x) − ∫(−cos(x)) dx = −x cos(x) + sin(x) + C."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Trigonometric Integrals",
+     "minutes": 18,
+     "intro": "Powers and products of sine, cosine, tangent, and secant show up constantly once you start substituting trig functions into other integrals. This lesson gives you the identity-based strategies for handling ∫sin^m(x)cos^n(x) dx and ∫tan^m(x)sec^n(x) dx so you're never stuck guessing.",
+     "sections": [
+      {
+       "heading": "Odd Powers of Sine or Cosine",
+       "body": [
+        "For ∫sin^m(x)cos^n(x) dx where at least one of m, n is odd, peel off a single factor of the odd-power function and convert the rest using sin²(x) + cos²(x) = 1, then substitute u for the other function. For example, in ∫sin³(x)cos²(x) dx, split sin³(x) = sin²(x)·sin(x) = (1 − cos²(x))·sin(x), then let u = cos(x), du = −sin(x) dx.",
+        "This peel-off strategy works because the leftover sin(x) dx (or cos(x) dx) pairs exactly with the du you need for substitution — it's the reason you always target the odd power first when one is available."
+       ],
+       "example": {
+        "problem": "Evaluate ∫sin³(x) dx.",
+        "steps": [
+         "Rewrite sin³(x) = sin²(x)·sin(x) = (1 − cos²(x))·sin(x).",
+         "Let u = cos(x), so du = −sin(x) dx, i.e. sin(x) dx = −du.",
+         "The integral becomes ∫(1 − u²)(−du) = −∫(1 − u²) du = −u + u³/3 + C.",
+         "Substitute back: −cos(x) + cos³(x)/3 + C."
+        ],
+        "answer": "∫sin³(x) dx = −cos(x) + cos³(x)/3 + C."
+       }
+      },
+      {
+       "heading": "Even Powers and Tangent–Secant Integrals",
+       "body": [
+        "When both powers of sine and cosine are even, no single factor can be peeled off cleanly, so instead use the power-reducing identities sin²(x) = (1 − cos(2x))/2 and cos²(x) = (1 + cos(2x))/2 to rewrite the integrand in terms of cos(2x), which is easier to integrate directly.",
+        "For ∫tan^m(x)sec^n(x) dx, the identity 1 + tan²(x) = sec²(x) plays the same role sin²+cos²=1 played above: if n is even, peel off sec²(x) dx as your du (since d/dx tan(x) = sec²(x)); if m is odd, peel off sec(x)tan(x) dx as your du (since d/dx sec(x) = sec(x)tan(x))."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "Pythagorean identity", "def": "sin²(x) + cos²(x) = 1, and its variant 1 + tan²(x) = sec²(x), used to rewrite trig integrands before substitution."},
+      {"term": "power-reducing identity", "def": "cos²(x) = (1+cos(2x))/2 and sin²(x) = (1−cos(2x))/2, used when all powers in a trig integral are even."},
+      {"term": "peel-off strategy", "def": "Splitting off one factor of an odd power so the remaining even power can be rewritten via a Pythagorean identity and substituted."}
+     ],
+     "practice": [
+      {"q": "For ∫sin²(x)cos³(x) dx, which substitution strategy applies?", "choices": ["Peel off one cos(x), let u = sin(x)", "Peel off one sin(x), let u = cos(x)", "Use only the power-reducing identity", "No standard technique applies"], "answer": 0, "explain": "cos³(x) is the odd power, so split off cos(x), convert the remaining cos²(x) = 1 − sin²(x), and substitute u = sin(x) since du = cos(x) dx matches the leftover factor."},
+      {"q": "Which identity is used to integrate ∫cos²(x) dx?", "choices": ["cos²(x) = (1+cos(2x))/2", "cos²(x) = 1 − sin²(x)", "cos²(x) = sin(2x)/2", "cos²(x) = 1/sec²(x) only"], "answer": 0, "explain": "With both powers even (cos²(x)sin^0(x)), the power-reducing identity converts it to a directly integrable form: ∫(1+cos(2x))/2 dx."},
+      {"q": "In ∫tan³(x)sec²(x) dx, what is the best substitution?", "choices": ["u = tan(x), since du = sec²(x) dx", "u = sec(x), since du = tan(x) dx", "u = sin(x)", "u = cos(x)"], "answer": 0, "explain": "The derivative of tan(x) is sec²(x), which exactly matches the sec²(x) dx factor present, so u = tan(x) turns the integral into ∫u³ du."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Trigonometric Substitution",
+     "minutes": 20,
+     "intro": "Some integrals hide a right triangle inside a square root — expressions like √(a²−x²), √(a²+x²), or √(x²−a²) resist ordinary substitution but fall apart once you replace x with a trig function chosen to make that root simplify using a Pythagorean identity.",
+     "sections": [
+      {
+       "heading": "Choosing the Right Substitution",
+       "body": [
+        "For √(a² − x²), substitute x = a·sin(θ), which gives a² − x² = a²(1−sin²θ) = a²cos²θ, so the root becomes a·cos(θ). For √(a² + x²), substitute x = a·tan(θ), giving a² + x² = a²sec²θ, so the root becomes a·sec(θ). For √(x² − a²), substitute x = a·sec(θ), giving x² − a² = a²tan²θ, so the root becomes a·tan(θ).",
+        "After substituting, dx must also be replaced (for example dx = a·cos(θ) dθ in the sine case), and the integral is solved entirely in terms of θ. A right triangle labeled with the substitution converts the final θ-based answer back into an expression in x using the triangle's side ratios."
+       ],
+       "example": {
+        "problem": "Evaluate ∫dx/√(9−x²), for −3 < x < 3.",
+        "steps": [
+         "Match the form √(a²−x²) with a = 3, so substitute x = 3sin(θ), dx = 3cos(θ) dθ.",
+         "Then 9 − x² = 9 − 9sin²θ = 9cos²θ, so √(9−x²) = 3cos(θ).",
+         "The integral becomes ∫3cos(θ) dθ / (3cos(θ)) = ∫dθ = θ + C.",
+         "Since sin(θ) = x/3, θ = arcsin(x/3), so the answer is arcsin(x/3) + C."
+        ],
+        "answer": "∫dx/√(9−x²) = arcsin(x/3) + C."
+       }
+      },
+      {
+       "heading": "Converting Back with a Reference Triangle",
+       "body": [
+        "When the final antiderivative involves θ combined with other trig functions (not just θ itself), draw a right triangle with the substitution's ratio labeled on two sides, then use the Pythagorean theorem to find the third side. Reading off sin(θ), cos(θ), tan(θ), or their reciprocals from that triangle converts a θ-based answer back into x without needing an inverse trig identity table.",
+        "For example, if x = 3tan(θ), draw a triangle with opposite side x, adjacent side 3, and hypotenuse √(x²+9); then sec(θ) = √(x²+9)/3 and this ratio substitutes directly wherever sec(θ) appears in the final answer."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "trigonometric substitution", "def": "Replacing x with a·sin(θ), a·tan(θ), or a·sec(θ) to simplify a square root of the form √(a²−x²), √(a²+x²), or √(x²−a²)."},
+      {"term": "reference triangle", "def": "A right triangle labeled from the substitution used to convert a θ-based antiderivative back into an expression in x."}
+     ],
+     "practice": [
+      {"q": "Which substitution is appropriate for ∫dx/√(x²+4)?", "choices": ["x = 2tan(θ)", "x = 2sin(θ)", "x = 2sec(θ)", "x = 4tan(θ)"], "answer": 0, "explain": "The form √(a²+x²) with a=2 calls for x = a·tan(θ) = 2tan(θ), which turns 4+x² into 4sec²(θ) by the Pythagorean identity."},
+      {"q": "After substituting x = 5sin(θ) into √(25−x²), the root simplifies to:", "choices": ["5cos(θ)", "5sin(θ)", "5tan(θ)", "25cos(θ)"], "answer": 0, "explain": "25 − 25sin²θ = 25(1−sin²θ) = 25cos²θ, and its square root is 5cos(θ) (taking the positive root on the relevant interval)."},
+      {"q": "For √(x²−16) with substitution x = 4sec(θ), the root simplifies to:", "choices": ["4tan(θ)", "4sec(θ)", "4sin(θ)", "16tan(θ)"], "answer": 0, "explain": "x²−16 = 16sec²θ − 16 = 16(sec²θ−1) = 16tan²θ, so √(x²−16) = 4tan(θ)."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Integration Techniques II and Improper Integrals",
+   "summary": "Partial fractions round out the integration toolkit, and improper integrals extend integration to infinite intervals and unbounded functions.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Partial Fraction Decomposition",
+     "minutes": 20,
+     "intro": "A rational function's antiderivative is often invisible until you rewrite it as a sum of simpler fractions — a trick that turns one hard integral into several easy ones. Partial fractions is the algebra that makes this decomposition possible whenever the denominator factors.",
+     "sections": [
+      {
+       "heading": "Decomposing with Distinct Linear Factors",
+       "body": [
+        "For a proper rational function (numerator degree less than denominator degree) whose denominator factors into distinct linear factors like (x−a)(x−b), write it as A/(x−a) + B/(x−b) for constants A and B to be determined. Multiply both sides by the original denominator to clear fractions, then solve for A and B either by matching coefficients or by substituting convenient x-values (like x = a and x = b) that make one term vanish.",
+        "Once decomposed, each piece A/(x−a) integrates directly to A·ln|x−a| using the basic log-antiderivative rule, so the entire rational function's antiderivative becomes a sum of logarithms — no further technique needed."
+       ],
+       "example": {
+        "problem": "Evaluate ∫(3x+5)/[(x−1)(x+2)] dx.",
+        "steps": [
+         "Write (3x+5)/[(x−1)(x+2)] = A/(x−1) + B/(x+2).",
+         "Multiply both sides by (x−1)(x+2): 3x+5 = A(x+2) + B(x−1).",
+         "Substitute x = 1: 3(1)+5 = A(3) → 8 = 3A → A = 8/3. Substitute x = −2: 3(−2)+5 = B(−3) → −1 = −3B → B = 1/3.",
+         "Integrate each term: ∫[8/3/(x−1) + 1/3/(x+2)] dx = (8/3)ln|x−1| + (1/3)ln|x+2| + C."
+        ],
+        "answer": "∫(3x+5)/[(x−1)(x+2)] dx = (8/3)ln|x−1| + (1/3)ln|x+2| + C."
+       }
+      },
+      {
+       "heading": "Repeated and Irreducible Quadratic Factors",
+       "body": [
+        "A repeated linear factor (x−a)² requires two terms in the decomposition, A/(x−a) + B/(x−a)², since a single term can't capture all the behavior near the repeated root. An irreducible quadratic factor (one that doesn't factor over the reals, like x²+1) requires a term of the form (Cx+D)/(x²+1) rather than a constant numerator, because the numerator's degree must stay one less than the denominator's.",
+        "If the original rational function is improper (numerator degree ≥ denominator degree), perform polynomial long division first to separate out a polynomial part, leaving a proper remainder fraction that partial fractions can then handle."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "partial fraction decomposition", "def": "Rewriting a rational function as a sum of simpler fractions with linear or irreducible quadratic denominators, each easy to integrate individually."},
+      {"term": "proper rational function", "def": "A rational function whose numerator has lower degree than its denominator; decomposition applies directly only to these."},
+      {"term": "irreducible quadratic factor", "def": "A quadratic denominator factor with no real roots (like x²+1), requiring a linear numerator (Cx+D) in its partial fraction term."}
+     ],
+     "practice": [
+      {"q": "For (2x+1)/[(x−3)(x+1)], the decomposition takes the form:", "choices": ["A/(x−3) + B/(x+1)", "A/(x−3)²", "(Ax+B)/[(x−3)(x+1)]", "A/(x−3) + B/(x+1)²"], "answer": 0, "explain": "Two distinct linear factors each get their own constant-numerator term: A/(x−3) + B/(x+1)."},
+      {"q": "For 5/(x−2)², the correct decomposition setup is:", "choices": ["A/(x−2) + B/(x−2)²", "A/(x−2)", "A/(x−2)² only", "(Ax+B)/(x−2)²"], "answer": 0, "explain": "A repeated linear factor needs one term for each power up to the repetition: A/(x−2) + B/(x−2)²."},
+      {"q": "For 1/[x(x²+4)], which setup is correct?", "choices": ["A/x + (Bx+C)/(x²+4)", "A/x + B/(x²+4)", "(Ax+B)/x + C/(x²+4)", "A/x²+4"], "answer": 0, "explain": "The irreducible quadratic x²+4 requires a linear numerator Bx+C, while the linear factor x gets a constant numerator A."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Improper Integrals",
+     "minutes": 18,
+     "intro": "Not every integral has finite bounds and a bounded integrand — sometimes you need the area under a curve stretching to infinity, or under a curve that blows up at a point. Improper integrals handle both cases by rewriting the integral as a limit, and that limit either exists (convergence) or it doesn't (divergence).",
+     "sections": [
+      {
+       "heading": "Infinite Limits of Integration",
+       "body": [
+        "For ∫[a,∞) f(x) dx, define the improper integral as lim(t→∞) ∫[a,t] f(x) dx. Compute the ordinary definite integral in terms of t, then take the limit as t → ∞. If the limit is a finite number, the integral **converges** to that value; if the limit is infinite or doesn't exist, the integral **diverges**.",
+        "The same idea applies to ∫(−∞,b] f(x) dx using lim(t→−∞), and to ∫(−∞,∞) f(x) dx by splitting it at any point c into ∫(−∞,c] + ∫[c,∞) and requiring both pieces to converge independently."
+       ],
+       "example": {
+        "problem": "Determine whether ∫[1,∞) 1/x² dx converges, and if so, find its value.",
+        "steps": [
+         "Rewrite as a limit: lim(t→∞) ∫[1,t] x^(−2) dx.",
+         "Compute the antiderivative: ∫x^(−2) dx = −x^(−1), so ∫[1,t] x^(−2) dx = [−1/x] from 1 to t = −1/t − (−1/1) = 1 − 1/t.",
+         "Take the limit as t → ∞: 1/t → 0, so the expression approaches 1 − 0 = 1.",
+         "Since the limit is finite, the integral converges to 1."
+        ],
+        "answer": "∫[1,∞) 1/x² dx = 1 (converges)."
+       }
+      },
+      {
+       "heading": "Unbounded Integrands",
+       "body": [
+        "When f(x) is unbounded at an endpoint of the interval — for instance 1/√x near x = 0 — rewrite the integral as a limit approaching that endpoint from inside the interval: ∫[0,b] f(x) dx = lim(t→0⁺) ∫[t,b] f(x) dx. If the function is unbounded at an interior point c, split the integral at c and require both one-sided limits to converge.",
+        "A useful benchmark is the p-integral ∫[1,∞) 1/x^p dx, which converges exactly when p > 1 and diverges when p ≤ 1; the analogous ∫[0,1] 1/x^p dx (unbounded at 0) converges exactly when p < 1. These benchmarks are the basis for the comparison test used later with infinite series."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "improper integral", "def": "An integral with an infinite limit of integration or an unbounded integrand, evaluated as a limit of proper integrals."},
+      {"term": "convergent", "def": "Describes an improper integral whose defining limit exists and is finite."},
+      {"term": "divergent", "def": "Describes an improper integral whose defining limit is infinite or fails to exist."},
+      {"term": "p-integral", "def": "∫[1,∞) 1/x^p dx, which converges for p > 1 and diverges for p ≤ 1 — a standard benchmark for comparison."}
+     ],
+     "practice": [
+      {"q": "∫[1,∞) 1/x dx (p = 1) does what?", "choices": ["Diverges", "Converges to 1", "Converges to 0", "Converges to ln(1)"], "answer": 0, "explain": "The p-integral converges only when p > 1; at p = 1 the antiderivative is ln(t), which grows without bound as t → ∞, so the integral diverges."},
+      {"q": "To evaluate ∫[0,4] 1/√x dx, which is unbounded at x = 0, the correct setup is:", "choices": ["lim(t→0⁺) ∫[t,4] x^(−1/2) dx", "lim(t→4) ∫[0,t] x^(−1/2) dx", "∫[0,4] x^(−1/2) dx directly, no limit needed", "lim(t→∞) ∫[0,4] x^(−1/2) dx"], "answer": 0, "explain": "Since the integrand is unbounded at the lower limit x=0, you approach that endpoint with a limit from inside the interval: t → 0⁺."},
+      {"q": "∫[1,∞) 1/x³ dx converges because:", "choices": ["p = 3 > 1", "p = 3 < 1", "the integrand is bounded", "all improper integrals converge"], "answer": 0, "explain": "By the p-integral rule, ∫[1,∞)1/x^p dx converges exactly when p > 1, and here p = 3 satisfies that."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Applications of Integration",
+   "summary": "Definite integrals measure arc length, surface area, and work, and generate solids of revolution via shells and washers.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Arc Length and Surface Area",
+     "minutes": 18,
+     "intro": "A curve's true length isn't the straight-line distance between its endpoints — it's the sum of infinitely many tiny straight segments that hug the curve's actual shape. That accumulation is exactly what a definite integral computes, and the same idea extends to the surface area swept out when a curve revolves around an axis.",
+     "sections": [
+      {
+       "heading": "The Arc Length Formula",
+       "body": [
+        "For a smooth curve y = f(x) on [a,b], the arc length is L = ∫[a,b] √(1 + [f'(x)]²) dx. This comes from approximating the curve with straight segments of length √(Δx² + Δy²) = Δx·√(1+(Δy/Δx)²), then taking the limit as the segments shrink so Δy/Δx becomes f'(x).",
+        "The formula demands computing f'(x), squaring it, adding 1, and integrating the square root of the result — a computation that's often messy by hand, which is why arc length problems in this course are chosen so the expression under the root simplifies to a perfect square."
+       ],
+       "example": {
+        "problem": "Find the arc length of y = (2/3)x^(3/2) from x = 0 to x = 3.",
+        "steps": [
+         "Compute the derivative: f'(x) = (2/3)·(3/2)x^(1/2) = x^(1/2), so [f'(x)]² = x.",
+         "Set up the integral: L = ∫[0,3] √(1+x) dx.",
+         "Let u = 1+x, du = dx; when x=0, u=1; when x=3, u=4. So L = ∫[1,4] √u du = [ (2/3)u^(3/2) ] from 1 to 4.",
+         "Evaluate: (2/3)(4^(3/2)) − (2/3)(1^(3/2)) = (2/3)(8) − (2/3)(1) = 16/3 − 2/3 = 14/3."
+        ],
+        "answer": "The arc length is 14/3."
+       }
+      },
+      {
+       "heading": "Surface Area of Revolution",
+       "body": [
+        "When y = f(x) on [a,b] revolves around the x-axis, the surface area swept out is S = ∫[a,b] 2π f(x)√(1+[f'(x)]²) dx. Each thin band of the surface is approximated as a frustum with circumference 2πf(x) and slant length matching the arc length element √(1+[f'(x)]²) dx, and the integral sums all these bands.",
+        "The formula reuses the same √(1+[f'(x)]²) factor from arc length, so any curve whose arc length integral simplifies nicely will usually have a workable surface area integral too — it's worth computing the arc length integrand first as a warm-up."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "arc length", "def": "The length of a curve, computed as L = ∫√(1+[f'(x)]²) dx over the relevant interval."},
+      {"term": "surface of revolution", "def": "The surface generated by revolving a curve around an axis, with area S = ∫2πf(x)√(1+[f'(x)]²) dx."},
+      {"term": "frustum", "def": "A truncated cone shape used to approximate a thin band of a surface of revolution when deriving the surface area formula."}
+     ],
+     "practice": [
+      {"q": "The arc length formula L = ∫√(1+[f'(x)]²) dx comes from approximating the curve with:", "choices": ["Straight line segments via the Pythagorean theorem", "Circular arcs", "Rectangles", "Trapezoids only"], "answer": 0, "explain": "Each tiny piece of curve is approximated as a straight segment with legs Δx and Δy, and the Pythagorean theorem gives its length √(Δx²+Δy²), which becomes the integrand after factoring out Δx."},
+      {"q": "For y = x² from x=0 to x=1, the arc length integrand √(1+[f'(x)]²) equals:", "choices": ["√(1+4x²)", "√(1+2x)", "√(1+x⁴)", "√(1+x²)"], "answer": 0, "explain": "f'(x) = 2x, so [f'(x)]² = 4x², giving the integrand √(1+4x²)."},
+      {"q": "The surface area of revolution formula includes which extra factor compared to the arc length formula?", "choices": ["2πf(x)", "π only", "f(x) squared", "No extra factor"], "answer": 0, "explain": "Surface area multiplies the arc length element by the circumference 2πf(x) of the circular band being swept out at that point."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Volumes by Shells",
+     "minutes": 17,
+     "intro": "Washers slice a solid of revolution perpendicular to the axis; shells wrap around it in cylindrical layers instead. When a region is easier to describe as a function of the axis you're revolving around than perpendicular to it, the shell method turns an awkward washer setup into a clean, direct integral.",
+     "sections": [
+      {
+       "heading": "The Shell Method Formula",
+       "body": [
+        "When a region bounded by y = f(x), the x-axis, x = a, and x = b (with 0 ≤ a < b) is revolved around the y-axis, the volume is V = ∫[a,b] 2πx·f(x) dx. Each thin vertical strip at position x, when revolved, sweeps out a cylindrical shell of radius x, height f(x), and infinitesimal thickness dx, contributing volume 2πx·f(x) dx (circumference × height × thickness).",
+        "The shell method is the natural choice whenever revolving around a vertical axis while the region is described in terms of x (so no need to solve for x as a function of y, which washers would require)."
+       ],
+       "example": {
+        "problem": "Use shells to find the volume when the region bounded by y = x² , x = 0, x = 2, and the x-axis is revolved around the y-axis.",
+        "steps": [
+         "Identify the shell radius as x and shell height as f(x) = x²; the setup is V = ∫[0,2] 2πx·x² dx.",
+         "Simplify the integrand: 2πx³.",
+         "Integrate: ∫[0,2] 2πx³ dx = 2π[x⁴/4] from 0 to 2 = 2π(16/4 − 0) = 2π(4).",
+         "Simplify: V = 8π."
+        ],
+        "answer": "The volume is 8π cubic units."
+       }
+      },
+      {
+       "heading": "Choosing Between Shells and Washers",
+       "body": [
+        "Use washers when the region naturally slices into disks perpendicular to the axis of revolution — typically when the axis matches the variable you're already integrating with respect to. Use shells when that slicing would require awkwardly solving for the other variable; shells let you integrate with respect to the variable that's already convenient.",
+        "As a rule of thumb: revolving around a vertical axis while the boundary is given as y = f(x) usually favors shells (integrate dx directly); revolving around a horizontal axis with the same boundary usually favors washers after solving for x = g(y), or vice versa depending on which axis is used."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "shell method", "def": "Computing a solid of revolution's volume by summing cylindrical shells: V = ∫2πx·f(x) dx (or the analogous form in y)."},
+      {"term": "washer method", "def": "Computing a solid of revolution's volume by summing disks with holes, V = π∫[R(x)² − r(x)²] dx, slicing perpendicular to the axis."}
+     ],
+     "practice": [
+      {"q": "The shell method formula V = ∫2πx·f(x) dx represents which quantity as the integrand?", "choices": ["Circumference times height times thickness of a cylindrical shell", "Area of a circular disk", "Area of a washer (disk with a hole)", "Arc length of the boundary curve"], "answer": 0, "explain": "2πx is the shell's circumference at radius x, f(x) is its height, and dx is the infinitesimal thickness — their product is the shell's volume element."},
+      {"q": "Revolving y = x² from x=0 to x=1 around the y-axis is best set up with:", "choices": ["Shells: V = ∫2πx·x² dx", "Washers directly in x without solving for x = √y", "No integral is needed", "Arc length formula"], "answer": 0, "explain": "The region is naturally described as a function of x, and the axis is vertical (the y-axis), so shells let you integrate directly in x without solving for x(y)."},
+      {"q": "In the shell method, what does the radius x represent geometrically?", "choices": ["Distance from the axis of revolution to the shell", "The shell's height", "The shell's thickness", "The total volume"], "answer": 0, "explain": "x is the horizontal distance from the vertical axis of revolution to the thin vertical strip being revolved, which becomes the shell's radius."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Sequences and Series",
+   "summary": "Infinite sequences and series, and the core convergence tests that determine whether an infinite sum settles on a finite value.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Sequences and Convergence",
+     "minutes": 15,
+     "intro": "A sequence is just an infinite ordered list of numbers, but the question that matters for calculus is what happens far out in that list — does it settle down and approach a single number, or does it wander or blow up forever? That single question, convergence, is the foundation for everything in this unit.",
+     "sections": [
+      {
+       "heading": "Defining Convergence",
+       "body": [
+        "A sequence {a_n} converges to a limit L if lim(n→∞) a_n = L, meaning the terms get arbitrarily close to L as n grows large; if no such L exists, the sequence diverges. Many sequence limits can be evaluated using the same techniques as function limits, by treating n as a continuous variable and applying limit laws, L'Hôpital's rule, or known limits like lim(n→∞) (1/n) = 0.",
+        "A sequence is **monotonic** if its terms are always increasing or always decreasing, and **bounded** if all its terms lie between some fixed lower and upper value. The Monotonic Sequence Theorem states that every bounded, monotonic sequence converges — a powerful existence result even when the exact limit is hard to compute directly."
+       ],
+       "example": {
+        "problem": "Determine whether the sequence a_n = (3n² + 1)/(n² + 2n) converges, and if so, find its limit.",
+        "steps": [
+         "Divide numerator and denominator by the highest power of n present, n²: a_n = (3 + 1/n²)/(1 + 2/n).",
+         "As n → ∞, 1/n² → 0 and 2/n → 0.",
+         "The expression approaches (3 + 0)/(1 + 0) = 3.",
+         "Since the limit is finite, the sequence converges to 3."
+        ],
+        "answer": "The sequence converges to 3."
+       }
+      },
+      {
+       "heading": "Common Sequence Behaviors",
+       "body": [
+        "The sequence a_n = r^n converges to 0 if |r| < 1, converges to 1 if r = 1, and diverges for all other values of r (including oscillating without settling when r = −1, and growing without bound when r > 1 or r < −1). This single fact underlies the geometric series test covered later in this unit.",
+        "Factorial growth (n!) eventually outpaces exponential growth (r^n for fixed r), which in turn outpaces polynomial growth (n^k), which outpaces logarithmic growth (ln n) — a growth-rate hierarchy worth memorizing, since it resolves many sequence and series limits by inspection."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "convergent sequence", "def": "A sequence {a_n} for which lim(n→∞) a_n exists and is finite."},
+      {"term": "monotonic sequence", "def": "A sequence whose terms are always non-decreasing or always non-increasing."},
+      {"term": "Monotonic Sequence Theorem", "def": "Every bounded, monotonic sequence of real numbers converges."}
+     ],
+     "practice": [
+      {"q": "The sequence a_n = (−1)^n does what as n → ∞?", "choices": ["Diverges (oscillates between −1 and 1)", "Converges to 0", "Converges to 1", "Converges to −1"], "answer": 0, "explain": "The terms alternate forever between −1 and 1 without settling on a single value, so the sequence has no limit and diverges."},
+      {"q": "For a_n = 5^n/n!, what happens as n → ∞?", "choices": ["Converges to 0, since factorial growth outpaces exponential growth", "Diverges to infinity", "Converges to 5", "Converges to 1"], "answer": 0, "explain": "Factorial growth eventually dominates any fixed exponential base, so the ratio shrinks toward 0 no matter how large the base 5 is."},
+      {"q": "a_n = (2n+1)/(4n−3) converges to:", "choices": ["1/2", "2", "1/4", "It diverges"], "answer": 0, "explain": "Dividing numerator and denominator by n gives (2+1/n)/(4−3/n), which approaches 2/4 = 1/2 as n → ∞."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Infinite Series and the Geometric Series",
+     "minutes": 16,
+     "intro": "An infinite series is what you get when you try to add up every term of a sequence, forever. Remarkably, some of these infinite sums do add up to a specific finite number, and the geometric series is the one case where you can find that exact number with a simple formula rather than a convergence test.",
+     "sections": [
+      {
+       "heading": "Partial Sums and Convergence of a Series",
+       "body": [
+        "The n-th partial sum S_n = a_1 + a_2 + ... + a_n is the sum of the first n terms of the series. The infinite series Σa_n converges to S if lim(n→∞) S_n = S, and diverges otherwise. A necessary (but not sufficient) condition for convergence is that lim(n→∞) a_n = 0 — if the terms themselves don't shrink to zero, the series cannot converge, which is called the **Divergence Test**.",
+        "The Divergence Test only rules series out; it never proves convergence. A series whose terms go to zero can still diverge, as the harmonic series Σ1/n famously demonstrates — its terms shrink to 0 but the partial sums grow without bound."
+       ]
+      },
+      {
+       "heading": "The Geometric Series Formula",
+       "body": [
+        "A geometric series has the form Σ(from n=0 to ∞) a·r^n = a + ar + ar² + ... . It converges if and only if |r| < 1, and when it does, it converges to exactly a/(1−r). If |r| ≥ 1, the series diverges. This is one of the only series types with a closed-form sum, which makes it the benchmark other convergence tests are often compared against.",
+        "Recognizing a geometric series requires spotting a constant ratio between consecutive terms; once identified, convergence and the sum follow immediately from a and r without any additional test."
+       ],
+       "example": {
+        "problem": "Determine whether Σ(from n=0 to ∞) 3(1/4)^n converges, and if so, find its sum.",
+        "steps": [
+         "Identify this as geometric with a = 3 and r = 1/4.",
+         "Check convergence: |r| = 1/4 < 1, so the series converges.",
+         "Apply the sum formula: sum = a/(1−r) = 3/(1 − 1/4) = 3/(3/4).",
+         "Simplify: 3/(3/4) = 3 × 4/3 = 4."
+        ],
+        "answer": "The series converges to 4."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "partial sum", "def": "S_n = a_1+a_2+...+a_n, the sum of the first n terms of a series; a series converges if lim(n→∞) S_n exists."},
+      {"term": "Divergence Test", "def": "If lim(n→∞) a_n ≠ 0, the series Σa_n diverges; if the limit is 0, the test is inconclusive."},
+      {"term": "geometric series", "def": "Σa·r^n, which converges to a/(1−r) when |r| < 1 and diverges otherwise."}
+     ],
+     "practice": [
+      {"q": "Σ(from n=1 to ∞) 2(1/3)^(n−1) converges to:", "choices": ["3", "2", "1.5", "It diverges"], "answer": 0, "explain": "This is geometric with a = 2, r = 1/3; sum = a/(1−r) = 2/(2/3) = 3."},
+      {"q": "If lim(n→∞) a_n = 5 (not 0), what does the Divergence Test tell you about Σa_n?", "choices": ["The series diverges", "The series converges to 5", "The test is inconclusive", "The series converges to 0"], "answer": 0, "explain": "Since the terms don't shrink to 0, the partial sums cannot settle down, so the series must diverge."},
+      {"q": "Σ(from n=0 to ∞) 4(2)^n does what?", "choices": ["Diverges, since |r| = 2 ≥ 1", "Converges to 4/(1−2) = −4", "Converges to 8", "Converges to 4"], "answer": 0, "explain": "The geometric series formula only applies when |r| < 1; here r = 2, so the series diverges rather than converging to a negative number."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Convergence Tests: Comparison, Ratio, and Root",
+     "minutes": 20,
+     "intro": "Most series aren't geometric, and most don't have a closed-form sum — so the practical question for the majority of series is simply convergent or divergent, answered by one of a handful of standard tests. This lesson covers the three tests that handle the largest share of series you'll encounter: comparison, ratio, and root.",
+     "sections": [
+      {
+       "heading": "The Comparison and Limit Comparison Tests",
+       "body": [
+        "The **Direct Comparison Test** says that if 0 ≤ a_n ≤ b_n for all n and Σb_n converges, then Σa_n also converges; if 0 ≤ b_n ≤ a_n and Σb_n diverges, then Σa_n also diverges. It requires finding a known benchmark series (often a p-series Σ1/n^p or geometric series) that bounds the series in question from above or below.",
+        "The **Limit Comparison Test** avoids the inequality requirement: if lim(n→∞) a_n/b_n = c for some finite c > 0, then Σa_n and Σb_n either both converge or both diverge. This is often easier to apply than direct comparison because you only need the terms' dominant behavior for large n, not an exact inequality for every n."
+       ],
+       "example": {
+        "problem": "Determine whether Σ(from n=1 to ∞) 1/(n²+3) converges, using comparison.",
+        "steps": [
+         "Compare to the benchmark p-series Σ1/n² (p = 2 > 1, which converges).",
+         "Use limit comparison: lim(n→∞) [1/(n²+3)] / [1/n²] = lim(n→∞) n²/(n²+3) = 1 (dividing top and bottom by n²).",
+         "Since the limit is a finite positive number (1) and Σ1/n² converges, the Limit Comparison Test says Σ1/(n²+3) also converges.",
+         "Conclusion: the series converges (its exact sum is not found by this test, only convergence)."
+        ],
+        "answer": "Σ1/(n²+3) converges, by limit comparison to the convergent p-series Σ1/n²."
+       }
+      },
+      {
+       "heading": "The Ratio and Root Tests",
+       "body": [
+        "The **Ratio Test** computes L = lim(n→∞) |a_(n+1)/a_n|. If L < 1, the series converges absolutely; if L > 1 (or L = ∞), it diverges; if L = 1, the test is inconclusive and another method is needed. This test is especially effective for series involving factorials or exponentials, since those forms simplify dramatically under the ratio.",
+        "The **Root Test** computes L = lim(n→∞) |a_n|^(1/n), with the same decision rule as the ratio test (converges if L<1, diverges if L>1, inconclusive if L=1). It's most useful when a_n itself is raised to the n-th power, since that power cancels directly against the n-th root."
+       ],
+       "example": {
+        "problem": "Use the Ratio Test to determine whether Σ(from n=1 to ∞) n!/2^n converges.",
+        "steps": [
+         "Set a_n = n!/2^n, so a_(n+1) = (n+1)!/2^(n+1).",
+         "Form the ratio: a_(n+1)/a_n = [(n+1)!/2^(n+1)] × [2^n/n!] = (n+1)/2.",
+         "Take the limit: lim(n→∞) (n+1)/2 = ∞.",
+         "Since L = ∞ > 1, the series diverges."
+        ],
+        "answer": "Σn!/2^n diverges, by the Ratio Test."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Direct Comparison Test", "def": "If 0≤a_n≤b_n and Σb_n converges, Σa_n converges; if 0≤b_n≤a_n and Σb_n diverges, Σa_n diverges."},
+      {"term": "Limit Comparison Test", "def": "If lim(n→∞) a_n/b_n equals a finite positive constant, Σa_n and Σb_n share the same convergence behavior."},
+      {"term": "Ratio Test", "def": "Computes L=lim|a_(n+1)/a_n|; converges absolutely if L<1, diverges if L>1, inconclusive if L=1."},
+      {"term": "Root Test", "def": "Computes L=lim|a_n|^(1/n), with the same convergence decision rule as the Ratio Test."}
+     ],
+     "practice": [
+      {"q": "Applying the Ratio Test to Σ3^n/n! gives L = lim(n→∞) 3/(n+1). What does this imply?", "choices": ["L = 0 < 1, so the series converges", "L = ∞, so the series diverges", "L = 1, inconclusive", "The test cannot be applied"], "answer": 0, "explain": "As n→∞, 3/(n+1) → 0, and since 0 < 1, the Ratio Test confirms absolute convergence."},
+      {"q": "To test Σ1/(n³+1) for convergence, the best comparison series is:", "choices": ["Σ1/n³, a convergent p-series", "Σ1/n, a divergent p-series", "Σ1/n^(1/2), divergent", "A geometric series with r=1/3"], "answer": 0, "explain": "For large n, 1/(n³+1) behaves like 1/n³, and Σ1/n³ is a p-series with p=3>1, which converges — limit comparison confirms the original series also converges."},
+      {"q": "The Root Test gives L = 1 for a series. What should you conclude?", "choices": ["The test is inconclusive; try a different test", "The series converges", "The series diverges", "The series is geometric"], "answer": 0, "explain": "L=1 is the boundary case for both the Ratio and Root Tests — it provides no information, so a different test (comparison, integral, etc.) is needed."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Power Series and Taylor Series",
+   "summary": "Representing functions as infinite power series, finding their radius and interval of convergence, and building Taylor and Maclaurin series.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Power Series and Radius of Convergence",
+     "minutes": 18,
+     "intro": "A power series is an infinite polynomial — Σc_n(x−a)^n — and unlike a regular series of numbers, it converges or diverges depending on which x-value you plug in. Finding exactly which x-values make it converge is the central computation of this lesson, and the Ratio Test is almost always the tool that gets you there.",
+     "sections": [
+      {
+       "heading": "Radius and Interval of Convergence",
+       "body": [
+        "A power series Σc_n(x−a)^n converges absolutely for |x−a| < R and diverges for |x−a| > R, where R is called the **radius of convergence**; R can be 0 (converges only at x=a), a finite positive number, or ∞ (converges for all x). The **interval of convergence** is the full set of x-values where the series converges, found by testing the two endpoints x = a−R and x = a+R separately, since the Ratio Test is inconclusive exactly at those points.",
+        "To find R, apply the Ratio Test to the series treating x as a variable: compute L = lim(n→∞) |c_(n+1)(x−a)^(n+1)/[c_n(x−a)^n]|, simplify to L = |x−a|·lim|c_(n+1)/c_n|, and solve L < 1 for x. Whatever bound that inequality produces on |x−a| is the radius R."
+       ],
+       "example": {
+        "problem": "Find the radius and interval of convergence of Σ(from n=0 to ∞) (x−2)^n / n!.",
+        "steps": [
+         "Apply the Ratio Test: L = lim(n→∞) |(x−2)^(n+1)/(n+1)!| × |n!/(x−2)^n| = |x−2|·lim(n→∞) 1/(n+1).",
+         "Since lim(n→∞) 1/(n+1) = 0, L = |x−2|·0 = 0 for every x.",
+         "Because L = 0 < 1 regardless of x, the series converges for all real x.",
+         "Radius of convergence: R = ∞; interval of convergence: (−∞, ∞)."
+        ],
+        "answer": "R = ∞, and the series converges for all real numbers."
+       }
+      },
+      {
+       "heading": "Checking the Endpoints",
+       "body": [
+        "When the Ratio Test produces a finite radius R, the inequality L < 1 gives an open interval (a−R, a+R) where convergence is guaranteed, but the two endpoints x = a−R and x = a+R must be checked separately by substituting them directly into the original series and applying a different test (often the alternating series test or a p-series comparison), since the Ratio Test itself gives L = 1 there and proves nothing.",
+        "Each endpoint might converge or diverge independently of the other, so the final interval of convergence can be open, half-open, or closed depending on what those two individual checks reveal — never assume both endpoints behave the same way."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "power series", "def": "A series of the form Σc_n(x−a)^n, functioning as an infinite polynomial centered at x = a."},
+      {"term": "radius of convergence", "def": "The value R such that the power series converges for |x−a|<R and diverges for |x−a|>R."},
+      {"term": "interval of convergence", "def": "The complete set of x-values where a power series converges, including any convergent endpoints of the radius interval."}
+     ],
+     "practice": [
+      {"q": "If the Ratio Test on a power series gives L = |x−3|/2, what is the radius of convergence?", "choices": ["R = 2", "R = 3", "R = 1/2", "R = ∞"], "answer": 0, "explain": "Solving L < 1 gives |x−3|/2 < 1, i.e. |x−3| < 2, so the radius of convergence is R = 2."},
+      {"q": "Why must the endpoints of a power series's convergence interval be checked separately?", "choices": ["The Ratio Test gives L=1 there, which is inconclusive", "Endpoints always diverge", "Endpoints always converge", "The Ratio Test cannot be used on power series at all"], "answer": 0, "explain": "At the two endpoint values, |x−a| = R exactly, making L = 1 in the Ratio Test — the test's inconclusive case — so a separate test is required for each endpoint."},
+      {"q": "A power series with radius of convergence R = 0 means:", "choices": ["The series converges only at x = a", "The series converges for all x", "The series never converges, even at x = a", "The series is geometric"], "answer": 0, "explain": "R = 0 means the interval where convergence is guaranteed by the ratio test shrinks to a single point, x = a, where every power series trivially converges (all terms beyond the constant vanish)."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Taylor and Maclaurin Series",
+     "minutes": 20,
+     "intro": "If a function can be represented as a power series at all, that series is forced to have a very specific form: its coefficients come directly from the function's own derivatives at the center point. This is the Taylor series, and it's the tool that lets you approximate transcendental functions like e^x or sin(x) with pure polynomial arithmetic.",
+     "sections": [
+      {
+       "heading": "Building the Taylor Series Formula",
+       "body": [
+        "The **Taylor series** of f(x) centered at x = a is Σ(from n=0 to ∞) [f^(n)(a)/n!]·(x−a)^n, where f^(n)(a) denotes the n-th derivative of f evaluated at a. Each coefficient f^(n)(a)/n! is chosen precisely so that the series and all of its derivatives match f and its derivatives at x = a — a condition that pins down the coefficients uniquely.",
+        "A **Maclaurin series** is simply a Taylor series centered at a = 0, and it's the version used most often in practice because the derivatives are usually simplest to evaluate right at zero. The most important Maclaurin series to memorize are e^x = Σx^n/n!, sin(x) = Σ(−1)^n x^(2n+1)/(2n+1)!, cos(x) = Σ(−1)^n x^(2n)/(2n)!, and 1/(1−x) = Σx^n (for |x|<1)."
+       ],
+       "example": {
+        "problem": "Find the first three nonzero terms of the Maclaurin series for f(x) = e^x, and use it to approximate e^(0.1).",
+        "steps": [
+         "Since every derivative of e^x is e^x, and e^0 = 1, every coefficient f^(n)(0)/n! equals 1/n!.",
+         "The series is Σx^n/n! = 1 + x + x²/2! + x³/3! + ... ; the first three terms are 1, x, x²/2.",
+         "Substitute x = 0.1: 1 + 0.1 + (0.1)²/2 = 1 + 0.1 + 0.01/2 = 1 + 0.1 + 0.005.",
+         "Add the terms: 1 + 0.1 + 0.005 = 1.105."
+        ],
+        "answer": "e^(0.1) ≈ 1.105 (the true value is approximately 1.10517)."
+       }
+      },
+      {
+       "heading": "Using Taylor Series for Limits and New Series",
+       "body": [
+        "Known Maclaurin series can be substituted, added, multiplied, or divided term by term to generate new series without recomputing derivatives from scratch — for instance, replacing x with x² in the series for e^x immediately gives the series for e^(x²). This algebraic manipulation is usually far faster than differentiating a composite function repeatedly.",
+        "Taylor series also resolve limits that would otherwise require L'Hôpital's rule multiple times: substitute the series for each function into the limit expression, cancel the leading terms that create the indeterminate form, and read off the limit from what remains as x → 0 (or whatever the limit point is)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "Taylor series", "def": "Σ[f^(n)(a)/n!](x−a)^n, a power series representation of f built from its derivatives at x=a."},
+      {"term": "Maclaurin series", "def": "A Taylor series centered at a=0; includes the standard series for e^x, sin(x), cos(x), and 1/(1−x)."},
+      {"term": "n-th derivative", "def": "f^(n)(a), the function differentiated n times and then evaluated at x=a; the building block of each Taylor coefficient."}
+     ],
+     "practice": [
+      {"q": "The Maclaurin series for cos(x) is obtained by:", "choices": ["Evaluating derivatives of cos(x) at x=0, giving Σ(−1)^n x^(2n)/(2n)!", "Integrating the series for sin(x) term by term with no sign change", "Setting a = 1 in the Taylor formula", "Using only the first derivative of cos(x)"], "answer": 0, "explain": "The cosine derivatives cycle through cos, −sin, −cos, sin at x=0 giving 1,0,−1,0,..., which produces exactly the even-power alternating series Σ(−1)^n x^(2n)/(2n)!."},
+      {"q": "To find the Maclaurin series for e^(−x²), the fastest method is:", "choices": ["Substitute −x² for x in the known series for e^x", "Differentiate e^(−x²) infinitely many times directly", "It cannot be found from the e^x series", "Use the series for sin(x) instead"], "answer": 0, "explain": "Since e^u = Σu^n/n! for any u, substituting u = −x² immediately gives Σ(−x²)^n/n! = Σ(−1)^n x^(2n)/n! without any new differentiation."},
+      {"q": "A Taylor series centered at a = 0 is specifically called a:", "choices": ["Maclaurin series", "Geometric series", "Harmonic series", "p-series"], "answer": 0, "explain": "By definition, a Maclaurin series is simply the special case of a Taylor series where the center a is 0."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Parametric Equations and Polar Coordinates",
+   "summary": "Curves defined by a parameter and by polar coordinates, including calculus operations like slope, area, and arc length in each system.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Parametric Equations and Their Calculus",
+     "minutes": 17,
+     "intro": "Some curves, like a circle or the path of a thrown ball, aren't naturally written as y = f(x) — they trace out x and y both as functions of a third variable, the parameter. Parametric equations describe these curves directly, and calculus on them requires a small but important adjustment to the usual derivative and arc length formulas.",
+     "sections": [
+      {
+       "heading": "Slope of a Parametric Curve",
+       "body": [
+        "A curve given parametrically as x = f(t), y = g(t) has slope dy/dx = (dy/dt)/(dx/dt) = g'(t)/f'(t), found by the chain rule applied in reverse: since dy/dt = (dy/dx)(dx/dt), dividing both sides by dx/dt isolates dy/dx. This works at any t where f'(t) ≠ 0.",
+        "The second derivative d²y/dx² for a parametric curve is not simply the derivative of g'(t)/f'(t) with respect to t — it requires computing d/dt[dy/dx] and then dividing that result by dx/dt again, since d²y/dx² still needs to end up as a derivative with respect to x, not t."
+       ],
+       "example": {
+        "problem": "Find dy/dx for the curve x = t² − 1, y = t³ − t, at t = 2.",
+        "steps": [
+         "Compute dx/dt = 2t and dy/dt = 3t² − 1.",
+         "Form the slope: dy/dx = (3t²−1)/(2t).",
+         "Substitute t = 2: dy/dx = (3(4)−1)/(2(2)) = (12−1)/4 = 11/4.",
+         "So the slope of the curve at t=2 is 11/4."
+        ],
+        "answer": "dy/dx = 11/4 at t = 2."
+       }
+      },
+      {
+       "heading": "Arc Length of a Parametric Curve",
+       "body": [
+        "For x = f(t), y = g(t) with t ranging over [α, β], the arc length is L = ∫[α,β] √([f'(t)]² + [g'(t)]²) dt, the direct parametric analogue of the Cartesian arc length formula, since (dx)² + (dy)² factors as [(dx/dt)² + (dy/dt)²]dt² under the parametrization.",
+        "This formula is especially useful for curves like circles and ellipses that are awkward or impossible to write as a single function y = f(x), since parametrizing with trigonometric functions (x = r·cos(t), y = r·sin(t) for a circle) sidesteps that difficulty entirely."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "parametric equations", "def": "A pair x=f(t), y=g(t) describing a curve's coordinates as functions of a parameter t rather than as y=f(x) directly."},
+      {"term": "parametric slope", "def": "dy/dx = (dy/dt)/(dx/dt) = g'(t)/f'(t), the derivative of a parametrically defined curve."}
+     ],
+     "practice": [
+      {"q": "For x = 3t, y = t², dy/dx equals:", "choices": ["2t/3", "3/2t", "2t", "6t"], "answer": 0, "explain": "dx/dt = 3 and dy/dt = 2t, so dy/dx = (dy/dt)/(dx/dt) = 2t/3."},
+      {"q": "The parametric arc length formula L = ∫√([f'(t)]²+[g'(t)]²) dt is the analogue of which Cartesian formula?", "choices": ["L = ∫√(1+[f'(x)]²) dx", "The shell method formula", "The disk method formula", "The Taylor series formula"], "answer": 0, "explain": "Both formulas measure the same accumulated straight-line-segment length; the parametric version keeps both dx/dt and dy/dt explicit instead of collapsing them into a single f'(x)."},
+      {"q": "Why is a circle often given parametrically rather than as y=f(x)?", "choices": ["A circle is not a function of x over its full domain (fails the vertical line test)", "Circles have no derivative", "Parametric equations are always simpler for every curve", "y=f(x) cannot describe curved shapes at all"], "answer": 0, "explain": "A full circle has two y-values for most x-values, so it isn't a single function y=f(x); parametrizing with x=r cos(t), y=r sin(t) avoids that problem entirely."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Polar Coordinates and Polar Area",
+     "minutes": 18,
+     "intro": "Polar coordinates locate a point by its distance from the origin and its angle from the positive x-axis rather than by horizontal and vertical distances — a system that turns spirals, roses, and circles centered at the origin into remarkably simple equations, and requires its own version of the area formula.",
+     "sections": [
+      {
+       "heading": "Converting Between Polar and Rectangular",
+       "body": [
+        "A point with polar coordinates (r, θ) converts to rectangular coordinates via x = r·cos(θ) and y = r·sin(θ). Conversely, rectangular (x,y) converts to polar via r = √(x²+y²) and θ = arctan(y/x) (adjusted by quadrant, since arctan alone only returns angles in a limited range).",
+        "Many curves have a dramatically simpler equation in one system than the other: a circle centered at the origin is x²+y²=a² in rectangular form but simply r=a in polar form, while a straight line through the origin at angle θ_0 is θ=θ_0 in polar form."
+       ]
+      },
+      {
+       "heading": "Area Enclosed by a Polar Curve",
+       "body": [
+        "The area enclosed by a polar curve r = f(θ) between angles θ=α and θ=β is A = (1/2)∫[α,β] [f(θ)]² dθ, derived by summing the areas of infinitesimally thin circular sectors, each with area (1/2)r²dθ (the sector-area formula scaled to an infinitesimal angle).",
+        "Care is needed with curves that pass through the origin (r=0) or trace out overlapping loops (like a rose curve), since the correct bounds α and β must trace the specific region once, not double-count a loop or include an unwanted region — sketching the curve first is strongly recommended before setting up the integral."
+       ],
+       "example": {
+        "problem": "Find the area enclosed by one petal of the rose r = 2cos(2θ), where the petal spans θ from −π/4 to π/4.",
+        "steps": [
+         "Apply the polar area formula: A = (1/2)∫[−π/4, π/4] [2cos(2θ)]² dθ.",
+         "Expand the integrand: [2cos(2θ)]² = 4cos²(2θ). Use cos²(u) = (1+cos(2u))/2 with u=2θ: 4·(1+cos(4θ))/2 = 2 + 2cos(4θ).",
+         "Integrate: (1/2)∫[−π/4,π/4] (2+2cos(4θ)) dθ = (1/2)[2θ + (1/2)sin(4θ)] from −π/4 to π/4.",
+         "Evaluate: at θ=π/4, 2(π/4)+(1/2)sin(π) = π/2 + 0. At θ=−π/4, 2(−π/4)+(1/2)sin(−π) = −π/2 + 0. Difference: π/2−(−π/2)=π. Multiply by 1/2: A = π/2."
+        ],
+        "answer": "The area of one petal is π/2 square units."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "polar coordinates", "def": "A coordinate system locating points by distance r from the origin and angle θ from the positive x-axis."},
+      {"term": "polar area formula", "def": "A = (1/2)∫[f(θ)]² dθ, giving the area enclosed by a polar curve r=f(θ) between two angles."},
+      {"term": "rose curve", "def": "A polar curve of the form r=a·cos(nθ) or r=a·sin(nθ) that traces petal-shaped loops through the origin."}
+     ],
+     "practice": [
+      {"q": "The rectangular point (0, 5) corresponds to which polar coordinates?", "choices": ["r=5, θ=π/2", "r=5, θ=0", "r=0, θ=5", "r=5, θ=π"], "answer": 0, "explain": "The point lies straight up the y-axis at distance 5 from the origin, which is angle θ=π/2 with r=5."},
+      {"q": "The polar area formula A=(1/2)∫[f(θ)]² dθ is derived from summing:", "choices": ["Infinitesimally thin circular sectors", "Rectangular strips", "Cylindrical shells", "Trapezoids under a curve"], "answer": 0, "explain": "Each thin angular slice of a polar region is approximately a circular sector with area (1/2)r²dθ, and the integral sums these sectors continuously."},
+      {"q": "Why should you sketch a polar curve before computing its enclosed area?", "choices": ["To identify the correct angle bounds and avoid double-counting overlapping loops", "Because the formula does not exist otherwise", "Polar curves cannot be integrated", "To convert it to rectangular form first, which is required"], "answer": 0, "explain": "Curves like roses can retrace the same region or pass through the origin multiple times, so a sketch prevents choosing angle bounds that double-count area or omit part of the region."}
+     ]
+    }
+   ]
+  }
+ ]
+}

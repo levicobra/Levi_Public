@@ -1,0 +1,744 @@
+{
+  "id": "study-skills",
+  "title": "Learning How to Learn",
+  "domain": "success",
+  "level": "All levels",
+  "description": "A practical, evidence-based course in how memory, attention, and practice actually work, so studying stops being a guessing game. You'll learn why some study habits feel productive without building real memory, and replace them with methods backed by cognitive science research.",
+  "outcomes": [
+    "You can explain why rereading and highlighting create an illusion of learning without building durable memory.",
+    "You can design a spaced-repetition schedule for any material you need to remember long-term.",
+    "You can use active recall techniques, self-testing, the Feynman technique, and practice problems, instead of passive review.",
+    "You can build a distraction-resistant study environment and a focus routine you can sustain across a semester.",
+    "You can diagnose which of your current study habits are working and replace the ones that aren't with a method matched to the material."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "How Memory Actually Works",
+      "summary": "The three-stage memory system, why working memory is so limited, and why some study techniques feel effective but leave almost nothing behind.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Sensory Memory, Working Memory, and Long-Term Memory",
+          "minutes": 14,
+          "intro": "Every study technique you'll ever use is really a way of getting information past two narrow bottlenecks and into long-term storage. Understanding those bottlenecks explains why some methods work and others quietly waste your time.",
+          "sections": [
+            {
+              "heading": "The Three-Stage Model",
+              "body": [
+                "Memory is often described as three connected stages. Sensory memory holds raw input, what you just saw or heard, for a fraction of a second, just long enough to notice it. Working memory holds a small amount of information actively in mind, roughly four meaningful chunks at a time, and loses it within seconds unless you actively rehearse it.",
+                "Long-term memory is the durable, effectively unlimited store that survives once information is properly encoded there. The entire challenge of studying is getting material to cross from the fragile, limited stages into that durable one, which doesn't happen automatically just because you looked at it."
+              ]
+            },
+            {
+              "heading": "Working Memory's Bottleneck",
+              "body": [
+                "Working memory's limit isn't measured in digits or words, it's measured in chunks, meaningful units regardless of size. A phone number as ten separate digits is hard to hold, but grouped into three chunks (area code, prefix, line number) it becomes manageable, because the brain is juggling three things instead of ten.",
+                "This is why cramming unfamiliar material into large blocks fails: unfamiliar information can't yet be grouped into larger chunks, so it floods working memory before it ever gets a chance to be encoded into long-term storage."
+              ],
+              "example": {
+                "problem": "You need to briefly remember the digit sequence 4 7 1 9 2 6 3 8 long enough to dial it. Held as 8 separate digits, this exceeds working memory's typical capacity of about 4 chunks. How can chunking make it manageable?",
+                "steps": [
+                  "Group the 8 digits into pairs or triplets: 471-926-38, or alternatively 47-19-26-38.",
+                  "Say or think each chunk as a single unit, not as separate digits.",
+                  "Rehearse the sequence chunk by chunk, in order, rather than digit by digit."
+                ],
+                "answer": "Grouping 8 digits into 3 to 4 chunks brings the task within working memory's actual capacity, which is about 4 chunks of information, not 4 digits, making the sequence far easier to hold briefly in mind."
+              }
+            },
+            {
+              "heading": "Why Encoding Determines What Sticks",
+              "body": [
+                "Not all processing of information leads to the same quality of memory. Shallow processing, noticing only what a word looks or sounds like, produces weak, short-lived traces. Deep processing, thinking about what something means and how it connects to what you already know, produces much stronger, longer-lasting memory.",
+                "This is why simply looking at a term's definition rarely sticks, while relating that term to a real example, or explaining why it matters, does. The depth of thinking about material, not the amount of time spent looking at it, is what predicts whether it survives."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Sensory memory", "def": "The briefest stage of memory, holding raw sensory input for a fraction of a second."},
+            {"term": "Working memory", "def": "The active, limited-capacity stage holding roughly four chunks of information for seconds without rehearsal."},
+            {"term": "Long-term memory", "def": "The durable, effectively unlimited memory store that material must be properly encoded into to survive."},
+            {"term": "Chunking", "def": "Grouping individual pieces of information into larger meaningful units to fit within working memory's limits."},
+            {"term": "Levels of processing", "def": "The idea that deeper, meaning-based processing of information produces stronger memory than shallow, surface-level processing."}
+          ],
+          "practice": [
+            {
+              "q": "Why is a ten-digit phone number easier to remember when grouped as 808-345-2201 than as ten separate digits?",
+              "choices": ["Because grouped numbers are mathematically smaller", "Because chunking reduces the number of separate units working memory has to hold, even though the total digit count is the same", "Because dashes are easier for the eye to read", "Because long-term memory only stores grouped numbers"],
+              "answer": 1,
+              "explain": "Working memory's limit is about the number of chunks, not digits; grouping ten digits into three chunks brings the load within the roughly four-chunk capacity."
+            },
+            {
+              "q": "According to levels-of-processing research, which activity is most likely to produce durable long-term memory of a new vocabulary term?",
+              "choices": ["Noticing that the word has three syllables", "Reading the definition once, silently, without further thought", "Explaining in your own words how the term connects to something you already understand", "Copying the word ten times without thinking about its meaning"],
+              "answer": 2,
+              "explain": "Explaining meaning and forming connections is deep processing, which produces stronger memory than shallow processing based on how a word sounds or looks."
+            },
+            {
+              "q": "What happens to information in working memory if it isn't actively rehearsed or encoded further?",
+              "choices": ["It transfers automatically into long-term memory after a few minutes", "It is lost within seconds", "It becomes permanently stored regardless of rehearsal", "It converts automatically into sensory memory"],
+              "answer": 1,
+              "explain": "Working memory holds information only briefly; without rehearsal or deeper encoding, it fades within seconds rather than being automatically preserved."
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Encoding: Why Highlighting Feels Like Learning But Isn't",
+          "minutes": 13,
+          "intro": "A textbook page covered in yellow highlighter looks like evidence of serious studying. It usually isn't. Highlighting and rereading are two of the most common study habits and, by the evidence, two of the least effective at building durable memory.",
+          "sections": [
+            {
+              "heading": "The Fluency Illusion",
+              "body": [
+                "The more times you see the same sentence, the more familiar it becomes, and that familiarity feels like knowledge. This is the fluency illusion: mistaking how smoothly information is processed for how well it's actually been learned. A highlighted page feels 'known' on the third pass mostly because it's recognizable, not because it could be reconstructed from memory.",
+                "The catch is that recognizing something and being able to retrieve it are different mental operations. An exam almost never asks you to recognize a familiar sentence, it asks you to produce an answer, which is exactly the skill rereading and highlighting never practice."
+              ]
+            },
+            {
+              "heading": "What Actually Produces Durable Encoding",
+              "body": [
+                "Methods that force effortful retrieval, trying to answer a question before checking the answer, or trying to explain a concept in your own words without looking, produce far stronger encoding than passive review, even when they feel harder or slower in the moment.",
+                "This is sometimes called the generation effect: information you generate yourself, even partially or incorrectly at first, is remembered better than information you simply read, because generating it requires the deeper kind of processing covered in the previous lesson."
+              ]
+            },
+            {
+              "heading": "Diagnosing Your Own Illusions",
+              "body": [
+                "The only reliable way to tell whether you actually know something is to close the material and test yourself cold: write out an explanation, solve the problem, or answer the question with nothing in front of you. If you can only manage it while glancing at the notes, that's recognition, not knowledge.",
+                "It helps to notice the specific feeling of false confidence: material that felt completely clear while reading but produces a blank page when tested closed-book is the clearest sign the fluency illusion was at work."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Fluency illusion", "def": "Mistaking the ease of processing familiar material for having actually learned it."},
+            {"term": "Generation effect", "def": "The finding that information you produce yourself is remembered better than information you only read."},
+            {"term": "Recognition", "def": "Identifying something as familiar when you see it again, a weaker test of memory than recall."},
+            {"term": "Recall", "def": "Producing information from memory without it being presented to you, the skill most exams actually test."}
+          ],
+          "practice": [
+            {
+              "q": "Why does highlighting a textbook often fail to build durable memory, even after multiple passes?",
+              "choices": ["Highlighter ink physically fades important information", "It builds familiarity with the text (recognition) without requiring the effortful retrieval that produces durable encoding", "Highlighting is only effective for science textbooks", "Highlighting takes too much time to be worthwhile"],
+              "answer": 1,
+              "explain": "Highlighting increases familiarity, which supports recognition, but doesn't require the effortful retrieval that produces strong, durable encoding for later recall."
+            },
+            {
+              "q": "What is the 'generation effect'?",
+              "choices": ["The tendency for older study techniques to become outdated", "Information you produce yourself from memory is retained better than information you only read", "The idea that younger students learn faster than older students", "A method for generating flashcards automatically"],
+              "answer": 1,
+              "explain": "The generation effect specifically refers to self-produced information being remembered better than passively read information, due to the deeper processing involved in producing it."
+            },
+            {
+              "q": "What is the most reliable way to check whether you actually know material, rather than just recognize it?",
+              "choices": ["Rereading the chapter one more time", "Closing the material and testing recall cold, with nothing in front of you", "Highlighting the same passages in a different color", "Checking how confident you feel while reading"],
+              "answer": 1,
+              "explain": "Confidence while reading reflects fluency, not knowledge; only a closed-book recall attempt actually tests whether the information can be retrieved without cues."
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Schemas: Connecting New Knowledge to What You Already Know",
+          "minutes": 12,
+          "intro": "Two students hear the same new fact in biology class. One already has a mental framework for how cells work and slots the new fact neatly into it. The other has nothing to connect it to, and the fact floats alone, easy to lose. The difference is a schema.",
+          "sections": [
+            {
+              "heading": "What a Schema Is",
+              "body": [
+                "A schema is an organized mental framework for a topic, built from everything you already understand about it, that new related information can attach to. Someone with a strong schema for basic cooking learns a new recipe faster than someone with none, because most of the new recipe's logic, why you sear before simmering, why you rest meat, already fits an existing structure.",
+                "New information that has no schema to attach to has to be memorized as an isolated fact, which is both harder to encode and far easier to forget, since there's nothing else in memory pulling it back up later."
+              ]
+            },
+            {
+              "heading": "Building Schemas on Purpose",
+              "body": [
+                "Before memorizing details in a new topic, it helps to build the framework first: skim the chapter's structure, draw a rough concept map connecting the main ideas before filling in specifics, or explicitly compare a new topic to something you already understand well through analogy.",
+                "Organizing material hierarchically, main concept first, then subtopics, then specific details underneath each, mirrors how schemas are actually structured in memory, which makes the details easier to attach and later retrieve."
+              ]
+            },
+            {
+              "heading": "When Schemas Mislead You",
+              "body": [
+                "Existing schemas can also distort new learning when they're wrong. A student who wrongly believes heavier objects always fall faster will keep unconsciously filtering new physics content through that mistaken framework unless it's explicitly identified and corrected.",
+                "This is why simply presenting correct information isn't always enough to fix a misconception, the old, incorrect schema needs to be directly named and contrasted with the correct one, not just quietly replaced."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Schema", "def": "An organized mental framework built from prior knowledge that new related information can attach to."},
+            {"term": "Concept map", "def": "A visual diagram connecting related ideas, used to build or reveal the structure of a topic."},
+            {"term": "Analogy", "def": "Comparing a new idea to something already well understood, to help it attach to an existing schema."},
+            {"term": "Misconception", "def": "An incorrect existing schema that can distort how new, correct information is understood and remembered."}
+          ],
+          "practice": [
+            {
+              "q": "Why does someone with an existing schema for basic cooking typically learn a new recipe faster than someone with no cooking background?",
+              "choices": ["Because they have more free time to practice", "Because much of the new recipe's logic already fits an existing framework, so less has to be memorized as an isolated fact", "Because recipes are easier for experienced cooks to read", "Schemas have no actual effect on learning speed"],
+              "answer": 1,
+              "explain": "An existing schema lets new, related information attach to a framework already in memory, reducing how much must be encoded as a brand-new, unconnected fact."
+            },
+            {
+              "q": "What is a practical way to build a schema before diving into a new topic's details?",
+              "choices": ["Memorizing definitions in alphabetical order", "Skimming the topic's overall structure or drawing a rough concept map before filling in specific details", "Reading only the last paragraph of each section", "Avoiding any connection to prior knowledge to keep the topic separate"],
+              "answer": 1,
+              "explain": "Building the overall framework first, through a skim or concept map, gives later details a structure to attach to, which mirrors how schemas actually work in memory."
+            },
+            {
+              "q": "Why can an existing misconception be harder to fix than simply teaching the correct information?",
+              "choices": ["Because misconceptions are always intentional", "Because the incorrect existing schema keeps filtering new information unless it is explicitly named and contrasted with the correct idea", "Because correct information is always more complicated to explain", "Misconceptions have no real effect once new information is presented"],
+              "answer": 1,
+              "explain": "An unaddressed misconception continues to shape how new information is interpreted; simply stating the correct fact often isn't enough without directly identifying and contrasting the old, wrong framework."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Active Recall and Spaced Repetition",
+      "summary": "The two most well-supported study techniques in cognitive science, and how to combine them into an actual weekly schedule.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Active Recall: Testing Yourself Beats Rereading",
+          "minutes": 15,
+          "intro": "If there's one finding from decades of memory research worth building your entire study routine around, it's this: testing yourself on material strengthens memory of it far more than reviewing it again does, even when the test happens before you feel ready.",
+          "sections": [
+            {
+              "heading": "The Testing Effect",
+              "body": [
+                "The testing effect refers to the well-replicated finding that retrieving information from memory, even via a low-stakes practice quiz, strengthens that memory more than an equal amount of time spent rereading the same material. This holds even when the retrieval attempt is initially wrong, as long as the correct answer is checked afterward.",
+                "This means a practice quiz isn't just a way to check what you know, it's actively a better way to learn the material than restudying it, which flips the usual assumption that testing only measures learning rather than producing it."
+              ]
+            },
+            {
+              "heading": "Recall Techniques That Work",
+              "body": [
+                "Flashcards work when used correctly: read only the question side, genuinely attempt an answer before flipping, and separate cards you got right from ones you missed so the missed ones come back around sooner. Blank-page recall means closing all notes and writing down everything you remember about a topic from scratch, which reveals gaps far more clearly than rereading does.",
+                "Practice problems should be attempted before looking at a worked solution, not the other way around, since attempting first, even unsuccessfully, is what produces the retrieval-strengthening effect; reading a solution first turns the same problem into passive review."
+              ]
+            },
+            {
+              "heading": "Building Recall Into Every Study Session",
+              "body": [
+                "A useful rule of thumb, supported by testing-effect research, is to spend the majority of study time actively testing rather than reviewing, something like a 70/30 split between retrieval practice and targeted review of what wasn't recalled correctly.",
+                "In practice this means opening a study session with self-testing first, not last, and treating rereading as a targeted fix for specific gaps the testing revealed, rather than as the primary activity."
+              ],
+              "example": {
+                "problem": "A student has 60 minutes to study a chapter. Using a 70/30 recall-to-review split, how should the time be divided, and how should each part be spent?",
+                "steps": [
+                  "Multiply total minutes by 0.70 for active recall/testing time: 60 × 0.70 = 42 minutes.",
+                  "Multiply total minutes by 0.30 for targeted review time: 60 × 0.30 = 18 minutes.",
+                  "Spend the 42-minute recall phase on flashcards, blank-page recall, and practice problems attempted before checking answers.",
+                  "Spend the 18-minute review phase only on material that was recalled incorrectly or not attempted at all."
+                ],
+                "answer": "42 minutes of active retrieval and 18 minutes of targeted review, with the review phase focused specifically on the gaps the recall phase revealed rather than a general reread of everything."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Testing effect", "def": "The finding that retrieving information from memory strengthens it more than rereading the same material."},
+            {"term": "Blank-page recall", "def": "Writing everything you remember about a topic from scratch, with no notes visible, to reveal gaps."},
+            {"term": "Retrieval practice", "def": "Any study method built around attempting to retrieve information from memory rather than reviewing it passively."},
+            {"term": "Recall-to-review ratio", "def": "The proportion of study time spent actively testing yourself versus reviewing material, commonly recommended around 70/30."}
+          ],
+          "practice": [
+            {
+              "q": "According to the testing effect, what happens when you attempt to recall an answer, get it wrong, and then check the correct answer?",
+              "choices": ["No learning occurs since the initial attempt was incorrect", "The memory is generally strengthened more than if you had simply reread the correct answer without attempting recall first", "It always produces worse memory than rereading", "It only helps if the first attempt happens to be correct"],
+              "answer": 1,
+              "explain": "The testing effect holds even for initially incorrect attempts; the effortful retrieval process itself strengthens memory, and checking the correct answer afterward completes the learning."
+            },
+            {
+              "q": "When using practice problems to study, what is the recommended order?",
+              "choices": ["Read the worked solution first, then attempt a similar problem from memory", "Attempt the problem yourself first, then check the worked solution", "Skip attempting and only read solutions to save time", "Order doesn't matter for learning outcomes"],
+              "answer": 1,
+              "explain": "Attempting the problem first, even if the attempt is wrong, engages retrieval practice; reading the solution first turns the same activity into passive review instead."
+            },
+            {
+              "q": "Using a 70/30 recall-to-review split, how many minutes of a 90-minute study session should be spent on active recall/testing?",
+              "choices": ["27 minutes", "45 minutes", "63 minutes", "81 minutes"],
+              "answer": 2,
+              "explain": "90 minutes × 0.70 = 63 minutes for active recall, leaving 90 × 0.30 = 27 minutes for targeted review of missed material."
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Spaced Repetition: Timing Your Reviews",
+          "minutes": 15,
+          "intro": "Studying the same material for four hours in one sitting and studying it for one hour on four different days both add up to four hours, but they don't produce the same memory. The timing of review matters almost as much as the review itself.",
+          "sections": [
+            {
+              "heading": "The Spacing Effect",
+              "body": [
+                "The spacing effect is the finding that distributing repetitions of the same material over time, with gaps in between, produces substantially better long-term retention than massing the same amount of study into one continuous session, often called cramming.",
+                "The mechanism has to do with retrieval difficulty: reviewing material after some forgetting has started requires more effortful retrieval than reviewing it again immediately, and that extra effort is what strengthens the memory trace further each time."
+              ]
+            },
+            {
+              "heading": "Building an Expanding Schedule",
+              "body": [
+                "A common approach uses roughly doubling intervals between reviews: a first review after 1 day, then 3 days later, then about a week later, then about two weeks after that, expanding as the memory becomes more solid and less likely to be forgotten before the next scheduled review.",
+                "The exact intervals matter less than the principle: reviews should happen close together at first, while forgetting is fastest, and can be spaced further apart later, once the material is well established."
+              ],
+              "example": {
+                "problem": "You learn 40 new vocabulary words today and want a spaced review schedule using roughly doubling intervals, ending near a test in 5 weeks (35 days). Build the schedule.",
+                "steps": [
+                  "First review: 1 day after learning.",
+                  "Second review: about 3 days after the first review (around day 4 total).",
+                  "Third review: about a week after that (around day 11 total).",
+                  "Fourth review: about two weeks after that (around day 25 total).",
+                  "Final review: 1 to 2 days before the test, around day 34."
+                ],
+                "answer": "Reviews at roughly day 1, day 4, day 11, day 25, and day 34 give five spaced exposures across the 5 weeks, in contrast to one long cram session the night before the test with the same total review time."
+              }
+            },
+            {
+              "heading": "Using a Spaced-Repetition System (Flashcard Apps)",
+              "body": [
+                "Digital spaced-repetition systems automate this scheduling: cards you answer correctly and quickly are pushed further out before they reappear, while cards you miss or hesitate on come back sooner, adjusting the interval to each individual card rather than treating a whole deck identically.",
+                "This is useful precisely because manually tracking dozens or hundreds of individual intervals by hand isn't practical, while an algorithm can track it per card without you having to think about it."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Spacing effect", "def": "The finding that distributing study repetitions over time produces better retention than massing them into one session."},
+            {"term": "Massed practice", "def": "Cramming repetitions of the same material into one continuous session rather than spreading them out."},
+            {"term": "Expanding interval", "def": "A review schedule where the gap between successive reviews grows longer as the material becomes more solidly learned."},
+            {"term": "Spaced repetition system (SRS)", "def": "Software that automatically schedules review timing per item based on how well you've recalled it previously."}
+          ],
+          "practice": [
+            {
+              "q": "Why does the spacing effect predict that four 1-hour study sessions on different days will outperform one 4-hour cram session, for the same total time?",
+              "choices": ["Because shorter sessions always contain less material", "Because reviewing after some forgetting has occurred requires more effortful retrieval, and that extra effort strengthens the memory further", "Because cramming is physically impossible for more than one hour", "There is no actual difference in outcomes between the two approaches"],
+              "answer": 1,
+              "explain": "Spaced reviews force more effortful retrieval each time, since some forgetting has occurred between sessions, and that added retrieval effort is what produces stronger long-term memory."
+            },
+            {
+              "q": "In an expanding spaced-review schedule, what generally happens to the gap between successive reviews over time?",
+              "choices": ["The gap stays exactly the same each time", "The gap gets shorter as material becomes better learned", "The gap gets longer as material becomes more solidly learned", "There is no set pattern to the gaps at all"],
+              "answer": 2,
+              "explain": "Expanding schedules start with short gaps, when forgetting is fastest, and lengthen the gaps as the material becomes more durably learned and less at risk of being forgotten before the next review."
+            },
+            {
+              "q": "How does a spaced-repetition system (SRS) flashcard app typically decide when to show a card again?",
+              "choices": ["It shows every card at the same fixed interval regardless of performance", "It pushes cards answered correctly further out and brings missed cards back sooner, per individual card", "It only shows cards the student marks as 'important'", "It shows cards in a completely random order every time"],
+              "answer": 1,
+              "explain": "SRS software adjusts each card's interval individually based on recall performance, spacing out well-known cards and bringing back weaker ones sooner, rather than applying one fixed schedule to the whole deck."
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Interleaving: Mixing It Up Instead of Blocking It",
+          "minutes": 13,
+          "intro": "Practicing twenty of the same type of math problem in a row feels smooth and satisfying, like you're getting good at it fast. Mixing different problem types together feels clumsier and slower in the moment, and yet it's the version that actually produces better performance on a real exam.",
+          "sections": [
+            {
+              "heading": "Blocked Practice Feels Easier, Interleaved Practice Works Better",
+              "body": [
+                "Blocked practice means working through many problems of the same type in a row (AAABBBCCC); it feels smooth because you can rely on the same strategy repeatedly without having to figure out which strategy applies. Interleaved practice mixes problem types together (ABCABCABC), forcing you to identify which approach fits each problem before solving it.",
+                "This extra step, deciding which method to use, is exactly what a real exam requires, since exam problems aren't grouped by type and labeled for you. Interleaving is harder during practice but builds the actual skill of recognizing problem types, which blocked practice never has to exercise."
+              ]
+            },
+            {
+              "heading": "How to Interleave Your Own Study Sessions",
+              "body": [
+                "In practice, this means deliberately mixing problem sets from different chapters or topics within a single study session rather than finishing one topic's entire problem set before moving to the next. For subjects without obvious problem types, alternating between two different subjects within a session, rather than one long block of a single subject, captures some of the same benefit.",
+                "It can help to physically shuffle practice problems from different sources together before starting, so the order genuinely can't be predicted from which problem came before it."
+              ]
+            },
+            {
+              "heading": "When Blocking Still Makes Sense",
+              "body": [
+                "Interleaving assumes some baseline familiarity with each problem type already exists; for a completely unfamiliar skill with zero foundation, a short period of blocked practice to establish basic fluency first, before mixing problem types together, tends to work better than interleaving from the very first attempt.",
+                "The practical takeaway is to block briefly to learn a new skill's basic mechanics, then switch to interleaved practice once each type can be solved individually, which is where most of the exam-relevant benefit actually comes from."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Blocked practice", "def": "Practicing many problems of the same type consecutively before moving to a different type."},
+            {"term": "Interleaving", "def": "Mixing different problem types together during practice rather than grouping them by type."},
+            {"term": "Discrimination", "def": "The skill of correctly identifying which problem type or method applies before solving, which interleaving specifically trains."},
+            {"term": "Transfer", "def": "The ability to apply learned skills to new, differently structured situations, such as an exam's mixed problem order."}
+          ],
+          "practice": [
+            {
+              "q": "Why does interleaved practice (mixing problem types) tend to produce better exam performance than blocked practice (grouping by type), even though it feels harder during study?",
+              "choices": ["Because interleaved practice always takes less total time", "Because it forces the added skill of identifying which method applies to each problem, which blocked practice never requires", "Because blocked practice is always incorrect mathematically", "Interleaving has no measurable advantage over blocked practice"],
+              "answer": 1,
+              "explain": "Blocked practice lets a student reuse the same strategy repeatedly without deciding which one applies; interleaving forces that decision every time, building the discrimination skill an exam's mixed problem order actually requires."
+            },
+            {
+              "q": "When is blocked practice still a reasonable choice, according to the lesson?",
+              "choices": ["Never; interleaving is always superior in every situation", "Briefly, at the very start of learning a completely new skill, to build basic fluency before mixing problem types", "Only during the final review before an exam", "Only for subjects that don't involve any problem-solving"],
+              "answer": 1,
+              "explain": "A short period of blocked practice can establish the basic mechanics of a brand-new skill; interleaving works best once each problem type can already be solved individually."
+            },
+            {
+              "q": "A student always practices ten algebra problems, then ten geometry problems, then ten trigonometry problems, in separate consecutive blocks. What change would make this practice interleaved instead?",
+              "choices": ["Doing more total problems in each block", "Mixing algebra, geometry, and trigonometry problems together in a shuffled, unpredictable order within the same session", "Studying algebra for a longer block of time", "Switching to a different textbook"],
+              "answer": 1,
+              "explain": "Interleaving requires mixing problem types together so the type can't be predicted from what came before, forcing active identification of which method applies to each problem."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Note-Taking and Organizing What You Learn",
+      "summary": "Capturing lecture and reading material in a form built for later retrieval, and using explanation and summarizing to test real understanding.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Why Verbatim Notes Don't Work",
+          "minutes": 12,
+          "intro": "Typing every word a professor says feels thorough, and a transcript-like set of notes looks impressively complete. But research comparing note-taking methods finds that students who summarize in their own words, even with fewer total words captured, often remember more than students who transcribe nearly everything.",
+          "sections": [
+            {
+              "heading": "Transcribing vs Processing",
+              "body": [
+                "Writing down every word requires almost no understanding of what's being said, you're converting sound to text, not thought to text. This can happen almost automatically, bypassing the kind of processing that actually builds memory, which is why word-for-word notes often feel complete but teach surprisingly little on their own.",
+                "Summarizing in your own words forces you to first understand the idea well enough to restate it more briefly, which is a meaningfully different, deeper cognitive task than transcription, even though it produces a shorter page of notes."
+              ]
+            },
+            {
+              "heading": "Note-Taking Systems: Cornell, Outline, and Mapping",
+              "body": [
+                "The Cornell method (a cue column, a wider notes column, and a bottom summary) works well for linear lectures with a clear sequence of points. The outline method, using indentation to show which points are subordinate to which, suits material with a clear hierarchy of main ideas and supporting details.",
+                "Concept mapping, drawing ideas as connected nodes rather than as a linear list, suits material where the relationships between ideas matter as much as the ideas themselves, such as overlapping causes in a historical event or interacting systems in biology."
+              ]
+            },
+            {
+              "heading": "Capturing the Right Things",
+              "body": [
+                "Regardless of the format, the goal is capturing main ideas, the specific examples used to illustrate them, and connections between concepts, not every sentence spoken. Examples are especially worth recording carefully, since test questions are frequently built directly around the specific example used in class.",
+                "It also helps to jot your own questions in the margin as they occur to you during the lecture, marking exactly what's unclear in the moment rather than trying to remember to ask about it later, when the specific confusion has often faded."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Verbatim note-taking", "def": "Writing down speech nearly word for word, which requires little understanding of the content."},
+            {"term": "Cornell method", "def": "A note-taking format with a cue column, a wider notes column, and a bottom summary."},
+            {"term": "Outline method", "def": "A note-taking format using indentation to show which points are subordinate to broader main ideas."},
+            {"term": "Concept mapping", "def": "A note-taking format representing ideas as connected nodes to show relationships between them."}
+          ],
+          "practice": [
+            {
+              "q": "Why do students who summarize lectures in their own words often remember more than students who type nearly verbatim transcripts?",
+              "choices": ["Because typing is always slower than handwriting", "Because summarizing requires understanding the idea well enough to restate it, a deeper form of processing than transcription", "Because verbatim notes are usually inaccurate", "There is no real difference between the two approaches"],
+              "answer": 1,
+              "explain": "Verbatim transcription can happen with minimal understanding, while summarizing forces genuine processing of the idea's meaning, which produces stronger memory even with a shorter set of notes."
+            },
+            {
+              "q": "Which note-taking format is best suited for material where the relationships between ideas matter as much as the ideas themselves, such as interacting causes of a historical event?",
+              "choices": ["Verbatim transcription", "The outline method", "Concept mapping", "Copying slides exactly as shown"],
+              "answer": 2,
+              "explain": "Concept mapping represents ideas as connected nodes, making it well suited to material defined by relationships between concepts rather than a strict linear or hierarchical structure."
+            },
+            {
+              "q": "Why is it useful to jot down your own confusion or questions in the margin during a lecture, rather than waiting until later to remember what was unclear?",
+              "choices": ["Because professors require margin notes for grading", "Because the specific point of confusion is often forgotten by the time you try to recall it later", "Margin notes have no real benefit over waiting", "Because it slows down note-taking, which is the actual goal"],
+              "answer": 1,
+              "explain": "Confusion noted in the moment captures the exact sticking point; trying to remember later what was unclear often produces a vaguer, less useful question."
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "The Feynman Technique: Teaching to Learn",
+          "minutes": 14,
+          "intro": "Physicist Richard Feynman was known for a simple test of real understanding: could you explain the idea in plain language a child could follow? If you can't, you don't understand it as well as you thought, no matter how familiar the technical terms feel.",
+          "sections": [
+            {
+              "heading": "The Four Steps",
+              "body": [
+                "The Feynman technique has four steps. First, pick a specific concept you want to understand. Second, explain it in plain, simple language, as though teaching it to someone with no background in the subject, avoiding jargon entirely. Third, notice exactly where the explanation breaks down, gets vague, or where you find yourself reaching for a technical term to paper over a gap in understanding.",
+                "Fourth, go back to the source material specifically to fill that identified gap, then attempt the plain-language explanation again, simplifying further until it flows without gaps or unexplained jargon."
+              ]
+            },
+            {
+              "heading": "Why Explaining Reveals What You Don't Know",
+              "body": [
+                "Recognizing a term and being able to explain it are different skills; recognition can survive on familiarity alone, while a plain-language explanation requires organizing the idea well enough to walk someone else through it from scratch, which exposes exactly which parts were never fully understood.",
+                "This is why the technique works even with no other person actually present, the value comes from the act of constructing the explanation and noticing where it breaks down, not from anyone hearing it."
+              ]
+            },
+            {
+              "heading": "Using It Without a Student to Teach",
+              "body": [
+                "Talking aloud to an empty room, explaining a concept to a study partner (even one from a different class), or writing a one-paragraph explanation from memory all work equally well, since the mechanism is the plain-language explanation attempt itself, not the audience.",
+                "A useful habit is picking one concept from each week's material and writing its plain-language explanation from memory before checking notes, treating any stumble as a specific, fixable to-do rather than a discouraging sign."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Feynman technique", "def": "A study method of explaining a concept in plain language to reveal and then fill gaps in understanding."},
+            {"term": "Plain-language explanation", "def": "Explaining an idea without jargon, as though to someone with no background in the subject."},
+            {"term": "Knowledge gap", "def": "A specific point where an explanation breaks down or becomes vague, revealing incomplete understanding."},
+            {"term": "Self-explanation", "def": "Explaining material to yourself as a way of testing and deepening your own understanding."}
+          ],
+          "practice": [
+            {
+              "q": "What is the purpose of explaining a concept in plain, jargon-free language as part of the Feynman technique?",
+              "choices": ["To make the explanation sound simpler for an audience only", "To reveal specific gaps where understanding is incomplete, since jargon can hide those gaps", "To reduce the total amount of material that needs to be studied", "Plain language has no particular purpose in the technique"],
+              "answer": 1,
+              "explain": "Jargon can be used correctly by rote without full understanding; forcing a plain-language explanation exposes exactly where the underlying understanding breaks down."
+            },
+            {
+              "q": "According to the Feynman technique, what should you do once you notice your explanation breaking down at a specific point?",
+              "choices": ["Move on to a different concept entirely", "Return to the source material specifically to fill that identified gap, then attempt the explanation again", "Memorize the technical term for that point without further explanation", "Assume the concept is too difficult to fully understand"],
+              "answer": 1,
+              "explain": "The technique's value comes from targeting the exact identified gap with a return to the source material, rather than continuing to skip over it or giving up."
+            },
+            {
+              "q": "Why does the Feynman technique work even when practiced alone, with no one actually listening to the explanation?",
+              "choices": ["It doesn't work without a real listener present", "The value comes from constructing the explanation and noticing where it breaks down, not from the audience hearing it", "Talking aloud is required for any studying to be effective", "It only works when explaining to someone with more background than you"],
+              "answer": 1,
+              "explain": "The mechanism is the act of building a plain-language explanation and noticing its gaps, which happens whether or not anyone else is actually present to hear it."
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Summarizing and Building Study Guides That Actually Help",
+          "minutes": 13,
+          "intro": "A study guide copied straight from a textbook's bolded terms and definitions looks thorough, but it's really just a second copy of the book, and copying doesn't test whether you can produce the answer without it in front of you.",
+          "sections": [
+            {
+              "heading": "A Good Summary Is Generated, Not Copied",
+              "body": [
+                "Writing a summary from memory, after closing the notes or textbook, forces retrieval and immediately reveals which parts you actually remember versus which parts you'd have to look up. Copying key sentences directly from the source skips that retrieval step entirely and can be done almost without reading for meaning.",
+                "A generated summary doesn't need to be polished; a rough, incomplete attempt written from memory is more useful diagnostically than a smooth, complete-looking summary copied straight from the source."
+              ]
+            },
+            {
+              "heading": "Organizing a Study Guide Around Questions",
+              "body": [
+                "Instead of building a study guide as a list of facts to reread, build it as a list of questions you must be able to answer cold, with the fact itself hidden until you've attempted the answer. This structure automatically turns the study guide into a self-testing tool rather than a rereading tool.",
+                "Questions can be pulled directly from lecture headings, textbook subheadings, or your own Cornell-style cue columns, so this step doesn't require inventing new material, just reframing what you already have into a question format."
+              ]
+            },
+            {
+              "heading": "Practice Testing With Your Own Study Guide",
+              "body": [
+                "Once the question-based guide exists, it should be used on a spaced schedule (tying back to the spacing principle from unit 2), not just once the night before a test. Each pass should separate questions you got right from ones you missed, so missed questions come back around sooner in the next review session.",
+                "Over several spaced passes, the guide naturally narrows down to the small set of genuinely hard questions that keep getting missed, which is exactly the material most worth spending remaining study time on before the exam."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Generative summarizing", "def": "Writing a summary from memory, without the source in front of you, which forces retrieval and reveals gaps."},
+            {"term": "Question-based study guide", "def": "A study guide organized as questions to answer cold, rather than a list of facts to reread."},
+            {"term": "Self-quiz", "def": "Using a study guide or set of questions to actively test your own recall rather than passively review material."},
+            {"term": "Retrieval cue", "def": "A prompt, like a question or keyword, used to trigger recall of associated information from memory."}
+          ],
+          "practice": [
+            {
+              "q": "Why is a summary written from memory generally more useful diagnostically than one copied directly from the textbook?",
+              "choices": ["Copied summaries are always factually incorrect", "Writing from memory forces retrieval, immediately revealing which parts are actually remembered versus which need more review", "Copied summaries take longer to produce", "There is no diagnostic difference between the two"],
+              "answer": 1,
+              "explain": "A memory-based summary surfaces gaps in real time, since anything you can't produce from memory is immediately visible, while copying can be done without genuinely testing recall at all."
+            },
+            {
+              "q": "What is the main advantage of organizing a study guide as a set of questions rather than a list of facts?",
+              "choices": ["Questions are always shorter to write than facts", "A question-based guide functions as a self-testing tool, since the answer is hidden until you attempt it", "Professors require study guides to be in question format", "There is no meaningful difference in format"],
+              "answer": 1,
+              "explain": "Hiding the answer until an attempt is made turns the guide into active retrieval practice, rather than a list you passively reread."
+            },
+            {
+              "q": "When using a question-based study guide across several spaced review sessions, what should happen to questions you keep getting wrong?",
+              "choices": ["They should be removed from the guide entirely", "They should come back around sooner in the next review session than questions answered correctly", "They should only be reviewed once, right before the exam", "They should be answered from the textbook rather than from memory going forward"],
+              "answer": 1,
+              "explain": "Prioritizing missed questions for earlier review concentrates remaining study time on the material that's actually still weak, rather than spreading effort evenly across everything."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Focus, Motivation, and Making It Stick",
+      "summary": "Managing attention and distraction, building study habits that don't depend on daily motivation, and combining every technique into one sustainable weekly system.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Attention, Multitasking, and the Cost of Switching",
+          "minutes": 12,
+          "intro": "Studying with a phone notification buzzing every few minutes feels like it's only costing you the few seconds it takes to glance at the screen. In reality, each glance costs far more than the glance itself, because refocusing afterward takes real time too.",
+          "sections": [
+            {
+              "heading": "Multitasking Is Mostly Task-Switching",
+              "body": [
+                "The brain doesn't process two demanding tasks simultaneously the way it feels like it does; instead, attention rapidly switches back and forth between them. Each switch carries a real cost, both in the time it takes to reorient to the new task and in an increased rate of errors right after the switch.",
+                "This means checking a phone during a study session isn't a brief, free pause, it's a full context switch, away from and then back to the material, with a documented cost each way, not just during the glance itself."
+              ],
+              "example": {
+                "problem": "A student estimates each phone check while studying costs about 4 minutes to fully refocus afterward (attention residue), and checks their phone roughly every 10 minutes during a 50-minute study session. Estimate how much of the 50 minutes is lost to switching versus genuinely focused.",
+                "steps": [
+                  "Determine the number of checks: 50 minutes ÷ 10-minute intervals ≈ 5 checks.",
+                  "Multiply the number of checks by the refocus cost per check: 5 × 4 minutes = 20 minutes lost to switching.",
+                  "Subtract the lost time from the total session length: 50 − 20 = 30 minutes."
+                ],
+                "answer": "Only about 30 of the 50 minutes are genuinely focused study time; roughly 20 minutes are lost to attention residue from repeatedly switching away from and back to the material."
+              }
+            },
+            {
+              "heading": "Designing a Distraction-Resistant Environment",
+              "body": [
+                "Because the cost is in switching, not just in the distraction itself, the most effective fix is removing the option to switch in the first place: putting the phone in another room rather than face-down nearby, closing every browser tab unrelated to the current task, and using a single-tab or full-screen view when possible.",
+                "Telling roommates, family, or a study partner your specific focus window, and asking not to be interrupted during it except for something urgent, removes another common source of switching that's outside your own control otherwise."
+              ]
+            },
+            {
+              "heading": "Sustainable Focus Blocks",
+              "body": [
+                "Focus blocks work best when their length is matched to a realistic attention span rather than an ambitious one; a shorter block that's actually completed distraction-free beats a longer block that gets interrupted repeatedly.",
+                "Using a visible timer for a fixed focus block, with a specific plan for the short break afterward, makes the commitment concrete and time-bounded, which is easier to sustain than an open-ended 'focus for a while' intention."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Task-switching", "def": "Rapidly shifting attention between tasks, which the brain does instead of truly processing two demanding tasks at once."},
+            {"term": "Switch cost", "def": "The time and increased error rate incurred each time attention shifts from one task to another."},
+            {"term": "Attention residue", "def": "The lingering distraction from a previous task that slows full refocus on the current one."},
+            {"term": "Focus block", "def": "A defined, timed period dedicated to a single task with distractions deliberately removed."}
+          ],
+          "practice": [
+            {
+              "q": "Why does checking a phone notification during a study session cost more than just the few seconds spent looking at the screen?",
+              "choices": ["Because phone screens use more battery when checked frequently", "Because refocusing on the study material afterward, due to attention residue, takes additional time beyond the glance itself", "Because notifications are always longer than a few seconds to read", "There is no additional cost beyond the glance"],
+              "answer": 1,
+              "explain": "Attention residue means the mental cost of a distraction includes not just the glance but also the time needed to fully refocus on the original task afterward."
+            },
+            {
+              "q": "If each phone check costs 5 minutes to refocus and a student checks their phone 6 times during a 60-minute session, how many minutes are genuinely focused?",
+              "choices": ["24 minutes", "30 minutes", "36 minutes", "54 minutes"],
+              "answer": 1,
+              "explain": "6 checks × 5 minutes lost each = 30 minutes lost to switching. 60 − 30 = 30 minutes of genuinely focused time remaining."
+            },
+            {
+              "q": "Why is putting a phone in another room generally more effective than placing it face-down on the desk during a focus block?",
+              "choices": ["Face-down phones are always louder", "Removing the option to switch entirely is more reliable than relying on willpower to resist a visible, nearby phone", "Phones placed face-down charge more slowly", "There is no meaningful difference between the two placements"],
+              "answer": 1,
+              "explain": "Since the cost comes from switching itself, removing the option to switch (phone in another room) is a more reliable fix than relying on willpower to ignore a phone that's still within easy reach."
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Motivation and Building Study Habits That Don't Rely on Willpower",
+          "minutes": 13,
+          "intro": "Waiting to feel motivated before studying works fine on the days motivation shows up, and fails completely on the days it doesn't, which for most people is most days. A study routine built to survive low-motivation days looks different from one that depends on feeling ready.",
+          "sections": [
+            {
+              "heading": "Why Willpower Alone Fails",
+              "body": [
+                "Motivation fluctuates day to day for reasons that have little to do with how important a task actually is, sleep, stress, and mood all shift how motivated a task feels, independent of its real priority. Relying on motivation to decide whether to study means skipping study specifically on the days it's needed most, when other stressors are already competing for attention.",
+                "A habit removes this daily decision entirely: once a behavior is automatic enough, it doesn't require a fresh burst of motivation each time, which is why habits outperform willpower for anything that needs to happen consistently over months."
+              ]
+            },
+            {
+              "heading": "The Habit Loop: Cue, Routine, Reward",
+              "body": [
+                "A habit loop has three parts: a cue that triggers the behavior (a specific time, place, or preceding action), the routine itself (the actual studying), and a reward that reinforces doing it again. Designing a study habit means deliberately choosing all three, rather than hoping the routine happens on its own.",
+                "A consistent cue, always studying at the same time in the same location right after the same preceding event, makes the habit far more automatic than a vague plan to 'study sometime today,' which leaves the timing, and therefore the whole habit, undefined."
+              ]
+            },
+            {
+              "heading": "Habit Stacking and Starting Small",
+              "body": [
+                "Habit stacking attaches a new habit to an existing, already-automatic routine: 'after I pour my morning coffee, I review 10 flashcards' borrows the existing coffee habit's momentum to trigger the new studying habit, rather than trying to create a brand-new cue from nothing.",
+                "Starting with a version of the habit small enough to feel almost too easy to skip, like 10 flashcards rather than an hour of review, makes the streak far easier to maintain on low-energy days; the habit can always be expanded once it's automatic, but a habit abandoned in week two never gets the chance."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Habit loop", "def": "The cue, routine, and reward structure that makes a behavior automatic over time."},
+            {"term": "Cue", "def": "The specific trigger, such as a time, place, or preceding event, that initiates a habit's routine."},
+            {"term": "Habit stacking", "def": "Attaching a new habit to an already-established routine to borrow its existing cue."},
+            {"term": "Implementation intention", "def": "A specific plan in the form 'when X happens, I will do Y,' used to make following through more automatic."}
+          ],
+          "practice": [
+            {
+              "q": "Why does relying on daily motivation to decide whether to study tend to fail specifically on the days studying is most needed?",
+              "choices": ["Because motivation is unrelated to study quality on any day", "Because stress and low mood, which reduce motivation, are often present on exactly the days other demands are competing for attention", "Because studying is never actually necessary on stressful days", "Motivation has no real effect on whether people study"],
+              "answer": 1,
+              "explain": "Motivation tends to dip during high-stress periods, which is often precisely when consistent studying matters most, making motivation-dependent plans unreliable when they're needed most."
+            },
+            {
+              "q": "What are the three components of a habit loop?",
+              "choices": ["Goal, deadline, reward", "Cue, routine, reward", "Subject, chapter, exam", "Motivation, effort, outcome"],
+              "answer": 1,
+              "explain": "A habit loop consists of a cue that triggers the behavior, the routine (the behavior itself), and a reward that reinforces repeating it."
+            },
+            {
+              "q": "Why is starting a new study habit at a very small size, like 10 flashcards instead of an hour, generally more effective for building consistency?",
+              "choices": ["Small habits always produce more learning than larger sessions", "A small version is easier to complete even on low-energy days, which protects the streak until the habit becomes automatic", "Larger habits are against most study guidelines", "There is no benefit to habit size when building consistency"],
+              "answer": 1,
+              "explain": "A habit small enough to feel almost effortless is far less likely to be skipped on a hard day, and maintaining the streak is what allows the habit to become automatic before it's expanded."
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Putting It Together: A Weekly Study System",
+          "minutes": 14,
+          "intro": "Knowing that spacing, active recall, and interleaving all work is only useful once they're combined into an actual repeatable weekly routine, rather than a list of separate facts about memory that never gets applied.",
+          "sections": [
+            {
+              "heading": "Auditing Your Current Habits",
+              "body": [
+                "Before building a new system, it helps to honestly list your current study habits and sort them into passive (rereading notes, re-listening to a recorded lecture, highlighting) and active (flashcards attempted before checking, blank-page recall, practice problems attempted before viewing the solution).",
+                "Most students find the majority of their current study time is passive, which is worth naming directly rather than assuming the problem is a lack of total hours studied. The fix is usually converting existing time to active methods, not simply adding more hours of the same passive habits."
+              ]
+            },
+            {
+              "heading": "Designing Your Weekly Loop",
+              "body": [
+                "A workable weekly system combines the pieces from this course: a fixed cue and time for each subject's study block (habit loop), sessions built around active recall first with targeted review second (roughly a 70/30 split), material scheduled at expanding spaced intervals rather than only right before a test, and mixed problem types within a session where interleaving applies.",
+                "This doesn't need to be elaborate; a simple weekly template, a specific day and time slot per subject, each slot starting with self-testing on material from an expanding schedule, is enough to apply every principle in this course consistently."
+              ]
+            },
+            {
+              "heading": "Adjusting When It's Not Working",
+              "body": [
+                "Clear signals a system needs adjusting include still forgetting material close to a test despite following the schedule, consistently running out of time within a study block, or noticing sessions have quietly drifted back toward passive review.",
+                "Common fixes include shortening the interval before the first review if forgetting is happening faster than expected, increasing the recall-to-review ratio if sessions have drifted passive, and breaking material into smaller chunks if a study block consistently runs out of time before finishing."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Study audit", "def": "Honestly reviewing current study habits to identify which are active versus passive."},
+            {"term": "Weekly study system", "def": "A repeatable weekly routine combining habit cues, active recall, spacing, and interleaving."},
+            {"term": "Active vs passive study", "def": "The distinction between methods requiring effortful retrieval versus methods involving only rereading or re-listening."},
+            {"term": "Troubleshooting", "def": "Adjusting a study system's specific components in response to a clear sign it isn't working as intended."}
+          ],
+          "practice": [
+            {
+              "q": "When auditing current study habits, what do most students typically find about how their time is currently split?",
+              "choices": ["Most time is already spent on active recall methods", "Most time is typically spent on passive methods like rereading, even though active methods produce stronger learning", "There's no typical pattern across different students", "Passive methods are impossible to identify without special tools"],
+              "answer": 1,
+              "explain": "Most students' current habits skew heavily passive (rereading, re-listening), which is exactly why naming the imbalance directly, rather than assuming the fix is simply more hours, is the useful first step."
+            },
+            {
+              "q": "A student notices they keep forgetting material close to a test despite following their spaced schedule. What is a reasonable adjustment based on the troubleshooting principles in this lesson?",
+              "choices": ["Abandon spaced review entirely and switch to one long cram session", "Shorten the interval before the first review, since forgetting may be happening faster than the current schedule assumes", "Stop using active recall and rely only on rereading", "Increase the total number of subjects studied per session"],
+              "answer": 1,
+              "explain": "If forgetting is outpacing the current schedule, tightening the interval before the first review directly addresses the specific problem, rather than abandoning spacing or active recall altogether."
+            },
+            {
+              "q": "What combination of elements does a well-designed weekly study system bring together, according to this lesson?",
+              "choices": ["Only rereading notes on a fixed daily schedule", "A fixed habit cue and time, active recall prioritized over passive review, expanding spaced intervals, and interleaved problem types where relevant", "Cramming the night before every test, scheduled consistently each week", "Studying only the subjects that feel most motivating on a given day"],
+              "answer": 1,
+              "explain": "A working system combines a consistent cue, a recall-first structure, spaced timing rather than last-minute review, and interleaving where applicable, rather than relying on any single technique alone."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

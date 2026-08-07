@@ -1,0 +1,723 @@
+{
+ "id": "electronics",
+ "title": "Electronics & Circuits",
+ "domain": "engineering",
+ "level": "All levels",
+ "description": "Electronics & Circuits teaches you how electricity actually behaves in real circuits: voltage, current, resistance, and power, and how components like resistors, capacitors, diodes, and transistors use those quantities to do useful work. You will learn to read a schematic, use a multimeter, solder a joint, and troubleshoot a circuit that is not behaving, building every skill on worked numbers you can check by hand.",
+ "outcomes": [
+  "You can apply Ohm's law and the power equations to calculate voltage, current, resistance, or power in a simple circuit.",
+  "You can calculate the equivalent resistance of resistors in series and in parallel.",
+  "You can read a resistor's color code and choose a current-limiting resistor for an LED.",
+  "You can read a basic schematic, identify its components, and build the same circuit on a breadboard.",
+  "You can use a multimeter to measure voltage, current, and resistance, and apply the voltage divider rule to predict a reading.",
+  "You can apply Kirchhoff's voltage law and a systematic troubleshooting method to diagnose a fault in a simple circuit."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Electricity Fundamentals",
+   "summary": "Every circuit, from a flashlight to a computer, is governed by the same three quantities and one simple law relating them. This unit builds that foundation: voltage, current, resistance, power, and how components combine in series and parallel.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Voltage, Current, and Resistance",
+     "minutes": 14,
+     "intro": "Electricity can feel invisible and mysterious, but it behaves according to one remarkably simple rule that you can use to predict exactly what any basic circuit will do. Ohm's law is that rule, and it is the single most useful equation in all of electronics.",
+     "sections": [
+      {
+       "heading": "The Three Quantities",
+       "body": [
+        "Voltage (measured in volts, V) is the electrical pressure that pushes charge through a circuit, similar to water pressure pushing water through a pipe. Current (measured in amperes, or amps, A) is the actual rate of flow of electric charge through that circuit, similar to how many gallons of water pass a point per second.",
+        "Resistance (measured in ohms, Ω) is how much a component opposes that flow, similar to a narrow section of pipe restricting water flow. A thin wire has more resistance than a thick one of the same length and material, and a long wire has more resistance than a short one, exactly as you would expect from a plumbing analogy."
+       ]
+      },
+      {
+       "heading": "Ohm's Law",
+       "body": [
+        "Ohm's law ties the three quantities together in one equation: V = I × R, where V is voltage in volts, I is current in amps, and R is resistance in ohms. Rearranged, this also gives I = V/R (current equals voltage divided by resistance) and R = V/I, so whichever quantity you do not know, you can solve for it if you know the other two.",
+        "This law holds for the resistors and simple components you will meet throughout this course, and it is the equation you will reach for constantly: given a battery voltage and a resistor value, you can predict the current before you ever touch a multimeter."
+       ],
+       "example": {
+        "problem": "A 9 V battery is connected across a 220 Ω resistor. What current flows through the resistor?",
+        "steps": [
+         "Identify the known values: V = 9 V, R = 220 Ω.",
+         "Rearrange Ohm's law to solve for current: I = V / R.",
+         "Substitute and divide: I = 9 / 220."
+        ],
+        "answer": "I ≈ 0.0409 A, or about 40.9 mA."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "voltage", "def": "The electrical pressure that pushes current through a circuit, measured in volts (V)."},
+      {"term": "current", "def": "The rate of flow of electric charge through a circuit, measured in amperes (A)."},
+      {"term": "resistance", "def": "How much a component opposes the flow of current, measured in ohms (Ω)."},
+      {"term": "Ohm's law", "def": "The relationship V = I × R connecting voltage, current, and resistance."}
+     ],
+     "practice": [
+      {
+       "q": "A 9 V battery is connected across a 220 Ω resistor. Approximately how much current flows?",
+       "choices": ["4.09 A", "40.9 mA", "409 mA", "0.409 mA"],
+       "answer": 1,
+       "explain": "I = V / R = 9 / 220 ≈ 0.0409 A, which is 40.9 mA."
+      },
+      {
+       "q": "In Ohm's law, V = I × R, what happens to current if voltage stays the same but resistance doubles?",
+       "choices": ["Current doubles", "Current stays the same", "Current is cut in half", "Current becomes zero"],
+       "answer": 2,
+       "explain": "Since I = V / R, doubling R while holding V constant cuts the current in half."
+      },
+      {
+       "q": "Which analogy correctly matches an electrical quantity to a water-pipe concept?",
+       "choices": ["Current is like water pressure", "Voltage is like the rate of water flow", "Resistance is like a narrow section of pipe restricting flow", "Resistance is like the water itself"],
+       "answer": 2,
+       "explain": "Resistance opposes flow, much like a narrow pipe restricts water flow; voltage is the pressure driving the flow, and current is the flow rate itself."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Power in Circuits",
+     "minutes": 12,
+     "intro": "Every component in a circuit converts electrical energy into something else - heat in a resistor, light in an LED, motion in a motor - and the rate at which it does that conversion is called power. Knowing how to calculate power keeps you from burning out parts or underestimating a battery's runtime.",
+     "sections": [
+      {
+       "heading": "Three Ways to Calculate Power",
+       "body": [
+        "Power (measured in watts, W) is the rate at which a component uses electrical energy, and there are three equivalent formulas for finding it, depending on which quantities you already know: P = I × V (current times voltage), P = I² × R (current squared times resistance), and P = V² / R (voltage squared divided by resistance).",
+        "All three formulas describe the same physical power and will always agree for the same circuit, because they are all derived from combining P = IV with Ohm's law (V = IR). Picking whichever formula uses the values you already have saves you an extra step of first solving for a missing quantity."
+       ]
+      },
+      {
+       "heading": "Why Power Ratings Matter",
+       "body": [
+        "Every resistor is rated for a maximum power it can safely dissipate as heat, commonly 1/4 watt for small hobby resistors, before it overheats and fails, possibly damaging nearby components or starting a fire in extreme cases. Before wiring any circuit, it is worth quickly checking that the calculated power is comfortably under the component's rating.",
+        "Batteries are rated the opposite way, by how much energy they can supply, so a circuit's power draw also determines how long a battery will last, a topic covered in more depth later in this course."
+       ],
+       "example": {
+        "problem": "A 12 V battery is connected across a 100 Ω resistor. How much power does the resistor dissipate?",
+        "steps": [
+         "Find the current first: I = V / R = 12 / 100 = 0.12 A.",
+         "Use P = I × V: P = 0.12 × 12.",
+         "Check with a second formula, P = V² / R: P = 144 / 100, which should match."
+        ],
+        "answer": "P = 1.44 W (both formulas agree)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "power", "def": "The rate at which a component converts electrical energy, measured in watts (W)."},
+      {"term": "watt", "def": "The SI unit of power, equal to one joule of energy per second."},
+      {"term": "power rating", "def": "The maximum power a component can safely dissipate as heat without failing."}
+     ],
+     "practice": [
+      {
+       "q": "A 12 V battery drives a 100 Ω resistor. How much power does the resistor dissipate?",
+       "choices": ["0.12 W", "1.2 W", "1.44 W", "14.4 W"],
+       "answer": 2,
+       "explain": "I = V/R = 12/100 = 0.12 A. P = I × V = 0.12 × 12 = 1.44 W (confirmed by P = V²/R = 144/100 = 1.44 W)."
+      },
+      {
+       "q": "A calculated circuit draws 0.3 W through a resistor rated for 1/4 W (0.25 W). What should you do?",
+       "choices": ["Use the resistor anyway, since 0.3 W is close enough", "Choose a resistor with a higher power rating, since 0.3 W exceeds 0.25 W", "Ignore power ratings for resistors under 1 W", "Double the resistor's resistance to fix the issue automatically"],
+       "answer": 1,
+       "explain": "0.3 W exceeds the resistor's 0.25 W rating, so it would overheat; a resistor with a higher power rating (such as 1/2 W) should be used instead."
+      },
+      {
+       "q": "Which formula for power would you use directly if you know a resistor's current and its resistance, but not the voltage across it?",
+       "choices": ["P = I × V", "P = V² / R", "P = I² × R", "P = R / I"],
+       "answer": 2,
+       "explain": "P = I² × R uses only current and resistance, letting you find power without first solving for voltage."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Series and Parallel Circuits",
+     "minutes": 14,
+     "intro": "Almost every real circuit is built from resistors (and other components) wired in one of two basic patterns: series, where current has only one path, or parallel, where current can split across multiple paths. Knowing how to combine each pattern into a single equivalent resistance lets you analyze circuits of any size with the same tools from lesson one.",
+     "sections": [
+      {
+       "heading": "Series Circuits: Add the Resistances",
+       "body": [
+        "In a series circuit, components are connected end to end so there is only one path for current to flow, meaning the same current passes through every component in turn. The total (equivalent) resistance of resistors in series is simply the sum of their individual resistances: Rtotal = R1 + R2 + R3 + ...",
+        "This makes sense from the water-pipe analogy: connecting several restrictive sections of pipe end to end makes the overall path more restrictive, not less, so total resistance always increases as you add more resistors in series."
+       ],
+       "example": {
+        "problem": "Three resistors, 100 Ω, 220 Ω, and 330 Ω, are connected in series with a 12 V battery. Find the total resistance and the current supplied by the battery.",
+        "steps": [
+         "Add the resistances: Rtotal = 100 + 220 + 330 = 650 Ω.",
+         "Apply Ohm's law to find current: I = V / Rtotal = 12 / 650."
+        ],
+        "answer": "Rtotal = 650 Ω, and I ≈ 0.0185 A, or about 18.5 mA."
+       }
+      },
+      {
+       "heading": "Parallel Circuits: Combine the Reciprocals",
+       "body": [
+        "In a parallel circuit, components are connected across the same two points, so current has multiple paths to choose from and the voltage across each parallel branch is identical. Because current has more than one route, adding a resistor in parallel always decreases the overall (equivalent) resistance, the opposite of the series case.",
+        "For resistors in parallel, the equivalent resistance follows 1/Rtotal = 1/R1 + 1/R2 + ...; for exactly two resistors, this simplifies to the convenient shortcut Rtotal = (R1 × R2) / (R1 + R2)."
+       ],
+       "example": {
+        "problem": "A 100 Ω resistor and a 220 Ω resistor are connected in parallel. Find the equivalent resistance.",
+        "steps": [
+         "Use the two-resistor shortcut: Rtotal = (R1 × R2) / (R1 + R2).",
+         "Substitute: Rtotal = (100 × 220) / (100 + 220) = 22,000 / 320."
+        ],
+        "answer": "Rtotal ≈ 68.75 Ω, which is smaller than either individual resistor, as expected for parallel resistors."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "series circuit", "def": "A circuit arrangement where components share a single current path, so the same current flows through each."},
+      {"term": "parallel circuit", "def": "A circuit arrangement where components share the same two connection points, so current splits between them."},
+      {"term": "equivalent resistance", "def": "A single resistance value that has the same effect as a combination of resistors."}
+     ],
+     "practice": [
+      {
+       "q": "Three resistors, 100 Ω, 220 Ω, and 330 Ω, are connected in series. What is the total resistance?",
+       "choices": ["68.75 Ω", "330 Ω", "550 Ω", "650 Ω"],
+       "answer": 3,
+       "explain": "In series, resistances simply add: 100 + 220 + 330 = 650 Ω."
+      },
+      {
+       "q": "A 100 Ω resistor and a 220 Ω resistor are connected in parallel. What is the approximate equivalent resistance?",
+       "choices": ["320 Ω", "160 Ω", "68.75 Ω", "100 Ω"],
+       "answer": 2,
+       "explain": "Using Rtotal = (R1×R2)/(R1+R2) = (100×220)/320 = 22,000/320 ≈ 68.75 Ω, which is less than either individual resistor."
+      },
+      {
+       "q": "Why does adding a resistor in parallel always decrease the overall equivalent resistance?",
+       "choices": ["It increases the voltage across the circuit", "It gives current an additional path, so more total current can flow for the same voltage", "Parallel resistors cancel each other's resistance", "It is only true for resistors above 1,000 Ω"],
+       "answer": 1,
+       "explain": "Adding a parallel path lets more total current flow for the same applied voltage, which by Ohm's law (R = V/I) means the equivalent resistance has decreased."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Circuit Components",
+   "summary": "Resistors, capacitors, inductors, diodes, and transistors are the building blocks of every circuit you will ever build. This unit teaches what each one does, how to read its markings, and how to size one correctly for a real job like protecting an LED.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Resistors and Reading Color Codes",
+     "minutes": 12,
+     "intro": "Most resistors are too small to print a number on, so manufacturers use a code of colored bands instead. Once you can read that code fluently, you can identify any resistor's value in seconds without a multimeter.",
+     "sections": [
+      {
+       "heading": "What a Resistor Does",
+       "body": [
+        "A resistor is a component built to provide a specific, known resistance, used to limit current, divide voltage, or set the behavior of other components in a circuit. Fixed resistors have one resistance value for their entire life, while potentiometers (variable resistors) let you dial in a range of values, like a volume knob.",
+        "Resistors are color-coded because their bodies are often only a few millimeters long, too small for readable printed numbers. A standard four-band resistor uses two digit bands, one multiplier band, and one tolerance band."
+       ]
+      },
+      {
+       "heading": "Reading the Four Bands",
+       "body": [
+        "The first two bands are digits (0-9, each color representing one digit); the third band is a multiplier, telling you how many zeros to add (or, for gold and silver, to divide by 10 or 100); the fourth band is the tolerance, telling you how far off the actual resistance might be from the printed value.",
+        "The standard color-to-digit key is: black=0, brown=1, red=2, orange=3, yellow=4, green=5, blue=6, violet=7, grey=8, white=9. Gold as a tolerance band means ±5%, and silver means ±10%."
+       ],
+       "example": {
+        "problem": "A resistor has the color bands yellow, violet, red, gold, in that order. What is its resistance?",
+        "steps": [
+         "Read the first digit: yellow = 4.",
+         "Read the second digit: violet = 7, giving 47 so far.",
+         "Read the multiplier: red = ×100, so 47 × 100 = 4,700.",
+         "Read the tolerance: gold = ±5%."
+        ],
+        "answer": "The resistor is 4,700 Ω (4.7 kΩ), ±5%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "resistor", "def": "A component that provides a fixed or variable resistance in a circuit."},
+      {"term": "color code", "def": "The standard system of colored bands used to mark a resistor's value and tolerance."},
+      {"term": "tolerance", "def": "How far a component's actual value may vary from its printed or coded value."},
+      {"term": "potentiometer", "def": "A variable resistor, often adjusted with a knob or slider."}
+     ],
+     "practice": [
+      {
+       "q": "A resistor's color bands are yellow, violet, red, gold. What is its resistance?",
+       "choices": ["47 Ω", "470 Ω", "4,700 Ω", "47,000 Ω"],
+       "answer": 2,
+       "explain": "Yellow=4, violet=7 gives 47; red as the multiplier means ×100, so 47 × 100 = 4,700 Ω (4.7 kΩ)."
+      },
+      {
+       "q": "What does a gold fourth band on a resistor indicate?",
+       "choices": ["The resistor's value in ohms", "±5% tolerance", "±10% tolerance", "The resistor is variable"],
+       "answer": 1,
+       "explain": "Gold as the tolerance band means the resistor's actual value is within ±5% of its coded value; silver would mean ±10%."
+      },
+      {
+       "q": "What is the main difference between a fixed resistor and a potentiometer?",
+       "choices": ["A potentiometer has no resistance at all", "A potentiometer's resistance can be adjusted, while a fixed resistor's cannot", "Fixed resistors are always more precise", "Potentiometers only work with AC power"],
+       "answer": 1,
+       "explain": "A potentiometer is a variable resistor whose value can be adjusted, often with a knob, while a fixed resistor has one unchanging resistance value."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Capacitors and Inductors",
+     "minutes": 13,
+     "intro": "Not every component simply resists current the way a resistor does. Capacitors store energy in an electric field and inductors store it in a magnetic field, and both change how a circuit behaves the instant voltage changes, which is exactly what makes them useful.",
+     "sections": [
+      {
+       "heading": "Capacitors: Storing Charge",
+       "body": [
+        "A capacitor stores electrical energy by accumulating charge on two conductive plates separated by an insulator, and its capacity to store charge is measured in farads (F), though most real capacitors are sized in microfarads (μF) or picofarads (pF) since a full farad is enormous. Capacitors are used to smooth out voltage fluctuations, filter unwanted signals, and store energy for quick release.",
+        "When a capacitor charges or discharges through a resistor, it does not happen instantly; it follows a predictable curve described by the time constant, τ = R × C, the time it takes to reach about 63% of its final charge (or fall to about 37% of its starting charge when discharging)."
+       ],
+       "example": {
+        "problem": "A 100 μF capacitor charges through a 10 kΩ resistor. What is the circuit's time constant?",
+        "steps": [
+         "Convert units: R = 10,000 Ω, C = 100 × 10⁻⁶ F = 0.0001 F.",
+         "Apply τ = R × C.",
+         "Multiply: 10,000 × 0.0001."
+        ],
+        "answer": "τ = 1 second."
+       }
+      },
+      {
+       "heading": "Inductors: Storing a Magnetic Field",
+       "body": [
+        "An inductor is typically a coil of wire that stores energy in a magnetic field when current flows through it, measured in henries (H), though most practical values are in millihenries (mH) or microhenries (μH). An inductor resists sudden changes in current, the electrical mirror image of how a capacitor resists sudden changes in voltage.",
+        "This behavior makes inductors useful for filtering out rapid, unwanted current spikes and for storing energy briefly in circuits like power supplies, where they work alongside capacitors to smooth out a circuit's voltage and current over time."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "capacitor", "def": "A component that stores energy as charge on two conductive plates, measured in farads."},
+      {"term": "inductor", "def": "A component, usually a coil, that stores energy in a magnetic field, measured in henries."},
+      {"term": "time constant", "def": "τ = R × C, the characteristic time for a capacitor to charge to about 63% of its final value through a resistor."},
+      {"term": "farad", "def": "The SI unit of capacitance."}
+     ],
+     "practice": [
+      {
+       "q": "A 100 μF capacitor charges through a 10 kΩ resistor. What is the circuit's time constant?",
+       "choices": ["0.01 second", "0.1 second", "1 second", "10 seconds"],
+       "answer": 2,
+       "explain": "τ = R × C = 10,000 Ω × 0.0001 F = 1 second."
+      },
+      {
+       "q": "What does a capacitor primarily resist?",
+       "choices": ["Sudden changes in voltage across it", "Sudden changes in resistance", "Any current flow at all times", "Magnetic fields only"],
+       "answer": 0,
+       "explain": "A capacitor resists sudden changes in the voltage across it, charging or discharging gradually according to its time constant."
+      },
+      {
+       "q": "What is the main functional difference between a capacitor and an inductor?",
+       "choices": ["A capacitor stores energy in a magnetic field; an inductor stores it as charge", "A capacitor resists sudden voltage changes; an inductor resists sudden current changes", "Only inductors can be used in DC circuits", "Capacitors are always larger physically than inductors"],
+       "answer": 1,
+       "explain": "A capacitor stores energy as charge and resists sudden voltage changes; an inductor stores energy in a magnetic field and resists sudden current changes."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Diodes, LEDs, and Transistors",
+     "minutes": 14,
+     "intro": "Resistors, capacitors, and inductors all treat current the same way no matter which direction it flows. Diodes and transistors break that symmetry: they let current flow one way but not the other, or use a small signal to control a much larger one, which is what makes modern electronics possible.",
+     "sections": [
+      {
+       "heading": "Diodes and LEDs",
+       "body": [
+        "A diode is a one-way valve for current: it allows current to flow easily in one direction (forward bias) and blocks it almost completely in the other (reverse bias). A silicon diode typically has a forward voltage drop of about 0.7 V; current will not flow forward until the voltage across it exceeds that threshold.",
+        "A light-emitting diode (LED) is a diode that emits light when current flows through it forward, with a forward voltage drop that depends on its color, commonly around 1.8 to 2.2 V for red LEDs and higher for blue or white ones. An LED connected directly across a battery with no resistor will draw far too much current and burn out almost instantly, which is why current-limiting resistors matter."
+       ]
+      },
+      {
+       "heading": "Sizing a Current-Limiting Resistor",
+       "body": [
+        "To protect an LED, a series resistor is chosen so the remaining voltage (after the LED's own forward drop) divided by the resistor gives the LED's rated current: R = (Vsupply - Vforward) / Idesired. Because standard resistors only come in specific values, the calculated resistance is usually rounded up to the next available standard value, which keeps the actual current at or slightly below the target rather than above it.",
+        "Rounding up rather than down matters because a slightly lower current just makes the LED marginally dimmer, which is harmless, while a slightly higher current than the LED is rated for shortens its life or destroys it outright."
+       ],
+       "example": {
+        "problem": "You want to light a red LED (forward voltage 2 V) from a 9 V supply at a target current of 20 mA (0.02 A). What resistor value should you use?",
+        "steps": [
+         "Find the voltage the resistor must drop: 9 V - 2 V = 7 V.",
+         "Apply Ohm's law: R = V / I = 7 / 0.02 = 350 Ω.",
+         "Since 350 Ω is not a standard value, round up to the nearest standard resistor, 390 Ω, so the actual current stays at or below the target."
+        ],
+        "answer": "Use a 390 Ω resistor; the actual current will be about (9-2)/390 ≈ 17.9 mA, slightly under the 20 mA target and safely within the LED's rating."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "diode", "def": "A component that allows current to flow easily in one direction and blocks it in the other."},
+      {"term": "forward voltage", "def": "The voltage drop across a diode or LED when it is conducting current in its allowed direction."},
+      {"term": "LED", "def": "Light-emitting diode, a diode that emits light when forward current flows through it."},
+      {"term": "current-limiting resistor", "def": "A resistor placed in series with an LED to keep its current at a safe level."},
+      {"term": "transistor", "def": "A semiconductor component that uses a small signal to control a much larger current, used for switching or amplification."}
+     ],
+     "practice": [
+      {
+       "q": "You want to light a red LED (forward voltage 2 V) from a 9 V supply at 20 mA. What resistor value does Ohm's law give before rounding to a standard value?",
+       "choices": ["45 Ω", "90 Ω", "350 Ω", "450 Ω"],
+       "answer": 2,
+       "explain": "R = (9 - 2) / 0.02 = 7 / 0.02 = 350 Ω."
+      },
+      {
+       "q": "When the calculated resistor value falls between two standard sizes, which should you generally choose for an LED circuit, and why?",
+       "choices": ["The next value down, to maximize brightness", "The next value up, so the actual current stays at or below the target", "Either value works identically", "Neither; always use the exact calculated value from a custom resistor"],
+       "answer": 1,
+       "explain": "Rounding up keeps the actual current at or slightly below the target, which is safe (slightly dimmer LED); rounding down would push current above the target, risking damage."
+      },
+      {
+       "q": "What is the defining behavior of a diode?",
+       "choices": ["It stores energy in a magnetic field", "It allows current to flow easily in one direction and blocks it in the other", "It provides a fixed resistance regardless of direction", "It amplifies any signal passed through it"],
+       "answer": 1,
+       "explain": "A diode acts as a one-way valve for current, conducting in its forward direction and blocking current in reverse."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Reading Schematics and Building Circuits",
+   "summary": "A schematic is the map of a circuit, a breadboard is where you build it, and a multimeter is how you check your work. This unit takes you from reading circuit diagrams to physically assembling and measuring a working circuit, plus the soldering skills to make a connection permanent.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Schematic Symbols and Circuit Diagrams",
+     "minutes": 12,
+     "intro": "A schematic strips away everything about a circuit's physical layout and keeps only what matters electrically: which components exist and how they connect. Learning to read one fluently means you can understand, troubleshoot, or rebuild any circuit someone hands you on paper.",
+     "sections": [
+      {
+       "heading": "Common Symbols",
+       "body": [
+        "Every component gets its own standard symbol: a battery is drawn as parallel lines of alternating length (long line = positive terminal), a resistor as a zigzag or rectangle, a capacitor as two parallel lines (or one straight and one curved for polarized types), and a diode as a triangle pointing toward a bar, with the bar marking the direction current is blocked.",
+        "Wires are drawn as straight lines, and a dot where two lines cross means they are electrically connected; lines that cross without a dot are not connected, just drawn over one another for layout convenience. Getting this distinction wrong is one of the most common schematic-reading mistakes."
+       ]
+      },
+      {
+       "heading": "Tracing Current Through a Schematic",
+       "body": [
+        "Reading a schematic well means being able to trace, with your finger or eye, the complete path current would take from the battery's positive terminal, through each component in order, back to the battery's negative terminal. If you cannot trace a complete closed loop, the circuit is open and no current will flow at all.",
+        "Ground symbols (often a downward arrow or set of horizontal lines) mark a shared reference point rather than always meaning a literal connection to the earth; every point in a circuit marked with the same ground symbol is understood to be electrically connected, even if no wire is drawn directly between them."
+       ],
+       "example": {
+        "problem": "A schematic shows a 9 V battery, a switch, a 330 Ω resistor, and an LED, all drawn in a single loop back to the battery. The switch is open. What happens?",
+        "steps": [
+         "Trace the loop from the battery's positive terminal through the switch.",
+         "Notice the switch is open, meaning there is a gap in the loop.",
+         "Recognize that an open switch breaks the closed loop needed for current to flow."
+        ],
+        "answer": "No current flows and the LED stays dark, because an open switch breaks the closed loop the circuit needs."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "schematic", "def": "A diagram representing a circuit's components and electrical connections using standard symbols."},
+      {"term": "node", "def": "A point in a circuit where two or more components electrically connect."},
+      {"term": "open circuit", "def": "A break in a circuit's path that prevents current from flowing at all."},
+      {"term": "ground", "def": "A shared reference point in a circuit, marked with a standard symbol, used as a common connection."}
+     ],
+     "practice": [
+      {
+       "q": "On a schematic, what does a dot at the intersection of two crossing lines mean?",
+       "choices": ["The lines are not connected", "The lines are electrically connected", "One line is a resistor", "The circuit has a fault at that point"],
+       "answer": 1,
+       "explain": "A dot at a crossing point means the two wires are electrically connected; without a dot, crossing lines are just drawn over each other with no connection."
+      },
+      {
+       "q": "A schematic shows a battery, switch, resistor, and LED in a single loop. The switch is open. What happens?",
+       "choices": ["Current flows normally", "No current flows, because the open switch breaks the loop", "Only the resistor receives current", "The LED lights at reduced brightness"],
+       "answer": 1,
+       "explain": "An open switch creates a gap in the circuit's loop, so no complete path exists for current, and nothing in the circuit receives power."
+      },
+      {
+       "q": "What does the longer line in a battery symbol represent?",
+       "choices": ["The negative terminal", "The positive terminal", "A resistor built into the battery", "A short circuit"],
+       "answer": 1,
+       "explain": "In the standard battery symbol, the longer line represents the positive terminal, and the shorter line represents the negative terminal."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Breadboarding and Multimeter Basics",
+     "minutes": 14,
+     "intro": "A breadboard lets you build and rebuild a circuit without soldering anything, which makes it the standard tool for prototyping, while a multimeter lets you check whether your circuit is actually behaving the way your calculations predicted. Together they turn schematic theory into hands-on practice.",
+     "sections": [
+      {
+       "heading": "How a Breadboard Connects",
+       "body": [
+        "A typical breadboard has two power rail rows along each edge (marked + and -, running the full length of the board) and a central section split into short columns of five holes each, with each column of five holes electrically connected internally but isolated from every other column. Inserting a component's leg into any hole in a column connects it to every other hole in that same column.",
+        "This layout is why breadboard circuits look nothing like their schematics physically but behave identically electrically, once you know that each five-hole column acts as a single node, exactly like a labeled point on the schematic."
+       ]
+      },
+      {
+       "heading": "Measuring with a Multimeter",
+       "body": [
+        "A multimeter measures voltage by being placed in parallel across a component (probes touching both ends of the component without breaking the circuit), and measures current by being placed in series (the circuit must be opened and the meter inserted into the gap so all the current passes through it). Resistance is measured on an unpowered, disconnected component, since the meter supplies its own small test current.",
+        "The voltage divider rule is a common calculation to check with a multimeter: for two resistors in series across a supply, the voltage across the second resistor is V2 = Vsupply × R2 / (R1 + R2), because the two resistors split the total voltage in proportion to their resistances."
+       ],
+       "example": {
+        "problem": "A 9 V supply drives two resistors in series: R1 = 220 Ω and R2 = 470 Ω. What voltage should a multimeter read across R2?",
+        "steps": [
+         "Apply the voltage divider rule: V2 = Vsupply × R2 / (R1 + R2).",
+         "Substitute: V2 = 9 × 470 / (220 + 470) = 9 × 470 / 690."
+        ],
+        "answer": "V2 ≈ 6.13 V."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "breadboard", "def": "A reusable board with internally connected rows of holes, used to build circuits without soldering."},
+      {"term": "multimeter", "def": "A tool that measures voltage, current, and resistance in a circuit."},
+      {"term": "voltage divider", "def": "Two resistors in series that split a supply voltage proportionally between them."},
+      {"term": "series measurement", "def": "Placing a meter within a broken circuit path so all current flows through it, used to measure current."}
+     ],
+     "practice": [
+      {
+       "q": "How should a multimeter be connected to measure the voltage across a resistor?",
+       "choices": ["In series, breaking the circuit", "In parallel, across the resistor's two ends", "Only after removing the resistor from the circuit", "In series with the battery only"],
+       "answer": 1,
+       "explain": "Voltage is measured in parallel, with the meter's probes touching both ends of the component, without opening the circuit."
+      },
+      {
+       "q": "A 9 V supply drives R1 = 220 Ω and R2 = 470 Ω in series. Using the voltage divider rule, what voltage appears across R2?",
+       "choices": ["2.87 V", "4.50 V", "6.13 V", "9.00 V"],
+       "answer": 2,
+       "explain": "V2 = 9 × 470 / (220+470) = 9 × 470 / 690 ≈ 6.13 V."
+      },
+      {
+       "q": "On a standard breadboard, what electrically connects the holes within one five-hole column of the central section?",
+       "choices": ["Nothing; each hole is isolated", "A metal strip beneath the board connecting that column only", "The entire row across the whole board", "Only the top and bottom holes of the column"],
+       "answer": 1,
+       "explain": "Each short column of five holes in a breadboard's central section is connected by its own internal metal strip, isolated from every other column."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Soldering Basics and Safety",
+     "minutes": 13,
+     "intro": "Soldering turns a temporary breadboard connection into a permanent one by melting metal alloy around a joint, and doing it well is a physical skill built on a few consistent habits rather than luck. This lesson covers the process and the safety rules that keep soldering from becoming a hazard.",
+     "sections": [
+      {
+       "heading": "The Soldering Process",
+       "body": [
+        "A good solder joint starts with a clean, properly tinned iron tip (a thin layer of fresh solder coating the tip) heated to around 315-370°C (600-700°F) for typical leaded or lead-free hobby solder. Heat both the component lead and the pad or wire together for one to two seconds before feeding solder into the joint, not onto the iron tip itself, so the solder flows because the joint is hot, not because the iron pushed it there.",
+        "A properly soldered joint looks shiny and forms a smooth cone shape around the connection; a dull, grainy, or ball-shaped joint (called a cold joint) usually means the metal was not heated enough and may not conduct reliably, even if it looks connected."
+       ]
+      },
+      {
+       "heading": "Safety Habits",
+       "body": [
+        "A soldering iron tip reaches temperatures well above 300°C and stays dangerously hot for minutes after being unplugged, so always return it to its stand between uses and never touch the metal tip or barrel. Work in a ventilated area, since rosin core solder produces fumes that irritate the eyes and lungs with prolonged exposure, and wear safety glasses, since solder can occasionally spatter or pop.",
+        "Wash your hands after handling solder, especially older leaded solder, before eating, and keep a damp sponge or brass wool nearby to wipe the tip clean between joints, which helps the tip stay properly tinned and heat transfer stay consistent."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "solder", "def": "A metal alloy melted to form a permanent electrical and mechanical connection between components."},
+      {"term": "tinning", "def": "Coating a soldering iron tip (or wire) with a thin layer of fresh solder to improve heat transfer."},
+      {"term": "cold joint", "def": "A dull, poorly formed solder connection caused by insufficient heat, which may not conduct reliably."},
+      {"term": "rosin core", "def": "Solder with a flux core that helps the joint bond cleanly, releasing fumes when heated."}
+     ],
+     "practice": [
+      {
+       "q": "What does a good solder joint look like when done correctly?",
+       "choices": ["Dull and grainy", "Shiny and shaped like a smooth cone", "Ball-shaped and loose", "Completely flat with no visible shape"],
+       "answer": 1,
+       "explain": "A properly heated solder joint flows smoothly into a shiny, cone-shaped connection; dull, grainy, or ball-shaped joints indicate a cold joint from insufficient heat."
+      },
+      {
+       "q": "Where should solder be fed into a joint?",
+       "choices": ["Directly onto the iron's tip", "Onto the heated component lead and pad together, not the tip", "Only after the iron is removed", "Into the air near the joint"],
+       "answer": 1,
+       "explain": "Solder should melt because the joint itself is hot, so it is fed onto the heated lead and pad together, not applied to the iron tip first."
+      },
+      {
+       "q": "Why should you work in a ventilated area when soldering?",
+       "choices": ["The iron requires airflow to heat up", "Rosin core solder fumes can irritate eyes and lungs with prolonged exposure", "Ventilation prevents cold joints", "It has no real safety purpose"],
+       "answer": 1,
+       "explain": "Heated rosin flux releases fumes that can irritate the respiratory system and eyes over time, so ventilation reduces that exposure."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Practical Electronics",
+   "summary": "This closing unit connects theory to real projects: how batteries actually supply power over time, how Kirchhoff's laws extend Ohm's law to more complex circuits, and a systematic method for finding what is actually wrong when a circuit does not work.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Batteries and Power Supplies",
+     "minutes": 12,
+     "intro": "A battery is not an infinite source of voltage; it stores a finite amount of energy and its capacity determines how long a circuit can run before it needs replacing or recharging. Learning to read a battery's rating lets you predict real runtime instead of guessing.",
+     "sections": [
+      {
+       "heading": "Voltage and Capacity",
+       "body": [
+        "A battery's voltage (such as 1.5 V for an alkaline AA cell, or 9 V for a common rectangular battery) tells you the electrical pressure it supplies, roughly constant while it has charge remaining. Its capacity, usually given in milliamp-hours (mAh) or amp-hours (Ah), tells you how much charge it can deliver in total, roughly speaking, before running out.",
+        "A 2,000 mAh battery could in principle supply 2,000 mA (2 A) for one hour, or 1,000 mA for two hours, or 100 mA for twenty hours; capacity and draw rate trade off directly, which is why a device's battery life estimate always depends on how much current it actually draws."
+       ]
+      },
+      {
+       "heading": "Estimating Battery Life",
+       "body": [
+        "To estimate how long a battery will power a circuit, divide its capacity (in mAh) by the circuit's steady current draw (in mA); the result is the approximate number of hours the battery should last, ignoring efficiency losses and the fact that voltage sags somewhat as batteries approach empty.",
+        "Real battery life is usually a bit shorter than this simple calculation predicts, since batteries do not supply their full rated capacity at every voltage level, but the calculation is still the right first estimate for comparing design choices, such as whether a lower-power component would meaningfully extend runtime."
+       ],
+       "example": {
+        "problem": "A circuit draws a steady 250 mA from a 2,000 mAh battery. Approximately how long will the battery last?",
+        "steps": [
+         "Identify the battery's capacity: 2,000 mAh.",
+         "Identify the circuit's current draw: 250 mA.",
+         "Divide capacity by draw: 2,000 / 250."
+        ],
+        "answer": "The battery should last about 8 hours."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "capacity", "def": "How much charge a battery can deliver in total, typically measured in milliamp-hours (mAh)."},
+      {"term": "milliamp-hour (mAh)", "def": "A unit of battery capacity: the charge delivered by 1 mA of current sustained for one hour."},
+      {"term": "battery life", "def": "The estimated time a battery can power a circuit, found by dividing capacity by current draw."}
+     ],
+     "practice": [
+      {
+       "q": "A circuit draws 250 mA from a 2,000 mAh battery. About how long will the battery last?",
+       "choices": ["2 hours", "4 hours", "8 hours", "20 hours"],
+       "answer": 2,
+       "explain": "Battery life ≈ capacity ÷ draw = 2,000 mAh ÷ 250 mA = 8 hours."
+      },
+      {
+       "q": "A 2,000 mAh battery is used in two different circuits: one drawing 1,000 mA and one drawing 100 mA. What does this tell you?",
+       "choices": ["Both circuits will run for exactly the same time", "The 1,000 mA circuit will run for about 2 hours; the 100 mA circuit for about 20 hours", "The battery's capacity changes depending on the circuit", "Capacity only matters for circuits above 500 mA"],
+       "answer": 1,
+       "explain": "Battery life trades off directly with draw: 2,000/1,000 = 2 hours versus 2,000/100 = 20 hours, for the same total capacity."
+      },
+      {
+       "q": "Why is a simple capacity-divided-by-draw calculation only an approximate estimate of real battery life?",
+       "choices": ["Because mAh is not a real unit", "Because batteries do not supply their full rated capacity at every voltage level as they discharge", "Because current draw never actually varies", "Because voltage has no effect on battery performance"],
+       "answer": 1,
+       "explain": "Real batteries sag in voltage and deliver somewhat less than their rated capacity as they approach empty, so real runtime is usually a bit shorter than the simple calculation predicts."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Kirchhoff's Laws and More Complex Circuits",
+     "minutes": 14,
+     "intro": "Ohm's law alone can analyze a single resistor, but real circuits often have multiple components and loops that need a more general set of rules. Kirchhoff's voltage and current laws extend Ohm's law to any circuit, no matter how complicated.",
+     "sections": [
+      {
+       "heading": "Kirchhoff's Voltage Law (KVL)",
+       "body": [
+        "Kirchhoff's voltage law states that the sum of all voltage drops around any closed loop in a circuit must equal the total voltage supplied to that loop; energy cannot appear or disappear, so every volt the source provides must be accounted for somewhere in the loop. In a simple series loop with one battery and multiple resistors, this means the sum of the individual voltage drops across each resistor equals the battery voltage.",
+        "This law is what lets you find the voltage across each resistor in a series circuit once you know the total current, since each resistor's drop is simply I × R, and those drops must sum back to the source voltage as a built-in check on your work."
+       ]
+      },
+      {
+       "heading": "Kirchhoff's Current Law (KCL)",
+       "body": [
+        "Kirchhoff's current law states that the total current flowing into any node (junction) must equal the total current flowing out of it; current cannot pile up or vanish at a junction. This is the formal version of the intuition used earlier for parallel circuits, where the current from the source splits among the parallel branches and then recombines."
+       ],
+       "example": {
+        "problem": "A 9 V battery drives R1 = 100 Ω and R2 = 200 Ω in a single series loop. Verify Kirchhoff's voltage law by finding the voltage drop across each resistor.",
+        "steps": [
+         "Find the total resistance: Rtotal = 100 + 200 = 300 Ω.",
+         "Find the current: I = V / Rtotal = 9 / 300 = 0.03 A.",
+         "Find each voltage drop: V_R1 = I × R1 = 0.03 × 100 = 3 V. V_R2 = I × R2 = 0.03 × 200 = 6 V.",
+         "Add the drops and compare to the source: 3 + 6 = 9 V."
+        ],
+        "answer": "V_R1 = 3 V and V_R2 = 6 V, and they sum to 9 V, confirming Kirchhoff's voltage law."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "Kirchhoff's voltage law (KVL)", "def": "The sum of voltage drops around any closed loop equals the total source voltage in that loop."},
+      {"term": "Kirchhoff's current law (KCL)", "def": "The total current entering a node equals the total current leaving it."},
+      {"term": "loop", "def": "A closed path through a circuit that returns to its starting point."}
+     ],
+     "practice": [
+      {
+       "q": "A 9 V battery drives R1 = 100 Ω and R2 = 200 Ω in series. What is the voltage drop across R2?",
+       "choices": ["3 V", "4.5 V", "6 V", "9 V"],
+       "answer": 2,
+       "explain": "I = 9/300 = 0.03 A. V_R2 = I × R2 = 0.03 × 200 = 6 V (and V_R1 = 3 V, summing to 9 V as KVL requires)."
+      },
+      {
+       "q": "What does Kirchhoff's current law state about a junction where three wires meet?",
+       "choices": ["The voltage at the junction must be zero", "The total current entering must equal the total current leaving", "Only one wire can carry current at a time", "Current is destroyed at every junction"],
+       "answer": 1,
+       "explain": "KCL states that current cannot accumulate or vanish at a node, so the total current in must equal the total current out."
+      },
+      {
+       "q": "In a series circuit with one battery and two resistors, what does Kirchhoff's voltage law guarantee?",
+       "choices": ["The two resistors have equal resistance", "The two voltage drops sum to exactly the battery's voltage", "No current flows in the circuit", "The resistors must be in parallel, not series"],
+       "answer": 1,
+       "explain": "KVL requires that all voltage drops around a closed loop sum to the total source voltage, so the two resistor drops together equal the battery voltage."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Troubleshooting Circuits",
+     "minutes": 13,
+     "intro": "A circuit that should work but does not is one of the most common situations in electronics, and guessing at the cause wastes parts and time. A systematic, voltage-by-voltage troubleshooting method finds the actual fault quickly, using the same Kirchhoff's law logic from the previous lesson.",
+     "sections": [
+      {
+       "heading": "A Systematic Approach",
+       "body": [
+        "Start by verifying the power source itself: measure the battery or supply voltage directly at its terminals before assuming any problem is downstream. Then work through the circuit in order, measuring voltage at each point relative to a common reference (often the negative terminal), comparing what you measure to what your calculations predict.",
+        "The key insight from Kirchhoff's voltage law is that an open circuit (no current flowing) forces the entire source voltage to appear across whichever point is actually broken, while every other component in that loop reads 0 V, since no current means no voltage drop anywhere else in the loop."
+       ]
+      },
+      {
+       "heading": "Reading the Clues",
+       "body": [
+        "If you measure 0 V across a resistor that should be conducting current, and the full supply voltage elsewhere in the loop, that elsewhere point is the break. If instead you measure roughly the expected voltage drops everywhere except one component reads far higher or lower than calculated, that specific component, not the wiring, is the more likely suspect.",
+        "This process of elimination, checking voltage progressively around the loop, is faster and more reliable than replacing parts at random, and it works the same way whether the circuit has one resistor or a dozen components."
+       ],
+       "example": {
+        "problem": "A breadboard circuit (9 V battery, 330 Ω resistor, LED, back to the battery) has an LED that stays dark. You measure 9 V across the battery terminals, 0 V across the resistor, and the full 9 V appearing across the LED's leads.",
+        "steps": [
+         "Confirm the power source is good: 9 V measured at the battery, so the supply is fine.",
+         "Notice 0 V across the resistor, meaning no current is flowing through it (since V = IR, if I = 0, the drop is 0).",
+         "Notice the full 9 V appears across the LED, which by KVL means the LED is the point where the loop is broken."
+        ],
+        "answer": "The LED itself is the fault (dead, reversed polarity, or a bad connection at its leads), since an open circuit there forces the entire 9 V to appear across it while the resistor shows no drop at all."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "troubleshooting", "def": "A systematic process of measuring a circuit at multiple points to isolate the location of a fault."},
+      {"term": "open circuit fault", "def": "A break in a circuit where the entire source voltage appears across the broken point, with 0 V elsewhere in that loop."},
+      {"term": "continuity", "def": "An unbroken electrical path between two points, often checked with a multimeter's continuity or beep function."}
+     ],
+     "practice": [
+      {
+       "q": "In a simple series circuit with a fault, you measure 0 V across a resistor and the full supply voltage across another component. What does this indicate?",
+       "choices": ["The resistor is short-circuited", "The other component is where the circuit is open (broken)", "The battery is dead", "Both components are working normally"],
+       "answer": 1,
+       "explain": "By Kirchhoff's voltage law, an open circuit forces the entire source voltage to appear across the broken point, while components with no current flowing show 0 V, which is what points to that other component as the fault."
+      },
+      {
+       "q": "What is the first step in systematically troubleshooting a circuit that is not working?",
+       "choices": ["Replace every component at once", "Verify the power source's voltage directly at its terminals", "Assume the resistor is always the problem", "Add more resistors to the circuit"],
+       "answer": 1,
+       "explain": "Confirming the power source itself is providing the expected voltage rules out the simplest possible cause before investigating anything further downstream."
+      },
+      {
+       "q": "Why is progressively measuring voltage around a loop a more reliable troubleshooting method than replacing parts at random?",
+       "choices": ["It uses Kirchhoff's laws to logically narrow down exactly where the fault must be", "It always finds the fault in exactly one measurement", "It eliminates the need to understand the circuit at all", "It only works on circuits with no resistors"],
+       "answer": 0,
+       "explain": "Comparing measured voltages to what Kirchhoff's laws predict at each point lets you logically narrow down the fault's location, rather than guessing which part to swap next."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

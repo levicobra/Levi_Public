@@ -1,0 +1,693 @@
+{
+ "id": "microeconomics",
+ "title": "Microeconomics",
+ "domain": "social",
+ "level": "Intro college",
+ "description": "An introduction to how individuals, households, and firms make choices under scarcity, and how those choices interact in markets. You will build supply-and-demand models, work through elasticity and cost calculations, compare market structures, and use the tools of microeconomics to evaluate real policy debates like minimum wage laws and pollution taxes.",
+ "outcomes": [
+  "You can use opportunity cost and a production possibilities frontier to explain the tradeoffs behind any choice.",
+  "You can solve supply-and-demand equations for equilibrium price and quantity, and predict shortages or surpluses from price controls.",
+  "You can calculate price elasticity of demand and use it to predict how revenue responds to a price change.",
+  "You can compute average and marginal cost from a cost schedule and find a firm's profit-maximizing output.",
+  "You can compare how perfectly competitive firms, monopolies, and oligopolists set price and quantity.",
+  "You can calculate the deadweight loss from a tax, a monopoly, or an externality, and explain what a Pigovian tax or minimum wage does to a market."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Scarcity, Choice, and Markets",
+   "summary": "The economic problem of unlimited wants and limited resources, and the supply-and-demand model used to study how markets solve it.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Scarcity, Opportunity Cost, and the PPF",
+     "minutes": 13,
+     "intro": "Every choice you make, even a free one, has a hidden price tag: what you gave up to make it. Economics starts with that idea, and a simple graph called the production possibilities frontier makes it visible.",
+     "sections": [
+      {
+       "heading": "Opportunity Cost",
+       "body": [
+        "**Scarcity** means resources (time, labor, land, capital) are limited relative to human wants, forcing choices. The **opportunity cost** of any choice is the value of the next-best alternative you give up to make it, not just its dollar price.",
+        "Opportunity cost applies everywhere: the opportunity cost of four years in college is not just tuition, but also the wages you could have earned working instead. Economists insist on this full accounting because it is the true cost that should drive a rational decision.",
+        "A **production possibilities frontier (PPF)** graphs the maximum combinations of two goods an economy can produce with fixed resources and technology. Points on the frontier are efficient; points inside it are wasteful; points outside it are currently unreachable."
+       ],
+       "example": {
+        "problem": "A country's PPF is a straight line: using all its resources, it can produce 60 units of food and 0 units of cloth, or 0 units of food and 30 units of cloth. What is the opportunity cost of producing one unit of cloth?",
+        "steps": [
+         "Find the two intercepts of the PPF: 60 units of food (all resources to food) or 30 units of cloth (all resources to cloth).",
+         "Since the frontier is a straight line, the opportunity cost per unit is constant: giving up all 60 food gains all 30 cloth.",
+         "Divide food given up by cloth gained: 60 ÷ 30 = 2 units of food per unit of cloth."
+        ],
+        "answer": "The opportunity cost of one unit of cloth is 2 units of food."
+       }
+      },
+      {
+       "heading": "Why the PPF Usually Bows Outward",
+       "body": [
+        "Real-world PPFs usually curve outward (are concave), because resources are not equally suited to producing every good. As an economy shifts more resources toward one good, it must draw on resources progressively less suited to that good, so each additional unit costs more of the other good than the last one did.",
+        "This rising opportunity cost is called the **law of increasing opportunity cost**. It explains why, in practice, economies tend to specialize rather than try to produce a little of everything at maximum efficiency, since specialization lets each resource go where it is most productive.",
+        "The PPF can shift outward over time through **economic growth**: more resources, better technology, or a more skilled workforce let an economy produce more of both goods than before, moving the whole frontier out rather than just moving along it."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "scarcity", "def": "The condition of having limited resources relative to unlimited wants, which forces choices."},
+      {"term": "opportunity cost", "def": "The value of the next-best alternative given up when a choice is made."},
+      {"term": "production possibilities frontier (PPF)", "def": "A graph showing the maximum combinations of two goods an economy can produce with its current resources and technology."},
+      {"term": "law of increasing opportunity cost", "def": "The principle that producing more of one good requires giving up increasing amounts of another good, producing a bowed-out PPF."}
+     ],
+     "practice": [
+      {"q": "A PPF runs from 60 food (0 cloth) to 0 food (30 cloth) in a straight line. What is the opportunity cost of 1 unit of food?", "choices": ["2 units of cloth", "0.5 units of cloth", "1 unit of cloth", "60 units of cloth"], "answer": 1, "explain": "Since 60 food trades off against 30 cloth, 1 food costs 30/60 = 0.5 cloth, the inverse of the 2 food-per-cloth rate found by moving the other direction."},
+      {"q": "A point that lies inside a country's PPF represents:", "choices": ["An unreachable combination of goods", "An efficient use of all resources", "A wasteful or inefficient use of resources", "A combination only possible after economic growth"], "answer": 2, "explain": "Points inside the frontier are attainable but do not use all resources efficiently; the economy could produce more of at least one good without giving up any of the other."},
+      {"q": "Why does a country's PPF typically bow outward rather than form a straight line?", "choices": ["Because opportunity costs are constant everywhere", "Because resources are not equally suited to producing every good, so opportunity cost rises as production shifts", "Because governments require it by law", "Because population always grows over time"], "answer": 1, "explain": "As more resources shift toward one good, less-suited resources must be used, so each extra unit costs increasingly more of the other good — the law of increasing opportunity cost."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Demand, Supply, and Equilibrium",
+     "minutes": 15,
+     "intro": "Two simple curves, one for buyers and one for sellers, explain why a Manhattan apartment costs more than one in rural Ohio, and why a bumper wheat harvest tends to push bread prices down.",
+     "sections": [
+      {
+       "heading": "The Law of Demand and the Law of Supply",
+       "body": [
+        "The **law of demand** says that, all else equal, as price rises, quantity demanded falls, producing a downward-sloping **demand curve**. Buyers substitute toward cheaper alternatives and cut back consumption as a good becomes pricier.",
+        "The **law of supply** says that, all else equal, as price rises, quantity supplied rises, producing an upward-sloping **supply curve**. Higher prices make it more profitable for sellers to produce and sell more.",
+        "A change in price causes a movement along a curve, but a change in anything else, income, the price of related goods, expectations, or the number of buyers or sellers, shifts the entire curve left or right. Confusing a shift with a movement is the most common supply-and-demand mistake."
+       ]
+      },
+      {
+       "heading": "Solving for Equilibrium",
+       "body": [
+        "**Market equilibrium** occurs at the price where quantity demanded equals quantity supplied; graphically, it is where the demand and supply curves cross. Economists find it algebraically by setting the demand equation equal to the supply equation and solving for price, then plugging that price back in to find quantity.",
+        "At equilibrium, there is no natural pressure for price to change: buyers are willing to buy exactly what sellers are willing to sell. Away from equilibrium, price naturally adjusts, rising when there is a shortage and falling when there is a surplus, until the market clears."
+       ],
+       "example": {
+        "problem": "A market has demand Qd = 200 − 10P and supply Qs = −100 + 20P, where P is price in dollars and Q is quantity. Find the equilibrium price and quantity.",
+        "steps": [
+         "Set quantity demanded equal to quantity supplied: 200 − 10P = −100 + 20P.",
+         "Add 10P to both sides and add 100 to both sides: 300 = 30P.",
+         "Solve for P: P = 300 ÷ 30 = 10.",
+         "Plug P = 10 into either equation to find Q: Qd = 200 − 10(10) = 100.",
+         "Check with supply: Qs = −100 + 20(10) = 100. Both match, confirming equilibrium."
+        ],
+        "answer": "Equilibrium price is $10 and equilibrium quantity is 100 units."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "law of demand", "def": "As price rises, quantity demanded falls, holding all else equal."},
+      {"term": "law of supply", "def": "As price rises, quantity supplied rises, holding all else equal."},
+      {"term": "market equilibrium", "def": "The price and quantity at which quantity demanded equals quantity supplied."},
+      {"term": "shift vs. movement", "def": "A price change causes movement along a curve; a change in any other factor shifts the whole curve."}
+     ],
+     "practice": [
+      {"q": "If the price of a good rises and all else stays equal, what happens to quantity demanded?", "choices": ["It rises", "It falls", "It stays the same", "It becomes zero"], "answer": 1, "explain": "The law of demand states that quantity demanded falls as price rises, holding all other factors constant."},
+      {"q": "A market has Qd = 200 − 10P and Qs = −100 + 20P. What is the equilibrium price?", "choices": ["$5", "$8", "$10", "$15"], "answer": 2, "explain": "Setting 200 − 10P = −100 + 20P gives 300 = 30P, so P = 10."},
+      {"q": "A rise in consumer income (for a normal good) causes which of the following?", "choices": ["A movement up along the existing demand curve", "A rightward shift of the entire demand curve", "A leftward shift of the entire demand curve", "No change to demand at all"], "answer": 1, "explain": "Income is not price, so a change in income shifts the whole demand curve rather than moving along it; for a normal good, higher income shifts demand right (more demanded at every price)."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Price Controls: Ceilings and Floors",
+     "minutes": 13,
+     "intro": "When governments cap or set a floor under prices, the supply-and-demand model predicts exactly what will happen next, and history keeps confirming it: rent control produces housing shortages, and price floors produce surpluses.",
+     "sections": [
+      {
+       "heading": "Price Ceilings and Shortages",
+       "body": [
+        "A **price ceiling** is a legal maximum price, like rent control. If set below the equilibrium price, it creates a **shortage**: quantity demanded exceeds quantity supplied, because the low price encourages buyers to want more while discouraging sellers from supplying as much.",
+        "Shortages caused by price ceilings do not just mean waiting in line; they also remove the price signal that normally rations goods to those who value them most, often replaced by waiting lists, favoritism, or black markets. A price ceiling set above equilibrium has no effect, since the market would settle below it anyway.",
+        "Rent control is the classic example: capping rent below market levels can help current tenants in the short run, but it also discourages new construction and maintenance, worsening housing shortages over time, a result confirmed across many cities that have tried it."
+       ]
+      },
+      {
+       "heading": "Price Floors and Surpluses",
+       "body": [
+        "A **price floor** is a legal minimum price, like a minimum wage or agricultural price supports. If set above the equilibrium price, it creates a **surplus**: quantity supplied exceeds quantity demanded, because the higher price encourages sellers to produce more while discouraging buyers from purchasing as much.",
+        "Agricultural price floors have historically led governments to buy up unsold surplus crops to prop up the price, since farmers keep producing more than the market wants to buy at the floor price. A price floor set below equilibrium has no effect, for the same reason a ceiling above equilibrium has no effect."
+       ],
+       "example": {
+        "problem": "In the market from the previous lesson, Qd = 200 − 10P and Qs = −100 + 20P, equilibrium is P = $10, Q = 100. The government imposes a price ceiling of $6. How large is the resulting shortage?",
+        "steps": [
+         "Find quantity demanded at the ceiling price: Qd = 200 − 10(6) = 200 − 60 = 140.",
+         "Find quantity supplied at the ceiling price: Qs = −100 + 20(6) = −100 + 120 = 20.",
+         "Subtract to find the shortage: Qd − Qs = 140 − 20 = 120 units."
+        ],
+        "answer": "The price ceiling of $6 creates a shortage of 120 units, since buyers want 140 units but sellers only supply 20."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "price ceiling", "def": "A legal maximum price; if set below equilibrium, it creates a shortage."},
+      {"term": "price floor", "def": "A legal minimum price; if set above equilibrium, it creates a surplus."},
+      {"term": "shortage", "def": "A situation where quantity demanded exceeds quantity supplied at the current price."},
+      {"term": "surplus", "def": "A situation where quantity supplied exceeds quantity demanded at the current price."}
+     ],
+     "practice": [
+      {"q": "A price ceiling set below the equilibrium price will generally cause:", "choices": ["A surplus", "A shortage", "No change in the market", "Equilibrium price to rise instantly"], "answer": 1, "explain": "A ceiling below equilibrium keeps price artificially low, so quantity demanded exceeds quantity supplied, creating a shortage."},
+      {"q": "Equilibrium is P = $10, Q = 100 using Qd = 200 − 10P and Qs = −100 + 20P. At a price ceiling of $6, quantity demanded is 140 and quantity supplied is 20. What is the size of the shortage?", "choices": ["20 units", "100 units", "120 units", "140 units"], "answer": 2, "explain": "Shortage equals quantity demanded minus quantity supplied: 140 − 20 = 120 units."},
+      {"q": "A minimum wage set above the market equilibrium wage is an example of a price floor. What does economic theory predict it will cause in the labor market?", "choices": ["A labor shortage", "A labor surplus (unemployment) as quantity of labor supplied exceeds quantity demanded", "No effect on employment", "Wages to fall below equilibrium"], "answer": 1, "explain": "A price floor above equilibrium creates a surplus; in a labor market, this surplus shows up as unemployment, since more people want to work at the higher wage than firms want to hire."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Elasticity, Consumer Choice, and Costs",
+   "summary": "Measuring how responsive buyers and sellers are to price changes, how consumers allocate a limited budget, and how firms' costs behave as output changes.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Price Elasticity of Demand",
+     "minutes": 14,
+     "intro": "Raise the price of insulin and people keep buying it; raise the price of a specific brand of soda and customers switch brands overnight. Elasticity is the number that tells you which kind of good you are dealing with.",
+     "sections": [
+      {
+       "heading": "Measuring Responsiveness",
+       "body": [
+        "**Price elasticity of demand** measures how much quantity demanded changes in response to a price change, calculated as the percentage change in quantity demanded divided by the percentage change in price. Because demand curves slope downward, this number is negative, but economists usually discuss its absolute value.",
+        "Demand is **elastic** when the elasticity's absolute value is greater than 1 (quantity is highly responsive to price), **inelastic** when it is less than 1 (quantity barely responds), and **unit elastic** when it equals exactly 1.",
+        "Necessities with few substitutes, like insulin or gasoline in the short run, tend to have inelastic demand. Luxuries and goods with many close substitutes, like a specific brand of cereal, tend to have elastic demand, since buyers can easily switch away when price rises."
+       ]
+      },
+      {
+       "heading": "The Midpoint Method",
+       "body": [
+        "To avoid getting a different elasticity depending on whether price rises or falls, economists use the **midpoint method**, dividing each change by the average of the starting and ending values rather than just the starting value.",
+        "Elasticity also predicts what happens to total revenue when price changes: if demand is elastic, a price increase lowers total revenue (the quantity drop outweighs the price gain); if demand is inelastic, a price increase raises total revenue (quantity barely drops, so the price gain wins)."
+       ],
+       "example": {
+        "problem": "When the price of a good rises from $10 to $12, quantity demanded falls from 100 to 80 units. Use the midpoint method to find the price elasticity of demand, and state whether demand is elastic or inelastic.",
+        "steps": [
+         "Find the percentage change in quantity using the midpoint: (80 − 100) ÷ ((80 + 100) ÷ 2) = −20 ÷ 90 ≈ −0.222, or about −22.2%.",
+         "Find the percentage change in price using the midpoint: (12 − 10) ÷ ((12 + 10) ÷ 2) = 2 ÷ 11 ≈ 0.182, or about 18.2%.",
+         "Divide the percentage change in quantity by the percentage change in price: −22.2% ÷ 18.2% ≈ −1.22.",
+         "Compare the absolute value, 1.22, to 1: since 1.22 > 1, demand is elastic."
+        ],
+        "answer": "Elasticity ≈ −1.22, so demand is elastic; because quantity fell proportionally more than price rose, total revenue would fall after this price increase."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "price elasticity of demand", "def": "The percentage change in quantity demanded divided by the percentage change in price."},
+      {"term": "elastic demand", "def": "Demand where the absolute value of elasticity is greater than 1; quantity is highly responsive to price."},
+      {"term": "inelastic demand", "def": "Demand where the absolute value of elasticity is less than 1; quantity barely responds to price."},
+      {"term": "midpoint method", "def": "A way of calculating percentage change using the average of the starting and ending values, giving a consistent elasticity regardless of direction."}
+     ],
+     "practice": [
+      {"q": "Price rises from $10 to $12 and quantity falls from 100 to 80. Using the midpoint method, the elasticity is approximately −1.22. Is demand elastic or inelastic?", "choices": ["Elastic, since |−1.22| > 1", "Inelastic, since |−1.22| > 1", "Unit elastic", "Cannot be determined"], "answer": 0, "explain": "Since the absolute value of elasticity (1.22) is greater than 1, quantity responded more than proportionally to the price change, meaning demand is elastic."},
+      {"q": "If demand for a good is inelastic, what happens to total revenue when price increases?", "choices": ["Total revenue falls", "Total revenue rises", "Total revenue stays exactly the same", "Total revenue becomes zero"], "answer": 1, "explain": "With inelastic demand, quantity falls only slightly when price rises, so the gain from the higher price outweighs the small quantity loss, raising total revenue."},
+      {"q": "Which good would you expect to have the MOST elastic demand?", "choices": ["Insulin for a diabetic patient", "Table salt", "A specific brand of soft drink with many close substitutes", "Gasoline in the short run"], "answer": 2, "explain": "Goods with many close substitutes tend to have elastic demand, since buyers can easily switch brands if the price rises, unlike necessities with few substitutes."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Consumer Choice and Marginal Utility",
+     "minutes": 13,
+     "intro": "You have a limited budget and a long list of things you would enjoy buying. The rule economists use to describe a smart shopper is surprisingly simple: chase the biggest bang for your next buck.",
+     "sections": [
+      {
+       "heading": "Diminishing Marginal Utility",
+       "body": [
+        "**Utility** is the satisfaction a person gets from consuming a good. **Marginal utility** is the extra utility gained from consuming one more unit. The **law of diminishing marginal utility** says that as you consume more of a good, the additional satisfaction from each extra unit tends to shrink: the first slice of pizza is glorious, the fifth is a chore.",
+        "Diminishing marginal utility is exactly why demand curves slope downward: a good's later units are worth less to you, so you will only buy more of them if the price drops to match that lower value."
+       ]
+      },
+      {
+       "heading": "The Utility-Maximizing Rule",
+       "body": [
+        "A rational consumer with a limited budget gets the most satisfaction by comparing **marginal utility per dollar** (marginal utility divided by price) across goods, not marginal utility alone, since a bigger payoff from an expensive good may still be a worse deal per dollar spent.",
+        "At a utility-maximizing bundle, the marginal utility per dollar spent on every good purchased is approximately equal; if one good offers a higher marginal utility per dollar than another, the consumer should buy more of it and less of the other, until the two ratios come back into balance."
+       ],
+       "example": {
+        "problem": "A consumer buys coffee (price $2, marginal utility from the last cup = 14) and donuts (price $1, marginal utility from the last donut = 6). Is this consumer maximizing utility? If not, what should they do?",
+        "steps": [
+         "Calculate marginal utility per dollar for coffee: 14 ÷ $2 = 7 utils per dollar.",
+         "Calculate marginal utility per dollar for donuts: 6 ÷ $1 = 6 utils per dollar.",
+         "Compare the two ratios: coffee (7) is higher than donuts (6), so the last dollar spent on coffee delivers more satisfaction than the last dollar spent on donuts."
+        ],
+        "answer": "No, this consumer is not maximizing utility. Since coffee delivers more utility per dollar (7 vs. 6), they should buy more coffee and fewer donuts until the marginal utility per dollar of both goods is equal."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "utility", "def": "The satisfaction a person receives from consuming a good or service."},
+      {"term": "marginal utility", "def": "The additional utility gained from consuming one more unit of a good."},
+      {"term": "law of diminishing marginal utility", "def": "The principle that marginal utility tends to shrink as a person consumes more units of a good."},
+      {"term": "marginal utility per dollar", "def": "Marginal utility divided by price, used to compare the value of spending an extra dollar on different goods."}
+     ],
+     "practice": [
+      {"q": "What does the law of diminishing marginal utility say?", "choices": ["Total utility always falls as you consume more", "The additional satisfaction from each extra unit tends to shrink as consumption increases", "Marginal utility is always negative", "Prices always fall as quantity rises"], "answer": 1, "explain": "Diminishing marginal utility means each additional unit adds less satisfaction than the one before, not that total utility falls."},
+      {"q": "A consumer gets marginal utility per dollar of 7 from coffee and 6 from donuts. To maximize utility, what should they do?", "choices": ["Buy more donuts and less coffee", "Buy more coffee and fewer donuts until the ratios equalize", "Stop buying both goods entirely", "Nothing; they are already maximizing utility"], "answer": 1, "explain": "Since coffee's marginal utility per dollar is higher, shifting spending toward coffee raises total utility until the marginal utility per dollar of both goods equalizes."},
+      {"q": "Why do economists compare marginal utility per DOLLAR rather than marginal utility alone when studying consumer choice?", "choices": ["Because prices never matter to consumers", "Because a good with higher marginal utility might still be a worse value if its price is much higher", "Because marginal utility per dollar is always equal to 1", "Because only expensive goods provide utility"], "answer": 1, "explain": "A good could deliver more raw satisfaction but cost so much more that it delivers less value per dollar spent, so dividing by price is necessary to compare fairly across goods."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Costs of Production",
+     "minutes": 15,
+     "intro": "Before a firm can decide how much to produce, it needs to know its own costs, cold. A cost schedule turns invisible bookkeeping into the numbers that drive every output decision a business makes.",
+     "sections": [
+      {
+       "heading": "Fixed, Variable, and Total Cost",
+       "body": [
+        "**Fixed costs (FC)** do not change with output, like rent on a factory; a firm pays them even if it produces nothing. **Variable costs (VC)** rise with output, like raw materials and hourly labor. **Total cost (TC)** is simply FC plus VC at each quantity.",
+        "Dividing these by quantity gives per-unit costs: **average fixed cost (AFC)** = FC ÷ Q, **average variable cost (AVC)** = VC ÷ Q, and **average total cost (ATC)** = TC ÷ Q. Since fixed costs are spread over more units as output rises, AFC always falls as quantity increases."
+       ]
+      },
+      {
+       "heading": "Marginal Cost",
+       "body": [
+        "**Marginal cost (MC)** is the extra cost of producing one more unit: the change in total cost divided by the change in quantity. Marginal cost typically falls at first as a firm gets more efficient, then rises as the firm strains its existing capacity, producing the U-shaped marginal cost curve central to production decisions.",
+        "Marginal cost is the number a firm should compare to the market price when deciding whether to produce one more unit: if the extra revenue from selling one more unit exceeds its marginal cost, producing it adds to profit."
+       ],
+       "example": {
+        "problem": "A firm has fixed costs of $100. At Q = 2, total cost is $190. At Q = 3, total cost is $220. Find the marginal cost of the third unit, the average total cost at Q = 3, and the average fixed cost at Q = 3.",
+        "steps": [
+         "Marginal cost of the 3rd unit = change in total cost ÷ change in quantity = ($220 − $190) ÷ (3 − 2) = $30.",
+         "Average total cost at Q = 3 = total cost ÷ quantity = $220 ÷ 3 ≈ $73.33.",
+         "Average fixed cost at Q = 3 = fixed cost ÷ quantity = $100 ÷ 3 ≈ $33.33.",
+         "Check: average variable cost at Q=3 = ($220 − $100) ÷ 3 = $40; AFC + AVC = $33.33 + $40 = $73.33, matching ATC."
+        ],
+        "answer": "Marginal cost of the third unit is $30; average total cost at Q = 3 is about $73.33; average fixed cost at Q = 3 is about $33.33."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "fixed cost", "def": "A cost that does not change with the quantity produced, such as rent."},
+      {"term": "variable cost", "def": "A cost that rises with the quantity produced, such as materials and hourly labor."},
+      {"term": "average total cost (ATC)", "def": "Total cost divided by quantity produced."},
+      {"term": "marginal cost (MC)", "def": "The extra cost of producing one additional unit, equal to the change in total cost divided by the change in quantity."}
+     ],
+     "practice": [
+      {"q": "A firm's total cost rises from $190 at Q=2 to $220 at Q=3. What is the marginal cost of the 3rd unit?", "choices": ["$190", "$220", "$30", "$73.33"], "answer": 2, "explain": "Marginal cost is the change in total cost divided by the change in quantity: ($220 − $190) ÷ 1 = $30."},
+      {"q": "Why does average fixed cost (AFC) always fall as output rises?", "choices": ["Because fixed costs decrease as output rises", "Because a constant fixed cost is spread over more units as quantity increases", "Because marginal cost always falls", "Because variable costs fall with output"], "answer": 1, "explain": "Fixed cost stays constant in total, so dividing that same fixed number by a growing quantity produces a steadily shrinking AFC."},
+      {"q": "If fixed cost is $100 and quantity is 3, what is average fixed cost?", "choices": ["$100", "$33.33", "$300", "$3"], "answer": 1, "explain": "AFC = fixed cost ÷ quantity = $100 ÷ 3 ≈ $33.33."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Market Structures",
+   "summary": "How firms set price and quantity differently depending on how much competition they face, from many small competitors to a single monopolist.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Perfect Competition",
+     "minutes": 14,
+     "intro": "In a perfectly competitive market, no single seller has any power over price at all. Understanding why reveals the profit-maximizing rule that underlies every market structure this unit covers.",
+     "sections": [
+      {
+       "heading": "Characteristics of Perfect Competition",
+       "body": [
+        "A **perfectly competitive market** has many buyers and sellers, an identical (homogeneous) product across firms, easy entry and exit, and full information. Because any single firm's output is tiny compared to the whole market, each firm is a **price taker**: it must accept the market price and cannot influence it by changing its own output.",
+        "Because a price-taking firm can sell as much as it wants at the market price, its **marginal revenue (MR)**, the extra revenue from selling one more unit, simply equals that market price for every unit sold."
+       ]
+      },
+      {
+       "heading": "The Profit-Maximizing Rule: MR = MC",
+       "body": [
+        "Every firm, regardless of market structure, maximizes profit by producing up to the point where marginal revenue equals marginal cost (MR = MC). Producing less than that point leaves profitable units on the table; producing more than that point means the last units cost more than they earn.",
+        "For a perfectly competitive firm, since MR always equals price, the rule becomes produce until MC = P. Once marginal cost rises above price, the next unit would cost more to make than it sells for, so the firm should stop there."
+       ],
+       "example": {
+        "problem": "A competitive firm faces a market price of $20. Its marginal cost is $10 for the 1st unit, $14 for the 2nd, $18 for the 3rd, and $22 for the 4th. Its average total cost at Q=3 is $17. How many units should it produce, and what is its profit?",
+        "steps": [
+         "Apply the rule: produce each unit as long as its marginal cost is less than the price of $20.",
+         "Unit 1 (MC=$10), unit 2 (MC=$14), and unit 3 (MC=$18) all have MC below $20, so all three are worth producing.",
+         "Unit 4 has MC=$22, which exceeds the $20 price, so producing it would lose money; the firm stops at Q = 3.",
+         "Calculate profit: (Price − ATC) × Q = ($20 − $17) × 3 = $9."
+        ],
+        "answer": "The firm should produce 3 units, earning an economic profit of $9."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "perfectly competitive market", "def": "A market with many buyers and sellers, an identical product, easy entry and exit, and full information."},
+      {"term": "price taker", "def": "A firm that must accept the market price because its own output is too small to affect it."},
+      {"term": "marginal revenue (MR)", "def": "The extra revenue a firm earns from selling one more unit."},
+      {"term": "MR = MC rule", "def": "The profit-maximizing rule: produce up to the quantity where marginal revenue equals marginal cost."}
+     ],
+     "practice": [
+      {"q": "Why is a perfectly competitive firm called a 'price taker'?", "choices": ["It sets the market price for all firms", "Its output is too small relative to the whole market to influence price, so it must accept the going price", "It only sells to the government", "It has no competitors at all"], "answer": 1, "explain": "In perfect competition, each firm is so small relative to the total market that changing its own output has no effect on the market price, so it simply takes the price as given."},
+      {"q": "A competitive firm faces price $20 and marginal costs of $10, $14, $18, and $22 for units 1 through 4. How many units should it produce?", "choices": ["2 units", "3 units", "4 units", "0 units"], "answer": 1, "explain": "The firm should produce every unit whose marginal cost is below the $20 price; units 1-3 qualify (MC of $10, $14, $18), but unit 4's MC of $22 exceeds price, so it should stop at 3."},
+      {"q": "For a perfectly competitive firm, marginal revenue equals:", "choices": ["Average total cost", "The market price", "Marginal cost, always", "Zero"], "answer": 1, "explain": "Because a price-taking firm can sell any quantity at the going market price, each additional unit sold brings in exactly that price, so MR equals price."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Monopoly",
+     "minutes": 15,
+     "intro": "A single seller with no close competitors can do something a competitive firm cannot: choose its price. That power comes at a cost to society, one economists can measure exactly as a triangle on a graph.",
+     "sections": [
+      {
+       "heading": "Monopoly Power and Marginal Revenue",
+       "body": [
+        "A **monopoly** is the sole seller of a product with no close substitutes, protected by **barriers to entry** such as patents, control of a key resource, government licenses, or economies of scale so large that only one firm can operate efficiently.",
+        "Unlike a price taker, a monopolist faces the entire downward-sloping market demand curve, so to sell more units it must lower price on all units sold, not just the last one. This makes its marginal revenue fall faster than price as quantity rises; for a straight-line demand curve, the marginal revenue curve has twice the slope of the demand curve."
+       ]
+      },
+      {
+       "heading": "Monopoly Output, Price, and Deadweight Loss",
+       "body": [
+        "The monopolist still applies MR = MC to maximize profit, but because MR lies below demand at every quantity, the monopoly produces less and charges more than a competitive market would, restricting output to keep price high.",
+        "This gap between the competitive outcome and the monopoly outcome creates **deadweight loss**: units that buyers value more than they would cost to produce simply never get made, a pure loss to society with no offsetting gain, since the extra profit no one gains back what would have been mutual gains from trade."
+       ],
+       "example": {
+        "problem": "Market demand is P = 100 − 2Q, so marginal revenue is MR = 100 − 4Q. Marginal cost is constant at $20. Find the monopoly price and quantity, the competitive (MC = P) price and quantity, and the deadweight loss.",
+        "steps": [
+         "Monopoly: set MR = MC: 100 − 4Q = 20 → 4Q = 80 → Q = 20. Price: P = 100 − 2(20) = 60.",
+         "Competitive benchmark: set P = MC: 100 − 2Q = 20 → 2Q = 80 → Q = 40. Price: P = 20.",
+         "Deadweight loss is the triangle between the competitive and monopoly quantities: 0.5 × (Qcompetitive − Qmonopoly) × (Pmonopoly − MC).",
+         "Calculate: 0.5 × (40 − 20) × (60 − 20) = 0.5 × 20 × 40 = 800."
+        ],
+        "answer": "Monopoly price is $60 at quantity 20; the competitive outcome would be price $20 at quantity 40; the deadweight loss from monopoly is $800."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "monopoly", "def": "A market with a single seller of a product with no close substitutes."},
+      {"term": "barriers to entry", "def": "Factors, like patents or control of a key resource, that prevent other firms from entering a market."},
+      {"term": "deadweight loss", "def": "The loss of total economic value from producing less than the efficient quantity, with no offsetting gain to anyone."}
+     ],
+     "practice": [
+      {"q": "Why does a monopolist's marginal revenue fall faster than price as quantity increases?", "choices": ["Because the monopolist must lower price on all units sold, not just the additional one, to sell more", "Because monopolists always face rising marginal cost", "Because government regulates monopoly prices", "Because monopolists cannot change their price at all"], "answer": 0, "explain": "A monopolist faces the whole market demand curve, so selling one more unit requires lowering the price on every unit sold, making marginal revenue fall faster than the price itself."},
+      {"q": "Demand is P = 100 − 2Q and MC is constant at $20. What is the monopoly quantity, given MR = 100 − 4Q?", "choices": ["10", "20", "40", "80"], "answer": 1, "explain": "Setting MR = MC: 100 − 4Q = 20 gives 4Q = 80, so Q = 20."},
+      {"q": "What does deadweight loss from monopoly represent?", "choices": ["Extra profit earned by the monopolist", "The tax government collects from a monopoly", "The value of trades that would benefit both buyers and sellers but never happen because output is restricted", "The monopolist's fixed costs"], "answer": 2, "explain": "Deadweight loss is the lost value from units that buyers would have valued more than their production cost, but are never produced because the monopolist restricts output to keep price high."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Monopolistic Competition and Oligopoly",
+     "minutes": 13,
+     "intro": "Most real markets sit between the extremes of perfect competition and monopoly: many brands of toothpaste compete on more than price, and a handful of airlines watch each other's every move before setting a fare.",
+     "sections": [
+      {
+       "heading": "Monopolistic Competition",
+       "body": [
+        "**Monopolistic competition** describes markets with many firms selling differentiated (not identical) products, like restaurants or clothing brands, with relatively easy entry and exit. Because products differ, each firm has some control over its own price, unlike a perfect competitor.",
+        "Free entry means economic profits attract new competitors, and losses drive firms out, so in the long run, firms in monopolistic competition tend to earn roughly zero economic profit, similar to perfect competition, even though individual firms sell somewhat different products at somewhat different prices."
+       ]
+      },
+      {
+       "heading": "Oligopoly and Strategic Behavior",
+       "body": [
+        "An **oligopoly** is a market dominated by a small number of large firms, like airlines or wireless carriers, where each firm's decisions directly affect its rivals, making strategic thinking essential. This interdependence is studied using **game theory**, which models how rational players choose actions based on what they expect others to do.",
+        "The **prisoner's dilemma** is a classic game theory setup where each player has a dominant strategy that seems best individually, yet following it by both players leads to a worse outcome for both than if they had cooperated, a pattern seen when oligopolists undercut each other on price or over-advertise even though both would profit more by holding back."
+       ],
+       "example": {
+        "problem": "Two firms, A and B, choose whether to advertise heavily. If both advertise, each earns $2 million profit. If neither advertises, each earns $5 million. If one advertises and the other does not, the advertiser earns $6 million and the non-advertiser earns $1 million. What is the Nash equilibrium?",
+        "steps": [
+         "Check Firm A's best response if B advertises: advertising gives A $2 million vs. $1 million for not advertising, so A should advertise.",
+         "Check Firm A's best response if B does not advertise: advertising gives A $6 million vs. $5 million for not advertising, so A should still advertise.",
+         "Since advertising is A's best choice no matter what B does, advertising is a dominant strategy for A, and by symmetry, for B as well.",
+         "Both firms advertising is the Nash equilibrium, even though both would earn more ($5 million each) if they both refrained."
+        ],
+        "answer": "The Nash equilibrium is both firms advertising, each earning $2 million, even though both would be better off ($5 million each) if neither advertised — a prisoner's dilemma."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "monopolistic competition", "def": "A market structure with many firms selling differentiated products and relatively easy entry and exit."},
+      {"term": "oligopoly", "def": "A market dominated by a small number of large, interdependent firms."},
+      {"term": "game theory", "def": "The study of how rational decision-makers choose strategies based on what they expect others to do."},
+      {"term": "prisoner's dilemma", "def": "A game in which each player's dominant strategy leads to a worse joint outcome than if both had cooperated."}
+     ],
+     "practice": [
+      {"q": "What allows firms in monopolistic competition to have some control over their price, unlike perfect competitors?", "choices": ["Government price controls", "Product differentiation, since goods are not identical across firms", "Legal barriers to entry", "A single firm controlling the whole market"], "answer": 1, "explain": "Because products are differentiated rather than identical, customers have brand preferences, giving each firm some pricing power that a perfect competitor selling an identical good would not have."},
+      {"q": "In the advertising example, why do both firms end up advertising even though both would profit more if neither did?", "choices": ["Advertising is illegal to avoid", "Advertising is each firm's dominant strategy regardless of what the other firm does", "The firms are forced to advertise by regulators", "Profits are always higher when advertising"], "answer": 1, "explain": "Since advertising is the better choice for each firm no matter what the other does, both rationally choose to advertise, even though mutual restraint would leave both better off — the essence of a prisoner's dilemma."},
+      {"q": "Which market structure involves a small number of large, interdependent firms where each firm's choices affect its rivals?", "choices": ["Perfect competition", "Monopoly", "Oligopoly", "Monopolistic competition"], "answer": 2, "explain": "Oligopoly describes markets with a few dominant firms whose strategic decisions are interdependent, unlike the many small firms of perfect or monopolistic competition or the single firm of a monopoly."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Labor Markets and Income Distribution",
+   "summary": "How firms decide how many workers to hire, why wages differ across jobs, and how economists measure and debate income inequality.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Labor Markets and Marginal Revenue Product",
+     "minutes": 13,
+     "intro": "A firm does not hire workers out of generosity; it hires them because each additional worker adds more to revenue than they cost in wages. That single comparison drives every hiring decision in the economy.",
+     "sections": [
+      {
+       "heading": "Derived Demand for Labor",
+       "body": [
+        "The demand for labor is a **derived demand**: firms do not want workers for their own sake, but for the goods and services those workers help produce. If demand for a firm's product falls, its demand for the workers who make that product falls too.",
+        "A worker's **marginal product (MP)** is the extra output produced by hiring one more worker, holding other inputs constant. Because of diminishing returns, marginal product typically falls as more workers are added to a fixed amount of capital and equipment."
+       ]
+      },
+      {
+       "heading": "The Hiring Rule: MRP = Wage",
+       "body": [
+        "A worker's **marginal revenue product (MRP)** is their marginal product multiplied by the price of the good they help produce; it measures the extra revenue one more worker brings in. A profit-maximizing firm hires workers up to the point where MRP equals the wage, since hiring beyond that point would cost more in wages than it brings in revenue.",
+        "This explains wage differences across jobs: workers whose labor produces highly valuable output, because of skill, capital they work with, or the price of what they make, command a higher wage than workers with lower marginal revenue product."
+       ],
+       "example": {
+        "problem": "A firm's product sells for $5 per unit. Workers have marginal products of 12, 10, 8, and 6 units for the 1st through 4th worker. The market wage is $35. How many workers should the firm hire?",
+        "steps": [
+         "Calculate MRP for each worker: MRP = marginal product × price. Worker 1: 12 × $5 = $60. Worker 2: 10 × $5 = $50. Worker 3: 8 × $5 = $40. Worker 4: 6 × $5 = $30.",
+         "Compare each worker's MRP to the $35 wage: Worker 1 ($60), Worker 2 ($50), and Worker 3 ($40) all have MRP above the wage, so hiring them is profitable.",
+         "Worker 4 has MRP of $30, which is below the $35 wage, so hiring this worker would cost more than they contribute in revenue."
+        ],
+        "answer": "The firm should hire 3 workers, since the 4th worker's marginal revenue product ($30) falls below the $35 wage."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "derived demand", "def": "Demand for an input, like labor, that comes from demand for the good or service it helps produce."},
+      {"term": "marginal product (MP)", "def": "The extra output produced by hiring one additional worker, holding other inputs constant."},
+      {"term": "marginal revenue product (MRP)", "def": "A worker's marginal product multiplied by the price of the good, measuring the extra revenue that worker generates."}
+     ],
+     "practice": [
+      {"q": "Why is labor demand called a 'derived demand'?", "choices": ["Because wages are always derived from government policy", "Because firms want labor for the goods and services it helps produce, not for its own sake", "Because labor supply is fixed", "Because it only applies to government jobs"], "answer": 1, "explain": "Firms demand labor because of what workers help produce; if demand for that output falls, demand for the labor that makes it falls too."},
+      {"q": "Workers have MRP of $60, $50, $40, and $30 for the 1st through 4th hire. The wage is $35. How many workers should the firm hire?", "choices": ["1", "2", "3", "4"], "answer": 2, "explain": "The firm should hire every worker whose MRP exceeds the $35 wage: workers 1-3 qualify ($60, $50, $40), but worker 4's MRP of $30 is below the wage."},
+      {"q": "A profit-maximizing firm hires workers up to the point where:", "choices": ["Marginal product equals zero", "Marginal revenue product equals the wage", "Total revenue equals total cost", "The firm runs out of applicants"], "answer": 1, "explain": "Hiring should continue as long as a worker's marginal revenue product exceeds the wage, stopping once MRP falls to the wage level."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Income Inequality and the Lorenz Curve",
+     "minutes": 12,
+     "intro": "Two countries can have the exact same average income and still look completely different, because average income says nothing about how that income is spread across the population. Economists built a specific tool to make that spread visible.",
+     "sections": [
+      {
+       "heading": "Measuring Income Distribution",
+       "body": [
+        "Economists often divide the population into **quintiles**, five equal-sized groups ranked from lowest to highest income, and report what share of total income each quintile receives. A perfectly equal distribution would give each quintile exactly 20% of total income.",
+        "In reality, every country's income distribution is unequal to some degree: the lowest quintile typically receives a small single-digit percentage of total income, while the top quintile typically receives closer to half, a pattern found across most market economies, though the degree of inequality varies widely by country and by policy."
+       ]
+      },
+      {
+       "heading": "The Lorenz Curve and the Gini Coefficient",
+       "body": [
+        "A **Lorenz curve** plots the cumulative share of income (vertical axis) against the cumulative share of population (horizontal axis), ordered from poorest to richest. A perfectly equal society's Lorenz curve is a straight 45-degree line; the more the actual curve bows below that line, the more unequal the income distribution.",
+        "The **Gini coefficient** summarizes this gap as a single number between 0 (perfect equality, the Lorenz curve matches the 45-degree line exactly) and 1 (perfect inequality, one person has all the income). Higher Gini coefficients indicate more inequality, and economists use them to compare inequality across countries or track how it changes over time within one country."
+       ],
+       "example": {
+        "problem": "In Country X, income quintile shares are: lowest 20% of households receive 4% of income, second 8%, third 14%, fourth 22%, and top 20% receive 52%. Compare this distribution to perfect equality and explain what it implies about the Lorenz curve.",
+        "steps": [
+         "Under perfect equality, each quintile would receive exactly 20% of income.",
+         "Compare actual shares to 20%: the bottom quintile (4%) receives far less than 20%, and the top quintile (52%) receives far more than 20%.",
+         "Because lower quintiles receive less than their equal share and the top quintile receives much more, the cumulative income curve lags well behind the cumulative population share at every point except the very end."
+        ],
+        "answer": "This distribution is significantly unequal: the Lorenz curve would bow well below the 45-degree equality line, since the bottom quintile holds only 4% of income while the top quintile holds 52%, far from an equal 20% each."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "income quintile", "def": "One of five equal-sized groups the population is divided into, ranked from lowest to highest income."},
+      {"term": "Lorenz curve", "def": "A graph plotting cumulative share of income against cumulative share of population, used to visualize income inequality."},
+      {"term": "Gini coefficient", "def": "A number between 0 (perfect equality) and 1 (perfect inequality) summarizing how far a Lorenz curve bows from perfect equality."}
+     ],
+     "practice": [
+      {"q": "What would a Lorenz curve look like for a country with perfectly equal income distribution?", "choices": ["A straight 45-degree line", "A curve that bows sharply below the diagonal", "A horizontal line at zero", "A vertical line"], "answer": 0, "explain": "Perfect equality means each population share earns exactly the matching income share, which plots as a straight 45-degree diagonal line."},
+      {"q": "A Gini coefficient close to 1 indicates:", "choices": ["Nearly perfect income equality", "Nearly perfect income inequality (one person holds almost all income)", "Zero income in the economy", "That the Lorenz curve matches the 45-degree line"], "answer": 1, "explain": "A Gini coefficient of 1 represents maximum inequality, where essentially all income is concentrated with one person or group."},
+      {"q": "If the bottom quintile of households receives only 4% of total income instead of an equal 20%, what does this suggest about the Lorenz curve?", "choices": ["It matches the 45-degree equality line exactly", "It bows below the equality line, indicating inequality", "It rises above the equality line", "It cannot be drawn"], "answer": 1, "explain": "Because the bottom quintile earns far less than its equal 20% share, the cumulative income curve falls below the cumulative population share, bowing below the 45-degree line."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Minimum Wage Debate",
+     "minutes": 13,
+     "intro": "Few policies split economists and the public more than the minimum wage. The basic supply-and-demand model predicts one outcome, but decades of real-world studies have made the actual story more complicated.",
+     "sections": [
+      {
+       "heading": "The Basic Model: A Price Floor on Labor",
+       "body": [
+        "A **minimum wage** is a legal price floor on wages. If set above the market equilibrium wage, the basic supply-and-demand model predicts a labor surplus: more people want to work at the higher wage than firms want to hire, showing up as higher unemployment among affected workers, particularly low-skill or entry-level workers.",
+        "This matches the general price-floor logic from earlier in this unit: a binding floor above equilibrium creates a surplus, and here that surplus takes the specific form of unemployment rather than unsold goods."
+       ]
+      },
+      {
+       "heading": "Real-World Evidence and Its Complications",
+       "body": [
+        "Many empirical studies of specific, moderate minimum wage increases have found smaller employment effects than the simple model predicts, sometimes finding little measurable job loss at all in the industries and time periods studied. Explanations include employers having some wage-setting power (monopsony) in certain local labor markets, workers becoming more productive or staying longer at higher pay, or firms absorbing costs through slightly higher prices rather than layoffs.",
+        "This does not overturn the basic supply-and-demand logic; very large minimum wage increases relative to local wages are more likely to reduce employment than small ones, and the size of any employment effect depends heavily on how far above the market wage the minimum is set and on local labor market conditions."
+       ],
+       "example": {
+        "problem": "In a local labor market, labor demand is Qd = 100 − 2W and labor supply is Qs = −20 + 3W, where W is the hourly wage in dollars and Q is in thousands of workers. Find the equilibrium wage, then find the size of the labor surplus if a minimum wage of $30 is imposed.",
+        "steps": [
+         "Find equilibrium by setting Qd = Qs: 100 − 2W = −20 + 3W → 120 = 5W → W = 24.",
+         "Find equilibrium quantity: Qd = 100 − 2(24) = 52 thousand workers.",
+         "At the $30 minimum wage, find quantity demanded: Qd = 100 − 2(30) = 40 thousand.",
+         "At the $30 minimum wage, find quantity supplied: Qs = −20 + 3(30) = 70 thousand.",
+         "Surplus = quantity supplied − quantity demanded = 70 − 40 = 30 thousand workers."
+        ],
+        "answer": "The equilibrium wage is $24. At a $30 minimum wage, 30,000 more workers want jobs than employers want to hire, a labor surplus (measured unemployment) of 30,000 workers in the basic model."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "minimum wage", "def": "A legal price floor on wages, set by government."},
+      {"term": "labor surplus", "def": "A situation where quantity of labor supplied exceeds quantity demanded at the current wage, showing up as unemployment."},
+      {"term": "monopsony", "def": "A labor market with limited employer competition, giving one or a few employers unusual power to set wages below the competitive level."}
+     ],
+     "practice": [
+      {"q": "In the basic supply-and-demand model, a minimum wage set above equilibrium is predicted to cause:", "choices": ["A labor shortage", "A labor surplus (unemployment among affected workers)", "Wages to fall", "No change in the labor market"], "answer": 1, "explain": "Like any binding price floor, a minimum wage above equilibrium creates a surplus — here, more job seekers than available jobs at that wage."},
+      {"q": "Labor demand is Qd = 100 − 2W and labor supply is Qs = −20 + 3W. What is the equilibrium wage?", "choices": ["$20", "$24", "$30", "$52"], "answer": 1, "explain": "Setting 100 − 2W = −20 + 3W gives 120 = 5W, so W = 24."},
+      {"q": "Why have some empirical studies found smaller-than-predicted job losses from moderate minimum wage increases?", "choices": ["Because supply and demand no longer apply to labor markets", "Possible reasons include limited employer wage-setting power, productivity gains, or firms raising prices instead of cutting jobs", "Because minimum wage laws are never enforced", "Because labor demand curves slope upward"], "answer": 1, "explain": "Economists point to factors like monopsony power, worker retention and productivity effects, and price pass-through as reasons real-world employment effects can be smaller than the basic competitive model predicts, especially for moderate increases."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Market Failure, Government, and Trade",
+   "summary": "What happens when markets misprice pollution or under-supply public goods, how taxes and trade barriers affect efficiency, and why countries gain from trading with each other.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Externalities and Public Goods",
+     "minutes": 14,
+     "intro": "A factory that pollutes a river is not paying the true cost of what it makes, and a lighthouse that guides every passing ship cannot easily charge any single ship for the service. Both are classic cases where markets alone get the outcome wrong.",
+     "sections": [
+      {
+       "heading": "Externalities",
+       "body": [
+        "An **externality** is a cost or benefit of a transaction that falls on someone outside the transaction. A **negative externality**, like pollution, means the private cost paid by producers is lower than the true **social cost** to society, so the free market tends to overproduce the good.",
+        "A **positive externality**, like vaccination or education, means the private benefit to the buyer understates the full social benefit to society, so the free market tends to underproduce the good, since decision-makers do not capture (and are not paid for) the extra benefit others receive."
+       ]
+      },
+      {
+       "heading": "Correcting Externalities and Public Goods",
+       "body": [
+        "A **Pigovian tax** corrects a negative externality by taxing the good an amount equal to its external cost, raising the private cost of production until it matches the true social cost, which pushes the market toward the socially efficient quantity instead of the excessive private-market quantity.",
+        "A **public good** is both non-excludable (you cannot stop people from using it, like national defense or a lighthouse) and non-rivalrous (one person's use does not reduce availability for others). Because non-payers cannot be excluded, private firms often cannot profitably supply public goods, a problem called the **free-rider problem**, which is why governments typically fund them through taxation instead."
+       ],
+       "example": {
+        "problem": "A factory's private marginal cost is 10 + 0.5Q. Producing also creates a constant external cost of $5 per unit borne by nearby residents. Market demand (marginal benefit) is 50 − 0.5Q. Find the market quantity (ignoring the externality) and the socially efficient quantity, and state what per-unit Pigovian tax would fix the gap.",
+        "steps": [
+         "Find the unregulated market quantity by setting marginal benefit equal to private marginal cost: 50 − 0.5Q = 10 + 0.5Q → 40 = Q.",
+         "Find social marginal cost by adding the external cost: social MC = (10 + 0.5Q) + 5 = 15 + 0.5Q.",
+         "Find the socially efficient quantity by setting marginal benefit equal to social marginal cost: 50 − 0.5Q = 15 + 0.5Q → 35 = Q.",
+         "Compare: the market overproduces by 40 − 35 = 5 units, exactly the amount a $5 per-unit Pigovian tax (matching the external cost) would correct by raising private cost to match social cost."
+        ],
+        "answer": "The unregulated market produces 40 units, but the socially efficient quantity is 35 units; a Pigovian tax of $5 per unit (equal to the external cost) would align private incentives with the social optimum."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "externality", "def": "A cost or benefit of a transaction that falls on someone outside the transaction."},
+      {"term": "social cost", "def": "The full cost of an activity to society, including both private costs and any external costs."},
+      {"term": "Pigovian tax", "def": "A tax on a good equal to its external cost, used to align private incentives with the true social cost."},
+      {"term": "public good", "def": "A good that is both non-excludable and non-rivalrous, such as national defense."},
+      {"term": "free-rider problem", "def": "The tendency of people to benefit from a non-excludable good without paying for it, leading to underproduction by private markets."}
+     ],
+     "practice": [
+      {"q": "A negative externality like pollution typically causes a free market to:", "choices": ["Underproduce the good", "Overproduce the good, since producers don't pay the full social cost", "Have no effect on quantity produced", "Automatically correct itself through competition"], "answer": 1, "explain": "Because producers only pay their private cost, which is lower than the true social cost, they produce more than the socially efficient quantity."},
+      {"q": "In the factory example, unregulated market quantity is 40 units and the socially efficient quantity is 35 units. What per-unit tax would correct this gap?", "choices": ["$10", "$5, equal to the external cost per unit", "$50", "No tax is needed"], "answer": 1, "explain": "A Pigovian tax equal to the $5 external cost per unit raises private marginal cost to match social marginal cost, moving the market from 40 units down to the efficient 35 units."},
+      {"q": "Why do private firms often fail to supply public goods like lighthouses or national defense?", "choices": ["Because public goods are illegal to sell", "Because non-excludability lets people benefit without paying, creating a free-rider problem", "Because public goods have no value to society", "Because government always outlaws private production of them"], "answer": 1, "explain": "Since no one can be excluded from a non-excludable good, firms struggle to charge for it, so people can free-ride, and private markets tend to underprovide such goods."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Taxes and Deadweight Loss",
+     "minutes": 14,
+     "intro": "Every tax on a good does two things at once: it raises revenue for the government, and it shrinks the total pie of value that buyers and sellers created together. Economists can measure exactly how much of the pie disappears.",
+     "sections": [
+      {
+       "heading": "How a Tax Shifts a Market",
+       "body": [
+        "A **per-unit tax** on a good drives a wedge between the price buyers pay and the price sellers receive, equal to the tax amount. The market finds a new equilibrium with a higher price for buyers, a lower after-tax price for sellers, and a lower quantity traded than before the tax.",
+        "**Tax incidence**, who actually bears the burden of a tax, does not depend on who physically writes the check to the government; it depends on the relative elasticities of supply and demand. The side of the market that is less elastic (has fewer good alternatives) bears more of the tax burden, regardless of whether that side is legally responsible for paying it."
+       ]
+      },
+      {
+       "heading": "Calculating Deadweight Loss from a Tax",
+       "body": [
+        "A tax creates **deadweight loss** because it eliminates trades that would have benefited both buyer and seller, specifically the units between the new, lower quantity and the old, higher pre-tax quantity, whose value to buyers exceeded their cost to produce but which now go unmade because the tax makes them unprofitable.",
+        "Deadweight loss from a tax can be calculated as a triangle: one-half times the change in quantity times the size of the tax. Larger taxes, and taxes on goods with more elastic supply or demand (where quantity responds sharply to price), create disproportionately larger deadweight loss."
+       ],
+       "example": {
+        "problem": "Before any tax, demand is Qd = 100 − 2P and supply is Qs = −20 + 4P, giving equilibrium P = $20, Q = 60. The government imposes a $6 per-unit tax on sellers. After the tax, quantity falls to 52 units. Calculate the deadweight loss from the tax.",
+        "steps": [
+         "Identify the quantity before the tax (Q = 60) and after the tax (Q = 52).",
+         "Find the change in quantity caused by the tax: 60 − 52 = 8 units.",
+         "Apply the deadweight loss formula: 0.5 × (change in quantity) × (tax per unit) = 0.5 × 8 × $6.",
+         "Calculate: 0.5 × 8 × 6 = 24."
+        ],
+        "answer": "The deadweight loss from the $6 per-unit tax is $24."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "tax incidence", "def": "The division of a tax's actual burden between buyers and sellers, determined by relative elasticities, not by who legally pays it."},
+      {"term": "deadweight loss", "def": "The loss of total economic value caused by a tax, price control, or market power, from trades that no longer happen."}
+     ],
+     "practice": [
+      {"q": "Who bears more of a tax's burden, according to the concept of tax incidence?", "choices": ["Whichever side (buyer or seller) is legally required to pay the tax", "Whichever side has the more elastic (responsive) supply or demand", "Whichever side has the LESS elastic supply or demand, since they have fewer good alternatives", "The burden is always split exactly 50-50"], "answer": 2, "explain": "The less elastic side of the market cannot easily avoid the good by switching to alternatives, so it ends up bearing more of the tax burden, regardless of who physically pays it."},
+      {"q": "Quantity falls from 60 to 52 units after a $6 per-unit tax. What is the deadweight loss?", "choices": ["$6", "$24", "$48", "$312"], "answer": 1, "explain": "Deadweight loss = 0.5 × change in quantity × tax = 0.5 × 8 × 6 = 24."},
+      {"q": "Deadweight loss from a tax represents:", "choices": ["The government's total tax revenue", "The value of mutually beneficial trades that no longer occur because of the tax", "The profit earned by sellers after the tax", "The amount buyers overpay compared to sellers"], "answer": 1, "explain": "Deadweight loss is specifically the lost value from trades that would have benefited both sides but are eliminated by the tax, not the revenue the government collects."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Comparative Advantage and International Trade",
+     "minutes": 13,
+     "intro": "It seems like a country that is better at making everything should just make everything itself. Comparative advantage is the surprising, two-century-old idea explaining why trading with a less efficient country still makes both sides richer.",
+     "sections": [
+      {
+       "heading": "Absolute vs. Comparative Advantage",
+       "body": [
+        "A country has **absolute advantage** in a good if it can produce more of that good with the same resources than another country. A country has **comparative advantage** in a good if it can produce that good at a lower opportunity cost than another country, regardless of which country is more productive overall.",
+        "Trade based on comparative advantage, not absolute advantage, is what generates gains from trade: even a country with an absolute advantage in every good benefits from specializing in the good where its advantage is relatively largest, and trading for the rest."
+       ]
+      },
+      {
+       "heading": "Finding Comparative Advantage and Terms of Trade",
+       "body": [
+        "To find comparative advantage, compare the opportunity cost of producing each good in each country. Whichever country gives up less of the other good to produce one unit of a given good holds the comparative advantage in that good, and both countries gain by specializing accordingly and trading.",
+        "For trade to benefit both countries, the **terms of trade**, the rate at which they exchange goods, must fall between the two countries' opportunity costs for that good; outside that range, at least one country would do better producing the good itself rather than trading for it."
+       ],
+       "example": {
+        "problem": "In one hour, Country A can produce either 4 shirts or 2 computers. In one hour, Country B can produce either 1 shirt or 4 computers. Which country has the comparative advantage in shirts, and which in computers?",
+        "steps": [
+         "Find Country A's opportunity cost of 1 shirt: giving up 2 computers to gain 4 shirts means 1 shirt costs 2 ÷ 4 = 0.5 computers.",
+         "Find Country B's opportunity cost of 1 shirt: giving up 4 computers to gain 1 shirt means 1 shirt costs 4 computers.",
+         "Compare: Country A's opportunity cost of a shirt (0.5 computers) is lower than Country B's (4 computers), so Country A has the comparative advantage in shirts.",
+         "By elimination (or by symmetric calculation), Country B, whose opportunity cost of a computer (0.25 shirts) is lower than Country A's (2 shirts), has the comparative advantage in computers."
+        ],
+        "answer": "Country A has the comparative advantage in shirts (lower opportunity cost: 0.5 computers vs. 4), and Country B has the comparative advantage in computers (lower opportunity cost: 0.25 shirts vs. 2). Both gain by specializing accordingly and trading."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "absolute advantage", "def": "The ability to produce more of a good with the same resources than another producer."},
+      {"term": "comparative advantage", "def": "The ability to produce a good at a lower opportunity cost than another producer, the true basis for gains from trade."},
+      {"term": "terms of trade", "def": "The rate at which two countries exchange goods, which must fall between their opportunity costs for trade to benefit both."}
+     ],
+     "practice": [
+      {"q": "Country A's opportunity cost of a shirt is 0.5 computers; Country B's is 4 computers. Which country has the comparative advantage in shirts?", "choices": ["Country A, since its opportunity cost of a shirt is lower", "Country B, since it produces fewer shirts overall", "Neither, comparative advantage does not apply here", "Both equally"], "answer": 0, "explain": "Comparative advantage goes to whichever country has the lower opportunity cost; Country A gives up only 0.5 computers per shirt versus Country B's 4, so Country A holds the comparative advantage in shirts."},
+      {"q": "What determines whether trade benefits both countries, according to the theory of comparative advantage?", "choices": ["Which country is more productive overall", "Whether the terms of trade fall between the two countries' opportunity costs", "Which country has more natural resources", "Which country has a larger population"], "answer": 1, "explain": "Gains from trade require agreeing on an exchange rate between the two countries' respective opportunity costs; outside that range, one country would be better off not trading."},
+      {"q": "A country with an absolute advantage in producing every good compared to its trading partner:", "choices": ["Should never trade, since it can produce everything more efficiently itself", "Can still gain from trade by specializing in the good where its comparative advantage is largest", "Automatically has the comparative advantage in every good too", "Cannot calculate opportunity cost"], "answer": 1, "explain": "Even a country with an absolute advantage in everything still has a relatively lower opportunity cost in some goods than others, and specializing there while trading for the rest benefits both countries."}
+     ]
+    }
+   ]
+  }
+ ]
+}

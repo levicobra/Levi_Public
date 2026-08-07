@@ -1,0 +1,823 @@
+{
+  "id": "japanese",
+  "title": "Japanese",
+  "domain": "languages",
+  "level": "All levels",
+  "description": "A practical first course in Japanese for absolute beginners who want to actually speak, understand, and start reading the language. You will learn hiragana, katakana, and core kanji alongside the particle-based grammar, adjective system, and polite verb forms that structure real Japanese, and the vocabulary for everyday situations like introductions, food, shopping, and directions.",
+  "outcomes": [
+    "You can read and distinguish hiragana and katakana, and pronounce Japanese's five vowels, mora timing, and vowel length correctly.",
+    "You can greet people, introduce yourself following the hajimemashite ritual, and build basic sentences with desu and core particles like wa, ga, o, ni, and de.",
+    "You can conjugate i-adjectives and na-adjectives, count objects with the correct counters, and describe people and things.",
+    "You can use the polite -masu verb system across all four tense/polarity combinations and ask questions with か and question words.",
+    "You can handle real situations — ordering food, shopping, asking directions — using suki/kirai, numbers, and the te-form for polite requests.",
+    "You can connect multiple actions using the te-form and hold a simple real conversation combining greetings, description, and past-tense narration."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Sounds and Greetings",
+      "summary": "Japanese writing splits cleanly into hiragana, katakana, and kanji, each with its own job. This unit builds reading basics, greetings, and the foundation of Japanese sentence structure.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Hiragana, Katakana, and Pronunciation Basics",
+          "minutes": 14,
+          "intro": "Japanese is written with three overlapping systems, hiragana, katakana, and kanji, and while that sounds like triple the work, each one has a clear, separate job, which makes starting far more manageable than it first appears.",
+          "sections": [
+            {
+              "heading": "Hiragana: The Native Sound System",
+              "body": [
+                "Hiragana (ひらがな) is a syllabary of 46 basic characters, each representing one mora, roughly a syllable: あ (a), い (i), う (u), え (e), お (o) are the five vowels, and most other hiragana pair a consonant with one of these vowels, such as か (ka), き (ki), く (ku), け (ke), こ (ko). Hiragana spells native Japanese words, grammar particles, and verb endings.",
+                "Because hiragana is fully phonetic, once you memorize its roughly 46 basic shapes, you can read any word written in it aloud correctly, even words you've never seen — much like Spanish spelling, but for an entirely different, non-alphabetic writing system."
+              ]
+            },
+            {
+              "heading": "Katakana: For Loanwords and Emphasis",
+              "body": [
+                "Katakana (カタカナ) represents the exact same sounds as hiragana, just with different, more angular shapes: ア (a), イ (i), ウ (u), エ (e), オ (o), カ (ka), キ (ki), and so on. Katakana is reserved for foreign loanwords, country names, and emphasis, similar to italics in English.",
+                "You'll recognize katakana words immediately once you learn the shapes: コーヒー (kōhī, coffee, from English/Dutch), アメリカ (Amerika, America), テレビ (terebi, television, a shortened loanword). Katakana vocabulary is often easier to start with, precisely because it overlaps with words you may already recognize."
+              ]
+            },
+            {
+              "heading": "The Five Vowels and Mora Timing",
+              "body": [
+                "Japanese has five pure vowel sounds, similar to Spanish: *a* like 'ah,' *i* like 'ee,' *u* like 'oo' with relaxed, unrounded lips, *e* like 'eh,' *o* like 'oh.' Every mora, or timed beat, takes roughly the same amount of time to say, giving Japanese its distinctive, evenly-paced rhythm.",
+                "Vowel length changes meaning: おばさん (obasan, aunt) versus おばあさん (obāsan, grandmother) differ only by one extra beat on the second a — a length difference easy to miss but critical to get right, since mixing them up changes who you're talking about entirely."
+              ],
+              "example": {
+                "problem": "Are ア and あ the same sound? What distinguishes them, and when would each be used?",
+                "steps": [
+                  "Both ア (katakana) and あ (hiragana) represent the identical sound 'a.'",
+                  "They differ only in which writing system they belong to and its purpose.",
+                  "あ (hiragana) is used for native Japanese words and grammar; ア (katakana) is used for loanwords, emphasis, or foreign names."
+                ],
+                "answer": "Yes, ア and あ represent the same sound 'a'; they are distinguished only by writing system and use — hiragana for native words/grammar, katakana for loanwords and emphasis."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Hiragana", "def": "The phonetic syllabary used for native Japanese words, grammar particles, and verb endings."},
+            {"term": "Katakana", "def": "The phonetic syllabary, sound-for-sound identical to hiragana, used for foreign loanwords and emphasis."},
+            {"term": "Mora", "def": "A single timed beat of Japanese pronunciation, roughly one syllable, all pronounced with equal length."},
+            {"term": "Vowel length", "def": "The difference between a short and long vowel sound that changes a word's meaning, as in obasan vs obāsan."}
+          ],
+          "practice": [
+            {"q": "What is the main difference between hiragana and katakana?", "choices": ["They represent the same sounds but are used for different purposes (native words vs. loanwords)", "Katakana represents entirely different sounds", "Hiragana is only used for numbers", "Katakana came before hiragana historically"], "answer": 0, "explain": "Hiragana and katakana are sound-for-sound identical; hiragana is used for native words and grammar, while katakana is used for loanwords and emphasis."},
+            {"q": "Which of these is a loanword typically written in katakana?", "choices": ["コーヒー (kōhī, coffee)", "ありがとう (arigatō, thank you)", "です (desu, is/am)", "わたし (watashi, I)"], "answer": 0, "explain": "Kōhī (coffee) is a loanword from English/Dutch and is written in katakana; the others are native Japanese words written in hiragana."},
+            {"q": "What does vowel length change in a word like 'obasan' vs 'obāsan'?", "choices": ["The entire meaning of the word (aunt vs. grandmother)", "Only the pitch, not the meaning", "Nothing; they are identical", "Only the formality level"], "answer": 0, "explain": "Obasan (aunt) and obāsan (grandmother) differ only by a long ā, but that length difference changes the word's meaning entirely."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Greetings and Introductions",
+          "minutes": 11,
+          "intro": "Japanese greetings are tied closely to time of day and social ritual, and the phrases you'll use when first meeting someone follow a fixed, predictable order.",
+          "sections": [
+            {
+              "heading": "Hello and Goodbye by Time of Day",
+              "body": [
+                "おはようございます (Ohayō gozaimasu, good morning, polite) is used in the morning; a shortened, casual version, おはよう (Ohayō), is used with friends. こんにちは (Konnichiwa) covers 'hello'/'good afternoon' through the daytime, and こんばんは (Konbanwa) covers 'good evening.' Both konnichiwa and konbanwa are used at any formality level.",
+                "さようなら (Sayōnara) means 'goodbye,' but carries a sense of finality or a longer separation, so it's used less casually than English 'bye'; among friends, じゃあね (Jā ne, see you) or またね (Mata ne, see you again) are far more common for an everyday parting."
+              ]
+            },
+            {
+              "heading": "Introducing Yourself",
+              "body": [
+                "On meeting someone for the very first time, Japanese has a fixed two-step ritual: first say はじめまして (Hajimemashite, roughly 'nice to meet you'), then state your name with 私は[name]です (Watashi wa [name] desu, 'I am [name]'), and close with よろしくお願いします (Yoroshiku onegaishimasu, roughly 'please treat me kindly').",
+                "This closing phrase, yoroshiku onegaishimasu, has no direct English equivalent — it's said after almost any first introduction, request, or new working relationship, expressing a hope for good future dealings. Skipping it can feel abrupt to a Japanese listener even if your Japanese is otherwise correct."
+              ],
+              "example": {
+                "problem": "Put these in the correct order for a first meeting: 私はアンナです (Watashi wa Anna desu), はじめまして (Hajimemashite), よろしくお願いします (Yoroshiku onegaishimasu).",
+                "steps": [
+                  "The ritual always opens with hajimemashite.",
+                  "Then state your name: Watashi wa Anna desu.",
+                  "Close with yoroshiku onegaishimasu."
+                ],
+                "answer": "はじめまして。私はアンナです。よろしくお願いします。(Hajimemashite. Watashi wa Anna desu. Yoroshiku onegaishimasu.)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "こんにちは (Konnichiwa)", "def": "'Hello' / 'good afternoon,' usable at any formality level during the daytime."},
+            {"term": "はじめまして (Hajimemashite)", "def": "The fixed opening phrase said only at a first meeting, roughly 'nice to meet you.'"},
+            {"term": "よろしくお願いします (Yoroshiku onegaishimasu)", "def": "A closing phrase with no direct English equivalent, expressing hope for a good relationship going forward; said after introductions and many requests."},
+            {"term": "さようなら (Sayōnara)", "def": "'Goodbye,' carrying a sense of finality; less common than casual partings like じゃあね among friends."}
+          ],
+          "practice": [
+            {"q": "When is はじめまして (hajimemashite) said?", "choices": ["Only at a first meeting with someone", "Every time you say hello", "Only when saying goodbye", "Only in writing"], "answer": 0, "explain": "Hajimemashite is a fixed phrase used specifically at the first meeting with a person, not a general greeting."},
+            {"q": "What does よろしくお願いします express?", "choices": ["A hope for a good relationship going forward, with no direct English equivalent", "A simple goodbye", "A question about someone's name", "An apology"], "answer": 0, "explain": "Yoroshiku onegaishimasu doesn't map directly onto any single English phrase; it expresses goodwill toward an ongoing relationship or request."},
+            {"q": "Which greeting is most tied to a specific time of day?", "choices": ["Ohayō gozaimasu (used specifically in the morning)", "Konnichiwa (usable any time formality allows)", "Sayōnara", "Hajimemashite"], "answer": 0, "explain": "Ohayō gozaimasu is specifically a morning greeting, unlike konnichiwa which covers a broader daytime range."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Desu and Basic Sentence Structure",
+          "minutes": 13,
+          "intro": "Japanese word order works backwards from English in a genuinely useful way once you see the pattern: the verb always comes last, and small particles, not word order, tell you who did what to whom.",
+          "sections": [
+            {
+              "heading": "Subject-Object-Verb Order",
+              "body": [
+                "English uses Subject-Verb-Object order (I drink water), but Japanese uses Subject-Object-Verb: 私は水を飲みます (Watashi wa mizu o nomimasu, literally 'I water drink'). The verb, nomimasu (drink), always comes at the end of the sentence, no matter how long the sentence is.",
+                "Because word order is fixed at 'verb last,' Japanese relies on small grammatical markers called particles, attached right after each noun, to show that noun's role. Watashi wa marks the topic, and mizu o marks the direct object — the particles carry the meaning, not the position."
+              ]
+            },
+            {
+              "heading": "Key Particles: wa, o, ni, de, no",
+              "body": [
+                "は (wa, pronounced 'wa' only as a particle) marks the topic of the sentence — what you're talking about. を (o) marks the direct object. に (ni) marks a location of existence, a point in time, or a destination. で (de) marks the location where an action happens, distinct from に's use for a destination.",
+                "の (no) marks possession, working like English's apostrophe-s: 私の本 (watashi no hon, my book). These particles, along with が (ga, covered in the next unit), cover the large majority of basic sentences you'll build in this course."
+              ]
+            },
+            {
+              "heading": "Desu: The Polite Copula",
+              "body": [
+                "です (desu) is the polite equivalent of 'is/am/are': これはペンです (Kore wa pen desu, This is a pen). To negate, use ではありません or its more casual equivalent じゃないです (dewa arimasen / ja nai desu, 'is not'). For the past tense, use でした (deshita, 'was').",
+                "Because Japanese verbs and adjectives conjugate for tense and politeness on their own, desu often functions less like a full verb 'to be' and more like a politeness marker attached to a noun or na-adjective — a distinction that becomes clearer in the next unit's lesson on adjectives."
+              ],
+              "example": {
+                "problem": "Say 'This is water' and 'This is not water' in Japanese, using desu correctly.",
+                "steps": [
+                  "'This' = kore; the topic particle wa follows it: kore wa.",
+                  "'Water' = mizu; add desu for the polite copula: kore wa mizu desu.",
+                  "Negate by replacing desu with dewa arimasen: kore wa mizu dewa arimasen."
+                ],
+                "answer": "これは水です (Kore wa mizu desu). これは水ではありません (Kore wa mizu dewa arimasen)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Subject-Object-Verb (SOV)", "def": "Japanese word order, where the verb always comes at the end of the sentence."},
+            {"term": "Particle", "def": "A short grammatical marker attached after a noun to show its role in the sentence, like は (topic) or を (object)."},
+            {"term": "です (Desu)", "def": "The polite copula, roughly 'is/am/are,' used after a noun or na-adjective."},
+            {"term": "の (No)", "def": "The possessive particle, working like English's apostrophe-s: watashi no hon (my book)."}
+          ],
+          "practice": [
+            {"q": "Where does the verb go in a Japanese sentence?", "choices": ["Always at the end", "Always second", "Always first", "Wherever sounds best"], "answer": 0, "explain": "Japanese follows Subject-Object-Verb order, so the verb always comes at the end of the sentence."},
+            {"q": "What does the particle を (o) mark?", "choices": ["The direct object", "The topic", "A location", "Possession"], "answer": 0, "explain": "を marks the direct object of a sentence; は marks the topic, and の marks possession."},
+            {"q": "What is the negative form of です (desu)?", "choices": ["ではありません (dewa arimasen)", "でした (deshita)", "ます (masu)", "の (no)"], "answer": 0, "explain": "Dewa arimasen (or the casual ja nai desu) is the negative of desu; deshita is the past tense (was), not the negative."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Particles, Adjectives, and Basic Grammar",
+      "summary": "This unit sharpens two of the trickiest particle pairs for beginners and adds the two adjective families and the counter system Japanese uses for counting objects.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Wa vs Ga, and Ni vs De",
+          "minutes": 13,
+          "intro": "Two particle pairs cause more confusion for beginners than anything else in early Japanese grammar, wa versus ga, and ni versus de, and both are genuinely learnable once you see the underlying logic.",
+          "sections": [
+            {
+              "heading": "Wa (Topic) vs Ga (Subject/Emphasis)",
+              "body": [
+                "は (wa) marks the topic — what the sentence is about, often already known or established in the conversation. が (ga) marks the grammatical subject, often introducing new information or adding emphasis: 象は鼻が長いです (Zō wa hana ga nagai desu, 'As for elephants, the trunk is long') uses wa for the overall topic (elephants) and ga for the specific subject of the description (the trunk).",
+                "A useful rule of thumb: use wa for general statements and background information, and ga when answering a question, introducing something new, or emphasizing exactly which thing does the action. 誰が来ましたか (Dare ga kimashita ka, Who came?) uses ga because 'who' is exactly the new information being asked about."
+              ]
+            },
+            {
+              "heading": "Ni (Destination/Time) vs De (Location of Action)",
+              "body": [
+                "に (ni) marks a static location for existence verbs (いる/ある, to exist), a point in time, or a destination of motion: 学校に行きます (Gakkō ni ikimasu, I go to school) — ni marks 'school' as the destination. で (de) marks the location where an action takes place: 学校で勉強します (Gakkō de benkyō shimasu, I study at school) — de marks 'school' as the place the studying happens.",
+                "The contrast is easiest to see side by side with the same noun: gakkō ni ikimasu (go TO school, destination) versus gakkō de benkyō shimasu (study AT school, location of action). Mixing up ni and de is one of the most common beginner mistakes, but this destination-vs-action-location test resolves nearly every case."
+              ],
+              "example": {
+                "problem": "Choose ni or de: '公園___遊びます' (I play ___ the park) — is the park a destination or a location of action?",
+                "steps": [
+                  "'Play' (asobimasu) is an action happening in a place, not a motion toward a destination.",
+                  "Since the park is where the action of playing happens, use de.",
+                  "Complete: 公園で遊びます (Kōen de asobimasu, I play in the park)."
+                ],
+                "answer": "公園で遊びます (Kōen de asobimasu) — de is correct because the park is the location where the action happens, not a destination being moved toward."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "は (Wa)", "def": "The topic particle, marking what the sentence is about, often already known information."},
+            {"term": "が (Ga)", "def": "The subject particle, often marking new information or adding emphasis to exactly who or what performs an action."},
+            {"term": "に (Ni)", "def": "Marks a destination, a point in time, or the location of existence (with いる/ある)."},
+            {"term": "で (De)", "def": "Marks the location where an action takes place, distinct from に's destination/existence use."}
+          ],
+          "practice": [
+            {"q": "In 'Dare ga kimashita ka' (Who came?), why is ga used instead of wa?", "choices": ["Ga marks new information being asked about, like 'who'", "Wa is only used in questions", "Ga is only used with proper nouns", "There's no real difference between wa and ga"], "answer": 0, "explain": "Ga marks new or focused information; since 'who' is the very thing being asked about, ga is the natural choice here rather than the topic marker wa."},
+            {"q": "Which particle would you use in 'I go to school' to mark 'school' as the destination?", "choices": ["に (ni)", "で (de)", "を (o)", "は (wa)"], "answer": 0, "explain": "Ni marks a destination of motion, as in gakkō ni ikimasu (I go to school); de would instead mark school as the location of an action happening there."},
+            {"q": "Which particle marks the location where an action (like studying) takes place?", "choices": ["で (de)", "に (ni)", "が (ga)", "の (no)"], "answer": 0, "explain": "De marks the location of an action, as in gakkō de benkyō shimasu (I study at school), distinct from ni's destination/existence use."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "I-Adjectives and Na-Adjectives",
+          "minutes": 12,
+          "intro": "Japanese adjectives split into two families with genuinely different grammar, i-adjectives that conjugate like verbs, and na-adjectives that behave more like nouns — telling them apart is essential for building correct sentences.",
+          "sections": [
+            {
+              "heading": "I-Adjectives",
+              "body": [
+                "I-adjectives end in い (i) and conjugate on their own, though desu is still added for politeness: 大きい (ōkii, big) → 大きいです (ōkii desu, it's big, polite present). To negate, change い to く and add ない: 大きくない (ōkikunai, not big); to negate politely, add です: 大きくないです.",
+                "For the past tense, change い to かった: 大きかった (ōkikatta, was big); politely, 大きかったです (ōkikatta desu). The adjective itself carries the tense, unlike English, where only the verb 'to be' changes."
+              ]
+            },
+            {
+              "heading": "Na-Adjectives",
+              "body": [
+                "Na-adjectives behave like nouns: to describe a noun directly, insert な (na) between the adjective and the noun: 静かな部屋 (shizuka na heya, a quiet room). To make a statement, use desu just like with a noun: 静かです (shizuka desu, it's quiet) — no な is needed before desu.",
+                "Negation and past tense for na-adjectives borrow directly from desu's own patterns: 静かではありません (shizuka dewa arimasen, is not quiet), 静かでした (shizuka deshita, was quiet) — exactly the same pattern you learned for desu with nouns."
+              ],
+              "example": {
+                "problem": "Say 'The room is quiet' and 'The room was not quiet' using the na-adjective 静か (shizuka).",
+                "steps": [
+                  "'The room is quiet' uses shizuka + desu directly, no na needed before desu: heya wa shizuka desu.",
+                  "'Was not quiet' combines the past and negative desu forms: shizuka dewa arimasen deshita.",
+                  "Combine: heya wa shizuka dewa arimasen deshita."
+                ],
+                "answer": "部屋は静かです (Heya wa shizuka desu). 部屋は静かではありませんでした (Heya wa shizuka dewa arimasen deshita)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "I-adjective", "def": "An adjective ending in い that conjugates on its own for tense and negation, like ōkii (big) → ōkikatta (was big)."},
+            {"term": "Na-adjective", "def": "An adjective that behaves like a noun, requiring な before a noun (shizuka na heya) but not before desu (shizuka desu)."},
+            {"term": "Ōkikunai", "def": "The negative form of the i-adjective ōkii (big): change い to くない."},
+            {"term": "Shizuka dewa arimasen", "def": "The negative form of the na-adjective shizuka (quiet), built the same way as negating a noun with desu."}
+          ],
+          "practice": [
+            {"q": "What is the negative form of the i-adjective 'ōkii' (big)?", "choices": ["ōkikunai", "ōkii nai", "ōkidenai", "ōkikatta"], "answer": 0, "explain": "I-adjectives negate by changing い to くない: ōkii → ōkikunai; ōkikatta is the past tense, not the negative."},
+            {"q": "How do you say 'a quiet room' using the na-adjective shizuka?", "choices": ["shizuka na heya", "shizuka heya", "shizuka no heya", "shizukai heya"], "answer": 0, "explain": "Na-adjectives require な directly before the noun they describe: shizuka na heya."},
+            {"q": "Do na-adjectives need な before です (desu)?", "choices": ["No, な is only used directly before a noun, not before desu", "Yes, な is always required before desu", "Only in the past tense", "Only in questions"], "answer": 0, "explain": "Na-adjectives use desu the same way nouns do, with no な needed: shizuka desu, not shizuka na desu."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Numbers and Counters",
+          "minutes": 12,
+          "intro": "Japanese numbers are themselves simple, but the language adds a twist English doesn't have: counting objects requires attaching a different 'counter' word depending on the shape or type of the thing being counted.",
+          "sections": [
+            {
+              "heading": "The Numbers 1-10 and Beyond",
+              "body": [
+                "The basic numbers are 一 (ichi, 1), 二 (ni, 2), 三 (san, 3), 四 (yon/shi, 4), 五 (go, 5), 六 (roku, 6), 七 (nana/shichi, 7), 八 (hachi, 8), 九 (kyū/ku, 9), 十 (jū, 10). Several numbers have two possible readings (yon/shi for 4, nana/shichi for 7) because certain readings sound too close to other words in some contexts, so the alternate reading is often preferred to avoid confusion.",
+                "Beyond ten, Japanese counts compositionally, much like Chinese: 十一 (jū-ichi, 11, literally 'ten-one'), 二十 (ni-jū, 20, 'two-ten'), 二十一 (ni-jū-ichi, 21, 'two-ten-one'), all the way to 百 (hyaku, 100). This compositional pattern is fully regular and, once learned, is arguably simpler than English's separate teens vocabulary."
+              ]
+            },
+            {
+              "heading": "Counters: Why You Can't Just Say the Number",
+              "body": [
+                "Unlike English, Japanese requires a counter word attached to the number whenever you count objects, and the counter depends on the object's shape or category: つ (tsu, generic counter for miscellaneous objects, used only for numbers 1-10), 人 (nin, for people), 枚 (mai, for flat, thin objects like paper or tickets), 本 (hon, for long, cylindrical objects like pencils or bottles).",
+                "So 'three people' is 三人 (san-nin), 'three sheets of paper' is 三枚 (san-mai), and 'three pencils' is 三本 (san-bon, note the sound change from hon to bon after san). The generic counter つ works for miscellaneous small objects when no specific counter applies: りんごを三つください (Ringo o mittsu kudasai, Please give me three apples, using the native-number series hitotsu, futatsu, mittsu...)."
+              ],
+              "example": {
+                "problem": "How would you count 'two pencils' and 'four people' correctly in Japanese?",
+                "steps": [
+                  "Pencils are long, cylindrical objects, so use the counter 本 (hon).",
+                  "'Two' + hon: ni-hon (two pencils).",
+                  "'People' use the counter 人 (nin); 'four' shifts from yon to yo before nin: yo-nin (four people)."
+                ],
+                "answer": "二本 (ni-hon, two pencils); 四人 (yo-nin, four people)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Counter", "def": "A word attached to a number when counting objects in Japanese, chosen based on the object's shape or category."},
+            {"term": "つ (Tsu)", "def": "The generic counter for miscellaneous objects, used only for the numbers 1 through 10 (hitotsu, futatsu, mittsu...)."},
+            {"term": "人 (Nin)", "def": "The counter for people: san-nin (three people), yo-nin (four people, an irregular reading)."},
+            {"term": "本 (Hon)", "def": "The counter for long, cylindrical objects like pencils or bottles: ni-hon (two), san-bon (three, with a sound shift)."}
+          ],
+          "practice": [
+            {"q": "Which counter would you use for counting bottles of water?", "choices": ["本 (hon), for long cylindrical objects", "人 (nin), for people", "枚 (mai), for flat objects", "There is no counter needed"], "answer": 0, "explain": "本 (hon) is used for long, cylindrical objects like bottles and pencils; 人 is for people, and 枚 is for flat objects like paper."},
+            {"q": "Why does Japanese need counters at all, unlike English?", "choices": ["A bare number cannot attach directly to a counted noun; a counter matching the object's shape/category is required", "Japanese has no numbers above ten", "Counters replace the noun entirely", "This is not actually true; Japanese works exactly like English here"], "answer": 0, "explain": "Unlike English, Japanese requires a counter suffixed to the number whenever counting objects, and the correct counter depends on the object's shape or category."},
+            {"q": "How would you say 'twenty-one' in Japanese?", "choices": ["二十一 (ni-jū-ichi, literally 'two-ten-one')", "十二十一", "二十いち, without jū", "一二十"], "answer": 0, "explain": "Japanese numbers above ten are compositional: ni-jū-ichi literally means 'two-ten-one,' i.e., 21."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Time, Family, and Descriptions",
+      "summary": "This unit adds the vocabulary for schedules, days of the week, and family, then shows how particles and adjectives combine to describe people and things.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Telling Time and Days of the Week",
+          "minutes": 12,
+          "intro": "Japanese days of the week are named after the same five classical elements plus sun and moon found across East Asian astrology, which makes them easier to remember once you notice the pattern.",
+          "sections": [
+            {
+              "heading": "Asking and Telling Time",
+              "body": [
+                "To ask the time, say 何時ですか (Nanji desu ka, What time is it?). The hour attaches directly to 時 (ji, o'clock): 一時です (Ichiji desu, It's 1:00), 二時です (Niji desu, It's 2:00). For the half hour, add 半 (han, half): 二時半です (Niji han desu, It's 2:30).",
+                "For minutes, attach 分 (fun/pun, minute, with a sound change depending on the preceding number): 三時五分です (Sanji gofun desu, It's 3:05), 三時十五分です (Sanji jūgofun desu, It's 3:15). Unlike English, there's no separate word for 'quarter' or 'to/past'; minutes are simply counted directly."
+              ]
+            },
+            {
+              "heading": "Days of the Week",
+              "body": [
+                "The days are 月曜日 (getsuyōbi, Monday, 'moon day'), 火曜日 (kayōbi, Tuesday, 'fire day'), 水曜日 (suiyōbi, Wednesday, 'water day'), 木曜日 (mokuyōbi, Thursday, 'wood day'), 金曜日 (kinyōbi, Friday, 'gold day'), 土曜日 (doyōbi, Saturday, 'earth day'), 日曜日 (nichiyōbi, Sunday, 'sun day').",
+                "Every day name shares the ending 曜日 (yōbi, roughly 'weekday'), attached to one of seven elements: moon, fire, water, wood, gold, earth, sun. Once you recognize this shared structure, the whole set becomes far easier to memorize as a group rather than seven unrelated words."
+              ],
+              "example": {
+                "problem": "What day is 水曜日, and what time is 三時半?",
+                "steps": [
+                  "水 means 'water,' and 曜日 marks it as a day of the week.",
+                  "Water day = Wednesday (suiyōbi).",
+                  "三時半 = three o'clock + han (half) = 3:30."
+                ],
+                "answer": "水曜日 = Wednesday (suiyōbi). 三時半 = 3:30 (sanji han)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "何時ですか (Nanji desu ka)", "def": "'What time is it?' — the standard way to ask the time in Japanese."},
+            {"term": "半 (Han)", "def": "'Half,' attached after the hour to mean the half hour: niji han (2:30)."},
+            {"term": "曜日 (Yōbi)", "def": "The shared ending on every day-of-the-week name, roughly meaning 'weekday,' attached to an element like moon, fire, or water."},
+            {"term": "水曜日 (Suiyōbi)", "def": "Wednesday, literally 'water day.'"}
+          ],
+          "practice": [
+            {"q": "What does 二時半 (niji han) mean?", "choices": ["2:30", "2:15", "12:30", "2:00"], "answer": 0, "explain": "Han means 'half,' so niji han is 'two o'clock and a half,' i.e., 2:30."},
+            {"q": "What day is 木曜日 (mokuyōbi)?", "choices": ["Thursday", "Monday", "Wednesday", "Friday"], "answer": 0, "explain": "木 means 'wood/tree,' making mokuyōbi 'wood day,' i.e., Thursday."},
+            {"q": "What does every Japanese day-of-the-week name share?", "choices": ["The ending 曜日 (yōbi), attached to an element like moon, fire, or water", "No shared structure at all", "The prefix nichi-", "A number from 1 to 7"], "answer": 0, "explain": "Every day name combines one of seven classical elements with the shared ending 曜日 (yōbi), roughly 'weekday.'"}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Family Vocabulary",
+          "minutes": 10,
+          "intro": "Japanese family words split into two complete sets, one humble set for your own family and one respectful set for someone else's, a distinction that reflects a broader pattern of Japanese politeness worth understanding early.",
+          "sections": [
+            {
+              "heading": "Your Own Family vs Someone Else's",
+              "body": [
+                "When talking about your own family to others, Japanese uses plain, humble terms: 母 (haha, my mother), 父 (chichi, my father), 兄 (ani, my older brother), 姉 (ane, my older sister). When talking about, or directly addressing, someone else's family, or your own family members directly, Japanese adds the honorific お...さん pattern: お母さん (okāsan), お父さん (otōsan), お兄さん (oniisan), お姉さん (onēsan).",
+                "This means you'd say 私の母 (watashi no haha, my mother) when talking about your mother to a friend, but you'd call your own mother directly, or ask about your friend's mother, using お母さん (okāsan). Younger siblings, 弟 (otōto, younger brother) and 妹 (imōto, younger sister), don't carry this same strong humble/respectful split, since younger family members are usually addressed by name."
+              ]
+            },
+            {
+              "heading": "Why the Split Exists",
+              "body": [
+                "This humble-versus-respectful vocabulary split reflects a broader pattern in Japanese: language choices constantly signal whether you're describing your own in-group, like family or company, modestly, or someone else's, or a social superior's, with more respect. The same logic reappears later at more advanced levels with verbs and set expressions.",
+                "For this course, the practical takeaway is simple: use the plain forms (haha, chichi, ani, ane) when describing your own family to someone else, and the お...さん forms (okāsan, otōsan, oniisan, onēsan) both to address your own family members directly and to talk about anyone else's family."
+              ],
+              "example": {
+                "problem": "How would you say 'my mother' when talking to a friend, versus how you'd address your own mother directly, or ask about your friend's mother?",
+                "steps": [
+                  "Talking about your own mother to someone else uses the humble term: haha (母), as in watashi no haha.",
+                  "Addressing your own mother directly, or referring to someone else's mother, uses the respectful term: okāsan (お母さん)."
+                ],
+                "answer": "'My mother' (talking about her to a friend) = haha; addressing your own mother directly, or referring to a friend's mother, = okāsan."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "母 (Haha)", "def": "The plain, humble word for 'my mother,' used when describing your own family to someone else."},
+            {"term": "お母さん (Okāsan)", "def": "The respectful word for 'mother,' used to address your own mother directly or to refer to someone else's mother."},
+            {"term": "兄 / お兄さん (Ani / Oniisan)", "def": "Plain vs. respectful terms for 'older brother,' following the same humble/respectful split as haha/okāsan."},
+            {"term": "In-group/out-group politeness", "def": "The broader Japanese pattern of speaking modestly about your own group and respectfully about others', reflected in family vocabulary."}
+          ],
+          "practice": [
+            {"q": "Which word would you use to tell a friend about your own mother?", "choices": ["haha (母)", "okāsan (お母さん)", "onēsan (お姉さん)", "Either works identically in all contexts"], "answer": 0, "explain": "Haha is the plain, humble term used when describing your own mother to someone else; okāsan is used to address your own mother directly or to refer to someone else's."},
+            {"q": "When would you use 'okāsan'?", "choices": ["Addressing your own mother directly, or referring to someone else's mother", "Only when talking about your own mother to a stranger", "Never; it's outdated", "Only for grandmothers"], "answer": 0, "explain": "Okāsan is the respectful term, used both to address your own mother directly and to talk about anyone else's mother."},
+            {"q": "What does the haha/okāsan split reflect about Japanese in general?", "choices": ["A broader pattern of speaking modestly about your own group and respectfully about others'", "A regional dialect difference only", "A distinction based on the mother's age", "A purely historical quirk with no modern relevance"], "answer": 0, "explain": "This humble-vs-respectful vocabulary split reflects a broader in-group/out-group politeness pattern that recurs throughout Japanese."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Describing People and Things",
+          "minutes": 11,
+          "intro": "Combining what you've learned so far, particles, adjectives, and desu, lets you build real descriptive sentences about the people and things around you.",
+          "sections": [
+            {
+              "heading": "Combining Adjectives with Desu",
+              "body": [
+                "To describe someone using an i-adjective, simply attach desu after it: あの人は背が高いです (Ano hito wa se ga takai desu, That person is tall, literally 'as for that person, height is high'). The wa/ga pattern from the previous unit reappears here: wa marks the overall topic (that person), and ga marks the specific attribute being described (height).",
+                "For a na-adjective description: 彼女は親切です (Kanojo wa shinsetsu desu, She is kind). No な appears here because shinsetsu is functioning as the sentence's predicate with desu, not directly modifying a following noun."
+              ]
+            },
+            {
+              "heading": "Combining Two Descriptions",
+              "body": [
+                "To describe someone with two adjectives, an i-adjective changes its final い to くて to connect to the next description: 背が高くて親切です (Se ga takakute shinsetsu desu, [He/she is] tall and kind). This くて connector is the adjective equivalent of 'and' linking two descriptive clauses.",
+                "For two na-adjectives, add で (de) instead: 静かで親切です (Shizuka de shinsetsu desu, [It/he/she is] quiet and kind). Mixing an i-adjective and a na-adjective in one sentence uses each adjective's own connector, exactly as the earlier example shows: takakute (i-adjective) plus shinsetsu desu (na-adjective)."
+              ],
+              "example": {
+                "problem": "Say 'My grandmother is small and very kind' in Japanese, connecting two adjectives correctly.",
+                "steps": [
+                  "'Small' = chiisai (i-adjective); to connect to another adjective, change い to くて: chiisakute.",
+                  "'Very kind' = totemo shinsetsu (na-adjective) + desu.",
+                  "Combine with 'my grandmother' (watashi no sobo): Watashi no sobo wa chiisakute totemo shinsetsu desu."
+                ],
+                "answer": "私のそぼは小さくてとても親切です (Watashi no sobo wa chiisakute totemo shinsetsu desu)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "くて (-kute)", "def": "The connecting form of an i-adjective, replacing い, used to link it to another description: takakute (tall, and...)."},
+            {"term": "で (De, adjective connector)", "def": "The connecting form used after a na-adjective to link it to another description: shizuka de (quiet, and...)."},
+            {"term": "背が高い (Se ga takai)", "def": "'Tall,' literally 'height is high,' a common example of the wa/ga pattern applied to physical description."},
+            {"term": "Descriptive sentence", "def": "A sentence combining a topic (wa), sometimes a sub-subject (ga), and an adjective plus desu to describe someone or something."}
+          ],
+          "practice": [
+            {"q": "How do you connect the i-adjective 'takai' (tall) to another description?", "choices": ["Change い to くて: takakute", "Add で after it: takai de", "Add な before the next word", "No connection is possible with i-adjectives"], "answer": 0, "explain": "I-adjectives connect to further description by changing their final い to くて: takai → takakute."},
+            {"q": "How do you connect the na-adjective 'shizuka' (quiet) to another description?", "choices": ["Add で: shizuka de", "Change it to shizukute", "Add くて: shizukakute", "No connector is needed"], "answer": 0, "explain": "Na-adjectives use で to connect to another description, unlike i-adjectives which use くて."},
+            {"q": "In '背が高いです' (se ga takai desu, tall), what does が mark?", "choices": ["The specific attribute (height) being described", "The overall topic of the sentence", "The direct object", "Possession"], "answer": 0, "explain": "Ga marks se (height) as the specific subject of the description, while wa, often attached to the person, marks the overall topic."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Verbs and Questions",
+      "summary": "This unit builds the polite verb system, all four tense/polarity combinations, and how to ask a question with no word-order change at all.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Verb Groups and the -masu Form",
+          "minutes": 13,
+          "intro": "Japanese verbs sort into three predictable groups, and nearly every polite conversation you'll have relies on just one shared present/future ending across all of them: -masu.",
+          "sections": [
+            {
+              "heading": "Three Verb Groups",
+              "body": [
+                "Group 1 (u-verbs, also called godan) includes most verbs ending in -u, -tsu, -ru, -ku, and so on in their dictionary form, like 飲む (nomu, to drink) and 書く (kaku, to write). Group 2 (ru-verbs, ichidan) includes verbs ending in -eru or -iru where the stem is unchanged before adding endings, like 食べる (taberu, to eat) and 見る (miru, to see).",
+                "Group 3 is irregular and contains only two verbs, but they're two of the most common in the language: する (suru, to do) and 来る (kuru, to come). Because group membership determines exactly how a verb conjugates, learning to sort a new verb into its group is one of the most valuable early skills in studying Japanese."
+              ]
+            },
+            {
+              "heading": "The Polite -masu Form",
+              "body": [
+                "For polite present/future tense, Group 2 verbs drop る and add ます: taberu → tabemasu (eat/will eat). Group 1 verbs change their final -u sound to the matching -i sound and add ます: nomu → nomimasu (drink/will drink), kaku → kakimasu (write/will write).",
+                "Group 3 is irregular but simple to memorize directly: suru → shimasu, kuru → kimasu. Because -masu covers both present habitual meaning and future meaning, たべます (tabemasu) can mean both 'I eat' habitually and 'I will eat,' with context distinguishing which is meant, similar to how Spanish's present tense sometimes covers near-future meaning."
+              ],
+              "example": {
+                "problem": "Convert 'nomu' (to drink, Group 1) and 'miru' (to see, Group 2) to their polite -masu forms.",
+                "steps": [
+                  "Nomu is Group 1: change the final u to i, then add masu: nomimasu.",
+                  "Miru is Group 2: drop る, add masu: mimasu."
+                ],
+                "answer": "nomu → nomimasu; miru → mimasu."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Group 1 (u-verb / godan)", "def": "The largest verb group, whose dictionary form ends in -u, -ku, -su, etc.; forms -masu by shifting the final vowel to -i."},
+            {"term": "Group 2 (ru-verb / ichidan)", "def": "Verbs ending in -eru/-iru with an unchanging stem; forms -masu by dropping る and adding ます."},
+            {"term": "Group 3 (irregular)", "def": "Just two verbs, suru (to do) and kuru (to come), with their own irregular conjugation patterns."},
+            {"term": "-masu form", "def": "The polite present/future verb ending, covering both habitual present and future meaning."}
+          ],
+          "practice": [
+            {"q": "Which verb group does 'taberu' (to eat) belong to?", "choices": ["Group 2 (ru-verb)", "Group 1 (u-verb)", "Group 3 (irregular)", "None of these"], "answer": 0, "explain": "Taberu ends in -eru with an unchanging stem, placing it in Group 2 (ichidan); its -masu form is tabemasu."},
+            {"q": "What is the -masu form of 'kaku' (to write, Group 1)?", "choices": ["kakimasu", "kakumasu", "kakemasu", "kakomasu"], "answer": 0, "explain": "Group 1 verbs form -masu by shifting the final -u sound to -i: kaku → kakimasu."},
+            {"q": "Which two verbs make up Group 3, the irregular group?", "choices": ["suru (to do) and kuru (to come)", "taberu and miru", "nomu and kaku", "There are no irregular verbs in Japanese"], "answer": 0, "explain": "Suru and kuru are the only two Group 3 verbs, each with its own irregular -masu form: shimasu and kimasu."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Negative and Past Tense",
+          "minutes": 12,
+          "intro": "Once you know the polite -masu form, three more endings, -masen, -mashita, and -masen deshita, unlock every combination of tense and polarity you need for everyday conversation.",
+          "sections": [
+            {
+              "heading": "The Four -masu Family Endings",
+              "body": [
+                "The polite verb system has exactly four endings, all built from the same base: -masu (present/future affirmative): 食べます (tabemasu, eat/will eat); -masen (present/future negative): 食べません (tabemasen, don't eat/won't eat); -mashita (past affirmative): 食べました (tabemashita, ate); -masen deshita (past negative): 食べませんでした (tabemasen deshita, didn't eat).",
+                "Notice the pattern: -masen deshita is literally -masen (negative) plus deshita (the past tense of desu), so once you know the three simpler forms, the fourth is just a combination you can predict rather than memorize separately."
+              ]
+            },
+            {
+              "heading": "Using All Four in Context",
+              "body": [
+                "These four forms attach to the same verb stem regardless of tense or polarity, which makes them mechanically simple even though there are four to track: 毎日野菜を食べます (Mainichi yasai o tabemasu, I eat vegetables every day) versus 昨日は肉を食べませんでした (Kinō wa niku o tabemasen deshita, Yesterday I didn't eat meat).",
+                "Because the verb stem itself doesn't change across these four forms, unlike the irregular English 'eat/ate/eaten,' a learner who has correctly identified a verb's -masu form has effectively unlocked all four tense/polarity combinations at once."
+              ],
+              "example": {
+                "problem": "Say 'I ate breakfast this morning' and 'I did not eat breakfast yesterday' using the correct -masu family endings.",
+                "steps": [
+                  "'Ate' (past affirmative) = tabemashita.",
+                  "'This morning' = kesa; 'breakfast' = asagohan: Kesa asagohan o tabemashita.",
+                  "'Did not eat' (past negative) = tabemasen deshita; 'yesterday' = kinō: Kinō wa asagohan o tabemasen deshita."
+                ],
+                "answer": "今朝朝ごはんを食べました (Kesa asagohan o tabemashita). 昨日は朝ごはんを食べませんでした (Kinō wa asagohan o tabemasen deshita)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "-masen", "def": "The polite present/future negative ending: tabemasen (don't eat/won't eat)."},
+            {"term": "-mashita", "def": "The polite past affirmative ending: tabemashita (ate)."},
+            {"term": "-masen deshita", "def": "The polite past negative ending, literally -masen (negative) plus deshita (past of desu): tabemasen deshita (didn't eat)."},
+            {"term": "Stable verb stem", "def": "The property that the verb stem doesn't change across all four -masu family endings, unlike irregular English verb forms."}
+          ],
+          "practice": [
+            {"q": "What does 'tabemasen deshita' mean?", "choices": ["Did not eat", "Ate", "Will not eat", "Is eating"], "answer": 0, "explain": "Tabemasen deshita combines the negative (masen) with the past of desu (deshita), giving the past negative: 'did not eat.'"},
+            {"q": "Which ending marks the past affirmative?", "choices": ["-mashita", "-masen", "-masu", "-masen deshita"], "answer": 0, "explain": "-Mashita is the past affirmative ending (tabemashita, ate); -masen is present/future negative, and -masen deshita is past negative."},
+            {"q": "Why is '-masen deshita' considered predictable rather than a separate memorized form?", "choices": ["It's literally -masen (negative) plus deshita (past tense of desu)", "It has no relationship to the other three endings", "It only applies to Group 3 verbs", "It's actually identical to -mashita"], "answer": 0, "explain": "Masen deshita is built by combining the negative ending masen with deshita, the past tense of desu, so it follows logically once you know the other three forms."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Asking Questions with か and Question Words",
+          "minutes": 11,
+          "intro": "Japanese question formation is refreshingly simple: no word-order change, no auxiliary verb, just one small particle added to the end of any sentence.",
+          "sections": [
+            {
+              "heading": "The Question Particle か",
+              "body": [
+                "To turn any statement into a yes/no question, simply add か (ka) to the end, with no change to word order at all: これはペンです (Kore wa pen desu, This is a pen) becomes これはペンですか (Kore wa pen desu ka, Is this a pen?). This is dramatically simpler than English's do/does insertion or Spanish/French/German's word-order or auxiliary changes.",
+                "In casual speech, か is often dropped and replaced by rising intonation alone, similar to Spanish's intonation-only questions, but in polite or written Japanese, か is standard and expected."
+              ]
+            },
+            {
+              "heading": "Question Words",
+              "body": [
+                "Common question words include 何 (nani/nan, what), 誰 (dare, who), いつ (itsu, when), どこ (doko, where), どう (dō, how), どうして/なぜ (dōshite/naze, why), いくら (ikura, how much). Unlike English, question words stay in their normal grammatical position in the sentence rather than moving to the front: これは何ですか (Kore wa nan desu ka, What is this?) keeps nan right where the answer word would go.",
+                "This is a direct consequence of Japanese's particle-based grammar: since word order doesn't carry grammatical meaning the way it does in English, there's no need to move the question word to a special front position — か at the end is enough to signal a question."
+              ],
+              "example": {
+                "problem": "Ask 'What is this?' and 'Where is the bank?' in Japanese, using the correct question words and か.",
+                "steps": [
+                  "'What is this?' keeps nani/nan in the position where the answer would go, plus desu ka: Kore wa nan desu ka.",
+                  "'Where is the bank?' uses doko (where) plus desu ka: Ginkō wa doko desu ka."
+                ],
+                "answer": "これは何ですか (Kore wa nan desu ka). 銀行はどこですか (Ginkō wa doko desu ka)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "か (Ka)", "def": "The question particle added to the end of a sentence to turn it into a yes/no or open question, with no word-order change."},
+            {"term": "何 (Nani/Nan)", "def": "'What'; stays in its normal sentence position rather than moving to the front, unlike English."},
+            {"term": "どこ (Doko)", "def": "'Where,' one of Japan's core question words, used in place like doko desu ka (where is it?)."},
+            {"term": "Fixed word order with か", "def": "The Japanese pattern where question words don't move position; only the final か signals a question."}
+          ],
+          "practice": [
+            {"q": "How do you turn 'Kore wa pen desu' (This is a pen) into a question?", "choices": ["Add か to the end: Kore wa pen desu ka", "Move pen to the front", "Add 'do' before desu", "Change desu to a special question form"], "answer": 0, "explain": "Adding か to the end of any statement turns it into a question, with no change to word order or an auxiliary verb needed."},
+            {"q": "Where does the question word 'nan' (what) go in 'Kore wa nan desu ka'?", "choices": ["In its normal grammatical position, not moved to the front", "Always at the very beginning of the sentence", "Always right after か", "It can go anywhere randomly"], "answer": 0, "explain": "Unlike English, Japanese question words stay in their normal sentence position; only か at the end signals the question."},
+            {"q": "What is often dropped in casual speech but expected in polite/written Japanese?", "choices": ["か (ka)", "です (desu)", "は (wa)", "を (o)"], "answer": 0, "explain": "In casual speech, か is often replaced by rising intonation alone; polite and written Japanese keeps か explicitly."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Food, Shopping, and Directions",
+      "summary": "This unit puts your Japanese to work in three of the most common real-world situations: eating out, buying things, and finding your way around.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Food and Preferences: Suki Desu",
+          "minutes": 12,
+          "intro": "Talking about food preferences in Japanese uses a na-adjective construction, suki desu, paired with the particle が, in a pattern that echoes the wa/ga distinction from earlier in this course.",
+          "sections": [
+            {
+              "heading": "Suki Desu: To Like",
+              "body": [
+                "好き (suki, liked/likeable) is a na-adjective, so it follows na-adjective grammar: 私は寿司が好きです (Watashi wa sushi ga suki desu, I like sushi, literally 'As for me, sushi is likeable'). Wa marks the overall topic (me) while ga marks the specific thing being liked (sushi) — the same wa/ga pattern from earlier in this course, applied to preferences.",
+                "To say you dislike something, use 嫌い (kirai, disliked) the same way: 肉が嫌いです (Niku ga kirai desu, I dislike meat). To intensify, add 大 (dai) to the front: 大好き (daisuki, love/really like), 大嫌い (daikirai, really dislike)."
+              ]
+            },
+            {
+              "heading": "Food Vocabulary and Set Phrases",
+              "body": [
+                "Useful food words: ご飯 (gohan, rice/a meal), 水 (mizu, water), 肉 (niku, meat), パン (pan, bread, a katakana loanword originally from Portuguese), 魚 (sakana, fish), 野菜 (yasai, vegetables), コーヒー (kōhī, coffee, katakana). Before eating, it's customary to say いただきます (Itadakimasu, roughly 'I gratefully receive this meal'), and after finishing, ごちそうさまでした (Gochisōsama deshita, 'Thank you for the meal').",
+                "To order at a restaurant, get someone's attention with すみません (Sumimasen, excuse me), then name the item followed by をお願いします (o onegaishimasu, '..., please'): 寿司をお願いします (Sushi o onegaishimasu, Sushi, please)."
+              ],
+              "example": {
+                "problem": "Say 'I like coffee' and 'I dislike fish' using suki/kirai desu correctly.",
+                "steps": [
+                  "'I like coffee' uses wa for the topic (me) and ga for the liked thing (coffee): Watashi wa kōhī ga suki desu.",
+                  "'I dislike fish' follows the same pattern with kirai: Watashi wa sakana ga kirai desu."
+                ],
+                "answer": "私はコーヒーが好きです (Watashi wa kōhī ga suki desu). 私は魚が嫌いです (Watashi wa sakana ga kirai desu)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "好き (Suki)", "def": "'Liked/likeable,' a na-adjective used with が to mark the thing liked: sushi ga suki desu."},
+            {"term": "嫌い (Kirai)", "def": "'Disliked,' the opposite of suki, used the same grammatical way."},
+            {"term": "いただきます (Itadakimasu)", "def": "Said before eating, roughly 'I gratefully receive this meal.'"},
+            {"term": "を お願いします (O onegaishimasu)", "def": "'..., please,' attached after an item name to politely order or request it."}
+          ],
+          "practice": [
+            {"q": "In 'Watashi wa sushi ga suki desu,' what does が mark?", "choices": ["The specific thing being liked (sushi)", "The overall topic", "The speaker", "A location"], "answer": 0, "explain": "Ga marks sushi as the specific thing being liked, while wa marks watashi (the speaker) as the overall topic, echoing the wa/ga pattern from earlier lessons."},
+            {"q": "What is said before starting to eat?", "choices": ["いただきます (Itadakimasu)", "ごちそうさまでした (Gochisōsama deshita)", "すみません (Sumimasen)", "はじめまして (Hajimemashite)"], "answer": 0, "explain": "Itadakimasu is said before eating; gochisōsama deshita is said afterward, to express thanks for the meal."},
+            {"q": "How do you intensify 'suki' (liked) to mean 'love/really like'?", "choices": ["Add 大 (dai) to the front: daisuki", "Add とても (totemo) only, never dai", "Repeat the word twice", "Change it to kirai"], "answer": 0, "explain": "Adding 大 (dai) to the front intensifies suki into daisuki (love) and kirai into daikirai (really dislike)."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Shopping and Prices",
+          "minutes": 11,
+          "intro": "Shopping in Japanese relies on one essential question, ikura desu ka, plus a small set of i-adjectives for describing price and quality.",
+          "sections": [
+            {
+              "heading": "Asking Prices",
+              "body": [
+                "To ask a price, say いくらですか (Ikura desu ka, How much is it?). Prices are stated with the number plus 円 (en, yen): 千円です (Sen'en desu, It's 1,000 yen). To describe something as expensive or cheap, use the i-adjectives 高い (takai, expensive/high) or 安い (yasui, cheap): これは高いです (Kore wa takai desu, This is expensive).",
+                "高い (takai) does double duty for both 'expensive' and 'tall/high,' with context distinguishing the meaning: 高いビル (takai biru, a tall building) versus 高い時計 (takai tokei, an expensive watch)."
+              ]
+            },
+            {
+              "heading": "Comparisons",
+              "body": [
+                "Japanese comparisons use の方が (no hō ga, roughly 'the side of...') plus より (yori, 'than'): こちらの方が安いです (Kochira no hō ga yasui desu, This one is cheaper) — literally 'as for the side of this one, it is cheap.' Adding より plus the other item makes the comparison explicit: あちらよりこちらの方が安いです (Achira yori kochira no hō ga yasui desu, This one is cheaper than that one).",
+                "For equality, use 同じくらい (onaji kurai, about the same): この二つは同じくらいの値段です (Kono futatsu wa onaji kurai no nedan desu, These two are about the same price)."
+              ],
+              "example": {
+                "problem": "Ask 'How much is this?' and say 'This one is cheaper than that one.'",
+                "steps": [
+                  "'How much is this?' = Kore wa ikura desu ka.",
+                  "'This one is cheaper than that one' uses no hō ga + yori: Achira yori kochira no hō ga yasui desu."
+                ],
+                "answer": "これはいくらですか (Kore wa ikura desu ka). あちらよりこちらの方が安いです (Achira yori kochira no hō ga yasui desu)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "いくらですか (Ikura desu ka)", "def": "'How much is it?' — the standard way to ask a price in Japanese."},
+            {"term": "高い (Takai)", "def": "An i-adjective meaning both 'expensive' and 'tall/high,' with context distinguishing the meaning."},
+            {"term": "の方が...より (No hō ga...yori)", "def": "The standard comparative construction: '[this one]'s side is more [adjective] than [that one].'"},
+            {"term": "同じくらい (Onaji kurai)", "def": "'About the same,' used to express rough equality between two things."}
+          ],
+          "practice": [
+            {"q": "What does 'takai' mean in 'takai tokei' (an expensive watch) versus 'takai biru' (a tall building)?", "choices": ["The same word, takai, means 'expensive' in one context and 'tall/high' in the other", "Two completely different words that happen to be spelled the same", "Takai only ever means 'tall'", "Takai only ever means 'expensive'"], "answer": 0, "explain": "Takai is a single i-adjective meaning both 'expensive' and 'tall/high'; context (watch vs. building) tells you which meaning applies."},
+            {"q": "How do you ask 'How much is this?' in Japanese?", "choices": ["Kore wa ikura desu ka", "Kore wa nan desu ka", "Kore wa doko desu ka", "Kore wa dare desu ka"], "answer": 0, "explain": "Ikura desu ka specifically asks about price; nan desu ka asks 'what is this,' and doko desu ka asks 'where is it.'"},
+            {"q": "Which phrase expresses that two things are about the same price?", "choices": ["onaji kurai", "no hō ga...yori", "ikura desu ka", "takai desu"], "answer": 0, "explain": "Onaji kurai means 'about the same,' expressing rough equality; no hō ga...yori is the comparative for inequality."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Directions and Polite Requests",
+          "minutes": 11,
+          "intro": "Giving and following directions in Japanese introduces the te-form, one of the most useful verb forms in the entire language, used here to make a polite request.",
+          "sections": [
+            {
+              "heading": "Direction Vocabulary",
+              "body": [
+                "Key direction words: 右 (migi, right), 左 (hidari, left), まっすぐ (massugu, straight ahead), 近い (chikai, near), 遠い (tooi, far). The verb 曲がる (magaru, to turn) is essential for giving directions: 右に曲がってください (Migi ni magatte kudasai, Please turn right).",
+                "Notice the pattern 曲がって (magatte) rather than the dictionary form 曲がる (magaru) — this is the te-form, a special connecting form of the verb used constantly in requests and in linking actions together, covered in detail in the next unit."
+              ]
+            },
+            {
+              "heading": "The Te-Form for Polite Requests",
+              "body": [
+                "Attaching ください (kudasai, please) after a verb's te-form creates a polite request: 曲がってください (magatte kudasai, please turn), 待ってください (matte kudasai, please wait, from 待つ matsu), 見てください (mite kudasai, please look, from 見る miru). The te-form itself varies in exactly how it's built depending on the verb's dictionary-form ending, a pattern studied more fully next.",
+                "For now, the practical shortcut is to learn common te-form + kudasai requests as set phrases: 右に曲がってください (turn right, please), まっすぐ行ってください (massugu itte kudasai, please go straight, from 行く iku)."
+              ],
+              "example": {
+                "problem": "Give the direction: 'Please go straight, then please turn left.'",
+                "steps": [
+                  "'Please go straight' uses the te-form of iku (to go): itte kudasai, plus massugu: massugu itte kudasai.",
+                  "'Then please turn left' uses the te-form of magaru: magatte kudasai, plus hidari and sorekara (then): sorekara hidari ni magatte kudasai."
+                ],
+                "answer": "まっすぐ行ってください。それから左に曲がってください。(Massugu itte kudasai. Sorekara hidari ni magatte kudasai.)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "曲がる (Magaru)", "def": "'To turn,' essential for giving directions; its te-form, magatte, combines with kudasai for polite requests."},
+            {"term": "て-form (Te-form)", "def": "A special connecting form of a verb, used with kudasai for polite requests and for linking actions together."},
+            {"term": "ください (Kudasai)", "def": "'Please,' attached after a verb's te-form to make a polite request: matte kudasai (please wait)."},
+            {"term": "まっすぐ (Massugu)", "def": "'Straight ahead,' a core direction word used in phrases like massugu itte kudasai (please go straight)."}
+          ],
+          "practice": [
+            {"q": "What does 'magatte kudasai' mean?", "choices": ["Please turn", "Please wait", "Please look", "Please go"], "answer": 0, "explain": "Magatte is the te-form of magaru (to turn), and kudasai after a te-form makes a polite request: please turn."},
+            {"q": "What verb form is used before kudasai to make a polite request?", "choices": ["The te-form", "The dictionary form", "The -masu form", "The past tense"], "answer": 0, "explain": "Kudasai attaches after a verb's te-form (like magatte, matte, mite) to form a polite request, not the plain dictionary form."},
+            {"q": "How do you say 'please go straight'?", "choices": ["massugu itte kudasai", "massugu iku kudasai", "massugu ikimasu kudasai", "massugu kudasai itte"], "answer": 0, "explain": "Itte is the te-form of iku (to go); combined with massugu (straight) and kudasai (please), it forms 'please go straight.'"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Putting It Together",
+      "summary": "The final unit builds the te-form's full range, from chaining actions to requests and permission, then pulls everything together into a realistic conversation.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Te-Form Basics and Connecting Actions",
+          "minutes": 13,
+          "intro": "Beyond making polite requests, the te-form's other essential job is linking two or more actions into one flowing sentence, exactly like saying 'and then' in English.",
+          "sections": [
+            {
+              "heading": "Building the Te-Form",
+              "body": [
+                "The te-form's ending depends on the verb's dictionary-form ending, and while the full pattern has several sound-based rules, three common examples show the range: たべる (taberu, Group 2) → たべて (tabete), simply drop る and add て. のむ (nomu, Group 1, ends in -mu) → のんで (nonde), a regular sound shift for its class. いく (iku, to go) → いって (itte), a true irregular exception even within Group 1.",
+                "Because Group 1 te-forms shift based on the final sound of the dictionary form (mu/bu/nu → んで; ku → いて, with iku as the sole exception; su → して; u/tsu/ru → って), memorizing a few example verbs from each sound family, rather than trying to derive every case from scratch, is the fastest path to fluency with this form."
+              ]
+            },
+            {
+              "heading": "Connecting Actions with Te",
+              "body": [
+                "To link two or more actions in sequence, use the te-form for every verb except the very last one, which carries the actual tense: 朝ご飯を食べて、学校に行きます (Asagohan o tabete, gakkō ni ikimasu, I eat breakfast and then go to school). The final verb, ikimasu, carries the tense/politeness for the whole sentence; tabete simply connects.",
+                "This te-form chaining can link as many actions as needed: 起きて、シャワーを浴びて、朝ご飯を食べて、学校に行きます (Okite, shawā o abite, asagohan o tabete, gakkō ni ikimasu, I wake up, shower, eat breakfast, and go to school) — only the final verb, ikimasu, is fully conjugated for tense."
+              ],
+              "example": {
+                "problem": "Combine 'nomu' (to drink) and 'neru' (to sleep, Group 2) into one sentence: 'I drink water and then sleep.'",
+                "steps": [
+                  "Nomu is Group 1, ending in -mu, so its te-form is nonde.",
+                  "Neru is Group 2, so its -masu-tense form is nemasu; the final verb carries the tense.",
+                  "Combine: mizu o nonde, nemasu."
+                ],
+                "answer": "水を飲んで、寝ます (Mizu o nonde, nemasu) — I drink water and then sleep."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "て-form (Te-form)", "def": "A connecting verb form used to link sequential actions or to build polite requests with kudasai."},
+            {"term": "Group 1 te-form sound shifts", "def": "Predictable sound changes for Group 1 verbs forming the te-form, based on the dictionary form's final sound (mu/bu/nu → んで, ku → いて, u/tsu/ru → って)."},
+            {"term": "行って (Itte)", "def": "The te-form of iku (to go), a true irregular exception to the regular ku→いて pattern."},
+            {"term": "Final verb carries tense", "def": "In a chain of te-form verbs, only the last verb is conjugated for tense; earlier verbs stay in the te-form."}
+          ],
+          "practice": [
+            {"q": "In a sentence chaining several actions with the te-form, which verb carries the tense?", "choices": ["Only the final verb in the chain", "Every verb in the chain", "Only the first verb", "None of the verbs; tense is separate"], "answer": 0, "explain": "Only the last verb in a te-form chain is conjugated for tense; every earlier verb stays in its unconjugated te-form."},
+            {"q": "What is the te-form of 'iku' (to go)?", "choices": ["itte (an irregular exception)", "iite (the regular pattern)", "ikite", "ikute"], "answer": 0, "explain": "Iku is a true irregular exception: its te-form is itte, not the iite you'd expect from the regular ku→いて pattern."},
+            {"q": "What is the main use of the te-form covered in this lesson?", "choices": ["Linking sequential actions into one sentence, like 'and then'", "Forming the past tense directly", "Making a verb negative", "Forming a question"], "answer": 0, "explain": "The te-form's core job here is chaining actions together in sequence, with only the final verb carrying tense."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Polite Requests and Common Set Phrases",
+          "minutes": 11,
+          "intro": "A handful of memorized set phrases, all built on grammar you already know, cover an enormous share of real, everyday Japanese interactions.",
+          "sections": [
+            {
+              "heading": "Requests and Permission",
+              "body": [
+                "Beyond te-form + kudasai, ~てもいいですか (te + mo ii desu ka, 'Is it okay if I...?') asks permission: 写真を撮ってもいいですか (Shashin o totte mo ii desu ka, Is it okay if I take a photo?). ~てはいけません (te wa ikemasen, 'must not...') states a prohibition: ここで写真を撮ってはいけません (Koko de shashin o totte wa ikemasen, You must not take photos here).",
+                "Both patterns build directly on the te-form you just learned, showing how far one verb form stretches across different everyday situations, from simple requests to asking permission to stating rules."
+              ]
+            },
+            {
+              "heading": "Common Set Phrases",
+              "body": [
+                "A short list of extremely high-frequency phrases: すみません (Sumimasen, excuse me/sorry, used both to apologize and to get attention), ありがとうございます (Arigatō gozaimasu, thank you, polite), お願いします (Onegaishimasu, please/I request this), 大丈夫です (Daijōbu desu, it's fine/I'm okay), わかりました (Wakarimashita, understood/got it).",
+                "These phrases are worth memorizing as complete units rather than analyzing grammatically at this stage; native speakers use them constantly, and recognizing them instantly will carry you through far more real conversations than any single grammar rule."
+              ],
+              "example": {
+                "problem": "Ask politely 'Is it okay if I sit here?' using ~てもいいですか, from the verb 座る (suwaru, to sit, Group 1).",
+                "steps": [
+                  "Suwaru is Group 1, ending in -ru, so its te-form is suwatte.",
+                  "Add mo ii desu ka: suwatte mo ii desu ka.",
+                  "Add 'here' (koko ni): Koko ni suwatte mo ii desu ka."
+                ],
+                "answer": "ここに座ってもいいですか (Koko ni suwatte mo ii desu ka) — Is it okay if I sit here?"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "~てもいいですか (Te mo ii desu ka)", "def": "'Is it okay if I...?' — a te-form-based pattern for asking permission."},
+            {"term": "~てはいけません (Te wa ikemasen)", "def": "'Must not...' — a te-form-based pattern for stating a prohibition."},
+            {"term": "すみません (Sumimasen)", "def": "'Excuse me' or 'sorry,' used both to apologize and to get someone's attention."},
+            {"term": "わかりました (Wakarimashita)", "def": "'Understood' / 'got it,' a common response confirming comprehension."}
+          ],
+          "practice": [
+            {"q": "What does '~てもいいですか' ask?", "choices": ["Permission: 'Is it okay if I...?'", "A prohibition: 'You must not...'", "A simple yes/no fact question", "An apology"], "answer": 0, "explain": "Te mo ii desu ka asks for permission; te wa ikemasen states a prohibition instead."},
+            {"q": "What is 'sumimasen' used for?", "choices": ["Both apologizing and getting someone's attention", "Only for saying thank you", "Only for asking the time", "Only for ordering food"], "answer": 0, "explain": "Sumimasen serves double duty in Japanese: it can mean 'sorry' or be used to politely get someone's attention, such as a waiter's."},
+            {"q": "What does 'wakarimashita' mean?", "choices": ["Understood/got it", "I don't understand", "Please wait", "Thank you very much"], "answer": 0, "explain": "Wakarimashita confirms comprehension, roughly 'understood' or 'got it.'"}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Putting It Together: A Real Conversation",
+          "minutes": 13,
+          "intro": "Every tool from this course, kana, particles, adjectives, the masu/te forms, and set phrases, comes together in one realistic exchange you could actually have today.",
+          "sections": [
+            {
+              "heading": "A Sample Conversation",
+              "body": [
+                "Consider this exchange: A: すみません、これはいくらですか。 B: 千円です。 A: 高いですね。もう少し安いのはありますか。 B: はい、こちらはいかがですか。五百円です。 A: いいですね。それをお願いします。(A: Excuse me, how much is this? B: It's 1,000 yen. A: That's expensive. Is there something a bit cheaper? B: Yes, how about this one? It's 500 yen. A: That's good. I'll take that one, please.)",
+                "This short exchange draws on nearly every grammar point from this course: sumimasen to open, ikura desu ka to ask price, the i-adjective takai desu, and o onegaishimasu to close the transaction — exactly how real fluency works, weaving multiple structures together naturally rather than using one rule in isolation."
+              ]
+            },
+            {
+              "heading": "Building Your Own Exchange",
+              "body": [
+                "A reliable template for a first conversation: greet and get attention (sumimasen), state your topic with wa, describe something with an i-adjective or na-adjective plus desu, ask a question with か, and close politely with お願いします or ありがとうございます.",
+                "From here, expanding your Japanese is mostly a matter of vocabulary and reading more kanji, not entirely new grammar structures — the patterns in this course, particles, desu, adjectives, the masu/te-form system, and questions with か, cover the large majority of everyday conversation you'll encounter."
+              ],
+              "example": {
+                "problem": "Write a two-line exchange: ask a friend what they did last weekend, and have them answer that they visited their grandmother and it was very nice.",
+                "steps": [
+                  "'What did you do last weekend' uses the past tense -mashita of suru (to do): Shūmatsu wa nani o shimashita ka.",
+                  "'I visited my grandmother' uses the Group 2 verb tazuneru (to visit) in its past -mashita form: Sobo o tazunemashita.",
+                  "'It was very nice' uses the i-adjective tanoshii (fun) in its past tense, tanoshikatta, plus desu: Totemo tanoshikatta desu."
+                ],
+                "answer": "A: 週末は何をしましたか。(Shūmatsu wa nani o shimashita ka.) B: そぼを訪ねました。とても楽しかったです。(Sobo o tazunemashita. Totemo tanoshikatta desu.)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "週末は何をしましたか (Shūmatsu wa nani o shimashita ka)", "def": "'What did you do this weekend?' — a past-tense question combining wa, nani, o, and the -mashita ending."},
+            {"term": "とても (Totemo)", "def": "'Very,' commonly used to intensify an adjective, as in totemo tanoshikatta desu (it was very fun)."},
+            {"term": "Conversation template", "def": "A reusable pattern of greeting/attention, topic, description, question, and polite closing, useful for any first exchange."},
+            {"term": "Fluency through combination", "def": "The principle that real fluency comes from weaving multiple grammar points together, not mastering one rule in isolation."}
+          ],
+          "practice": [
+            {"q": "In the sample conversation, which phrase is used to close the transaction politely?", "choices": ["それをお願いします (Sore o onegaishimasu)", "すみません (Sumimasen)", "いくらですか (Ikura desu ka)", "高いですね (Takai desu ne)"], "answer": 0, "explain": "Sore o onegaishimasu ('that one, please') politely closes the transaction after deciding what to buy."},
+            {"q": "What does 'totemo tanoshikatta desu' mean?", "choices": ["It was very fun", "It is very fun", "It will be very fun", "It is not fun at all"], "answer": 0, "explain": "Tanoshikatta is the past tense of the i-adjective tanoshii (fun); totemo intensifies it to 'very,' and desu adds politeness: 'it was very fun.'"},
+            {"q": "According to this lesson, what mostly drives further progress in Japanese after this course?", "choices": ["Vocabulary and reading more kanji, since the core grammar patterns are now covered", "Learning a completely different grammar system", "Abandoning particles for a simpler system", "Memorizing exceptions to desu"], "answer": 0, "explain": "The lesson argues that the grammar patterns taught cover most everyday conversation, so vocabulary and kanji growth become the main drivers of further progress."}
+          ]
+        }
+      ]
+    }
+  ]
+}

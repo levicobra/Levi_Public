@@ -1,0 +1,751 @@
+{
+ "id": "intro-engineering",
+ "title": "Introduction to Engineering",
+ "domain": "engineering",
+ "level": "Intro college",
+ "description": "Introduction to Engineering surveys what engineers actually do: the engineering method, the major disciplines, and the design process used to turn a problem into a working solution. Along the way you will build the practical toolkit every engineer needs - units and estimation, forces and equilibrium, and structured decision-making - and see how professional ethics and safety shape real engineering practice.",
+ "outcomes": [
+  "You can explain how the engineering method differs from pure science and walk through the six stages of the engineering design process using a concrete example.",
+  "You can name the major engineering disciplines and match each one to the kinds of systems it typically designs.",
+  "You can convert between units using the factor-label method and report a calculated answer with the correct number of significant figures.",
+  "You can make a quick order-of-magnitude estimate to sanity-check whether an engineering answer is plausible.",
+  "You can draw a free-body diagram for a simple object and apply the equilibrium equations ΣFx = 0 and ΣFy = 0 to solve for unknown forces.",
+  "You can build a weighted decision matrix to compare design options and explain why factor of safety and a professional code of ethics matter in engineering practice."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "What Engineers Do",
+   "summary": "Before you can practice engineering, you need to know what it is: a distinct method for solving problems, a family of disciplines that apply that method to different kinds of systems, and a repeatable process for turning a need into a working design.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Engineering Method",
+     "minutes": 14,
+     "intro": "Ask ten people what an engineer does and you will get ten different answers, from 'builds bridges' to 'writes software' to 'fixes machines' - and all of them are partly right. What ties every kind of engineering together is not a subject matter but a method: a disciplined way of turning a real-world need into a working, tested solution under real constraints of cost, time, and physics.",
+     "sections": [
+      {
+       "heading": "Engineering vs. Science vs. Technology",
+       "body": [
+        "Science asks 'why does this happen?' and builds theories that explain and predict the natural world; a physicist studying friction wants to understand it in general. Engineering asks 'how do I make this happen, on purpose, within a budget?' and uses scientific knowledge as a tool rather than an end in itself; a mechanical engineer designing a brake pad wants a specific, reliable amount of friction at a specific cost.",
+        "Technology is the artifact that results - the actual bridge, phone, or engine - while engineering is the process that produced it. This distinction matters because engineers are judged not on elegant theory but on whether the finished device works, ships on schedule, and does not hurt anyone. A gorgeous analysis that never becomes a working product has not done its job."
+       ]
+      },
+      {
+       "heading": "Constraints Make Engineering Hard",
+       "body": [
+        "A physics problem usually has one right numeric answer. An engineering problem has many workable answers and no single correct one, because it is shaped by constraints that rarely appear in a science class: budget, available materials, manufacturing tolerances, government regulations, deadlines, and how the device will be used by real, imperfect people.",
+        "This is why two competent engineering teams can solve the same problem - say, a lightweight drone frame - with completely different, equally valid designs. One might optimize for the lowest cost using stamped aluminum, another for the lowest weight using carbon fiber. Judging a design means asking whether it meets the requirements within its constraints, not whether it matches someone else's answer."
+       ],
+       "example": {
+        "problem": "You must choose a material for a bicycle kickstand that must support a 15 kg bicycle without bending, cost under $2 per unit to manufacture, and resist rust outdoors for at least 5 years.",
+        "steps": [
+         "List the requirement: support a 15 kg bicycle without bending.",
+         "List the constraints: cost under $2 per unit, and 5-year outdoor corrosion resistance.",
+         "Compare candidate materials against both: stainless steel resists corrosion well but usually costs more than $2 per unit at this size; plain aluminum is light but needs a thicker, heavier cross-section to match steel's stiffness; zinc-plated mild steel is cheap and strong, and the zinc coating protects it from rust for years."
+        ],
+        "answer": "Zinc-plated mild steel best satisfies all three conditions - strong enough for 15 kg without bending, priced under $2, and protected from rust - while stainless steel would exceed the cost constraint and plain aluminum would need a heavier, bulkier design to match the same strength."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "engineering method", "def": "A disciplined process for turning a real-world need into a working, tested solution within constraints of cost, time, and physics."},
+      {"term": "constraint", "def": "An outside limit a design must stay within, such as a budget, a deadline, or a regulation."},
+      {"term": "requirement", "def": "Something a design must actually accomplish for its user, such as holding a specific weight or running for a set time."},
+      {"term": "technology", "def": "The finished artifact or device that results from the engineering process."}
+     ],
+     "practice": [
+      {
+       "q": "Which question is most characteristic of the engineering method, as opposed to pure science?",
+       "choices": ["Why does friction occur between two surfaces?", "How can I achieve a reliable amount of friction within a fixed budget?", "What is the mathematical model that explains friction?", "Can friction be observed in a laboratory?"],
+       "answer": 1,
+       "explain": "Engineering starts from a practical need and works within constraints like cost and reliability to produce something on purpose, rather than explaining a phenomenon in general."
+      },
+      {
+       "q": "A technology, in the engineering sense, is best described as...",
+       "choices": ["The scientific theory behind a device", "The finished artifact that results from the engineering process", "A branch of pure science", "A government regulation on manufacturing"],
+       "answer": 1,
+       "explain": "Technology refers to the actual device or artifact produced; engineering is the process, and science is the underlying explanatory knowledge."
+      },
+      {
+       "q": "Two competent teams design a lightweight drone frame and arrive at very different but equally valid solutions. What best explains this?",
+       "choices": ["One of the teams made a mathematical error", "Engineering problems are shaped by constraints, so many workable designs can meet the same requirements", "Only one true optimal design exists and one team must be wrong", "Drone frames have no real requirements to satisfy"],
+       "answer": 1,
+       "explain": "Unlike a science problem with one correct numeric answer, engineering design problems typically have multiple workable solutions depending on which constraints (cost, weight, materials) are prioritized."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "A Tour of the Engineering Disciplines",
+     "minutes": 14,
+     "intro": "Every engineered object you touched today - your phone, the chair you sat in, the water that came out of your tap - was designed by an engineer from a specific discipline. Knowing what those disciplines actually do, and how they divide up the physical and digital world, is the fastest way to see where you might eventually fit.",
+     "sections": [
+      {
+       "heading": "Disciplines Built Around Physical Systems",
+       "body": [
+        "Civil engineers design the built environment we move through every day: roads, bridges, water systems, and buildings, all sized to survive decades of loads from traffic, weather, and gravity itself. Mechanical engineers design machines with moving parts, from car engines to robotic arms, where forces, motion, and heat all have to work together reliably.",
+        "Aerospace engineers extend mechanical principles into the extreme environment of flight and space, where weight is brutally expensive and failure margins are thin. Electrical engineers design the circuits, motors, and power systems that generate, move, and use electricity, from a phone charger to a city's power grid."
+       ]
+      },
+      {
+       "heading": "Disciplines Built Around Information, Chemistry, and Life",
+       "body": [
+        "Chemical engineers design processes that transform raw materials into useful products at scale, such as turning crude oil into plastic or purifying drinking water, often working with pressures, temperatures, and reactions too dangerous to handle by hand. Computer engineers design the hardware and embedded software that make digital devices think, from a laptop's processor to a car's engine control unit.",
+        "Industrial engineers optimize how people, machines, and information flow through a system, such as redesigning a hospital's patient intake process or a factory's assembly line to reduce waste and delay. Biomedical engineers apply engineering methods directly to the human body, designing devices like pacemakers and prosthetic limbs that must work safely inside living tissue."
+       ],
+       "example": {
+        "problem": "A pacemaker, a highway overpass, and a Wi-Fi router each needed a different kind of engineer to design them. Match each device to the discipline most responsible for it.",
+        "steps": [
+         "Pacemaker: identify that it must interface safely with living tissue using tiny, extremely reliable electronics.",
+         "Highway overpass: identify that it must carry traffic loads safely for decades, using structural and soil analysis.",
+         "Wi-Fi router: identify that it needs radio-frequency circuits paired with embedded software."
+        ],
+        "answer": "The pacemaker is biomedical engineering, the overpass is civil engineering, and the Wi-Fi router is a joint effort of electrical and computer engineering."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "civil engineering", "def": "The discipline that designs infrastructure such as roads, bridges, water systems, and buildings."},
+      {"term": "mechanical engineering", "def": "The discipline that designs machines and systems with moving parts, forces, and heat."},
+      {"term": "electrical engineering", "def": "The discipline that designs circuits, motors, and systems that generate, move, or use electricity."},
+      {"term": "chemical engineering", "def": "The discipline that designs large-scale processes that transform raw materials into useful products."},
+      {"term": "biomedical engineering", "def": "The discipline that applies engineering methods to devices that work inside or with the human body."}
+     ],
+     "practice": [
+      {
+       "q": "Which engineering discipline is most directly responsible for designing a highway overpass?",
+       "choices": ["Chemical engineering", "Civil engineering", "Biomedical engineering", "Computer engineering"],
+       "answer": 1,
+       "explain": "Civil engineering designs infrastructure like bridges, overpasses, and roads, accounting for structural loads and soil conditions."
+      },
+      {
+       "q": "A pacemaker must interface safely with living tissue while running on tiny, extremely reliable electronics. Which discipline designed it?",
+       "choices": ["Aerospace engineering", "Industrial engineering", "Biomedical engineering", "Civil engineering"],
+       "answer": 2,
+       "explain": "Biomedical engineering combines electronics and materials science with an understanding of the human body, exactly what a pacemaker requires."
+      },
+      {
+       "q": "Which pair correctly matches a discipline to a system it typically designs?",
+       "choices": ["Chemical engineering - a Wi-Fi router's radio circuit", "Mechanical engineering - an internal combustion engine's moving parts", "Industrial engineering - a spacecraft's heat shield", "Electrical engineering - a water treatment plant's chemical process"],
+       "answer": 1,
+       "explain": "Mechanical engineering covers machines and moving parts, including engines; the other pairings mismatch disciplines with unrelated systems."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Engineering Design Process",
+     "minutes": 15,
+     "intro": "Engineering is not just knowledge, it is a repeatable process: a sequence of stages that reliably turns a vague need into a working, tested solution. Learning this process now means you can apply it to almost any design problem you will meet later in this course or beyond.",
+     "sections": [
+      {
+       "heading": "Six Stages, One Loop",
+       "body": [
+        "The engineering design process usually runs through six stages: define the problem, gather requirements and constraints, generate multiple concepts, analyze and select the strongest concept, build a prototype, and test it against the original requirements. Written this way it looks like a straight line, but real design almost never is.",
+        "The crucial feature is the loop back from testing to any earlier stage. If a prototype fails a test, engineers do not throw out the whole project - they figure out which stage produced the flaw (a missed requirement, a weak concept, a manufacturing shortcut) and revise from there. This is why the process is often drawn as a cycle with arrows curving backward, not a checklist to complete once."
+       ]
+      },
+      {
+       "heading": "Applying It: A Phone Stand",
+       "body": [
+        "Suppose the problem is 'people prop their phone against random objects on a desk, and it keeps sliding.' Requirements might include holding the phone at a comfortable 50 to 60° viewing angle and staying stable when the phone is tapped. Constraints might include a manufacturing cost under $5 and folding flat enough to fit in a backpack pocket.",
+        "From there, several concepts get sketched: a folding wire frame, a wedge cut from solid wood, a two-piece interlocking plastic clip. Each concept gets built as a rough prototype and tested against the actual requirements - does it hold the phone at the right angle, does it wobble when tapped - and the weakest concepts get dropped or revised, not the strongest."
+       ],
+       "example": {
+        "problem": "A phone-stand prototype (a folded wire frame) holds the phone at a good angle but tips over whenever the phone is tapped to unlock it.",
+        "steps": [
+         "Identify which requirement failed: stability under a light tap, not viewing angle.",
+         "Trace the failure to the concept stage: the wire frame's base is too narrow relative to the phone's height.",
+         "Revise the concept (widen the base or add a low center-of-mass foot) and build a new prototype.",
+         "Retest against the same stability requirement before moving forward."
+        ],
+        "answer": "Iterate: widen the base of the wire frame, build a new prototype, and retest for stability rather than shipping the flawed design or discarding the whole project."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "design process", "def": "The repeatable sequence of stages engineers use to turn a problem into a tested solution."},
+      {"term": "prototype", "def": "An early, rough working version of a design built to be tested."},
+      {"term": "iterate", "def": "To revise a design based on test results and try again, rather than starting over or stopping."},
+      {"term": "requirement gathering", "def": "The stage of the design process where the team defines what the solution must actually accomplish."}
+     ],
+     "practice": [
+      {
+       "q": "In the engineering design process, why does prototyping come before mass production rather than after?",
+       "choices": ["Prototypes are cheaper to sell than final products", "Testing a prototype reveals flaws while they are still cheap and easy to fix", "Prototypes eliminate the need for requirements", "Government regulations require a prototype stage"],
+       "answer": 1,
+       "explain": "Catching a design flaw in an early prototype is far cheaper than discovering it after tooling up for mass production."
+      },
+      {
+       "q": "You test a phone stand prototype and find it tips over with heavier phones. What should happen next in the design process?",
+       "choices": ["Ship the product as-is since it already works for light phones", "Iterate: revise the design (for example, a wider base) and test again", "Skip straight to mass production to save time", "Remove the requirement that it must hold a phone"],
+       "answer": 1,
+       "explain": "The design process is a loop: test results feed back into revising the concept, which is then tested again, rather than being abandoned or shipped with a known flaw."
+      },
+      {
+       "q": "What is the first stage of the engineering design process?",
+       "choices": ["Building the final product", "Defining the problem and gathering requirements", "Choosing a manufacturer", "Filing a patent"],
+       "answer": 1,
+       "explain": "Before generating or evaluating any concepts, engineers must clearly define what problem they are solving and what requirements the solution must meet."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Units, Measurement, and Estimation",
+   "summary": "Every engineering calculation lives or dies by its units. This unit builds the measurement toolkit engineers use every day: the SI system, converting between units without error, and quickly estimating an answer's ballpark before trusting a calculator.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "SI Units and Base Quantities",
+     "minutes": 12,
+     "intro": "Nearly every number an engineer calculates is meaningless without its units attached - '24.5' means nothing, but '24.5 newtons' tells you exactly what physical quantity you are holding. This lesson lays out the small set of units almost everything else in engineering is built from.",
+     "sections": [
+      {
+       "heading": "The Seven SI Base Units",
+       "body": [
+        "Every physical measurement engineers use is either one of seven SI base units or built from combinations of them. The base units are the meter (length), kilogram (mass), second (time), ampere (electric current), kelvin (temperature), mole (amount of substance), and candela (luminous intensity). Nearly every quantity you will calculate in this course reduces to some combination of these seven.",
+        "Mass and weight are a common early mix-up worth fixing now: mass (kilograms) is how much matter an object contains and does not change with location, while weight is the force of gravity on that mass, measured in newtons, and does change depending on where you are. A 2.5 kg tool has the same mass on Earth and the Moon, but weighs far less on the Moon because gravity there is weaker."
+       ]
+      },
+      {
+       "heading": "Derived Units and Prefixes",
+       "body": [
+        "Derived units are built by combining base units through a physical law. Force is measured in newtons, where 1 N = 1 kg·m/s² (from Newton's second law, F = ma). Energy is measured in joules (1 J = 1 N·m), and power in watts (1 W = 1 J/s). Pressure is measured in pascals (1 Pa = 1 N/m²). Recognizing these relationships lets you check whether an equation's units even make sense before you trust its answer.",
+        "SI prefixes rescale a unit by powers of ten so numbers stay a manageable size: kilo- (×1,000), milli- (×0.001), micro- (×0.000001), and nano- (×0.000000001) are the ones you will meet constantly. A resistor's value in kilohms, a capacitor's value in microfarads, and a processor's clock speed in gigahertz are all the same idea: the prefix carries the power of ten so the number in front of it stays readable."
+       ],
+       "example": {
+        "problem": "A component has a mass of 2.5 kg. What is its weight in newtons at Earth's surface, where g = 9.81 m/s²?",
+        "steps": [
+         "Identify the correct relationship: weight is a force, so use F = mg.",
+         "Substitute the known values: F = 2.5 kg × 9.81 m/s².",
+         "Multiply: 2.5 × 9.81 = 24.525."
+        ],
+        "answer": "The component weighs about 24.5 N."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "SI", "def": "The International System of Units, the standard set of measurement units used in science and engineering worldwide."},
+      {"term": "base unit", "def": "One of the seven fundamental SI units (meter, kilogram, second, ampere, kelvin, mole, candela) that all other units are built from."},
+      {"term": "derived unit", "def": "A unit built by combining base units through a physical law, such as the newton (kg·m/s²)."},
+      {"term": "newton", "def": "The SI unit of force, equal to 1 kg·m/s²."},
+      {"term": "prefix", "def": "A term like kilo- or milli- that rescales a unit by a power of ten."}
+     ],
+     "practice": [
+      {
+       "q": "Which of these is one of the seven SI base units?",
+       "choices": ["Newton", "Joule", "Kilogram", "Watt"],
+       "answer": 2,
+       "explain": "The kilogram is one of the seven SI base units (along with meter, second, ampere, kelvin, mole, and candela); newtons, joules, and watts are derived units built from combinations of base units."
+      },
+      {
+       "q": "A 2.5 kg component hangs from a hook. Using F = mg with g = 9.81 m/s², what is its weight?",
+       "choices": ["2.5 N", "9.81 N", "24.5 N", "245 N"],
+       "answer": 2,
+       "explain": "Weight is a force: F = mg = 2.5 kg × 9.81 m/s² = 24.525 N, which rounds to 24.5 N."
+      },
+      {
+       "q": "What does the prefix 'milli-' mean in a unit like millimeter?",
+       "choices": ["×1,000", "×1,000,000", "×0.001", "×0.000001"],
+       "answer": 2,
+       "explain": "Milli- means one-thousandth (×0.001), so a millimeter is 0.001 meter; micro- (×0.000001) is a different, smaller prefix."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Unit Conversion: The Factor-Label Method",
+     "minutes": 12,
+     "intro": "Converting units by guessing whether to multiply or divide is how careless errors turn into failed designs. The factor-label method removes the guesswork by treating conversion factors as ordinary fractions equal to one, so the units themselves show you when the arithmetic is set up correctly.",
+     "sections": [
+      {
+       "heading": "Multiplying by One",
+       "body": [
+        "A conversion factor such as 1,000 m / 1 km looks like a fraction, but its actual value is 1, because 1,000 meters and 1 kilometer are the same physical distance written two different ways. Multiplying any quantity by a conversion factor therefore never changes what it physically equals - it only changes which units describe it.",
+        "The factor-label method uses this fact deliberately: write your starting quantity, then multiply by one or more conversion factors arranged so that unwanted units cancel diagonally, one on top and one on bottom, leaving only the units you want. If the units do not cancel to what you expect, the conversion factor was set up upside down, and the arithmetic that follows will be wrong even if the multiplication itself is correct."
+       ]
+      },
+      {
+       "heading": "Worked Conversions",
+       "body": [
+        "Converting between unit systems, like miles and meters, takes an extra step, but the logic is identical: find or recall a conversion factor connecting the two systems, then apply it the same way. A speed like miles per hour actually contains two units to convert, distance and time, so you may need two conversion factors chained together.",
+        "Setting up the chain correctly is what actually saves you from errors, more than the arithmetic itself. Once each unwanted unit is positioned to cancel against its partner, whatever is left over is guaranteed to be in the units you asked for, which is a useful check even before you multiply anything out."
+       ],
+       "example": {
+        "problem": "Convert 65 mph to meters per second, using 1 mile ≈ 1,609 m and 1 hour = 3,600 s.",
+        "steps": [
+         "Write 65 mi/hr as the starting quantity.",
+         "Multiply by (1,609 m / 1 mi) to convert miles to meters; miles cancel.",
+         "Multiply by (1 hr / 3,600 s) to convert hours to seconds; hours cancel.",
+         "Multiply the numbers: 65 × 1,609 ÷ 3,600."
+        ],
+        "answer": "65 mph ≈ 29.1 m/s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "conversion factor", "def": "A ratio equal to 1 that relates the same quantity expressed in two different units."},
+      {"term": "factor-label method", "def": "A technique for converting units by multiplying by conversion factors arranged so unwanted units cancel."},
+      {"term": "dimensional analysis", "def": "Checking or working out a calculation by tracking how units combine and cancel."},
+      {"term": "unit cancellation", "def": "The process of an unwanted unit appearing once on top and once on bottom, so it divides out to 1."}
+     ],
+     "practice": [
+      {
+       "q": "In the factor-label method, a conversion factor like 1,609 m / 1 mi is useful because...",
+       "choices": ["It changes the actual distance being measured", "It equals 1, so multiplying by it changes units without changing the underlying quantity", "It only works for metric units", "It eliminates the need for significant figures"],
+       "answer": 1,
+       "explain": "A conversion factor is a ratio equal to 1 (since 1,609 m and 1 mi represent the same distance), so multiplying by it changes the units label while preserving the actual quantity."
+      },
+      {
+       "q": "A car travels at 65 mph. Approximately what is this speed in m/s (using 1 mph ≈ 0.447 m/s)?",
+       "choices": ["14.5 m/s", "20.9 m/s", "29.1 m/s", "65.0 m/s"],
+       "answer": 2,
+       "explain": "65 mph × 0.447 m/s per mph ≈ 29.1 m/s."
+      },
+      {
+       "q": "Which setup correctly converts 45 minutes to seconds using the factor-label method?",
+       "choices": ["45 min × (1 min / 60 s)", "45 min × (60 s / 1 min)", "45 min × (60 min / 1 s)", "45 min ÷ (60 s / 1 min)"],
+       "answer": 1,
+       "explain": "To cancel minutes and end up in seconds, the conversion factor must have minutes on the bottom and seconds on top: 45 min × (60 s / 1 min) = 2,700 s."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Significant Figures and Order-of-Magnitude Estimation",
+     "minutes": 13,
+     "intro": "A calculator will happily print ten digits after a decimal point, but not all of them are real - most only reflect how precisely you actually measured something. This lesson covers reporting answers honestly with significant figures, and the opposite skill of getting a fast, rough answer when precision is not yet the point.",
+     "sections": [
+      {
+       "heading": "Significant Figures Rules",
+       "body": [
+        "Significant figures represent how precisely a value is actually known, not just how many digits a calculator prints. As a rule of thumb for multiplication and division, the answer can have no more significant figures than the least-precise measurement used to calculate it - extra digits from a calculator's display imply a precision your measurements never had.",
+        "This matters because reporting 62.992 cm² when both original measurements only had 3 significant figures overstates your precision - it claims you know the area to the nearest thousandth of a square centimeter, when really you only know your two side lengths to about ±0.05 cm each. Rounding to the correct number of significant figures keeps a reported answer honest about what was actually measured."
+       ],
+       "example": {
+        "problem": "A rectangular steel plate measures 12.4 cm by 5.08 cm. Both measurements have 3 significant figures. What is the plate's area, correctly reported?",
+        "steps": [
+         "Multiply the two measurements: 12.4 × 5.08 = 62.992.",
+         "Identify the least number of significant figures among the inputs: both have 3.",
+         "Round the result to 3 significant figures."
+        ],
+        "answer": "63.0 cm²."
+       }
+      },
+      {
+       "heading": "Fermi Estimation",
+       "body": [
+        "An order-of-magnitude estimate, also called a Fermi estimate after physicist Enrico Fermi, trades precision for speed: instead of looking up exact numbers, you use round, defensible guesses to get an answer within a factor of two or three of the truth. This is often all an engineer needs in an early design phase, before it is worth the time to gather precise data.",
+        "The technique is to break a big, unfamiliar quantity into smaller pieces you can estimate confidently, then multiply them together. A wildly precise final number is not the goal - what matters is getting the right number of zeros, so you can catch an answer that is obviously too big or too small before it causes a costly mistake."
+       ],
+       "example": {
+        "problem": "A university has 30,000 students. To sanity-check whether a pedestrian bridge rated for 2,500,000 kg could safely hold the entire student body crossing at once, estimate the total mass of the students, using an average mass of 70 kg per person.",
+        "steps": [
+         "Identify the two quantities to multiply: number of students (30,000) and average mass per student (70 kg).",
+         "Multiply: 30,000 × 70 = 2,100,000."
+        ],
+        "answer": "About 2,100,000 kg (2,100 metric tons) - below the bridge's 2,500,000 kg rating, but close enough that an engineer would want an exact headcount and load pattern before relying on that margin."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "significant figures", "def": "The digits in a measured or calculated value that carry real precision."},
+      {"term": "order of magnitude", "def": "A rough estimate of a quantity's size, correct to roughly a power of ten."},
+      {"term": "Fermi estimate", "def": "A fast, rough calculation built from defensible guesses, used to sanity-check whether a detailed answer is plausible."},
+      {"term": "precision", "def": "How finely a measurement or calculation is actually known, as opposed to how many digits are displayed."}
+     ],
+     "practice": [
+      {
+       "q": "A rectangular plate measures 12.4 cm by 5.08 cm, each with 3 significant figures. What is its area, correctly rounded?",
+       "choices": ["62.992 cm²", "63.0 cm²", "63 cm²", "62.99 cm²"],
+       "answer": 1,
+       "explain": "12.4 × 5.08 = 62.992, but since each measurement has only 3 significant figures, the answer must also be rounded to 3 significant figures: 63.0 cm²."
+      },
+      {
+       "q": "You want to sanity-check whether a bridge rated for 2,500,000 kg could hold all 30,000 students of a university at once. Roughly how much do 30,000 students weigh, at about 70 kg each?",
+       "choices": ["About 21,000 kg", "About 210,000 kg", "About 2,100,000 kg", "About 21,000,000 kg"],
+       "answer": 2,
+       "explain": "30,000 × 70 kg = 2,100,000 kg. This order-of-magnitude estimate is below the bridge's 2,500,000 kg rating, but close enough that a real engineer would want a more precise count."
+      },
+      {
+       "q": "What is the main purpose of an order-of-magnitude (Fermi) estimate?",
+       "choices": ["To replace the need for precise calculation entirely", "To quickly check whether a detailed answer is plausible, using rough numbers", "To determine the exact number of significant figures required", "To avoid using SI units"],
+       "answer": 1,
+       "explain": "Fermi estimates are quick, rough calculations used to sanity-check whether a more detailed answer is in the right ballpark, not to replace careful calculation."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Forces, Free-Body Diagrams, and Equilibrium",
+   "summary": "Structures and machines stay put - or move the way they should - because forces balance. This unit introduces vectors, free-body diagrams, and the equilibrium equations engineers use to find unknown forces in stationary systems.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Vectors and Forces",
+     "minutes": 14,
+     "intro": "A force is more than a number - push a door at the hinge and nothing happens, push the same amount at the edge and it swings open, because direction and location matter as much as strength. This lesson introduces vectors, the mathematical tool engineers use to add forces together correctly.",
+     "sections": [
+      {
+       "heading": "Forces Are Vectors",
+       "body": [
+        "A force is fully described only by giving both its magnitude (how strong) and its direction (which way) - a force of 100 N pushing north is a completely different physical situation from 100 N pushing east, even though the magnitude is identical. Quantities that need both magnitude and direction, like force, velocity, and displacement, are called vectors; quantities that need only magnitude, like mass or temperature, are called scalars.",
+        "To do arithmetic with vectors safely, engineers break each one into perpendicular x and y components: a force at some angle θ above the horizontal has a horizontal component (magnitude × cosθ) and a vertical component (magnitude × sinθ). Components can be added like ordinary numbers, which is what makes this trick so useful - you never have to add two arrows at odd angles directly."
+       ]
+      },
+      {
+       "heading": "Adding Forces with Components",
+       "body": [
+        "Once every force acting on an object is broken into x and y components, finding the net (resultant) force is just addition: sum all the x-components together, sum all the y-components together, and you have the resultant's own x and y components. From there, the resultant's magnitude comes from the Pythagorean theorem, and its direction from the inverse tangent of the y-component over the x-component.",
+        "This component method works no matter how many forces are involved or at what angles, which is why it is the standard approach rather than trying to add angled arrows geometrically. It is also the same method used later in this unit to solve equilibrium problems, so it is worth being comfortable with before moving on."
+       ],
+       "example": {
+        "problem": "Two forces act on a bracket: F1 = 100 N at 0° (horizontal) and F2 = 150 N at 60° above horizontal. Find the magnitude and direction of the resultant force.",
+        "steps": [
+         "Break each force into components: F1x = 100 N, F1y = 0 N. F2x = 150 cos60° = 75 N, F2y = 150 sin60° = 129.9 N.",
+         "Add the components: Rx = 100 + 75 = 175 N. Ry = 0 + 129.9 = 129.9 N.",
+         "Find the magnitude: R = √(175² + 129.9²) = √47,499 ≈ 217.9 N.",
+         "Find the direction: θ = tan⁻¹(129.9/175) ≈ 36.6° above horizontal."
+        ],
+        "answer": "The resultant force is about 218 N, directed 36.6° above the horizontal."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "vector", "def": "A quantity, such as force or velocity, that has both magnitude and direction."},
+      {"term": "scalar", "def": "A quantity, such as mass or temperature, that has magnitude only."},
+      {"term": "resultant", "def": "The single net force equivalent to two or more forces added together."},
+      {"term": "component", "def": "The x or y part of a vector, found using cosine or sine of its angle."}
+     ],
+     "practice": [
+      {
+       "q": "Two forces act on a bracket: F1 = 100 N at 0° and F2 = 150 N at 60° above horizontal. What is the horizontal (x) component of the resultant force?",
+       "choices": ["100 N", "150 N", "175 N", "217.9 N"],
+       "answer": 2,
+       "explain": "F1x = 100 N, F2x = 150 cos60° = 75 N. Adding the x-components: 100 + 75 = 175 N."
+      },
+      {
+       "q": "Using the same two forces (F1 = 100 N at 0°, F2 = 150 N at 60°), what is the magnitude of the resultant force?",
+       "choices": ["175 N", "129.9 N", "217.9 N", "250 N"],
+       "answer": 2,
+       "explain": "Rx = 175 N and Ry = 129.9 N, so R = √(175² + 129.9²) ≈ √47,499 ≈ 217.9 N."
+      },
+      {
+       "q": "What distinguishes a vector quantity like force from a scalar quantity like mass?",
+       "choices": ["Vectors have direction as well as magnitude; scalars have magnitude only", "Scalars can be negative; vectors cannot", "Vectors are always measured in newtons", "Scalars only apply to solid objects"],
+       "answer": 0,
+       "explain": "A vector quantity, like force or velocity, requires both a magnitude and a direction to be fully described; a scalar, like mass or temperature, is fully described by magnitude alone."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Free-Body Diagrams",
+     "minutes": 13,
+     "intro": "Before you can write a single equation about a real object's forces, you need a clean picture of exactly which forces act on it - no more, no fewer. The free-body diagram is that picture, and getting it right is the single most important habit in all of statics.",
+     "sections": [
+      {
+       "heading": "Isolating the Body",
+       "body": [
+        "A free-body diagram strips away everything except one object and the forces acting directly on it - the ground, the rope, the air are erased, replaced by arrows representing the forces they exert. This isolation is what makes the physics tractable: instead of reasoning about an entire messy scene, you can write equations for exactly one object at a time.",
+        "Four forces show up in the overwhelming majority of introductory problems: weight (always straight down, equal to mg), normal force (always perpendicular to whatever surface the object touches), tension (always pulling along a rope or cable, never pushing), and friction (always opposing the direction of sliding or attempted sliding, along the contact surface)."
+       ]
+      },
+      {
+       "heading": "Drawing the Diagram",
+       "body": [
+        "To draw a free-body diagram, first sketch the object as a simple box or dot, ignoring its actual shape. Then add one arrow for every force acting on it, starting from the center of the object and pointing in the direction that force actually acts, labeling each arrow with its known or unknown magnitude.",
+        "The most common mistake is forgetting a force that is easy to overlook, especially normal force or friction, or drawing a force acting on the wrong object entirely, like drawing the force the crate exerts on the ramp instead of the force the ramp exerts on the crate. Double-checking that every arrow originates from the one isolated object usually catches this."
+       ],
+       "example": {
+        "problem": "A 10 kg box rests on a ramp inclined at 20° above horizontal. A rope pulls the box up the ramp, parallel to its surface, with 30 N of tension. Draw the free-body diagram of the box.",
+        "steps": [
+         "Add the weight: mg = 10 kg × 9.81 m/s² = 98.1 N, straight down.",
+         "Add the normal force, perpendicular to the ramp's surface, pointing away from it.",
+         "Add the tension, 30 N, directed up the slope, parallel to the ramp's surface.",
+         "If the box is sliding, add friction along the surface, opposing the direction of relative motion."
+        ],
+        "answer": "The free-body diagram shows four forces: 98.1 N weight straight down, a normal force perpendicular to the ramp, 30 N tension up the slope, and friction along the surface opposing any sliding."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "free-body diagram", "def": "A diagram isolating one object and showing every external force acting on it."},
+      {"term": "normal force", "def": "The contact force a surface exerts perpendicular to itself."},
+      {"term": "tension", "def": "The pulling force transmitted along a rope, cable, or string."},
+      {"term": "friction", "def": "A force that opposes sliding or attempted sliding between two surfaces in contact."}
+     ],
+     "practice": [
+      {
+       "q": "In a free-body diagram of a crate resting on a ramp, which force acts perpendicular to the ramp's surface?",
+       "choices": ["Weight", "Normal force", "Tension", "Applied force along the ramp"],
+       "answer": 1,
+       "explain": "The normal force is defined as the contact force perpendicular to the surface the object rests on; weight acts straight down regardless of the ramp's angle."
+      },
+      {
+       "q": "A free-body diagram is useful because it...",
+       "choices": ["Shows every force acting on every object in the scene at once", "Isolates a single object and shows only the forces acting on it", "Only applies to objects that are moving", "Replaces the need for equilibrium equations"],
+       "answer": 1,
+       "explain": "A free-body diagram isolates one object and represents every external force acting on that object alone, which is what makes the equilibrium equations solvable."
+      },
+      {
+       "q": "A rope pulls a crate up a ramp at constant speed. Besides weight, normal force, and tension, what additional force belongs on the free-body diagram if the surface is not frictionless?",
+       "choices": ["A second tension force", "Friction, opposing the direction of sliding", "A second normal force", "Air resistance only"],
+       "answer": 1,
+       "explain": "Any real surface that is not frictionless exerts a friction force on a sliding object, acting opposite to the direction of relative motion."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Static Equilibrium",
+     "minutes": 15,
+     "intro": "A parked car, a hanging sign, and a bridge deck all share one physical fact: the forces acting on each of them add up to exactly zero. This lesson shows how to turn that fact into two solvable equations for finding unknown forces.",
+     "sections": [
+      {
+       "heading": "Newton's First Law for Structures",
+       "body": [
+        "Newton's first law says an object at rest stays at rest unless acted on by a net force - which means that for anything sitting still, the vector sum of every force acting on it must equal exactly zero. Engineers write this as two separate scalar equations, one for each direction: ΣFx = 0 and ΣFy = 0.",
+        "These two equations are enough to solve for up to two unknown forces in a planar problem, which is why so many introductory statics problems, like a hanging sign on two cables or a ladder against a wall, are built around exactly two unknowns. More complex structures need a third equation, the sum of moments equals zero, but two-force problems can be solved with ΣFx = 0 and ΣFy = 0 alone."
+       ]
+      },
+      {
+       "heading": "Solving for Unknown Tensions",
+       "body": [
+        "The method is always the same: draw the free-body diagram of the point where the unknown forces meet, break every force into x and y components, then write and solve the two equilibrium equations simultaneously. Because there are exactly two equations, this method works cleanly whenever there are exactly two unknowns.",
+        "It is worth solving one of these by hand at least once, because the algebra (substituting one equation into the other) is exactly the same pattern used throughout statics and later structural courses, just with different numbers and more unknowns."
+       ],
+       "example": {
+        "problem": "A 500 N sign hangs from a horizontal beam by two cables meeting at a single ring: cable A pulls at 30° above horizontal, cable B pulls at 60° above horizontal, on opposite sides of the ring. Find the tension in each cable.",
+        "steps": [
+         "Write the horizontal equilibrium equation: TA cos30° = TB cos60°.",
+         "Write the vertical equilibrium equation: TA sin30° + TB sin60° = 500 N.",
+         "Solve the first equation for TA: TA = TB (cos60°/cos30°) ≈ 0.577 TB.",
+         "Substitute into the second equation and solve: 0.577TB(0.5) + TB(0.866) = 500, giving TB ≈ 433 N and TA ≈ 250 N."
+        ],
+        "answer": "TA (at 30°) ≈ 250 N, and TB (at 60°) ≈ 433 N."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "static equilibrium", "def": "The state of an object at rest where the vector sum of all forces acting on it is zero."},
+      {"term": "equilibrium equation", "def": "One of the scalar equations, ΣFx = 0 or ΣFy = 0, used to solve for unknown forces on a stationary object."},
+      {"term": "tension", "def": "The pulling force carried by a cable or rope, directed along its length."},
+      {"term": "resultant force", "def": "The net force found by adding all individual forces acting on an object."}
+     ],
+     "practice": [
+      {
+       "q": "A 500 N sign hangs from two cables: one at 30° from horizontal, one at 60° from horizontal. Which equation represents horizontal equilibrium?",
+       "choices": ["TA sin30° = TB sin60°", "TA cos30° = TB cos60°", "TA + TB = 500 N", "TA = TB"],
+       "answer": 1,
+       "explain": "The horizontal components of the two tensions must cancel for the sign to hang in place: TA cos30° (pulling one way) equals TB cos60° (pulling the other way)."
+      },
+      {
+       "q": "Solving the two equilibrium equations for the 500 N sign problem, what is the tension in the cable at 60° from horizontal?",
+       "choices": ["250 N", "333 N", "433 N", "500 N"],
+       "answer": 2,
+       "explain": "Solving ΣFx = 0 and ΣFy = 0 simultaneously gives TA (at 30°) ≈ 250 N and TB (at 60°) ≈ 433 N."
+      },
+      {
+       "q": "An object is in static equilibrium. What must be true of the forces acting on it?",
+       "choices": ["All forces must be equal in magnitude", "The vector sum of all forces must equal zero", "Only one force may act on it", "Friction must be zero"],
+       "answer": 1,
+       "explain": "Static equilibrium means the net vector sum of all forces acting on the object is zero, so it stays at rest; individual forces can differ in magnitude as long as they balance."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "The Engineering Design Process and Professional Practice",
+   "summary": "Good engineering is not just calculation; it is a repeatable process for turning constraints into a chosen design, and a professional obligation to build things that are safe. This unit ties the design process together with decision-making tools and the ethics that govern the profession.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Defining Requirements and Constraints",
+     "minutes": 12,
+     "intro": "Every good design starts with a clear, written answer to two different questions: what must this thing actually do, and what limits must it stay inside while doing it? Confusing those two questions is one of the most common ways design projects go wrong.",
+     "sections": [
+      {
+       "heading": "Requirements vs. Constraints",
+       "body": [
+        "A requirement describes what a design must actually accomplish for the user - hold a phone at a usable angle, resist water for 30 minutes, run for 8 hours on one charge. A constraint instead describes an outside limit the design must stay within, regardless of what it accomplishes - a maximum cost, a maximum weight, a regulation that must be followed, a deadline that cannot move.",
+        "Confusing the two causes real design mistakes: treating a firm budget cap as merely a nice-to-have goal, rather than a hard limit, can produce a beautiful design that never gets funded, while treating a genuine performance requirement as a soft constraint can produce a cheap design that does not actually solve the user's problem. Keeping the two lists separate, and revisiting both, prevents this."
+       ]
+      },
+      {
+       "heading": "Writing a Design Brief",
+       "body": [
+        "A design brief collects the requirements and constraints in one place before any concept sketching begins, so the whole team is solving the same problem. For a phone stand, functional requirements might include holding a phone at a 50 to 60° viewing angle and remaining stable when the phone is tapped; constraints might include a manufacturing cost under $5 per unit and folding to under 1 cm thick.",
+        "Writing these down explicitly, rather than keeping them as a vague shared understanding, matters because it gives every later decision, such as which material or which manufacturing process, an objective test: does this option still meet every requirement, within every constraint? Options that fail either test get eliminated regardless of how appealing they otherwise are."
+       ],
+       "example": {
+        "problem": "Sort the following statements about a reusable water bottle into requirements and constraints: (1) must hold at least 500 mL, (2) must not leak when shaken, (3) manufacturing cost must stay under $3 per unit, (4) must keep contents cold for 4 hours.",
+        "steps": [
+         "Ask of each statement: does it describe what the product must do (requirement), or an outside limit it must stay within (constraint)?",
+         "Items 1, 2, and 4 describe performance the bottle must deliver to the user.",
+         "Item 3 describes a budget limit that exists independent of performance."
+        ],
+        "answer": "Requirements: holds 500 mL, does not leak, keeps contents cold for 4 hours. Constraint: manufacturing cost under $3 per unit."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "requirement", "def": "Something a design must actually accomplish for the user."},
+      {"term": "constraint", "def": "An outside limit, such as cost, weight, or a deadline, that a design must stay within."},
+      {"term": "specification", "def": "A precise, measurable statement of a requirement, such as 'holds at least 500 mL' rather than 'holds a good amount of liquid.'"},
+      {"term": "design brief", "def": "A document collecting a project's requirements and constraints before concept generation begins."}
+     ],
+     "practice": [
+      {
+       "q": "Which of these is a constraint, not a requirement, for a reusable water bottle design?",
+       "choices": ["Must hold at least 500 mL of liquid", "Must not leak when shaken", "Manufacturing cost must stay under $3 per unit", "Must keep contents cold for 4 hours"],
+       "answer": 2,
+       "explain": "A cost limit is a constraint, a boundary the design must stay within, while holding volume, not leaking, and keeping contents cold are functional requirements the product must achieve."
+      },
+      {
+       "q": "A design brief for a phone stand states it must hold a phone at a 60° viewing angle and remain stable on a desk. These are examples of...",
+       "choices": ["Constraints", "Requirements", "Decision matrix criteria", "Prototypes"],
+       "answer": 1,
+       "explain": "Requirements describe what the design must actually do (hold the phone at a set angle, stay stable); constraints instead describe outside limits like budget or size."
+      },
+      {
+       "q": "Why do engineers write down requirements and constraints before generating design concepts?",
+       "choices": ["To make the design process take longer", "So every concept can be judged against a clear, shared standard", "Because it is legally required for every product", "To guarantee only one possible design exists"],
+       "answer": 1,
+       "explain": "A clear written set of requirements and constraints gives the team an objective standard to generate and compare concepts against, rather than relying on personal opinion."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Concept Generation and Decision Matrices",
+     "minutes": 13,
+     "intro": "Once you know what a design must do, you still need a fair way to choose between competing ideas for how to do it. This lesson covers generating many options before judging any of them, then scoring the finalists with a tool that turns fuzzy preferences into a defensible decision.",
+     "sections": [
+      {
+       "heading": "Generating Many Concepts Before Judging Any",
+       "body": [
+        "Divergent thinking means generating as many candidate concepts as possible without stopping to criticize any of them, quantity over quality, on purpose. Convergent thinking is the opposite: narrowing a large set of candidates down to the strongest few by applying real criteria. Doing these two things at the same time is one of the most common ways design teams accidentally settle for a mediocre first idea.",
+        "Teams that jump straight to judging tend to anchor on whichever concept was proposed first or loudest, rather than the one that actually best fits the requirements. Deliberately separating the two phases, brainstorm first and evaluate second, gives quieter or less obvious ideas a real chance to be considered before anything gets ruled out."
+       ]
+      },
+      {
+       "heading": "The Weighted Decision Matrix",
+       "body": [
+        "A weighted decision matrix scores each design option against a shared set of criteria, with each criterion given a weight reflecting how much it matters, where the weights across all criteria typically add up to 100%. Each option gets a score, often 1 to 5, on every criterion; multiplying each score by its criterion's weight and summing across all criteria gives that option's total.",
+        "This forces disagreements about priorities into the open, as weights, rather than letting them stay implicit and unexamined - a team that disagrees about whether cost or weight matters more can debate the weighting percentages directly, instead of arguing past each other about which material 'feels' better."
+       ],
+       "example": {
+        "problem": "Choose a material for a bicycle frame using a weighted decision matrix with criteria Weight (40%), Cost (30%), and Durability (30%). Aluminum scores 4/4/3, steel scores 2/5/5, and carbon fiber scores 5/1/4 on Weight/Cost/Durability respectively, each on a 1-5 scale.",
+        "steps": [
+         "Aluminum: (4×0.4) + (4×0.3) + (3×0.3) = 1.6 + 1.2 + 0.9 = 3.7.",
+         "Steel: (2×0.4) + (5×0.3) + (5×0.3) = 0.8 + 1.5 + 1.5 = 3.8.",
+         "Carbon fiber: (5×0.4) + (1×0.3) + (4×0.3) = 2.0 + 0.3 + 1.2 = 3.5.",
+         "Compare the three totals."
+        ],
+        "answer": "Steel wins with a total of 3.8, narrowly ahead of aluminum (3.7) and ahead of carbon fiber (3.5), because steel's strong cost and durability scores outweigh its poor weight score under this weighting."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "divergent thinking", "def": "Generating many candidate ideas without stopping to judge or narrow them yet."},
+      {"term": "convergent thinking", "def": "Narrowing a set of candidate ideas down using specific criteria."},
+      {"term": "decision matrix", "def": "A table scoring design options against weighted criteria to reach a total score for each."},
+      {"term": "weighting", "def": "The percentage importance assigned to each criterion in a decision matrix."}
+     ],
+     "practice": [
+      {
+       "q": "In the bicycle frame decision matrix (Weight 40%, Cost 30%, Durability 30%), aluminum scored 4 on weight, 4 on cost, and 3 on durability. What is its weighted total?",
+       "choices": ["3.5", "3.7", "3.8", "4.0"],
+       "answer": 1,
+       "explain": "(4×0.4) + (4×0.3) + (3×0.3) = 1.6 + 1.2 + 0.9 = 3.7."
+      },
+      {
+       "q": "In that same matrix, steel scored lower than carbon fiber on weight (2 vs 5) but still won overall with a total of 3.8 versus 3.5. Why?",
+       "choices": ["Weight was weighted at 0%, so it did not matter", "Steel scored much higher on cost and durability, which together carried 60% of the weighting", "The matrix contained an arithmetic error", "Carbon fiber was disqualified for being too light"],
+       "answer": 1,
+       "explain": "Cost and durability together make up 60% of the total weighting, and steel scored a full 5 on both, more than making up for its weaker weight score of 2."
+      },
+      {
+       "q": "What is the purpose of generating many concepts before evaluating any of them, using divergent thinking before convergent thinking?",
+       "choices": ["To waste less time overall", "To avoid prematurely locking onto the first idea, so better options are not missed", "Because only the last idea generated is ever chosen", "To make the decision matrix unnecessary"],
+       "answer": 1,
+       "explain": "Judging ideas too early tends to anchor a team on the first workable concept; generating many options first increases the odds that a genuinely better solution is found and compared fairly."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Ethics, Safety, and Learning from Failure",
+     "minutes": 15,
+     "intro": "Engineering carries real stakes: a bridge, a car part, or a medical device that fails can hurt people, which is why the profession treats safety margins and ethical obligations as non-negotiable, not optional extras. This closing lesson covers both, using two of history's most studied engineering failures as evidence.",
+     "sections": [
+      {
+       "heading": "A Professional Code of Ethics",
+       "body": [
+        "Engineering societies, such as the National Society of Professional Engineers, maintain codes of ethics whose first, overriding principle is that engineers must hold paramount the safety, health, and welfare of the public - above their employer's preference, above cost savings, above their own convenience. This is not an abstract ideal; it is the standard by which real engineers are professionally, and sometimes legally, judged.",
+        "In many countries and U.S. states, certain designs, especially those affecting public safety like buildings and bridges, must be signed off by a licensed Professional Engineer (PE), who is personally accountable for that design meeting applicable codes and standards. Licensure exists precisely because the consequences of a bad engineering decision can be catastrophic and irreversible."
+       ]
+      },
+      {
+       "heading": "Factor of Safety and Famous Failures",
+       "body": [
+        "A factor of safety compares how much load a component can actually withstand before failing to the maximum load it is expected to see in service: factor of safety = failure load ÷ design load. A factor of safety of 5 means the component could theoretically handle five times its expected maximum load before breaking, margin that absorbs uncertainty in materials, manufacturing, and real-world use.",
+        "History supplies sobering reminders of what happens when that margin is missed. The Tacoma Narrows Bridge collapsed in 1940 because its deck was not designed to resist wind-driven twisting oscillation, called aeroelastic flutter, a dynamic load engineers of the time had not yet learned to model well. The 1986 Space Shuttle Challenger disaster traced back to O-ring seals that lost flexibility in cold temperatures, a known risk that was not treated with the safety margin it deserved. Both failures reshaped how their fields test and regulate designs afterward."
+       ],
+       "example": {
+        "problem": "A lifting cable is rated to fail (its ultimate load) at 10,000 N. It will be used to lift loads up to 2,000 N. What is its factor of safety?",
+        "steps": [
+         "Identify the failure (ultimate) load: 10,000 N.",
+         "Identify the expected maximum service load: 2,000 N.",
+         "Divide: 10,000 ÷ 2,000."
+        ],
+        "answer": "The factor of safety is 5."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "factor of safety", "def": "The ratio of a component's failure load to its expected maximum service load."},
+      {"term": "code of ethics", "def": "A professional society's written standards, requiring engineers to place public safety above other interests."},
+      {"term": "Professional Engineer (PE)", "def": "An engineer licensed to be personally accountable for designs affecting public safety."},
+      {"term": "failure analysis", "def": "The study of why an engineered system broke, used to prevent similar failures in the future."}
+     ],
+     "practice": [
+      {
+       "q": "A lifting cable is rated to fail at 10,000 N and is used to lift a 2,000 N load. What is its factor of safety?",
+       "choices": ["2", "5", "0.2", "10,000"],
+       "answer": 1,
+       "explain": "Factor of safety = failure load ÷ actual load = 10,000 N ÷ 2,000 N = 5."
+      },
+      {
+       "q": "The Tacoma Narrows Bridge collapse in 1940 is most often cited as a lesson in...",
+       "choices": ["Poor concrete mixing", "Failing to account for dynamic wind-induced motion (aeroelastic flutter) in the design", "Using too high a factor of safety", "Corrosion of steel cables"],
+       "answer": 1,
+       "explain": "The bridge's deck was not designed to resist the wind-driven twisting oscillation known as aeroelastic flutter, which grew until the structure failed, a case that reshaped how engineers model dynamic loads."
+      },
+      {
+       "q": "Why do many countries require a licensed Professional Engineer (PE) to sign off on certain public designs?",
+       "choices": ["To slow down construction projects", "To ensure a professional is legally and ethically accountable for public safety in that design", "Because unlicensed engineers cannot do any technical work at all", "To increase project costs without benefit"],
+       "answer": 1,
+       "explain": "PE licensure creates personal legal accountability for safety-critical designs, backed by a professional code of ethics that puts public welfare above other interests."
+      },
+      {
+       "q": "What is the core idea behind a factor of safety?",
+       "choices": ["Designing a component to withstand more load than it will ever actually see, to allow for uncertainty", "Making every component exactly as strong as the maximum expected load, no more", "Ignoring material defects because testing already occurred", "Reducing costs by using the weakest available material"],
+       "answer": 0,
+       "explain": "A factor of safety builds in margin above the expected maximum load, accounting for uncertainties in materials, loads, and manufacturing, so the design does not fail under real-world variability."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

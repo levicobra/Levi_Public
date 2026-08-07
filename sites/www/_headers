@@ -1,0 +1,40 @@
+# Cloudflare Pages reads this file. Max 100 rules, 2000 chars per header.
+#
+# The site makes zero external requests, so the CSP can be almost entirely
+# 'self' with nothing allowlisted. If a rule here ever has to be loosened to
+# make something work, that is a signal the something does not belong on this
+# site.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'; object-src 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Fingerprint-free filenames, so these cannot be cached immutably — a stale
+# index.html is how a deploy silently fails to reach anyone.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Images and icons are content-addressed by hand (names change when the art
+# changes), so a long cache is safe and saves the repeat visit.
+/*.jpg
+  Cache-Control: public, max-age=604800
+/*.png
+  Cache-Control: public, max-age=604800
+/*.webp
+  Cache-Control: public, max-age=604800
+/*.svg
+  Cache-Control: public, max-age=604800
+/*.ico
+  Cache-Control: public, max-age=604800
+
+# The benefits directory regenerates from data.json; a week of staleness on a
+# dead link is worse than a revalidation request.
+/military-benefits/data.json
+  Cache-Control: public, max-age=3600

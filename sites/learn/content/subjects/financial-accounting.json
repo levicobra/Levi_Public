@@ -1,0 +1,807 @@
+{
+  "id": "financial-accounting",
+  "title": "Financial Accounting",
+  "domain": "business",
+  "level": "College",
+  "description": "The systematic language businesses use to record, summarize, and report what they own, owe, earn, and spend. You will learn double-entry bookkeeping from the first transaction through the four major financial statements, then use those statements to evaluate a company's financial health.",
+  "outcomes": [
+    "You can apply the accounting equation and double-entry rules to record a business transaction correctly.",
+    "You can journalize transactions, post them to a ledger, and prepare a trial balance.",
+    "You can prepare adjusting entries for accrued and deferred revenue and expenses.",
+    "You can calculate depreciation, inventory cost, and the allowance for bad debt using standard methods.",
+    "You can prepare a basic income statement, balance sheet, and statement of cash flows.",
+    "You can compute and interpret key financial ratios such as the current ratio and return on equity."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations of Financial Accounting",
+      "summary": "Before recording a single transaction, you need to understand what accounting is for, the equation every transaction must satisfy, and the mechanics of debits and credits.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "What Accounting Is and the Financial Statements",
+          "minutes": 10,
+          "intro": "Every investor, lender, and manager who has never set foot in a company still needs a way to know whether it's healthy — and that shared, standardized language is exactly what accounting provides.",
+          "sections": [
+            {
+              "heading": "Financial Accounting and Its Users",
+              "body": [
+                "**Financial accounting** is the process of recording, summarizing, and reporting a business's financial transactions to external users — investors, lenders, regulators, and the public — through a standard set of financial statements. It differs from **managerial accounting**, which produces internal reports for a company's own managers and is not bound by the same public reporting rules.",
+                "In the United States, public companies must follow **GAAP** (Generally Accepted Accounting Principles), a common rulebook that makes one company's financial statements comparable to another's. Without a shared standard, an investor comparing two companies would have no way to know whether a difference in reported profit came from real performance or just different accounting choices."
+              ]
+            },
+            {
+              "heading": "The Four Financial Statements",
+              "body": [
+                "Financial accounting produces four core statements. The **income statement** reports revenue, expenses, and net income over a period of time. The **balance sheet** reports assets, liabilities, and equity at a single point in time. The **statement of cash flows** reports actual cash moving in and out of the business over a period, separated into operating, investing, and financing activities.",
+                "The **statement of stockholders' equity** reports the changes in the owners' equity accounts over a period, including net income added and dividends paid out. Together, these four statements answer four different questions: how much did we earn, what do we own and owe, where did our cash actually go, and how did our owners' stake change."
+              ]
+            },
+            {
+              "heading": "Why the Statements Must Work Together",
+              "body": [
+                "No single statement tells the full story on its own: a company can report strong net income on its income statement while its cash flow statement shows it is actually running low on cash, because revenue was recorded before the customer paid. Reading only one statement risks missing exactly the kind of problem that puts a company out of business.",
+                "This is why the profession insists on all four statements being reported together, audited as a set, and reviewed together by anyone making a lending or investment decision — the statements are designed to check each other, and each one is more informative in combination with the other three than it is alone."
+              ],
+              "example": {
+                "problem": "A retailer's income statement reports $80,000 in net income for the year. Its statement of cash flows reports only $15,000 in net cash from operations for the same year. What does this gap most likely suggest, and which additional statement would help investigate it?",
+                "steps": [
+                  "Note that net income is an accounting measure that can include revenue not yet collected in cash.",
+                  "A large gap between net income and operating cash flow often signals that receivables, meaning unpaid customer invoices, grew significantly during the year.",
+                  "The balance sheet would show the size of accounts receivable at year-end, helping confirm whether uncollected sales explain the gap."
+                ],
+                "answer": "The gap suggests a large buildup of uncollected receivables; checking the balance sheet's accounts receivable balance would help confirm this."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Financial accounting", "def": "Recording, summarizing, and reporting a business's transactions to external users through standard financial statements."},
+            {"term": "GAAP", "def": "Generally Accepted Accounting Principles, the common rulebook U.S. public companies use to prepare financial statements."},
+            {"term": "Income statement", "def": "A financial statement reporting revenue, expenses, and net income over a period of time."},
+            {"term": "Balance sheet", "def": "A financial statement reporting assets, liabilities, and equity at a single point in time."},
+            {"term": "Statement of cash flows", "def": "A financial statement reporting actual cash inflows and outflows over a period, by operating, investing, and financing activity."}
+          ],
+          "practice": [
+            {"q": "Which financial statement reports a company's assets, liabilities, and equity at a single point in time?", "choices": ["The balance sheet", "The income statement", "The statement of cash flows", "The statement of stockholders' equity"], "answer": 0, "explain": "The balance sheet is a snapshot at one specific moment, unlike the other statements, which cover a period."},
+            {"q": "GAAP exists primarily to:", "choices": ["Make financial statements comparable across companies by enforcing a common set of rules", "Replace the need for a balance sheet", "Guarantee every company reports a profit", "Eliminate the need for a statement of cash flows"], "answer": 0, "explain": "A shared rulebook lets users compare different companies' statements on a like-for-like basis."},
+            {"q": "A company reports high net income but very low cash from operations. This is a signal to check:", "choices": ["The balance sheet, to see if accounts receivable grew significantly", "The statement of stockholders' equity only", "Nothing further, since net income is the only number that matters", "The company's advertising budget"], "answer": 0, "explain": "A growing receivables balance is a common cause of net income outpacing actual operating cash flow."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "The Accounting Equation and Double-Entry Bookkeeping",
+          "minutes": 12,
+          "intro": "Every single transaction a business ever records, no matter how complicated the company, has to satisfy one unbreakable equation — and that constraint is what makes bookkeeping self-checking rather than a trust exercise.",
+          "sections": [
+            {
+              "heading": "The Accounting Equation",
+              "body": [
+                "The **accounting equation** states: Assets = Liabilities + Equity. **Assets** are resources the business owns or controls that provide future economic benefit, such as cash, inventory, and equipment. **Liabilities** are obligations the business owes to outsiders, such as loans and unpaid bills. **Equity** is the owners' residual claim on the assets after liabilities are subtracted.",
+                "This equation must balance after every single transaction, without exception, because a transaction can add to one side without changing the other only if it also changes something on the same side by an equal and opposite amount. This built-in balancing requirement is the core discipline that makes accounting a checkable system rather than a list of unverified claims."
+              ]
+            },
+            {
+              "heading": "Double-Entry Bookkeeping",
+              "body": [
+                "**Double-entry bookkeeping** records every transaction in at least two accounts, ensuring the accounting equation stays balanced. Each account has a **debit** side (left) and a **credit** side (right); for asset and expense accounts, debits increase the balance and credits decrease it; for liability, equity, and revenue accounts, credits increase the balance and debits decrease it.",
+                "This debit-and-credit system feels arbitrary at first, but it exists purely to keep the equation balanced automatically: because assets sit on the left of the equation and liabilities plus equity sit on the right, increasing an asset has to be matched by an equal debit or credit elsewhere so total debits always equal total credits across the whole entry."
+              ]
+            },
+            {
+              "heading": "Applying the Equation to a Transaction",
+              "body": [
+                "Consider a company buying $8,000 of equipment entirely with cash. This transaction increases one asset (equipment) and decreases another asset (cash) by the same amount, so total assets are unchanged and the equation still balances without touching liabilities or equity at all.",
+                "Now consider the same company borrowing $8,000 from a bank to buy that equipment instead of paying cash. This increases an asset, equipment, by $8,000 and increases a liability, notes payable, by $8,000, so both sides of the equation grow together and stay balanced."
+              ],
+              "example": {
+                "problem": "A company starts with Assets $50,000, Liabilities $20,000, and Equity $30,000. It then purchases $6,000 of inventory on credit, owing the supplier later. What are the new totals for Assets, Liabilities, and Equity, and does the equation still balance?",
+                "steps": [
+                  "Identify the transaction: inventory, an asset, increases by $6,000, and accounts payable, a liability, increases by $6,000, since the purchase was made on credit rather than cash.",
+                  "New Assets = $50,000 + $6,000 = $56,000.",
+                  "New Liabilities = $20,000 + $6,000 = $26,000. Equity is unaffected and stays at $30,000.",
+                  "Check the equation: $56,000 should equal $26,000 + $30,000, which is $56,000. It balances."
+                ],
+                "answer": "Assets rise to $56,000, Liabilities rise to $26,000, Equity stays at $30,000, and the equation still balances: $56,000 = $26,000 + $30,000."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Accounting equation", "def": "The identity Assets = Liabilities + Equity that must hold after every recorded transaction."},
+            {"term": "Asset", "def": "A resource a business owns or controls that provides future economic benefit."},
+            {"term": "Liability", "def": "An obligation a business owes to outside parties."},
+            {"term": "Equity", "def": "The owners' residual claim on assets after liabilities are subtracted."},
+            {"term": "Double-entry bookkeeping", "def": "A recording system where every transaction affects at least two accounts, keeping the accounting equation balanced."}
+          ],
+          "practice": [
+            {"q": "The accounting equation states that:", "choices": ["Assets = Liabilities + Equity", "Assets + Liabilities = Equity", "Assets = Liabilities − Equity", "Equity = Assets + Liabilities"], "answer": 0, "explain": "This is the defining identity of the accounting equation."},
+            {"q": "A company pays $5,000 cash to buy office furniture. What happens to total assets?", "choices": ["Total assets stay the same, since cash decreases and furniture increases by the same amount", "Total assets increase by $5,000", "Total assets decrease by $5,000", "Total assets cannot be determined without more information"], "answer": 0, "explain": "One asset decreases while another increases by the same amount, leaving the total unchanged."},
+            {"q": "A company borrows $10,000 from a bank and deposits it in its checking account. This transaction:", "choices": ["Increases both an asset (cash) and a liability (notes payable) by $10,000", "Increases assets and decreases liabilities by $10,000", "Has no effect on the accounting equation", "Increases equity by $10,000"], "answer": 0, "explain": "Borrowing cash increases both an asset and the corresponding liability by the same amount."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Recording Transactions: Debits, Credits, and Journal Entries",
+          "minutes": 12,
+          "intro": "Long before a company's statements exist, every transaction gets written down first in a specific two-sided format called a journal entry — and learning to write one correctly is the single most important mechanical skill in accounting.",
+          "sections": [
+            {
+              "heading": "The General Journal and T-Accounts",
+              "body": [
+                "The **general journal** is the chronological record where every transaction is first recorded as a **journal entry**, listing the accounts debited and credited along with the dollar amounts, which must always be equal on both sides. A **T-account** is a simplified visual tool, shaped like a T, used to track increases and decreases in a single account, with debits recorded on the left and credits on the right.",
+                "After being journalized, entries are **posted** to the **general ledger**, which collects all the T-accounts for every account the business uses, such as Cash, Accounts Receivable, and Accounts Payable, so a bookkeeper can see the running balance of any single account at any time."
+              ]
+            },
+            {
+              "heading": "The Rules of Debits and Credits by Account Type",
+              "body": [
+                "Five account categories follow a consistent rule: **assets** and **expenses** increase with debits and decrease with credits; **liabilities**, **equity**, and **revenues** increase with credits and decrease with debits. Memorizing this rule for all five categories, rather than memorizing individual transactions, lets you journalize almost any transaction correctly.",
+                "It helps to think of it as two mirrored groups: assets and expenses behave alike, increasing with a debit, while liabilities, equity, and revenue behave alike, increasing with a credit — opposite groups on opposite sides of the accounting equation."
+              ]
+            },
+            {
+              "heading": "Writing a Journal Entry",
+              "body": [
+                "To journalize a transaction: identify every account affected, determine whether each account increases or decreases, apply the debit/credit rule for that account's category, and confirm total debits equal total credits. A cash sale of services for $2,000 increases Cash, an asset debited to increase, and increases Service Revenue, a revenue credited to increase.",
+                "A more complex transaction, such as buying $3,000 of supplies with $1,000 cash and the rest on account, affects three accounts at once: Supplies increases, debited $3,000; Cash decreases, credited $1,000; and Accounts Payable increases, credited $2,000 — the two credits sum to $3,000, matching the single $3,000 debit."
+              ],
+              "example": {
+                "problem": "A company provides $4,500 of consulting services to a client, who pays $1,500 cash immediately and promises to pay the remaining $3,000 within 30 days. Write the journal entry.",
+                "steps": [
+                  "Identify accounts affected: Cash increases by $1,500, Accounts Receivable increases by $3,000, and Service Revenue increases by $4,500.",
+                  "Apply debit/credit rules: Cash and Accounts Receivable are assets, so they are debited to increase; Service Revenue is a revenue account, so it is credited to increase.",
+                  "Confirm the entry balances: debits of $1,500 plus $3,000 equal $4,500, matching the single credit of $4,500."
+                ],
+                "answer": "Debit Cash $1,500, debit Accounts Receivable $3,000, credit Service Revenue $4,500 — total debits and credits both equal $4,500."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "General journal", "def": "The chronological record where every business transaction is first recorded as a journal entry."},
+            {"term": "Journal entry", "def": "A record listing the accounts debited and credited for a transaction, with equal total dollar amounts on each side."},
+            {"term": "T-account", "def": "A simplified visual tool shaped like a T, used to track debits and credits in a single account."},
+            {"term": "General ledger", "def": "The complete collection of T-accounts for every account a business uses."},
+            {"term": "Posting", "def": "Transferring a journalized transaction into the appropriate accounts in the general ledger."}
+          ],
+          "practice": [
+            {"q": "In the standard debit/credit rules, which two account categories both increase with a debit?", "choices": ["Assets and expenses", "Liabilities and equity", "Revenue and liabilities", "Equity and revenue"], "answer": 0, "explain": "Assets and expenses are the two categories that increase with debits and decrease with credits."},
+            {"q": "A company pays $2,000 cash for rent expense. The correct journal entry is:", "choices": ["Debit Rent Expense $2,000, credit Cash $2,000", "Debit Cash $2,000, credit Rent Expense $2,000", "Debit Rent Expense $2,000, debit Cash $2,000", "Credit Rent Expense $2,000, credit Cash $2,000"], "answer": 0, "explain": "Expense increases are debits, and the asset Cash decreases with a credit."},
+            {"q": "A company bills a customer $5,000 for services performed, to be paid later. What is the correct entry?", "choices": ["Debit Accounts Receivable $5,000, credit Service Revenue $5,000", "Debit Service Revenue $5,000, credit Accounts Receivable $5,000", "Debit Cash $5,000, credit Service Revenue $5,000", "Debit Accounts Payable $5,000, credit Service Revenue $5,000"], "answer": 0, "explain": "Billing a customer creates a receivable, an asset debited to increase, and earns revenue, credited to increase, even though cash hasn't been received."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Completing the Accounting Cycle",
+      "summary": "Recording transactions is only the start — at period end, accounts must be adjusted, checked for balance, and closed before a merchandiser's specific transactions can even be handled correctly.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Adjusting Entries: Accruals and Deferrals",
+          "minutes": 12,
+          "intro": "At the end of every accounting period, a set of transactions exists that nobody has explicitly recorded yet — revenue earned but not billed, expenses incurred but not paid — and adjusting entries are how the books catch up to reality before the statements are prepared.",
+          "sections": [
+            {
+              "heading": "Why Adjusting Entries Are Needed",
+              "body": [
+                "**Accrual accounting** records revenue when it is earned and expenses when they are incurred, regardless of when cash actually changes hands — the opposite of cash-basis accounting, which records transactions only when cash moves. GAAP requires accrual accounting for most companies because it matches revenue to the period it was actually earned in, giving a more accurate picture of performance.",
+                "**Adjusting entries** are journal entries made at the end of a period, before financial statements are prepared, to update account balances for revenue earned or expenses incurred that haven't yet been recorded through a normal transaction. Skipping them means the income statement and balance sheet both misstate the company's true position for that period."
+              ]
+            },
+            {
+              "heading": "Accruals: Recording What Hasn't Been Billed or Paid Yet",
+              "body": [
+                "An **accrued revenue** is revenue earned but not yet billed or collected, such as interest earned on a loan the company made but not yet received in cash; recording it requires a debit to a receivable and a credit to revenue. An **accrued expense** is an expense incurred but not yet paid, such as unpaid wages for days already worked at period end; recording it requires a debit to an expense and a credit to a payable.",
+                "A company that pays employees every other Friday but closes its books on a month-end that falls mid-pay-period has genuinely earned wages the employees haven't been paid for yet — accruing that wage expense before preparing statements is required, or the period's expenses would be understated and net income overstated."
+              ]
+            },
+            {
+              "heading": "Deferrals: Adjusting for Cash Received or Paid in Advance",
+              "body": [
+                "A **deferred revenue**, or unearned revenue, arises when a customer pays in advance for a good or service not yet delivered; the cash is recorded as a liability until the company actually earns it, at which point an adjusting entry debits the liability and credits revenue. A **deferred expense**, or prepaid expense, arises when a company pays in advance for something it will use over time, such as a one-year insurance policy; the payment is initially recorded as an asset and expensed gradually as it is used up.",
+                "A magazine publisher that collects $120 for a one-year subscription up front has not yet earned that money — it records $120 as unearned revenue and recognizes $10 of revenue each month as issues are delivered, a deferral adjustment repeating monthly across the year."
+              ],
+              "example": {
+                "problem": "On October 1, a company pays $2,400 for a 12-month insurance policy, recording the full amount as Prepaid Insurance, an asset. By December 31, three months of coverage have been used. What adjusting entry is needed at year-end, and for how much?",
+                "steps": [
+                  "Determine the monthly cost: $2,400 ÷ 12 months = $200 per month.",
+                  "Determine the portion used by December 31: 3 months × $200 = $600 has been used and should now be recognized as expense.",
+                  "Write the adjusting entry: debit Insurance Expense $600, credit Prepaid Insurance $600, leaving $1,800 remaining as an asset for the future 9 months of coverage."
+                ],
+                "answer": "Debit Insurance Expense $600, credit Prepaid Insurance $600, reflecting the 3 months of coverage already used."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Accrual accounting", "def": "Recording revenue when earned and expenses when incurred, regardless of when cash changes hands."},
+            {"term": "Adjusting entry", "def": "A period-end journal entry that updates account balances for revenue or expenses not yet recorded through a normal transaction."},
+            {"term": "Accrued revenue", "def": "Revenue earned but not yet billed or collected."},
+            {"term": "Accrued expense", "def": "An expense incurred but not yet paid."},
+            {"term": "Deferred revenue", "def": "Cash received in advance for goods or services not yet delivered, recorded as a liability until earned."},
+            {"term": "Deferred expense", "def": "A payment made in advance for something used over time, recorded as an asset and expensed gradually."}
+          ],
+          "practice": [
+            {"q": "Accrual accounting records revenue and expenses:", "choices": ["When earned or incurred, regardless of when cash changes hands", "Only when cash is received or paid", "Only at the end of the fiscal year", "Only for publicly traded companies"], "answer": 0, "explain": "Accrual accounting ties recognition to when revenue is earned or expenses are incurred, not to cash timing."},
+            {"q": "A company has not yet paid $1,200 of wages for work already performed by year-end. The required adjusting entry is:", "choices": ["Debit Wages Expense $1,200, credit Wages Payable $1,200", "Debit Wages Payable $1,200, credit Wages Expense $1,200", "Debit Cash $1,200, credit Wages Expense $1,200", "No entry is needed until the wages are actually paid"], "answer": 0, "explain": "The expense was incurred, since work was performed, even though cash hasn't been paid, requiring an accrual."},
+            {"q": "A company pays $2,400 for one year of insurance on October 1 and initially records it as an asset. Three months later, at year-end, how much should be recognized as expense?", "choices": ["$600", "$2,400", "$200", "$1,800"], "answer": 0, "explain": "$2,400 ÷ 12 = $200 per month × 3 months used = $600 expensed, with $1,800 remaining as a prepaid asset."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "The Trial Balance and Closing the Books",
+          "minutes": 11,
+          "intro": "Before a company can trust its financial statements, it needs a way to double-check that every debit it recorded all year actually has a matching credit — and that check is the trial balance.",
+          "sections": [
+            {
+              "heading": "The Trial Balance",
+              "body": [
+                "A **trial balance** is a list of every account in the general ledger along with its ending balance, organized to show total debits and total credits separately; if the two totals match, it provides evidence, though not proof, that the ledger is arithmetically consistent. A trial balance that does not balance means a recording error exists somewhere and must be found before statements can be prepared.",
+                "A balanced trial balance is not a guarantee of accuracy — it would still balance even if a transaction were entirely omitted, or if an amount were debited and credited to the wrong accounts, since both errors leave total debits equal to total credits. It only rules out a narrow category of errors, chiefly ones where debits and credits are unequal."
+              ]
+            },
+            {
+              "heading": "The Adjusted Trial Balance and Financial Statements",
+              "body": [
+                "After adjusting entries are journalized and posted, an **adjusted trial balance** is prepared, listing every account's updated balance including the effects of accruals and deferrals. This adjusted trial balance is the direct source for preparing the income statement, statement of stockholders' equity, and balance sheet, in that specific order, since net income flows into equity, which flows into the balance sheet.",
+                "Revenue and expense account balances from the adjusted trial balance populate the income statement; the resulting net income then updates retained earnings on the statement of stockholders' equity; and the ending equity balance, along with asset and liability accounts, populates the balance sheet."
+              ]
+            },
+            {
+              "heading": "Closing Entries and the New Period",
+              "body": [
+                "**Closing entries** are journal entries made at the end of a period to reset all temporary accounts, meaning revenue, expense, and dividend accounts, to zero, transferring their balances into retained earnings so the next period starts fresh. **Permanent accounts**, meaning assets, liabilities, and equity, are not closed and simply carry their ending balance forward into the new period.",
+                "Closing is necessary because revenue and expense accounts are meant to measure activity within a single period only; if they were never reset to zero, next year's revenue would simply pile onto this year's, making the income statement meaningless as a measure of any single period's performance."
+              ],
+              "example": {
+                "problem": "At the start of the closing process, a company's adjusted trial balance shows Service Revenue $90,000 as a credit balance and total expenses of $65,000 as debit balances. No dividends were paid. What is the closing entry effect on Retained Earnings, and what should Service Revenue's balance be after closing?",
+                "steps": [
+                  "Calculate net income: Revenue $90,000 minus Expenses $65,000 equals $25,000.",
+                  "Closing entries transfer this $25,000 net income into Retained Earnings, increasing it by $25,000.",
+                  "After closing, Service Revenue and all expense accounts are reset to a zero balance, ready to accumulate the next period's activity."
+                ],
+                "answer": "Retained Earnings increases by $25,000, and Service Revenue's balance is reset to zero after closing."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Trial balance", "def": "A list of every ledger account and its ending balance, checking that total debits equal total credits."},
+            {"term": "Adjusted trial balance", "def": "A trial balance prepared after adjusting entries are posted, used as the source for the financial statements."},
+            {"term": "Closing entries", "def": "Period-end entries that reset temporary accounts to zero and transfer their balances into retained earnings."},
+            {"term": "Temporary accounts", "def": "Revenue, expense, and dividend accounts that are reset to zero at the end of each period."},
+            {"term": "Permanent accounts", "def": "Asset, liability, and equity accounts whose balances carry forward from one period to the next."}
+          ],
+          "practice": [
+            {"q": "A trial balance that has equal total debits and total credits proves that:", "choices": ["The ledger contains no errors that make debits unequal to credits, but other errors may still exist", "Every transaction was recorded with perfect accuracy", "No transaction was ever omitted", "All accounts have a zero balance"], "answer": 0, "explain": "A balanced trial balance only rules out debit/credit inequality; omissions and misclassifications can still balance."},
+            {"q": "Which accounts are reset to zero by closing entries?", "choices": ["Revenue, expense, and dividend accounts", "Asset and liability accounts", "Only cash and inventory accounts", "All accounts in the general ledger"], "answer": 0, "explain": "Only temporary accounts, which measure a single period's activity, are closed to zero."},
+            {"q": "A company's adjusted trial balance shows Revenue of $70,000 and Expenses of $52,000, with no dividends paid. After closing entries, Retained Earnings will:", "choices": ["Increase by $18,000", "Increase by $70,000", "Decrease by $52,000", "Remain unchanged"], "answer": 0, "explain": "Net income of $70,000 minus $52,000, equal to $18,000, is closed into Retained Earnings."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Merchandising Transactions and Cost of Goods Sold",
+          "minutes": 12,
+          "intro": "A company that buys finished goods and resells them has to track something a service business never worries about — the cost of the actual inventory sold — and that single number sits right at the heart of a merchandiser's profitability.",
+          "sections": [
+            {
+              "heading": "Merchandising Basics: Sales, Returns, and Discounts",
+              "body": [
+                "A **merchandising business** buys finished goods and resells them to customers, as opposed to a service business, which sells labor or expertise, or a manufacturer, which builds the goods itself. Merchandisers report **sales revenue** from customer purchases, reduced by **sales returns and allowances** and **sales discounts**, to arrive at **net sales**.",
+                "A common sales discount term is '2/10, net 30,' meaning a customer receives a 2% discount if they pay within 10 days, otherwise the full amount is due within 30 days. A $1,000 invoice paid within 10 days under these terms costs the customer only $980, an incentive that speeds up a seller's cash collection in exchange for a small revenue reduction."
+              ]
+            },
+            {
+              "heading": "Cost of Goods Sold and Gross Profit",
+              "body": [
+                "**Cost of goods sold (COGS)** is the direct cost of the inventory that was actually sold during a period, and it is subtracted from net sales to calculate **gross profit**: Net Sales − COGS = Gross Profit. Gross profit measures how much a company earns from the core buying-and-selling activity before subtracting operating expenses like rent, salaries, and advertising.",
+                "**Gross profit margin**, gross profit divided by net sales, lets a company compare its core merchandising efficiency across periods or against competitors, independent of how much it spends on overhead — a retailer with a 40% gross margin keeps 40 cents of every sales dollar before operating expenses are even considered."
+              ]
+            },
+            {
+              "heading": "The Perpetual Inventory System",
+              "body": [
+                "Under a **perpetual inventory system**, the Inventory account and Cost of Goods Sold are updated with every single sale and purchase transaction, giving an always-current inventory balance, which is standard practice now that point-of-sale and warehouse software make constant updating practical. This contrasts with a **periodic inventory system**, which only calculates COGS at the end of a period through a physical count.",
+                "In a perpetual system, a single sale actually requires two journal entries: one to record the revenue and receivable or cash, and a second to remove the sold item's cost from Inventory and add it to Cost of Goods Sold, keeping the balance sheet's inventory figure accurate at all times rather than only at period end."
+              ],
+              "example": {
+                "problem": "A store sells a jacket to a customer for $120 cash. The jacket cost the store $70 to purchase from its supplier. Under a perpetual inventory system, write both required journal entries and calculate the gross profit on this single sale.",
+                "steps": [
+                  "Entry 1 records the sale: debit Cash $120, credit Sales Revenue $120.",
+                  "Entry 2 records the cost of the item sold: debit Cost of Goods Sold $70, credit Inventory $70.",
+                  "Calculate gross profit on this sale: Sales Revenue $120 minus COGS $70 equals $50 gross profit."
+                ],
+                "answer": "Debit Cash $120 and credit Sales Revenue $120; debit COGS $70 and credit Inventory $70; gross profit on the sale is $50."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Merchandising business", "def": "A business that buys finished goods and resells them to customers."},
+            {"term": "Net sales", "def": "Sales revenue reduced by sales returns, allowances, and discounts."},
+            {"term": "Cost of goods sold (COGS)", "def": "The direct cost of inventory that was actually sold during a period."},
+            {"term": "Gross profit", "def": "Net sales minus cost of goods sold, measuring core merchandising profitability before operating expenses."},
+            {"term": "Perpetual inventory system", "def": "An inventory system that updates Inventory and COGS with every sale and purchase transaction."}
+          ],
+          "practice": [
+            {"q": "A retailer has net sales of $300,000 and cost of goods sold of $185,000. Its gross profit is:", "choices": ["$115,000", "$300,000", "$185,000", "$485,000"], "answer": 0, "explain": "Gross profit equals net sales minus COGS: $300,000 − $185,000 = $115,000."},
+            {"q": "Under sales terms of '2/10, net 30,' a customer who pays a $2,000 invoice within 10 days pays:", "choices": ["$1,960", "$2,000", "$1,800", "$40"], "answer": 0, "explain": "A 2% discount on $2,000 is $40, so the customer pays $2,000 − $40 = $1,960."},
+            {"q": "Under a perpetual inventory system, recording a sale requires:", "choices": ["Two journal entries: one for the sale and one to move the item's cost from Inventory to COGS", "Only one entry, recording revenue alone", "No journal entry until the end of the period", "An entry only if the sale was made on credit"], "answer": 0, "explain": "A perpetual system updates both the sale and the inventory cost at the moment of each sale."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Accounting for Assets",
+      "summary": "Cash needs protecting, receivables need estimating for the losses that will inevitably occur, and inventory and long-term assets need a consistent method for spreading their cost across time.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Cash and Internal Controls",
+          "minutes": 10,
+          "intro": "Cash is the single asset every employee, customer, and thief has the easiest time touching, which is exactly why businesses build a deliberate system of checks around it rather than trusting good intentions alone.",
+          "sections": [
+            {
+              "heading": "Internal Controls",
+              "body": [
+                "**Internal controls** are the policies and procedures a business puts in place to safeguard assets, ensure accurate financial records, and promote operational efficiency. A foundational internal control principle is **separation of duties**: the person who handles cash should not be the same person who records the transaction in the books, since combining both roles makes theft easy to commit and easy to hide.",
+                "Other common controls include requiring two signatures on large checks, conducting surprise cash counts, and using pre-numbered documents so a missing number is immediately noticeable. None of these controls guarantees fraud is impossible, but together they make it substantially harder to commit and far more likely to be caught quickly."
+              ]
+            },
+            {
+              "heading": "Bank Reconciliation",
+              "body": [
+                "A **bank reconciliation** compares a company's own cash records to the bank statement to explain any difference between the two balances, since timing differences, like a check written but not yet cashed, are normal and expected rather than errors. Common reconciling items include **outstanding checks**, **deposits in transit**, bank fees, and interest earned.",
+                "Reconciling monthly catches genuine errors before they compound, and a persistent unexplained difference after accounting for all known timing items is often the first sign of an accounting error or, in rarer cases, fraud."
+              ]
+            },
+            {
+              "heading": "Cash Over and Short",
+              "body": [
+                "In a retail setting handling a physical cash drawer, small discrepancies between recorded sales and actual cash counted are common enough that many companies use a **Cash Over and Short** account to record these differences as a small expense, if short, or other income, if over, rather than investigating every one-dollar mismatch as a crisis.",
+                "A pattern of repeated shortages from the same register or the same employee is treated very differently from an occasional dollar or two of random variance, since a consistent pattern suggests either a training problem or, in a worse case, deliberate theft that internal controls should be designed to catch."
+              ],
+              "example": {
+                "problem": "A company's cash records show an ending balance of $14,200. The bank statement shows $15,000. Investigation finds a $900 deposit in transit not yet processed by the bank, and a $100 bank service fee not yet recorded in the company's books. Complete the reconciliation.",
+                "steps": [
+                  "Start from the bank balance: $15,000. Add the deposit in transit: $15,000 + $900 = $15,900, the adjusted bank balance.",
+                  "Start from the company's book balance: $14,200. Subtract the unrecorded bank fee: $14,200 − $100 = $14,100, the adjusted book balance.",
+                  "Compare: $15,900 does not equal $14,100 — a $1,800 difference remains, meaning another reconciling item has not yet been found and must be investigated further."
+                ],
+                "answer": "After adjusting for the known items, the balances still differ by $1,800 ($15,900 vs. $14,100), indicating an additional unreconciled item must be located before the reconciliation is complete."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Internal controls", "def": "Policies and procedures a business uses to safeguard assets and ensure accurate financial records."},
+            {"term": "Separation of duties", "def": "An internal control principle keeping cash handling and recordkeeping duties assigned to different people."},
+            {"term": "Bank reconciliation", "def": "A comparison of a company's cash records to its bank statement to explain any difference between the two."},
+            {"term": "Outstanding checks", "def": "Checks written and recorded by the company but not yet cleared by the bank."},
+            {"term": "Deposits in transit", "def": "Deposits recorded by the company but not yet processed by the bank."}
+          ],
+          "practice": [
+            {"q": "Separation of duties as an internal control principle means:", "choices": ["The person handling cash should not be the same person recording the transaction", "Every employee must work in pairs at all times", "Only the owner can handle any cash transaction", "Cash handling requires no independent recordkeeping"], "answer": 0, "explain": "Splitting cash handling from recordkeeping makes theft harder to commit and easier to detect."},
+            {"q": "A check the company wrote and recorded, but that has not yet cleared the bank, is called:", "choices": ["An outstanding check", "A deposit in transit", "A bank service fee", "Cash over and short"], "answer": 0, "explain": "An outstanding check has been issued and recorded by the company but not yet processed by the bank."},
+            {"q": "A bank reconciliation is prepared mainly to:", "choices": ["Explain differences between the company's cash records and the bank statement, including timing items and errors", "Replace the need for internal controls entirely", "Calculate a company's net income for the period", "Determine the value of ending inventory"], "answer": 0, "explain": "Reconciliation identifies and explains gaps between two independently maintained cash records."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Accounts Receivable and the Allowance for Bad Debt",
+          "minutes": 12,
+          "intro": "Selling on credit means accepting, from day one, that some customers simply will not pay — and accrual accounting requires a business to estimate and record that expected loss before it even knows which specific customer will default.",
+          "sections": [
+            {
+              "heading": "Accounts Receivable and Uncollectible Accounts",
+              "body": [
+                "**Accounts receivable** is money owed to a business by customers who purchased on credit rather than paying cash immediately. Not every receivable is ultimately collected — some customers default, close their business, or dispute the charge — and these losses are called **bad debt** or uncollectible accounts.",
+                "The **matching principle** requires that expenses be recorded in the same period as the revenue they helped generate; since bad debt is a cost of selling on credit, GAAP requires estimating and recording expected bad debt in the same period as the related sale, rather than waiting until a specific customer is confirmed to have defaulted."
+              ]
+            },
+            {
+              "heading": "The Allowance Method",
+              "body": [
+                "The **allowance method** estimates uncollectible accounts at the end of each period and records the estimate through an adjusting entry: debit Bad Debt Expense and credit **Allowance for Doubtful Accounts**, a contra-asset account that reduces the reported value of Accounts Receivable on the balance sheet without altering the actual receivable records for individual customers.",
+                "A common estimation approach is the **percentage of sales method**, applying a historical bad-debt percentage to the period's credit sales. Another is the **aging of receivables method**, which categorizes individual customer balances by how overdue they are and applies a higher expected loss percentage to older, more overdue balances, since older debt is statistically far less likely to ever be collected."
+              ]
+            },
+            {
+              "heading": "Writing Off a Specific Account",
+              "body": [
+                "When a specific customer's account is finally confirmed uncollectible, the company **writes it off**: debit Allowance for Doubtful Accounts and credit Accounts Receivable for that customer's specific balance. This write-off entry does not touch Bad Debt Expense again, since the expense was already estimated and recorded earlier, when the allowance was originally set up.",
+                "Because the estimate was made earlier using the allowance method, the actual write-off has no effect on total assets or net income at the time it occurs — the loss was already anticipated and recorded in the period of the original sale, which is the entire point of estimating bad debt in advance."
+              ],
+              "example": {
+                "problem": "At year-end, a company has $500,000 in credit sales. Based on historical experience, it estimates 2% will ultimately be uncollectible. Record the adjusting entry, and then record the write-off of a specific customer's $3,000 balance three months later.",
+                "steps": [
+                  "Estimate bad debt expense: $500,000 × 2% = $10,000.",
+                  "Record the year-end adjusting entry: debit Bad Debt Expense $10,000, credit Allowance for Doubtful Accounts $10,000.",
+                  "Three months later, record the write-off: debit Allowance for Doubtful Accounts $3,000, credit Accounts Receivable $3,000 — this entry does not touch Bad Debt Expense again."
+                ],
+                "answer": "Year-end entry: debit Bad Debt Expense $10,000, credit Allowance for Doubtful Accounts $10,000. Write-off entry: debit Allowance for Doubtful Accounts $3,000, credit Accounts Receivable $3,000."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Accounts receivable", "def": "Money owed to a business by customers who purchased on credit."},
+            {"term": "Bad debt", "def": "Amounts owed by customers that a business ultimately cannot collect."},
+            {"term": "Matching principle", "def": "The requirement to record expenses in the same period as the revenue they helped generate."},
+            {"term": "Allowance for Doubtful Accounts", "def": "A contra-asset account that reduces reported Accounts Receivable for expected uncollectible amounts."},
+            {"term": "Aging of receivables", "def": "A method estimating bad debt by categorizing customer balances by how overdue they are."}
+          ],
+          "practice": [
+            {"q": "The matching principle requires that bad debt expense be recorded:", "choices": ["In the same period as the related credit sales, even before a specific customer defaults", "Only after a specific customer is confirmed to have defaulted", "Only at the end of the company's fiscal year regardless of when sales occurred", "Never, since bad debt is not a real expense"], "answer": 0, "explain": "The matching principle ties bad debt expense to the period of the related sale, not to the later default date."},
+            {"q": "Allowance for Doubtful Accounts is best described as:", "choices": ["A contra-asset account that reduces the reported value of Accounts Receivable", "A liability owed to customers", "A type of revenue account", "An expense paid in cash immediately"], "answer": 0, "explain": "It offsets Accounts Receivable on the balance sheet without being a liability or revenue account itself."},
+            {"q": "When a specific customer's $2,000 balance is written off using the allowance method, the entry:", "choices": ["Debits Allowance for Doubtful Accounts and credits Accounts Receivable, with no effect on net income at that time", "Debits Bad Debt Expense again for the full $2,000", "Has no journal entry since the amount was never expected to be collected", "Increases total assets by $2,000"], "answer": 0, "explain": "The expense was already recorded earlier, so the write-off only removes the offsetting allowance and the receivable."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Inventory Costing and Depreciation of Long-Term Assets",
+          "minutes": 13,
+          "intro": "Two identical warehouses of inventory can be reported at two different costs on two companies' books, legally, simply because each chose a different accounting method for deciding which units were 'sold' first — and long-term assets raise a parallel question about spreading cost over time.",
+          "sections": [
+            {
+              "heading": "Inventory Costing Methods: FIFO, LIFO, and Weighted Average",
+              "body": [
+                "When identical inventory units are purchased at different costs over time, a company must choose a costing method to decide which cost applies to units sold. **FIFO** (first-in, first-out) assumes the oldest inventory costs are the first ones expensed as COGS. **LIFO** (last-in, first-out) assumes the newest inventory costs are expensed first. The **weighted average method** blends all costs together into a single average cost per unit.",
+                "During a period of rising prices, FIFO produces a lower COGS, using older, cheaper costs, and therefore higher reported net income, while LIFO produces a higher COGS, using newer, more expensive costs, and lower reported net income — the same physical inventory and sales produce different reported profit purely from this accounting choice."
+              ]
+            },
+            {
+              "heading": "Calculating Cost of Goods Sold Under FIFO",
+              "body": [
+                "Suppose a company buys inventory in two batches: 100 units at $10 each, then 100 units at $12 each, and later sells 150 units. Under FIFO, the 150 units sold are assumed to come from the oldest units first: all 100 units at $10, plus 50 of the units at $12.",
+                "This produces COGS of (100 × $10) + (50 × $12), equal to $1,000 + $600 = $1,600, leaving 50 units of the $12 batch, worth $600, remaining in ending inventory. Under LIFO with the same purchases, the 150 units sold would instead be assumed to come from the newest batch first, producing a different COGS of $1,700 and ending inventory of $500."
+              ]
+            },
+            {
+              "heading": "Depreciation of Long-Term Assets",
+              "body": [
+                "**Depreciation** allocates the cost of a long-term tangible asset, such as equipment or a building, over its estimated useful life, matching the asset's cost to the periods it helps generate revenue, rather than expensing the full cost the moment it's purchased. The **straight-line method** is the simplest: (Cost − Salvage Value) ÷ Useful Life, producing an equal expense each year.",
+                "**Salvage value** is the estimated amount the asset could be sold for at the end of its useful life, and **book value** at any point is the asset's original cost minus **accumulated depreciation**, the total depreciation recorded so far. Book value is an accounting figure reflecting undepreciated cost, and it is not necessarily equal to the asset's actual market value at that moment."
+              ],
+              "example": {
+                "problem": "A company buys a delivery van for $42,000, expects to use it for 6 years, and estimates a $6,000 salvage value at the end. Using straight-line depreciation, calculate the annual depreciation expense and the van's book value after 2 years.",
+                "steps": [
+                  "Calculate annual depreciation: (Cost − Salvage Value) ÷ Useful Life = ($42,000 − $6,000) ÷ 6 = $36,000 ÷ 6 = $6,000 per year.",
+                  "Calculate accumulated depreciation after 2 years: $6,000 × 2 = $12,000.",
+                  "Calculate book value after 2 years: Cost − Accumulated Depreciation = $42,000 − $12,000 = $30,000."
+                ],
+                "answer": "Annual depreciation is $6,000, and the van's book value after 2 years is $30,000."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "FIFO", "def": "An inventory costing method assuming the oldest inventory costs are expensed first as COGS."},
+            {"term": "LIFO", "def": "An inventory costing method assuming the newest inventory costs are expensed first as COGS."},
+            {"term": "Weighted average method", "def": "An inventory costing method blending all unit costs into a single average cost."},
+            {"term": "Depreciation", "def": "Allocating the cost of a long-term tangible asset over its estimated useful life."},
+            {"term": "Straight-line method", "def": "A depreciation method producing an equal expense each year: (Cost − Salvage Value) ÷ Useful Life."},
+            {"term": "Salvage value", "def": "The estimated amount an asset could be sold for at the end of its useful life."}
+          ],
+          "practice": [
+            {"q": "During a period of rising prices, which inventory method typically produces the lowest reported net income?", "choices": ["LIFO", "FIFO", "Weighted average", "All methods produce identical net income"], "answer": 0, "explain": "LIFO expenses the newest, higher-cost units first, raising COGS and lowering net income during inflation."},
+            {"q": "A company buys equipment for $30,000 with a $2,000 salvage value and a 7-year useful life. Using straight-line depreciation, the annual depreciation expense is:", "choices": ["$4,000", "$30,000", "$2,000", "$28,000"], "answer": 0, "explain": "($30,000 − $2,000) ÷ 7 = $28,000 ÷ 7 = $4,000 per year."},
+            {"q": "An asset's book value is calculated as:", "choices": ["Original cost minus accumulated depreciation", "Original cost plus accumulated depreciation", "Salvage value minus accumulated depreciation", "Current market value minus depreciation expense"], "answer": 0, "explain": "Book value reflects undepreciated cost: original cost minus depreciation taken so far."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Liabilities and Equity",
+      "summary": "Beyond simple unpaid bills, a company's obligations include payroll withholdings, bonds sold to public investors, and the equity accounts that record what owners have contributed and earned.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Current Liabilities and Payroll",
+          "minutes": 10,
+          "intro": "Every paycheck a company issues hides a small stack of obligations to other parties — tax withholdings, benefit contributions, government filings — that never touch the employee's bank account but still belong squarely on the company's books.",
+          "sections": [
+            {
+              "heading": "Current Liabilities",
+              "body": [
+                "A **current liability** is an obligation due within one year or one operating cycle, whichever is longer, and typically includes **accounts payable**, notes payable due within a year, **unearned revenue**, and accrued liabilities like wages or taxes owed but not yet paid.",
+                "Correctly classifying a liability as current versus **long-term** matters to anyone reading a balance sheet, since comparing current liabilities to current assets is one of the fastest ways to judge whether a company can meet its near-term obligations — a debt due in 11 months is a very different risk than one due in 11 years."
+              ]
+            },
+            {
+              "heading": "Payroll Liabilities",
+              "body": [
+                "When a company pays an employee, the paycheck amount is only part of the story: the company withholds income taxes and the employee's share of Social Security and Medicare taxes from gross pay, and separately owes its own employer share of Social Security and Medicare taxes, plus unemployment taxes, none of which the employee ever sees directly.",
+                "All of these withheld and employer-owed amounts become current liabilities the moment payroll is processed, since the company has collected or incurred an obligation to remit them to tax authorities and benefit providers on a set schedule, even though the cash hasn't left the company yet."
+              ]
+            },
+            {
+              "heading": "Recording a Payroll Entry",
+              "body": [
+                "A payroll journal entry typically debits Salaries Expense for the full gross pay, then credits several liability accounts for each withholding, such as federal income tax payable and Social Security payable, with the remainder credited to Cash or Salaries Payable for the employee's net take-home pay.",
+                "The employer's own matching payroll taxes require a second, separate entry: debiting Payroll Tax Expense and crediting the corresponding liability accounts, since the employer's share is an additional company cost on top of the employee's gross wages, not something deducted from the employee's paycheck."
+              ],
+              "example": {
+                "problem": "An employee's gross pay for the week is $1,000. The company withholds $150 for federal income tax and $76.50 for the employee's Social Security and Medicare, at 7.65%. What is the employee's net pay, and what liability accounts does the company record?",
+                "steps": [
+                  "Calculate total withholdings: $150 + $76.50 = $226.50.",
+                  "Calculate net pay: Gross pay minus withholdings = $1,000 − $226.50 = $773.50.",
+                  "The company records: debit Salaries Expense $1,000; credit Federal Income Tax Payable $150; credit Social Security/Medicare Payable $76.50; credit Cash or Salaries Payable $773.50."
+                ],
+                "answer": "Net pay is $773.50. The company records Salaries Expense of $1,000, with $150 and $76.50 held as payable liabilities and $773.50 paid or owed to the employee."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Current liability", "def": "An obligation due within one year or one operating cycle, whichever is longer."},
+            {"term": "Accounts payable", "def": "Amounts owed to suppliers for purchases made on credit."},
+            {"term": "Unearned revenue", "def": "A liability recorded when a customer pays in advance for goods or services not yet delivered."},
+            {"term": "Payroll liabilities", "def": "Withheld and employer-owed payroll amounts owed to tax authorities and benefit providers."},
+            {"term": "Long-term liability", "def": "An obligation not due within one year or one operating cycle."}
+          ],
+          "practice": [
+            {"q": "A liability due within one year or one operating cycle, whichever is longer, is classified as:", "choices": ["A current liability", "A long-term liability", "An asset", "Equity"], "answer": 0, "explain": "This is the standard definition used to classify a liability as current."},
+            {"q": "An employee's gross pay is $1,200. Withholdings total $260. What is net pay?", "choices": ["$940", "$1,200", "$260", "$1,460"], "answer": 0, "explain": "Net pay equals gross pay minus withholdings: $1,200 − $260 = $940."},
+            {"q": "Amounts a company withholds from an employee's paycheck for taxes become, at the moment of payroll processing:", "choices": ["Current liabilities owed to tax authorities", "Immediate revenue for the company", "Long-term liabilities due in over a year", "Equity accounts"], "answer": 0, "explain": "Withheld amounts are obligations the company must remit soon, making them current liabilities."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Long-Term Liabilities: Bonds Payable",
+          "minutes": 12,
+          "intro": "When a company needs to borrow far more money than a single bank is willing to lend, it can instead sell thousands of small IOUs directly to investors on the open market — a financing tool called a bond.",
+          "sections": [
+            {
+              "heading": "What a Bond Is",
+              "body": [
+                "A **bond** is a formal debt instrument in which a company, the issuer, borrows a stated amount, called the **face value** or par value, from investors and promises to repay that amount at a specific future **maturity date**, while paying periodic interest, called the **coupon**, based on a stated interest rate along the way.",
+                "Bonds let a company borrow from many investors simultaneously rather than from a single lender, and because bonds trade on secondary markets after they're issued, an original bondholder can sell their bond to another investor before maturity rather than waiting years to be repaid directly by the company."
+              ]
+            },
+            {
+              "heading": "Bonds Issued at a Premium or Discount",
+              "body": [
+                "A bond's stated interest rate is fixed at issuance, but the market interest rate for similar bonds moves constantly; when a bond's stated rate is lower than the current market rate, investors will only buy it at a **discount**, less than face value, and when the stated rate is higher than the market rate, investors will pay a **premium**, more than face value.",
+                "This adjustment happens because investors compare the fixed coupon payments the bond promises to what they could earn elsewhere at the current market rate — nobody would pay full face value for a bond offering a lower return than the market when better alternatives exist, so the price falls until the bond's effective return matches the market."
+              ]
+            },
+            {
+              "heading": "Recording Bond Interest Payments",
+              "body": [
+                "A company records periodic interest expense on its bonds by debiting Bond Interest Expense and crediting Cash, or Interest Payable if unpaid at period end, for the coupon amount, calculated as Face Value × Stated Rate × the fraction of the year covered by the payment. Bonds issued at a discount or premium require additional amortization entries beyond this basic scope, gradually adjusting the bond's carrying value toward face value by maturity.",
+                "At maturity, the company repays the bond's full face value to whoever currently holds it, regardless of how many times it changed hands on the secondary market since it was originally issued — the company's obligation runs to the bond itself, not to any particular original investor."
+              ],
+              "example": {
+                "problem": "A company issues a $1,000,000 bond with a 6% annual stated interest rate, paying interest semiannually. Calculate the amount of each semiannual interest payment.",
+                "steps": [
+                  "Calculate annual interest: $1,000,000 × 6% = $60,000.",
+                  "Divide by two semiannual payments per year: $60,000 ÷ 2 = $30,000 per payment.",
+                  "Each semiannual payment of $30,000 is recorded as a debit to Bond Interest Expense and a credit to Cash."
+                ],
+                "answer": "Each semiannual interest payment is $30,000."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Bond", "def": "A formal debt instrument in which a company borrows a stated face value from investors and repays it at maturity."},
+            {"term": "Face value", "def": "The amount a bond's issuer promises to repay at maturity, also called par value."},
+            {"term": "Maturity date", "def": "The specific future date when a bond's face value must be repaid."},
+            {"term": "Coupon", "def": "The periodic interest payment a bond makes, based on its stated interest rate."},
+            {"term": "Bond discount and premium", "def": "The amount a bond sells for below (discount) or above (premium) its face value, driven by market interest rate changes."}
+          ],
+          "practice": [
+            {"q": "A bond's face value is:", "choices": ["The amount the issuer promises to repay at maturity", "The current market price of the bond", "The total interest paid over the bond's life", "Always equal to what an investor actually pays for the bond"], "answer": 0, "explain": "Face value is the fixed repayment amount at maturity, distinct from the bond's fluctuating market price."},
+            {"q": "A bond will typically sell at a discount, below face value, when:", "choices": ["Its stated interest rate is lower than the current market interest rate for similar bonds", "Its stated interest rate is higher than the current market rate", "Interest rates have no effect on bond prices", "The company is not required to repay the face value"], "answer": 0, "explain": "Investors demand a lower price to make up for the bond's below-market coupon rate."},
+            {"q": "A company issues a $500,000 bond with a 4% annual stated rate, paying interest annually. The annual interest payment is:", "choices": ["$20,000", "$500,000", "$4,000", "$2,000"], "answer": 0, "explain": "$500,000 × 4% = $20,000."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Stockholders' Equity: Stock and Dividends",
+          "minutes": 11,
+          "intro": "When a corporation sells ownership shares to raise money, it has to record not just the cash received, but exactly how that cash splits between the shares' stated legal value and everything investors paid above it.",
+          "sections": [
+            {
+              "heading": "Common and Preferred Stock",
+              "body": [
+                "**Common stock** represents basic ownership in a corporation, typically carrying voting rights and a residual claim on assets and earnings after all other claims are paid. **Preferred stock** carries no voting rights in most cases but has priority over common stock for receiving dividends and for any assets remaining if the company is liquidated.",
+                "Stock is often assigned a **par value**, a small stated legal amount per share, frequently $0.01 or $1, that is mostly a historical legal formality today and bears little relation to the stock's actual market price; the amount investors pay above par value is recorded separately as **additional paid-in capital**."
+              ]
+            },
+            {
+              "heading": "Issuing Stock",
+              "body": [
+                "When a company issues stock, it records the par value portion in the Common Stock account and any excess received above par value in Additional Paid-in Capital, with the total cash received recorded as a debit to Cash. This split exists purely for legal and reporting reasons; both accounts together represent the total amount investors paid into the company.",
+                "A company issuing 10,000 shares with a $1 par value for $15 per share receives $150,000 in total cash, records $10,000 in Common Stock and the remaining $140,000 in Additional Paid-in Capital — the split between the two equity accounts does not change the total cash raised."
+              ]
+            },
+            {
+              "heading": "Dividends and Retained Earnings",
+              "body": [
+                "A **dividend** is a distribution of a company's earnings to its shareholders, typically paid in cash, and it reduces **retained earnings**, the accumulated net income a company has kept rather than distributed since it began. A company is never legally required to pay dividends, and many growth-focused companies retain all earnings to reinvest instead.",
+                "The dividend process has three key dates: the **declaration date**, when the board formally announces the dividend and a liability is recorded; the **record date**, which determines who currently owns shares and is therefore entitled to the dividend; and the **payment date**, when cash is actually distributed and the liability is settled."
+              ],
+              "example": {
+                "problem": "A company declares a $0.50 per share cash dividend on 200,000 shares of common stock outstanding. What is the total dividend liability recorded on the declaration date, and what happens on the payment date?",
+                "steps": [
+                  "Calculate the total dividend: 200,000 shares × $0.50 = $100,000.",
+                  "On the declaration date, record: debit Retained Earnings $100,000, credit Dividends Payable $100,000.",
+                  "On the payment date, record: debit Dividends Payable $100,000, credit Cash $100,000, settling the liability."
+                ],
+                "answer": "The company records a $100,000 dividend liability on the declaration date and settles it with a $100,000 cash payment on the payment date."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Common stock", "def": "Basic corporate ownership shares typically carrying voting rights and a residual claim on assets."},
+            {"term": "Preferred stock", "def": "Stock with priority over common stock for dividends and liquidation, usually without voting rights."},
+            {"term": "Par value", "def": "A small stated legal value per share, largely unrelated to the stock's actual market price."},
+            {"term": "Additional paid-in capital", "def": "The amount investors pay for stock above its par value."},
+            {"term": "Dividend", "def": "A distribution of a company's earnings to its shareholders, reducing retained earnings."},
+            {"term": "Retained earnings", "def": "Accumulated net income a company has kept rather than distributed as dividends."}
+          ],
+          "practice": [
+            {"q": "A company issues 5,000 shares with a $1 par value for $20 per share. How much is recorded in Additional Paid-in Capital?", "choices": ["$95,000", "$100,000", "$5,000", "$20,000"], "answer": 0, "explain": "Total cash received is 5,000 × $20 = $100,000; par value portion is 5,000 × $1 = $5,000; the remaining $95,000 is additional paid-in capital."},
+            {"q": "Preferred stock typically differs from common stock in that preferred stock:", "choices": ["Has priority for dividends and liquidation but usually no voting rights", "Always has voting rights and no dividend priority", "Cannot ever be issued by a corporation", "Is the same as a bond in every respect"], "answer": 0, "explain": "Preferred stock trades voting rights for priority in receiving dividends and liquidation proceeds."},
+            {"q": "A dividend reduces which account when it is declared?", "choices": ["Retained earnings", "Common stock", "Accounts payable", "Additional paid-in capital"], "answer": 0, "explain": "Declaring a dividend reduces retained earnings and creates a Dividends Payable liability."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Statements and Analysis",
+      "summary": "The accounting cycle culminates in a full set of statements, including the often-overlooked statement of cash flows, and in the ratios analysts use to judge what those statements actually mean.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "The Statement of Cash Flows",
+          "minutes": 12,
+          "intro": "A company can be profitable and still run out of cash, which is exactly why lenders and investors insist on a fourth statement that ignores accrual accounting entirely and simply tracks where actual cash came from and where it went.",
+          "sections": [
+            {
+              "heading": "The Three Sections of the Statement of Cash Flows",
+              "body": [
+                "The **statement of cash flows** reports all cash inflows and outflows during a period, divided into three sections. **Operating activities** covers cash from the core business, such as collecting from customers and paying suppliers and employees. **Investing activities** covers cash used to buy or received from selling long-term assets. **Financing activities** covers cash from borrowing, repaying debt, issuing stock, or paying dividends.",
+                "Separating cash flows into these three categories lets a reader see, for example, that a company's cash grew this period entirely because it took out a large loan, financing, even while its actual operations burned through cash — a very different, riskier story than if the operating section alone showed strong positive cash flow."
+              ]
+            },
+            {
+              "heading": "The Indirect Method",
+              "body": [
+                "The **indirect method**, used by most companies, starts with net income from the income statement and adjusts it for non-cash items and changes in working capital accounts to arrive at cash from operating activities. **Depreciation**, a major non-cash expense, is added back to net income, since it reduced net income on the income statement but never actually used any cash.",
+                "Changes in current asset and liability accounts are also adjusted: an increase in accounts receivable is subtracted, since it means sales were recorded as revenue but the cash hasn't been collected yet, while an increase in accounts payable is added, since expenses were incurred but the cash hasn't been paid out yet."
+              ]
+            },
+            {
+              "heading": "Interpreting the Statement",
+              "body": [
+                "A financially healthy, mature company typically shows positive operating cash flow, negative investing cash flow from spending on growth, and modestly negative or mixed financing cash flow from paying down debt or dividends. A young, fast-growing company might show negative operating cash flow temporarily while it scales, a different and more acceptable risk profile if investors understand why.",
+                "The most concerning pattern is negative operating cash flow paired with heavy reliance on financing cash flow just to keep the company running, since it suggests the core business itself is not yet self-sustaining and depends on outside capital to survive."
+              ],
+              "example": {
+                "problem": "A company reports net income of $60,000. Depreciation expense was $15,000. Accounts receivable increased by $8,000, and accounts payable increased by $5,000. Calculate cash flow from operating activities using the indirect method.",
+                "steps": [
+                  "Start with net income: $60,000.",
+                  "Add back depreciation, a non-cash expense: $60,000 + $15,000 = $75,000.",
+                  "Subtract the increase in accounts receivable, uncollected revenue: $75,000 − $8,000 = $67,000.",
+                  "Add the increase in accounts payable, unpaid expenses: $67,000 + $5,000 = $72,000."
+                ],
+                "answer": "Cash flow from operating activities is $72,000."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Statement of cash flows", "def": "A financial statement reporting actual cash inflows and outflows over a period, in three sections."},
+            {"term": "Operating activities", "def": "The statement of cash flows section covering cash from a company's core business operations."},
+            {"term": "Investing activities", "def": "The statement of cash flows section covering cash used to buy or received from selling long-term assets."},
+            {"term": "Financing activities", "def": "The statement of cash flows section covering cash from borrowing, issuing stock, or paying dividends."},
+            {"term": "Indirect method", "def": "A method of preparing operating cash flow that starts with net income and adjusts for non-cash items and working capital changes."}
+          ],
+          "practice": [
+            {"q": "Cash received from issuing stock or borrowing money is classified under:", "choices": ["Financing activities", "Operating activities", "Investing activities", "None of the three sections"], "answer": 0, "explain": "Raising capital through debt or equity is a financing activity."},
+            {"q": "Under the indirect method, depreciation is added back to net income because:", "choices": ["It reduced net income but did not actually use any cash", "It is a source of new cash inflow", "It always equals the change in accounts receivable", "It is classified as a financing activity"], "answer": 0, "explain": "Depreciation is a non-cash expense, so it is added back when reconciling net income to cash flow."},
+            {"q": "A company reports net income of $40,000, depreciation of $10,000, and an increase in accounts receivable of $6,000, with no other changes. Cash flow from operations is:", "choices": ["$44,000", "$40,000", "$56,000", "$24,000"], "answer": 0, "explain": "$40,000 + $10,000 − $6,000 = $44,000."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Financial Statement Analysis: Key Ratios",
+          "minutes": 12,
+          "intro": "Raw numbers on a financial statement mean very little on their own — $50,000 in cash could be plenty for a small shop or a rounding error for a large company — which is why analysts convert those numbers into ratios that can actually be compared.",
+          "sections": [
+            {
+              "heading": "Liquidity Ratios",
+              "body": [
+                "**Liquidity ratios** measure a company's ability to meet short-term obligations. The **current ratio**, current assets divided by current liabilities, is the most common: a ratio above 1.0 means current assets exceed current liabilities, generally considered a sign of adequate short-term financial health, though what counts as healthy varies by industry.",
+                "The **quick ratio**, or acid-test ratio, is a stricter version, excluding inventory from current assets before dividing by current liabilities, since inventory can be slow or difficult to convert to cash quickly if the company urgently needed it. A company can have a healthy current ratio driven mostly by hard-to-sell inventory while its quick ratio reveals a much thinner cash cushion."
+              ]
+            },
+            {
+              "heading": "Profitability Ratios",
+              "body": [
+                "**Profitability ratios** measure how effectively a company converts sales and assets into profit. **Gross profit margin**, gross profit divided by net sales, measures core merchandising efficiency, while **net profit margin**, net income divided by net sales, measures overall efficiency after all expenses, including operating costs, interest, and taxes.",
+                "**Return on equity (ROE)**, net income divided by average stockholders' equity, measures how much profit a company generates for each dollar shareholders have invested, and it is one of the most closely watched profitability metrics by investors comparing companies of very different sizes."
+              ]
+            },
+            {
+              "heading": "Solvency Ratios",
+              "body": [
+                "**Solvency ratios** measure a company's ability to meet long-term obligations and its overall reliance on debt. The **debt-to-equity ratio**, total liabilities divided by total stockholders' equity, shows how much of the company is financed by debt versus owner investment; a higher ratio means more financial leverage and generally more risk, since debt must be repaid regardless of how the business performs.",
+                "No single ratio tells the full story in isolation: a high debt-to-equity ratio is a serious concern for a company with unstable, unpredictable revenue, but far less concerning for a stable utility company with highly predictable cash flow able to reliably service that debt."
+              ],
+              "example": {
+                "problem": "A company has current assets of $180,000, including $60,000 of inventory, and current liabilities of $90,000. Calculate its current ratio and its quick ratio.",
+                "steps": [
+                  "Calculate the current ratio: current assets ÷ current liabilities = $180,000 ÷ $90,000 = 2.0.",
+                  "Calculate quick assets: current assets minus inventory = $180,000 − $60,000 = $120,000.",
+                  "Calculate the quick ratio: quick assets ÷ current liabilities = $120,000 ÷ $90,000 ≈ 1.33."
+                ],
+                "answer": "The current ratio is 2.0, and the quick ratio is about 1.33 — both indicate healthy short-term liquidity even after excluding inventory."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Liquidity ratio", "def": "A ratio measuring a company's ability to meet its short-term obligations."},
+            {"term": "Current ratio", "def": "Current assets divided by current liabilities, a common measure of short-term liquidity."},
+            {"term": "Quick ratio", "def": "A stricter liquidity measure excluding inventory from current assets before dividing by current liabilities."},
+            {"term": "Return on equity (ROE)", "def": "Net income divided by average stockholders' equity, measuring profit generated per dollar of owner investment."},
+            {"term": "Debt-to-equity ratio", "def": "Total liabilities divided by total stockholders' equity, measuring reliance on debt financing."}
+          ],
+          "practice": [
+            {"q": "A company has current assets of $250,000 and current liabilities of $125,000. Its current ratio is:", "choices": ["2.0", "0.5", "125,000", "375,000"], "answer": 0, "explain": "$250,000 ÷ $125,000 = 2.0."},
+            {"q": "The quick ratio differs from the current ratio because it:", "choices": ["Excludes inventory from current assets before dividing by current liabilities", "Excludes cash from current assets", "Uses total assets instead of current assets", "Ignores current liabilities entirely"], "answer": 0, "explain": "The quick ratio removes inventory, the least liquid current asset, before calculating the ratio."},
+            {"q": "A high debt-to-equity ratio is generally most concerning for:", "choices": ["A company with unstable and unpredictable revenue", "A company with no debt at all", "A stable utility with highly predictable cash flow", "A company that pays no dividends"], "answer": 0, "explain": "Unpredictable revenue makes it riskier to rely on debt that must be repaid on a fixed schedule."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Putting the Statements Together",
+          "minutes": 12,
+          "intro": "The real test of everything you've learned is not preparing one statement in isolation, but taking a single set of raw account balances and turning them into a coherent, cross-checked picture of a company's full financial position.",
+          "sections": [
+            {
+              "heading": "From Trial Balance to Statements: The Order of Operations",
+              "body": [
+                "Preparing financial statements from an adjusted trial balance follows a strict order, because each statement depends on the one before it. First, the **income statement** is prepared from revenue and expense balances, producing net income. Second, the **statement of stockholders' equity** is prepared, adding that net income and subtracting any dividends from beginning equity. Third, the **balance sheet** is prepared, using the ending equity figure from step two alongside the asset and liability balances.",
+                "Skipping this order, or preparing the balance sheet first, is a common mistake, because the balance sheet's equity section literally cannot be completed correctly without first knowing the period's net income — the statements form a dependent chain, not three independent documents."
+              ]
+            },
+            {
+              "heading": "A Worked Example: Building the Income Statement",
+              "body": [
+                "Consider a small consulting firm's adjusted trial balance showing: Service Revenue $180,000, Salaries Expense $95,000, Rent Expense $24,000, Utilities Expense $6,000, and Supplies Expense $3,000. Total expenses are $95,000 + $24,000 + $6,000 + $3,000, which equals $128,000.",
+                "Net income is Revenue minus total expenses: $180,000 − $128,000 = $52,000. This net income figure becomes the starting point for the next statement in the sequence, the statement of stockholders' equity, where it will be added to the firm's beginning retained earnings balance."
+              ]
+            },
+            {
+              "heading": "Continuing to the Balance Sheet",
+              "body": [
+                "Suppose the firm began the year with Retained Earnings of $40,000 and paid $10,000 in dividends during the year. Its ending Retained Earnings is $40,000 + $52,000 net income − $10,000 dividends, equal to $82,000, which now flows directly into the equity section of the balance sheet.",
+                "If the firm's balance sheet also shows Common Stock of $50,000, total equity becomes $50,000 + $82,000 = $132,000. If total liabilities are $38,000, total assets must equal $132,000 + $38,000 = $170,000 by the accounting equation — a figure that should exactly match the sum of the firm's actual asset accounts, providing a final check that everything was prepared correctly."
+              ],
+              "example": {
+                "problem": "Using the consulting firm above, if its actual listed asset accounts, such as Cash, Accounts Receivable, and Equipment, sum to $165,000 instead of the expected $170,000, what does this indicate?",
+                "steps": [
+                  "Recall the balance sheet must satisfy Assets = Liabilities + Equity, and the expected total from Liabilities + Equity was calculated as $170,000.",
+                  "Compare to the actual asset total of $165,000, a $5,000 shortfall.",
+                  "Conclude that an error exists somewhere in the trial balance, an account was omitted or miscopied, or a transaction was recorded incorrectly, and it must be located and corrected before the statements can be finalized."
+                ],
+                "answer": "The $5,000 mismatch signals a recording or transcription error somewhere in the accounts that must be found and corrected before the balance sheet is complete and accurate."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Order of statement preparation", "def": "The required sequence — income statement, then statement of stockholders' equity, then balance sheet — since each depends on the one before it."},
+            {"term": "Net income", "def": "Revenue minus expenses for a period, the starting figure for updating equity."},
+            {"term": "Ending retained earnings", "def": "Beginning retained earnings plus net income minus dividends paid during the period."},
+            {"term": "Total equity", "def": "The sum of a company's contributed capital and retained earnings on the balance sheet."},
+            {"term": "Accounting equation check", "def": "Confirming that total assets equal total liabilities plus equity as a final accuracy check."}
+          ],
+          "practice": [
+            {"q": "The correct order for preparing financial statements from an adjusted trial balance is:", "choices": ["Income statement, statement of stockholders' equity, balance sheet", "Balance sheet, income statement, statement of stockholders' equity", "Statement of stockholders' equity, balance sheet, income statement", "All three can be prepared in any order with identical results"], "answer": 0, "explain": "Each statement depends on figures produced by the one before it in this specific sequence."},
+            {"q": "A firm has beginning retained earnings of $30,000, net income of $45,000, and pays $8,000 in dividends. Ending retained earnings is:", "choices": ["$67,000", "$75,000", "$83,000", "$37,000"], "answer": 0, "explain": "$30,000 + $45,000 − $8,000 = $67,000."},
+            {"q": "If a balance sheet's calculated total equity plus liabilities does not match the sum of its actual asset accounts, this most likely indicates:", "choices": ["An error somewhere in the accounts that needs to be located and corrected", "That the accounting equation is only an approximation", "That dividends were paid twice", "A normal and expected result requiring no action"], "answer": 0, "explain": "The accounting equation must hold exactly; a mismatch points to a recording or transcription error."}
+          ]
+        }
+      ]
+    }
+  ]
+}

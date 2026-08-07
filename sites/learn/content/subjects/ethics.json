@@ -1,0 +1,682 @@
+{
+  "id": "ethics",
+  "title": "Ethics",
+  "domain": "humanities",
+  "level": "Intro college",
+  "description": "A rigorous introduction to moral philosophy: how to tell a genuine ethical argument from mere opinion, and how to apply the major moral theories to real, contested cases. You will study consequentialism, deontology, virtue ethics, and social-contract theory, then use them to reason through abortion, euthanasia, animal ethics, justice, honesty, and punishment.",
+  "outcomes": [
+    "You can distinguish descriptive ethics, normative ethics, and metaethics, and explain why the is-ought gap matters.",
+    "You can lay out a utilitarian argument for or against an action, including act versus rule versions, and state its strongest objection.",
+    "You can apply Kant's categorical imperative and explain how deontology differs from consequentialism in a concrete case.",
+    "You can compare virtue ethics and social-contract theory as alternative starting points for moral reasoning.",
+    "You can construct a structured argument, using at least two ethical frameworks, on a contested applied issue such as euthanasia, animal ethics, or punishment.",
+    "You can identify a common informal fallacy (naturalistic fallacy, appeal to tradition, slippery slope) inside a real moral argument."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations of Moral Reasoning",
+      "summary": "Before debating any hard case, you need to know what kind of question 'is this right?' actually is, and what counts as a real argument rather than a shrug.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "What Ethics Asks",
+          "minutes": 12,
+          "intro": "Every person already has opinions about right and wrong, but ethics is the discipline of testing those opinions against reasons instead of just restating them louder.",
+          "sections": [
+            {
+              "heading": "Ethics, Law, and Etiquette",
+              "body": [
+                "**Ethics** (or moral philosophy) studies what makes actions right or wrong and what makes a person good or bad, using reasons rather than personal preference. It is not the same as **law**, which is whatever a government enforces, or **etiquette**, which is a culture's rules for polite behavior. Slavery was legal in many places and impolite behavior can be perfectly ethical, which shows all three come apart.",
+                "A useful test: if you can ask 'but was that actually right?' about something legal, or 'was that actually fine?' about something rude, you have located a genuinely ethical question underneath the legal or social one. Ethics is the field that takes that follow-up question seriously and tries to answer it with argument."
+              ]
+            },
+            {
+              "heading": "Three Branches: Descriptive, Normative, Metaethics",
+              "body": [
+                "**Descriptive ethics** reports what people or cultures actually believe is right, without judging it — an anthropologist doing this work is not endorsing anything, just recording it. **Normative ethics** asks what actually is right or wrong and tries to justify an answer, producing theories like utilitarianism or Kantian ethics that you will study in this course.",
+                "**Metaethics** asks a further question behind both: what does 'right' even mean, and is there moral truth at all, independent of what any person or culture believes? A metaethical question is not 'should I lie?' but 'is there a fact of the matter about whether lying is wrong, or is morality just invented?' — the topic of the next lesson."
+              ],
+              "example": {
+                "problem": "Classify each question as descriptive, normative, or metaethical: (1) 'Did most ancient Spartans approve of infanticide?' (2) 'Is infanticide wrong?' (3) 'Can moral claims be true or false at all?'",
+                "steps": [
+                  "Question 1 only reports a belief held by a group, with no judgment attached — that is descriptive.",
+                  "Question 2 asks for a verdict on the action itself, backed by reasons — that is normative.",
+                  "Question 3 asks about the status of moral claims in general, prior to any specific verdict — that is metaethical."
+                ],
+                "answer": "(1) Descriptive, (2) Normative, (3) Metaethical."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Ethics", "def": "The study of what makes actions right or wrong and people good or bad, using reasoned argument."},
+            {"term": "Descriptive ethics", "def": "Reporting what a person or culture believes is right, without judging those beliefs."},
+            {"term": "Normative ethics", "def": "The branch that argues for what actually is right or wrong."},
+            {"term": "Metaethics", "def": "The branch that asks what moral terms mean and whether moral truth exists at all."}
+          ],
+          "practice": [
+            {"q": "Asking 'is capital punishment actually justified?' rather than 'is it legal?' shows you are asking a:", "choices": ["Normative ethical question", "Descriptive question only", "Question of etiquette", "Metaethical question about meaning"], "answer": 0, "explain": "Asking whether an action is truly justified, beyond its legal status, is a normative ethics question."},
+            {"q": "A researcher who records, without judgment, that a culture approves of arranged marriage is doing:", "choices": ["Descriptive ethics", "Normative ethics", "Metaethics", "Etiquette"], "answer": 0, "explain": "Reporting a belief without evaluating it is descriptive ethics, not an ethical judgment itself."},
+            {"q": "'Is there any objective fact about whether an action is wrong, or is morality just a human invention?' is a question in:", "choices": ["Metaethics", "Descriptive ethics", "Law", "Etiquette"], "answer": 0, "explain": "This asks about the status and meaning of moral claims themselves, which is the metaethical question."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Is Morality Relative?",
+          "minutes": 13,
+          "intro": "The claim 'that's just your opinion, morality is relative' sounds tolerant and modest, but it is actually a strong philosophical position that runs into serious trouble the moment you try to live by it consistently.",
+          "sections": [
+            {
+              "heading": "Cultural Relativism",
+              "body": [
+                "**Cultural relativism** holds that what is morally right or wrong is entirely determined by a given culture's norms, so there is no standard above or outside any culture by which to judge it. On this view, if a culture accepts a practice, it is right for that culture, full stop — there is no further question to ask.",
+                "Cultural relativism is often motivated by genuine humility about judging unfamiliar cultures, and by the real fact that customs (food, dress, greetings) vary enormously and unproblematically across the world. But moral relativism is a much stronger claim than 'customs vary' — it says no culture can ever be mistaken about right and wrong, which is a very different and riskier claim."
+              ]
+            },
+            {
+              "heading": "The Reformer's Dilemma",
+              "body": [
+                "The strongest objection to cultural relativism is the **reformer's dilemma**: if a culture's norms simply define what is right for that culture, then a moral reformer within that culture — someone opposing slavery, or arguing for women's suffrage, before the culture changed its mind — was, by definition, wrong at the time they spoke, since they contradicted the prevailing norm. Yet we clearly regard such reformers as having been right all along, ahead of their culture rather than mistaken.",
+                "This suggests cross-cultural moral criticism is sometimes appropriate and coherent, which relativism cannot allow. Rejecting strict relativism does not require claiming your own culture is perfect or that no genuine moral disagreement or uncertainty exists — it only requires allowing that some practices can be assessed by standards that do not reduce to 'what this culture currently accepts.'"
+              ],
+              "example": {
+                "problem": "A strict cultural relativist says: 'A 19th-century abolitionist in a slaveholding society was, by definition, morally wrong to call slavery unjust, since their society's norms permitted it.' Evaluate this consequence.",
+                "steps": [
+                  "Note that relativism defines rightness entirely by prevailing cultural norms at the time.",
+                  "Apply that definition consistently to the abolitionist, who opposed the prevailing norm.",
+                  "Notice this forces the conclusion that the abolitionist was wrong to object — a conclusion nearly everyone rejects on reflection.",
+                  "Conclude that this consequence counts as strong evidence against strict cultural relativism, since it implies moral reformers are wrong merely for disagreeing with their era."
+                ],
+                "answer": "The reformer's dilemma shows strict cultural relativism has a very costly implication: it must call the abolitionist wrong simply for opposing a norm, which is a serious problem for the theory rather than for the abolitionist."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Cultural relativism", "def": "The view that moral rightness is entirely determined by a culture's own norms, with no standard outside them."},
+            {"term": "Moral objectivism", "def": "The view that at least some moral claims are true or false independent of what any individual or culture believes."},
+            {"term": "Reformer's dilemma", "def": "The objection that relativism must count moral reformers as wrong merely for opposing their culture's prevailing norm."}
+          ],
+          "practice": [
+            {"q": "The reformer's dilemma is an objection to cultural relativism because it shows relativism must conclude that:", "choices": ["Moral reformers were wrong by definition, since they opposed prevailing norms", "All cultures are morally equal", "Customs like food and dress vary across cultures", "No moral disagreement is ever possible"], "answer": 0, "explain": "If rightness is defined by current norms, anyone opposing those norms is, by definition, wrong — including reformers we now credit as correct."},
+            {"q": "Noticing that greeting customs and dress vary harmlessly across cultures supports:", "choices": ["That customs vary, which is weaker than the claim that morality itself is entirely relative", "Full cultural relativism about all moral questions", "That no cross-cultural judgment is ever appropriate", "That reformers are always mistaken"], "answer": 0, "explain": "Variation in customs is uncontroversial; moral relativism is a much stronger and separate claim that doesn't follow from mere custom variation."},
+            {"q": "Moral objectivism, as defined in this lesson, claims that:", "choices": ["At least some moral claims are true or false independent of belief", "Every culture is identical in its moral views", "No moral disagreement ever exists", "Etiquette and ethics are the same thing"], "answer": 0, "explain": "Objectivism only requires that some moral facts hold regardless of what any person or culture believes, not universal agreement."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "The Is-Ought Gap and Building a Moral Argument",
+          "minutes": 14,
+          "intro": "A shockingly large share of everyday moral arguments secretly try to sneak an 'ought' out of a plain 'is,' and learning to spot that move is one of the single most useful skills in this entire course.",
+          "sections": [
+            {
+              "heading": "Hume's Is-Ought Gap",
+              "body": [
+                "Philosopher David Hume observed that arguments often slide from purely descriptive premises (statements of fact, what 'is' the case) to a normative conclusion (what 'ought' to be done) without explaining the jump. For example: 'Humans have always eaten meat, therefore eating meat is morally fine' moves from a historical fact straight to a moral verdict, with no bridging principle connecting them.",
+                "This is now called the **is-ought gap** (or **Hume's guillotine**): no set of purely factual premises, by itself, logically entails a moral conclusion. To reach a normative 'ought,' an argument needs at least one normative premise already in it — the facts alone are never enough."
+              ]
+            },
+            {
+              "heading": "The Naturalistic Fallacy and Building Sound Arguments",
+              "body": [
+                "A closely related error is the **naturalistic fallacy**: inferring that because something is 'natural' (occurs in nature, or is common, or is traditional), it must therefore be good or right. Disease, aggression, and infant mortality are all perfectly natural, which shows 'natural' cannot by itself guarantee 'good.'",
+                "A well-built moral argument instead states its normative premise openly: 'Unnecessary suffering is wrong (normative premise); this policy causes unnecessary suffering (factual premise); therefore this policy is wrong (conclusion).' Naming the normative premise explicitly is what separates genuine ethical reasoning from a disguised assertion, because it puts the actual point of disagreement — the normative premise — up for examination rather than hiding it behind a fact."
+              ],
+              "example": {
+                "problem": "Diagnose this argument: 'Aggression and dominance hierarchies appear throughout the animal kingdom, so it is natural, and therefore acceptable, for humans to dominate weaker rivals in business.'",
+                "steps": [
+                  "Identify the factual premise: aggression and hierarchy occur widely in nature.",
+                  "Identify the hidden move: 'natural, and therefore acceptable' assumes natural implies good, with no defense of that link.",
+                  "Name the fallacy: this is the naturalistic fallacy, since many natural things (disease, infant mortality) are not good.",
+                  "Rebuild it honestly: the arguer would need to add and defend an explicit normative premise, such as 'whatever increases evolutionary fitness is morally good,' which is a much more debatable claim than the original hidden version."
+                ],
+                "answer": "The argument commits the naturalistic fallacy by treating 'occurs in nature' as if it settled 'is morally acceptable,' without ever stating or defending the needed normative premise."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Is-ought gap", "def": "Hume's observation that purely factual premises can never by themselves entail a moral 'ought' conclusion."},
+            {"term": "Naturalistic fallacy", "def": "The error of inferring that something is good or right merely because it is natural or common."},
+            {"term": "Normative premise", "def": "A premise in an argument that states a value or moral standard, required to validly reach a moral conclusion."}
+          ],
+          "practice": [
+            {"q": "The is-ought gap identifies a problem with arguments that:", "choices": ["Move from purely factual premises to a moral conclusion with no normative premise", "Use any normative premise at all", "Only ever discuss facts and never reach conclusions", "Rely exclusively on cultural relativism"], "answer": 0, "explain": "Hume's point is that factual premises alone, without an explicit normative premise, cannot validly yield an 'ought' conclusion."},
+            {"q": "'Humans have hunted for food throughout history, so hunting is morally acceptable' is best diagnosed as:", "choices": ["The naturalistic fallacy", "A valid deductive argument", "A metaethical claim", "An example of cultural relativism specifically"], "answer": 0, "explain": "It infers 'acceptable' from 'natural/historical' without defending that natural or historical practices are automatically good."},
+            {"q": "A well-built moral argument improves on a hidden naturalistic-fallacy argument by:", "choices": ["Stating its normative premise explicitly so it can be examined", "Removing all factual premises entirely", "Avoiding any conclusion at all", "Appealing only to what a culture currently believes"], "answer": 0, "explain": "Making the normative premise explicit exposes the actual point of disagreement instead of smuggling it in unstated."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Consequentialism",
+      "summary": "The first great family of moral theories judges actions entirely by their outcomes — so the question becomes: outcomes for whom, measured how, and at what cost to fairness?",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Utilitarianism: The Greatest Good",
+          "minutes": 13,
+          "intro": "Imagine judging every decision, from a personal favor to a national policy, by one single question: does this produce more overall well-being than the alternatives? — that single-mindedness is both utilitarianism's power and its danger.",
+          "sections": [
+            {
+              "heading": "Bentham, Mill, and the Utility Principle",
+              "body": [
+                "**Utilitarianism**, developed by Jeremy Bentham and refined by John Stuart Mill, holds that the right action is the one that produces the greatest total **utility** — commonly understood as happiness or well-being minus suffering — summed across everyone affected. Bentham treated all pleasures as equal in kind and different only in intensity and duration; Mill later argued that some pleasures (intellectual, creative) are qualitatively higher than mere bodily pleasure, even if less intense.",
+                "Utilitarianism is a form of **consequentialism**: only outcomes matter to rightness, not the nature of the act itself or anyone's intentions. This makes it flexible and outcome-focused, but it also means utilitarianism must, in principle, weigh literally everyone's welfare, including strangers and even future generations, not just the decision-maker's own circle."
+              ]
+            },
+            {
+              "heading": "Applying the Calculation",
+              "body": [
+                "To apply utilitarianism, you estimate the total welfare produced by each available option and pick the one with the highest sum, weighing intensity, duration, and the number of people affected. Consider a city government deciding whether to build a homeless shelter that will mildly annoy 200 nearby homeowners (minor property value and noise concerns) while providing life-changing housing stability to 50 people currently on the street.",
+                "A utilitarian calculation would weigh the modest, diffuse harm to 200 homeowners against the severe, concentrated benefit to 50 formerly unhoused people, and in most realistic estimates the severe benefit to the smaller group outweighs the mild harm spread across the larger group — illustrating that utilitarian reasoning is not simply 'majority rules' but 'weigh total welfare,' where intensity matters as much as headcount."
+              ],
+              "example": {
+                "problem": "A factory can install a $2 million safety upgrade that would prevent an estimated 3 serious injuries per year, or skip it and pass the savings to 10,000 shareholders as a small dividend increase. Sketch the utilitarian analysis.",
+                "steps": [
+                  "Estimate the harm side: 3 serious injuries per year represent severe, concentrated suffering for a small number of workers and their families.",
+                  "Estimate the benefit side: the dividend increase distributed across 10,000 shareholders is a very small gain per person.",
+                  "Compare total magnitudes, not headcounts alone: severe injury typically carries far more disutility per person than a marginal dividend gain, even though far fewer people are affected.",
+                  "Conclude, on standard utilitarian reasoning, that the safety upgrade likely produces greater total utility despite benefiting a smaller group in raw numbers."
+                ],
+                "answer": "A utilitarian calculation would very likely favor the safety upgrade, since severe injury to a few outweighs a marginal financial gain spread thinly across many, once you weigh intensity and not just headcount."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Utilitarianism", "def": "The view that the right action produces the greatest total utility (well-being minus suffering) summed across everyone affected."},
+            {"term": "Consequentialism", "def": "Any theory holding that the rightness of an act is determined entirely by its outcomes."},
+            {"term": "Utility", "def": "A measure of net well-being — happiness or benefit minus suffering or harm — used to compare outcomes."}
+          ],
+          "practice": [
+            {"q": "Utilitarianism is a form of consequentialism because it holds that:", "choices": ["Rightness is determined entirely by an action's outcomes", "Rightness depends on following fixed duties regardless of outcome", "Only the actor's intentions matter, not results", "Cultural norms determine rightness"], "answer": 0, "explain": "Consequentialist theories, including utilitarianism, judge actions solely by the outcomes they produce."},
+            {"q": "Mill's addition to Bentham's version of utilitarianism was the idea that:", "choices": ["Some pleasures are qualitatively higher than others, not just more intense", "Only the majority's preference counts", "Utility cannot be compared across people", "Consequences never matter, only rules"], "answer": 0, "explain": "Mill distinguished higher (intellectual, creative) from lower (bodily) pleasures, adding a qualitative dimension Bentham's model lacked."},
+            {"q": "A utilitarian choosing between a policy that mildly inconveniences a large group and one that severely harms a small group should:", "choices": ["Weigh total intensity and duration of welfare change, not just the number of people affected", "Always favor whichever option affects more people", "Always favor whichever option affects fewer people", "Ignore intensity and count only who is affected"], "answer": 0, "explain": "Utilitarian calculation sums total welfare change, where severity and duration matter as much as the number of people involved."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Act versus Rule Utilitarianism",
+          "minutes": 12,
+          "intro": "A doctor could save five patients by secretly harvesting one healthy visitor's organs — pure act-by-act utilitarian math might even favor it, which is exactly the kind of case that pushed philosophers to build a more careful version of the theory.",
+          "sections": [
+            {
+              "heading": "Act Utilitarianism",
+              "body": [
+                "**Act utilitarianism** applies the utility calculation directly to each individual act: for this specific choice, right now, which option produces the most total utility? It requires no fixed rules — every situation gets its own fresh calculation, which makes it maximally flexible to unique circumstances.",
+                "This flexibility is also its biggest liability: applied strictly and literally, act utilitarianism could endorse harvesting one healthy person's organs to save five dying patients, since the raw calculation (one life lost, five saved) favors the harvest. Nearly everyone's moral intuition rejects this conclusion, which is a serious problem for a theory that is supposed to track what is actually right."
+              ]
+            },
+            {
+              "heading": "Rule Utilitarianism as a Response",
+              "body": [
+                "**Rule utilitarianism** asks a different question: what general rule, if consistently followed by everyone, would produce the greatest overall utility — and then requires following that rule even in an individual case where breaking it looks locally optimal. A rule like 'never take organs from unwilling donors' produces enormous long-run utility (trust in hospitals, willingness to seek care) even though following it in the transplant case forgoes a one-time local gain.",
+                "Rule utilitarianism trades away some of act utilitarianism's flexibility for stability and predictability, and it avoids the organ-harvesting result because the relevant rule, evaluated for its long-run consequences across all cases, clearly outperforms a policy of ad hoc exceptions. Critics reply that rule utilitarianism risks collapsing back into act utilitarianism, since a sufficiently detailed and case-specific 'rule' just re-becomes a per-case calculation."
+              ],
+              "example": {
+                "problem": "A transplant surgeon has five patients who will die without organs and one healthy visitor whose organs are a perfect match for all five. Compare what strict act utilitarianism and rule utilitarianism say.",
+                "steps": [
+                  "Act utilitarianism, applied narrowly to this single choice, compares one death against five deaths and — taken in isolation — favors the harvest.",
+                  "Rule utilitarianism instead evaluates the general rule 'hospitals may take organs from unwilling patients when it saves more lives.'",
+                  "Assess that rule's long-run effects: fear of hospitals, collapse of trust in medicine, people avoiding care — consequences far worse than five deaths.",
+                  "Conclude the rule utilitarian rejects the harvest because the best general rule forbids it, even though this one case looks locally favorable."
+                ],
+                "answer": "Narrow act-by-act utilitarian math can favor the harvest, but rule utilitarianism rejects it, because the general rule permitting such harvesting would produce far worse total utility across all cases through destroyed trust in medicine."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Act utilitarianism", "def": "Applying the utility calculation separately to each individual act, with no fixed rules."},
+            {"term": "Rule utilitarianism", "def": "Judging actions by whether they follow the general rule that would produce the greatest utility if consistently followed."}
+          ],
+          "practice": [
+            {"q": "The organ-harvesting case is a standard objection to strict act utilitarianism because:", "choices": ["Its case-by-case calculation can favor an outcome that violates near-universal moral intuition", "It shows utilitarianism never considers consequences", "It shows rule utilitarianism produces the same result", "It proves consequentialism is identical to deontology"], "answer": 0, "explain": "Applied narrowly to one isolated case, the raw calculation (one death versus five) can favor harvesting, which almost everyone judges to be wrong."},
+            {"q": "Rule utilitarianism avoids the organ-harvesting conclusion by:", "choices": ["Evaluating the long-run consequences of a general rule rather than this one isolated act", "Ignoring consequences entirely", "Adopting Kant's categorical imperative instead", "Rejecting utility as a measure altogether"], "answer": 0, "explain": "Rule utilitarianism asks what rule, followed consistently, maximizes utility overall — and a permissive organ-harvesting rule fails that test due to destroyed trust."},
+            {"q": "A key criticism of rule utilitarianism is that:", "choices": ["A sufficiently detailed 'rule' can collapse back into per-case act utilitarian calculation", "It never considers the consequences of a rule", "It is identical to cultural relativism", "It cannot be applied to medical ethics"], "answer": 0, "explain": "If rules are allowed to become highly specific to each situation, the theory risks becoming indistinguishable from act utilitarianism."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Objections to Consequentialism",
+          "minutes": 12,
+          "intro": "Consequentialism's promise — reduce ethics to one clean calculation — is exactly what makes its failures so sharp, and three classic objections show where the calculation breaks down.",
+          "sections": [
+            {
+              "heading": "The Utility Monster and Measurement Problems",
+              "body": [
+                "Philosopher Robert Nozick's **utility monster** thought experiment imagines a being that gains vastly more utility per unit of resource than ordinary people do, so that strict utilitarian math requires funneling all resources to the monster at everyone else's expense, since that maximizes total utility. This exposes a structural weakness: utilitarianism cares about the total sum, not how it is distributed, so an extreme enough imbalance in someone's utility-generating capacity could justify extreme unfairness.",
+                "A separate practical problem is **measurement**: utility is not literally measurable in shared units the way currency or distance is, so real-world utilitarian calculations always rely on rough estimates and comparisons across different people's inner experiences, which cannot be verified directly. This does not make utilitarian reasoning useless, but it does mean confident precise-sounding calculations should be treated with real caution."
+              ]
+            },
+            {
+              "heading": "The Justice Objection",
+              "body": [
+                "The most damaging objection is the **justice objection**: consequentialism appears to permit punishing an innocent person if doing so happens to produce the best overall outcome — for instance, framing one innocent bystander for a crime to calm a riot and prevent greater violence, if the math works out favorably. Most people find this deeply wrong regardless of the calculated outcome, which suggests some constraints (like not punishing the innocent) hold independently of consequences.",
+                "Defenders of consequentialism respond in two ways: some bite the bullet and argue the framing really would be wrong in any realistic case once you count in longer-run harms (loss of trust in the justice system, risk of discovery); others move toward rule consequentialism, arguing that a rule against framing the innocent produces better outcomes overall than case-by-case exceptions. Both replies show consequentialists take the objection seriously rather than dismissing it."
+              ],
+              "example": {
+                "problem": "A sheriff can frame and execute one known-innocent man to stop a mob from lynching five innocent people in retaliatory riots. Strict act-consequentialist math seems to favor framing him. Explain why this is treated as a serious objection to consequentialism rather than a minor puzzle.",
+                "steps": [
+                  "Note the calculation: one innocent death versus five, so bare act-consequentialist arithmetic favors framing the one.",
+                  "Recognize that punishing a known-innocent person is treated by nearly everyone as wrong independent of the numbers involved.",
+                  "Draw the conclusion: this suggests justice or the rights of the innocent function as constraints on action that do not simply bend to aggregate outcomes.",
+                  "Note this is exactly the kind of case that motivates deontological theories, covered next, which build in such constraints directly."
+                ],
+                "answer": "The case is a serious objection because it shows raw consequence-counting can endorse punishing a known-innocent person, which conflicts sharply with the near-universal judgment that justice for individuals is not simply negotiable against aggregate outcomes."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Utility monster", "def": "A thought experiment imagining a being whose extreme utility gains would justify funneling all resources to it under strict utilitarian math."},
+            {"term": "Justice objection", "def": "The objection that consequentialism can permit punishing an innocent person when doing so produces the best aggregate outcome."}
+          ],
+          "practice": [
+            {"q": "The utility monster thought experiment targets which weakness of utilitarianism?", "choices": ["It cares only about the total sum of utility, not how it is distributed", "It ignores consequences entirely", "It requires following fixed rules regardless of outcome", "It cannot be applied to resource allocation"], "answer": 0, "explain": "Because utilitarianism maximizes the total, an extreme enough individual utility gain could in principle justify extreme unfairness in distribution."},
+            {"q": "The justice objection to consequentialism is illustrated by a case where:", "choices": ["Framing an innocent person produces a better aggregate outcome under the calculation", "Two rule-based theories disagree about lying", "A culture's customs differ from another's", "Utility cannot be measured precisely at all"], "answer": 0, "explain": "The classic case involves punishing a known-innocent person because doing so calculates out to a better overall outcome, which conflicts with intuitions about justice."},
+            {"q": "One consequentialist reply to the justice objection is to:", "choices": ["Move toward rule consequentialism, arguing a rule against framing the innocent produces better outcomes overall", "Deny that consequences ever matter", "Adopt strict cultural relativism instead", "Reject the idea of utility altogether"], "answer": 0, "explain": "Rule consequentialists argue that evaluating the general rule, rather than the isolated act, better preserves justice while remaining consequentialist."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Duty, Rights, and Virtue",
+      "summary": "Consequences are not the only place to ground morality — this unit studies theories built instead on duty, on rights, and on the character of the person acting.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Kant and the Categorical Imperative",
+          "minutes": 14,
+          "intro": "Immanuel Kant thought morality could not depend on outcomes at all, because outcomes are too uncertain and too easily manipulated — instead he built an entire ethics out of one test you can run on the reasoning behind an action.",
+          "sections": [
+            {
+              "heading": "Duty Over Outcome",
+              "body": [
+                "**Deontological ethics** (from the Greek *deon*, duty) judges actions by whether they conform to a moral duty or rule, not by their consequences. Kant argued that an action only has real moral worth when done from duty — because it is right — rather than merely from inclination or for a good outcome, even if the visible behavior looks identical either way.",
+                "This is why a shopkeeper who gives correct change only because dishonesty would hurt business, on Kant's view, has not acted from a genuinely moral motive, even though the customer receives the same correct change as they would from an honest shopkeeper. What matters is the underlying reason, called the **maxim**, not just the observable result."
+              ]
+            },
+            {
+              "heading": "The Categorical Imperative",
+              "body": [
+                "Kant's central test, the **categorical imperative**, has several formulations; the most used is: act only according to a maxim you could, at the same time, will to become a **universal law** — meaning everyone, in a similar situation, follows the same rule. Lying to get out of a debt fails this test, because if lying-to-escape-debt became universal, the entire practice of lending on trust would collapse, making the original lie impossible to even attempt.",
+                "A second formulation, the **humanity formula**, requires treating people always as ends in themselves, never merely as a means to your own purposes. Manipulating someone into a business deal through deception treats them as a mere tool for your profit rather than as a rational agent capable of consenting to the real terms, which Kant holds is wrong regardless of the financial outcome."
+              ],
+              "example": {
+                "problem": "Someone considers borrowing money with a false promise to repay, because they urgently need cash and know they can't actually pay it back. Apply the universal-law formulation of the categorical imperative.",
+                "steps": [
+                  "State the maxim honestly: 'I will make a false promise to repay whenever I urgently need money and know I can't pay it back.'",
+                  "Universalize it: imagine everyone in financial need adopts this exact maxim.",
+                  "Test for consistency: if everyone made false promises to repay whenever convenient, no one would trust a promise to repay, and the entire practice of lending on trust would collapse.",
+                  "Conclude the maxim is self-defeating once universalized — the false promise depends on a practice (trusted lending) that its own universal adoption would destroy — so the categorical imperative forbids it."
+                ],
+                "answer": "The maxim fails the universal-law test: if everyone made false promises to repay whenever it suited them, lending on trust would become impossible, undermining the very practice the false promise depends on — so Kant's test forbids the lie."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Deontological ethics", "def": "A theory judging actions by conformity to duty or moral rule, not by consequences."},
+            {"term": "Maxim", "def": "The underlying principle or reason behind an action, which Kant holds is what matters morally."},
+            {"term": "Categorical imperative", "def": "Kant's test: act only on a maxim you could will to become a universal law followed by everyone."},
+            {"term": "Humanity formula", "def": "Kant's requirement to treat people always as ends in themselves, never merely as a means."}
+          ],
+          "practice": [
+            {"q": "On Kant's view, a shopkeeper who is honest only because dishonesty would hurt business:", "choices": ["Has not acted from a genuinely moral motive, despite the correct behavior", "Has satisfied the categorical imperative fully", "Has acted with more moral worth than an honest shopkeeper", "Has committed the naturalistic fallacy"], "answer": 0, "explain": "Kant holds that moral worth requires acting from duty, not merely from self-interested inclination, even when the visible action is identical."},
+            {"q": "The universal-law formulation of the categorical imperative tests a maxim by asking:", "choices": ["Whether you could will everyone, in a similar situation, to act on the same maxim", "Whether the action produces the most total utility", "Whether a culture currently approves of the action", "Whether the action is legal"], "answer": 0, "explain": "Kant's test requires that the maxim be universalizable without self-contradiction or self-defeat, not that it maximizes utility or matches cultural norms."},
+            {"q": "The humanity formula of the categorical imperative forbids:", "choices": ["Treating a person merely as a means to your own purposes rather than as an end", "Ever taking any action that benefits yourself", "All forms of consequentialist reasoning", "Making promises of any kind"], "answer": 0, "explain": "Kant's second formulation requires treating rational agents as ends in themselves, which rules out using deception or manipulation to use people purely instrumentally."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Rights and the Social Contract",
+          "minutes": 12,
+          "intro": "Instead of asking what rule you could universalize, social contract theory asks a more concrete question: what rules would free, self-interested people actually agree to live under, if they had to choose together?",
+          "sections": [
+            {
+              "heading": "Natural Rights and Negative versus Positive Rights",
+              "body": [
+                "A **right** is a justified claim that others must respect, typically by not interfering (a **negative right**, like the right to speak freely) or by actively providing something (a **positive right**, like a right to basic education). Philosophers such as John Locke argued for natural rights to life, liberty, and property that exist independent of any government and that government exists to protect.",
+                "Rights-based ethics treats certain claims as side constraints on what may be done to a person, even to produce a better aggregate outcome — echoing the deontological rejection of sacrificing an individual for the greater good, but grounded in the language of rights rather than duty as such."
+              ]
+            },
+            {
+              "heading": "Social Contract Theory",
+              "body": [
+                "**Social contract theory**, developed by Hobbes, Locke, and Rousseau, and later reworked by John Rawls, grounds morality and political authority in a hypothetical agreement: rules and institutions are just if they are the ones free, rational people would agree to, especially if choosing without knowing their own future position in society. Rawls's version, the **veil of ignorance**, asks you to design society's basic rules without knowing whether you will be born rich or poor, healthy or disabled, majority or minority.",
+                "Rawls argued that reasoning behind this veil would lead people to favor strong protections for basic liberties and rules that improve the position of the worst-off, since anyone could end up there — a distinctly different method for reaching moral conclusions than calculating aggregate utility or testing a maxim's universalizability."
+              ],
+              "example": {
+                "problem": "Using Rawls's veil of ignorance, evaluate a proposed policy that would give substantially better healthcare access to the wealthiest 10% and minimal access to everyone else.",
+                "steps": [
+                  "Imagine designing this rule without knowing whether you will end up in the wealthy 10% or the other 90%.",
+                  "Recognize the large risk: there is a 90% chance you would end up with minimal healthcare access under this policy.",
+                  "Compare to an alternative of broadly equal, adequate access, which carries far less downside risk regardless of where you land.",
+                  "Conclude that behind the veil, a rational self-interested person would reject the unequal policy in favor of broader, more equal access."
+                ],
+                "answer": "Behind the veil of ignorance, a rational person facing a 90% chance of landing in the disadvantaged group would reject the unequal healthcare policy and favor broader, more equal access instead."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Right", "def": "A justified claim that others must respect, either by not interfering (negative right) or by providing something (positive right)."},
+            {"term": "Social contract theory", "def": "The view that morality and political authority derive from an agreement free, rational people would make together."},
+            {"term": "Veil of ignorance", "def": "Rawls's device for choosing society's rules without knowing your own future position within it."}
+          ],
+          "practice": [
+            {"q": "A negative right, such as the right to free speech, primarily requires others to:", "choices": ["Refrain from interfering", "Actively provide a good or service", "Vote in favor of it", "Calculate its utility before acting"], "answer": 0, "explain": "Negative rights are claims against interference; positive rights are claims to active provision of something."},
+            {"q": "Rawls's veil of ignorance asks you to choose society's rules:", "choices": ["Without knowing what position you will occupy in that society", "After already knowing you are wealthy", "Based only on your own culture's current norms", "By maximizing utility across all agents with full knowledge of everyone's position"], "answer": 0, "explain": "The veil of ignorance removes knowledge of your own future position specifically to produce impartial, fair rule selection."},
+            {"q": "Rights-based ethics resembles deontology most closely in that both:", "choices": ["Treat certain claims as constraints that cannot simply be overridden for a better aggregate outcome", "Calculate the greatest total utility as the sole standard", "Depend entirely on what a culture currently believes", "Reject the existence of moral rules altogether"], "answer": 0, "explain": "Both traditions resist sacrificing an individual's claims merely because doing so would produce a better overall calculated outcome."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Virtue Ethics: Character and Flourishing",
+          "minutes": 12,
+          "intro": "Instead of asking 'what rule applies?' or 'what maximizes utility?', Aristotle asked a strikingly different question: what kind of person should I become, such that acting well becomes second nature?",
+          "sections": [
+            {
+              "heading": "Aristotle and Eudaimonia",
+              "body": [
+                "**Virtue ethics**, rooted in Aristotle, holds that ethics is fundamentally about character rather than about isolated acts or their outcomes. The central goal is **eudaimonia**, often translated as 'flourishing' or 'living well,' achieved by developing stable character traits called **virtues** — honesty, courage, generosity, temperance — through habituation and practice rather than by memorizing rules.",
+                "On this view, a single honest act doesn't make you honest any more than one healthy meal makes you fit; virtue is a settled disposition built over time, and the honest, courageous, generous person reliably does the right thing because of who they have become, not because they consulted a rule or ran a calculation in the moment."
+              ]
+            },
+            {
+              "heading": "The Doctrine of the Mean",
+              "body": [
+                "Aristotle's **doctrine of the mean** holds that each virtue sits between two vices — one of deficiency, one of excess. Courage is the mean between cowardice (deficiency of courage) and recklessness (excess of courage); generosity is the mean between stinginess and wastefulness. The right amount is not a fixed universal number but depends on the situation, a judgment call Aristotle calls **practical wisdom** (*phronesis*).",
+                "Virtue ethics is often praised for capturing something the rule-based and outcome-based theories miss: that good character, built through habit, guides action reliably across countless situations no rule book could fully anticipate. Its main criticism is that it can feel less action-guiding in a genuine dilemma, since 'be virtuous' offers less concrete direction than 'maximize utility' or 'follow this maxim' when you are actually stuck."
+              ],
+              "example": {
+                "problem": "A soldier faces a dangerous situation. Identify what would count as the deficient vice, the excessive vice, and the virtuous mean, using Aristotle's doctrine of the mean applied to courage.",
+                "steps": [
+                  "Identify the deficiency: fleeing every risk regardless of the stakes, driven by excessive fear — this is cowardice.",
+                  "Identify the excess: charging into any danger recklessly, ignoring real risk to self and others — this is recklessness.",
+                  "Identify the mean: facing genuine danger when the cause warrants it, while still recognizing real risk and acting with judgment rather than blind fearlessness — this is courage.",
+                  "Note that practical wisdom, not a fixed formula, is what tells the soldier which specific action counts as the mean in this particular situation."
+                ],
+                "answer": "Cowardice (excessive fear, fleeing unnecessarily) and recklessness (ignoring real danger) are the two vices; courage is the mean between them, requiring practical wisdom to judge case by case."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Virtue ethics", "def": "A theory centering on the character of the moral agent rather than on rules or consequences."},
+            {"term": "Eudaimonia", "def": "Aristotle's term for human flourishing or living well, the central goal of a virtuous life."},
+            {"term": "Doctrine of the mean", "def": "Aristotle's principle that each virtue is a mean between a vice of deficiency and a vice of excess."},
+            {"term": "Practical wisdom", "def": "The learned judgment needed to identify the virtuous mean in a specific real situation."}
+          ],
+          "practice": [
+            {"q": "Virtue ethics differs from utilitarianism and deontology mainly by focusing on:", "choices": ["The character and habituated dispositions of the moral agent", "Only the consequences of a single act", "Only whether a maxim can be universalized", "Only what a culture currently believes"], "answer": 0, "explain": "Virtue ethics centers on stable character traits developed through habit, rather than on rules or outcomes for a single act."},
+            {"q": "Aristotle's doctrine of the mean holds that courage is the mean between:", "choices": ["Cowardice and recklessness", "Honesty and generosity", "Utility and duty", "Law and etiquette"], "answer": 0, "explain": "Courage sits between the deficiency (cowardice) and the excess (recklessness) of the same underlying trait."},
+            {"q": "A common criticism of virtue ethics is that it:", "choices": ["Offers less concrete guidance in an acute dilemma than a rule- or outcome-based theory", "Never considers character at all", "Is identical to strict act utilitarianism", "Cannot be traced to any historical philosopher"], "answer": 0, "explain": "Because it centers on character rather than a decision procedure, virtue ethics can feel less directive when someone needs an immediate concrete answer."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Applied Ethics I: Life and Death",
+      "summary": "The theories only earn their keep once you use them on the hardest real cases — starting with the ethics of abortion, euthanasia, and our treatment of animals.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Abortion and the Personhood Debate",
+          "minutes": 13,
+          "intro": "Almost every argument about abortion, once you trace it back far enough, turns on a single contested question: at what point, if any, does a developing human being acquire full moral status?",
+          "sections": [
+            {
+              "heading": "The Personhood Question",
+              "body": [
+                "Much of the abortion debate centers on **moral personhood** — the properties (self-awareness, rationality, the capacity to value one's own future) that make an entity's interests count fully in moral reasoning. Conservative positions typically argue personhood begins at conception, or that a developing fetus has full moral status because of its potential to become a person, or its continuous biological humanity from conception onward.",
+                "Liberal positions typically argue that personhood requires capacities (sentience, self-awareness) that develop gradually, so early-stage embryos lack the properties that ground full moral status, even while a birthed infant clearly has them. Philosopher Mary Anne Warren argued personhood requires several traits together, including consciousness and self-awareness, that are not present at conception."
+              ]
+            },
+            {
+              "heading": "Thomson's Violinist and Bodily Autonomy",
+              "body": [
+                "Philosopher Judith Jarvis Thomson offered an influential argument that grants, for the sake of argument, that a fetus is a full person, and still argues abortion can be permissible: imagine waking up connected by tubes to a famous violinist who will die if disconnected, but whom you never consented to be connected to. Thomson argues you are not morally obligated to remain connected for nine months, even though the violinist is a person and disconnecting causes death, because the right to life does not include a right to use another person's body without consent.",
+                "This argument shifts the debate from 'is the fetus a person?' to a second, separate question: even granting personhood, does anyone have a right to use another's body to survive? Critics of Thomson's argument note disanalogies — pregnancy typically results from a voluntary act in a way the violinist scenario does not — while defenders reply that the core point about bodily autonomy survives even with that difference."
+              ],
+              "example": {
+                "problem": "Summarize why Thomson's violinist thought experiment is structured to grant the strongest possible assumption to the anti-abortion position before making its argument.",
+                "steps": [
+                  "Note that Thomson stipulates the violinist is a full person with a right to life — the strongest anti-abortion premise.",
+                  "Observe that even granting this, she argues you are not obligated to stay connected, since your bodily autonomy was never consented away.",
+                  "Recognize the strategic point: if the argument works even granting full personhood, it shows the debate cannot be settled by the personhood question alone.",
+                  "Conclude that bodily autonomy functions as an independent consideration alongside, not instead of, the personhood question."
+                ],
+                "answer": "By granting full personhood to the violinist and still arguing disconnection is permissible, Thomson isolates bodily autonomy as a separate, independent factor in the debate, showing personhood alone does not automatically settle the question."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Moral personhood", "def": "The status of having properties, such as self-awareness or rationality, that make an entity's interests count fully in moral reasoning."},
+            {"term": "Bodily autonomy", "def": "The principle that a person has the right to control what happens to and within their own body."},
+            {"term": "Thomson's violinist", "def": "A thought experiment arguing that even granting a fetus full personhood, a right to life does not include a right to use another's body without consent."}
+          ],
+          "practice": [
+            {"q": "Mary Anne Warren's account of personhood grounds moral status in:", "choices": ["A set of psychological capacities such as consciousness and self-awareness", "Genetic humanity alone from the moment of conception", "Whichever position a culture currently favors", "Physical size and viability alone"], "answer": 0, "explain": "Warren's criteria focus on capacities like consciousness and self-awareness rather than biological humanity alone."},
+            {"q": "Thomson's violinist argument is notable because it:", "choices": ["Grants full personhood to the fetus and still argues abortion can be permissible", "Denies that a fetus could ever be a person", "Relies entirely on utilitarian calculation", "Argues that personhood begins at conception"], "answer": 0, "explain": "Thomson deliberately grants the strongest anti-abortion premise (full personhood) and argues the conclusion still doesn't follow, isolating bodily autonomy as a separate issue."},
+            {"q": "A key criticism of the violinist analogy is that:", "choices": ["Pregnancy typically results from a voluntary act, unlike the involuntary connection in the thought experiment", "It assumes the fetus has no moral status at all", "It relies on the doctrine of the mean", "It is a metaethical rather than normative argument"], "answer": 0, "explain": "Critics note the violinist scenario involves no voluntary act leading to the connection, which is disanalogous to many real pregnancies."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Euthanasia and End-of-Life Decisions",
+          "minutes": 12,
+          "intro": "When continuing to live means only continuing to suffer with no prospect of recovery, the question of who — if anyone — may help end that suffering becomes one of the most consequential a society can face.",
+          "sections": [
+            {
+              "heading": "Distinctions That Matter",
+              "body": [
+                "**Euthanasia** means intentionally ending a person's life to relieve suffering. **Voluntary euthanasia** occurs at the patient's own informed request; **non-voluntary** occurs when the patient cannot express a preference (permanent unconsciousness); **involuntary** occurs against the patient's wishes and is essentially universally condemned. A separate distinction is **active** euthanasia (directly causing death, such as a lethal injection) versus **passive** euthanasia (withholding or withdrawing treatment, letting an underlying condition cause death).",
+                "**Physician-assisted death** (or assisted suicide, terms both used in the literature) refers to a doctor providing the means for a patient to end their own life, with the patient performing the final act themselves — legally and ethically treated somewhat differently from a doctor directly administering a lethal dose in several jurisdictions."
+              ]
+            },
+            {
+              "heading": "The Central Arguments",
+              "body": [
+                "Arguments for permitting voluntary euthanasia typically appeal to autonomy (a person's right to control the end of their own life and avoid prolonged suffering they judge unbearable) and to mercy (relieving pain with no prospect of recovery is compassionate, not harmful). Arguments against often appeal to the sanctity of life, the risk of pressuring vulnerable patients (the elderly, disabled, or poor) to choose death to relieve family or financial burden, and the **slippery slope** concern that voluntary euthanasia could gradually expand into non-voluntary cases.",
+                "The active/passive distinction is itself ethically contested: some argue there is a real moral difference between directly causing death and merely allowing it via withdrawn treatment, while others (including philosopher James Rachels) argue the distinction is often morally arbitrary, since the patient's death and the caregiver's intention can be identical either way — only the *method* differs."
+              ],
+              "example": {
+                "problem": "A terminally ill patient with only weeks to live, in continuous severe pain unrelieved by medication, repeatedly and clearly requests to die. Identify the strongest argument on each side of permitting voluntary euthanasia here.",
+                "steps": [
+                  "For permitting it: the patient is competent, informed, and repeatedly requesting it — a strong autonomy claim — and continued suffering has no prospect of relief or recovery, a strong mercy claim.",
+                  "Against permitting it: even a clear individual case raises a slippery-slope concern about how broadly any legalized practice would actually be applied and monitored in the wider healthcare system.",
+                  "Note both arguments can be true at once: this specific case may be a strong candidate for permission while the broader policy question about safeguards remains separately debatable.",
+                  "Conclude that resolving the individual case does not automatically resolve the policy-level slippery-slope question, and vice versa."
+                ],
+                "answer": "The strongest case for permitting euthanasia here combines clear patient autonomy with unrelievable suffering and no prospect of recovery; the strongest case against rests not on this patient specifically but on slippery-slope risk to the wider policy — the two levels of argument are separate."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Euthanasia", "def": "Intentionally ending a person's life to relieve suffering."},
+            {"term": "Voluntary euthanasia", "def": "Euthanasia performed at the informed, competent patient's own request."},
+            {"term": "Active versus passive euthanasia", "def": "Directly causing death versus allowing death by withholding or withdrawing treatment."},
+            {"term": "Slippery slope", "def": "The concern that permitting a narrow, seemingly acceptable practice will gradually expand into broader, less acceptable cases."}
+          ],
+          "practice": [
+            {"q": "Non-voluntary euthanasia refers to a case where:", "choices": ["The patient cannot express a preference, such as permanent unconsciousness", "The patient explicitly requests death", "The euthanasia occurs against the patient's clear wishes", "The patient administers the lethal dose themselves"], "answer": 0, "explain": "Non-voluntary applies when the patient's own preference cannot be known or expressed, distinct from voluntary (requested) or involuntary (against wishes)."},
+            {"q": "James Rachels argued that the active/passive distinction in euthanasia is often:", "choices": ["Morally arbitrary, since the death and the caregiver's intention can be identical either way", "The single most important ethical factor in every case", "Only relevant to non-voluntary cases", "Identical to the slippery-slope objection"], "answer": 0, "explain": "Rachels argued that if the outcome and intention are the same, the mere method (act vs omission) shouldn't carry the moral weight often assigned to it."},
+            {"q": "The slippery-slope objection to legalizing voluntary euthanasia claims that:", "choices": ["A narrow, seemingly acceptable practice could gradually expand into broader, less acceptable cases", "Voluntary euthanasia is identical to involuntary euthanasia", "Autonomy arguments are always invalid", "Passive euthanasia is always more ethical than active euthanasia"], "answer": 0, "explain": "The slippery-slope concern is about gradual policy expansion over time, not about the initial case itself being wrong."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Animal Ethics",
+          "minutes": 12,
+          "intro": "If moral status depends on the capacity to suffer rather than on being human, then a huge amount of ordinary practice — factory farming, animal testing, hunting — comes under serious pressure, which is exactly the argument philosopher Peter Singer built his career on.",
+          "sections": [
+            {
+              "heading": "Singer and the Argument from Sentience",
+              "body": [
+                "Peter Singer argues that **sentience** — the capacity to experience pleasure and suffering — rather than species membership, is what should determine whose interests count morally. On a utilitarian basis, Singer argues suffering matters equally regardless of which species experiences it, so inflicting suffering on animals for relatively minor human benefit (taste preference, in the case of most factory-farmed meat) cannot be justified once animal suffering is weighed fairly.",
+                "Singer coined the term **speciesism** for the practice of assigning lesser moral weight to a being's interests solely because of its species, arguing it is structurally similar to racism or sexism: an arbitrary basis for discounting suffering that is, in the relevant respect (the capacity to suffer), just as real and just as bad."
+              ]
+            },
+            {
+              "heading": "Objections and Alternative Views",
+              "body": [
+                "One objection argues humans possess morally relevant capacities (rationality, complex language, moral agency) that most animals lack, and that these capacities justify greater moral weight for human interests — a position Singer would call speciesist unless the capacities themselves, not species membership, are doing the real work, and even then some humans (infants, severely cognitively disabled people) lack those same capacities, a problem called the **argument from marginal cases**.",
+                "Philosopher Tom Regan takes a rights-based rather than utilitarian route, arguing animals that are 'subjects-of-a-life' (with beliefs, desires, memory, a sense of their own future) have inherent value and rights that cannot simply be outweighed by aggregate human benefit, which would forbid using them merely as means even where a utilitarian calculation might permit limited use."
+              ],
+              "example": {
+                "problem": "A critic argues: 'Animals lack rationality and complex language, so human interests always outweigh animal interests.' Apply the argument from marginal cases to test this reasoning.",
+                "steps": [
+                  "Identify the criterion offered: rationality and complex language justify greater moral weight.",
+                  "Find humans who lack that same criterion: infants and some severely cognitively disabled humans also lack full rationality and complex language.",
+                  "Apply the criterion consistently: if the criterion alone justifies discounting animal interests, it would also justify discounting those humans' interests equally.",
+                  "Conclude that since most people reject discounting infants' or disabled humans' interests, the criterion cannot be doing the moral work claimed for it, at least not without further, non-arbitrary refinement."
+                ],
+                "answer": "The argument from marginal cases shows that if rationality and language alone justified discounting animal interests, consistency would require discounting some humans' interests too — a conclusion nearly everyone rejects, which undermines the original criterion as stated."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Sentience", "def": "The capacity to experience pleasure and suffering, which Singer argues should determine moral consideration."},
+            {"term": "Speciesism", "def": "Assigning lesser moral weight to a being's interests solely because of its species."},
+            {"term": "Argument from marginal cases", "def": "The objection that any criterion (rationality, language) used to exclude animals from full moral status would also exclude some humans who lack it."}
+          ],
+          "practice": [
+            {"q": "Peter Singer argues that moral consideration should be based on:", "choices": ["Sentience — the capacity to suffer — rather than species membership", "Species membership alone", "Rationality and complex language exclusively", "Whichever species is more numerous"], "answer": 0, "explain": "Singer's utilitarian argument grounds moral status in the capacity to suffer, which many animals share with humans, rather than in species itself."},
+            {"q": "The argument from marginal cases challenges the 'rationality justifies human priority' view by pointing out:", "choices": ["Some humans, such as infants, also lack full rationality, yet we don't discount their interests", "All animals possess full human-level rationality", "Rationality is irrelevant to any ethical theory", "Speciesism is a form of utilitarianism"], "answer": 0, "explain": "If the criterion used to exclude animals is also lacking in some humans we still fully value, the criterion alone can't be doing the moral work claimed."},
+            {"q": "Tom Regan's rights-based view of animal ethics differs from Singer's utilitarian view in that Regan:", "choices": ["Argues animals have inherent rights that can't simply be outweighed by aggregate benefit", "Denies animals have any morally relevant capacities", "Relies entirely on the doctrine of the mean", "Argues suffering doesn't matter morally at all"], "answer": 0, "explain": "Regan grounds animal ethics in inherent rights and value, which function as constraints rather than quantities to be weighed and potentially outweighed."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Applied Ethics II: Justice, Honesty, and Punishment",
+      "summary": "The final unit turns the theories toward how we distribute resources, whether we may ever lie, and what justifies the state's power to punish.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Distributive Justice",
+          "minutes": 13,
+          "intro": "Two societies can have the exact same total wealth and yet be radically more or less just, depending on how that wealth is distributed — which is precisely the question distributive justice tries to answer.",
+          "sections": [
+            {
+              "heading": "Rawls: Justice as Fairness",
+              "body": [
+                "John Rawls's theory of **justice as fairness** applies the veil of ignorance (introduced earlier) to argue for two governing principles: first, each person has an equal right to the most extensive basic liberties compatible with the same liberties for others; second, social and economic inequalities are permitted only if they are attached to positions open to all under fair equality of opportunity, and only if they benefit the least advantaged members of society — the **difference principle**.",
+                "The difference principle does not require perfect equality of outcome; it permits inequality (for example, higher pay for a difficult, socially valuable job) precisely when that inequality actually improves the position of the worst-off, such as by incentivizing productivity whose gains are broadly shared, rather than merely enriching those already well off."
+              ]
+            },
+            {
+              "heading": "Nozick's Libertarian Alternative",
+              "body": [
+                "Robert Nozick's **entitlement theory** rejects Rawls's focus on end-state patterns of distribution, arguing instead that a distribution is just if it arose through a just process: just initial acquisition of unowned resources, and just voluntary transfer (trade, gift) thereafter, regardless of how equal or unequal the resulting pattern looks. On this view, redistributive taxation to achieve a Rawlsian pattern violates individual property rights, because it forcibly takes from people who acquired their holdings justly through voluntary exchange.",
+                "Rawls's reply is that background conditions (unequal starting points, luck in talent and family circumstance) make claims of 'fully just acquisition' much harder to sustain in the real world than Nozick's theory assumes, so some redistribution can be justified as correcting for unchosen disadvantage rather than as violating anyone's genuine entitlement."
+              ],
+              "example": {
+                "problem": "A society has to choose between Policy A (strict equal division of all income regardless of work) and Policy B (a large tax-funded social safety net alongside significant income inequality, where high earners' innovation raises wages for the lowest-paid workers too). How would a Rawlsian evaluate these using the difference principle?",
+                "steps": [
+                  "Apply the difference principle: inequality is permissible only if it benefits the least advantaged.",
+                  "Check Policy A: strict equality may remove incentives that drive productivity gains, potentially leaving the worst-off with lower absolute income than under B.",
+                  "Check Policy B: inequality exists, but if it demonstrably raises the lowest-paid workers' actual income (not just aggregate wealth), it satisfies the difference principle's test.",
+                  "Conclude a Rawlsian would favor whichever policy leaves the worst-off best off in absolute terms, which could be B despite its inequality, or A if B's claimed benefits to the poor don't materialize."
+                ],
+                "answer": "A Rawlsian evaluates purely by which policy leaves the least-advantaged group best off in absolute terms — if Policy B's inequality genuinely raises the lowest earners' real position, the difference principle can favor it over strict equality, and vice versa if it does not."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Justice as fairness", "def": "Rawls's theory deriving principles of justice from what people would choose behind a veil of ignorance."},
+            {"term": "Difference principle", "def": "Rawls's rule that social and economic inequalities are just only if they benefit the least advantaged members of society."},
+            {"term": "Entitlement theory", "def": "Nozick's view that a distribution is just if it arose through just acquisition and voluntary transfer, regardless of the resulting pattern."}
+          ],
+          "practice": [
+            {"q": "Rawls's difference principle permits economic inequality only when:", "choices": ["It benefits the least advantaged members of society", "It benefits the wealthiest members most of all", "Society has achieved perfectly equal outcomes", "It arose through any voluntary transaction whatsoever"], "answer": 0, "explain": "The difference principle specifically requires that permitted inequality actually improve the position of the worst-off group, not merely exist."},
+            {"q": "Nozick's entitlement theory judges a distribution as just based on:", "choices": ["Whether it arose through just acquisition and voluntary transfer, regardless of the resulting pattern", "Whether it satisfies the veil of ignorance", "Whether it benefits the least advantaged", "Whether a culture currently approves of it"], "answer": 0, "explain": "Nozick focuses on the historical process (just acquisition, just transfer) rather than the resulting pattern of distribution."},
+            {"q": "Rawls's main reply to Nozick's libertarian view is that:", "choices": ["Unequal starting points and luck make claims of fully just original acquisition hard to sustain in practice", "Property rights should never be recognized at all", "The veil of ignorance is irrelevant to distributive justice", "Voluntary transfer is always unjust"], "answer": 0, "explain": "Rawls argues that unchosen disadvantages in starting position undercut the claim that resulting holdings are cleanly and fully 'justly acquired.'"}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Lying, Honesty, and Trust",
+          "minutes": 11,
+          "intro": "Almost everyone agrees lying is usually wrong, but the interesting ethical work starts with the hard cases: the lie that spares someone pain, and the lie that might save a life.",
+          "sections": [
+            {
+              "heading": "Why Lying Is Presumed Wrong",
+              "body": [
+                "Most ethical traditions treat lying as presumptively wrong, but for different underlying reasons. Kantians object because a lie fails the universal-law test (universal lying would destroy the trust that makes lying possible in the first place) and treats the hearer merely as a means, denying them the accurate information they need to reason for themselves. Utilitarians object because lying tends to produce bad consequences — eroded trust, poor decisions made on false information — even though a utilitarian must, in principle, weigh a specific lie's actual consequences case by case.",
+                "Virtue ethicists frame it around character: habitual lying corrodes honesty as a trait, making future truthfulness harder and damaging the liar's own integrity even independent of any single lie's direct victim."
+              ]
+            },
+            {
+              "heading": "Hard Cases: The Murderer at the Door and White Lies",
+              "body": [
+                "Kant himself notoriously argued, in a famous and widely criticized example, that you should not lie even to a murderer asking where your friend is hiding, because the duty against lying is unconditional — a position most contemporary philosophers, including many Kantians, reject as too rigid, arguing instead that the duty not to lie can be outweighed or overridden by the duty to protect innocent life. Most modern deontologists distinguish absolute duties from duties that can conflict and require weighing.",
+                "'White lies' (small lies told to spare minor feelings, such as praising an unwanted gift) are a genuinely contested middle case: some argue any intentional deception, however small, still fails the universalizability test and disrespects the hearer's rational agency, while others argue the harm from cataloging every white lie as a serious moral failure is disproportionate, and that honesty admits of degrees of stakes just as other virtues do."
+              ],
+              "example": {
+                "problem": "A murderer asks you directly where your friend, whom you are hiding, has gone. Contrast Kant's own famous answer with a more flexible modern deontological approach.",
+                "steps": [
+                  "State Kant's own position: the duty against lying is unconditional, so you must not lie even here, though you could remain silent or refuse to answer.",
+                  "Note the common objection: this seems to prioritize an abstract duty over an innocent person's life, which strikes nearly everyone as badly wrong.",
+                  "State the modern deontological revision: duties can conflict, and the duty to protect innocent life from a murderer can override the duty not to lie in this specific extreme case.",
+                  "Conclude that most contemporary deontologists reject Kant's own rigid answer while still keeping deontology's basic structure of duties, showing the theory can be revised without being abandoned."
+                ],
+                "answer": "Kant himself held you must not lie even here; most modern deontologists reject this rigidity, holding that the duty to protect innocent life can override the duty not to lie in an extreme case like this, while still working within a duty-based framework."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Presumptive duty", "def": "A duty that generally binds but can, in some theories, be outweighed by a conflicting stronger duty in extreme cases."},
+            {"term": "White lie", "def": "A small, typically low-stakes lie told to spare minor feelings, treated as a genuinely contested middle case in ethics."}
+          ],
+          "practice": [
+            {"q": "Kant's own position on lying to a murderer seeking an innocent victim was that:", "choices": ["Lying is unconditionally wrong, even in this case", "Lying is permissible whenever it produces a better outcome", "The situation is a metaethical rather than normative question", "Only rule utilitarians need answer this question"], "answer": 0, "explain": "Kant held the duty against lying was unconditional, a position most later philosophers, including many Kantians, have rejected as too rigid."},
+            {"q": "Most contemporary deontologists revise Kant's murderer-at-the-door answer by arguing that:", "choices": ["Duties can conflict, and protecting innocent life can override the duty not to lie in an extreme case", "Lying is never actually wrong under any circumstance", "Consequences are the only thing that ever matters", "The duty not to lie applies only to virtue ethicists"], "answer": 0, "explain": "Modern deontologists generally allow that duties can conflict and be weighed, rather than treating every duty as absolute in every case."},
+            {"q": "A virtue-ethics objection to habitual lying, distinct from the Kantian or utilitarian objections, focuses on:", "choices": ["How lying corrodes honesty as a character trait over time", "Whether the lie can be universalized without contradiction", "Whether the lie maximizes aggregate utility", "Whether lying is currently legal"], "answer": 0, "explain": "Virtue ethics frames the concern around the liar's own developing character, distinct from the universalizability or consequence-based objections."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Punishment: Retribution, Deterrence, and Rehabilitation",
+          "minutes": 12,
+          "intro": "When a society locks someone up, it is implicitly committing to one or more theories of why that is justified — and those theories can point toward very different sentences for the very same crime.",
+          "sections": [
+            {
+              "heading": "Three Justifications for Punishment",
+              "body": [
+                "**Retributivism** holds that punishment is justified because the offender deserves it — a backward-looking theory focused on proportionality between the wrong done and the punishment imposed, independent of any future benefit. **Deterrence theory** is forward-looking and consequentialist: punishment is justified by the future crime it prevents, both by discouraging the specific offender from reoffending (**specific deterrence**) and by discouraging others who observe the punishment (**general deterrence**).",
+                "**Rehabilitation theory** justifies punishment (or more precisely, the correctional system) by its capacity to reform the offender into a law-abiding member of society, treating criminal behavior partly as a problem to be treated rather than purely a wrong to be avenged or deterred."
+              ]
+            },
+            {
+              "heading": "Where the Theories Pull Apart",
+              "body": [
+                "The theories can sharply disagree in practice. A retributivist judges a sentence's rightness by whether it fits the severity of the crime, regardless of whether it deters anyone; this can conflict with deterrence theory, which might justify an unusually harsh sentence for a minor but common crime if that harshness effectively reduces its frequency — a move retributivists reject as punishing someone more than they deserve merely to send a message to others.",
+                "Rehabilitation theory can likewise diverge from retributivism: a rehabilitation-focused view might release an offender early once reformed, even if the original sentence, calculated on desert alone, was not yet served, while a strict retributivist would object that early release fails to give the offender the punishment proportionate to the original wrong regardless of any personal reform."
+              ],
+              "example": {
+                "problem": "A first-time offender commits a moderate theft. A judge is deciding between (A) a sentence matched closely to typical proportional punishment for this offense, and (B) an unusually harsh sentence specifically to make an example that deters similar thefts citywide, which are currently common. Analyze this choice through retributivism and deterrence theory.",
+                "steps": [
+                  "Apply retributivism: the punishment should fit the severity of this offender's actual wrongdoing, so Option A (proportional) is favored and Option B is rejected as excessive relative to desert.",
+                  "Apply deterrence theory: if reliable evidence shows the harsher sentence would meaningfully reduce citywide theft, Option B could be favored on forward-looking grounds.",
+                  "Notice the conflict: deterrence theory is willing to punish this individual more than they deserve, in retributivist terms, to benefit future potential victims.",
+                  "Conclude that which sentence is 'right' depends on which underlying justification for punishment you accept — the theories are not just details but genuinely different reasons that can recommend different sentences for the identical case."
+                ],
+                "answer": "A retributivist favors the proportional sentence (A) regardless of deterrent effect; a deterrence theorist could favor the harsher sentence (B) if it reliably reduces future theft — the disagreement traces directly to which justification for punishment each side accepts."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Retributivism", "def": "The theory that punishment is justified because the offender deserves it, proportionate to the wrong done."},
+            {"term": "Deterrence theory", "def": "The theory that punishment is justified by the future crime it prevents, for the offender specifically or for others generally."},
+            {"term": "Rehabilitation theory", "def": "The theory that punishment or correction is justified by its capacity to reform the offender."}
+          ],
+          "practice": [
+            {"q": "Retributivism is best described as a:", "choices": ["Backward-looking theory focused on proportional desert, independent of future benefit", "Forward-looking theory focused only on preventing future crime", "Theory that punishment should reform the offender above all else", "Theory identical to general deterrence"], "answer": 0, "explain": "Retributivism justifies punishment by what the offender deserves for the past wrong, not by any future consequence."},
+            {"q": "A retributivist would object to an unusually harsh sentence justified purely by general deterrence because:", "choices": ["It punishes the offender more than they deserve, merely to send a message to others", "Deterrence theory never considers future crime", "Rehabilitation always requires harsher sentences", "Proportionality is irrelevant to retributivism"], "answer": 0, "explain": "Retributivism ties punishment strictly to individual desert, so using an offender's sentence mainly to influence others' future behavior violates its core proportionality requirement."},
+            {"q": "Specific deterrence differs from general deterrence in that specific deterrence targets:", "choices": ["Discouraging the individual offender from reoffending", "Discouraging the broader public who observe the punishment", "Reforming the offender's character", "Only crimes that carry no possible punishment"], "answer": 0, "explain": "Specific deterrence aims at the punished individual; general deterrence aims at the wider public who might otherwise consider the same crime."}
+          ]
+        }
+      ]
+    }
+  ]
+}

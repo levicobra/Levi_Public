@@ -1,0 +1,624 @@
+{
+  "id": "logic",
+  "title": "Logic & Critical Thinking",
+  "domain": "humanities",
+  "level": "Intro college",
+  "description": "A hands-on course in reasoning well: how to identify an argument's structure, test it for validity and strength, work with formal propositional and categorical logic, and recognize the informal fallacies that derail everyday reasoning. You will build the skills to evaluate claims, spot manipulation, and construct arguments that actually hold up.",
+  "outcomes": [
+    "You can identify an argument's premises and conclusion and distinguish deductive from inductive reasoning.",
+    "You can test a deductive argument for validity and soundness, and build a truth table for a compound statement.",
+    "You can name and apply core valid argument forms (modus ponens, modus tollens, hypothetical syllogism) and their invalid look-alikes.",
+    "You can evaluate a categorical syllogism for validity using the rules of the syllogism.",
+    "You can name at least eight informal fallacies and explain why each one fails to support its conclusion.",
+    "You can evaluate a source's credibility and identify common cognitive biases distorting a piece of reasoning."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Arguments and Reasoning Basics",
+      "summary": "Before you can evaluate an argument, you have to be able to find it — separating the actual reasoning from the noise around it.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "What Is an Argument?",
+          "minutes": 11,
+          "intro": "In everyday speech 'argument' means a quarrel, but in logic an argument is simply a claim backed by reasons — and learning to spot the reasons is the first real skill of this course.",
+          "sections": [
+            {
+              "heading": "Premises and Conclusions",
+              "body": [
+                "An **argument** consists of one or more **premises** (statements offered as reasons) supporting a **conclusion** (the claim those reasons are meant to establish). 'All mammals are warm-blooded; a whale is a mammal; therefore a whale is warm-blooded' has two premises and a conclusion signaled by 'therefore.' Not every passage is an argument — a list of facts, a story, or a single opinion with no supporting reason offered is not yet an argument, just a claim.",
+                "**Indicator words** help locate the parts: conclusion indicators include 'therefore,' 'thus,' 'so,' and 'hence'; premise indicators include 'because,' 'since,' and 'given that.' When no indicator word appears, ask which statement the others are meant to support — that statement is the conclusion, whichever position it occupies in the passage."
+              ],
+              "example": {
+                "problem": "Identify the premises and conclusion: 'Since the bridge has failed three inspections and the county lacks funds to repair it, the bridge should be closed to traffic.'",
+                "steps": [
+                  "Look for indicator words: 'since' signals the premises that follow it.",
+                  "Extract premise 1: the bridge has failed three inspections.",
+                  "Extract premise 2: the county lacks funds to repair it.",
+                  "Identify the conclusion as the remaining claim: the bridge should be closed to traffic."
+                ],
+                "answer": "Premises: the bridge failed three inspections; the county lacks repair funds. Conclusion: the bridge should be closed to traffic."
+              }
+            },
+            {
+              "heading": "Arguments Versus Explanations",
+              "body": [
+                "An **explanation** looks structurally similar to an argument (a claim plus a 'because' clause) but serves a different purpose: it accounts for something already accepted as true, rather than trying to establish that it is true. 'The road is icy because the temperature dropped below freezing overnight' does not argue that the road is icy — it assumes that and explains why.",
+                "Telling the two apart matters because you evaluate them differently: an argument is evaluated by whether its premises actually support its conclusion, while an explanation is evaluated by whether the 'because' clause accurately accounts for an already-accepted fact. Treating an explanation as if it needed to 'prove' its conclusion is a common source of confused criticism."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Argument", "def": "One or more premises offered as reasons in support of a conclusion."},
+            {"term": "Premise", "def": "A statement offered as a reason supporting an argument's conclusion."},
+            {"term": "Conclusion", "def": "The claim an argument's premises are intended to establish."},
+            {"term": "Explanation", "def": "A statement accounting for something already accepted as true, rather than trying to establish that it is true."}
+          ],
+          "practice": [
+            {"q": "In 'Because the vaccine trial showed a 90% reduction in cases, the treatment should be approved,' the conclusion is:", "choices": ["The treatment should be approved", "The vaccine trial showed a 90% reduction in cases", "Vaccines are generally effective", "There is no conclusion, only a premise"], "answer": 0, "explain": "'Because' introduces the premise; the claim it supports, 'the treatment should be approved,' is the conclusion."},
+            {"q": "'The streets are wet because it rained last night' is best classified as:", "choices": ["An explanation, not an argument", "An argument with two premises", "An invalid argument", "A categorical syllogism"], "answer": 0, "explain": "This accounts for an already-accepted fact (wet streets) rather than trying to establish that the streets are wet."},
+            {"q": "A passage with no indicator words can still be an argument if:", "choices": ["One statement is clearly offered as a reason for another", "It contains at least three sentences", "It uses the word 'because'", "It describes a sequence of events"], "answer": 0, "explain": "Indicator words help but aren't required; what matters is whether one claim is functioning as support for another."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Deductive Validity and Soundness",
+          "minutes": 13,
+          "intro": "A deductive argument makes an extraordinarily strong promise — that its conclusion cannot possibly be false if its premises are true — and validity is the test of whether it actually keeps that promise.",
+          "sections": [
+            {
+              "heading": "Validity",
+              "body": [
+                "A **deductive argument** is **valid** if it is logically impossible for all its premises to be true while its conclusion is false — the conclusion follows with certainty from the premises, purely by the argument's structure. Validity is entirely about form, not about whether the premises are actually true: 'All fish can fly; a shark is a fish; therefore a shark can fly' is a valid argument, because if both premises really were true, the conclusion would have to be true too.",
+                "This is the single most common confusion for beginners: a valid argument can have false premises and a false conclusion, and an argument with true premises and a true conclusion can still be invalid, if the structure doesn't actually guarantee the connection. Validity checks the wiring, not the content."
+              ]
+            },
+            {
+              "heading": "Soundness",
+              "body": [
+                "A **sound** argument is a valid argument whose premises are also actually true — soundness adds the truth requirement on top of validity. Only a sound argument guarantees a true conclusion; a valid-but-unsound argument (like the flying shark) guarantees nothing about the real world, because its promise ('true premises would force this conclusion') is never actually triggered by true premises.",
+                "To evaluate any deductive argument, ask two separate questions in order: is it valid (does the structure guarantee the conclusion given the premises), and are the premises actually true? An argument can fail either test independently, and a full evaluation requires checking both."
+              ],
+              "example": {
+                "problem": "Evaluate: 'All U.S. presidents have been over 30 years old; Barack Obama was a U.S. president; therefore Barack Obama was over 30 years old.' Check validity and soundness.",
+                "steps": [
+                  "Check validity: if both premises are true, must the conclusion be true? Yes — this is a valid structural pattern (a categorical syllogism form).",
+                  "Check premise 1's truth: the U.S. Constitution requires presidents to be at least 35, so all presidents have indeed been over 30. True.",
+                  "Check premise 2's truth: Obama was in fact a U.S. president. True.",
+                  "Since the argument is valid and both premises are true, it is sound."
+                ],
+                "answer": "The argument is both valid (the structure guarantees the conclusion) and sound (both premises are actually true)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Valid", "def": "A deductive argument where it is logically impossible for the premises to be true and the conclusion false."},
+            {"term": "Sound", "def": "A valid argument whose premises are also actually true."},
+            {"term": "Deductive argument", "def": "An argument intended to guarantee its conclusion given true premises, based purely on logical structure."}
+          ],
+          "practice": [
+            {"q": "An argument with false premises and a false conclusion can still be:", "choices": ["Valid, if the structure guarantees the conclusion given the premises", "Sound, regardless of the premises' truth", "Neither valid nor an argument at all", "True by definition"], "answer": 0, "explain": "Validity depends only on the structural connection between premises and conclusion, not on whether the premises are actually true."},
+            {"q": "A sound argument is defined as:", "choices": ["A valid argument with actually true premises", "Any argument with a true conclusion", "An argument that persuades most listeners", "A valid argument regardless of its premises' truth"], "answer": 0, "explain": "Soundness requires both structural validity and actual truth of the premises — either alone is not enough."},
+            {"q": "To fully evaluate a deductive argument, you should check:", "choices": ["Both validity and the actual truth of the premises", "Only whether the conclusion sounds reasonable", "Only whether the premises are true", "Only whether the argument uses indicator words"], "answer": 0, "explain": "Validity and premise truth are independent questions; a complete evaluation requires checking both separately."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Inductive Reasoning and Strength",
+          "minutes": 12,
+          "intro": "Most of what you actually believe about the world — that the sun will rise tomorrow, that a treatment probably works, that a friend probably won't betray you — rests not on deductive certainty but on inductive reasoning, which trades certainty for probability.",
+          "sections": [
+            {
+              "heading": "Strength Instead of Validity",
+              "body": [
+                "An **inductive argument** offers premises that make its conclusion probable, not certain — even a very good inductive argument allows for the possibility, however small, that the premises are true and the conclusion is still false. Instead of 'valid/invalid,' inductive arguments are evaluated as **strong** or **weak**: a strong argument makes its conclusion highly likely; a weak one does not.",
+                "'Every crow observed in 10,000 sightings across six continents has been black; therefore all crows are black' is a strong inductive argument — the evidence makes the conclusion highly probable — but it is not deductively valid, since it remains logically possible (and, as it happens, actually true, since rare leucistic and albino crows exist) for a non-black crow to exist despite the evidence."
+              ]
+            },
+            {
+              "heading": "Sample Size and Representativeness",
+              "body": [
+                "Inductive strength depends heavily on **sample size** (how much evidence you have) and **representativeness** (whether the evidence reflects the whole population fairly, not just a convenient or biased slice). A survey of 50 people strongly supporting a policy is much weaker evidence than a survey of 5,000, and a survey drawn entirely from one neighborhood is weaker evidence about a whole country than one drawn nationally, even with the same sample size.",
+                "Strengthening or weakening evidence can arrive after the fact: new counter-examples, better sampling, or a larger dataset can shift an inductive argument's strength up or down, which is why inductive conclusions are always held with some acknowledged uncertainty, unlike a genuinely sound deductive conclusion."
+              ],
+              "example": {
+                "problem": "A company claims 'our new drug is effective' based on a trial of 40 volunteers who happened to sign up online, all in one city. Assess this inductive argument's strength.",
+                "steps": [
+                  "Check sample size: 40 is a fairly small trial for a medical claim, weakening confidence.",
+                  "Check representativeness: volunteers who self-select online in a single city may differ systematically (age, health, motivation) from the general patient population.",
+                  "Note both problems compound: a small, non-representative sample gives weak inductive support even if the observed effect within that sample was large.",
+                  "Conclude the argument is currently weak, and would need a larger, more representative trial to become strong."
+                ],
+                "answer": "The argument is inductively weak because the sample is small and drawn from a non-representative, self-selected group in a single city — stronger support would require a larger, more broadly representative trial."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Inductive argument", "def": "An argument whose premises are intended to make the conclusion probable, not certain."},
+            {"term": "Strong/weak", "def": "The evaluative labels for inductive arguments, based on how probable the premises make the conclusion."},
+            {"term": "Representativeness", "def": "Whether a sample of evidence fairly reflects the whole population it is meant to support a conclusion about."}
+          ],
+          "practice": [
+            {"q": "Inductive arguments are evaluated using which pair of terms?", "choices": ["Strong and weak", "Valid and invalid", "Sound and unsound", "True and false"], "answer": 0, "explain": "Validity and soundness apply to deductive arguments; inductive arguments are instead evaluated as strong or weak."},
+            {"q": "A survey sampling opinions from only one neighborhood, then generalizing to an entire country, is weak mainly due to a problem with:", "choices": ["Representativeness", "Indicator words", "Deductive validity", "Soundness"], "answer": 0, "explain": "The sample fails to reflect the broader population fairly, which weakens the inductive generalization regardless of sample size."},
+            {"q": "Even a strong inductive argument:", "choices": ["Can have true premises and still a false conclusion", "Guarantees its conclusion with certainty", "Is automatically also deductively valid", "Requires no evidence at all"], "answer": 0, "explain": "Inductive strength only establishes probability, never certainty, so a strong argument can still, rarely, have a false conclusion despite true premises."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Formal Logic: Propositional Reasoning",
+      "summary": "Formal logic strips arguments down to pure structure using symbols, letting you test validity mechanically rather than by intuition alone.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Statements, Connectives, and Truth Tables",
+          "minutes": 14,
+          "intro": "Once you represent 'and,' 'or,' 'not,' and 'if...then' as precise symbols with fixed rules, you can determine an argument's validity by mechanical calculation instead of gut feeling.",
+          "sections": [
+            {
+              "heading": "Statements and Connectives",
+              "body": [
+                "A **statement** is a sentence that is either true or false (not both), such as 'It is raining' — questions and commands are not statements. Simple statements combine into compound statements using **logical connectives**: **negation** (`¬`, 'not'), **conjunction** (`∧`, 'and'), **disjunction** (`∨`, 'or'), and the **conditional** (`→`, 'if...then'). We use letters like `p` and `q` to stand for simple statements, so `p ∧ q` means 'p and q are both true.'",
+                "The conditional `p → q` reads 'if p then q,' where `p` is the **antecedent** and `q` is the **consequent**. It is only false in exactly one case: when the antecedent is true and the consequent is false — 'if it rains, the game is cancelled' is only shown false by rain without cancellation; it is not falsified by a dry day with or without cancellation."
+              ]
+            },
+            {
+              "heading": "Building a Truth Table",
+              "body": [
+                "A **truth table** lists every possible true/false combination of a statement's simple parts and shows the resulting truth value of the compound statement for each combination. For `p → q`, there are four rows (T-T, T-F, F-T, F-F for p-q), and the conditional is true in every row except T-F, where a true antecedent pairs with a false consequent.",
+                "Truth tables let you verify equivalences precisely: `¬(p ∧ q)` and `(¬p ∨ ¬q)` produce identical truth values in every row (this equivalence is called De Morgan's law), which is how logicians confirm two differently worded statements actually say the same thing, rather than relying on how they merely sound."
+              ],
+              "example": {
+                "problem": "Build the truth table for `p ∧ ¬q` and state which row(s) make it true.",
+                "steps": [
+                  "List all four combinations of p and q: TT, TF, FT, FF.",
+                  "Compute ¬q for each row: F, T, F, T respectively.",
+                  "Compute p ∧ ¬q for each row: (T,F)→F, (T,T)→T, (F,F)→F, (F,T)→F.",
+                  "Identify the only true row: p=T, q=F."
+                ],
+                "answer": "`p ∧ ¬q` is true only in the row where p is true and q is false; it is false in all other combinations."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Statement", "def": "A sentence that is either true or false, and not both."},
+            {"term": "Conditional", "def": "A compound statement 'if p then q' (`p → q`), false only when the antecedent is true and the consequent is false."},
+            {"term": "Truth table", "def": "A table listing every combination of truth values for a statement's parts and the resulting compound value."}
+          ],
+          "practice": [
+            {"q": "The conditional `p → q` is false in exactly which case?", "choices": ["p is true and q is false", "p is false and q is true", "Both p and q are false", "Both p and q are true"], "answer": 0, "explain": "A conditional is only falsified when the antecedent holds but the consequent fails; every other combination leaves it true."},
+            {"q": "A truth table for a compound statement with two simple statements has how many rows?", "choices": ["Four", "Two", "Eight", "Sixteen"], "answer": 0, "explain": "Each of the two statements can be true or false, giving 2×2 = 4 possible combinations."},
+            {"q": "`¬(p ∧ q)` is logically equivalent to:", "choices": ["`¬p ∨ ¬q`", "`p ∧ q`", "`p → q`", "`¬p ∧ ¬q`"], "answer": 0, "explain": "This is De Morgan's law: the negation of a conjunction equals the disjunction of the negations."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Valid Argument Forms",
+          "minutes": 13,
+          "intro": "A small handful of argument patterns are so reliably valid that once you can recognize their shape, you can certify an argument's validity instantly, no matter what the letters stand for.",
+          "sections": [
+            {
+              "heading": "Modus Ponens and Modus Tollens",
+              "body": [
+                "**Modus ponens** ('mode that affirms'): from `p → q` and `p`, conclude `q`. 'If it rains, the streets get wet; it is raining; therefore the streets are wet.' This form is valid for any statements substituted for p and q, because it directly mirrors the conditional's own truth-table definition.",
+                "**Modus tollens** ('mode that denies'): from `p → q` and `¬q`, conclude `¬p`. 'If it rains, the streets get wet; the streets are not wet; therefore it is not raining.' This works because the only way `p → q` could be true while q is false is if p is also false — so denying the consequent forces denying the antecedent."
+              ]
+            },
+            {
+              "heading": "Hypothetical Syllogism and Disjunctive Syllogism",
+              "body": [
+                "**Hypothetical syllogism**: from `p → q` and `q → r`, conclude `p → r` — conditionals chain together validly. 'If I study, I'll pass; if I pass, I'll graduate; therefore if I study, I'll graduate.' **Disjunctive syllogism**: from `p ∨ q` and `¬p`, conclude `q` — if one of two options holds and you rule one out, the other must hold.",
+                "These four forms (modus ponens, modus tollens, hypothetical syllogism, disjunctive syllogism) recur constantly in everyday and academic reasoning, and recognizing the bare pattern — regardless of subject matter — is what lets you certify validity quickly and confidently."
+              ],
+              "example": {
+                "problem": "Identify the valid form: 'If the alarm is working, it will sound during a fire. The alarm did not sound during the fire. Therefore the alarm is not working.'",
+                "steps": [
+                  "Symbolize: p = 'the alarm is working,' q = 'it sounds during a fire.'",
+                  "First premise: p → q. Second premise: ¬q.",
+                  "Match to known forms: denying the consequent (¬q) to conclude ¬p is the modus tollens pattern.",
+                  "Confirm validity: modus tollens is always valid regardless of the specific content substituted in."
+                ],
+                "answer": "This is modus tollens (from `p → q` and `¬q`, conclude `¬p`), a valid argument form."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Modus ponens", "def": "The valid form: from p → q and p, conclude q."},
+            {"term": "Modus tollens", "def": "The valid form: from p → q and ¬q, conclude ¬p."},
+            {"term": "Hypothetical syllogism", "def": "The valid form: from p → q and q → r, conclude p → r."},
+            {"term": "Disjunctive syllogism", "def": "The valid form: from p ∨ q and ¬p, conclude q."}
+          ],
+          "practice": [
+            {"q": "'If p then q; q; therefore p' is an example of:", "choices": ["Neither modus ponens nor modus tollens — it is an invalid pattern", "Modus ponens", "Modus tollens", "Hypothetical syllogism"], "answer": 0, "explain": "Affirming the consequent (concluding p from q) is not modus ponens or modus tollens; it is an invalid form covered in the next lesson."},
+            {"q": "'If I save $200/month, I'll afford the trip; if I afford the trip, I'll visit my family; therefore if I save $200/month, I'll visit my family' uses:", "choices": ["Hypothetical syllogism", "Disjunctive syllogism", "Modus tollens", "None of these — it is invalid"], "answer": 0, "explain": "Chaining two conditionals (p→q, q→r, therefore p→r) is exactly the hypothetical syllogism pattern."},
+            {"q": "'Either the package was lost or it was stolen; it was not lost; therefore it was stolen' is:", "choices": ["A valid disjunctive syllogism", "An invalid form", "Modus ponens", "A hasty generalization"], "answer": 0, "explain": "From p ∨ q and ¬p, concluding q is exactly the disjunctive syllogism pattern, which is valid."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Common Formal Fallacies",
+          "minutes": 11,
+          "intro": "Two argument patterns look almost identical to modus ponens and modus tollens, sound just as convincing out loud, and are completely invalid — which makes them some of the most common reasoning traps in everyday arguments.",
+          "sections": [
+            {
+              "heading": "Affirming the Consequent",
+              "body": [
+                "**Affirming the consequent**: from `p → q` and `q`, invalidly conclude `p`. 'If it rained, the ground would be wet; the ground is wet; therefore it rained' is invalid, because plenty of other things (a sprinkler, a burst pipe) could also make the ground wet — `q` being true doesn't mean `p` specifically is what caused it.",
+                "The mistake is confusing 'p is sufficient for q' (which `p → q` states) with 'p is necessary for q' (which it does not state). Only if you also knew rain was the *only* possible cause of wet ground would the inference work — and that additional claim is not given by the conditional alone."
+              ]
+            },
+            {
+              "heading": "Denying the Antecedent",
+              "body": [
+                "**Denying the antecedent**: from `p → q` and `¬p`, invalidly conclude `¬q`. 'If it rained, the ground would be wet; it did not rain; therefore the ground is not wet' is invalid for the same underlying reason — the ground could still be wet from a sprinkler even without rain, since the conditional never claimed rain was the only route to a wet ground.",
+                "Both fallacies share a root cause: a conditional `p → q` only guarantees the connection in one direction (p to q), and both invalid forms try to run the inference in a direction the conditional never licensed."
+              ],
+              "example": {
+                "problem": "Diagnose: 'If a student cheats, they will fail the ethics review. This student passed the ethics review. Wait — actually diagnose this instead: If a student cheats, they will fail the ethics review. This student did not cheat. Therefore this student will not fail the ethics review.'",
+                "steps": [
+                  "Symbolize: p = 'student cheats,' q = 'student fails the ethics review.'",
+                  "Premises given: p → q, and ¬p.",
+                  "Match to known invalid forms: denying the antecedent (¬p) to conclude ¬q.",
+                  "Explain the flaw: the student could fail the ethics review for an unrelated reason (missed deadline, plagiarism from a source other than cheating in the narrow sense), so ¬p does not guarantee ¬q."
+                ],
+                "answer": "This is the fallacy of denying the antecedent — an invalid form, since failing the ethics review could have causes other than cheating, so not-cheating doesn't guarantee not-failing."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Affirming the consequent", "def": "The invalid form: from p → q and q, concluding p."},
+            {"term": "Denying the antecedent", "def": "The invalid form: from p → q and ¬p, concluding ¬q."}
+          ],
+          "practice": [
+            {"q": "'If she is a doctor, she went to medical school; she went to medical school; therefore she is a doctor' commits which fallacy?", "choices": ["Affirming the consequent", "Denying the antecedent", "Modus ponens (it is valid)", "Hasty generalization"], "answer": 0, "explain": "Concluding p from q, given p → q, is affirming the consequent — invalid, since other paths (a non-doctor researcher) can also lead to medical school."},
+            {"q": "The underlying reason both affirming the consequent and denying the antecedent fail is that:", "choices": ["A conditional only guarantees the connection in one direction, from antecedent to consequent", "Conditionals are never true", "Truth tables cannot be built for conditionals", "They both use disjunction instead of a conditional"], "answer": 0, "explain": "p → q licenses inferring from p to q, not the reverse or its negation, which is exactly what both fallacies attempt."},
+            {"q": "'If the exam is hard, many students will fail; the exam was not hard; therefore few students failed' commits:", "choices": ["Denying the antecedent", "Affirming the consequent", "Modus tollens (it is valid)", "Disjunctive syllogism"], "answer": 0, "explain": "Concluding ¬q from ¬p, given p → q, is denying the antecedent — invalid, since other factors could still cause many failures."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Categorical Logic",
+      "summary": "Before symbolic logic existed, Aristotle built a powerful system for reasoning about whole categories of things — 'all,' 'no,' and 'some' — that still underlies a huge share of everyday argument.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Categorical Statements",
+          "minutes": 12,
+          "intro": "Nearly every claim about a whole category of things — 'all politicians are dishonest,' 'no fish are mammals,' 'some doctors are surgeons' — fits into exactly one of four standard forms, and knowing them lets you spot exactly what a claim does and doesn't assert.",
+          "sections": [
+            {
+              "heading": "The Four Standard Forms",
+              "body": [
+                "A **categorical statement** relates two categories (classes), called the subject and predicate terms, in one of four standard forms: **A** ('All S are P'), **E** ('No S are P'), **I** ('Some S are P'), **O** ('Some S are not P'). 'All' and 'no' statements are **universal** (they claim something about every member of the subject class); 'some' statements are **particular** (they claim something about at least one member, without saying how many).",
+                "'Some' in logic means 'at least one,' not 'some but not all' — 'some doctors are surgeons' is true even if, unbeknownst to the speaker, every doctor turns out to be a surgeon, because 'at least one' is still satisfied."
+              ]
+            },
+            {
+              "heading": "Distribution",
+              "body": [
+                "A term is **distributed** if the statement says something about every member of that term's category. In 'All S are P' (A), the subject S is distributed (it speaks about every S) but the predicate P is not (it doesn't say P is confined to S). In 'No S are P' (E), both terms are distributed, since it excludes every S from every P. In 'Some S are P' (I), neither term is distributed. In 'Some S are not P' (O), only the predicate P is distributed.",
+                "Distribution matters because it's the mechanism behind the syllogism validity rules in the next lesson: a term that needs to be distributed in the conclusion but wasn't distributed in either premise signals an invalid argument, a pattern you can check mechanically once you know each form's distribution."
+              ],
+              "example": {
+                "problem": "Classify this statement's form and state which terms are distributed: 'No reptiles are warm-blooded animals.'",
+                "steps": [
+                  "Match the pattern 'No S are P' to the standard forms: this is the E form.",
+                  "Recall that E statements distribute both terms.",
+                  "Confirm intuitively: the statement excludes every reptile from the warm-blooded category, and simultaneously excludes every warm-blooded animal from the reptile category.",
+                  "State the terms: subject = reptiles, predicate = warm-blooded animals, both distributed."
+                ],
+                "answer": "This is an E-form statement ('No S are P'), and both the subject (reptiles) and predicate (warm-blooded animals) are distributed."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Categorical statement", "def": "A statement relating two categories using one of four standard forms: A, E, I, or O."},
+            {"term": "Universal statement", "def": "A categorical statement (A or E) that makes a claim about every member of its subject class."},
+            {"term": "Distributed term", "def": "A term about which a categorical statement makes a claim covering every member of that term's category."}
+          ],
+          "practice": [
+            {"q": "'Some engineers are not licensed' is an example of which standard form?", "choices": ["O", "A", "E", "I"], "answer": 0, "explain": "'Some S are not P' is the O form, a particular negative statement."},
+            {"q": "In the statement 'All whales are mammals,' which term(s) are distributed?", "choices": ["Only the subject, whales", "Only the predicate, mammals", "Both terms", "Neither term"], "answer": 0, "explain": "An A statement distributes only the subject; it says nothing about whether every mammal is a whale."},
+            {"q": "In logic, 'some' means:", "choices": ["At least one", "More than half but not all", "Exactly one", "None at all"], "answer": 0, "explain": "Logical 'some' is satisfied by at least one instance, regardless of how many total members actually qualify."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Categorical Syllogisms",
+          "minutes": 13,
+          "intro": "A categorical syllogism packs an entire argument into just three statements, and there is a simple, checkable set of rules that tells you, with total reliability, whether it is valid.",
+          "sections": [
+            {
+              "heading": "Structure of a Syllogism",
+              "body": [
+                "A **categorical syllogism** has exactly two premises and a conclusion, using exactly three terms, each appearing exactly twice across the whole argument: the **major term** (the conclusion's predicate), the **minor term** (the conclusion's subject), and the **middle term** (appearing in both premises but not the conclusion, which links the other two). 'All mammals are warm-blooded (major premise); all dogs are mammals (minor premise); therefore all dogs are warm-blooded (conclusion)' has middle term 'mammals,' minor term 'dogs,' major term 'warm-blooded.'",
+                "The middle term is doing the real logical work: it's the shared category that lets you connect the minor term to the major term. If the middle term isn't properly distributed at least once across the two premises, the syllogism cannot validly connect the other two terms — this is the most common way syllogisms go wrong."
+              ]
+            },
+            {
+              "heading": "A Key Validity Rule and Testing"
+              ,
+              "body": [
+                "One essential rule: **the middle term must be distributed in at least one premise**. Consider 'All cats are mammals; all dogs are mammals; therefore all dogs are cats' — the middle term 'mammals' is not distributed in either premise (both are A statements distributing only their subjects, cats and dogs, not mammals), so the syllogism is invalid, which matches the obviously false conclusion.",
+                "Another rule: **a term distributed in the conclusion must be distributed in its premise** (the 'illicit major/minor' error otherwise). Testing a syllogism means identifying the three terms, checking each premise's form (A/E/I/O) and which terms it distributes, and confirming every rule holds — a fully mechanical check that does not depend on whether the conclusion happens to sound true."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Categorical syllogism", "def": "A three-line argument using exactly three terms, each appearing twice, with two premises and a conclusion."},
+            {"term": "Middle term", "def": "The term appearing in both premises of a syllogism but not in the conclusion, linking the other two terms."},
+            {"term": "Undistributed middle", "def": "The fallacy of a syllogism whose middle term is not distributed in either premise, making it invalid."}
+          ],
+          "practice": [
+            {"q": "In 'All squares are rectangles; all rectangles are quadrilaterals; therefore all squares are quadrilaterals,' the middle term is:", "choices": ["Rectangles", "Squares", "Quadrilaterals", "There is no middle term"], "answer": 0, "explain": "'Rectangles' appears in both premises but not in the conclusion, making it the middle term linking squares to quadrilaterals."},
+            {"q": "'All cats are mammals; all dogs are mammals; therefore all dogs are cats' is invalid because:", "choices": ["The middle term, mammals, is not distributed in either premise", "It uses an O-form statement", "It has four terms instead of three", "The conclusion happens to be false"], "answer": 0, "explain": "Both premises are A statements distributing only their subjects (cats, dogs), leaving 'mammals' undistributed in both, which fails the middle-term rule."},
+            {"q": "The rule that a term distributed in the conclusion must also be distributed in its premise exists to prevent:", "choices": ["The argument from claiming more about a term than the premises actually established", "Statements from having a subject and predicate", "The use of universal statements", "Syllogisms from having exactly three terms"], "answer": 0, "explain": "If the conclusion distributes a term (makes a universal claim about it) that its premise never distributed, the argument has overreached beyond what the premises support."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Informal Fallacies",
+      "summary": "Most bad reasoning in the real world isn't a formal structural error — it's a recognizable pattern of irrelevance, weak evidence, or hidden assumption, and naming the pattern is often enough to defuse it.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Fallacies of Relevance",
+          "minutes": 12,
+          "intro": "These fallacies work by redirecting attention away from the actual argument onto something that feels emotionally or socially compelling but has no real bearing on whether the conclusion is true.",
+          "sections": [
+            {
+              "heading": "Ad Hominem and Appeal to Authority",
+              "body": [
+                "**Ad hominem** attacks the arguer's character, motives, or circumstances instead of addressing their argument: 'You can't trust her climate research, she drives a gas-powered car' dismisses the research based on the researcher's personal behavior, which has no bearing on whether her data or methods are correct. Note that pointing out a genuine, relevant **conflict of interest** (a paid industry consultant's financial stake in a study's outcome) is not automatically an ad hominem — it becomes fallacious when the personal fact is irrelevant to the argument's actual logical support.",
+                "**Appeal to authority** cites an authority's opinion as if that alone settles the question — legitimate when the authority has genuine, relevant expertise and the claim falls within it, but fallacious when the 'authority' lacks relevant expertise (a celebrity endorsing a medical claim) or when experts genuinely disagree and only one side is cited as if unanimous."
+              ]
+            },
+            {
+              "heading": "Appeal to Emotion and Strawman",
+              "body": [
+                "**Appeal to emotion** substitutes an emotional reaction (fear, pity, outrage) for actual evidence: an advertisement showing a crying child to sell an unrelated insurance product tries to make you feel your way to a purchase decision rather than reason your way there. **Strawman** misrepresents an opponent's actual position as a weaker, easier-to-attack version, then refutes that distorted version instead of the real one — 'She wants better school funding? So she wants to bankrupt taxpayers entirely' twists a moderate position into an extreme one nobody actually holds.",
+                "Both fallacies succeed by diverting attention from the real argument's actual merits: emotion substitutes feeling for evidence, and strawman substitutes a fake, weaker target for the real claim being made."
+              ],
+              "example": {
+                "problem": "Diagnose: 'My opponent proposes a modest increase in the minimum wage. Clearly he wants to destroy small businesses and put people out of work entirely.'",
+                "steps": [
+                  "Identify the actual position stated: a modest minimum wage increase.",
+                  "Identify the distorted version attacked: 'wants to destroy small businesses and put people out of work entirely.'",
+                  "Note the gap between the two: the actual proposal is specific and modest; the attacked version is extreme and unsupported.",
+                  "Name the fallacy: this is a strawman, since it refutes an exaggerated position rather than the actual proposal."
+                ],
+                "answer": "This is a strawman fallacy: it attacks an exaggerated, unsupported version of the opponent's position rather than the actual modest proposal made."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Ad hominem", "def": "Attacking the arguer's character or circumstances instead of addressing their actual argument."},
+            {"term": "Appeal to authority", "def": "Citing an authority's opinion as if it alone settles a question, fallacious when the authority lacks relevant expertise or experts disagree."},
+            {"term": "Appeal to emotion", "def": "Substituting an emotional reaction for actual evidence in support of a conclusion."},
+            {"term": "Strawman", "def": "Misrepresenting an opponent's position as weaker than it actually is, then refuting that distorted version."}
+          ],
+          "practice": [
+            {"q": "'Don't listen to his argument about tax policy — he's been divorced twice' is an example of:", "choices": ["Ad hominem", "Appeal to authority", "Strawman", "Appeal to emotion"], "answer": 0, "explain": "It attacks an irrelevant personal fact about the arguer rather than addressing the actual tax policy argument."},
+            {"q": "A skincare ad featuring a celebrity actor recommending a specific medical treatment for a skin disease is potentially fallacious because:", "choices": ["The celebrity lacks relevant medical expertise for the claim", "Celebrities are never allowed to have opinions", "It uses a categorical syllogism incorrectly", "It commits the undistributed middle fallacy"], "answer": 0, "explain": "Appeal to authority becomes fallacious when the cited authority lacks genuine expertise relevant to the specific claim being made."},
+            {"q": "The strawman fallacy specifically works by:", "choices": ["Refuting a distorted, weaker version of an opponent's actual position", "Attacking the opponent's personal character", "Citing an irrelevant authority", "Using an invalid categorical syllogism"], "answer": 0, "explain": "Strawman substitutes an easier, exaggerated target for the real position, then defeats that instead of the real argument."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Fallacies of Weak Induction",
+          "minutes": 12,
+          "intro": "These fallacies don't ignore evidence entirely — they use real evidence, but stretch it far past what it can actually support.",
+          "sections": [
+            {
+              "heading": "Hasty Generalization and False Cause",
+              "body": [
+                "**Hasty generalization** draws a broad conclusion from a sample that is too small or unrepresentative to support it: 'I met two rude people from that city, so everyone there must be rude' generalizes from a tiny, likely unrepresentative sample to an entire population. **False cause** (also called *post hoc ergo propter hoc*, 'after this, therefore because of this') assumes that because one event followed another, the first caused the second: 'I wore my lucky socks and we won the game, so the socks caused the win' ignores every other possible explanation for the outcome.",
+                "Both fallacies mistake weak inductive evidence for strong support: a couple of anecdotes are not a representative sample, and mere temporal sequence (A happened, then B happened) is not evidence of causation without ruling out coincidence and confounding factors."
+              ]
+            },
+            {
+              "heading": "Slippery Slope",
+              "body": [
+                "**Slippery slope** argues that a first, often modest step will inevitably trigger a chain of increasingly extreme consequences, without actually establishing that each link in the chain is likely: 'If we allow students to redo one assignment, soon no one will ever complete anything on time and the whole grading system will collapse' asserts an inevitable chain without evidence that any individual link would actually follow.",
+                "Not every 'this could lead to that' claim is fallacious — some slopes really are slippery, if there's actual evidence for each step's likelihood. The fallacy occurs specifically when the chain is asserted as inevitable without support for the intermediate steps, using fear of the extreme endpoint to avoid defending the actual, much more modest proposal on its own merits."
+              ],
+              "example": {
+                "problem": "Diagnose: 'Every time I've eaten sushi from this specific restaurant on a Friday, I've gotten a headache the next day. Therefore this restaurant's sushi causes headaches.'",
+                "steps": [
+                  "Identify the pattern: a temporal correlation is being treated as causation.",
+                  "Consider what evidence would actually be needed: ruling out other Friday-specific factors (different sleep, alcohol, stress, or even a different restaurant visited the same evening).",
+                  "Note that correlation alone, especially from a small number of personal observations, does not establish which factor is the actual cause.",
+                  "Name the fallacy: this is false cause (post hoc), since temporal sequence is being mistaken for a demonstrated causal link."
+                ],
+                "answer": "This is the false cause (post hoc) fallacy: a repeated temporal pattern is treated as proof of causation without ruling out other explanations, such as unrelated Friday habits."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Hasty generalization", "def": "Drawing a broad conclusion from a sample too small or unrepresentative to support it."},
+            {"term": "False cause", "def": "Assuming that because one event followed another, the first caused the second."},
+            {"term": "Slippery slope", "def": "Asserting that a modest first step will inevitably trigger an extreme chain of consequences, without evidence for each link."}
+          ],
+          "practice": [
+            {"q": "'I met one unfriendly person from that country, so people from that country must be unfriendly' is a:", "choices": ["Hasty generalization", "False cause", "Slippery slope", "Appeal to authority"], "answer": 0, "explain": "It generalizes to an entire population from a single, clearly unrepresentative data point."},
+            {"q": "The false cause fallacy specifically mistakes:", "choices": ["Temporal sequence for demonstrated causation", "A small sample for a large one", "An emotional appeal for evidence", "An authority's opinion for proof"], "answer": 0, "explain": "It assumes that one event following another means the first caused the second, without ruling out coincidence or other explanations."},
+            {"q": "A slippery slope argument becomes fallacious specifically when:", "choices": ["The chain of consequences is asserted as inevitable without evidence for each intermediate step", "Any connection between two policies is mentioned at all", "It concerns a modest, low-stakes proposal", "It cites a relevant expert"], "answer": 0, "explain": "The fallacy lies in asserting inevitability without support for each link — some genuinely evidenced slippery slopes are not fallacious."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Fallacies of Presumption and Ambiguity",
+          "minutes": 11,
+          "intro": "These fallacies work by smuggling in an assumption that hasn't been earned, or by exploiting a word that quietly shifts meaning partway through the argument.",
+          "sections": [
+            {
+              "heading": "Begging the Question and False Dilemma",
+              "body": [
+                "**Begging the question** assumes, in a premise, the very conclusion the argument is supposed to prove, so the argument goes in a circle rather than actually building support: 'The Bible is true because it says so, and the Bible is always right' assumes the Bible's reliability, which is exactly what needed to be established. **False dilemma** presents only two options as if they were the only possibilities, when in fact more options exist: 'Either you support this entire bill, or you don't care about public safety' ignores the possibility of supporting parts of the bill, or caring about safety while opposing this specific approach.",
+                "Both fallacies work by presumption — assuming something (the conclusion, or a limited set of options) that the arguer hasn't actually earned the right to assume."
+              ]
+            },
+            {
+              "heading": "Equivocation",
+              "body": [
+                "**Equivocation** uses a word or phrase in two different senses within the same argument, relying on the switch to make an invalid inference look valid: 'A feather is light; what is light cannot be dark; therefore a feather cannot be dark' shifts 'light' from meaning 'not heavy' in the first premise to meaning 'not dark' in the second, making the argument's apparent validity an illusion created by the ambiguous word.",
+                "Spotting equivocation requires tracking exactly what each key term means at each point in the argument — if a term's meaning shifts between premises, the argument's apparent logical connection is broken, even though the same word appears throughout and creates a false sense of continuity."
+              ],
+              "example": {
+                "problem": "Diagnose: 'Only man is rational. No woman is a man. Therefore no woman is rational.'",
+                "steps": [
+                  "Identify the two possible meanings of 'man': (1) 'humankind' in general, or (2) 'adult male human' specifically.",
+                  "Check premise 1: 'only man is rational' likely uses 'man' to mean humankind in general (the traditional but ambiguous usage).",
+                  "Check premise 2: 'no woman is a man' clearly uses 'man' to mean adult male specifically.",
+                  "Confirm the meanings differ across premises, so the two premises don't actually connect the way the argument's surface form suggests."
+                ],
+                "answer": "This is equivocation: 'man' shifts from meaning 'humankind' in the first premise to meaning 'adult male' in the second, making the argument's apparent validity an illusion of the ambiguous word."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Begging the question", "def": "Assuming, in a premise, the very conclusion the argument is meant to establish."},
+            {"term": "False dilemma", "def": "Presenting only two options as the only possibilities when more actually exist."},
+            {"term": "Equivocation", "def": "Using a word or phrase in two different senses within the same argument to create an illusion of valid inference."}
+          ],
+          "practice": [
+            {"q": "'You're either with us completely or against us entirely' when other positions clearly exist is an example of:", "choices": ["False dilemma", "Equivocation", "Begging the question", "Ad hominem"], "answer": 0, "explain": "It presents only two extreme options as exhaustive when intermediate positions are actually available."},
+            {"q": "'This law is just because it's what justice requires, and justice requires whatever is lawful' is an example of:", "choices": ["Begging the question", "False dilemma", "Slippery slope", "Hasty generalization"], "answer": 0, "explain": "The argument circularly assumes justice and law are equivalent, which is exactly what would need independent support rather than assumption."},
+            {"q": "Equivocation specifically relies on:", "choices": ["A key term shifting meaning between different parts of the same argument", "A sample that is too small to generalize from", "An irrelevant personal attack", "A chain of consequences with no evidence"], "answer": 0, "explain": "The fallacy's mechanism is a word changing meaning mid-argument while appearing to stay constant, creating an illusion of valid connection."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Critical Thinking in Practice",
+      "summary": "The final unit turns logic outward — toward evaluating real sources, recognizing the mental shortcuts that distort your own reasoning, and building arguments that can withstand scrutiny.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Evaluating Evidence and Sources",
+          "minutes": 12,
+          "intro": "In an environment full of confident-sounding claims, the skill that matters most is not spotting an outright lie — it's knowing what questions to ask before you believe anything at all.",
+          "sections": [
+            {
+              "heading": "Source Credibility Checks",
+              "body": [
+                "Before accepting a claim, check the source's **expertise** (does this person or outlet have genuine, relevant training or track record on this specific topic?), **bias** (does the source have a financial, political, or personal stake in a particular conclusion?), and **corroboration** (do independent, credible sources report the same finding?). A single study, even a well-designed one, is weaker evidence than a pattern of consistent findings replicated across multiple independent studies.",
+                "Primary sources (the original study, the original data, the direct quote) are generally more reliable than secondary retellings (a news article summarizing a study, a social media post paraphrasing a quote), because each retelling introduces a chance for simplification, selective emphasis, or outright error."
+              ]
+            },
+            {
+              "heading": "Statistical Red Flags",
+              "body": [
+                "Watch for **cherry-picked statistics** (a true number presented without the context that would change its meaning, such as a 'doubled risk' claim that goes from 1-in-a-million to 2-in-a-million) and **correlation presented as causation** (as in the false-cause fallacy) — a genuine statistical association between two things does not by itself tell you which one, if either, caused the other, or whether some third factor explains both.",
+                "A practical habit: before sharing or accepting a striking claim, ask what the original source actually says, whether the number is presented with its relevant base rate or context, and whether the specific causal claim being made has actually been tested, or merely correlated."
+              ],
+              "example": {
+                "problem": "A headline reads: 'Study finds coffee drinkers 50% more likely to develop condition X.' Apply the evaluation checklist before accepting this as showing coffee causes condition X.",
+                "steps": [
+                  "Check the base rate: '50% more likely' could mean rising from 2% to 3% risk (a small absolute change) or from 20% to 30% (a large one) — the relative number alone doesn't tell you which.",
+                  "Check for confounding factors: coffee drinkers might differ systematically in other habits (sleep, smoking, diet) that could actually explain the association.",
+                  "Check causation versus correlation: an observational study showing an association does not, by itself, establish that coffee causes the condition.",
+                  "Check corroboration: has this finding been replicated by other independent studies, or is this a single, possibly preliminary result?"
+                ],
+                "answer": "Before accepting the causal claim, check the actual absolute risk change (not just the relative percentage), rule out confounding habits, and look for independent replication — a single correlational study does not establish causation on its own."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Corroboration", "def": "Independent confirmation of a claim or finding by multiple credible sources."},
+            {"term": "Primary source", "def": "An original account, study, or dataset, as opposed to a secondary retelling or summary."},
+            {"term": "Cherry-picked statistic", "def": "A true number presented without the context that would meaningfully change its interpretation."}
+          ],
+          "practice": [
+            {"q": "A '50% increased risk' headline is potentially misleading if it omits:", "choices": ["The absolute base rate the increase applies to", "The name of the researcher", "The publication date of the study", "The length of the study's title"], "answer": 0, "explain": "A large relative increase can still be a tiny absolute risk change; without the base rate, the number alone can mislead."},
+            {"q": "A primary source is generally more reliable than a secondary retelling because:", "choices": ["Each retelling introduces a chance for simplification or error", "Primary sources are always free of bias", "Secondary sources are illegal to cite", "Primary sources never contain statistics"], "answer": 0, "explain": "Every step of summarizing or paraphrasing a finding introduces a chance for meaningful distortion, however small."},
+            {"q": "Finding that two variables are statistically correlated tells you that:", "choices": ["An association exists, but not by itself which, if either, causes the other", "One variable definitely causes the other", "The finding has been fully corroborated", "The source is definitely unbiased"], "answer": 0, "explain": "Correlation alone is silent on causal direction and cannot rule out a third factor explaining both variables."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Cognitive Biases and Reasoning Errors",
+          "minutes": 12,
+          "intro": "The most dangerous reasoning errors aren't the ones you can spot in someone else's argument — they're the automatic mental shortcuts quietly shaping your own, often without your awareness.",
+          "sections": [
+            {
+              "heading": "Confirmation Bias and Availability Heuristic",
+              "body": [
+                "**Confirmation bias** is the tendency to notice, favor, and remember information that confirms what you already believe, while overlooking or discounting information that challenges it — someone convinced a certain diet works will vividly recall the days they felt great and gloss over the days they didn't. Actively seeking out the strongest evidence *against* your own view is one of the most reliable countermeasures.",
+                "The **availability heuristic** is judging how likely or common something is based on how easily examples come to mind, rather than actual frequency — vivid, widely reported events (a plane crash, a shark attack) feel far more common than they statistically are, because they are memorable, while far more common but less dramatic risks (car accidents, heart disease) feel comparatively less threatening."
+              ]
+            },
+            {
+              "heading": "Anchoring and the Dunning-Kruger Effect",
+              "body": [
+                "**Anchoring bias** is the tendency to rely too heavily on the first piece of information encountered (the 'anchor') when making a subsequent judgment, even when that first number is arbitrary — a negotiation's opening offer, however unrealistic, tends to pull the final agreed price toward it. The **Dunning-Kruger effect** describes how people with limited knowledge or skill in an area often overestimate their own competence, because the very skills needed to perform well are often the same skills needed to recognize good performance in the first place.",
+                "None of these biases mean human reasoning is hopeless — they mean specific, checkable habits (seeking disconfirming evidence, checking base rates instead of vivid anecdotes, deliberately ignoring an arbitrary first number, and staying humble about unfamiliar domains) meaningfully improve reasoning quality over time."
+              ],
+              "example": {
+                "problem": "A car salesperson opens negotiations at $32,000 for a car with a fair market value around $24,000. The buyer ends up settling at $28,000, feeling like they got a reasonable deal. Explain the bias at work.",
+                "steps": [
+                  "Identify the anchor: the opening offer of $32,000, though arbitrary and above fair value.",
+                  "Note the buyer's reference point shifted toward that anchor rather than toward the actual fair market value of $24,000.",
+                  "Observe the outcome: $28,000 feels like a win relative to $32,000, even though it is well above the car's actual fair value.",
+                  "Name the bias: anchoring bias, since the final judgment was pulled toward the arbitrary first number rather than an independent assessment of value."
+                ],
+                "answer": "This is anchoring bias: the initial arbitrary offer of $32,000 shifted the buyer's reference point, making $28,000 feel like a good deal even though it remained well above the car's actual $24,000 fair market value."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Confirmation bias", "def": "The tendency to favor and recall information that confirms existing beliefs while discounting contrary evidence."},
+            {"term": "Availability heuristic", "def": "Judging likelihood by how easily examples come to mind rather than by actual frequency."},
+            {"term": "Anchoring bias", "def": "Relying too heavily on the first piece of information encountered when making a subsequent judgment."},
+            {"term": "Dunning-Kruger effect", "def": "The tendency for people with limited skill in a domain to overestimate their own competence in it."}
+          ],
+          "practice": [
+            {"q": "Overestimating the frequency of shark attacks because news coverage makes them memorable is an example of:", "choices": ["The availability heuristic", "Confirmation bias", "Anchoring bias", "The Dunning-Kruger effect"], "answer": 0, "explain": "Judging frequency by how easily examples come to mind, rather than by actual statistical rates, is the availability heuristic."},
+            {"q": "A reliable countermeasure to confirmation bias is:", "choices": ["Actively seeking out the strongest evidence against your own current view", "Only reading sources that already agree with you", "Trusting your first impression without further checking", "Relying on vivid anecdotes over statistics"], "answer": 0, "explain": "Deliberately seeking disconfirming evidence directly counteracts the tendency to notice only confirming information."},
+            {"q": "The Dunning-Kruger effect describes a situation where:", "choices": ["Limited skill in a domain leads to overestimating one's own competence in it", "Experts always underestimate their skill", "An initial number distorts a later judgment", "Vivid examples distort frequency estimates"], "answer": 0, "explain": "The effect specifically concerns low-skill individuals overestimating competence, partly because the skills needed to judge performance are the ones they lack."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Constructing a Strong Argument",
+          "minutes": 12,
+          "intro": "Everything in this course — validity, soundness, inductive strength, avoiding fallacies — comes together in a single practical skill: building an argument of your own that can actually survive scrutiny.",
+          "sections": [
+            {
+              "heading": "A Process for Building an Argument",
+              "body": [
+                "Start by stating your conclusion as precisely as possible — a vague conclusion ('this policy is bad') is much harder to support well than a precise one ('this policy will reduce the workforce by an estimated 8% within a year'). Then list the actual premises that support it, checking each on its own for truth, and checking the whole argument's structure for validity (if deductive) or strength (if inductive).",
+                "Explicitly consider the strongest objection to your own argument, called a **counterargument**, and address it directly rather than ignoring it — an argument that has already answered its best objection is far more persuasive and far more likely to be actually correct than one that has never been tested against one."
+              ]
+            },
+            {
+              "heading": "Charity and Precision"
+              ,
+              "body": [
+                "The **principle of charity** requires interpreting an opposing argument in its strongest, most reasonable form before criticizing it — refuting a strawman version, even accidentally, teaches you nothing about whether the real position is actually wrong. Applying charity to your own argument means anticipating how a careful critic would strengthen the best version of the opposing case, and building your response to survive that stronger version, not just a weak one.",
+                "Precision in language also matters enormously: vague or ambiguous key terms (as seen in the equivocation fallacy) let an argument seem to succeed only because no one has pinned down exactly what it's claiming — defining your key terms clearly at the outset removes a whole category of possible confusion and hidden error before it can even arise."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Counterargument", "def": "The strongest objection to a given argument, which a well-built argument anticipates and addresses directly."},
+            {"term": "Principle of charity", "def": "The practice of interpreting an opposing argument in its strongest, most reasonable form before criticizing it."}
+          ],
+          "practice": [
+            {"q": "Applying the principle of charity to an opposing argument means:", "choices": ["Interpreting it in its strongest, most reasonable form before criticizing it", "Assuming it is automatically correct", "Refusing to state a counterargument", "Refuting the weakest version you can find"], "answer": 0, "explain": "Charity requires engaging the best version of an opposing view, which is what makes any resulting criticism actually meaningful."},
+            {"q": "Addressing the strongest objection to your own argument, rather than ignoring it, mainly:", "choices": ["Makes the argument more persuasive and more likely to actually be correct", "Guarantees the argument is deductively valid", "Removes the need to state any premises at all", "Converts an inductive argument into a deductive one"], "answer": 0, "explain": "An argument tested against its best objection and still standing is meaningfully stronger than one that has never faced scrutiny."},
+            {"q": "Defining key terms precisely at the start of an argument mainly helps avoid:", "choices": ["Equivocation and hidden ambiguity later in the argument", "The need for any premises", "The requirement of forming a conclusion", "Having to consider counterarguments"], "answer": 0, "explain": "Clear definitions close off the possibility that a key term quietly shifts meaning partway through, which is exactly how equivocation succeeds."}
+          ]
+        }
+      ]
+    }
+  ]
+}

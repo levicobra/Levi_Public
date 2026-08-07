@@ -1,0 +1,663 @@
+{
+ "id": "technical-drawing",
+ "title": "Technical Drawing & CAD",
+ "domain": "engineering",
+ "level": "High school",
+ "description": "Technical Drawing & CAD teaches you to communicate a physical object precisely on paper or screen: freehand sketching, orthographic projection, dimensioning, and sectioning, then carrying those same principles into a digital 3D CAD model. By the end, you can read a working drawing like an engineer and produce one that another person could build from without ever seeing the original object.",
+ "outcomes": [
+  "You can sketch an object freehand using proper line weights, proportion, and basic isometric technique.",
+  "You can create a correct multiview (orthographic) drawing of an object, choosing the right views and projecting them accurately.",
+  "You can apply dimensions and tolerances to a drawing following standard conventions, so a part can be manufactured correctly.",
+  "You can read and create section views and auxiliary views to reveal internal or angled features of a part.",
+  "You can build a simple 3D model in CAD using sketches, extrusions, and other basic features, and produce a 2D drawing from it.",
+  "You can interpret a complete working drawing, including its title block, notes, and symbols, to fully understand a part's requirements."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Sketching Fundamentals",
+   "summary": "Every technical drawing, digital or not, starts with the ability to sketch cleanly and think in three dimensions. This unit builds line control, proportion, and basic pictorial sketching.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Line Types and Line Weight",
+     "minutes": 11,
+     "intro": "A technical drawing is really a coded message, and the code is made of different line types and weights, each one telling the reader something specific about the object without a single word of explanation.",
+     "sections": [
+      {
+       "heading": "The Standard Line Types",
+       "body": [
+        "A visible (object) line is a thick, solid line showing an edge or outline you would actually see looking at the real object; it is drawn darkest and thickest of all line types since it represents the object's real, visible geometry. A hidden line is a thin, dashed line showing an edge that exists but is blocked from view by other material in front of it, such as the back edge of a hole drilled through a block.",
+        "A center line is a thin line alternating long and short dashes, marking the axis of symmetry of a cylindrical feature like a hole or a shaft, and it is essential for showing where a round feature is centered even when the feature itself is shown with visible or hidden lines. A dimension line, together with extension lines, shows a measurement, capped with arrowheads and usually including the numeric value directly on or above the line."
+       ]
+      },
+      {
+       "heading": "Why Line Weight Matters",
+       "body": [
+        "Using distinctly different weights (thicknesses) for these line types, rather than drawing everything the same, is what lets a reader instantly tell an actual edge from a hidden feature from a dimension without reading a single label. A drawing where every line looks the same is nearly impossible to interpret quickly, which is why line weight and type are standardized (in the U.S., largely following ASME Y14.2) rather than left to individual preference.",
+        "As a practical guideline, visible lines are drawn thickest, roughly 0.6 mm in pencil or ink; hidden lines and center lines are drawn thinner, roughly 0.3 mm; and dimension, extension, and construction lines are thinnest of all. Consistency within a single drawing matters more than hitting an exact measurement, since the goal is a clear visual hierarchy the eye can sort through instantly."
+       ],
+       "example": {
+        "problem": "A drawing shows a rectangular block with a round hole drilled through it, viewed from the top so the hole's bottom edge is not visible from this angle.",
+        "steps": [
+         "Draw the block's outer outline as thick, solid visible lines, since these edges are directly seen from this view.",
+         "Draw the hole's edge nearest the viewer as a thick, solid circle, since it is visible.",
+         "Add a thin, alternating long-short-dash center line through the hole's axis to mark its center, even though the hole itself is already shown."
+        ],
+        "answer": "The block's outline and the hole's visible circular edge are drawn as thick visible lines, and a thin center line marks the hole's axis; no hidden line is needed here since the hole's near edge is fully visible from the top view."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "visible line", "def": "A thick, solid line representing an edge of the object that is actually seen from the current view."},
+      {"term": "hidden line", "def": "A thin, dashed line representing an edge that exists but is blocked from view by material in front of it."},
+      {"term": "center line", "def": "A thin line of alternating long and short dashes marking the axis of symmetry of a round or symmetric feature."},
+      {"term": "line weight", "def": "The relative thickness of a drawn line, used to visually distinguish different line types at a glance."}
+     ],
+     "practice": [
+      {
+       "q": "What does a hidden line represent in a technical drawing?",
+       "choices": ["A dimension measurement", "An edge that exists but is blocked from view by material in front of it", "The center axis of a cylindrical feature", "A construction guideline that will be erased"],
+       "answer": 1,
+       "explain": "A hidden line, drawn as thin dashes, shows an edge that is real but not directly visible in the current view because other material blocks it, such as the far wall of a drilled hole."
+      },
+      {
+       "q": "Why are different line types given distinctly different weights (thicknesses) rather than all drawn the same?",
+       "choices": ["It has no functional purpose, only aesthetic preference", "Distinct weights let a reader instantly distinguish an actual edge from a hidden feature or a dimension without needing labels", "Thicker lines are simply easier to erase", "Line weight is only relevant in digital CAD, not hand sketching"],
+       "answer": 1,
+       "explain": "A visual hierarchy of line weights lets the eye sort visible edges, hidden edges, and dimensions apart at a glance, which would be impossible if every line looked identical."
+      },
+      {
+       "q": "What does a center line indicate on a drawing?",
+       "choices": ["A hidden feature the reader cannot see", "The axis of symmetry of a round or symmetric feature, such as a hole or shaft", "The overall outer boundary of the part", "A dimension value in millimeters"],
+       "answer": 1,
+       "explain": "A center line, shown as alternating long and short dashes, marks the axis of a circular or symmetric feature, helping locate it precisely even when the feature is also shown with other line types."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Proportion and Freehand Sketching",
+     "minutes": 12,
+     "intro": "Before any measurement is added, a good sketch has to look right: its proportions have to roughly match the real object, and freehand sketching skill is what lets a designer capture an idea quickly before committing to precise, measured work.",
+     "sections": [
+      {
+       "heading": "Sketching Straight Lines and Circles Freehand",
+       "body": [
+        "To sketch a straight line freehand, mark the start and end points first, then draw the line in one smooth, confident motion looking at the endpoint rather than the pencil tip, which produces a straighter line than trying to trace slowly and carefully. Rotating the paper to a comfortable angle for each line, rather than forcing an awkward wrist angle for a specific direction, also improves control significantly.",
+        "To sketch a circle freehand, first lightly sketch a square the diameter of the intended circle, mark the midpoint of each side, then connect those four midpoints with four smooth arcs; this construction method produces a rounder circle than attempting to draw the full circle in one continuous stroke, especially for larger circles."
+       ]
+      },
+      {
+       "heading": "Estimating and Maintaining Proportion",
+       "body": [
+        "Proportion means the relative sizes of an object's features compared to each other, and getting proportion right matters more in an early sketch than getting any single measurement exact, since a sketch's whole purpose is to communicate the object's overall shape and relationships quickly. A simple technique is to pick one feature as a reference unit (say, the width of a block) and estimate every other dimension as a multiple or fraction of that unit, such as \"the height looks like about 1.5 times the width.\"",
+        "Blocking in a sketch with light, loose construction lines first, roughly capturing the overall proportions and boundary box of the object, and only then darkening the final lines once the proportions look correct, prevents the common beginner mistake of committing too early to a dark line that turns out to be the wrong length or angle."
+       ],
+       "example": {
+        "problem": "You are sketching a rectangular block freehand and want its height to look proportionally correct at about 1.5 times its width, where the width will be drawn as roughly 2 inches on paper.",
+        "steps": [
+         "Lightly sketch the width first, about 2 inches, as a light construction line.",
+         "Calculate the target height using the 1.5 ratio: 2 × 1.5 = 3 inches.",
+         "Lightly block in a height of about 3 inches, check the overall proportion looks right, then darken the final visible lines."
+        ],
+        "answer": "The height should be sketched at roughly 3 inches (1.5 times the 2-inch width) to preserve the object's correct proportions."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "proportion", "def": "The relative size relationship between different features of an object, independent of the sketch's actual scale."},
+      {"term": "construction line", "def": "A light, temporary guideline sketched to block in proportions and layout before darkening the final lines."},
+      {"term": "blocking in", "def": "Roughly sketching an object's overall boundary and major proportions with light lines before adding detail or darkening final lines."}
+     ],
+     "practice": [
+      {
+       "q": "Why is looking at the endpoint of a line, rather than the pencil tip, recommended when sketching a straight line freehand?",
+       "choices": ["It has no effect on line quality", "It tends to produce a straighter, more confident line than tracing slowly while watching the pencil tip", "It is only useful for very short lines", "It causes the line to curve intentionally"],
+       "answer": 1,
+       "explain": "Focusing on the destination point guides the hand in one smooth motion toward that target, generally producing a straighter result than slow, hesitant tracing while watching the pencil itself."
+      },
+      {
+       "q": "What is the benefit of constructing a freehand circle by first sketching a square and connecting the midpoints of its sides with arcs?",
+       "choices": ["It is slower and less accurate than drawing directly", "It produces a rounder, more accurate circle than attempting one continuous freehand stroke, especially for larger circles", "It only works for very small circles", "Squares are easier to erase than circles"],
+       "answer": 1,
+       "explain": "The square gives four fixed reference points (the midpoints) evenly spaced around the intended circle, guiding four separate arcs into a rounder overall shape than a single unguided freehand stroke typically achieves."
+      },
+      {
+       "q": "Why does proportion matter more than exact measurements in an early freehand sketch?",
+       "choices": ["Measurements are never useful in any sketch", "An early sketch's main purpose is communicating the object's overall shape and feature relationships quickly, not precise dimensions", "Proportion and measurement are the same thing", "Exact measurements should always come before any sketching begins"],
+       "answer": 1,
+       "explain": "A quick sketch is meant to capture and communicate the object's form and relative feature sizes; exact dimensions come later in a formal, measured drawing, so getting proportions visually right matters most at the sketching stage."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Isometric Sketching",
+     "minutes": 13,
+     "intro": "An isometric sketch shows an object in a pictorial, three-dimensional-looking view using just three axes at fixed angles, giving a quick, realistic sense of an object's overall form without the complexity of full perspective drawing.",
+     "sections": [
+      {
+       "heading": "The Isometric Axes",
+       "body": [
+        "An isometric sketch is built on three axes: one drawn straight up (vertical), and two drawn at 30 degrees above the horizontal in each direction, so the total angle between the two slanted axes is 120 degrees. Every line on the actual object that runs parallel to one of these three axes is drawn parallel to that same axis in the sketch, at true or proportional length, which is what makes isometric sketching fast and consistent once the axes are set.",
+        "Isometric grid paper, printed with faint dots or lines already oriented along these three axes, makes starting an isometric sketch much easier for beginners, since the axis angles are already laid out and only need to be followed rather than measured freehand each time."
+       ]
+      },
+      {
+       "heading": "Building an Isometric Box",
+       "body": [
+        "To sketch a simple rectangular object in isometric, start at a single corner point and draw three lines outward along the three isometric axes, representing the object's width, height, and depth. Complete the box by drawing lines parallel to each axis connecting the far ends of these three lines, forming a complete six-sided box in pictorial view; this isometric box becomes the bounding envelope that more complex features are then sketched inside of.",
+        "Circles and holes on an isometric drawing do not appear as true circles; on each of the three visible faces they appear as ellipses, tilted differently depending on which face they sit on, since the circle is being viewed at an angle rather than straight on. Sketching these ellipses accurately takes practice, but starting from a lightly blocked isometric square on the correct face and inscribing the ellipse within it keeps the proportions correct."
+       ],
+       "example": {
+        "problem": "You need to isometrically sketch a rectangular block that is 3 inches wide, 2 inches tall, and 1.5 inches deep.",
+        "steps": [
+         "Mark a starting corner point, and draw a line 3 inches long along the right-side 30-degree axis for the width.",
+         "From the same starting point, draw a line 2 inches long straight up (vertical) for the height.",
+         "From the same starting point, draw a line 1.5 inches long along the left-side 30-degree axis for the depth.",
+         "Complete the box by drawing lines parallel to each axis connecting the far endpoints of the three initial lines."
+        ],
+        "answer": "Three lines of 3, 2, and 1.5 inches drawn along the vertical axis and the two 30-degree axes from a shared starting corner, then connected with parallel lines, form the complete isometric box for the block."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "isometric sketch", "def": "A pictorial sketch built on three axes, one vertical and two at 30 degrees from horizontal, showing an object's three dimensions at once."},
+      {"term": "isometric axes", "def": "The three reference directions in an isometric sketch: one vertical, and two each drawn 30 degrees above horizontal."},
+      {"term": "isometric ellipse", "def": "The elliptical shape a true circle takes when drawn on one of the three faces of an isometric sketch, due to the angled viewing direction."}
+     ],
+     "practice": [
+      {
+       "q": "In an isometric sketch, at what angle above horizontal are the two non-vertical axes drawn?",
+       "choices": ["15 degrees", "30 degrees", "45 degrees", "60 degrees"],
+       "answer": 1,
+       "explain": "Standard isometric projection uses one vertical axis and two axes each drawn at 30 degrees above the horizontal, giving a total of 120 degrees between the two slanted axes."
+      },
+      {
+       "q": "Why does a true circle appear as an ellipse on the face of an isometric sketch rather than as a circle?",
+       "choices": ["Isometric sketches cannot show round features at all", "The face is being viewed at an angle rather than straight on, which distorts a circle's outline into an ellipse", "Only hidden circles appear as ellipses; visible ones stay circular", "It is simply an artistic convention with no geometric reason"],
+       "answer": 1,
+       "explain": "Isometric projection views each face of the object at an angle, and any circle on that angled face projects as a foreshortened ellipse rather than a true circle, similar to how a coin held at an angle appears oval to the eye."
+      },
+      {
+       "q": "What is the purpose of isometric grid paper for a beginner?",
+       "choices": ["It replaces the need to know the isometric axis angles at all", "It provides the three axis directions already laid out, so a sketcher can follow them rather than measuring 30-degree angles freehand each time", "It is only used for orthographic drawings, not isometric ones", "It automatically draws circles as true circles instead of ellipses"],
+       "answer": 1,
+       "explain": "Isometric grid paper is pre-printed with dots or lines aligned to the vertical and 30-degree axes, letting a beginner follow the existing grid rather than needing to measure each axis angle by hand."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Orthographic Projection",
+   "summary": "Orthographic (multiview) drawing is the core skill of technical drawing: representing a 3D object fully and unambiguously using a set of flat, related 2D views. This unit builds that skill from single views up to a complete multiview drawing.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Glass Box and Choosing Views",
+     "minutes": 13,
+     "intro": "Orthographic projection can feel abstract at first, but it becomes intuitive once you imagine the object suspended inside a glass box, with each view simply being what you would see projected straight onto one wall of that box.",
+     "sections": [
+      {
+       "heading": "The Glass Box Concept",
+       "body": [
+        "Imagine an object suspended at the center of a transparent glass box, and imagine projecting lines straight out from every point on the object, perpendicular to each face of the box, until they land on that face; the resulting image on each face is that view of the object: front, top, right side, left side, bottom, and rear. Unfolding this box flat, hinged along its edges, arranges the views in a standard, predictable layout relative to each other, which is exactly how a multiview drawing is organized on paper.",
+        "In the standard U.S. system (third-angle projection), when the box is unfolded, the top view lands directly above the front view, and the right side view lands directly to the right of the front view, so aligned views can be read together, feature by feature, without needing to re-measure anything between them."
+       ]
+      },
+      {
+       "heading": "Choosing Which Views to Show",
+       "body": [
+        "Not every object needs all six possible views; the goal is the minimum number of views that fully and unambiguously describes the object, typically front, top, and right side for a moderately complex part. The front view is chosen as whichever view shows the object's most characteristic shape and the most features, since it is both the primary view and the one most other views are aligned relative to.",
+        "A simple object, like a flat rectangular plate with a hole, might need only two views (say, front and top) if depth and thickness are already fully clear from a note or the other two views combined; adding a third view that provides no new information just clutters the drawing and should be omitted."
+       ],
+       "example": {
+        "problem": "You need to fully describe a cylindrical bushing (a hollow tube) with a stepped outer diameter.",
+        "steps": [
+         "Recognize the front view (or a similar side view showing the cylinder's outline and step) captures the diameters and lengths along the axis.",
+         "Recognize that a circular end view shows the bushing's round profile and confirms it is cylindrical, including the hole's diameter.",
+         "Determine that a top view would be identical in outline to the front view for a body of revolution like this, so it adds no new information and can be omitted."
+        ],
+        "answer": "A cylindrical part like this typically needs only two views: one showing the profile with diameters and lengths (often the front view), and one circular end view, since a third view would be redundant for a body of revolution."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "orthographic projection", "def": "A method of representing a 3D object using multiple related 2D views, each showing the object as seen straight-on from a specific direction."},
+      {"term": "glass box method", "def": "A conceptual model imagining an object inside a transparent box, where each view is the projection of the object onto one face of the box."},
+      {"term": "third-angle projection", "def": "The standard U.S. orthographic projection convention where the top view is placed above the front view and the right side view to its right."}
+     ],
+     "practice": [
+      {
+       "q": "In standard U.S. third-angle projection, where is the top view placed relative to the front view?",
+       "choices": ["Below the front view", "Directly above the front view", "To the left of the front view", "It can be placed anywhere on the page"],
+       "answer": 1,
+       "explain": "Third-angle projection, the U.S. standard, places the top view directly above the front view and the right side view directly to the right, following the glass box's standard unfolded layout."
+      },
+      {
+       "q": "What determines how many views should be included in a multiview drawing?",
+       "choices": ["Always exactly six views, one for every face of the glass box", "The minimum number of views needed to fully and unambiguously describe the object", "As many views as will fit on the paper", "Exactly one view is always sufficient for any part"],
+       "answer": 1,
+       "explain": "Good practice uses the fewest views that still fully and clearly communicate the object's shape; extra views that add no new information simply clutter the drawing without benefit."
+      },
+      {
+       "q": "How is the front view of an object generally chosen?",
+       "choices": ["It is always whichever view happens to fit best on the page", "It is chosen as the view showing the object's most characteristic shape and the most features, since other views are aligned relative to it", "It must always be the smallest possible view", "The front view is chosen at random"],
+       "answer": 1,
+       "explain": "The front view serves as the primary reference view that other views are aligned to, so it is selected as the view that best represents the object's overall shape and shows the greatest number of features."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Projecting Features Between Views",
+     "minutes": 14,
+     "intro": "Once you have chosen your views, the real skill of orthographic drawing is projecting each feature accurately from one view to the next, so that a hole, edge, or slope shows up in exactly the right place in every related view.",
+     "sections": [
+      {
+       "heading": "Projecting Height, Width, and Depth",
+       "body": [
+        "Each of an object's three dimensions, height, width, and depth, appears in exactly two of the three standard views, never in all three and never in only one: height appears in the front and side views, width appears in the front and top views, and depth appears in the top and side views. This relationship is what makes projecting features between views possible: a feature's height, once established in the front view, projects directly (as a horizontal line) into the side view at the same height.",
+        "A miter line, a 45-degree construction line placed at the corner where the top view and the side view meet, is a classic drafting technique for projecting depth measurements from the top view around the corner into the side view (or vice versa), ensuring depth stays consistent between those two views without needing to re-measure it."
+       ]
+      },
+      {
+       "heading": "Practicing Feature Projection",
+       "body": [
+        "When a hole appears in the top view of an object, its position (left-right and front-back) is set there, but its position in the front view along the vertical axis needs to come from wherever that same feature is visible in the side view or from a direct height measurement, and vice versa; every feature should be locatable by cross-referencing at least two of the three views together. Practicing this by drawing light, thin projection lines directly between views while sketching, rather than estimating each view's features independently, builds the habit of true alignment that a real working drawing depends on.",
+        "A common beginner mistake is drawing each view as if it were a separate, disconnected picture, estimating hole positions or edge lengths freshly in each view rather than projecting them from one to another; this reliably produces small misalignments between views that would make actual manufacturing from that drawing impossible."
+       ],
+       "example": {
+        "problem": "A block's top view shows a hole located 1 inch from the left edge and 0.5 inch from the front edge. You now need to add that hole to the front view.",
+        "steps": [
+         "Recognize the hole's left-right position (1 inch from the left edge) is width, which appears in both the top view and the front view.",
+         "Project a vertical line straight down from the hole's center in the top view into the front view to fix its horizontal (left-right) location there.",
+         "Determine the hole's vertical position in the front view separately, from its known height along the object (for example, centered on a known feature height), since height is not shown in the top view at all."
+        ],
+        "answer": "The hole's left-right position projects directly down from the top view into the front view, while its vertical position must come from a separate height reference, since the top view does not show height."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "miter line", "def": "A 45-degree construction line used at the corner of a multiview drawing to project depth measurements between the top view and the side view."},
+      {"term": "projection line", "def": "A thin construction line drawn between views to transfer a feature's position accurately from one view to another."}
+     ],
+     "practice": [
+      {
+       "q": "Which two views does an object's depth dimension appear in?",
+       "choices": ["Front and side views", "Front and top views", "Top and side views", "Only the front view"],
+       "answer": 2,
+       "explain": "Depth is shared between the top view (front-to-back extent as seen from above) and the side view (front-to-back extent as seen from the side); it does not appear directly in the front view."
+      },
+      {
+       "q": "What is the purpose of a 45-degree miter line in a multiview drawing?",
+       "choices": ["It marks a hidden feature", "It projects depth measurements between the top view and the side view around the drawing's corner", "It indicates a center axis", "It shows a dimension value directly"],
+       "answer": 1,
+       "explain": "A miter line placed at the corner where the top and side views meet lets a drafter transfer depth measurements consistently between those two views without re-measuring."
+      },
+      {
+       "q": "Why is estimating a hole's position independently in each view, rather than projecting it between views, considered a common beginner mistake?",
+       "choices": ["It takes less time than projecting between views", "It reliably produces small misalignments between views, since independent estimates rarely match exactly", "There is no real downside to this approach", "Projection lines are only needed for circular features"],
+       "answer": 1,
+       "explain": "Estimating each view separately introduces small inconsistencies since the same feature is being judged independently multiple times; projecting it between views keeps every view mathematically consistent with the others."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Section Views",
+     "minutes": 13,
+     "intro": "Some features, like an internal cavity or a complex hole pattern deep inside a part, are nearly impossible to show clearly with hidden lines alone, and a section view solves this by imagining the object sliced open to reveal what is inside.",
+     "sections": [
+      {
+       "heading": "How a Section View Works",
+       "body": [
+        "A section view imagines cutting the object along a defined cutting plane, removing the portion of the object on one side of that plane, and then drawing the remaining portion as if looking straight at the newly exposed cut face. Any solid material actually cut through by the cutting plane is marked with section lining (also called hatching), thin parallel diagonal lines, typically at 45 degrees, distinguishing solid material that was sliced through from open space or a hole.",
+        "The cutting plane itself is marked on the adjacent view (typically the view the section is derived from) using a cutting plane line, a thick line with arrows indicating the direction of sight, and often labeled with letters (such as A-A) matching a label under the section view itself, so a reader can trace exactly where the cut was made and which direction it is viewed from."
+       ]
+      },
+      {
+       "heading": "Full Sections and Common Uses",
+       "body": [
+        "A full section cuts entirely through the object along a single flat plane, most commonly used to reveal an internal bore, cavity, or wall thickness that would otherwise require several confusing hidden lines to describe. Because a section view replaces what would have been hidden lines with clear, solid section-lined boundaries, hidden lines are typically omitted from a section view entirely, since the whole point of the section is to make those previously hidden features visible instead.",
+        "Section views are especially common for parts like housings, castings, or any part with a hollow interior, where a standard view full of dashed hidden lines would be genuinely difficult to interpret; converting that confusing hidden-line view into a clean, section-lined section view is one of the most valuable tools a technical drawing has for internal geometry."
+       ],
+       "example": {
+        "problem": "A cylindrical housing has a stepped bore through its center that would require multiple overlapping hidden lines to show in a standard view.",
+        "steps": [
+         "Define a cutting plane through the housing's central axis, passing through the bore.",
+         "Mark this cutting plane on the front (or relevant adjacent) view with a labeled cutting plane line and direction arrows.",
+         "Draw the section view showing the bore's stepped internal profile clearly as solid boundaries, with section lining on the solid material that was actually cut through, and omit hidden lines from this view."
+        ],
+        "answer": "A full section through the housing's axis reveals the stepped bore's profile clearly with solid lines and section lining, replacing what would otherwise be a hard-to-read tangle of hidden lines."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "section view", "def": "A view showing an object as if sliced along a cutting plane, revealing internal features that would otherwise require hidden lines."},
+      {"term": "section lining", "def": "Thin parallel diagonal lines (hatching), typically at 45 degrees, marking solid material actually cut through in a section view."},
+      {"term": "cutting plane line", "def": "A thick line with direction arrows, shown on an adjacent view, indicating where and from which direction a section is cut."}
+     ],
+     "practice": [
+      {
+       "q": "What does section lining (hatching) in a section view represent?",
+       "choices": ["A hidden feature not actually visible", "Solid material that was actually cut through by the cutting plane", "The overall outline of the part", "A dimension measurement"],
+       "answer": 1,
+       "explain": "Section lining marks the solid material that the cutting plane actually sliced through, distinguishing it from open space, holes, or cavities that the cut passed through without hitting material."
+      },
+      {
+       "q": "Why are hidden lines typically omitted from a section view?",
+       "choices": ["Hidden lines are always required in every view without exception", "The section view's whole purpose is to reveal previously hidden internal features directly as visible, solid boundaries", "Section views cannot technically contain any dashed lines", "Omitting hidden lines is purely a stylistic choice with no functional reason"],
+       "answer": 1,
+       "explain": "Because a section view exposes what would otherwise be internal, hidden geometry, those features now appear as real, visible edges in the section, making separate hidden lines for the same features unnecessary and redundant."
+      },
+      {
+       "q": "What is the purpose of a cutting plane line on the view adjacent to a section view?",
+       "choices": ["It shows where and in which direction the object was conceptually sliced to produce the section view", "It indicates a dimension value", "It marks the center axis of a round feature", "It has no functional purpose and is purely decorative"],
+       "answer": 0,
+       "explain": "The cutting plane line, typically labeled with matching letters to the section view, shows exactly where the imaginary cut passes through the object and the direction the resulting section is viewed from."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Dimensioning and Tolerancing",
+   "summary": "A drawing without dimensions is just a picture. This unit covers the rules for adding dimensions correctly and specifying how much variation from an exact size is acceptable.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Dimensioning Rules and Conventions",
+     "minutes": 13,
+     "intro": "Dimensioning is not just writing numbers next to a drawing; it follows a precise, standardized set of rules so that every dimension is unambiguous, every feature is located exactly once, and nothing needed to build the part is left to guesswork.",
+     "sections": [
+      {
+       "heading": "Anatomy of a Dimension",
+       "body": [
+        "A complete dimension consists of extension lines (thin lines extending out from the object's edges, not touching the object itself, typically with a small visible gap), a dimension line (running between the extension lines, capped with arrowheads), and the dimension value itself, placed on or above the dimension line. Extension lines should never cross through visible or hidden lines of the object if it can be avoided, and dimension lines themselves should never cross each other, which is why dimension placement follows established spacing and layering conventions rather than being placed wherever there happens to be room.",
+        "Every dimension should be given exactly once on a complete drawing; a feature dimensioned in two different views, or from two different reference points, risks creating a conflict if either value is later slightly adjusted, and duplicate or redundant dimensions are considered a drafting error, not just a stylistic issue."
+       ]
+      },
+      {
+       "heading": "Placement and Reading Direction",
+       "body": [
+        "Dimensions are placed between views when possible, rather than crowding them onto one single view, and are generally arranged from smallest dimension closest to the object outward to largest dimension farthest away, so that extension lines for the larger dimensions do not need to cross over the smaller dimensions placed nearer the part. All dimension text on a standard drawing reads from the bottom of the sheet (horizontally) or from the right side of the sheet (for vertical dimensions, read by rotating the sheet 90 degrees clockwise), a convention called unidirectional dimensioning that lets someone reading the drawing from a fixed position read every dimension without spinning the paper in circles.",
+        "Dimensions should be placed on the view that most clearly shows the feature being measured, generally the view where that feature appears as a true, undistorted shape rather than foreshortened or as an edge-on line, since dimensioning a feature on the wrong view can force awkward or misleading dimension placement."
+       ],
+       "example": {
+        "problem": "A drawing has a 2-inch dimension nested inside a 5-inch overall dimension on the same side of a part.",
+        "steps": [
+         "Place the 2-inch dimension line closer to the object's edge, since it is the smaller dimension.",
+         "Place the 5-inch overall dimension line farther from the object, outside the 2-inch dimension.",
+         "Confirm the extension lines for the 5-inch dimension do not have to cross through the 2-inch dimension line, since the smaller one is nested inside, closer to the part."
+        ],
+        "answer": "The smaller 2-inch dimension is placed closer to the object, and the larger 5-inch overall dimension is placed farther out, following the standard smallest-to-largest, closest-to-farthest dimension placement convention."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "extension line", "def": "A thin line extending from an object's edge, not touching the object, used to mark the endpoints of a dimension."},
+      {"term": "dimension line", "def": "A line capped with arrowheads, running between extension lines, showing the extent of a measurement with its value placed along it."},
+      {"term": "unidirectional dimensioning", "def": "A dimensioning convention where all text reads horizontally from the bottom of the sheet, or vertically read by rotating the sheet clockwise."}
+     ],
+     "practice": [
+      {
+       "q": "Why should a dimension only ever be given once on a complete drawing, not repeated in two different views?",
+       "choices": ["Repeating dimensions is always required by drafting standards", "A duplicated dimension risks creating a conflict if one instance is later adjusted but the other is not, and is considered a drafting error", "It saves paper space to repeat dimensions", "Repeated dimensions make the drawing easier to read"],
+       "answer": 1,
+       "explain": "If a dimension appears twice and only one copy is updated during a design change, the drawing becomes internally inconsistent; giving each dimension exactly once avoids this risk entirely."
+      },
+      {
+       "q": "When two dimensions are nested on the same side of a part (one smaller, one being the overall size), how should they typically be arranged?",
+       "choices": ["The larger overall dimension closest to the object, with the smaller dimension farther out", "The smaller dimension closest to the object, with the larger overall dimension placed farther out", "Both dimensions should be placed at the exact same distance from the object", "Dimension order does not matter as long as both are shown"],
+       "answer": 1,
+       "explain": "Standard practice places smaller dimensions closer to the object and larger, more overall dimensions farther away, so that extension lines for larger dimensions do not need to cross over smaller ones nested closer in."
+      },
+      {
+       "q": "What does unidirectional dimensioning mean?",
+       "choices": ["All dimensions must use the same unit of measurement", "All dimension text reads horizontally from the bottom of the sheet, or vertically by rotating the sheet 90 degrees clockwise", "Dimensions can only be placed in one single view on the entire drawing", "Every dimension must point in the same direction as the part's main axis"],
+       "answer": 1,
+       "explain": "Unidirectional dimensioning is a text-orientation convention: all values read horizontally from the sheet's bottom edge, or are read by physically rotating the sheet clockwise for vertical dimensions, so a reader in a fixed position can read every value without spinning the drawing itself."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Tolerances",
+     "minutes": 14,
+     "intro": "No manufacturing process produces a part at a perfectly exact size every single time, and tolerancing is how a drawing specifies exactly how much variation from the ideal, or nominal, dimension is acceptable while the part still functions correctly.",
+     "sections": [
+      {
+       "heading": "Why Tolerances Are Necessary",
+       "body": [
+        "Every dimension on a real, manufactured part varies slightly from its nominal (ideal, stated) value due to the natural limits of any machining or manufacturing process, and a tolerance defines the acceptable range around that nominal value within which the part still functions and assembles correctly. Without a stated tolerance, a machinist has no way to know how precisely a dimension actually needs to be held, which either wastes time and money achieving unnecessary precision or, worse, risks producing a part too imprecise to actually fit or function.",
+        "A tolerance can be expressed as a bilateral tolerance (a plus and a minus value around the nominal, such as 2.000 ± 0.005 inches, allowing the actual dimension to fall anywhere from 1.995 to 2.005 inches) or as limit dimensions (stating the maximum and minimum acceptable values directly, such as 2.005 / 1.995)."
+       ]
+      },
+      {
+       "heading": "Fit Between Mating Parts",
+       "body": [
+        "When two parts must fit together, like a shaft fitting inside a hole, the relationship between their tolerance ranges determines the type of fit: a clearance fit always leaves a small gap so the shaft slides freely into the hole (used for parts that must rotate or slide relative to each other); an interference fit makes the shaft's tolerance range slightly larger than the hole's, requiring the shaft to be pressed in and relying on friction to hold the parts together permanently.",
+        "As a general rule, tighter tolerances (a smaller allowed range of variation) cost significantly more to manufacture, since they require more precise machines, more careful setup, and more frequent inspection, so a designer should specify the loosest tolerance that still lets the part function correctly, not the tightest tolerance simply available."
+       ],
+       "example": {
+        "problem": "A hole is specified as 1.000 ± 0.002 inches, and a shaft meant to fit into it is specified as 0.995 ± 0.002 inches. Determine the type of fit.",
+        "steps": [
+         "Find the hole's actual range: 1.000 − 0.002 = 0.998 inches (minimum) to 1.000 + 0.002 = 1.002 inches (maximum).",
+         "Find the shaft's actual range: 0.995 − 0.002 = 0.993 inches (minimum) to 0.995 + 0.002 = 0.997 inches (maximum).",
+         "Compare the ranges: even at the shaft's largest possible size (0.997) and the hole's smallest possible size (0.998), the shaft is still smaller than the hole."
+        ],
+        "answer": "Since the shaft's maximum size (0.997 in) is always smaller than the hole's minimum size (0.998 in), this is a clearance fit; the shaft will always slide freely into the hole with a small gap remaining."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "nominal dimension", "def": "The stated, ideal target value of a dimension, before tolerance variation is applied."},
+      {"term": "tolerance", "def": "The acceptable range of variation around a nominal dimension within which a part still functions correctly."},
+      {"term": "clearance fit", "def": "A fit between mating parts where the internal part is always smaller than the external part, leaving a gap for sliding or rotation."},
+      {"term": "interference fit", "def": "A fit between mating parts where the internal part is always larger than the external part, requiring a press fit held by friction."}
+     ],
+     "practice": [
+      {
+       "q": "A dimension is given as 2.000 ± 0.005 inches. What is the smallest acceptable actual size?",
+       "choices": ["2.000 inches", "1.995 inches", "2.005 inches", "1.990 inches"],
+       "answer": 1,
+       "explain": "The bilateral tolerance of ± 0.005 inches around a nominal 2.000 inches means the acceptable range runs from 2.000 − 0.005 = 1.995 inches up to 2.000 + 0.005 = 2.005 inches, so 1.995 inches is the smallest acceptable value."
+      },
+      {
+       "q": "Why should a designer generally specify the loosest tolerance that still lets a part function correctly, rather than the tightest tolerance available?",
+       "choices": ["Tighter tolerances are always free to manufacture", "Tighter tolerances require more precise machines, careful setup, and more inspection, significantly increasing manufacturing cost", "Loose tolerances always make parts fit better regardless of function", "Tolerances have no effect on manufacturing cost at all"],
+       "answer": 1,
+       "explain": "Manufacturing to a tighter tolerance demands more precise equipment and process control, which raises cost; a good designer specifies only as tight a tolerance as the part's function actually requires, no tighter."
+      },
+      {
+       "q": "In an interference fit between a shaft and a hole, what is true of their size ranges?",
+       "choices": ["The shaft is always smaller than the hole, leaving a gap", "The shaft's size range is larger than the hole's, requiring the shaft to be pressed in and held by friction", "The shaft and hole are always exactly the same nominal size with zero tolerance", "Interference fits are only used for parts that must rotate freely"],
+       "answer": 1,
+       "explain": "An interference fit is defined by the shaft's tolerance range being larger than the hole's, so the shaft must be forced (pressed) into the hole, and the resulting friction holds the two parts together, unlike a clearance fit which always leaves a gap."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Working Drawings and Standards",
+   "summary": "A complete working drawing is more than views and dimensions; it includes a title block, notes, and standard symbols that together tell a manufacturer everything needed to build the part correctly. This unit ties it all together.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Title Blocks and Drawing Notes",
+     "minutes": 10,
+     "intro": "The title block, usually tucked in the bottom right corner of a drawing, and the general notes elsewhere on the sheet, carry critical information that the views and dimensions alone cannot: who made the part, what it is made of, and rules that apply to the whole drawing at once.",
+     "sections": [
+      {
+       "heading": "What Belongs in a Title Block",
+       "body": [
+        "A standard title block includes the part name and part number, the drafter's name and the date drawn, the drawing scale, the material the part is made from, and the general tolerance that applies to any dimension not individually toleranced elsewhere on the drawing. It also typically includes a revision block, a table logging every change made to the drawing over time, each with a revision letter or number, a brief description of the change, and the date, so anyone can trace the drawing's history.",
+        "The scale noted in the title block (such as 1:1 for full size, 1:2 for half size, or 2:1 for double size) tells the reader how the drawing relates to the actual part's size, which matters because a drawing is often printed or displayed at a different physical size than what its scale states, so a reader should always trust the dimension values on the drawing, never measure the drawing itself with a ruler to infer a size."
+       ]
+      },
+      {
+       "heading": "General Notes",
+       "body": [
+        "General notes, typically placed near the title block or along one edge of the sheet, state requirements that apply to the whole part rather than to one specific dimension, such as \"BREAK ALL SHARP EDGES 0.005 IN MAX\" or \"REMOVE ALL BURRS.\" Rather than repeating the same instruction next to every single edge on a drawing, a general note states it once for the entire part, keeping the drawing far less cluttered.",
+        "A note referenced by a number or letter directly on a view, called a flag note or local note, applies to one specific feature only, distinguishing it from a general note that applies everywhere; both types of notes are essential for communicating requirements that dimensions and tolerances alone cannot express, such as surface finish, heat treatment, or a specific manufacturing process."
+       ],
+       "example": {
+        "problem": "A drawing needs to specify that every sharp edge on an otherwise fully dimensioned part must be broken (deburred) to no more than 0.005 inches, without cluttering every single edge with its own dimension.",
+        "steps": [
+         "Recognize this requirement applies uniformly to the whole part, not to one specific feature.",
+         "Add it as a general note near the title block, such as \"BREAK ALL SHARP EDGES 0.005 IN MAX,\" rather than dimensioning each edge individually.",
+         "Leave the individual edges undimensioned for this requirement, relying on the general note to cover them all at once."
+        ],
+        "answer": "A single general note covering all edges is the correct approach, since it applies the same requirement uniformly without needing to repeat it, edge by edge, throughout the drawing."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "title block", "def": "A standardized information box, typically in a drawing's bottom right corner, listing part name, number, material, scale, and other key data."},
+      {"term": "revision block", "def": "A table logging the history of changes made to a drawing, including revision letter, description, and date for each change."},
+      {"term": "general note", "def": "A note applying a requirement to an entire part or drawing, rather than to one specific dimensioned feature."}
+     ],
+     "practice": [
+      {
+       "q": "Why should a reader of a technical drawing never measure the printed drawing itself with a ruler to determine a part's actual size?",
+       "choices": ["Rulers are never accurate enough for this purpose", "Drawings are often printed or displayed at a different physical size than their stated scale, so only the dimension values on the drawing are reliable", "Scale only applies to isometric sketches, not orthographic drawings", "It is actually the correct and recommended method"],
+       "answer": 1,
+       "explain": "A drawing's printed or displayed size can differ from its nominal scale due to printing, scanning, or screen resolution, so the numeric dimension values are always the authoritative source of a part's actual size, not physical measurement of the sheet."
+      },
+      {
+       "q": "What is the difference between a general note and a flag (local) note?",
+       "choices": ["There is no real difference between them", "A general note applies to the entire part, while a flag note, referenced from a specific feature, applies only to that one feature", "General notes only appear in the title block, never elsewhere on the sheet", "Flag notes are only used for tolerances, never for finishing instructions"],
+       "answer": 1,
+       "explain": "A general note communicates a requirement that applies uniformly across the whole part, while a flag note is tied to and referenced from one specific feature or location on a view, applying only there."
+      },
+      {
+       "q": "What is the purpose of a revision block in a title block?",
+       "choices": ["It shows the part's weight and center of gravity", "It logs the history of changes made to the drawing over time, including a description and date for each revision", "It replaces the need for a general tolerance note", "It is purely decorative with no functional record-keeping purpose"],
+       "answer": 1,
+       "explain": "A revision block provides a traceable history of every change made to a drawing, letting anyone reviewing it understand what was modified, when, and often why, across the part's design lifecycle."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Introduction to CAD Modeling",
+     "minutes": 15,
+     "intro": "Modern parts are almost always designed first as a 3D digital model in CAD software, with 2D drawings generated automatically from that model afterward, so understanding the basic building blocks of a CAD model connects everything you have learned about sketching and views to how parts are actually designed today.",
+     "sections": [
+      {
+       "heading": "Sketches and Extrusions",
+       "body": [
+        "Most parametric CAD software (such as SolidWorks, Fusion 360, or Onshape) builds a 3D model starting from a 2D sketch drawn on a flat reference plane, using lines, circles, and other basic shapes constrained with exact dimensions, very similar in spirit to the dimensioned 2D views you have already practiced. That flat sketch is then turned into a 3D solid using a feature such as an extrude, which pushes (extrudes) the sketch's flat shape out to a specified depth along a straight path, essentially the reverse operation of taking a 3D solid's cross section back down to a 2D sketch.",
+        "Other common features build on this same idea: a revolve rotates a sketch profile around an axis to create a round solid (useful for a bolt, a bushing, or anything symmetric about a centerline), and a cut (or extruded cut) removes material from an existing solid using a new sketch, the same way an extrude adds material, only in reverse."
+       ]
+      },
+      {
+       "heading": "From 3D Model to 2D Drawing",
+       "body": [
+        "Once a part exists as a 3D CAD model, generating a 2D drawing becomes largely automatic: the software projects the model into front, top, and side views following the exact same glass box logic covered earlier in this course, and updates those views instantly if the underlying 3D model changes, which is a major advantage over drawing each view manually and independently by hand.",
+        "Even with this automation, a drafter still must choose which views to include, add dimensions in the correct places following the same conventions covered earlier, and add title block information, notes, and tolerances, since the software can project geometry accurately but cannot decide on its own which dimensions matter most for manufacturing or where to best place them for a clear, readable drawing."
+       ],
+       "example": {
+        "problem": "You are modeling a simple cylindrical bushing (a hollow tube) in CAD: outer diameter 1 inch, inner diameter 0.5 inch, length 2 inches.",
+        "steps": [
+         "Sketch a circle 1 inch in diameter on a flat reference plane, and extrude it 2 inches to create a solid cylinder.",
+         "Sketch a second circle 0.5 inch in diameter on the flat end face of that cylinder, aligned to the same center.",
+         "Use an extruded cut with the 0.5-inch circle, cutting all the way through the 2-inch length, to remove material and create the hollow bore."
+        ],
+        "answer": "An initial extrude of a 1-inch circle to 2 inches long creates the solid cylinder, and a subsequent extruded cut of a concentric 0.5-inch circle through its full length creates the hollow bushing."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "extrude", "def": "A CAD feature that pushes a flat 2D sketch outward to a specified depth along a straight path, creating a 3D solid."},
+      {"term": "revolve", "def": "A CAD feature that rotates a 2D sketch profile around an axis to create a round, symmetric 3D solid."},
+      {"term": "parametric CAD", "def": "CAD software where a 3D model is built from dimensioned sketches and features that can be edited later, automatically updating the whole model and any drawings derived from it."}
+     ],
+     "practice": [
+      {
+       "q": "Which CAD feature would you use to create a round part like a bolt shaft, starting from a 2D profile sketch?",
+       "choices": ["Extrude", "Revolve", "Extruded cut", "Title block"],
+       "answer": 1,
+       "explain": "A revolve rotates a sketch profile around a defined axis, which is the natural way to create a round, symmetric solid like a bolt shaft, rather than pushing a flat shape straight out like an extrude does."
+      },
+      {
+       "q": "What is the relationship between an extrude and an extruded cut?",
+       "choices": ["They are unrelated, completely different operations", "An extrude adds material by pushing a sketch outward, while an extruded cut removes material using a sketch, essentially the reverse operation", "An extruded cut can only be used on round parts", "Extrudes and extruded cuts both only work with circular sketches"],
+       "answer": 1,
+       "explain": "Both operations use a 2D sketch pushed through a solid, but an extrude adds new material in that shape while an extruded cut removes existing material in that same shape, making them complementary operations."
+      },
+      {
+       "q": "Even though CAD software can automatically generate 2D drawing views from a 3D model, what still requires a drafter's judgment?",
+       "choices": ["Nothing; the process is fully automatic with no human input needed", "Choosing which views to include, placing dimensions correctly, and adding notes and tolerances the software cannot decide on its own", "The software automatically decides which dimensions matter most for manufacturing", "Title blocks are generated automatically with no drafter input required"],
+       "answer": 1,
+       "explain": "While the software can accurately project geometry into views, a drafter still must decide which views best represent the part, where dimensions and tolerances should go for clarity and manufacturability, and what notes are needed, none of which the software determines on its own."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Reading a Complete Working Drawing",
+     "minutes": 12,
+     "intro": "Every skill in this course comes together in a single working drawing: choosing views, projecting features, dimensioning, tolerancing, and reading the title block, all combined to fully describe a real part that could be manufactured from that sheet alone.",
+     "sections": [
+      {
+       "heading": "A Systematic Reading Order",
+       "body": [
+        "When reading an unfamiliar working drawing for the first time, start with the title block to establish the part name, material, scale, and general tolerance, since these set the context for everything else on the sheet; then scan the overall views to build a basic mental picture of the part's shape before diving into individual dimensions. Only after this overview should you work through each view systematically, matching visible, hidden, and center lines to actual features, and cross-referencing dimensions between views to confirm you understand the full geometry, not just isolated numbers.",
+        "Pay close attention to any section views and their cutting plane labels, since these often reveal the internal geometry that is most critical to the part's function and easiest to misread if skipped past quickly; also check every general and flag note, since these frequently specify requirements, like a required finish or heat treatment, that do not appear anywhere in the dimensions themselves."
+       ]
+      },
+      {
+       "heading": "Putting It Together",
+       "body": [
+        "A complete, correctly made working drawing should let someone who has never seen the actual physical part build it exactly right the first time, without needing to ask any clarifying questions, which is the entire purpose of everything covered in this course: consistent line types, a minimal but complete set of views, features projected accurately between those views, dimensions placed following clear conventions, tolerances specifying acceptable variation, and a title block and notes filling in everything the geometry itself cannot show.",
+        "Whenever a drawing seems to contradict itself, such as a dimension in one view that seems inconsistent with a related dimension elsewhere, that is a sign to slow down and re-check both the general tolerance in the title block and whether a note somewhere on the sheet supersedes the general assumption, since a well-made drawing should never truly be ambiguous once every note, dimension, and tolerance on it has been accounted for."
+       ],
+       "example": {
+        "problem": "You are handed a working drawing of a bracket with three views, two dimensions, a section view labeled A-A, a general tolerance of ± 0.010 inches in the title block, and a flag note pointing to one specific hole reading \"THIS HOLE ± 0.001 IN.\"",
+        "steps": [
+         "Start with the title block, noting the part name, material, scale, and the general tolerance of ± 0.010 inches that applies to any dimension not otherwise specified.",
+         "Scan the three views to build an overall mental picture of the bracket's shape before focusing on individual features.",
+         "Study the A-A section view to understand the internal geometry it reveals, cross-referencing its cutting plane back to the view it was taken from.",
+         "Apply the flag note's tighter ± 0.001 inch tolerance specifically to that one hole, understanding it overrides the general ± 0.010 inch tolerance for that single feature only."
+        ],
+        "answer": "The bracket's overall dimensions follow the general ± 0.010 inch tolerance from the title block, except for the one flagged hole, which requires the much tighter ± 0.001 inch tolerance specified by its local note, overriding the general tolerance for that feature alone."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "working drawing", "def": "A complete technical drawing containing all views, dimensions, tolerances, and notes needed to manufacture a part correctly."},
+      {"term": "general tolerance", "def": "The default tolerance stated in a title block that applies to any dimension on the drawing not given its own specific tolerance."}
+     ],
+     "practice": [
+      {
+       "q": "Why should a reader start with a drawing's title block before examining the individual views and dimensions?",
+       "choices": ["The title block is not actually useful information", "The title block establishes context such as material, scale, and general tolerance that applies to the rest of the drawing", "Reading order does not matter for a working drawing", "Title blocks only matter for CAD-generated drawings, not hand drawings"],
+       "answer": 1,
+       "explain": "Information in the title block, like the general tolerance and material, frames how every other dimension and feature on the drawing should be interpreted, so establishing that context first makes the rest of the drawing easier to read correctly."
+      },
+      {
+       "q": "A drawing has a general tolerance of ± 0.010 inches in the title block, and one specific hole has a flag note reading ± 0.001 inches. Which tolerance applies to that hole?",
+       "choices": ["The general ± 0.010 inch tolerance, since it applies to the whole drawing", "The flag note's ± 0.001 inch tolerance, since a local note overrides the general tolerance for that specific feature", "Both tolerances apply simultaneously, whichever is more convenient", "Neither tolerance applies since they conflict"],
+       "answer": 1,
+       "explain": "A flag (local) note attached to a specific feature overrides the drawing's general tolerance for that one feature, meaning the ± 0.001 inch value governs that particular hole, while the general ± 0.010 inch tolerance still applies to every other undimensioned-tolerance feature."
+      },
+      {
+       "q": "What is the overall goal of a properly completed working drawing?",
+       "choices": ["To look visually impressive above all else", "To let someone who has never seen the physical part build it correctly the first time, without needing clarifying questions", "To minimize the total number of views regardless of clarity", "To avoid using any notes so the drawing stays simple"],
+       "answer": 1,
+       "explain": "A working drawing's fundamental purpose is complete, unambiguous communication: correct views, accurate dimensions, appropriate tolerances, and clear notes combine so that manufacturing can proceed correctly without needing to consult anyone beyond the drawing itself."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1576 @@
+{
+ "id": "physics",
+ "title": "College Physics",
+ "domain": "physical",
+ "level": "Intro college",
+ "description": "An algebra-based tour of physics from motion and forces through heat, waves, electricity, and light. You will set up and solve real numeric problems at every stage, building the quantitative habits that carry into any lab or technical field.",
+ "outcomes": [
+  "Describe motion with position, velocity, and acceleration, and solve constant-acceleration and projectile problems.",
+  "Apply Newton's three laws to forces, friction, inclines, and circular motion.",
+  "Use the work-energy theorem and conservation of momentum to solve mechanics problems.",
+  "Apply torque, rotational dynamics, and fluid principles (pressure, buoyancy) to real systems.",
+  "Use the ideal gas law and the laws of thermodynamics to analyze heat and energy transfer.",
+  "Solve problems involving waves, sound, DC circuits, magnetism, and basic optics."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Kinematics and Newton's Laws",
+   "summary": "How to describe motion precisely, and the three laws that connect motion to force.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Describing Motion: Position, Velocity, and Acceleration",
+     "minutes": 18,
+     "intro": "Before you can predict where anything goes, you need a precise vocabulary for where it is, how fast it moves, and whether that speed is changing. These three ideas — position, velocity, acceleration — are the alphabet of every motion problem you will ever solve.",
+     "sections": [
+      {
+       "heading": "Position, Displacement, and Distance",
+       "body": [
+        "**Position** is a location measured from a chosen origin along a chosen axis, given a sign for direction. **Displacement** is the change in position, Δx = x~f~ − x~i~, and it can be zero even if you walked a mile and came back, because displacement only cares about start and end points.",
+        "**Distance** is the total length of path traveled and is always positive. Walk 8 m east then 3 m west: your distance traveled is 11 m, but your displacement is only 5 m east. Keeping these two numbers separate is the single most common place beginners lose points."
+       ]
+      },
+      {
+       "heading": "Average and Instantaneous Velocity",
+       "body": [
+        "**Average velocity** is displacement divided by elapsed time, v~avg~ = Δx/Δt, and it is a vector: its sign shows direction. **Average speed** is total distance divided by time and is never negative, so a round trip has zero average velocity but a positive average speed.",
+        "**Instantaneous velocity** is what a speedometer reads at one moment — the average velocity taken over a time interval so short it captures that single instant. When velocity is constant, instantaneous and average velocity are identical, which is why constant-velocity problems are the simplest starting point."
+       ]
+      },
+      {
+       "heading": "Acceleration",
+       "body": [
+        "**Acceleration** is the rate at which velocity changes, a = Δv/Δt, measured in m/s². Acceleration is nonzero whenever speed changes, direction changes, or both — a car turning a corner at steady speed is still accelerating because its velocity vector is rotating.",
+        "A negative acceleration does not always mean slowing down; it means the acceleration vector points in the negative direction. An object moving in the negative direction that speeds up has negative velocity and negative acceleration together, and it is getting faster, not slower."
+       ],
+       "example": {
+        "problem": "A car at rest speeds up to 25 m/s in 5.0 s, moving in a straight line. Find its acceleration.",
+        "steps": [
+         "Identify the given values: v~i~ = 0 m/s, v~f~ = 25 m/s, Δt = 5.0 s.",
+         "Apply a = Δv/Δt = (v~f~ − v~i~)/Δt.",
+         "a = (25 − 0)/5.0 = 5.0 m/s²."
+        ],
+        "answer": "5.0 m/s², in the direction of motion."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "displacement",
+       "def": "The change in position, Δx = x~f~ − x~i~; a vector that ignores the path taken."
+      },
+      {
+       "term": "average velocity",
+       "def": "Displacement divided by elapsed time, v~avg~ = Δx/Δt."
+      },
+      {
+       "term": "instantaneous velocity",
+       "def": "The velocity at a single instant in time, what a speedometer shows."
+      },
+      {
+       "term": "acceleration",
+       "def": "The rate of change of velocity, a = Δv/Δt, in m/s²."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A runner goes 400 m around a track and ends up back at the starting line. What is the runner's displacement?",
+       "choices": [
+        "400 m",
+        "200 m",
+        "0 m",
+        "800 m"
+       ],
+       "answer": 2,
+       "explain": "Displacement depends only on start and end position. Since the runner returns to the start, the displacement is 0 m even though the distance traveled is 400 m."
+      },
+      {
+       "q": "A car's velocity changes from +10 m/s to +2 m/s in 4.0 s. What is its acceleration?",
+       "choices": [
+        "+2.0 m/s²",
+        "−2.0 m/s²",
+        "+3.0 m/s²",
+        "−8.0 m/s²"
+       ],
+       "answer": 1,
+       "explain": "a = (v~f~ − v~i~)/Δt = (2 − 10)/4.0 = −8/4.0 = −2.0 m/s². The negative sign shows the car is slowing while moving in the positive direction."
+      },
+      {
+       "q": "Which quantity is always positive or zero, never negative?",
+       "choices": [
+        "Displacement",
+        "Velocity",
+        "Acceleration",
+        "Distance traveled"
+       ],
+       "answer": 3,
+       "explain": "Distance is a scalar total path length and cannot be negative, unlike displacement, velocity, and acceleration, which carry direction and can be negative."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Newton's Three Laws of Motion",
+     "minutes": 20,
+     "intro": "Every push, pull, launch, and collision you will study in this course traces back to three short statements Isaac Newton wrote down in 1687. Master these and you can predict the motion of anything from a dropped pencil to a rocket.",
+     "sections": [
+      {
+       "heading": "Newton's First Law: Inertia",
+       "body": [
+        "An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted on by a net external force. This is the **law of inertia**: motion does not need a cause to continue, only a cause to change.",
+        "Inertia is why passengers lurch forward when a car brakes suddenly — their bodies are obeying the first law, continuing forward while the car stops. **Mass** is the quantitative measure of inertia: the more mass an object has, the more it resists changes in its velocity."
+       ]
+      },
+      {
+       "heading": "Newton's Second Law: F = ma",
+       "body": [
+        "The net force on an object equals its mass times its acceleration, ΣF = ma. This single equation is the engine of nearly every mechanics problem: given the forces, you find the acceleration, and given the acceleration, you find the motion.",
+        "Force is measured in newtons (N), where 1 N = 1 kg·m/s². Because acceleration is a vector, so is net force — you must add forces as vectors, keeping track of direction, before dividing by mass to get acceleration."
+       ],
+       "example": {
+        "problem": "A 1200 kg car accelerates from rest at 2.5 m/s². What net force does the engine and road together produce on the car?",
+        "steps": [
+         "Identify m = 1200 kg and a = 2.5 m/s².",
+         "Apply Newton's second law: ΣF = ma.",
+         "ΣF = 1200 × 2.5 = 3000 N."
+        ],
+        "answer": "3000 N (3.0 × 10³ N) in the direction of acceleration."
+       }
+      },
+      {
+       "heading": "Newton's Third Law: Action and Reaction",
+       "body": [
+        "For every force one object exerts on a second object, the second object exerts an equal and opposite force back on the first. These two forces act on *different* objects and never cancel each other, because canceling requires both forces to act on the same object.",
+        "When you push on a wall, the wall pushes back on you with equal force — that reaction is what stops your hand. A rocket expels gas backward; the gas pushes the rocket forward with equal force, which is how rockets work even in the vacuum of space."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "inertia",
+       "def": "The tendency of an object to resist changes in its velocity; measured by mass."
+      },
+      {
+       "term": "net force",
+       "def": "The vector sum of all forces acting on an object."
+      },
+      {
+       "term": "newton (N)",
+       "def": "The SI unit of force; 1 N = 1 kg·m/s²."
+      },
+      {
+       "term": "action-reaction pair",
+       "def": "Two equal and opposite forces that two objects exert on each other, acting on different bodies."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 5.0 kg object experiences a net force of 20 N. What is its acceleration?",
+       "choices": [
+        "100 m/s²",
+        "4.0 m/s²",
+        "0.25 m/s²",
+        "25 m/s²"
+       ],
+       "answer": 1,
+       "explain": "a = ΣF/m = 20/5.0 = 4.0 m/s², directly from Newton's second law."
+      },
+      {
+       "q": "A book rests on a table without moving. According to Newton's first law, what must be true of the net force on the book?",
+       "choices": [
+        "It must be zero",
+        "It must equal the book's weight",
+        "It must point upward",
+        "It must be increasing"
+       ],
+       "answer": 0,
+       "explain": "An object at rest stays at rest only if the net force is zero; the table's upward normal force exactly balances gravity's downward pull."
+      },
+      {
+       "q": "You push on a wall with 50 N of force. How much force does the wall exert back on you?",
+       "choices": [
+        "0 N, walls do not push",
+        "25 N",
+        "50 N, in the opposite direction",
+        "It depends on your mass"
+       ],
+       "answer": 2,
+       "explain": "Newton's third law requires the reaction force to be equal in size and opposite in direction: the wall pushes back with exactly 50 N."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Projectile Motion and Circular Motion",
+     "minutes": 20,
+     "intro": "Throw a ball, launch a rocket, or swing a bucket of water in a circle, and you are watching the same two-dimensional physics in action. Splitting motion into independent horizontal and vertical (or radial) pieces turns intimidating curved paths into two easy straight-line problems.",
+     "sections": [
+      {
+       "heading": "Independence of Horizontal and Vertical Motion",
+       "body": [
+        "A projectile is any object launched into the air and moving only under gravity. The remarkable fact is that its horizontal motion (constant velocity, no horizontal force from gravity) and its vertical motion (constant downward acceleration g = 9.8 m/s²) happen completely independently and can be analyzed separately.",
+        "Time is the one thing the two directions share: the time to fall is exactly the time available for horizontal travel. This is why a bullet fired horizontally and a bullet dropped from the same height hit the ground at the same instant — their vertical motions are identical, only their horizontal motions differ."
+       ],
+       "example": {
+        "problem": "A ball is thrown horizontally at 12 m/s from a cliff 20 m high. How far from the base of the cliff does it land?",
+        "steps": [
+         "Find the fall time from vertical motion: h = ½gt², so t = √(2h/g).",
+         "t = √(2×20/9.8) = √4.08 = 2.02 s.",
+         "Use horizontal motion at constant velocity: x = v~x~ × t.",
+         "x = 12 × 2.02 = 24.2 m."
+        ],
+        "answer": "About 24 m from the base of the cliff."
+       }
+      },
+      {
+       "heading": "Setting Up Projectile Problems",
+       "body": [
+        "For launches at an angle, split the initial velocity into components: v~x~ = v cos θ (constant throughout the flight) and v~y~ = v sin θ (changes under gravity, v~y,f~ = v~y,i~ − gt). Solve the vertical equation for time, then plug that time into the horizontal equation.",
+        "At the peak of the trajectory, vertical velocity is momentarily zero, which is a useful checkpoint: the object has used half its total flight time to get there (for launch and landing at the same height). Range is maximized at a 45° launch angle when air resistance is ignored."
+       ]
+      },
+      {
+       "heading": "Uniform Circular Motion",
+       "body": [
+        "An object moving in a circle at constant speed is still accelerating, because its velocity direction constantly changes. This **centripetal acceleration** points toward the circle's center with magnitude a~c~ = v²/r, and the centripetal force that causes it is F~c~ = ma~c~ = mv²/r.",
+        "Centripetal force is not a new, separate kind of force — it is whatever real force (tension, gravity, friction, the normal force) happens to point toward the center and supply the needed inward pull. A car turning on a flat road relies on friction between tires and pavement to act as that centripetal force."
+       ],
+       "example": {
+        "problem": "A 0.50 kg ball on a string moves in a horizontal circle of radius 0.80 m at 4.0 m/s. Find the tension in the string.",
+        "steps": [
+         "The tension supplies the centripetal force: F~c~ = mv²/r.",
+         "F~c~ = 0.50 × (4.0)²/0.80 = 0.50 × 16/0.80.",
+         "F~c~ = 8.0/0.80 = 10 N."
+        ],
+        "answer": "10 N of tension."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "projectile",
+       "def": "An object launched into the air that moves only under the influence of gravity."
+      },
+      {
+       "term": "range",
+       "def": "The horizontal distance a projectile travels before returning to launch height."
+      },
+      {
+       "term": "centripetal acceleration",
+       "def": "The acceleration directed toward the center of a circular path, a~c~ = v²/r."
+      },
+      {
+       "term": "centripetal force",
+       "def": "The net inward force that produces centripetal acceleration; supplied by tension, gravity, friction, or the normal force."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A projectile is launched at an angle above the ground and lands at the same height it was launched from. What is true at the very top of its path?",
+       "choices": [
+        "Both velocity components are zero",
+        "The vertical velocity is zero but horizontal velocity is not",
+        "The horizontal velocity is zero but vertical velocity is not",
+        "Acceleration is zero"
+       ],
+       "answer": 1,
+       "explain": "Gravity only affects the vertical component, so vertical velocity momentarily reaches zero at the peak while the constant horizontal velocity continues unchanged. Acceleration (g, downward) never becomes zero during flight."
+      },
+      {
+       "q": "A car doubles its speed while going around the same circular curve. By what factor does the required centripetal force increase?",
+       "choices": [
+        "2",
+        "4",
+        "1/2",
+        "It stays the same"
+       ],
+       "answer": 1,
+       "explain": "Centripetal force is F = mv²/r, so doubling v multiplies the required force by 2² = 4."
+      },
+      {
+       "q": "Two balls are released at the same instant from the same height: one drops straight down, the other is thrown horizontally. Which hits the ground first?",
+       "choices": [
+        "The dropped ball",
+        "The thrown ball",
+        "They hit at the same time",
+        "It depends on how hard the ball was thrown"
+       ],
+       "answer": 2,
+       "explain": "Horizontal and vertical motions are independent. Both balls have identical vertical motion (starting vertical velocity zero, same g), so they fall for the same amount of time regardless of horizontal speed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Energy and Momentum",
+   "summary": "Two of physics' most powerful bookkeeping tools: energy that changes form but is never lost, and momentum that is exchanged but always conserved.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Work and Kinetic Energy",
+     "minutes": 16,
+     "intro": "Physicists give the word 'work' a strict meaning: force applied through a distance. That strict definition unlocks the work-energy theorem, a shortcut that solves motion problems without ever mentioning time.",
+     "sections": [
+      {
+       "heading": "Work Done by a Constant Force",
+       "body": [
+        "**Work** is defined as W = Fd cos θ, where F is the applied force, d is the displacement, and θ is the angle between the force and the displacement directions. Work is measured in joules (J), where 1 J = 1 N·m.",
+        "Only the component of force *along* the direction of motion does work. Carrying a heavy box at constant height across a room involves an upward force (supporting the box) and horizontal displacement — since those are perpendicular (θ = 90°, cos 90° = 0), gravity and your supporting force do zero work on the box."
+       ]
+      },
+      {
+       "heading": "Kinetic Energy and the Work-Energy Theorem",
+       "body": [
+        "**Kinetic energy** is the energy of motion, KE = ½mv². The **work-energy theorem** states that the net work done on an object equals its change in kinetic energy: W~net~ = ΔKE = KE~f~ − KE~i~.",
+        "This theorem is powerful because it connects force and distance directly to speed, skipping acceleration and time entirely. If you know the net work done on an object and its starting speed, you can find its final speed without ever solving a kinematics equation."
+       ],
+       "example": {
+        "problem": "A 60 kg box, starting from rest, is pushed 4.0 m across a frictionless floor by a constant 150 N horizontal force. Find its final speed.",
+        "steps": [
+         "Compute the work done: W = Fd cos 0° = 150 × 4.0 = 600 J.",
+         "Apply the work-energy theorem: W~net~ = ΔKE = ½mv~f~² − 0.",
+         "Solve for v~f~: v~f~ = √(2W/m) = √(2×600/60) = √20.",
+         "v~f~ ≈ 4.47 m/s."
+        ],
+        "answer": "About 4.5 m/s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "work",
+       "def": "Energy transferred by a force acting through a displacement, W = Fd cos θ, measured in joules."
+      },
+      {
+       "term": "kinetic energy",
+       "def": "Energy of motion, KE = ½mv²."
+      },
+      {
+       "term": "work-energy theorem",
+       "def": "The net work done on an object equals its change in kinetic energy, W~net~ = ΔKE."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 10 N force pushes a crate 3.0 m in the direction of the force. How much work is done?",
+       "choices": [
+        "30 J",
+        "13 J",
+        "3.3 J",
+        "0.3 J"
+       ],
+       "answer": 0,
+       "explain": "Since the force and displacement are in the same direction, θ = 0° and cos 0° = 1, so W = Fd = 10 × 3.0 = 30 J."
+      },
+      {
+       "q": "A worker carries a suitcase at constant height across a level floor. How much work does the worker's upward supporting force do on the suitcase?",
+       "choices": [
+        "A large positive amount",
+        "A large negative amount",
+        "Zero",
+        "It depends on the suitcase's weight"
+       ],
+       "answer": 2,
+       "explain": "The supporting force is vertical while the displacement is horizontal, so the angle between them is 90° and cos 90° = 0; that force does no work."
+      },
+      {
+       "q": "A 2.0 kg object's kinetic energy increases from 10 J to 40 J. How much net work was done on it?",
+       "choices": [
+        "50 J",
+        "40 J",
+        "30 J",
+        "4 J"
+       ],
+       "answer": 2,
+       "explain": "By the work-energy theorem, W~net~ = ΔKE = 40 − 10 = 30 J."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Potential Energy and Conservation of Energy",
+     "minutes": 16,
+     "intro": "Lift a rock and you store energy in it that a falling rock can later cash in as speed. Conservation of mechanical energy turns that everyday intuition into a precise, reusable equation.",
+     "sections": [
+      {
+       "heading": "Gravitational Potential Energy",
+       "body": [
+        "**Gravitational potential energy** near Earth's surface is PE = mgh, where h is height above a chosen reference level. Potential energy is always measured relative to a reference point you choose — only *changes* in PE have physical meaning, not the absolute number.",
+        "A **conservative force**, like gravity, does work that depends only on start and end position, not on the path taken. This is precisely why potential energy can be defined for it: the work a conservative force does can always be recovered as stored energy."
+       ]
+      },
+      {
+       "heading": "Conservation of Mechanical Energy",
+       "body": [
+        "When only conservative forces act (no friction or air resistance), total mechanical energy is conserved: KE~i~ + PE~i~ = KE~f~ + PE~f~. Energy changes form — potential becomes kinetic and back again — but the total never changes.",
+        "This principle turns multi-step kinematics problems into one-line algebra. A roller coaster's speed at the bottom of a hill, for example, depends only on the height dropped, not on the shape of the track, as long as friction is negligible."
+       ],
+       "example": {
+        "problem": "A 2.0 kg ball is dropped from rest at a height of 10 m. Find its speed just before it hits the ground (ignore air resistance).",
+        "steps": [
+         "Set the ground as h = 0, so PE~f~ = 0 and KE~i~ = 0 (starts from rest).",
+         "Apply conservation of energy: mgh = ½mv~f~².",
+         "Mass cancels: v~f~ = √(2gh) = √(2×9.8×10) = √196.",
+         "v~f~ = 14 m/s."
+        ],
+        "answer": "14 m/s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "gravitational potential energy",
+       "def": "Stored energy due to height, PE = mgh, measured relative to a chosen reference level."
+      },
+      {
+       "term": "conservative force",
+       "def": "A force whose work depends only on start and end position, not the path taken; allows a potential energy to be defined."
+      },
+      {
+       "term": "conservation of mechanical energy",
+       "def": "KE~i~ + PE~i~ = KE~f~ + PE~f~ when only conservative forces act."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 5.0 kg object is raised 3.0 m above the ground. How much gravitational potential energy has it gained (g = 9.8 m/s²)?",
+       "choices": [
+        "14.7 J",
+        "49 J",
+        "147 J",
+        "15 J"
+       ],
+       "answer": 2,
+       "explain": "PE = mgh = 5.0 × 9.8 × 3.0 = 147 J."
+      },
+      {
+       "q": "A ball rolls down a curved, frictionless ramp from height 8 m. Compared to a ball dropped straight down from the same height, which has the greater speed at the bottom?",
+       "choices": [
+        "The one that rolled down the ramp",
+        "The one dropped straight down",
+        "They have the same speed",
+        "Cannot be determined"
+       ],
+       "answer": 2,
+       "explain": "Conservation of mechanical energy depends only on the height dropped, not the path, when friction is negligible, so both reach the same final speed."
+      },
+      {
+       "q": "Why can potential energy be defined for gravity but the same approach does not work for friction?",
+       "choices": [
+        "Friction is too weak to matter",
+        "Friction's work depends on the path taken, so it cannot be stored and recovered",
+        "Gravity only acts on heavy objects",
+        "Potential energy only applies to falling objects"
+       ],
+       "answer": 1,
+       "explain": "Potential energy requires a conservative force, one whose work depends only on start and end points. Friction's work depends on the length of the path (more sliding means more energy lost as heat), so no potential energy function exists for it."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Momentum, Impulse, and Collisions",
+     "minutes": 18,
+     "intro": "When two cars collide, energy calculations get messy — but momentum stays perfectly conserved no matter how tangled the crash. That reliability makes momentum the tool of choice for analyzing any collision or explosion.",
+     "sections": [
+      {
+       "heading": "Momentum and Impulse",
+       "body": [
+        "**Momentum** is p = mv, a vector pointing in the direction of velocity. **Impulse** is the change in momentum caused by a force acting over time, J = FΔt = Δp. A small force acting for a long time can produce the same impulse as a large force acting briefly.",
+        "This is why airbags and padded surfaces reduce injury: they extend the time over which a stopping force acts, which lowers the average force needed to produce the same change in momentum. Catching a fast ball with a stiff arm hurts more than catching it while letting your hand move backward, for the same reason."
+       ]
+      },
+      {
+       "heading": "Conservation of Momentum in Collisions",
+       "body": [
+        "In any closed system with no external net force, total momentum before a collision equals total momentum after: p~i,total~ = p~f,total~. This holds whether the collision is elastic (kinetic energy conserved, like billiard balls) or inelastic (kinetic energy lost to heat and sound, like a car crash).",
+        "In a **perfectly inelastic collision**, the objects stick together and move with one common final velocity, which makes the algebra especially simple: m~1~v~1~ + m~2~v~2~ = (m~1~ + m~2~)v~f~."
+       ],
+       "example": {
+        "problem": "A 1000 kg car moving at 15 m/s collides with a stationary 1500 kg car and they lock together. Find their common velocity just after the collision.",
+        "steps": [
+         "Write conservation of momentum: m~1~v~1~ + m~2~v~2~ = (m~1~ + m~2~)v~f~.",
+         "Substitute values: (1000)(15) + (1500)(0) = (1000 + 1500)v~f~.",
+         "15000 = 2500 v~f~.",
+         "v~f~ = 15000/2500 = 6.0 m/s."
+        ],
+        "answer": "6.0 m/s in the direction of the first car's motion."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "momentum",
+       "def": "p = mv, the product of an object's mass and velocity, a vector quantity."
+      },
+      {
+       "term": "impulse",
+       "def": "J = FΔt, the change in momentum produced by a force acting over a time interval."
+      },
+      {
+       "term": "elastic collision",
+       "def": "A collision in which total kinetic energy is conserved."
+      },
+      {
+       "term": "perfectly inelastic collision",
+       "def": "A collision in which the objects stick together and move with a shared final velocity; kinetic energy is lost."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 0.50 kg ball moving at 20 m/s hits a wall and bounces straight back at 18 m/s. What is the magnitude of its change in momentum?",
+       "choices": [
+        "1.0 kg·m/s",
+        "9.0 kg·m/s",
+        "19 kg·m/s",
+        "10 kg·m/s"
+       ],
+       "answer": 2,
+       "explain": "Taking the initial direction as positive: p~i~ = 0.50×20 = 10 kg·m/s, p~f~ = 0.50×(−18) = −9.0 kg·m/s. Δp = p~f~ − p~i~ = −9.0 − 10 = −19 kg·m/s, magnitude 19 kg·m/s."
+      },
+      {
+       "q": "Why do airbags reduce injury in a car crash even though the total change in momentum of the passenger is the same with or without one?",
+       "choices": [
+        "Airbags reduce the passenger's mass",
+        "Airbags increase the stopping time, lowering the average force for the same impulse",
+        "Airbags eliminate momentum entirely",
+        "Airbags make the collision elastic"
+       ],
+       "answer": 1,
+       "explain": "Impulse J = FΔt is fixed by the momentum change, but stretching the stopping time Δt lowers the average force F needed to produce that same impulse."
+      },
+      {
+       "q": "Two identical 2.0 kg carts moving toward each other, each at 3.0 m/s, collide and stick together. What is their velocity after collision?",
+       "choices": [
+        "3.0 m/s",
+        "1.5 m/s",
+        "0 m/s",
+        "6.0 m/s"
+       ],
+       "answer": 2,
+       "explain": "Taking one direction as positive, momenta are +6.0 kg·m/s and −6.0 kg·m/s, which sum to zero. Conservation of momentum gives a final velocity of 0 m/s: the carts stop."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Rotational Motion, Statics, and Fluids",
+   "summary": "Extending force and motion to spinning objects, structures that must not move at all, and liquids and gases that flow and float.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Torque and Static Equilibrium",
+     "minutes": 16,
+     "intro": "A force applied off-center can turn a bolt, open a door, or tip over a bookshelf, even without moving the object's center of mass an inch. That turning effect, torque, is the rotational cousin of force, and it is the key to every lever, wrench, and see-saw.",
+     "sections": [
+      {
+       "heading": "Torque",
+       "body": [
+        "**Torque** is the rotational analog of force: τ = rF sin θ, where r is the distance from the pivot to where the force is applied, F is the force magnitude, and θ is the angle between the force and the lever arm. Torque is measured in newton-meters (N·m).",
+        "Torque depends on *where* a force is applied, not just how big it is. Pushing a door near its hinges barely opens it, while the same push far from the hinges (large r) swings it open easily — this is why door handles sit far from the hinge, not next to it."
+       ]
+      },
+      {
+       "heading": "Conditions for Static Equilibrium",
+       "body": [
+        "An object is in **static equilibrium** when it is not accelerating linearly or rotationally, which requires two conditions simultaneously: the net force is zero (ΣF = 0) and the net torque about any pivot point is zero (Στ = 0). Both must hold, or the object will start to slide, rotate, or both.",
+        "A clever trick for equilibrium problems is choosing the pivot point at the location of an unknown force: since that force has zero lever arm about its own point of application, it drops out of the torque equation entirely, leaving one fewer unknown to solve for."
+       ],
+       "example": {
+        "problem": "A uniform 5.0 m seesaw balances on a central pivot. A 40 kg child sits 2.0 m from the pivot. How far from the pivot must a 50 kg child sit on the other side to balance it?",
+        "steps": [
+         "Set net torque about the pivot to zero: τ~1~ = τ~2~.",
+         "Write each torque as (mass)(g)(distance), and note g cancels from both sides.",
+         "40 × 2.0 = 50 × d.",
+         "d = 80/50 = 1.6 m."
+        ],
+        "answer": "1.6 m from the pivot."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "torque",
+       "def": "The rotational analog of force, τ = rF sin θ, measured in newton-meters."
+      },
+      {
+       "term": "lever arm",
+       "def": "The perpendicular distance from the pivot to the line of action of the force."
+      },
+      {
+       "term": "static equilibrium",
+       "def": "A state in which both net force and net torque are zero, so an object has neither linear nor rotational acceleration."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A wrench applies a force 0.30 m from a bolt. Which produces the greatest torque?",
+       "choices": [
+        "Pushing straight along the wrench handle (θ = 0°)",
+        "Pushing perpendicular to the handle (θ = 90°)",
+        "Pushing at θ = 45°",
+        "Torque does not depend on angle"
+       ],
+       "answer": 1,
+       "explain": "Torque is τ = rF sin θ, which is maximized when sin θ = 1, at θ = 90°. Pushing along the handle (θ = 0°) produces zero torque."
+      },
+      {
+       "q": "A 4.0 m plank balances on a pivot at its center. A 30 kg weight sits 1.5 m from the pivot on the left. Where must a 20 kg weight sit on the right to balance it?",
+       "choices": [
+        "1.0 m",
+        "1.5 m",
+        "2.0 m",
+        "2.25 m"
+       ],
+       "answer": 3,
+       "explain": "Balancing torques: 30 × 1.5 = 20 × d, so d = 45/20 = 2.25 m."
+      },
+      {
+       "q": "Which conditions together define static equilibrium?",
+       "choices": [
+        "Net force zero only",
+        "Net torque zero only",
+        "Net force zero and net torque zero",
+        "Constant nonzero velocity"
+       ],
+       "answer": 2,
+       "explain": "An object at rest that stays at rest needs both zero net force (no linear acceleration) and zero net torque (no rotational acceleration)."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Rotational Dynamics and Angular Momentum",
+     "minutes": 18,
+     "intro": "Newton's second law has a rotational twin. Once you know an object's moment of inertia, you can predict how fast it spins up under a torque using the same logic that predicted how fast a car speeds up under a force.",
+     "sections": [
+      {
+       "heading": "Moment of Inertia and Rotational Newton's Second Law",
+       "body": [
+        "**Moment of inertia** I measures an object's resistance to changes in rotational motion, playing the same role mass plays for linear motion. It depends on both mass and how that mass is distributed relative to the axis: a solid disk has I = ½MR², while a mass concentrated at the rim (a hoop) has I = MR², twice as much for the same M and R.",
+        "The rotational version of Newton's second law is Στ = Iα, where α is angular acceleration in rad/s². Objects with larger moment of inertia need more torque to reach the same angular acceleration — this is why figure skaters spin faster by pulling their arms in, reducing I."
+       ],
+       "example": {
+        "problem": "A solid disk of mass 2.0 kg and radius 0.50 m experiences a net torque of 3.0 N·m. Find its angular acceleration.",
+        "steps": [
+         "Compute the moment of inertia for a solid disk: I = ½MR² = ½(2.0)(0.50)².",
+         "I = ½(2.0)(0.25) = 0.25 kg·m².",
+         "Apply Στ = Iα, so α = τ/I.",
+         "α = 3.0/0.25 = 12 rad/s²."
+        ],
+        "answer": "12 rad/s²."
+       }
+      },
+      {
+       "heading": "Rotational Kinetic Energy and Angular Momentum",
+       "body": [
+        "A spinning object stores **rotational kinetic energy**, KE~rot~ = ½Iω², in addition to any translational kinetic energy from its center of mass moving. A rolling ball, for example, has both kinds at once.",
+        "**Angular momentum** is L = Iω, and like linear momentum, it is conserved when no net external torque acts on a system. A skater pulling in her arms decreases I, and since L = Iω must stay constant, ω increases — she spins faster without anyone pushing her."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "moment of inertia",
+       "def": "A measure of an object's resistance to changes in rotational motion, depending on mass and its distribution about the axis."
+      },
+      {
+       "term": "angular acceleration",
+       "def": "The rate of change of angular velocity, α, in rad/s²."
+      },
+      {
+       "term": "angular momentum",
+       "def": "L = Iω, conserved when no net external torque acts on a system."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Two disks have the same mass and radius, but one is solid and the other is a thin hoop. Which has the greater moment of inertia?",
+       "choices": [
+        "The solid disk",
+        "The hoop",
+        "They are equal",
+        "Cannot be determined"
+       ],
+       "answer": 1,
+       "explain": "A hoop concentrates all its mass at radius R (I = MR²), while a solid disk spreads mass from the center outward (I = ½MR²), giving it a smaller moment of inertia for the same M and R."
+      },
+      {
+       "q": "A figure skater spinning with arms extended pulls her arms in. What happens to her angular velocity, assuming no external torque?",
+       "choices": [
+        "It decreases",
+        "It stays the same",
+        "It increases",
+        "It becomes zero"
+       ],
+       "answer": 2,
+       "explain": "Angular momentum L = Iω is conserved. Pulling her arms in decreases her moment of inertia I, so ω must increase to keep L constant."
+      },
+      {
+       "q": "A wheel with moment of inertia 0.40 kg·m² experiences a net torque of 2.0 N·m. What is its angular acceleration?",
+       "choices": [
+        "0.80 rad/s²",
+        "1.6 rad/s²",
+        "5.0 rad/s²",
+        "2.4 rad/s²"
+       ],
+       "answer": 2,
+       "explain": "α = τ/I = 2.0/0.40 = 5.0 rad/s²."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Fluids: Pressure, Buoyancy, and Flow",
+     "minutes": 16,
+     "intro": "Why do ships float, why does a hydraulic jack lift a car with almost no effort, and why does water speed up through a narrow hose? All three answers come from just two principles governing how fluids push and flow.",
+     "sections": [
+      {
+       "heading": "Pressure and Pascal's Principle",
+       "body": [
+        "**Pressure** is force per unit area, P = F/A, measured in pascals (Pa = N/m²). In a fluid at rest, pressure increases with depth: P = P~0~ + ρgh, where ρ is the fluid's density and h is depth below the surface.",
+        "**Pascal's principle** states that a pressure applied anywhere in an enclosed fluid is transmitted equally to every point in the fluid. A hydraulic lift uses this: a small force on a small-area piston creates a pressure that, applied to a much larger-area piston, produces a much larger force — the trade-off is that the large piston moves a proportionally smaller distance."
+       ]
+      },
+      {
+       "heading": "Archimedes' Principle and Fluid Flow",
+       "body": [
+        "**Archimedes' principle** states that the buoyant force on a submerged or floating object equals the weight of the fluid it displaces: F~b~ = ρ~fluid~Vg. An object floats when its average density is less than the fluid's density, sinking only enough to displace its own weight in fluid.",
+        "For moving fluids, the **continuity equation** (A~1~v~1~ = A~2~v~2~) says fluid speeds up where a pipe narrows, since the same volume must pass every cross-section per second. **Bernoulli's principle** adds that faster-moving fluid exerts lower pressure, which is why airflow over a curved airplane wing (moving faster on top) creates lift."
+       ],
+       "example": {
+        "problem": "A block of wood with density 600 kg/m³ and volume 0.0020 m³ floats in water (density 1000 kg/m³). What fraction of the block's volume is submerged?",
+        "steps": [
+         "At equilibrium, buoyant force equals the block's weight: ρ~water~V~sub~g = ρ~wood~V~total~g.",
+         "Cancel g and solve for the submerged fraction: V~sub~/V~total~ = ρ~wood~/ρ~water~.",
+         "V~sub~/V~total~ = 600/1000 = 0.60."
+        ],
+        "answer": "60% of the block's volume is submerged."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "pressure",
+       "def": "Force per unit area, P = F/A, measured in pascals (Pa)."
+      },
+      {
+       "term": "Pascal's principle",
+       "def": "Pressure applied anywhere in an enclosed fluid is transmitted equally throughout the fluid."
+      },
+      {
+       "term": "Archimedes' principle",
+       "def": "The buoyant force on an object equals the weight of the fluid it displaces."
+      },
+      {
+       "term": "continuity equation",
+       "def": "A~1~v~1~ = A~2~v~2~: fluid speeds up where a pipe's cross-sectional area decreases."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An object has a density exactly equal to water's density. What happens when it is placed in water?",
+       "choices": [
+        "It sinks to the bottom",
+        "It floats completely above the surface",
+        "It floats fully submerged, neither sinking nor rising",
+        "It dissolves"
+       ],
+       "answer": 2,
+       "explain": "An object floats in equilibrium when the buoyant force (weight of displaced fluid) equals its own weight. Equal densities mean it can be fully submerged and still displace exactly its own weight, so it neither sinks further nor rises."
+      },
+      {
+       "q": "Water flows through a pipe that narrows to half its original cross-sectional area. What happens to the water's speed in the narrow section?",
+       "choices": [
+        "It halves",
+        "It stays the same",
+        "It doubles",
+        "It quadruples"
+       ],
+       "answer": 2,
+       "explain": "By the continuity equation A~1~v~1~ = A~2~v~2~, halving the area requires doubling the speed to keep the same volume flow rate."
+      },
+      {
+       "q": "A hydraulic lift has a small piston of area 0.01 m² and a large piston of area 0.50 m². A 200 N force is applied to the small piston. What force does the large piston produce?",
+       "choices": [
+        "200 N",
+        "4 N",
+        "10,000 N",
+        "2,000 N"
+       ],
+       "answer": 2,
+       "explain": "By Pascal's principle, pressure is equal on both pistons: P = 200/0.01 = 20,000 Pa. Force on the large piston: F = P × A = 20,000 × 0.50 = 10,000 N."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Heat and Thermodynamics",
+   "summary": "Temperature, heat flow, and the two laws that govern every engine, refrigerator, and living cell.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Temperature, Heat, and Thermal Expansion",
+     "minutes": 14,
+     "intro": "Temperature and heat sound like the same thing in everyday speech, but physics draws a sharp line between them: one describes a state, the other describes a transfer. Getting that distinction straight unlocks calorimetry and thermal expansion problems alike.",
+     "sections": [
+      {
+       "heading": "Temperature Versus Heat",
+       "body": [
+        "**Temperature** measures the average kinetic energy of the particles in a substance; it is a property an object *has*. **Heat** is energy that flows between objects because of a temperature difference; it is energy *in transit*, measured in joules (or calories, where 1 cal = 4.186 J).",
+        "Heat always flows spontaneously from higher to lower temperature, never the reverse, until the two objects reach **thermal equilibrium** — the same temperature, with no further net heat flow. A cup of coffee cools because heat flows out to the cooler room, not because the coffee 'loses' temperature directly."
+       ]
+      },
+      {
+       "heading": "Thermal Expansion",
+       "body": [
+        "Most materials expand when heated because faster-moving particles settle into a larger average spacing. For a linear dimension, ΔL = αL~0~ΔT, where α is the material's coefficient of linear expansion and L~0~ is the original length.",
+        "Engineers must plan for this: bridges include expansion joints, and railroad tracks once needed small gaps between sections, because a solid steel structure spanning hundreds of meters can grow by several centimeters between a cold winter night and a hot summer day."
+       ],
+       "example": {
+        "problem": "A steel rod is 2.0 m long at 20°C. Steel's coefficient of linear expansion is 12 × 10⁻⁶/°C. How much does the rod lengthen when heated to 70°C?",
+        "steps": [
+         "Find the temperature change: ΔT = 70 − 20 = 50°C.",
+         "Apply ΔL = αL~0~ΔT.",
+         "ΔL = (12×10⁻⁶)(2.0)(50) = 0.0012 m."
+        ],
+        "answer": "0.0012 m, or 1.2 mm."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "temperature",
+       "def": "A measure of the average kinetic energy of a substance's particles."
+      },
+      {
+       "term": "heat",
+       "def": "Energy transferred between objects due to a temperature difference, measured in joules or calories."
+      },
+      {
+       "term": "thermal equilibrium",
+       "def": "The state reached when two objects in contact have the same temperature and no net heat flows between them."
+      },
+      {
+       "term": "coefficient of linear expansion",
+       "def": "α, the fractional change in length per degree of temperature change for a material."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A hot metal block is placed in cool water and the two are left alone. Which best describes what eventually happens?",
+       "choices": [
+        "The block keeps losing heat forever",
+        "Heat flows from block to water until both reach the same temperature",
+        "Heat flows from water to block",
+        "Nothing happens because heat cannot flow between solids and liquids"
+       ],
+       "answer": 1,
+       "explain": "Heat flows spontaneously from the hotter object to the cooler one until they reach thermal equilibrium at a shared temperature, after which no net heat flow continues."
+      },
+      {
+       "q": "Which statement correctly distinguishes heat from temperature?",
+       "choices": [
+        "They are the same physical quantity",
+        "Temperature is energy in transit; heat is a property of an object",
+        "Heat is energy in transit; temperature is a property of an object",
+        "Heat only applies to solids, temperature only to gases"
+       ],
+       "answer": 2,
+       "explain": "Temperature describes the state of a substance (average particle kinetic energy); heat is energy flowing between objects due to a temperature difference."
+      },
+      {
+       "q": "An aluminum rod (α = 24 × 10⁻⁶/°C) is 1.0 m long and heated by 40°C. Approximately how much does it lengthen?",
+       "choices": [
+        "0.00096 m",
+        "0.096 m",
+        "0.0096 m",
+        "0.96 m"
+       ],
+       "answer": 0,
+       "explain": "ΔL = αL~0~ΔT = (24×10⁻⁶)(1.0)(40) = 0.00096 m, about 1 mm."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Ideal Gas Law and Kinetic Theory",
+     "minutes": 16,
+     "intro": "A gas is billions of tiny particles bouncing off each other and their container, yet their collective behavior obeys one remarkably clean equation. The ideal gas law connects the everyday quantities of pressure, volume, and temperature into a single formula.",
+     "sections": [
+      {
+       "heading": "The Ideal Gas Law",
+       "body": [
+        "The **ideal gas law** is PV = nRT, where P is pressure (Pa), V is volume (m³), n is the number of moles, T is absolute temperature (kelvin), and R = 8.31 J/(mol·K) is the universal gas constant. Temperature must always be in kelvin (K = °C + 273) for this equation to work correctly.",
+        "This single law replaces three separate historical laws: at constant temperature, pressure and volume are inversely related (Boyle's law); at constant pressure, volume grows with temperature (Charles's law); at constant volume, pressure grows with temperature (Gay-Lussac's law)."
+       ],
+       "example": {
+        "problem": "2.0 mol of an ideal gas occupies 0.050 m³ at 300 K. Find the pressure.",
+        "steps": [
+         "Apply PV = nRT, solving for P: P = nRT/V.",
+         "P = (2.0)(8.31)(300)/0.050.",
+         "P = 4986/0.050 = 99,720 Pa."
+        ],
+        "answer": "About 9.97 × 10⁴ Pa (roughly 1 atmosphere)."
+       }
+      },
+      {
+       "heading": "Kinetic Theory of Gases",
+       "body": [
+        "**Kinetic theory** explains pressure and temperature at the molecular level: gas particles are in constant, random motion, colliding with the container walls, and each collision transfers momentum, which we experience macroscopically as pressure. More frequent or harder collisions mean higher pressure.",
+        "Temperature turns out to be a direct measure of the average translational kinetic energy per particle: KE~avg~ = (3/2)k~B~T, where k~B~ = 1.38 × 10⁻²³ J/K is Boltzmann's constant. This is why heating a gas at constant volume raises its pressure — faster particles hit the walls harder and more often."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ideal gas law",
+       "def": "PV = nRT, relating pressure, volume, moles, and absolute temperature of a gas."
+      },
+      {
+       "term": "absolute temperature",
+       "def": "Temperature measured in kelvin, where 0 K is absolute zero; K = °C + 273."
+      },
+      {
+       "term": "kinetic theory",
+       "def": "The model explaining gas pressure and temperature as the result of countless particle collisions with a container's walls."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A gas is heated from 27°C to 327°C at constant volume and amount. What happens to its pressure?",
+       "choices": [
+        "It stays the same",
+        "It doubles",
+        "It triples",
+        "It falls by half"
+       ],
+       "answer": 1,
+       "explain": "Convert to kelvin: 27°C = 300 K, 327°C = 600 K. Since P is proportional to T at constant V and n (P = nRT/V), doubling the absolute temperature doubles the pressure."
+      },
+      {
+       "q": "Why must temperature be converted to kelvin before using PV = nRT?",
+       "choices": [
+        "Kelvin is simply a tradition with no real reason",
+        "The equation requires an absolute temperature scale starting from true zero energy",
+        "Celsius values are always negative",
+        "R is only defined for kelvin conversions above 100"
+       ],
+       "answer": 1,
+       "explain": "PV = nRT assumes T = 0 corresponds to zero average kinetic energy. Celsius and Fahrenheit have arbitrary zero points, so only an absolute scale like kelvin gives physically correct ratios."
+      },
+      {
+       "q": "According to kinetic theory, what happens to gas pressure on a container's walls as temperature increases, at constant volume?",
+       "choices": [
+        "Pressure decreases because particles slow down",
+        "Pressure increases because particles move faster and collide more forcefully and often",
+        "Pressure is unaffected by temperature",
+        "Pressure only depends on the number of particles"
+       ],
+       "answer": 1,
+       "explain": "Higher temperature means greater average kinetic energy per particle, so particles strike the walls harder and more frequently, increasing pressure."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Laws of Thermodynamics",
+     "minutes": 18,
+     "intro": "Every engine that has ever turned fuel into motion, and every refrigerator that has ever kept food cold, obeys two unbreakable accounting rules for energy. These laws explain not just what is possible, but what is fundamentally impossible, no matter how clever the engineering.",
+     "sections": [
+      {
+       "heading": "The First Law of Thermodynamics",
+       "body": [
+        "The **first law of thermodynamics** is a statement of energy conservation for thermal systems: ΔU = Q − W, where ΔU is the change in internal energy, Q is heat added to the system, and W is work done *by* the system on its surroundings. Energy is never created or destroyed, only converted between heat, work, and internal energy.",
+        "In an **isothermal** process, temperature (and thus internal energy for an ideal gas) does not change, so all added heat becomes work: Q = W. In an **adiabatic** process, no heat is exchanged (Q = 0), so any work done by the gas comes entirely at the expense of its internal energy, and the gas cools."
+       ]
+      },
+      {
+       "heading": "The Second Law and Heat Engines",
+       "body": [
+        "The **second law of thermodynamics** states that heat spontaneously flows from hot to cold, never the reverse without external work, and that no heat engine can convert heat into work with 100% efficiency. Some heat must always be exhausted to a cold reservoir.",
+        "A **Carnot engine** is the theoretical best-possible heat engine operating between temperatures T~h~ (hot) and T~c~ (cold, in kelvin), with maximum efficiency e = 1 − T~c~/T~h~. Real engines always perform worse than this Carnot limit due to friction and irreversible processes; this efficiency ceiling is a law of nature, not a limit of engineering."
+       ],
+       "example": {
+        "problem": "A heat engine operates between a hot reservoir at 500 K and a cold reservoir at 300 K. Find its maximum possible (Carnot) efficiency.",
+        "steps": [
+         "Apply the Carnot efficiency formula: e = 1 − T~c~/T~h~.",
+         "e = 1 − 300/500 = 1 − 0.60.",
+         "e = 0.40."
+        ],
+        "answer": "40% maximum efficiency."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "first law of thermodynamics",
+       "def": "ΔU = Q − W; energy is conserved, converting between heat, work, and internal energy."
+      },
+      {
+       "term": "second law of thermodynamics",
+       "def": "Heat flows spontaneously from hot to cold, and no engine converts heat to work with 100% efficiency."
+      },
+      {
+       "term": "Carnot efficiency",
+       "def": "The maximum possible efficiency of a heat engine, e = 1 − T~c~/T~h~, using absolute temperatures."
+      },
+      {
+       "term": "entropy",
+       "def": "A measure of disorder in a system; the total entropy of an isolated system never decreases."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A gas expands adiabatically (Q = 0), doing positive work on its surroundings. What happens to its internal energy?",
+       "choices": [
+        "It increases",
+        "It decreases",
+        "It stays the same",
+        "Cannot be determined"
+       ],
+       "answer": 1,
+       "explain": "From ΔU = Q − W with Q = 0, ΔU = −W. If the gas does positive work, ΔU is negative: internal energy (and typically temperature) decreases."
+      },
+      {
+       "q": "A heat engine operates between 800 K and 400 K. What is its maximum possible Carnot efficiency?",
+       "choices": [
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+       ],
+       "answer": 1,
+       "explain": "e = 1 − T~c~/T~h~ = 1 − 400/800 = 1 − 0.50 = 0.50, or 50%."
+      },
+      {
+       "q": "Which statement correctly reflects the second law of thermodynamics?",
+       "choices": [
+        "Energy can be created if you build a good enough engine",
+        "A heat engine can achieve 100% efficiency with perfect insulation",
+        "Some heat must always be exhausted to a cold reservoir; no engine is perfectly efficient",
+        "Heat flows equally in both directions between objects at different temperatures"
+       ],
+       "answer": 2,
+       "explain": "The second law guarantees that every real heat engine exhausts some heat to a cold reservoir, so 100% efficiency is fundamentally impossible, not just an engineering shortfall."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Waves, Sound, and Electricity",
+   "summary": "How disturbances travel through matter as waves, how those waves become the sound you hear, and the fundamentals of electric charge and current.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Wave Motion, Superposition, and Sound",
+     "minutes": 16,
+     "intro": "Ripples on a pond, the sound of a guitar string, and the light from a star are all waves — disturbances that carry energy from place to place without carrying matter along with them. One core equation and one core principle describe nearly all of them.",
+     "sections": [
+      {
+       "heading": "Describing Waves",
+       "body": [
+        "A wave's **wavelength** (λ) is the distance between successive identical points (crest to crest), its **frequency** (f) is the number of cycles per second (hertz, Hz), and its **period** (T = 1/f) is the time for one cycle. These combine in the universal wave equation v = fλ, linking speed, frequency, and wavelength.",
+        "In a **transverse wave**, particles move perpendicular to the direction of travel (like a wave on a rope); in a **longitudinal wave**, particles move parallel to the direction of travel, alternately compressing and spreading apart (like sound in air)."
+       ],
+       "example": {
+        "problem": "A sound wave has a frequency of 500 Hz and a wavelength of 0.68 m. Find its speed, and check it against the known speed of sound in air (about 340 m/s).",
+        "steps": [
+         "Apply the wave equation: v = fλ.",
+         "v = 500 × 0.68.",
+         "v = 340 m/s, matching the known speed of sound in air."
+        ],
+        "answer": "340 m/s."
+       }
+      },
+      {
+       "heading": "Superposition and the Doppler Effect",
+       "body": [
+        "The **principle of superposition** says that when two or more waves overlap, the total displacement at any point is the sum of the individual displacements. This produces **constructive interference** (waves add, crests meeting crests) and **destructive interference** (waves cancel, crest meeting trough), which is how noise-canceling headphones work.",
+        "The **Doppler effect** is the shift in observed frequency when a source and observer move relative to each other: frequency rises as a source approaches and falls as it recedes, which is why an ambulance siren sounds higher-pitched approaching you and lower-pitched moving away."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "wavelength",
+       "def": "The distance between successive identical points on a wave, such as crest to crest."
+      },
+      {
+       "term": "frequency",
+       "def": "The number of wave cycles passing a point per second, measured in hertz (Hz)."
+      },
+      {
+       "term": "superposition",
+       "def": "The principle that overlapping waves add their displacements at each point."
+      },
+      {
+       "term": "Doppler effect",
+       "def": "The shift in observed frequency due to relative motion between a wave source and an observer."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A wave has a frequency of 200 Hz and travels at 400 m/s. What is its wavelength?",
+       "choices": [
+        "0.5 m",
+        "2.0 m",
+        "80,000 m",
+        "200 m"
+       ],
+       "answer": 1,
+       "explain": "From v = fλ, λ = v/f = 400/200 = 2.0 m."
+      },
+      {
+       "q": "Two identical waves meet crest-to-crest at a point. What kind of interference occurs there?",
+       "choices": [
+        "Destructive interference, canceling out",
+        "Constructive interference, adding to a larger displacement",
+        "No interference occurs",
+        "The waves reverse direction"
+       ],
+       "answer": 1,
+       "explain": "By the principle of superposition, crest meeting crest adds the two positive displacements together, producing constructive interference."
+      },
+      {
+       "q": "An ambulance siren sounds higher-pitched as it approaches you and lower-pitched as it drives away. What is this an example of?",
+       "choices": [
+        "Constructive interference",
+        "The Doppler effect",
+        "Resonance",
+        "Diffraction"
+       ],
+       "answer": 1,
+       "explain": "The relative motion between the moving source and the stationary observer shifts the observed frequency up while approaching and down while receding — the Doppler effect."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Electric Charge, Force, and Electric Field",
+     "minutes": 16,
+     "intro": "Rub a balloon on your hair and it will stick to a wall — a small demonstration of the same force that holds atoms together and drives every circuit you will study next. Electric charge and Coulomb's law are where electricity begins.",
+     "sections": [
+      {
+       "heading": "Electric Charge and Coulomb's Law",
+       "body": [
+        "Charge comes in two types, positive and negative, measured in coulombs (C); like charges repel and opposite charges attract. **Coulomb's law** gives the force between two point charges: F = k|q~1~q~2~|/r², where k = 8.99 × 10⁹ N·m²/C².",
+        "Coulomb's law has the same inverse-square structure as Newton's law of gravitation, but electric forces can be enormously stronger and can either attract or repel, unlike gravity, which only attracts."
+       ],
+       "example": {
+        "problem": "Two point charges, q~1~ = 3.0 μC and q~2~ = −2.0 μC, are separated by 0.50 m. Find the magnitude of the force between them.",
+        "steps": [
+         "Apply Coulomb's law: F = k|q~1~q~2~|/r².",
+         "F = (8.99×10⁹)(3.0×10⁻⁶)(2.0×10⁻⁶)/(0.50)².",
+         "F = (8.99×10⁹)(6.0×10⁻¹²)/0.25 = 0.0539/0.25.",
+         "F ≈ 0.216 N."
+        ],
+        "answer": "About 0.22 N, attractive (opposite charges)."
+       }
+      },
+      {
+       "heading": "The Electric Field",
+       "body": [
+        "An **electric field** is the force per unit charge that would be felt by a small positive test charge at each point in space: E = F/q, measured in N/C. Fields let us describe the influence of a charge distribution without needing to place a specific second charge there.",
+        "Electric field lines point away from positive charges and toward negative charges, and their density represents field strength — lines packed closely together indicate a strong field, while widely spaced lines indicate a weak one."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Coulomb's law",
+       "def": "F = k|q~1~q~2~|/r², the force between two point charges, with k = 8.99 × 10⁹ N·m²/C²."
+      },
+      {
+       "term": "electric field",
+       "def": "The force per unit charge at a point in space, E = F/q, measured in N/C."
+      },
+      {
+       "term": "coulomb (C)",
+       "def": "The SI unit of electric charge."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Two positive charges are brought twice as far apart as before. What happens to the force between them?",
+       "choices": [
+        "It doubles",
+        "It halves",
+        "It becomes one-quarter as strong",
+        "It stays the same"
+       ],
+       "answer": 2,
+       "explain": "Coulomb's law follows an inverse-square relationship, F ∝ 1/r². Doubling r reduces the force by a factor of 2² = 4, leaving one-quarter the original force."
+      },
+      {
+       "q": "Charges q~1~ = 4.0 μC and q~2~ = 4.0 μC are separated by 1.0 m. What is the approximate force between them?",
+       "choices": [
+        "0.036 N, repulsive",
+        "0.144 N, repulsive",
+        "0.036 N, attractive",
+        "3.6 N, repulsive"
+       ],
+       "answer": 1,
+       "explain": "F = k q~1~q~2~/r² = (8.99×10⁹)(4.0×10⁻⁶)(4.0×10⁻⁶)/(1.0)² = (8.99×10⁹)(1.6×10⁻¹¹) ≈ 0.144 N. Since both charges are positive, the force is repulsive."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Electric Circuits and Magnetism",
+     "minutes": 18,
+     "intro": "Flip a switch and charge begins to flow in an organized way through wires and components — a circuit. Add a magnet and that flowing charge starts to feel and exert forces of its own, linking electricity and magnetism into one unified subject.",
+     "sections": [
+      {
+       "heading": "Current, Resistance, and Ohm's Law",
+       "body": [
+        "**Electric current** is the rate of charge flow, I = ΔQ/Δt, measured in amperes (A). **Resistance** opposes current flow and is measured in ohms (Ω). **Ohm's law** relates the three: V = IR, where V is voltage (potential difference) across a component.",
+        "In a **series circuit**, components share the same current but voltage divides among them; total resistance is R~total~ = R~1~ + R~2~ + ... . In a **parallel circuit**, components share the same voltage but current divides among branches, and total resistance is always less than the smallest individual resistor."
+       ],
+       "example": {
+        "problem": "A 12 V battery is connected across two resistors in series: 4.0 Ω and 8.0 Ω. Find the current and the voltage across the 8.0 Ω resistor.",
+        "steps": [
+         "Find total resistance for series resistors: R~total~ = 4.0 + 8.0 = 12 Ω.",
+         "Apply Ohm's law to the whole circuit: I = V/R~total~ = 12/12 = 1.0 A.",
+         "The same current flows through each series resistor, so V~8Ω~ = IR = 1.0 × 8.0 = 8.0 V."
+        ],
+        "answer": "Current = 1.0 A; voltage across the 8.0 Ω resistor = 8.0 V."
+       }
+      },
+      {
+       "heading": "Magnetic Force and Fields",
+       "body": [
+        "A moving charge in a magnetic field feels a force F = qvB sin θ, where θ is the angle between velocity and the field; a charge moving parallel to the field feels no magnetic force at all. A current-carrying wire in a field feels F = BIL sin θ, the basis of every electric motor.",
+        "Magnetic fields themselves are produced by moving charges — a current-carrying wire generates a magnetic field circling around it, which is why an electromagnet is just a coil of wire carrying current, with the field strengthened by looping the wire many times."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "electric current",
+       "def": "The rate of charge flow, I = ΔQ/Δt, measured in amperes (A)."
+      },
+      {
+       "term": "Ohm's law",
+       "def": "V = IR, relating voltage, current, and resistance."
+      },
+      {
+       "term": "series circuit",
+       "def": "A circuit where components are connected end to end, sharing the same current."
+      },
+      {
+       "term": "parallel circuit",
+       "def": "A circuit where components share the same voltage across separate branches."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 6.0 Ω resistor has a 3.0 A current flowing through it. What voltage is across it?",
+       "choices": [
+        "2.0 V",
+        "9.0 V",
+        "18 V",
+        "0.50 V"
+       ],
+       "answer": 2,
+       "explain": "By Ohm's law, V = IR = 3.0 × 6.0 = 18 V."
+      },
+      {
+       "q": "Two resistors are connected in parallel across a battery. Compared to using just one resistor alone, what happens to the total resistance of the circuit?",
+       "choices": [
+        "It increases",
+        "It decreases",
+        "It stays the same",
+        "It becomes zero"
+       ],
+       "answer": 1,
+       "explain": "Adding a parallel branch gives current more paths to flow, which always decreases total resistance below that of any single resistor in the combination."
+      },
+      {
+       "q": "A charged particle moves exactly parallel to a magnetic field's direction. What magnetic force does it experience?",
+       "choices": [
+        "Maximum force",
+        "Zero force",
+        "A force perpendicular to the field only",
+        "It depends on the particle's charge sign"
+       ],
+       "answer": 1,
+       "explain": "The magnetic force is F = qvB sin θ. When velocity is parallel to the field, θ = 0°, and sin 0° = 0, so the force is zero regardless of charge or speed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Light and Modern Physics",
+   "summary": "How light bends and interferes, and the twentieth-century discoveries that revealed light and matter behave in ways classical physics never predicted.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Reflection, Refraction, and Lenses",
+     "minutes": 16,
+     "intro": "Light bends when it crosses from air into water or glass, which is exactly why a straw looks broken in a glass of water and why a lens can focus sunlight to a point hot enough to start a fire. One equation predicts all of it.",
+     "sections": [
+      {
+       "heading": "Reflection and Refraction",
+       "body": [
+        "The **law of reflection** states that the angle of incidence equals the angle of reflection, both measured from a line perpendicular to the surface (the normal). **Refraction** is the bending of light as it passes between materials with different optical densities, described by **Snell's law**: n~1~ sin θ~1~ = n~2~ sin θ~2~, where n is a material's index of refraction.",
+        "Light bends toward the normal when entering a denser medium (higher n) and away from the normal when entering a less dense one. A higher index of refraction means light travels more slowly in that material, since n = c/v, where c is the speed of light in vacuum."
+       ],
+       "example": {
+        "problem": "Light traveling in air (n = 1.00) strikes a glass surface (n = 1.50) at an angle of incidence of 30°. Find the angle of refraction inside the glass.",
+        "steps": [
+         "Apply Snell's law: n~1~ sin θ~1~ = n~2~ sin θ~2~.",
+         "(1.00)(sin 30°) = (1.50)(sin θ~2~).",
+         "sin θ~2~ = (1.00)(0.500)/1.50 = 0.333.",
+         "θ~2~ = sin⁻¹(0.333) ≈ 19.5°."
+        ],
+        "answer": "About 19.5°, bent toward the normal since glass is denser than air."
+       }
+      },
+      {
+       "heading": "Thin Lenses",
+       "body": [
+        "The **thin lens equation**, 1/d~o~ + 1/d~i~ = 1/f, relates object distance d~o~, image distance d~i~, and focal length f. A converging lens (positive f) can form either a real, inverted image (object beyond the focal point) or a virtual, upright, magnified image (object inside the focal point, like a magnifying glass).",
+        "**Magnification** is m = −d~i~/d~o~: a negative m means the image is inverted, and |m| greater than 1 means the image is enlarged relative to the object."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "law of reflection",
+       "def": "The angle of incidence equals the angle of reflection, measured from the normal."
+      },
+      {
+       "term": "index of refraction",
+       "def": "n = c/v, the ratio of light's speed in vacuum to its speed in a material."
+      },
+      {
+       "term": "Snell's law",
+       "def": "n~1~ sin θ~1~ = n~2~ sin θ~2~, describing how light bends between two media."
+      },
+      {
+       "term": "focal length",
+       "def": "The distance from a lens or mirror at which parallel rays converge (or appear to diverge from)."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Light passes from water (n = 1.33) into air (n = 1.00). What happens to the light ray at the boundary?",
+       "choices": [
+        "It bends toward the normal",
+        "It bends away from the normal",
+        "It does not bend at all",
+        "It reverses direction completely"
+       ],
+       "answer": 1,
+       "explain": "Moving from a denser medium (higher n) to a less dense one (lower n), light bends away from the normal, per Snell's law."
+      },
+      {
+       "q": "An object is placed beyond the focal point of a converging lens. What type of image forms?",
+       "choices": [
+        "Virtual and upright",
+        "Real and inverted",
+        "Virtual and inverted",
+        "No image forms"
+       ],
+       "answer": 1,
+       "explain": "When an object is farther from a converging lens than the focal length, the lens forms a real, inverted image on the opposite side."
+      },
+      {
+       "q": "Which material has light traveling through it more slowly: one with n = 1.3 or one with n = 2.4?",
+       "choices": [
+        "n = 1.3",
+        "n = 2.4",
+        "Light travels at the same speed in both",
+        "Index of refraction does not affect speed"
+       ],
+       "answer": 1,
+       "explain": "Since n = c/v, a higher index of refraction corresponds to a lower speed of light in that material. n = 2.4 slows light more than n = 1.3."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Wave Optics: Interference and Diffraction",
+     "minutes": 14,
+     "intro": "Shine light through two narrow slits and, instead of two bright stripes, you get a pattern of many bright and dark bands. That surprising result was the strongest historical evidence that light behaves as a wave.",
+     "sections": [
+      {
+       "heading": "Young's Double-Slit Experiment",
+       "body": [
+        "When coherent light passes through two closely spaced slits, the waves from each slit overlap and interfere. Bright fringes (constructive interference) appear where the path difference between the two slits is a whole number of wavelengths: d sin θ = mλ, where d is the slit spacing and m = 0, 1, 2, ...",
+        "Dark fringes (destructive interference) appear exactly halfway between bright fringes, where the path difference is a half-integer number of wavelengths. The spacing between fringes depends on wavelength, slit separation, and distance to the screen, which is how this experiment lets scientists measure the wavelength of light precisely."
+       ],
+       "example": {
+        "problem": "Light of wavelength 600 nm passes through two slits separated by 0.20 mm. Find the angle to the first bright fringe (m = 1) beyond the center.",
+        "steps": [
+         "Apply the double-slit condition: d sin θ = mλ.",
+         "sin θ = mλ/d = (1)(600×10⁻⁹)/(0.20×10⁻³).",
+         "sin θ = 600×10⁻⁹/2.0×10⁻⁴ = 3.0×10⁻³.",
+         "θ = sin⁻¹(3.0×10⁻³) ≈ 0.17°."
+        ],
+        "answer": "About 0.17° from the central bright fringe."
+       }
+      },
+      {
+       "heading": "Diffraction",
+       "body": [
+        "**Diffraction** is the bending and spreading of waves around obstacles or through openings, most noticeable when the opening's size is comparable to the wavelength. A single narrow slit produces its own pattern of bright and dark bands, with a bright central maximum flanked by much dimmer secondary bands.",
+        "A **diffraction grating**, with thousands of closely spaced slits per centimeter, produces very sharp, widely separated bright fringes, which makes gratings far better than a simple double slit for precisely measuring wavelengths and separating light into a detailed spectrum."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "constructive interference",
+       "def": "Overlapping waves that reinforce each other, producing a bright fringe when the path difference is a whole number of wavelengths."
+      },
+      {
+       "term": "destructive interference",
+       "def": "Overlapping waves that cancel each other, producing a dark fringe when the path difference is a half-integer number of wavelengths."
+      },
+      {
+       "term": "diffraction",
+       "def": "The bending and spreading of waves around obstacles or through narrow openings."
+      },
+      {
+       "term": "diffraction grating",
+       "def": "A device with many closely spaced slits that produces sharp, well-separated interference fringes."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a double-slit experiment, what condition produces a bright fringe on the screen?",
+       "choices": [
+        "The path difference is a whole number of wavelengths",
+        "The path difference is exactly half a wavelength",
+        "The slits are infinitely far apart",
+        "The light must be a single color of red only"
+       ],
+       "answer": 0,
+       "explain": "Bright (constructive) fringes occur where d sin θ = mλ, meaning the path difference between the two slits is a whole number of wavelengths, so crests align with crests."
+      },
+      {
+       "q": "Doubling the wavelength of light used in a double-slit experiment, with everything else unchanged, does what to the fringe spacing?",
+       "choices": [
+        "Halves it",
+        "Doubles it",
+        "Leaves it unchanged",
+        "Eliminates the fringes"
+       ],
+       "answer": 1,
+       "explain": "Since sin θ = mλ/d, doubling λ doubles the angle (and thus the spacing) to each fringe order, for fixed d."
+      },
+      {
+       "q": "Why are diffraction gratings preferred over a simple double slit for measuring wavelengths precisely?",
+       "choices": [
+        "Gratings work only with white light",
+        "Gratings produce sharper, more widely separated fringes due to many slits interfering",
+        "Gratings eliminate diffraction entirely",
+        "Gratings require no light source"
+       ],
+       "answer": 1,
+       "explain": "With thousands of slits interfering together, a grating produces much narrower and more precisely located bright fringes than a two-slit setup, improving measurement precision."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Relativity, Quantum, and the Atom",
+     "minutes": 18,
+     "intro": "In the early 1900s, physics discovered that at very high speeds and very small scales, nature stops behaving the way common sense expects. This lesson previews the two revolutions — relativity and quantum theory — that reshaped physics forever.",
+     "sections": [
+      {
+       "heading": "The Basics of Special Relativity",
+       "body": [
+        "Einstein's special relativity rests on two postulates: the laws of physics are the same in all non-accelerating reference frames, and the speed of light in vacuum (c = 3.0 × 10⁸ m/s) is the same for all observers, regardless of their motion. From these follow strange but experimentally confirmed effects: moving clocks run slow (**time dilation**) and moving objects appear shortened along their direction of motion (**length contraction**).",
+        "Relativity also gives mass and energy an equivalence: E = mc². Even a small mass corresponds to an enormous amount of energy because c² is such a large number, which is the basis for both nuclear power and nuclear weapons."
+       ]
+      },
+      {
+       "heading": "Photons and the Bohr Model",
+       "body": [
+        "Light also carries energy in discrete packets called **photons**, with energy E = hf, where h = 6.63 × 10⁻³⁴ J·s is Planck's constant. This explained the **photoelectric effect** — light knocking electrons out of a metal only above a threshold frequency, no matter how bright the light, a result classical wave theory could not explain.",
+        "Niels Bohr proposed that electrons in an atom occupy only specific, quantized energy levels, jumping between them by absorbing or emitting a photon whose energy exactly matches the level gap. This explained why atoms emit and absorb light only at specific wavelengths, producing each element's unique spectral fingerprint."
+       ],
+       "example": {
+        "problem": "Find the energy of a photon of visible light with frequency 5.0 × 10¹⁴ Hz, in both joules and electron-volts (1 eV = 1.6 × 10⁻¹⁹ J).",
+        "steps": [
+         "Apply E = hf.",
+         "E = (6.63×10⁻³⁴)(5.0×10¹⁴) = 3.315×10⁻¹⁹ J.",
+         "Convert to eV: E = 3.315×10⁻¹⁹/1.6×10⁻¹⁹.",
+         "E ≈ 2.07 eV."
+        ],
+        "answer": "About 3.3 × 10⁻¹⁹ J, or 2.1 eV."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "time dilation",
+       "def": "The effect by which a moving clock runs slower as measured by a stationary observer."
+      },
+      {
+       "term": "length contraction",
+       "def": "The shortening of a moving object's length along its direction of motion, as measured by a stationary observer."
+      },
+      {
+       "term": "photon",
+       "def": "A discrete packet of light energy, E = hf, where h is Planck's constant."
+      },
+      {
+       "term": "photoelectric effect",
+       "def": "The ejection of electrons from a metal surface by light above a threshold frequency, explained by treating light as photons."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to special relativity, what happens to a clock moving at a very high speed, as measured by a stationary observer?",
+       "choices": [
+        "It runs faster",
+        "It runs slower",
+        "It stops completely",
+        "It is unaffected by motion"
+       ],
+       "answer": 1,
+       "explain": "Time dilation predicts that a moving clock ticks slower than an identical stationary clock, as measured by an observer at rest, an effect confirmed experimentally with fast-moving particles and atomic clocks."
+      },
+      {
+       "q": "In the photoelectric effect, increasing the brightness (intensity) of light below the threshold frequency does what?",
+       "choices": [
+        "Ejects electrons with more kinetic energy",
+        "Still ejects no electrons, regardless of brightness",
+        "Always ejects electrons if the light is bright enough",
+        "Doubles the threshold frequency"
+       ],
+       "answer": 1,
+       "explain": "Each photon's energy depends on frequency (E = hf), not intensity. Below the threshold frequency, no single photon carries enough energy to eject an electron, no matter how many photons (how bright) arrive."
+      },
+      {
+       "q": "What produces the unique spectral lines observed for each chemical element?",
+       "choices": [
+        "Random scattering of light off atoms",
+        "Electrons jumping between quantized energy levels, absorbing or emitting specific photon energies",
+        "The Doppler effect acting on all atoms equally",
+        "Time dilation at atomic scales"
+       ],
+       "answer": 1,
+       "explain": "Bohr's model shows electrons only occupy specific energy levels; transitions between them release or absorb photons of exactly the corresponding energy, producing each element's characteristic spectral lines."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

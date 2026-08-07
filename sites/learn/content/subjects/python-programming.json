@@ -1,0 +1,1556 @@
+{
+ "id": "python-programming",
+ "title": "Python Programming",
+ "domain": "cs",
+ "level": "Intro college",
+ "description": "A hands-on introduction to programming using Python, from your very first script to working with files, errors, and reusable modules. You will write and trace real code in every lesson: variables, decisions, loops, functions, and Python's core data structures.",
+ "outcomes": [
+  "You can write, run, and debug simple Python scripts using variables, arithmetic, and print statements.",
+  "You can control a program's flow with if/elif/else statements and while/for loops.",
+  "You can write your own functions with parameters, return values, and default arguments.",
+  "You can choose the right built-in data structure, list, dictionary, tuple, or set, for a given task.",
+  "You can read and write text files and handle errors gracefully with try/except.",
+  "You can use Python's standard library modules and organize code across multiple files."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Getting Started with Python",
+   "summary": "Every program starts with printing something to the screen and storing values in variables. This unit covers Python's basic building blocks: running code, variables, data types, and arithmetic.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Your First Python Program",
+     "minutes": 8,
+     "intro": "Every programmer's first program prints a greeting to the screen. It looks trivial, but it proves your setup works and introduces two ideas underneath every program: instructions run in order, and `print` is how a program talks to you.",
+     "sections": [
+      {
+       "heading": "Running Python and print()",
+       "body": [
+        "Python code runs in an interpreter, which reads and executes your file line by line. Save a file named `hello.py` containing `print('Hello, world!')`, run it, and the interpreter displays Hello, world! on screen, with no separate compiling step required.",
+        "`print()` is a function: a named, reusable action, and everything inside its parentheses is what gets displayed. Text in Python must be wrapped in quotes, forming a **string**; without quotes, Python would try to treat the words as a variable name and fail."
+       ],
+       "example": {
+        "problem": "What does `print('2 + 2')` output, and how is that different from `print(2 + 2)`?",
+        "steps": [
+         "Because '2 + 2' is written inside quotes, Python treats it as a string of text, not math to calculate.",
+         "print('2 + 2') therefore outputs the literal characters 2 + 2.",
+         "print(2 + 2), with no quotes, tells Python to actually compute the sum, which prints 4."
+        ],
+        "answer": "print('2 + 2') prints the text 2 + 2; print(2 + 2) prints 4."
+       }
+      },
+      {
+       "heading": "Comments: Notes the Interpreter Ignores",
+       "body": [
+        "A **comment** starts with `#` and continues to the end of the line; Python skips it completely when running the program. Comments exist for humans: explaining why code does something, not restating what it obviously does.",
+        "Good comments age well. `# convert Celsius to Fahrenheit` still makes sense a year later, while `# add 32` merely repeats code anyone can already read. Write comments that explain intent, not syntax."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "interpreter",
+       "def": "A program that reads and executes source code directly, line by line."
+      },
+      {
+       "term": "print()",
+       "def": "A built-in function that displays its argument on the screen."
+      },
+      {
+       "term": "string",
+       "def": "A piece of text data, written inside quotes in Python."
+      },
+      {
+       "term": "comment",
+       "def": "A note in source code, starting with #, that Python ignores when running the program."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which of these correctly prints the word Hello to the screen?",
+       "choices": [
+        "print(Hello)",
+        "print('Hello')",
+        "print = Hello",
+        "echo('Hello')"
+       ],
+       "answer": 1,
+       "explain": "Strings need quotes; print(Hello) would look for a variable named Hello and fail since none exists."
+      },
+      {
+       "q": "What happens when Python runs a line starting with #?",
+       "choices": [
+        "It causes an error",
+        "It is skipped entirely, since it is a comment",
+        "It prints the # symbol",
+        "It becomes a string automatically"
+       ],
+       "answer": 1,
+       "explain": "Comments are for humans reading the code; Python ignores everything after # on that line."
+      },
+      {
+       "q": "What will print(3 + 4) output?",
+       "choices": [
+        "The text 3 + 4",
+        "The number 7",
+        "An error message",
+        "Nothing at all"
+       ],
+       "answer": 1,
+       "explain": "With no quotes, 3 + 4 is treated as math to compute, and Python prints the result, 7."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Variables, Data Types, and Input",
+     "minutes": 12,
+     "intro": "A variable is a labeled box for a value your program can reuse and change. Get comfortable naming, assigning, and inspecting variables, because every program after this one depends on them.",
+     "sections": [
+      {
+       "heading": "Assigning and Naming Variables",
+       "body": [
+        "In Python, `name = 'Maya'` creates a variable called `name` and stores the string `'Maya'` in it. The equals sign is an **assignment**, not a math equals sign; it means 'store the thing on the right in the box named on the left.'",
+        "Variable names should describe what they hold: `age` beats `x`, and `total_price` beats `tp`. Python variable names can use letters, digits, and underscores, cannot start with a digit, and are case-sensitive, so `Age` and `age` are different variables."
+       ]
+      },
+      {
+       "heading": "Core Data Types and type()",
+       "body": [
+        "Python's basic **data types** include `int` for whole numbers like 7, `float` for decimals like 3.14, `str` for text, and `bool` for True or False. Calling `type(7)` returns `<class 'int'>`, confirming what kind of value you are working with.",
+        "The built-in `input()` function pauses a program and waits for the user to type something, always returning it as a string, even if they type a number. That is why `age = int(input('Age: '))` wraps the call in `int()`, converting the typed text into a real number you can do math with."
+       ],
+       "example": {
+        "problem": "A program runs x = input('Enter a number: ') and the user types 5. What is the value and type of x, and why can't you compute x + 1 directly?",
+        "steps": [
+         "input() always returns a string, no matter what the user types.",
+         "So x holds the string '5', not the integer 5.",
+         "x + 1 would try to add a string and an integer, which Python does not allow, raising a TypeError.",
+         "Writing x = int(input('Enter a number: ')) instead converts '5' into the integer 5 first."
+        ],
+        "answer": "x is the string '5'; you must convert it with int(x) before adding it to a number."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "variable",
+       "def": "A named storage location that holds a value a program can use and change."
+      },
+      {
+       "term": "assignment",
+       "def": "Storing a value in a variable using the = operator."
+      },
+      {
+       "term": "data type",
+       "def": "A category of value, such as int, float, str, or bool, that determines what operations make sense on it."
+      },
+      {
+       "term": "input()",
+       "def": "A built-in function that pauses a program and returns whatever the user types, as a string."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does the line score = 10 do?",
+       "choices": [
+        "Compares score to 10",
+        "Creates a variable named score and stores 10 in it",
+        "Prints the number 10",
+        "Deletes the variable score"
+       ],
+       "answer": 1,
+       "explain": "A single = performs assignment: it stores the value 10 in a variable named score."
+      },
+      {
+       "q": "Why does age = input('Age: ') need int() around the input() call before doing math with age?",
+       "choices": [
+        "input() always returns a string, even for numbers typed by the user",
+        "input() only works with whole numbers",
+        "int() makes the program run faster",
+        "age is not a valid variable name"
+       ],
+       "answer": 0,
+       "explain": "input() returns text regardless of what was typed, so it must be converted with int() before it can be used in arithmetic."
+      },
+      {
+       "q": "Which variable name is invalid in Python?",
+       "choices": [
+        "total_1",
+        "1_total",
+        "_total",
+        "Total"
+       ],
+       "answer": 1,
+       "explain": "Python variable names cannot start with a digit, so 1_total is invalid."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Numbers and Arithmetic Expressions",
+     "minutes": 12,
+     "intro": "Once you can store numbers, you need to combine them. Python's arithmetic operators look familiar from math class, but a few surprises, like floor division and operator order, trip up nearly every beginner at least once.",
+     "sections": [
+      {
+       "heading": "The Arithmetic Operators",
+       "body": [
+        "Python supports `+` add, `-` subtract, `*` multiply, `/` divide (always returns a float), `//` floor division (drops any remainder), `%` modulo (returns the remainder), and `**` exponent. So `7 / 2` gives `3.5`, while `7 // 2` gives `3`, and `7 % 2` gives `1`.",
+        "`%` (modulo) is surprisingly useful: `number % 2 == 0` tests whether a number is even, and it is the backbone of countless scheduling and formatting tricks, like figuring out which day of the week falls 40 days from today."
+       ]
+      },
+      {
+       "heading": "Order of Operations and Type Conversion",
+       "body": [
+        "Python follows standard **order of operations**: parentheses first, then exponents, then multiplication, division, floor division, and modulo left to right, then addition and subtraction left to right. `2 + 3 * 4` is 14, not 20, because multiplication happens before addition.",
+        "Mixing an `int` and a `float` in one expression automatically produces a `float`: `5 + 2.0` is `7.0`. Converting explicitly with `int()`, `float()`, or `str()` lets you control the type on purpose instead of relying on automatic conversion."
+       ],
+       "example": {
+        "problem": "What does the expression 2 + 3 * 4 // 2 evaluate to?",
+        "steps": [
+         "Multiplication happens first: 3 * 4 = 12.",
+         "Floor division has the same priority as multiplication and runs left to right: 12 // 2 = 6.",
+         "Addition happens last: 2 + 6 = 8."
+        ],
+        "answer": "8"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "arithmetic operator",
+       "def": "A symbol like +, -, *, /, //, %, or ** that performs a math operation."
+      },
+      {
+       "term": "floor division (//)",
+       "def": "Division that drops any remainder, keeping only the whole-number result."
+      },
+      {
+       "term": "modulo (%)",
+       "def": "An operator that returns the remainder left over after division."
+      },
+      {
+       "term": "order of operations",
+       "def": "The fixed order Python evaluates operators in: parentheses, exponents, then multiplicative, then additive."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does 9 // 2 evaluate to in Python?",
+       "choices": [
+        "4.5",
+        "4",
+        "5",
+        "4.0"
+       ],
+       "answer": 1,
+       "explain": "Floor division drops the remainder: 9 divided by 2 is 4.5, and floor division keeps only the whole number, 4."
+      },
+      {
+       "q": "What does 9 % 2 evaluate to?",
+       "choices": [
+        "4",
+        "4.5",
+        "1",
+        "0"
+       ],
+       "answer": 2,
+       "explain": "9 divided by 2 is 4 with a remainder of 1, and % returns exactly that remainder."
+      },
+      {
+       "q": "What does 4 + 2 * 3 evaluate to, and why?",
+       "choices": [
+        "18, because Python evaluates left to right with no priority",
+        "10, because multiplication happens before addition",
+        "10, because addition always happens first",
+        "6, because Python adds 4 + 2 first"
+       ],
+       "answer": 1,
+       "explain": "Multiplication has higher priority than addition: 2 * 3 = 6 first, then 4 + 6 = 10."
+      },
+      {
+       "q": "What data type does the expression 5 + 2.0 produce?",
+       "choices": [
+        "int",
+        "float",
+        "str",
+        "bool"
+       ],
+       "answer": 1,
+       "explain": "Mixing an int and a float automatically produces a float, so 5 + 2.0 is 7.0."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Making Decisions and Repeating Actions",
+   "summary": "Programs become powerful once they can choose between paths and repeat work automatically. This unit covers booleans, if/elif/else branching, and while/for loops.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Booleans and Comparison Operators",
+     "minutes": 10,
+     "intro": "Every decision a program makes boils down to a single True or False question. Comparison operators are how you write those questions in code, and they are the foundation every if statement and loop depends on.",
+     "sections": [
+      {
+       "heading": "The bool Type: True and False",
+       "body": [
+        "Python has a dedicated **bool** type with exactly two values, `True` and `False` (capitalized, no quotes). Booleans are the result of every comparison and the condition every `if` statement and loop depends on.",
+        "Comparison operators include `==` equal to, `!=` not equal to, `<`, `>`, `<=`, and `>=`. Note the double equals: `==` checks equality, while a single `=` performs assignment; confusing them is one of the most common beginner mistakes."
+       ]
+      },
+      {
+       "heading": "Combining Conditions with and, or, not",
+       "body": [
+        "`and` requires both conditions to be True, `or` requires at least one to be True, and `not` flips a condition's truth value. `age >= 13 and age <= 19` is True only when age falls in the teenage range, both ends included.",
+        "Python **short-circuits** `and`/`or`: if the left side of `and` is False, Python never bothers checking the right side, since the whole expression is already guaranteed False."
+       ],
+       "example": {
+        "problem": "Evaluate the expression 5 > 3 and 2 == 2.",
+        "steps": [
+         "Evaluate the left side: 5 > 3 is True.",
+         "Evaluate the right side: 2 == 2 is True.",
+         "and requires both sides to be True, so the whole expression is True."
+        ],
+        "answer": "True"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "bool",
+       "def": "Python's data type for the two truth values, True and False."
+      },
+      {
+       "term": "comparison operator",
+       "def": "An operator like ==, !=, <, or > that compares two values and produces a bool."
+      },
+      {
+       "term": "and / or / not",
+       "def": "Logical operators that combine or invert boolean conditions."
+      },
+      {
+       "term": "short-circuit evaluation",
+       "def": "Skipping evaluation of the right side of and/or once the result is already determined."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the result of 7 != 7?",
+       "choices": [
+        "True",
+        "False",
+        "7",
+        "Error"
+       ],
+       "answer": 1,
+       "explain": "7 equals 7, so the not-equal comparison, !=, evaluates to False."
+      },
+      {
+       "q": "Which symbol checks whether two values are equal, without changing anything?",
+       "choices": [
+        "=",
+        "==",
+        "!=",
+        "<>"
+       ],
+       "answer": 1,
+       "explain": "A single = assigns a value; == compares two values for equality and returns a bool."
+      },
+      {
+       "q": "What does age > 12 and age < 20 evaluate to when age is 25?",
+       "choices": [
+        "True",
+        "False",
+        "25",
+        "Error"
+       ],
+       "answer": 1,
+       "explain": "age > 12 is True, but age < 20 is False, and and requires both sides to be True, so the overall result is False."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "if / elif / else Statements",
+     "minutes": 12,
+     "intro": "An if statement is how a program chooses which instructions to run based on a condition, letting the exact same code behave differently depending on the data it receives.",
+     "sections": [
+      {
+       "heading": "Branching with if, elif, and else",
+       "body": [
+        "`if condition:` runs an indented block only when the condition is True. `elif` (else if) checks another condition, but only if the previous ones were False, and `else` catches everything else, with no condition of its own.",
+        "Python uses **indentation** (consistently 4 spaces) instead of curly braces to mark which lines belong to which block. Getting indentation wrong is a syntax error, not just a style problem."
+       ]
+      },
+      {
+       "heading": "Order Matters",
+       "body": [
+        "Python checks `elif` conditions top to bottom and stops at the first True one, skipping the rest, even if a later condition would also have been True. Ordering conditions from most specific to least specific avoids surprising bugs."
+       ],
+       "example": {
+        "problem": "Trace this code for score = 85: if score >= 90: grade = 'A'. elif score >= 80: grade = 'B'. elif score >= 70: grade = 'C'. else: grade = 'F'. What is grade?",
+        "steps": [
+         "Check score >= 90: 85 >= 90 is False, so skip to the next check.",
+         "Check score >= 80: 85 >= 80 is True, so grade = 'B'.",
+         "Because a True elif was found, the remaining elif and else are skipped entirely."
+        ],
+        "answer": "grade = 'B'"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "if statement",
+       "def": "A statement that runs a block of code only when its condition is True."
+      },
+      {
+       "term": "elif",
+       "def": "A follow-up condition checked only if earlier if/elif conditions were False."
+      },
+      {
+       "term": "else",
+       "def": "A fallback block that runs when none of the preceding if/elif conditions were True."
+      },
+      {
+       "term": "indentation",
+       "def": "Consistent leading whitespace that marks which lines belong inside a block in Python."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For score = 72 using the grading code above, what is grade?",
+       "choices": [
+        "'A'",
+        "'B'",
+        "'C'",
+        "'F'"
+       ],
+       "answer": 2,
+       "explain": "score >= 90 is False, score >= 80 is False, score >= 70 is True, so grade becomes 'C'."
+      },
+      {
+       "q": "What happens if an if block's indentation does not match the rest of its body?",
+       "choices": [
+        "Python ignores indentation entirely",
+        "Python raises a syntax or indentation error",
+        "The block runs twice",
+        "Nothing changes"
+       ],
+       "answer": 1,
+       "explain": "Python relies on indentation to define blocks, so inconsistent indentation causes an error rather than just a style warning."
+      },
+      {
+       "q": "In an if/elif/else chain, what happens once one condition evaluates True?",
+       "choices": [
+        "All remaining elif and else blocks are skipped",
+        "Every remaining block still runs",
+        "The program restarts from the top",
+        "An error occurs"
+       ],
+       "answer": 0,
+       "explain": "Python stops checking further conditions the moment it finds the first True one and skips the rest of the chain."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "while and for Loops",
+     "minutes": 14,
+     "intro": "Loops let a handful of lines run hundreds or millions of times without retyping them. Python gives you two kinds: while, which repeats as long as a condition holds, and for, which repeats over a known sequence.",
+     "sections": [
+      {
+       "heading": "while Loops: Repeat Until a Condition Fails",
+       "body": [
+        "A `while condition:` loop repeats its indented block as long as the condition stays True, rechecking it before every pass. Forgetting to update the condition inside the loop causes an **infinite loop** that never stops on its own.",
+        "`while` loops suit situations where you do not know in advance how many repetitions you need, like asking a user to keep entering numbers until they type 'done'."
+       ]
+      },
+      {
+       "heading": "for Loops and range()",
+       "body": [
+        "A `for` loop repeats once for each item in a sequence: `for letter in 'cat':` runs three times, with `letter` taking the values `'c'`, `'a'`, then `'t'`. `range(5)` generates the sequence 0, 1, 2, 3, 4, useful for repeating a fixed number of times.",
+        "`range(start, stop)` counts from `start` up to, but not including, `stop`. `range(2, 6)` produces 2, 3, 4, 5, which is why range's stop value is often called exclusive."
+       ],
+       "example": {
+        "problem": "What does this loop print? total = 0. for n in range(1, 5): total = total + n. print(total)",
+        "steps": [
+         "range(1, 5) produces 1, 2, 3, 4, stopping before 5.",
+         "total starts at 0: after n=1, total=1; after n=2, total=3; after n=3, total=6; after n=4, total=10.",
+         "The print(total) line runs once after the loop finishes, since it is not indented inside the loop."
+        ],
+        "answer": "10"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "while loop",
+       "def": "A loop that repeats its block as long as its condition stays True."
+      },
+      {
+       "term": "for loop",
+       "def": "A loop that repeats once for each item in a sequence."
+      },
+      {
+       "term": "range()",
+       "def": "A built-in function that generates a sequence of numbers, commonly used to control a for loop's repeat count."
+      },
+      {
+       "term": "infinite loop",
+       "def": "A loop whose condition never becomes False, causing it to repeat forever."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does range(3, 7) generate?",
+       "choices": [
+        "3, 4, 5, 6, 7",
+        "3, 4, 5, 6",
+        "4, 5, 6, 7",
+        "0, 1, 2, 3"
+       ],
+       "answer": 1,
+       "explain": "range(start, stop) counts up to, but not including, stop, so range(3, 7) produces 3, 4, 5, 6."
+      },
+      {
+       "q": "What causes an infinite while loop?",
+       "choices": [
+        "Using for instead of while",
+        "The loop's condition never becomes False because nothing inside the loop updates it",
+        "Using range() inside a while loop",
+        "Indenting the loop body incorrectly"
+       ],
+       "answer": 1,
+       "explain": "If nothing in the loop body changes the value the condition depends on, the condition can never become False, so the loop never ends."
+      },
+      {
+       "q": "How many times does `for i in range(5):` run its body?",
+       "choices": [
+        "4",
+        "5",
+        "6",
+        "Infinitely"
+       ],
+       "answer": 1,
+       "explain": "range(5) produces 0, 1, 2, 3, 4, which is 5 values, so the loop body runs 5 times."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Strings and Lists",
+   "summary": "Text and ordered collections are everywhere in real programs. This unit covers string indexing and methods, plus creating, modifying, and looping over lists.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "String Basics and Methods",
+     "minutes": 12,
+     "intro": "Text is everywhere in real programs: names, messages, file paths, search queries. Python strings come with a rich toolkit of built-in methods for cleaning, searching, and reshaping text without writing your own loops.",
+     "sections": [
+      {
+       "heading": "Indexing and Slicing",
+       "body": [
+        "Every character in a string has a numeric position, or index, starting at 0. For `name = 'Python'`, `name[0]` is `'P'` and `name[5]` is `'n'`. Negative indices count from the end: `name[-1]` is the last character, `'n'`.",
+        "**Slicing** grabs a range of characters: `name[1:4]` returns characters from index 1 up to, but not including, index 4, giving `'yth'`. Leaving off a start or stop, like `name[:3]` or `name[3:]`, slices from the beginning or to the end."
+       ]
+      },
+      {
+       "heading": "Useful String Methods",
+       "body": [
+        "`.upper()` and `.lower()` change case; `.strip()` removes leading and trailing whitespace; `.replace(old, new)` swaps every occurrence of one substring for another; `.split(sep)` breaks a string into a list of pieces at each separator.",
+        "Strings are **immutable**: no method changes the original string in place. `'hello'.upper()` returns a brand-new string, `'HELLO'`; the original variable stays unchanged unless you reassign it, like `name = name.upper()`."
+       ],
+       "example": {
+        "problem": "What does 'Hello World'.lower().split(' ') return?",
+        "steps": [
+         "First, .lower() runs on the whole string, producing 'hello world'.",
+         ".split(' ') then breaks that string into pieces wherever a space appears.",
+         "The result is a list of two strings: ['hello', 'world']."
+        ],
+        "answer": "['hello', 'world']"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "index",
+       "def": "The numeric position of a character in a string, starting at 0."
+      },
+      {
+       "term": "slicing",
+       "def": "Extracting a range of characters from a string using start and stop positions."
+      },
+      {
+       "term": "immutable",
+       "def": "Unable to be changed after creation; strings are immutable in Python."
+      },
+      {
+       "term": "string method",
+       "def": "A built-in function attached to a string, like .upper() or .split(), that operates on its text."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For name = 'Python', what is name[-1]?",
+       "choices": [
+        "'P'",
+        "'n'",
+        "'o'",
+        "Error"
+       ],
+       "answer": 1,
+       "explain": "Negative indices count from the end, and -1 refers to the last character, 'n'."
+      },
+      {
+       "q": "What does name[1:4] return for name = 'Python'?",
+       "choices": [
+        "'yth'",
+        "'ytho'",
+        "'Pyth'",
+        "'ython'"
+       ],
+       "answer": 0,
+       "explain": "Slicing from index 1 up to, but not including, index 4 gives the characters at positions 1, 2, and 3: 'y', 't', 'h'."
+      },
+      {
+       "q": "After running text = 'cat'.upper(), what is the value of text?",
+       "choices": [
+        "'cat'",
+        "'CAT'",
+        "'Cat'",
+        "None, because strings cannot be uppercased"
+       ],
+       "answer": 1,
+       "explain": ".upper() returns a new uppercase string, and reassigning it to text updates the variable to 'CAT'."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Lists: Creating, Indexing, and Modifying",
+     "minutes": 12,
+     "intro": "A list holds an ordered collection of values, and unlike a string, you can change it after creating it: add items, remove them, or overwrite any position directly.",
+     "sections": [
+      {
+       "heading": "Creating and Accessing Lists",
+       "body": [
+        "A list is written with square brackets: `fruits = ['apple', 'banana', 'cherry']`. Like strings, list items are indexed from 0, so `fruits[0]` is `'apple'` and `fruits[-1]` is `'cherry'`, the last item.",
+        "Lists can hold any mix of types, including other lists, and `len(fruits)` tells you how many items it holds; here `len(fruits)` returns `3`."
+       ]
+      },
+      {
+       "heading": "Modifying a List",
+       "body": [
+        "Unlike strings, lists are **mutable**: `fruits[1] = 'blueberry'` changes the second item in place, no reassignment needed. `.append(item)` adds an item to the end; `.remove(item)` deletes the first matching item; `.sort()` reorders the list in place.",
+        "`.pop()` removes and returns the last item (or a specific index if given), which is handy when a list is used like a stack of tasks to work through one at a time."
+       ],
+       "example": {
+        "problem": "Trace this code: nums = [3, 1, 4]. nums.append(1). nums.sort(). print(nums)",
+        "steps": [
+         "Start: nums = [3, 1, 4].",
+         "nums.append(1) adds 1 to the end: nums = [3, 1, 4, 1].",
+         "nums.sort() reorders in place from smallest to largest: nums = [1, 1, 3, 4]."
+        ],
+        "answer": "[1, 1, 3, 4]"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "list",
+       "def": "An ordered, mutable collection of values written with square brackets."
+      },
+      {
+       "term": "mutable",
+       "def": "Able to be changed after creation; lists are mutable in Python."
+      },
+      {
+       "term": "append()",
+       "def": "A list method that adds a new item to the end of the list."
+      },
+      {
+       "term": "index",
+       "def": "The numeric position of an item in a list, starting at 0."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For fruits = ['apple', 'banana', 'cherry'], what is fruits[1]?",
+       "choices": [
+        "'apple'",
+        "'banana'",
+        "'cherry'",
+        "Error"
+       ],
+       "answer": 1,
+       "explain": "Indexing starts at 0, so index 1 refers to the second item, 'banana'."
+      },
+      {
+       "q": "What does nums.append(5) do to nums = [1, 2, 3]?",
+       "choices": [
+        "Inserts 5 at the front, giving [5, 1, 2, 3]",
+        "Adds 5 to the end, giving [1, 2, 3, 5]",
+        "Replaces the whole list with [5]",
+        "Raises an error because 5 is not a string"
+       ],
+       "answer": 1,
+       "explain": "append() always adds the new item to the end of the list."
+      },
+      {
+       "q": "Why can you write fruits[0] = 'mango' for a list but not name[0] = 'M' for a string?",
+       "choices": [
+        "Lists are mutable and can be changed in place; strings are immutable and cannot",
+        "Strings do not support indexing at all",
+        "There is no actual difference; both work fine",
+        "Lists do not support indexing"
+       ],
+       "answer": 0,
+       "explain": "Lists allow in-place modification because they are mutable, while strings are immutable and reject any attempt to change a character directly."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Looping Over Lists and List Operations",
+     "minutes": 12,
+     "intro": "Lists earn their keep when you process every item at once: totaling a shopping cart, filtering search results, or transforming every value the same way. Looping is how you touch every item without repeating code.",
+     "sections": [
+      {
+       "heading": "for Loops Over a List",
+       "body": [
+        "`for item in my_list:` runs its block once per item, with `item` taking each value in order, from first to last. This avoids manually tracking an index unless you actually need the position too.",
+        "When you do need the index alongside the value, `enumerate(my_list)` gives you both: `for i, item in enumerate(my_list):` provides the position `i` and the value `item` together on each pass."
+       ]
+      },
+      {
+       "heading": "Building a New List",
+       "body": [
+        "A common pattern starts with an empty list, then appends a transformed value inside a loop: `squares = []`, then `for n in [1, 2, 3]: squares.append(n * n)`, building `squares = [1, 4, 9]` one item at a time.",
+        "A **list comprehension** writes that same pattern in one line: `squares = [n * n for n in [1, 2, 3]]` produces the identical result more compactly, once the loop pattern feels familiar."
+       ],
+       "example": {
+        "problem": "What list does [n for n in [4, 7, 2, 9, 1] if n > 3] produce?",
+        "steps": [
+         "The comprehension loops over each n in the list.",
+         "The if n > 3 condition keeps only values greater than 3: 4, 7, and 9 pass; 2 and 1 do not.",
+         "The kept values, in their original order, form the result."
+        ],
+        "answer": "[4, 7, 9]"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "for loop",
+       "def": "A loop that repeats once for each item in a sequence, such as a list."
+      },
+      {
+       "term": "enumerate()",
+       "def": "A built-in function that pairs each item in a sequence with its index while looping."
+      },
+      {
+       "term": "list comprehension",
+       "def": "A compact syntax for building a new list from a loop and an optional condition."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does `for i, item in enumerate(['a', 'b', 'c']):` give you on each pass?",
+       "choices": [
+        "Only the value item",
+        "Only the index i",
+        "Both the index i and the value item",
+        "Nothing; enumerate() is not valid on lists"
+       ],
+       "answer": 2,
+       "explain": "enumerate() pairs each item with its position, giving both the index and the value on every pass."
+      },
+      {
+       "q": "What does [n * 2 for n in [1, 2, 3]] produce?",
+       "choices": [
+        "[1, 2, 3]",
+        "[2, 4, 6]",
+        "[1, 4, 9]",
+        "[2, 3, 4]"
+       ],
+       "answer": 1,
+       "explain": "Each item n is doubled: 1*2=2, 2*2=4, 3*2=6, giving [2, 4, 6]."
+      },
+      {
+       "q": "What does [n for n in [1, 2, 3, 4, 5, 6] if n % 2 == 0] produce?",
+       "choices": [
+        "[1, 3, 5]",
+        "[2, 4, 6]",
+        "[1, 2, 3, 4, 5, 6]",
+        "[]"
+       ],
+       "answer": 1,
+       "explain": "The condition n % 2 == 0 keeps only even numbers, giving [2, 4, 6]."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Functions",
+   "summary": "A function packages instructions under one reusable name. This unit covers defining and calling functions, return values, local scope, and default and keyword arguments.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Defining and Calling Functions",
+     "minutes": 12,
+     "intro": "A function packages a set of instructions under one name so you can run them again, with different inputs, without retyping the logic every time. Functions are how programs stay organized as they grow.",
+     "sections": [
+      {
+       "heading": "def, Parameters, and Calling",
+       "body": [
+        "`def greet(name):` defines a function named `greet` that expects one **parameter**, `name`. Inside the function body, `name` behaves like a variable holding whatever value gets passed in when the function is called.",
+        "Calling `greet('Maya')` runs the function's body with `name` set to `'Maya'` for that one call only. The value `'Maya'` passed into the call is called an **argument**: parameter is the name in the definition, argument is the value at the call site."
+       ]
+      },
+      {
+       "heading": "Why Bother Defining Functions",
+       "body": [
+        "Without functions, fixing a bug in repeated logic means finding and fixing every copy. With a function, you fix the logic once, inside the `def`, and every call automatically benefits.",
+        "Functions also make code readable: `total = calculate_tax(price)` tells a reader what happens even if they never look at `calculate_tax`'s internals, hiding complexity behind a clear name."
+       ],
+       "example": {
+        "problem": "Define a function double(n) that returns twice its input, then trace double(6).",
+        "steps": [
+         "def double(n): return n * 2 defines the function.",
+         "Calling double(6) sets the parameter n to 6 for this call.",
+         "The function body computes n * 2 = 6 * 2 = 12 and returns it."
+        ],
+        "answer": "12"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "function",
+       "def": "A named, reusable block of code defined with def and run by calling its name."
+      },
+      {
+       "term": "parameter",
+       "def": "A named placeholder in a function's definition for a value it will receive."
+      },
+      {
+       "term": "argument",
+       "def": "The actual value passed into a function when it is called."
+      },
+      {
+       "term": "def",
+       "def": "The Python keyword used to define a new function."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In def greet(name):, what is name called?",
+       "choices": [
+        "An argument",
+        "A parameter",
+        "A return value",
+        "A comment"
+       ],
+       "answer": 1,
+       "explain": "name is a placeholder in the function's definition, which makes it a parameter."
+      },
+      {
+       "q": "In the call greet('Maya'), what is 'Maya' called?",
+       "choices": [
+        "A parameter",
+        "An argument",
+        "A function",
+        "A keyword"
+       ],
+       "answer": 1,
+       "explain": "'Maya' is the actual value supplied at the call site, which makes it an argument."
+      },
+      {
+       "q": "What is the main benefit of writing a function instead of repeating the same code block three times?",
+       "choices": [
+        "Functions always run faster than repeated code",
+        "Fixing a bug only requires changing the logic in one place",
+        "Functions use less memory than variables",
+        "Python requires functions for any repeated code"
+       ],
+       "answer": 1,
+       "explain": "A function centralizes the logic, so a fix inside the def automatically applies to every call, instead of needing to be repeated in every copy."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Parameters, Return Values, and Scope",
+     "minutes": 14,
+     "intro": "A function is far more useful once it can hand a result back to whoever called it, and once you understand which variables it can see and which it cannot.",
+     "sections": [
+      {
+       "heading": "return vs print",
+       "body": [
+        "`return` sends a value back out of a function to wherever it was called, so it can be stored in a variable or used in further calculations. `print()` merely displays something on screen and hands nothing back to the calling code.",
+        "A function with no `return` statement implicitly returns `None`. Confusing `print` for `return` is a classic bug: `result = show_double(5)` sets `result` to `None` if `show_double` only prints instead of returning."
+       ]
+      },
+      {
+       "heading": "Local Scope",
+       "body": [
+        "A variable created inside a function exists only inside that function's **local scope**; it disappears once the function finishes and is invisible to code outside it, even code that called the function.",
+        "This is a feature, not a limitation: it means two different functions can both safely use a variable named `total` internally without clashing, since each function's `total` is separate and private to it."
+       ],
+       "example": {
+        "problem": "def add_tax(price): tax = price * 0.08. return price + tax. What happens if you try to print(tax) after calling add_tax(100)?",
+        "steps": [
+         "tax is created inside add_tax's local scope.",
+         "Once add_tax finishes running and returns its value, tax no longer exists outside the function.",
+         "print(tax) outside the function raises a NameError, because tax was never defined in that outer scope."
+        ],
+        "answer": "A NameError, because tax is local to add_tax and does not exist outside it."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "return",
+       "def": "A statement that sends a value back from a function to its caller."
+      },
+      {
+       "term": "local scope",
+       "def": "The region where a variable created inside a function exists and is visible."
+      },
+      {
+       "term": "None",
+       "def": "Python's value representing 'nothing,' returned by default when a function has no return statement."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does a function return if it has no return statement at all?",
+       "choices": [
+        "0",
+        "An empty string",
+        "None",
+        "It causes a syntax error"
+       ],
+       "answer": 2,
+       "explain": "Python functions implicitly return None whenever no explicit return statement runs."
+      },
+      {
+       "q": "Why does result = print('hi') set result to None?",
+       "choices": [
+        "print() always fails silently",
+        "print() displays text but does not return a value, so result gets Python's default None",
+        "Python does not allow assigning the result of print()",
+        "'hi' is not a valid return value"
+       ],
+       "answer": 1,
+       "explain": "print() only shows text on screen; it has no return statement, so it implicitly returns None to whatever tries to capture its result."
+      },
+      {
+       "q": "Two different functions each create a local variable named count. Do they conflict?",
+       "choices": [
+        "Yes, Python raises an error for duplicate names",
+        "No, each function's local variables are separate and private to it",
+        "Only if both functions run at the exact same time",
+        "Yes, the second function's count overwrites the first's permanently"
+       ],
+       "answer": 1,
+       "explain": "Local scope keeps each function's variables isolated, so identical names in different functions never interfere with each other."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Default Arguments and Keyword Arguments",
+     "minutes": 10,
+     "intro": "Not every caller of a function wants to specify every detail. Default arguments let a function work with sensible fallback values while still allowing callers to override them when needed.",
+     "sections": [
+      {
+       "heading": "Default Argument Values",
+       "body": [
+        "`def greet(name, greeting='Hello'):` gives `greeting` a default value of `'Hello'`. Calling `greet('Maya')` uses that default, producing `'Hello, Maya'`; calling `greet('Maya', 'Hi')` overrides it, producing `'Hi, Maya'`.",
+        "Default arguments must come after any required arguments in the definition; putting a default before a required parameter is invalid, since Python could not tell which arguments are optional."
+       ]
+      },
+      {
+       "heading": "Keyword Arguments",
+       "body": [
+        "Calling a function with **keyword arguments**, like `greet(name='Maya', greeting='Hi')`, names each argument explicitly, so order no longer matters and the call is self-documenting even with many parameters.",
+        "Keyword arguments are especially valuable for functions with several optional settings, since naming each one clearly at the call site is far easier to read than several unlabeled positional values."
+       ],
+       "example": {
+        "problem": "Given def power(base, exponent=2): return base ** exponent, what does power(5) return, and what does power(5, 3) return?",
+        "steps": [
+         "power(5) uses the default exponent of 2: 5 ** 2 = 25.",
+         "power(5, 3) overrides the default, using exponent 3: 5 ** 3 = 125."
+        ],
+        "answer": "power(5) returns 25; power(5, 3) returns 125."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "default argument",
+       "def": "A parameter value used automatically when the caller does not supply one."
+      },
+      {
+       "term": "keyword argument",
+       "def": "An argument passed by explicitly naming its parameter at the call site."
+      },
+      {
+       "term": "positional argument",
+       "def": "An argument matched to a parameter by its order in the call, not by name."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For def greet(name, greeting='Hello'):, what does greet('Sam') return?",
+       "choices": [
+        "'Hello, Sam'",
+        "'Sam, Hello'",
+        "An error, because greeting is missing",
+        "None"
+       ],
+       "answer": 0,
+       "explain": "Since greeting is not supplied, its default value 'Hello' is used, producing 'Hello, Sam'."
+      },
+      {
+       "q": "Why is def greet(greeting='Hi', name): invalid in Python?",
+       "choices": [
+        "Default arguments must come after required arguments in the definition",
+        "Python does not allow default arguments at all",
+        "name is not a valid parameter name",
+        "Functions cannot have more than one parameter"
+       ],
+       "answer": 0,
+       "explain": "A required parameter cannot come after one with a default value, since Python would not be able to tell which arguments are optional."
+      },
+      {
+       "q": "What is the advantage of calling resize(image, width=800, height=600) using keyword arguments?",
+       "choices": [
+        "It runs faster than positional arguments",
+        "It makes the call self-documenting and order-independent",
+        "It is the only way to pass more than one argument",
+        "Keyword arguments are required by Python syntax"
+       ],
+       "answer": 1,
+       "explain": "Naming each argument makes the call's meaning clear at a glance and removes any dependence on argument order."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Dictionaries, Tuples, and Sets",
+   "summary": "Beyond lists, Python offers structures built for different jobs: dictionaries for labeled lookups, tuples for fixed groupings, and sets for fast membership checks without duplicates.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Dictionaries: Key-Value Pairs",
+     "minutes": 12,
+     "intro": "Sometimes position does not matter, but names do. A dictionary stores data as labeled pairs, letting you fetch a value by a meaningful key instead of a numeric position you would have to remember.",
+     "sections": [
+      {
+       "heading": "Creating and Accessing Dictionaries",
+       "body": [
+        "A dictionary is written with curly braces and colon-separated pairs: `student = {'name': 'Maya', 'age': 20, 'major': 'CS'}`. Accessing `student['name']` returns `'Maya'`; each key must be unique within the dictionary.",
+        "Unlike a list, a dictionary has no numeric index; you always look things up by key. Accessing a key that does not exist raises a `KeyError`."
+       ]
+      },
+      {
+       "heading": "Modifying and Safely Checking Keys",
+       "body": [
+        "`student['age'] = 21` updates an existing key, while `student['gpa'] = 3.8` adds a brand-new key-value pair; dictionaries are mutable, just like lists. `.get(key, default)` looks up a key safely, returning `default` instead of crashing if the key is missing.",
+        "`key in student` checks whether a key exists and returns a boolean, letting you avoid a `KeyError` before it happens."
+       ],
+       "example": {
+        "problem": "Given prices = {'apple': 1.50, 'banana': 0.75}, what does prices.get('cherry', 0) return, and why doesn't prices['cherry'] work the same way?",
+        "steps": [
+         "'cherry' is not a key in the prices dictionary.",
+         "prices.get('cherry', 0) safely returns the given default, 0, instead of crashing.",
+         "prices['cherry'] would instead raise a KeyError, since direct bracket access has no built-in fallback."
+        ],
+        "answer": "prices.get('cherry', 0) returns 0; prices['cherry'] would raise a KeyError."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "dictionary",
+       "def": "A collection of key-value pairs, written with curly braces, that maps each key to a value."
+      },
+      {
+       "term": "key",
+       "def": "The label used to look up a value in a dictionary."
+      },
+      {
+       "term": "KeyError",
+       "def": "The error raised when accessing a dictionary key that does not exist."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For student = {'name': 'Maya', 'age': 20}, what does student['age'] return?",
+       "choices": [
+        "'Maya'",
+        "20",
+        "'age'",
+        "Error"
+       ],
+       "answer": 1,
+       "explain": "Looking up the key 'age' returns its associated value, 20."
+      },
+      {
+       "q": "What does student.get('gpa', 0) return if 'gpa' is not a key in student?",
+       "choices": [
+        "Raises a KeyError",
+        "None, always",
+        "0, the given default value",
+        "'gpa'"
+       ],
+       "answer": 2,
+       "explain": ".get() returns the supplied default instead of raising an error when the key is missing."
+      },
+      {
+       "q": "How do you safely check whether 'email' is a key in a dictionary called contact before accessing it?",
+       "choices": [
+        "contact.has('email')",
+        "'email' in contact",
+        "contact['email'] == True",
+        "contact.key('email')"
+       ],
+       "answer": 1,
+       "explain": "The in operator checks for key membership and returns True or False without risking a KeyError."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Tuples and When to Use Them",
+     "minutes": 10,
+     "intro": "A tuple looks almost like a list but comes with one crucial difference: once created, it cannot be changed. That single restriction makes tuples the right tool whenever data should stay fixed.",
+     "sections": [
+      {
+       "heading": "Creating and Using Tuples",
+       "body": [
+        "A tuple is written with parentheses: `point = (3, 5)`. Like lists, tuples are indexed from 0, so `point[0]` is `3` and `point[1]` is `5`, and you can loop over a tuple exactly like a list.",
+        "Tuples are **immutable**: `point[0] = 10` raises a `TypeError`, since tuples cannot be modified after creation. If you need to change values, use a list instead; tuples are for data that should not change by accident."
+       ]
+      },
+      {
+       "heading": "Common Uses: Coordinates and Multiple Returns",
+       "body": [
+        "Tuples are a natural fit for fixed groupings like coordinates `(x, y)` or RGB colors `(255, 0, 0)`, where the number and meaning of positions never changes.",
+        "A function can `return (min_value, max_value)` to hand back two results at once, and the caller can **unpack** them directly: `low, high = find_range(numbers)` assigns each tuple item to its own variable in one line."
+       ],
+       "example": {
+        "problem": "Given def min_max(nums): return (min(nums), max(nums)), what happens when you run low, high = min_max([4, 1, 9, 3])?",
+        "steps": [
+         "min_max([4, 1, 9, 3]) computes min([4, 1, 9, 3]) = 1 and max([4, 1, 9, 3]) = 9, returning the tuple (1, 9).",
+         "low, high = (1, 9) unpacks the tuple, assigning low = 1 and high = 9."
+        ],
+        "answer": "low = 1, high = 9"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "tuple",
+       "def": "An ordered, immutable collection of values written with parentheses."
+      },
+      {
+       "term": "immutable",
+       "def": "Unable to be changed after creation; tuples are immutable in Python."
+      },
+      {
+       "term": "unpacking",
+       "def": "Assigning each item of a tuple (or other sequence) to its own variable in one statement."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What happens if you try point[0] = 10 on a tuple point = (3, 5)?",
+       "choices": [
+        "It works, changing point to (10, 5)",
+        "It raises a TypeError because tuples are immutable",
+        "It creates a new variable named point[0]",
+        "Nothing happens; the line is ignored"
+       ],
+       "answer": 1,
+       "explain": "Tuples cannot be modified after creation, so attempting item assignment raises a TypeError."
+      },
+      {
+       "q": "Why are tuples a good fit for representing an (x, y) coordinate?",
+       "choices": [
+        "Coordinates always need to be sorted",
+        "The fixed number of values should not change by accident, which immutability guarantees",
+        "Tuples use curly braces like dictionaries",
+        "Lists cannot store numbers"
+       ],
+       "answer": 1,
+       "explain": "A coordinate always has exactly two fixed values, and immutability protects against accidentally altering them."
+      },
+      {
+       "q": "What does low, high = (2, 8) do?",
+       "choices": [
+        "Raises an error, since tuples cannot be assigned this way",
+        "Unpacks the tuple, setting low = 2 and high = 8",
+        "Sets both low and high to the tuple (2, 8)",
+        "Sets low = 8 and high = 2"
+       ],
+       "answer": 1,
+       "explain": "Tuple unpacking assigns each position to the matching variable in order: low gets 2, high gets 8."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Sets and Set Operations",
+     "minutes": 10,
+     "intro": "When you only care whether something is present, not how many times or in what order, a set is the right structure: it automatically drops duplicates and offers fast membership checks.",
+     "sections": [
+      {
+       "heading": "Creating Sets and Checking Membership",
+       "body": [
+        "A set is written with curly braces but no colons: `colors = {'red', 'blue', 'red', 'green'}` automatically collapses to `{'red', 'blue', 'green'}`, since sets never store duplicate values.",
+        "`'red' in colors` checks membership in close to O(1) time, similar to a dictionary key lookup, which makes sets far faster than lists for repeated 'is this value already here?' checks on large collections."
+       ]
+      },
+      {
+       "heading": "Set Operations: Union, Intersection, Difference",
+       "body": [
+        "`set_a | set_b` (union) combines all unique items from both sets. `set_a & set_b` (intersection) keeps only items in both sets. `set_a - set_b` (difference) keeps items in `set_a` that are not in `set_b`.",
+        "These operations mirror the math you may already know from Venn diagrams, and they are exactly how you would compute, for example, which students are enrolled in two different classes, using intersection."
+       ],
+       "example": {
+        "problem": "Given class_a = {'Sam', 'Lee', 'Ana'} and class_b = {'Lee', 'Ana', 'Kai'}, what does class_a & class_b return?",
+        "steps": [
+         "Intersection (&) keeps only items present in both sets.",
+         "'Lee' and 'Ana' appear in both class_a and class_b.",
+         "'Sam' is only in class_a and 'Kai' is only in class_b, so neither is included."
+        ],
+        "answer": "{'Lee', 'Ana'}"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "set",
+       "def": "An unordered collection of unique values written with curly braces."
+      },
+      {
+       "term": "union",
+       "def": "A set operation (|) that combines all unique items from two sets."
+      },
+      {
+       "term": "intersection",
+       "def": "A set operation (&) that keeps only items present in both sets."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does {'a', 'b', 'a', 'c'} become once stored as a set?",
+       "choices": [
+        "{'a', 'b', 'a', 'c'}",
+        "{'a', 'b', 'c'}",
+        "['a', 'b', 'c']",
+        "An error, since duplicates are not allowed"
+       ],
+       "answer": 1,
+       "explain": "Sets automatically remove duplicate values, so the repeated 'a' collapses down, leaving {'a', 'b', 'c'}."
+      },
+      {
+       "q": "For set_a = {1, 2, 3} and set_b = {2, 3, 4}, what does set_a & set_b return?",
+       "choices": [
+        "{1, 2, 3, 4}",
+        "{2, 3}",
+        "{1, 4}",
+        "{}"
+       ],
+       "answer": 1,
+       "explain": "Intersection keeps only values present in both sets, which are 2 and 3."
+      },
+      {
+       "q": "For set_a = {1, 2, 3} and set_b = {2, 3, 4}, what does set_a - set_b return?",
+       "choices": [
+        "{1}",
+        "{4}",
+        "{2, 3}",
+        "{1, 2, 3, 4}"
+       ],
+       "answer": 0,
+       "explain": "Difference keeps items in set_a that are not in set_b; only 1 satisfies that, since 2 and 3 are in both."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Files, Errors, and Modules",
+   "summary": "Real programs read and write data that outlives a single run, cope gracefully with bad input, and reuse code other people have written. This closing unit covers files, exceptions, and Python's module system.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Reading and Writing Files",
+     "minutes": 12,
+     "intro": "Programs that forget everything the moment they close are not very useful. Reading and writing files is how a program remembers data between runs, saving results, logs, or settings to disk.",
+     "sections": [
+      {
+       "heading": "Opening Files with with open()",
+       "body": [
+        "`with open('notes.txt', 'r') as f:` opens a file named `notes.txt` in read mode ('r') and automatically closes it once the indented block finishes, even if an error occurs inside. `f.read()` then returns the entire file's contents as one string.",
+        "Mode `'w'` opens a file for writing, creating it if it does not exist and erasing any existing content first; mode `'a'` appends new content to the end of an existing file instead of erasing it."
+       ]
+      },
+      {
+       "heading": "Reading Line by Line",
+       "body": [
+        "Looping `for line in f:` reads a file one line at a time, which is far more memory-efficient than `.read()` for huge files, since it never loads the whole file into memory at once.",
+        "Each line read this way keeps its trailing newline character, `\\n`; calling `.strip()` on it removes that newline along with any other surrounding whitespace before you use the line's text."
+       ],
+       "example": {
+        "problem": "A file scores.txt contains three lines: 85, 92, 78. What does this code compute? total = 0. with open('scores.txt') as f: for line in f: total = total + int(line.strip())",
+        "steps": [
+         "The loop reads each line as text with a trailing newline: '85\\n', '92\\n', '78\\n'.",
+         ".strip() removes the newline from each, then int() converts the remaining text to a number: 85, 92, 78.",
+         "total accumulates across the loop: 0+85=85, 85+92=177, 177+78=255."
+        ],
+        "answer": "total = 255"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "with open()",
+       "def": "The standard way to open a file so it is automatically closed when the block finishes."
+      },
+      {
+       "term": "read mode ('r')",
+       "def": "A file mode that opens a file for reading only."
+      },
+      {
+       "term": "write mode ('w')",
+       "def": "A file mode that opens a file for writing, erasing existing content first."
+      },
+      {
+       "term": "strip()",
+       "def": "A string method that removes leading and trailing whitespace, including newline characters."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does opening a file with mode 'w' do if the file already has content?",
+       "choices": [
+        "Appends new content to the end",
+        "Erases the existing content and starts writing fresh",
+        "Refuses to open the file",
+        "Only allows reading, not writing"
+       ],
+       "answer": 1,
+       "explain": "Write mode ('w') always starts the file empty, discarding whatever content existed before."
+      },
+      {
+       "q": "Why use with open(...) as f: instead of just open(...)?",
+       "choices": [
+        "with automatically closes the file when the block ends, even if an error occurs",
+        "with makes files read faster",
+        "with is required to read text files",
+        "There is no real difference"
+       ],
+       "answer": 0,
+       "explain": "The with statement guarantees cleanup, closing the file automatically, which prevents leaving files open accidentally."
+      },
+      {
+       "q": "Why call .strip() on each line read from a file before converting it with int()?",
+       "choices": [
+        "To remove the trailing newline character so int() does not fail on stray whitespace",
+        "To make the text uppercase",
+        "To skip blank lines automatically",
+        "strip() is required before any file can be opened"
+       ],
+       "answer": 0,
+       "explain": "Lines read from a file include a trailing newline; int() would fail to parse text containing that extra character, so strip() removes it first."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Handling Errors with try/except",
+     "minutes": 12,
+     "intro": "Programs meet bad input constantly: users type letters where numbers belong, files go missing, networks drop. try/except lets a program catch that failure gracefully instead of crashing outright.",
+     "sections": [
+      {
+       "heading": "try, except, and Exception Types",
+       "body": [
+        "Code that might fail goes inside a `try:` block. If it raises an **exception**, Python immediately jumps to the matching `except:` block instead of crashing the whole program. `int('abc')` raises a `ValueError`, which `except ValueError:` can catch specifically.",
+        "Catching a specific exception type, like `except ValueError:`, is better practice than a bare `except:`, because a bare except also silently swallows genuine bugs you would want to know about, like a typo in a variable name."
+       ]
+      },
+      {
+       "heading": "else and finally",
+       "body": [
+        "An optional `else:` block runs only if the `try` block succeeded with no exception; an optional `finally:` block always runs, whether an exception occurred or not, which is the right place for cleanup like closing a file.",
+        "Together, `try/except/else/finally` let you separate the risky operation, the failure response, the success-only follow-up, and guaranteed cleanup into four clear, distinct pieces of code."
+       ],
+       "example": {
+        "problem": "Trace this code for user input 'abc': try: n = int(input()). except ValueError: print('not a number'). else: print('got', n). What gets printed?",
+        "steps": [
+         "int('abc') is attempted inside try and raises a ValueError, since 'abc' cannot convert to an integer.",
+         "Python jumps to the matching except ValueError: block, printing 'not a number'.",
+         "Because an exception occurred, the else: block is skipped entirely; else only runs after a successful try."
+        ],
+        "answer": "'not a number' is printed; the else block does not run."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "exception",
+       "def": "An error condition raised while a program runs, which try/except can catch."
+      },
+      {
+       "term": "try/except",
+       "def": "A structure that runs risky code and handles specific errors it might raise."
+      },
+      {
+       "term": "ValueError",
+       "def": "An exception raised when a function receives an argument of the right type but an invalid value, like int('abc')."
+      },
+      {
+       "term": "finally",
+       "def": "A block that always runs after try/except, whether an exception occurred or not."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is except ValueError: usually better than a bare except:?",
+       "choices": [
+        "It is always faster to execute",
+        "It catches only the specific error expected, without silently hiding unrelated bugs",
+        "Bare except is not valid Python syntax",
+        "except ValueError: catches every possible error type"
+       ],
+       "answer": 1,
+       "explain": "Catching a specific exception type avoids accidentally masking other, unrelated bugs that a bare except would silently swallow."
+      },
+      {
+       "q": "When does the else: block after a try/except run?",
+       "choices": [
+        "Only if the try block succeeds with no exception",
+        "Only if an exception occurs",
+        "Every single time, no matter what",
+        "Never; else is not valid after try"
+       ],
+       "answer": 0,
+       "explain": "else runs only when the try block completes without raising any exception."
+      },
+      {
+       "q": "When does a finally: block run?",
+       "choices": [
+        "Only if no exception occurred",
+        "Only if an exception occurred",
+        "Always, whether an exception occurred or not",
+        "Only if the file was opened with with open()"
+       ],
+       "answer": 2,
+       "explain": "finally is guaranteed to run regardless of whether an exception was raised or caught, making it ideal for cleanup code."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Modules and the Python Standard Library",
+     "minutes": 10,
+     "intro": "You do not need to write everything from scratch. Python ships with a huge standard library of ready-made modules, and importing one gives you instant access to code other people have already written, tested, and debugged.",
+     "sections": [
+      {
+       "heading": "import and Using a Module",
+       "body": [
+        "`import math` loads the built-in `math` module, after which `math.sqrt(16)` returns `4.0` and `math.pi` gives an accurate value of π. `import random` gives access to `random.randint(1, 6)`, which returns a random whole number between 1 and 6 inclusive, perfect for simulating a die roll.",
+        "`from math import sqrt` imports just the one function you need directly into your file, letting you write `sqrt(16)` without the `math.` prefix, at the cost of it being less obvious later which module `sqrt` came from."
+       ]
+      },
+      {
+       "heading": "Your Own Modules",
+       "body": [
+        "Any Python file is itself a module: saving functions in `helpers.py` lets another file in the same folder run `import helpers` and call `helpers.some_function()`, splitting a large program across organized files instead of one giant one.",
+        "This is how real projects scale. A weather app might split into `fetch_data.py`, `convert_units.py`, and `display.py`, each importable and testable on its own, then combined in a main file that imports all three."
+       ],
+       "example": {
+        "problem": "After running import math, what does math.sqrt(81) return, and what type is it?",
+        "steps": [
+         "math.sqrt() computes the square root of its argument.",
+         "The square root of 81 is 9, since 9 × 9 = 81.",
+         "math.sqrt() always returns a float, so the result is 9.0, not the integer 9."
+        ],
+        "answer": "9.0, a float"
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "module",
+       "def": "A Python file (or built-in unit) containing code that can be imported and reused."
+      },
+      {
+       "term": "import",
+       "def": "The statement used to bring a module's code into your current file."
+      },
+      {
+       "term": "standard library",
+       "def": "The large collection of modules that ships with Python, ready to use without installing anything extra."
+      },
+      {
+       "term": "from ... import",
+       "def": "A form of import that brings specific names from a module directly into your file's namespace."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does math.sqrt(25) return?",
+       "choices": [
+        "5",
+        "5.0",
+        "25.0",
+        "Error, math has no sqrt function"
+       ],
+       "answer": 1,
+       "explain": "math.sqrt() always returns a float, so the square root of 25 comes back as 5.0."
+      },
+      {
+       "q": "What is the main advantage of from math import sqrt over import math for calling sqrt()?",
+       "choices": [
+        "It lets you write sqrt(16) directly instead of math.sqrt(16)",
+        "It makes the sqrt function run faster",
+        "It is required to use any math function",
+        "There is no difference at all"
+       ],
+       "answer": 0,
+       "explain": "Importing the name directly removes the need for the module prefix at every call site."
+      },
+      {
+       "q": "Why would a project split its code across helpers.py, fetch_data.py, and display.py instead of one giant file?",
+       "choices": [
+        "Python requires at least three files per project",
+        "Splitting code into focused, importable modules keeps a large project organized and each piece separately testable",
+        "Multiple files always run faster than one file",
+        "Only one file is allowed to contain a main() function"
+       ],
+       "answer": 1,
+       "explain": "Organizing code into modules by responsibility makes large projects easier to navigate, test, and maintain."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

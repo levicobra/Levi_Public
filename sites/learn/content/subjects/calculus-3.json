@@ -1,0 +1,636 @@
+{
+ "id": "calculus-3",
+ "title": "Calculus III",
+ "domain": "math",
+ "level": "College",
+ "description": "Calculus extended into two and three dimensions: vectors and the geometry of space, functions of several variables, partial derivatives, multiple integrals, and the vector calculus theorems that tie them all together. This course builds the mathematical language used throughout physics and engineering to describe motion, fields, and flow in three-dimensional space.",
+ "outcomes": [
+  "Perform vector operations in two and three dimensions, including dot products, cross products, and equations of lines and planes.",
+  "Differentiate and integrate vector-valued functions to analyze curves, velocity, acceleration, and arc length in space.",
+  "Compute partial derivatives, gradients, and directional derivatives for functions of several variables, and use them to find local extrema.",
+  "Evaluate double and triple integrals in rectangular, polar, cylindrical, and spherical coordinates.",
+  "Compute line and surface integrals of scalar and vector fields.",
+  "Apply Green's Theorem, Stokes' Theorem, and the Divergence Theorem to relate integrals over regions to integrals over their boundaries."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Vectors and the Geometry of Space",
+   "summary": "Vector algebra in three dimensions, the dot and cross products, and the equations of lines and planes in space.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Vectors in Three Dimensions",
+     "minutes": 16,
+     "intro": "Everything in this course happens in space, so before differentiating or integrating anything, you need a solid grip on vectors themselves — quantities with both magnitude and direction, written with three coordinates instead of two, and combined with rules that generalize cleanly from the plane.",
+     "sections": [
+      {
+       "heading": "Vector Basics in 3D",
+       "body": [
+        "A vector in three dimensions is written v = ⟨v₁, v₂, v₃⟩, representing displacement v₁ units along x, v₂ along y, and v₃ along z. Vector addition and scalar multiplication work component-wise: ⟨a₁,a₂,a₃⟩ + ⟨b₁,b₂,b₃⟩ = ⟨a₁+b₁, a₂+b₂, a₃+b₃⟩, and c⟨v₁,v₂,v₃⟩ = ⟨cv₁,cv₂,cv₃⟩.",
+        "The **magnitude** (or length) of v = ⟨v₁,v₂,v₃⟩ is |v| = √(v₁²+v₂²+v₃²), a direct extension of the Pythagorean theorem into three dimensions. A **unit vector** has magnitude 1; you obtain one in the direction of any nonzero vector v by computing v/|v|, which scales v down without changing its direction."
+       ],
+       "example": {
+        "problem": "Find the magnitude of v = ⟨3, −4, 12⟩ and the unit vector in its direction.",
+        "steps": [
+         "Compute the magnitude: |v| = √(3²+(−4)²+12²) = √(9+16+144) = √169 = 13.",
+         "Divide each component by the magnitude to get the unit vector: v/13 = ⟨3/13, −4/13, 12/13⟩.",
+         "Verify: this unit vector has magnitude √((3/13)²+(4/13)²+(12/13)²) = √(169/169) = 1."
+        ],
+        "answer": "|v| = 13; the unit vector is ⟨3/13, −4/13, 12/13⟩."
+       }
+      },
+      {
+       "heading": "The Standard Basis Vectors",
+       "body": [
+        "The vectors i = ⟨1,0,0⟩, j = ⟨0,1,0⟩, and k = ⟨0,0,1⟩ are the standard basis vectors — every vector in three dimensions can be written as a unique combination v = v₁i + v₂j + v₃k, which is just another notation for ⟨v₁,v₂,v₃⟩ that's often more convenient when combined with derivatives later in the course.",
+        "Points in space are located by position vectors from the origin, and the vector connecting point P to point Q is found by subtracting coordinates: PQ→ = ⟨Q_x−P_x, Q_y−P_y, Q_z−P_z⟩ — this displacement-vector idea underlies how lines and curves in space are described throughout this unit."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "vector magnitude", "def": "|v| = √(v₁²+v₂²+v₃²), the length of a three-dimensional vector."},
+      {"term": "unit vector", "def": "A vector with magnitude 1, obtained from any nonzero vector v by computing v/|v|."},
+      {"term": "standard basis vectors", "def": "i=⟨1,0,0⟩, j=⟨0,1,0⟩, k=⟨0,0,1⟩, used to write any vector as v₁i+v₂j+v₃k."}
+     ],
+     "practice": [
+      {"q": "What is the magnitude of v = ⟨1, 2, 2⟩?", "choices": ["3", "5", "9", "1.5"], "answer": 0, "explain": "|v| = √(1²+2²+2²) = √(1+4+4) = √9 = 3."},
+      {"q": "The vector from point P(1,0,2) to point Q(4,3,2) is:", "choices": ["⟨3,3,0⟩", "⟨5,3,4⟩", "⟨−3,−3,0⟩", "⟨3,0,3⟩"], "answer": 0, "explain": "Subtract P's coordinates from Q's: ⟨4−1, 3−0, 2−2⟩ = ⟨3,3,0⟩."},
+      {"q": "Which vector is a unit vector?", "choices": ["⟨0, 1, 0⟩", "⟨1, 1, 1⟩", "⟨2, 0, 0⟩", "⟨1, 1, 0⟩"], "answer": 0, "explain": "⟨0,1,0⟩ has magnitude √(0²+1²+0²)=1; the others have magnitudes √3, 2, and √2 respectively."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Dot Product and Angles Between Vectors",
+     "minutes": 17,
+     "intro": "The dot product turns two vectors into a single number that encodes how aligned they are — parallel vectors give large positive results, perpendicular vectors give exactly zero, and the formula connects directly to the angle between them, which makes it the workhorse for projections and orthogonality throughout this course.",
+     "sections": [
+      {
+       "heading": "Computing and Interpreting the Dot Product",
+       "body": [
+        "For u = ⟨u₁,u₂,u₃⟩ and v = ⟨v₁,v₂,v₃⟩, the dot product is u·v = u₁v₁ + u₂v₂ + u₃v₃, a scalar (not a vector). Geometrically, u·v = |u||v|cos(θ), where θ is the angle between the vectors when placed tail to tail — this equivalence is what makes the dot product useful for finding angles.",
+        "Two nonzero vectors are **orthogonal** (perpendicular) exactly when u·v = 0, since cos(θ)=0 only at θ=90°. This single test — compute the dot product and check for zero — is faster than computing an angle explicitly whenever you only need to know if two vectors are perpendicular."
+       ],
+       "example": {
+        "problem": "Find the angle between u = ⟨1, 1, 0⟩ and v = ⟨1, 0, 1⟩.",
+        "steps": [
+         "Compute the dot product: u·v = (1)(1)+(1)(0)+(0)(1) = 1.",
+         "Compute the magnitudes: |u| = √(1+1+0) = √2, |v| = √(1+0+1) = √2.",
+         "Use u·v = |u||v|cos(θ): 1 = (√2)(√2)cos(θ) = 2cos(θ), so cos(θ) = 1/2.",
+         "Solve: θ = arccos(1/2) = 60° (or π/3 radians)."
+        ],
+        "answer": "The angle between u and v is 60° (π/3 radians)."
+       }
+      },
+      {
+       "heading": "Vector Projection",
+       "body": [
+        "The **scalar projection** of v onto u is comp_u(v) = (u·v)/|u|, representing how far v extends in the direction of u. The **vector projection** proj_u(v) = [(u·v)/|u|²]·u takes that scalar amount and points it in u's direction, effectively decomposing v into a component parallel to u and a component perpendicular to it.",
+        "Projections are used constantly in physics to split a force or velocity vector into components along and perpendicular to a given direction (like a ramp's surface), and in this course they set up the plane and distance formulas covered next."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "dot product", "def": "u·v = u₁v₁+u₂v₂+u₃v₃ = |u||v|cos(θ), a scalar measuring alignment between two vectors."},
+      {"term": "orthogonal vectors", "def": "Two nonzero vectors whose dot product is 0, meaning they meet at a 90° angle."},
+      {"term": "vector projection", "def": "proj_u(v) = [(u·v)/|u|²]u, the component of v pointing in the direction of u."}
+     ],
+     "practice": [
+      {"q": "What is u·v for u=⟨2,−1,3⟩ and v=⟨1,4,−2⟩?", "choices": ["−8", "8", "6", "0"], "answer": 0, "explain": "u·v = (2)(1)+(−1)(4)+(3)(−2) = 2−4−6 = −8."},
+      {"q": "If u·v = 0 for two nonzero vectors, what can you conclude?", "choices": ["The vectors are orthogonal (perpendicular)", "The vectors are parallel", "The vectors are equal", "One vector is the zero vector"], "answer": 0, "explain": "A dot product of zero between two nonzero vectors means cos(θ)=0, so θ=90°: the vectors are orthogonal."},
+      {"q": "For u=⟨3,0,0⟩ and v=⟨2,2,0⟩, the scalar projection of v onto u is:", "choices": ["2", "6", "3", "4"], "answer": 0, "explain": "comp_u(v) = (u·v)/|u| = (6+0+0)/3 = 6/3 = 2."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Cross Product, Lines, and Planes",
+     "minutes": 19,
+     "intro": "Where the dot product produces a number, the cross product produces a brand-new vector, one perpendicular to both original vectors, and its magnitude measures the area of the parallelogram they span. This makes it the natural tool for pinning down the equation of a plane in space.",
+     "sections": [
+      {
+       "heading": "The Cross Product",
+       "body": [
+        "For u = ⟨u₁,u₂,u₃⟩ and v = ⟨v₁,v₂,v₃⟩, the cross product is u×v = ⟨u₂v₃−u₃v₂, u₃v₁−u₁v₃, u₁v₂−u₂v₁⟩, a vector perpendicular to both u and v (following the right-hand rule for its direction). Its magnitude |u×v| = |u||v|sin(θ) equals the area of the parallelogram with sides u and v.",
+        "Unlike the dot product, the cross product is only defined in three dimensions and is anticommutative: u×v = −(v×u). Two nonzero vectors are parallel exactly when u×v = 0 (the zero vector), since sin(θ)=0 only when θ=0° or 180°."
+       ],
+       "example": {
+        "problem": "Find u × v for u = ⟨1, 2, 0⟩ and v = ⟨0, 1, 3⟩.",
+        "steps": [
+         "First component: u₂v₃ − u₃v₂ = (2)(3) − (0)(1) = 6.",
+         "Second component: u₃v₁ − u₁v₃ = (0)(0) − (1)(3) = −3.",
+         "Third component: u₁v₂ − u₂v₁ = (1)(1) − (2)(0) = 1.",
+         "Assemble the result: u×v = ⟨6, −3, 1⟩."
+        ],
+        "answer": "u × v = ⟨6, −3, 1⟩."
+       }
+      },
+      {
+       "heading": "Equations of Planes",
+       "body": [
+        "A plane is determined by a point P₀(x₀,y₀,z₀) on it and a **normal vector** n = ⟨a,b,c⟩ perpendicular to the plane. Its equation is a(x−x₀) + b(y−y₀) + c(z−z₀) = 0, derived from requiring that the vector from P₀ to any other point (x,y,z) in the plane is orthogonal to n (their dot product is zero).",
+        "Given three non-collinear points in a plane, find two vectors between them and take their cross product to get a normal vector n, then plug n and any one of the three points into the plane equation above — this is the standard method for finding a plane's equation from three points."
+       ],
+       "example": {
+        "problem": "Find the equation of the plane through P(1,0,0), Q(0,1,0), and R(0,0,1).",
+        "steps": [
+         "Form two vectors in the plane: PQ = ⟨−1,1,0⟩ and PR = ⟨−1,0,1⟩.",
+         "Compute the normal vector n = PQ×PR = ⟨(1)(1)−(0)(0), (0)(−1)−(−1)(1), (−1)(0)−(1)(−1)⟩ = ⟨1, 1, 1⟩.",
+         "Use the plane formula with normal ⟨1,1,1⟩ and point P(1,0,0): 1(x−1)+1(y−0)+1(z−0) = 0.",
+         "Simplify: x−1+y+z = 0, or x+y+z = 1."
+        ],
+        "answer": "The plane's equation is x + y + z = 1."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "cross product", "def": "u×v, a vector perpendicular to both u and v with magnitude |u||v|sin(θ), equal to the area of the spanned parallelogram."},
+      {"term": "normal vector", "def": "A vector perpendicular to a plane, used together with a point on the plane to write the plane's equation."},
+      {"term": "right-hand rule", "def": "A convention determining the direction of u×v: curl the right hand's fingers from u to v; the thumb points in the direction of the cross product."}
+     ],
+     "practice": [
+      {"q": "For u=⟨1,0,0⟩ and v=⟨0,1,0⟩, u×v equals:", "choices": ["⟨0,0,1⟩", "⟨1,1,0⟩", "⟨0,0,0⟩", "⟨1,0,1⟩"], "answer": 0, "explain": "Applying the cross product formula: (0·0−0·1, 0·0−1·0, 1·1−0·0) = (0,0,1), which is simply k, matching the right-hand rule for i×j."},
+      {"q": "If u×v = ⟨0,0,0⟩ for nonzero u and v, what does this mean?", "choices": ["u and v are parallel", "u and v are orthogonal", "u and v are equal in magnitude only", "This cannot happen for nonzero vectors"], "answer": 0, "explain": "The cross product's magnitude is |u||v|sin(θ); this is zero only when sin(θ)=0, i.e., θ=0° or 180°, meaning the vectors are parallel (or antiparallel)."},
+      {"q": "A plane with normal vector ⟨2,0,0⟩ passing through (3,1,1) has equation:", "choices": ["2(x−3) = 0, i.e. x = 3", "2x+y+z=0", "x+y+z=5", "2y=0"], "answer": 0, "explain": "With normal ⟨2,0,0⟩, only the x-component matters in the plane equation: 2(x−3)+0(y−1)+0(z−1)=0 simplifies to x=3, a plane parallel to the yz-plane."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Vector-Valued Functions",
+   "summary": "Curves in space described by vector-valued functions, and their derivatives, integrals, and applications to motion.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Vector-Valued Functions and Space Curves",
+     "minutes": 16,
+     "intro": "A vector-valued function traces out a curve in space by giving the position vector at each value of a parameter t — the natural three-dimensional extension of parametric equations, and the mathematical description of any path an object follows through space.",
+     "sections": [
+      {
+       "heading": "Defining and Graphing Space Curves",
+       "body": [
+        "A vector-valued function has the form r(t) = ⟨f(t), g(t), h(t)⟩, where f, g, and h are the component functions giving the x, y, and z coordinates at parameter value t. As t varies, the tip of r(t) traces out a curve in three-dimensional space, called a space curve.",
+        "A classic example is the **helix** r(t) = ⟨cos(t), sin(t), t⟩, which spirals upward: the x and y components trace a circle of radius 1 (since cos²t+sin²t=1), while the z-component climbs steadily, so the curve winds around the z-axis while rising at a constant rate."
+       ]
+      },
+      {
+       "heading": "Limits and Continuity of Vector Functions",
+       "body": [
+        "The limit of r(t) = ⟨f(t),g(t),h(t)⟩ as t→a is computed component-wise: lim(t→a) r(t) = ⟨lim f(t), lim g(t), lim h(t)⟩, provided each component limit exists. This means every technique from single-variable limits (factoring, L'Hôpital's rule, etc.) applies directly to each component separately.",
+        "r(t) is continuous at t=a exactly when all three component functions f, g, h are continuous at t=a — there is no new continuity concept here, just the requirement that it holds simultaneously in all three coordinates."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "vector-valued function", "def": "r(t) = ⟨f(t),g(t),h(t)⟩, giving a position in space as a function of parameter t, tracing out a space curve."},
+      {"term": "helix", "def": "The space curve r(t)=⟨cos t, sin t, t⟩ (or similar), which spirals around an axis while translating along it."}
+     ],
+     "practice": [
+      {"q": "For r(t) = ⟨t, t², t³⟩, what is r(2)?", "choices": ["⟨2, 4, 8⟩", "⟨2, 2, 2⟩", "⟨4, 8, 2⟩", "⟨2, 8, 4⟩"], "answer": 0, "explain": "Substitute t=2 into each component: ⟨2, 2², 2³⟩ = ⟨2, 4, 8⟩."},
+      {"q": "The curve r(t) = ⟨3cos(t), 3sin(t), 0⟩ traces out:", "choices": ["A circle of radius 3 in the xy-plane", "A helix", "A straight line", "A circle of radius 3 in the xz-plane"], "answer": 0, "explain": "Since z=0 always and x²+y² = 9cos²t+9sin²t = 9, the curve stays in the xy-plane on a circle of radius 3."},
+      {"q": "r(t) is continuous at t=a when:", "choices": ["Each of its three component functions is continuous at t=a", "At least one component is continuous at t=a", "r(a) exists, regardless of the components", "It is never possible for vector functions to be continuous"], "answer": 0, "explain": "Continuity of a vector-valued function requires all three component functions to individually be continuous at that point; there is no separate vector continuity condition."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Derivatives, Velocity, and Acceleration",
+     "minutes": 18,
+     "intro": "Differentiating a vector-valued function component by component gives you the velocity vector of whatever is tracing out that curve, and differentiating again gives acceleration — turning the abstract geometry of space curves into the concrete physics of motion.",
+     "sections": [
+      {
+       "heading": "The Derivative of a Vector-Valued Function",
+       "body": [
+        "If r(t) = ⟨f(t),g(t),h(t)⟩, then r'(t) = ⟨f'(t),g'(t),h'(t)⟩, found by differentiating each component separately — the same component-wise pattern used for limits and continuity. Geometrically, r'(t) is a vector tangent to the curve at the point r(t), pointing in the direction of increasing t.",
+        "When r(t) represents the position of a moving particle at time t, r'(t) is its **velocity** v(t), and |v(t)| is its speed. Differentiating again, r''(t) = v'(t) is the **acceleration** a(t) — the same physical interpretations as in one-dimensional motion, just carried out in three components at once."
+       ],
+       "example": {
+        "problem": "For r(t) = ⟨t², 2t, t³⟩, find the velocity and speed at t = 1.",
+        "steps": [
+         "Differentiate each component: r'(t) = ⟨2t, 2, 3t²⟩.",
+         "Evaluate at t=1: v(1) = ⟨2(1), 2, 3(1)²⟩ = ⟨2, 2, 3⟩.",
+         "Compute the speed: |v(1)| = √(2²+2²+3²) = √(4+4+9) = √17.",
+         "So velocity is ⟨2,2,3⟩ and speed is √17 ≈ 4.12."
+        ],
+        "answer": "v(1) = ⟨2, 2, 3⟩, speed = √17 ≈ 4.12."
+       }
+      },
+      {
+       "heading": "The Unit Tangent Vector",
+       "body": [
+        "The **unit tangent vector** T(t) = r'(t)/|r'(t)| is the tangent direction to the curve scaled to length 1 — useful because it isolates pure direction from speed, letting you compare how a curve is oriented independent of how fast it's being traversed by a particular parametrization.",
+        "Differentiation rules extend naturally to vector-valued functions: the sum rule, constant-multiple rule, and product rules for dot and cross products all hold in forms directly analogous to single-variable calculus, for example d/dt[u(t)·v(t)] = u'(t)·v(t) + u(t)·v'(t)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "velocity vector", "def": "v(t) = r'(t), the derivative of a position vector function, tangent to the path and pointing in the direction of motion."},
+      {"term": "acceleration vector", "def": "a(t) = r''(t) = v'(t), the second derivative of position, describing how velocity changes over time."},
+      {"term": "unit tangent vector", "def": "T(t) = r'(t)/|r'(t)|, the direction of motion along a curve scaled to unit length."}
+     ],
+     "practice": [
+      {"q": "For r(t) = ⟨cos(t), sin(t), 0⟩, what is r'(t)?", "choices": ["⟨−sin(t), cos(t), 0⟩", "⟨sin(t), −cos(t), 0⟩", "⟨cos(t), sin(t), 0⟩", "⟨−cos(t), −sin(t), 0⟩"], "answer": 0, "explain": "Differentiate each component: d/dt cos(t) = −sin(t), d/dt sin(t) = cos(t), d/dt 0 = 0."},
+      {"q": "If v(t) = ⟨0, 5, 0⟩ (constant), what does this imply about acceleration?", "choices": ["a(t) = ⟨0,0,0⟩, since acceleration is the derivative of velocity", "a(t) = ⟨0,5,0⟩", "The particle is not moving", "Acceleration cannot be determined"], "answer": 0, "explain": "A constant velocity vector has a zero derivative in each component, so acceleration a(t) = v'(t) = ⟨0,0,0⟩ — this describes motion at constant velocity, a straight line at constant speed."},
+      {"q": "The unit tangent vector T(t) is obtained by:", "choices": ["Dividing r'(t) by its own magnitude", "Multiplying r'(t) by t", "Differentiating r'(t) again", "Dividing r(t) by |r(t)|"], "answer": 0, "explain": "T(t) = r'(t)/|r'(t)| rescales the tangent vector r'(t) to have length exactly 1 while preserving its direction."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Functions of Several Variables",
+   "summary": "Multivariable functions, partial derivatives, the gradient, directional derivatives, and finding local extrema.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Partial Derivatives",
+     "minutes": 18,
+     "intro": "A function of several variables changes differently depending on which direction you move — a hillside's slope going north is different from its slope going east. The partial derivative isolates the rate of change in just one variable at a time, holding all the others frozen, and it's the foundation everything else in multivariable calculus builds on.",
+     "sections": [
+      {
+       "heading": "Computing Partial Derivatives",
+       "body": [
+        "For f(x,y), the partial derivative with respect to x, written ∂f/∂x or f_x, is found by differentiating f with respect to x while treating y as a constant. Similarly, ∂f/∂y (or f_y) treats x as a constant and differentiates with respect to y. All the ordinary differentiation rules (power, product, quotient, chain) apply exactly as before, just applied to one variable while the other sits frozen as a constant coefficient.",
+        "Geometrically, f_x(a,b) is the slope of the surface z=f(x,y) in the x-direction at the point (a,b), obtained by slicing the surface with the plane y=b and finding the slope of the resulting single-variable curve; f_y(a,b) is the analogous slope in the y-direction."
+       ],
+       "example": {
+        "problem": "Find f_x and f_y for f(x,y) = x²y³ + sin(xy).",
+        "steps": [
+         "Differentiate with respect to x, treating y as constant: ∂/∂x[x²y³] = 2xy³; for sin(xy), use the chain rule with y constant: ∂/∂x[sin(xy)] = cos(xy)·y.",
+         "Combine: f_x = 2xy³ + y·cos(xy).",
+         "Differentiate with respect to y, treating x as constant: ∂/∂y[x²y³] = 3x²y²; for sin(xy): ∂/∂y[sin(xy)] = cos(xy)·x.",
+         "Combine: f_y = 3x²y² + x·cos(xy)."
+        ],
+        "answer": "f_x = 2xy³ + y·cos(xy); f_y = 3x²y² + x·cos(xy)."
+       }
+      },
+      {
+       "heading": "Second-Order Partial Derivatives",
+       "body": [
+        "Taking a partial derivative of a partial derivative produces second-order partials: f_xx = ∂/∂x(f_x), f_yy = ∂/∂y(f_y), and the mixed partials f_xy = ∂/∂y(f_x) and f_yx = ∂/∂x(f_y). Clairaut's Theorem guarantees that for functions with continuous second partials, the mixed partials are equal: f_xy = f_yx, regardless of the order of differentiation.",
+        "This equality is a useful check on your work — if you compute f_xy and f_yx by two different paths and get different answers, you've made an arithmetic error somewhere, since they're guaranteed to match for the well-behaved functions used throughout this course."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "partial derivative", "def": "∂f/∂x, the rate of change of f(x,y,...) with respect to one variable, holding all others fixed."},
+      {"term": "mixed partial derivative", "def": "f_xy or f_yx, a second-order partial derivative taken with respect to two different variables in sequence."},
+      {"term": "Clairaut's Theorem", "def": "For functions with continuous second partial derivatives, f_xy = f_yx — the order of mixed differentiation doesn't matter."}
+     ],
+     "practice": [
+      {"q": "For f(x,y) = 3x²y + y³, what is f_x?", "choices": ["6xy", "3x² + 3y²", "6x", "x²y"], "answer": 0, "explain": "Treating y as a constant, differentiate 3x²y with respect to x to get 6xy; the y³ term has no x, so it vanishes."},
+      {"q": "For f(x,y) = 3x²y + y³, what is f_y?", "choices": ["3x² + 3y²", "6xy", "3x²", "6y"], "answer": 0, "explain": "Treating x as a constant, differentiate 3x²y with respect to y to get 3x², and differentiate y³ to get 3y²; sum: 3x²+3y²."},
+      {"q": "Clairaut's Theorem states that for well-behaved functions:", "choices": ["f_xy = f_yx", "f_x = f_y always", "f_xx = f_yy always", "Mixed partials never exist"], "answer": 0, "explain": "Clairaut's Theorem guarantees the two mixed second partial derivatives are equal when they are continuous, regardless of the order of differentiation."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Gradient and Directional Derivatives",
+     "minutes": 19,
+     "intro": "Partial derivatives only tell you the slope along the x- and y-axes, but a hiker standing on a hillside might want the slope in any direction — northeast, say. The gradient vector packages all the partial derivative information together, and the directional derivative uses it to answer the slope-in-any-direction question directly.",
+     "sections": [
+      {
+       "heading": "The Gradient Vector",
+       "body": [
+        "For f(x,y), the **gradient** is ∇f(x,y) = ⟨f_x, f_y⟩, a vector built from the partial derivatives; for a three-variable function it extends to ∇f(x,y,z) = ⟨f_x, f_y, f_z⟩. The gradient, evaluated at a point, points in the direction of steepest increase of f at that point, and |∇f| gives the magnitude of that steepest rate of increase.",
+        "A key geometric fact: the gradient ∇f(a,b) is always perpendicular to the level curve of f passing through (a,b) — this is why gradients are used to find normal vectors to curves and surfaces defined implicitly, not just to locate steepest ascent."
+       ]
+      },
+      {
+       "heading": "The Directional Derivative",
+       "body": [
+        "The **directional derivative** of f at (a,b) in the direction of a unit vector u = ⟨u₁,u₂⟩ is D_u f(a,b) = ∇f(a,b)·u, the dot product of the gradient with that unit direction. This single formula recovers f_x and f_y as special cases: D_u f = f_x when u = ⟨1,0⟩ and D_u f = f_y when u = ⟨0,1⟩.",
+        "Because D_u f = |∇f|cos(θ) where θ is the angle between ∇f and u, the directional derivative is maximized (equal to |∇f|) when u points in the exact direction of the gradient, and minimized (equal to −|∇f|) when u points exactly opposite to it — confirming that the gradient direction is the direction of steepest ascent."
+       ],
+       "example": {
+        "problem": "Find the directional derivative of f(x,y) = x²+3xy at the point (1,2) in the direction of v = ⟨3,4⟩.",
+        "steps": [
+         "Compute the gradient: f_x = 2x+3y, f_y = 3x. At (1,2): f_x=2(1)+3(2)=8, f_y=3(1)=3, so ∇f(1,2) = ⟨8,3⟩.",
+         "Convert v to a unit vector: |v| = √(3²+4²) = 5, so u = ⟨3/5, 4/5⟩.",
+         "Compute the dot product: D_u f(1,2) = ⟨8,3⟩·⟨3/5,4/5⟩ = 8(3/5) + 3(4/5) = 24/5 + 12/5.",
+         "Add the fractions: 24/5+12/5 = 36/5 = 7.2."
+        ],
+        "answer": "D_u f(1,2) = 36/5 = 7.2."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "gradient", "def": "∇f = ⟨f_x, f_y⟩ (or ⟨f_x,f_y,f_z⟩ in 3D), a vector pointing in the direction of steepest increase of f, perpendicular to level curves."},
+      {"term": "directional derivative", "def": "D_u f = ∇f·u, the rate of change of f in the direction of unit vector u."}
+     ],
+     "practice": [
+      {"q": "The gradient of f(x,y)=x²+y² at (1,1) is:", "choices": ["⟨2,2⟩", "⟨1,1⟩", "⟨2,0⟩", "⟨0,2⟩"], "answer": 0, "explain": "f_x=2x and f_y=2y; at (1,1), ∇f = ⟨2(1),2(1)⟩ = ⟨2,2⟩."},
+      {"q": "The directional derivative D_u f is maximized when u points:", "choices": ["In the direction of ∇f", "Perpendicular to ∇f", "Opposite to ∇f", "Along the x-axis always"], "answer": 0, "explain": "D_u f = |∇f|cos(θ) is maximized when cos(θ)=1, i.e., θ=0, meaning u points in exactly the same direction as the gradient."},
+      {"q": "If u = ⟨1,0⟩, the directional derivative D_u f equals:", "choices": ["f_x", "f_y", "|∇f|", "f_x + f_y"], "answer": 0, "explain": "D_u f = ∇f·u = ⟨f_x,f_y⟩·⟨1,0⟩ = f_x, recovering the plain partial derivative with respect to x."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Local Extrema and the Second Derivative Test",
+     "minutes": 19,
+     "intro": "Finding a hilltop or a valley floor on a multivariable surface uses the same core idea as single-variable optimization — set the derivatives to zero — but with two variables, the resulting candidate points need a more careful test to tell peaks from valleys from saddle-shaped points that are neither.",
+     "sections": [
+      {
+       "heading": "Critical Points",
+       "body": [
+        "A **critical point** of f(x,y) is a point (a,b) where f_x(a,b) = 0 and f_y(a,b) = 0 simultaneously (or where one of the partials fails to exist). Local maxima and minima of a differentiable function can only occur at critical points, exactly as in single-variable calculus, but not every critical point is a max or min.",
+        "To find critical points, set both partial derivatives equal to zero and solve the resulting system of equations simultaneously — since both conditions must hold at once, this is a genuine system, not two independent single-variable problems."
+       ]
+      },
+      {
+       "heading": "The Second Derivative Test",
+       "body": [
+        "Define D = f_xx(a,b)·f_yy(a,b) − [f_xy(a,b)]² at a critical point (a,b). If D > 0 and f_xx(a,b) > 0, f has a local minimum there; if D > 0 and f_xx(a,b) < 0, f has a local maximum. If D < 0, (a,b) is a **saddle point** — neither a max nor a min, where the surface curves up in one direction and down in another. If D = 0, the test is inconclusive.",
+        "This test is the direct multivariable analogue of the single-variable second derivative test, but with the extra D quantity needed because curvature in two dimensions can differ across directions in ways a single number like f'' cannot capture."
+       ],
+       "example": {
+        "problem": "Find and classify the critical points of f(x,y) = x² + y² − 4x + 2y.",
+        "steps": [
+         "Compute the partials: f_x = 2x−4, f_y = 2y+2. Set both to zero: 2x−4=0 → x=2; 2y+2=0 → y=−1. Critical point: (2,−1).",
+         "Compute second partials: f_xx = 2, f_yy = 2, f_xy = 0.",
+         "Compute D = f_xx·f_yy − (f_xy)² = (2)(2) − 0² = 4.",
+         "Since D=4>0 and f_xx=2>0, the point (2,−1) is a local minimum."
+        ],
+        "answer": "f has a local minimum at (2, −1)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "critical point", "def": "A point (a,b) where f_x(a,b)=0 and f_y(a,b)=0 simultaneously, a candidate for a local extremum."},
+      {"term": "saddle point", "def": "A critical point where D<0 in the second derivative test — the surface rises in one direction and falls in another, neither a max nor min."},
+      {"term": "second derivative test (multivariable)", "def": "Uses D=f_xx·f_yy−(f_xy)² at a critical point to classify it as a local min (D>0, f_xx>0), local max (D>0, f_xx<0), or saddle (D<0)."}
+     ],
+     "practice": [
+      {"q": "At a critical point, if D = f_xx·f_yy − (f_xy)² is negative, the point is:", "choices": ["A saddle point", "A local minimum", "A local maximum", "Always the global minimum"], "answer": 0, "explain": "D<0 means the surface curves oppositely in different directions through that point — up in one, down in another — which is the definition of a saddle point."},
+      {"q": "If D > 0 and f_xx < 0 at a critical point, the point is:", "choices": ["A local maximum", "A local minimum", "A saddle point", "Not classifiable"], "answer": 0, "explain": "D>0 confirms it's a genuine extremum (not a saddle), and f_xx<0 means the surface curves downward, indicating a local maximum."},
+      {"q": "For f(x,y)=x²+y², the only critical point is (0,0). What type is it?", "choices": ["Local minimum", "Local maximum", "Saddle point", "Not a critical point"], "answer": 0, "explain": "f_xx=2, f_yy=2, f_xy=0, so D=4>0 and f_xx=2>0, confirming (0,0) is a local minimum — consistent with x²+y² being a bowl shape with its lowest point at the origin."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Multiple Integrals",
+   "summary": "Double and triple integrals over general regions, and the coordinate systems — polar, cylindrical, and spherical — that simplify them.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Double Integrals over Rectangles and General Regions",
+     "minutes": 20,
+     "intro": "A double integral extends the definite integral's area-under-a-curve idea into volume-under-a-surface: it sums up the value of a function over a two-dimensional region, and computing it comes down to doing two ordinary single-variable integrals, one right after the other.",
+     "sections": [
+      {
+       "heading": "Iterated Integrals over Rectangles",
+       "body": [
+        "For a rectangle R = [a,b]×[c,d], the double integral ∬_R f(x,y) dA can be computed as the **iterated integral** ∫[a,b]∫[c,d] f(x,y) dy dx: first integrate with respect to y (treating x as constant), producing a function of x alone, then integrate that result with respect to x. Fubini's Theorem guarantees you get the same answer integrating in either order (dy dx or dx dy) whenever f is continuous on R.",
+        "The inner integral is computed exactly like a partial-derivative calculation in reverse: treat the outer variable as a constant, apply the ordinary antiderivative rules to the inner variable, and evaluate at the inner integral's bounds before moving to the outer integral."
+       ],
+       "example": {
+        "problem": "Evaluate ∬_R (x+2y) dA where R = [0,2]×[0,3].",
+        "steps": [
+         "Set up the iterated integral: ∫[0,2]∫[0,3] (x+2y) dy dx.",
+         "Integrate the inner integral with respect to y, treating x as constant: ∫[0,3](x+2y) dy = [xy+y²] from 0 to 3 = (3x+9) − 0 = 3x+9.",
+         "Integrate the result with respect to x: ∫[0,2](3x+9) dx = [(3/2)x²+9x] from 0 to 2 = ((3/2)(4)+18) − 0 = 6+18.",
+         "Add: 6+18 = 24."
+        ],
+        "answer": "∬_R (x+2y) dA = 24."
+       }
+      },
+      {
+       "heading": "General (Non-Rectangular) Regions",
+       "body": [
+        "For a **type I region** (bounded left/right by vertical lines x=a, x=b, and below/above by curves y=g₁(x), y=g₂(x)), the double integral is ∫[a,b]∫[g₁(x),g₂(x)] f(x,y) dy dx — the y-bounds are now functions of x rather than constants. A **type II region** swaps the roles: x-bounds become functions of y, integrated as ∫[c,d]∫[h₁(y),h₂(y)] f(x,y) dx dy.",
+        "The key skill is reading a region's description or picture to determine the correct inner and outer bounds — sketching the region first, identifying which variable's bounds are constants and which are curves, is usually the fastest path to setting up the integral correctly."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "iterated integral", "def": "A double integral computed as two successive single-variable integrals, one held with the other variable as a constant."},
+      {"term": "Fubini's Theorem", "def": "For continuous f over a rectangle, ∬f dA can be computed in either integration order (dy dx or dx dy) with the same result."},
+      {"term": "type I region", "def": "A planar region with constant x-bounds and y-bounds given as functions g₁(x)≤y≤g₂(x)."}
+     ],
+     "practice": [
+      {"q": "For ∬_R xy dA where R=[0,1]×[0,2], the inner integral ∫[0,2] xy dy equals:", "choices": ["2x", "x", "4x", "2xy"], "answer": 0, "explain": "Treating x as constant: ∫[0,2] xy dy = x[y²/2] from 0 to 2 = x(4/2 − 0) = 2x."},
+      {"q": "A type I region has bounds:", "choices": ["Constant x-bounds, with y between two functions of x", "Constant y-bounds, with x between two functions of y", "Both bounds constant", "Neither bound can be a function"], "answer": 0, "explain": "Type I regions are described by a ≤ x ≤ b (constants) with g₁(x) ≤ y ≤ g₂(x) as the inner, x-dependent bounds."},
+      {"q": "Fubini's Theorem allows you to:", "choices": ["Swap the order of integration for a continuous function over a rectangle without changing the result", "Avoid computing one of the two integrals", "Convert any double integral into a single integral", "Only applies to polar coordinates"], "answer": 0, "explain": "Fubini's Theorem guarantees that integrating dy dx or dx dy gives the same numeric value for a continuous integrand over a rectangular region."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Double Integrals in Polar Coordinates",
+     "minutes": 17,
+     "intro": "Circular and radially symmetric regions become far easier to integrate over once you switch from rectangular to polar coordinates, but the conversion requires one crucial adjustment to dA that catches almost everyone the first time: it isn't simply dr dθ.",
+     "sections": [
+      {
+       "heading": "Converting dA to Polar Form",
+       "body": [
+        "Using x = r cos(θ), y = r sin(θ), the area element in polar coordinates is dA = r dr dθ, not dr dθ — the extra factor of r accounts for the fact that a thin polar 'rectangle' (bounded by two radii and two circles) has area approximately r·Δr·Δθ, growing with distance from the origin. Forgetting this factor of r is the single most common error in polar double integrals.",
+        "A region described in polar coordinates as α ≤ θ ≤ β, h₁(θ) ≤ r ≤ h₂(θ) converts the double integral to ∬f(x,y) dA = ∫[α,β]∫[h₁(θ),h₂(θ)] f(r cosθ, r sinθ)·r dr dθ, integrating r first (inner) and θ second (outer) in the typical setup."
+       ],
+       "example": {
+        "problem": "Find the area of the region inside the circle r = 2 using a polar double integral.",
+        "steps": [
+         "Set up the integral for area: A = ∫[0,2π]∫[0,2] r dr dθ (the integrand is 1, since we just want area, and r comes from dA).",
+         "Integrate the inner integral: ∫[0,2] r dr = [r²/2] from 0 to 2 = 4/2 = 2.",
+         "Integrate the outer integral: ∫[0,2π] 2 dθ = 2(2π) = 4π.",
+         "The area is 4π, matching the known formula πr² = π(2²) = 4π."
+        ],
+        "answer": "The area is 4π square units."
+       }
+      },
+      {
+       "heading": "When to Switch to Polar",
+       "body": [
+        "Polar coordinates are the right choice whenever the region is a circle, a sector, an annulus (ring), or bounded by curves naturally expressed as r=f(θ), or whenever the integrand itself contains x²+y² (which becomes simply r² in polar form). Converting a rectangular double integral with these features to polar form usually turns an intractable integral into a manageable one.",
+        "The conversion process has three steps: rewrite the integrand using x=r cosθ, y=r sinθ (simplifying x²+y² to r²); rewrite the region's boundary curves in terms of r and θ to get the new bounds; and multiply the integrand by the extra factor of r from dA=r dr dθ."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "polar area element", "def": "dA = r dr dθ, the area element used when converting a double integral to polar coordinates."},
+      {"term": "annulus", "def": "A ring-shaped region between two concentric circles, naturally described with polar bounds like a ≤ r ≤ b."}
+     ],
+     "practice": [
+      {"q": "The correct polar area element is:", "choices": ["dA = r dr dθ", "dA = dr dθ", "dA = r² dr dθ", "dA = dθ dr"], "answer": 0, "explain": "The extra factor of r accounts for the fact that polar 'grid rectangles' grow larger with distance from the origin; omitting it is the most common polar-integral error."},
+      {"q": "In polar coordinates, x²+y² converts to:", "choices": ["r²", "r", "θ²", "2r"], "answer": 0, "explain": "Since x=r cosθ and y=r sinθ, x²+y² = r²cos²θ+r²sin²θ = r²(cos²θ+sin²θ) = r²."},
+      {"q": "Polar coordinates are especially useful for regions that are:", "choices": ["Circular, sector-shaped, or annular", "Perfect squares", "Only triangular", "Never useful for double integrals"], "answer": 0, "explain": "Circles, sectors, and annuli have natural descriptions in terms of r and θ, which is exactly what makes the polar conversion pay off in simpler bounds and integrands."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Triple Integrals and Cylindrical/Spherical Coordinates",
+     "minutes": 20,
+     "intro": "Triple integrals extend double integrals one dimension further, summing a function's values throughout a three-dimensional solid, and for solids with cylindrical or spherical symmetry, switching coordinate systems again does the heavy lifting the way polar coordinates did for circular regions in the plane.",
+     "sections": [
+      {
+       "heading": "Triple Integrals in Rectangular Coordinates",
+       "body": [
+        "A triple integral ∭_E f(x,y,z) dV over a solid region E is computed as an iterated integral with three nested single-variable integrations, in whichever order matches how the region's bounds are described (six possible orderings exist, analogous to type I/II regions in two dimensions). When f(x,y,z)=1, the triple integral computes the volume of E directly.",
+        "Setting up the bounds requires visualizing E in three dimensions: identify the outermost pair of constant bounds (say for z), then the bounds for the middle variable as functions of the outer variable, then the innermost variable's bounds as functions of both outer variables — the same nesting logic as double integrals, one level deeper."
+       ]
+      },
+      {
+       "heading": "Cylindrical and Spherical Coordinates",
+       "body": [
+        "**Cylindrical coordinates** (r, θ, z) use r and θ exactly as in polar coordinates for the x,y-plane, keeping z unchanged; the volume element is dV = r dr dθ dz. They are the natural choice for solids with a circular cross-section, like cylinders, cones, and paraboloids of revolution around the z-axis.",
+        "**Spherical coordinates** (ρ, θ, φ) use ρ as distance from the origin, θ as the same angle as in cylindrical/polar, and φ as the angle down from the positive z-axis; the conversions are x=ρ sinφ cosθ, y=ρ sinφ sinθ, z=ρ cosφ, and the volume element is dV = ρ² sinφ dρ dθ dφ. Spherical coordinates are the natural choice for solids with spherical symmetry, like balls and spherical shells."
+       ],
+       "example": {
+        "problem": "Find the volume of a solid sphere of radius 3 using a spherical triple integral.",
+        "steps": [
+         "Set up the bounds: 0 ≤ ρ ≤ 3, 0 ≤ θ ≤ 2π, 0 ≤ φ ≤ π (covering the full sphere), integrating the volume element ρ² sinφ.",
+         "V = ∫[0,2π]∫[0,π]∫[0,3] ρ² sinφ dρ dφ dθ. Integrate the inner integral over ρ: ∫[0,3] ρ² dρ = [ρ³/3] from 0 to 3 = 27/3 = 9.",
+         "Integrate over φ: ∫[0,π] 9 sinφ dφ = 9[−cosφ] from 0 to π = 9(−(−1)−(−1)) = 9(2) = 18.",
+         "Integrate over θ: ∫[0,2π] 18 dθ = 18(2π) = 36π."
+        ],
+        "answer": "The volume is 36π cubic units, matching the known formula (4/3)πr³ = (4/3)π(27) = 36π."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "cylindrical coordinates", "def": "(r,θ,z), extending polar coordinates by keeping the z-axis unchanged; volume element dV = r dr dθ dz."},
+      {"term": "spherical coordinates", "def": "(ρ,θ,φ), using distance from the origin ρ and angle down from the z-axis φ; volume element dV = ρ² sinφ dρ dθ dφ."},
+      {"term": "triple integral", "def": "∭_E f dV, a three-dimensional analogue of the double integral, summing f over a solid region E."}
+     ],
+     "practice": [
+      {"q": "The volume element in cylindrical coordinates is:", "choices": ["r dr dθ dz", "dr dθ dz", "r² dr dθ dz", "ρ² sinφ dρ dθ dφ"], "answer": 0, "explain": "Cylindrical coordinates keep z unchanged and use the polar area element r dr dθ for the xy-plane cross-section, giving dV = r dr dθ dz."},
+      {"q": "The volume element in spherical coordinates is:", "choices": ["ρ² sinφ dρ dθ dφ", "r dr dθ dz", "ρ dρ dθ dφ", "sinφ dρ dθ dφ"], "answer": 0, "explain": "Spherical coordinates require the Jacobian factor ρ² sinφ, which accounts for how volume scales both with distance from the origin and with the angle φ from the z-axis."},
+      {"q": "Spherical coordinates are the natural choice for a solid that is:", "choices": ["A ball or spherical shell", "A cylinder", "A rectangular box", "A cone aligned with the x-axis"], "answer": 0, "explain": "Spherical coordinates parametrize distance from the origin directly, making them ideal for regions with symmetry about a single point, such as balls and spherical shells."}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Vector Calculus",
+   "summary": "Vector fields, line integrals, and the fundamental theorems relating integrals over regions to integrals over their boundaries.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Vector Fields and Line Integrals",
+     "minutes": 19,
+     "intro": "A vector field assigns a vector, like a wind velocity or a gravitational pull, to every point in space, and a line integral measures the total effect of that field along a specific path — the mathematical description of the work done moving through a force field, or the flow measured along a curve.",
+     "sections": [
+      {
+       "heading": "Vector Fields",
+       "body": [
+        "A vector field in two dimensions is F(x,y) = ⟨P(x,y), Q(x,y)⟩, assigning a vector to every point in the plane (analogously, F(x,y,z)=⟨P,Q,R⟩ in three dimensions). A vector field is called **conservative** if it equals the gradient of some scalar function f, i.e. F=∇f; that function f is called the field's **potential function**.",
+        "Conservative fields have a convenient test in two dimensions: F=⟨P,Q⟩ is conservative (on a simply connected region) if and only if ∂P/∂y = ∂Q/∂x — this mixed-partial equality check is usually far faster than trying to guess a potential function directly."
+       ]
+      },
+      {
+       "heading": "Line Integrals of Scalar and Vector Fields",
+       "body": [
+        "The line integral of a scalar function f along a curve C parametrized by r(t) for t in [a,b] is ∫_C f ds = ∫[a,b] f(r(t))·|r'(t)| dt, summing the function's values weighted by arc length along the path. This computes quantities like the total mass of a wire with variable density f.",
+        "The line integral of a vector field F along the same curve is ∫_C F·dr = ∫[a,b] F(r(t))·r'(t) dt, computing the total work done by F moving an object along C. When F is conservative with potential f, the Fundamental Theorem of Line Integrals says ∫_C F·dr = f(r(b)) − f(r(a)) — the integral depends only on the endpoints, not on the specific path taken."
+       ],
+       "example": {
+        "problem": "Evaluate ∫_C F·dr where F=⟨y,x⟩ and C is parametrized by r(t)=⟨t,t²⟩ for t from 0 to 1.",
+        "steps": [
+         "Check conservativeness: P=y, Q=x, ∂P/∂y=1, ∂Q/∂x=1 — equal, so F is conservative with potential f=xy (since ∇(xy)=⟨y,x⟩).",
+         "Using the Fundamental Theorem of Line Integrals: ∫_C F·dr = f(r(1)) − f(r(0)).",
+         "Compute r(1)=⟨1,1⟩ and r(0)=⟨0,0⟩; f(1,1)=1·1=1, f(0,0)=0·0=0.",
+         "So the integral equals 1 − 0 = 1, regardless of the specific path shape, since F is conservative."
+        ],
+        "answer": "∫_C F·dr = 1."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "vector field", "def": "F(x,y)=⟨P,Q⟩ (or ⟨P,Q,R⟩ in 3D), assigning a vector to every point in a region."},
+      {"term": "conservative vector field", "def": "A vector field F equal to ∇f for some scalar potential function f; tested in 2D by ∂P/∂y=∂Q/∂x."},
+      {"term": "line integral", "def": "∫_C F·dr, the accumulated effect of a vector field along a curve C, computing work done along the path."}
+     ],
+     "practice": [
+      {"q": "F=⟨2x, 3y⟩ is conservative because:", "choices": ["∂P/∂y = 0 = ∂Q/∂x", "It has only two components", "It is defined everywhere", "It cannot be tested without a potential function"], "answer": 0, "explain": "With P=2x, Q=3y: ∂P/∂y=0 and ∂Q/∂x=0, which are equal, satisfying the conservative field test."},
+      {"q": "If F is conservative with potential f, the Fundamental Theorem of Line Integrals says ∫_C F·dr equals:", "choices": ["f(endpoint) − f(start point), regardless of path", "The arc length of C", "0 always", "f(start point) − f(endpoint)"], "answer": 0, "explain": "For conservative fields, the line integral collapses to the potential function evaluated at the endpoints, exactly like the Fundamental Theorem of Calculus for ordinary integrals."},
+      {"q": "The line integral ∫_C f ds (scalar field) is used to compute:", "choices": ["The total mass of a wire with density f along curve C", "The work done by a force", "The area under a curve", "The volume of a solid"], "answer": 0, "explain": "∫_C f ds sums scalar values weighted by arc length, which models physical quantities like total mass when f represents linear density."}
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Green's Theorem",
+     "minutes": 18,
+     "intro": "Green's Theorem is the first of three deep results connecting an integral around the boundary of a region to an integral over the region's interior — trading a line integral around a closed curve for a (usually easier) double integral inside it, or vice versa.",
+     "sections": [
+      {
+       "heading": "Statement of Green's Theorem",
+       "body": [
+        "For a positively oriented (counterclockwise), simple closed curve C bounding a region D, and F=⟨P,Q⟩ with continuous partial derivatives on D, Green's Theorem states ∮_C P dx + Q dy = ∬_D (∂Q/∂x − ∂P/∂y) dA. It converts a line integral around the boundary into a double integral over the enclosed region.",
+        "This is especially powerful when the double integral on the right is far simpler to compute than the line integral on the left would be directly — for instance, when the boundary curve C is piecewise and awkward to parametrize, but the enclosed region D has a simple description."
+       ],
+       "example": {
+        "problem": "Use Green's Theorem to evaluate ∮_C (x² dx + xy dy), where C is the boundary of the square with vertices (0,0), (1,0), (1,1), (0,1), traversed counterclockwise.",
+        "steps": [
+         "Identify P=x², Q=xy. Compute ∂Q/∂x = y and ∂P/∂y = 0.",
+         "Apply Green's Theorem: ∮_C P dx+Q dy = ∬_D (y−0) dA = ∬_D y dA over the unit square.",
+         "Set up the double integral: ∫[0,1]∫[0,1] y dx dy. Inner integral over x: ∫[0,1] y dx = y (since y doesn't depend on x, integrating dx from 0 to 1 just multiplies by 1).",
+         "Outer integral: ∫[0,1] y dy = [y²/2] from 0 to 1 = 1/2."
+        ],
+        "answer": "∮_C (x² dx + xy dy) = 1/2."
+       }
+      },
+      {
+       "heading": "Using Green's Theorem for Area",
+       "body": [
+        "Setting P=0, Q=x in Green's Theorem gives ∮_C x dy = ∬_D dA, the area of D; similarly setting P=−y, Q=0 gives ∮_C −y dx = ∬_D dA. A commonly used symmetric version is Area = (1/2)∮_C (x dy − y dx), which averages both approaches and often produces the simplest computation.",
+        "This turns finding the area of a complicated region into evaluating a line integral around its boundary — useful specifically when the boundary curve is given parametrically (such as an ellipse or an unusual closed curve) but the region itself has no simple direct area formula."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {"term": "Green's Theorem", "def": "∮_C P dx + Q dy = ∬_D (∂Q/∂x − ∂P/∂y) dA, relating a line integral around a closed boundary to a double integral over the enclosed region."},
+      {"term": "positively oriented curve", "def": "A simple closed curve traversed counterclockwise, so the enclosed region stays on the left as you walk along it — the orientation Green's Theorem requires."}
+     ],
+     "practice": [
+      {"q": "Green's Theorem converts a line integral around a closed curve into:", "choices": ["A double integral over the enclosed region", "A triple integral", "Another line integral", "A single-variable integral only"], "answer": 0, "explain": "Green's Theorem's entire purpose is trading ∮_C P dx+Q dy for ∬_D(∂Q/∂x−∂P/∂y) dA — a double integral over the region D bounded by C."},
+      {"q": "For F=⟨P,Q⟩=⟨y,0⟩, Green's Theorem gives ∮_C y dx equal to:", "choices": ["−∬_D dA (negative of the area)", "∬_D dA (the area)", "0 always", "∬_D y dA"], "answer": 0, "explain": "∂Q/∂x−∂P/∂y = 0−1 = −1, so ∮_C y dx = ∬_D(−1)dA = −(area of D)."},
+      {"q": "Green's Theorem requires the curve C to be:", "choices": ["A positively oriented (counterclockwise), simple closed curve", "An open curve with distinct endpoints", "Traversed clockwise only", "A straight line"], "answer": 0, "explain": "Green's Theorem specifically applies to simple (non-self-intersecting) closed curves oriented counterclockwise; using the opposite orientation flips the sign of the result."}
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Stokes' Theorem and the Divergence Theorem",
+     "minutes": 20,
+     "intro": "Green's Theorem relates a boundary integral to a region integral in the plane; Stokes' and the Divergence Theorem extend that same relationship into three dimensions, one for surfaces bounded by curves and one for solids bounded by surfaces, closing out the vector calculus toolkit.",
+     "sections": [
+      {
+       "heading": "Stokes' Theorem",
+       "body": [
+        "**Stokes' Theorem** generalizes Green's Theorem to a surface S in three dimensions bounded by a closed curve C: ∮_C F·dr = ∬_S (curl F)·dS, where curl F = ∇×F measures the vector field's local rotation. It converts a line integral around the boundary curve of a surface into a surface integral of the curl over that surface.",
+        "The **curl** of F=⟨P,Q,R⟩ is curl F = ∇×F = ⟨R_y−Q_z, P_z−R_x, Q_x−P_y⟩, computed with the same determinant pattern as the cross product but with partial derivative operators in place of vector components. A field with curl F = 0 everywhere is called irrotational, and Green's Theorem is exactly the special case of Stokes' Theorem when S is flat and lies in the xy-plane."
+       ]
+      },
+      {
+       "heading": "The Divergence Theorem",
+       "body": [
+        "The **Divergence Theorem** relates a closed surface S bounding a solid region E to the field's behavior throughout that solid: ∬_S F·dS = ∭_E (div F) dV, where div F = ∇·F = P_x+Q_y+R_z measures how much the field is expanding or contracting (its source or sink strength) at each point.",
+        "This theorem is invaluable when a surface integral over a closed surface would be tedious to compute piece by piece (like a cube's six faces or a complicated closed surface), but the triple integral of the divergence over the enclosed solid is straightforward — trading a hard surface integral for an easier volume integral, exactly as Green's Theorem trades a line integral for a double integral."
+       ],
+       "example": {
+        "problem": "Use the Divergence Theorem to find the flux of F=⟨x,y,z⟩ out of the sphere x²+y²+z²=9.",
+        "steps": [
+         "Compute the divergence: div F = ∂x/∂x + ∂y/∂y + ∂z/∂z = 1+1+1 = 3.",
+         "Apply the Divergence Theorem: flux = ∭_E div F dV = ∭_E 3 dV = 3·Volume(E).",
+         "The enclosed solid is a ball of radius 3, with volume (4/3)π(3³) = (4/3)π(27) = 36π.",
+         "Multiply: flux = 3 × 36π = 108π."
+        ],
+        "answer": "The flux out of the sphere is 108π."
+       }
+      }
+     ],
+     "keyTerms": [
+      {"term": "curl", "def": "curl F = ∇×F, a vector measuring the local rotation of a vector field; used in Stokes' Theorem."},
+      {"term": "divergence", "def": "div F = ∇·F = P_x+Q_y+R_z, a scalar measuring how much a field expands or contracts at a point; used in the Divergence Theorem."},
+      {"term": "Stokes' Theorem", "def": "∮_C F·dr = ∬_S (curl F)·dS, relating a line integral around a boundary curve to a surface integral of curl over the bounded surface."},
+      {"term": "Divergence Theorem", "def": "∬_S F·dS = ∭_E (div F) dV, relating a closed surface's flux integral to the triple integral of divergence over the enclosed solid."}
+     ],
+     "practice": [
+      {"q": "Stokes' Theorem relates a line integral around a boundary curve C to:", "choices": ["A surface integral of curl F over a surface bounded by C", "A triple integral over a solid", "Another line integral", "The divergence of F"], "answer": 0, "explain": "Stokes' Theorem states ∮_C F·dr = ∬_S(curl F)·dS, directly connecting the boundary line integral to a surface integral of curl."},
+      {"q": "For F=⟨2x, 3y, 4z⟩, the divergence is:", "choices": ["9", "2+3+4 written as a vector", "0", "24xyz"], "answer": 0, "explain": "div F = ∂(2x)/∂x + ∂(3y)/∂y + ∂(4z)/∂z = 2+3+4 = 9."},
+      {"q": "The Divergence Theorem is most useful when:", "choices": ["A closed surface integral is hard to compute directly but the enclosed volume integral is simple", "The field has zero curl", "The surface is not closed", "Only for two-dimensional problems"], "answer": 0, "explain": "The Divergence Theorem trades a potentially tedious piecewise surface integral (like summing over a solid's several faces) for a single triple integral of divergence over the enclosed solid, which is often much simpler."}
+     ]
+    }
+   ]
+  }
+ ]
+}

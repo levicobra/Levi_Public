@@ -1,0 +1,1481 @@
+{
+ "id": "university-physics-1",
+ "title": "University Physics I",
+ "domain": "physical",
+ "level": "College",
+ "description": "Calculus-based mechanics for STEM majors: vectors, motion, Newton's laws, energy, momentum, rotation, gravitation, and the beginnings of oscillations and waves. Each lesson pairs the calculus definitions of motion with fully worked numerical problems.",
+ "outcomes": [
+  "Use vectors and calculus (derivatives and integrals) to describe position, velocity, and acceleration.",
+  "Apply Newton's laws to solve problems with friction, tension, inclines, and circular motion.",
+  "Use the work-energy theorem and conservation of energy and momentum, including integrals of variable forces.",
+  "Analyze rotational motion with torque, moment of inertia, and angular momentum conservation.",
+  "Apply static equilibrium, Newton's law of gravitation, and fluid statics/dynamics to real systems.",
+  "Model simple harmonic motion and mechanical waves, including the Doppler effect."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Vectors and Kinematics",
+   "summary": "The mathematical language of motion: vectors, derivatives, and integrals applied to position, velocity, and acceleration.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Vectors and Coordinate Systems",
+     "minutes": 16,
+     "intro": "Physics happens in a world with direction as well as size, and vectors are the tool that keeps both pieces of information straight at once. Before you can describe motion in more than one dimension, you need to be fluent in adding, subtracting, and decomposing vectors.",
+     "sections": [
+      {
+       "heading": "Components and Unit Vectors",
+       "body": [
+        "Any vector in the plane can be written in terms of perpendicular components, **A** = A~x~ **î** + A~y~ **ĵ**, where **î** and **ĵ** are unit vectors of length 1 along the x- and y-axes. The magnitude is |**A**| = √(A~x~² + A~y~²), and the direction is θ = tan⁻¹(A~y~/A~x~), measured from the positive x-axis.",
+        "Breaking a vector into components turns two-dimensional problems into two independent one-dimensional problems: you can add, subtract, or analyze forces along x and y completely separately, then recombine the results at the end."
+       ]
+      },
+      {
+       "heading": "Adding Vectors by Components",
+       "body": [
+        "To add vectors, add their components separately: if **C** = **A** + **B**, then C~x~ = A~x~ + B~x~ and C~y~ = A~y~ + B~y~. This works no matter how many vectors are involved, which makes it far more reliable than trying to add vectors graphically, tip-to-tail, for anything beyond a rough sketch.",
+        "Scalar multiplication scales both components equally: 2**A** has components (2A~x~, 2A~y~) and points in the same direction as **A**, just twice as long. This is why multiplying a velocity vector by a negative scalar reverses its direction entirely, not just its magnitude."
+       ],
+       "example": {
+        "problem": "Vector **A** = (3.0, 4.0) m and vector **B** = (−1.0, 2.0) m. Find the magnitude and direction of **A** + **B**.",
+        "steps": [
+         "Add components separately: C~x~ = 3.0 + (−1.0) = 2.0 m, C~y~ = 4.0 + 2.0 = 6.0 m.",
+         "Find magnitude: |**C**| = √(2.0² + 6.0²) = √(4.0 + 36) = √40 ≈ 6.32 m.",
+         "Find direction: θ = tan⁻¹(6.0/2.0) = tan⁻¹(3.0) ≈ 71.6° above the x-axis."
+        ],
+        "answer": "|**C**| ≈ 6.3 m, directed about 71.6° above the x-axis."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "vector",
+       "def": "A quantity with both magnitude and direction, such as displacement, velocity, or force."
+      },
+      {
+       "term": "unit vector",
+       "def": "A vector of length 1 used to indicate direction, such as **î** and **ĵ** along the x- and y-axes."
+      },
+      {
+       "term": "component",
+       "def": "The projection of a vector onto a coordinate axis, such as A~x~ or A~y~."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Vector **A** has components (6.0, 0) and vector **B** has components (0, 8.0). What is the magnitude of **A** + **B**?",
+       "choices": [
+        "10.0",
+        "14.0",
+        "48.0",
+        "7.0"
+       ],
+       "answer": 0,
+       "explain": "Sum components: (6.0, 8.0). Magnitude = √(6.0² + 8.0²) = √(36 + 64) = √100 = 10.0."
+      },
+      {
+       "q": "A vector has components A~x~ = 5.0 and A~y~ = 5.0. What angle does it make with the positive x-axis?",
+       "choices": [
+        "0°",
+        "30°",
+        "45°",
+        "90°"
+       ],
+       "answer": 2,
+       "explain": "θ = tan⁻¹(A~y~/A~x~) = tan⁻¹(5.0/5.0) = tan⁻¹(1) = 45°."
+      },
+      {
+       "q": "Why is breaking a vector into x- and y-components useful for solving physics problems?",
+       "choices": [
+        "It changes the vector's magnitude to a simpler number",
+        "It turns a two-dimensional problem into two independent one-dimensional problems",
+        "Components only work for velocity, not force",
+        "It eliminates the need for units"
+       ],
+       "answer": 1,
+       "explain": "Components along perpendicular axes do not affect each other, so each direction can be analyzed with simple one-dimensional equations, then recombined at the end."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Motion Along a Straight Line",
+     "minutes": 18,
+     "intro": "In calculus-based mechanics, velocity and acceleration are not just ratios of small changes — they are exact derivatives of position with respect to time. That precision lets you handle motion where acceleration itself changes, not just the constant-acceleration cases from introductory courses.",
+     "sections": [
+      {
+       "heading": "Velocity and Acceleration as Derivatives",
+       "body": [
+        "Instantaneous velocity is the derivative of position with respect to time: v(t) = dx/dt. Instantaneous acceleration is the derivative of velocity with respect to time: a(t) = dv/dt = d²x/dt². These definitions hold whether or not acceleration is constant, which is the whole advantage of the calculus approach.",
+        "Graphically, velocity is the slope of the position-versus-time curve at each instant, and acceleration is the slope of the velocity-versus-time curve. A curve that is bending, not just tilted, tells you acceleration is nonzero at that point."
+       ]
+      },
+      {
+       "heading": "Recovering Motion by Integration",
+       "body": [
+        "Integration reverses differentiation: given acceleration as a function of time, velocity is v(t) = v~0~ + ∫a(t)dt, and given velocity, position is x(t) = x~0~ + ∫v(t)dt. For constant acceleration, these integrals reduce exactly to the familiar equations v = v~0~ + at and x = x~0~ + v~0~t + ½at².",
+        "The real power shows up when acceleration is not constant — for example, a rocket burning fuel and losing mass, or a car with a time-varying braking force. The calculus framework handles these cases with the same two integrals, no new formulas required."
+       ],
+       "example": {
+        "problem": "An object starts at x~0~ = 0 with initial velocity v~0~ = 2.0 m/s and constant acceleration a = 4.0 m/s². Find its velocity and position at t = 3.0 s.",
+        "steps": [
+         "Integrate acceleration to get velocity: v(t) = v~0~ + at = 2.0 + 4.0t.",
+         "At t = 3.0 s: v = 2.0 + 4.0(3.0) = 2.0 + 12 = 14 m/s.",
+         "Integrate velocity to get position: x(t) = x~0~ + v~0~t + ½at² = 0 + 2.0t + 2.0t².",
+         "At t = 3.0 s: x = 2.0(3.0) + 2.0(3.0)² = 6.0 + 18 = 24 m."
+        ],
+        "answer": "v = 14 m/s and x = 24 m at t = 3.0 s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "derivative",
+       "def": "The instantaneous rate of change of one quantity with respect to another, such as v = dx/dt."
+      },
+      {
+       "term": "integral",
+       "def": "The accumulation of a rate over time, used to recover velocity from acceleration or position from velocity."
+      },
+      {
+       "term": "instantaneous acceleration",
+       "def": "a(t) = dv/dt, the rate of change of velocity at a single moment."
+      }
+     ],
+     "practice": [
+      {
+       "q": "The position of an object is x(t) = 3t² (in meters, t in seconds). What is its velocity at t = 2.0 s?",
+       "choices": [
+        "6.0 m/s",
+        "12 m/s",
+        "3.0 m/s",
+        "18 m/s"
+       ],
+       "answer": 1,
+       "explain": "v(t) = dx/dt = 6t. At t = 2.0 s, v = 6(2.0) = 12 m/s."
+      },
+      {
+       "q": "On a position-versus-time graph, what does a straight, tilted line (constant slope) indicate about the motion?",
+       "choices": [
+        "Constant nonzero acceleration",
+        "Constant velocity, zero acceleration",
+        "The object is at rest",
+        "The object is changing direction"
+       ],
+       "answer": 1,
+       "explain": "A constant slope on a position-time graph means velocity is not changing, so acceleration is zero — the object moves at constant velocity."
+      },
+      {
+       "q": "An object has constant acceleration a = 2.0 m/s² and starts from rest at x~0~ = 0. What is its position at t = 4.0 s?",
+       "choices": [
+        "8.0 m",
+        "16 m",
+        "4.0 m",
+        "32 m"
+       ],
+       "answer": 1,
+       "explain": "x(t) = x~0~ + v~0~t + ½at² = 0 + 0 + ½(2.0)(4.0)² = ½(2.0)(16) = 16 m."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Motion in Two and Three Dimensions",
+     "minutes": 18,
+     "intro": "Real motion rarely stays on a single line. Position, velocity, and acceleration all become vectors, but the calculus stays exactly the same: differentiate component by component, and projectile motion falls out as a natural special case.",
+     "sections": [
+      {
+       "heading": "Vector Kinematics",
+       "body": [
+        "In two or three dimensions, position is a vector **r**(t), and velocity and acceleration are its derivatives taken component by component: **v**(t) = d**r**/dt and **a**(t) = d**v**/dt. Each component (x, y, and z) can be analyzed completely independently, exactly as in one dimension.",
+        "This independence is why projectile motion is tractable at all: the horizontal component has zero acceleration (constant v~x~) while the vertical component has constant acceleration −g, and neither component's equations reference the other."
+       ]
+      },
+      {
+       "heading": "Projectile Motion Revisited",
+       "body": [
+        "For a projectile launched at speed v~0~ and angle θ above the horizontal, the initial components are v~0x~ = v~0~ cos θ and v~0y~ = v~0~ sin θ. Horizontal position is x(t) = v~0x~t; vertical position is y(t) = v~0y~t − ½gt². Setting y = 0 and solving for t gives the total flight time (for launch and landing at the same height).",
+        "The range formula R = v~0~² sin(2θ)/g follows directly from combining these two equations, and it shows that range is maximized at θ = 45°, since sin(2θ) peaks at 2θ = 90°."
+       ],
+       "example": {
+        "problem": "A projectile is launched at 20 m/s at an angle of 40° above the horizontal from ground level. Find its range on level ground.",
+        "steps": [
+         "Find velocity components: v~0x~ = 20 cos 40° ≈ 15.3 m/s, v~0y~ = 20 sin 40° ≈ 12.9 m/s.",
+         "Find total flight time: since the projectile returns to launch height, t~total~ = 2v~0y~/g = 2(12.9)/9.8 ≈ 2.62 s.",
+         "Find range: R = v~0x~ × t~total~ = 15.3 × 2.62 ≈ 40 m.",
+         "Check with the range formula: R = v~0~² sin(2θ)/g = (400)(sin 80°)/9.8 ≈ 400(0.985)/9.8 ≈ 40.2 m."
+        ],
+        "answer": "About 40 m."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "position vector",
+       "def": "**r**(t), the vector locating an object relative to an origin, as a function of time."
+      },
+      {
+       "term": "range",
+       "def": "The horizontal distance a projectile travels before returning to its launch height."
+      },
+      {
+       "term": "component independence",
+       "def": "The principle that perpendicular components of motion (such as horizontal and vertical) evolve independently under gravity alone."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A projectile's horizontal velocity component is constant throughout its flight (no air resistance). Why?",
+       "choices": [
+        "Gravity has no horizontal component, so horizontal acceleration is zero",
+        "Horizontal velocity always equals vertical velocity",
+        "The projectile is not accelerating at all",
+        "Air resistance keeps horizontal velocity constant"
+       ],
+       "answer": 0,
+       "explain": "Gravity acts only vertically (downward), so there is no horizontal force or acceleration, and horizontal velocity remains constant throughout the flight."
+      },
+      {
+       "q": "At what launch angle (ignoring air resistance) is the range of a projectile maximized, for a fixed launch speed?",
+       "choices": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+       ],
+       "answer": 1,
+       "explain": "Range R = v~0~² sin(2θ)/g is maximized when sin(2θ) = 1, which occurs at 2θ = 90°, so θ = 45°."
+      },
+      {
+       "q": "A ball is launched at 15 m/s at 30° above horizontal. What is its initial vertical velocity component?",
+       "choices": [
+        "13.0 m/s",
+        "7.5 m/s",
+        "15 m/s",
+        "3.75 m/s"
+       ],
+       "answer": 1,
+       "explain": "v~0y~ = v~0~ sin θ = 15 × sin 30° = 15 × 0.5 = 7.5 m/s."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Newton's Laws and Applications",
+   "summary": "The full framework of Newtonian dynamics, from the general force-momentum relationship to friction, tension, and circular motion.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Newton's Laws in General Form",
+     "minutes": 16,
+     "intro": "Newton's second law is usually written as F = ma, but its true, more general form is written in terms of momentum. That generality matters the moment mass is not constant, such as a rocket burning fuel or a raindrop growing as it falls.",
+     "sections": [
+      {
+       "heading": "Force as the Rate of Change of Momentum",
+       "body": [
+        "Newton's second law in its most general form is **F**~net~ = d**p**/dt, where **p** = m**v** is momentum. When mass is constant, this reduces to the familiar **F**~net~ = m**a**, since d(m**v**)/dt = m(d**v**/dt) = m**a**.",
+        "This momentum form is essential whenever mass changes with time, such as a rocket expelling propellant. It also makes Newton's third law easy to state precisely: the forces two objects exert on each other are equal in magnitude and opposite in direction, always acting on different objects."
+       ],
+       "example": {
+        "problem": "A 5.0 kg object's momentum increases from 10 kg·m/s to 30 kg·m/s over a 2.0 s interval. Find the average net force.",
+        "steps": [
+         "Apply F~avg~ = Δp/Δt.",
+         "Δp = 30 − 10 = 20 kg·m/s.",
+         "F~avg~ = 20/2.0 = 10 N."
+        ],
+        "answer": "10 N."
+       }
+      },
+      {
+       "heading": "Free-Body Diagrams",
+       "body": [
+        "A **free-body diagram** isolates one object and draws every force acting on it as an arrow, ignoring the forces that object exerts on anything else. Building one correctly, before writing any equations, is the single habit that most reliably prevents sign errors and missed forces.",
+        "Once forces are identified, choose a coordinate system aligned with the motion (often along and perpendicular to an incline or circular path), resolve each force into components along those axes, and apply ΣF~x~ = ma~x~ and ΣF~y~ = ma~y~ separately."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "momentum",
+       "def": "p = mv, and more generally, Newton's second law states F~net~ = dp/dt."
+      },
+      {
+       "term": "free-body diagram",
+       "def": "A diagram showing all forces acting on a single isolated object."
+      },
+      {
+       "term": "normal force",
+       "def": "The contact force a surface exerts perpendicular to itself, preventing objects from passing through it."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is F = dp/dt considered more general than F = ma?",
+       "choices": [
+        "It only applies to rotational motion",
+        "It correctly handles situations where mass itself changes with time",
+        "It is only valid at relativistic speeds",
+        "It replaces the need for free-body diagrams"
+       ],
+       "answer": 1,
+       "explain": "F = ma assumes constant mass. F = dp/dt = d(mv)/dt properly accounts for cases like rockets, where mass changes as fuel burns, and reduces to F = ma only when mass is constant."
+      },
+      {
+       "q": "A 2.0 kg object experiences a net force that changes its momentum from 4.0 kg·m/s to 14 kg·m/s in 5.0 s. What is the average net force?",
+       "choices": [
+        "2.0 N",
+        "10 N",
+        "0.5 N",
+        "18 N"
+       ],
+       "answer": 0,
+       "explain": "F~avg~ = Δp/Δt = (14 − 4.0)/5.0 = 10/5.0 = 2.0 N."
+      },
+      {
+       "q": "What is the main purpose of drawing a free-body diagram before solving a dynamics problem?",
+       "choices": [
+        "To calculate the object's mass",
+        "To isolate one object and identify every force acting on it, reducing sign errors",
+        "To find the object's velocity directly",
+        "It is only useful for circular motion problems"
+       ],
+       "answer": 1,
+       "explain": "A free-body diagram forces you to identify each force acting on a single object and its direction, which is the most reliable way to avoid missing or double-counting forces."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Applications: Friction, Tension, and Inclines",
+     "minutes": 20,
+     "intro": "Ramps, ropes, and rough surfaces are where Newton's laws meet the real world. Every one of these problems follows the same recipe: draw the free-body diagram, choose smart axes, and solve ΣF = ma along each axis.",
+     "sections": [
+      {
+       "heading": "Friction",
+       "body": [
+        "**Static friction** prevents relative sliding and adjusts itself up to a maximum value f~s,max~ = μ~s~N, where N is the normal force and μ~s~ is the coefficient of static friction. **Kinetic friction**, which opposes sliding that is already happening, has a fixed magnitude f~k~ = μ~k~N, and typically μ~k~ < μ~s~ for the same surfaces.",
+        "This is why it takes more force to *start* an object sliding than to *keep* it sliding — once motion begins, friction actually drops slightly, to the kinetic value."
+       ]
+      },
+      {
+       "heading": "Inclined Planes",
+       "body": [
+        "On a frictionless incline at angle θ, gravity's component along the surface is mg sin θ, and perpendicular to the surface is mg cos θ (which the normal force balances). Adding kinetic friction opposing the motion, the acceleration down the incline is a = g(sin θ − μ~k~ cos θ).",
+        "Choosing axes *along* and *perpendicular to* the incline, rather than horizontal and vertical, is what makes these problems manageable: gravity is the only force that then needs to be split into components, while the normal force and friction each lie neatly along one axis."
+       ],
+       "example": {
+        "problem": "A 10 kg block slides down a 30° incline with a kinetic friction coefficient μ~k~ = 0.20. Find its acceleration down the slope.",
+        "steps": [
+         "Apply a = g(sin θ − μ~k~ cos θ).",
+         "sin 30° = 0.500, cos 30° ≈ 0.866.",
+         "a = 9.8(0.500 − 0.20 × 0.866) = 9.8(0.500 − 0.1732).",
+         "a = 9.8(0.3268) ≈ 3.2 m/s²."
+        ],
+        "answer": "About 3.2 m/s², directed down the incline."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "static friction",
+       "def": "The friction force that prevents relative sliding, up to a maximum f~s,max~ = μ~s~N."
+      },
+      {
+       "term": "kinetic friction",
+       "def": "The friction force opposing sliding that is already occurring, f~k~ = μ~k~N."
+      },
+      {
+       "term": "tension",
+       "def": "The pulling force transmitted through a rope, string, or cable."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A 20 kg crate rests on a floor with μ~s~ = 0.40. What is the maximum static friction force before it starts to slide (g = 9.8 m/s²)?",
+       "choices": [
+        "8.0 N",
+        "78.4 N",
+        "196 N",
+        "40 N"
+       ],
+       "answer": 1,
+       "explain": "f~s,max~ = μ~s~N = μ~s~mg = 0.40 × 20 × 9.8 = 78.4 N."
+      },
+      {
+       "q": "Why does an object often require more force to start sliding than to keep sliding at constant velocity?",
+       "choices": [
+        "Static friction coefficients are typically larger than kinetic friction coefficients",
+        "Kinetic friction always exceeds static friction",
+        "Mass increases once motion begins",
+        "This is a myth; both require the same force"
+       ],
+       "answer": 0,
+       "explain": "μ~s~ is generally greater than μ~k~ for the same two surfaces, so the maximum static friction that must be overcome to start motion exceeds the kinetic friction force once sliding is underway."
+      },
+      {
+       "q": "A block slides down a frictionless 20° incline. What is its acceleration?",
+       "choices": [
+        "9.8 m/s²",
+        "3.35 m/s²",
+        "9.2 m/s²",
+        "0 m/s²"
+       ],
+       "answer": 1,
+       "explain": "With no friction, a = g sin θ = 9.8 × sin 20° = 9.8 × 0.342 ≈ 3.35 m/s²."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Circular Motion Dynamics",
+     "minutes": 16,
+     "intro": "A car rounding a curve, a satellite circling a planet, and a ball on a string all share the same requirement: some real force must point toward the center of the circle. Banked curves show how engineers use geometry itself to help supply that force.",
+     "sections": [
+      {
+       "heading": "Centripetal Force in Real Systems",
+       "body": [
+        "Uniform circular motion requires a net centripetal force F~c~ = mv²/r directed toward the center. This is never a new, independent force — it is supplied by whatever combination of tension, gravity, friction, or normal force happens to point inward for that particular situation.",
+        "On a flat curve, friction alone must supply the centripetal force, which is why cars skid off flat curves taken too fast: friction has a maximum value, and once the required centripetal force exceeds μ~s~mg, the car can no longer follow the curve."
+       ]
+      },
+      {
+       "heading": "Banked Curves",
+       "body": [
+        "A **banked curve** tilts the roadway so that part of the normal force itself points toward the center, reducing (or eliminating) the reliance on friction. For a frictionless banked curve, resolving the normal force into horizontal and vertical components gives tan θ = v²/(rg), independent of the vehicle's mass.",
+        "This is why highway engineers design curve banking angles for a specific target speed: at that exact speed, a car needs no friction at all to stay on the road, which is especially valuable in icy conditions."
+       ],
+       "example": {
+        "problem": "A frictionless banked curve has radius 100 m. Find the banking angle needed for a car traveling at 20 m/s to stay on the road with no friction.",
+        "steps": [
+         "Apply tan θ = v²/(rg).",
+         "tan θ = (20)²/(100 × 9.8) = 400/980.",
+         "tan θ ≈ 0.408.",
+         "θ = tan⁻¹(0.408) ≈ 22.2°."
+        ],
+        "answer": "About 22°."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "centripetal force",
+       "def": "The net inward force required for circular motion, F~c~ = mv²/r; supplied by another real force, not a separate force of its own."
+      },
+      {
+       "term": "banked curve",
+       "def": "A curve tilted so the normal force contributes to the centripetal force, reducing reliance on friction."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A car rounds a flat curve using only friction to stay on the road. What happens if the car's speed exceeds the maximum the friction can support?",
+       "choices": [
+        "The car speeds up automatically",
+        "The car skids outward, off the curve's path",
+        "Nothing changes, friction is unlimited",
+        "The centripetal force increases to compensate"
+       ],
+       "answer": 1,
+       "explain": "Static friction has a maximum value μ~s~N. If the required centripetal force mv²/r exceeds that maximum, friction can no longer supply enough inward force, and the car slides outward off its circular path."
+      },
+      {
+       "q": "A frictionless banked curve of radius 50 m is designed for a speed of 15 m/s. What banking angle is required?",
+       "choices": [
+        "arctan(0.459) ≈ 24.7°",
+        "arctan(0.15) ≈ 8.5°",
+        "arctan(2.25) ≈ 66°",
+        "arctan(0.03) ≈ 1.7°"
+       ],
+       "answer": 0,
+       "explain": "tan θ = v²/(rg) = (15)²/(50 × 9.8) = 225/490 ≈ 0.459, giving θ = tan⁻¹(0.459) ≈ 24.7°."
+      },
+      {
+       "q": "Why is the required banking angle for a frictionless curve independent of the vehicle's mass?",
+       "choices": [
+        "Mass cancels out of tan θ = v²/(rg) because both gravity and the required centripetal force scale with mass",
+        "Heavier vehicles do not experience centripetal force",
+        "Friction depends on mass instead",
+        "It is not actually independent of mass"
+       ],
+       "answer": 0,
+       "explain": "Both the centripetal force requirement (mv²/r) and the vertical weight (mg) are proportional to mass, so mass cancels when the two conditions are combined into tan θ = v²/(rg)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Energy and Momentum",
+   "summary": "Work and energy generalized with integrals for variable forces, and the conservation laws that make momentum problems solvable without knowing the details of a collision.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Work as an Integral",
+     "minutes": 16,
+     "intro": "When a force changes as an object moves — a stretching spring, a rocket losing weight — the simple formula W = Fd cos θ no longer applies directly. Calculus generalizes work into an integral that handles any force, constant or not.",
+     "sections": [
+      {
+       "heading": "Work for a Variable Force",
+       "body": [
+        "In general, work is the integral of force over displacement: W = ∫F(x) dx, evaluated between the starting and ending positions. When force is constant, this integral simplifies exactly to the familiar W = Fd cos θ.",
+        "Graphically, work is the area under a force-versus-position curve. For a constant force this area is a simple rectangle; for a force like a spring's, F = kx, the area is a triangle, giving the well-known result W = ½kx²."
+       ],
+       "example": {
+        "problem": "A spring has spring constant k = 200 N/m and obeys F = kx. Find the work done in stretching it from x = 0 to x = 0.10 m.",
+        "steps": [
+         "Set up the integral: W = ∫~0~^x₀ kx dx.",
+         "Evaluate the integral: W = ½kx₀², since ∫kx dx = ½kx².",
+         "Substitute values: W = ½(200)(0.10)².",
+         "W = ½(200)(0.010) = 1.0 J."
+        ],
+        "answer": "1.0 J."
+       }
+      },
+      {
+       "heading": "Power",
+       "body": [
+        "**Power** is the rate at which work is done, P = dW/dt, measured in watts (W = J/s). For a force acting on an object moving at velocity v, instantaneous power is also P = Fv cos θ, which is often easier to apply directly than tracking total work and time separately.",
+        "Two engines can do the same total work, but the one that does it faster has a higher power rating — this is the practical difference between torque and horsepower in vehicles, and why climbing stairs quickly feels harder than climbing them slowly, even though the total work against gravity is identical."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "variable force",
+       "def": "A force whose magnitude or direction changes with position, requiring integration to find total work."
+      },
+      {
+       "term": "power",
+       "def": "The rate at which work is done, P = dW/dt = Fv cos θ, measured in watts."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A spring with k = 300 N/m is stretched from 0 to 0.20 m. How much work is done?",
+       "choices": [
+        "60 J",
+        "6.0 J",
+        "30 J",
+        "12 J"
+       ],
+       "answer": 1,
+       "explain": "W = ½kx² = ½(300)(0.20)² = ½(300)(0.040) = 6.0 J."
+      },
+      {
+       "q": "On a force-versus-position graph, what does the area under the curve between two positions represent?",
+       "choices": [
+        "The object's velocity",
+        "The work done over that displacement",
+        "The object's mass",
+        "The object's acceleration"
+       ],
+       "answer": 1,
+       "explain": "Work is the integral of force with respect to position, which is exactly the area under a force-versus-position graph between the two limits."
+      },
+      {
+       "q": "A motor does 500 J of work in 2.0 s. What is its power output?",
+       "choices": [
+        "1000 W",
+        "250 W",
+        "125 W",
+        "500 W"
+       ],
+       "answer": 1,
+       "explain": "P = W/t = 500/2.0 = 250 W."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Potential Energy and Conservation of Energy",
+     "minutes": 18,
+     "intro": "Every conservative force has a potential energy hiding inside it, ready to be released as kinetic energy. Springs, gravity, and other conservative forces all follow the same underlying pattern, connected through a derivative-integral relationship.",
+     "sections": [
+      {
+       "heading": "Potential Energy from Force, and Back Again",
+       "body": [
+        "For any conservative force, potential energy is defined so that F = −dU/dx: force points in the direction that decreases potential energy. Equivalently, U(x) = −∫F(x)dx. For a spring, this gives U = ½kx², and for gravity near Earth's surface, U = mgh.",
+        "This relationship works both ways: if you know the potential energy function, you can find the force by differentiating (and negating), and if you know the force, you can find potential energy by integrating (and negating)."
+       ]
+      },
+      {
+       "heading": "Conservation of Total Mechanical Energy",
+       "body": [
+        "When only conservative forces do work, total mechanical energy E = KE + U remains constant: KE~i~ + U~i~ = KE~f~ + U~f~. This single principle solves problems involving springs, gravity, or both together, without ever needing to track the details of the motion in between.",
+        "If nonconservative forces like friction or air resistance are present, mechanical energy is no longer conserved, but total energy still is — the 'missing' mechanical energy has simply been converted to heat and sound."
+       ],
+       "example": {
+        "problem": "A spring with k = 150 N/m is compressed 0.20 m and used to launch a 0.50 kg block (initially at rest) along a frictionless surface. Find the block's speed as it leaves the spring.",
+        "steps": [
+         "Find the spring's stored potential energy: U = ½kx² = ½(150)(0.20)².",
+         "U = ½(150)(0.040) = 3.0 J.",
+         "Apply conservation of energy: U = ½mv², since all spring PE converts to KE.",
+         "v = √(2U/m) = √(2×3.0/0.50) = √12 ≈ 3.46 m/s."
+        ],
+        "answer": "About 3.5 m/s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "potential energy",
+       "def": "Stored energy associated with a conservative force, related by F = −dU/dx."
+      },
+      {
+       "term": "mechanical energy",
+       "def": "The sum of kinetic and potential energy, E = KE + U, conserved when only conservative forces act."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A spring's potential energy is U(x) = ½kx². What force does the spring exert, using F = −dU/dx?",
+       "choices": [
+        "F = kx",
+        "F = −kx",
+        "F = k",
+        "F = −½kx²"
+       ],
+       "answer": 1,
+       "explain": "Differentiating U = ½kx² gives dU/dx = kx, and F = −dU/dx = −kx, the familiar restoring force of a spring (Hooke's law)."
+      },
+      {
+       "q": "A 1.0 kg ball is dropped from rest at height 5.0 m. Using conservation of energy, find its speed just before hitting the ground.",
+       "choices": [
+        "7.0 m/s",
+        "9.9 m/s",
+        "5.0 m/s",
+        "49 m/s"
+       ],
+       "answer": 1,
+       "explain": "mgh = ½mv², so v = √(2gh) = √(2×9.8×5.0) = √98 ≈ 9.9 m/s."
+      },
+      {
+       "q": "A block slides across a rough floor and comes to rest due to friction. What happened to its initial kinetic energy?",
+       "choices": [
+        "It was destroyed, violating energy conservation",
+        "It converted entirely into gravitational potential energy",
+        "It converted into heat and sound; total energy is still conserved",
+        "It transferred entirely into the floor's kinetic energy"
+       ],
+       "answer": 2,
+       "explain": "Friction is nonconservative, so mechanical energy is not conserved, but total energy is: the kinetic energy is converted into thermal energy (heat) and sound as the surfaces rub together."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Linear Momentum and Collisions",
+     "minutes": 18,
+     "intro": "Momentum conservation solves collision problems that energy conservation alone cannot, because it holds true regardless of whether kinetic energy is conserved. Elastic collisions add one further constraint that produces some genuinely surprising results.",
+     "sections": [
+      {
+       "heading": "Conservation of Momentum",
+       "body": [
+        "For any isolated system (no external net force), total momentum is conserved: Σp~i~ = Σp~f~. This holds during any collision, no matter how complicated the forces are during the brief instant of contact, because those internal forces cancel in pairs by Newton's third law.",
+        "This makes momentum conservation more broadly reliable than energy conservation for collisions, since kinetic energy is often lost to heat, sound, and deformation, but total momentum of the system never is, as long as no external force interferes."
+       ]
+      },
+      {
+       "heading": "Elastic Collisions",
+       "body": [
+        "An **elastic collision** conserves both momentum and kinetic energy. For a one-dimensional elastic collision, the results reduce to two familiar formulas: v~1'~ = [(m~1~−m~2~)/(m~1~+m~2~)]v~1~ + [2m~2~/(m~1~+m~2~)]v~2~, and a symmetric formula for v~2'~.",
+        "A striking special case: when two objects of *equal* mass collide elastically and one is initially at rest, they simply exchange velocities — the moving object stops, and the object that was at rest moves off with the incoming speed. This is exactly what happens in a well-executed game of billiards."
+       ],
+       "example": {
+        "problem": "A 2.0 kg cart moving at 6.0 m/s collides elastically with an identical 2.0 kg cart at rest. Find the velocity of each cart after the collision.",
+        "steps": [
+         "Recognize the equal-mass elastic collision case: the moving object and the resting object exchange velocities.",
+         "Cart 1 (originally moving at 6.0 m/s) comes to rest: v~1'~ = 0.",
+         "Cart 2 (originally at rest) moves off at the original speed: v~2'~ = 6.0 m/s.",
+         "Check momentum: before, p = 2.0(6.0) = 12 kg·m/s; after, p = 2.0(0) + 2.0(6.0) = 12 kg·m/s. Conserved."
+        ],
+        "answer": "Cart 1 stops (0 m/s); cart 2 moves off at 6.0 m/s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "isolated system",
+       "def": "A system with no net external force acting on it, so its total momentum is conserved."
+      },
+      {
+       "term": "elastic collision",
+       "def": "A collision in which both momentum and kinetic energy are conserved."
+      },
+      {
+       "term": "inelastic collision",
+       "def": "A collision in which momentum is conserved but kinetic energy is not."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is momentum conservation more universally reliable than kinetic energy conservation during collisions?",
+       "choices": [
+        "Momentum is a scalar while energy is a vector",
+        "Internal collision forces cancel by Newton's third law regardless of how kinetic energy is affected",
+        "Kinetic energy is always conserved in every collision",
+        "Momentum only applies to elastic collisions"
+       ],
+       "answer": 1,
+       "explain": "Total momentum is conserved for any isolated system because the internal forces between colliding objects are equal and opposite (Newton's third law) and cancel in the total sum, regardless of whether kinetic energy is lost to heat or deformation."
+      },
+      {
+       "q": "A 3.0 kg ball moving at 6.0 m/s collides elastically with an identical stationary 3.0 kg ball. What happens?",
+       "choices": [
+        "Both balls move together at 3.0 m/s",
+        "The moving ball stops and the stationary ball moves off at 6.0 m/s",
+        "The moving ball bounces back at 6.0 m/s",
+        "Nothing; the balls pass through each other"
+       ],
+       "answer": 1,
+       "explain": "For an elastic collision between equal masses where one is initially at rest, the two objects exchange velocities: the moving ball stops and the previously stationary ball takes on its speed."
+      },
+      {
+       "q": "In an inelastic collision between two objects, which of the following is true?",
+       "choices": [
+        "Neither momentum nor kinetic energy is conserved",
+        "Momentum is conserved, but kinetic energy is generally not",
+        "Kinetic energy is conserved, but momentum is generally not",
+        "Both are always conserved, by definition of a collision"
+       ],
+       "answer": 1,
+       "explain": "By definition, an inelastic collision conserves total momentum (true of essentially all isolated collisions) but loses some kinetic energy to heat, sound, or deformation."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Rotational Motion",
+   "summary": "Extending Newton's laws and conservation principles to spinning objects, using moment of inertia in place of mass.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Rotational Kinematics and Moment of Inertia",
+     "minutes": 16,
+     "intro": "A spinning wheel obeys equations that look remarkably like the ones for straight-line motion, once angle replaces position and moment of inertia replaces mass. Building the analogy carefully makes rotational dynamics far less intimidating.",
+     "sections": [
+      {
+       "heading": "Angular Position, Velocity, and Acceleration",
+       "body": [
+        "Angular position θ is measured in radians; angular velocity ω = dθ/dt (rad/s); angular acceleration α = dω/dt (rad/s²). For constant angular acceleration, the rotational kinematic equations mirror the linear ones exactly: ω = ω~0~ + αt, and θ = θ~0~ + ω~0~t + ½αt².",
+        "A point at radius r from the rotation axis has linear speed v = ωr and linear (tangential) acceleration a~t~ = αr, linking rotational and linear quantities directly. This is why a point farther from a spinning disk's center moves faster, even though every point shares the same angular velocity."
+       ]
+      },
+      {
+       "heading": "Moment of Inertia",
+       "body": [
+        "**Moment of inertia** I = Σm~i~r~i~² measures how mass is distributed relative to a rotation axis; it plays the role mass plays in linear dynamics. For a continuous object it becomes an integral, I = ∫r²dm, which is how standard formulas like I = ½MR² (solid disk) and I = MR² (hoop) are derived.",
+        "Mass located farther from the axis contributes far more to I, since r is squared — doubling the distance of a given mass from the axis quadruples its contribution to the moment of inertia."
+       ],
+       "example": {
+        "problem": "Two 2.0 kg point masses sit at opposite ends of a light rod, each 0.50 m from the center. Find the moment of inertia about an axis through the center, perpendicular to the rod.",
+        "steps": [
+         "Apply I = Σm~i~r~i~² for point masses.",
+         "Each mass contributes m r² = 2.0 × (0.50)² = 2.0 × 0.25 = 0.50 kg·m².",
+         "Add both contributions: I = 0.50 + 0.50 = 1.0 kg·m²."
+        ],
+        "answer": "1.0 kg·m²."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "angular velocity",
+       "def": "ω = dθ/dt, the rate of change of angular position, in rad/s."
+      },
+      {
+       "term": "moment of inertia",
+       "def": "I = Σmr² (or ∫r²dm for continuous objects), a measure of resistance to changes in rotational motion."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A wheel starts from rest with constant angular acceleration 3.0 rad/s². What is its angular velocity after 4.0 s?",
+       "choices": [
+        "7.0 rad/s",
+        "12 rad/s",
+        "0.75 rad/s",
+        "24 rad/s"
+       ],
+       "answer": 1,
+       "explain": "ω = ω~0~ + αt = 0 + 3.0(4.0) = 12 rad/s."
+      },
+      {
+       "q": "A point mass is moved from 0.20 m to 0.40 m from the rotation axis, with mass unchanged. By what factor does its contribution to the moment of inertia change?",
+       "choices": [
+        "2",
+        "4",
+        "8",
+        "It stays the same"
+       ],
+       "answer": 1,
+       "explain": "Moment of inertia for a point mass is mr². Doubling r multiplies the contribution by 2² = 4."
+      },
+      {
+       "q": "A point on a spinning disk is at radius 0.30 m, where the disk's angular velocity is 10 rad/s. What is that point's linear speed?",
+       "choices": [
+        "3.0 m/s",
+        "10 m/s",
+        "0.30 m/s",
+        "33.3 m/s"
+       ],
+       "answer": 0,
+       "explain": "Linear speed relates to angular speed by v = ωr = 10 × 0.30 = 3.0 m/s."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Torque, Rotational Dynamics, and Rolling",
+     "minutes": 18,
+     "intro": "Torque drives rotation the same way force drives straight-line acceleration, and rolling objects carry kinetic energy in two forms at once. Together these ideas explain everything from a spinning top to a bowling ball rolling down a lane.",
+     "sections": [
+      {
+       "heading": "Newton's Second Law for Rotation",
+       "body": [
+        "The rotational analog of F = ma is τ~net~ = Iα, where τ is net torque and I is moment of inertia about the rotation axis. This equation lets you find angular acceleration directly from applied torques, exactly as force and mass give linear acceleration.",
+        "Just as with linear motion, you must be careful about the axis: moment of inertia (and therefore this equation) is defined relative to a specific rotation axis, and using the wrong axis gives the wrong answer even if every other number is correct."
+       ]
+      },
+      {
+       "heading": "Rolling Without Slipping",
+       "body": [
+        "An object that rolls without slipping has its rotational and translational motion linked by v = ωR, where R is the object's radius. Its total kinetic energy is the sum of translational and rotational parts: KE = ½mv² + ½Iω².",
+        "For a solid sphere (I = (2/5)mR²), substituting ω = v/R shows the rotational term is exactly (1/5)mv², giving a total KE = (7/10)mv² — noticeably more than the ½mv² of an object that only slides without rotating."
+       ],
+       "example": {
+        "problem": "A solid sphere of mass 2.0 kg rolls without slipping at 3.0 m/s. Find its total kinetic energy.",
+        "steps": [
+         "Compute translational KE: KE~trans~ = ½mv² = ½(2.0)(3.0)² = ½(2.0)(9.0) = 9.0 J.",
+         "Compute rotational KE using I = (2/5)mR² and ω = v/R, which gives KE~rot~ = (1/5)mv² = (1/5)(2.0)(9.0) = 3.6 J.",
+         "Add both parts: KE~total~ = 9.0 + 3.6 = 12.6 J."
+        ],
+        "answer": "12.6 J."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "torque",
+       "def": "The rotational analog of force; τ~net~ = Iα for rotational motion."
+      },
+      {
+       "term": "rolling without slipping",
+       "def": "Motion in which an object's rotation and translation are linked by v = ωR, with no sliding at the contact point."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A hollow cylinder (I = MR²) of mass 3.0 kg and radius 0.20 m experiences a net torque of 4.0 N·m. Find its angular acceleration.",
+       "choices": [
+        "6.7 rad/s²",
+        "33.3 rad/s²",
+        "1.2 rad/s²",
+        "20 rad/s²"
+       ],
+       "answer": 1,
+       "explain": "I = MR² = 3.0 × (0.20)² = 3.0 × 0.040 = 0.12 kg·m². α = τ/I = 4.0/0.12 ≈ 33.3 rad/s²."
+      },
+      {
+       "q": "Compared to a solid sphere sliding (not rotating) at the same speed, a solid sphere rolling without slipping at that speed has:",
+       "choices": [
+        "Less total kinetic energy",
+        "The same total kinetic energy",
+        "More total kinetic energy, due to added rotational KE",
+        "Zero kinetic energy"
+       ],
+       "answer": 2,
+       "explain": "A rolling sphere has both translational KE (½mv²) and rotational KE (½Iω²), giving (7/10)mv² total — more than a sliding, non-rotating object's ½mv²."
+      },
+      {
+       "q": "Why must the axis be specified when applying τ~net~ = Iα?",
+       "choices": [
+        "It does not need to be specified; I is the same about every axis",
+        "Moment of inertia depends on the chosen rotation axis, so using the wrong axis gives an incorrect I and answer",
+        "Torque is undefined without an axis",
+        "Only α depends on the axis, not I"
+       ],
+       "answer": 1,
+       "explain": "Moment of inertia I = Σmr² depends on distances measured from a specific axis; changing the axis changes those distances and therefore I, so the axis must be fixed and consistent throughout the calculation."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Angular Momentum and Its Conservation",
+     "minutes": 16,
+     "intro": "Spin a stool with your arms out, then pull them in, and you speed up without anyone touching you. That surprising acceleration is angular momentum conservation in action, the rotational partner to linear momentum conservation.",
+     "sections": [
+      {
+       "heading": "Angular Momentum",
+       "body": [
+        "**Angular momentum** is L = Iω for a rigid rotating body (more generally, **L** = **r** × **p** for a single particle). Just as net force changes linear momentum, net external torque changes angular momentum: τ~net~ = dL/dt.",
+        "When net external torque is zero, angular momentum is conserved: L~i~ = L~f~. Because L = Iω, any change in an object's moment of inertia must be compensated by an opposite change in angular velocity to keep L constant."
+       ]
+      },
+      {
+       "heading": "Applying Conservation of Angular Momentum",
+       "body": [
+        "This principle explains a huge range of phenomena: a diver pulls in their limbs mid-air to spin faster, a collapsing star spins faster as it shrinks (this is part of how pulsars form), and a person walking toward the center of a spinning platform makes it speed up.",
+        "The key problem-solving step is identifying I before and after the change, then applying I~1~ω~1~ = I~2~ω~2~ directly, since no external torque means the product Iω stays fixed even though I and ω individually change."
+       ],
+       "example": {
+        "problem": "A rotating platform with moment of inertia 20 kg·m² spins at 4.0 rad/s. A person (adding 5.0 kg·m² to the moment of inertia) steps onto the edge. Find the new angular velocity, assuming no external torque.",
+        "steps": [
+         "Apply conservation of angular momentum: I~1~ω~1~ = I~2~ω~2~.",
+         "Find the new total moment of inertia: I~2~ = 20 + 5.0 = 25 kg·m².",
+         "Solve for ω~2~: ω~2~ = I~1~ω~1~/I~2~ = (20)(4.0)/25 = 80/25.",
+         "ω~2~ = 3.2 rad/s."
+        ],
+        "answer": "3.2 rad/s."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "angular momentum",
+       "def": "L = Iω for a rigid body; changes only when a net external torque acts."
+      },
+      {
+       "term": "conservation of angular momentum",
+       "def": "L~i~ = L~f~ whenever net external torque is zero."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A skater spinning with arms extended has moment of inertia 4.0 kg·m² and angular velocity 2.0 rad/s. She pulls her arms in, reducing her moment of inertia to 1.0 kg·m². Find her new angular velocity.",
+       "choices": [
+        "0.50 rad/s",
+        "2.0 rad/s",
+        "8.0 rad/s",
+        "4.0 rad/s"
+       ],
+       "answer": 2,
+       "explain": "I~1~ω~1~ = I~2~ω~2~ → (4.0)(2.0) = (1.0)ω~2~ → ω~2~ = 8.0/1.0 = 8.0 rad/s."
+      },
+      {
+       "q": "What condition allows angular momentum to be treated as conserved?",
+       "choices": [
+        "The object must be perfectly rigid",
+        "The net external torque on the system must be zero",
+        "The moment of inertia must stay constant",
+        "Angular momentum is always conserved, with no conditions"
+       ],
+       "answer": 1,
+       "explain": "Just like linear momentum requires zero net external force, angular momentum requires zero net external torque to remain constant; internal changes in shape (and thus I) are allowed."
+      },
+      {
+       "q": "A star collapses under gravity, shrinking its radius and moment of inertia dramatically, with no external torque acting. What happens to its rotation rate?",
+       "choices": [
+        "It slows down",
+        "It stays the same",
+        "It speeds up dramatically",
+        "It stops rotating entirely"
+       ],
+       "answer": 2,
+       "explain": "With angular momentum conserved (L = Iω constant) and I decreasing sharply as the star shrinks, ω must increase sharply — this is the basic mechanism behind the fast spin rates of pulsars."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Statics, Gravitation, and Fluids",
+   "summary": "Structures that must not move at all, the force that holds the solar system together, and fluids at rest and in motion.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Static Equilibrium and Elasticity",
+     "minutes": 16,
+     "intro": "Bridges, cranes, and bookshelves must satisfy Newton's laws just as much as a rolling ball does — they simply must satisfy them with zero net force and zero net torque at every instant. Real materials also stretch slightly under load, and that stretching follows its own precise law.",
+     "sections": [
+      {
+       "heading": "Conditions for Equilibrium",
+       "body": [
+        "A rigid object in static equilibrium satisfies ΣF = 0 (no linear acceleration) and Στ = 0 about any chosen pivot (no angular acceleration). Choosing the pivot at an unknown force's point of application is a standard trick, since that force then contributes zero torque and drops out of the equation.",
+        "Multi-force equilibrium problems, like a ladder leaning against a wall or a sign hanging from a bracket, typically require writing all three equations (ΣF~x~ = 0, ΣF~y~ = 0, Στ = 0) and solving them together as a system."
+       ]
+      },
+      {
+       "heading": "Stress, Strain, and Elastic Modulus",
+       "body": [
+        "Real materials deform under load. **Stress** is force per cross-sectional area, and **strain** is the fractional deformation (ΔL/L~0~ for stretching). For small deformations, stress is proportional to strain: stress = E × strain, where E is the material's elastic (Young's) modulus.",
+        "Steel has a very high Young's modulus (about 200 GPa), meaning it resists stretching strongly, while rubber has a Young's modulus thousands of times smaller, which is why rubber stretches noticeably under forces that leave steel essentially unchanged."
+       ],
+       "example": {
+        "problem": "A steel wire (Young's modulus E = 200 × 10⁹ Pa) has cross-sectional area 2.0 × 10⁻⁶ m² and original length 2.0 m. Find its elongation under a tension force of 400 N.",
+        "steps": [
+         "Find stress: stress = F/A = 400/(2.0×10⁻⁶) = 2.0×10⁸ Pa.",
+         "Find strain: strain = stress/E = (2.0×10⁸)/(200×10⁹) = 1.0×10⁻³.",
+         "Find elongation: ΔL = strain × L~0~ = (1.0×10⁻³)(2.0) = 2.0×10⁻³ m."
+        ],
+        "answer": "2.0 mm."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "static equilibrium",
+       "def": "A state with zero net force and zero net torque, so an object has no linear or angular acceleration."
+      },
+      {
+       "term": "stress",
+       "def": "Force per unit cross-sectional area applied to a material."
+      },
+      {
+       "term": "Young's modulus",
+       "def": "E, the ratio of stress to strain for a material under tension or compression, describing its stiffness."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is it useful to choose a pivot point at the location of an unknown force when solving equilibrium problems?",
+       "choices": [
+        "It makes the object's weight disappear",
+        "That force then has zero lever arm and drops out of the torque equation",
+        "It changes the object's mass",
+        "Pivot location never matters in equilibrium problems"
+       ],
+       "answer": 1,
+       "explain": "Torque depends on the lever arm from the pivot to the force. Placing the pivot exactly at an unknown force's application point makes its lever arm zero, eliminating that unknown from the torque equation."
+      },
+      {
+       "q": "A wire stretches under tension. If the applied force doubles while cross-sectional area and length stay the same, what happens to the stress?",
+       "choices": [
+        "It doubles",
+        "It halves",
+        "It stays the same",
+        "It quadruples"
+       ],
+       "answer": 0,
+       "explain": "Stress = F/A. With A unchanged, doubling F directly doubles the stress."
+      },
+      {
+       "q": "A material with a very high Young's modulus, compared to one with a low Young's modulus, under the same stress will:",
+       "choices": [
+        "Stretch much more",
+        "Stretch much less",
+        "Stretch the same amount",
+        "Not stretch is undefined without knowing mass"
+       ],
+       "answer": 1,
+       "explain": "Since stress = E × strain, a higher E means a smaller strain (less deformation) results from the same applied stress; the material is stiffer."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Newton's Law of Gravitation and Orbits",
+     "minutes": 18,
+     "intro": "The same force that pulls an apple to the ground keeps the Moon circling Earth and every planet circling the Sun. Newton's law of universal gravitation unifies all of these with a single elegant equation.",
+     "sections": [
+      {
+       "heading": "Newton's Law of Universal Gravitation",
+       "body": [
+        "Every pair of masses attracts each other with a force F = Gm~1~m~2~/r², where G = 6.674 × 10⁻¹¹ N·m²/kg² is the universal gravitational constant, and r is the distance between their centers. This inverse-square law applies equally to apples, planets, and galaxies.",
+        "Near Earth's surface, this general law reduces to the familiar F = mg, with g = GM~Earth~/R~Earth~² ≈ 9.8 m/s². Gravity weakens with the square of distance, so an object at twice Earth's radius from its center experiences only one-quarter the surface gravitational acceleration."
+       ]
+      },
+      {
+       "heading": "Circular Orbits",
+       "body": [
+        "For a satellite in a circular orbit, gravity supplies exactly the centripetal force needed: GMm/r² = mv²/r, which simplifies to orbital speed v = √(GM/r). Notice the orbiting object's own mass cancels completely — a heavy satellite and a light one at the same orbital radius move at the same speed.",
+        "This also means orbital speed depends only on the central body's mass and the orbital radius, which is why all satellites at a given altitude above Earth, regardless of their mass, must travel at the same speed to maintain a stable circular orbit."
+       ],
+       "example": {
+        "problem": "Find the orbital speed of a satellite orbiting Earth (M = 5.97 × 10²⁴ kg) at a radius of 7.0 × 10⁶ m from Earth's center.",
+        "steps": [
+         "Apply v = √(GM/r).",
+         "Compute GM: (6.674×10⁻¹¹)(5.97×10²⁴) ≈ 3.98×10¹⁴.",
+         "Divide by r: 3.98×10¹⁴/7.0×10⁶ ≈ 5.69×10⁷.",
+         "Take the square root: v ≈ √(5.69×10⁷) ≈ 7.5×10³ m/s."
+        ],
+        "answer": "About 7.5 km/s, consistent with real low-Earth-orbit speeds."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "universal gravitational constant",
+       "def": "G = 6.674 × 10⁻¹¹ N·m²/kg², the constant in Newton's law of gravitation."
+      },
+      {
+       "term": "inverse-square law",
+       "def": "A relationship in which a quantity falls off as 1/r², such as gravitational force with distance."
+      },
+      {
+       "term": "orbital speed",
+       "def": "v = √(GM/r), the speed needed to maintain a stable circular orbit at radius r around a mass M."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An object is moved from Earth's surface to a distance of 3 Earth radii from Earth's center. By what factor does the gravitational acceleration on it change?",
+       "choices": [
+        "1/3",
+        "1/9",
+        "3",
+        "9"
+       ],
+       "answer": 1,
+       "explain": "Gravitational acceleration follows an inverse-square law, g ∝ 1/r². Tripling the distance reduces g by a factor of 3² = 9, leaving 1/9 of the surface value."
+      },
+      {
+       "q": "Two satellites of very different mass orbit Earth at the exact same altitude. How do their orbital speeds compare?",
+       "choices": [
+        "The heavier satellite moves faster",
+        "The lighter satellite moves faster",
+        "They move at the same speed",
+        "It depends on their shapes"
+       ],
+       "answer": 2,
+       "explain": "Orbital speed v = √(GM/r) depends only on the central body's mass M and orbital radius r; the orbiting satellite's own mass cancels out of the equation entirely."
+      },
+      {
+       "q": "What is the primary reason gravitational force follows an inverse-square law?",
+       "choices": [
+        "It is an empirical fact confirmed by Newton's law of gravitation, F = Gm~1~m~2~/r²",
+        "Gravity only acts within a fixed radius",
+        "It follows from Newton's third law alone",
+        "Gravitational force is actually independent of distance"
+       ],
+       "answer": 0,
+       "explain": "Newton's law of universal gravitation directly states that the force between two masses is proportional to 1/r², a relationship confirmed extensively by observation of orbits and free-fall experiments."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Fluid Statics and Fluid Dynamics",
+     "minutes": 16,
+     "intro": "Whether you are calculating the pressure at the bottom of a swimming pool or the lift on an airplane wing, fluid mechanics reduces to a small set of principles about pressure, buoyancy, and flow.",
+     "sections": [
+      {
+       "heading": "Pressure in a Static Fluid",
+       "body": [
+        "In a fluid at rest, pressure increases with depth according to P = P~0~ + ρgh, where P~0~ is the pressure at the surface, ρ is the fluid's density, and h is depth. This is why your ears feel pressure diving into a pool, and why deep-sea vessels need extremely strong hulls.",
+        "**Archimedes' principle** states that the buoyant force on a submerged object equals the weight of fluid it displaces, F~b~ = ρ~fluid~V~displaced~g. An object floats when it can displace a volume of fluid whose weight equals its own."
+       ],
+       "example": {
+        "problem": "Find the water pressure at the bottom of a swimming pool 5.0 m deep (atmospheric pressure P~0~ = 1.013 × 10⁵ Pa, water density ρ = 1000 kg/m³).",
+        "steps": [
+         "Apply P = P~0~ + ρgh.",
+         "ρgh = (1000)(9.8)(5.0) = 49,000 Pa.",
+         "P = 101,300 + 49,000."
+        ],
+        "answer": "About 1.50 × 10⁵ Pa (150,300 Pa)."
+       }
+      },
+      {
+       "heading": "Fluid Flow",
+       "body": [
+        "For steady, incompressible flow, the **continuity equation** A~1~v~1~ = A~2~v~2~ requires fluid to speed up wherever a pipe or channel narrows. **Bernoulli's equation** extends conservation of energy to flowing fluids: P + ½ρv² + ρgh stays constant along a streamline (for an ideal, non-viscous fluid).",
+        "Bernoulli's equation shows that where fluid speed increases, pressure must decrease (at the same height), which explains lift on an airplane wing: air moving faster over the curved top surface exerts less pressure there than the slower air beneath, producing a net upward force."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "hydrostatic pressure",
+       "def": "P = P~0~ + ρgh, the pressure in a static fluid increasing linearly with depth."
+      },
+      {
+       "term": "continuity equation",
+       "def": "A~1~v~1~ = A~2~v~2~, describing conservation of volume flow rate in an incompressible fluid."
+      },
+      {
+       "term": "Bernoulli's equation",
+       "def": "P + ½ρv² + ρgh = constant along a streamline for an ideal, non-viscous, incompressible fluid."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Water flows through a horizontal pipe that widens to twice its original cross-sectional area. What happens to the fluid's speed in the wider section?",
+       "choices": [
+        "It doubles",
+        "It stays the same",
+        "It is cut in half",
+        "It quadruples"
+       ],
+       "answer": 2,
+       "explain": "By the continuity equation A~1~v~1~ = A~2~v~2~, doubling the area requires halving the speed to conserve the volume flow rate."
+      },
+      {
+       "q": "According to Bernoulli's equation, in a horizontal pipe where fluid speed increases, what happens to pressure?",
+       "choices": [
+        "Pressure increases",
+        "Pressure decreases",
+        "Pressure stays the same",
+        "Pressure becomes negative"
+       ],
+       "answer": 1,
+       "explain": "With height constant, P + ½ρv² is constant along the streamline, so an increase in speed (and thus ½ρv²) must be balanced by a decrease in pressure P."
+      },
+      {
+       "q": "Find the water pressure at a depth of 10 m (atmospheric pressure ≈ 1.0 × 10⁵ Pa, ρ~water~ = 1000 kg/m³, g = 9.8 m/s²).",
+       "choices": [
+        "9.8 × 10⁴ Pa",
+        "1.98 × 10⁵ Pa",
+        "1.0 × 10⁵ Pa",
+        "9.8 × 10⁵ Pa"
+       ],
+       "answer": 1,
+       "explain": "P = P~0~ + ρgh = 1.0×10⁵ + (1000)(9.8)(10) = 1.0×10⁵ + 9.8×10⁴ ≈ 1.98×10⁵ Pa."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Oscillations and Waves",
+   "summary": "Repeating motion, from a mass on a spring to sound traveling through air, and the shift in pitch caused by relative motion.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Simple Harmonic Motion",
+     "minutes": 16,
+     "intro": "A mass bouncing on a spring, a pendulum swinging, and a plucked guitar string all repeat their motion in exactly the same mathematical pattern. Simple harmonic motion is that universal pattern, and it appears throughout physics wherever a restoring force is proportional to displacement.",
+     "sections": [
+      {
+       "heading": "The Defining Condition of SHM",
+       "body": [
+        "**Simple harmonic motion (SHM)** occurs whenever the restoring force is directly proportional to displacement and points back toward equilibrium: F = −kx. This single condition guarantees sinusoidal motion, x(t) = A cos(ωt + φ), where A is amplitude and ω is angular frequency.",
+        "For a mass-spring system, ω = √(k/m), and the period is T = 2π√(m/k) — notably independent of amplitude. Whether the spring is stretched a little or a lot, it completes each cycle in the same amount of time, as long as Hooke's law holds."
+       ],
+       "example": {
+        "problem": "A 0.50 kg mass is attached to a spring with k = 200 N/m. Find the period of oscillation.",
+        "steps": [
+         "Apply T = 2π√(m/k).",
+         "m/k = 0.50/200 = 0.0025.",
+         "√0.0025 = 0.050.",
+         "T = 2π(0.050) ≈ 0.314 s."
+        ],
+        "answer": "About 0.31 s."
+       }
+      },
+      {
+       "heading": "Energy in SHM",
+       "body": [
+        "Total mechanical energy in SHM is constant and equals ½kA², the potential energy at maximum displacement (where velocity is momentarily zero). At equilibrium, all of that energy is kinetic, giving maximum speed v~max~ = Aω.",
+        "A simple pendulum with small swing angles also approximates SHM, with period T = 2π√(L/g), depending only on length L and gravitational acceleration g — not on the pendulum's mass or amplitude, which is why pendulum clocks keep reliable time regardless of small variations in swing size."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "simple harmonic motion",
+       "def": "Oscillation produced by a restoring force proportional to displacement, F = −kx, giving sinusoidal motion."
+      },
+      {
+       "term": "angular frequency",
+       "def": "ω = √(k/m) for a spring-mass system; relates to period by T = 2π/ω."
+      },
+      {
+       "term": "amplitude",
+       "def": "The maximum displacement from equilibrium during oscillation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A mass-spring system has period T = 1.0 s. If the mass is quadrupled with the same spring, what is the new period?",
+       "choices": [
+        "0.5 s",
+        "1.0 s",
+        "2.0 s",
+        "4.0 s"
+       ],
+       "answer": 2,
+       "explain": "T = 2π√(m/k), so T ∝ √m. Quadrupling m multiplies T by √4 = 2, giving a new period of 2.0 s."
+      },
+      {
+       "q": "In simple harmonic motion, where is the object's speed at a maximum?",
+       "choices": [
+        "At maximum displacement (amplitude)",
+        "At the equilibrium position",
+        "It is constant throughout the motion",
+        "Speed is always zero in SHM"
+       ],
+       "answer": 1,
+       "explain": "At equilibrium, all the system's mechanical energy is kinetic (potential energy is zero there), so speed is at its maximum value, v~max~ = Aω."
+      },
+      {
+       "q": "A simple pendulum's period depends on which of the following?",
+       "choices": [
+        "Its mass only",
+        "Its length and gravitational acceleration",
+        "Its amplitude only",
+        "Its mass and amplitude together"
+       ],
+       "answer": 1,
+       "explain": "For small angles, T = 2π√(L/g) depends only on the pendulum's length and the local gravitational acceleration, not on its mass or (for small swings) its amplitude."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Mechanical Waves",
+     "minutes": 16,
+     "intro": "A wave on a guitar string carries energy down its length without any piece of the string actually traveling anywhere — each point just oscillates up and down. Understanding what determines a wave's speed explains why a tightened string plays a higher note.",
+     "sections": [
+      {
+       "heading": "Wave Speed on a String",
+       "body": [
+        "A transverse wave traveling along a stretched string has speed v = √(T/μ), where T is the string's tension and μ is its linear mass density (mass per unit length). Greater tension increases wave speed; greater density decreases it.",
+        "This is exactly why tightening a guitar string raises its pitch: increasing tension increases wave speed, and for a fixed string length, higher wave speed means higher frequency (since the fundamental wavelength is fixed by the string's length)."
+       ],
+       "example": {
+        "problem": "A string under tension 50 N has a linear mass density of 0.020 kg/m. Find the wave speed on the string.",
+        "steps": [
+         "Apply v = √(T/μ).",
+         "T/μ = 50/0.020 = 2500.",
+         "v = √2500 = 50 m/s."
+        ],
+        "answer": "50 m/s."
+       }
+      },
+      {
+       "heading": "Standing Waves and Resonance",
+       "body": [
+        "When waves traveling in opposite directions on a string interfere (such as a wave and its reflection), they can form a **standing wave**: a stationary pattern with fixed points of zero displacement (**nodes**) and fixed points of maximum displacement (**antinodes**).",
+        "A string fixed at both ends can only support standing waves whose wavelengths fit an integer number of half-wavelengths between the fixed ends: L = nλ/2. Each allowed value of n corresponds to a **resonant** frequency — this is the physical basis for every musical note a stringed instrument can produce."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "linear mass density",
+       "def": "μ, the mass per unit length of a string or rope."
+      },
+      {
+       "term": "standing wave",
+       "def": "A stationary interference pattern formed by two waves traveling in opposite directions, with fixed nodes and antinodes."
+      },
+      {
+       "term": "node",
+       "def": "A point on a standing wave with zero displacement at all times."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A guitarist tightens a string, increasing its tension. What happens to the wave speed on the string?",
+       "choices": [
+        "It increases",
+        "It decreases",
+        "It stays the same",
+        "It becomes zero"
+       ],
+       "answer": 0,
+       "explain": "Wave speed on a string is v = √(T/μ). Increasing tension T (with μ unchanged) increases the wave speed."
+      },
+      {
+       "q": "A string has tension 80 N and linear density 0.0080 kg/m. Find the wave speed.",
+       "choices": [
+        "10 m/s",
+        "100 m/s",
+        "1000 m/s",
+        "0.10 m/s"
+       ],
+       "answer": 1,
+       "explain": "v = √(T/μ) = √(80/0.0080) = √10000 = 100 m/s."
+      },
+      {
+       "q": "What characterizes a node on a standing wave?",
+       "choices": [
+        "Maximum displacement at all times",
+        "Zero displacement at all times",
+        "Maximum speed at all times",
+        "It moves along the string over time"
+       ],
+       "answer": 1,
+       "explain": "A node is a fixed point on a standing wave pattern where the two interfering waves always cancel, producing zero displacement throughout the motion."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Sound Waves and the Doppler Effect",
+     "minutes": 16,
+     "intro": "Sound is a longitudinal pressure wave traveling through a medium, and its pitch shifts in a precise, predictable way whenever the source or listener is moving. This lesson works through the Doppler formula that describes exactly how much.",
+     "sections": [
+      {
+       "heading": "Sound as a Longitudinal Wave",
+       "body": [
+        "Sound travels as alternating regions of compression and rarefaction in a medium like air, with particles oscillating parallel to the direction of wave travel. The speed of sound in air is about 340 m/s at room temperature, much slower than light, which is why you see lightning before hearing thunder.",
+        "Sound intensity (power per unit area) determines loudness, and it decreases with distance from a point source following an inverse-square law, since the same total power spreads over a sphere whose surface area grows as r²."
+       ]
+      },
+      {
+       "heading": "The Doppler Effect",
+       "body": [
+        "The **Doppler effect** describes the frequency shift observed when a sound source and listener move relative to each other. For a source moving toward a stationary observer, the observed frequency is f' = f × v/(v − v~s~), where v is the speed of sound and v~s~ is the source's speed toward the observer.",
+        "The effect flips sign for a receding source (v becomes v + v~s~ in the denominator), and analogous formulas exist for a moving observer with a stationary source. This is the same physical effect used by police radar and by astronomers measuring the redshift of distant galaxies, just with sound replaced by light."
+       ],
+       "example": {
+        "problem": "A car horn emits a frequency of 440 Hz. The car approaches a stationary listener at 30 m/s (speed of sound = 340 m/s). Find the frequency the listener hears.",
+        "steps": [
+         "Apply the Doppler formula for an approaching source: f' = f × v/(v − v~s~).",
+         "f' = 440 × 340/(340 − 30) = 440 × 340/310.",
+         "f' = 440 × 1.097 ≈ 482.6 Hz."
+        ],
+        "answer": "About 483 Hz, higher than the emitted 440 Hz."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "longitudinal wave",
+       "def": "A wave in which particle motion is parallel to the direction of wave travel, such as sound."
+      },
+      {
+       "term": "Doppler effect",
+       "def": "The shift in observed frequency caused by relative motion between a wave source and an observer."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An ambulance siren has a source frequency of 500 Hz. As the ambulance moves away from a stationary listener at 20 m/s (speed of sound = 340 m/s), is the observed frequency higher or lower than 500 Hz?",
+       "choices": [
+        "Higher",
+        "Lower",
+        "Exactly the same",
+        "Cannot be determined"
+       ],
+       "answer": 1,
+       "explain": "For a receding source, the effective wave speed relative to the observer's side of the formula increases (v + v~s~ in the denominator), lowering the observed frequency below the emitted 500 Hz."
+      },
+      {
+       "q": "Why does sound intensity from a point source decrease with the square of distance?",
+       "choices": [
+        "Sound loses energy to friction with air molecules exponentially",
+        "The same total power spreads over a sphere whose surface area grows as r²",
+        "Sound waves slow down with distance",
+        "This is not actually true; intensity is constant with distance"
+       ],
+       "answer": 1,
+       "explain": "A point source radiates power equally in all directions, spreading over an expanding spherical surface of area 4πr². Since intensity is power divided by area, it falls off as 1/r²."
+      },
+      {
+       "q": "A train horn emits 300 Hz and approaches a stationary observer at 34 m/s (speed of sound = 340 m/s). Find the observed frequency.",
+       "choices": [
+        "Approximately 273 Hz",
+        "Approximately 330 Hz",
+        "Exactly 300 Hz",
+        "Approximately 340 Hz"
+       ],
+       "answer": 1,
+       "explain": "f' = f × v/(v − v~s~) = 300 × 340/(340 − 34) = 300 × 340/306 ≈ 300 × 1.111 ≈ 333 Hz, closest to 330 Hz."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

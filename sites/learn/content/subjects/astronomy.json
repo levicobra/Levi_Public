@@ -1,0 +1,1018 @@
+{
+ "id": "astronomy",
+ "title": "Astronomy",
+ "domain": "physical",
+ "level": "Intro college",
+ "description": "A tour of the universe from the ground up: how ancient observers figured out the sky's motions, how light and telescopes let us study objects we can never touch, and what we now know about planets, stars, galaxies, and the history of the cosmos itself.",
+ "outcomes": [
+  "Explain how the heliocentric model replaced the geocentric model and apply Kepler's three laws to planetary orbits.",
+  "Use Newton's law of gravitation to explain orbital motion and calculate quantities like escape velocity.",
+  "Relate a wave's wavelength and frequency, and use spectroscopy (including Doppler shift) to measure a star's motion and composition.",
+  "Compare the terrestrial and giant planets and explain how the solar system formed.",
+  "Use parallax, luminosity, and the H-R diagram to measure stellar properties and trace a star's life cycle by mass.",
+  "Explain Hubble's law, the expansion of the universe, and the evidence for the Big Bang."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Observing the Sky and the Laws of Motion",
+   "summary": "How careful naked-eye observation led from an Earth-centered universe to a Sun-centered one, and the mathematical laws that describe every orbit.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Celestial Sphere and the Heliocentric Revolution",
+     "minutes": 16,
+     "intro": "For most of human history, the obvious interpretation of the night sky was that everything revolved around a stationary Earth — and it took centuries of careful observation to prove that interpretation wrong.",
+     "sections": [
+      {
+       "heading": "The Celestial Sphere and the Seasons",
+       "body": [
+        "Ancient astronomers tracked stars and planets against an imagined **celestial sphere**, a backdrop of fixed stars surrounding Earth, with planets ('wanderers' in Greek) drifting slowly against that backdrop. Earth's axis is tilted 23.5° relative to its orbital plane, and this tilt — not our changing distance from the Sun — causes the seasons by changing how directly sunlight strikes each hemisphere through the year.",
+        "One especially puzzling observation was **retrograde motion**: planets like Mars occasionally appear to reverse direction against the stars for a few weeks before resuming their normal path. Explaining this convincingly required a fundamentally different model of the solar system."
+       ]
+      },
+      {
+       "heading": "From Geocentric to Heliocentric",
+       "body": [
+        "The ancient **geocentric model**, refined by Ptolemy, explained retrograde motion with small looping paths called epicycles layered onto larger circular orbits — it worked numerically but grew increasingly complicated. **Copernicus** proposed a **heliocentric model** with the Sun at the center, which explained retrograde motion far more simply: it is only the appearance created as faster-orbiting Earth periodically overtakes a slower outer planet like Mars.",
+        "**Galileo's** telescope observations — the phases of Venus and the four large moons orbiting Jupiter — provided direct evidence against a purely Earth-centered universe, since Jupiter's moons proved that not everything orbits Earth."
+       ],
+       "example": {
+        "problem": "Explain why Mars appears to temporarily move backward against the stars roughly every two years, using the heliocentric model.",
+        "steps": [
+         "Earth orbits the Sun faster than Mars, since Earth is closer and has a shorter orbital path.",
+         "As Earth catches up to and passes Mars in its orbit, the line of sight from Earth to Mars briefly appears to move backward against the distant stars, just as a faster car passing a slower one on the highway makes the slower car appear to drift backward relative to the horizon."
+        ],
+        "answer": "Retrograde motion is an apparent effect of Earth overtaking Mars in orbit, not an actual reversal of Mars's motion."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "celestial sphere",
+       "def": "An imagined sphere of fixed stars surrounding Earth, used to track the positions of celestial objects."
+      },
+      {
+       "term": "retrograde motion",
+       "def": "The apparent temporary backward motion of a planet against the background stars."
+      },
+      {
+       "term": "geocentric model",
+       "def": "The ancient model placing a stationary Earth at the center of the universe."
+      },
+      {
+       "term": "heliocentric model",
+       "def": "The model placing the Sun at the center of the solar system, with planets orbiting it."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What actually causes Earth's seasons?",
+       "choices": [
+        "Earth's changing distance from the Sun",
+        "The 23.5° tilt of Earth's axis relative to its orbital plane",
+        "The Moon's gravitational pull",
+        "Sunspot activity"
+       ],
+       "answer": 1,
+       "explain": "Earth's axial tilt changes how directly sunlight strikes each hemisphere over the year, driving the seasons; Earth's orbital distance changes very little and is not the cause."
+      },
+      {
+       "q": "How does the heliocentric model explain Mars's retrograde motion more simply than the geocentric model?",
+       "choices": [
+        "Mars actually reverses its orbital direction",
+        "It results from Earth, moving faster, passing Mars in its orbit",
+        "It requires small looping epicycles layered onto larger orbits",
+        "Retrograde motion cannot be explained by either model"
+       ],
+       "answer": 1,
+       "explain": "In the heliocentric model, retrograde motion is simply the changing viewing angle as faster-orbiting Earth overtakes the more distant, slower-orbiting Mars — no epicycles required."
+      },
+      {
+       "q": "What observation by Galileo provided direct evidence against a purely Earth-centered universe?",
+       "choices": [
+        "The retrograde motion of Mars",
+        "The moons of Jupiter orbiting Jupiter, not Earth",
+        "The 23.5° tilt of Earth's axis",
+        "The changing brightness of the Sun"
+       ],
+       "answer": 1,
+       "explain": "Galileo observed four moons clearly orbiting Jupiter, proving that at least some bodies do not orbit Earth, directly undermining the geocentric model."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Kepler's Laws of Planetary Motion",
+     "minutes": 17,
+     "intro": "Using decades of precise naked-eye data, Johannes Kepler discovered that planetary orbits are not the perfect circles ancient astronomers assumed, and he distilled their true behavior into three laws you can still use today.",
+     "sections": [
+      {
+       "heading": "Kepler's First and Second Laws",
+       "body": [
+        "**Kepler's first law** states that a planet's orbit is an **ellipse** with the Sun at one focus, not a circle centered on the Sun. **Kepler's second law** states that a line connecting a planet to the Sun sweeps out equal areas in equal times, meaning a planet moves fastest at **perihelion** (closest approach) and slowest at **aphelion** (farthest point).",
+        "These two laws together replaced 2,000 years of assumed circular, uniform motion with a model that actually matched precise observational data, resolving small discrepancies that circular orbits could never explain."
+       ]
+      },
+      {
+       "heading": "Kepler's Third Law",
+       "body": [
+        "**Kepler's third law** relates a planet's orbital period to its distance from the Sun: T² = a³, when T is measured in Earth years and a (the semi-major axis) is measured in astronomical units (AU, the Earth-Sun distance). This means outer planets do not just travel a longer path — they also move more slowly, so their orbital periods grow faster than their distance.",
+        "This law lets you predict the orbital period of any newly discovered object around the Sun from its distance alone, without tracking it through a full orbit first."
+       ],
+       "example": {
+        "problem": "Mars orbits the Sun at an average distance of 1.524 AU. Use Kepler's third law to predict its orbital period.",
+        "steps": [
+         "Apply T² = a³: T² = (1.524)³.",
+         "Calculate (1.524)³ = 1.524 × 1.524 × 1.524 ≈ 3.54.",
+         "Take the square root: T = √3.54 ≈ 1.88 years."
+        ],
+        "answer": "About 1.88 Earth years, matching Mars's actual orbital period of 687 days."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ellipse",
+       "def": "The oval-shaped curve of a planetary orbit, with the Sun at one of its two foci."
+      },
+      {
+       "term": "perihelion",
+       "def": "The point in an orbit closest to the Sun, where orbital speed is greatest."
+      },
+      {
+       "term": "aphelion",
+       "def": "The point in an orbit farthest from the Sun, where orbital speed is slowest."
+      },
+      {
+       "term": "Kepler's third law",
+       "def": "The relationship T² = a³ (in years and AU) between a planet's orbital period and its distance from the Sun."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to Kepler's second law, where does a planet move fastest in its orbit?",
+       "choices": [
+        "Aphelion",
+        "Perihelion",
+        "Speed is constant throughout",
+        "At the midpoint of the orbit"
+       ],
+       "answer": 1,
+       "explain": "Kepler's second law (equal areas in equal times) requires a planet to move fastest when closest to the Sun, at perihelion, to sweep out the same area as when it moves slowly far away."
+      },
+      {
+       "q": "A hypothetical asteroid orbits the Sun at a distance of 4 AU. What is its approximate orbital period?",
+       "choices": [
+        "2 years",
+        "4 years",
+        "8 years",
+        "16 years"
+       ],
+       "answer": 2,
+       "explain": "By Kepler's third law, T² = a³ = 4³ = 64, so T = √64 = 8 years."
+      },
+      {
+       "q": "What shape did Kepler determine planetary orbits actually follow, correcting the ancient assumption of perfect circles?",
+       "choices": [
+        "Parabolas",
+        "Spirals",
+        "Ellipses",
+        "Perfect circles, just off-center"
+       ],
+       "answer": 2,
+       "explain": "Kepler's first law establishes that orbits are ellipses with the Sun at one focus, not circles, which is the key correction to the ancient model."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Newton's Law of Universal Gravitation",
+     "minutes": 17,
+     "intro": "Kepler described how planets move with remarkable precision but could not explain why — it took Isaac Newton's law of gravitation to reveal that the same force pulling an apple to the ground also holds the planets in their orbits.",
+     "sections": [
+      {
+       "heading": "The Law of Universal Gravitation",
+       "body": [
+        "Newton's law states that every pair of masses attracts each other with a force F = Gm~1~m~2~/r², where G is the gravitational constant (6.674 × 10^−11^ N·m²/kg²), m~1~ and m~2~ are the two masses, and r is the distance between their centers. This single equation explains both a falling apple and an orbiting Moon as the same phenomenon at different scales.",
+        "Because gravity depends on 1/r², doubling the distance between two masses cuts the gravitational force to one quarter, which is why gravity weakens quickly with distance but never quite reaches zero."
+       ]
+      },
+      {
+       "heading": "Escape Velocity",
+       "body": [
+        "**Escape velocity** is the minimum speed an object needs to permanently break free of a body's gravity without further propulsion, given by v = √(2GM/r), where M is the mass of the body being escaped and r is the starting distance from its center. A more massive or more compact body has a higher escape velocity, which is why a black hole's escape velocity can exceed the speed of light.",
+        "Escape velocity depends only on mass and distance, not on the mass of the escaping object itself — a pebble and a spacecraft launched from the same point need exactly the same speed to escape."
+       ],
+       "example": {
+        "problem": "Calculate Earth's escape velocity, given Earth's mass M = 5.97 × 10^24^ kg and radius r = 6.37 × 10^6^ m.",
+        "steps": [
+         "Apply v = √(2GM/r): 2GM = 2 × (6.674 × 10^−11^) × (5.97 × 10^24^) ≈ 7.97 × 10^14^.",
+         "Divide by r: 7.97 × 10^14^ / 6.37 × 10^6^ ≈ 1.25 × 10^8^.",
+         "Take the square root: v ≈ 1.12 × 10^4^ m/s."
+        ],
+        "answer": "About 11.2 km/s, the well-known escape velocity from Earth's surface."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "law of universal gravitation",
+       "def": "Newton's law that every pair of masses attracts with force F = Gm~1~m~2~/r²."
+      },
+      {
+       "term": "gravitational constant",
+       "def": "G, the constant 6.674 × 10^−11^ N·m²/kg² relating mass, distance, and gravitational force."
+      },
+      {
+       "term": "escape velocity",
+       "def": "The minimum speed needed to break free of a body's gravity permanently, v = √(2GM/r)."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If the distance between two masses is doubled, what happens to the gravitational force between them?",
+       "choices": [
+        "It doubles",
+        "It is cut in half",
+        "It is cut to one quarter",
+        "It stays the same"
+       ],
+       "answer": 2,
+       "explain": "Gravitational force depends on 1/r², so doubling distance reduces the force to 1/2² = 1/4 of its original value."
+      },
+      {
+       "q": "Why does a spacecraft need the same escape velocity as a small pebble launched from the same point on Earth?",
+       "choices": [
+        "Escape velocity does not depend on the escaping object's own mass",
+        "Spacecraft always have engines to compensate",
+        "Pebbles cannot actually escape Earth's gravity",
+        "Escape velocity depends only on the object's own mass"
+       ],
+       "answer": 0,
+       "explain": "The escape velocity formula, v = √(2GM/r), depends only on the mass being escaped (M) and distance (r), not on the escaping object's own mass."
+      },
+      {
+       "q": "Why can a black hole have an escape velocity that exceeds the speed of light?",
+       "choices": [
+        "Black holes have unusually low mass",
+        "Black holes are extremely compact, giving a very small r for their mass, making 2GM/r enormous",
+        "Escape velocity is unrelated to mass or radius for black holes",
+        "The gravitational constant is different near a black hole"
+       ],
+       "answer": 1,
+       "explain": "A black hole packs enormous mass into an extremely small radius, so 2GM/r becomes so large that the resulting escape velocity exceeds light speed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Light, Spectroscopy, and Telescopes",
+   "summary": "Light is nearly the only messenger that reaches us from space — this unit covers how to read it for composition, motion, and how telescopes collect it.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Electromagnetic Spectrum and the Nature of Light",
+     "minutes": 15,
+     "intro": "Visible light is only a narrow sliver of the full range of radiation astronomers use to study the universe, and understanding light's basic wave properties is the foundation for everything a telescope or spectrograph can tell us.",
+     "sections": [
+      {
+       "heading": "Wavelength, Frequency, and the Spectrum",
+       "body": [
+        "Light travels as a wave with **wavelength** (λ, distance between wave crests) and **frequency** (f, waves passing a point per second), related by c = λf, where c is the speed of light (3.00 × 10^8^ m/s). The **electromagnetic spectrum** ranges from long-wavelength, low-frequency radio waves through microwaves, infrared, visible light, ultraviolet, X-rays, to short-wavelength, high-frequency gamma rays.",
+        "Every part of this spectrum carries information: radio telescopes reveal cold gas, infrared reveals dust-shrouded star formation, and X-rays reveal extremely hot gas near black holes — a full picture of the universe requires observing across the entire spectrum, not just the visible sliver our eyes detect."
+       ]
+      },
+      {
+       "heading": "Light as Particles: Photons",
+       "body": [
+        "Light also behaves as discrete packets of energy called **photons**, with energy E = hf, where h is Planck's constant — so higher-frequency light (like X-rays) carries more energetic photons than lower-frequency light (like radio waves). This wave-particle duality is essential for understanding how atoms absorb and emit light only at specific, quantized energies.",
+        "Because energy and frequency are directly related, and frequency and wavelength are inversely related, high-energy light always has short wavelengths, and low-energy light always has long wavelengths."
+       ],
+       "example": {
+        "problem": "Find the frequency of green light with a wavelength of 500 nm (500 × 10^−9^ m).",
+        "steps": [
+         "Apply c = λf, rearranged to f = c/λ.",
+         "f = (3.00 × 10^8^ m/s) / (500 × 10^−9^ m).",
+         "f = 6.00 × 10^14^ Hz."
+        ],
+        "answer": "6.00 × 10^14^ Hz."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "wavelength",
+       "def": "The distance between successive crests of a wave."
+      },
+      {
+       "term": "electromagnetic spectrum",
+       "def": "The full range of light from radio waves through gamma rays, ordered by wavelength and frequency."
+      },
+      {
+       "term": "photon",
+       "def": "A discrete packet of light energy, with energy E = hf."
+      }
+     ],
+     "practice": [
+      {
+       "q": "As wavelength increases, what happens to a light wave's frequency?",
+       "choices": [
+        "It increases",
+        "It decreases",
+        "It stays constant",
+        "It becomes negative"
+       ],
+       "answer": 1,
+       "explain": "Since c = λf is constant, wavelength and frequency are inversely related — as one increases, the other decreases."
+      },
+      {
+       "q": "Which type of electromagnetic radiation carries the most energy per photon?",
+       "choices": [
+        "Radio waves",
+        "Infrared",
+        "Visible light",
+        "Gamma rays"
+       ],
+       "answer": 3,
+       "explain": "Photon energy E = hf increases with frequency, and gamma rays have the highest frequency (and shortest wavelength) of the electromagnetic spectrum."
+      },
+      {
+       "q": "What is the frequency of light with a wavelength of 600 nm?",
+       "choices": [
+        "2.0 × 10^14^ Hz",
+        "5.0 × 10^14^ Hz",
+        "6.0 × 10^14^ Hz",
+        "1.8 × 10^17^ Hz"
+       ],
+       "answer": 1,
+       "explain": "f = c/λ = (3.00 × 10^8^) / (600 × 10^−9^) = 5.0 × 10^14^ Hz."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Spectroscopy: Reading the Fingerprints of Atoms",
+     "minutes": 17,
+     "intro": "By spreading starlight into a spectrum, astronomers can determine what a star is made of, how hot it is, and how fast it is moving — all without ever traveling there.",
+     "sections": [
+      {
+       "heading": "Spectral Lines and Composition",
+       "body": [
+        "Each element absorbs and emits light only at specific wavelengths determined by its electron energy levels, producing a unique pattern of **absorption lines** (dark lines in a continuous spectrum) or **emission lines** (bright lines against a dark background). Matching these patterns to laboratory spectra tells astronomers exactly which elements are present in a star or nebula, even at distances of billions of light-years.",
+        "A star's overall spectrum, along with **Wien's law** (peak wavelength × temperature = 2.898 × 10^−3^ m·K), also reveals its surface temperature: hotter stars peak at shorter (bluer) wavelengths, cooler stars at longer (redder) wavelengths."
+       ]
+      },
+      {
+       "heading": "The Doppler Shift",
+       "body": [
+        "When a light source moves toward or away from an observer, its wavelengths shift: **blueshift** (shorter wavelengths) for approaching motion, **redshift** (longer wavelengths) for receding motion. The **Doppler shift** formula, Δλ/λ = v/c, lets astronomers convert a measured wavelength shift directly into a radial velocity, the speed of approach or recession along the line of sight.",
+        "This technique is how astronomers detect orbiting exoplanets (from the slight wobble they induce in their star's spectrum) and measure the expansion of the universe itself (from the redshift of distant galaxies)."
+       ],
+       "example": {
+        "problem": "A star's spectral line, normally at 500.0 nm in the lab, is observed at 500.1 nm. Find the star's radial velocity.",
+        "steps": [
+         "Calculate the wavelength shift: Δλ = 500.1 − 500.0 = 0.1 nm.",
+         "Apply the Doppler formula: v = c × (Δλ/λ) = (3.00 × 10^5^ km/s) × (0.1/500.0).",
+         "v ≈ 60 km/s."
+        ],
+        "answer": "About 60 km/s, receding (since the shift is toward longer wavelength — a redshift)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "spectral line",
+       "def": "A specific wavelength at which an element absorbs or emits light, acting as a chemical fingerprint."
+      },
+      {
+       "term": "Wien's law",
+       "def": "The relationship between a blackbody's peak emission wavelength and its temperature: λ~max~T = 2.898 × 10^−3^ m·K."
+      },
+      {
+       "term": "Doppler shift",
+       "def": "The change in observed wavelength caused by relative motion between source and observer, used to measure radial velocity."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A star's spectrum shows its light shifted to longer wavelengths than expected. What does this indicate?",
+       "choices": [
+        "The star is approaching (blueshift)",
+        "The star is receding (redshift)",
+        "The star is stationary",
+        "The star has no measurable motion"
+       ],
+       "answer": 1,
+       "explain": "A shift to longer wavelengths is a redshift, indicating the source is moving away from the observer."
+      },
+      {
+       "q": "Two stars have identical composition, but Star A's spectrum peaks at a shorter (bluer) wavelength than Star B's. What does this tell you?",
+       "choices": [
+        "Star A is farther away",
+        "Star A is hotter than Star B",
+        "Star A is cooler than Star B",
+        "Star A is moving toward us"
+       ],
+       "answer": 1,
+       "explain": "By Wien's law, a shorter peak wavelength corresponds to a higher surface temperature, since λ~max~ and temperature are inversely related."
+      },
+      {
+       "q": "How do astronomers determine which elements are present in a distant star?",
+       "choices": [
+        "By measuring its exact distance",
+        "By matching its spectral absorption or emission lines to laboratory spectra of known elements",
+        "By observing its color with the naked eye",
+        "By calculating its escape velocity"
+       ],
+       "answer": 1,
+       "explain": "Each element produces a unique pattern of spectral lines; comparing a star's spectrum to known laboratory patterns reveals its composition."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Telescopes: Gathering and Focusing Light",
+     "minutes": 15,
+     "intro": "A telescope's job is not really to magnify — it is to gather far more light than the human eye can collect on its own, and to resolve fine detail that the naked eye simply cannot see.",
+     "sections": [
+      {
+       "heading": "Light-Gathering Power",
+       "body": [
+        "A telescope's most important property is its **aperture** (the diameter of its main mirror or lens): light-gathering power scales with the aperture's area, which grows with the square of its diameter. This is why astronomers prize larger telescopes so heavily — doubling the aperture diameter quadruples the light collected, revealing objects four times fainter.",
+        "**Refracting telescopes** use a lens to bend and focus light, while **reflecting telescopes** use a curved mirror; almost all large modern research telescopes are reflectors, since large lenses sag under their own weight and are far harder to manufacture flawlessly than large mirrors."
+       ]
+      },
+      {
+       "heading": "Resolving Power and Observing Locations",
+       "body": [
+        "**Resolving power** (also called angular resolution) is a telescope's ability to distinguish fine detail or closely spaced objects, and it improves with larger aperture and shorter observed wavelength, roughly proportional to λ/D. This is why radio telescopes, working at long wavelengths, must be enormous (or linked together as an array) to match the resolution of a much smaller optical telescope.",
+        "Telescopes are often built at high, dry, dark sites, or launched into space entirely, because Earth's atmosphere blurs images, absorbs some wavelengths (like most infrared, ultraviolet, and X-rays) completely, and city lights add background glow that washes out faint objects."
+       ],
+       "example": {
+        "problem": "Compare the light-gathering power of a 10-inch telescope to a 2-inch telescope.",
+        "steps": [
+         "Light-gathering power scales with the square of the aperture diameter.",
+         "Ratio = (10/2)² = 5² = 25."
+        ],
+        "answer": "The 10-inch telescope gathers 25 times more light than the 2-inch telescope."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "aperture",
+       "def": "The diameter of a telescope's main light-collecting mirror or lens."
+      },
+      {
+       "term": "reflecting telescope",
+       "def": "A telescope that uses a curved mirror to gather and focus light, standard for large modern telescopes."
+      },
+      {
+       "term": "resolving power",
+       "def": "A telescope's ability to distinguish fine detail, improving with larger aperture and shorter wavelength."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If a telescope's aperture diameter is tripled, how does its light-gathering power change?",
+       "choices": [
+        "It triples",
+        "It increases sixfold",
+        "It increases ninefold",
+        "It stays the same"
+       ],
+       "answer": 2,
+       "explain": "Light-gathering power scales with the square of the aperture, so tripling the diameter increases it by 3² = 9 times."
+      },
+      {
+       "q": "Why do almost all large modern research telescopes use mirrors rather than lenses?",
+       "choices": [
+        "Mirrors are cheaper to produce at any size",
+        "Large lenses sag under their own weight and are harder to manufacture flawlessly at large sizes",
+        "Lenses cannot focus visible light",
+        "Mirrors gather less light than lenses"
+       ],
+       "answer": 1,
+       "explain": "A lens can only be supported at its edge and sags under gravity at large sizes, while a mirror can be supported from behind, making large mirrors far more practical."
+      },
+      {
+       "q": "Why are some telescopes launched into space rather than built on the ground?",
+       "choices": [
+        "Space telescopes are always cheaper",
+        "Earth's atmosphere blurs images and absorbs wavelengths like most infrared, ultraviolet, and X-rays",
+        "Ground telescopes cannot use mirrors",
+        "Space telescopes need less maintenance"
+       ],
+       "answer": 1,
+       "explain": "The atmosphere distorts incoming light and blocks many wavelengths entirely, so observing those wavelengths, or getting the sharpest possible images, requires going to space."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "The Solar System",
+   "summary": "How the solar system formed, and a tour of the planets and small bodies that resulted, from rocky Mercury to the icy Kuiper Belt.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Formation of the Solar System and the Earth-Moon System",
+     "minutes": 16,
+     "intro": "The Sun, planets, and Moon did not form independently — they all emerged together from a single collapsing cloud of gas and dust about 4.6 billion years ago, and their present-day arrangement still carries the fingerprints of that shared origin.",
+     "sections": [
+      {
+       "heading": "The Nebular Hypothesis",
+       "body": [
+        "The **nebular hypothesis** explains the solar system's formation: a giant cloud of gas and dust collapsed under gravity, flattening into a spinning disk with the proto-Sun forming at the dense center. Closer to the young Sun, only rock and metal could condense (forming the small, dense terrestrial planets); farther out, ices could also condense, feeding the growth of much larger gas and ice giants.",
+        "This single model explains several otherwise puzzling facts at once: why all the planets orbit in nearly the same plane and same direction, and why the inner planets are rocky while the outer planets are gas- and ice-rich."
+       ]
+      },
+      {
+       "heading": "The Earth-Moon System",
+       "body": [
+        "The leading explanation for the Moon's origin is the **giant impact hypothesis**: a Mars-sized body collided with the young Earth, and debris from that collision coalesced into the Moon. The Moon is **tidally locked** to Earth, always showing the same face, because Earth's gravity long ago slowed the Moon's rotation until it matched its orbital period.",
+        "The Moon's sidereal period (27.3 days, relative to the stars) differs from its synodic period (29.5 days, relative to the Sun, which sets the cycle of lunar phases) because Earth itself keeps moving along its own orbit while the Moon completes a lap."
+       ],
+       "example": {
+        "problem": "Explain why the Moon takes longer to return to the same phase (29.5 days) than to complete one full orbit relative to the stars (27.3 days).",
+        "steps": [
+         "In 27.3 days, the Moon completes one full orbit relative to the fixed stars.",
+         "But Earth has also moved along its own orbit around the Sun during that time, so the Moon must travel a bit farther to realign with the Sun-Earth-Moon geometry that defines a repeated phase."
+        ],
+        "answer": "The extra 2.2 days account for Earth's own motion around the Sun during the Moon's orbit, a gap between the sidereal and synodic month."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "nebular hypothesis",
+       "def": "The model that the solar system formed from the gravitational collapse of a rotating cloud of gas and dust."
+      },
+      {
+       "term": "giant impact hypothesis",
+       "def": "The leading model that the Moon formed from debris after a Mars-sized body struck the young Earth."
+      },
+      {
+       "term": "tidally locked",
+       "def": "Describing a body whose rotation period matches its orbital period, so it always shows the same face to its partner."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why are the inner planets rocky while the outer planets are gas- and ice-rich, according to the nebular hypothesis?",
+       "choices": [
+        "The inner planets formed much later than the outer planets",
+        "Only rock and metal could condense near the hot young Sun, while ices could also condense farther out",
+        "The outer planets captured all the rocky material",
+        "The Sun's magnetic field pushed ice outward after the planets formed"
+       ],
+       "answer": 1,
+       "explain": "Near the young Sun's heat, only rock and metal condense into solids; farther out, where it is cold enough, ices condense too, allowing much larger planets to form."
+      },
+      {
+       "q": "What is the leading scientific explanation for the Moon's formation?",
+       "choices": [
+        "The Moon was captured intact from interstellar space",
+        "The Moon formed from debris after a Mars-sized body collided with the young Earth",
+        "The Moon split off from a rapidly spinning Earth with no outside impact",
+        "The Moon formed at the same location and time as Earth, independently"
+       ],
+       "answer": 1,
+       "explain": "The giant impact hypothesis, supported by lunar rock composition and orbital dynamics, is the leading explanation for the Moon's origin."
+      },
+      {
+       "q": "Why does the Moon always show the same face to Earth?",
+       "choices": [
+        "The Moon does not rotate at all",
+        "The Moon is tidally locked, with its rotation period matching its orbital period",
+        "Earth's atmosphere blocks our view of the far side",
+        "The Moon's orbit is perfectly circular"
+       ],
+       "answer": 1,
+       "explain": "Tidal locking means the Moon's rotation period exactly matches its orbital period around Earth, so the same hemisphere always faces us."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Terrestrial Planets",
+     "minutes": 16,
+     "intro": "Mercury, Venus, Earth, and Mars share a rocky composition, but their atmospheres — or lack of one — make their surface conditions wildly different from each other.",
+     "sections": [
+      {
+       "heading": "Mercury and Venus",
+       "body": [
+        "**Mercury**, closest to the Sun, has essentially no atmosphere to trap or spread heat, so its surface temperature swings from about 430 °C on the sunlit side to about −180 °C on the dark side — the most extreme temperature range of any planet. **Venus**, despite being farther from the Sun than Mercury, is the hottest planet at roughly 465 °C, because its thick atmosphere (96% carbon dioxide) traps heat in a runaway **greenhouse effect**.",
+        "Venus's atmosphere is nearly 90 times denser than Earth's at the surface, and its thick sulfuric acid clouds reflect most sunlight, which is why Venus is the brightest planet in Earth's sky despite its surface never being directly visible from outside."
+       ]
+      },
+      {
+       "heading": "Earth and Mars",
+       "body": [
+        "**Earth** sits in the Sun's habitable zone, with a moderate greenhouse effect from its nitrogen-oxygen atmosphere keeping surface temperatures suitable for liquid water and life. **Mars** has a thin atmosphere (less than 1% of Earth's surface pressure), too thin to retain much heat, giving it a cold average temperature around −60 °C despite clear evidence of ancient rivers, lakebeds, and possibly oceans.",
+        "Mars's thin atmosphere is thought to result from losing its global magnetic field billions of years ago, which let solar wind gradually strip the atmosphere away — a cautionary tale about what protects a planet's ability to hold onto air."
+       ],
+       "example": {
+        "problem": "Explain why Venus is hotter than Mercury, even though Mercury is nearly twice as close to the Sun.",
+        "steps": [
+         "Mercury receives more sunlight per square meter than Venus, since it is much closer to the Sun.",
+         "But Mercury has essentially no atmosphere to trap that heat, so most of it radiates back into space quickly.",
+         "Venus's thick CO~2~ atmosphere traps heat extremely effectively through the greenhouse effect, more than compensating for receiving less sunlight than Mercury."
+        ],
+        "answer": "Venus's runaway greenhouse effect traps far more heat than Mercury's airless surface can retain, making Venus hotter despite being farther from the Sun."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "greenhouse effect",
+       "def": "The trapping of heat by an atmosphere that lets sunlight in but absorbs and re-radiates outgoing infrared energy."
+      },
+      {
+       "term": "habitable zone",
+       "def": "The range of orbital distances from a star where a planet's surface temperature could support liquid water."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does Mercury have the most extreme day-to-night temperature swing of any planet?",
+       "choices": [
+        "It has the thickest atmosphere",
+        "It has essentially no atmosphere to retain heat or spread it around",
+        "It is farthest from the Sun",
+        "It rotates faster than any other planet"
+       ],
+       "answer": 1,
+       "explain": "Without an atmosphere to trap and redistribute heat, Mercury's sunlit side gets extremely hot while its dark side radiates heat away and gets extremely cold."
+      },
+      {
+       "q": "What primarily makes Venus the hottest planet in the solar system?",
+       "choices": [
+        "Its closer distance to the Sun than any other planet",
+        "A runaway greenhouse effect from its thick carbon dioxide atmosphere",
+        "Constant volcanic eruptions releasing heat",
+        "Its very fast rotation rate"
+       ],
+       "answer": 1,
+       "explain": "Venus's dense CO~2~ atmosphere traps heat so effectively that it outweighs receiving less sunlight than Mercury, making Venus the hottest planet overall."
+      },
+      {
+       "q": "What is thought to have caused Mars to lose most of its atmosphere over time?",
+       "choices": [
+        "Impacts from asteroids",
+        "Loss of its global magnetic field, letting solar wind strip the atmosphere away",
+        "The atmosphere froze onto the surface permanently",
+        "Mars never had a substantial atmosphere"
+       ],
+       "answer": 1,
+       "explain": "Without a global magnetic field to deflect it, the solar wind gradually stripped away much of Mars's early atmosphere over billions of years."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Giant Planets and Small Bodies",
+     "minutes": 15,
+     "intro": "Beyond Mars, the solar system changes character entirely — planets made mostly of gas and ice dwarf the terrestrial worlds, and countless smaller bodies fill the space between and beyond them.",
+     "sections": [
+      {
+       "heading": "Jupiter, Saturn, Uranus, and Neptune",
+       "body": [
+        "**Jupiter** and **Saturn** are gas giants composed mostly of hydrogen and helium, so large that Jupiter alone contains more mass than all other planets combined; Saturn's density is only 0.687 g/cm³, less dense than water, meaning Saturn would float if you could find an ocean large enough. **Uranus** and **Neptune** are ice giants, composed more of water, ammonia, and methane ices around a rocky core, and both are notably cold, blue-tinted worlds far from the Sun's warmth.",
+        "All four giant planets have ring systems (Saturn's the most visible) and large families of moons, including geologically active worlds like Jupiter's moon Io (the most volcanically active body in the solar system) and Saturn's moon Enceladus (which vents water-ice geysers from a subsurface ocean)."
+       ]
+      },
+      {
+       "heading": "Asteroids, Comets, and the Kuiper Belt",
+       "body": [
+        "The **asteroid belt**, between Mars and Jupiter, holds millions of rocky leftover bodies that never accreted into a full planet, largely because Jupiter's gravity kept stirring them up. **Comets** are icy bodies, many originating in the distant **Kuiper Belt** or even more distant Oort Cloud, that develop glowing comas and long tails of gas and dust when their orbits bring them close enough to the Sun for ices to sublimate.",
+        "Pluto, discovered in 1930, is now classified as a **dwarf planet** rather than a full planet, since it has not gravitationally cleared its orbital neighborhood in the Kuiper Belt the way the eight recognized planets have cleared theirs."
+       ],
+       "example": {
+        "problem": "Explain why Saturn's low density (0.687 g/cm³) is a meaningful clue about its composition.",
+        "steps": [
+         "Water has a density of 1.00 g/cm³; Saturn's average density is lower than that.",
+         "Rock and metal (as in terrestrial planets) have densities several times higher than water, so a body less dense than water must be composed mostly of much lighter material."
+        ],
+        "answer": "Saturn's low density confirms it is made almost entirely of light gases like hydrogen and helium, not rock or metal."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "gas giant",
+       "def": "A large planet composed mostly of hydrogen and helium, such as Jupiter or Saturn."
+      },
+      {
+       "term": "ice giant",
+       "def": "A large planet composed mostly of water, ammonia, and methane ices, such as Uranus or Neptune."
+      },
+      {
+       "term": "Kuiper Belt",
+       "def": "A region beyond Neptune containing icy small bodies, including Pluto and many comets."
+      },
+      {
+       "term": "dwarf planet",
+       "def": "A body that orbits the Sun and is round from its own gravity but has not cleared its orbital neighborhood, like Pluto."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does Saturn's density being lower than water most directly indicate?",
+       "choices": [
+        "Saturn is mostly rock and metal",
+        "Saturn is composed almost entirely of light gases like hydrogen and helium",
+        "Saturn is hollow",
+        "Saturn's rings are made of water ice"
+       ],
+       "answer": 1,
+       "explain": "Since rock and metal are much denser than water, a planet less dense than water must be composed overwhelmingly of very light material, like hydrogen and helium gas."
+      },
+      {
+       "q": "Why is Pluto classified as a dwarf planet rather than a full planet?",
+       "choices": [
+        "Pluto is not round",
+        "Pluto does not orbit the Sun",
+        "Pluto has not gravitationally cleared its orbital neighborhood",
+        "Pluto is made entirely of gas"
+       ],
+       "answer": 2,
+       "explain": "The modern definition requires a planet to have cleared its orbital neighborhood of other debris; Pluto, sharing the crowded Kuiper Belt with many similar bodies, does not meet this criterion."
+      },
+      {
+       "q": "What causes a comet to develop a glowing coma and tail?",
+       "choices": [
+        "Collision with an asteroid",
+        "Solar heating causing its ices to sublimate as it nears the Sun",
+        "Reflected light from Jupiter",
+        "Gravitational pull from the asteroid belt"
+       ],
+       "answer": 1,
+       "explain": "As a comet's orbit brings it close to the Sun, solar heating causes its ices to sublimate directly into gas, releasing dust and gas that form the glowing coma and tail."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Stars, Galaxies, and Cosmology",
+   "summary": "How stars are born, live, and die depending on their mass, how galaxies are organized, and what the expanding universe tells us about its own history.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Sun and Measuring Stellar Properties",
+     "minutes": 17,
+     "intro": "The Sun is the one star close enough to study in detail, and the same three tools astronomers use on it — parallax, brightness, and spectral type — let them measure the properties of stars trillions of kilometers away.",
+     "sections": [
+      {
+       "heading": "The Sun's Structure and Energy Source",
+       "body": [
+        "The Sun generates energy through **nuclear fusion** in its core, where immense pressure and temperature (about 15 million K) fuse hydrogen nuclei into helium via the proton-proton chain, converting a small fraction of mass directly into energy according to E = mc². This energy takes an estimated tens of thousands of years to random-walk outward through the dense interior before finally radiating from the visible surface, the **photosphere**, at about 5,778 K.",
+        "The Sun has fused hydrogen steadily for about 4.6 billion years and has enough hydrogen fuel left to continue for roughly another 5 billion years before its core composition changes enough to end its main-sequence life."
+       ]
+      },
+      {
+       "heading": "Parallax and Apparent Brightness",
+       "body": [
+        "**Parallax** measures a nearby star's tiny apparent shift against distant background stars as Earth orbits the Sun; a star with a parallax angle of exactly 1 arcsecond is defined to be at a distance of 1 **parsec** (about 3.26 light-years), and distance in parsecs equals 1 divided by the parallax angle in arcseconds. **Apparent brightness** follows an inverse-square law with distance, so a star's true luminosity cannot be judged from brightness alone without knowing how far away it is.",
+        "Combining a star's measured temperature (from its spectrum) and its luminosity (from brightness and distance) on the **Hertzsprung-Russell (H-R) diagram** reveals that most stars, including the Sun, fall along a **main sequence** band, with hotter stars also being more luminous."
+       ],
+       "example": {
+        "problem": "Star A and Star B have identical luminosity, but Star A is twice as far from Earth as Star B. How does Star A's apparent brightness compare to Star B's?",
+        "steps": [
+         "Apparent brightness follows an inverse-square law: brightness ∝ 1/distance².",
+         "Doubling the distance means brightness is divided by 2² = 4."
+        ],
+        "answer": "Star A appears one-quarter as bright as Star B, despite having identical true luminosity."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "nuclear fusion",
+       "def": "The combining of light atomic nuclei into heavier ones, releasing energy, as occurs in the Sun's core."
+      },
+      {
+       "term": "parallax",
+       "def": "The apparent shift of a nearby star against distant background stars as Earth orbits the Sun, used to measure distance."
+      },
+      {
+       "term": "parsec",
+       "def": "A unit of distance equal to about 3.26 light-years, defined as the distance at which parallax equals 1 arcsecond."
+      },
+      {
+       "term": "main sequence",
+       "def": "The band on the H-R diagram where most stars, including the Sun, spend the majority of their lives fusing hydrogen."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A star has a measured parallax of 0.1 arcseconds. What is its distance in parsecs?",
+       "choices": [
+        "0.1 pc",
+        "1 pc",
+        "10 pc",
+        "100 pc"
+       ],
+       "answer": 2,
+       "explain": "Distance in parsecs = 1 / parallax in arcseconds = 1 / 0.1 = 10 pc."
+      },
+      {
+       "q": "Two stars appear equally bright in the sky, but one is much farther away. What must be true of the farther star?",
+       "choices": [
+        "It must be much cooler",
+        "It must have much greater true luminosity",
+        "It must be much smaller",
+        "It must have a lower surface temperature"
+       ],
+       "answer": 1,
+       "explain": "Since apparent brightness falls off with the square of distance, a farther star appearing equally bright must be intrinsically far more luminous to compensate."
+      },
+      {
+       "q": "What energy source powers the Sun?",
+       "choices": [
+        "Chemical combustion",
+        "Gravitational contraction alone",
+        "Nuclear fusion of hydrogen into helium in its core",
+        "Radioactive decay of heavy elements"
+       ],
+       "answer": 2,
+       "explain": "The Sun's energy comes from nuclear fusion, converting hydrogen into helium in its extremely hot, high-pressure core, releasing energy according to E = mc²."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Stellar Evolution: Birth, Life, and Death of Stars",
+     "minutes": 17,
+     "intro": "A star's mass at birth determines almost everything about its future — how long it lives, how it dies, and what kind of remarkable object it leaves behind.",
+     "sections": [
+      {
+       "heading": "Main-Sequence Lifetimes",
+       "body": [
+        "Stars form when clouds of gas and dust collapse under gravity until core temperatures are high enough to ignite hydrogen fusion. More massive stars fuse hydrogen far faster than low-mass stars, so despite having more fuel, they burn through it much sooner — a 10-solar-mass star lives only about 30 million years, compared to the Sun's roughly 10-billion-year total main-sequence lifetime.",
+        "When a star exhausts the hydrogen in its core, fusion shifts to a shell around an inert helium core, causing the star to expand and cool into a **red giant** — the Sun itself will swell to a red giant in roughly 5 billion years, likely engulfing Mercury and Venus."
+       ]
+      },
+      {
+       "heading": "Stellar Deaths: White Dwarfs, Neutron Stars, and Black Holes",
+       "body": [
+        "A low- or medium-mass star (like the Sun) ends its life by shedding its outer layers as a **planetary nebula**, leaving behind a hot, dense **white dwarf** — a stellar remnant supported by electron degeneracy pressure, with no mass above about 1.4 solar masses (the **Chandrasekhar limit**) able to remain a stable white dwarf. A much more massive star ends in a violent **supernova** explosion, leaving behind either a **neutron star** (if the collapsed core is between about 1.4 and 3 solar masses) or a **black hole** (if the core exceeds about 3 solar masses, with gravity so strong that nothing, not even light, can escape).",
+        "This mass-dependent split — quiet fade for low-mass stars, violent explosion for high-mass stars — is why the same physical process, gravitational collapse, produces three completely different classes of stellar remnant."
+       ],
+       "example": {
+        "problem": "A star's collapsed core after a supernova has a mass of 2 solar masses. What kind of stellar remnant does it become?",
+        "steps": [
+         "Compare 2 solar masses to the key thresholds: below 1.4 solar masses would be a white dwarf; between about 1.4 and 3 solar masses is the neutron star range; above about 3 solar masses becomes a black hole.",
+         "2 solar masses falls within the 1.4–3 solar mass range."
+        ],
+        "answer": "The core becomes a neutron star."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "red giant",
+       "def": "An expanded, cooled late-life stage of a star after core hydrogen is exhausted and shell fusion begins."
+      },
+      {
+       "term": "white dwarf",
+       "def": "The dense remnant of a low- or medium-mass star, supported by electron degeneracy pressure, below 1.4 solar masses."
+      },
+      {
+       "term": "neutron star",
+       "def": "The extremely dense remnant of a massive star's supernova core, roughly 1.4 to 3 solar masses."
+      },
+      {
+       "term": "black hole",
+       "def": "A remnant so dense that not even light can escape its gravity, forming from cores above about 3 solar masses."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does a 10-solar-mass star have a much shorter main-sequence lifetime than the Sun, despite having far more fuel?",
+       "choices": [
+        "It has less hydrogen than the Sun",
+        "It fuses hydrogen at a dramatically faster rate than the Sun",
+        "It never actually reaches the main sequence",
+        "Its fuel is a different chemical element"
+       ],
+       "answer": 1,
+       "explain": "Massive stars burn through their much larger fuel supply even faster because their core fusion rate scales up dramatically with mass, shortening their total lifetime."
+      },
+      {
+       "q": "What determines whether a stellar remnant becomes a white dwarf, a neutron star, or a black hole?",
+       "choices": [
+        "The star's age at formation",
+        "The mass of the collapsed stellar core",
+        "The star's distance from Earth",
+        "Whether the star has any orbiting planets"
+       ],
+       "answer": 1,
+       "explain": "The mass of the collapsed core determines the outcome: below about 1.4 solar masses gives a white dwarf, 1.4–3 gives a neutron star, and above about 3 gives a black hole."
+      },
+      {
+       "q": "What will happen to the Sun after it exhausts the hydrogen fuel in its core?",
+       "choices": [
+        "It will immediately become a black hole",
+        "It will expand into a red giant, then eventually leave behind a white dwarf",
+        "It will explode as a supernova, leaving a neutron star",
+        "It will simply stop shining with no further change"
+       ],
+       "answer": 1,
+       "explain": "As a medium-mass star, the Sun will expand into a red giant, later shed its outer layers, and leave behind a white dwarf remnant, not a supernova."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Galaxies, the Expanding Universe, and the Big Bang",
+     "minutes": 17,
+     "intro": "Zooming out from individual stars to entire galaxies reveals a universe that is not just full of galaxies, but expanding — a discovery that points directly back to a single, hot, dense beginning.",
+     "sections": [
+      {
+       "heading": "The Milky Way and Other Galaxies",
+       "body": [
+        "Our **Milky Way** is a spiral galaxy roughly 100,000 light-years across, containing 200 to 400 billion stars, with the Sun located about 26,000 light-years from the galactic center in one of its spiral arms, orbiting the galactic center about once every 225 to 250 million years. Beyond the Milky Way lie billions of other galaxies, classified broadly as spiral (like the Milky Way, with pinwheel arms), elliptical (smooth, rounded, often older stellar populations), or irregular (lacking clear structure).",
+        "Galaxies themselves cluster together under gravity into groups and larger clusters, which are in turn organized into vast filaments and walls surrounding huge, relatively empty voids — the large-scale structure of the universe."
+       ]
+      },
+      {
+       "heading": "Hubble's Law and the Big Bang",
+       "body": [
+        "In the 1920s, Edwin Hubble discovered that nearly every distant galaxy shows a redshift proportional to its distance, described by **Hubble's law**, v = H~0~d, where H~0~ (the Hubble constant) is roughly 70 km/s/Mpc. This means the universe itself is expanding, with more distant galaxies receding faster — not because galaxies are flying through static space, but because space itself is stretching between them.",
+        "Running this expansion backward in time points to a single origin, the **Big Bang**, about 13.8 billion years ago; strong supporting evidence includes the cosmic microwave background radiation (a faint afterglow at about 2.7 K filling the entire sky) and the observed abundance of light elements like hydrogen and helium, both matching Big Bang predictions closely."
+       ],
+       "example": {
+        "problem": "A galaxy is measured at a distance of 100 megaparsecs (Mpc). Using Hubble's law with H~0~ = 70 km/s/Mpc, find its recession velocity.",
+        "steps": [
+         "Apply Hubble's law: v = H~0~ × d.",
+         "v = 70 km/s/Mpc × 100 Mpc."
+        ],
+        "answer": "v = 7,000 km/s, receding from us."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Milky Way",
+       "def": "Our home spiral galaxy, roughly 100,000 light-years across, containing 200-400 billion stars."
+      },
+      {
+       "term": "Hubble's law",
+       "def": "The relationship v = H~0~d showing that a galaxy's recession velocity is proportional to its distance."
+      },
+      {
+       "term": "Big Bang",
+       "def": "The hot, dense origin of the universe roughly 13.8 billion years ago, from which all matter and space expanded."
+      },
+      {
+       "term": "cosmic microwave background",
+       "def": "The faint, uniform afterglow radiation (about 2.7 K) left over from the early universe, filling the entire sky."
+      }
+     ],
+     "practice": [
+      {
+       "q": "According to Hubble's law, how does a distant galaxy's recession velocity relate to its distance?",
+       "choices": [
+        "It is unrelated to distance",
+        "It is inversely proportional to distance",
+        "It is directly proportional to distance",
+        "It decreases with increasing distance"
+       ],
+       "answer": 2,
+       "explain": "Hubble's law states v = H~0~d, meaning recession velocity increases directly and proportionally with a galaxy's distance."
+      },
+      {
+       "q": "Using Hubble's law with H~0~ = 70 km/s/Mpc, what is the recession velocity of a galaxy at 50 Mpc?",
+       "choices": [
+        "350 km/s",
+        "700 km/s",
+        "3,500 km/s",
+        "35,000 km/s"
+       ],
+       "answer": 2,
+       "explain": "v = H~0~ × d = 70 km/s/Mpc × 50 Mpc = 3,500 km/s."
+      },
+      {
+       "q": "What is the cosmic microwave background, and why is it considered strong evidence for the Big Bang?",
+       "choices": [
+        "Light from the Milky Way's center, showing the galaxy is young",
+        "A faint, uniform afterglow radiation filling the sky, matching predictions for radiation left over from a hot early universe",
+        "Radio noise from distant black holes",
+        "Starlight from the very first stars, unrelated to the universe's origin"
+       ],
+       "answer": 1,
+       "explain": "The cosmic microwave background is the predicted, observed afterglow of the hot, dense early universe cooling as it expanded, closely matching Big Bang predictions."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

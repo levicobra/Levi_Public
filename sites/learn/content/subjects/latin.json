@@ -1,0 +1,1008 @@
+{
+  "id": "latin",
+  "title": "Latin",
+  "domain": "languages",
+  "level": "All levels",
+  "description": "An introduction to Latin grammar and vocabulary that builds from the alphabet and pronunciation through noun declensions and verb conjugations to reading short real Latin sentences. You will learn to identify a noun's case and a verb's person and tense, translate basic sentences in both directions, and read authentic Latin, including a classical proverb and the opening line of Caesar's Gallic War commentaries.",
+  "outcomes": [
+    "You can pronounce Latin using the classical (restored) pronunciation system, including vowel length.",
+    "You can identify a noun's case, number, and declension and translate first- and second-declension nouns.",
+    "You can conjugate and translate present-tense verbs from the first and second conjugations, plus the irregular verb sum.",
+    "You can make adjectives agree with the nouns they modify in case, number, and gender.",
+    "You can translate simple Latin sentences using the genitive, dative, and ablative cases correctly.",
+    "You can read and translate short authentic Latin sentences, including a well-known proverb and a line of Caesar."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Sounds and Letters",
+      "summary": "Classical Latin pronunciation is regular and learnable once you know its rules for consonants, vowel length, and syllable stress.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "The Latin Alphabet and Classical Pronunciation",
+          "minutes": 10,
+          "intro": "Latin as the Romans spoke it sounds nothing like the Latin whispered in old church services or movie spells — classical pronunciation is closer to Italian than to English, and every letter is pronounced consistently once you know the rules.",
+          "sections": [
+            {
+              "heading": "Consonants: Hard and Consistent",
+              "body": [
+                "Classical Latin has no soft *c* or *g* — *c* is always pronounced like English 'k' (*Caesar* is 'KAI-sar,' not 'SEE-zer'), and *g* is always hard, as in 'go.' The letter *v* is pronounced like English 'w' (*veni* sounds like 'WEH-nee'), and *i* between two vowels acts as a consonant 'y' (*Troia* sounds like 'TROY-ah').",
+                "Latin *qu* is always pronounced together as 'kw,' as in English 'quick' (*quid*, what, sounds like 'kwid'). There is no letter *j* or separate *u/v* in the classical alphabet — what looks like *j* in later printed texts is really consonantal *i*, so *Iulius* and *Julius* are the same name."
+              ]
+            },
+            {
+              "heading": "Vowels: Five Pure Sounds",
+              "body": [
+                "Like Hawaiian, Latin vowels are pure and do not glide: *a* as in 'father,' *e* as in 'bet,' *i* as in 'machine' (short) or 'ee' (long), *o* as in 'obey,' and *u* as in 'moon.' Each vowel also has a short and a long version, and length changes both pronunciation duration and, often, meaning.",
+                "Diphthongs — two vowels blended into one syllable — include *ae* (like English 'eye,' as in *Caesar*), *au* (like English 'ow,' as in *aut*, 'or'), and *oe* (like English 'oy,' as in *poena*, punishment). Recognizing these blended sounds prevents you from pronouncing two separate vowel sounds where the Romans intended one."
+              ],
+              "example": {
+                "problem": "Pronounce *Caesar* and *veni, vidi, vici* using classical Latin rules.",
+                "steps": [
+                  "Caesar: ae is the diphthong 'eye,' c is hard 'k,' giving 'KYE-sar.'",
+                  "Veni: v is 'w,' giving 'WEH-nee.'",
+                  "Vidi: v is 'w,' i is 'ee,' giving 'WEE-dee.'",
+                  "Vici: v is 'w,' c is hard 'k,' giving 'WEE-kee.'"
+                ],
+                "answer": "Caesar = 'KYE-sar'; veni, vidi, vici = 'WEH-nee, WEE-dee, WEE-kee' ('I came, I saw, I conquered')."
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Classical pronunciation",
+              "def": "The reconstructed pronunciation of Latin as spoken in the late Republic and early Empire, close to Italian in its sounds."
+            },
+            {
+              "term": "Consonantal i / v",
+              "def": "The letters i and v acting as consonants ('y' and 'w' sounds) rather than vowels."
+            },
+            {
+              "term": "Diphthong",
+              "def": "Two vowels blended into a single syllable's sound, such as ae ('eye') or au ('ow')."
+            }
+          ],
+          "practice": [
+            {
+              "q": "How is *c* pronounced in classical Latin?",
+              "choices": [
+                "Always like English 'k'",
+                "Like 'k' before a, o, u and like 's' before e, i",
+                "Always like English 's'",
+                "Silent before consonants"
+              ],
+              "answer": 0,
+              "explain": "Classical Latin has no soft c — it is consistently a hard 'k' sound in every position."
+            },
+            {
+              "q": "How is the Latin letter *v* pronounced in classical pronunciation?",
+              "choices": [
+                "Like English 'w'",
+                "Like English 'v'",
+                "Like English 'f'",
+                "It is silent"
+              ],
+              "answer": 0,
+              "explain": "Classical v represents a 'w' sound, so veni sounds like 'WEH-nee,' not the modern English 'v.'"
+            },
+            {
+              "q": "What sound does the diphthong *ae* make, as in *Caesar*?",
+              "choices": [
+                "Like English 'eye'",
+                "Like English 'ee'",
+                "Like English 'ay'",
+                "Like English 'oo'"
+              ],
+              "answer": 0,
+              "explain": "The Latin diphthong ae is pronounced like the 'eye' sound in English, giving Caesar the sound 'KYE-sar.'"
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Vowel Length and Syllable Weight",
+          "minutes": 10,
+          "intro": "Two words can be spelled with the exact same letters and mean entirely different things in Latin, distinguished only by how long you hold a vowel — length is not a minor detail, it is part of the word's identity.",
+          "sections": [
+            {
+              "heading": "Long and Short Vowels Change Meaning",
+              "body": [
+                "Latin marks a long vowel with a macron in modern textbooks (ā ē ī ō ū), though ancient Romans usually did not write it. A held-long vowel is roughly twice the duration of a short one. The classic example is *mălum* (short a, meaning 'evil/bad thing') versus *mālum* (long a, meaning 'apple') — same letters, opposite-feeling meanings, distinguished only by length.",
+                "Another pair: *lĕvis* (short e, 'light in weight') versus *lēvis* (long e, 'smooth'). Textbooks mark these lengths because dictionaries and grammars need to record them precisely, but ordinary Latin inscriptions from Rome rarely bothered — Romans simply knew the length from having grown up speaking the language, the way English speakers know 'read' (present) and 'read' (past) sound different without needing a mark."
+              ]
+            },
+            {
+              "heading": "Syllable Weight and Stress",
+              "body": [
+                "A Latin syllable is 'heavy' if it contains a long vowel or diphthong, or if a short vowel is followed by two consonants; otherwise it is 'light.' Stress placement depends on syllable weight in words of three or more syllables: stress falls on the second-to-last syllable if that syllable is heavy, and on the third-to-last syllable if the second-to-last is light.",
+                "Take *amīcus* (friend): the second-to-last syllable, *mī*, has a long vowel, making it heavy, so stress falls there — a-MI-cus. Take *fēmina* (woman): the second-to-last syllable, *mi*, is short and light, so stress moves back to the third-to-last — FE-mi-na."
+              ],
+              "example": {
+                "problem": "Determine where the stress falls in *dominus* (master) and explain why.",
+                "steps": [
+                  "Identify the second-to-last syllable: mi in do-mi-nus.",
+                  "Check its weight: the vowel i is short and is followed by only one consonant (n), so the syllable is light.",
+                  "Since the second-to-last syllable is light, stress shifts to the third-to-last syllable: do."
+                ],
+                "answer": "DO-mi-nus — stress falls on the third-to-last syllable because the second-to-last is light."
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Vowel length",
+              "def": "Whether a vowel is held short or long (roughly double duration); can change a word's meaning entirely."
+            },
+            {
+              "term": "Heavy syllable",
+              "def": "A syllable with a long vowel/diphthong, or a short vowel followed by two consonants."
+            },
+            {
+              "term": "Penultimate / antepenultimate",
+              "def": "The second-to-last (penultimate) and third-to-last (antepenultimate) syllables, which determine Latin stress placement."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What is the main difference between *mălum* and *mālum*?",
+              "choices": [
+                "Vowel length changes the meaning from 'bad thing' to 'apple'",
+                "They are spelled with completely different letters",
+                "One is plural and one is singular",
+                "They differ only in capitalization"
+              ],
+              "answer": 0,
+              "explain": "The words are spelled identically except for the length of the first a, which changes 'evil thing' to 'apple.'"
+            },
+            {
+              "q": "What makes a syllable 'heavy' in Latin?",
+              "choices": [
+                "A long vowel/diphthong, or a short vowel followed by two consonants",
+                "Being the first syllable of any word",
+                "Containing the letter q",
+                "Ending the sentence"
+              ],
+              "answer": 0,
+              "explain": "Heavy syllables contain a long vowel or diphthong, or a short vowel blocked by two following consonants."
+            },
+            {
+              "q": "In *fēmina* (woman), why does the stress fall on the third-to-last syllable rather than the second-to-last?",
+              "choices": [
+                "The second-to-last syllable (mi) is light, so stress shifts back",
+                "Latin always stresses the third-to-last syllable",
+                "The word has an irregular, memorized stress",
+                "Because fēmina has a long ē in the first syllable"
+              ],
+              "answer": 0,
+              "explain": "Because the second-to-last syllable is light, Latin's stress rule pushes the accent to the third-to-last syllable instead."
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Reading Latin Aloud",
+          "minutes": 10,
+          "intro": "Grammar rules stay abstract until you actually make the sounds — this lesson is pure practice, applying everything from pronunciation and vowel length to real short lines you will recognize.",
+          "sections": [
+            {
+              "heading": "Putting the Rules Together",
+              "body": [
+                "To read any Latin word aloud correctly, work through it in order: identify consonant sounds (remembering hard c and g, and w-sound v), identify vowel qualities and lengths, mark diphthongs as single sounds, and then apply the stress rule based on syllable weight. This is mechanical, not intuitive, which is exactly why it is learnable — there are no silent letters or surprise exceptions to memorize beyond what you already know.",
+                "Consider *Senātus Populusque Rōmānus* (SPQR, 'The Senate and People of Rome'), the motto of ancient Rome still stamped on manhole covers in the city today. Reading it: se-NA-tus (long a makes the second syllable heavy), po-PU-lus-que (heavy pu from the following two consonants), ro-MA-nus (long a again pulls the stress)."
+              ]
+            },
+            {
+              "heading": "A Famous Line to Practice On",
+              "body": [
+                "Julius Caesar's own words, *Vēnī, vīdī, vīcī* ('I came, I saw, I conquered'), make excellent pronunciation practice: each word is two syllables, each with a long first vowel, so stress naturally falls on that first syllable in each word — WAY-nee, WEE-dee, WEE-kee, using the classical w-sound v.",
+                "Try also *Alea iacta est* ('The die is cast,' attributed to Caesar crossing the Rubicon): AH-le-a YAHK-ta est, where *iacta* begins with consonantal *i* (a 'y' sound) before the vowel *a*. Practicing short, famous phrases like these is a far more motivating way to drill pronunciation than isolated vocabulary lists."
+              ],
+              "example": {
+                "problem": "Read aloud, syllable by syllable with stress marked: *Cōgitō ergō sum* ('I think, therefore I am').",
+                "steps": [
+                  "Cōgitō: the long ō makes the last syllable long, but the second-to-last syllable gi is short and light, so stress falls on the third-to-last: CO-gi-to.",
+                  "Ergō: two syllables; with only two syllables Latin stress defaults to the first: ER-go.",
+                  "Sum: one syllable, no stress question."
+                ],
+                "answer": "CO-gi-to ER-go sum."
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "SPQR",
+              "def": "Senātus Populusque Rōmānus, 'The Senate and People of Rome,' Rome's ancient civic motto."
+            },
+            {
+              "term": "Alea iacta est",
+              "def": "'The die is cast' — words attributed to Julius Caesar on crossing the Rubicon."
+            }
+          ],
+          "practice": [
+            {
+              "q": "How would classical pronunciation render *vīcī* (from vēnī, vīdī, vīcī)?",
+              "choices": [
+                "WEE-kee",
+                "VEE-see",
+                "WI-chee",
+                "VEE-kee"
+              ],
+              "answer": 0,
+              "explain": "Classical c is always hard 'k' and i is 'ee,' giving WEE-kee, not the Italianate/ecclesiastical 'VEE-chee.'"
+            },
+            {
+              "q": "What does *Alea iacta est* mean?",
+              "choices": [
+                "The die is cast",
+                "I came, I saw, I conquered",
+                "The Senate and People of Rome",
+                "I think, therefore I am"
+              ],
+              "answer": 0,
+              "explain": "Alea iacta est is the phrase attributed to Caesar on crossing the Rubicon, meaning 'the die is cast' — a decision now irreversible."
+            },
+            {
+              "q": "In reading Latin aloud, what should you check right after identifying consonant sounds?",
+              "choices": [
+                "Vowel qualities and lengths, including diphthongs",
+                "Whether the word is a noun or a verb",
+                "The English translation",
+                "The number of letters in the word"
+              ],
+              "answer": 0,
+              "explain": "After consonants, the pronunciation process moves to vowels and diphthongs, which then determine syllable weight and stress."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Nouns and Cases: First and Second Declension",
+      "summary": "Latin shows a noun's grammatical role through its ending, not its position — this unit introduces the case system and the two most common declension patterns.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "What Is a Case? Nominative and Accusative",
+          "minutes": 12,
+          "intro": "English shows a word's job in a sentence mostly through word order — 'the dog bites the man' means something different from 'the man bites the dog' — but Latin shows the same information by changing the noun's ending instead, which is why Latin word order can be so flexible.",
+          "sections": [
+            {
+              "heading": "Case Marks a Noun's Job",
+              "body": [
+                "A case is an ending on a noun that tells you its grammatical role — subject, direct object, possessor, and so on — independent of where the word sits in the sentence. Latin has six cases in total, but this lesson introduces the two most fundamental: nominative (the subject, the one doing the action) and accusative (the direct object, the one receiving the action).",
+                "Because case endings carry this information, Latin word order is far freer than English's: *Puella puerum videt*, *Puerum puella videt*, and *Videt puella puerum* can all mean 'The girl sees the boy,' because *puella* ('girl') stays nominative and *puerum* ('boy') stays accusative no matter where they sit. The verb *videt* ('sees') and the case endings do the work English relies on position for."
+              ]
+            },
+            {
+              "heading": "Recognizing Nominative and Accusative Endings",
+              "body": [
+                "In the first declension (words like *puella*, girl), the nominative singular ends in *-a* and the accusative singular ends in *-am*: *puella* (subject: 'the girl') versus *puellam* (object: 'the girl,' as in 'I see the girl'). In the second declension (words like *puer*, boy), the nominative is often just the stem, and the accusative singular adds *-um*: *puer* versus *puerum*.",
+                "A rule of thumb while you are learning: if a noun ends in *-m*, it is very often the accusative, marking it as the object of the sentence, not the subject. This single check will correctly identify the object in the overwhelming majority of simple Latin sentences you encounter in this course."
+              ],
+              "example": {
+                "problem": "Translate 'The boy sees the girl,' given *puer* (boy, nominative) and *puella/puellam* (girl, nominative/accusative), and the verb *videt* (sees).",
+                "steps": [
+                  "Identify the subject: 'the boy' is doing the seeing, so use the nominative: puer.",
+                  "Identify the object: 'the girl' is being seen, so use the accusative: puellam.",
+                  "Add the verb: videt.",
+                  "Assemble (any order works, but subject-object-verb is common): Puer puellam videt."
+                ],
+                "answer": "Puer puellam videt. ('The boy sees the girl.')"
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Case",
+              "def": "An ending on a Latin noun showing its grammatical role in the sentence, such as subject or object."
+            },
+            {
+              "term": "Nominative case",
+              "def": "The case marking the subject of a sentence — the one performing the action."
+            },
+            {
+              "term": "Accusative case",
+              "def": "The case marking the direct object of a sentence — the one receiving the action."
+            },
+            {
+              "term": "Declension",
+              "def": "A pattern group of nouns that share the same set of case endings."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What does the nominative case mark?",
+              "choices": [
+                "The subject of the sentence",
+                "The direct object",
+                "Possession",
+                "Location"
+              ],
+              "answer": 0,
+              "explain": "The nominative case identifies the subject — the noun performing the verb's action."
+            },
+            {
+              "q": "In *Puellam puer videt*, which word is the direct object, and how do you know?",
+              "choices": [
+                "Puellam, because its -am ending marks the accusative",
+                "Puer, because it comes second",
+                "Videt, because it is the verb",
+                "Puellam, because it comes first in the sentence"
+              ],
+              "answer": 0,
+              "explain": "The -am ending marks puellam as accusative (object), regardless of its position in the sentence — Latin case endings, not word order, show grammatical role."
+            },
+            {
+              "q": "Why can Latin word order vary so much more freely than English word order?",
+              "choices": [
+                "Case endings, not position, show each noun's grammatical role",
+                "Latin sentences are always very short",
+                "Latin has no verbs",
+                "Latin nouns never change form"
+              ],
+              "answer": 0,
+              "explain": "Because endings like nominative -a and accusative -am mark role directly, Latin does not need fixed word order to show who does what to whom."
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "The First Declension: Feminine -a Nouns",
+          "minutes": 10,
+          "intro": "Once you can recognize one declension pattern completely, you can decline hundreds of Latin nouns on sight — the first declension, built almost entirely around feminine nouns ending in -a, is the natural place to start.",
+          "sections": [
+            {
+              "heading": "The Singular Endings",
+              "body": [
+                "First-declension nouns like *puella* (girl) or *rosa* (rose) decline as follows in the singular: nominative *puella* (the girl, subject), genitive *puellae* (of the girl), dative *puellae* (to/for the girl), accusative *puellam* (the girl, object), and ablative *puellā* (by/with/from the girl, note the long ā). Most first-declension nouns are feminine, though a handful referring to male roles, like *agricola* (farmer) and *poēta* (poet), are grammatically feminine in form but masculine in meaning and agreement.",
+                "Notice that genitive and dative singular share the identical form, *puellae* — context and the rest of the sentence tell you which meaning is intended. This kind of overlap is common across Latin declensions and is one reason translating whole sentences, not isolated words, is the real skill being built here."
+              ]
+            },
+            {
+              "heading": "The Plural Endings",
+              "body": [
+                "In the plural: nominative *puellae* (the girls), genitive *puellārum* (of the girls), dative *puellīs* (to/for the girls), accusative *puellās* (the girls, object), and ablative *puellīs* (by/with/from the girls). Notice dative and ablative plural share the identical form *puellīs*, just as genitive and dative singular did.",
+                "A useful memorization strategy is to chant the whole pattern in order — nominative, genitive, dative, accusative, ablative, singular then plural — for one model noun like *puella* until it is automatic, then apply the same six-times-two grid of endings to any new first-declension noun you meet, such as *aqua* (water) or *terra* (land)."
+              ],
+              "example": {
+                "problem": "Give the accusative singular and nominative plural of *rosa* (rose).",
+                "steps": [
+                  "The first-declension accusative singular ending is -am: rosam.",
+                  "The first-declension nominative plural ending is -ae: rosae."
+                ],
+                "answer": "Accusative singular: rosam. Nominative plural: rosae."
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "First declension",
+              "def": "The noun pattern for words like puella (girl) ending in -a, mostly feminine."
+            },
+            {
+              "term": "Genitive case",
+              "def": "The case showing possession, 'of the ___' (puellae, of the girl)."
+            },
+            {
+              "term": "Dative case",
+              "def": "The case showing the indirect object, 'to/for the ___' (puellae, to the girl)."
+            },
+            {
+              "term": "Ablative case",
+              "def": "The case showing means, manner, or separation, 'by/with/from the ___' (puellā)."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What is the nominative plural of *puella* (girl)?",
+              "choices": [
+                "Puellae",
+                "Puellam",
+                "Puellārum",
+                "Puellīs"
+              ],
+              "answer": 0,
+              "explain": "The first-declension nominative plural ending is -ae, giving puellae, 'the girls.'"
+            },
+            {
+              "q": "Which two cases share the identical singular form *puellae*?",
+              "choices": [
+                "Genitive and dative",
+                "Nominative and accusative",
+                "Accusative and ablative",
+                "Genitive and ablative"
+              ],
+              "answer": 0,
+              "explain": "First-declension genitive singular (of the girl) and dative singular (to/for the girl) are both puellae; context distinguishes them."
+            },
+            {
+              "q": "What does the ablative case typically express?",
+              "choices": [
+                "Means, manner, or separation ('by/with/from')",
+                "The subject of the sentence",
+                "Direct possession only",
+                "A question"
+              ],
+              "answer": 0,
+              "explain": "The ablative covers a range of meanings translated as 'by,' 'with,' or 'from,' depending on context."
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "The Second Declension: Masculine -us and Neuter -um Nouns",
+          "minutes": 10,
+          "intro": "The second declension covers two noun genders at once with a single family of endings — most of Latin's -us words and every one of its -um words — making it the single most useful pattern you will learn after the first declension.",
+          "sections": [
+            {
+              "heading": "Masculine -us Nouns",
+              "body": [
+                "Second-declension masculine nouns like *dominus* (master, lord) decline: nominative *dominus*, genitive *dominī* (of the master), dative *dominō* (to/for the master), accusative *dominum* (the master, object), and ablative *dominō* (by/with/from the master). The vocative — used when directly addressing someone — is *domine*, famous from the phrase *Et tū, Brūte?* ('You too, Brutus?'), where *Brūte* is the vocative of *Brūtus*.",
+                "In the plural: nominative *dominī*, genitive *dominōrum*, dative *dominīs*, accusative *dominōs*, ablative *dominīs*. Notice genitive singular (*dominī*) and nominative plural (*dominī*) share an identical spelling — another overlap to resolve from context, exactly like the first-declension genitive/dative overlap in the previous lesson."
+              ]
+            },
+            {
+              "heading": "Neuter -um Nouns",
+              "body": [
+                "Second-declension neuter nouns like *bellum* (war) follow a related pattern: nominative *bellum*, genitive *bellī*, dative *bellō*, accusative *bellum* (identical to the nominative), and ablative *bellō*. Every neuter noun in Latin, in every declension, has an identical nominative and accusative form — a rule that holds with no exceptions.",
+                "In the plural, neuter nominative and accusative are both *bella*, always ending in a short *-a* — this is actually the origin of the modern English word 'data,' originally the neuter plural of Latin *datum* ('given thing'). Recognizing 'nominative equals accusative' the instant you see a neuter noun saves you from having to guess its role from the ending alone; you must rely on word order or context instead."
+              ],
+              "example": {
+                "problem": "Given *bellum* (war, neuter) and *urbem* (city, accusative), translate 'War destroys the city,' where *dēlet* means 'destroys.'",
+                "steps": [
+                  "Bellum is the subject here (context marks it as the one acting, since neuter nominative and accusative look identical): Bellum.",
+                  "Urbem is the object, marked accusative by its -em ending.",
+                  "Assemble: Bellum urbem dēlet."
+                ],
+                "answer": "Bellum urbem dēlet. ('War destroys the city.')"
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Second declension",
+              "def": "The noun pattern covering masculine -us nouns (dominus) and neuter -um nouns (bellum)."
+            },
+            {
+              "term": "Vocative case",
+              "def": "The case used to directly address someone, as in domine ('O master') or Brūte ('O Brutus')."
+            },
+            {
+              "term": "Neuter nominative = accusative",
+              "def": "A rule with no exceptions: every neuter noun's nominative and accusative forms are always identical."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What is the genitive singular of *dominus* (master)?",
+              "choices": [
+                "Dominī",
+                "Dominō",
+                "Dominum",
+                "Dominōrum"
+              ],
+              "answer": 0,
+              "explain": "The second-declension masculine genitive singular ending is -ī, giving dominī, 'of the master.'"
+            },
+            {
+              "q": "Why can't you rely on a neuter noun's ending alone to tell subject from object?",
+              "choices": [
+                "Neuter nominative and accusative forms are always identical",
+                "Neuter nouns have no accusative case",
+                "Neuter nouns are never used as objects",
+                "Neuter endings change randomly"
+              ],
+              "answer": 0,
+              "explain": "Every neuter noun has the same form for nominative and accusative, so word order or context, not the ending, must show its role."
+            },
+            {
+              "q": "What case is *Brūte* in the phrase *Et tū, Brūte?*",
+              "choices": [
+                "Vocative",
+                "Genitive",
+                "Dative",
+                "Ablative"
+              ],
+              "answer": 0,
+              "explain": "The vocative case is used for direct address; Brūte is the vocative form of Brūtus, 'O Brutus.'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Verbs: The Present System",
+      "summary": "Latin verbs conjugate through endings that show person and number directly — this unit covers the irregular verb sum and two full regular conjugations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Sum, Esse: The Verb 'To Be'",
+          "minutes": 10,
+          "intro": "Every language needs a way to say 'is' and 'am,' and Latin's version, *sum, esse*, is deeply irregular — but it is also one of the first ten words you must memorize cold, because it appears in nearly every paragraph of Latin you will ever read.",
+          "sections": [
+            {
+              "heading": "The Present Tense of Sum",
+              "body": [
+                "The present tense of *sum* ('I am') conjugates: *sum* (I am), *es* (you are, singular), *est* (he/she/it is), *sumus* (we are), *estis* (you are, plural), *sunt* (they are). Unlike regular verbs, these forms do not build predictably from a single stem, which is exactly what makes a verb 'irregular' — you simply memorize the six forms as a set.",
+                "*Sum* links a subject to a description or identity rather than showing an action, so both sides of the sentence typically appear in the nominative case, not the accusative: *Puella est fēlix* means 'The girl is happy,' with *fēlix* (happy) agreeing with the nominative subject, not marked as an object the way a true direct object would be."
+              ]
+            },
+            {
+              "heading": "Word Order With Sum",
+              "body": [
+                "Because *sum* is not an action verb, sentences with it often place the verb in the middle or at the end rather than needing strict subject-first order: *Fēlix est puella* and *Puella fēlix est* both translate naturally as 'The girl is happy.' The nominative case on both *puella* and *fēlix* is what confirms neither one is an object being acted upon.",
+                "*Sum* also appears without an explicit subject pronoun, since the verb ending already shows person: *Sum Rōmānus* means 'I am Roman' without needing a separate word for 'I.' This pattern — dropping subject pronouns because the verb ending already identifies the subject — holds for every Latin verb, not just *sum*, and is one reason Latin sentences can be shorter than their English translations."
+              ],
+              "example": {
+                "problem": "Translate 'We are friends,' given *amīcī* (friends, nominative plural).",
+                "steps": [
+                  "Identify the subject: 'we,' which corresponds to the first-person-plural verb form sumus.",
+                  "Sumus already carries the meaning 'we are,' so no separate pronoun is needed.",
+                  "Add the nominative complement: amīcī.",
+                  "Assemble: Sumus amīcī."
+                ],
+                "answer": "Sumus amīcī. ('We are friends.')"
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Sum, esse",
+              "def": "The irregular Latin verb 'to be': sum, es, est, sumus, estis, sunt."
+            },
+            {
+              "term": "Irregular verb",
+              "def": "A verb whose forms must be memorized individually because they do not follow a predictable pattern."
+            },
+            {
+              "term": "Nominative complement",
+              "def": "A noun or adjective linked to the subject by sum, appearing in the nominative case rather than the accusative."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What is the correct form of *sum* for 'they are'?",
+              "choices": [
+                "Sunt",
+                "Sumus",
+                "Estis",
+                "Est"
+              ],
+              "answer": 0,
+              "explain": "Sunt is the third-person-plural form of sum, meaning 'they are.'"
+            },
+            {
+              "q": "In *Puella est fēlix*, why is *fēlix* not in the accusative case?",
+              "choices": [
+                "Sum links the subject to a description rather than an object, so both stay nominative",
+                "Fēlix is an adverb, not a noun or adjective",
+                "Latin adjectives never take case endings",
+                "It is a typo and should be fēlicem"
+              ],
+              "answer": 0,
+              "explain": "Sum is not an action verb — it links, so its complement matches the subject's nominative case rather than being marked as a direct object."
+            },
+            {
+              "q": "Why can *Sum Rōmānus* mean 'I am Roman' with no separate word for 'I'?",
+              "choices": [
+                "The verb ending -sum already identifies the subject as 'I'",
+                "Rōmānus itself means 'I'",
+                "Latin sentences never have subjects",
+                "It is missing a word and is grammatically incomplete"
+              ],
+              "answer": 0,
+              "explain": "Latin verb endings encode the subject's person and number, so a separate subject pronoun is often unnecessary."
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "First Conjugation: Amō, Amāre",
+          "minutes": 10,
+          "intro": "*Amō* — 'I love' — is the textbook-famous first word of Latin class for a reason: it is a perfectly regular first-conjugation verb, and once you know its six present-tense endings, you can conjugate hundreds of other -āre verbs the exact same way.",
+          "sections": [
+            {
+              "heading": "Conjugating Amō in the Present",
+              "body": [
+                "*Amō, amāre* (to love) is a first-conjugation verb, identified by the infinitive ending *-āre*. Its present tense is: *amō* (I love), *amās* (you love, singular), *amat* (he/she/it loves), *amāmus* (we love), *amātis* (you love, plural), *amant* (they love). Every regular first-conjugation verb — *portō* (to carry), *laudō* (to praise), *vocō* (to call) — takes exactly these same six endings on its stem.",
+                "The pattern to notice: the personal endings *-ō/-m, -s, -t, -mus, -tis, -nt* are shared across almost every Latin verb conjugation, with only the connecting vowel before them changing by conjugation. Learning these six endings once, on *amō*, gives you a skeleton you will reuse for every conjugation in this course."
+              ]
+            },
+            {
+              "heading": "Using Amō in Sentences",
+              "body": [
+                "*Fēmina puerum amat* means 'The woman loves the boy' — *fēmina* is nominative (subject), *puerum* is accusative (object), and *amat* agrees with the third-person-singular subject. Because the verb ending already shows person and number, Latin often drops separate subject pronouns entirely: *Amō* alone can mean simply 'I love.'",
+                "Negating a Latin verb is simple: place *nōn* directly before it. *Nōn amō* means 'I do not love,' and *Puella puerum nōn amat* means 'The girl does not love the boy.' Unlike English, which needs a helper verb like 'do' to form a negative, Latin negation is just one small word."
+              ],
+              "example": {
+                "problem": "Translate 'The boy calls the girls,' given *vocō, vocāre* (to call), *puer* (boy, nominative), *puellās* (girls, accusative plural).",
+                "steps": [
+                  "Identify the subject: puer (boy), nominative singular, requiring the third-person-singular verb form.",
+                  "Conjugate vocō in third-person singular: vocat.",
+                  "Identify the object: puellās, already accusative plural.",
+                  "Assemble: Puer puellās vocat."
+                ],
+                "answer": "Puer puellās vocat. ('The boy calls the girls.')"
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "First conjugation",
+              "def": "The verb pattern for -āre infinitives like amāre, sharing the connecting vowel ā before personal endings."
+            },
+            {
+              "term": "Personal endings",
+              "def": "The verb endings -ō/-m, -s, -t, -mus, -tis, -nt marking I, you, he/she/it, we, you-plural, they."
+            },
+            {
+              "term": "Nōn",
+              "def": "The Latin negation word, placed directly before the verb it negates."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What is the correct present-tense form of amō for 'we love'?",
+              "choices": [
+                "Amāmus",
+                "Amant",
+                "Amātis",
+                "Amat"
+              ],
+              "answer": 0,
+              "explain": "Amāmus is the first-person-plural present form of amō, 'we love.'"
+            },
+            {
+              "q": "How would you say 'I do not love' in Latin?",
+              "choices": [
+                "Nōn amō",
+                "Amō nōn",
+                "Nōn amāre",
+                "Amō sine"
+              ],
+              "answer": 0,
+              "explain": "Latin negates a verb by placing nōn directly before it: Nōn amō."
+            },
+            {
+              "q": "Why can Latin often drop subject pronouns like 'I' or 'we'?",
+              "choices": [
+                "The verb's personal ending already identifies the subject's person and number",
+                "Latin has no subjects at all",
+                "Pronouns are considered rude in Latin",
+                "Only irregular verbs like sum can drop pronouns"
+              ],
+              "answer": 0,
+              "explain": "Every regular Latin verb's ending marks who the subject is, making a separate pronoun optional rather than required."
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Second Conjugation and Putting Sentences Together",
+          "minutes": 12,
+          "intro": "With one more conjugation pattern under your belt, you can already build and translate real multi-word Latin sentences using everything from Units 1 through 3 combined — nouns, cases, and now two full families of regular verbs.",
+          "sections": [
+            {
+              "heading": "Second Conjugation: Videō, Vidēre",
+              "body": [
+                "*Videō, vidēre* (to see) is a second-conjugation verb, identified by the infinitive ending *-ēre* with a long e. Its present tense is: *videō* (I see), *vidēs* (you see), *videt* (he/she/it sees), *vidēmus* (we see), *vidētis* (you see, plural), *vident* (they see). Notice the same personal endings from first conjugation reappear, just attached after a long e instead of a long a.",
+                "Other common second-conjugation verbs include *habeō* (to have), *teneō* (to hold), and *moneō* (to warn) — all conjugate identically to *videō* once you swap in their stem. This is the payoff of learning conjugation patterns rather than memorizing individual verbs one at a time: one pattern instantly unlocks dozens of vocabulary words."
+              ]
+            },
+            {
+              "heading": "Combining Everything: A Full Sentence",
+              "body": [
+                "Now assemble a complete sentence using declension and conjugation together: *Fēmina bonum vīnum habet* ('The woman has good wine') requires *fēmina* (nominative, subject), *vīnum* (accusative neuter, object — recall neuter nominative equals accusative), *bonum* (an adjective agreeing with *vīnum*, covered fully next unit), and *habet* (third-person-singular of *habeō*).",
+                "Reading Latin fluently means holding all these pieces in mind at once: scanning each word's ending to identify its case and number, matching subjects to their verbs by person, and only then reading the sentence's meaning off the combination — not off the word order, which Latin uses far more loosely than English."
+              ],
+              "example": {
+                "problem": "Translate 'The master sees the war,' given *dominus* (master, nominative), *bellum* (war, neuter, accusative = bellum), *videō, vidēre*.",
+                "steps": [
+                  "Subject: dominus, nominative singular, needs third-person-singular verb.",
+                  "Verb: videt (he/she/it sees).",
+                  "Object: bellum — neuter, so its accusative form is identical to its nominative, bellum.",
+                  "Assemble: Dominus bellum videt."
+                ],
+                "answer": "Dominus bellum videt. ('The master sees the war.')"
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Second conjugation",
+              "def": "The verb pattern for -ēre infinitives like vidēre, sharing the connecting vowel ē before personal endings."
+            },
+            {
+              "term": "Habeō",
+              "def": "'I have' — a common second-conjugation verb, conjugated like videō."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What is the correct present-tense form of videō for 'you (plural) see'?",
+              "choices": [
+                "Vidētis",
+                "Vidēs",
+                "Videt",
+                "Vident"
+              ],
+              "answer": 0,
+              "explain": "Vidētis is the second-person-plural present form of videō, 'you (all) see.'"
+            },
+            {
+              "q": "Which infinitive ending identifies a second-conjugation verb?",
+              "choices": [
+                "-ēre",
+                "-āre",
+                "-ere (short e)",
+                "-īre"
+              ],
+              "answer": 0,
+              "explain": "Second-conjugation verbs have an infinitive ending in a long -ēre, like vidēre and habēre."
+            },
+            {
+              "q": "In *Fēmina bonum vīnum habet*, why is *vīnum* the same form whether it is subject or object?",
+              "choices": [
+                "Vīnum is neuter, and neuter nominative and accusative forms are always identical",
+                "Vīnum is an adjective, not a noun",
+                "The sentence has no object",
+                "Habet requires the nominative case for its object"
+              ],
+              "answer": 0,
+              "explain": "As a neuter noun, vīnum cannot show subject-versus-object by its ending alone since both forms are identical — here context and word order show it is the object of habet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Building Real Sentences",
+      "summary": "The final unit adds adjective agreement and three more cases, then puts everything together to read a classical proverb and Caesar's own opening line.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Adjectives and Agreement",
+          "minutes": 12,
+          "intro": "A Latin adjective is a chameleon — it changes its own ending to match whatever noun it describes in case, number, and gender, which means the same adjective *bonus* can appear in a dozen different forms depending on what it modifies.",
+          "sections": [
+            {
+              "heading": "The Rule of Agreement",
+              "body": [
+                "Latin adjectives must agree with the noun they modify in three ways: case (nominative, accusative, etc.), number (singular or plural), and gender (masculine, feminine, or neuter) — but agreement does not require an identical ending, only a matching case/number/gender combination. *Bonus* (good) is a first/second-declension adjective, taking -us/-a/-um endings that parallel *dominus/puella/bellum*: masculine *bonus puer* (good boy), feminine *bona puella* (good girl), neuter *bonum bellum* (good war).",
+                "Because the adjective's ending is chosen by its noun's gender, not by the adjective's own preference, *puella bona* ('good girl,' feminine nominative) and *puellam bonam* ('good girl,' feminine accusative) both change the adjective alongside the noun. Get the noun's case and gender right first, and the correct adjective ending follows automatically from the matching pattern."
+              ]
+            },
+            {
+              "heading": "Adjectives Don't Have to Sit Next to Their Noun",
+              "body": [
+                "Because agreement, not position, links an adjective to its noun, Latin can separate them for emphasis or style: *Bonam fēmina videt puellam* still means 'The woman sees the good girl,' because *bonam* and *puellam* share the identical feminine-accusative-singular ending, marking them as a pair no matter how far apart they sit in the sentence.",
+                "This is a genuine reading skill you must build deliberately: when translating, first scan every word for matching case/number/gender endings before assuming an adjective describes whichever noun happens to sit next to it — in English that assumption almost always works, but in Latin it frequently does not."
+              ],
+              "example": {
+                "problem": "Translate 'The good master has a big war' (habet, to have; magnum, big, neuter).",
+                "steps": [
+                  "Subject: dominus (nominative), needs the matching masculine nominative adjective: bonus.",
+                  "Object: bellum (neuter accusative = bellum), needs the matching neuter accusative adjective: magnum.",
+                  "Verb: habet.",
+                  "Assemble: Bonus dominus magnum bellum habet."
+                ],
+                "answer": "Bonus dominus magnum bellum habet."
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Agreement",
+              "def": "The requirement that an adjective match its noun in case, number, and gender."
+            },
+            {
+              "term": "Bonus, -a, -um",
+              "def": "'Good' — a first/second-declension adjective shown in its masculine, feminine, and neuter nominative singular forms."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What three things must a Latin adjective agree with in its noun?",
+              "choices": [
+                "Case, number, and gender",
+                "Case and tense only",
+                "Person and number only",
+                "Only gender"
+              ],
+              "answer": 0,
+              "explain": "Latin adjectives must match their noun's case, number, and gender — not necessarily use an identical ending, but the same combination."
+            },
+            {
+              "q": "In *Bonam fēmina videt puellam*, how do you know *bonam* describes *puellam* and not *fēmina*?",
+              "choices": [
+                "Bonam and puellam share the same feminine-accusative-singular ending",
+                "Bonam always comes right before the verb",
+                "Fēmina is masculine, so it cannot take bonam",
+                "Word order in this sentence makes it obvious"
+              ],
+              "answer": 0,
+              "explain": "Agreement is shown by matching endings, not position — bonam (accusative) matches puellam (accusative), not fēmina (nominative)."
+            },
+            {
+              "q": "Which form of *bonus* correctly modifies the neuter noun *bellum* in the nominative?",
+              "choices": [
+                "Bonum",
+                "Bonus",
+                "Bona",
+                "Bonī"
+              ],
+              "answer": 0,
+              "explain": "Bonum is the neuter nominative/accusative form of bonus, matching bellum's neuter gender."
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "The Genitive, Dative, and Ablative Cases",
+          "minutes": 12,
+          "intro": "Three cases remain before you can read a genuinely wide range of Latin sentences — the genitive for possession, the dative for the person something is given to or done for, and the ablative for the tool, manner, or place something happens by or in.",
+          "sections": [
+            {
+              "heading": "Genitive: Showing Possession",
+              "body": [
+                "The genitive case translates as 'of the ___' and shows possession or a close association: *fīlia rēgīnae* means 'the daughter of the queen' (*rēgīnae*, first-declension genitive singular of *rēgīna*, queen). English can express this two ways — 'the queen's daughter' or 'the daughter of the queen' — and Latin's genitive corresponds to both.",
+                "A genitive noun typically sits right after the noun it modifies, similar to English 'the queen's,' though — as with adjective agreement — Latin's genitive is identified by its ending, not strictly by position. Recognizing genitive endings (-ae, -ī, -is, and others by declension) is what lets you correctly identify a possessive relationship even in a scrambled sentence."
+              ]
+            },
+            {
+              "heading": "Dative for 'To/For', Ablative for 'By/With/From'",
+              "body": [
+                "The dative case marks the indirect object, translated 'to' or 'for': *Puer puellae rosam dat* means 'The boy gives a rose to the girl,' where *puellae* (dative) is who receives the giving, and *rosam* (accusative) is the rose itself, the direct object. Verbs of giving, telling, and showing routinely take a dative indirect object alongside an accusative direct object.",
+                "The ablative case, often paired with a preposition like *cum* (with) or *ā/ab* (by/from), expresses means, manner, accompaniment, or separation: *cum amīcō* means 'with a friend' (ablative *amīcō*), and *Rōmā* alone, without a preposition, can mean 'from Rome' when used to show separation or origin. Distinguishing dative ('to/for,' a recipient) from ablative ('by/with/from,' a means or accompaniment) is mostly a matter of checking which preposition, if any, accompanies the noun and what role it plays in the sentence."
+              ],
+              "example": {
+                "problem": "Translate 'The queen gives a gift to the friend with a smile' (dōnum, gift, accusative dōnum, neuter; amīcus, friend, dative amīcō; rīsus, smile, ablative rīsū; dat, gives).",
+                "steps": [
+                  "Subject: rēgīna (nominative, queen).",
+                  "Direct object: dōnum (neuter accusative = dōnum).",
+                  "Indirect object (to whom): amīcō (dative).",
+                  "Means/manner (with what): cum rīsū (ablative with preposition).",
+                  "Assemble: Rēgīna amīcō dōnum cum rīsū dat."
+                ],
+                "answer": "Rēgīna amīcō dōnum cum rīsū dat."
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Genitive case",
+              "def": "The case showing possession, 'of the ___,' such as rēgīnae, 'of the queen.'"
+            },
+            {
+              "term": "Dative case",
+              "def": "The case marking the indirect object, 'to/for the ___,' such as puellae, 'to the girl.'"
+            },
+            {
+              "term": "Ablative case",
+              "def": "The case for means, manner, accompaniment, or separation, often with cum (with) or ā/ab (from)."
+            }
+          ],
+          "practice": [
+            {
+              "q": "What does the genitive case typically express?",
+              "choices": [
+                "Possession, 'of the ___'",
+                "The direct object",
+                "Direct address",
+                "Location only"
+              ],
+              "answer": 0,
+              "explain": "The genitive shows possession or close association, translated 'of the ___,' like rēgīnae, 'of the queen.'"
+            },
+            {
+              "q": "In *Puer puellae rosam dat*, what role does *puellae* play?",
+              "choices": [
+                "Indirect object (dative) — the recipient of the giving",
+                "Direct object (accusative) — the thing given",
+                "Subject (nominative) — the one giving",
+                "Possessor (genitive) — 'of the girl'"
+              ],
+              "answer": 0,
+              "explain": "Puellae is dative, marking the girl as the recipient ('to the girl'), while rosam (accusative) is the thing actually given."
+            },
+            {
+              "q": "Which preposition commonly pairs with the ablative to mean 'with'?",
+              "choices": [
+                "Cum",
+                "Ad",
+                "In (motion)",
+                "Dē"
+              ],
+              "answer": 0,
+              "explain": "Cum ('with') regularly takes an ablative object, as in cum amīcō, 'with a friend.'"
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Reading Real Latin: A Proverb and a Line of Caesar",
+          "minutes": 12,
+          "intro": "Everything in this course has been building toward this moment: taking real, unmodified Latin — a proverb still quoted today and Caesar's own opening line about Gaul — and translating it word by word using nothing but the grammar you already know.",
+          "sections": [
+            {
+              "heading": "A Classical Proverb: Errāre Hūmānum Est",
+              "body": [
+                "*Errāre hūmānum est* ('To err is human') uses an infinitive, *errāre* (to err/wander), as the grammatical subject of the sentence — Latin allows an infinitive to function as a noun-like subject, similar to the English gerund 'erring is human.' *Hūmānum* is a neuter nominative adjective (matching the grammatically neuter infinitive-as-subject) meaning 'human,' and *est* is the familiar third-person-singular of *sum*.",
+                "The full proverb is often completed as *Errāre hūmānum est, ignōscere dīvīnum* ('To err is human, to forgive divine'), using the same pattern twice: an infinitive subject (*ignōscere*, to forgive) paired with a neuter nominative adjective (*dīvīnum*, divine) and an understood repeated *est*. Recognizing this parallel structure is exactly the pattern-matching skill built across this whole course."
+              ]
+            },
+            {
+              "heading": "Caesar's Opening Line: Gallia Est Omnis Dīvīsa",
+              "body": [
+                "Julius Caesar opens his *Commentāriī dē Bellō Gallicō* (Commentaries on the Gallic War) with *Gallia est omnis dīvīsa in partēs trēs* ('All Gaul is divided into three parts'). *Gallia* is the nominative subject (Gaul), *est* is 'is,' *omnis* is an adjective meaning 'all/whole' agreeing with *Gallia*, and *dīvīsa* ('divided') is a further descriptive form agreeing with the feminine subject.",
+                "*In partēs trēs* uses the preposition *in* with the accusative (*partēs*, parts) to show division 'into,' and *trēs* ('three') agrees with *partēs* in case and number. This single opening sentence, one of the most quoted lines in all of Latin literature, contains a nominative subject, an adjective in agreement, sum, and a prepositional phrase — nearly every grammar point from this entire course in one short line."
+              ],
+              "example": {
+                "problem": "Identify the case and role of *Galliam* if the sentence instead read *Rōmānī Galliam vident* ('The Romans see Gaul').",
+                "steps": [
+                  "Rōmānī is nominative plural, the subject ('the Romans').",
+                  "Vident is third-person plural of videō, agreeing with Rōmānī.",
+                  "Galliam has switched from -a (nominative, Caesar's original sentence) to -am, marking it as the accusative direct object here."
+                ],
+                "answer": "Galliam is accusative singular, functioning as the direct object of vident — 'the Romans see Gaul.'"
+              }
+            }
+          ],
+          "keyTerms": [
+            {
+              "term": "Errāre hūmānum est",
+              "def": "'To err is human' — a classical Latin proverb, often extended with 'ignōscere dīvīnum' (to forgive, divine)."
+            },
+            {
+              "term": "Infinitive as subject",
+              "def": "A Latin infinitive (like errāre) functioning as the grammatical subject of a sentence, paired with a neuter adjective."
+            },
+            {
+              "term": "Gallia est omnis dīvīsa in partēs trēs",
+              "def": "'All Gaul is divided into three parts' — the opening line of Caesar's Commentaries on the Gallic War."
+            }
+          ],
+          "practice": [
+            {
+              "q": "In *Errāre hūmānum est*, what role does the infinitive *errāre* play?",
+              "choices": [
+                "It functions as the grammatical subject of the sentence",
+                "It is the direct object",
+                "It is an adverb modifying est",
+                "It has no grammatical function"
+              ],
+              "answer": 0,
+              "explain": "Latin allows an infinitive to act as a noun-like subject; errāre ('to err') is the subject that hūmānum est describes."
+            },
+            {
+              "q": "What does Caesar's opening line *Gallia est omnis dīvīsa in partēs trēs* mean?",
+              "choices": [
+                "All Gaul is divided into three parts",
+                "Gaul is entirely at war with three tribes",
+                "The whole world is divided into three parts",
+                "Gaul has three great rivers"
+              ],
+              "answer": 0,
+              "explain": "This is the famous opening sentence of Caesar's Gallic War commentaries, describing Gaul's three-part division."
+            },
+            {
+              "q": "What case is *partēs* in *in partēs trēs*, and why?",
+              "choices": [
+                "Accusative, because in + accusative shows motion/division 'into'",
+                "Nominative, because it is the subject",
+                "Genitive, showing possession",
+                "Dative, showing the indirect object"
+              ],
+              "answer": 0,
+              "explain": "The preposition in takes the accusative here to express division 'into' parts, matching trēs in the same case and number."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

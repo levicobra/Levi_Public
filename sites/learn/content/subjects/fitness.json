@@ -1,0 +1,959 @@
+{
+ "id": "fitness",
+ "title": "Fitness & Exercise Science",
+ "domain": "health",
+ "level": "All levels",
+ "description": "A practical introduction to how the body adapts to exercise and how to train it on purpose. You will learn the core training principles behind cardio and strength programs, how to calculate your own heart rate zones and estimated one-rep max, and how nutrition, recovery, and periodization fit together into a plan you can actually follow.",
+ "outcomes": [
+  "You can explain the five components of fitness and the FITT principle, and use them to design a weekly workout.",
+  "You can calculate a target heart rate zone and choose steady-state or interval training to match a goal.",
+  "You can apply progressive overload and choose sets, reps, and rest for strength, hypertrophy, or endurance goals.",
+  "You can identify major muscle groups and describe correct form basics for foundational exercises.",
+  "You can explain how protein, carbohydrate, and hydration needs change with training, with real numbers.",
+  "You can recognize signs of overtraining and apply recovery strategies like deload weeks, adequate sleep, and rest between sessions."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Foundations of Fitness",
+   "summary": "Before designing any workout, you need the vocabulary and the framework: what fitness is actually made of, and the four dials you can turn to make a workout harder, easier, or more specific.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Five Components of Fitness",
+     "minutes": 12,
+     "intro": "\"Fitness\" is not one thing you either have or lack; exercise scientists break it into five measurable components. Knowing them lets you spot exactly what a workout is training and what it is ignoring, so you can build a program that covers what actually matters to you.",
+     "sections": [
+      {
+       "heading": "The Five Components",
+       "body": [
+        "Cardiorespiratory endurance is your heart, lungs, and blood vessels' ability to deliver oxygen to working muscles over time, measured by things like a mile-run time or VO2 max. Muscular strength is the maximum force a muscle can produce in one effort, like a single heavy deadlift. Muscular endurance is a muscle's ability to keep contracting repeatedly, like doing 30 push-ups instead of one maximum push-up.",
+        "Flexibility is the range of motion available at a joint, and body composition is the ratio of fat mass to lean mass (muscle, bone, organs) in your body, which is a better health marker than body weight alone, since two people at the same weight can have very different amounts of muscle versus fat."
+       ]
+      },
+      {
+       "heading": "Why All Five Matter",
+       "body": [
+        "A runner with excellent cardiorespiratory endurance can still have weak, undertrained muscles and poor flexibility, which raises injury risk. A powerlifter with enormous strength can have poor cardiorespiratory endurance, which limits recovery between sets and daily stamina. A balanced program touches all five, even if it emphasizes one or two based on your goal.",
+        "When you evaluate any workout, ask which of the five components it trains. A 20-minute jog mostly trains cardiorespiratory endurance; a set of heavy squats mostly trains muscular strength. Neither one, by itself, builds a complete fitness base."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "cardiorespiratory endurance",
+       "def": "The heart and lungs' ability to supply oxygen to muscles during sustained activity."
+      },
+      {
+       "term": "muscular strength",
+       "def": "The maximum force a muscle or muscle group can produce in a single effort."
+      },
+      {
+       "term": "muscular endurance",
+       "def": "A muscle's ability to sustain repeated contractions over time without fatiguing."
+      },
+      {
+       "term": "body composition",
+       "def": "The ratio of fat mass to lean mass in the body, a more informative measure than body weight alone."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which component of fitness does a single maximum-effort deadlift primarily measure?",
+       "choices": [
+        "Cardiorespiratory endurance",
+        "Muscular strength",
+        "Flexibility",
+        "Body composition"
+       ],
+       "answer": 1,
+       "explain": "A one-rep maximum lift measures the peak force a muscle group can produce in a single effort, which is the definition of muscular strength, distinct from endurance or cardio fitness."
+      },
+      {
+       "q": "Why is body composition considered more informative than body weight alone?",
+       "choices": [
+        "Body weight cannot be measured accurately",
+        "Two people at the same weight can have very different fat-to-muscle ratios",
+        "Body composition is easier to measure",
+        "Weight always reflects fitness level directly"
+       ],
+       "answer": 1,
+       "explain": "Body composition separates fat mass from lean mass, so two people with identical body weight could have very different health and fitness profiles depending on that ratio."
+      },
+      {
+       "q": "A person can run 5 miles easily but cannot do a single pull-up. Which component are they likely weakest in?",
+       "choices": [
+        "Cardiorespiratory endurance",
+        "Muscular strength",
+        "Flexibility",
+        "Body composition"
+       ],
+       "answer": 1,
+       "explain": "Strong endurance running does not guarantee upper-body strength; being unable to perform a pull-up points to low muscular strength in that movement pattern."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The FITT Principle",
+     "minutes": 12,
+     "intro": "FITT stands for Frequency, Intensity, Time, and Type: the four variables you adjust to make any workout plan match a goal. Change one of these dials and you change the entire training effect, even if the exercises themselves stay the same.",
+     "sections": [
+      {
+       "heading": "Frequency, Intensity, Time",
+       "body": [
+        "Frequency is how often you train per week. General health guidelines recommend at least 150 minutes of moderate cardio per week (or 75 minutes vigorous), spread across most days, plus 2 or more strength sessions weekly. Intensity is how hard a session is, measured by heart rate, weight lifted, or Rate of Perceived Exertion (RPE) on a 1-10 scale, where 1 is barely moving and 10 is maximal effort.",
+        "Time is the duration of a single session. A 20-minute high-intensity interval session and a 60-minute easy jog can produce comparable cardio benefits despite very different lengths, because intensity and time trade off against each other."
+       ]
+      },
+      {
+       "heading": "Type and Putting It Together",
+       "body": [
+        "Type is the kind of exercise: running trains cardio differently than swimming, and back squats train different muscles than bench presses. Matching type to your goal matters. Someone training for a 10k race should prioritize running-specific cardio over cycling, even though cycling also builds cardio fitness, because of the principle of specificity: the body adapts most to the exact demands placed on it.",
+        "A simple beginner plan applying FITT: Frequency of 3 strength days and 2 cardio days per week; Intensity around RPE 5-6 for cardio and a weight that is challenging by the last 2 reps for strength; Time of 30-45 minutes per session; Type mixing full-body strength work with brisk walking or cycling."
+       ],
+       "example": {
+        "problem": "Design one week of a beginner's plan using FITT, given 4 available days and a goal of general health.",
+        "steps": [
+         "Frequency: use all 4 days, alternating 2 strength days and 2 cardio days.",
+         "Intensity: strength at RPE 6-7 (challenging but with good form); cardio at RPE 5 (able to talk in short sentences).",
+         "Time: 30-40 minutes per session. Type: full-body strength circuits and brisk walking or cycling."
+        ],
+        "answer": "A workable week: Mon strength (35 min), Tue cardio (30 min brisk walk), Thu strength (35 min), Sat cardio (30 min bike), meeting the FITT targets for a general health goal."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "FITT",
+       "def": "Frequency, Intensity, Time, Type - the four variables used to design and adjust an exercise program."
+      },
+      {
+       "term": "RPE",
+       "def": "Rate of Perceived Exertion, a 1-10 (or 6-20 Borg) scale for how hard an effort feels."
+      },
+      {
+       "term": "specificity",
+       "def": "The principle that the body adapts most to the exact type of demand placed on it in training."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In the FITT principle, what does the 'I' stand for?",
+       "choices": [
+        "Interval",
+        "Intensity",
+        "Instruction",
+        "Injury"
+       ],
+       "answer": 1,
+       "explain": "The I in FITT is Intensity: how hard a session is, which can be measured with heart rate, weight lifted, or RPE."
+      },
+      {
+       "q": "Why might a 20-minute interval workout produce similar cardio benefits to a 60-minute easy jog?",
+       "choices": [
+        "Duration never matters for cardio benefit",
+        "Intensity and time trade off against each other",
+        "Interval workouts only build strength, not cardio",
+        "Easy jogs provide no cardio benefit at all"
+       ],
+       "answer": 1,
+       "explain": "Higher intensity for a shorter time can produce a training effect comparable to lower intensity for a longer time, since both variables interact under the FITT framework."
+      },
+      {
+       "q": "A runner training for a 10k adds swimming instead of running to their plan. According to the principle of specificity, what happens?",
+       "choices": [
+        "Their 10k running performance improves the most",
+        "Swimming improves overall cardio fitness but transfers less directly to running performance",
+        "Swimming has zero effect on fitness",
+        "Type of exercise never matters for a specific goal"
+       ],
+       "answer": 1,
+       "explain": "The principle of specificity says the body adapts most to the exact demands placed on it, so running-specific training transfers better to a running goal than a different type of cardio."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Warm-Up, Cool-Down, and Injury Prevention",
+     "minutes": 11,
+     "intro": "The minutes before and after your main workout are not wasted time. A good warm-up prepares muscles and joints for the specific demands ahead, and a good cool-down helps your body transition back to rest, and both measurably reduce injury risk.",
+     "sections": [
+      {
+       "heading": "Warming Up: Dynamic Movement First",
+       "body": [
+        "A warm-up should raise heart rate and muscle temperature gradually and rehearse the movements you are about to do. Use dynamic stretching, active movements like leg swings, arm circles, and walking lunges, rather than static (held) stretching, since holding a cold stretch for a long time can temporarily reduce muscle power right before you need it.",
+        "A solid warm-up structure: 5 minutes of light cardio (brisk walk or easy jog) to raise heart rate, followed by 5 minutes of dynamic movements targeting the muscles you are about to train, such as bodyweight squats before a leg day or arm circles and light band pulls before an upper-body day."
+       ]
+      },
+      {
+       "heading": "Cooling Down and Reducing Injury Risk",
+       "body": [
+        "A cool-down brings your heart rate down gradually with 5-10 minutes of light activity, which helps prevent blood from pooling in your legs and feeling lightheaded after intense effort. This is also the right time for static stretching, holding each stretch for 20-30 seconds, since your muscles are warm and more pliable.",
+        "Most exercise injuries come from doing too much, too soon: increasing weight, mileage, or intensity faster than the body can adapt. A widely used guideline is to increase training volume by no more than about 10% per week. Persistent joint pain (different from normal muscle soreness) that does not improve with rest is a signal to scale back and, if it continues, see a medical professional."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "dynamic stretching",
+       "def": "Active, moving stretches (like leg swings) used to warm up before exercise."
+      },
+      {
+       "term": "static stretching",
+       "def": "Held stretches, best used after exercise when muscles are warm, not immediately before intense effort."
+      },
+      {
+       "term": "10% rule",
+       "def": "A guideline to increase training volume (weight, mileage, or time) by no more than about 10% per week to avoid overuse injury."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is dynamic stretching preferred over static stretching before a workout?",
+       "choices": [
+        "Static stretching is dangerous and should never be done",
+        "Long static holds right before intense effort can temporarily reduce muscle power",
+        "Dynamic stretching takes longer, so it warms up better",
+        "There is no difference between the two"
+       ],
+       "answer": 1,
+       "explain": "Research shows that holding static stretches for a long time immediately before intense effort can temporarily reduce the power a muscle can produce, so dynamic, movement-based warm-ups are preferred pre-workout."
+      },
+      {
+       "q": "According to the 10% rule, if you ran 20 miles last week, what is a reasonable target for next week?",
+       "choices": [
+        "30 miles",
+        "22 miles",
+        "40 miles",
+        "20 miles exactly, forever"
+       ],
+       "answer": 1,
+       "explain": "The 10% guideline suggests increasing volume by no more than about 10% per week; 10% of 20 miles is 2 miles, giving a target of about 22 miles."
+      },
+      {
+       "q": "What is the best time to do static (held) stretching?",
+       "choices": [
+        "Before any warm-up",
+        "After a workout, during the cool-down, when muscles are warm",
+        "Only on rest days",
+        "Immediately before a maximal lift"
+       ],
+       "answer": 1,
+       "explain": "Static stretching is most effective and safest after exercise, during the cool-down, when muscles are already warm and pliable."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Cardiovascular Training",
+   "summary": "This unit covers how the heart adapts to endurance training and gives you the actual math to calculate your own training zones and choose between steady and interval cardio.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "How the Heart Adapts to Exercise",
+     "minutes": 11,
+     "intro": "Cardio training does not just burn calories in the moment; over weeks and months it physically remodels your heart and blood vessels to move oxygen more efficiently. Understanding this adaptation explains why consistent training lowers your resting heart rate over time.",
+     "sections": [
+      {
+       "heading": "Stroke Volume and Resting Heart Rate",
+       "body": [
+        "Stroke volume is the amount of blood the heart pumps out with each beat. As cardiorespiratory fitness improves, the heart's left ventricle can pump more blood per beat, meaning it needs fewer beats per minute to deliver the same amount of blood. This is why trained endurance athletes often have resting heart rates in the 40s or 50s, compared to a typical untrained adult resting rate of 60-100 beats per minute.",
+        "This adaptation takes weeks to months of consistent training to develop, and it can also partly reverse within a few weeks of stopping training, which is one reason consistency matters more than occasional intense efforts."
+       ]
+      },
+      {
+       "heading": "VO2 Max",
+       "body": [
+        "VO2 max is the maximum rate at which your body can take in and use oxygen during intense exercise, measured in milliliters of oxygen per kilogram of body weight per minute. It is considered one of the best single measures of cardiorespiratory fitness, and it improves with consistent aerobic training, particularly interval training at high intensities.",
+        "You do not need a lab to benefit from knowing this: any training that reliably pushes your heart rate up into higher zones for sustained periods, repeated consistently over weeks, is the practical way most people improve their VO2 max without ever measuring the exact number."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "stroke volume",
+       "def": "The amount of blood the heart pumps out with each single beat."
+      },
+      {
+       "term": "resting heart rate",
+       "def": "Heart rate measured at rest; it tends to decrease as cardiorespiratory fitness improves."
+      },
+      {
+       "term": "VO2 max",
+       "def": "The maximum rate the body can take in and use oxygen during intense exercise, a key measure of cardio fitness."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do well-trained endurance athletes often have a lower resting heart rate?",
+       "choices": [
+        "Their hearts are smaller than average",
+        "Increased stroke volume lets the heart pump the same blood with fewer beats",
+        "They have less blood overall",
+        "Resting heart rate does not relate to fitness"
+       ],
+       "answer": 1,
+       "explain": "As stroke volume increases with training, the heart pumps more blood per beat, so fewer beats per minute are needed to move the same amount of blood, lowering resting heart rate."
+      },
+      {
+       "q": "What does VO2 max measure?",
+       "choices": [
+        "Maximum heart rate only",
+        "The maximum rate the body can take in and use oxygen during intense exercise",
+        "Total lung volume",
+        "Muscle strength in the legs"
+       ],
+       "answer": 1,
+       "explain": "VO2 max measures the body's maximum capacity to take in and use oxygen during intense effort, and it is one of the best single indicators of cardiorespiratory fitness."
+      },
+      {
+       "q": "What happens to cardio adaptations like increased stroke volume if training stops for several weeks?",
+       "choices": [
+        "They are permanent and never change",
+        "They can partly reverse",
+        "They immediately disappear within a day",
+        "They only improve further"
+       ],
+       "answer": 1,
+       "explain": "Cardio adaptations partially reverse (a process called detraining) within weeks of stopping consistent training, which is why maintaining regular training matters."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Calculating Target Heart Rate Zones",
+     "minutes": 14,
+     "intro": "Heart rate zones turn \"train harder\" into an actual number you can check on a watch or by hand. With one simple formula and your age, you can calculate the heart rate range that matches moderate or vigorous exercise for your own body.",
+     "sections": [
+      {
+       "heading": "Estimating Maximum Heart Rate",
+       "body": [
+        "A commonly taught estimate for maximum heart rate is 220 minus your age in years. It is an approximation, not an exact measurement, but it is useful for setting practical training zones. The CDC defines moderate-intensity exercise as roughly 64% to 76% of estimated max heart rate, and vigorous-intensity exercise as roughly 77% to 93% of estimated max heart rate.",
+        "To find your own zone: calculate your estimated max heart rate, then multiply by the lower and upper percentage to get your target range in beats per minute."
+       ],
+       "example": {
+        "problem": "Calculate the moderate-intensity target heart rate zone for a 30-year-old.",
+        "steps": [
+         "Estimate max heart rate: 220 - 30 = 190 beats per minute.",
+         "Multiply by the lower bound of moderate intensity: 190 × 0.64 = 121.6, rounds to 122 bpm.",
+         "Multiply by the upper bound: 190 × 0.76 = 144.4, rounds to 144 bpm."
+        ],
+        "answer": "The moderate-intensity target heart rate zone for a 30-year-old is approximately 122 to 144 beats per minute."
+       }
+      },
+      {
+       "heading": "Checking Your Heart Rate by Hand",
+       "body": [
+        "To check your pulse without a device, place two fingers (not the thumb, which has its own pulse) on your wrist below the base of the thumb, or on your neck beside the windpipe. Count beats for 15 seconds and multiply by 4 to get beats per minute, or count for a full 60 seconds for a more precise reading right after intense exercise, since heart rate drops quickly once you stop moving.",
+        "Zones are a guide, not a strict rule. Medications, heat, altitude, stress, and individual variation can shift your actual heart rate response, so use the zone as a starting estimate and adjust based on how the effort actually feels, cross-checking with an RPE scale."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "estimated maximum heart rate",
+       "def": "A common estimate calculated as 220 minus age, used as the basis for target heart rate zones."
+      },
+      {
+       "term": "moderate-intensity zone",
+       "def": "Roughly 64% to 76% of estimated maximum heart rate."
+      },
+      {
+       "term": "vigorous-intensity zone",
+       "def": "Roughly 77% to 93% of estimated maximum heart rate."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Using the 220-minus-age formula, what is the estimated maximum heart rate for a 45-year-old?",
+       "choices": [
+        "165 bpm",
+        "175 bpm",
+        "185 bpm",
+        "195 bpm"
+       ],
+       "answer": 1,
+       "explain": "220 - 45 = 175 beats per minute is the estimated maximum heart rate using this common formula."
+      },
+      {
+       "q": "A 40-year-old's estimated max heart rate is 180 bpm. What is the lower bound of their moderate-intensity zone (64%)?",
+       "choices": [
+        "about 105 bpm",
+        "about 115 bpm",
+        "about 137 bpm",
+        "about 155 bpm"
+       ],
+       "answer": 1,
+       "explain": "180 × 0.64 = 115.2, which rounds to about 115 bpm, marking the lower edge of the moderate-intensity zone for this person."
+      },
+      {
+       "q": "Why should heart rate zones be treated as a guide rather than a strict rule?",
+       "choices": [
+        "The formula is always perfectly accurate for everyone",
+        "Factors like medication, heat, and stress can shift actual heart rate response",
+        "Heart rate has nothing to do with exercise intensity",
+        "Zones only apply to professional athletes"
+       ],
+       "answer": 1,
+       "explain": "Individual variation and factors like medication, heat, altitude, and stress mean the formula-based zone is an estimate; RPE and how the effort feels should also guide intensity."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Steady-State vs. Interval Training",
+     "minutes": 12,
+     "intro": "Not all cardio is the same workout in different clothes. Steady-state training and interval training stress the body in different ways, and knowing when to use each lets you build a cardio plan instead of just logging miles.",
+     "sections": [
+      {
+       "heading": "Steady-State Cardio",
+       "body": [
+        "Steady-state cardio means holding a consistent, moderate pace for an extended time, such as a 40-minute jog at a conversational pace (roughly RPE 4-5). It builds a strong aerobic base, improves fat utilization as fuel, and is generally easier to recover from, making it sustainable at higher weekly frequency.",
+        "Because the intensity is moderate, steady-state sessions are also lower-risk for beginners and a good default for most weekly cardio volume, especially the 150 minutes per week recommended for general health."
+       ]
+      },
+      {
+       "heading": "Interval Training",
+       "body": [
+        "Interval training alternates short bursts of high-intensity effort with recovery periods, for example 30 seconds of sprinting followed by 90 seconds of walking, repeated 6-10 times. This style, often called HIIT (High-Intensity Interval Training), produces strong VO2 max improvements in less total time than steady-state work, and it keeps the body burning extra calories for a period after the workout ends.",
+        "The tradeoff is higher physical stress: intervals demand more recovery, so most programs limit HIIT to 1-3 sessions per week rather than every day, and beginners should build a steady-state base before adding much high-intensity work."
+       ],
+       "example": {
+        "problem": "Plan a 20-minute interval workout with a work-to-rest ratio of 1:3, using 30-second work intervals.",
+        "steps": [
+         "Set work interval at 30 seconds; with a 1:3 ratio, rest interval is 90 seconds.",
+         "Each work-rest cycle takes 30 + 90 = 120 seconds (2 minutes).",
+         "Divide the 20-minute session by 2 minutes per cycle: 20 ÷ 2 = 10 cycles."
+        ],
+        "answer": "The workout consists of 10 rounds of 30 seconds of hard effort followed by 90 seconds of rest, fitting the 20-minute window."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "steady-state cardio",
+       "def": "Sustained, moderate-intensity aerobic exercise held at a consistent pace over time."
+      },
+      {
+       "term": "HIIT",
+       "def": "High-Intensity Interval Training: alternating short bursts of intense effort with recovery periods."
+      },
+      {
+       "term": "work-to-rest ratio",
+       "def": "The proportion of hard-effort time to recovery time in an interval workout."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which describes steady-state cardio?",
+       "choices": [
+        "Alternating 30-second sprints with rest",
+        "A sustained, consistent moderate pace over an extended time",
+        "Lifting maximal weight for one rep",
+        "Static stretching held for 30 seconds"
+       ],
+       "answer": 1,
+       "explain": "Steady-state cardio means holding a consistent, moderate effort for an extended duration, unlike interval training's alternating bursts."
+      },
+      {
+       "q": "In a HIIT workout with a 1:2 work-to-rest ratio using 20-second work intervals, how long is each rest interval?",
+       "choices": [
+        "10 seconds",
+        "20 seconds",
+        "40 seconds",
+        "60 seconds"
+       ],
+       "answer": 2,
+       "explain": "A 1:2 ratio means rest is twice the work time, so 20 seconds of work pairs with 40 seconds of rest."
+      },
+      {
+       "q": "Why do most training plans limit HIIT to 1-3 sessions per week rather than daily?",
+       "choices": [
+        "HIIT has no real benefit",
+        "The high physical stress requires more recovery time than steady-state cardio",
+        "HIIT is illegal to perform more often",
+        "It takes too much equipment"
+       ],
+       "answer": 1,
+       "explain": "Because interval training pushes the body harder, it demands more recovery, so it is typically limited to a few sessions per week to avoid overtraining."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Strength Training",
+   "summary": "This unit covers the muscles you are training, the principle that makes them get stronger over time, and how to choose sets and reps for different goals.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Muscles and Movement Basics",
+     "minutes": 12,
+     "intro": "You do not need a full anatomy course to train effectively, but knowing the major muscle groups and how muscles work in pairs helps you understand why a program includes the exercises it does, and helps you spot an imbalanced routine.",
+     "sections": [
+      {
+       "heading": "The Major Muscle Groups",
+       "body": [
+        "The main groups trained in a typical program are: chest (pectorals), back (lats and traps), shoulders (deltoids), arms (biceps and triceps), core (abdominals and lower back), and legs (quadriceps, hamstrings, glutes, and calves). Most effective exercises engage more than one group at once; a squat, for example, works quads, glutes, hamstrings, and core together.",
+        "Exercises are often grouped as push movements (chest, shoulders, triceps - like a bench press) and pull movements (back, biceps - like a row), plus lower-body movements (squats, deadlifts, lunges). A balanced program includes push, pull, and lower-body work each week."
+       ]
+      },
+      {
+       "heading": "Agonist and Antagonist Pairs",
+       "body": [
+        "Muscles typically work in opposing pairs: when the agonist muscle contracts to create a movement, the antagonist muscle on the opposite side relaxes and lengthens. The biceps (agonist) contract to bend the elbow while the triceps (antagonist) lengthen; the reverse happens when straightening the arm.",
+        "Training only one side of a pair, such as heavy bench pressing (chest and front shoulder) without matching back and rear-shoulder work, can create muscle imbalances that pull posture forward and increase injury risk over time. This is the practical reason balanced programs pair push exercises with pull exercises."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "agonist",
+       "def": "The muscle actively contracting to produce a specific movement."
+      },
+      {
+       "term": "antagonist",
+       "def": "The opposing muscle that relaxes and lengthens while the agonist contracts."
+      },
+      {
+       "term": "push movement",
+       "def": "An exercise pattern like a bench press or overhead press, primarily working chest, shoulders, and triceps."
+      },
+      {
+       "term": "pull movement",
+       "def": "An exercise pattern like a row or pull-up, primarily working the back and biceps."
+      }
+     ],
+     "practice": [
+      {
+       "q": "When the biceps contract to bend the elbow, what happens to the triceps?",
+       "choices": [
+        "They also contract at the same time",
+        "They relax and lengthen as the antagonist muscle",
+        "They stay completely unused",
+        "They contract even harder than the biceps"
+       ],
+       "answer": 1,
+       "explain": "The triceps act as the antagonist to the biceps in this movement, relaxing and lengthening while the biceps (agonist) contract to bend the elbow."
+      },
+      {
+       "q": "Why might a program that only includes bench pressing, with no rowing or back work, cause problems over time?",
+       "choices": [
+        "It trains too many muscle groups at once",
+        "It can create a muscle imbalance between push and pull muscles, affecting posture",
+        "Bench pressing does not use any muscles",
+        "There is no risk to training only push movements"
+       ],
+       "answer": 1,
+       "explain": "Overemphasizing push movements like bench press without matching pull movements can create imbalances between opposing muscle groups, which can pull the shoulders forward and increase injury risk."
+      },
+      {
+       "q": "Which exercise is classified as a pull movement?",
+       "choices": [
+        "Bench press",
+        "Overhead press",
+        "Row",
+        "Push-up"
+       ],
+       "answer": 2,
+       "explain": "A row primarily works the back and biceps by pulling weight toward the body, making it a pull movement, unlike the push movements listed."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Progressive Overload and Program Design",
+     "minutes": 14,
+     "intro": "Muscles get stronger only when you consistently ask them to do a little more than they are used to. This single idea, progressive overload, is the engine behind every effective strength program, and it comes down to choosing the right sets, reps, and load for your goal.",
+     "sections": [
+      {
+       "heading": "Progressive Overload",
+       "body": [
+        "Progressive overload means gradually increasing the demand placed on a muscle over time, by adding weight, adding reps, adding sets, increasing frequency, or improving range of motion or technique. Without it, the body has no reason to keep adapting, and progress stalls, a plateau. A common guideline is to increase load by roughly 2.5-5% once you can comfortably complete all planned sets and reps with good form.",
+        "Overload has to be gradual: jumping the weight up too fast increases injury risk and often means sacrificing form, which reduces the muscle-building benefit of the movement."
+       ]
+      },
+      {
+       "heading": "Choosing Sets, Reps, and Load by Goal",
+       "body": [
+        "Different rep ranges emphasize different adaptations. For maximal strength, use heavy loads (about 85% or more of your one-rep max) for 1-6 reps across 3-5 sets. For muscle growth (hypertrophy), use moderate loads (about 65-85% of one-rep max) for 6-12 reps across 3-4 sets. For muscular endurance, use lighter loads (below 65% of one-rep max) for 12-20 or more reps.",
+        "Your one-rep max (1RM) is the heaviest weight you can lift once with correct form. Rather than testing it directly, which carries injury risk for beginners, you can estimate it from a lighter set using the Epley formula: 1RM = weight × (1 + reps ÷ 30)."
+       ],
+       "example": {
+        "problem": "A lifter benches 135 pounds for 8 reps to failure. Estimate their one-rep max using the Epley formula.",
+        "steps": [
+         "Epley formula: 1RM = weight × (1 + reps ÷ 30).",
+         "Plug in the numbers: 1RM = 135 × (1 + 8 ÷ 30) = 135 × (1 + 0.267) = 135 × 1.267.",
+         "Multiply: 135 × 1.267 ≈ 171 pounds."
+        ],
+        "answer": "The estimated one-rep max is about 171 pounds, which could then be used to calculate training loads at, for example, 70% (about 120 lb) for hypertrophy work."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "progressive overload",
+       "def": "Gradually increasing the demand on a muscle over time (weight, reps, sets, or frequency) to keep driving adaptation."
+      },
+      {
+       "term": "one-rep max (1RM)",
+       "def": "The heaviest weight a person can lift for a single repetition with correct form."
+      },
+      {
+       "term": "hypertrophy",
+       "def": "Muscle growth, typically best driven by moderate loads (about 65-85% of 1RM) for 6-12 reps."
+      },
+      {
+       "term": "plateau",
+       "def": "A stall in progress that occurs when training stops overloading the muscles enough to drive further adaptation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Using the Epley formula, estimate the one-rep max for a lifter who squats 200 pounds for 5 reps. (1RM = weight × (1 + reps ÷ 30))",
+       "choices": [
+        "about 210 lb",
+        "about 217 lb",
+        "about 233 lb",
+        "about 250 lb"
+       ],
+       "answer": 2,
+       "explain": "1RM = 200 × (1 + 5 ÷ 30) = 200 × 1.167 ≈ 233 lb."
+      },
+      {
+       "q": "Which rep range and load is generally best for building maximal strength?",
+       "choices": [
+        "1-6 reps at 85%+ of 1RM",
+        "12-20+ reps at under 65% of 1RM",
+        "6-12 reps at 65-85% of 1RM",
+        "Any rep range works identically for strength"
+       ],
+       "answer": 0,
+       "explain": "Maximal strength adaptations are best driven by heavy loads (85% or more of 1RM) performed for low reps, typically 1-6, across several sets."
+      },
+      {
+       "q": "What is progressive overload?",
+       "choices": [
+        "Lifting the same weight for the same reps every session indefinitely",
+        "Gradually increasing the demand on a muscle over time to keep driving adaptation",
+        "Only increasing the number of workout days",
+        "Resting completely for a full month between sessions"
+       ],
+       "answer": 1,
+       "explain": "Progressive overload is the gradual, ongoing increase in training demand (weight, reps, sets, or frequency) that forces the body to keep adapting instead of plateauing."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Foundational Lifts and Safe Form",
+     "minutes": 13,
+     "intro": "A small set of foundational exercises can build a complete strength base, and getting the basic form right on each one matters more for long-term progress than any amount of extra weight lifted with bad technique.",
+     "sections": [
+      {
+       "heading": "The Squat and Deadlift",
+       "body": [
+        "The squat trains quads, glutes, hamstrings, and core. Key form points: feet about shoulder-width apart, weight through the whole foot (not just the toes), knees tracking in the same direction as the toes, chest up, and lowering until thighs are at least parallel to the floor while keeping the natural curve of the lower back.",
+        "The deadlift trains the entire posterior chain (hamstrings, glutes, back). Key form points: bar or weight close to the shins, hips pushed back before bending the knees deeply, a flat (not rounded) back throughout the lift, and standing up by driving through the heels, not by yanking with the lower back."
+       ]
+      },
+      {
+       "heading": "Push-Ups and Rows",
+       "body": [
+        "The push-up trains chest, shoulders, triceps, and core. Key form points: hands slightly wider than shoulders, body in a straight line from head to heels (no sagging hips), and lowering until the chest is close to the floor before pushing back up. Beginners can regress the movement by doing push-ups against a wall or with knees on the floor while building strength.",
+        "The row (with a band, dumbbell, or bar) trains the back and biceps, balancing out pushing exercises. Key form points: pull the elbow back close to the body rather than flaring it out wide, squeeze the shoulder blades together at the top, and control the weight back down slowly rather than letting it drop."
+       ],
+       "example": {
+        "problem": "A beginner cannot yet do a full push-up with good form (their hips sag before their chest reaches the floor).",
+        "steps": [
+         "Recognize the sagging hips as a form breakdown, not just a strength issue to push through.",
+         "Regress the exercise to an easier version: incline push-ups (hands on a bench or wall) or knee push-ups.",
+         "Practice the regressed version with strict form and gradually progress toward the full push-up as strength improves."
+        ],
+        "answer": "Use a regression (incline or knee push-ups) to build strength with correct form first, rather than doing full push-ups with a sagging, unsafe position."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "posterior chain",
+       "def": "The group of muscles along the back of the body - hamstrings, glutes, and back - trained heavily by the deadlift."
+      },
+      {
+       "term": "regression",
+       "def": "An easier version of an exercise (like a knee push-up) used to build strength safely before attempting the full movement."
+      },
+      {
+       "term": "form breakdown",
+       "def": "A change in movement pattern, like sagging hips or a rounding back, that signals an exercise is too advanced or too heavy to do safely."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a proper deadlift, which describes the correct back position throughout the lift?",
+       "choices": [
+        "Rounded, to protect the shoulders",
+        "Flat, maintaining its natural curve",
+        "Arched excessively backward",
+        "Position does not matter if the weight is light"
+       ],
+       "answer": 1,
+       "explain": "A flat back that maintains its natural curve protects the spine during a deadlift; a rounded back under load significantly increases injury risk."
+      },
+      {
+       "q": "A beginner's hips sag during push-ups before their chest reaches the floor. What is the best fix?",
+       "choices": [
+        "Add more weight to a backpack to force better form",
+        "Regress to an easier version like incline or knee push-ups",
+        "Ignore it since form does not matter",
+        "Stop doing push-ups permanently"
+       ],
+       "answer": 1,
+       "explain": "Sagging hips is a form breakdown; regressing to an easier variation lets the person build strength with correct form before returning to the full push-up."
+      },
+      {
+       "q": "What is the main muscle group targeted by a row that balances out pressing exercises like the bench press?",
+       "choices": [
+        "Quadriceps",
+        "Back and biceps",
+        "Calves",
+        "Abdominals only"
+       ],
+       "answer": 1,
+       "explain": "Rows primarily train the back and biceps (a pull movement), balancing programs that include a lot of pressing (push) movements like the bench press."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Recovery and Nutrition",
+   "summary": "Training only works if you recover from it and fuel it properly. This unit covers flexibility work, recognizing overtraining, and the nutrition basics that support a training program.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Flexibility and Mobility Training",
+     "minutes": 10,
+     "intro": "Flexibility is one of the five components of fitness, and it is also one of the easiest to neglect. A few minutes of targeted stretching a few times a week can improve range of motion and may reduce the risk of certain injuries.",
+     "sections": [
+      {
+       "heading": "Static vs. Dynamic Flexibility Work",
+       "body": [
+        "Static stretching, holding a stretch at the point of mild tension for 20-30 seconds, is best done after exercise or on its own, when muscles are warm. Dynamic stretching, moving through a range of motion repeatedly like leg swings or arm circles, is better before exercise since it does not temporarily reduce muscle power the way long static holds can.",
+        "Mobility training goes further than stretching alone; it combines flexibility with control and strength through a joint's full range, such as deep bodyweight squats held for a few breaths, or controlled shoulder circles with light resistance."
+       ]
+      },
+      {
+       "heading": "Building a Simple Routine",
+       "body": [
+        "A basic flexibility routine: after a workout or on a rest day, spend 8-10 minutes holding static stretches for major areas that feel tight - hamstrings, hips, chest, and shoulders are common trouble spots for most people who sit for long stretches during the day. Consistency (a few short sessions per week) matters more than any single long session.",
+        "Flexibility, like strength, is specific: stretching your hamstrings does not improve your shoulder range of motion. Target the areas you actually use and that feel restricted, rather than a generic routine copied from someone with different needs."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "mobility",
+       "def": "The combination of flexibility and strength/control through a joint's full range of motion."
+      },
+      {
+       "term": "static stretching",
+       "def": "Holding a stretch at a point of mild tension, typically 20-30 seconds, best done when muscles are warm."
+      }
+     ],
+     "practice": [
+      {
+       "q": "When is static stretching best performed?",
+       "choices": [
+        "Immediately before a maximal lift",
+        "After exercise, when muscles are warm",
+        "Only first thing in the morning",
+        "It should never be done"
+       ],
+       "answer": 1,
+       "explain": "Static stretching is most effective and lowest-risk after exercise or when muscles are already warm, rather than as a cold pre-workout stretch."
+      },
+      {
+       "q": "What distinguishes mobility training from simple stretching?",
+       "choices": [
+        "Mobility training never involves movement",
+        "Mobility combines flexibility with strength and control through a range of motion",
+        "Mobility only applies to the legs",
+        "There is no real difference"
+       ],
+       "answer": 1,
+       "explain": "Mobility training adds strength and control to flexibility, such as holding a controlled deep squat, rather than passively stretching a muscle."
+      },
+      {
+       "q": "Why won't stretching your hamstrings improve your shoulder range of motion?",
+       "choices": [
+        "Flexibility gains are specific to the joint and muscles being stretched",
+        "All stretching improves the whole body equally",
+        "Shoulders cannot be stretched at all",
+        "Hamstrings and shoulders are the same muscle group"
+       ],
+       "answer": 0,
+       "explain": "Like strength training, flexibility adaptations are specific to the area worked, so a full-body routine should target each area you actually want to improve."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Recovery, Sleep, and Overtraining",
+     "minutes": 11,
+     "intro": "Muscles do not get stronger during a workout; they get stronger during recovery, when the body repairs the small damage caused by training. Skimping on recovery is one of the most common reasons people stall or get hurt.",
+     "sections": [
+      {
+       "heading": "Why Rest Days Matter",
+       "body": [
+        "During strength training, muscle fibers experience tiny amounts of damage, and the repair process during rest is what makes them come back stronger, a cycle called supercompensation. Most muscle groups need roughly 48 hours to recover from a hard strength session before training them again at similar intensity, which is why many programs alternate muscle groups across days rather than training everything daily.",
+        "Sleep is where a large share of this repair happens, aided by growth hormone released during deep sleep. Adults generally need 7-9 hours per night, and athletes in heavy training blocks often need more, since sleep debt has been linked to slower recovery, reduced strength performance, and higher injury rates."
+       ]
+      },
+      {
+       "heading": "Recognizing Overtraining",
+       "body": [
+        "Overtraining happens when training stress consistently outpaces recovery. Warning signs include persistent fatigue that does not improve with a normal rest day, declining performance despite continued or increased effort, elevated resting heart rate, irritability or mood changes, trouble sleeping despite being tired, and increased frequency of illness or injury.",
+        "The fix is usually a deload: a planned week of reduced volume or intensity (commonly cutting weight or volume by 40-50%), or in more severe cases, several days of complete rest. Persistent pain (as opposed to normal muscle soreness that fades in 1-3 days) should be evaluated by a medical professional rather than trained through."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "supercompensation",
+       "def": "The cycle of training stress, recovery, and rebuilding that leaves a muscle slightly stronger than before."
+      },
+      {
+       "term": "overtraining",
+       "def": "A state where training stress consistently exceeds the body's ability to recover, shown by fatigue, declining performance, and mood changes."
+      },
+      {
+       "term": "deload",
+       "def": "A planned period of reduced training volume or intensity used to allow full recovery before continuing to progress."
+      }
+     ],
+     "practice": [
+      {
+       "q": "When does a muscle actually get stronger?",
+       "choices": [
+        "During the workout itself",
+        "During the recovery period after training, as the body repairs and rebuilds",
+        "Only while sleeping in on weekends",
+        "Strength gains happen instantly with each rep"
+       ],
+       "answer": 1,
+       "explain": "The training session creates the stimulus (small muscle damage), but the actual strength gain happens during recovery, when the body repairs and rebuilds the tissue stronger than before."
+      },
+      {
+       "q": "Which is a warning sign of overtraining?",
+       "choices": [
+        "Improved performance every single week",
+        "Persistent fatigue and declining performance despite continued effort",
+        "Feeling normally sore for a day after a hard workout",
+        "Sleeping well and feeling energized"
+       ],
+       "answer": 1,
+       "explain": "Persistent fatigue and performance that declines despite continued or increased training effort are classic overtraining warning signs, unlike normal, short-lived post-workout soreness."
+      },
+      {
+       "q": "What is a deload week designed to do?",
+       "choices": [
+        "Increase training intensity to break through a plateau",
+        "Reduce training volume or intensity to allow fuller recovery",
+        "Replace all training with stretching only",
+        "Eliminate the need for sleep"
+       ],
+       "answer": 1,
+       "explain": "A deload intentionally reduces volume or intensity for a period, giving the body a chance to fully recover before resuming progressive training."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Fueling Your Training",
+     "minutes": 12,
+     "intro": "What you eat determines whether your body has the raw materials to recover and adapt from training, or whether it is running on empty. A few real numbers for protein, carbohydrate, and water needs turn vague nutrition advice into a plan you can actually use.",
+     "sections": [
+      {
+       "heading": "Protein and Carbohydrates",
+       "body": [
+        "Protein supplies the amino acids used to repair and build muscle tissue. General guidelines for people doing regular strength training suggest about 1.2 to 2.0 grams of protein per kilogram of body weight per day, with the higher end of that range for those in heavier strength training. For a 70 kg (about 154 lb) person training regularly, that works out to roughly 84 to 140 grams of protein daily, spread across meals for consistent availability to muscles.",
+        "Carbohydrates are the body's primary fuel for moderate-to-high intensity exercise, stored in muscles and the liver as glycogen. Endurance athletes with high training volume may need a higher share of calories from carbohydrates than someone doing light activity, since depleted glycogen stores are a major cause of the sudden fatigue endurance athletes call \"hitting the wall.\""
+       ],
+       "example": {
+        "problem": "Calculate the daily protein range for a 65 kg person doing regular strength training, using 1.2 to 2.0 g/kg.",
+        "steps": [
+         "Lower bound: 65 kg × 1.2 g/kg = 78 grams of protein per day.",
+         "Upper bound: 65 kg × 2.0 g/kg = 130 grams of protein per day.",
+         "State the range."
+        ],
+        "answer": "This person's daily protein target is roughly 78 to 130 grams, depending on training volume and goals."
+       }
+      },
+      {
+       "heading": "Hydration",
+       "body": [
+        "Water needs increase with exercise, especially in heat, since sweat carries both water and electrolytes like sodium out of the body. A simple practical check is urine color: pale yellow generally indicates adequate hydration, while dark yellow suggests you need more fluids. During exercise longer than about 60 minutes, or in hot conditions, an electrolyte drink can help replace sodium lost in sweat, which plain water alone does not replace.",
+        "Overhydrating is also possible, though rare, and can dilute blood sodium to dangerous levels (a condition called hyponatremia) in endurance events; the practical guidance for most people is to drink when thirsty and use urine color as a rough guide, rather than forcing large amounts of water on a strict schedule."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "glycogen",
+       "def": "The stored form of carbohydrate in muscles and the liver, used as fuel during moderate-to-high intensity exercise."
+      },
+      {
+       "term": "hitting the wall",
+       "def": "Sudden fatigue in endurance exercise caused by depleted glycogen stores."
+      },
+      {
+       "term": "hyponatremia",
+       "def": "Dangerously low blood sodium, which can occur from significant overhydration during prolonged endurance exercise."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For a 70 kg person using a protein target of 1.5 g/kg, how many grams of protein per day is that?",
+       "choices": [
+        "70 grams",
+        "95 grams",
+        "105 grams",
+        "140 grams"
+       ],
+       "answer": 2,
+       "explain": "70 kg × 1.5 g/kg = 105 grams of protein per day."
+      },
+      {
+       "q": "What is glycogen?",
+       "choices": [
+        "A type of protein supplement",
+        "The stored form of carbohydrate in muscles and liver used as exercise fuel",
+        "A hormone released during sleep",
+        "A measure of hydration status"
+       ],
+       "answer": 1,
+       "explain": "Glycogen is stored carbohydrate in the muscles and liver, and it is a primary fuel source during moderate-to-high intensity exercise."
+      },
+      {
+       "q": "What is a simple practical way to check daily hydration status?",
+       "choices": [
+        "Body weight alone",
+        "Urine color, with pale yellow indicating adequate hydration",
+        "Resting heart rate only",
+        "Counting exact ounces with no other checks"
+       ],
+       "answer": 1,
+       "explain": "Urine color is a simple, practical hydration check: pale yellow generally suggests adequate hydration, while dark yellow suggests a need for more fluids."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

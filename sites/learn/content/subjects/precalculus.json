@@ -1,0 +1,1612 @@
+{
+ "id": "precalculus",
+ "title": "Precalculus",
+ "domain": "math",
+ "level": "Intro college",
+ "description": "The complete toolkit you need before calculus: functions and their graphs, polynomial and rational behavior, exponential and logarithmic growth, trigonometry, systems of equations, conic sections, and sequences that lead directly into the idea of a limit. Each unit builds fluency you will lean on constantly once derivatives and integrals enter the picture.",
+ "outcomes": [
+  "Analyze functions for domain, range, transformations, and composition, and find inverse functions algebraically.",
+  "Determine end behavior and zeros of polynomial functions, and identify asymptotes of rational functions.",
+  "Model growth and decay with exponential functions and solve exponential and logarithmic equations.",
+  "Evaluate trigonometric functions exactly, graph them, and solve triangles with the Law of Sines and Law of Cosines.",
+  "Solve systems of linear and nonlinear equations, including with matrices, and classify conic sections from their equations.",
+  "Work with arithmetic and geometric sequences and series, and evaluate basic limits as an introduction to calculus."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Functions and Their Graphs",
+   "summary": "The language of functions: domain, range, transformations, composition, and inverses.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Functions, Domain, and Range",
+     "minutes": 16,
+     "intro": "Precalculus is, at its core, the study of functions in enough depth that calculus can ask what happens to them in the limit. Before analyzing any function's behavior, you need to know precisely what inputs it accepts and what outputs it can produce — that's domain and range.",
+     "sections": [
+      {
+       "heading": "What Makes a Relation a Function",
+       "body": [
+        "A **function** is a rule assigning exactly one output to each input. Graphically, this is the **vertical line test**: if any vertical line crosses a graph more than once, it is not a function, because that x-value would have two different y-values. Function notation f(x) names the output produced by input x, so f(3) = 7 means the function assigns 7 to the input 3.",
+        "The **domain** is the complete set of allowed inputs; the **range** is the complete set of outputs actually produced. For a formula-defined function with no context restricting it further, the domain excludes values that cause division by zero or a negative number under an even root, since neither operation is defined for real numbers there."
+       ]
+      },
+      {
+       "heading": "Finding Domain Algebraically",
+       "body": [
+        "For rational expressions, set the denominator equal to zero and exclude those x-values from the domain. For square roots (or any even root), require the expression under the radical to be greater than or equal to zero, and solve that inequality. Combine both restrictions with 'and' if a function has both a fraction and a radical.",
+        "Range is usually harder to find algebraically and is often easier to read from a graph or by analyzing the function's behavior — for example, √x can never be negative, so its range is [0, ∞), while 1/x can be any nonzero number, so its range excludes 0."
+       ],
+       "example": {
+        "problem": "Find the domain of f(x) = √(x − 4)/(x − 7).",
+        "steps": [
+         "The square root requires x − 4 ≥ 0, so x ≥ 4.",
+         "The denominator requires x − 7 ≠ 0, so x ≠ 7.",
+         "Combine both restrictions: x ≥ 4 and x ≠ 7."
+        ],
+        "answer": "Domain: [4, 7) ∪ (7, ∞)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "function",
+       "def": "A rule pairing each input with exactly one output; graphically, passes the vertical line test."
+      },
+      {
+       "term": "domain",
+       "def": "The complete set of input values for which a function is defined."
+      },
+      {
+       "term": "range",
+       "def": "The complete set of output values a function actually produces."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the domain of f(x) = 1/(x + 5)?",
+       "choices": [
+        "All reals except x = −5",
+        "All reals except x = 5",
+        "x ≥ −5",
+        "All real numbers"
+       ],
+       "answer": 0,
+       "explain": "The denominator is zero when x = −5, which must be excluded from the domain."
+      },
+      {
+       "q": "What is the domain of g(x) = √(9 − x)?",
+       "choices": [
+        "x ≤ 9",
+        "x ≥ 9",
+        "x ≤ −9",
+        "All real numbers"
+       ],
+       "answer": 0,
+       "explain": "The radicand must be nonnegative: 9 − x ≥ 0, so x ≤ 9."
+      },
+      {
+       "q": "Which test determines whether a graph represents a function?",
+       "choices": [
+        "Vertical line test",
+        "Horizontal line test",
+        "Slope test",
+        "Origin test"
+       ],
+       "answer": 0,
+       "explain": "A graph represents a function only if no vertical line crosses it more than once, since each input needs exactly one output."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Transformations of Functions",
+     "minutes": 15,
+     "intro": "Once you know the shape of a handful of parent functions, like x², √x, and 1/x, you can predict the graph of dozens of related functions instantly just by recognizing how they've been shifted, stretched, or flipped, without plotting a single extra point.",
+     "sections": [
+      {
+       "heading": "Shifts and Reflections",
+       "body": [
+        "For a parent function f(x), the graph of f(x) + k shifts vertically by k (up if k > 0, down if k < 0), and f(x − h) shifts horizontally by h (right if h > 0, left if h < 0) — note the sign flip inside the parentheses is easy to get backwards. The graph of −f(x) reflects vertically over the x-axis, and f(−x) reflects horizontally over the y-axis.",
+        "These rules combine: g(x) = f(x − 2) + 3 shifts f two units right and three units up. Always apply the horizontal shift to the input before evaluating, matching exactly how the parentheses group the algebra."
+       ]
+      },
+      {
+       "heading": "Stretches and Compressions",
+       "body": [
+        "For a f(x), a > 1 stretches the graph vertically (taller) and 0 < a < 1 compresses it (flatter); a negative a also reflects over the x-axis. For f(bx), b > 1 compresses the graph horizontally (narrower) and 0 < b < 1 stretches it (wider) — horizontal changes act opposite to intuition because they affect the input, not the output.",
+        "A full transformation like g(x) = −2f(3(x + 1)) − 4 should be read in layers: horizontal compression by 3, horizontal shift left 1, vertical stretch by 2, vertical reflection, then vertical shift down 4. Working through transformations in a consistent order avoids sign errors."
+       ],
+       "example": {
+        "problem": "Describe the transformations that produce g(x) = −(x + 2)² + 5 from the parent function f(x) = x².",
+        "steps": [
+         "Identify the inside shift: (x + 2) means a horizontal shift 2 units left.",
+         "The negative sign in front reflects the graph over the x-axis.",
+         "The +5 at the end shifts the graph up 5 units."
+        ],
+        "answer": "g(x) is f(x) = x² shifted left 2, reflected over the x-axis, and shifted up 5."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "vertical shift",
+       "def": "f(x) + k moves a graph up (k > 0) or down (k < 0) by |k| units."
+      },
+      {
+       "term": "horizontal shift",
+       "def": "f(x − h) moves a graph right (h > 0) or left (h < 0) by |h| units."
+      },
+      {
+       "term": "reflection",
+       "def": "−f(x) flips a graph over the x-axis; f(−x) flips it over the y-axis."
+      }
+     ],
+     "practice": [
+      {
+       "q": "The graph of g(x) = f(x + 3) − 2 is f(x) shifted how?",
+       "choices": [
+        "Left 3, down 2",
+        "Right 3, down 2",
+        "Left 3, up 2",
+        "Right 3, up 2"
+       ],
+       "answer": 0,
+       "explain": "f(x + 3) shifts left 3 (since the sign inside is opposite of the shift direction), and −2 shifts down 2."
+      },
+      {
+       "q": "Which transformation reflects a graph over the y-axis?",
+       "choices": [
+        "f(−x)",
+        "−f(x)",
+        "f(x) − 1",
+        "2f(x)"
+       ],
+       "answer": 0,
+       "explain": "Replacing x with −x reflects the graph horizontally across the y-axis."
+      },
+      {
+       "q": "g(x) = 3f(x) compared to f(x) is a...",
+       "choices": [
+        "Vertical stretch by 3",
+        "Horizontal stretch by 3",
+        "Vertical shift up 3",
+        "Horizontal compression by 3"
+       ],
+       "answer": 0,
+       "explain": "Multiplying the output by 3 stretches the graph vertically, making every y-value three times as far from the x-axis."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Composite and Inverse Functions",
+     "minutes": 17,
+     "intro": "Functions can be chained together, feeding one's output into another's input, and some functions can be perfectly undone by a partner function that reverses every step. Both ideas, composition and inversion, are essential once calculus starts chaining rates of change together.",
+     "sections": [
+      {
+       "heading": "Composite Functions",
+       "body": [
+        "The **composite function** (f ∘ g)(x) means f(g(x)): first apply g to x, then apply f to that result. Order matters enormously — (f ∘ g)(x) is generally not the same as (g ∘ f)(x). The domain of f ∘ g includes only x-values in g's domain for which g(x) is also in f's domain.",
+        "Composition is how complicated functions are usually built from simpler pieces, and recognizing a function as a composition is a core skill for the chain rule in calculus, where you differentiate the 'outside' function and the 'inside' function separately."
+       ],
+       "example": {
+        "problem": "Let f(x) = x² + 1 and g(x) = 2x − 3. Find (f ∘ g)(4) and (g ∘ f)(4).",
+        "steps": [
+         "(f ∘ g)(4) = f(g(4)). First g(4) = 2(4) − 3 = 5.",
+         "Then f(5) = 5² + 1 = 26. So (f ∘ g)(4) = 26.",
+         "(g ∘ f)(4) = g(f(4)). First f(4) = 4² + 1 = 17.",
+         "Then g(17) = 2(17) − 3 = 31. So (g ∘ f)(4) = 31."
+        ],
+        "answer": "(f ∘ g)(4) = 26; (g ∘ f)(4) = 31 — different, confirming order matters."
+       }
+      },
+      {
+       "heading": "Inverse Functions",
+       "body": [
+        "A function f has an **inverse** f⁻¹ if f is one-to-one (passes the horizontal line test, meaning no output repeats). By definition, f⁻¹(f(x)) = x and f(f⁻¹(x)) = x — applying a function and then its inverse returns the original input. To find an inverse algebraically: replace f(x) with y, swap x and y, then solve for y.",
+        "Graphically, f⁻¹ is the reflection of f across the line y = x, and the domain of f becomes the range of f⁻¹ (and vice versa). If a function is not one-to-one over its full domain, restricting the domain (as with sine, cosine, and tangent, or with x² restricted to x ≥ 0) can make an inverse possible."
+       ],
+       "example": {
+        "problem": "Find the inverse of f(x) = 3x − 6.",
+        "steps": [
+         "Replace f(x) with y: y = 3x − 6.",
+         "Swap x and y: x = 3y − 6.",
+         "Solve for y: x + 6 = 3y, so y = (x + 6)/3."
+        ],
+        "answer": "f⁻¹(x) = (x + 6)/3."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "composite function",
+       "def": "(f ∘ g)(x) = f(g(x)), applying g first, then f, to the result."
+      },
+      {
+       "term": "one-to-one function",
+       "def": "A function where every output corresponds to exactly one input; passes the horizontal line test."
+      },
+      {
+       "term": "inverse function (f⁻¹)",
+       "def": "A function that undoes f, satisfying f⁻¹(f(x)) = x, existing only when f is one-to-one."
+      }
+     ],
+     "practice": [
+      {
+       "q": "If f(x) = x + 2 and g(x) = x², what is (g ∘ f)(3)?",
+       "choices": [
+        "25",
+        "11",
+        "35",
+        "9"
+       ],
+       "answer": 0,
+       "explain": "f(3) = 3 + 2 = 5, then g(5) = 5² = 25."
+      },
+      {
+       "q": "Which test determines whether a function has an inverse over its whole domain?",
+       "choices": [
+        "Horizontal line test",
+        "Vertical line test",
+        "Domain test",
+        "Slope test"
+       ],
+       "answer": 0,
+       "explain": "A function must be one-to-one (pass the horizontal line test) for an inverse function to exist over its full domain."
+      },
+      {
+       "q": "Find the inverse of f(x) = (x − 1)/2.",
+       "choices": [
+        "f⁻¹(x) = 2x + 1",
+        "f⁻¹(x) = 2x − 1",
+        "f⁻¹(x) = x/2 + 1",
+        "f⁻¹(x) = (x+1)/2"
+       ],
+       "answer": 0,
+       "explain": "Swap and solve: x = (y − 1)/2 → 2x = y − 1 → y = 2x + 1."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Polynomial and Rational Functions",
+   "summary": "How polynomial functions behave at their extremes and at their zeros, and how rational functions behave near their asymptotes.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Polynomial Functions and End Behavior",
+     "minutes": 15,
+     "intro": "Zoom far enough away from any polynomial's graph and all its twists and turns fade into a simple pattern set entirely by its highest-degree term. Learning to predict that pattern, called end behavior, lets you sketch the big picture of a polynomial before ever plotting a point.",
+     "sections": [
+      {
+       "heading": "Degree, Leading Coefficient, and End Behavior",
+       "body": [
+        "For a polynomial written in standard form, the **degree** is the highest exponent and the **leading coefficient** is the number multiplying that highest-degree term. As x → ±∞, the polynomial's behavior is entirely controlled by this leading term, because it eventually dwarfs every lower-degree term.",
+        "Four end-behavior patterns follow directly from degree (even or odd) and leading coefficient (positive or negative): even degree with positive leading coefficient means both ends rise; even degree with negative leading coefficient means both ends fall; odd degree with positive leading coefficient means the left end falls and the right end rises; odd degree with negative leading coefficient reverses that."
+       ],
+       "example": {
+        "problem": "Describe the end behavior of f(x) = −2x⁵ + 3x² − 1.",
+        "steps": [
+         "Identify the leading term: −2x⁵, so degree 5 (odd) and leading coefficient −2 (negative).",
+         "Odd degree, negative leading coefficient: as x → −∞, f(x) → +∞; as x → +∞, f(x) → −∞."
+        ],
+        "answer": "As x → −∞, f(x) → +∞; as x → +∞, f(x) → −∞ (left rises, right falls)."
+       }
+      },
+      {
+       "heading": "Turning Points and Local Extrema",
+       "body": [
+        "A polynomial of degree n has at most n − 1 turning points (places where the graph changes from rising to falling or vice versa) and at most n real zeros. These bounds are useful for sanity-checking a graph: if you count more turning points in a sketch than the degree allows, something went wrong.",
+        "Together with end behavior, the zeros and turning points give a reliable skeleton for sketching any polynomial by hand: mark the zeros on the x-axis, orient the far-left and far-right arms using end behavior, then connect the dots with no more wiggles than the turning-point bound allows."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "degree",
+       "def": "The highest exponent appearing in a polynomial, which controls its long-run shape."
+      },
+      {
+       "term": "leading coefficient",
+       "def": "The coefficient of a polynomial's highest-degree term."
+      },
+      {
+       "term": "end behavior",
+       "def": "How a function's output behaves as x approaches positive or negative infinity."
+      },
+      {
+       "term": "turning point",
+       "def": "A point where a graph changes from increasing to decreasing or vice versa."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the end behavior of f(x) = 3x⁴ − x + 2 as x → ±∞?",
+       "choices": [
+        "Both ends rise to +∞",
+        "Both ends fall to −∞",
+        "Left falls, right rises",
+        "Left rises, right falls"
+       ],
+       "answer": 0,
+       "explain": "Even degree (4) with positive leading coefficient (3) means both ends rise to +∞."
+      },
+      {
+       "q": "What is the maximum number of turning points for a degree-6 polynomial?",
+       "choices": [
+        "5",
+        "6",
+        "3",
+        "7"
+       ],
+       "answer": 0,
+       "explain": "A degree-n polynomial has at most n − 1 turning points, so 6 − 1 = 5."
+      },
+      {
+       "q": "A polynomial has odd degree and a negative leading coefficient. What happens as x → +∞?",
+       "choices": [
+        "f(x) → −∞",
+        "f(x) → +∞",
+        "f(x) → 0",
+        "It oscillates forever"
+       ],
+       "answer": 0,
+       "explain": "Odd degree with negative leading coefficient means the right end falls toward −∞."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Finding Zeros of Polynomials",
+     "minutes": 17,
+     "intro": "Finding a polynomial's zeros — the x-values where it crosses or touches the x-axis — is one of the most useful and most tested skills in this course, and factoring, synthetic division, and the rational root theorem are the three tools that make it possible without guessing blindly.",
+     "sections": [
+      {
+       "heading": "The Rational Root Theorem and Synthetic Division",
+       "body": [
+        "The **Rational Root Theorem** says that if a polynomial with integer coefficients has a rational zero p/q (in lowest terms), then p must divide the constant term and q must divide the leading coefficient. This narrows an infinite search down to a short, testable list of candidates.",
+        "Once a candidate root is confirmed (by direct substitution or **synthetic division** giving a remainder of 0), synthetic division also produces the depressed polynomial — one degree lower — which can be searched for more roots, often by factoring or the quadratic formula once it's degree 2."
+       ],
+       "example": {
+        "problem": "Find all real zeros of f(x) = x³ − 4x² + x + 6.",
+        "steps": [
+         "Constant term 6, leading coefficient 1: candidates are ±1, ±2, ±3, ±6.",
+         "Test x = −1: (−1)³ − 4(−1)² + (−1) + 6 = −1 − 4 − 1 + 6 = 0. So x = −1 is a zero.",
+         "Synthetic division of x³ − 4x² + x + 6 by (x + 1) gives x² − 5x + 6.",
+         "Factor: x² − 5x + 6 = (x − 2)(x − 3), giving zeros x = 2 and x = 3."
+        ],
+        "answer": "Zeros: x = −1, x = 2, x = 3."
+       }
+      },
+      {
+       "heading": "Multiplicity",
+       "body": [
+        "The **multiplicity** of a zero is how many times its corresponding factor appears. If a zero has odd multiplicity, the graph crosses straight through the x-axis there; if it has even multiplicity, the graph touches the x-axis and bounces back without crossing, like the vertex of a parabola resting on the axis.",
+        "For example, f(x) = (x − 2)³(x + 1)² has a zero at x = 2 with multiplicity 3 (odd, crosses, and flattens slightly as it crosses) and a zero at x = −1 with multiplicity 2 (even, touches and bounces)."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Rational Root Theorem",
+       "def": "For integer-coefficient polynomials, any rational zero p/q must have p dividing the constant term and q dividing the leading coefficient."
+      },
+      {
+       "term": "synthetic division",
+       "def": "A shortcut method for dividing a polynomial by a linear factor (x − c), testing whether c is a zero."
+      },
+      {
+       "term": "multiplicity",
+       "def": "The number of times a given zero's factor repeats; even multiplicity means the graph bounces off the x-axis, odd means it crosses."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For f(x) = 2x³ + 3x² − 8x − 12, which is a possible rational zero by the Rational Root Theorem?",
+       "choices": [
+        "3/2",
+        "5",
+        "1/5",
+        "7"
+       ],
+       "answer": 0,
+       "explain": "Constant term is −12 (factors: 1,2,3,4,6,12) and leading coefficient is 2 (factors 1,2), so 3/2 is a valid p/q candidate; 5 and 7 do not divide 12, and 1/5 has a denominator that doesn't divide 2."
+      },
+      {
+       "q": "A polynomial has a zero at x = 4 with multiplicity 2. What does the graph do there?",
+       "choices": [
+        "Touches the x-axis and bounces back",
+        "Crosses straight through",
+        "Has a vertical asymptote",
+        "Is undefined at x = 4"
+       ],
+       "answer": 0,
+       "explain": "Even multiplicity means the graph touches the x-axis at that zero without crossing it."
+      },
+      {
+       "q": "Synthetic division of x³ − 2x² − 5x + 6 by (x − 1) gives a remainder of 0 and quotient x² − x − 6. What are the remaining zeros?",
+       "choices": [
+        "x = 3 and x = −2",
+        "x = −3 and x = 2",
+        "x = 6 and x = −1",
+        "x = 1 and x = 6"
+       ],
+       "answer": 0,
+       "explain": "x² − x − 6 factors as (x − 3)(x + 2), giving zeros x = 3 and x = −2."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Rational Functions and Asymptotes",
+     "minutes": 17,
+     "intro": "Rational functions, ratios of polynomials, behave predictably near the values that make their denominator zero and far out toward infinity — and once you know the rules for finding vertical, horizontal, and slant asymptotes, you can sketch one accurately without plotting dozens of points.",
+     "sections": [
+      {
+       "heading": "Vertical Asymptotes and Holes",
+       "body": [
+        "For a rational function in lowest terms, a **vertical asymptote** occurs at any x-value that makes the denominator zero. If a factor cancels between numerator and denominator before you check for zeros, that x-value instead produces a **hole** (a removable discontinuity), not an asymptote, because the function was never truly undefined there in a way that blows up.",
+        "Always factor numerator and denominator completely and cancel common factors first — the canceled factor's zero is a hole, and only the remaining denominator's zeros are true vertical asymptotes."
+       ],
+       "example": {
+        "problem": "Find the vertical asymptotes and any holes of f(x) = (x² − 9)/(x² − x − 12).",
+        "steps": [
+         "Factor: numerator = (x − 3)(x + 3); denominator = (x − 4)(x + 3).",
+         "The factor (x + 3) cancels, leaving f(x) = (x − 3)/(x − 4) for x ≠ −3.",
+         "The canceled value x = −3 is a hole. The remaining denominator zero, x = 4, is a vertical asymptote."
+        ],
+        "answer": "Vertical asymptote at x = 4; hole at x = −3."
+       }
+      },
+      {
+       "heading": "Horizontal and Slant Asymptotes",
+       "body": [
+        "Compare the degree of the numerator (n) to the degree of the denominator (m). If n < m, the horizontal asymptote is y = 0. If n = m, the horizontal asymptote is y = (leading coefficient of numerator)/(leading coefficient of denominator). If n = m + 1 (numerator's degree is exactly one more), there is no horizontal asymptote, but a **slant (oblique) asymptote** exists, found by polynomial long division.",
+        "If n > m + 1, there is neither a horizontal nor a slant asymptote — the function grows without a simple linear bound. These three cases cover every rational function you'll encounter in this course, so identifying n and m first tells you immediately which rule to apply."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "vertical asymptote",
+       "def": "A vertical line x = c that a rational function's graph approaches where an uncanceled denominator factor is zero."
+      },
+      {
+       "term": "hole (removable discontinuity)",
+       "def": "A single missing point on a graph where a common factor canceled between numerator and denominator."
+      },
+      {
+       "term": "horizontal asymptote",
+       "def": "A horizontal line the graph approaches as x → ±∞, determined by comparing numerator and denominator degrees."
+      },
+      {
+       "term": "slant asymptote",
+       "def": "A non-horizontal line the graph approaches when the numerator's degree is exactly one more than the denominator's."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For f(x) = (2x² + 1)/(x² − 4), what is the horizontal asymptote?",
+       "choices": [
+        "y = 2",
+        "y = 0",
+        "y = 1/4",
+        "There is none"
+       ],
+       "answer": 0,
+       "explain": "Numerator and denominator have equal degree (2), so the horizontal asymptote is the ratio of leading coefficients, 2/1 = 2."
+      },
+      {
+       "q": "For g(x) = (x + 1)/(x² − 1), what happens at x = −1?",
+       "choices": [
+        "A hole, since (x+1) cancels",
+        "A vertical asymptote",
+        "A horizontal asymptote",
+        "Nothing unusual"
+       ],
+       "answer": 0,
+       "explain": "x² − 1 factors as (x−1)(x+1); the (x+1) cancels with the numerator, leaving a hole at x = −1 rather than an asymptote."
+      },
+      {
+       "q": "For h(x) = (x² + 3)/(x + 1), what type of asymptote exists?",
+       "choices": [
+        "Slant (oblique)",
+        "Horizontal at y = 0",
+        "Horizontal at y = 1",
+        "Vertical only, no other asymptote"
+       ],
+       "answer": 0,
+       "explain": "The numerator's degree (2) is exactly one more than the denominator's (1), which produces a slant asymptote found by long division."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Exponential and Logarithmic Functions",
+   "summary": "Modeling growth and decay with exponential functions, and using logarithms as their inverse to solve for unknown exponents.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Exponential Functions and Growth or Decay",
+     "minutes": 16,
+     "intro": "Populations, radioactive isotopes, compound interest, and viral spread all share a mathematical signature: the amount changes at a rate proportional to how much is already there. That signature is the exponential function, and this lesson builds it from first principles.",
+     "sections": [
+      {
+       "heading": "The Exponential Function",
+       "body": [
+        "An **exponential function** has the form f(x) = a·b^x, where a is the initial value (at x = 0) and b is the **growth factor**, with b > 0 and b ≠ 1. If b > 1, the function models growth; if 0 < b < 1, it models decay. Unlike a polynomial, where the variable is the base, here the variable sits in the exponent, which is exactly why exponential functions eventually outgrow every polynomial no matter how large the polynomial's degree.",
+        "A percentage growth or decay rate r converts to a growth factor as b = 1 + r for growth or b = 1 − r for decay, expressed as a decimal. For example, 5% annual growth gives b = 1.05, and 5% annual decay gives b = 0.95."
+       ],
+       "example": {
+        "problem": "A city's population is 40,000 and grows 3% per year. Write an exponential model and predict the population after 10 years.",
+        "steps": [
+         "Growth factor: b = 1 + 0.03 = 1.03. Initial value a = 40,000.",
+         "Model: P(t) = 40,000(1.03)^t.",
+         "Evaluate at t = 10: P(10) = 40,000(1.03)^10 ≈ 40,000 × 1.3439 ≈ 53,757."
+        ],
+        "answer": "P(t) = 40,000(1.03)^t; after 10 years, about 53,757 people."
+       }
+      },
+      {
+       "heading": "The Natural Base e",
+       "body": [
+        "The number **e** ≈ 2.71828 arises naturally when growth compounds continuously rather than at discrete intervals, and it appears throughout calculus because the function e^x is its own derivative. Continuous growth or decay is modeled as A(t) = a·e^(kt), where k > 0 gives growth and k < 0 gives decay.",
+        "The constant e is not arbitrary — it's the limit of (1 + 1/n)^n as n grows large, representing what happens to compound interest as the number of compounding periods per year increases without bound. This connection between discrete and continuous growth will resurface directly when you study limits."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "exponential function",
+       "def": "f(x) = a·b^x, where a is the initial value and b > 0, b ≠ 1 is the growth factor."
+      },
+      {
+       "term": "growth factor",
+       "def": "The base b in an exponential function; b > 1 means growth, 0 < b < 1 means decay."
+      },
+      {
+       "term": "e (natural base)",
+       "def": "The constant ≈2.71828 that arises from continuous compounding, used in A(t) = a·e^(kt)."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A radioactive sample decays 2% per year. What is its growth factor b?",
+       "choices": [
+        "0.98",
+        "1.02",
+        "0.02",
+        "−0.02"
+       ],
+       "answer": 0,
+       "explain": "Decay uses b = 1 − r = 1 − 0.02 = 0.98."
+      },
+      {
+       "q": "For f(x) = 200(0.85)^x, is this growth or decay, and why?",
+       "choices": [
+        "Decay, because 0 < 0.85 < 1",
+        "Growth, because 0.85 is positive",
+        "Decay, because 200 is large",
+        "Growth, because x is an exponent"
+       ],
+       "answer": 0,
+       "explain": "Any base strictly between 0 and 1 produces decay as x increases, regardless of the coefficient in front."
+      },
+      {
+       "q": "Which function models continuous growth at rate k?",
+       "choices": [
+        "A(t) = a·e^(kt)",
+        "A(t) = a + kt",
+        "A(t) = a·k^t",
+        "A(t) = a/kt"
+       ],
+       "answer": 0,
+       "explain": "Continuous compounding uses the natural base e, giving A(t) = a·e^(kt)."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Logarithmic Functions",
+     "minutes": 15,
+     "intro": "If exponential functions answer \"what do I get after this much growth,\" logarithms answer the reverse question: \"how much growth got me here.\" That reversal makes logarithms the essential tool anytime the unknown quantity is stuck up in an exponent.",
+     "sections": [
+      {
+       "heading": "Defining the Logarithm",
+       "body": [
+        "The **logarithm** log_b(x) is defined as the inverse of the exponential function b^x: log_b(x) = y means b^y = x. So log_2(8) = 3 because 2³ = 8. The base b must be positive and not equal to 1, and the argument x must be positive, since a positive base raised to any real power is always positive.",
+        "Two bases get their own shorthand: log(x) with no base written means log base 10 (the **common logarithm**), and ln(x) means log base e (the **natural logarithm**). Because logarithms are inverses of exponentials, their graphs are reflections of exponential graphs across the line y = x."
+       ],
+       "example": {
+        "problem": "Evaluate log_3(81) and ln(e^5) without a calculator.",
+        "steps": [
+         "log_3(81) asks: 3 to what power gives 81? Since 3^4 = 81, log_3(81) = 4.",
+         "ln(e^5) asks: e to what power gives e^5? By definition, that power is exactly 5."
+        ],
+        "answer": "log_3(81) = 4; ln(e^5) = 5."
+       }
+      },
+      {
+       "heading": "Domain and Graph of Logarithmic Functions",
+       "body": [
+        "Since log_b(x) is the inverse of b^x, and b^x has range (0, ∞), the domain of log_b(x) is (0, ∞) — logarithms of zero or negative numbers are undefined. The graph of y = log_b(x) has a vertical asymptote at x = 0, passes through (1, 0) since b^0 = 1, and increases slowly (for b > 1) without ever leveling off.",
+        "This domain restriction matters constantly when solving equations: any solution that would require taking the log of a negative number or zero must be rejected as extraneous."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "logarithm (log_b x)",
+       "def": "The inverse of the exponential function: log_b(x) = y means b^y = x."
+      },
+      {
+       "term": "common logarithm",
+       "def": "log(x), meaning log base 10."
+      },
+      {
+       "term": "natural logarithm",
+       "def": "ln(x), meaning log base e."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is log_5(125)?",
+       "choices": [
+        "3",
+        "5",
+        "25",
+        "1/3"
+       ],
+       "answer": 0,
+       "explain": "5³ = 125, so log_5(125) = 3."
+      },
+      {
+       "q": "What is the domain of y = log_2(x)?",
+       "choices": [
+        "x > 0",
+        "All real numbers",
+        "x ≥ 0",
+        "x > 2"
+       ],
+       "answer": 0,
+       "explain": "Since 2^x is always positive, its inverse log_2(x) only accepts positive inputs."
+      },
+      {
+       "q": "What is ln(1)?",
+       "choices": [
+        "0",
+        "1",
+        "e",
+        "undefined"
+       ],
+       "answer": 0,
+       "explain": "e^0 = 1, so ln(1) = 0 by the definition of the natural logarithm as the inverse of e^x."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Properties of Logs and Solving Exponential and Logarithmic Equations",
+     "minutes": 18,
+     "intro": "Three logarithm properties turn multiplication into addition, division into subtraction, and exponents into multiplication — and together with the fact that logs and exponentials undo each other, they're the complete toolkit for solving any equation with the variable trapped in an exponent.",
+     "sections": [
+      {
+       "heading": "The Three Log Properties",
+       "body": [
+        "The **product rule**: log_b(MN) = log_b(M) + log_b(N). The **quotient rule**: log_b(M/N) = log_b(M) − log_b(N). The **power rule**: log_b(M^p) = p·log_b(M). All three follow directly from the corresponding exponent rules, since logarithms are exponents in disguise.",
+        "The **change of base formula**, log_b(x) = ln(x)/ln(b) (or log(x)/log(b)), lets you evaluate any logarithm on a calculator that only has ln and log buttons — essential for bases like 7 or 12 that don't appear as calculator keys."
+       ]
+      },
+      {
+       "heading": "Solving Exponential and Logarithmic Equations",
+       "body": [
+        "To solve an equation with the variable in an exponent, like 5^x = 40, take the log (or ln) of both sides and use the power rule to bring the exponent down: x·ln 5 = ln 40, so x = ln 40/ln 5. This works because logarithms are one-to-one, so applying the same log to both sides of a true equation preserves equality.",
+        "To solve a logarithmic equation like log(x) + log(x − 3) = 1, first combine logs using the product rule, then rewrite in exponential form to eliminate the log entirely, solve the resulting polynomial, and finally check every solution against the original equation's domain restrictions, since squaring or combining logs can introduce extraneous roots."
+       ],
+       "example": {
+        "problem": "Solve 3^(x+1) = 20 for x, and solve log(x) + log(x − 3) = 1 for x.",
+        "steps": [
+         "For 3^(x+1) = 20: take ln of both sides: (x+1)ln 3 = ln 20.",
+         "x + 1 = ln 20/ln 3 ≈ 2.9957/1.0986 ≈ 2.727, so x ≈ 1.727.",
+         "For log(x) + log(x−3) = 1: combine using product rule: log(x(x−3)) = 1.",
+         "Rewrite exponentially: x(x−3) = 10^1 = 10, so x² − 3x − 10 = 0, giving (x−5)(x+2)=0, so x = 5 or x = −2. Reject x = −2 since log(−2) is undefined; x = 5 checks out."
+        ],
+        "answer": "x ≈ 1.727 for the first equation; x = 5 for the second (x = −2 rejected)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "product rule (logs)",
+       "def": "log_b(MN) = log_b(M) + log_b(N)."
+      },
+      {
+       "term": "power rule (logs)",
+       "def": "log_b(M^p) = p·log_b(M), used to bring exponents down when solving equations."
+      },
+      {
+       "term": "change of base formula",
+       "def": "log_b(x) = ln(x)/ln(b), used to evaluate any base logarithm with a standard calculator."
+      },
+      {
+       "term": "extraneous solution",
+       "def": "A solution produced algebraically that fails to satisfy the original equation's domain restrictions."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Using the power rule, log_2(x^5) equals what?",
+       "choices": [
+        "5 log_2(x)",
+        "log_2(5x)",
+        "5 + log_2(x)",
+        "log_2(x)/5"
+       ],
+       "answer": 0,
+       "explain": "The power rule moves the exponent out front as a multiplier: log_b(M^p) = p log_b(M)."
+      },
+      {
+       "q": "Solve 4^x = 30 for x (approximate).",
+       "choices": [
+        "x ≈ 2.454",
+        "x ≈ 7.5",
+        "x ≈ 1.229",
+        "x ≈ 3.4"
+       ],
+       "answer": 0,
+       "explain": "x = ln30/ln4 ≈ 3.401/1.386 ≈ 2.454."
+      },
+      {
+       "q": "Why is x = −2 rejected as a solution to log(x) + log(x−3) = 1 even though it solves x²−3x−10=0?",
+       "choices": [
+        "log(−2) is undefined",
+        "It doesn't satisfy the quadratic",
+        "−2 is not an integer",
+        "The equation has no solutions"
+       ],
+       "answer": 0,
+       "explain": "Logarithms are only defined for positive arguments, so x = −2 would require taking log of a negative number, which is undefined."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Trigonometric Functions",
+   "summary": "The unit circle, graphs of the basic trig functions, and solving triangles with the Law of Sines and Law of Cosines.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Unit Circle and Radian Measure",
+     "minutes": 16,
+     "intro": "Trigonometry re-enters precalculus not as a study of triangles alone, but as a family of functions defined on the unit circle — functions that will describe every wave, oscillation, and rotation you model from here through calculus and physics.",
+     "sections": [
+      {
+       "heading": "Radians and the Unit Circle",
+       "body": [
+        "An angle's **radian measure** equals the arc length it cuts from a unit circle, so a full rotation is 2π radians (matching 360°), and 180° = π radians gives the conversion factor between the two scales. On the **unit circle** (radius 1, centered at the origin), for angle θ measured from the positive x-axis, define cos θ as the x-coordinate and sin θ as the y-coordinate of the point where the terminal side meets the circle.",
+        "Because x² + y² = 1 on the unit circle, this immediately gives the **Pythagorean identity** sin²θ + cos²θ = 1 for every angle θ, one of the most-used facts in all of trigonometry and calculus."
+       ]
+      },
+      {
+       "heading": "Reference Angles and Exact Values",
+       "body": [
+        "Every angle has a **reference angle**, the positive acute angle between its terminal side and the x-axis, and the trig values of θ match those of its reference angle in magnitude, differing only in sign depending on the quadrant. Memorizing the exact sine and cosine values for 30°, 45°, and 60° (π/6, π/4, π/3) lets you find the exact trig value of any angle built from these, like 120°, 210°, or 300°, using reference angles and quadrant signs.",
+        "This same unit-circle definition extends sine and cosine (and, through tan θ = sin θ/cos θ, the other four functions) to negative angles and angles beyond 360°, which is essential once you start graphing periodic behavior."
+       ],
+       "example": {
+        "problem": "Find the exact value of sin(210°) and cos(210°).",
+        "steps": [
+         "210° is in Quadrant III, with reference angle 210° − 180° = 30°.",
+         "In Quadrant III, both sine and cosine are negative.",
+         "sin(210°) = −sin(30°) = −1/2. cos(210°) = −cos(30°) = −√3/2."
+        ],
+        "answer": "sin(210°) = −1/2; cos(210°) = −√3/2."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "radian",
+       "def": "The unit of angle measure equal to the arc length cut from a unit circle; 2π radians = 360°."
+      },
+      {
+       "term": "unit circle",
+       "def": "The circle of radius 1 centered at the origin, used to define cos θ (x-coordinate) and sin θ (y-coordinate) for any angle."
+      },
+      {
+       "term": "reference angle",
+       "def": "The positive acute angle between an angle's terminal side and the x-axis, used to find exact trig values."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the exact value of cos(315°)?",
+       "choices": [
+        "√2/2",
+        "−√2/2",
+        "1/2",
+        "−1/2"
+       ],
+       "answer": 0,
+       "explain": "315° is in Quadrant IV with reference angle 45°; cosine is positive in QIV, giving cos(315°) = cos(45°) = √2/2."
+      },
+      {
+       "q": "How many radians are in 270°?",
+       "choices": [
+        "3π/2",
+        "π/2",
+        "2π",
+        "3π/4"
+       ],
+       "answer": 0,
+       "explain": "270° × π/180° = 270π/180 = 3π/2."
+      },
+      {
+       "q": "What is the Pythagorean identity for any angle θ?",
+       "choices": [
+        "sin²θ + cos²θ = 1",
+        "sin θ + cos θ = 1",
+        "sin²θ − cos²θ = 1",
+        "tan θ = sin θ + cos θ"
+       ],
+       "answer": 0,
+       "explain": "This identity comes directly from x² + y² = 1 on the unit circle, where x = cos θ and y = sin θ."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Graphs of Sine, Cosine, and Tangent",
+     "minutes": 16,
+     "intro": "As an angle sweeps steadily around the unit circle, plotting its sine or cosine against that angle traces a smooth repeating wave — the graphs that describe sound, light, tides, and every oscillating system you'll meet in later science courses.",
+     "sections": [
+      {
+       "heading": "Sine and Cosine Graphs",
+       "body": [
+        "The graphs of y = sin x and y = cos x are both **periodic** with period 2π and **amplitude** 1, oscillating between −1 and 1. For the general form y = A sin(B(x − C)) + D, the amplitude is |A|, the period is 2π/|B|, the phase shift is C (positive shifts right), and the midline is y = D.",
+        "Cosine is simply sine shifted left by π/2, since cos x = sin(x + π/2); recognizing this relationship means you never need to memorize two separate shapes, only one, plus a shift."
+       ],
+       "example": {
+        "problem": "State the amplitude, period, phase shift, and midline of y = 3 sin(2(x − π/4)) − 1.",
+        "steps": [
+         "Amplitude: |A| = 3.",
+         "Period: 2π/|B| = 2π/2 = π.",
+         "Phase shift: C = π/4 (right).",
+         "Midline: y = D = −1."
+        ],
+        "answer": "Amplitude 3, period π, phase shift π/4 right, midline y = −1."
+       }
+      },
+      {
+       "heading": "The Tangent Graph",
+       "body": [
+        "Since tan x = sin x/cos x, tangent has **vertical asymptotes** wherever cos x = 0 (at x = π/2 + kπ), and its period is π, not 2π, since the ratio's pattern repeats twice as often. Between consecutive asymptotes, tangent rises continuously from −∞ to +∞, passing through zero at each multiple of π.",
+        "Because tangent is unbounded, it has no amplitude — the concept only applies to functions with a fixed maximum and minimum, like sine and cosine."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "amplitude",
+       "def": "Half the distance between a periodic function's maximum and minimum output; |A| in y = A sin(Bx)."
+      },
+      {
+       "term": "period",
+       "def": "The horizontal length of one complete cycle of a periodic function."
+      },
+      {
+       "term": "vertical asymptote (tangent)",
+       "def": "A vertical line the tangent graph approaches, occurring wherever cosine equals zero."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the period of y = cos(3x)?",
+       "choices": [
+        "2π/3",
+        "3π",
+        "6π",
+        "π/3"
+       ],
+       "answer": 0,
+       "explain": "Period = 2π/|B| = 2π/3."
+      },
+      {
+       "q": "What is the amplitude of y = −4 sin(x) + 2?",
+       "choices": [
+        "4",
+        "−4",
+        "2",
+        "6"
+       ],
+       "answer": 0,
+       "explain": "Amplitude is |A| = |−4| = 4; the +2 shifts the midline but doesn't change amplitude."
+      },
+      {
+       "q": "Where does y = tan x have a vertical asymptote?",
+       "choices": [
+        "x = π/2",
+        "x = π",
+        "x = 0",
+        "x = 2π"
+       ],
+       "answer": 0,
+       "explain": "tan x is undefined where cos x = 0, first occurring at x = π/2."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Solving Triangles: Law of Sines and Law of Cosines",
+     "minutes": 17,
+     "intro": "Right-triangle ratios stop working the moment a triangle has no right angle, which is most triangles you'll actually meet in surveying, navigation, and physics. The Law of Sines and Law of Cosines extend trigonometry to handle any triangle at all.",
+     "sections": [
+      {
+       "heading": "The Law of Sines",
+       "body": [
+        "For a triangle with angles A, B, C opposite sides a, b, c, the **Law of Sines** states sin A/a = sin B/b = sin C/c. It applies whenever you know an angle and its opposite side plus one more piece of information (the AAS or ASA case), and it works for any triangle because it comes from expressing the triangle's altitude two different ways.",
+        "When given two sides and a non-included angle (the SSA case), be alert to the **ambiguous case**: the Law of Sines can produce zero, one, or two valid triangles, since an angle and its supplement share the same sine value."
+       ]
+      },
+      {
+       "heading": "The Law of Cosines",
+       "body": [
+        "The **Law of Cosines**, c² = a² + b² − 2ab cos C, generalizes the Pythagorean theorem to any triangle (setting C = 90° recovers c² = a² + b² exactly, since cos 90° = 0). Use it for the SAS case (two sides, included angle) to find the third side, or for the SSS case (all three sides) solved for cosine to find any angle.",
+        "A practical strategy: use the Law of Cosines once to find the missing piece, then switch to the simpler Law of Sines for any remaining angles, since it involves less arithmetic once one angle-side pair is known."
+       ],
+       "example": {
+        "problem": "A triangle has sides a = 8, b = 11, and included angle C = 55°. Find side c.",
+        "steps": [
+         "Apply c² = a² + b² − 2ab cos C.",
+         "c² = 8² + 11² − 2(8)(11)cos 55° = 64 + 121 − 176(0.5736).",
+         "c² = 185 − 100.9 ≈ 84.1.",
+         "c ≈ √84.1 ≈ 9.17."
+        ],
+        "answer": "c ≈ 9.17."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "Law of Sines",
+       "def": "sin A/a = sin B/b = sin C/c, used when an angle-opposite-side pair is known."
+      },
+      {
+       "term": "Law of Cosines",
+       "def": "c² = a² + b² − 2ab cos C, used for SAS or SSS triangles."
+      },
+      {
+       "term": "ambiguous case (SSA)",
+       "def": "The situation where two sides and a non-included angle may produce zero, one, or two valid triangles."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which case is solved with the Law of Cosines rather than the Law of Sines?",
+       "choices": [
+        "SAS",
+        "AAS",
+        "ASA",
+        "Any case with a known right angle"
+       ],
+       "answer": 0,
+       "explain": "SAS gives no angle-opposite-side pair, so the Law of Sines can't be applied directly; the Law of Cosines finds the missing side instead."
+      },
+      {
+       "q": "A triangle has angle A = 50°, angle B = 60°, and side a = 10. Which law finds side b?",
+       "choices": [
+        "Law of Sines",
+        "Law of Cosines",
+        "Pythagorean theorem",
+        "None of these apply"
+       ],
+       "answer": 0,
+       "explain": "Angle A and its opposite side a are known, an angle-opposite-side pair, so the Law of Sines directly gives b."
+      },
+      {
+       "q": "Setting C = 90° in the Law of Cosines gives which familiar formula?",
+       "choices": [
+        "The Pythagorean theorem",
+        "The Law of Sines",
+        "The quadratic formula",
+        "The area formula"
+       ],
+       "answer": 0,
+       "explain": "cos 90° = 0 makes the −2ab cos C term vanish, leaving c² = a² + b²."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Systems and Matrices",
+   "summary": "Solving systems of linear equations by elimination and with matrices, using Gaussian elimination to organize the process.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Solving Systems of Linear Equations",
+     "minutes": 15,
+     "intro": "Two or more equations sharing the same variables describe a system whose solution is the point (or points) satisfying every equation simultaneously — the algebra behind everything from mixing chemical solutions to balancing a budget across multiple constraints.",
+     "sections": [
+      {
+       "heading": "Substitution and Elimination",
+       "body": [
+        "**Substitution** solves one equation for one variable, then substitutes that expression into the other equation, reducing two unknowns to one. **Elimination** instead adds or subtracts multiples of the equations to cancel a variable entirely; you may need to multiply one or both equations by a constant first so that a variable's coefficients become opposites.",
+        "A system of two linear equations in two variables has exactly one solution (lines cross once), no solution (lines are parallel and distinct), or infinitely many solutions (the equations describe the same line) — recognizing which case you're in comes from what happens when you try to eliminate: a true statement like 0 = 0 signals infinite solutions, and a false statement like 0 = 5 signals no solution."
+       ],
+       "example": {
+        "problem": "Solve the system: 3x + 2y = 16 and 5x − 2y = 8.",
+        "steps": [
+         "Add the two equations directly, since the y-terms are already opposites: (3x + 2y) + (5x − 2y) = 16 + 8.",
+         "8x = 24, so x = 3.",
+         "Substitute x = 3 into the first equation: 3(3) + 2y = 16, so 9 + 2y = 16, giving 2y = 7 and y = 3.5."
+        ],
+        "answer": "x = 3, y = 3.5."
+       }
+      },
+      {
+       "heading": "Systems in Three Variables",
+       "body": [
+        "A system of three linear equations in three variables (x, y, z) is solved by using elimination repeatedly to reduce to a system of two equations in two variables, then two equations in one variable. The strategy is the same as the two-variable case, just applied in stages: eliminate one variable from two different pairs of equations, then solve the resulting 2-variable system, then back-substitute to find every value.",
+        "This staged elimination process is exactly what the matrix method in the next lesson organizes more systematically, avoiding the bookkeeping errors that come from tracking three equations by hand."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "substitution method",
+       "def": "Solving one equation for a variable, then substituting that expression into the other equation."
+      },
+      {
+       "term": "elimination method",
+       "def": "Adding or subtracting multiples of equations to cancel a variable."
+      },
+      {
+       "term": "inconsistent system",
+       "def": "A system with no solution, signaled by a false statement like 0 = 5 during elimination."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Solve: x + y = 10 and x − y = 4. What is x?",
+       "choices": [
+        "7",
+        "3",
+        "6",
+        "14"
+       ],
+       "answer": 0,
+       "explain": "Adding the equations: 2x = 14, so x = 7."
+      },
+      {
+       "q": "When eliminating variables produces the statement 0 = 0, what does that mean?",
+       "choices": [
+        "Infinitely many solutions",
+        "No solution",
+        "Exactly one solution",
+        "An error was made"
+       ],
+       "answer": 0,
+       "explain": "A true, variable-free statement like 0 = 0 means the two equations are equivalent, so every point on the line is a solution."
+      },
+      {
+       "q": "To eliminate y from 2x + 3y = 7 and 4x − y = 5, what should you do first?",
+       "choices": [
+        "Multiply the second equation by 3, then add",
+        "Multiply the first equation by 4",
+        "Subtract the equations directly",
+        "Divide both equations by 2"
+       ],
+       "answer": 0,
+       "explain": "Multiplying 4x − y = 5 by 3 gives 12x − 3y = 15; adding to 2x + 3y = 7 cancels the y-terms."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Matrices and Gaussian Elimination",
+     "minutes": 17,
+     "intro": "A matrix strips a system of linear equations down to just its numbers, arranged in a grid — and a systematic row-reduction process called Gaussian elimination solves any size system using nothing but three simple, repeatable row operations.",
+     "sections": [
+      {
+       "heading": "Representing a System as an Augmented Matrix",
+       "body": [
+        "An **augmented matrix** lists a system's coefficients and constants as a grid, with each row corresponding to one equation and each column to one variable (plus a final column for the constants). For the system 2x + y = 7 and x − 3y = −5, the augmented matrix is [[2, 1, 7], [1, −3, −5]], keeping every number in the same relative position as in the original equations.",
+        "The three allowed **row operations** are: swap two rows, multiply a row by a nonzero constant, and add a multiple of one row to another. Every one of these preserves the solution set exactly, because they correspond precisely to the legal moves of substitution and elimination applied directly to the coefficient grid."
+       ]
+      },
+      {
+       "heading": "Gaussian Elimination to Row-Echelon Form",
+       "body": [
+        "**Gaussian elimination** uses row operations to convert the augmented matrix into **row-echelon form**, where each row's leading nonzero entry (called a pivot) sits strictly to the right of the pivot in the row above, and all entries below each pivot are zero. Once in this triangular form, the system is solved by **back-substitution**, starting from the last row (which gives one variable directly) and substituting upward.",
+        "This method scales cleanly to any number of variables, which is exactly why it, rather than repeated substitution, is the standard tool for three-or-more-variable systems and the method used inside calculators and computer algebra systems."
+       ],
+       "example": {
+        "problem": "Use Gaussian elimination to solve: x + y = 5 and 2x − y = 1.",
+        "steps": [
+         "Augmented matrix: [[1, 1, 5], [2, −1, 1]].",
+         "Replace row 2 with (row 2 − 2·row 1): [2−2(1), −1−2(1), 1−2(5)] = [0, −3, −9].",
+         "New matrix: [[1, 1, 5], [0, −3, −9]]. The second row means −3y = −9, so y = 3.",
+         "Back-substitute into row 1: x + 3 = 5, so x = 2."
+        ],
+        "answer": "x = 2, y = 3."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "augmented matrix",
+       "def": "A grid of a linear system's coefficients and constants, one row per equation."
+      },
+      {
+       "term": "row operations",
+       "def": "Swapping rows, scaling a row, or adding a multiple of one row to another — moves that preserve a system's solution."
+      },
+      {
+       "term": "row-echelon form",
+       "def": "A triangular matrix form where each row's leading entry is right of the one above it, ready for back-substitution."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the augmented matrix for the system 3x − y = 4 and x + 2y = 9?",
+       "choices": [
+        "[[3, −1, 4], [1, 2, 9]]",
+        "[[3, −1], [1, 2], [4, 9]]",
+        "[[4, 3, −1], [9, 1, 2]]",
+        "[[1, 2, 9], [3, −1, 4], [0,0,0]]"
+       ],
+       "answer": 0,
+       "explain": "Each row lists a single equation's coefficients followed by its constant, in the same order as the original equations."
+      },
+      {
+       "q": "Which of these is NOT a valid row operation in Gaussian elimination?",
+       "choices": [
+        "Multiplying two different rows together",
+        "Swapping two rows",
+        "Multiplying a row by a nonzero constant",
+        "Adding a multiple of one row to another"
+       ],
+       "answer": 0,
+       "explain": "Only swapping, scaling by a nonzero constant, and adding a multiple of one row to another are legal; multiplying rows together is not a linear operation and would change the system."
+      },
+      {
+       "q": "In row-echelon form, once you reach the bottom row, what do you do next?",
+       "choices": [
+        "Back-substitute upward through the rows",
+        "Start over from the top row",
+        "Multiply all rows by the bottom row",
+        "Discard the bottom row"
+       ],
+       "answer": 0,
+       "explain": "The bottom row typically isolates one variable directly; you substitute that value up into the row above to find the next variable, and so on."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Analytic Geometry: Conic Sections",
+   "summary": "Recognizing and graphing parabolas, ellipses, and hyperbolas from their standard-form equations.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Parabolas",
+     "minutes": 16,
+     "intro": "A parabola is more than the graph of y = x² — it is the set of every point equally distant from a fixed point and a fixed line, a definition that also explains why satellite dishes and car headlights are shaped exactly this way.",
+     "sections": [
+      {
+       "heading": "The Focus-Directrix Definition",
+       "body": [
+        "A **parabola** is the set of all points equidistant from a fixed point, the **focus**, and a fixed line, the **directrix**. For a parabola opening upward or downward with vertex at the origin, the standard form is x² = 4py, where |p| is the distance from the vertex to the focus (and also to the directrix, on the opposite side). If p > 0, the parabola opens upward with focus (0, p) and directrix y = −p; if p < 0, it opens downward.",
+        "For a parabola opening left or right with vertex at the origin, the standard form is y² = 4px, with focus (p, 0) and directrix x = −p. Reflective properties of the parabola — rays from the focus reflect off the curve parallel to the axis, and vice versa — are exactly why headlight and satellite dish reflectors are parabolic."
+       ]
+      },
+      {
+       "heading": "Parabolas With a Shifted Vertex",
+       "body": [
+        "When the vertex is at (h, k) instead of the origin, the standard forms become (x − h)² = 4p(y − k) for vertical axes, or (y − k)² = 4p(x − h) for horizontal axes. To convert a general quadratic like y = ax² + bx + c into this form, complete the square on the x-terms to isolate (x − h)² and read off the vertex and the value of p.",
+        "Recognizing which variable is squared tells you the axis of the parabola immediately: x² terms alone (with y to the first power) means a vertical parabola opening up or down; y² terms alone (with x to the first power) means a horizontal parabola opening left or right."
+       ],
+       "example": {
+        "problem": "Find the vertex, value of p, and focus of the parabola x² = 12y.",
+        "steps": [
+         "Compare to x² = 4py: 4p = 12, so p = 3.",
+         "Vertex is at the origin (0, 0), since there's no shift.",
+         "Focus is (0, p) = (0, 3), since the parabola opens upward (p > 0)."
+        ],
+        "answer": "Vertex (0, 0), p = 3, focus (0, 3), directrix y = −3."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "parabola",
+       "def": "The set of points equidistant from a fixed focus point and a fixed directrix line."
+      },
+      {
+       "term": "focus (parabola)",
+       "def": "The fixed point used in a parabola's distance definition; for x² = 4py, the focus is (0, p)."
+      },
+      {
+       "term": "directrix",
+       "def": "The fixed line used in a parabola's distance definition, on the opposite side of the vertex from the focus."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For the parabola y² = 8x, what is the value of p?",
+       "choices": [
+        "2",
+        "8",
+        "4",
+        "1/2"
+       ],
+       "answer": 0,
+       "explain": "Compare to y² = 4px: 4p = 8, so p = 2."
+      },
+      {
+       "q": "A parabola has equation x² = −20y. Which way does it open?",
+       "choices": [
+        "Downward",
+        "Upward",
+        "Left",
+        "Right"
+       ],
+       "answer": 0,
+       "explain": "The form x² = 4py opens upward if p > 0 and downward if p < 0; here 4p = −20 gives p = −5, negative, so it opens downward."
+      },
+      {
+       "q": "What real-world property makes parabolas useful for satellite dishes?",
+       "choices": [
+        "Rays from the focus reflect parallel to the axis (and vice versa)",
+        "Parabolas are the widest possible curve",
+        "Parabolas have no curvature",
+        "Parabolas always pass through the origin"
+       ],
+       "answer": 0,
+       "explain": "The reflective property of a parabola concentrates parallel incoming rays (like satellite signals) at a single focus point, which is exactly why dish antennas use this shape."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Ellipses",
+     "minutes": 16,
+     "intro": "An ellipse is the elegant answer to a question you can demonstrate with two thumbtacks and a loop of string: what shape do you get by tracing every point whose distances to two fixed points always add up to the same total?",
+     "sections": [
+      {
+       "heading": "Standard Form of an Ellipse",
+       "body": [
+        "An **ellipse** centered at the origin has standard form x²/a² + y²/b² = 1, where a is the distance from center to vertex along one axis and b along the other. If a > b, the **major axis** (the longer one) is horizontal, with vertices at (±a, 0); if b > a, the major axis is vertical, with vertices at (0, ±b). The shorter axis is the **minor axis**.",
+        "The two **foci** lie along the major axis at a distance c from the center, where c² = a² − b² (using whichever of a, b is larger as the major-axis value). Every point on the ellipse has the defining property that the sum of its distances to the two foci equals 2a (the length of the major axis)."
+       ]
+      },
+      {
+       "heading": "Eccentricity and Shifted Centers",
+       "body": [
+        "**Eccentricity** e = c/a measures how stretched an ellipse is, ranging from 0 (a perfect circle, where the foci coincide at the center) up to just under 1 (a very flattened ellipse). Planetary orbits are ellipses with the sun at one focus, and their eccentricities are typically small (Earth's is about 0.017), which is why they look nearly circular.",
+        "When the center is at (h, k) instead of the origin, the standard form becomes (x−h)²/a² + (y−k)²/b² = 1, and every feature, vertices, foci, and axis lengths, shifts by the same (h, k), found the same way as with parabolas by completing the square if needed."
+       ],
+       "example": {
+        "problem": "Find the vertices and foci of the ellipse x²/25 + y²/16 = 1.",
+        "steps": [
+         "Compare to x²/a² + y²/b² = 1: a² = 25, so a = 5; b² = 16, so b = 4. Since a > b, the major axis is horizontal.",
+         "Vertices are at (±a, 0) = (±5, 0).",
+         "Find c: c² = a² − b² = 25 − 16 = 9, so c = 3.",
+         "Foci are at (±c, 0) = (±3, 0)."
+        ],
+        "answer": "Vertices (±5, 0); foci (±3, 0)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ellipse",
+       "def": "The set of points whose distances to two fixed foci sum to a constant, 2a."
+      },
+      {
+       "term": "major axis",
+       "def": "The longer axis of an ellipse, containing both vertices and both foci."
+      },
+      {
+       "term": "eccentricity",
+       "def": "e = c/a, a value between 0 and 1 measuring how stretched an ellipse is."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For x²/9 + y²/36 = 1, is the major axis horizontal or vertical?",
+       "choices": [
+        "Vertical, since 36 > 9",
+        "Horizontal, since 9 < 36",
+        "Neither, it's a circle",
+        "Cannot be determined"
+       ],
+       "answer": 0,
+       "explain": "The larger denominator (36, under y²) tells you the major axis direction; since it's under y², the major axis is vertical."
+      },
+      {
+       "q": "An ellipse has a = 10 and c = 6. What is its eccentricity?",
+       "choices": [
+        "0.6",
+        "1.67",
+        "6",
+        "0.4"
+       ],
+       "answer": 0,
+       "explain": "Eccentricity e = c/a = 6/10 = 0.6."
+      },
+      {
+       "q": "For an ellipse, what is always true about the sum of distances from any point on the curve to the two foci?",
+       "choices": [
+        "It equals the length of the major axis (2a)",
+        "It equals the length of the minor axis (2b)",
+        "It equals the eccentricity",
+        "It varies depending on the point"
+       ],
+       "answer": 0,
+       "explain": "This constant-sum property, 2a, is the defining geometric property of an ellipse, true for every point on the curve."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Hyperbolas",
+     "minutes": 16,
+     "intro": "Flip a single sign in the ellipse equation, from plus to minus, and the closed oval shatters into two open, mirror-image branches sweeping off toward infinity — the hyperbola, which shows up in orbital mechanics, sundials, and the shape of certain radio navigation systems.",
+     "sections": [
+      {
+       "heading": "Standard Form of a Hyperbola",
+       "body": [
+        "A **hyperbola** centered at the origin with a horizontal transverse axis has standard form x²/a² − y²/b² = 1, with vertices at (±a, 0). One with a vertical transverse axis instead has the form y²/a² − x²/b² = 1, with vertices at (0, ±a). Unlike the ellipse, here a² and b² are not directly comparable in size to determine orientation — the sign and position of the minus term tells you the axis instead.",
+        "The two branches of a hyperbola open away from each other along the transverse axis, and every point on either branch satisfies the defining property that the difference of its distances to the two foci is a constant, 2a."
+       ]
+      },
+      {
+       "heading": "Asymptotes and Foci",
+       "body": [
+        "A hyperbola's branches approach two **asymptotes** that cross at the center: for x²/a² − y²/b² = 1, the asymptotes are y = ±(b/a)x; for y²/a² − x²/b² = 1, they are y = ±(a/b)x. Sketching a hyperbola is easiest by drawing these asymptote lines first (through a rectangle of width 2a and height 2b centered at the origin), then curving the branches to hug the asymptotes as they head toward infinity.",
+        "The foci lie on the transverse axis at distance c from the center, where c² = a² + b² — notice the plus sign here, the opposite of the ellipse's relationship, since a hyperbola's foci are always farther out than its vertices."
+       ],
+       "example": {
+        "problem": "Find the vertices, foci, and asymptotes of the hyperbola x²/16 − y²/9 = 1.",
+        "steps": [
+         "a² = 16, so a = 4; b² = 9, so b = 3. Vertices at (±4, 0).",
+         "c² = a² + b² = 16 + 9 = 25, so c = 5. Foci at (±5, 0).",
+         "Asymptotes: y = ±(b/a)x = ±(3/4)x."
+        ],
+        "answer": "Vertices (±4, 0); foci (±5, 0); asymptotes y = ±(3/4)x."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "hyperbola",
+       "def": "The set of points whose distances to two fixed foci differ by a constant, 2a, forming two open branches."
+      },
+      {
+       "term": "transverse axis",
+       "def": "The axis through both vertices of a hyperbola, along which the branches open."
+      },
+      {
+       "term": "asymptotes (hyperbola)",
+       "def": "The two lines through the center that a hyperbola's branches approach but never cross."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For y²/4 − x²/9 = 1, where are the vertices?",
+       "choices": [
+        "(0, ±2)",
+        "(±2, 0)",
+        "(0, ±3)",
+        "(±3, 0)"
+       ],
+       "answer": 0,
+       "explain": "The positive term is y²/4, so a² = 4, a = 2, and the transverse axis is vertical, giving vertices (0, ±2)."
+      },
+      {
+       "q": "For a hyperbola, how are c, a, and b related?",
+       "choices": [
+        "c² = a² + b²",
+        "c² = a² − b²",
+        "c = a + b",
+        "c² = ab"
+       ],
+       "answer": 0,
+       "explain": "Unlike the ellipse (c² = a² − b²), a hyperbola's foci are farther from center than its vertices, giving c² = a² + b²."
+      },
+      {
+       "q": "What do the asymptotes of a hyperbola describe?",
+       "choices": [
+        "Lines the branches approach but never touch",
+        "The exact path of the branches",
+        "The location of the foci",
+        "The center of the hyperbola"
+       ],
+       "answer": 0,
+       "explain": "Asymptotes are guide lines that the hyperbola's branches get arbitrarily close to without ever crossing, useful for sketching the curve's shape."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u7",
+   "title": "Sequences, Series, and an Introduction to Limits",
+   "summary": "Arithmetic and geometric sequences and series, and the limit concept that bridges precalculus to calculus.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Arithmetic and Geometric Sequences",
+     "minutes": 15,
+     "intro": "A sequence is just an ordered, numbered list of numbers, but two patterns, constant differences and constant ratios, show up so often in nature and finance that they get their own names and formulas: arithmetic and geometric sequences.",
+     "sections": [
+      {
+       "heading": "Arithmetic Sequences",
+       "body": [
+        "An **arithmetic sequence** has a constant difference d between consecutive terms: a_n = a_1 + (n − 1)d, where a_1 is the first term. Each term is found by adding d to the one before it, so the sequence 5, 8, 11, 14, ... has a_1 = 5 and d = 3, and its 10th term is a_10 = 5 + (10−1)(3) = 5 + 27 = 32.",
+        "Arithmetic sequences model anything that changes by a fixed amount each step: a salary with a fixed annual raise, a savings balance with fixed monthly deposits (ignoring interest), or seats per row in a stadium section that increases by the same number each row back."
+       ]
+      },
+      {
+       "heading": "Geometric Sequences",
+       "body": [
+        "A **geometric sequence** has a constant ratio r between consecutive terms: a_n = a_1·r^(n−1). Each term is found by multiplying the one before it by r, so the sequence 3, 6, 12, 24, ... has a_1 = 3 and r = 2, and its 8th term is a_8 = 3·2^7 = 3 × 128 = 384.",
+        "Geometric sequences model exponential-style change from term to term: compound interest, population growth measured generation by generation, or radioactive decay measured half-life by half-life. Whenever a quantity is multiplied (not added to) by the same factor each step, it's geometric."
+       ],
+       "example": {
+        "problem": "A sequence begins 7, 11, 15, 19, ... Find the 20th term. A second sequence begins 2, 6, 18, 54, ... Find the 7th term.",
+        "steps": [
+         "First sequence is arithmetic: a_1 = 7, d = 4. a_20 = 7 + (20−1)(4) = 7 + 76 = 83.",
+         "Second sequence is geometric: a_1 = 2, r = 3. a_7 = 2·3^6 = 2 × 729 = 1458."
+        ],
+        "answer": "a_20 = 83 (arithmetic); a_7 = 1458 (geometric)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "arithmetic sequence",
+       "def": "A sequence with a constant difference d between terms: a_n = a_1 + (n−1)d."
+      },
+      {
+       "term": "geometric sequence",
+       "def": "A sequence with a constant ratio r between terms: a_n = a_1·r^(n−1)."
+      },
+      {
+       "term": "common difference / common ratio",
+       "def": "The constant amount added (arithmetic, d) or multiplied (geometric, r) between consecutive terms."
+      }
+     ],
+     "practice": [
+      {
+       "q": "An arithmetic sequence has a_1 = 4 and d = 5. What is a_12?",
+       "choices": [
+        "59",
+        "64",
+        "54",
+        "9"
+       ],
+       "answer": 0,
+       "explain": "a_12 = 4 + (12−1)(5) = 4 + 55 = 59."
+      },
+      {
+       "q": "A geometric sequence has a_1 = 5 and r = 1/2. What is a_4?",
+       "choices": [
+        "5/8",
+        "5/4",
+        "5/16",
+        "10"
+       ],
+       "answer": 0,
+       "explain": "a_4 = 5·(1/2)^3 = 5 × 1/8 = 5/8."
+      },
+      {
+       "q": "Which type of sequence models a savings account balance with a fixed dollar deposit each month and no interest?",
+       "choices": [
+        "Arithmetic",
+        "Geometric",
+        "Neither",
+        "Both equally"
+       ],
+       "answer": 0,
+       "explain": "A fixed amount added each period (not multiplied) is the defining trait of an arithmetic sequence."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "An Introduction to Limits",
+     "minutes": 18,
+     "intro": "Every idea in this course so far has described what a function does at specific points. Calculus begins by asking a subtler question: what does a function approach as its input gets arbitrarily close to some value, even if the function is never actually evaluated there? That question is the limit, and it is the single idea the rest of your mathematical education builds on.",
+     "sections": [
+      {
+       "heading": "The Idea of a Limit",
+       "body": [
+        "The notation lim(x→a) f(x) = L means that as x gets arbitrarily close to a (from either side), f(x) gets arbitrarily close to L. Critically, this says nothing about f(a) itself — the limit can exist and equal L even if f(a) is undefined, or if f(a) is some completely different value. Limits describe trend, not a single evaluated point.",
+        "For most functions built from polynomials, roots, and other 'nice' pieces, and evaluated at a point where the function is actually defined, the limit simply equals direct substitution: lim(x→a) f(x) = f(a). The interesting cases, and the reason limits matter, arise exactly where direct substitution fails, typically because it produces the indeterminate form 0/0."
+       ]
+      },
+      {
+       "heading": "Evaluating Limits Algebraically",
+       "body": [
+        "When direct substitution gives 0/0, the function often has a removable factor that can be canceled first. Factor both numerator and denominator, cancel the common factor, and then substitute again in the simplified expression — this works because the simplified function agrees with the original everywhere except possibly at the single troublesome point, and a limit only cares about nearby behavior, not that single point.",
+        "This algebraic technique, and the broader idea of watching what a ratio approaches rather than what it equals at one exact spot, is precisely the machinery used to define the derivative in the next course: the slope of a curve at a single point, found as the limit of slopes between two increasingly close points."
+       ],
+       "example": {
+        "problem": "Evaluate lim(x→3) (x² − 9)/(x − 3).",
+        "steps": [
+         "Direct substitution gives (9−9)/(3−3) = 0/0, an indeterminate form, so factor instead.",
+         "Factor the numerator: x² − 9 = (x−3)(x+3).",
+         "Cancel the common factor: (x−3)(x+3)/(x−3) = x + 3, valid for x ≠ 3.",
+         "Substitute x = 3 into the simplified expression: 3 + 3 = 6."
+        ],
+        "answer": "lim(x→3) (x² − 9)/(x − 3) = 6."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "limit",
+       "def": "The value a function approaches as its input approaches a given value, written lim(x→a) f(x) = L."
+      },
+      {
+       "term": "indeterminate form",
+       "def": "An expression like 0/0 produced by direct substitution that gives no immediate information about the limit's value."
+      },
+      {
+       "term": "direct substitution",
+       "def": "Evaluating a limit by plugging the target value directly into the function, valid when the function is continuous there."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Evaluate lim(x→2) (x² − 4)/(x − 2).",
+       "choices": [
+        "4",
+        "0",
+        "undefined",
+        "2"
+       ],
+       "answer": 0,
+       "explain": "Factor: (x−2)(x+2)/(x−2) = x+2 for x≠2; substituting x=2 gives 2+2=4."
+      },
+      {
+       "q": "What does lim(x→a) f(x) = L tell you about f(a)?",
+       "choices": [
+        "Nothing directly — f(a) could be undefined or different from L",
+        "f(a) must equal L",
+        "f(a) must be undefined",
+        "f must be a polynomial"
+       ],
+       "answer": 0,
+       "explain": "A limit describes the trend of nearby values, not the function's actual value at a, which may not even exist."
+      },
+      {
+       "q": "Which expression, evaluated by direct substitution, produces an indeterminate form requiring further work?",
+       "choices": [
+        "lim(x→5) (x²−25)/(x−5)",
+        "lim(x→5) (x+3)",
+        "lim(x→0) (x+7)",
+        "lim(x→2) (3x)"
+       ],
+       "answer": 0,
+       "explain": "Substituting x=5 gives (25−25)/(5−5) = 0/0, an indeterminate form, unlike the other options which substitute cleanly."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,824 @@
+{
+  "id": "french",
+  "title": "French",
+  "domain": "languages",
+  "level": "All levels",
+  "description": "A practical first course in French for absolute beginners who want to actually speak and understand the language. You will master pronunciation quirks like nasal vowels and liaison, the core grammar patterns that carry most everyday speech, and the vocabulary for real situations like meeting people, describing your family, ordering food, shopping, and talking about the past.",
+  "outcomes": [
+    "You can pronounce French nasal vowels, silent letters, liaison, and accent marks accurately.",
+    "You can greet people, introduce yourself, and use être and avoir correctly for identity, location, possession, and common idioms like age and hunger.",
+    "You can build correct noun phrases with proper gender, number, articles, agreeing adjectives, and possessive adjectives.",
+    "You can conjugate regular -er, -ir, and -re verbs in the present tense and form questions and negative sentences.",
+    "You can handle real situations — ordering food, shopping, asking directions — using numbers, time expressions, and everyday vocabulary.",
+    "You can describe a completed past event using the passé composé, choosing correctly between avoir and être and making participles agree when needed."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Sounds and Greetings",
+      "summary": "French spelling hides several genuinely new sounds, like nasal vowels and liaison. This unit builds the pronunciation and greeting toolkit for a first real conversation.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "French Pronunciation Basics",
+          "minutes": 12,
+          "intro": "French spelling looks intimidating with all its silent letters, but a handful of rules unlock nearly every word, and one famous feature, the nasal vowel, has no equivalent in English at all.",
+          "sections": [
+            {
+              "heading": "Nasal Vowels",
+              "body": [
+                "French has four nasal vowel sounds, made by letting air pass through the nose: *an/en* (as in *dans*), *in/ain* (as in *vin*), *on* (as in *bon*), and *un* (as in *un*). These sounds don't exist in English, so they take deliberate practice, but they're fully predictable from spelling once you learn the four patterns.",
+                "The nasal sound only occurs when n or m follows a vowel within the same syllable and isn't itself followed by another vowel; add a vowel and the nasal disappears — compare nasal *bon* (good) to non-nasal *bonne* (good, feminine), where the extra e cancels the nasal sound entirely."
+              ]
+            },
+            {
+              "heading": "Silent Endings and Liaison",
+              "body": [
+                "Most French final consonants are silent: *petit* (small) is pronounced 'puh-TEE,' with the final t silent. A useful mnemonic is CaReFuL — the consonants c, r, f, and l are usually still pronounced at the end of a word, as in *chef* or *animal*.",
+                "*Liaison* is the rule that brings a normally silent final consonant back to life when the next word starts with a vowel: *les amis* (the friends) is pronounced 'lez-ah-MEE,' linking the silent s to the following vowel. This is part of why French can sound like one continuous flow rather than separate words."
+              ]
+            },
+            {
+              "heading": "Accent Marks",
+              "body": [
+                "French accents mostly guide pronunciation rather than stress: *é* (acute) is a closed 'ay' sound, as in *café*; *è* and *ê* (grave and circumflex) are a more open 'eh' sound, as in *père* and *tête*. The cedilla, *ç*, softens a c before a, o, or u into an 's' sound, as in *français*.",
+                "Because these marks change pronunciation and sometimes meaning, they can't be skipped when writing: *a* (has, from avoir) and *à* (to/at) are different words that happen to look almost identical without the accent."
+              ],
+              "example": {
+                "problem": "Explain why 'les amis' is pronounced with a 'z' sound, and why 'bonne' isn't nasal even though 'bon' is.",
+                "steps": [
+                  "Les ends in a normally silent s, but amis begins with a vowel, so liaison links them, producing a 'z' sound.",
+                  "Bon is nasal because n follows the vowel with nothing else in the syllable.",
+                  "Bonne adds an e after the n, so the nasal pattern is broken and the sound is cancelled."
+                ],
+                "answer": "Liaison links the silent s in les to the vowel in amis, producing 'lez-ami'; bonne loses its nasal sound because the added e breaks the nasal pattern."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Nasal vowel", "def": "A vowel sound made through the nose, as in on, an, in, un, with no English equivalent."},
+            {"term": "Liaison", "def": "Pronouncing a normally silent final consonant because the next word begins with a vowel."},
+            {"term": "CaReFuL", "def": "A mnemonic for the consonants (c, r, f, l) that are usually still pronounced at the end of a French word."},
+            {"term": "Cedilla (ç)", "def": "The mark under c that softens it to an 's' sound before a, o, or u."}
+          ],
+          "practice": [
+            {"q": "Which sound is nasal?", "choices": ["on, as in bon", "o, as in note", "u, as in tu", "é, as in café"], "answer": 0, "explain": "On (and an/en, in/ain, un) are French's four nasal vowel sounds, made through the nose with no English equivalent."},
+            {"q": "Why is the s in 'les amis' pronounced?", "choices": ["Liaison links it to the following vowel-starting word", "S is always pronounced in French", "Amis is an irregular word", "It isn't actually pronounced"], "answer": 0, "explain": "Liaison brings back a normally silent final consonant when the next word starts with a vowel."},
+            {"q": "What does the cedilla in 'français' do?", "choices": ["Softens the c to an 's' sound before a", "Makes the c silent", "Adds a nasal sound", "Marks stress"], "answer": 0, "explain": "The cedilla (ç) softens a c before a, o, or u into an 's' sound; without it, c before a would be a hard 'k' sound."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Greetings and Introductions",
+          "minutes": 10,
+          "intro": "A French conversation opens with a short, ritualized exchange, and getting the tu/vous choice right in that opening line matters as much as the words themselves.",
+          "sections": [
+            {
+              "heading": "Hello and Goodbye",
+              "body": [
+                "*Bonjour* (good day/hello) works from morning through late afternoon and is the single safest French greeting; *bonsoir* (good evening) takes over once evening arrives. *Salut* (hi/bye) is casual, used only with people you already know well.",
+                "To say goodbye, *au revoir* is the standard, all-purpose choice. *À bientôt* (see you soon) and *à demain* (see you tomorrow) are common, warmer alternatives when you expect to see the person again."
+              ]
+            },
+            {
+              "heading": "Introducing Yourself",
+              "body": [
+                "To give your name, say *je m'appelle* + name (literally 'I call myself'), as in *Je m'appelle Marie*. Ask informally with *Comment tu t'appelles?* or formally with *Comment vous appelez-vous?* On meeting someone, *enchanté* (male speaker) or *enchantée* (female speaker) means 'delighted [to meet you].'",
+                "*Enchanté(e)* shows a pattern that recurs throughout French: many words add a silent -e for the feminine form, sometimes changing pronunciation, sometimes not. Here the extra e is silent, so both forms sound identical when spoken."
+              ]
+            },
+            {
+              "heading": "Tu vs Vous",
+              "body": [
+                "Like Spanish tú/usted, French has *tu* (informal, for friends, family, children, peers) and *vous* (formal, for strangers, elders, professional contexts — and also the plural 'you all,' whether formal or informal). Choosing vous by default with anyone new is always safe.",
+                "Using tu with someone who expects vous can come across as presumptuous, especially with older people or in business settings. Wait for the other person to say *On peut se tutoyer?* (Can we use tu?) before switching."
+              ],
+              "example": {
+                "problem": "You're meeting a client's parent for the first time at a formal dinner. How should you greet them and ask their name?",
+                "steps": [
+                  "The context is formal and you don't know them, so use vous.",
+                  "Greet with Bonjour.",
+                  "Ask: Comment vous appelez-vous?"
+                ],
+                "answer": "Bonjour, comment vous appelez-vous? — using vous because the situation is formal and unfamiliar."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Bonjour", "def": "Good day/hello, used from morning through late afternoon; the safest all-purpose French greeting."},
+            {"term": "Enchanté(e)", "def": "'Delighted [to meet you]'; said upon a first introduction, agreeing in gender with the speaker."},
+            {"term": "Tu", "def": "The informal singular 'you,' for friends, family, and peers."},
+            {"term": "Vous", "def": "The formal 'you' (singular or plural), for strangers, elders, and professional contexts."}
+          ],
+          "practice": [
+            {"q": "Which greeting is safe to use at almost any time of day?", "choices": ["Bonjour", "Bonsoir", "Salut, in all contexts", "Enchanté"], "answer": 0, "explain": "Bonjour works from morning through late afternoon and is the default safe greeting; bonsoir is only for evening."},
+            {"q": "What signals that you should switch from vous to tu?", "choices": ["The other person invites it, e.g. 'On peut se tutoyer?'", "You've known the word for a week", "It's always fine to guess", "Vous is only used in writing"], "answer": 0, "explain": "Switching from vous to tu should wait for an explicit invitation from the other person, since using tu too soon can seem disrespectful."},
+            {"q": "Why do enchanté and enchantée sound the same when spoken?", "choices": ["The added feminine -e is silent", "They're actually spelled identically", "Only men are allowed to say enchanté", "French adjectives never show gender"], "answer": 0, "explain": "Many French adjectives add a silent -e for the feminine form; here it doesn't change the pronunciation, only the spelling."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Être and Avoir: The Two Essential Verbs",
+          "minutes": 13,
+          "intro": "Être (to be) and avoir (to have) are irregular, used constantly, and worth memorizing cold before anything else — they also team up later to build the entire past tense.",
+          "sections": [
+            {
+              "heading": "Être: To Be",
+              "body": [
+                "Être conjugates as: *je suis, tu es, il/elle/on est, nous sommes, vous êtes, ils/elles sont*. Unlike Spanish, French does not split 'to be' into two verbs — être alone covers identity, description, and location: *Je suis fatigué* (I am tired), *Le livre est sur la table* (The book is on the table).",
+                "*On* is a useful, very common pronoun meaning roughly 'we' in casual speech, though it grammatically conjugates like il/elle: *On est en retard* (We're late) is far more common in spoken French than *nous sommes en retard*."
+              ]
+            },
+            {
+              "heading": "Avoir: To Have",
+              "body": [
+                "Avoir conjugates as: *j'ai, tu as, il/elle/on a, nous avons, vous avez, ils/elles ont*. Beyond simple possession (*j'ai un chat*, I have a cat), avoir appears in idioms where English would use 'to be': *avoir faim* (to be hungry, literally 'to have hunger'), *avoir soif* (to be thirsty), *avoir chaud/froid* (to be hot/cold), and *avoir ... ans* for age.",
+                "*J'ai vingt ans* (I am twenty, literally 'I have twenty years') is the standard way to state age in French — using être for age is a common, noticeable learner mistake."
+              ],
+              "example": {
+                "problem": "Say 'I am hungry and I am 25 years old' in French, choosing the right verb for each part.",
+                "steps": [
+                  "'Hungry' is an avoir idiom: j'ai faim.",
+                  "Age is also expressed with avoir: j'ai vingt-cinq ans.",
+                  "Combine both with et (and): J'ai faim et j'ai vingt-cinq ans."
+                ],
+                "answer": "J'ai faim et j'ai vingt-cinq ans."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Être", "def": "'To be'; covers identity, description, and location — French does not split this the way Spanish splits ser/estar."},
+            {"term": "Avoir", "def": "'To have'; also used idiomatically for hunger, thirst, temperature sensations, and age."},
+            {"term": "Avoir faim/soif", "def": "Idioms meaning 'to be hungry/thirsty,' built with avoir rather than être."},
+            {"term": "On", "def": "An informal pronoun meaning roughly 'we,' conjugated like il/elle, extremely common in spoken French."}
+          ],
+          "practice": [
+            {"q": "How do you say 'I am 30 years old' in French?", "choices": ["J'ai trente ans", "Je suis trente ans", "J'ai trente an", "Je suis trente"], "answer": 0, "explain": "French expresses age with avoir, not être: j'ai trente ans, literally 'I have thirty years.'"},
+            {"q": "What does 'avoir faim' mean?", "choices": ["To be hungry", "To have a meal", "To be full", "To cook"], "answer": 0, "explain": "Avoir faim literally means 'to have hunger,' but is the standard idiom for 'to be hungry.'"},
+            {"q": "Why doesn't French need a ser/estar-style split for 'to be'?", "choices": ["Être alone covers identity, description, and location", "French has no verb for 'to be'", "Avoir replaces être entirely", "French uses three separate verbs instead of two"], "answer": 0, "explain": "Unlike Spanish, French uses a single verb, être, for all core meanings of 'to be,' without a separate location/condition verb."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Nouns, Gender, and Articles",
+      "summary": "Every French noun carries a gender, and articles, adjectives, and possessives must all agree with it. This unit builds the noun-phrase skills used in every sentence from here on.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Gender and Plural of Nouns",
+          "minutes": 10,
+          "intro": "Every French noun, like Spanish, has a grammatical gender, but French offers fewer reliable spelling clues, so pairing each noun with its article from day one is the most efficient way to learn it.",
+          "sections": [
+            {
+              "heading": "Le, La, and Les",
+              "body": [
+                "Definite articles are *le* (masculine singular), *la* (feminine singular), and *les* (plural, both genders). Before a vowel sound, both le and la shorten to *l'*: *l'ami* (the friend), *l'école* (the school) — this elision happens regardless of gender.",
+                "Indefinite articles are *un* (masculine), *une* (feminine), and *des* (plural, both genders): *un chien* (a dog), *une maison* (a house), *des livres* (some books). Since French gender is harder to guess from spelling than Spanish, most learners memorize le/la together with each new noun."
+              ]
+            },
+            {
+              "heading": "Some Gender Patterns",
+              "body": [
+                "A few endings do hint at gender: words ending in *-tion, -sion, -té* are typically feminine (*la nation, la télévision, la liberté*), while words ending in *-age, -isme, -ment* are typically masculine (*le tourisme, le gouvernement*) — though *le fromage* (cheese) and *la page* are notable exceptions worth remembering individually.",
+                "Making a noun plural is usually simple: add -s, silent in speech: *le livre → les livres*. Nouns already ending in -s, -x, or -z don't change at all in the plural: *le prix → les prix* (the price/s)."
+              ],
+              "example": {
+                "problem": "What are the plural forms of 'le livre' (the book) and 'la souris' (the mouse)?",
+                "steps": [
+                  "Livre takes a regular plural: add -s, giving livres, with the article becoming les.",
+                  "Souris already ends in -s, so it doesn't change at all in the plural."
+                ],
+                "answer": "les livres; les souris (no change to the noun itself, only the article)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Le / la / les", "def": "The definite articles 'the': le (masc. sing.), la (fem. sing.), les (plural, both genders)."},
+            {"term": "L' (elision)", "def": "The shortened form of le or la used before a word starting with a vowel sound: l'ami, l'école."},
+            {"term": "Un / une / des", "def": "The indefinite articles 'a/an' and 'some': un (masc.), une (fem.), des (plural)."},
+            {"term": "Invariable plural", "def": "A noun already ending in -s, -x, or -z that doesn't change spelling in the plural, like prix or souris."}
+          ],
+          "practice": [
+            {"q": "What is the plural of 'la souris' (the mouse)?", "choices": ["les souris (no change to the noun)", "les sourises", "les souri", "les sourisses"], "answer": 0, "explain": "Nouns already ending in -s don't change in the plural; only the article changes, from la to les."},
+            {"q": "Which article is used before 'école' (school), and why?", "choices": ["l', because école starts with a vowel sound", "le, because schools are masculine", "la, with no elision", "les, because école is always plural"], "answer": 0, "explain": "L' replaces le or la before a word beginning with a vowel sound, regardless of gender; école is actually feminine (l'école, une école)."},
+            {"q": "Which ending typically signals a feminine noun?", "choices": ["-té", "-age", "-isme", "-ment"], "answer": 0, "explain": "-té (like -tion and -sion) is a reliable feminine ending, as in la liberté; -age, -isme, and -ment typically signal masculine nouns."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Adjective Agreement and Placement (BAGS)",
+          "minutes": 11,
+          "intro": "French adjectives, like Spanish ones, must match their noun in gender and number — but unlike Spanish, a small set of common adjectives jump in front of the noun instead of following it.",
+          "sections": [
+            {
+              "heading": "Agreement Rules",
+              "body": [
+                "The regular pattern for feminine agreement is adding -e: *petit* (small, masc.) → *petite* (fem.); for plural, add -s: *petits* (masc. pl.), *petites* (fem. pl.). Adjectives already ending in -e don't change for gender: *un homme rouge* and *une robe rouge* both use rouge unchanged.",
+                "Some adjectives are irregular: *beau* (handsome/beautiful, masc.) becomes *belle* (fem.), and *nouveau* (new) becomes *nouvelle*. These irregular pairs are common, high-frequency words, so they're worth memorizing individually rather than deriving a rule."
+              ]
+            },
+            {
+              "heading": "Where Adjectives Go: BAGS",
+              "body": [
+                "Most French adjectives follow the noun, exactly like Spanish: *une voiture rouge* (a red car). But a specific group, remembered by the acronym BAGS — Beauty, Age, Goodness, Size — comes before the noun instead: *une belle maison* (a beautiful house), *un jeune homme* (a young man), *un bon ami* (a good friend), *une grande ville* (a big city).",
+                "A few BAGS adjectives even shift meaning depending on position: *un homme grand* means 'a tall man' (physical height, after the noun), while *un grand homme* means 'a great man' (importance, before the noun) — the same word, a real difference in meaning."
+              ],
+              "example": {
+                "problem": "Translate 'a beautiful old house' and 'a tall man,' placing the adjectives correctly.",
+                "steps": [
+                  "Beautiful (belle) and old (vieille) are both BAGS adjectives, so they go before the noun: une belle vieille maison.",
+                  "'Tall' describing physical height uses grand after the noun: un homme grand."
+                ],
+                "answer": "une belle vieille maison; un homme grand."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "BAGS", "def": "A mnemonic for the adjective categories (Beauty, Age, Goodness, Size) that are placed before the noun in French."},
+            {"term": "Adjective agreement", "def": "The requirement that a French adjective's ending match the gender and number of the noun it describes."},
+            {"term": "Beau/belle, nouveau/nouvelle", "def": "Common irregular adjective pairs whose feminine forms don't follow the standard add-e rule."},
+            {"term": "Position-dependent meaning", "def": "A shift in meaning based on whether an adjective is placed before or after the noun, as with grand homme vs. homme grand."}
+          ],
+          "practice": [
+            {"q": "Where does a typical (non-BAGS) French adjective go?", "choices": ["After the noun", "Always before the noun", "At the start of the sentence", "Never with an article"], "answer": 0, "explain": "Most French descriptive adjectives, like Spanish ones, follow the noun: une voiture rouge."},
+            {"q": "Which category of adjectives comes before the noun, per BAGS?", "choices": ["Beauty, Age, Goodness, Size", "Color, shape, nationality", "Only possessive adjectives", "Adjectives ending in -e"], "answer": 0, "explain": "BAGS stands for Beauty, Age, Goodness, Size — these categories place before the noun, unlike most other descriptive adjectives."},
+            {"q": "What is the difference between 'un grand homme' and 'un homme grand'?", "choices": ["'A great man' vs. 'a tall man'", "No difference at all", "'A big man' vs. 'a small man'", "Only a spelling difference"], "answer": 0, "explain": "Grand before the noun means 'great' (importance); after the noun it means 'tall' (physical height) — the same word changes meaning with position."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Possessive Adjectives",
+          "minutes": 11,
+          "intro": "French possessive adjectives ('my,' 'your,' 'his/her') agree with the noun they describe, not with the owner — a small but crucial difference from English that trips up many learners.",
+          "sections": [
+            {
+              "heading": "The Core Pattern",
+              "body": [
+                "Possessive adjectives change form based on the gender and number of the thing owned, not the owner's gender: *mon* (masc. sing.), *ma* (fem. sing.), *mes* (plural) all mean 'my.' So *mon frère* (my brother) and *ma sœur* (my sister) both mean 'my,' just matching frère (masc.) and sœur (fem.).",
+                "The same pattern repeats for other owners: *ton/ta/tes* (your, informal), *son/sa/ses* (his/her/its — this doesn't reveal the owner's gender at all), *notre/notre/nos* (our), *votre/votre/vos* (your, formal/plural), *leur/leur/leurs* (their)."
+              ]
+            },
+            {
+              "heading": "A Vowel Exception",
+              "body": [
+                "Before a feminine noun that starts with a vowel sound, French swaps *ma, ta, sa* for *mon, ton, son* purely for pronunciation, the same elision logic seen with le/la becoming l'. *Mon amie* (my friend, feminine) uses mon even though amie is feminine, because amie starts with a vowel.",
+                "This also means *son livre* can mean 'his book' or 'her book' — French possessives don't disambiguate the owner's gender the way English 'his/her' does; only context tells you which is meant."
+              ],
+              "example": {
+                "problem": "Say 'my friend (female) is nice' and 'his/her car is red,' choosing the correct possessive.",
+                "steps": [
+                  "Amie is feminine but starts with a vowel, so use mon instead of ma: mon amie.",
+                  "Voiture (car) is feminine, and son/sa/ses doesn't reveal the owner's gender: sa voiture.",
+                  "Combine: Mon amie est sympathique. Sa voiture est rouge."
+                ],
+                "answer": "Mon amie est sympathique. Sa voiture est rouge."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Mon/ma/mes", "def": "'My,' agreeing with the gender and number of the noun owned, not the owner."},
+            {"term": "Son/sa/ses", "def": "'His/her/its'; does not indicate the owner's gender, only the gender and number of the thing owned."},
+            {"term": "Vowel-sound exception", "def": "The rule that swaps ma/ta/sa for mon/ton/son before a feminine noun beginning with a vowel sound, for easier pronunciation."},
+            {"term": "Notre vs nos", "def": "'Our' for singular owned nouns (notre) vs. plural owned nouns (nos)."}
+          ],
+          "practice": [
+            {"q": "What does 'son livre' mean?", "choices": ["His book or her book — context decides", "Only his book", "Only her book", "Their book"], "answer": 0, "explain": "Son/sa/ses agree with the thing owned, not the owner's gender, so son livre could mean either 'his book' or 'her book.'"},
+            {"q": "Why does 'mon amie' use mon instead of ma, even though amie is feminine?", "choices": ["Amie starts with a vowel sound, triggering the pronunciation exception", "Amie is actually a masculine noun", "Mon is used for all singular nouns regardless of gender", "It is a common spelling mistake"], "answer": 0, "explain": "Before a feminine noun starting with a vowel sound, ma becomes mon purely to ease pronunciation, just like la becomes l'."},
+            {"q": "Which possessive matches the gender/number of the owned noun, not the owner?", "choices": ["All French possessive adjectives", "Only mon/ma/mes", "Only son/sa/ses", "None; French works like English"], "answer": 0, "explain": "Every French possessive adjective (mon, ton, son, notre, votre, leur) agrees with the noun it describes, unlike English which reflects the owner's identity."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Numbers, Time, and Family",
+      "summary": "This unit adds the vocabulary that lets you handle dates, schedules, and describing the people closest to you — plus French's famously quirky higher numbers.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Numbers 0-100",
+          "minutes": 12,
+          "intro": "French numbers are mostly straightforward until you hit 70, 80, and 90 — a genuinely different counting system left over from an older base-20 method, and worth understanding rather than just memorizing.",
+          "sections": [
+            {
+              "heading": "Zero to Sixty-Nine",
+              "body": [
+                "Zero through sixteen are individual words: *zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix, onze, douze, treize, quatorze, quinze, seize*. From seventeen on, numbers combine with hyphens: *dix-sept* (17, ten-seven), *dix-huit* (18), *dix-neuf* (19), then *vingt* (20) starts a new base.",
+                "Twenty-one uses *et* (and) instead of a hyphen: *vingt et un* (21), but twenty-two onward returns to hyphens: *vingt-deux* (22), *vingt-trois* (23). This et-vs-hyphen pattern repeats at every new ten through *soixante et un* (61)."
+              ]
+            },
+            {
+              "heading": "Seventy, Eighty, Ninety: The Base-20 Quirk",
+              "body": [
+                "Standard French has no separate words for 70, 80, or 90. Instead, *soixante-dix* (70) literally means 'sixty-ten,' continuing to count past sixty: *soixante et onze* (71, sixty-eleven), *soixante-douze* (72, sixty-twelve), all the way to *soixante-dix-neuf* (79, sixty-nineteen).",
+                "*Quatre-vingts* (80) literally means 'four-twenties' (4 × 20), a leftover from a base-20 counting system. Ninety continues from there: *quatre-vingt-dix* (90, four-twenty-ten), *quatre-vingt-onze* (91), up to *quatre-vingt-dix-neuf* (99). *Cent* (100) finally resets to a clean word."
+              ],
+              "example": {
+                "problem": "How do you say 75 and 92 in French?",
+                "steps": [
+                  "75 continues the soixante-dix pattern: soixante (60) + quinze (15) = soixante-quinze.",
+                  "92 continues the quatre-vingt pattern: quatre-vingt (80) + douze (12) = quatre-vingt-douze."
+                ],
+                "answer": "soixante-quinze (75); quatre-vingt-douze (92)."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Soixante-dix", "def": "70, literally 'sixty-ten'; French continues counting from 60 up to 79 without a separate word for 70."},
+            {"term": "Quatre-vingts", "def": "80, literally 'four-twenties' (4×20), a remnant of an older base-20 counting system."},
+            {"term": "Et (and)", "def": "Used instead of a hyphen at 21, 31, 41, 51, 61, and 71: vingt et un, trente et un."},
+            {"term": "Cent", "def": "100, the clean reset after the base-20 quirks of 70-99."}
+          ],
+          "practice": [
+            {"q": "What does 'quatre-vingts' literally mean, and what number is it?", "choices": ["'Four-twenties,' equal to 80", "'Four-tens,' equal to 40", "'Fourteen,' equal to 14", "'Four hundred'"], "answer": 0, "explain": "Quatre-vingts literally means 'four-twenties' (4×20=80), a leftover from an older base-20 counting system."},
+            {"q": "How do you say 71 in French?", "choices": ["soixante et onze", "soixante-dix et un", "septante et un", "soixante-onze"], "answer": 0, "explain": "71 continues the soixante-dix pattern using et before onze (11): soixante et onze, literally 'sixty and eleven.'"},
+            {"q": "How do you say 21 in French?", "choices": ["vingt et un", "vingt-un", "vingt-et-un with hyphens throughout", "un-vingt"], "answer": 0, "explain": "21 uses et (and) rather than a hyphen: vingt et un, unlike 22 and beyond which use hyphens (vingt-deux)."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Telling Time and Days/Months",
+          "minutes": 12,
+          "intro": "French time-telling has its own small logic, and once you know it, scheduling anything, a train, a meeting, a date, becomes second nature.",
+          "sections": [
+            {
+              "heading": "Asking and Telling Time",
+              "body": [
+                "To ask the time, say *Quelle heure est-il?* Like Spanish, one o'clock is singular and every other hour is plural: *Il est une heure* (It's 1:00), *Il est deux heures* (It's 2:00), *Il est trois heures* (It's 3:00) — heure/heures itself is the word for 'hour(s),' always present.",
+                "For minutes, add them directly after the hour: *Il est trois heures et demie* (3:30, 'and a half'), *Il est quatre heures et quart* (4:15, 'and a quarter'). For the last 15 minutes before the hour, use *moins le quart*: *Il est cinq heures moins le quart* (4:45, 'five o'clock minus a quarter')."
+              ]
+            },
+            {
+              "heading": "Days and Months",
+              "body": [
+                "The days are *lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche*, and like Spanish, none are capitalized. The months are *janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre*, also lowercase.",
+                "To say 'on' a specific day, French usually needs no preposition at all: *Je travaille lundi* (I work on Monday). Adding *le* before the day (*le lundi*) instead means 'on Mondays' as a repeated habit, similar to Spanish's los lunes."
+              ],
+              "example": {
+                "problem": "Say 'It's 4:45' and 'I work on Mondays' (as a weekly habit) in French.",
+                "steps": [
+                  "4:45 is a quarter before 5:00: Il est cinq heures moins le quart.",
+                  "'On Mondays' as a habit uses le: Je travaille le lundi."
+                ],
+                "answer": "Il est cinq heures moins le quart. Je travaille le lundi."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Quelle heure est-il?", "def": "'What time is it?' — the standard way to ask the time in French."},
+            {"term": "Et demie / et quart", "def": "'And a half' (:30) and 'and a quarter' (:15), added directly after the hour."},
+            {"term": "Moins le quart", "def": "'Minus a quarter,' used for :45, counted toward the next hour."},
+            {"term": "Le lundi", "def": "'On Mondays' (a repeated habit); contrast with lundi alone, meaning 'on [this coming/this past] Monday.'"}
+          ],
+          "practice": [
+            {"q": "How do you say 'It's 3:30'?", "choices": ["Il est trois heures et demie", "Il est trois heures et quart", "Il sont trois heures et demie", "Il est trois et demie heures"], "answer": 0, "explain": "Et demie means 'and a half,' added directly after the hour: trois heures et demie."},
+            {"q": "What does 'Il est cinq heures moins le quart' mean?", "choices": ["It's 4:45", "It's 5:15", "It's 5:45", "It's 4:15"], "answer": 0, "explain": "Moins le quart means 'minus a quarter,' so five o'clock minus a quarter is 4:45."},
+            {"q": "What is the difference between 'lundi' and 'le lundi'?", "choices": ["Lundi means 'on [a specific] Monday'; le lundi means 'on Mondays' as a habit", "There is no difference", "Le lundi refers only to next Monday", "Lundi is used only in questions"], "answer": 0, "explain": "Adding le before a day name turns a one-time reference into a repeated, habitual one, just like Spanish los lunes."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Family Vocabulary and Descriptions",
+          "minutes": 10,
+          "intro": "Family conversation is where possessive adjectives, gender, and descriptive adjectives all meet in practice — the perfect place to consolidate everything from this unit.",
+          "sections": [
+            {
+              "heading": "Family Words",
+              "body": [
+                "Core vocabulary: *la mère* (mother), *le père* (father), *les parents* (parents), *le frère/la sœur* (brother/sister), *les grands-parents* (grandparents), *le fils/la fille* (son/daughter), *l'oncle/la tante* (uncle/aunt), *le cousin/la cousine* (cousin), *le mari/la femme* (husband/wife).",
+                "Notice *la femme* does double duty for both 'wife' and 'woman' — context makes the meaning clear. Similarly *le mari* specifically means husband, while *l'homme* is the general word for 'man.'"
+              ]
+            },
+            {
+              "heading": "Describing Family Members",
+              "body": [
+                "Common descriptive adjectives: *grand/grande* (tall), *petit/petite* (short), *mince* (thin, same for both genders), *gentil/gentille* (kind), *intelligent/intelligente* (smart), *jeune* (young, same for both genders), *vieux/vieille* (old, an irregular pair).",
+                "Combining what you've learned: *Ma sœur est petite et très gentille* (My sister is short and very kind) shows a possessive (ma), a noun (sœur), and two agreeing adjectives (petite, gentille) all working together in one natural sentence."
+              ],
+              "example": {
+                "problem": "Say 'My grandfather is old but very kind' in French.",
+                "steps": [
+                  "'My grandfather' = mon grand-père (masculine, so mon not ma).",
+                  "'Old' (irregular masc.) = vieux; 'very kind' (masc.) = très gentil.",
+                  "Combine with mais (but): Mon grand-père est vieux mais très gentil."
+                ],
+                "answer": "Mon grand-père est vieux mais très gentil."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Les grands-parents", "def": "'The grandparents,' combining grand-père and grand-mère."},
+            {"term": "La femme", "def": "Means both 'wife' and 'woman'; context distinguishes the meaning."},
+            {"term": "Vieux/vieille", "def": "'Old,' an irregular adjective pair (like beau/belle) not following the standard add-e rule."},
+            {"term": "Gentil/gentille", "def": "'Kind/nice,' with a feminine form that doubles the final consonant before adding -e."}
+          ],
+          "practice": [
+            {"q": "What does 'la femme' mean?", "choices": ["Both 'wife' and 'woman,' depending on context", "Only 'woman'", "Only 'wife'", "'Daughter'"], "answer": 0, "explain": "La femme covers both 'wife' and 'woman'; context (such as ma femme vs. une femme) clarifies which is meant."},
+            {"q": "What is the feminine form of 'vieux' (old)?", "choices": ["vieille", "vieuxe", "vieuse", "viel"], "answer": 0, "explain": "Vieux is an irregular adjective; its feminine form is vieille, similar to the irregular pattern of beau/belle."},
+            {"q": "In 'Mon grand-père est vieux,' why is 'mon' used rather than 'ma'?", "choices": ["Grand-père is masculine, and possessives agree with the noun owned", "Grandfathers are always referred to with ma", "Mon is used before all professions", "There's no rule; it's random"], "answer": 0, "explain": "Possessive adjectives agree with the gender of the noun owned; grand-père is masculine, so mon is correct."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Present-Tense Verbs and Questions",
+      "summary": "With regular verb patterns and question formation in hand, you can describe daily routines and have real back-and-forth conversations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Regular -ER Verbs",
+          "minutes": 11,
+          "intro": "Roughly ninety percent of French verbs follow the -er pattern, making it by far the highest-value verb group to master first.",
+          "sections": [
+            {
+              "heading": "The -ER Pattern",
+              "body": [
+                "To conjugate a regular -er verb, drop -er and add: -e, -es, -e, -ons, -ez, -ent. Using *parler* (to speak): *je parle, tu parles, il/elle/on parle, nous parlons, vous parlez, ils/elles parlent*. Notice je, tu, il/elle, and ils/elles all sound identical when spoken — only nous and vous sound distinct, which is why context and pronouns matter so much in spoken French.",
+                "This same pattern applies to hundreds of verbs: *aimer* (to like/love), *habiter* (to live/reside), *regarder* (to watch/look at), *manger* (to eat, with a small spelling tweak: nous mangeons, adding an e to keep the g soft)."
+              ]
+            },
+            {
+              "heading": "Using It in Sentences",
+              "body": [
+                "The French present tense covers what English sometimes splits into two forms: *je parle français* can mean both 'I speak French' and 'I do speak French.' Unlike English, there is no separate 'do/does' auxiliary needed to form questions or negatives with -er verbs in the present.",
+                "Because most forms sound alike, French relies heavily on the subject pronoun, unlike Spanish, which often drops it: *il parle* and *ils parlent* sound the same, so the pronoun il/ils is what actually distinguishes singular from plural in speech."
+              ],
+              "example": {
+                "problem": "Conjugate 'aimer' (to like) for 'we' and use it to say 'We like French.'",
+                "steps": [
+                  "Drop -er from aimer, leaving aim-.",
+                  "Add -ons for nous: aimons.",
+                  "Combine: Nous aimons le français."
+                ],
+                "answer": "Nous aimons le français."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "-ER verb ending", "def": "The present-tense endings for regular -er verbs: -e, -es, -e, -ons, -ez, -ent."},
+            {"term": "Homophone conjugation", "def": "The pattern by which je/tu/il/ils forms of -er verbs often sound identical despite different spellings."},
+            {"term": "Manger-type spelling change", "def": "Verbs like manger add an extra e before -ons (mangeons) to keep the g sound soft."},
+            {"term": "Pronoun dependence", "def": "Because many -er verb forms sound alike, French relies on the subject pronoun to convey who is acting, unlike Spanish."}
+          ],
+          "practice": [
+            {"q": "What is the 'nous' ending for regular -er verbs?", "choices": ["-ons", "-ez", "-ent", "-es"], "answer": 0, "explain": "The nous ending for -er verbs is -ons: parler → parlons."},
+            {"q": "Why does 'nous mangeons' add an extra e before -ons?", "choices": ["To keep the g sound soft before the o", "It's a random exception with no reason", "All -er verbs add an e before -ons", "Manger is actually an irregular verb"], "answer": 0, "explain": "Manger and similar -ger verbs insert e before endings starting with a or o to preserve the soft g sound."},
+            {"q": "Why does French rely more on subject pronouns than Spanish does?", "choices": ["Many -er verb forms are pronounced identically, so the pronoun distinguishes them", "French verbs have no endings at all", "Pronouns are required only in questions", "This is not actually true"], "answer": 0, "explain": "Because je/tu/il/elle/ils forms of -er verbs often sound alike, the pronoun becomes the main spoken signal of who is acting."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Regular -IR/-RE Verbs and Aller, Faire",
+          "minutes": 12,
+          "intro": "Beyond -er verbs, French has two smaller regular families, plus two irregular verbs, aller and faire, so common they need to be memorized outright.",
+          "sections": [
+            {
+              "heading": "-IR and -RE Endings",
+              "body": [
+                "Regular -ir verbs, like *finir* (to finish), add: -is, -is, -it, -issons, -issez, -issent: *je finis, tu finis, il finit, nous finissons, vous finissez, ils finissent*. Regular -re verbs, like *vendre* (to sell), add: -s, -s, nothing, -ons, -ez, -ent: *je vends, tu vends, il vend, nous vendons, vous vendez, ils vendent*.",
+                "Notice -re verbs have no ending at all in the il/elle form (vend, not vende), and both families use their own nous/vous patterns, distinct from the -ons/-ez of -er verbs only in the singular forms."
+              ]
+            },
+            {
+              "heading": "Aller (to go) and Faire (to do/make)",
+              "body": [
+                "*Aller* is irregular: *je vais, tu vas, il/elle/on va, nous allons, vous allez, ils/elles vont*. Like Spanish ir, *aller* + infinitive expresses the near future: *je vais manger* (I'm going to eat).",
+                "*Faire* (to do/make) is irregular: *je fais, tu fais, il/elle/on fait, nous faisons, vous faites, ils/elles font*. It appears constantly, including for weather (*il fait chaud*, it's hot) and asking what someone is doing (*Qu'est-ce que tu fais?*)."
+              ],
+              "example": {
+                "problem": "Say 'I am going to finish my homework' and 'What are you (informal) doing?' in French.",
+                "steps": [
+                  "'Going to' uses aller + infinitive: je vais + finir.",
+                  "Add the object: je vais finir mes devoirs.",
+                  "'What are you doing' uses faire: Qu'est-ce que tu fais?"
+                ],
+                "answer": "Je vais finir mes devoirs. Qu'est-ce que tu fais?"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "-IR verb ending", "def": "The present-tense endings for regular -ir verbs: -is, -is, -it, -issons, -issez, -issent."},
+            {"term": "-RE verb ending", "def": "The present-tense endings for regular -re verbs: -s, -s, no ending, -ons, -ez, -ent."},
+            {"term": "Aller + infinitive", "def": "The 'going to' construction for the near future: je vais manger (I'm going to eat)."},
+            {"term": "Faire", "def": "'To do/make'; used for weather expressions and to ask what someone is doing."}
+          ],
+          "practice": [
+            {"q": "What is the 'il' form of 'vendre' (to sell)?", "choices": ["vend (no added ending)", "vends", "vende", "vendit"], "answer": 0, "explain": "Regular -re verbs have no ending at all in the il/elle form: vendre → il vend."},
+            {"q": "How do you say 'I am going to eat' in French?", "choices": ["Je vais manger", "Je vais mangez", "J'irai manger, always", "Je fais manger"], "answer": 0, "explain": "Aller + infinitive expresses the near future: je vais manger, exactly like Spanish voy a comer."},
+            {"q": "Which verb is used to talk about the weather, as in 'it's hot'?", "choices": ["faire (il fait chaud)", "aller (il va chaud)", "être (il est chaud, for weather)", "avoir (il a chaud)"], "answer": 0, "explain": "Faire is the standard verb for weather expressions: il fait chaud (it's hot), il fait froid (it's cold)."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Asking Questions and Negation",
+          "minutes": 10,
+          "intro": "French offers three ways to ask a yes/no question, from casual to formal, plus one essential two-word negation pattern that wraps around the verb.",
+          "sections": [
+            {
+              "heading": "Three Ways to Ask Yes/No Questions",
+              "body": [
+                "The simplest way is rising intonation on a statement: *Tu parles français?* (You speak French?), common in casual speech. The next level of formality adds *est-ce que* to the front of a statement without changing word order: *Est-ce que tu parles français?*",
+                "The most formal method is inversion, swapping the verb and pronoun: *Parles-tu français?* Inversion is common in writing and formal speech but rare in casual conversation, where est-ce que or plain intonation dominate."
+              ]
+            },
+            {
+              "heading": "Negation: Ne...Pas",
+              "body": [
+                "French negates a sentence by sandwiching the conjugated verb between *ne* and *pas*: *Je ne parle pas français* (I don't speak French). Before a vowel sound, *ne* shortens to *n'*: *Je n'aime pas le café* (I don't like coffee).",
+                "In casual spoken French, the *ne* is very often dropped entirely, leaving just *pas* after the verb: *Je parle pas français* is extremely common in speech, though formal writing always keeps both parts."
+              ],
+              "example": {
+                "problem": "Ask 'Do you speak English?' formally using est-ce que, then answer 'No, I don't speak English' using ne...pas.",
+                "steps": [
+                  "Formal question with est-ce que: Est-ce que tu parles anglais?",
+                  "Negation wraps the verb: ne parle pas.",
+                  "Full answer: Non, je ne parle pas anglais."
+                ],
+                "answer": "Est-ce que tu parles anglais? Non, je ne parle pas anglais."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Est-ce que", "def": "A phrase added to the front of a statement to turn it into a question, without changing word order."},
+            {"term": "Inversion", "def": "Forming a question by swapping the verb and subject pronoun: Parles-tu...?"},
+            {"term": "Ne...pas", "def": "The standard two-part negation that wraps around the conjugated verb: ne parle pas."},
+            {"term": "Dropped ne", "def": "The common spoken-French habit of omitting ne and keeping only pas in casual negation."}
+          ],
+          "practice": [
+            {"q": "Which is the most formal way to ask 'Do you speak French?'", "choices": ["Parles-tu français?", "Tu parles français?", "Français tu parles?", "Parle tu français?"], "answer": 0, "explain": "Inversion (Parles-tu français?) is the most formal question structure, common in writing and formal speech."},
+            {"q": "How do you say 'I don't like coffee'?", "choices": ["Je n'aime pas le café", "Je pas aime le café", "Je n'aime le café", "Aime pas je le café"], "answer": 0, "explain": "Ne shortens to n' before a vowel sound (aime), and pas follows the verb: je n'aime pas le café."},
+            {"q": "What happens to 'ne' in casual spoken French?", "choices": ["It's often dropped, leaving just pas", "It's always required in speech", "It moves to the end of the sentence", "It becomes 'non' instead"], "answer": 0, "explain": "Casual spoken French frequently drops ne, keeping only pas after the verb, though formal writing retains both."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Food, Shopping, and Directions",
+      "summary": "This unit puts your French to work in three of the most common real-world situations: eating out, buying things, and finding your way around.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Food and Ordering: Aimer, Vouloir",
+          "minutes": 12,
+          "intro": "Unlike Spanish gustar, French talks about liking food the same way English does, subject first, which actually makes this one of the easier topics to pick up.",
+          "sections": [
+            {
+              "heading": "Aimer: To Like/Love",
+              "body": [
+                "*Aimer* works exactly like English 'to like': the person doing the liking is the subject. *J'aime la pizza* (I like pizza), *Tu aimes le café* (You like coffee) — no backwards construction needed, unlike Spanish gustar.",
+                "To be more specific about enjoyment level, French adds modifiers: *J'aime bien* (I like it okay/somewhat), *J'aime beaucoup* (I like it a lot), *Je n'aime pas du tout* (I don't like it at all)."
+              ]
+            },
+            {
+              "heading": "Vouloir and Food Vocabulary",
+              "body": [
+                "*Vouloir* (to want) is irregular: *je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent*. For ordering politely, the conditional form *je voudrais* (I would like) softens the request, just like Spanish quisiera: *Je voudrais le poulet, s'il vous plaît*.",
+                "Useful food words: *le pain* (bread), *l'eau* (water), *la viande* (meat), *le poulet* (chicken), *le riz* (rice), *les légumes* (vegetables), *les fruits* (fruit), *le café* (coffee). To close the meal, ask *L'addition, s'il vous plaît* (The check, please)."
+              ],
+              "example": {
+                "problem": "Say 'I would like the chicken with rice, please' and 'I like coffee a lot.'",
+                "steps": [
+                  "'I would like' = je voudrais; add the food and avec (with): je voudrais le poulet avec du riz.",
+                  "Add s'il vous plaît for politeness.",
+                  "'I like ... a lot' places beaucoup after aimer: J'aime beaucoup le café."
+                ],
+                "answer": "Je voudrais le poulet avec du riz, s'il vous plaît. J'aime beaucoup le café."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Aimer", "def": "'To like/love,' used with normal subject-first word order, unlike Spanish gustar."},
+            {"term": "Je voudrais", "def": "'I would like,' the polite conditional form of vouloir, used for ordering."},
+            {"term": "L'addition", "def": "'The check/bill,' requested at the end of a meal."},
+            {"term": "Aimer bien / beaucoup", "def": "Modifiers that soften ('like somewhat') or intensify ('like a lot') the verb aimer."}
+          ],
+          "practice": [
+            {"q": "How do you politely order chicken in French?", "choices": ["Je voudrais le poulet, s'il vous plaît", "Je veux poulet", "J'aime le poulet, s'il vous plaît", "Poulet, je voudrais"], "answer": 0, "explain": "Je voudrais (I would like) is the polite conditional form used for ordering, softer than je veux (I want)."},
+            {"q": "Does French 'aimer' work like Spanish 'gustar'?", "choices": ["No, aimer uses normal subject-first word order like English", "Yes, they work identically", "Aimer is used only for people, never food", "Aimer requires an indirect object pronoun like gustar"], "answer": 0, "explain": "Unlike gustar, which puts the liked thing as the subject, aimer places the person doing the liking as the subject, just like English 'I like.'"},
+            {"q": "What do you say to ask for the check?", "choices": ["L'addition, s'il vous plaît", "Je voudrais l'addition seulement", "Le prix, s'il vous plaît", "C'est combien la note?"], "answer": 0, "explain": "L'addition, s'il vous plaît is the standard French phrase for requesting the bill at a restaurant."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Shopping, Prices, and Comparisons",
+          "minutes": 11,
+          "intro": "Shopping phrases and comparisons go hand in hand — you'll rarely ask a price without also comparing it to something else.",
+          "sections": [
+            {
+              "heading": "Asking Prices",
+              "body": [
+                "To ask a price, say *Combien ça coûte?* or *C'est combien?* (both mean 'How much is it?'). Describe something as expensive or cheap with *c'est cher* (it's expensive) or *ce n'est pas cher* (it's not expensive/it's cheap).",
+                "Prices combine directly with numbers and currency: *Ça coûte vingt euros* (It costs twenty euros). *Avez-vous quelque chose de moins cher?* (Do you have something less expensive?) is useful when comparing options."
+              ]
+            },
+            {
+              "heading": "Making Comparisons",
+              "body": [
+                "To compare, French uses *plus...que* (more...than) and *moins...que* (less...than): *Celui-ci est plus cher que celui-là* (This one is more expensive than that one). For equality, use *aussi...que* (as...as): *C'est aussi bon que l'autre* (It's as good as the other one).",
+                "Like Spanish, a few adjectives have irregular comparatives instead of using plus/moins: *bon* (good) → *meilleur* (better), rather than the expected *plus bon*."
+              ],
+              "example": {
+                "problem": "Say 'This shirt is more expensive than that one, but it's better.'",
+                "steps": [
+                  "'More expensive than' = plus cher que: Cette chemise est plus chère que celle-là.",
+                  "'But it's better' uses the irregular comparative: mais elle est meilleure."
+                ],
+                "answer": "Cette chemise est plus chère que celle-là, mais elle est meilleure."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Combien ça coûte?", "def": "'How much does it cost?' — the standard way to ask a price in French."},
+            {"term": "Plus...que / moins...que", "def": "'More...than' / 'less...than,' the standard comparative construction."},
+            {"term": "Aussi...que", "def": "'As...as,' used to express equality between two things."},
+            {"term": "Meilleur", "def": "The irregular comparative form of bon (good), used instead of plus bon."}
+          ],
+          "practice": [
+            {"q": "How do you say 'This is more expensive than that'?", "choices": ["C'est plus cher que ça", "C'est cher plus que ça", "C'est aussi cher que ça", "C'est moins que ça cher"], "answer": 0, "explain": "The comparative pattern is plus + adjective + que: plus cher que."},
+            {"q": "What is the correct comparative for 'good' in French?", "choices": ["meilleur", "plus bon", "bonner", "plus bien"], "answer": 0, "explain": "Bon has an irregular comparative, meilleur (better), rather than the expected plus bon."},
+            {"q": "Which phrase expresses that two things are equal?", "choices": ["aussi...que", "plus...que", "moins...que", "combien ça coûte"], "answer": 0, "explain": "Aussi...que means 'as...as,' expressing equality, unlike plus...que or moins...que which express inequality."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Directions and Prepositions of Place",
+          "minutes": 10,
+          "intro": "A short list of direction words turns you from lost to found anywhere in a French-speaking city.",
+          "sections": [
+            {
+              "heading": "Giving and Following Directions",
+              "body": [
+                "Key direction words: *à droite* (to the right), *à gauche* (to the left), *tout droit* (straight ahead). The verb *continuer* is common in instructions: *Continuez tout droit* (Continue straight ahead, formal command with vous).",
+                "*Tourner* means 'to turn': *Tournez à droite au coin* (Turn right at the corner). These vous-form commands are standard when asking a stranger for directions or giving them politely."
+              ]
+            },
+            {
+              "heading": "Prepositions of Place",
+              "body": [
+                "Useful prepositions: *près de* (near), *loin de* (far from), *entre* (between), *à côté de* (next to), *en face de* (across from/facing), *derrière* (behind). All combine with *de* and a noun: *La banque est près de la place* (The bank is near the plaza).",
+                "As with Spanish, all of these pair naturally with *être*, since être already covers location in French: *Le musée est entre la pharmacie et la banque* (The museum is between the pharmacy and the bank)."
+              ],
+              "example": {
+                "problem": "Give directions: 'Go straight, then turn left. The hotel is next to the bank.'",
+                "steps": [
+                  "'Go straight' = Continuez tout droit (formal command).",
+                  "'Then turn left' = puis tournez à gauche.",
+                  "'Next to' uses être + à côté de: L'hôtel est à côté de la banque."
+                ],
+                "answer": "Continuez tout droit, puis tournez à gauche. L'hôtel est à côté de la banque."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "À droite / à gauche", "def": "'To the right' / 'to the left,' the core direction phrases."},
+            {"term": "Continuer / tourner", "def": "'To continue' and 'to turn,' the two core direction-giving verbs."},
+            {"term": "À côté de", "def": "'Next to,' one of several de-based prepositions of place."},
+            {"term": "Formal command (vous)", "def": "The vous-form instruction (continuez, tournez) used to politely direct a stranger."}
+          ],
+          "practice": [
+            {"q": "Which verb means 'to turn' when giving directions?", "choices": ["tourner", "continuer", "être", "aimer"], "answer": 0, "explain": "Tourner means 'to turn' (tournez à droite, turn right); continuer means 'to continue.'"},
+            {"q": "What does 'en face de' mean?", "choices": ["Across from/facing", "Next to", "Behind", "Between"], "answer": 0, "explain": "En face de means 'across from' or 'facing'; à côté de means 'next to,' and derrière means 'behind.'"},
+            {"q": "Which verb do directions and locations naturally pair with in French?", "choices": ["Être, since it already covers location", "Avoir, since location is a form of possession", "Aller, since directions involve movement", "Faire, since directions are an action"], "answer": 0, "explain": "Because être alone covers location in French, unlike Spanish's ser/estar split, place prepositions pair naturally with être."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Past Tense and Real Conversation",
+      "summary": "The final unit adds the passé composé for talking about completed past events, then pulls everything together into a realistic conversation.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "The Passé Composé with Avoir",
+          "minutes": 13,
+          "intro": "The passé composé is the tense French speakers reach for constantly in conversation to describe a finished past action — and most verbs build it with avoir.",
+          "sections": [
+            {
+              "heading": "Building the Passé Composé",
+              "body": [
+                "The passé composé has two parts: a present-tense form of *avoir* (or, for some verbs, être) plus the verb's past participle. For most verbs, avoir is the auxiliary: *j'ai parlé* (I spoke/have spoken), *tu as fini* (you finished), *il a vendu* (he sold).",
+                "Regular past participles follow the verb's original family: -er verbs end in -é (*parlé*), -ir verbs end in -i (*fini*), -re verbs end in -u (*vendu*). Once you know a verb's family, its regular past participle is fully predictable."
+              ]
+            },
+            {
+              "heading": "Common Irregular Participles",
+              "body": [
+                "Several everyday verbs have irregular past participles worth memorizing directly: *avoir* → *eu* (j'ai eu, I had), *être* → *été* (j'ai été, I was/have been), *faire* → *fait* (j'ai fait, I did/made), *prendre* → *pris* (j'ai pris, I took).",
+                "Because these verbs are used so frequently, their irregular participles come up constantly in everyday storytelling: *J'ai fait mes devoirs hier* (I did my homework yesterday), *J'ai pris le train* (I took the train)."
+              ],
+              "example": {
+                "problem": "Say 'Yesterday I spoke with my sister and I did my homework' using the passé composé.",
+                "steps": [
+                  "'I spoke' from parler, regular -er participle: j'ai parlé.",
+                  "'I did' from faire, irregular participle: j'ai fait.",
+                  "Combine with hier (yesterday): Hier, j'ai parlé avec ma sœur et j'ai fait mes devoirs."
+                ],
+                "answer": "Hier, j'ai parlé avec ma sœur et j'ai fait mes devoirs."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Passé composé", "def": "The French compound past tense, built from an auxiliary verb (avoir or être) plus a past participle."},
+            {"term": "Past participle", "def": "The verb form used with an auxiliary to build the passé composé: parlé, fini, vendu."},
+            {"term": "Auxiliary verb", "def": "The helper verb (avoir or être) conjugated in the present tense to build the passé composé."},
+            {"term": "Irregular participle", "def": "A past participle that doesn't follow the regular -é/-i/-u pattern, like fait (faire) or pris (prendre)."}
+          ],
+          "practice": [
+            {"q": "What is the past participle of a regular -er verb like 'parler'?", "choices": ["parlé", "parli", "parlu", "parlant"], "answer": 0, "explain": "Regular -er verbs form their past participle by replacing -er with -é: parler → parlé."},
+            {"q": "What is the past participle of 'faire' (to do/make)?", "choices": ["fait", "faisé", "fais", "faisu"], "answer": 0, "explain": "Faire has an irregular past participle, fait, rather than a regular -er-style ending."},
+            {"q": "Which two parts make up the passé composé?", "choices": ["A present-tense auxiliary (avoir/être) plus a past participle", "Two past participles combined", "A future-tense verb plus an infinitive", "An imperative plus a pronoun"], "answer": 0, "explain": "The passé composé is built from a present-tense auxiliary verb (avoir or être) followed by the main verb's past participle."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "The Passé Composé with Être",
+          "minutes": 13,
+          "intro": "A small, memorable group of verbs, mostly about motion and change of state, ditch avoir for être as their passé composé auxiliary, and their past participle must then agree with the subject.",
+          "sections": [
+            {
+              "heading": "Which Verbs Use Être",
+              "body": [
+                "A specific set of intransitive verbs use être instead of avoir: *aller* (to go), *venir* (to come), *partir* (to leave), *arriver* (to arrive), *entrer* (to enter), *sortir* (to go out), *monter* (to go up), *descendre* (to go down), *naître* (to be born), *mourir* (to die), *rester* (to stay), *retourner* (to return), plus all reflexive verbs.",
+                "*Elle est allée au marché* (She went to the market) uses être (est) plus the participle allée, not avoir. This list is often taught with the mnemonic 'Dr & Mrs Vandertramp,' one letter per verb in the group."
+              ]
+            },
+            {
+              "heading": "Participle Agreement",
+              "body": [
+                "With être verbs, the past participle must agree in gender and number with the subject, just like an adjective: *il est allé* (he went, masc.), *elle est allée* (she went, fem., add -e), *ils sont allés* (they went, masc./mixed, add -s), *elles sont allées* (they went, fem., add -es).",
+                "This agreement doesn't happen with avoir verbs — a regular avoir-verb participle like *parlé* never changes for gender or number — which is exactly why the être/avoir distinction matters for writing correctly, even though it rarely changes pronunciation."
+              ],
+              "example": {
+                "problem": "Say 'She arrived yesterday and she stayed at the hotel' using the passé composé with être.",
+                "steps": [
+                  "'She arrived' uses être + arrivée (feminine agreement): elle est arrivée.",
+                  "'She stayed' uses être + restée (feminine agreement): elle est restée.",
+                  "Combine with hier and à l'hôtel: Elle est arrivée hier et elle est restée à l'hôtel."
+                ],
+                "answer": "Elle est arrivée hier et elle est restée à l'hôtel."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Être verbs", "def": "A specific set of motion/change-of-state verbs (aller, venir, partir, and others) that use être instead of avoir in the passé composé."},
+            {"term": "Dr & Mrs Vandertramp", "def": "A mnemonic covering the core list of verbs that take être as their passé composé auxiliary."},
+            {"term": "Participle agreement", "def": "The requirement that a passé composé participle with être match the subject's gender and number, like an adjective."},
+            {"term": "Reflexive verb", "def": "A verb like se lever (to get up) that also uses être in the passé composé, with participle agreement."}
+          ],
+          "practice": [
+            {"q": "Which verb uses être, not avoir, in the passé composé?", "choices": ["aller", "manger", "finir", "vendre"], "answer": 0, "explain": "Aller is one of the specific motion verbs that takes être as its auxiliary, unlike regular avoir verbs like manger, finir, or vendre."},
+            {"q": "Why does 'elle est allée' add an -e to allé?", "choices": ["The participle must agree with the feminine subject, elle", "It's a spelling mistake", "All participles add -e in the passé composé", "Aller is a regular -er verb needing no agreement"], "answer": 0, "explain": "With être verbs, the past participle agrees in gender and number with the subject, so a feminine subject like elle adds -e."},
+            {"q": "Does a regular avoir-verb participle, like 'parlé,' change for the subject's gender?", "choices": ["No, avoir-verb participles don't agree with the subject", "Yes, exactly like être verbs", "Only in the plural", "Only for feminine subjects"], "answer": 0, "explain": "Participle agreement with the subject only applies to être verbs; avoir-verb participles like parlé stay unchanged regardless of the subject's gender or number."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Putting It Together: A Real Conversation",
+          "minutes": 13,
+          "intro": "Every tool from this course, greetings, être/avoir, present tense, aimer, and the passé composé, comes together in one realistic exchange you could have today.",
+          "sections": [
+            {
+              "heading": "A Sample Conversation",
+              "body": [
+                "Consider this exchange at a café: *A: Salut! Ça va? B: Ça va bien, merci. Et toi? A: Ça va. Qu'est-ce que tu as fait hier? B: Je suis allé au cinéma avec mon frère. Tu as aimé le film? A: Oui, j'ai beaucoup aimé.* Notice as fait and suis allé (passé composé, one with avoir, one with être) and as aimé (avoir + past participle).",
+                "This short exchange draws on nearly every grammar point from this course: greetings, informal tu, the passé composé with both auxiliaries, and aimer — exactly how real fluency works, weaving multiple structures together naturally rather than using one rule in isolation."
+              ]
+            },
+            {
+              "heading": "Building Your Own Exchange",
+              "body": [
+                "A reliable template for a first conversation: greet (salut/bonjour), ask how someone is (ça va?/comment vas-tu?), ask about a recent event with the passé composé (qu'est-ce que tu as fait...?), and react with an aimer-based opinion (j'ai aimé / je n'ai pas aimé).",
+                "From here, expanding your French is mostly a matter of vocabulary, not new grammar structures — the patterns in this course (être/avoir, aimer, present tense, passé composé, questions, negation) cover the large majority of everyday conversation you'll encounter."
+              ],
+              "example": {
+                "problem": "Write a two-line exchange: ask a friend what they did last weekend, and have them answer that they visited their grandmother and it was very nice.",
+                "steps": [
+                  "'What did you do last weekend' = Qu'est-ce que tu as fait le week-end dernier?",
+                  "'I visited my grandmother' uses avoir + visité: J'ai visité ma grand-mère.",
+                  "'It was very nice' can use c'était (it was), a natural way to describe a resulting feeling: C'était très agréable."
+                ],
+                "answer": "A: Qu'est-ce que tu as fait le week-end dernier? B: J'ai visité ma grand-mère. C'était très agréable."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Qu'est-ce que tu as fait?", "def": "'What did you do?' — the passé composé question used to ask about a specific past event."},
+            {"term": "J'ai aimé", "def": "The passé composé of aimer, used to react to a specific past event: 'I liked it.'"},
+            {"term": "Conversation template", "def": "A reusable pattern of greeting, asking a state, asking about a past event, and reacting, useful for any first exchange."},
+            {"term": "Fluency through combination", "def": "The principle that real fluency comes from weaving multiple grammar points together, not mastering one rule in isolation."}
+          ],
+          "practice": [
+            {"q": "In 'J'ai beaucoup aimé le film,' which tense is aimé in?", "choices": ["Passé composé, reacting to one specific past viewing", "Present tense", "Future tense", "Imperative"], "answer": 0, "explain": "Aimé is the past participle of aimer used with avoir to form the passé composé, appropriate for reacting to one specific finished event."},
+            {"q": "Which question asks specifically about a past action?", "choices": ["Qu'est-ce que tu as fait?", "Qu'est-ce que tu fais?", "Comment vas-tu?", "Qu'est-ce que tu aimes?"], "answer": 0, "explain": "Qu'est-ce que tu as fait? uses the passé composé (as fait) to ask what someone did in the past; qu'est-ce que tu fais? asks about the present."},
+            {"q": "According to this lesson, what mostly drives further progress in French after this course?", "choices": ["Vocabulary, since the core grammar patterns are now covered", "Learning a completely new grammar system", "Abandoning the passé composé for a simpler tense", "Memorizing exceptions to être/avoir"], "answer": 0, "explain": "The lesson argues that the grammar patterns taught cover most everyday conversation, so vocabulary growth becomes the main driver of further progress."}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "id": "business-law",
+  "title": "Business Law",
+  "domain": "business",
+  "level": "Intro college",
+  "description": "An introduction to the legal rules that govern commerce: where law comes from, how courts resolve disputes, the torts and crimes that create business liability, and the full life of a contract from formation through breach and remedy. You will apply real legal tests to concrete business fact patterns throughout.",
+  "outcomes": [
+    "You can identify which court has jurisdiction over a business dispute and describe the litigation process.",
+    "You can distinguish negligence, intentional torts, and strict liability, and apply the negligence test to a fact pattern.",
+    "You can determine whether a valid contract was formed by checking offer, acceptance, and consideration.",
+    "You can identify defenses to contract enforcement such as lack of capacity, the statute of frauds, and unconscionability.",
+    "You can classify a breach of contract and match it to the correct remedy.",
+    "You can compare business entity types (sole proprietorship, partnership, corporation, LLC) by liability and formality."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Legal Foundations and the Court System",
+      "summary": "Before you can apply the law to a business dispute, you need to know where law comes from and which court, if any, actually has the power to hear the case.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Sources of Law and Legal Systems",
+          "minutes": 12,
+          "intro": "\"The law\" is not one single rulebook — it's a layered stack of constitutions, statutes, regulations, and judicial decisions, and knowing which layer controls a given business question is the first skill of legal reasoning.",
+          "sections": [
+            {
+              "heading": "The Hierarchy of Law",
+              "body": [
+                "**Constitutional law** sets the highest-level framework and limits on government power; **statutory law** is written by legislatures (Congress, state legislatures) and covers most business regulation; **administrative law** consists of rules written by agencies (the FTC, SEC) under authority delegated by statute; **case law** (or common law) comes from judicial decisions interpreting statutes and resolving disputes not otherwise covered.",
+                "When sources conflict, a clear hierarchy applies: the Constitution overrides statutes, statutes override agency regulations, and federal law overrides conflicting state law under the Supremacy Clause. A state statute that directly conflicts with a valid federal statute on the same subject is unenforceable to the extent of the conflict."
+              ]
+            },
+            {
+              "heading": "Civil Law Versus Criminal Law",
+              "body": [
+                "**Civil law** resolves private disputes between parties (a breach of contract, a personal injury claim) where the remedy is typically money damages or a court order, and the losing party is 'liable,' not 'guilty.' **Criminal law** involves the government prosecuting conduct considered harmful to society, with penalties including fines and imprisonment, and the standard of proof is 'beyond a reasonable doubt,' far higher than civil law's 'preponderance of the evidence.'",
+                "The same conduct can trigger both: a company's toxic dumping might result in criminal charges brought by the state (fines, potential imprisonment for executives) and a separate civil lawsuit from injured neighbors seeking damages — two independent proceedings with different burdens of proof and different possible outcomes."
+              ],
+              "example": {
+                "problem": "A state law requires a 100-foot setback for factory waste discharge into a river; a new federal environmental statute requires a stricter 300-foot setback for the same activity. A factory complies with the state law but not the federal one. Is the factory in compliance?",
+                "steps": [
+                  "Apply the Supremacy Clause: federal law overrides conflicting state law.",
+                  "Since the federal statute imposes a stricter requirement covering the same conduct, the factory must meet the federal 300-foot standard regardless of state law compliance."
+                ],
+                "answer": "No — the factory is not in compliance because federal law's stricter requirement controls under the Supremacy Clause, regardless of state law compliance."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Statutory law", "def": "Written law enacted by a legislature, such as Congress or a state legislature."},
+            {"term": "Supremacy Clause", "def": "The constitutional principle that valid federal law overrides conflicting state law."},
+            {"term": "Preponderance of the evidence", "def": "The civil law standard of proof: more likely than not (over 50%) that a claim is true."}
+          ],
+          "practice": [
+            {"q": "When a valid federal statute conflicts with a state statute on the same subject:", "choices": ["The federal statute controls under the Supremacy Clause", "The state statute always controls", "Both apply simultaneously with no resolution", "Neither statute is enforceable"], "answer": 0, "explain": "The Supremacy Clause establishes that valid federal law overrides conflicting state law."},
+            {"q": "The standard of proof in a criminal case is:", "choices": ["Beyond a reasonable doubt, higher than the civil standard", "Preponderance of the evidence, the same as civil cases", "No standard of proof is required", "Lower than the civil standard"], "answer": 0, "explain": "Criminal cases require proof beyond a reasonable doubt, a substantially higher bar than civil law's preponderance standard."},
+            {"q": "Rules written by an agency like the SEC under authority delegated by Congress are an example of:", "choices": ["Administrative law", "Constitutional law", "Common law", "Criminal law"], "answer": 0, "explain": "Administrative law consists of agency-created rules operating under statutory delegation."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Courts, Jurisdiction, and the Litigation Process",
+          "minutes": 13,
+          "intro": "Before a court can decide who's right in a business dispute, it first has to have the legal power to hear the case at all — and picking the wrong court can get a case thrown out before the merits are ever considered.",
+          "sections": [
+            {
+              "heading": "Jurisdiction",
+              "body": [
+                "**Subject matter jurisdiction** is a court's authority to hear a particular type of case; federal courts have limited subject matter jurisdiction, generally requiring either a **federal question** (the case involves federal law) or **diversity jurisdiction** (parties are citizens of different states and the amount in controversy exceeds $75,000). **Personal jurisdiction** is a court's authority over the specific parties, generally requiring the defendant to have sufficient contacts with the state (residence, business operations, or a transaction connected to the claim).",
+                "A company with no offices, employees, or sales in a state generally cannot be sued there just because a customer happened to travel there — personal jurisdiction typically requires the defendant to have purposefully directed activity toward that state related to the dispute."
+              ]
+            },
+            {
+              "heading": "The Litigation Process",
+              "body": [
+                "Civil litigation generally proceeds through pleadings (the complaint and answer stating each side's claims and defenses), **discovery** (exchanging evidence through depositions, document requests, and interrogatories before trial), pretrial motions (including summary judgment, asking the court to decide without a full trial because there's no genuine factual dispute), trial, and possible appeal.",
+                "Most civil cases settle before trial, often during or after discovery once both sides have a clearer picture of the evidence and the likely outcome — trial is the expensive, uncertain last resort, not the typical outcome of a lawsuit."
+              ],
+              "example": {
+                "problem": "A California-based online retailer with no physical presence in Ohio ships one order to an Ohio customer who is later injured using the product and sues in an Ohio state court. The retailer argues Ohio has no personal jurisdiction over it.",
+                "steps": [
+                  "Assess purposeful contact: even a single transaction can support jurisdiction if the company purposefully directed commerce (shipping, marketing) toward that state and the claim arises from that same transaction.",
+                  "Since the injury arises directly from the shipped product, Ohio courts likely have specific personal jurisdiction over this particular claim, even without a broader physical presence in the state."
+                ],
+                "answer": "Ohio likely has personal jurisdiction because the claim arises directly from a transaction the retailer purposefully directed into the state, even without a physical presence there."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Subject matter jurisdiction", "def": "A court's authority to hear a particular type of case."},
+            {"term": "Personal jurisdiction", "def": "A court's authority over the specific parties to a case, generally requiring sufficient contacts with the state."},
+            {"term": "Discovery", "def": "The pretrial process of exchanging evidence between parties through depositions, documents, and interrogatories."}
+          ],
+          "practice": [
+            {"q": "Diversity jurisdiction in federal court generally requires:", "choices": ["Parties from different states and an amount in controversy over $75,000", "Only that the case involves any dollar amount", "That both parties are from the same state", "That the case involves only criminal law"], "answer": 0, "explain": "Diversity jurisdiction specifically requires different-state citizenship and an amount in controversy exceeding $75,000."},
+            {"q": "Personal jurisdiction over an out-of-state company generally requires:", "choices": ["Sufficient purposeful contacts with the state related to the claim", "Any mention of the state anywhere in company records", "The company's headquarters to be physically located there", "Nothing beyond the plaintiff living in that state"], "answer": 0, "explain": "Courts look for purposeful contact connected to the specific dispute, not just any tangential link."},
+            {"q": "Most civil lawsuits are resolved:", "choices": ["Through settlement before trial", "Only through a full jury trial", "Exclusively through criminal prosecution", "Without any discovery process"], "answer": 0, "explain": "The large majority of civil cases settle before reaching trial, often once discovery clarifies the likely outcome."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Business and the Constitution",
+          "minutes": 11,
+          "intro": "Government regulation of business isn't unlimited — several constitutional provisions specifically constrain what legislatures and agencies can do to companies and their property.",
+          "sections": [
+            {
+              "heading": "The Commerce Clause and Due Process",
+              "body": [
+                "The **Commerce Clause** grants Congress power to regulate interstate commerce, which has been interpreted broadly to cover most business activity that affects trade across state lines, even activity that occurs entirely within one state if it substantially affects interstate commerce in aggregate. This is the constitutional basis for most federal business regulation, from labor law to environmental law.",
+                "**Due process** requires that government not deprive a person or business of life, liberty, or property without fair procedure (procedural due process) and that laws restricting fundamental rights or property be reasonably related to a legitimate government purpose (substantive due process). A business facing license revocation generally has a due process right to notice and a hearing before the government can act."
+              ]
+            },
+            {
+              "heading": "Takings and Equal Protection",
+              "body": [
+                "The **Takings Clause** requires the government to pay just compensation when it takes private property for public use, which applies to outright seizure and, in some cases, to regulation so restrictive it effectively destroys a property's economic value (a regulatory taking). **Equal protection** requires government to treat similarly situated businesses or individuals alike, though most economic regulation only needs a rational basis to survive challenge.",
+                "A city zoning change that bans all commercial use of a specific parcel, leaving the owner with no economically viable use of the land, can trigger takings analysis even though the government never physically seized the property."
+              ],
+              "example": {
+                "problem": "A city rezones a commercial district as residential-only, and a business owner's land — previously a functioning retail lot — becomes unusable for any economically viable purpose. The owner sues, claiming an unconstitutional taking.",
+                "steps": [
+                  "Recognize this may be a regulatory taking: government action that destroys nearly all economic value of property, even without physical seizure, can trigger Takings Clause analysis.",
+                  "The key question becomes whether just compensation is owed, since the regulation eliminated substantially all economically viable use rather than merely reducing value somewhat."
+                ],
+                "answer": "The owner has a plausible regulatory takings claim, since a zoning change that eliminates virtually all economically viable use of property can require just compensation even without physical seizure."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Commerce Clause", "def": "The constitutional provision granting Congress power to regulate interstate commerce, the basis for most federal business regulation."},
+            {"term": "Due process", "def": "The constitutional requirement of fair procedure before depriving someone of life, liberty, or property."},
+            {"term": "Regulatory taking", "def": "Government regulation so restrictive it effectively destroys a property's economic value, potentially requiring compensation."}
+          ],
+          "practice": [
+            {"q": "The Commerce Clause is the primary constitutional basis for:", "choices": ["Most federal business regulation", "State criminal law only", "Local zoning ordinances exclusively", "Corporate bylaws"], "answer": 0, "explain": "Federal regulation of business activity affecting interstate commerce rests primarily on Commerce Clause authority."},
+            {"q": "A zoning change that eliminates virtually all economic use of a property, without physical seizure, may constitute:", "choices": ["A regulatory taking", "A violation of the Commerce Clause", "A criminal offense", "A breach of contract"], "answer": 0, "explain": "Regulation destroying nearly all economic value can trigger Takings Clause analysis even without physical government seizure."},
+            {"q": "Procedural due process generally requires, before a license revocation:", "choices": ["Notice and an opportunity for a hearing", "No process at all if the government acts in good faith", "A jury trial in every case", "Only a written explanation after the fact"], "answer": 0, "explain": "Due process requires fair procedure, typically notice and a hearing, before depriving someone of a protected interest like a license."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Torts and Business Crime",
+      "summary": "Businesses face liability outside of contracts too — from careless conduct that injures others to intentional wrongs and criminal exposure. Learn the tests courts actually apply.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Negligence",
+          "minutes": 13,
+          "intro": "Most business lawsuits over accidents don't involve anyone intending harm — they turn on whether a company was careless enough to be legally at fault, which is exactly what the negligence test measures.",
+          "sections": [
+            {
+              "heading": "The Four Elements of Negligence",
+              "body": [
+                "**Negligence** requires proving four elements: (1) **duty** — the defendant owed the plaintiff a legal duty of reasonable care, (2) **breach** — the defendant failed to meet that standard of care, (3) **causation** — the breach actually and proximately caused the harm, and (4) **damages** — the plaintiff suffered actual, provable harm. Missing any one element defeats the claim entirely, regardless of how careless the defendant otherwise seems.",
+                "The standard of care is typically what a **reasonable person** would do under similar circumstances — not perfection, and not the defendant's own personal best effort, but an objective, ordinary standard of care that a jury applies to the specific facts."
+              ]
+            },
+            {
+              "heading": "Causation and Defenses",
+              "body": [
+                "**Actual cause** ('but-for' cause) asks whether the harm would have occurred but for the defendant's conduct; **proximate cause** limits liability to harms that were a reasonably foreseeable consequence of the breach, cutting off liability for freak, unforeseeable chains of events. A grocery store that fails to clean a spill is the actual cause of a customer's fall, and the fall injury is a foreseeable consequence — proximate cause is satisfied.",
+                "Common defenses include **contributory negligence** (in a minority of states, any plaintiff fault bars recovery entirely) and **comparative negligence** (most states; damages are reduced by the plaintiff's percentage of fault, or barred if the plaintiff's fault exceeds a threshold like 50%)."
+              ],
+              "example": {
+                "problem": "A grocery store leaves a spilled liquid unmarked for 40 minutes. A customer, looking at her phone instead of the floor, slips and breaks her wrist. In a comparative negligence state, a jury finds the store 70% at fault and the customer 30% at fault, with $50,000 in damages.",
+                "steps": [
+                  "Confirm all four negligence elements are met: duty (store owes customers reasonable care), breach (40-minute unmarked spill), causation (spill caused the fall), damages ($50,000).",
+                  "Apply comparative negligence: reduce the damages award by the plaintiff's percentage of fault.",
+                  "Calculate: $50,000 × (1 − 0.30) = $50,000 × 0.70 = $35,000."
+                ],
+                "answer": "The customer recovers $35,000 after her damages are reduced by her own 30% share of fault under comparative negligence."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Negligence", "def": "A tort requiring proof of duty, breach, causation, and damages, based on a failure to exercise reasonable care."},
+            {"term": "Proximate cause", "def": "A limit on liability to harms that were a reasonably foreseeable consequence of the defendant's breach."},
+            {"term": "Comparative negligence", "def": "A rule reducing a plaintiff's damages award in proportion to their own percentage of fault."}
+          ],
+          "practice": [
+            {"q": "In a comparative negligence state, a plaintiff with $80,000 in damages found 25% at fault recovers:", "choices": ["$60,000", "$80,000", "$20,000", "$0"], "answer": 0, "explain": "$80,000 × (1 − 0.25) = $80,000 × 0.75 = $60,000."},
+            {"q": "Missing which single element defeats a negligence claim?", "choices": ["Any one of duty, breach, causation, or damages", "Only intent to harm", "Only physical contact", "Only a written contract"], "answer": 0, "explain": "All four elements are required; missing any one defeats the claim regardless of the others."},
+            {"q": "Proximate cause limits liability to harms that were:", "choices": ["A reasonably foreseeable consequence of the breach", "Caused by any action whatsoever, foreseeable or not", "Intentional rather than accidental", "Covered by insurance"], "answer": 0, "explain": "Proximate cause cuts off liability for freak, unforeseeable consequences even where actual cause exists."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Intentional Torts and Strict Liability",
+          "minutes": 12,
+          "intro": "Not every business tort is about carelessness — some involve deliberately wrongful conduct, and a narrow set of especially dangerous activities carry liability even when the defendant was perfectly careful.",
+          "sections": [
+            {
+              "heading": "Intentional Torts",
+              "body": [
+                "**Intentional torts** require that the defendant intended the act (though not necessarily the specific harm), including **defamation** (a false statement of fact harming someone's reputation, published to a third party), **fraud** (a knowing misrepresentation of material fact that the victim reasonably relied on to their detriment), and **tortious interference** (intentionally disrupting a valid contract or business relationship between others).",
+                "Defamation defenses matter in business contexts: **truth** is a complete defense (a true but damaging statement isn't defamation), and statements of **opinion**, when clearly framed as opinion rather than fact, generally aren't actionable, which is why 'I think their service is terrible' is legally safer than a false factual claim like 'they falsified their safety records.'"
+              ]
+            },
+            {
+              "heading": "Strict Liability",
+              "body": [
+                "**Strict liability** imposes liability regardless of fault or care taken, applied narrowly to abnormally dangerous activities (explosives, hazardous chemical storage) and to defective products under **product liability** law. A manufacturer can be strictly liable for a defective product that injures a consumer even if the manufacturer exercised reasonable care in every step of production, because the policy goal is to place the cost of dangerous defects on the party best able to prevent and insure against them.",
+                "Product liability claims typically allege a **manufacturing defect** (the product deviated from its intended design), a **design defect** (the entire product line is unreasonably dangerous even when made correctly), or a **failure to warn** (inadequate warning of a non-obvious danger) — each analyzed somewhat differently but all falling under the strict liability umbrella for defective products."
+              ],
+              "example": {
+                "problem": "A power tool manufacturer follows every industry safety standard precisely, yet one unit, due to a rare manufacturing flaw not present in the rest of the product line, causes a serious injury. The injured user sues.",
+                "steps": [
+                  "Identify the claim type: this is a manufacturing defect — the injured unit deviated from the intended design, unlike the rest of the (safe) product line.",
+                  "Apply strict liability: the manufacturer can be held liable for the defective unit's harm even though it exercised reasonable care throughout production, because manufacturing-defect claims don't require proof of negligence."
+                ],
+                "answer": "The manufacturer can be strictly liable for the manufacturing defect regardless of the care it exercised, since strict product liability doesn't require proving negligence."}
+            }
+          ],
+          "keyTerms": [
+            {"term": "Defamation", "def": "A false statement of fact, published to a third party, that harms someone's reputation."},
+            {"term": "Strict liability", "def": "Liability imposed regardless of fault or care taken, applied to abnormally dangerous activities and defective products."},
+            {"term": "Manufacturing defect", "def": "A flaw where a specific product unit deviates from its intended design, distinct from a design defect affecting the whole line."}
+          ],
+          "practice": [
+            {"q": "Truth is a complete defense to which claim?", "choices": ["Defamation", "Strict product liability", "Negligence", "Tortious interference"], "answer": 0, "explain": "A true statement, however damaging, cannot be defamation since the claim requires a false statement of fact."},
+            {"q": "A manufacturer using perfect care can still be liable for a defective unit under:", "choices": ["Strict product liability", "Only intentional tort law", "Only if negligence is separately proven", "Only if the buyer signed no waiver"], "answer": 0, "explain": "Strict liability for manufacturing defects doesn't require proving the manufacturer was careless."},
+            {"q": "A design defect claim, unlike a manufacturing defect claim, alleges that:", "choices": ["The entire product line is unreasonably dangerous even when made correctly", "Only one specific unit deviated from spec", "The warning label was missing", "The buyer misused the product"], "answer": 0, "explain": "Design defects concern the whole product line's inherent danger, not a flaw in one specific unit."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Business Crime",
+          "minutes": 11,
+          "intro": "Some business misconduct crosses from a private dispute into a matter the government itself prosecutes — and executives, not just companies, can face personal criminal exposure.",
+          "sections": [
+            {
+              "heading": "Common Business Crimes",
+              "body": [
+                "**White-collar crimes** relevant to business include **fraud** (criminal, not just civil, when it meets a state's specific statutory elements), **embezzlement** (an employee or fiduciary unlawfully taking property already in their lawful possession, distinct from theft), **insider trading** (trading securities based on material non-public information in breach of a duty), and **bribery** of public officials.",
+                "Corporations themselves can be criminally charged (fined, subject to compliance monitors), and individual executives can also face personal criminal liability for their own conduct or, in some regulatory schemes, for failing to prevent violations they had a legal duty to supervise, even without personal wrongdoing on their part."
+              ]
+            },
+            {
+              "heading": "Constitutional Protections in Criminal Proceedings",
+              "body": [
+                "Individuals facing business-related criminal charges retain constitutional protections: the **Fifth Amendment** privilege against self-incrimination (though this protection is generally personal and doesn't extend to a corporation's own required business records), the right to a jury trial, and protection against unreasonable searches under the **Fourth Amendment**, which still constrains regulatory investigations even in heavily regulated industries.",
+                "Businesses under investigation should understand that cooperation with regulators and voluntary internal investigation can meaningfully affect the severity of charges and penalties, since prosecutors weigh a company's proactive compliance efforts when deciding how aggressively to pursue charges."
+              ],
+              "example": {
+                "problem": "A CFO learns of a pending merger announcement two days before it's public and buys company stock through a personal account, then sells after the announcement drives the price up 20%.",
+                "steps": [
+                  "Identify the crime: trading securities based on material non-public information (the pending merger) while owing a duty of confidentiality is insider trading.",
+                  "Note that this exposes the CFO to personal criminal liability distinct from any liability the corporation itself might face."
+                ],
+                "answer": "This is insider trading, exposing the CFO to personal criminal liability for trading on material non-public information in breach of a fiduciary duty."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Embezzlement", "def": "Unlawfully taking property already in one's lawful possession, distinct from theft of property never entrusted to the taker."},
+            {"term": "Insider trading", "def": "Trading securities based on material non-public information in breach of a duty of confidentiality."},
+            {"term": "Fifth Amendment privilege", "def": "The personal constitutional protection against being compelled to give self-incriminating testimony."}
+          ],
+          "practice": [
+            {"q": "Embezzlement is distinct from theft because it involves:", "choices": ["Property already in the defendant's lawful possession being unlawfully taken", "Property never entrusted to the defendant at all", "Only corporate, never individual, liability", "No criminal exposure, only civil"], "answer": 0, "explain": "Embezzlement specifically involves misappropriating property the person already lawfully possessed, unlike ordinary theft."},
+            {"q": "An executive trading stock on material non-public information about a pending merger commits:", "choices": ["Insider trading", "Embezzlement", "Defamation", "A regulatory taking"], "answer": 0, "explain": "Trading on material non-public information in breach of a duty is the definition of insider trading."},
+            {"q": "The Fifth Amendment privilege against self-incrimination generally:", "choices": ["Is personal and doesn't extend to a corporation's required business records", "Protects corporations from producing any documents", "Only applies to civil cases", "Eliminates the need for search warrants"], "answer": 0, "explain": "The privilege is personal to individuals and doesn't shield a corporation's legally required records."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Contract Formation",
+      "summary": "Contracts are the backbone of commerce, and courts use a specific, checkable set of tests to decide whether a real, enforceable agreement actually exists.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Offer and Acceptance",
+          "minutes": 13,
+          "intro": "A deal isn't a contract just because two people shook hands and felt good about it — the law asks a much more specific question: was there a valid offer, and was it validly accepted?",
+          "sections": [
+            {
+              "heading": "What Makes a Valid Offer",
+              "body": [
+                "A valid **offer** requires (1) intent to be bound (a serious commitment, not a joke or preliminary negotiation), (2) definite and certain terms (price, subject matter, quantity), and (3) communication to the offeree. An advertisement is generally treated as an invitation to negotiate, not an offer, unless it's so specific and limited (first-come, specific quantity, clear price) that a court would treat it as a genuine offer.",
+                "An offer can be revoked by the offeror any time before acceptance, with narrow exceptions: an **option contract** (paid consideration to hold the offer open) and, under the UCC for merchants, a signed **firm offer** promising to hold it open, cannot be freely revoked during their stated period."
+              ]
+            },
+            {
+              "heading": "Acceptance and the Mirror Image Rule",
+              "body": [
+                "**Acceptance** must generally mirror the offer's terms exactly under the common law **mirror image rule** — an acceptance that changes any term is treated as a counteroffer, not an acceptance, and the original offer is terminated. Under the **UCC** (for the sale of goods), this rule is relaxed for merchants: additional terms in an acceptance can become part of the contract unless the offer expressly limited acceptance to its own terms, the new term materially alters the deal, or the offeror objects promptly.",
+                "The **mailbox rule** provides that acceptance is effective the moment it's properly dispatched (mailed, sent) under the agreed method, not when it's received, meaning a mailed acceptance can form a contract even if it's lost in transit and the offeror never actually sees it, so long as it was properly sent before any revocation arrived."
+              ]
+            },
+            {
+              "heading": "Applying the Rules",
+              "body": [
+                "In practice, disputes usually turn on timing (was the offer already revoked when the acceptance was sent?) or on whether purported 'acceptance' language actually changed a material term (turning it into a counteroffer instead). Reading the actual words of the exchange, not just the parties' intent, resolves most of these disputes."
+              ],
+              "example": {
+                "problem": "On Monday, a supplier mails an offer to sell 500 units at $10 each, open for acceptance until Friday. On Wednesday, the supplier mails a revocation. On Thursday, before receiving the revocation, the buyer mails an acceptance of the original offer.",
+                "steps": [
+                  "Apply the mailbox rule: acceptance is effective when properly mailed, not when received.",
+                  "The buyer's acceptance was mailed Thursday, before the buyer received the Wednesday revocation, so the acceptance was effective when sent.",
+                  "A revocation is only effective when received by the offeree — since the buyer accepted before receiving it, the revocation came too late."
+                ],
+                "answer": "A contract was formed: the buyer's mailed acceptance was effective the moment it was sent, before the revocation (effective only upon receipt) reached the buyer."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Mirror image rule", "def": "The common law requirement that acceptance match the offer's terms exactly, or it becomes a counteroffer."},
+            {"term": "Mailbox rule", "def": "The rule that acceptance is effective when properly dispatched, not when received."},
+            {"term": "Firm offer", "def": "A merchant's signed promise under the UCC to hold an offer open, which cannot be freely revoked during that period."}
+          ],
+          "practice": [
+            {"q": "Under the mailbox rule, a properly mailed acceptance is effective:", "choices": ["The moment it is dispatched, not when received", "Only when the offeror actually reads it", "Only if sent by certified mail", "Never, unless confirmed by phone"], "answer": 0, "explain": "The mailbox rule makes acceptance effective upon proper dispatch, regardless of whether or when it's received."},
+            {"q": "Under the common law mirror image rule, an acceptance that changes a term is treated as:", "choices": ["A counteroffer, terminating the original offer", "A valid acceptance regardless of the change", "An automatically enforceable modification", "A firm offer"], "answer": 0, "explain": "Any change to the offer's terms under the mirror image rule converts the response into a counteroffer, not an acceptance."},
+            {"q": "A store advertisement is generally treated as:", "choices": ["An invitation to negotiate, not a binding offer", "A firm, binding offer to every reader", "An acceptance of a prior offer", "A counteroffer"], "answer": 0, "explain": "Ads are usually invitations to negotiate unless unusually specific and limited enough to be treated as a genuine offer."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Consideration and Capacity",
+          "minutes": 12,
+          "intro": "Even a clear, mutually agreed promise isn't automatically enforceable — the law also asks whether each side actually gave up something of legal value, and whether both parties were legally capable of agreeing at all.",
+          "sections": [
+            {
+              "heading": "Consideration",
+              "body": [
+                "**Consideration** is something of legal value exchanged by each party — a promise, an act, or a forbearance from doing something one has a legal right to do — and it's required to make a promise legally enforceable as a contract. A pure gift promise ('I'll give you my car next week') generally isn't enforceable because the recipient gives nothing in exchange; if the recipient promises something in return (even a modest payment), consideration exists.",
+                "Courts generally don't examine whether consideration is adequate (a fair value), only whether it exists at all — agreeing to sell a valuable item for $1 can still be valid consideration, since courts avoid second-guessing the fairness of a bargain both parties freely accepted, reserving that scrutiny for genuine unconscionability."
+              ]
+            },
+            {
+              "heading": "Capacity",
+              "body": [
+                "**Capacity** to contract requires the party be of legal age (generally 18) and of sound mind at the time of agreement. Contracts with **minors** are generally **voidable** at the minor's option (the minor can choose to enforce or disaffirm it), though many states require the minor to pay reasonable value for **necessaries** (food, shelter, basic medical care) already received even if the contract is disaffirmed.",
+                "A person lacking mental capacity due to a cognitive impairment at the time of contracting can similarly void the agreement, though a contract made during a lucid interval, or later ratified once capacity is regained, may still be enforceable."
+              ],
+              "example": {
+                "problem": "A 16-year-old signs a one-year contract for a gym membership, pays the first month, then wants out after two months, having used the gym regularly. The gym argues the contract is binding.",
+                "steps": [
+                  "Apply capacity rules: a minor's contract is generally voidable at the minor's option, meaning the minor can disaffirm even a fully signed agreement.",
+                  "Check the necessaries exception: a gym membership is not a necessary like food or shelter, so the minor is not required to keep paying for it after disaffirming.",
+                  "The minor can disaffirm the remaining obligation, though courts in some states may still require payment for the reasonable value of the two months of gym use already received."
+                ],
+                "answer": "The minor can disaffirm the remaining contract term since gym memberships aren't necessaries, though he may owe reasonable value for the two months already used, depending on the state."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Consideration", "def": "Something of legal value exchanged by each party to a contract, required to make a promise enforceable."},
+            {"term": "Voidable contract", "def": "A contract that one party (such as a minor) can choose to enforce or cancel."},
+            {"term": "Necessaries", "def": "Basic items like food, shelter, and medical care for which a minor may owe reasonable value even after disaffirming a contract."}
+          ],
+          "practice": [
+            {"q": "A promise to give away a car with nothing given in return is generally:", "choices": ["Unenforceable, since it lacks consideration", "Fully enforceable as a valid contract", "Automatically voidable only by minors", "Enforceable only if written down"], "answer": 0, "explain": "A one-sided gift promise lacks consideration from the recipient, so courts generally won't enforce it as a contract."},
+            {"q": "A minor's contract for a non-necessary item is generally:", "choices": ["Voidable at the minor's option", "Automatically void with no legal effect at all", "Fully binding regardless of age", "Enforceable only against the minor's parents"], "answer": 0, "explain": "Minors can choose to disaffirm contracts for non-necessary items, making such contracts voidable rather than automatically void or fully binding."},
+            {"q": "Courts generally require consideration to:", "choices": ["Exist, without evaluating whether it's an adequate or fair value", "Be exactly equal in value on both sides", "Be paid entirely in cash", "Exceed $75,000 in value"], "answer": 0, "explain": "Courts check for the existence of consideration, not whether the bargain was a fair one."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Defenses to Contract Enforcement",
+          "minutes": 12,
+          "intro": "Even a contract with a valid offer, acceptance, and consideration can still be unenforceable if it was formed unfairly, lacks required formality, or crosses a legal line.",
+          "sections": [
+            {
+              "heading": "The Statute of Frauds",
+              "body": [
+                "The **statute of frauds** requires certain contracts to be in writing and signed to be enforceable, including contracts for the sale of goods over $500 (under the UCC), contracts that cannot be performed within one year, contracts for the sale of real estate, and contracts to answer for another's debt. A purely oral agreement falling into one of these categories is generally unenforceable, even if both parties clearly agreed to its terms.",
+                "Exceptions exist: partial performance, especially in real estate, can make an otherwise oral agreement enforceable, and under the UCC, a merchant's written confirmation of an oral agreement that the other merchant doesn't object to within a reasonable time can satisfy the writing requirement even without that party's own signature."
+              ]
+            },
+            {
+              "heading": "Misrepresentation, Duress, and Unconscionability",
+              "body": [
+                "A contract can be voided for **misrepresentation** (a false statement of material fact inducing agreement, whether intentional fraud or an innocent mistake), **duress** (agreement obtained through improper threats leaving no reasonable alternative), or **undue influence** (unfair persuasion exploiting a relationship of trust, such as a caregiver pressuring an elderly client).",
+                "**Unconscionability** allows a court to refuse to enforce a contract, or a specific clause, that is so one-sided and unfair — often combined with a serious imbalance of bargaining power — that enforcing it would shock the conscience. Courts apply this defense narrowly and rarely, reserving it for genuinely extreme cases rather than ordinary hard bargains."
+              ],
+              "example": {
+                "problem": "A homeowner orally agrees to sell a contractor $2,000 worth of custom cabinetry, to be delivered in three months. After the cabinetry is built and delivered, the homeowner refuses to pay, claiming the agreement was never in writing.",
+                "steps": [
+                  "Check the statute of frauds: a sale of goods over $500 generally requires a writing under the UCC, and this oral agreement exceeds that threshold.",
+                  "Check for an exception: goods that have been specially manufactured for the buyer and are not suitable for sale to others in the ordinary course of business are generally enforceable without a writing.",
+                  "Custom cabinetry built to this homeowner's specifications likely qualifies as specially manufactured goods, falling within this statute-of-frauds exception."
+                ],
+                "answer": "The oral agreement is likely still enforceable under the specially manufactured goods exception to the statute of frauds, since custom cabinetry isn't resalable to other buyers in the ordinary course of business."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Statute of frauds", "def": "A rule requiring certain categories of contracts to be in writing and signed to be enforceable."},
+            {"term": "Duress", "def": "Improper threats that leave a party no reasonable alternative but to agree to a contract."},
+            {"term": "Unconscionability", "def": "A defense allowing courts to refuse enforcement of a contract or clause that is extremely one-sided and unfair."}
+          ],
+          "practice": [
+            {"q": "Under the statute of frauds, which contract generally must be in writing?", "choices": ["A contract for the sale of goods over $500", "A contract for a $50 purchase", "Any contract performable within a month", "A verbal agreement between friends for a small favor"], "answer": 0, "explain": "Sales of goods over $500 fall within the UCC's statute of frauds writing requirement."},
+            {"q": "Specially manufactured goods not resalable to others are an exception to:", "choices": ["The statute of frauds writing requirement", "The mirror image rule", "The mailbox rule", "The doctrine of consideration"], "answer": 0, "explain": "This is a recognized statute of frauds exception, allowing enforcement of an oral agreement for custom goods."},
+            {"q": "Unconscionability is applied by courts:", "choices": ["Narrowly, reserved for extreme, shockingly one-sided contracts", "To void any contract one party later regrets", "Only to contracts involving minors", "Automatically whenever bargaining power is unequal"], "answer": 0, "explain": "Courts use unconscionability sparingly, for genuinely extreme unfairness, not for ordinary hard bargains."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Performance, Remedies, and Business Entities",
+      "summary": "Finish the life of a contract — performance, breach, and remedy — then step back to the entity choices and agency relationships that shape how a business itself is legally organized.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Performance, Breach, and Remedies",
+          "minutes": 13,
+          "intro": "When a deal goes wrong, the law doesn't just ask 'who broke the promise' — it asks how badly, and then calculates a specific dollar remedy designed to put the injured party where they would have been if the contract had been honored.",
+          "sections": [
+            {
+              "heading": "Material Versus Minor Breach",
+              "body": [
+                "A **material breach** is significant enough that it defeats the essential purpose of the contract, excusing the non-breaching party from their own further performance and allowing them to sue for total damages. A **minor breach** (partial or technical) doesn't excuse the other side's performance, but does allow a claim for the damages that specific breach caused.",
+                "**Substantial performance** — performing the essential terms with only minor, unintended deviations — generally entitles the performing party to payment, minus damages for the minor deviation, rather than forfeiting the whole contract price over a small, immaterial defect."
+              ]
+            },
+            {
+              "heading": "Calculating Damages",
+              "body": [
+                "**Expectation damages** (the standard remedy) put the injured party in the position they'd have been in if the contract had been performed — usually the difference between the contract price and the market price, or the cost to complete/repair the deficient performance. **Consequential damages** cover foreseeable additional losses beyond the direct contract value, but only if the breaching party could reasonably have foreseen them at the time of contracting.",
+                "The non-breaching party has a duty to **mitigate damages** — take reasonable steps to minimize the loss — and cannot recover for losses that reasonable mitigation would have avoided. A landlord whose tenant breaks a lease generally must make a reasonable effort to re-rent the unit rather than letting it sit empty and suing for the full remaining term."
+              ],
+              "example": {
+                "problem": "A contractor agrees to build a deck for $8,000. The buyer breaches after the contractor has already spent $3,000 on materials and labor, before any work was wasted, and the contractor could have used that time for a different $5,000 job but chose not to seek other work for two months.",
+                "steps": [
+                  "Calculate expectation damages: the contractor is generally entitled to lost profit plus costs already incurred, minus costs avoided by not finishing the job.",
+                  "Apply the duty to mitigate: since the contractor could have taken the $5,000 job but didn't try, a court may reduce the damages award by what could reasonably have been earned through mitigation.",
+                  "The final award should reflect the contractor's actual provable loss reduced by the reasonably avoidable $5,000 opportunity."
+                ],
+                "answer": "Damages are calculated as the contractor's provable loss from the breach, but reduced by the amount the contractor could reasonably have earned by mitigating (taking the available $5,000 job) instead of remaining idle."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Material breach", "def": "A breach significant enough to defeat the contract's essential purpose, excusing the other party's further performance."},
+            {"term": "Expectation damages", "def": "Damages that put the injured party in the position they'd have been in if the contract had been performed as agreed."},
+            {"term": "Duty to mitigate", "def": "The non-breaching party's obligation to take reasonable steps to minimize losses from a breach."}
+          ],
+          "practice": [
+            {"q": "A material breach, unlike a minor breach, generally:", "choices": ["Excuses the non-breaching party's own further performance", "Has no legal consequence at all", "Only applies to contracts for the sale of goods", "Automatically voids the contract from its inception"], "answer": 0, "explain": "A material breach defeats the contract's essential purpose, releasing the other party from further performance obligations."},
+            {"q": "The duty to mitigate damages means a non-breaching party:", "choices": ["Must take reasonable steps to minimize their loss", "Can recover damages regardless of avoidable losses", "Has no obligation to act after a breach", "Forfeits all rights to damages if they take any action"], "answer": 0, "explain": "Failing to reasonably mitigate can reduce the damages a non-breaching party is entitled to recover."},
+            {"q": "Expectation damages are generally calculated to:", "choices": ["Put the injured party where they'd have been if the contract were performed", "Punish the breaching party beyond the actual loss", "Award a fixed penalty regardless of actual loss", "Only cover legal fees"], "answer": 0, "explain": "Expectation damages aim to replicate the benefit of the bargain, not to punish beyond actual loss."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Business Entity Types",
+          "minutes": 12,
+          "intro": "Choosing how to legally organize a business shapes who's personally on the hook when something goes wrong, how profits are taxed, and how much paperwork the owners sign up for.",
+          "sections": [
+            {
+              "heading": "Sole Proprietorships and Partnerships",
+              "body": [
+                "A **sole proprietorship** is the simplest form: one owner, no separate legal entity, no formal registration required, but the owner has **unlimited personal liability** for all business debts and lawsuits. A **general partnership** is formed automatically whenever two or more people carry on a business for profit together, even without a written agreement, and each general partner similarly has unlimited personal liability, including for the other partners' business-related actions.",
+                "A **limited partnership** has at least one general partner (full liability, full management control) and one or more limited partners (liability limited to their investment, but generally no management control) — a structure often used to bring in passive investors without exposing them to unlimited liability."
+              ]
+            },
+            {
+              "heading": "Corporations and LLCs",
+              "body": [
+                "A **corporation** is a separate legal entity from its owners (shareholders), providing limited liability — shareholders generally risk only their investment, not personal assets — but subject to more formality (bylaws, board meetings, records) and, for a standard **C corporation**, double taxation (the corporation pays tax on profits, and shareholders pay tax again on dividends). An **S corporation** election avoids double taxation by passing income through to shareholders directly, subject to eligibility limits like a cap on the number of shareholders.",
+                "A **limited liability company (LLC)** combines limited liability (like a corporation) with pass-through taxation and management flexibility (like a partnership), and has become a popular default choice for small and mid-sized businesses precisely because it avoids the C corporation's double taxation without the unlimited liability of a proprietorship or general partnership."
+              ],
+              "example": {
+                "problem": "Two friends start a consulting business without filing any paperwork or signing a written agreement, splitting profits informally. One friend later signs a large, ill-advised contract on the business's behalf without telling the other, and the business can't pay.",
+                "steps": [
+                  "Identify the entity: carrying on a business for profit together without formal registration creates a general partnership by default, even without a written agreement.",
+                  "Apply the liability rule: general partners have unlimited personal liability, including for business obligations created by the other partner acting within the scope of the partnership's business.",
+                  "Conclude that both friends' personal assets are potentially at risk for the unpaid contract, not just the business's assets."
+                ],
+                "answer": "This is a general partnership by default, and both partners face unlimited personal liability for the contract, even though only one of them signed it, because it was made within the scope of the partnership's business."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Unlimited personal liability", "def": "Liability extending to an owner's personal assets, not just business assets, for business debts and obligations."},
+            {"term": "Limited liability", "def": "Liability capped at an owner's investment in the business, protecting personal assets, as with corporations and LLCs."},
+            {"term": "Pass-through taxation", "def": "A tax structure where business income is taxed only once, at the owner level, rather than at both the entity and owner level."}
+          ],
+          "practice": [
+            {"q": "Two people who start operating a business together for profit, with no paperwork filed, have by default formed a:", "choices": ["General partnership", "Corporation", "Limited liability company", "Sole proprietorship"], "answer": 0, "explain": "A general partnership forms automatically when two or more people carry on a business for profit together, regardless of paperwork."},
+            {"q": "A standard C corporation's profits are generally taxed:", "choices": ["Twice — once at the corporate level and again on shareholder dividends", "Only once, at the shareholder level", "Only once, at the corporate level, with no further tax", "Never, since corporations are tax-exempt"], "answer": 0, "explain": "C corporations face double taxation: the entity pays corporate tax, and shareholders pay tax again on dividends received."},
+            {"q": "An LLC is popular because it combines:", "choices": ["Limited liability with pass-through taxation and management flexibility", "Unlimited liability with double taxation", "No liability protection with pass-through taxation", "Limited liability with mandatory double taxation"], "answer": 0, "explain": "LLCs offer corporation-like liability protection alongside partnership-like pass-through taxation and flexible management."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Agency Law",
+          "minutes": 11,
+          "intro": "Businesses act through people — employees, contractors, officers — and agency law decides when the actions and mistakes of those people legally bind, or expose, the business itself.",
+          "sections": [
+            {
+              "heading": "Creating an Agency Relationship and Authority",
+              "body": [
+                "An **agency relationship** exists when one party (the **agent**) agrees to act on behalf of and under the control of another (the **principal**). An agent can bind the principal to a contract through **actual authority** (express or implied instructions from the principal) or **apparent authority** (the principal's conduct leads a reasonable third party to believe the agent has authority, even if actual authority was never actually granted).",
+                "Apparent authority protects third parties who reasonably rely on how a principal has presented an agent, which is why a company that lets an employee negotiate deals for years, even after quietly revoking their formal authority, can still be bound by that employee's contracts with customers who reasonably believed the authority still existed."
+              ]
+            },
+            {
+              "heading": "Respondeat Superior",
+              "body": [
+                "**Respondeat superior** ('let the superior answer') holds an employer liable for an employee's negligent or wrongful acts committed within the **scope of employment** — during work duties, at a work location, and at least partly to serve the employer's business purpose. Acts far outside the job's normal scope, or purely personal frolics unrelated to work, generally fall outside this doctrine and don't create employer liability.",
+                "This doctrine is why a delivery company can be liable when its driver, running a normal delivery route, negligently causes a car accident, but is much less likely to be liable if that same driver, after clocking out, causes an accident while driving to a personal errand unrelated to any work duty."
+              ],
+              "example": {
+                "problem": "A pizza delivery driver, running a normal delivery during his shift, runs a red light and injures a pedestrian. The injured pedestrian sues both the driver and the pizza company.",
+                "steps": [
+                  "Confirm the act falls within the scope of employment: the driver was actively performing an assigned delivery, during work hours, serving the employer's business purpose.",
+                  "Apply respondeat superior: because the negligent act occurred within the scope of employment, the employer can be held liable alongside the driver."
+                ],
+                "answer": "The pizza company can be held liable under respondeat superior because the driver's negligence occurred within the scope of employment while performing an assigned delivery."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Apparent authority", "def": "Authority a third party reasonably believes an agent has, based on the principal's own conduct, even without actual authority granted."},
+            {"term": "Respondeat superior", "def": "The doctrine holding an employer liable for an employee's wrongful acts committed within the scope of employment."},
+            {"term": "Scope of employment", "def": "Conduct occurring during work duties, at a work location, and at least partly serving the employer's business purpose."}
+          ],
+          "practice": [
+            {"q": "Apparent authority arises when:", "choices": ["A principal's conduct leads a third party to reasonably believe an agent has authority", "An agent secretly grants authority to themselves", "A written contract explicitly grants full authority", "No third party is ever involved"], "answer": 0, "explain": "Apparent authority is based on the principal's own conduct creating a reasonable belief in a third party, independent of actual authority."},
+            {"q": "Respondeat superior holds an employer liable for an employee's acts:", "choices": ["Committed within the scope of employment", "Committed at any time, even entirely unrelated to work", "Only when the employer personally directed the specific act", "Never, since employees are always personally liable alone"], "answer": 0, "explain": "The doctrine specifically requires the act to fall within the scope of employment, not any act by an employee at any time."},
+            {"q": "A delivery driver causing an accident during a personal errand after clocking out is generally:", "choices": ["Outside the scope of employment, reducing employer liability", "Still covered by respondeat superior in every case", "Automatically the employer's sole responsibility", "Irrelevant to agency law"], "answer": 0, "explain": "Personal activity unrelated to work duties generally falls outside the scope of employment that respondeat superior requires."}
+          ]
+        }
+      ]
+    }
+  ]
+}

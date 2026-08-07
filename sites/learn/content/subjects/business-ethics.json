@@ -1,0 +1,536 @@
+{
+  "id": "business-ethics",
+  "title": "Business Ethics",
+  "domain": "business",
+  "level": "Intro college",
+  "description": "A practical study of ethical reasoning applied to real business situations: how to weigh competing duties, evaluate consequences, and navigate pressure from stakeholders, culture, and technology. You will work through classic ethical frameworks and apply them to workplace dilemmas, corporate governance, and global business decisions.",
+  "outcomes": [
+    "You can apply utilitarian, deontological, and virtue-ethics reasoning to a business dilemma and compare the conclusions.",
+    "You can use a structured decision framework to work through an ethical conflict step by step.",
+    "You can explain how corporate culture and governance structures either support or undermine ethical behavior.",
+    "You can identify a company's stakeholders and evaluate a decision's impact on each.",
+    "You can analyze whistleblowing, workplace privacy, and technology-related ethical issues using recognized standards.",
+    "You can evaluate a corporate social responsibility claim and a real ethical failure case using course frameworks."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations of Ethical Reasoning",
+      "summary": "Before judging any business decision as right or wrong, you need shared vocabulary and tested frameworks — not just gut feeling.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "What Business Ethics Is",
+          "minutes": 11,
+          "intro": "Legal and ethical are not the same thing: plenty of legal actions are still widely seen as wrong, and business ethics is the discipline of reasoning through that gap carefully rather than assuming the law settles the question.",
+          "sections": [
+            {
+              "heading": "Ethics Versus Law and Compliance",
+              "body": [
+                "**Business ethics** is the study of what constitutes right and wrong conduct in a business context, distinct from law (the minimum standard enforced by government) and from compliance (following internal rules and external regulation). A company can be fully legal and fully compliant while still making choices most people would call unethical, such as aggressively marketing a harmful product to children in ways no specific law forbids.",
+                "This gap matters because relying only on 'is it legal?' leaves a company exposed: law lags behind new situations (new technology, new markets), and reputational damage from a legal-but-unethical choice can be as costly as a lawsuit, sometimes more so, because it erodes the trust a brand needs to operate."
+              ]
+            },
+            {
+              "heading": "Descriptive Versus Normative Ethics",
+              "body": [
+                "**Descriptive ethics** simply describes what people or cultures actually believe is right or wrong, without judging those beliefs. **Normative ethics** asks what actually is right or wrong, and tries to justify an answer with reasoning, not just report existing opinion.",
+                "Business ethics courses focus mainly on normative ethics, because the goal is to equip you to reason through a genuinely new situation — one your company's existing policy doesn't cover — not just to catalog what people currently happen to believe."
+              ],
+              "example": {
+                "problem": "A company discovers a loophole letting it dump a byproduct that isn't legally classified as hazardous waste, though it does mild, unquantified ecological harm. Is 'it's not illegal' a sufficient ethical justification?",
+                "steps": [
+                  "Separate the legal question (is it against the law?) from the ethical question (is it right?).",
+                  "Recognize that 'not illegal' only answers the legal question; ecological harm and reputational risk remain live ethical concerns regardless of legal status."
+                ],
+                "answer": "No — legality is a floor, not an ethical justification; the ecological harm and trust at stake require separate ethical evaluation."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Business ethics", "def": "The study of right and wrong conduct as applied to business decisions and organizations."},
+            {"term": "Compliance", "def": "Following internal rules and external regulations, distinct from broader ethical judgment."},
+            {"term": "Normative ethics", "def": "The branch of ethics that reasons toward what actually is right or wrong, rather than just describing existing beliefs."}
+          ],
+          "practice": [
+            {"q": "A company acting legally but still causing widespread reputational harm illustrates:", "choices": ["That legal and ethical are not the same standard", "That compliance guarantees ethical behavior", "That ethics has no practical relevance to business", "That descriptive ethics is the same as normative ethics"], "answer": 0, "explain": "Legality is a floor set by law; ethical judgment can and does go beyond it."},
+            {"q": "Descriptive ethics differs from normative ethics because it:", "choices": ["Reports what people believe without judging those beliefs", "Determines what is actually right or wrong", "Applies only to compliance departments", "Is identical to corporate law"], "answer": 0, "explain": "Descriptive ethics catalogs beliefs; normative ethics reasons toward a justified answer."},
+            {"q": "Relying only on 'is it legal?' as an ethical test is risky because:", "choices": ["Law often lags behind new situations and doesn't cover every case", "Legal standards are always identical to ethical ones", "Compliance departments handle all ethical questions", "Ethics only applies to illegal acts"], "answer": 0, "explain": "New situations, especially with new technology or markets, often aren't yet addressed by existing law."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Utilitarianism and Deontology",
+          "minutes": 13,
+          "intro": "Two people can disagree sharply about a business decision not because one is unethical, but because they're using entirely different definitions of what makes an action right.",
+          "sections": [
+            {
+              "heading": "Utilitarianism: Judging by Outcomes",
+              "body": [
+                "**Utilitarianism** judges an action by its consequences: the right choice is the one producing the greatest good (or least harm) for the greatest number of people affected. A utilitarian analysis of a factory closure would weigh total harm to laid-off workers against total benefit to remaining employees, shareholders, and customers from a leaner, more competitive company.",
+                "Utilitarianism's weakness is that it can justify harming a minority if it benefits a larger majority enough — for instance, it might endorse a policy that badly harms a small group of workers if it modestly benefits a much larger group, even when that feels unjust to the harmed minority."
+              ]
+            },
+            {
+              "heading": "Deontology: Judging by Duty",
+              "body": [
+                "**Deontological ethics** judges an action by whether it follows a moral duty or rule, regardless of the outcome — some actions (lying, breaking a promise, treating people merely as means to an end) are wrong even if they'd produce a better result. A deontologist would say a company has a duty to honor a signed contract even if breaking it would produce more total benefit.",
+                "Deontology's strength is protecting individuals from being sacrificed for aggregate benefit, since duties like honesty and promise-keeping don't bend just because breaking them would help more people. Its weakness is rigidity: it can require honoring a rule even in a case where the outcome is clearly disastrous."
+              ],
+              "example": {
+                "problem": "A pharmaceutical company must decide whether to recall a drug immediately, at massive cost and reputational damage, after finding it causes serious side effects in 1% of users but strong benefits for the other 99%. Compare a utilitarian and a deontological analysis.",
+                "steps": [
+                  "Utilitarian view: weigh total benefit to the 99% against total harm to the 1%, including severity; if the harmed group's suffering is severe, even a small percentage can outweigh a large but mild benefit.",
+                  "Deontological view: the company has a duty not to knowingly expose customers to serious harm without full disclosure and consent, regardless of the aggregate benefit calculation.",
+                  "Note that both frameworks can converge on 'recall or disclose,' but for different reasons — one because the numbers favor it, one because of a duty independent of the numbers."
+                ],
+                "answer": "Utilitarian reasoning depends on comparing total harm versus total benefit; deontological reasoning insists on the duty not to expose people to serious harm without disclosure, regardless of that calculation — both can support recalling the drug, but for different underlying reasons."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Utilitarianism", "def": "An ethical framework judging actions by whether they produce the greatest overall good for the greatest number."},
+            {"term": "Deontological ethics", "def": "An ethical framework judging actions by whether they follow moral duties or rules, regardless of outcome."},
+            {"term": "Aggregate benefit", "def": "The total combined benefit across everyone affected by a decision, the core measure in utilitarian reasoning."}
+          ],
+          "practice": [
+            {"q": "A framework that would honor a contract even if breaking it produced a better overall outcome is:", "choices": ["Deontological ethics", "Utilitarianism", "Descriptive ethics", "Compliance"], "answer": 0, "explain": "Deontology judges by duty (keeping promises) rather than by the outcome the action produces."},
+            {"q": "The core criticism of utilitarianism is that it can:", "choices": ["Justify harming a minority if it benefits a larger majority enough", "Never account for consequences at all", "Only apply to legal questions", "Ignore the greatest number entirely"], "answer": 0, "explain": "Because utilitarianism aggregates welfare, it can endorse outcomes that harm a minority for a larger majority's benefit."},
+            {"q": "Deontology's main weakness, compared to utilitarianism, is:", "choices": ["Rigidity — it can require following a rule even when the outcome is clearly disastrous", "It ignores duties entirely", "It cannot be applied to business decisions", "It always produces the same conclusion as utilitarianism"], "answer": 0, "explain": "Deontology's commitment to rules over outcomes can produce a rigid conclusion even in a case with a clearly bad result."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Virtue Ethics and Ethical Decision Frameworks",
+          "minutes": 12,
+          "intro": "Instead of asking 'what rule applies?' or 'what outcome is best?', virtue ethics asks a different question: what would a genuinely good person do here? — and a structured framework turns that question into a repeatable process.",
+          "sections": [
+            {
+              "heading": "Virtue Ethics",
+              "body": [
+                "**Virtue ethics** focuses on the character of the decision-maker rather than rules or consequences, asking what a person of good character — honest, fair, courageous, prudent — would do in this situation. A manager reasoning through virtue ethics asks not 'what's legal' or 'what maximizes profit' but 'what would an honest, fair-minded person in my position actually do here.'",
+                "Virtue ethics is less tidy than the other two frameworks because it doesn't produce a formula, but it captures something the others miss: that ethical business behavior is also about the ongoing habits and character of the people making decisions, not just isolated calculations for each choice."
+              ]
+            },
+            {
+              "heading": "A Structured Ethical Decision Framework",
+              "body": [
+                "A practical framework for working through a dilemma: (1) gather the relevant facts, (2) identify the stakeholders affected, (3) identify the ethical issue(s) at stake, (4) generate options, (5) evaluate each option against multiple frameworks (utilitarian, deontological, virtue), and (6) choose and be ready to justify the choice to stakeholders.",
+                "Running a decision through multiple frameworks rather than just one often reveals whether the frameworks converge (a good sign the choice is solid) or conflict (a sign the situation genuinely involves a hard tradeoff worth naming explicitly, rather than papering over)."
+              ],
+              "example": {
+                "problem": "A manager discovers a supplier uses labor practices that are legal in that country but would be considered exploitative by the manager's home-country standards. Switching suppliers would raise costs 20% and require a difficult conversation with the board.",
+                "steps": [
+                  "Facts: legal in the supplier's country, but conditions considered exploitative by the manager's own ethical standards; switching costs 20% more.",
+                  "Stakeholders: supplier's workers, the company's shareholders, customers, and the manager's own integrity/reputation.",
+                  "Run multiple frameworks: utilitarian analysis weighs worker welfare improvement against cost increases passed to customers; deontological analysis asks whether the company has a duty not to profit from exploitative conditions regardless of legality; virtue ethics asks what an honest, fair person would tolerate.",
+                  "Since frameworks converge toward switching or demanding improved conditions (the worker harm is significant and duty-based reasoning opposes profiting from it), recommend renegotiating standards with the current supplier first, switching only if they refuse."
+                ],
+                "answer": "Multiple frameworks converge toward action: first demand improved labor conditions from the current supplier, and switch suppliers if they refuse, rather than accepting exploitative conditions just because they're legal."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Virtue ethics", "def": "An ethical framework focused on the character of the decision-maker rather than rules or outcomes."},
+            {"term": "Stakeholder", "def": "Any individual or group affected by, or able to affect, a business decision."},
+            {"term": "Ethical decision framework", "def": "A structured, repeatable process for identifying facts, stakeholders, and options before choosing a course of action."}
+          ],
+          "practice": [
+            {"q": "Virtue ethics primarily asks:", "choices": ["What would a person of good character do in this situation?", "What rule must be followed regardless of outcome?", "What produces the greatest total benefit?", "What is strictly legal?"], "answer": 0, "explain": "Virtue ethics centers on character and what a genuinely good person would do, not a rule or outcome calculation."},
+            {"q": "When multiple ethical frameworks applied to the same dilemma converge on the same choice, that is:", "choices": ["A good sign the choice is solid", "Proof the decision is definitely wrong", "Irrelevant to the final decision", "Evidence that ethics doesn't matter"], "answer": 0, "explain": "Convergence across independent frameworks strengthens confidence that a choice holds up under different ethical lenses."},
+            {"q": "The first step in a structured ethical decision framework is typically to:", "choices": ["Gather the relevant facts", "Choose the final decision immediately", "Consult only utilitarian reasoning", "Skip stakeholder identification"], "answer": 0, "explain": "Frameworks start with facts before moving to stakeholders, options, and framework evaluation."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Ethics Inside the Organization",
+      "summary": "Ethical behavior isn't just an individual choice — it's shaped by the culture a company builds, the governance structures that check power, and how seriously it takes its stakeholders.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Corporate Culture and Ethics",
+          "minutes": 12,
+          "intro": "Two employees can read the identical code of conduct and behave completely differently, because the code isn't what actually drives behavior — the culture around it is.",
+          "sections": [
+            {
+              "heading": "How Culture Shapes Ethical Behavior",
+              "body": [
+                "A company's ethical culture is shaped far more by what leadership actually rewards and tolerates than by what the written code of conduct says. If a top salesperson who cuts ethical corners gets promoted anyway, employees learn the real rule: results matter more than the stated values, no matter what the handbook claims.",
+                "**Tone at the top** describes how senior leadership's visible behavior sets the ethical standard for the whole organization; a CEO who visibly cuts corners undermines every ethics training session the company runs, because employees calibrate to observed behavior, not stated policy."
+              ]
+            },
+            {
+              "heading": "Ethical Climate and Reporting Systems",
+              "body": [
+                "An organization's **ethical climate** is the shared perception of what ethical behavior is expected and rewarded day to day. A strong ethical climate includes psychological safety to raise concerns without retaliation, visible consequences for violations regardless of seniority, and leaders who model the standard themselves rather than just announcing it.",
+                "Anonymous reporting hotlines and clear non-retaliation policies matter because employees who fear retaliation for raising a concern will simply stay silent, letting problems compound until they surface publicly — usually at a much higher cost than if they'd been addressed early."
+              ],
+              "example": {
+                "problem": "A company has an ethics hotline and a written code of conduct, but a senior VP who bullies subordinates and pressures them to falsify reports has never faced consequences because he hits his numbers. Diagnose the culture problem.",
+                "steps": [
+                  "Identify the gap: written policy exists, but tone at the top (tolerating the VP's behavior because of results) sends the opposite real message.",
+                  "Predict the consequence: employees will conclude that results override ethical conduct, weakening the hotline's credibility since reports about protected high performers appear to go nowhere.",
+                  "Recommend action: hold the VP accountable regardless of performance, since credible enforcement — not just having a hotline — is what builds a genuine ethical climate."
+                ],
+                "answer": "The real message being sent is that results excuse misconduct; fixing it requires visibly holding the VP accountable, since policy without consistent enforcement doesn't change the actual culture."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Tone at the top", "def": "The ethical standard set by senior leadership's visible behavior, which shapes the whole organization's conduct."},
+            {"term": "Ethical climate", "def": "The shared perception within an organization of what ethical behavior is actually expected and rewarded."},
+            {"term": "Non-retaliation policy", "def": "A commitment protecting employees who report concerns from punishment, intended to encourage early reporting."}
+          ],
+          "practice": [
+            {"q": "A company's real ethical culture is shaped most by:", "choices": ["What leadership actually rewards and tolerates, not just written policy", "The length of its code of conduct", "How many ethics training hours are required", "The company's stock price"], "answer": 0, "explain": "Observed leadership behavior and consequences shape actual culture more than written policy alone."},
+            {"q": "A hotline with no real consequences for reported misconduct will most likely:", "choices": ["Lose credibility as employees see reports go nowhere", "Automatically improve the ethical climate", "Eliminate the need for tone at the top", "Guarantee non-retaliation"], "answer": 0, "explain": "Reporting systems only work if they lead to visible, credible consequences; otherwise employees stop trusting them."},
+            {"q": "'Tone at the top' refers to:", "choices": ["How senior leadership's visible behavior sets the ethical standard", "The volume of a company's marketing", "A synonym for compliance training", "The legal department's policies alone"], "answer": 0, "explain": "Tone at the top is specifically about leadership's observed behavior setting the real standard employees follow."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Corporate Governance",
+          "minutes": 12,
+          "intro": "Even well-intentioned executives can drift toward self-serving decisions without structures that check their power — governance is the set of guardrails meant to keep that from happening.",
+          "sections": [
+            {
+              "heading": "The Board's Oversight Role",
+              "body": [
+                "**Corporate governance** is the system of rules, practices, and relationships by which a company is directed and controlled, centered on the board of directors' duty to oversee management on behalf of shareholders and other stakeholders. An **independent director** (one without financial ties to the company beyond board pay) is meant to check executive decisions more objectively than an insider would.",
+                "Weak governance shows up as a board stacked with executives' allies, minimal separation between the CEO and board chair roles, and rubber-stamp approval of executive pay and major decisions — all of which reduce the real check governance is supposed to provide."
+              ]
+            },
+            {
+              "heading": "Conflicts of Interest and Agency Problems",
+              "body": [
+                "The **agency problem** arises because managers (agents) may act in their own interest rather than shareholders' (principals') interest — for example, approving an acquisition that builds an executive's personal empire and pay but destroys shareholder value. Governance structures like independent audit committees and performance-linked (not just tenure-linked) executive pay are designed to narrow this gap.",
+                "A **conflict of interest** exists whenever a decision-maker's personal interest could improperly influence a decision they're supposed to make objectively — a purchasing manager awarding a contract to a supplier owned by a family member, even if that supplier happens to be competent, still creates a conflict that should be disclosed and typically recused from."
+              ],
+              "example": {
+                "problem": "A company's board is composed mostly of the CEO's personal friends and former direct reports, and it just approved a large bonus for the CEO in a year the company's stock fell 15%.",
+                "steps": [
+                  "Identify the governance weakness: a board without independence cannot objectively check the CEO's decisions or pay.",
+                  "Connect to the agency problem: the CEO (agent) benefited personally even though shareholders (principals) lost value, exactly the divergence governance is meant to prevent.",
+                  "Recommend a fix: add genuinely independent directors with no personal ties to the CEO, and tie executive pay more directly to shareholder-value performance metrics."
+                ],
+                "answer": "The board lacks independence, allowing an agency-problem outcome (CEO rewarded despite shareholder losses); the fix is adding independent directors and linking pay to real performance."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Corporate governance", "def": "The system of rules and relationships by which a company is directed and controlled on behalf of shareholders and stakeholders."},
+            {"term": "Independent director", "def": "A board member without financial ties to the company beyond board compensation, meant to provide objective oversight."},
+            {"term": "Agency problem", "def": "The risk that managers (agents) act in their own interest rather than in shareholders' (principals') interest."}
+          ],
+          "practice": [
+            {"q": "A board stacked with the CEO's personal allies most directly weakens:", "choices": ["Independent oversight of executive decisions", "The company's marketing strategy", "Customer segmentation", "Product life cycle management"], "answer": 0, "explain": "A board without genuine independence cannot objectively check the CEO, undermining governance's core purpose."},
+            {"q": "The agency problem describes the risk that:", "choices": ["Managers act in their own interest rather than shareholders'", "Shareholders always act unethically", "Independent directors have too much power", "Governance rules are always followed perfectly"], "answer": 0, "explain": "It specifically names the divergence between managers' (agents') interests and shareholders' (principals') interests."},
+            {"q": "A purchasing manager awarding a contract to a family member's firm creates:", "choices": ["A conflict of interest that should be disclosed and typically recused from", "No ethical issue if the firm is competent", "An example of strong governance", "A resolved agency problem"], "answer": 0, "explain": "Personal interest improperly influencing an objective decision is a conflict of interest regardless of the firm's competence."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Stakeholder Theory",
+          "minutes": 11,
+          "intro": "Shareholders aren't the only people a business decision affects, and stakeholder theory asks managers to widen their view of who counts before making a call.",
+          "sections": [
+            {
+              "heading": "Shareholder Versus Stakeholder Views",
+              "body": [
+                "The **shareholder view** (associated with economist Milton Friedman) holds that a company's primary responsibility is maximizing shareholder value within the law. The **stakeholder view** holds that a company has obligations to all groups affected by its decisions — employees, customers, suppliers, communities, and the environment — not just shareholders.",
+                "The two views often converge in practice, since treating employees and customers well tends to support long-term shareholder value too, but they diverge sharply in hard cases: a plant closure that maximizes shareholder value by cutting costs may devastate a local community that stakeholder theory says deserves real weight in the decision."
+              ]
+            },
+            {
+              "heading": "Mapping and Prioritizing Stakeholders",
+              "body": [
+                "A practical **stakeholder map** lists each affected group and rates them on power (ability to affect the company) and interest/impact (how much the decision affects them), helping managers decide who to consult, inform, or actively manage in a decision. A group with high power and high impact (a major regulator, a unionized workforce) generally needs direct engagement, not just notification after the fact.",
+                "Stakeholder theory doesn't claim every stakeholder gets an equal vote — it claims every affected group's interests deserve honest consideration before a decision is finalized, which is a lower bar than giving everyone veto power but a meaningfully higher bar than considering only shareholders."
+              ],
+              "example": {
+                "problem": "A manufacturer is deciding whether to close a plant in a small town, saving $8 million a year for shareholders but eliminating 400 jobs that anchor the local economy. Apply stakeholder theory to the decision process.",
+                "steps": [
+                  "Identify stakeholders beyond shareholders: 400 employees, their families, the town's local businesses and tax base, and the customers relying on the plant's output.",
+                  "Map power and impact: the affected town has high impact (economic devastation) even if it has limited power to stop the decision.",
+                  "Apply stakeholder theory: honestly weigh community and worker impact alongside shareholder benefit — for example, considering a phased closure, retraining support, or a delayed timeline — rather than deciding solely on the $8 million shareholder benefit."
+                ],
+                "answer": "Stakeholder theory requires weighing the town's and workers' interests honestly alongside the shareholder benefit, likely leading to mitigations like phased closure or transition support rather than an abrupt, shareholder-only decision."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Shareholder view", "def": "The position that a company's primary responsibility is maximizing shareholder value within the law."},
+            {"term": "Stakeholder view", "def": "The position that a company has obligations to all groups affected by its decisions, not just shareholders."},
+            {"term": "Stakeholder map", "def": "A tool rating affected groups by power and impact to guide how a decision-maker engages each one."}
+          ],
+          "practice": [
+            {"q": "The stakeholder view differs from the shareholder view by holding that a company:", "choices": ["Has obligations to all groups its decisions affect", "Should only ever maximize shareholder value", "Has no obligations to shareholders at all", "Should ignore local communities entirely"], "answer": 0, "explain": "The stakeholder view widens responsibility beyond shareholders to employees, customers, and communities."},
+            {"q": "A stakeholder map rates affected groups primarily by:", "choices": ["Power and impact/interest", "Alphabetical order", "Company tenure", "Shareholder status only"], "answer": 0, "explain": "The map assesses how much power a group has and how much the decision affects them."},
+            {"q": "Stakeholder theory claims every affected group deserves:", "choices": ["Honest consideration, though not necessarily an equal vote", "An equal vote on every decision", "No consideration if they lack formal power", "Consideration only if they are shareholders"], "answer": 0, "explain": "The theory requires honest weighing of interests, a lower bar than veto power but higher than shareholder-only focus."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Ethics in Practice",
+      "summary": "Move from theory to the situations that actually trigger ethics complaints: workplace conduct, new technology, and how companies claim (or fail to earn) social responsibility.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Workplace Ethics and Whistleblowing",
+          "minutes": 12,
+          "intro": "Most ethical failures aren't discovered by regulators first — they're discovered by an employee who noticed something wrong and had to decide whether to say anything.",
+          "sections": [
+            {
+              "heading": "Employer-Employee Duties",
+              "body": [
+                "Employers owe employees fair treatment, a safe working environment, honest communication about job conditions, and privacy protections appropriate to the role; employees owe employers honest effort, confidentiality of proprietary information, and good-faith service. Both duties run in both directions, and an employer that violates its side (unsafe conditions, dishonest pay practices) undermines its ethical standing to demand loyalty in return.",
+                "Workplace privacy is a common friction point: employers have legitimate interests in monitoring for security and performance, but monitoring that is excessive, undisclosed, or applied unevenly can violate a reasonable expectation of privacy and damage trust even where it's technically legal."
+              ]
+            },
+            {
+              "heading": "Whistleblowing",
+              "body": [
+                "**Whistleblowing** is reporting an organization's wrongdoing, either internally (to management or a hotline) or externally (to regulators, media, or the public). Ethically, internal reporting is usually the appropriate first step when there's a credible internal channel and no urgent danger — external whistleblowing is generally justified only when internal channels have failed, been exhausted, or ignoring them risks serious ongoing harm.",
+                "Whistleblowers often face real retaliation risk despite legal protections, which is why a strong ethical climate (Unit 2) that visibly protects and rewards good-faith reporting matters — legal protection alone doesn't remove the practical fear that keeps many people silent."
+              ],
+              "example": {
+                "problem": "An accountant discovers her company has been misreporting revenue to inflate quarterly earnings. She has already raised the issue twice with her manager, who dismissed her both times and implied she should drop it.",
+                "steps": [
+                  "Assess whether internal channels have been genuinely exhausted: two dismissed internal reports to the direct manager count as a real attempt, but a compliance hotline or audit committee may still be an available, unexhausted internal channel.",
+                  "If those higher internal channels also fail or are unavailable, and the misreporting is material and ongoing (harming investors), external reporting to a regulator becomes ethically justified.",
+                  "Document everything along the way, since evidence matters both for credibility and for the accountant's own protection."
+                ],
+                "answer": "Escalate first to a higher internal channel (compliance hotline, audit committee) if one exists; only move to external reporting (e.g., regulators) if internal channels are genuinely exhausted and the harm is material and ongoing."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Whistleblowing", "def": "Reporting an organization's wrongdoing internally or externally, to management, regulators, or the public."},
+            {"term": "Internal reporting", "def": "Raising a concern through an organization's own channels, such as a manager or ethics hotline."},
+            {"term": "External whistleblowing", "def": "Reporting wrongdoing outside the organization, generally justified only after internal channels fail or are exhausted."}
+          ],
+          "practice": [
+            {"q": "External whistleblowing is generally considered ethically justified when:", "choices": ["Internal channels have failed or been exhausted and serious harm continues", "Any minor disagreement with a manager occurs", "It's the very first step, before trying internal channels", "The company has any hotline at all, regardless of outcome"], "answer": 0, "explain": "Internal reporting is the appropriate first step; external reporting is justified once those channels fail and material harm persists."},
+            {"q": "Employer-employee ethical duties run:", "choices": ["In both directions between employer and employee", "Only from employee to employer", "Only from employer to employee", "Only when a union is present"], "answer": 0, "explain": "Both parties owe duties to each other — fair treatment and safety from the employer, honest effort and confidentiality from the employee."},
+            {"q": "Legal whistleblower protections alone are often insufficient because:", "choices": ["Practical fear of retaliation can persist despite legal protection", "They make whistleblowing illegal", "They eliminate all retaliation risk automatically", "They apply only to external reporting"], "answer": 0, "explain": "Fear of informal retaliation (being sidelined, excluded) can persist even when formal legal protections exist."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Ethics and Technology",
+          "minutes": 12,
+          "intro": "New technology tends to outrun the ethical norms and laws meant to govern it, leaving companies to make judgment calls about data, automation, and AI well before clear rules exist.",
+          "sections": [
+            {
+              "heading": "Data Privacy and Surveillance",
+              "body": [
+                "Companies routinely collect far more customer data than is strictly necessary for the service provided, raising the ethical question of **informed consent**: do customers actually understand what's being collected and how it will be used, or did they just click 'accept' on a long, unread policy? Consent that isn't genuinely informed is ethically thin even where it's legally sufficient.",
+                "The **principle of data minimization** — collecting only the data actually needed for a stated purpose — is an ethical standard some companies adopt voluntarily, going beyond what law requires, because it reduces harm from eventual data breaches and respects customer autonomy over their own information."
+              ]
+            },
+            {
+              "heading": "Algorithmic Bias and Automation",
+              "body": [
+                "**Algorithmic bias** occurs when an automated system (hiring screener, loan approval algorithm) systematically disadvantages a group, often because it was trained on historically biased data that encodes past discrimination into a seemingly 'neutral' math model. A hiring algorithm trained on a company's past hiring data can quietly reproduce that company's past biases at scale, faster than any individual human reviewer could.",
+                "Automation that replaces jobs raises a distinct ethical question about the transition, not just the outcome: companies deploying labor-saving automation face an ethical question about how much responsibility they bear for retraining or transitioning displaced workers, separate from whether the automation itself is a legitimate business decision."
+              ],
+              "example": {
+                "problem": "A company adopts an AI hiring tool trained on ten years of the company's past hiring decisions. An audit finds it systematically rates resumes from graduates of historically Black colleges lower, even controlling for qualifications.",
+                "steps": [
+                  "Identify the mechanism: the tool learned from past hiring data, which likely encoded historical bias, and the algorithm is now reproducing that bias at scale.",
+                  "Recognize this isn't a 'neutral math' defense — a biased outcome from biased training data is still an ethical (and likely legal) problem regardless of the algorithm's technical objectivity.",
+                  "Recommend action: retrain or replace the model using audited, bias-corrected data, and add human review specifically checking for this kind of disparate outcome before relying on the tool further."
+                ],
+                "answer": "The bias must be corrected, not excused as 'just math' — retrain the model on audited data and add human oversight checking for disparate outcomes before continued use."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Informed consent", "def": "Genuine understanding by a customer of what data is collected and how it will be used, beyond simply clicking 'accept.'"},
+            {"term": "Data minimization", "def": "The practice of collecting only the data actually necessary for a stated purpose."},
+            {"term": "Algorithmic bias", "def": "Systematic disadvantage produced by an automated system, often from training on historically biased data."}
+          ],
+          "practice": [
+            {"q": "Algorithmic bias in a hiring tool most often originates from:", "choices": ["Training data that encodes past human bias", "The algorithm's code being written in a biased programming language", "Random chance with no identifiable cause", "Excessive human oversight"], "answer": 0, "explain": "Models trained on historically biased decisions tend to reproduce that bias at scale."},
+            {"q": "Consent obtained by a customer clicking 'accept' on an unread policy is:", "choices": ["Legally sufficient but ethically thin if not genuinely informed", "Always fully ethical if it's legal", "Irrelevant to data privacy ethics", "Proof of data minimization"], "answer": 0, "explain": "Genuine informed consent requires real understanding, which clicking through an unread policy doesn't guarantee."},
+            {"q": "Data minimization means a company should:", "choices": ["Collect only data necessary for a stated purpose", "Collect as much data as technically possible", "Avoid collecting any customer data ever", "Share all collected data publicly"], "answer": 0, "explain": "It's the principle of limiting collection to what's actually needed, reducing breach and misuse risk."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Corporate Social Responsibility",
+          "minutes": 12,
+          "intro": "Every company now claims to care about sustainability and community, but claims are cheap — evaluating whether CSR is genuine or just marketing requires looking past the press release.",
+          "sections": [
+            {
+              "heading": "What CSR Actually Means",
+              "body": [
+                "**Corporate social responsibility (CSR)** refers to a company's voluntary commitments beyond legal compliance to social, environmental, and economic wellbeing — reducing environmental footprint, fair labor practices in the supply chain, community investment. Genuine CSR is integrated into core business decisions (sourcing, pricing, operations), not confined to a separate marketing campaign layered on top of unchanged practices.",
+                "The **triple bottom line** — people, planet, profit — frames CSR as measuring success across social and environmental impact alongside financial performance, rather than treating financial return as the only metric that counts."
+              ]
+            },
+            {
+              "heading": "Greenwashing and Evaluating CSR Claims",
+              "body": [
+                "**Greenwashing** is exaggerating or fabricating a company's environmental or social commitments to look responsible without matching substantive action — a company touting a small 'green' product line while its core operations remain unchanged and high-impact. Genuine CSR claims should be verifiable: specific, measured targets with third-party audits, not vague language like 'committed to sustainability.'",
+                "A useful test: does the CSR claim cost the company anything real (changed sourcing, higher input costs, foregone short-term profit), or is it purely promotional with no operational change behind it? Genuine commitments usually show up as real tradeoffs somewhere in the business, not just in advertising copy."
+              ],
+              "example": {
+                "problem": "A fast-fashion company launches a 'sustainable collection' that is 2% of total sales, made from recycled materials, while continuing high-volume, high-waste production for the other 98% of its business. Its marketing emphasizes 'commitment to sustainability.'",
+                "steps": [
+                  "Apply the test: does the claim reflect a real, costly operational change, or is it confined to a small promotional line?",
+                  "Note that 98% of production is unaffected, meaning the core business model and its environmental impact haven't meaningfully changed.",
+                  "Conclude this pattern is a warning sign of greenwashing — a small, genuine effort used to imply a broader commitment that doesn't exist."
+                ],
+                "answer": "This is likely greenwashing: a small, real sustainable line is being used to imply a company-wide commitment the actual 98%-unchanged production doesn't support."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Corporate social responsibility (CSR)", "def": "A company's voluntary commitments beyond legal compliance to social, environmental, and economic wellbeing."},
+            {"term": "Triple bottom line", "def": "A framework measuring success across people, planet, and profit rather than financial return alone."},
+            {"term": "Greenwashing", "def": "Exaggerating or fabricating environmental or social commitments without matching substantive action."}
+          ],
+          "practice": [
+            {"q": "Genuine CSR is best distinguished from greenwashing by:", "choices": ["Real, costly operational changes rather than promotional claims alone", "The length of the sustainability press release", "How many awards a company has won", "Having any environmental program at all, regardless of scale"], "answer": 0, "explain": "Genuine commitment shows up as actual tradeoffs in the business, not just marketing language."},
+            {"q": "The triple bottom line adds which two measures alongside profit?", "choices": ["People and planet", "Price and promotion", "Product and place", "Revenue and market share"], "answer": 0, "explain": "The triple bottom line frames success as people, planet, and profit together."},
+            {"q": "A company with a small 'green' product line but unchanged high-impact core operations is a warning sign of:", "choices": ["Greenwashing", "Genuine data minimization", "A strong ethical climate", "Effective stakeholder mapping"], "answer": 0, "explain": "A minor sustainable effort used to imply a broader unsupported commitment is a classic greenwashing pattern."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Ethics in a Global Economy",
+      "summary": "Zoom out to the largest scale: ethical leadership that sets the tone for an entire organization, and the hard tradeoffs businesses face operating across different cultures and legal systems.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Ethical Leadership",
+          "minutes": 12,
+          "intro": "An organization's ethics ultimately trace back to the people at the top — not because leaders are morally superior, but because their visible choices set the standard everyone else calibrates to.",
+          "sections": [
+            {
+              "heading": "What Ethical Leadership Looks Like",
+              "body": [
+                "**Ethical leadership** combines personal integrity (consistency between stated values and actual behavior) with active promotion of ethical conduct in others — rewarding honesty, addressing violations consistently regardless of the violator's rank, and being transparent about the reasoning behind hard decisions. A leader who is personally honest but silent when subordinates cut corners is only halfway to ethical leadership.",
+                "Ethical leaders make their reasoning visible, especially for unpopular decisions, because transparency about why a hard call was made (even one people disagree with) builds more trust than a decision announced without explanation, which reads as arbitrary even if it was carefully reasoned."
+              ]
+            },
+            {
+              "heading": "Ethical Leadership Under Pressure",
+              "body": [
+                "The real test of ethical leadership comes under pressure — a missed quarterly target, a competitive threat, a crisis — because it's easy to claim ethical values when they cost nothing and much harder to hold them when a shortcut would clearly help the numbers. Leaders who fold under pressure teach the organization that ethical talk is only for good times.",
+                "A practical marker of genuine ethical leadership is willingness to accept a worse short-term outcome (lower quarterly profit, a harder competitive position) to avoid an unethical shortcut, and to communicate that tradeoff honestly to the board and employees rather than hiding it."
+              ],
+              "example": {
+                "problem": "A CEO is under pressure to hit a quarterly earnings target that analysts expect. Meeting it would require recognizing revenue from a deal that hasn't actually closed yet — a common but ethically and often legally questionable practice. The CEO refuses and reports the real numbers, missing the target and taking a stock price hit.",
+                "steps": [
+                  "Recognize the pressure test: an easy shortcut (premature revenue recognition) existed and was rejected despite real short-term cost.",
+                  "Identify the ethical leadership marker: accepting a worse short-term outcome to avoid a shortcut, and communicating honestly about the miss rather than hiding it."
+                ],
+                "answer": "The CEO demonstrated ethical leadership by accepting the real short-term cost of honest reporting rather than taking an available shortcut, and by being transparent about the miss."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Ethical leadership", "def": "Leadership combining personal integrity with active promotion of ethical conduct throughout an organization."},
+            {"term": "Integrity", "def": "Consistency between a person's stated values and their actual behavior."},
+            {"term": "Transparency", "def": "Openly communicating the reasoning behind decisions, especially difficult or unpopular ones."}
+          ],
+          "practice": [
+            {"q": "The real test of ethical leadership occurs:", "choices": ["Under pressure, when a shortcut would clearly help the numbers", "Only when a company is already profitable", "Only in written codes of conduct", "Only during ethics training sessions"], "answer": 0, "explain": "It's easy to hold ethical values when costless; pressure reveals whether they're genuinely held."},
+            {"q": "A leader who is personally honest but ignores subordinates cutting corners is:", "choices": ["Only halfway to ethical leadership", "Fully demonstrating ethical leadership", "Not relevant to organizational ethics", "Guaranteed to build strong trust"], "answer": 0, "explain": "Ethical leadership requires actively promoting ethical conduct in others, not just personal honesty."},
+            {"q": "Transparency about a hard decision matters because it:", "choices": ["Builds more trust than an unexplained decision, even if people disagree", "Guarantees everyone will agree with the decision", "Is irrelevant if the decision was correct", "Only matters for illegal decisions"], "answer": 0, "explain": "Visible reasoning, even for unpopular calls, builds trust that an unexplained decision cannot."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Globalization and Cross-Cultural Ethics",
+          "minutes": 12,
+          "intro": "A practice considered completely normal in one country can look clearly unethical from another — and global businesses have to decide how to navigate that gap without either imposing their own standards blindly or excusing anything under the banner of 'cultural difference.'",
+          "sections": [
+            {
+              "heading": "Ethical Relativism Versus Ethical Universalism",
+              "body": [
+                "**Ethical relativism** holds that what's ethical depends on the local culture's norms, so a practice acceptable in one country shouldn't be judged by another country's standards. **Ethical universalism** holds that certain standards (basic human rights, prohibitions on exploitation and fraud) apply everywhere regardless of local custom or law.",
+                "Most working businesspeople land somewhere between the extremes: respecting genuine cultural variation in business customs (gift-giving norms, negotiation styles, working hour conventions) while still holding firm to universal minimums around child labor, forced labor, and physical safety, which aren't treated as merely 'a different custom.'"
+              ]
+            },
+            {
+              "heading": "Bribery, Facilitation Payments, and Local Custom",
+              "body": [
+                "Some countries have a well-established informal practice of small **facilitation payments** to speed up routine government processing, which locals may view very differently from outright bribery for special favors. Many multinational companies nonetheless adopt a strict no-payment policy regardless of local custom, precisely because the line between a modest facilitation payment and outright corruption is blurry and easy to slide across.",
+                "The U.S. Foreign Corrupt Practices Act and similar laws in other countries make this a legal issue as well as an ethical one, but the ethical reasoning matters independently: a company must decide in advance, through clear policy, rather than case-by-case improvisation under local pressure, which tends to drift toward whatever gets the deal done fastest."
+              ],
+              "example": {
+                "problem": "A company's local manager in a foreign subsidiary reports that a small payment to a customs official is 'just how things work here' and needed to clear a shipment that's otherwise fully compliant with all paperwork requirements.",
+                "steps": [
+                  "Apply universalist reasoning to the bribery-adjacent core: paying an official to perform their normal duty faster still risks crossing into corruption, regardless of local framing.",
+                  "Check company policy: most multinational firms have a bright-line no-payment rule precisely to avoid case-by-case drift toward corruption under local pressure.",
+                  "Recommend escalating through legitimate channels (formal complaint, higher-level government contact) rather than making the payment, even at the cost of a delayed shipment."
+                ],
+                "answer": "Refuse the payment and escalate through legitimate channels, since a bright-line no-payment policy avoids the ethical and legal drift that case-by-case exceptions invite."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Ethical relativism", "def": "The view that what is ethical depends on local cultural norms and should not be judged by outside standards."},
+            {"term": "Ethical universalism", "def": "The view that certain ethical standards apply everywhere regardless of local custom or law."},
+            {"term": "Facilitation payment", "def": "A small payment to speed up routine government processing, ethically and legally blurry compared to outright bribery."}
+          ],
+          "practice": [
+            {"q": "Ethical universalism holds that:", "choices": ["Certain standards apply everywhere regardless of local custom", "Every local custom should be judged only by its own standards", "No universal ethical standards can exist", "Local law always overrides ethical judgment"], "answer": 0, "explain": "Universalism asserts standards like prohibitions on exploitation apply across all cultures."},
+            {"q": "Most multinational companies adopt strict no-payment policies for facilitation payments because:", "choices": ["The line between a small payment and outright corruption is blurry and easy to cross", "Facilitation payments are always fully legal everywhere", "It guarantees faster processing every time", "Local custom always requires such payments"], "answer": 0, "explain": "A bright-line policy avoids the gradual drift from small payments into outright corruption."},
+            {"q": "A business approach balancing relativism and universalism typically:", "choices": ["Respects genuine cultural variation while holding firm on universal minimums like forced labor bans", "Rejects all local business customs entirely", "Treats every local practice as equally acceptable", "Ignores human rights standards in favor of local law"], "answer": 0, "explain": "A balanced approach respects real cultural variation in customs while still enforcing universal minimums."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Learning From Ethical Failures",
+          "minutes": 13,
+          "intro": "The clearest ethics lessons often come from studying how real companies went wrong — not to assign blame from a distance, but to spot the warning signs before they replay somewhere else.",
+          "sections": [
+            {
+              "heading": "Common Patterns in Corporate Ethical Failures",
+              "body": [
+                "Studying real corporate scandals reveals recurring patterns: incentive structures that reward hitting a number regardless of how (encouraging fraud when the honest number falls short), a culture where dissent was actively punished or quietly discouraged, weak or captured governance that failed to ask hard questions, and a slow slide where each small compromise made the next one easier to rationalize.",
+                "This slow-slide pattern, sometimes called the **normalization of deviance**, describes how a first small ethical compromise that produces no visible bad consequence makes a second, slightly larger compromise feel normal, and so on — until a company arrives somewhere it never would have agreed to go in one single decision."
+              ]
+            },
+            {
+              "heading": "Applying the Warning Signs",
+              "body": [
+                "Practical warning signs to watch for in any organization: numbers that are suspiciously smooth and always exactly hit target, a culture where raising concerns is met with career consequences, a board that never pushes back on management, and a growing gap between what leadership claims publicly and internal reporting shows privately.",
+                "The value of studying failure cases isn't hindsight blame — it's pattern recognition: someone who has studied the normalization-of-deviance pattern is more likely to notice a small compromise happening in their own organization now, while it's still small enough to stop."
+              ],
+              "example": {
+                "problem": "A mid-level analyst at a growing company notices that sales figures have been rounded up 'just slightly' for three consecutive quarters, each time justified as an immaterial rounding choice management insists is harmless. She's now asked to round up a fourth time, more than before.",
+                "steps": [
+                  "Recognize the pattern: this is normalization of deviance — each small compromise made the next, slightly larger one feel routine.",
+                  "Note the warning signs: smoothed numbers hitting target repeatedly, and escalating magnitude of the compromise being asked for.",
+                  "Recommend raising the pattern explicitly (not just this single instance) to a genuinely independent channel, since the trend itself, not just one quarter's number, is the real problem."
+                ],
+                "answer": "This is a normalization-of-deviance pattern; the analyst should flag the escalating, repeated nature of the adjustments to an independent channel, since the trend is the real warning sign, not any single quarter's number alone."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Normalization of deviance", "def": "The process by which small, unpunished ethical compromises make progressively larger compromises feel routine."},
+            {"term": "Incentive misalignment", "def": "A reward structure that pressures people to hit a target regardless of how, encouraging shortcuts or fraud."},
+            {"term": "Captured governance", "def": "A board or oversight body that fails to independently question management, reducing its real check on power."}
+          ],
+          "practice": [
+            {"q": "Normalization of deviance describes:", "choices": ["Small unpunished compromises making larger ones feel routine over time", "A single, isolated ethical mistake with no pattern", "A company's official code of conduct", "A legal defense against fraud charges"], "answer": 0, "explain": "It's specifically about the gradual, escalating pattern of compromise, not a one-time event."},
+            {"q": "A repeating pattern of 'immaterial' rounding that escalates each quarter is best understood as:", "choices": ["A warning sign worth flagging as a trend, not a single incident", "Clearly harmless and not worth reporting", "Evidence of strong governance", "Unrelated to incentive structures"], "answer": 0, "explain": "The escalating trend itself is the meaningful warning sign, more than any single quarter's number."},
+            {"q": "Studying corporate ethical failure cases is primarily valuable for:", "choices": ["Recognizing warning-sign patterns early in one's own organization", "Assigning blame to past executives", "Proving ethics has no practical business use", "Replacing the need for governance structures"], "answer": 0, "explain": "The goal is pattern recognition that helps catch a small compromise before it grows, not retrospective blame."}
+          ]
+        }
+      ]
+    }
+  ]
+}

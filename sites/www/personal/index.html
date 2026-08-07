@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Levi Colby — XPLabs</title>
+<meta name="description" content="Founder of XPLabs. Games, a free offline learning platform, and a military benefits directory.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#17171B">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://xplabs.us/personal/">
+<meta property="og:title" content="Levi Colby — XPLabs">
+<meta property="og:description" content="Founder of XPLabs. Games, a free offline learning platform, and a military benefits directory.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xplabs.us/personal/">
+<meta property="og:image" content="https://xplabs.us/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Tokens match the site root. Change a colour here and change it there too. */
+:root{
+  --ink:#17171B; --ink-2:#4E4E56; --bone:#F0EBE0; --bone-2:#E6E0D2;
+  --teal:#0B6155; --ultra:#20338C; --rust:#A63423; --mustard:#C98A06;
+  --display:"Arial Black","Arial Bold",Impact,"Helvetica Neue",Arial,sans-serif;
+  --text:Georgia,"Iowan Old Style",Charter,"Times New Roman",serif;
+  --ui:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --s-0:1.0625rem;
+  --s-1:clamp(1.25rem,1.14rem + 0.48vw,1.5rem);
+  --s-2:clamp(1.5rem,1.3rem + 0.9vw,2rem);
+  --s-3:clamp(1.875rem,1.5rem + 1.7vw,2.75rem);
+  --s-4:clamp(2.25rem,1.6rem + 2.9vw,4rem);
+  --s-min:0.8125rem;
+  --wrap:72rem; --gutter:clamp(1.15rem,4vw,3rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--text);
+  font-size:var(--s-0);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+p{margin:0}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:900;line-height:.98;
+  letter-spacing:-.012em;text-wrap:balance}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:.6rem;top:.6rem;z-index:99;background:var(--ink);color:var(--bone);padding:.7rem 1rem}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.slab :focus-visible{outline-color:#fff}
+.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+  gap:.5rem 1rem;padding-block:1.1rem;border-bottom:3px solid var(--ink)}
+.logo{font-family:var(--display);font-size:var(--s-1);letter-spacing:-.02em;text-decoration:none}
+.top nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--ui);font-size:var(--s-min)}
+.top nav a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
+.top nav a:hover,.top nav a[aria-current]{border-bottom-color:var(--ink)}
+.head{padding-block:clamp(2.25rem,6vw,4rem) clamp(1.5rem,3vw,2.5rem)}
+.head h1{font-size:var(--s-4)}
+.head .lede{font-size:var(--s-1);max-width:44ch;margin-top:1.1rem;line-height:1.45}
+.slab{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+  padding-left:calc(50vw - 50% + var(--gutter));padding-right:calc(50vw - 50% + var(--gutter));
+  padding-block:clamp(2rem,4.5vw,3.25rem);color:#fff}
+.slab--teal{background:var(--teal)}
+.slab--ultra{background:var(--ultra)}
+.slab--rust{background:var(--rust)}
+.slab__in{max-width:var(--wrap);margin-inline:auto}
+.sec{padding-block:clamp(2rem,5vw,3.5rem)}
+.sec h2{font-size:var(--s-2);margin-bottom:1rem}
+.body{max-width:58ch}
+.body p + p{margin-top:.9rem}
+.body a{text-decoration:underline;text-underline-offset:2px}
+.rule{border:0;border-top:3px solid var(--ink);margin:0}
+.stack{display:grid;gap:.75rem;margin-top:1.25rem}
+@media (min-width:700px){.stack{grid-template-columns:repeat(2,1fr)}}
+.item{border-top:2px solid currentColor;padding-top:.7rem}
+.item b{display:block;font-family:var(--ui);font-size:var(--s-min);font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:.3rem}
+.item span{display:block;font-size:.9375rem;line-height:1.5;opacity:.92}
+.note{font-family:var(--ui);font-size:var(--s-min);color:var(--ink-2);margin-top:1.25rem;max-width:60ch}
+.links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem;font-family:var(--ui);font-size:var(--s-min)}
+.links a{border:2px solid var(--ink);padding:.45rem .8rem;text-decoration:none;font-weight:700}
+.links a:hover{background:var(--ink);color:var(--bone)}
+.foot{background:var(--ink);color:var(--bone);padding-block:2.25rem 2.75rem;margin-top:2rem}
+.foot a{color:var(--bone)}
+.foot__meta{margin-top:1.25rem;padding-top:1rem;border-top:1px solid #3A3A42;
+  font-family:var(--ui);font-size:var(--s-min);color:#9A958A}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap top">
+  <a class="logo" href="/">XPLABS</a>
+  <nav aria-label="Primary">
+    <a href="https://game.xplabs.us/">Games</a>
+    <a href="https://learn.xplabs.us/">Education</a>
+    <a href="/engineering/">Engineering</a>
+    <a href="/military-benefits/">Benefits</a>
+    <a href="/personal/" aria-current="page">Personal</a>
+  </nav>
+</header>
+<main id="main">
+<section class="wrap head">
+  <h1>Levi Colby</h1>
+  <p class="lede">Founder of XPLabs. I build games, and I build free things that should exist.</p>
+</section>
+
+<section class="wrap sec">
+  <div class="body">
+    <p>XPLabs is a small studio with four titles in progress &mdash; a mobile survivors game in
+    Unreal Engine, a puzzle-defense campaign and a life simulator on iPhone, and a live Roblox
+    world. The engineering side of that is on the <a href="/engineering/">engineering page</a>,
+    and the games themselves are in the <a href="https://game.xplabs.us/">catalog</a>.</p>
+    <p>Two of the projects are not games and are not for sale.
+    <a href="https://learn.xplabs.us/">XP Education</a> is a free offline learning platform: 106 subjects from
+    K&ndash;8 through college, that work with no connection, no account and no tracking. The
+    <a href="/military-benefits/">military benefits directory</a> pulls hundreds of scattered
+    programs for service members, veterans and their families into one place, with a crisis line
+    at the top and no signup anywhere.</p>
+    <p>Both exist for the same reason: the information is real, it is genuinely hard to find, and
+    nobody was going to be paid to fix that.</p>
+  </div>
+  <p class="links">
+    <a href="https://www.linkedin.com/in/levicolby/" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/levicobra" rel="noopener">GitHub</a>
+    <a href="mailto:xp.labs.3d@gmail.com">Email</a>
+  </p>
+  <p class="note">More here later &mdash; writing, and the projects that do not fit under a company
+  heading.</p>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>XPLabs LLC</strong> &mdash; games, an offline school, and a free benefits directory.</p>
+    <p style="margin-top:.4rem"><a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a></p>
+    <div class="foot__meta">&copy; 2026 XPLabs LLC &middot; Honolulu, HI</div>
+  </div>
+</footer>
+</body>
+</html>

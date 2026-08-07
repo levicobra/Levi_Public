@@ -1,0 +1,1283 @@
+{
+ "id": "ai-machine-learning",
+ "title": "AI & Machine Learning",
+ "domain": "cs",
+ "level": "College",
+ "description": "This course builds machine learning from the ground up: what it means for a machine to 'learn' from data, how linear and logistic models make predictions, how neural networks stack simple pieces into powerful ones, and where modern AI systems like large language models fit in. Every lesson works through real numbers by hand so the ideas stop being abstract. By the end you can reason clearly about how these systems work, learn, and fail.",
+ "outcomes": [
+  "You can distinguish supervised, unsupervised, and reinforcement learning and match each to an example problem.",
+  "You can fit a linear regression model, compute its error with Mean Squared Error, and explain gradient descent.",
+  "You can explain how logistic regression and decision trees classify data, and evaluate a classifier with a confusion matrix.",
+  "You can describe how a neural network's neurons, layers, and activation functions transform inputs into predictions.",
+  "You can identify overfitting and describe how train/test splits guard against it.",
+  "You can explain, at a conceptual level, how large language models generate text and where bias in AI systems comes from."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "What Is Machine Learning?",
+   "summary": "Before training any model, you need the vocabulary: what kind of learning problem you're facing, what data looks like to a model, and how to tell if a model actually learned anything useful.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Types of Machine Learning",
+     "minutes": 10,
+     "intro": "Machine learning is not one technique but a family of approaches, and the very first decision in any project is figuring out which kind of problem you actually have.",
+     "sections": [
+      {
+       "heading": "Supervised Learning",
+       "body": [
+        "In **supervised learning**, the training data comes with the correct answer already attached, called a **label**. A model learns the relationship between inputs and labels from many labeled examples, then predicts labels for new, unseen inputs. Predicting a house's price from its features, or classifying an email as spam or not, are both supervised problems.",
+        "Supervised problems split further into **regression** (predicting a number, like a price) and **classification** (predicting a category, like spam or not spam), a distinction this course returns to repeatedly."
+       ]
+      },
+      {
+       "heading": "Unsupervised and Reinforcement Learning",
+       "body": [
+        "**Unsupervised learning** works with unlabeled data, finding structure or patterns on its own, such as **clustering** similar customers together with no predefined groups given in advance. There is no 'right answer' to check against, only patterns worth discovering.",
+        "**Reinforcement learning** trains an agent to take actions in an environment to maximize a cumulative reward signal, learning through trial and error rather than from labeled examples, used for problems like game-playing agents or robotic control."
+       ],
+       "example": {
+        "problem": "A streaming service wants to group its users into segments based on viewing habits, with no predefined categories given in advance. Which type of machine learning fits, and why?",
+        "steps": [
+         "There is no labeled 'correct segment' provided for any user, ruling out supervised learning.",
+         "The goal is to discover natural groupings directly from the data's structure.",
+         "This is a clustering task, a classic unsupervised learning problem."
+        ],
+        "answer": "Unsupervised learning (clustering) — there are no predefined labels, only patterns to discover in the data."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "supervised learning",
+       "def": "Learning from data where each example is paired with a known correct label."
+      },
+      {
+       "term": "unsupervised learning",
+       "def": "Learning to find structure or patterns in data that has no labels."
+      },
+      {
+       "term": "reinforcement learning",
+       "def": "Learning through trial and error by taking actions to maximize a cumulative reward."
+      },
+      {
+       "term": "label",
+       "def": "The known correct answer attached to a training example in supervised learning."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A model is trained on emails already marked 'spam' or 'not spam' to classify new emails. What type of learning is this?",
+       "choices": [
+        "Unsupervised learning",
+        "Supervised learning",
+        "Reinforcement learning",
+        "None of these"
+       ],
+       "answer": 1,
+       "explain": "Because each training email already has a known correct label (spam or not), this is a supervised learning problem."
+      },
+      {
+       "q": "What is the defining feature of unsupervised learning?",
+       "choices": [
+        "It requires labeled training data",
+        "It finds structure or patterns in data that has no labels",
+        "It always predicts a numeric price",
+        "It requires a reward signal"
+       ],
+       "answer": 1,
+       "explain": "Unsupervised learning works without labels, searching for patterns like clusters directly in the raw data."
+      },
+      {
+       "q": "A robot learns to walk by repeatedly trying actions and receiving a reward when it moves forward without falling. What type of learning is this?",
+       "choices": [
+        "Supervised learning",
+        "Unsupervised learning",
+        "Reinforcement learning",
+        "Clustering"
+       ],
+       "answer": 2,
+       "explain": "Learning through trial and error guided by a reward signal, rather than labeled examples, defines reinforcement learning."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The ML Workflow: Data, Features, Labels",
+     "minutes": 10,
+     "intro": "Every supervised learning project starts by answering the same question: what information will the model see, and what is it trying to predict?",
+     "sections": [
+      {
+       "heading": "Features and Labels",
+       "body": [
+        "A **feature** is one piece of input information the model uses to make a prediction; the collection of features for one example is often called a **feature vector**. The **label** is the target value the model is trying to predict, only available during training.",
+        "Choosing good features, called **feature engineering**, often matters more to a model's success than the choice of algorithm itself, since a model can only learn patterns present in the features it's given."
+       ]
+      },
+      {
+       "heading": "Training and Test Sets",
+       "body": [
+        "Data is typically split into a **training set**, used to fit the model, and a **test set**, held back and used only afterward to check how well the model performs on data it has never seen. A common split is 80% training, 20% test.",
+        "Never let the model see the test set during training; doing so would make its performance look better than it actually is on truly new data, defeating the entire purpose of the split."
+       ],
+       "example": {
+        "problem": "You want to predict a house's sale price from its square footage, number of bedrooms, and zip code. Identify the features and the label.",
+        "steps": [
+         "The label is the value being predicted: the sale price.",
+         "The features are the inputs used to make that prediction: square footage, number of bedrooms, and zip code.",
+         "Together, one house's square footage, bedrooms, and zip code form its feature vector."
+        ],
+        "answer": "Features: square footage, bedrooms, zip code. Label: sale price."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "feature",
+       "def": "One piece of input information a model uses to make a prediction."
+      },
+      {
+       "term": "training set",
+       "def": "The portion of data used to fit a model's parameters."
+      },
+      {
+       "term": "test set",
+       "def": "Data held back from training, used to evaluate how well a model generalizes to unseen examples."
+      },
+      {
+       "term": "feature engineering",
+       "def": "The process of choosing and constructing informative input features for a model."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a model predicting exam scores from hours studied and hours slept, what is the label?",
+       "choices": [
+        "Hours studied",
+        "Hours slept",
+        "The exam score",
+        "The student's name"
+       ],
+       "answer": 2,
+       "explain": "The label is the value being predicted, which here is the exam score itself."
+      },
+      {
+       "q": "Why should a model never be trained on its test set?",
+       "choices": [
+        "It would make training run slower",
+        "It would make the model's evaluated performance look artificially better than its true performance on new data",
+        "Test sets cannot contain numbers",
+        "Features would become labels"
+       ],
+       "answer": 1,
+       "explain": "If the model has already seen the test data during training, its performance on that data no longer reflects how well it generalizes to truly unseen examples."
+      },
+      {
+       "q": "What is a common train/test split ratio?",
+       "choices": [
+        "50/50 always required",
+        "80% training, 20% test",
+        "100% training, 0% test",
+        "1% training, 99% test"
+       ],
+       "answer": 1,
+       "explain": "An 80/20 split is a common convention, though the exact ratio can vary depending on how much data is available."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Training, Testing, and Overfitting",
+     "minutes": 12,
+     "intro": "A model that performs perfectly on the data it was trained on has not necessarily learned anything useful — it may have simply memorized the answers.",
+     "sections": [
+      {
+       "heading": "Overfitting and Underfitting",
+       "body": [
+        "**Overfitting** happens when a model learns the training data too specifically, including its noise and quirks, so it performs great on training data but poorly on new data. **Underfitting** is the opposite problem: the model is too simple to capture the real pattern, performing poorly on both training and test data.",
+        "The goal is **generalization**: performing well on data the model has never seen, which is the entire point of building a model in the first place."
+       ]
+      },
+      {
+       "heading": "Spotting Overfitting with the Train/Test Gap",
+       "body": [
+        "The clearest signal of overfitting is a large gap between training accuracy and test accuracy: very high on training data, noticeably lower on test data. A well-fit model shows similar, reasonably high performance on both.",
+        "Common fixes include gathering more training data, simplifying the model, or applying **regularization**, a technique (covered more in advanced courses) that penalizes overly complex models during training to discourage memorization."
+       ],
+       "example": {
+        "problem": "A model achieves 99% accuracy on its training data but only 60% accuracy on new test data it has never seen. What problem does this indicate?",
+        "steps": [
+         "Compare the two numbers: 99% on training versus only 60% on test, a very large gap.",
+         "High training performance with much lower test performance is the classic signature of a model that memorized rather than generalized.",
+         "This pattern specifically indicates overfitting."
+        ],
+        "answer": "Overfitting."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "overfitting",
+       "def": "When a model learns training data too specifically, performing well on it but poorly on new data."
+      },
+      {
+       "term": "underfitting",
+       "def": "When a model is too simple to capture the real pattern, performing poorly on both training and test data."
+      },
+      {
+       "term": "generalization",
+       "def": "A model's ability to perform well on new, previously unseen data."
+      },
+      {
+       "term": "regularization",
+       "def": "A technique that penalizes model complexity during training to reduce overfitting."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A model scores 55% accuracy on training data and 53% on test data. What does this suggest?",
+       "choices": [
+        "Severe overfitting",
+        "The model is likely underfitting; it performs poorly on both sets",
+        "Perfect generalization with no issues at all",
+        "The test set is mislabeled"
+       ],
+       "answer": 1,
+       "explain": "Low performance on both training and test data, with only a small gap, suggests the model is too simple — underfitting."
+      },
+      {
+       "q": "What does 'generalization' mean in machine learning?",
+       "choices": [
+        "Memorizing the training data exactly",
+        "Performing well on new, unseen data",
+        "Using as many features as possible",
+        "Training for as long as possible"
+       ],
+       "answer": 1,
+       "explain": "Generalization is the ability to apply learned patterns successfully to data the model has never encountered before."
+      },
+      {
+       "q": "Which is a common fix for an overfitting model?",
+       "choices": [
+        "Removing the test set entirely",
+        "Gathering more training data or simplifying the model",
+        "Training only on the test set",
+        "Increasing the size of the training/test gap"
+       ],
+       "answer": 1,
+       "explain": "More diverse training data or a simpler model both reduce the model's ability to memorize noise, helping it generalize."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Linear Models",
+   "summary": "Linear regression is the simplest real machine learning model, and it introduces two ideas — measuring error and gradient descent — that every more advanced model still relies on.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Linear Regression: Fitting a Line to Data",
+     "minutes": 10,
+     "intro": "Linear regression makes one simple assumption: the relationship between input and output is a straight line, and 'training' just means finding the best line through the data.",
+     "sections": [
+      {
+       "heading": "The Linear Equation",
+       "body": [
+        "A simple linear regression model predicts an output as `y = w × x + b`, where `w` is the **weight** (slope) and `b` is the **bias** (intercept). Training the model means finding the values of w and b that make the line fit the training data as closely as possible.",
+        "With more than one feature, the equation extends to `y = w1×x1 + w2×x2 + ... + b`, one weight per feature, but the core idea — a weighted sum plus a bias — stays exactly the same."
+       ]
+      },
+      {
+       "heading": "Using the Model to Predict",
+       "body": [
+        "Once w and b are found (during training), making a prediction for a brand new input is just plugging its feature values into the equation — no further 'learning' happens at prediction time. This is why trained models can produce predictions almost instantly.",
+        "The weight tells you how much the prediction changes per unit change in the feature: a weight of 5 means every one-unit increase in x increases the predicted y by 5."
+       ],
+       "example": {
+        "problem": "A trained linear regression model predicts exam score from hours studied using the equation score = 5 × hours + 50. Predict the score for a student who studies 8 hours.",
+        "steps": [
+         "Substitute hours = 8 into the equation: score = 5 × 8 + 50.",
+         "5 × 8 = 40.",
+         "40 + 50 = 90."
+        ],
+        "answer": "90."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "linear regression",
+       "def": "A model that predicts a numeric output as a weighted sum of input features plus a bias."
+      },
+      {
+       "term": "weight",
+       "def": "The coefficient multiplying a feature, controlling how much that feature influences the prediction."
+      },
+      {
+       "term": "bias (intercept)",
+       "def": "The constant term added to a model's weighted sum, shifting the prediction up or down."
+      },
+      {
+       "term": "prediction",
+       "def": "The output a trained model produces for a given input."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Using score = 5 × hours + 50, what is the predicted score for a student who studies 4 hours?",
+       "choices": [
+        "54",
+        "60",
+        "70",
+        "90"
+       ],
+       "answer": 2,
+       "explain": "5 × 4 = 20, and 20 + 50 = 70."
+      },
+      {
+       "q": "In a linear regression model, what does the weight represent?",
+       "choices": [
+        "The final prediction",
+        "How much the prediction changes per one-unit increase in the corresponding feature",
+        "The number of training examples",
+        "The label"
+       ],
+       "answer": 1,
+       "explain": "The weight is the slope: it scales how strongly a given feature affects the predicted output."
+      },
+      {
+       "q": "What happens at prediction time, after a linear regression model has already been trained?",
+       "choices": [
+        "The model retrains itself on the new input",
+        "The new input's feature values are simply plugged into the already-found equation",
+        "Training and prediction are the same step",
+        "Nothing; predictions require a human to compute by hand"
+       ],
+       "answer": 1,
+       "explain": "Once weights and bias are fixed from training, prediction is just evaluating the equation on new feature values."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Measuring Error: MSE and Loss Functions",
+     "minutes": 12,
+     "intro": "You can't improve a model without a number that tells you how wrong it currently is, and Mean Squared Error is the standard way regression models get that number.",
+     "sections": [
+      {
+       "heading": "Residuals and Squared Error",
+       "body": [
+        "A **residual** is the difference between the actual value and the model's prediction: `residual = actual − predicted`. Squaring each residual makes all errors positive (so overshooting and undershooting don't cancel out) and penalizes large errors more heavily than small ones.",
+        "A **loss function** is any formula that turns a model's errors into a single number to minimize; **Mean Squared Error (MSE)** is the most common loss function for regression."
+       ]
+      },
+      {
+       "heading": "Computing MSE",
+       "body": [
+        "MSE is computed by squaring every residual, summing them, and dividing by the number of examples: `MSE = (sum of squared residuals) / n`. A lower MSE means the model's predictions are, on average, closer to the actual values.",
+        "MSE is the quantity a training algorithm tries to minimize by adjusting the model's weights and bias, which is exactly the job of gradient descent, covered next."
+       ],
+       "example": {
+        "problem": "A model predicts scores for 3 students: predicted = [70, 80, 90], actual = [75, 78, 95]. Compute the Mean Squared Error.",
+        "steps": [
+         "Compute residuals: 75−70=5, 78−80=−2, 95−90=5.",
+         "Square each residual: 5²=25, (−2)²=4, 5²=25. Sum: 25+4+25=54.",
+         "Divide by n=3: MSE = 54 ÷ 3 = 18."
+        ],
+        "answer": "MSE = 18."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "residual",
+       "def": "The difference between an actual value and a model's predicted value."
+      },
+      {
+       "term": "loss function",
+       "def": "A formula that turns a model's prediction errors into a single number to minimize."
+      },
+      {
+       "term": "Mean Squared Error (MSE)",
+       "def": "A loss function computed as the average of the squared residuals."
+      }
+     ],
+     "practice": [
+      {
+       "q": "For predicted = [10, 20] and actual = [12, 18], what is the MSE?",
+       "choices": [
+        "2",
+        "4",
+        "8",
+        "16"
+       ],
+       "answer": 1,
+       "explain": "Residuals: 12−10=2, 18−20=−2. Squares: 4, 4. Sum=8. MSE = 8 ÷ 2 = 4."
+      },
+      {
+       "q": "Why does MSE square each residual instead of just averaging the raw residuals?",
+       "choices": [
+        "Squaring makes computation impossible",
+        "Squaring makes all errors positive so they don't cancel out, and penalizes large errors more heavily",
+        "Squaring is only used for classification models",
+        "It has no effect on the result"
+       ],
+       "answer": 1,
+       "explain": "Without squaring, a +5 error and a −5 error would cancel to zero even though both represent real mistakes; squaring fixes this and emphasizes larger errors."
+      },
+      {
+       "q": "A model's MSE decreases from 20 to 5 after more training. What does this indicate?",
+       "choices": [
+        "The model got worse",
+        "The model's predictions are now, on average, closer to the actual values",
+        "The training data changed size",
+        "MSE cannot decrease during training"
+       ],
+       "answer": 1,
+       "explain": "A lower MSE directly reflects smaller average squared errors, meaning predictions are closer to the true values."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Gradient Descent: How Models Learn",
+     "minutes": 14,
+     "intro": "Gradient descent is the engine behind almost every trained model in this course: a simple, repeated nudge toward lower error, one small step at a time.",
+     "sections": [
+      {
+       "heading": "The Loss Landscape and the Gradient",
+       "body": [
+        "Picture the loss (like MSE) as a landscape shaped by the model's weights: some weight values give high loss (a bad model), others give low loss (a good model). The **gradient** at a point is the direction of steepest increase in loss; moving in the opposite direction decreases loss.",
+        "**Gradient descent** repeatedly nudges each weight a small step in the direction that reduces loss, gradually walking down toward a low point in that landscape."
+       ]
+      },
+      {
+       "heading": "The Learning Rate and the Update Rule",
+       "body": [
+        "The update rule is `w_new = w − learning_rate × gradient`. The **learning rate** controls how big each step is: too large and training can overshoot and become unstable; too small and training crawls forward extremely slowly.",
+        "This single update is repeated many times (often thousands), each time recomputing the gradient based on the current weights, until the loss stops meaningfully decreasing."
+       ],
+       "example": {
+        "problem": "A weight starts at w = 10. The gradient of the loss at that point is 4, and the learning rate is 0.1. What is the updated weight after one gradient descent step?",
+        "steps": [
+         "Apply the update rule: w_new = w − learning_rate × gradient.",
+         "w_new = 10 − (0.1 × 4).",
+         "0.1 × 4 = 0.4, so w_new = 10 − 0.4 = 9.6."
+        ],
+        "answer": "9.6."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "gradient descent",
+       "def": "An algorithm that repeatedly adjusts model weights in the direction that reduces loss."
+      },
+      {
+       "term": "gradient",
+       "def": "The direction of steepest increase in loss at a given point; used to decide which way to adjust weights."
+      },
+      {
+       "term": "learning rate",
+       "def": "A parameter controlling how large each gradient descent update step is."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A weight is w = 5, the gradient is 2, and the learning rate is 0.5. What is the updated weight after one step?",
+       "choices": [
+        "3",
+        "4",
+        "6",
+        "5.5"
+       ],
+       "answer": 1,
+       "explain": "w_new = 5 − (0.5 × 2) = 5 − 1 = 4."
+      },
+      {
+       "q": "What problem can occur if the learning rate is set far too high?",
+       "choices": [
+        "Training becomes perfectly stable",
+        "Weight updates can overshoot and make training unstable",
+        "The model trains instantly with no data needed",
+        "The gradient becomes undefined"
+       ],
+       "answer": 1,
+       "explain": "A very large learning rate can cause each update to jump too far, overshooting the low-loss region and destabilizing training."
+      },
+      {
+       "q": "What does the gradient descent update rule move a weight toward?",
+       "choices": [
+        "A random new value each time",
+        "A value that increases the loss",
+        "A value that decreases the loss",
+        "The value of the learning rate itself"
+       ],
+       "answer": 2,
+       "explain": "Gradient descent steps in the direction opposite the gradient specifically because that direction reduces the loss."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Classification",
+   "summary": "Predicting a category instead of a number needs different tools: probabilities and thresholds, tree-based rules, and ways to measure success beyond simple accuracy.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Logistic Regression and Decision Boundaries",
+     "minutes": 12,
+     "intro": "Logistic regression looks almost like linear regression, but one small change — squashing the output into a probability — turns it into a classifier.",
+     "sections": [
+      {
+       "heading": "From a Line to a Probability",
+       "body": [
+        "**Logistic regression** computes a weighted sum just like linear regression, but then passes it through the **sigmoid function**, which squashes any real number into a value strictly between 0 and 1, interpreted as a probability.",
+        "A sigmoid output near 1 means the model is confident the example belongs to the positive class (e.g., 'spam'); an output near 0 means confident it belongs to the negative class ('not spam'); values near 0.5 mean genuine uncertainty."
+       ]
+      },
+      {
+       "heading": "Decision Boundaries and Thresholds",
+       "body": [
+        "To turn a probability into an actual class prediction, a **threshold** is applied, commonly 0.5: probabilities above the threshold are classified as positive, below as negative. This threshold implicitly defines a **decision boundary** separating the two classes in feature space.",
+        "The threshold doesn't have to be 0.5; raising it makes the model more conservative about predicting the positive class, which matters when false positives are especially costly (like flagging legitimate email as spam)."
+       ],
+       "example": {
+        "problem": "A logistic regression model outputs a probability of 0.73 that an email is spam. Using the standard 0.5 threshold, how is the email classified?",
+        "steps": [
+         "Compare the output probability, 0.73, to the threshold, 0.5.",
+         "0.73 is greater than 0.5.",
+         "Probabilities above the threshold are classified as the positive class."
+        ],
+        "answer": "Spam."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "logistic regression",
+       "def": "A classification model that outputs a probability by passing a weighted sum through the sigmoid function."
+      },
+      {
+       "term": "sigmoid function",
+       "def": "A function that squashes any real number into a value strictly between 0 and 1."
+      },
+      {
+       "term": "threshold",
+       "def": "The probability cutoff used to convert a model's output into a final class prediction."
+      },
+      {
+       "term": "decision boundary",
+       "def": "The line or surface separating regions that a classifier predicts as different classes."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A logistic regression model outputs 0.35 for a given example, using a 0.5 threshold. How is it classified?",
+       "choices": [
+        "Positive class",
+        "Negative class",
+        "Exactly 50% either way",
+        "Cannot classify without more data"
+       ],
+       "answer": 1,
+       "explain": "0.35 is below the 0.5 threshold, so the example is classified into the negative class."
+      },
+      {
+       "q": "What does the sigmoid function do to a logistic regression model's weighted sum?",
+       "choices": [
+        "Rounds it to the nearest integer",
+        "Squashes it into a value strictly between 0 and 1",
+        "Doubles its value",
+        "Converts it into a category name directly"
+       ],
+       "answer": 1,
+       "explain": "Sigmoid maps any real number into the (0,1) range, which is interpreted as a probability."
+      },
+      {
+       "q": "Why might someone raise the classification threshold above 0.5?",
+       "choices": [
+        "To make the model less accurate on purpose",
+        "To make the model more conservative about predicting the positive class when false positives are costly",
+        "Thresholds cannot be changed",
+        "To force every prediction to be positive"
+       ],
+       "answer": 1,
+       "explain": "A higher threshold requires stronger confidence before predicting positive, reducing false positives at the cost of possibly missing some true positives."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Decision Trees",
+     "minutes": 12,
+     "intro": "A decision tree classifies by asking a sequence of simple yes/no questions, each one narrowing down the answer, much like a flowchart you could follow by hand.",
+     "sections": [
+      {
+       "heading": "How a Decision Tree Classifies",
+       "body": [
+        "A **decision tree** starts at a **root node** asking a question about one feature (like 'income > $50,000?'), then branches to a child node based on the answer, repeating until it reaches a **leaf node** holding the final prediction. Each internal node is a **split** on one feature.",
+        "Trees are trained by choosing, at each node, the feature and threshold that best separates the classes (using a measure of 'purity' among the resulting groups), a process too detailed for this lesson but conceptually similar to always asking the most informative question available first."
+       ]
+      },
+      {
+       "heading": "Depth and Overfitting",
+       "body": [
+        "A tree's **depth** is how many questions it asks before reaching a leaf. A very deep tree can carve out a rule for nearly every individual training example, which is a classic overfitting risk: it memorizes the training data instead of learning a general pattern.",
+        "Common fixes include limiting the maximum depth, requiring a minimum number of examples per leaf, or combining many trees together (an ensemble method), a topic for more advanced courses."
+       ],
+       "example": {
+        "problem": "A decision tree for loan approval first splits on 'income > $50,000?' then, if yes, splits on 'credit score > 650?'. An applicant has income $60,000 and credit score 700, and both 'yes' branches lead to 'approve.' Trace the path and give the decision.",
+        "steps": [
+         "At the root: is income > $50,000? $60,000 > $50,000, so yes — follow the 'yes' branch.",
+         "At the next node: is credit score > 650? 700 > 650, so yes — follow the 'yes' branch.",
+         "This reaches the leaf labeled 'approve.'"
+        ],
+        "answer": "Approve."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "decision tree",
+       "def": "A classification model that predicts by following a sequence of feature-based yes/no splits."
+      },
+      {
+       "term": "root node",
+       "def": "The first node in a decision tree, asking the first splitting question."
+      },
+      {
+       "term": "leaf node",
+       "def": "A terminal node in a decision tree holding the final prediction."
+      },
+      {
+       "term": "tree depth",
+       "def": "The number of splits a decision tree makes before reaching a leaf; excessive depth risks overfitting."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does a leaf node in a decision tree represent?",
+       "choices": [
+        "A splitting question about a feature",
+        "The final prediction after following a path of splits",
+        "The training data itself",
+        "The learning rate"
+       ],
+       "answer": 1,
+       "explain": "A leaf is a terminal point in the tree holding the class prediction reached after answering all the splits along the way."
+      },
+      {
+       "q": "Why can a very deep decision tree be prone to overfitting?",
+       "choices": [
+        "Deep trees always run faster",
+        "It can carve out a specific rule for nearly every individual training example, memorizing rather than generalizing",
+        "Depth has no relationship to overfitting",
+        "Deep trees cannot make any predictions"
+       ],
+       "answer": 1,
+       "explain": "Excessive depth lets a tree fit the training data's noise and quirks too precisely, hurting performance on new data."
+      },
+      {
+       "q": "A tree splits first on 'age > 30?' and, if yes, then on 'owns a car?'. A 40-year-old who does not own a car reaches which branch sequence?",
+       "choices": [
+        "No, then No",
+        "Yes, then No",
+        "Yes, then Yes",
+        "No, then Yes"
+       ],
+       "answer": 1,
+       "explain": "40 > 30 is true (Yes at the root), and owning a car is false, so the path is Yes, then No."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Evaluating Classifiers: Accuracy, Precision, Recall",
+     "minutes": 12,
+     "intro": "Accuracy alone can be dangerously misleading, especially when the classes you're predicting aren't evenly balanced — precision and recall tell a fuller, more honest story.",
+     "sections": [
+      {
+       "heading": "The Confusion Matrix",
+       "body": [
+        "A **confusion matrix** organizes a classifier's predictions into four counts: **true positives (TP)** correctly predicted positive, **true negatives (TN)** correctly predicted negative, **false positives (FP)** incorrectly predicted positive, and **false negatives (FN)** incorrectly predicted negative.",
+        "Every standard evaluation metric for classification is built directly from these four counts, which is why the confusion matrix is the starting point for evaluating any classifier."
+       ]
+      },
+      {
+       "heading": "Accuracy, Precision, and Recall",
+       "body": [
+        "**Accuracy** = (TP + TN) / total, the overall fraction correct — but it can look great on an imbalanced dataset even if the model never correctly catches the rare class. **Precision** = TP / (TP + FP): of everything predicted positive, how much actually was. **Recall** = TP / (TP + FN): of everything actually positive, how much did the model catch.",
+        "Precision and recall trade off against each other: a model that predicts 'positive' more aggressively catches more true positives (higher recall) but also more false positives (lower precision), and vice versa."
+       ],
+       "example": {
+        "problem": "A spam classifier is tested on 100 emails: TP=10, FP=10, FN=5, TN=75. Compute accuracy, precision, and recall.",
+        "steps": [
+         "Accuracy = (TP + TN) / total = (10 + 75) / 100 = 85 / 100 = 85%.",
+         "Precision = TP / (TP + FP) = 10 / (10 + 10) = 10 / 20 = 50%.",
+         "Recall = TP / (TP + FN) = 10 / (10 + 5) = 10 / 15 ≈ 66.7%."
+        ],
+        "answer": "Accuracy 85%, Precision 50%, Recall ≈ 66.7%."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "confusion matrix",
+       "def": "A table of true positives, true negatives, false positives, and false negatives for a classifier."
+      },
+      {
+       "term": "precision",
+       "def": "Of everything predicted positive, the fraction that was actually positive: TP / (TP + FP)."
+      },
+      {
+       "term": "recall",
+       "def": "Of everything actually positive, the fraction the model correctly identified: TP / (TP + FN)."
+      },
+      {
+       "term": "accuracy",
+       "def": "The overall fraction of predictions the model got correct: (TP + TN) / total."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Given TP=20, FP=5, FN=5, TN=70, what is the precision?",
+       "choices": [
+        "70%",
+        "80%",
+        "20%",
+        "95%"
+       ],
+       "answer": 1,
+       "explain": "Precision = TP / (TP + FP) = 20 / (20 + 5) = 20/25 = 80%."
+      },
+      {
+       "q": "Why can accuracy be misleading on an imbalanced dataset (e.g., 95% of emails are not spam)?",
+       "choices": [
+        "Accuracy cannot be computed on imbalanced data",
+        "A model that always predicts 'not spam' would score 95% accuracy while never catching any actual spam",
+        "Precision and recall are always identical to accuracy",
+        "Imbalanced datasets have no effect on any metric"
+       ],
+       "answer": 1,
+       "explain": "A model that ignores the minority class entirely can still post a high accuracy score, hiding the fact that it fails at the actual task."
+      },
+      {
+       "q": "What does recall specifically measure?",
+       "choices": [
+        "Of everything predicted positive, how much actually was positive",
+        "Of everything actually positive, how much the model correctly identified",
+        "The total number of predictions made",
+        "The model's training time"
+       ],
+       "answer": 1,
+       "explain": "Recall focuses on catching true positives out of all the actual positives that exist, regardless of how many false positives are also produced."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Neural Networks",
+   "summary": "Neural networks build on the same weighted-sum idea from linear regression, stacking many small units together, layer after layer, to model far more complex patterns.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Neurons, Weights, and Activation Functions",
+     "minutes": 12,
+     "intro": "A single artificial neuron is barely more complex than the linear regression you already know — the one new ingredient is a small nonlinear twist that turns out to change everything.",
+     "sections": [
+      {
+       "heading": "The Artificial Neuron",
+       "body": [
+        "A **neuron** computes a weighted sum of its inputs plus a bias, exactly like linear regression: `z = w1×x1 + w2×x2 + ... + b`. It then passes that sum through an **activation function** to produce its final output.",
+        "**ReLU** (rectified linear unit), one of the most common activation functions, is simply `max(0, z)`: it passes positive values through unchanged and clips negative values to zero."
+       ]
+      },
+      {
+       "heading": "Why Nonlinearity Matters",
+       "body": [
+        "Without an activation function, stacking multiple layers of weighted sums would mathematically collapse into a single equivalent linear layer, no matter how many layers you stack — the network could never learn anything more complex than a straight line.",
+        "The activation function's nonlinearity is what allows deep stacks of neurons to represent curved, complex relationships between inputs and outputs, which is the entire reason neural networks can model things linear regression cannot."
+       ],
+       "example": {
+        "problem": "A neuron receives inputs x1=2, x2=3 with weights w1=0.5, w2=−1, and bias b=1. Compute the weighted sum, then apply ReLU.",
+        "steps": [
+         "Compute the weighted sum: z = (0.5 × 2) + (−1 × 3) + 1 = 1 − 3 + 1.",
+         "1 − 3 + 1 = −1.",
+         "Apply ReLU: max(0, −1) = 0."
+        ],
+        "answer": "Weighted sum z = −1; after ReLU, the neuron's output is 0."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "neuron",
+       "def": "A computational unit that produces a weighted sum of its inputs, then applies an activation function."
+      },
+      {
+       "term": "activation function",
+       "def": "A nonlinear function applied to a neuron's weighted sum, such as ReLU or sigmoid."
+      },
+      {
+       "term": "ReLU",
+       "def": "An activation function defined as max(0, z): passes positive values through, clips negatives to zero."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A neuron computes weighted sum z = 3.5. What is ReLU(z)?",
+       "choices": [
+        "0",
+        "3.5",
+        "-3.5",
+        "1"
+       ],
+       "answer": 1,
+       "explain": "ReLU passes positive values through unchanged, so ReLU(3.5) = 3.5."
+      },
+      {
+       "q": "A neuron has x1=4, x2=1, w1=−2, w2=3, b=0. Compute z, then apply ReLU.",
+       "choices": [
+        "z = -5, ReLU output 0",
+        "z = 5, ReLU output 5",
+        "z = -5, ReLU output -5",
+        "z = 11, ReLU output 11"
+       ],
+       "answer": 0,
+       "explain": "z = (−2×4) + (3×1) + 0 = −8 + 3 = −5. ReLU(−5) = max(0, −5) = 0."
+      },
+      {
+       "q": "Why is an activation function necessary between layers of a neural network?",
+       "choices": [
+        "It has no real effect and is purely optional",
+        "Without it, stacked layers collapse mathematically into one equivalent linear layer, unable to learn complex patterns",
+        "It only affects how fast the model trains",
+        "It converts the network into a decision tree"
+       ],
+       "answer": 1,
+       "explain": "Nonlinearity is what allows depth to actually add representational power; without it, any number of layers reduces to a single linear function."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Layers and Forward Propagation",
+     "minutes": 12,
+     "intro": "A neural network is really just neurons arranged in layers, and 'running' the network means pushing a single input all the way through, layer by layer, to a final answer.",
+     "sections": [
+      {
+       "heading": "Input, Hidden, and Output Layers",
+       "body": [
+        "A network's **input layer** simply holds the raw feature values (no computation happens there). One or more **hidden layers** apply weighted sums and activation functions, transforming the input step by step. The **output layer** produces the final prediction, often with a different activation (like sigmoid for binary classification, or none at all for a raw numeric regression output).",
+        "In a **fully connected** layer, every neuron receives input from every neuron in the previous layer, each connection carrying its own separate weight."
+       ]
+      },
+      {
+       "heading": "Forward Propagation",
+       "body": [
+        "**Forward propagation** is the process of passing an input through the network layer by layer: compute layer 1's outputs from the input, feed those into layer 2, and so on until reaching the output layer's final prediction.",
+        "This is exactly how a trained network makes a prediction on new data — no learning happens during forward propagation itself; it is a straightforward computation using whatever weights training already found."
+       ],
+       "example": {
+        "problem": "A tiny network has one hidden neuron with output (after activation) h=0.8, connected to a linear (no activation) output neuron with weight w=2 and bias b=−0.5. Compute the network's final output.",
+        "steps": [
+         "The output neuron computes: output = w × h + b.",
+         "output = (2 × 0.8) + (−0.5).",
+         "2 × 0.8 = 1.6, and 1.6 − 0.5 = 1.1."
+        ],
+        "answer": "1.1."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "input layer",
+       "def": "The layer of a neural network holding the raw feature values, with no computation performed."
+      },
+      {
+       "term": "hidden layer",
+       "def": "A layer between input and output that transforms data via weighted sums and activation functions."
+      },
+      {
+       "term": "output layer",
+       "def": "The final layer of a network, producing the prediction."
+      },
+      {
+       "term": "forward propagation",
+       "def": "Passing an input through a network's layers in sequence to compute its final prediction."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What computation happens in a neural network's input layer?",
+       "choices": [
+        "A full round of activation functions",
+        "None; it simply holds the raw feature values",
+        "The final prediction is produced there",
+        "Gradient descent updates occur there"
+       ],
+       "answer": 1,
+       "explain": "The input layer just passes along the raw features; all weighted sums and activations happen in later layers."
+      },
+      {
+       "q": "A hidden neuron outputs h=0.5, feeding a linear output neuron with weight w=4 and bias b=1. What is the final output?",
+       "choices": [
+        "1.5",
+        "2",
+        "3",
+        "5"
+       ],
+       "answer": 2,
+       "explain": "output = (4 × 0.5) + 1 = 2 + 1 = 3."
+      },
+      {
+       "q": "What is forward propagation?",
+       "choices": [
+        "Adjusting weights to reduce loss",
+        "Passing an input through a network's layers in sequence to compute the final prediction",
+        "Splitting data into train and test sets",
+        "Choosing which activation function to use"
+       ],
+       "answer": 1,
+       "explain": "Forward propagation is purely the computation of a prediction from an input, layer by layer, using fixed weights."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Backpropagation and Training",
+     "minutes": 14,
+     "intro": "Forward propagation makes a prediction; backpropagation is how the network figures out, layer by layer in reverse, exactly how to adjust every single weight to make that prediction better next time.",
+     "sections": [
+      {
+       "heading": "From Loss Back to Every Weight",
+       "body": [
+        "After forward propagation produces a prediction, the loss function compares it to the true label, producing a single error number, exactly as in linear regression. **Backpropagation** then works backward through the network, using calculus (the chain rule) to compute how much each individual weight contributed to that error.",
+        "Once every weight's contribution (its gradient) is known, gradient descent updates each one, exactly as in unit 2, just applied to potentially millions of weights across many layers instead of one or two."
+       ]
+      },
+      {
+       "heading": "Epochs and Batches",
+       "body": [
+        "One full pass through the entire training dataset is called an **epoch**; networks are typically trained over many epochs, since a single pass rarely finds good weights. Data is often processed in smaller **batches** rather than one example at a time or the whole dataset at once, balancing computational efficiency with stable weight updates.",
+        "Training is this loop, repeated: forward propagate a batch, compute loss, backpropagate to get gradients, update weights, repeat — until the loss stops meaningfully improving."
+       ],
+       "example": {
+        "problem": "After one forward pass, a network's loss is 4.0. After backpropagation and one gradient descent update to all weights, the loss on the same batch drops to 3.2. What does this indicate is happening during training?",
+        "steps": [
+         "The loss value measures how wrong the network's predictions currently are.",
+         "A decrease from 4.0 to 3.2 means the predictions moved closer to the true labels after the update.",
+         "This is exactly the intended effect of one training step: gradually reducing loss, one small update at a time."
+        ],
+        "answer": "The model is learning — the backpropagation and weight update step reduced the loss, meaning predictions moved closer to the correct answers."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "backpropagation",
+       "def": "An algorithm that computes each weight's contribution to the loss by working backward through the network."
+      },
+      {
+       "term": "epoch",
+       "def": "One full pass of the training algorithm through the entire training dataset."
+      },
+      {
+       "term": "batch",
+       "def": "A subset of training examples processed together before one weight update."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the purpose of backpropagation?",
+       "choices": [
+        "To generate new training data",
+        "To compute how much each weight in the network contributed to the loss, so it can be updated",
+        "To convert a neural network into a decision tree",
+        "To select the learning rate automatically"
+       ],
+       "answer": 1,
+       "explain": "Backpropagation calculates the gradient for every weight in the network so gradient descent can update each one appropriately."
+      },
+      {
+       "q": "What is one epoch?",
+       "choices": [
+        "One single training example",
+        "One full pass of training through the entire training dataset",
+        "The final trained model",
+        "The learning rate value"
+       ],
+       "answer": 1,
+       "explain": "An epoch means every training example has been used once in the training process, though many epochs are typically needed."
+      },
+      {
+       "q": "A network's loss decreases steadily over many epochs, then levels off and stops changing. What does this suggest?",
+       "choices": [
+        "The network has crashed",
+        "Training has likely converged, with further updates producing little additional improvement",
+        "The learning rate is exactly zero",
+        "The network has stopped receiving input"
+       ],
+       "answer": 1,
+       "explain": "A leveling-off loss curve typically indicates the model has converged to a stable set of weights, where further gradient updates produce diminishing returns."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Modern AI and Responsible Use",
+   "summary": "The same core ideas — layers, weights, gradient descent — scale up into the specialized architectures behind image recognition and language models, and scaling up brings new responsibilities.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Convolutional and Sequence Models",
+     "minutes": 12,
+     "intro": "Fully connected layers treat every input independently, which wastes an enormous amount of structure in images and text — CNNs and RNNs were designed specifically to exploit that structure instead.",
+     "sections": [
+      {
+       "heading": "Convolutional Neural Networks (CNNs)",
+       "body": [
+        "A **CNN** applies small **convolution** filters that slide across an image, each one learning to detect a local pattern, like an edge or a texture, regardless of where it appears in the image. Stacking convolutional layers lets early layers detect simple features (edges) and later layers combine them into complex ones (shapes, faces).",
+        "**Pooling** layers shrink the data between convolutions, reducing computation while keeping the most important detected features, which is why CNNs became the standard architecture for image classification tasks."
+       ]
+      },
+      {
+       "heading": "Recurrent Neural Networks (RNNs)",
+       "body": [
+        "An **RNN** processes a sequence one element at a time (like one word at a time in a sentence), maintaining a **hidden state** that carries information forward from earlier elements, giving the network a form of memory across the sequence.",
+        "RNNs were the traditional choice for text and time-series tasks before the transformer architecture (covered next lesson) largely replaced them for large-scale language tasks, though the core idea, processing order and context, remains central to both."
+       ]
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "CNN",
+       "def": "A convolutional neural network, using filters to detect local patterns, standard for image tasks."
+      },
+      {
+       "term": "convolution",
+       "def": "A small filter slid across an image (or sequence) to detect a local pattern."
+      },
+      {
+       "term": "pooling",
+       "def": "A layer that shrinks data between convolutions while preserving important detected features."
+      },
+      {
+       "term": "RNN",
+       "def": "A recurrent neural network that processes a sequence step by step, keeping a memory of earlier elements."
+      }
+     ],
+     "practice": [
+      {
+       "q": "You need a model to classify whether a photo contains a cat. Which architecture family is the traditional choice?",
+       "choices": [
+        "RNN",
+        "CNN",
+        "Linear regression only",
+        "Decision tree only"
+       ],
+       "answer": 1,
+       "explain": "CNNs exploit spatial patterns in images through convolution filters, making them the traditional standard for image classification."
+      },
+      {
+       "q": "What does a convolution filter do in a CNN?",
+       "choices": [
+        "It removes all the pixels from an image",
+        "It slides across the image, learning to detect a local pattern regardless of position",
+        "It converts the image into text",
+        "It only works on the very last layer of the network"
+       ],
+       "answer": 1,
+       "explain": "Convolution filters detect local patterns like edges anywhere in the image, since the same filter slides across every position."
+      },
+      {
+       "q": "What gives an RNN a form of 'memory' across a sequence?",
+       "choices": [
+        "Its convolution filters",
+        "Its hidden state, carried forward from earlier elements in the sequence",
+        "Its pooling layers",
+        "Its output layer alone"
+       ],
+       "answer": 1,
+       "explain": "The hidden state is updated at each step and passed forward, letting information from earlier in the sequence influence later processing."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Large Language Models and How They Generate Text",
+     "minutes": 12,
+     "intro": "A large language model looks like magic from the outside, but at its core it is doing something familiar from this whole course: predicting one output at a time, based on patterns learned from data.",
+     "sections": [
+      {
+       "heading": "Transformers, Tokens, and Attention",
+       "body": [
+        "Modern LLMs are built on the **transformer** architecture, which processes an entire sequence at once (unlike an RNN's step-by-step approach) using a mechanism called **attention** that lets the model weigh how relevant every other word in the input is to predicting the next one.",
+        "Text is broken into **tokens** (roughly word pieces, not always whole words) before being processed, and a model's **context window** is the maximum number of tokens it can consider at once when generating a response."
+       ]
+      },
+      {
+       "heading": "Next-Token Prediction and Hallucination",
+       "body": [
+        "At its core, an LLM is trained to predict the most probable next token given everything before it, repeated one token at a time to generate whole sentences and paragraphs. This training objective, applied at massive scale across huge amounts of text, is what produces fluent, coherent-sounding output.",
+        "Because the model is producing statistically plausible text rather than looking up verified facts, it can generate confident-sounding but false statements, called **hallucination** — a key limitation to keep in mind whenever a language model states something as fact."
+       ],
+       "example": {
+        "problem": "An LLM is given the input 'The capital of France is' and must produce the next token. Explain, at a high level, how it decides what to output.",
+        "steps": [
+         "The model has learned, from patterns across enormous amounts of training text, a probability distribution over possible next tokens given this exact context.",
+         "Attention lets it weigh which earlier words ('capital', 'France') matter most for this prediction.",
+         "It selects the highest-probability token given that context, which for this input is almost certainly 'Paris'."
+        ],
+        "answer": "It computes a probability distribution over possible next tokens from patterns learned in training, and outputs the most likely one, 'Paris'."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "transformer",
+       "def": "The neural network architecture underlying modern LLMs, using attention to process an entire sequence at once."
+      },
+      {
+       "term": "attention",
+       "def": "A mechanism that lets a model weigh how relevant each part of the input is to a given prediction."
+      },
+      {
+       "term": "token",
+       "def": "A unit of text (often a word piece) that a language model processes and predicts one at a time."
+      },
+      {
+       "term": "hallucination",
+       "def": "A confident-sounding but factually false statement generated by a language model."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the core training objective of a large language model?",
+       "choices": [
+        "Classifying images into categories",
+        "Predicting the most probable next token given everything before it",
+        "Sorting a list of numbers",
+        "Computing exact database queries"
+       ],
+       "answer": 1,
+       "explain": "LLMs are trained to predict the next token in a sequence, a task applied at massive scale that produces fluent generated text."
+      },
+      {
+       "q": "What does the attention mechanism in a transformer do?",
+       "choices": [
+        "It deletes irrelevant words from the input entirely",
+        "It lets the model weigh how relevant every other part of the input is to the current prediction",
+        "It only works on images, not text",
+        "It replaces the need for training data"
+       ],
+       "answer": 1,
+       "explain": "Attention computes relevance weights across the input, letting the model focus more on the parts of context that matter most for each prediction."
+      },
+      {
+       "q": "What is 'hallucination' in the context of an LLM?",
+       "choices": [
+        "A bug that crashes the model",
+        "A confident-sounding but factually false statement the model generates",
+        "A type of training data",
+        "A synonym for the context window"
+       ],
+       "answer": 1,
+       "explain": "Because LLMs generate statistically plausible text rather than verified facts, they can produce false statements delivered with apparent confidence."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Bias, Fairness, and Responsible AI",
+     "minutes": 10,
+     "intro": "A model is only as fair as the data it learned from, and when that data reflects real-world inequities, the model can quietly learn to reproduce and even amplify them.",
+     "sections": [
+      {
+       "heading": "Where Bias Comes From",
+       "body": [
+        "Machine learning models learn patterns from historical data, and if that data reflects existing social or historical bias, the model can learn to reproduce it, sometimes even amplifying it by treating a biased pattern as a reliable signal. This is not a hypothetical: hiring, lending, and facial recognition systems have all documented real cases of this exact failure.",
+        "Bias can also creep in through which data was collected in the first place: a dataset that underrepresents certain groups produces a model that performs worse specifically for those groups, simply from having seen fewer relevant examples."
+       ]
+      },
+      {
+       "heading": "Mitigating Bias and Practicing Responsible AI",
+       "body": [
+        "Mitigations include auditing model outcomes across demographic groups before deployment, deliberately diversifying and rebalancing training data, adding fairness constraints during training, and keeping meaningful human oversight over high-stakes decisions rather than fully automating them.",
+        "Responsible AI also means transparency: documenting a model's limitations, intended use cases, and known failure modes, so the people relying on its output understand what it can and cannot be trusted to do."
+       ],
+       "example": {
+        "problem": "A hiring-screening model, trained mostly on resumes from past hires who were overwhelmingly from one demographic, starts down-ranking qualified candidates from underrepresented groups. What is the root cause, and name one mitigation.",
+        "steps": [
+         "The training data reflects a historical pattern of who was hired in the past, not necessarily who was actually most qualified.",
+         "The model learned to treat that historical demographic skew as a predictive signal, reproducing the bias.",
+         "A mitigation is auditing the model's outcomes across demographic groups and correcting the training data, or adding explicit fairness constraints, before deployment."
+        ],
+        "answer": "Root cause: the model learned bias present in historical hiring data. Mitigation: audit outcomes by group and rebalance the training data or add fairness constraints."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "bias (in ML)",
+       "def": "Systematic unfairness in a model's predictions, often traceable to patterns in its training data."
+      },
+      {
+       "term": "fairness",
+       "def": "The goal of a model treating different groups equitably rather than reproducing historical inequities."
+      },
+      {
+       "term": "model audit",
+       "def": "Evaluating a model's outcomes across different groups to check for disparate or unfair impact."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can a model trained on historical hiring data end up biased against underrepresented groups?",
+       "choices": [
+        "Models cannot use historical data at all",
+        "The model learns patterns from the data, and if that data reflects past biased decisions, the model reproduces them",
+        "Bias is impossible in machine learning",
+        "It only happens with very small datasets"
+       ],
+       "answer": 1,
+       "explain": "A model has no way to distinguish a fair pattern from a biased one in its training data; it simply learns whatever pattern the data contains."
+      },
+      {
+       "q": "What is one practical way to check whether a deployed model is behaving unfairly toward a specific group?",
+       "choices": [
+        "Assume fairness by default with no checks",
+        "Audit the model's outcomes broken down by demographic group",
+        "Only test the model on one group",
+        "Remove the test set entirely"
+       ],
+       "answer": 1,
+       "explain": "Auditing outcomes across groups is a direct way to detect disparate impact that a single overall accuracy number could easily hide."
+      },
+      {
+       "q": "What does 'responsible AI' emphasize regarding a model's limitations?",
+       "choices": [
+        "Hiding all limitations from users",
+        "Transparently documenting known limitations and appropriate use cases",
+        "Claiming the model is always correct",
+        "Avoiding any human oversight of decisions"
+       ],
+       "answer": 1,
+       "explain": "Being clear about what a model can and cannot reliably do helps people using its output apply appropriate caution and oversight."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

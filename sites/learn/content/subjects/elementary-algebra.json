@@ -1,0 +1,796 @@
+{
+  "id": "elementary-algebra",
+  "title": "Elementary Algebra",
+  "domain": "math",
+  "level": "High school",
+  "description": "The first full course in algebra: expressions, equations, and inequalities, then graphing lines and solving systems of them, and finally polynomials and factoring. Every topic is built on the arithmetic you already know and worked all the way to a checked answer.",
+  "outcomes": [
+    "Evaluate algebraic expressions, combine like terms, and apply the distributive property.",
+    "Solve linear equations and inequalities, including multi-step equations and those with variables on both sides.",
+    "Graph linear equations using intercepts and slope, and write the equation of a line from given information.",
+    "Solve systems of two linear equations by graphing, substitution, and elimination, and apply them to word problems.",
+    "Add, subtract, and multiply polynomials, and factor them using GCF, trinomial factoring, and special product patterns.",
+    "Solve quadratic equations by factoring and using the zero product property."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Foundations: Expressions and Equations",
+      "summary": "Evaluating expressions, simplifying with the distributive property and like terms, and solving one- and two-step equations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Evaluating Algebraic Expressions",
+          "minutes": 14,
+          "intro": "An algebraic expression is a recipe waiting for numbers; the moment you know what each variable stands for, order of operations turns that recipe into a single, exact value.",
+          "sections": [
+            {
+              "heading": "Expressions, Variables, and Order of Operations",
+              "body": [
+                "An expression combines numbers and variables with operations, but unlike an equation it has no equals sign — it names a value rather than making a claim about one. Evaluating an expression means substituting a specific number for each variable and simplifying using the standard order of operations: parentheses first, then exponents, then multiplication and division left to right, then addition and subtraction left to right.",
+                "Keeping that order strict matters even in short expressions: 3 + 4 × 2 is 11, not 14, because multiplication is done before addition regardless of which one is written first."
+              ]
+            },
+            {
+              "heading": "Evaluating Expressions with Two Variables",
+              "body": [
+                "When an expression uses more than one variable, substitute every value at once before simplifying, and use parentheses around each substituted value to avoid sign errors, especially with negative numbers.",
+                "For 5x − 2y with x = 4 and y = 3, substitute both: 5(4) − 2(3). Multiply first, 20 − 6, then subtract to get 14. Writing the parentheses around each number as you substitute keeps the multiplication clearly attached to the right variable."
+              ],
+              "example": {
+                "problem": "Evaluate 5x − 2y when x = 4 and y = 3.",
+                "steps": [
+                  "Substitute the values: 5(4) − 2(3).",
+                  "Multiply first: 5(4) = 20 and 2(3) = 6.",
+                  "Subtract: 20 − 6 = 14."
+                ],
+                "answer": "5x − 2y = 14"
+              }
+            },
+            {
+              "heading": "Translating Words into Expressions",
+              "body": [
+                "Word problems describe relationships in sentences that must be turned into algebra before they can be solved. Sum, total, and more than signal addition; difference and less than signal subtraction, with less than reversing word order; product and twice signal multiplication; quotient signals division.",
+                "Practice restating a phrase before symbolizing it: 'four more than three times a number' first becomes 'three times a number, plus four,' which then translates directly to 3n + 4."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "expression", "def": "a combination of numbers, variables, and operations with no equals sign"},
+            {"term": "substitute", "def": "to replace a variable with a specific numeric value"},
+            {"term": "order of operations", "def": "the agreed sequence for simplifying: parentheses, exponents, multiplication/division, addition/subtraction"}
+          ],
+          "practice": [
+            {"q": "Evaluate 2x + 3y when x = 5 and y = 2.", "choices": ["16", "13", "10", "19"], "answer": 0, "explain": "Substituting gives 2(5) + 3(2) = 10 + 6 = 16."},
+            {"q": "Which expression represents 'the product of a number and six, decreased by four'?", "choices": ["6n − 4", "4 − 6n", "6(n − 4)", "n − 6 + 4"], "answer": 0, "explain": "'The product of a number and six' is 6n, and 'decreased by four' subtracts 4 afterward, giving 6n − 4."},
+            {"q": "Evaluate 3x² − 1 when x = 4.", "choices": ["47", "35", "23", "11"], "answer": 0, "explain": "Exponents come before multiplication: 4² = 16, then 3(16) = 48, then 48 − 1 = 47."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Combining Like Terms and the Distributive Property",
+          "minutes": 15,
+          "intro": "Two tools do almost all of the simplifying work in algebra: the distributive property, which spreads multiplication across a sum, and combining like terms, which gathers matching pieces back together.",
+          "sections": [
+            {
+              "heading": "The Distributive Property",
+              "body": [
+                "The distributive property says a(b + c) = ab + ac: a factor multiplied by a sum equals that factor times each term of the sum, added together. This lets you remove parentheses whenever a number sits just outside them multiplying a sum or difference inside.",
+                "The property works the same with subtraction, a(b − c) = ab − ac, and with a negative sign out front, which distributes as a negative to every term inside: −(2x − 5) becomes −2x + 5, not −2x − 5."
+              ],
+              "example": {
+                "problem": "Distribute 3(2x + 5).",
+                "steps": [
+                  "Multiply 3 by the first term: 3 × 2x = 6x.",
+                  "Multiply 3 by the second term: 3 × 5 = 15."
+                ],
+                "answer": "3(2x + 5) = 6x + 15"
+              }
+            },
+            {
+              "heading": "Combining Like Terms",
+              "body": [
+                "Like terms have the exact same variable part — the same letters raised to the same powers — and can be combined by adding or subtracting their numeric coefficients. Terms like 4x and −2x are like terms and combine to 2x, but 4x and 4x² are not like terms and cannot be combined.",
+                "In an expression such as 4x + 7 − 2x + 3, group the like terms mentally: the x-terms 4x and −2x combine to 2x, and the constants 7 and 3 combine to 10, giving 2x + 10."
+              ]
+            },
+            {
+              "heading": "Combining Both Tools",
+              "body": [
+                "Most simplifying problems need the distributive property first to clear any parentheses, and then combining like terms to finish. Always distribute completely before you start hunting for like terms, since terms hidden inside parentheses are not yet in a form you can combine.",
+                "This two-step process — distribute, then combine — turns a messy expression into its simplest equivalent form, ready to be evaluated or used inside an equation."
+              ],
+              "example": {
+                "problem": "Simplify 3(2x − 4) + 5x.",
+                "steps": [
+                  "Distribute the 3: 3(2x) − 3(4) = 6x − 12.",
+                  "Rewrite the full expression: 6x − 12 + 5x.",
+                  "Combine like terms: 6x + 5x = 11x, and the constant −12 stays as is."
+                ],
+                "answer": "3(2x − 4) + 5x = 11x − 12"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "distributive property", "def": "the rule a(b + c) = ab + ac, spreading multiplication across a sum or difference"},
+            {"term": "like terms", "def": "terms with the identical variable part, which can be combined by adding or subtracting coefficients"},
+            {"term": "coefficient", "def": "the numeric factor multiplying a variable in a term"}
+          ],
+          "practice": [
+            {"q": "Simplify 4(x − 3) + 2x.", "choices": ["6x − 12", "6x − 3", "4x − 12", "6x + 12"], "answer": 0, "explain": "Distributing gives 4x − 12, and adding 2x combines like terms: 4x + 2x = 6x, giving 6x − 12."},
+            {"q": "Simplify −2(3x − 5).", "choices": ["−6x − 10", "−6x + 10", "6x − 10", "−6x − 5"], "answer": 1, "explain": "Distributing −2 across both terms: −2(3x) = −6x and −2(−5) = +10, giving −6x + 10."},
+            {"q": "Simplify 5x + 9 − 3x − 4.", "choices": ["2x + 5", "8x + 5", "2x + 13", "2x − 5"], "answer": 0, "explain": "Combine like terms: 5x − 3x = 2x, and 9 − 4 = 5, giving 2x + 5."},
+            {"q": "Which pair are like terms?", "choices": ["3x and 3x²", "7xy and 2yx", "5x and 5", "2x² and 2y²"], "answer": 1, "explain": "7xy and 2yx have the identical variable part (xy, regardless of the order it is written), so they are like terms and can combine to 9xy."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Solving One-Step and Two-Step Equations",
+          "minutes": 15,
+          "intro": "Solving an equation is a balancing act: whatever you do to one side, you must do to the other, and choosing the right inverse operations peels an equation down to the variable one careful layer at a time.",
+          "sections": [
+            {
+              "heading": "One-Step Equations",
+              "body": [
+                "A one-step equation needs only one inverse operation to isolate the variable. If the variable has something added or subtracted, use the opposite operation on both sides; if the variable is multiplied or divided by a number, undo that with the opposite operation.",
+                "For x + 9 = 14, subtract 9 from both sides to get x = 5. For 3x = 21, divide both sides by 3 to get x = 7. Always finish by substituting your answer back into the original equation to confirm it makes both sides equal."
+              ]
+            },
+            {
+              "heading": "Two-Step Equations",
+              "body": [
+                "A two-step equation needs two inverse operations, performed in a specific order: undo addition or subtraction first, and undo multiplication or division second. This order reverses how the expression was built in the first place.",
+                "For 3x + 7 = 22, the expression was built by multiplying x by 3 and then adding 7, so solving it undoes the addition first (subtract 7 from both sides) and the multiplication second (divide both sides by 3)."
+              ],
+              "example": {
+                "problem": "Solve 3x + 7 = 22 for x.",
+                "steps": [
+                  "Subtract 7 from both sides: 3x = 15.",
+                  "Divide both sides by 3: x = 5.",
+                  "Check: 3(5) + 7 = 15 + 7 = 22."
+                ],
+                "answer": "x = 5"
+              }
+            },
+            {
+              "heading": "Equations with Fractions",
+              "body": [
+                "When the variable is multiplied by a fraction, undo it by multiplying both sides by the reciprocal of that fraction. Solving (2/3)x = 8 means multiplying both sides by 3/2, since 3/2 is the reciprocal of 2/3 and multiplying by a number and its reciprocal always cancels to 1.",
+                "This is exactly the same idea as dividing both sides by a whole number, just applied to a fractional coefficient: multiplying by the reciprocal is how you divide by a fraction."
+              ],
+              "example": {
+                "problem": "Solve (2/3)x = 8 for x.",
+                "steps": [
+                  "Multiply both sides by the reciprocal of 2/3, which is 3/2: (3/2)(2/3)x = (3/2)(8).",
+                  "The left side simplifies to x, since (3/2)(2/3) = 1.",
+                  "The right side: (3/2)(8) = 24/2 = 12."
+                ],
+                "answer": "x = 12"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "isolate the variable", "def": "to get the variable alone on one side of the equation using inverse operations"},
+            {"term": "check a solution", "def": "substituting the answer back into the original equation to confirm both sides match"}
+          ],
+          "practice": [
+            {"q": "Solve for x: x − 6 = 11.", "choices": ["5", "17", "−17", "−5"], "answer": 1, "explain": "Adding 6 to both sides gives x = 11 + 6 = 17."},
+            {"q": "Solve for x: 4x − 5 = 19.", "choices": ["6", "3.5", "24", "4"], "answer": 0, "explain": "Add 5 to both sides to get 4x = 24, then divide by 4 to get x = 6."},
+            {"q": "Solve for x: (3/4)x = 9.", "choices": ["6.75", "12", "6", "3"], "answer": 1, "explain": "Multiplying both sides by the reciprocal 4/3 gives x = 9 × 4/3 = 36/3 = 12."},
+            {"q": "Solve for x: 2x + 3 = 15.", "choices": ["9", "6", "5", "12"], "answer": 1, "explain": "Subtract 3 from both sides to get 2x = 12, then divide by 2 to get x = 6."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Solving Linear Equations and Inequalities",
+      "summary": "Multi-step equations, equations with variables on both sides, and solving and graphing linear inequalities.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Multi-Step Equations",
+          "minutes": 16,
+          "intro": "Real equations rarely arrive in one-step or two-step form; usually you must first distribute or clear fractions before the familiar isolate-the-variable steps even apply.",
+          "sections": [
+            {
+              "heading": "Equations with Parentheses",
+              "body": [
+                "When an equation contains parentheses, distribute first to remove them, then combine any like terms on each side, and only then begin isolating the variable with inverse operations.",
+                "Skipping the distribution step and trying to divide only part of an expression by a number is one of the most common algebra errors; always fully distribute before doing anything else."
+              ],
+              "example": {
+                "problem": "Solve 3(2x − 1) − 4 = 11 for x.",
+                "steps": [
+                  "Distribute the 3: 6x − 3 − 4 = 11.",
+                  "Combine like terms on the left: −3 − 4 = −7, giving 6x − 7 = 11.",
+                  "Add 7 to both sides: 6x = 18.",
+                  "Divide both sides by 6: x = 3."
+                ],
+                "answer": "x = 3"
+              }
+            },
+            {
+              "heading": "Equations with Fractions",
+              "body": [
+                "When an equation has fractions, multiply every term on both sides by the least common denominator (LCD) of all the fractions present. This clears every denominator at once, turning the equation into one with only whole-number coefficients.",
+                "For x/2 + x/3 = 5, the LCD of 2 and 3 is 6. Multiplying every term by 6 gives 6(x/2) + 6(x/3) = 6(5), which simplifies to 3x + 2x = 30, a much easier equation to finish solving."
+              ],
+              "example": {
+                "problem": "Solve x/2 + x/3 = 5 for x.",
+                "steps": [
+                  "Multiply every term by the LCD, 6: 6(x/2) + 6(x/3) = 6(5).",
+                  "Simplify each term: 3x + 2x = 30.",
+                  "Combine like terms: 5x = 30.",
+                  "Divide both sides by 5: x = 6."
+                ],
+                "answer": "x = 6"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "clearing fractions", "def": "multiplying every term of an equation by the LCD to remove all denominators at once"},
+            {"term": "multi-step equation", "def": "an equation requiring more than two operations to isolate the variable, often after distributing or clearing fractions"}
+          ],
+          "practice": [
+            {"q": "Solve for x: 2(3x + 1) = 20.", "choices": ["3", "6", "9", "4"], "answer": 0, "explain": "Distributing gives 6x + 2 = 20, so 6x = 18, and x = 3."},
+            {"q": "Solve for x: x/4 + x/2 = 9.", "choices": ["9", "12", "6", "18"], "answer": 1, "explain": "The LCD of 4 and 2 is 4; multiplying every term by 4 gives x + 2x = 36, so 3x = 36 and x = 12."},
+            {"q": "Solve for x: 5(x − 2) + 3 = 18.", "choices": ["5", "7", "3", "4"], "answer": 0, "explain": "Distributing gives 5x − 10 + 3 = 18, which simplifies to 5x − 7 = 18, so 5x = 25 and x = 5."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Equations with Variables on Both Sides",
+          "minutes": 15,
+          "intro": "When the variable shows up on both sides of an equation, the very first move is to gather all the variable terms onto one side, turning a two-sided problem back into the familiar one-sided kind.",
+          "sections": [
+            {
+              "heading": "Gathering Variable Terms",
+              "body": [
+                "To solve an equation with the variable on both sides, add or subtract a variable term from both sides so it disappears from one side entirely, leaving a standard equation with the variable on just one side.",
+                "It usually helps to move the smaller variable term rather than the larger one, to keep the remaining coefficient positive, though either choice works as long as you apply the same operation to both sides."
+              ],
+              "example": {
+                "problem": "Solve 4x − 9 = 2x + 7 for x.",
+                "steps": [
+                  "Subtract 2x from both sides: 4x − 2x − 9 = 7, giving 2x − 9 = 7.",
+                  "Add 9 to both sides: 2x = 16.",
+                  "Divide both sides by 2: x = 8.",
+                  "Check: 4(8) − 9 = 32 − 9 = 23, and 2(8) + 7 = 16 + 7 = 23."
+                ],
+                "answer": "x = 8"
+              }
+            },
+            {
+              "heading": "Special Cases: No Solution and Infinitely Many Solutions",
+              "body": [
+                "Sometimes gathering variable terms makes the variable vanish entirely, leaving only numbers. If the remaining numeric statement is false, like 5 = −2, the equation has no solution — no value of x could ever make it true. If the remaining statement is true, like 6 = 6, the equation is an identity, true for every value of x, so it has infinitely many solutions.",
+                "These special cases are not errors in your work; they are the equation itself communicating that the two original expressions either never agree or always agree, and recognizing them is part of solving correctly."
+              ],
+              "example": {
+                "problem": "Solve 2(x + 3) = 2x + 6 for x.",
+                "steps": [
+                  "Distribute the left side: 2x + 6 = 2x + 6.",
+                  "Subtract 2x from both sides: 6 = 6.",
+                  "This is always true, regardless of x."
+                ],
+                "answer": "Infinitely many solutions (an identity)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "identity", "def": "an equation that is true for every value of the variable"},
+            {"term": "no solution", "def": "the case where no value of the variable makes the equation true"}
+          ],
+          "practice": [
+            {"q": "Solve for x: 5x + 4 = 2x + 19.", "choices": ["3", "5", "7", "23/3"], "answer": 1, "explain": "Subtract 2x from both sides to get 3x + 4 = 19, then subtract 4 to get 3x = 15, and divide by 3 to get x = 5."},
+            {"q": "Solve 3x + 5 = 3x − 2. What is true about this equation?", "choices": ["x = 7", "x = 0", "No solution", "Infinitely many solutions"], "answer": 2, "explain": "Subtracting 3x from both sides leaves 5 = −2, which is false, so the equation has no solution."},
+            {"q": "Solve for x: 6x − 3 = 4x + 9.", "choices": ["6", "3", "12", "2"], "answer": 0, "explain": "Subtract 4x from both sides to get 2x − 3 = 9, add 3 to get 2x = 12, and divide by 2 to get x = 6."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Linear Inequalities",
+          "minutes": 14,
+          "intro": "Solving an inequality feels almost identical to solving an equation, with one sharp exception: multiplying or dividing by a negative number flips which direction the inequality points, and forgetting that single rule is the most common mistake in this lesson.",
+          "sections": [
+            {
+              "heading": "Solving Inequalities",
+              "body": [
+                "Inequalities use symbols <, >, ≤, and ≥ instead of an equals sign, and you solve them with the same inverse operations used for equations: add, subtract, multiply, or divide both sides to isolate the variable.",
+                "The one rule that changes: whenever you multiply or divide both sides by a negative number, reverse the direction of the inequality symbol. Adding or subtracting any number, positive or negative, never flips the inequality."
+              ],
+              "example": {
+                "problem": "Solve −2x + 5 < 11 for x.",
+                "steps": [
+                  "Subtract 5 from both sides: −2x < 6.",
+                  "Divide both sides by −2, and flip the inequality symbol since you divided by a negative: x > −3."
+                ],
+                "answer": "x > −3"
+              }
+            },
+            {
+              "heading": "Graphing Solutions on a Number Line",
+              "body": [
+                "An inequality's solution is not one number but a whole range, shown on a number line as a ray starting at the boundary value. Use an open circle at the boundary for < or >, since the boundary value itself is not included, and a closed, filled circle for ≤ or ≥, since it is included.",
+                "For x > −3, draw an open circle at −3 and shade everything to the right, since every number greater than −3 satisfies the inequality but −3 itself does not."
+              ],
+              "example": {
+                "problem": "Solve 3x − 4 ≥ 11 for x and describe its graph.",
+                "steps": [
+                  "Add 4 to both sides: 3x ≥ 15.",
+                  "Divide both sides by 3 (positive, so no flip): x ≥ 5.",
+                  "Graph: a closed circle at 5, shaded to the right."
+                ],
+                "answer": "x ≥ 5, closed circle at 5 shaded rightward"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "linear inequality", "def": "a mathematical statement using <, >, ≤, or ≥ instead of an equals sign"},
+            {"term": "flip the inequality", "def": "reversing the direction of an inequality symbol, required when multiplying or dividing both sides by a negative number"}
+          ],
+          "practice": [
+            {"q": "Solve for x: −3x + 2 > 14.", "choices": ["x > −4", "x < −4", "x > 4", "x < 4"], "answer": 1, "explain": "Subtract 2 to get −3x > 12, then divide by −3 and flip the inequality: x < −4."},
+            {"q": "Solve for x: 5x − 2 ≤ 13.", "choices": ["x ≤ 3", "x ≥ 3", "x ≤ 15", "x ≤ 2.2"], "answer": 0, "explain": "Add 2 to both sides to get 5x ≤ 15, then divide by 5 (positive, no flip) to get x ≤ 3."},
+            {"q": "Which graph matches x < 2?", "choices": ["Closed circle at 2, shaded left", "Open circle at 2, shaded left", "Open circle at 2, shaded right", "Closed circle at 2, shaded right"], "answer": 1, "explain": "x < 2 does not include 2 itself, so the circle is open, and it shades toward smaller values, to the left."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Graphing Linear Equations",
+      "summary": "Plotting points and lines on the coordinate plane, finding slope and intercepts, and writing the equation of a line.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "The Rectangular Coordinate System",
+          "minutes": 13,
+          "intro": "Every point on a flat surface can be pinned down by exactly two numbers, and that simple idea — the coordinate plane — is what lets algebra and geometry talk to each other.",
+          "sections": [
+            {
+              "heading": "Plotting Points and Quadrants",
+              "body": [
+                "The coordinate plane is formed by a horizontal x-axis and a vertical y-axis crossing at the origin, (0, 0). A point's location is given as an ordered pair (x, y): the x-coordinate tells you how far to move horizontally, and the y-coordinate tells you how far to move vertically.",
+                "The two axes divide the plane into four quadrants, numbered counterclockwise starting from the upper right: Quadrant I has both coordinates positive, Quadrant II has a negative x and positive y, Quadrant III has both negative, and Quadrant IV has a positive x and negative y."
+              ]
+            },
+            {
+              "heading": "Finding Intercepts of a Line",
+              "body": [
+                "The x-intercept is the point where a line crosses the x-axis, which always has a y-coordinate of 0; the y-intercept is where it crosses the y-axis, always with an x-coordinate of 0. Finding intercepts is a fast way to graph a line from its equation without a table of many points.",
+                "To find the x-intercept, substitute y = 0 into the equation and solve for x; to find the y-intercept, substitute x = 0 and solve for y. Plotting just these two points, and drawing the straight line through them, graphs the entire equation."
+              ],
+              "example": {
+                "problem": "Find the x- and y-intercepts of 2x + 3y = 12.",
+                "steps": [
+                  "For the x-intercept, set y = 0: 2x + 3(0) = 12, so 2x = 12 and x = 6. The x-intercept is (6, 0).",
+                  "For the y-intercept, set x = 0: 2(0) + 3y = 12, so 3y = 12 and y = 4. The y-intercept is (0, 4)."
+                ],
+                "answer": "x-intercept (6, 0), y-intercept (0, 4)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "coordinate plane", "def": "a flat surface formed by a horizontal x-axis and vertical y-axis, used to locate points"},
+            {"term": "ordered pair", "def": "a pair of numbers (x, y) that locates a specific point on the coordinate plane"},
+            {"term": "x-intercept", "def": "the point where a graph crosses the x-axis, where y = 0"},
+            {"term": "y-intercept", "def": "the point where a graph crosses the y-axis, where x = 0"}
+          ],
+          "practice": [
+            {"q": "In which quadrant does the point (−3, 5) lie?", "choices": ["I", "II", "III", "IV"], "answer": 1, "explain": "A negative x-coordinate and a positive y-coordinate place the point in Quadrant II."},
+            {"q": "Find the x-intercept of 4x − 2y = 16.", "choices": ["(4, 0)", "(0, −8)", "(8, 0)", "(0, 4)"], "answer": 0, "explain": "Setting y = 0 gives 4x = 16, so x = 4, and the x-intercept is (4, 0)."},
+            {"q": "Find the y-intercept of 3x + 5y = 20.", "choices": ["(0, 4)", "(20, 0)", "(0, 20)", "(4, 0)"], "answer": 0, "explain": "Setting x = 0 gives 5y = 20, so y = 4, and the y-intercept is (0, 4)."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Graphing with Slope and Intercepts",
+          "minutes": 16,
+          "intro": "Slope answers a single practical question — for every step you take to the right, how far up or down does the line go? — and once you know a line's slope and where it starts, you can sketch it in seconds.",
+          "sections": [
+            {
+              "heading": "Calculating Slope",
+              "body": [
+                "Slope measures a line's steepness as the ratio of vertical change to horizontal change between any two points on it: slope m = (y₂ − y₁)/(x₂ − x₁). A positive slope rises left to right, a negative slope falls left to right, a slope of 0 is horizontal, and an undefined slope (division by zero) is vertical.",
+                "The order you subtract in does not matter as long as you are consistent: subtract the coordinates of the second point from the first in both the numerator and denominator, or the first from the second in both — just never mix the order between the two."
+              ],
+              "example": {
+                "problem": "Find the slope of the line through (1, 2) and (4, 11).",
+                "steps": [
+                  "Label the points: (x₁, y₁) = (1, 2) and (x₂, y₂) = (4, 11).",
+                  "Apply the slope formula: m = (11 − 2)/(4 − 1) = 9/3.",
+                  "Simplify: 9/3 = 3."
+                ],
+                "answer": "The slope is 3"
+              }
+            },
+            {
+              "heading": "Slope-Intercept Form",
+              "body": [
+                "Slope-intercept form writes a line's equation as y = mx + b, where m is the slope and b is the y-intercept. This form makes graphing fast: plot the y-intercept (0, b) first, then use the slope as rise over run to plot a second point, and draw the line through both.",
+                "For y = −2x + 5, the y-intercept is (0, 5) and the slope is −2, meaning for every 1 unit moved right, the line falls 2 units. From (0, 5), moving right 1 and down 2 lands on the point (1, 3), which is also on the line."
+              ],
+              "example": {
+                "problem": "Graph y = −2x + 5 using its slope and y-intercept.",
+                "steps": [
+                  "Identify the y-intercept: b = 5, so plot (0, 5).",
+                  "Identify the slope: m = −2, written as rise/run = −2/1.",
+                  "From (0, 5), move right 1 and down 2 to plot (1, 3).",
+                  "Draw a straight line through (0, 5) and (1, 3)."
+                ],
+                "answer": "A line through (0, 5) and (1, 3) with slope −2"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "slope", "def": "a measure of a line's steepness, equal to vertical change divided by horizontal change between two points"},
+            {"term": "slope-intercept form", "def": "the equation of a line written as y = mx + b, where m is slope and b is the y-intercept"},
+            {"term": "rise over run", "def": "another name for slope, describing vertical change (rise) over horizontal change (run)"}
+          ],
+          "practice": [
+            {"q": "Find the slope of the line through (2, 3) and (6, 15).", "choices": ["3", "4", "2", "12"], "answer": 0, "explain": "m = (15 − 3)/(6 − 2) = 12/4 = 3."},
+            {"q": "What is the y-intercept of y = 4x − 7?", "choices": ["(0, 4)", "(0, −7)", "(−7, 0)", "(4, 0)"], "answer": 1, "explain": "In slope-intercept form y = mx + b, b is the y-intercept; here b = −7, so the y-intercept is (0, −7)."},
+            {"q": "A line has slope −1/2 and passes through (0, 6). Which point is also on the line?", "choices": ["(2, 5)", "(2, 7)", "(1, 6.5)", "(−2, 5)"], "answer": 0, "explain": "From (0, 6), a slope of −1/2 means moving right 2 goes down 1, landing on (2, 5)."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Writing Equations of Lines",
+          "minutes": 15,
+          "intro": "Given just a slope and a point, or even just two points, you can reconstruct the full equation of a line — the reverse of graphing, and just as mechanical once you know the moves.",
+          "sections": [
+            {
+              "heading": "Point-Slope Form",
+              "body": [
+                "Point-slope form writes a line's equation as y − y₁ = m(x − x₁), using its slope m and any known point (x₁, y₁). It is especially useful when you know a slope and one point but not the y-intercept directly.",
+                "Once written in point-slope form, you can leave it as is or solve for y to convert it into slope-intercept form, whichever the situation calls for."
+              ],
+              "example": {
+                "problem": "Write the equation of the line through (2, 3) with slope 4.",
+                "steps": [
+                  "Substitute into point-slope form: y − 3 = 4(x − 2).",
+                  "Distribute the 4: y − 3 = 4x − 8.",
+                  "Add 3 to both sides: y = 4x − 5."
+                ],
+                "answer": "y = 4x − 5"
+              }
+            },
+            {
+              "heading": "Writing an Equation from Two Points",
+              "body": [
+                "When given two points instead of a slope, calculate the slope first using the slope formula, then use either point in point-slope form to finish writing the equation. Either point produces the same final equation, since both lie on the same line.",
+                "This two-step process — find the slope, then apply point-slope form — is the standard method for turning any two known points on a line into its full equation."
+              ],
+              "example": {
+                "problem": "Write the equation of the line through (1, 5) and (3, 9).",
+                "steps": [
+                  "Find the slope: m = (9 − 5)/(3 − 1) = 4/2 = 2.",
+                  "Use point-slope form with (1, 5): y − 5 = 2(x − 1).",
+                  "Distribute: y − 5 = 2x − 2.",
+                  "Add 5 to both sides: y = 2x + 3."
+                ],
+                "answer": "y = 2x + 3"
+              }
+            },
+            {
+              "heading": "Parallel and Perpendicular Lines",
+              "body": [
+                "Parallel lines never meet and always have the exact same slope. Perpendicular lines cross at a right angle, and their slopes are negative reciprocals of each other — flip the fraction and change the sign, so a slope of 2/3 pairs with a perpendicular slope of −3/2.",
+                "These slope relationships let you write the equation of a line parallel or perpendicular to a given line through a new point, using the same point-slope method with the correctly related slope."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "point-slope form", "def": "the equation y − y₁ = m(x − x₁), built from a line's slope and one known point"},
+            {"term": "parallel lines", "def": "lines with the same slope that never intersect"},
+            {"term": "perpendicular lines", "def": "lines that meet at a right angle, with slopes that are negative reciprocals of each other"}
+          ],
+          "practice": [
+            {"q": "Write the equation of the line through (4, 1) with slope −2.", "choices": ["y = −2x + 9", "y = −2x − 7", "y = 2x + 9", "y = −2x + 1"], "answer": 0, "explain": "Point-slope form: y − 1 = −2(x − 4), which distributes to y − 1 = −2x + 8, so y = −2x + 9."},
+            {"q": "Find the equation of the line through (2, 4) and (5, 13).", "choices": ["y = 3x − 2", "y = 3x + 2", "y = 2x", "y = 3x − 6"], "answer": 0, "explain": "Slope = (13 − 4)/(5 − 2) = 9/3 = 3. Using point-slope with (2, 4): y − 4 = 3(x − 2), which gives y = 3x − 6 + 4 = 3x − 2."},
+            {"q": "A line has slope 2/5. What is the slope of a line perpendicular to it?", "choices": ["2/5", "5/2", "−5/2", "−2/5"], "answer": 2, "explain": "Perpendicular slopes are negative reciprocals: flip 2/5 to 5/2 and change the sign, giving −5/2."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Systems of Linear Equations",
+      "summary": "Solving systems of two linear equations by graphing, substitution, and elimination, and applying them to real situations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Solving by Graphing and Substitution",
+          "minutes": 15,
+          "intro": "A system of equations asks where two lines meet, and substitution turns that geometric question into pure algebra by replacing one variable with an equivalent expression from the other equation.",
+          "sections": [
+            {
+              "heading": "What a System's Solution Means",
+              "body": [
+                "A system of two linear equations has a solution wherever both lines are true at once, which graphically is exactly the point where the two lines cross. If the lines have different slopes, they cross exactly once, giving one solution; if they have the same slope but different y-intercepts, they are parallel and never cross, giving no solution; if they are the same line entirely, every point is a solution.",
+                "Graphing both lines and reading off the intersection point works, but it is only as precise as your graph; algebraic methods like substitution give an exact answer every time."
+              ]
+            },
+            {
+              "heading": "Solving by Substitution",
+              "body": [
+                "Substitution solves a system by taking an expression for one variable from one equation and substituting it into the other equation, collapsing two equations with two unknowns into one equation with one unknown.",
+                "This method works best when one equation is already solved for a variable, or can be solved for one easily. Once you find one variable's value, substitute it back into either original equation to find the other."
+              ],
+              "example": {
+                "problem": "Solve the system y = 2x + 1 and y = −x + 7.",
+                "steps": [
+                  "Since both equations equal y, set the right-hand sides equal to each other: 2x + 1 = −x + 7.",
+                  "Add x to both sides: 3x + 1 = 7.",
+                  "Subtract 1: 3x = 6, then divide by 3: x = 2.",
+                  "Substitute x = 2 into y = 2x + 1: y = 2(2) + 1 = 5."
+                ],
+                "answer": "(x, y) = (2, 5)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "system of equations", "def": "two or more equations considered together, sharing the same variables"},
+            {"term": "solution of a system", "def": "the ordered pair (or pairs) that make every equation in the system true at once"},
+            {"term": "substitution method", "def": "solving a system by replacing one variable with an equivalent expression from another equation"}
+          ],
+          "practice": [
+            {"q": "Solve the system y = 3x − 1 and y = x + 5.", "choices": ["(3, 8)", "(2, 5)", "(3, 5)", "(2, 8)"], "answer": 0, "explain": "Setting 3x − 1 = x + 5 gives 2x = 6, so x = 3, and y = x + 5 = 8, giving (3, 8)."},
+            {"q": "Two lines in a system have the same slope but different y-intercepts. How many solutions does the system have?", "choices": ["Exactly one", "None", "Infinitely many", "Exactly two"], "answer": 1, "explain": "Lines with the same slope and different y-intercepts are parallel and never intersect, so the system has no solution."},
+            {"q": "Solve the system y = x + 4 and 2x + y = 10.", "choices": ["(2, 6)", "(3, 7)", "(3, 4)", "(4, 8)"], "answer": 0, "explain": "Substitute y = x + 4 into the second equation: 2x + x + 4 = 10, so 3x = 6, x = 2, and y = 2 + 4 = 6."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Solving by Elimination",
+          "minutes": 16,
+          "intro": "Elimination solves a system by adding or subtracting the two equations directly, engineering a matching pair of opposite coefficients so one variable cancels out entirely.",
+          "sections": [
+            {
+              "heading": "Eliminating a Variable by Adding",
+              "body": [
+                "If one variable has opposite coefficients in the two equations, adding the equations together eliminates that variable immediately, leaving one equation with one unknown. Solve for that unknown, then substitute it back into either original equation to find the other variable.",
+                "This method is efficient precisely because it works directly with whole equations instead of solving for a variable first, which is especially useful when neither equation is easily solved for x or y alone."
+              ],
+              "example": {
+                "problem": "Solve the system 3x + 2y = 12 and 3x − 2y = 0 by elimination.",
+                "steps": [
+                  "The y-terms have opposite coefficients (+2y and −2y), so add the equations: (3x + 3x) + (2y − 2y) = 12 + 0, giving 6x = 12.",
+                  "Divide both sides by 6: x = 2.",
+                  "Substitute x = 2 into 3x + 2y = 12: 6 + 2y = 12, so 2y = 6 and y = 3."
+                ],
+                "answer": "(x, y) = (2, 3)"
+              }
+            },
+            {
+              "heading": "Multiplying Before Eliminating",
+              "body": [
+                "When neither variable already has opposite or matching coefficients, multiply one or both equations by a constant so that one variable's coefficients become opposites, then add as usual. Multiplying an entire equation by a nonzero constant does not change its solution, since it is the same as multiplying both sides by that number.",
+                "Choose the multiplier by looking at the coefficients you want to match: to eliminate y from 2x + 3y = 13 and 4x − y = 5, multiply the second equation by 3 so its y-term becomes −3y, matching the first equation's +3y as opposites."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "elimination method", "def": "solving a system by adding or subtracting equations to cancel out one variable"},
+            {"term": "opposite coefficients", "def": "matching numeric coefficients with opposite signs, such as +2y and −2y, which cancel when added"}
+          ],
+          "practice": [
+            {"q": "Solve the system 4x + y = 11 and 4x − y = 5 by elimination.", "choices": ["(2, 3)", "(3, 2)", "(2, 2)", "(1, 3)"], "answer": 0, "explain": "Adding the equations cancels y: 8x = 16, so x = 2. Substituting into 4x + y = 11 gives 8 + y = 11, so y = 3."},
+            {"q": "To eliminate x from 2x + 5y = 8 and 6x − y = 4, what should you multiply the first equation by before subtracting?", "choices": ["2", "3", "6", "5"], "answer": 1, "explain": "Multiplying the first equation by 3 makes its x-coefficient 6, matching the second equation's 6x so it can be eliminated by subtraction."},
+            {"q": "Solve the system x + y = 10 and x − y = 2 by elimination.", "choices": ["(6, 4)", "(4, 6)", "(5, 5)", "(8, 2)"], "answer": 0, "explain": "Adding the equations cancels y: 2x = 12, so x = 6. Substituting gives 6 + y = 10, so y = 4."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Applications of Systems",
+          "minutes": 17,
+          "intro": "Two unknowns, two facts about them: that pattern shows up in ticket sales, mixture problems, and cost comparisons alike, and setting up a system correctly is most of the battle.",
+          "sections": [
+            {
+              "heading": "Setting Up a System from a Word Problem",
+              "body": [
+                "Start by naming your two unknowns clearly with variables, then translate each separate piece of given information into its own equation. A well-set-up system usually has one equation about a total count and another about a total value, price, or rate.",
+                "Reread the problem after writing each equation to confirm it actually matches what was said; a wrong equation guarantees a wrong answer no matter how carefully you solve it afterward."
+              ]
+            },
+            {
+              "heading": "Worked Application: Ticket Sales",
+              "body": [
+                "A theater sells adult tickets for $8 and child tickets for $5. Suppose 200 tickets are sold in total for $1,300. Let x be the number of adult tickets and y the number of child tickets sold.",
+                "The total ticket count gives one equation, x + y = 200, and the total revenue gives the other, 8x + 5y = 1,300. Solving this system by substitution or elimination reveals exactly how many of each ticket type were sold."
+              ],
+              "example": {
+                "problem": "Solve x + y = 200 and 8x + 5y = 1,300 for the number of adult and child tickets sold.",
+                "steps": [
+                  "Solve the first equation for y: y = 200 − x.",
+                  "Substitute into the second equation: 8x + 5(200 − x) = 1,300.",
+                  "Distribute: 8x + 1,000 − 5x = 1,300, which simplifies to 3x + 1,000 = 1,300.",
+                  "Subtract 1,000: 3x = 300, so x = 100. Then y = 200 − 100 = 100.",
+                  "Check: 100 + 100 = 200 tickets, and 8(100) + 5(100) = 800 + 500 = 1,300."
+                ],
+                "answer": "100 adult tickets and 100 child tickets"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "mixture problem", "def": "a system-of-equations word problem combining two quantities at different rates, prices, or concentrations"},
+            {"term": "define variables", "def": "the step of assigning letters to represent each unknown quantity before writing equations"}
+          ],
+          "practice": [
+            {"q": "A parking lot has motorcycles and cars totaling 50 vehicles with 172 wheels (motorcycles have 2 wheels, cars have 4). Which system represents this?", "choices": ["m + c = 50 and 2m + 4c = 172", "m + c = 172 and 2m + 4c = 50", "m + c = 50 and 4m + 2c = 172", "2m + 2c = 50 and m + c = 172"], "answer": 0, "explain": "The total vehicle count gives m + c = 50, and the total wheel count, 2 per motorcycle and 4 per car, gives 2m + 4c = 172."},
+            {"q": "Solve m + c = 50 and 2m + 4c = 172 for the number of motorcycles and cars.", "choices": ["m = 14, c = 36", "m = 36, c = 14", "m = 20, c = 30", "m = 25, c = 25"], "answer": 0, "explain": "From m + c = 50, m = 50 − c. Substituting gives 2(50 − c) + 4c = 172, so 100 + 2c = 172, meaning c = 36 and m = 14."},
+            {"q": "A coffee shop mixes x pounds of $6-per-pound beans with y pounds of $9-per-pound beans to make 20 pounds worth $7.50 per pound total. Which equation represents the total value?", "choices": ["6x + 9y = 7.50", "x + y = 150", "6x + 9y = 150", "x + y = 7.50"], "answer": 2, "explain": "20 pounds at $7.50 per pound is worth 20 × 7.50 = $150 total, so the value equation is 6x + 9y = 150 (paired with x + y = 20 for the weight)."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Polynomials and Factoring",
+      "summary": "Adding, subtracting, and multiplying polynomials, then factoring them and using factoring to solve quadratic equations.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Adding, Subtracting, and Multiplying Polynomials",
+          "minutes": 16,
+          "intro": "Polynomials are just expressions built from whole-number powers of a variable, and every operation you do with them boils down to the same two skills from earlier units: combining like terms and distributing.",
+          "sections": [
+            {
+              "heading": "Polynomial Vocabulary",
+              "body": [
+                "A polynomial is an expression made of terms with whole-number exponents on its variables, such as 3x² + 2x − 5. A single term is a monomial, two terms make a binomial, and three terms make a trinomial. The degree of a polynomial is the highest exponent appearing in it.",
+                "Polynomials are usually written in standard form, with terms ordered from highest degree to lowest, which makes it easy to compare, add, and later factor them consistently."
+              ]
+            },
+            {
+              "heading": "Adding and Subtracting Polynomials",
+              "body": [
+                "To add polynomials, combine like terms across both, matching terms with the same variable and exponent. To subtract one polynomial from another, distribute the negative sign across every term of the polynomial being subtracted, then combine like terms as usual.",
+                "It helps to line up like terms mentally by degree before combining, so the x² terms combine with x² terms, the x terms with x terms, and the constants with constants, without mixing across degrees."
+              ],
+              "example": {
+                "problem": "Add (3x² + 2x − 5) + (x² − 4x + 7).",
+                "steps": [
+                  "Combine x² terms: 3x² + x² = 4x².",
+                  "Combine x terms: 2x − 4x = −2x.",
+                  "Combine constants: −5 + 7 = 2."
+                ],
+                "answer": "4x² − 2x + 2"
+              }
+            },
+            {
+              "heading": "Multiplying Polynomials",
+              "body": [
+                "Multiplying two binomials uses the distributive property twice, often organized with the FOIL pattern: multiply the First terms, then the Outer terms, then the Inner terms, then the Last terms, and combine any resulting like terms.",
+                "For larger polynomials, distribute every term of the first polynomial across every term of the second, then combine like terms; FOIL is simply this same process specialized to the common case of two binomials."
+              ],
+              "example": {
+                "problem": "Multiply (x + 3)(x − 5).",
+                "steps": [
+                  "First: x × x = x².",
+                  "Outer: x × (−5) = −5x.",
+                  "Inner: 3 × x = 3x.",
+                  "Last: 3 × (−5) = −15.",
+                  "Combine like terms: −5x + 3x = −2x."
+                ],
+                "answer": "(x + 3)(x − 5) = x² − 2x − 15"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "polynomial", "def": "an expression made of terms with whole-number exponents on its variables"},
+            {"term": "degree", "def": "the highest exponent appearing in a polynomial"},
+            {"term": "FOIL", "def": "a pattern for multiplying two binomials: First, Outer, Inner, Last terms"}
+          ],
+          "practice": [
+            {"q": "Add (2x² − x + 4) + (5x² + 3x − 1).", "choices": ["7x² + 2x + 3", "7x² − 2x + 3", "3x² + 2x + 3", "7x² + 2x − 3"], "answer": 0, "explain": "Combine like terms: 2x² + 5x² = 7x², −x + 3x = 2x, and 4 − 1 = 3, giving 7x² + 2x + 3."},
+            {"q": "Multiply (x + 4)(x + 2).", "choices": ["x² + 6x + 8", "x² + 8x + 6", "x² + 6x + 6", "x² + 2x + 8"], "answer": 0, "explain": "FOIL gives x² + 2x + 4x + 8, which combines to x² + 6x + 8."},
+            {"q": "Subtract (5x² + 3x) − (2x² − 4x).", "choices": ["3x² + 7x", "3x² − x", "7x² − x", "3x² − 7x"], "answer": 0, "explain": "Distribute the negative: 5x² + 3x − 2x² + 4x, and combine to get 3x² + 7x."},
+            {"q": "What is the degree of the polynomial 4x³ − 2x² + x − 9?", "choices": ["4", "3", "2", "9"], "answer": 1, "explain": "The degree is the highest exponent appearing, which here is 3 in the term 4x³."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Factoring Trinomials and the GCF",
+          "minutes": 17,
+          "intro": "Factoring is multiplication in reverse — reverse-engineering an expression back into the factors that would produce it — and it starts with always checking for a common factor first.",
+          "sections": [
+            {
+              "heading": "Factoring Out the Greatest Common Factor",
+              "body": [
+                "Before any other factoring technique, check whether every term in the expression shares a common factor, and if so, pull out the greatest one. This is exactly the distributive property in reverse: instead of multiplying a factor across a sum, you are finding what factor was multiplied across it.",
+                "For 6x² + 9x, both terms share a factor of 3x, the greatest common factor. Dividing each term by 3x gives 2x and 3, so the factored form is 3x(2x + 3)."
+              ],
+              "example": {
+                "problem": "Factor 6x² + 9x.",
+                "steps": [
+                  "Find the GCF of 6x² and 9x: the GCF of 6 and 9 is 3, and both terms share at least one factor of x, so the GCF is 3x.",
+                  "Divide each term by 3x: 6x² ÷ 3x = 2x, and 9x ÷ 3x = 3.",
+                  "Write the factored form with the GCF outside parentheses."
+                ],
+                "answer": "6x² + 9x = 3x(2x + 3)"
+              }
+            },
+            {
+              "heading": "Factoring Trinomials with Leading Coefficient 1",
+              "body": [
+                "To factor a trinomial x² + bx + c, look for two numbers that multiply to give c and add to give b. Once found, those two numbers become the constants in a pair of binomial factors: (x + first number)(x + second number).",
+                "For x² + 7x + 12, look for two numbers multiplying to 12 and adding to 7: 3 and 4 satisfy both conditions, since 3 × 4 = 12 and 3 + 4 = 7. So the trinomial factors as (x + 3)(x + 4)."
+              ],
+              "example": {
+                "problem": "Factor x² + 7x + 12.",
+                "steps": [
+                  "List factor pairs of 12: 1 and 12, 2 and 6, 3 and 4.",
+                  "Check which pair adds to 7: 3 + 4 = 7, matching the middle coefficient.",
+                  "Write the binomial factors using these numbers."
+                ],
+                "answer": "x² + 7x + 12 = (x + 3)(x + 4)"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "factor", "def": "to rewrite an expression as a product of simpler expressions"},
+            {"term": "greatest common factor (GCF)", "def": "the largest expression that divides evenly into every term of a polynomial"},
+            {"term": "trinomial", "def": "a polynomial with exactly three terms"}
+          ],
+          "practice": [
+            {"q": "Factor 8x² + 12x.", "choices": ["4x(2x + 3)", "4(2x² + 3x)", "2x(4x + 6)", "4x(2x + 12)"], "answer": 0, "explain": "The GCF of 8x² and 12x is 4x; dividing each term by 4x gives 2x and 3, so the factored form is 4x(2x + 3)."},
+            {"q": "Factor x² + 9x + 20.", "choices": ["(x + 4)(x + 5)", "(x + 2)(x + 10)", "(x + 1)(x + 20)", "(x + 20)(x + 1)"], "answer": 0, "explain": "4 and 5 multiply to 20 and add to 9, so the trinomial factors as (x + 4)(x + 5)."},
+            {"q": "Factor x² − 2x − 15.", "choices": ["(x − 5)(x + 3)", "(x + 5)(x − 3)", "(x − 15)(x + 1)", "(x − 5)(x − 3)"], "answer": 0, "explain": "Looking for two numbers multiplying to −15 and adding to −2: −5 and 3 work, since −5 × 3 = −15 and −5 + 3 = −2, giving (x − 5)(x + 3)."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Factoring Special Products and Solving by Factoring",
+          "minutes": 16,
+          "intro": "A few patterns show up so often in factoring that memorizing them saves real time, and once you can factor a quadratic, solving it becomes a matter of asking when a product of factors can possibly equal zero.",
+          "sections": [
+            {
+              "heading": "Difference of Squares",
+              "body": [
+                "An expression of the form a² − b², a difference of two perfect squares, always factors as (a − b)(a + b). This pattern is worth recognizing on sight, since expanding (a − b)(a + b) with FOIL always cancels the middle terms, leaving exactly a² − b².",
+                "For x² − 16, recognize x² as a square and 16 as 4², so a = x and b = 4, giving the factored form (x − 4)(x + 4)."
+              ],
+              "example": {
+                "problem": "Factor x² − 16.",
+                "steps": [
+                  "Recognize both terms as perfect squares: x² and 4² = 16.",
+                  "Apply the difference of squares pattern a² − b² = (a − b)(a + b) with a = x and b = 4."
+                ],
+                "answer": "x² − 16 = (x − 4)(x + 4)"
+              }
+            },
+            {
+              "heading": "Solving Quadratic Equations by Factoring",
+              "body": [
+                "The zero product property states that if two factors multiply to give zero, at least one of those factors must itself be zero. This lets you solve any factorable quadratic equation: move everything to one side so it equals zero, factor the expression, then set each factor equal to zero and solve.",
+                "This method turns one quadratic equation into two simple linear equations, each giving one solution, so a quadratic typically has up to two solutions."
+              ],
+              "example": {
+                "problem": "Solve x² + 5x + 6 = 0 by factoring.",
+                "steps": [
+                  "Factor the trinomial: look for two numbers multiplying to 6 and adding to 5, which are 2 and 3, giving (x + 2)(x + 3) = 0.",
+                  "Apply the zero product property: either x + 2 = 0 or x + 3 = 0.",
+                  "Solve each: x = −2 or x = −3."
+                ],
+                "answer": "x = −2 or x = −3"
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "difference of squares", "def": "the pattern a² − b² = (a − b)(a + b)"},
+            {"term": "zero product property", "def": "if a product of factors equals zero, at least one factor must equal zero"},
+            {"term": "quadratic equation", "def": "an equation where the variable's highest power is 2"}
+          ],
+          "practice": [
+            {"q": "Factor x² − 25.", "choices": ["(x − 5)(x + 5)", "(x − 25)(x + 1)", "(x − 5)²", "(x + 5)²"], "answer": 0, "explain": "25 is 5², so x² − 25 fits the difference of squares pattern, factoring to (x − 5)(x + 5)."},
+            {"q": "Solve x² − x − 12 = 0 by factoring.", "choices": ["x = 4 or x = −3", "x = −4 or x = 3", "x = 4 or x = 3", "x = −4 or x = −3"], "answer": 0, "explain": "Two numbers multiplying to −12 and adding to −1 are −4 and 3, giving (x − 4)(x + 3) = 0, so x = 4 or x = −3."},
+            {"q": "According to the zero product property, if (x − 6)(x + 2) = 0, what must be true?", "choices": ["x = 6 or x = −2", "x = −6 or x = 2", "x = 6 and x = −2 simultaneously", "x must equal 0"], "answer": 0, "explain": "The zero product property says at least one factor equals zero: x − 6 = 0 gives x = 6, and x + 2 = 0 gives x = −2."}
+          ]
+        }
+      ]
+    }
+  ]
+}

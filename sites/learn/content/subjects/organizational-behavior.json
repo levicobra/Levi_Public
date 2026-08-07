@@ -1,0 +1,519 @@
+{
+  "id": "organizational-behavior",
+  "title": "Organizational Behavior",
+  "domain": "business",
+  "level": "College",
+  "description": "A study of how individuals, teams, and structures shape what happens inside real organizations. You will examine motivation, personality, group dynamics, leadership, power, and culture using research-backed models, then apply them to workplace situations, closing with how to lead organizational change.",
+  "outcomes": [
+    "You can apply motivation theories (Maslow, Herzberg, expectancy, goal-setting, equity) to real workplace decisions.",
+    "You can diagnose team dysfunction using stages of group development and the causes of social loafing.",
+    "You can match a leadership style to a situation using contingency theory and identify sources of power.",
+    "You can resolve conflict and negotiate by separating positions from underlying interests.",
+    "You can evaluate whether an organization's structure fits its environment and describe how culture is transmitted.",
+    "You can critique a change-management effort against Lewin's and Kotter's models."
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "title": "Individual Foundations",
+      "summary": "OB studies how people actually behave at work. Start with what the field covers, how personality shapes fit, and why perception is often more powerful than fact.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "What Organizational Behavior Studies",
+          "minutes": 11,
+          "intro": "Every organization runs on two systems at once: the official one in the handbook, and the real one made of habits and unwritten rules. OB studies the second system.",
+          "sections": [
+            {
+              "heading": "Three Levels of Analysis",
+              "body": [
+                "OB researchers study behavior at three nested levels: individual (personality, perception, motivation), group (teams, conflict, communication), and organization (structure, culture, change). High turnover might trace to a harsh manager (individual), an unclear team role (group), or a pay structure rewarding only solo output (organizational).",
+                "Diagnosing the wrong level wastes effort. Sending an underperformer to a time-management class won't help if the real cause is two departments with contradictory goals. Good OB diagnosis starts by asking which level the root cause actually lives at, then treats that level specifically."
+              ]
+            },
+            {
+              "heading": "Evidence Over Instinct",
+              "body": [
+                "Untrained intuition about people is built from a small, biased sample: your own experience. OB replaces anecdote with findings from controlled studies and large workplace surveys, so decisions about hiring, incentives, and team design rest on evidence rather than gut feel.",
+                "Consider a common wrong instinct: that more pay always means more effort. Herzberg's research found pay is a **hygiene factor** — its absence causes dissatisfaction, but adding more rarely increases motivation once a fair baseline is met. A manager who skips this may raise salaries and see no behavior change at all."
+              ],
+              "example": {
+                "problem": "A retail chain has 40% annual turnover. Leadership assumes workers just don't care about the job and plans a motivational poster campaign.",
+                "steps": [
+                  "Ask which level the cause sits at before picking a fix: individual attitude, team dynamics, or organizational pay/scheduling.",
+                  "Exit interviews reveal the real driver: unpredictable scheduling that conflicts with second jobs and childcare — an organizational-level, structural cause.",
+                  "Target that level directly: offer stable, published schedules two weeks in advance instead of running a poster campaign aimed at individual attitude."
+                ],
+                "answer": "The turnover is structural (scheduling policy), not attitudinal, so fix the schedule rather than trying to motivate individuals with posters."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Organizational behavior", "def": "The study of how individuals and groups act within organizations, and how that behavior affects performance."},
+            {"term": "Hygiene factor", "def": "A workplace condition, like pay, whose absence causes dissatisfaction but whose presence doesn't by itself motivate."},
+            {"term": "Level of analysis", "def": "The scale at which a behavior is examined: individual, group, or organizational."}
+          ],
+          "practice": [
+            {"q": "High turnover should first be diagnosed by asking:", "choices": ["Which level the root cause lives at", "How to write a stricter attendance policy", "Whether to lower advertised pay", "Whether to fire HR"], "answer": 0, "explain": "OB diagnosis starts by locating the level of the problem before choosing a fix."},
+            {"q": "A 'hygiene factor' is best described as:", "choices": ["A condition whose absence causes dissatisfaction but doesn't strongly motivate", "Anything that always increases motivation", "A synonym for culture", "A performance metric"], "answer": 0, "explain": "Hygiene factors like pay prevent dissatisfaction but are weak motivators once adequate."},
+            {"q": "OB replaces personal anecdote with:", "choices": ["Findings from controlled studies and large surveys", "Executive opinion alone", "Whichever theory is newest", "Customer reviews only"], "answer": 0, "explain": "OB is grounded in research evidence rather than one person's limited experience."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Personality and Person-Job Fit",
+          "minutes": 12,
+          "intro": "No two employees respond to the same manager the same way, and that isn't random — it's personality doing predictable work.",
+          "sections": [
+            {
+              "heading": "The Big Five Traits",
+              "body": [
+                "The **Big Five** (OCEAN) describes personality along five dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Of these, Conscientiousness is the strongest, most consistent predictor of job performance across nearly every occupation, because conscientious people set goals, follow through, and show up prepared.",
+                "Extraversion predicts success specifically in sales and management, where constant social contact matters, but doesn't predict performance broadly the way conscientiousness does. Traits describe tendencies, not ceilings: a low-conscientiousness employee can still build checklists and external structure that compensate."
+              ]
+            },
+            {
+              "heading": "Matching People to Roles",
+              "body": [
+                "**Person-job fit** is the match between a person's traits and a role's demands. A highly extraverted, low-conscientiousness person may thrive in outside sales, where charm matters more than solitary follow-through, yet struggle in compliance auditing, which rewards the opposite profile.",
+                "Poor fit shows up as burnout or turnover even in skilled people, because the mismatch is temperament versus task, not competence. Sometimes the better fix is redesigning who does what on a team rather than trying to change the person to fit a fixed job description."
+              ],
+              "example": {
+                "problem": "A sales lead must assign two new hires: Hire A (high Extraversion, low Conscientiousness) and Hire B (moderate Extraversion, high Conscientiousness) to either cold-calling or account renewals.",
+                "steps": [
+                  "Cold-calling needs social energy and resilience to rejection more than paperwork discipline; renewals need steady follow-up and accurate records.",
+                  "Match Hire A's extraversion to cold-calling and Hire B's conscientiousness to renewals."
+                ],
+                "answer": "Put Hire A on cold-calling and Hire B on account renewals, matching trait profile to role demands."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Big Five (OCEAN)", "def": "Five broad personality dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism."},
+            {"term": "Conscientiousness", "def": "The trait reflecting organization and follow-through; the strongest general predictor of job performance."},
+            {"term": "Person-job fit", "def": "The degree of match between an individual's traits and the demands of a specific role."}
+          ],
+          "practice": [
+            {"q": "The strongest general predictor of job performance across occupations is:", "choices": ["Conscientiousness", "Extraversion", "Openness", "Neuroticism"], "answer": 0, "explain": "Conscientious workers set goals and follow through, which predicts performance broadly."},
+            {"q": "Person-job fit problems most often show up as:", "choices": ["Burnout or disengagement despite adequate skill", "Automatic pay increases", "Improved conscientiousness over time", "No measurable effect"], "answer": 0, "explain": "The mismatch is temperament versus task, not ability, so it shows as disengagement."},
+            {"q": "Extraversion most strongly predicts performance in:", "choices": ["Sales and management roles", "Solitary data-entry roles", "All roles equally", "Only compliance auditing"], "answer": 0, "explain": "Extraversion's benefit is concentrated in roles with heavy interpersonal demand."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Perception and Attribution",
+          "minutes": 12,
+          "intro": "Two employees can hear the same feedback and walk away with different interpretations. Perception, not the raw event, is what people act on.",
+          "sections": [
+            {
+              "heading": "Selective Perception",
+              "body": [
+                "Perception is selecting, organizing, and interpreting information to form a picture of reality. Because the brain can't process every signal, it filters based on prior belief and mood. **Selective perception** means people notice information confirming what they already expect and overlook information that contradicts it.",
+                "A manager who already believes an employee is unreliable notices one late arrival and discounts five days of punctuality. Because unaided perception is biased this way, fair organizations build in structure: written criteria, multiple raters, documented examples."
+              ]
+            },
+            {
+              "heading": "The Fundamental Attribution Error",
+              "body": [
+                "**Attribution theory** describes how people explain behavior as internal (disposition, effort) or external (situation, luck). The **fundamental attribution error** is the tendency to over-attribute others' behavior to disposition while attributing our own behavior to situation.",
+                "A manager whose report misses a deadline thinks 'disorganized,' but excuses their own missed deadline as a client emergency. This leads managers to under-invest in fixing real situational barriers, since they default to blaming the person instead."
+              ],
+              "example": {
+                "problem": "A project manager notices a team member missed three deadlines this month and assumes poor work ethic.",
+                "steps": [
+                  "Pause before assigning an internal cause like laziness.",
+                  "Investigate situational factors: unreasonable workload, late dependencies from another team, a tool outage.",
+                  "Compare against teammates facing the same situation before concluding the cause is personal."
+                ],
+                "answer": "Investigate situational causes first and compare against peers before concluding the missed deadlines reflect a personal trait."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Selective perception", "def": "Noticing information that confirms existing beliefs while filtering out contradicting information."},
+            {"term": "Attribution theory", "def": "A framework describing how people explain behavior as caused by disposition or situation."},
+            {"term": "Fundamental attribution error", "def": "Over-attributing others' behavior to disposition while excusing our own behavior via situation."}
+          ],
+          "practice": [
+            {"q": "The fundamental attribution error describes the tendency to:", "choices": ["Blame others' disposition while excusing our own behavior via situation", "Always blame the situation for others' mistakes", "Perceive events with perfect objectivity", "Apply only to first impressions"], "answer": 0, "explain": "The error is the asymmetry between how we judge others versus ourselves."},
+            {"q": "Selective perception explains why a manager who expects poor performance:", "choices": ["Notices confirming instances and discounts disconfirming ones", "Rates the employee more accurately", "Stops evaluating the employee entirely", "Raises that employee's pay automatically"], "answer": 0, "explain": "Selective perception biases attention toward confirming information."},
+            {"q": "Which practice most directly counters the fundamental attribution error?", "choices": ["Asking what situational factors might explain the behavior first", "Relying on first impressions", "Skipping documentation", "Comparing only to the employee's own past"], "answer": 0, "explain": "Deliberately considering situation counters the default bias toward blaming the person."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Motivating People",
+      "summary": "Learn need-based, process-based, and fairness-based theories of motivation, and how to apply each to a real management decision.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Maslow and Herzberg",
+          "minutes": 13,
+          "intro": "Before designing an incentive plan, you need a theory of what people actually want from work. Maslow and Herzberg give two of the most widely used answers.",
+          "sections": [
+            {
+              "heading": "Maslow's Hierarchy of Needs",
+              "body": [
+                "Maslow proposed needs form a hierarchy: physiological, safety, social, esteem, and self-actualization, with lower needs generally satisfied before higher ones motivate. An employee worried about rent is unlikely to be energized by a 'growth opportunity' pitch — the safety-level need dominates attention.",
+                "The strict five-step ladder isn't well supported by rigorous testing; people often pursue esteem and belonging simultaneously. Use Maslow as a checklist of need categories to scan, not a literal universal sequence."
+              ]
+            },
+            {
+              "heading": "Herzberg's Two-Factor Theory",
+              "body": [
+                "Herzberg found satisfaction and dissatisfaction come from different ingredients. **Hygiene factors** (salary, policy, conditions) prevent dissatisfaction but don't create satisfaction. **Motivators** (achievement, recognition, responsibility) actually drive satisfaction and effort.",
+                "This means raising salary or improving the break room removes a complaint but rarely produces enthusiasm. To motivate, redesign the job: add autonomy, meaningful responsibility, and recognition for achievement."
+              ],
+              "example": {
+                "problem": "An engineering team has good pay and offices but low morale. Leadership wants to raise salaries again.",
+                "steps": [
+                  "Hygiene factors are already adequate, so more of the same yields diminishing returns.",
+                  "Target motivators instead: give engineers ownership of features end-to-end and public recognition for shipped work."
+                ],
+                "answer": "Increase motivators (ownership, recognition) rather than raising already-adequate pay."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Maslow's hierarchy", "def": "A model ranking needs from physiological and safety up through social, esteem, and self-actualization."},
+            {"term": "Two-factor theory", "def": "Herzberg's model separating hygiene factors from motivators."},
+            {"term": "Motivator", "def": "A factor like achievement or recognition that actively drives satisfaction and effort."}
+          ],
+          "practice": [
+            {"q": "Raising already-adequate salary will most likely:", "choices": ["Remove little dissatisfaction and not create lasting satisfaction", "Guarantee a large motivation boost", "Eliminate the need for motivators", "Increase self-actualization automatically"], "answer": 0, "explain": "Hygiene factors prevent dissatisfaction but aren't motivators once adequate."},
+            {"q": "An employee worried about job security sits at which Maslow level?", "choices": ["Safety", "Self-actualization", "Esteem", "Social"], "answer": 0, "explain": "Job security concerns map to the safety level."},
+            {"q": "Which is a Herzberg 'motivator', not a hygiene factor?", "choices": ["Recognition for achievement", "Company policy", "Base salary", "Office temperature"], "answer": 0, "explain": "Recognition drives satisfaction directly; the others are hygiene factors."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Expectancy and Goal-Setting Theory",
+          "minutes": 13,
+          "intro": "Need theories explain what people want; process theories explain the mental math they run before deciding how hard to try.",
+          "sections": [
+            {
+              "heading": "Expectancy Theory",
+              "body": [
+                "Vroom's **expectancy theory** holds motivation is a product of three beliefs: expectancy (will effort produce results?), instrumentality (will results actually get rewarded?), and valence (do I value the reward?). If any one is near zero, motivation collapses.",
+                "A salesperson may believe effort leads to sales and value commissions, but if commissions are opaque or clawed back (low instrumentality), motivation still collapses. Diagnose by checking each link separately."
+              ]
+            },
+            {
+              "heading": "Goal-Setting Theory",
+              "body": [
+                "Locke and Latham found specific, difficult but attainable goals produce higher performance than vague goals like 'do your best.' 'Cut wait time 15% this quarter' motivates more than 'improve service' because it's measurable and gives a clear target.",
+                "Four conditions strengthen the effect: specific, challenging, accepted, and paired with feedback. Remove feedback and even a great goal loses most of its power, since people can't course-correct against a target they can't see themselves approaching."
+              ],
+              "example": {
+                "problem": "A call-center manager tells reps to 'improve customer satisfaction.' Scores stay flat.",
+                "steps": [
+                  "The goal is vague and unmeasurable — replace it with 'raise average score from 3.6 to 4.2 by quarter end.'",
+                  "Add rep input to build acceptance and a weekly dashboard for feedback."
+                ],
+                "answer": "Replace the vague goal with a specific, measurable target and pair it with regular feedback."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Expectancy theory", "def": "Vroom's model that motivation depends on expectancy, instrumentality, and valence multiplied together."},
+            {"term": "Instrumentality", "def": "The belief that good performance will actually lead to the promised reward."},
+            {"term": "Goal-setting theory", "def": "The finding that specific, difficult, accepted goals with feedback beat vague goals."}
+          ],
+          "practice": [
+            {"q": "If an employee doubts good performance will be rewarded, which link is broken?", "choices": ["Instrumentality", "Expectancy", "Valence", "Goal difficulty"], "answer": 0, "explain": "Instrumentality is specifically the belief that performance leads to reward."},
+            {"q": "Which goal fits goal-setting theory best?", "choices": ["'Cut response time from 40 to 30 seconds this quarter'", "'Try to do better'", "'Respond as fast as possible no matter what'", "'Keep response time about the same'"], "answer": 0, "explain": "It's specific, measurable, and moderately challenging."},
+            {"q": "Removing feedback from a good goal will most likely:", "choices": ["Weaken its motivating power since people can't track progress", "Have no effect", "Make the goal automatically easier", "Increase instrumentality"], "answer": 0, "explain": "Feedback lets people see progress and adjust; without it the goal loses power."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Equity Theory and Fairness",
+          "minutes": 11,
+          "intro": "People judge pay relative to what others get for similar work, and that comparison shapes effort more than the absolute number does.",
+          "sections": [
+            {
+              "heading": "The Equity Ratio",
+              "body": [
+                "Adams's **equity theory** says employees compare their own outcome-to-input ratio against a comparison other's ratio. **Underreward inequity** (my ratio is worse) produces anger or reduced effort; overreward can produce guilt, though that reaction is weaker.",
+                "Pay secrecy often backfires: employees estimate others' pay anyway to complete the comparison, and imagined inequity is just as demotivating as real inequity, sometimes more, because it goes uncorrected."
+              ]
+            },
+            {
+              "heading": "Restoring Equity",
+              "body": [
+                "When people perceive inequity, they can reduce effort, seek a raise, rationalize the comparison away, change who they compare to, or quit. Managers can't control private comparisons, but can control transparent, criteria-based raises and clear communication about legitimate pay differences.",
+                "A useful diagnostic when effort mysteriously drops: ask who the person compares themselves to, and whether that comparison looks unequal from where they sit."
+              ],
+              "example": {
+                "problem": "Maria (5 years) and Jordan (1 year) do near-identical work. Jordan discovers he earns only 8% less and his effort drops.",
+                "steps": [
+                  "Jordan sees a large experience gap but a small pay gap, making his ratio look worse — underreward inequity.",
+                  "Management should explain the pay structure's real logic or adjust the gap."
+                ],
+                "answer": "Jordan perceives underreward inequity; management should clarify or close the gap since unaddressed underreward drives reduced effort or turnover."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Equity theory", "def": "Adams's model that motivation depends on comparing one's outcome-to-input ratio against a comparison other's."},
+            {"term": "Underreward inequity", "def": "Perceiving one's own ratio is worse than a comparison other's, typically producing anger or reduced effort."},
+            {"term": "Comparison other", "def": "The peer or reference point used to judge whether treatment is fair."}
+          ],
+          "practice": [
+            {"q": "Equity theory predicts employees judge fairness by comparing:", "choices": ["Their own outcome-to-input ratio to a comparison other's", "Only their absolute salary", "Only their job title", "Their manager's personality"], "answer": 0, "explain": "Equity theory centers on relative ratios, not absolute pay."},
+            {"q": "Underreward inequity most commonly leads to:", "choices": ["Reduced effort, anger, or turnover", "Increased guilt and self-imposed pay cuts", "No behavioral change", "Automatic promotion"], "answer": 0, "explain": "Perceived underreward typically produces anger or withdrawal of effort."},
+            {"q": "Pay secrecy can backfire because:", "choices": ["Employees form their own inaccurate comparisons anyway", "Equity theory only applies to public pay", "Secrecy always increases fairness perception", "Employees stop comparing entirely"], "answer": 0, "explain": "People complete the comparison with estimates, and inaccurate perceived inequity is just as demotivating."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Teams and Leadership",
+      "summary": "Teams behave predictably as they develop, groups tempt individuals to coast, and the right leadership style depends on the situation, not a fixed formula.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Group Development and Social Loafing",
+          "minutes": 13,
+          "intro": "Every new team feels awkward at first, and that's a predictable stage, not a bad sign. But put people in a group and average individual effort also tends to quietly drop.",
+          "sections": [
+            {
+              "heading": "Tuckman's Stages",
+              "body": [
+                "**Forming** is polite and cautious; roles are unclear and productivity is low. **Storming** brings real disagreement over roles and approach — necessary, since suppressing it just carries resentment forward. **Norming** is where shared expectations and trust emerge.",
+                "**Performing** is minimal-supervision, high-trust execution — most training aims here, but skipping storming often means a team never truly arrives. Teams can regress: adding a member or changing the goal can send a performing team back into storming."
+              ]
+            },
+            {
+              "heading": "Social Loafing",
+              "body": [
+                "**Social loafing** is exerting less effort in a group than alone, worsening as groups get bigger and individual contribution gets harder to see. It stems from reduced accountability, feeling dispensable, and the free-rider incentive — not personal laziness.",
+                "The fix is structural: assign clearly owned sub-tasks, track individual contribution even within group work, and use peer evaluation so effort is visible to teammates who see it daily."
+              ],
+              "example": {
+                "problem": "A ten-person team shares one deliverable and one grade. Three people quietly do most of the work.",
+                "steps": [
+                  "Diagnose: invisible individual contribution predicts loafing.",
+                  "Break the deliverable into named, owned sub-components and add peer evaluation feeding into individual assessment."
+                ],
+                "answer": "Split the shared task into individually owned pieces and add peer evaluation to restore accountability."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Tuckman's stages", "def": "Forming, storming, norming, performing, and adjourning — the stages of group development."},
+            {"term": "Social loafing", "def": "Exerting less individual effort on a group task than when working alone."},
+            {"term": "Free-rider problem", "def": "The incentive to reduce effort because others are expected to compensate."}
+          ],
+          "practice": [
+            {"q": "A team that avoids all conflict early is likely to:", "choices": ["Carry hidden resentment forward and underperform later", "Skip to performing with no downside", "Automatically reach high cohesion", "Never reach forming"], "answer": 0, "explain": "Storming is necessary; suppressing it leaves unresolved tension."},
+            {"q": "Social loafing is best described as:", "choices": ["A predictable response to low individual accountability", "A fixed personality trait", "Only occurring in groups under three people", "Unrelated to visibility of effort"], "answer": 0, "explain": "It's driven by structural conditions like low accountability, not innate laziness."},
+            {"q": "Which change most directly reduces social loafing?", "choices": ["Making individual contributions identifiable and accountable", "Making the group larger", "Removing individual metrics", "Rewarding only group averages"], "answer": 0, "explain": "Loafing depends on low visibility of effort, so identifiability directly counters it."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Conflict and Negotiation",
+          "minutes": 12,
+          "intro": "Conflict at work isn't inherently bad — some kinds sharpen decisions while others quietly wreck teams. Telling them apart is a core management skill.",
+          "sections": [
+            {
+              "heading": "Task vs. Relationship Conflict",
+              "body": [
+                "**Task conflict** is disagreement about the work itself — approach, priorities, what data means. In moderate amounts it improves decisions by surfacing assumptions. **Relationship conflict** is personal friction, and it consistently damages performance with little offsetting benefit.",
+                "The danger is task conflict curdling into relationship conflict when disagreement gets personal ('you always...') instead of substantive. Keeping debate anchored to evidence and options prevents that slide."
+              ]
+            },
+            {
+              "heading": "Distributive vs. Integrative Negotiation",
+              "body": [
+                "**Distributive negotiation** treats the outcome as a fixed pie. **Integrative negotiation** expands the pie by uncovering each side's underlying interests, not just their stated positions, often creating a trade both sides prefer.",
+                "Two departments wanting the same conference room looks distributive, but if one needs the video equipment and the other just needs space, an integrative trade satisfies both without a fight over the room itself."
+              ],
+              "example": {
+                "problem": "Marketing and Product both claim the only user-research budget this quarter as a zero-sum fight.",
+                "steps": [
+                  "Ask each side why they need it: Marketing wants to validate messaging; Product wants usability testing.",
+                  "Propose a combined study or a split budget by method rather than picking a single winner."
+                ],
+                "answer": "Uncover each side's underlying interest and design a combined or split study instead of a winner-take-all allocation."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Task conflict", "def": "Disagreement about work content or approach, which in moderation can improve decisions."},
+            {"term": "Relationship conflict", "def": "Interpersonal friction unrelated to the task, which consistently harms performance."},
+            {"term": "Integrative negotiation", "def": "Expanding available value by addressing underlying interests rather than splitting a fixed pie."}
+          ],
+          "practice": [
+            {"q": "Moderate task conflict tends to:", "choices": ["Improve decision quality by surfacing alternatives", "Always damage team performance", "Be indistinguishable from relationship conflict", "Have no effect on decisions"], "answer": 0, "explain": "Unlike relationship conflict, moderate task conflict brings hidden assumptions into the open."},
+            {"q": "The key risk to manage in team disagreement is:", "choices": ["Task conflict curdling into personal conflict", "Having any disagreement at all", "Reaching consensus too fast", "Avoiding negotiation entirely"], "answer": 0, "explain": "Task conflict is often productive but becomes damaging once it turns personal."},
+            {"q": "Integrative negotiation differs from distributive by:", "choices": ["Seeking to expand value via underlying interests", "Always producing a 50/50 split", "Ignoring each party's needs", "Only applying to salary talks"], "answer": 0, "explain": "It looks past stated positions to interests, finding trades that grow total value."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Contingency Leadership and Power",
+          "minutes": 13,
+          "intro": "There's no single best leadership style — the right approach depends on the situation, and effective leaders draw on power that doesn't always come from a title.",
+          "sections": [
+            {
+              "heading": "Matching Style to Situation",
+              "body": [
+                "Hersey and Blanchard's **situational leadership** says leaders should flex style based on a follower's readiness (ability plus willingness) for a specific task. A new hire needs directing; a skilled but hesitant veteran facing an unfamiliar task needs coaching, not pure direction or full delegation.",
+                "Readiness is task-specific, not a fixed trait: the same skilled employee may need directing on unfamiliar software and delegating on their usual work. Diagnosing readiness for this task, before choosing a style, is the core skill."
+              ]
+            },
+            {
+              "heading": "Five Bases of Power",
+              "body": [
+                "French and Raven identified five power bases: **legitimate**, **reward**, and **coercive** power come from the position; **expert** and **referent** power travel with the person. Personal power sources produce more durable commitment — people follow out of respect, not just because monitoring is present.",
+                "A newly promoted manager leaning only on legitimate and coercive power ('I'm the boss') often gets compliance, not real engagement, while a technical expert with no formal authority can influence a whole team through expertise and respect alone."
+              ],
+              "example": {
+                "problem": "A veteran employee, highly confident in her usual role, is asked to lead a project using unfamiliar software.",
+                "steps": [
+                  "Her readiness for this specific task is low-ability but high-willingness.",
+                  "Match to a coaching style: high task guidance paired with high support, not pure directing or full delegating."
+                ],
+                "answer": "Use a coaching style for this task since her ability with the new tool is low even though her general confidence is high."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Situational leadership", "def": "Adapting leadership style based on a follower's task-specific readiness (ability and willingness)."},
+            {"term": "Expert power", "def": "Influence derived from valued knowledge or skill, independent of formal position."},
+            {"term": "Referent power", "def": "Influence derived from others' respect or admiration for a person."}
+          ],
+          "practice": [
+            {"q": "In situational leadership, follower readiness is:", "choices": ["Task-specific, so it can vary for the same person", "A fixed trait constant across tasks", "Irrelevant to choosing a style", "Always high for experienced staff"], "answer": 0, "explain": "Readiness applies to a specific task, so it can differ even for an experienced employee."},
+            {"q": "Which two power bases travel with the individual regardless of title?", "choices": ["Expert and referent power", "Legitimate and reward power", "Coercive and legitimate power", "Reward and coercive power"], "answer": 0, "explain": "Expert and referent power belong to the person, unlike position-based power."},
+            {"q": "Compliance driven mainly by coercive power tends to:", "choices": ["Last only as long as monitoring continues", "Produce the most durable commitment", "Match expert-power-driven compliance", "Always outperform referent power"], "answer": 0, "explain": "Coercive power produces minimal, monitored compliance rather than genuine engagement."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Structure, Culture, and Change",
+      "summary": "Zoom out from individuals and teams to the organization itself: how it's structured, what culture it runs on, and how to lead it through change without snapping back.",
+      "lessons": [
+        {
+          "id": "l1",
+          "title": "Organizational Structure",
+          "minutes": 12,
+          "intro": "The org chart quietly decides who talks to whom, how fast decisions get made, and how much autonomy a frontline employee actually has.",
+          "sections": [
+            {
+              "heading": "Centralization and Formalization",
+              "body": [
+                "**Centralization** is how concentrated decision authority is: centralized organizations push decisions up to senior leaders; decentralized ones push authority down to the work. Decentralization speeds decisions but can create inconsistency without shared norms.",
+                "**Formalization** is how explicit rules and procedures are. High formalization increases predictability in routine work but slows response to novel situations the rules didn't anticipate."
+              ]
+            },
+            {
+              "heading": "Mechanistic vs. Organic Fit",
+              "body": [
+                "A **mechanistic structure** is centralized, formalized, and rigid — suited to stable environments and routine work, like a regulated factory. An **organic structure** is decentralized, flexible, and cross-functional — suited to unstable, fast-changing environments, like an early-stage startup.",
+                "Neither is universally better: the right choice depends on how stable and predictable the environment is. A hospital ER may need mechanistic discipline in triage protocol but organic flexibility in how clinicians handle an unusual case."
+              ],
+              "example": {
+                "problem": "A fast-growing 15-person startup requires CEO sign-off on every purchase over $50, and growth has stalled from slow decisions.",
+                "steps": [
+                  "Heavy centralization is bottlenecking routine decisions in an unstable, fast-changing environment that calls for an organic structure.",
+                  "Raise the sign-off threshold and push routine decisions down to empowered team leads, with a shared budget guardrail to prevent inconsistency."
+                ],
+                "answer": "Decentralize routine decisions and add lightweight shared guardrails, since the startup is over-centralized for its environment."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Centralization", "def": "The degree to which decision authority is concentrated at higher levels rather than pushed down."},
+            {"term": "Mechanistic structure", "def": "A centralized, formalized, rigid structure suited to stable, predictable environments."},
+            {"term": "Organic structure", "def": "A decentralized, flexible structure suited to unstable, fast-changing environments."}
+          ],
+          "practice": [
+            {"q": "A startup in a fast-changing market fits best with:", "choices": ["An organic structure", "A mechanistic structure", "No structure at all", "Maximum formalization"], "answer": 0, "explain": "Organic structures fit unstable, fast-changing environments better than rigid ones."},
+            {"q": "High formalization is most likely to slow things down when:", "choices": ["The organization faces a novel situation rules didn't anticipate", "Work is routine and predictable", "Consistency is the top priority", "Errors must be minimized in routine work"], "answer": 0, "explain": "Written procedures help routine work but slow response outside what they anticipated."},
+            {"q": "A wide span of control tends to produce:", "choices": ["Flatter organizations with fewer layers", "Taller organizations with more layers", "No change in shape", "Automatic centralization"], "answer": 0, "explain": "When each manager oversees more people, fewer management layers are needed."}
+          ]
+        },
+        {
+          "id": "l2",
+          "title": "Organizational Culture",
+          "minutes": 11,
+          "intro": "New employees learn a company's real culture within days, often before anyone explains it, just by watching what gets rewarded and what gets quietly punished.",
+          "sections": [
+            {
+              "heading": "How Culture Is Transmitted",
+              "body": [
+                "**Organizational culture** is the shared values, beliefs, and norms shaping how members think and act — 'how things really work here' beneath official policy. Strong cultures have widely shared, intensely held values; weak cultures leave behavior inconsistent across units.",
+                "Culture is transmitted through stories, rituals, symbols, and language. New hires absorb it mostly by observing these channels, not by reading the handbook. A culture can be strong and still dysfunctional: strength and health are separate questions."
+              ]
+            },
+            {
+              "heading": "Person-Organization Fit",
+              "body": [
+                "**Person-organization fit** is the match between a person's values and the culture, distinct from fit to a specific job. A highly collaborative person in a fiercely individualistic sales culture may do the tasks well but feel alienated and leave.",
+                "A strong culture speeds coordination because people share assumptions without needing constant instruction — but that same strength can suppress dissent and resist change once the environment shifts and old assumptions stop fitting."
+              ]
+            }
+          ],
+          "keyTerms": [
+            {"term": "Organizational culture", "def": "The shared values, beliefs, and norms shaping how organization members think and behave."},
+            {"term": "Strong culture", "def": "A culture where values are widely shared and intensely held across the organization."},
+            {"term": "Person-organization fit", "def": "The match between an individual's values and the organization's broader culture."}
+          ],
+          "practice": [
+            {"q": "A 'strong' culture is best defined by:", "choices": ["Widely shared and intensely held values", "Always being a healthy culture", "Having many written policies", "Low turnover exclusively"], "answer": 0, "explain": "Strength is about how widely shared values are, not whether they're healthy."},
+            {"q": "New employees primarily learn culture through:", "choices": ["Observing stories, rituals, symbols, and language", "Reading the handbook exclusively", "Formal HR training alone", "Random chance"], "answer": 0, "explain": "Culture is transmitted mainly through observable channels, not documents."},
+            {"q": "Why is changing a strong culture especially hard?", "choices": ["The same shared norms that make it strong resist revision", "Strong cultures have no shared values", "Strong cultures always match the environment", "Culture can't be observed"], "answer": 0, "explain": "The mechanisms creating strength also resist change when circumstances shift."}
+          ]
+        },
+        {
+          "id": "l3",
+          "title": "Leading Organizational Change",
+          "minutes": 13,
+          "intro": "Most change initiatives fail not because the plan was wrong, but because fear, habit, and unaddressed resistance were never managed.",
+          "sections": [
+            {
+              "heading": "Lewin's Three Stages",
+              "body": [
+                "Resistance to change usually has identifiable roots: fear of losing status or job security, low trust in leadership, or genuine disagreement the change is needed. Lewin's model frames change as unfreezing (building the case the status quo is unacceptable), changing (implementing), and refreezing (stabilizing the new state).",
+                "Skipping unfreezing and jumping straight to a new process is a common reason initiatives stall. Skipping refreezing is equally common: without reinforcement like updated incentives, organizations snap back toward old habits once the initial push fades."
+              ]
+            },
+            {
+              "heading": "Kotter's Eight Steps",
+              "body": [
+                "Kotter's model breaks change into eight sequential steps: create urgency, build a guiding coalition, form a vision, enlist support, remove barriers, generate short-term wins, sustain momentum, and institute the change into culture. Skipping early steps to rush toward visible action tends to make change stall later.",
+                "'Generate short-term wins' is frequently skipped: an 18-month effort with no visible benefit loses credibility long before it succeeds. A small, early, visible win sustains belief that the larger effort is working."
+              ],
+              "example": {
+                "problem": "A hospital announces a new charting system launching in six months, with training scheduled the week before go-live. Staff ignore the training emails.",
+                "steps": [
+                  "Leadership skipped creating urgency and building a coalition of respected staff to champion the change.",
+                  "Backfill: build urgency with data on current charting errors, recruit respected nurses as champions, and pilot in one unit first for a visible early win."
+                ],
+                "answer": "Build urgency, recruit a guiding coalition, and generate a short-term win via a pilot unit before full rollout."
+              }
+            }
+          ],
+          "keyTerms": [
+            {"term": "Unfreezing", "def": "Building the case that the current state is unacceptable and loosening attachment to old habits."},
+            {"term": "Refreezing", "def": "Reinforcing and stabilizing a new state so behavior doesn't drift back to the old pattern."},
+            {"term": "Guiding coalition", "def": "A group of influential, credible people assembled to lead and champion a change effort."}
+          ],
+          "practice": [
+            {"q": "Skipping Lewin's 'unfreezing' stage most often results in:", "choices": ["Employees lacking a felt need for the change", "Faster adoption of the new process", "Automatic institutionalization", "No effect on how change is received"], "answer": 0, "explain": "Unfreezing builds the sense the status quo is unacceptable; without it, motivation to change is low."},
+            {"q": "Why is a short-term win important in Kotter's model?", "choices": ["Long efforts lose momentum without early visible progress", "It replaces the need for a coalition", "It's the final step of the process", "It has no bearing on belief in the change"], "answer": 0, "explain": "A visible early win sustains belief that a long effort is actually working."},
+            {"q": "'Instituting change into culture' is most similar to which Lewin stage?", "choices": ["Refreezing", "Unfreezing", "The changing stage only", "None of Lewin's stages"], "answer": 0, "explain": "Both describe stabilizing new behavior so it doesn't revert once attention fades."}
+          ]
+        }
+      ]
+    }
+  ]
+}

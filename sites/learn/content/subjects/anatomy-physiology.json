@@ -1,0 +1,1600 @@
+{
+ "id": "anatomy-physiology",
+ "title": "Anatomy & Physiology",
+ "domain": "life",
+ "level": "College",
+ "description": "A college survey covering every major organ system of the human body, structure alongside function. Starting from the level of tissues and homeostasis, the course builds through the skeletal, muscular, nervous, cardiovascular, respiratory, digestive, urinary, endocrine, immune, and reproductive systems, with worked examples throughout, from bone leverage to cardiac output to kidney filtration.",
+ "outcomes": [
+  "You can describe the levels of structural organization in the body and explain homeostasis using a negative feedback loop with correctly labeled components.",
+  "You can identify the major bones, joint types, and muscle actions involved in a specific movement, and explain how a sarcomere contracts.",
+  "You can trace a nerve impulse along a neuron and through a reflex arc, and distinguish the roles of the central and peripheral nervous systems.",
+  "You can calculate cardiac output and describe the path of blood through the heart, lungs, and body, and explain the mechanics of a single breath.",
+  "You can trace a meal through the digestive system and calculate a simple clearance or filtration value for the kidneys.",
+  "You can compare how the endocrine and immune systems each maintain internal stability, and describe the major stages of human reproduction and development."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Foundations of the Human Body",
+   "summary": "The levels of structural organization, anatomical terminology used to describe the body precisely, and the tissue types every organ is built from.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Levels of Structural Organization and Homeostasis",
+     "minutes": 13,
+     "intro": "Anatomy and physiology are really the study of one long chain of organization, from atoms up to an entire organism, all working together to hold conditions inside your body remarkably stable no matter what is happening outside it.",
+     "sections": [
+      {
+       "heading": "From Atoms to Organism",
+       "body": [
+        "The human body is organized into a nested hierarchy: **atoms** combine into **molecules**, which organize into **organelles** inside **cells**, the smallest living unit. Similar cells working together form a **tissue**, two or more tissue types combine to form an **organ** (like the heart or stomach), and organs that cooperate toward a shared overall function make up an **organ system** (like the cardiovascular system). All eleven organ systems together make up the complete **organism**.",
+        "This hierarchy matters practically: a disruption at any single level can ripple upward, a single gene mutation (molecular level) can alter a protein, which can disable a type of cell, which can impair an entire organ, which can compromise a whole organ system's function."
+       ]
+      },
+      {
+       "heading": "Homeostasis and Feedback Loops",
+       "body": [
+        "**Homeostasis** is the body's maintenance of a relatively stable internal environment, temperature, blood pH, blood glucose, and dozens of other variables, despite continuous changes in the external environment. Homeostatic control depends on three components working together: a **receptor** that detects change in a monitored variable, a **control center** (often the brain or an endocrine gland) that receives and processes that information, and an **effector**, a muscle or gland, that carries out the response.",
+        "The overwhelming majority of the body's homeostatic mechanisms use **negative feedback**, where the effector's response counteracts the original change, pushing the variable back toward its set point and then shutting the response off. A rare few processes instead use **positive feedback**, where the response amplifies the original change rather than reversing it, such as the escalating contractions of labor, which intensify until childbirth itself removes the trigger."
+       ],
+       "example": {
+        "problem": "A person's blood glucose rises sharply after a large, sugary meal. Identify the receptor, control center, and effector involved in returning blood glucose to normal, and state whether this is positive or negative feedback.",
+        "steps": [
+         "The receptor: specialized cells in the pancreas detect the rise in blood glucose.",
+         "The control center: those same pancreatic cells process the signal and decide to release insulin.",
+         "The effector: body cells (muscle, liver, fat) respond to insulin by absorbing glucose from the blood, lowering the level back toward normal, which then reduces further insulin release."
+        ],
+        "answer": "Receptor and control center: pancreatic cells detecting and responding to high glucose. Effector: body cells taking up glucose in response to insulin. This is negative feedback, since the response counteracts and reverses the original rise."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "tissue",
+       "def": "A group of similar cells working together to perform a shared function."
+      },
+      {
+       "term": "organ",
+       "def": "A structure made of two or more tissue types working together for a common function."
+      },
+      {
+       "term": "organ system",
+       "def": "A group of organs that work together toward an overall body function."
+      },
+      {
+       "term": "homeostasis",
+       "def": "The maintenance of a stable internal environment despite external changes."
+      },
+      {
+       "term": "negative feedback",
+       "def": "A control loop in which the response counteracts and reverses the original deviation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which level of organization directly sits between 'cell' and 'organ' in the body's structural hierarchy?",
+       "choices": [
+        "Organelle",
+        "Tissue",
+        "Organ system",
+        "Organism"
+       ],
+       "answer": 1,
+       "explain": "Similar cells organize into tissues, and two or more tissue types then combine to form an organ, placing tissue directly between cell and organ in the hierarchy."
+      },
+      {
+       "q": "What are the three essential components of any homeostatic feedback loop?",
+       "choices": [
+        "Nucleus, cytoplasm, membrane",
+        "Receptor, control center, effector",
+        "Artery, vein, capillary",
+        "Neuron, synapse, neurotransmitter"
+       ],
+       "answer": 1,
+       "explain": "Every feedback loop requires a receptor to detect the change, a control center to process that information, and an effector to carry out the corrective (or amplifying) response."
+      },
+      {
+       "q": "The escalating uterine contractions during labor grow stronger as labor progresses, rather than tapering off, until birth occurs. What kind of feedback does this represent?",
+       "choices": [
+        "Negative feedback",
+        "Positive feedback, since the response amplifies rather than reverses the original stimulus",
+        "No feedback is involved",
+        "Homeostatic equilibrium"
+       ],
+       "answer": 1,
+       "explain": "Because each contraction stimulates even stronger contractions rather than reducing the original stimulus, this is one of the body's rare positive feedback loops, which ends only when the triggering condition (the baby) is resolved."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Anatomical Terminology and Body Planes",
+     "minutes": 12,
+     "intro": "Describing a location on the human body accurately requires a shared, standardized vocabulary; without it, 'above the wrist' could mean several different things depending on how the arm is positioned. Anatomists solve this with a fixed reference position and a consistent set of directional terms.",
+     "sections": [
+      {
+       "heading": "Anatomical Position and Directional Terms",
+       "body": [
+        "All anatomical description starts from the **anatomical position**: standing upright, facing forward, arms at the sides with palms facing forward, feet flat and parallel. From this fixed reference, directional terms have precise meanings: **superior** (toward the head) versus **inferior** (toward the feet), **anterior** (toward the front) versus **posterior** (toward the back), and **medial** (toward the body's midline) versus **lateral** (away from the midline).",
+        "Additional terms describe limbs specifically: **proximal** (closer to the point of attachment to the trunk) versus **distal** (farther from that attachment), which is why, on the arm, the elbow is proximal to the wrist but distal to the shoulder."
+       ]
+      },
+      {
+       "heading": "Body Planes and Cavities",
+       "body": [
+        "A **sagittal plane** divides the body into left and right portions (a **midsagittal plane** divides it into exactly equal halves); a **frontal (coronal) plane** divides the body into anterior and posterior portions; and a **transverse plane** divides the body into superior and inferior portions, the plane typically used in a CT scan cross-section.",
+        "The body's internal organs sit within specific **body cavities**: the **dorsal cavity** (further divided into the cranial cavity, housing the brain, and the spinal cavity, housing the spinal cord) and the larger **ventral cavity** (divided by the diaphragm into the thoracic cavity, housing the heart and lungs, and the abdominopelvic cavity, housing digestive, urinary, and reproductive organs)."
+       ],
+       "example": {
+        "problem": "A radiologist orders a CT scan that produces cross-sectional images, each one showing a horizontal slice of the body separating upper structures from lower ones at that level. Which anatomical plane does each image represent, and is the elbow proximal or distal to the wrist in standard anatomical terms?",
+        "steps": [
+         "A plane separating superior from inferior structures is, by definition, a transverse plane.",
+         "Proximal/distal terms are measured relative to the point of attachment to the trunk; the elbow attaches closer to the trunk than the wrist does.",
+         "Therefore the elbow is proximal relative to the wrist, and the wrist is distal relative to the elbow."
+        ],
+        "answer": "The CT images represent transverse planes. The elbow is proximal to the wrist (closer to the trunk), and the wrist is distal to the elbow."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "anatomical position",
+       "def": "The standard reference position: standing upright, facing forward, arms at sides, palms forward."
+      },
+      {
+       "term": "superior/inferior",
+       "def": "Directional terms meaning toward the head versus toward the feet."
+      },
+      {
+       "term": "proximal/distal",
+       "def": "Directional terms meaning closer to versus farther from a limb's point of attachment to the trunk."
+      },
+      {
+       "term": "transverse plane",
+       "def": "A body plane dividing the body into superior and inferior portions."
+      },
+      {
+       "term": "thoracic cavity",
+       "def": "The body cavity, above the diaphragm, housing the heart and lungs."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which plane divides the body into anterior and posterior portions?",
+       "choices": [
+        "Sagittal plane",
+        "Transverse plane",
+        "Frontal (coronal) plane",
+        "Midsagittal plane only"
+       ],
+       "answer": 2,
+       "explain": "A frontal, or coronal, plane splits the body into a front (anterior) section and a back (posterior) section."
+      },
+      {
+       "q": "On the leg, is the knee proximal or distal relative to the ankle?",
+       "choices": [
+        "Proximal, since it is closer to the trunk than the ankle is",
+        "Distal, since it is farther from the trunk",
+        "Neither term applies to the leg",
+        "It depends on the person's height"
+       ],
+       "answer": 0,
+       "explain": "Proximal/distal describe relative distance from the trunk; since the knee attaches closer to the trunk than the ankle does, the knee is proximal relative to the ankle."
+      },
+      {
+       "q": "The heart and lungs are located within which body cavity?",
+       "choices": [
+        "Abdominopelvic cavity",
+        "Cranial cavity",
+        "Thoracic cavity",
+        "Spinal cavity"
+       ],
+       "answer": 2,
+       "explain": "The thoracic cavity, located above the diaphragm within the ventral cavity, houses the heart, lungs, and associated structures."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Cell and Tissue Types",
+     "minutes": 13,
+     "intro": "Roughly 37 trillion cells make up an adult human body, but nearly all of them can be sorted into just four broad tissue categories, each with a distinct job that shows up again and again across every organ system in this course.",
+     "sections": [
+      {
+       "heading": "The Generalized Human Cell",
+       "body": [
+        "A typical human cell is enclosed by a **plasma membrane** and contains a **nucleus**, which houses DNA, along with organelles including **mitochondria** (energy production), the **endoplasmic reticulum** and **Golgi apparatus** (protein and lipid processing), and **ribosomes** (protein synthesis). While every cell shares this same basic toolkit, cells specialize dramatically depending on their tissue: a muscle cell is packed with contractile proteins, while a nerve cell has a long, signal-conducting extension no other cell type has.",
+        "This specialization is possible because every cell in the body (with rare exceptions like red blood cells) carries the complete genome, but only a fraction of those genes are actively expressed in any given cell type, a process called differentiation."
+       ]
+      },
+      {
+       "heading": "The Four Tissue Types",
+       "body": [
+        "**Epithelial tissue** covers external body surfaces and lines internal cavities and organs, forming tightly packed sheets specialized for protection, absorption, or secretion, such as the skin's outer layer or the lining of the intestines. **Connective tissue** is the body's most abundant and varied tissue type, binding, supporting, and cushioning other structures; it includes bone, cartilage, tendons, ligaments, blood, and adipose (fat) tissue, unified by having relatively few cells scattered within a large amount of extracellular matrix.",
+        "**Muscle tissue** generates force through contraction and comes in three types: skeletal (voluntary, moves the skeleton), cardiac (found only in the heart), and smooth (involuntary, lines organ walls like the intestines and blood vessels). **Nervous tissue**, found in the brain, spinal cord, and nerves, generates and transmits electrical signals that let the body sense its environment and coordinate a response."
+       ],
+       "example": {
+        "problem": "A pathologist examines a tissue sample under a microscope and observes tightly packed cells forming a continuous sheet with almost no space between them, sitting on a thin basement membrane, with no blood vessels running directly through the sheet itself. Which of the four tissue types is this most likely to be?",
+        "steps": [
+         "Recognize that tightly packed cells forming continuous sheets is a hallmark of epithelial tissue, not connective, muscle, or nervous tissue.",
+         "Note that epithelial tissue characteristically lacks its own blood supply and instead relies on diffusion from underlying connective tissue.",
+         "Confirm this matches the description: a cell-dense sheet on a basement membrane, avascular."
+        ],
+        "answer": "This is epithelial tissue, identifiable by its tightly packed cellular sheet structure, basement membrane attachment, and lack of direct blood vessels."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "epithelial tissue",
+       "def": "Tissue forming tightly packed sheets that cover surfaces and line cavities and organs."
+      },
+      {
+       "term": "connective tissue",
+       "def": "The body's most abundant tissue type, providing support, binding, and cushioning, with abundant extracellular matrix."
+      },
+      {
+       "term": "muscle tissue",
+       "def": "Tissue specialized to generate force through contraction; includes skeletal, cardiac, and smooth types."
+      },
+      {
+       "term": "nervous tissue",
+       "def": "Tissue specialized to generate and transmit electrical signals for sensing and coordination."
+      },
+      {
+       "term": "differentiation",
+       "def": "The process by which a cell becomes specialized by expressing only a subset of its full genome."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which tissue type is characterized by relatively few cells embedded in a large amount of extracellular matrix, and includes bone, cartilage, and blood?",
+       "choices": [
+        "Epithelial tissue",
+        "Connective tissue",
+        "Muscle tissue",
+        "Nervous tissue"
+       ],
+       "answer": 1,
+       "explain": "Connective tissue is defined by its abundant extracellular matrix relative to cell number, a feature shared by seemingly very different tissues like bone, cartilage, and blood."
+      },
+      {
+       "q": "Which type of muscle tissue is found only in the heart?",
+       "choices": [
+        "Skeletal muscle",
+        "Smooth muscle",
+        "Cardiac muscle",
+        "Epithelial muscle"
+       ],
+       "answer": 2,
+       "explain": "Cardiac muscle is a distinct muscle tissue type found exclusively in the heart, specialized for the heart's continuous, coordinated contractions."
+      },
+      {
+       "q": "Every cell in the body carries essentially the same complete genome, yet a muscle cell and a nerve cell look and function very differently. What explains this?",
+       "choices": [
+        "Muscle and nerve cells actually have different DNA sequences",
+        "Differentiation, in which each cell type expresses only a subset of the shared genome",
+        "Only muscle cells contain a nucleus",
+        "Nerve cells lack mitochondria entirely"
+       ],
+       "answer": 1,
+       "explain": "Differentiation allows genetically identical cells to become structurally and functionally distinct by expressing different subsets of the same genome, producing the wide variety of specialized cell types in the body."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Integumentary and Skeletal Systems",
+   "summary": "The skin's layered structure and functions, how bones are built and classified, and how joints allow the range of motion the skeleton is capable of.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Integumentary System",
+     "minutes": 12,
+     "intro": "Skin is often overlooked as an organ, but at roughly two square meters in an adult, it is the body's largest, and it does far more than simply cover what's underneath.",
+     "sections": [
+      {
+       "heading": "Layers of the Skin",
+       "body": [
+        "The skin has two main layers: the **epidermis**, an outer layer of epithelial tissue with no blood vessels of its own, and the **dermis**, a thicker underlying layer of connective tissue containing blood vessels, nerve endings, hair follicles, and glands. Below the dermis sits the **hypodermis** (or subcutaneous layer), made mostly of adipose tissue, which is technically not part of the skin itself but anchors it to underlying muscle and provides insulation and cushioning.",
+        "The epidermis is built almost entirely of a specialized epithelial cell type that produces **keratin**, a tough, water-resistant protein; as these cells are pushed toward the surface over about a month, they die, flatten, and fill with keratin, forming a durable, continuously shedding protective layer."
+       ]
+      },
+      {
+       "heading": "Functions of the Integumentary System",
+       "body": [
+        "The skin's functions extend well beyond simple covering: **protection** against pathogens, UV radiation, and physical abrasion; **thermoregulation** through sweat gland secretion and adjustable blood flow near the surface; **sensation** via nerve endings that detect touch, pressure, temperature, and pain; and **vitamin D synthesis**, triggered by UV exposure on skin cells, which is essential for calcium absorption and bone health.",
+        "Because the skin plays such an active role in thermoregulation, extensive burns are dangerous for reasons beyond the visible wound itself: severe burns impair the body's ability to regulate temperature and retain fluid, and they eliminate a major barrier against infection, which is why burn severity is often assessed by both depth and percentage of total body surface area affected."
+       ],
+       "example": {
+        "problem": "A patient has second-degree burns covering an estimated 30% of their total body surface area. Using the general rule that burns covering more than 20-25% of body surface area place a patient at serious risk for both fluid loss and infection, assess the clinical significance of this injury.",
+        "steps": [
+         "Note that the burn covers 30% of body surface area, which exceeds the 20-25% threshold associated with serious risk.",
+         "Recall that skin normally regulates fluid retention and blocks pathogen entry.",
+         "Conclude that a burn of this size significantly impairs both functions over a large area, requiring urgent, specialized medical management, typically at a dedicated burn center."
+        ],
+        "answer": "A 30% total body surface area burn exceeds the serious-risk threshold, placing the patient at high risk for dangerous fluid loss and infection, and warrants urgent specialized burn care."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "epidermis",
+       "def": "The skin's outer epithelial layer, avascular and rich in keratin."
+      },
+      {
+       "term": "dermis",
+       "def": "The skin's thicker underlying connective tissue layer, containing blood vessels, nerves, and glands."
+      },
+      {
+       "term": "keratin",
+       "def": "A tough, water-resistant protein that fills epidermal cells as they mature toward the surface."
+      },
+      {
+       "term": "thermoregulation",
+       "def": "The regulation of body temperature, aided by skin through sweating and blood flow adjustment."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does the epidermis rely on the underlying dermis for its oxygen and nutrient supply?",
+       "choices": [
+        "The epidermis has no cells",
+        "The epidermis itself has no blood vessels; nutrients diffuse upward from the vascularized dermis below",
+        "The epidermis is not living tissue",
+        "The dermis lies above the epidermis"
+       ],
+       "answer": 1,
+       "explain": "The epidermis lacks its own blood supply, so its cells depend on nutrients and oxygen diffusing upward from the blood vessels found in the dermis beneath it."
+      },
+      {
+       "q": "How does the skin contribute to vitamin D production?",
+       "choices": [
+        "It absorbs vitamin D directly from sweat",
+        "UV exposure on skin cells triggers synthesis of a vitamin D precursor, essential for calcium absorption",
+        "It has no role in vitamin D production",
+        "It only produces vitamin D at night"
+       ],
+       "answer": 1,
+       "explain": "UV light striking skin cells initiates a chemical reaction that produces an early form of vitamin D, later converted to its active form, supporting calcium absorption and bone health."
+      },
+      {
+       "q": "Why are burns covering a large percentage of body surface area especially dangerous, beyond the visible tissue damage?",
+       "choices": [
+        "They have no additional risks beyond the wound itself",
+        "They impair thermoregulation and fluid retention and remove a major infection barrier over a large area",
+        "They only affect the hypodermis",
+        "They automatically heal faster than small burns"
+       ],
+       "answer": 1,
+       "explain": "Skin actively regulates temperature and fluid balance and blocks pathogens; losing these functions over a large body area creates serious, body-wide risks well beyond the local wound."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Bone Structure and the Skeleton",
+     "minutes": 14,
+     "intro": "Bone is a living, constantly remodeling tissue, not the static, inert scaffold it is often imagined to be, and understanding its structure explains everything from why bones heal after a fracture to why astronauts lose bone density in space.",
+     "sections": [
+      {
+       "heading": "Bone Tissue and Structure",
+       "body": [
+        "A typical long bone, like the femur, has a hollow shaft, the **diaphysis**, made of dense **compact bone**, and two rounded ends, the **epiphyses**, containing lighter, honeycomb-like **spongy bone** that houses red bone marrow, the site of blood cell production. The whole bone is covered by a connective tissue membrane, the **periosteum**, which anchors tendons and ligaments and contains cells responsible for bone growth in width and repair.",
+        "Bone tissue itself is built by three specialized cell types working in balance: **osteoblasts** build new bone matrix, **osteocytes** are mature bone cells embedded within that matrix maintaining it, and **osteoclasts** break down bone matrix, releasing calcium into the blood when needed. This ongoing balance between osteoblast building and osteoclast breakdown is called **bone remodeling**, and it continues throughout life, not just during childhood growth."
+       ]
+      },
+      {
+       "heading": "Classifying Bones and the Skeleton",
+       "body": [
+        "Bones are classified by shape: **long bones** (femur, humerus) are longer than wide and act as levers, **short bones** (carpals, tarsals) are roughly cube-shaped and provide stability with limited motion, **flat bones** (skull, sternum, ribs) provide protection and broad surfaces for muscle attachment, and **irregular bones** (vertebrae) have complex shapes that don't fit the other categories.",
+        "The skeleton itself is divided into two divisions: the **axial skeleton** (skull, vertebral column, rib cage, roughly 80 bones) forms the body's central axis and protects the brain, spinal cord, and thoracic organs, while the **appendicular skeleton** (limbs, shoulder girdle, pelvic girdle, roughly 126 bones) enables movement and manipulation of the environment."
+       ],
+       "example": {
+        "problem": "A blood test reveals unusually high calcium levels, and further testing shows abnormally high osteoclast activity relative to osteoblast activity. Explain how this imbalance would affect bone density over time, and identify which bone cell type is responsible for releasing calcium into the blood.",
+        "steps": [
+         "Recall that osteoclasts break down bone matrix, releasing stored calcium into the bloodstream.",
+         "Osteoblasts, by contrast, build new bone matrix and would normally offset this loss.",
+         "If osteoclast activity substantially exceeds osteoblast activity, bone breakdown outpaces bone building, so calcium is released faster than it is redeposited into bone."
+        ],
+        "answer": "Osteoclasts are responsible for releasing calcium into the blood by breaking down bone matrix; with osteoclast activity outpacing osteoblast activity, bone density would decrease over time as calcium is lost from bone faster than it is replaced."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "osteoblast",
+       "def": "A bone cell that builds new bone matrix."
+      },
+      {
+       "term": "osteoclast",
+       "def": "A bone cell that breaks down bone matrix, releasing calcium into the blood."
+      },
+      {
+       "term": "periosteum",
+       "def": "The connective tissue membrane covering the outer surface of a bone."
+      },
+      {
+       "term": "axial skeleton",
+       "def": "The division of the skeleton forming the body's central axis: skull, vertebral column, and rib cage."
+      },
+      {
+       "term": "appendicular skeleton",
+       "def": "The division of the skeleton consisting of the limbs and their supporting girdles."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which bone cell type is responsible for building new bone matrix?",
+       "choices": [
+        "Osteocyte",
+        "Osteoclast",
+        "Osteoblast",
+        "Chondrocyte"
+       ],
+       "answer": 2,
+       "explain": "Osteoblasts synthesize and deposit new bone matrix; osteocytes are the mature cells that maintain existing matrix, and osteoclasts break matrix down."
+      },
+      {
+       "q": "The vertebrae are classified as which type of bone based on shape?",
+       "choices": [
+        "Long bone",
+        "Short bone",
+        "Flat bone",
+        "Irregular bone"
+       ],
+       "answer": 3,
+       "explain": "Vertebrae have complex, non-uniform shapes that don't fit the long, short, or flat bone categories, placing them in the irregular bone classification."
+      },
+      {
+       "q": "The femur (thigh bone) belongs to which division of the skeleton?",
+       "choices": [
+        "Axial skeleton",
+        "Appendicular skeleton",
+        "Cranial skeleton",
+        "Thoracic skeleton"
+       ],
+       "answer": 1,
+       "explain": "The femur is a limb bone, and all limb bones and their supporting girdles belong to the appendicular skeleton, distinct from the central axial skeleton."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Joints and Movement",
+     "minutes": 13,
+     "intro": "Every bend of an elbow or twist of a wrist happens at a joint, and the specific type of joint involved determines exactly how much, and in what directions, that movement is allowed to happen.",
+     "sections": [
+      {
+       "heading": "Classifying Joints",
+       "body": [
+        "Joints are classified functionally by the amount of movement they allow: **synarthroses** are immovable joints (like the sutures between skull bones), **amphiarthroses** allow slight movement (like the joints between vertebrae), and **diarthroses** are freely movable joints (like the knee or shoulder), which make up the majority of joints involved in everyday movement.",
+        "Diarthroses are also called **synovial joints**, characterized by a fluid-filled joint capsule that lubricates the joint and reduces friction between the smooth articular cartilage covering each bone's contact surface. Synovial joints come in several structural subtypes with distinctly different ranges of motion, including hinge joints (elbow, knee, allowing motion in one plane), ball-and-socket joints (hip, shoulder, allowing motion in multiple planes plus rotation), and pivot joints (the joint between the first two neck vertebrae, allowing rotation)."
+       ]
+      },
+      {
+       "heading": "Range of Motion and Movement Terms",
+       "body": [
+        "Movements at synovial joints are described with specific terms: **flexion** decreases the angle between two bones (bending the elbow), while **extension** increases that angle (straightening it); **abduction** moves a limb away from the body's midline, while **adduction** moves it back toward the midline; **rotation** turns a bone around its own longitudinal axis.",
+        "A joint's structure directly determines its available range of motion; a ball-and-socket joint like the shoulder allows an exceptionally wide range of motion, including flexion, extension, abduction, adduction, and rotation, precisely because its rounded head sits in a deep, cup-shaped socket that permits movement in nearly every direction, at some cost to overall joint stability compared to a simpler hinge joint."
+       ],
+       "example": {
+        "problem": "A physical therapist asks a patient to bend their elbow, bringing the forearm up toward the upper arm, then straighten it back out fully. Identify the movement term for each phase, and classify the elbow joint's structural type.",
+        "steps": [
+         "Bringing the forearm up decreases the angle between the forearm and upper arm, which is the definition of flexion.",
+         "Straightening the arm back out increases that angle again, which is the definition of extension.",
+         "The elbow allows movement primarily in one plane (bending and straightening), which is characteristic of a hinge joint."
+        ],
+        "answer": "Bending the elbow is flexion; straightening it is extension. The elbow is structurally classified as a hinge joint, allowing motion mainly in one plane."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "synovial joint",
+       "def": "A freely movable joint containing a fluid-filled capsule that lubricates and reduces friction."
+      },
+      {
+       "term": "hinge joint",
+       "def": "A synovial joint type allowing movement primarily in one plane, such as the elbow or knee."
+      },
+      {
+       "term": "ball-and-socket joint",
+       "def": "A synovial joint type allowing a wide range of motion in multiple planes plus rotation, such as the hip or shoulder."
+      },
+      {
+       "term": "flexion",
+       "def": "A movement that decreases the angle between two bones at a joint."
+      },
+      {
+       "term": "abduction",
+       "def": "A movement that moves a body part away from the body's midline."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which joint type allows the widest range of motion, including rotation, and is exemplified by the shoulder joint?",
+       "choices": [
+        "Hinge joint",
+        "Pivot joint",
+        "Ball-and-socket joint",
+        "Synarthrosis"
+       ],
+       "answer": 2,
+       "explain": "A ball-and-socket joint's rounded head fitting into a deep socket allows motion in nearly every direction, including rotation, more than any other synovial joint type."
+      },
+      {
+       "q": "Raising your arm out to the side, away from your body, is an example of which movement?",
+       "choices": [
+        "Flexion",
+        "Extension",
+        "Adduction",
+        "Abduction"
+       ],
+       "answer": 3,
+       "explain": "Abduction specifically describes movement of a limb away from the body's midline, exactly the motion of raising an arm out to the side."
+      },
+      {
+       "q": "The immovable sutures between the bones of the skull are classified functionally as which type of joint?",
+       "choices": [
+        "Diarthrosis",
+        "Amphiarthrosis",
+        "Synarthrosis",
+        "Synovial joint"
+       ],
+       "answer": 2,
+       "explain": "A synarthrosis is an immovable joint, exactly describing the fused, rigid sutures connecting the skull's individual bones."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Muscular and Nervous Systems",
+   "summary": "How muscle tissue generates force at the molecular level, how a single neuron transmits a signal, and how the central and peripheral nervous systems coordinate the body.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Muscle Tissue and Contraction",
+     "minutes": 15,
+     "intro": "Every voluntary movement you make, and plenty you never think about, comes down to microscopic protein filaments sliding past each other inside muscle cells, a mechanism precise enough to explain everything from a bicep curl to why muscles fatigue.",
+     "sections": [
+      {
+       "heading": "Skeletal Muscle Structure",
+       "body": [
+        "A skeletal muscle is made of bundles of long, cylindrical muscle cells called **muscle fibers**, each containing many smaller contractile strands called **myofibrils**. Each myofibril is divided along its length into repeating contractile units called **sarcomeres**, the basic functional unit of muscle contraction, built from overlapping thin filaments (**actin**) and thick filaments (**myosin**).",
+        "Within a sarcomere, myosin filaments have small projections called **cross-bridges** that can attach to specific binding sites on the actin filaments; contraction happens when these cross-bridges repeatedly attach, pull, detach, and reattach further along the actin, an ATP-powered ratcheting action known as the **sliding filament model**."
+       ]
+      },
+      {
+       "heading": "The Sliding Filament Model and Muscle Fatigue",
+       "body": [
+        "In the sliding filament model, a nerve signal triggers the release of calcium ions inside the muscle fiber, which exposes the myosin-binding sites on actin (normally covered by regulatory proteins). Myosin cross-bridges then bind actin, pull it inward using energy from ATP, release, and reattach further along, repeatedly sliding the actin filaments past the myosin filaments, shortening the sarcomere and the whole muscle fiber, without either filament itself changing length.",
+        "Sustained or intense contraction can lead to **muscle fatigue**, a temporary decline in a muscle's ability to generate force, caused by a combination of factors including depleted ATP and glycogen reserves, buildup of metabolic byproducts like lactic acid during anaerobic exercise, and disrupted calcium ion handling within the fiber."
+       ],
+       "example": {
+        "problem": "A single sarcomere is measured at 2.2 micrometers in its relaxed state. After a maximal contraction, it shortens to 1.8 micrometers. By what percentage did the sarcomere shorten, and does the length of the actin filaments themselves change during this process?",
+        "steps": [
+         "Calculate the length decrease: 2.2 − 1.8 = 0.4 micrometers.",
+         "Calculate the percentage decrease relative to the original length: 0.4 ÷ 2.2 ≈ 0.182, or about 18%.",
+         "Recall that in the sliding filament model, actin and myosin filaments slide past each other but do not themselves change length during contraction."
+        ],
+        "answer": "The sarcomere shortened by about 18%. The actin filaments themselves do not change length; the shortening comes entirely from the filaments sliding further past one another."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "sarcomere",
+       "def": "The basic contractile unit of a muscle fiber, built from overlapping actin and myosin filaments."
+      },
+      {
+       "term": "actin",
+       "def": "The thin filament protein in a sarcomere that myosin cross-bridges pull against during contraction."
+      },
+      {
+       "term": "myosin",
+       "def": "The thick filament protein in a sarcomere whose cross-bridges generate the pulling force of contraction."
+      },
+      {
+       "term": "sliding filament model",
+       "def": "The mechanism by which actin and myosin filaments slide past each other, shortening the sarcomere, to produce muscle contraction."
+      },
+      {
+       "term": "muscle fatigue",
+       "def": "A temporary decline in a muscle's force-generating capacity due to depleted energy reserves and metabolic byproduct buildup."
+      }
+     ],
+     "practice": [
+      {
+       "q": "During muscle contraction, what happens to the length of the actin and myosin filaments themselves?",
+       "choices": [
+        "Both filaments shorten equally",
+        "Both filaments lengthen",
+        "Neither filament changes length; they slide past each other instead",
+        "Only myosin shortens"
+       ],
+       "answer": 2,
+       "explain": "In the sliding filament model, actin and myosin filaments maintain their own length throughout contraction; the sarcomere shortens because the filaments slide further past one another, increasing their overlap."
+      },
+      {
+       "q": "What role does calcium play in triggering muscle contraction?",
+       "choices": [
+        "Calcium directly supplies the ATP needed for contraction",
+        "Calcium release exposes myosin-binding sites on actin, allowing cross-bridges to attach",
+        "Calcium breaks down actin filaments",
+        "Calcium has no role in skeletal muscle contraction"
+       ],
+       "answer": 1,
+       "explain": "Calcium ions released in response to a nerve signal bind regulatory proteins on actin, exposing the binding sites myosin cross-bridges need to attach and begin pulling."
+      },
+      {
+       "q": "A sarcomere shortens from 2.4 micrometers to 2.0 micrometers during a contraction. What is the approximate percentage decrease in length?",
+       "choices": [
+        "4%",
+        "17%",
+        "20%",
+        "40%"
+       ],
+       "answer": 1,
+       "explain": "Decrease = 2.4 − 2.0 = 0.4 micrometers; percentage decrease = 0.4 ÷ 2.4 ≈ 0.167, or about 17%."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Neurons and Nerve Impulses",
+     "minutes": 14,
+     "intro": "A nerve signal travels down a neuron not like water through a pipe, but as a self-propagating electrical wave, one that can reach speeds over 100 meters per second in some of the body's fastest nerves.",
+     "sections": [
+      {
+       "heading": "Neuron Structure",
+       "body": [
+        "A **neuron** has three main parts: **dendrites**, branching extensions that receive signals from other neurons; the **cell body**, containing the nucleus and most organelles; and the **axon**, a single long extension that carries the signal away from the cell body toward the next cell. Many axons are wrapped in a fatty, insulating **myelin sheath**, produced by specialized support cells, with small gaps between segments called **nodes of Ranvier**.",
+        "Myelination dramatically speeds up signal transmission through **saltatory conduction**, in which the electrical signal effectively jumps from one node of Ranvier to the next rather than traveling continuously along the entire membrane, which is why damage to myelin, as occurs in multiple sclerosis, slows and can eventually disrupt nerve signaling."
+       ]
+      },
+      {
+       "heading": "The Nerve Impulse and Synaptic Transmission",
+       "body": [
+        "A neuron at rest maintains a stable electrical difference across its membrane, the **resting membrane potential**, with the inside slightly negative relative to the outside. A strong enough stimulus triggers an **action potential**: a rapid, temporary reversal of this charge that travels the length of the axon as an all-or-nothing electrical impulse, meaning it either fires at full strength or does not fire at all, regardless of how strong the triggering stimulus was, as long as it crossed the necessary threshold.",
+        "When the action potential reaches the axon's end, it triggers the release of chemical messengers called **neurotransmitters** into the tiny gap between neurons, the **synapse**. These neurotransmitters bind receptors on the next neuron, either encouraging or discouraging that neuron from firing its own action potential, which is exactly how one neuron's signal is passed along a chain to eventually produce a sensation, thought, or movement."
+       ],
+       "example": {
+        "problem": "A stimulus strong enough to reach a neuron's firing threshold triggers an action potential. A second, weaker stimulus applied to the same neuron does not reach threshold. Explain what happens in each case, referencing the all-or-nothing principle.",
+        "steps": [
+         "The first stimulus crosses the threshold, triggering a full-strength action potential that travels the entire length of the axon.",
+         "The all-or-nothing principle means that once threshold is crossed, the action potential's strength does not vary with how far above threshold the stimulus was; it always fires at full strength.",
+         "The second, weaker stimulus does not reach threshold at all, so no action potential is generated, regardless of how close it came."
+        ],
+        "answer": "The first stimulus produces a full-strength action potential because it crossed threshold; the second produces no action potential at all, since sub-threshold stimuli do not trigger any impulse, consistent with the all-or-nothing principle."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "axon",
+       "def": "The long extension of a neuron that carries an electrical signal away from the cell body."
+      },
+      {
+       "term": "myelin sheath",
+       "def": "A fatty insulating layer around many axons that speeds signal conduction."
+      },
+      {
+       "term": "action potential",
+       "def": "A rapid, all-or-nothing reversal of a neuron's membrane charge that propagates a nerve signal along the axon."
+      },
+      {
+       "term": "synapse",
+       "def": "The small gap between two neurons where neurotransmitter-based chemical signaling occurs."
+      },
+      {
+       "term": "neurotransmitter",
+       "def": "A chemical messenger released at a synapse that influences whether the next neuron fires."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the functional benefit of a myelin sheath around an axon?",
+       "choices": [
+        "It slows down signal transmission for safety",
+        "It speeds up signal transmission through saltatory conduction, jumping the signal between nodes of Ranvier",
+        "It produces neurotransmitters",
+        "It replaces the need for an action potential"
+       ],
+       "answer": 1,
+       "explain": "Myelin's insulating segments let the electrical signal effectively jump from node to node rather than traveling continuously along the whole membrane, greatly increasing conduction speed."
+      },
+      {
+       "q": "What does the 'all-or-nothing' principle of an action potential mean?",
+       "choices": [
+        "Stronger stimuli always produce a stronger action potential",
+        "Once a stimulus reaches threshold, the action potential fires at full, constant strength regardless of how far above threshold the stimulus was",
+        "Action potentials never occur in real neurons",
+        "Sub-threshold stimuli still produce a small action potential"
+       ],
+       "answer": 1,
+       "explain": "An action potential either fires completely, at a fixed strength, once threshold is reached, or does not fire at all if threshold is not reached; stimulus intensity beyond threshold does not change the action potential's size."
+      },
+      {
+       "q": "What is released at a synapse to pass a signal from one neuron to the next?",
+       "choices": [
+        "Myelin",
+        "Neurotransmitters",
+        "Actin filaments",
+        "Osteoblasts"
+       ],
+       "answer": 1,
+       "explain": "When an action potential reaches the end of an axon, it triggers the release of neurotransmitter molecules into the synapse, which then bind receptors on the next neuron."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Central and Peripheral Nervous Systems",
+     "minutes": 13,
+     "intro": "The nervous system is organized into a command center and a communication network reaching every part of the body, a division that explains both how you can consciously decide to move a finger and how you can yank your hand off a hot stove before you even feel the pain.",
+     "sections": [
+      {
+       "heading": "Central and Peripheral Divisions",
+       "body": [
+        "The **central nervous system (CNS)** consists of the brain and spinal cord, serving as the body's main processing and decision-making center, protected by bone (skull and vertebrae), membranes called meninges, and a cushioning layer of cerebrospinal fluid. The **peripheral nervous system (PNS)** consists of all the nerves branching out from the CNS to the rest of the body, carrying sensory information inward and motor commands outward.",
+        "The PNS is further divided into the **somatic nervous system**, which controls voluntary skeletal muscle movement and conscious sensation, and the **autonomic nervous system**, which controls involuntary functions like heart rate, digestion, and gland secretion, itself split into the **sympathetic** division (the 'fight or flight' response, activated during stress or danger) and the **parasympathetic** division (the 'rest and digest' response, dominant during calm states)."
+       ]
+      },
+      {
+       "heading": "Reflex Arcs",
+       "body": [
+        "A **reflex** is a fast, automatic, involuntary response to a stimulus that does not require conscious processing in the brain to occur, following a specific pathway called a **reflex arc**: a sensory receptor detects a stimulus, a sensory neuron carries that signal to the spinal cord, an interneuron in the spinal cord processes and relays it, a motor neuron carries the outgoing signal to a muscle, and the muscle (the effector) contracts to produce the response.",
+        "Because the signal for a simple reflex is processed at the level of the spinal cord rather than needing to travel all the way up to the brain and back, reflexes are significantly faster than a consciously decided action, which is exactly why you can jerk your hand away from a hot stove before you consciously register the pain, even though you do become consciously aware of the pain shortly afterward."
+       ],
+       "example": {
+        "problem": "A person accidentally touches a hot stove and reflexively pulls their hand away before feeling the pain consciously. Trace the pathway of this reflex arc from stimulus to response, identifying each component.",
+        "steps": [
+         "Sensory receptors in the skin detect the excessive heat.",
+         "A sensory neuron carries this signal to the spinal cord.",
+         "An interneuron in the spinal cord processes the signal and relays it directly to a motor neuron, without first routing it up to the brain.",
+         "The motor neuron carries the signal to the arm's muscles (the effector), which contract to pull the hand away."
+        ],
+        "answer": "Heat is detected by skin receptors, carried by a sensory neuron to the spinal cord, processed by an interneuron, and relayed by a motor neuron to the arm muscles, which contract to withdraw the hand, all before the signal has time to reach the brain for conscious pain perception."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "central nervous system",
+       "def": "The brain and spinal cord, serving as the body's main processing and decision-making center."
+      },
+      {
+       "term": "peripheral nervous system",
+       "def": "All nerves outside the brain and spinal cord, connecting the CNS to the rest of the body."
+      },
+      {
+       "term": "autonomic nervous system",
+       "def": "The division of the PNS controlling involuntary functions like heart rate and digestion."
+      },
+      {
+       "term": "reflex arc",
+       "def": "The neural pathway of a fast, involuntary response: receptor, sensory neuron, interneuron, motor neuron, effector."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why can a withdrawal reflex, like pulling a hand off a hot stove, occur faster than a consciously decided movement?",
+       "choices": [
+        "Reflexes do not involve neurons at all",
+        "The reflex signal is processed at the spinal cord level rather than needing to travel to the brain and back",
+        "Conscious movements do not require any nerve signals",
+        "Reflexes only occur in the brain"
+       ],
+       "answer": 1,
+       "explain": "Because a reflex arc's processing happens directly in the spinal cord via an interneuron, the response can be triggered without waiting for the signal to reach the brain, be consciously processed, and travel back down, saving valuable time."
+      },
+      {
+       "q": "Which division of the autonomic nervous system is primarily responsible for the 'fight or flight' response?",
+       "choices": [
+        "Somatic nervous system",
+        "Parasympathetic division",
+        "Sympathetic division",
+        "Central nervous system alone"
+       ],
+       "answer": 2,
+       "explain": "The sympathetic division activates the body's stress response, increasing heart rate and redirecting blood flow to prepare for immediate action, the classic 'fight or flight' pattern."
+      },
+      {
+       "q": "Which structures make up the central nervous system?",
+       "choices": [
+        "All nerves in the arms and legs",
+        "The brain and spinal cord",
+        "The autonomic and somatic nervous systems combined",
+        "Only the brain"
+       ],
+       "answer": 1,
+       "explain": "The central nervous system is specifically defined as the brain and spinal cord, distinct from the peripheral nerves that make up the rest of the nervous system."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Circulatory and Respiratory Systems",
+   "summary": "How the heart pumps blood through a closed circuit, what blood is made of, and how the lungs exchange oxygen and carbon dioxide with that blood.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Heart and Cardiac Cycle",
+     "minutes": 15,
+     "intro": "Your heart beats roughly 100,000 times a day without you ever having to think about it, pumping blood through two separate circuits in a precisely timed sequence that keeps oxygen-rich and oxygen-poor blood from ever mixing.",
+     "sections": [
+      {
+       "heading": "Heart Structure and the Two Circuits",
+       "body": [
+        "The heart has four chambers: two upper **atria** that receive incoming blood, and two lower **ventricles** that pump blood back out, with the right and left sides completely separated by a muscular wall (the septum), preventing oxygen-rich and oxygen-poor blood from mixing. The right side of the heart receives oxygen-poor blood from the body and pumps it to the lungs via the **pulmonary circuit**; the left side receives oxygen-rich blood returning from the lungs and pumps it out to the rest of the body via the **systemic circuit**.",
+        "One-way valves, the **atrioventricular valves** between each atrium and ventricle and the **semilunar valves** at the exits of each ventricle, ensure blood flows in only one direction through the heart, snapping shut to prevent backflow, the sound of which produces the familiar 'lub-dub' heartbeat."
+       ]
+      },
+      {
+       "heading": "The Cardiac Cycle and Cardiac Output",
+       "body": [
+        "One complete heartbeat, the **cardiac cycle**, consists of **systole** (contraction, when a chamber pumps blood out) and **diastole** (relaxation, when a chamber fills with blood), with the atria and ventricles alternating their contraction timing so that atrial contraction tops off the ventricles just before the ventricles contract to pump blood out to the lungs or body.",
+        "**Cardiac output**, the total volume of blood the heart pumps per minute, is calculated as **heart rate** (beats per minute) multiplied by **stroke volume** (the volume of blood ejected per beat). This single number is one of the most clinically important measures of overall cardiovascular function, since it reflects the heart's actual capacity to deliver blood to the body's tissues."
+       ],
+       "example": {
+        "problem": "A patient has a resting heart rate of 72 beats per minute and a stroke volume of 70 milliliters per beat. Calculate this patient's cardiac output in milliliters per minute, and convert the answer to liters per minute.",
+        "steps": [
+         "Cardiac output = heart rate × stroke volume.",
+         "Multiply: 72 beats/min × 70 mL/beat = 5,040 mL/min.",
+         "Convert to liters by dividing by 1,000: 5,040 ÷ 1,000 = 5.04 L/min."
+        ],
+        "answer": "Cardiac output is 5,040 mL/min, or about 5.04 liters per minute, which is a typical resting value for a healthy adult."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "atrium",
+       "def": "An upper heart chamber that receives incoming blood."
+      },
+      {
+       "term": "ventricle",
+       "def": "A lower heart chamber that pumps blood out of the heart."
+      },
+      {
+       "term": "cardiac cycle",
+       "def": "One complete heartbeat, consisting of systole (contraction) and diastole (relaxation)."
+      },
+      {
+       "term": "cardiac output",
+       "def": "The total volume of blood the heart pumps per minute, equal to heart rate times stroke volume."
+      },
+      {
+       "term": "stroke volume",
+       "def": "The volume of blood ejected by a ventricle in a single heartbeat."
+      }
+     ],
+     "practice": [
+      {
+       "q": "A patient has a heart rate of 80 beats per minute and a stroke volume of 65 mL per beat. What is this patient's cardiac output in mL per minute?",
+       "choices": [
+        "5,200 mL/min",
+        "4,500 mL/min",
+        "6,000 mL/min",
+        "1,450 mL/min"
+       ],
+       "answer": 0,
+       "explain": "Cardiac output = heart rate × stroke volume = 80 × 65 = 5,200 mL/min."
+      },
+      {
+       "q": "Why is it critical that the septum completely separates the right and left sides of the heart?",
+       "choices": [
+        "It allows oxygen-rich and oxygen-poor blood to mix efficiently",
+        "It prevents oxygen-poor blood heading to the lungs from mixing with oxygen-rich blood heading to the body",
+        "It has no functional importance",
+        "It only matters in fetal circulation"
+       ],
+       "answer": 1,
+       "explain": "Without a complete separation, oxygen-poor blood from the body could mix with oxygen-rich blood before it reaches the tissues, reducing the oxygen delivered throughout the body."
+      },
+      {
+       "q": "Which side of the heart pumps blood into the pulmonary circuit toward the lungs?",
+       "choices": [
+        "Left atrium",
+        "Left ventricle",
+        "Right ventricle",
+        "Right atrium alone"
+       ],
+       "answer": 2,
+       "explain": "The right ventricle pumps oxygen-poor blood received from the right atrium out to the lungs via the pulmonary artery, beginning the pulmonary circuit."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Blood and Blood Vessels",
+     "minutes": 14,
+     "intro": "Blood is technically a connective tissue, a fluid matrix carrying cells and dissolved substances through a branching network of vessels engineered with very different properties depending on their job.",
+     "sections": [
+      {
+       "heading": "Components of Blood",
+       "body": [
+        "Blood consists of a liquid component, **plasma** (roughly 55% of blood volume, mostly water along with proteins, nutrients, hormones, and waste), and a cellular component (roughly 45%) made of three main cell types: **red blood cells (erythrocytes)**, which carry oxygen bound to the protein hemoglobin; **white blood cells (leukocytes)**, which defend against infection; and **platelets**, cell fragments essential for blood clotting.",
+        "Red blood cells vastly outnumber white blood cells, roughly 700 red blood cells for every white blood cell, reflecting how much of blood's total function is dedicated simply to oxygen transport; despite this numerical dominance, white blood cells are far more metabolically active and varied, since they must recognize and respond to an enormous range of possible threats."
+       ]
+      },
+      {
+       "heading": "Blood Vessel Types",
+       "body": [
+        "**Arteries** carry blood away from the heart under high pressure and have thick, muscular, elastic walls able to withstand and smooth out that pressure; **veins** carry blood back toward the heart under much lower pressure and have thinner walls along with one-way valves that prevent backflow, especially important in the limbs where blood must travel against gravity. **Capillaries**, the smallest vessels, have walls just one cell thick, thin enough to allow the actual exchange of oxygen, nutrients, and waste between blood and surrounding tissue, the entire functional point of the circulatory system.",
+        "Blood pressure is highest in the arteries closest to the heart and progressively drops as blood moves through smaller arteries, arterioles, and capillaries, which is precisely why a blood pressure reading taken from an arm artery reflects arterial, not capillary or venous, pressure."
+       ],
+       "example": {
+        "problem": "A researcher examines a blood sample and finds it consists of about 45% cellular components and 55% plasma by volume, with red blood cells vastly outnumbering white blood cells among the cellular fraction. Given a total blood volume of 5 liters, approximately how many liters are plasma, and how many liters are cellular components?",
+        "steps": [
+         "Calculate plasma volume: 5 liters × 0.55 = 2.75 liters.",
+         "Calculate cellular volume: 5 liters × 0.45 = 2.25 liters.",
+         "Confirm the two add up to the total: 2.75 + 2.25 = 5 liters."
+        ],
+        "answer": "Approximately 2.75 liters would be plasma, and approximately 2.25 liters would be cellular components (red cells, white cells, and platelets)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "plasma",
+       "def": "The liquid component of blood, containing water, proteins, nutrients, hormones, and waste."
+      },
+      {
+       "term": "erythrocyte",
+       "def": "A red blood cell, specialized to carry oxygen bound to hemoglobin."
+      },
+      {
+       "term": "artery",
+       "def": "A thick-walled blood vessel that carries blood away from the heart under high pressure."
+      },
+      {
+       "term": "capillary",
+       "def": "A thin-walled blood vessel, one cell thick, where exchange of gases and nutrients with tissue occurs."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do capillary walls need to be only one cell thick, unlike arteries and veins?",
+       "choices": [
+        "To withstand the highest blood pressure in the body",
+        "To allow efficient diffusion of oxygen, nutrients, and waste between blood and surrounding tissue",
+        "To store the largest volume of blood",
+        "To prevent any blood pressure at all"
+       ],
+       "answer": 1,
+       "explain": "The entire functional purpose of capillaries is exchange with tissue, and a thin, single-cell-layer wall minimizes the diffusion distance for gases and nutrients to cross efficiently."
+      },
+      {
+       "q": "A blood sample of 4 liters contains 55% plasma by volume. How many liters of plasma does it contain?",
+       "choices": [
+        "1.8 liters",
+        "2.2 liters",
+        "2.5 liters",
+        "4 liters"
+       ],
+       "answer": 1,
+       "explain": "4 liters × 0.55 = 2.2 liters of plasma."
+      },
+      {
+       "q": "Why do veins, unlike arteries, rely on one-way valves to keep blood moving toward the heart?",
+       "choices": [
+        "Veins carry blood under very high pressure",
+        "Veins carry blood at low pressure, especially challenging in the limbs where blood must move against gravity",
+        "Arteries never carry blood against gravity",
+        "Valves are only found in capillaries"
+       ],
+       "answer": 1,
+       "explain": "Because venous blood pressure is much lower than arterial pressure, valves are needed to prevent blood from flowing backward, particularly in the legs and arms where gravity would otherwise pull blood downward."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Respiratory System and Gas Exchange",
+     "minutes": 13,
+     "intro": "Every breath you take moves air through a branching series of tubes to reach roughly 300 million tiny air sacs, where oxygen and carbon dioxide swap places between air and blood in a fraction of a second.",
+     "sections": [
+      {
+       "heading": "The Respiratory Pathway and Breathing Mechanics",
+       "body": [
+        "Air travels through the nasal cavity or mouth, pharynx, larynx, trachea, and into progressively smaller branching **bronchi** and **bronchioles**, ultimately reaching clusters of tiny air sacs called **alveoli**, the actual site of gas exchange with the surrounding capillary network. The muscular **diaphragm**, along with the intercostal muscles between the ribs, drives breathing mechanics: contraction of the diaphragm increases the chest cavity's volume, dropping internal pressure below atmospheric pressure and drawing air in (inhalation), while its relaxation decreases the volume, raising pressure and pushing air back out (exhalation).",
+        "This pressure-driven mechanism follows directly from the physical principle that gas moves from a region of higher pressure to lower pressure; breathing works entirely by manipulating the chest cavity's volume to create the pressure differences that pull air in and push it back out."
+       ]
+      },
+      {
+       "heading": "Gas Exchange at the Alveoli",
+       "body": [
+        "Each alveolus is surrounded by a dense network of capillaries, and both structures have extremely thin walls, minimizing the distance oxygen and carbon dioxide must diffuse. Oxygen diffuses from the alveolar air, where its concentration is high, into the blood, where its concentration is lower after tissues have used it up; carbon dioxide diffuses in the opposite direction, from the blood, where it has accumulated as a waste product of metabolism, into the alveolar air to be exhaled.",
+        "This entire exchange happens purely by **diffusion**, driven by concentration gradients, requiring no additional energy input from the body, which is why conditions that damage or thicken the alveolar or capillary walls, such as pneumonia or emphysema, directly impair the efficiency of gas exchange even if the mechanical act of breathing itself is unaffected."
+       ],
+       "example": {
+        "problem": "A patient with pneumonia has fluid buildup thickening the walls of many alveoli, increasing the diffusion distance between alveolar air and the surrounding capillaries. Explain how this would affect oxygen delivery to the blood, even if the patient's breathing rate and volume remain normal.",
+        "steps": [
+         "Recall that gas exchange at the alveoli depends on diffusion across thin alveolar and capillary walls.",
+         "A thickened wall increases the diffusion distance oxygen molecules must cross to reach the blood.",
+         "Increased diffusion distance slows the rate of oxygen transfer, reducing how much oxygen reaches the blood per unit time, even with unchanged breathing mechanics."
+        ],
+        "answer": "Even with normal breathing rate and volume, the thickened alveolar walls slow oxygen diffusion into the blood, reducing blood oxygen levels, which is why pneumonia can cause low blood oxygen despite the patient still being able to physically breathe."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "alveolus",
+       "def": "A tiny air sac in the lungs, surrounded by capillaries, where gas exchange occurs."
+      },
+      {
+       "term": "diaphragm",
+       "def": "The muscular structure below the lungs that drives breathing by changing chest cavity volume."
+      },
+      {
+       "term": "diffusion",
+       "def": "The movement of a substance from an area of higher concentration to lower concentration, requiring no direct energy input."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What directly causes air to flow into the lungs during inhalation?",
+       "choices": [
+        "Active pumping by the alveoli",
+        "Diaphragm contraction increases chest cavity volume, dropping internal pressure below atmospheric pressure and drawing air in",
+        "The heart pumping air through the bronchi",
+        "Muscle contraction in the alveolar walls"
+       ],
+       "answer": 1,
+       "explain": "Diaphragm contraction expands the chest cavity, lowering internal air pressure below outside atmospheric pressure, and air naturally flows from the higher-pressure outside environment into the lower-pressure lungs."
+      },
+      {
+       "q": "Why does gas exchange at the alveoli not require the body to expend direct energy?",
+       "choices": [
+        "It relies on active transport powered by ATP",
+        "It occurs by diffusion, driven passively by concentration gradients between air and blood",
+        "The heart directly pumps gases across the alveolar wall",
+        "Gas exchange does not actually occur at the alveoli"
+       ],
+       "answer": 1,
+       "explain": "Diffusion moves molecules from high to low concentration without requiring the cell or body to spend energy, which is exactly the mechanism responsible for oxygen and carbon dioxide exchange at the alveoli."
+      },
+      {
+       "q": "A disease thickens the alveolar walls, increasing the diffusion distance for gases. What is the most direct physiological consequence?",
+       "choices": [
+        "Breathing rate automatically increases to compensate fully",
+        "Oxygen diffusion into the blood slows, potentially lowering blood oxygen levels even with normal breathing mechanics",
+        "Carbon dioxide production stops entirely",
+        "The diaphragm stops contracting"
+       ],
+       "answer": 1,
+       "explain": "Since gas exchange depends on diffusion across the alveolar-capillary membrane, a thicker membrane slows that diffusion, directly reducing how efficiently oxygen reaches the blood regardless of breathing rate."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Digestive, Urinary, and Endocrine Systems",
+   "summary": "How food is mechanically and chemically broken down and absorbed, how the kidneys filter blood and balance fluids, and how hormones coordinate slower, longer-lasting body processes.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Digestive System",
+     "minutes": 14,
+     "intro": "A meal takes roughly 24 to 72 hours to travel from mouth to exit, passing through a series of organs each specialized for a distinct stage of breaking food down into molecules small enough for the body to actually absorb and use.",
+     "sections": [
+      {
+       "heading": "Mechanical and Chemical Digestion",
+       "body": [
+        "Digestion begins in the mouth with **mechanical digestion**, chewing that physically breaks food into smaller pieces and increases its surface area, combined with **chemical digestion**, in which salivary amylase begins breaking down starches. Food travels down the esophagus by **peristalsis**, coordinated waves of smooth muscle contraction, into the **stomach**, where hydrochloric acid and the enzyme pepsin begin protein digestion, and further mechanical churning creates a semi-liquid mixture called **chyme**.",
+        "The **small intestine** is where the majority of chemical digestion and nearly all nutrient absorption occurs, aided by enzymes and bile delivered from the pancreas, liver, and gallbladder; its interior is lined with finger-like projections called **villi**, and each villus is covered in even smaller **microvilli**, together dramatically increasing the surface area available for absorbing nutrients into the bloodstream."
+       ]
+      },
+      {
+       "heading": "Accessory Organs and the Large Intestine",
+       "body": [
+        "The **liver** produces **bile**, which physically emulsifies fats into smaller droplets to increase the surface area available for enzymatic digestion, and the **gallbladder** stores and concentrates that bile until it is needed. The **pancreas** secretes a broad range of digestive enzymes into the small intestine, along with bicarbonate to neutralize the highly acidic chyme arriving from the stomach, protecting the intestinal lining from acid damage.",
+        "The **large intestine** absorbs remaining water and electrolytes from indigestible material and hosts a large population of beneficial gut bacteria, which further break down some remaining material and produce certain vitamins, before the remaining waste is compacted and eliminated."
+       ],
+       "example": {
+        "problem": "A patient has had their gallbladder surgically removed. Explain why this patient may have more difficulty digesting high-fat meals, even though the liver, which actually produces bile, remains fully intact.",
+        "steps": [
+         "Recall that the liver produces bile, but the gallbladder's role is to store and concentrate that bile until it is needed for a meal.",
+         "Without a gallbladder, bile from the liver flows more continuously into the small intestine in smaller, less concentrated amounts, rather than being released in a large, concentrated burst timed to a fatty meal.",
+         "A large fatty meal may then arrive faster than the available bile can effectively emulsify it, reducing the efficiency of fat digestion."
+        ],
+        "answer": "Without a gallbladder to store and release a concentrated bolus of bile on demand, fat emulsification during a large fatty meal becomes less efficient, which is why gallbladder removal patients are often advised to eat smaller, lower-fat meals, especially soon after surgery."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "peristalsis",
+       "def": "Coordinated waves of smooth muscle contraction that move food through the digestive tract."
+      },
+      {
+       "term": "chyme",
+       "def": "The semi-liquid mixture of partially digested food and gastric secretions formed in the stomach."
+      },
+      {
+       "term": "villi",
+       "def": "Finger-like projections lining the small intestine that increase surface area for nutrient absorption."
+      },
+      {
+       "term": "bile",
+       "def": "A fluid produced by the liver, stored in the gallbladder, that emulsifies fats to aid digestion."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the primary function of villi and microvilli in the small intestine?",
+       "choices": [
+        "Producing stomach acid",
+        "Dramatically increasing surface area to maximize nutrient absorption",
+        "Storing bile until needed",
+        "Neutralizing stomach acid"
+       ],
+       "answer": 1,
+       "explain": "The finger-like villi and even smaller microvilli greatly expand the small intestine's internal surface area, which directly increases how much nutrient absorption can occur along its length."
+      },
+      {
+       "q": "What is the specific role of bile in fat digestion?",
+       "choices": [
+        "Bile chemically breaks fats into fatty acids directly",
+        "Bile emulsifies fats into smaller droplets, increasing surface area for enzymes to act on",
+        "Bile neutralizes stomach acid entering the small intestine",
+        "Bile has no role in digestion at all"
+       ],
+       "answer": 1,
+       "explain": "Bile does not chemically digest fat itself; it physically breaks large fat globules into smaller droplets, increasing the surface area available for digestive enzymes to act on efficiently."
+      },
+      {
+       "q": "Which organ secretes bicarbonate into the small intestine specifically to neutralize acidic chyme arriving from the stomach?",
+       "choices": [
+        "Liver",
+        "Gallbladder",
+        "Pancreas",
+        "Large intestine"
+       ],
+       "answer": 2,
+       "explain": "The pancreas secretes bicarbonate along with its digestive enzymes, neutralizing the strongly acidic chyme from the stomach and protecting the small intestine's lining from acid damage."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Urinary System and Fluid Balance",
+     "minutes": 14,
+     "intro": "Each kidney contains roughly a million microscopic filtering units, together processing your entire blood volume many times over each day to remove waste while carefully deciding exactly how much water and which dissolved substances to keep.",
+     "sections": [
+      {
+       "heading": "The Nephron and Urine Formation",
+       "body": [
+        "The kidney's functional filtering unit is the **nephron**, and urine formation occurs in three stages. **Filtration** occurs at the **glomerulus**, a ball of capillaries where blood pressure forces water and small dissolved solutes out of the blood into the nephron's tubule, while blood cells and large proteins are normally too big to pass through and remain in the blood. **Reabsorption** then occurs along the tubule, reclaiming most of the filtered water, glucose, and useful ions back into the blood, since filtration alone would otherwise remove far more water and useful solutes than the body can afford to lose.",
+        "Finally, **secretion** actively moves additional waste products and excess ions from the blood directly into the tubule, fine-tuning the final composition of what remains, which then travels as urine through the renal pelvis, ureter, bladder, and urethra to be eliminated."
+       ]
+      },
+      {
+       "heading": "Fluid, Electrolyte, and pH Balance",
+       "body": [
+        "Beyond removing waste, the kidneys are the body's primary long-term regulators of water balance, electrolyte concentration, and blood pH. **Antidiuretic hormone (ADH)**, released when the body detects dehydration, increases water reabsorption in the kidney tubules, producing more concentrated urine and conserving body water; when the body is well-hydrated, ADH release drops, and more dilute urine is produced to eliminate excess water.",
+        "The kidneys also help regulate blood pH by adjusting how much acid or bicarbonate is excreted or retained, working alongside the respiratory system's faster-acting CO2 adjustments to keep blood pH within its narrow, survivable range, a critical example of two organ systems cooperating toward the same homeostatic target."
+       ],
+       "example": {
+        "problem": "A person becomes significantly dehydrated after several hours of exercise without drinking water. Predict what happens to their ADH levels and to the concentration of their urine, and explain the physiological reasoning.",
+        "steps": [
+         "Dehydration is detected by the body as a signal to conserve water.",
+         "This triggers increased release of ADH from the pituitary gland.",
+         "Increased ADH boosts water reabsorption in the kidney tubules, meaning less water is lost in the urine, producing urine that is more concentrated (darker and lower in volume)."
+        ],
+        "answer": "ADH levels rise in response to dehydration, increasing water reabsorption in the kidneys and producing more concentrated urine, an example of the kidneys' role in conserving body water during fluid loss."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "nephron",
+       "def": "The functional filtering unit of the kidney, responsible for filtration, reabsorption, and secretion."
+      },
+      {
+       "term": "glomerulus",
+       "def": "A ball of capillaries in the nephron where blood pressure drives filtration of water and small solutes."
+      },
+      {
+       "term": "reabsorption",
+       "def": "The process of reclaiming filtered water and useful solutes back into the blood along the kidney tubule."
+      },
+      {
+       "term": "antidiuretic hormone (ADH)",
+       "def": "A hormone that increases water reabsorption in the kidneys, conserving body water and concentrating urine."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main function of the glomerulus in the nephron?",
+       "choices": [
+        "Actively secreting waste into the tubule",
+        "Filtering blood under pressure, allowing water and small solutes to pass into the tubule while retaining blood cells and large proteins",
+        "Reabsorbing water back into the blood",
+        "Producing ADH"
+       ],
+       "answer": 1,
+       "explain": "The glomerulus is the site of filtration, where blood pressure forces water and small dissolved substances out of the blood and into the nephron's tubule, while larger components stay in the bloodstream."
+      },
+      {
+       "q": "If a person drinks a large amount of water and becomes over-hydrated, what would be expected to happen to their ADH levels and urine concentration?",
+       "choices": [
+        "ADH increases and urine becomes more concentrated",
+        "ADH decreases and urine becomes more dilute, eliminating the excess water",
+        "ADH has no effect on urine concentration",
+        "Urine production stops entirely"
+       ],
+       "answer": 1,
+       "explain": "With excess body water, ADH release decreases, reducing water reabsorption in the kidneys and producing a larger volume of more dilute urine to eliminate the extra fluid."
+      },
+      {
+       "q": "Why is reabsorption a necessary step after filtration in the nephron?",
+       "choices": [
+        "Filtration removes only waste and no useful substances",
+        "Filtration alone would remove far more water and useful solutes, like glucose, than the body can afford to lose, so most must be reclaimed",
+        "Reabsorption occurs before filtration, not after",
+        "Reabsorption only affects blood cells"
+       ],
+       "answer": 1,
+       "explain": "Filtration is a relatively non-selective process that removes small molecules regardless of their usefulness; reabsorption selectively reclaims water and valuable substances like glucose, preventing their unnecessary loss in urine."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "The Endocrine System and Hormones",
+     "minutes": 13,
+     "intro": "While the nervous system sends rapid, short-lived electrical signals, the endocrine system communicates through hormones released into the blood, producing slower but often longer-lasting effects on tissues throughout the entire body.",
+     "sections": [
+      {
+       "heading": "Hormones and Endocrine Glands",
+       "body": [
+        "A **hormone** is a chemical messenger released directly into the bloodstream by an **endocrine gland**, traveling throughout the body but affecting only cells that have the specific receptor for that hormone, called **target cells**. Major endocrine glands include the **pituitary gland** (often called the 'master gland' because it regulates several other endocrine glands), the **thyroid gland** (regulates metabolic rate), the **adrenal glands** (regulate stress response and some electrolyte balance), and the **pancreas** (regulates blood glucose).",
+        "Because hormones travel through the blood rather than along a direct wired connection like a nerve, their effects tend to take longer to begin, seconds to hours rather than milliseconds, but often last significantly longer, sometimes for hours or days, making the endocrine system especially well suited to regulating slower, ongoing processes like growth, metabolism, and reproductive cycles."
+       ]
+      },
+      {
+       "heading": "Blood Glucose Regulation as a Model System",
+       "body": [
+        "The regulation of blood glucose by the pancreas is one of the clearest examples of hormonal negative feedback in the body. When blood glucose rises after a meal, pancreatic beta cells release **insulin**, which signals muscle, liver, and fat cells to absorb glucose from the blood, lowering blood glucose back toward normal. When blood glucose falls too low, such as between meals, pancreatic alpha cells release **glucagon**, which signals the liver to break down stored glycogen and release glucose back into the blood, raising levels back toward normal.",
+        "These two hormones work as an opposing pair, each countering the other's effect depending on which direction blood glucose has drifted, which is exactly the kind of two-hormone negative feedback system that keeps blood glucose remarkably stable across a normal day of eating and fasting; a failure of this system, as in diabetes, leads to chronically elevated blood glucose with serious long-term health consequences."
+       ],
+       "example": {
+        "problem": "A patient's blood glucose is measured at 180 mg/dL two hours after a meal, above the normal post-meal range of roughly 70-140 mg/dL. Which pancreatic hormone would be expected to be elevated in response, and what effect would it have?",
+        "steps": [
+         "Recognize that an elevated blood glucose level triggers the release of insulin, not glucagon.",
+         "Insulin signals muscle, liver, and fat cells to take up glucose from the blood.",
+         "This glucose uptake by cells lowers the blood glucose level back toward the normal range."
+        ],
+        "answer": "Insulin would be expected to be elevated, prompting cells throughout the body to absorb glucose from the blood and bring the elevated blood glucose level back down toward the normal range."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "hormone",
+       "def": "A chemical messenger released into the bloodstream by an endocrine gland, affecting specific target cells."
+      },
+      {
+       "term": "target cell",
+       "def": "A cell that has the specific receptor needed to respond to a particular hormone."
+      },
+      {
+       "term": "insulin",
+       "def": "A pancreatic hormone that lowers blood glucose by promoting glucose uptake into cells."
+      },
+      {
+       "term": "glucagon",
+       "def": "A pancreatic hormone that raises blood glucose by triggering the liver to release stored glucose."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why do hormonal effects, unlike nervous system signals, tend to take longer to begin but last longer once they occur?",
+       "choices": [
+        "Hormones travel faster than nerve impulses",
+        "Hormones travel through the bloodstream rather than along a direct nerve connection, which is slower to start but produces more sustained effects",
+        "Hormones only affect the brain",
+        "There is no real difference in timing between hormones and nerve signals"
+       ],
+       "answer": 1,
+       "explain": "Because hormones must travel through the entire bloodstream to reach target cells, their onset is slower than the near-instant conduction of a nerve impulse, but their effects, once they begin, typically persist much longer."
+      },
+      {
+       "q": "What effect does insulin have when blood glucose rises after a meal?",
+       "choices": [
+        "It raises blood glucose further",
+        "It signals cells to take up glucose from the blood, lowering blood glucose back toward normal",
+        "It has no effect on blood glucose",
+        "It converts glucose directly into oxygen"
+       ],
+       "answer": 1,
+       "explain": "Insulin promotes glucose uptake by muscle, liver, and fat cells, directly lowering the elevated blood glucose level back toward its normal homeostatic range."
+      },
+      {
+       "q": "Why is the pituitary gland often called the 'master gland'?",
+       "choices": [
+        "It is the largest endocrine gland in the body",
+        "It regulates the activity of several other endocrine glands",
+        "It produces insulin exclusively",
+        "It has no hormonal function at all"
+       ],
+       "answer": 1,
+       "explain": "The pituitary gland releases hormones that control the activity of several other endocrine glands, giving it a central coordinating role over much of the endocrine system."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u6",
+   "title": "Immunity and Reproduction",
+   "summary": "How the lymphatic and immune systems defend the body, how the male and female reproductive systems are structured, and the major stages of human development from fertilization to birth.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "The Immune System and Lymphatics",
+     "minutes": 13,
+     "intro": "The lymphatic system quietly drains excess fluid from your tissues and doubles as the immune system's transportation network, funneling pathogens toward lymph nodes where immune cells stand ready to intercept them.",
+     "sections": [
+      {
+       "heading": "The Lymphatic System",
+       "body": [
+        "As blood circulates, some fluid, along with proteins and other substances, naturally leaks out of capillaries into surrounding tissue; the **lymphatic system** collects this leaked fluid, now called **lymph**, through a network of lymphatic vessels and returns it to the bloodstream, preventing fluid from accumulating and causing tissue swelling. Along the way, lymph passes through **lymph nodes**, small bean-shaped structures packed with immune cells that filter the fluid and detect any pathogens present.",
+        "Beyond fluid balance, the lymphatic system houses much of the body's specific adaptive immune response, since lymph nodes are exactly where B and T lymphocytes are activated after being exposed to an antigen carried in from an infection site, which is why lymph nodes noticeably swell during many infections, a visible sign of increased immune cell activity."
+       ]
+      },
+      {
+       "heading": "Innate and Adaptive Immunity",
+       "body": [
+        "**Innate immunity** provides fast, non-specific defense present from birth, including physical barriers like skin, phagocytic cells that engulf pathogens, and inflammation that increases blood flow and immune cell delivery to an injury site. **Adaptive immunity** is slower to activate but highly specific, targeting a particular pathogen's antigens through **B cells**, which produce antibodies, and **T cells**, some of which directly kill infected cells while others coordinate the overall immune response.",
+        "After an infection resolves, adaptive immunity leaves behind long-lived **memory cells** specific to that pathogen, allowing a much faster and stronger response if the same pathogen is encountered again, the biological basis for both long-term natural immunity and for vaccination."
+       ],
+       "example": {
+        "problem": "A patient develops swollen lymph nodes in the neck during a throat infection. Explain what this swelling most likely indicates about immune activity at that location.",
+        "steps": [
+         "Recall that lymph nodes filter lymph fluid draining from nearby tissue, including the throat in this case.",
+         "Recognize that lymph nodes are sites where immune cells, including B and T lymphocytes, become activated upon detecting an antigen carried in from the infection site.",
+         "Connect increased immune cell activity and proliferation within the lymph node to the visible, palpable swelling."
+        ],
+        "answer": "The swollen lymph nodes indicate increased immune cell activity and proliferation as the body mounts a response against the throat infection, a normal and expected sign that the immune system is actively engaging the pathogen."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "lymphatic system",
+       "def": "A network of vessels and nodes that returns leaked tissue fluid to the blood and supports immune function."
+      },
+      {
+       "term": "lymph node",
+       "def": "A bean-shaped structure that filters lymph and houses immune cells, where B and T cells are often activated."
+      },
+      {
+       "term": "innate immunity",
+       "def": "Fast, non-specific immune defense present from birth."
+      },
+      {
+       "term": "adaptive immunity",
+       "def": "Slower, highly specific immune defense involving B cells, T cells, and memory cell formation."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the main function of the lymphatic system besides supporting immunity?",
+       "choices": [
+        "Producing red blood cells",
+        "Returning fluid that has leaked out of capillaries back into the bloodstream, preventing tissue swelling",
+        "Pumping blood throughout the body",
+        "Producing hormones"
+       ],
+       "answer": 1,
+       "explain": "The lymphatic system collects excess fluid that leaks from capillaries into tissue and returns it to the bloodstream, a critical role in preventing fluid buildup independent of its immune functions."
+      },
+      {
+       "q": "Why do lymph nodes often swell noticeably during an infection?",
+       "choices": [
+        "They are filling with excess blood only",
+        "Increased immune cell activity and proliferation occurs there as B and T cells respond to antigens carried in from the infection site",
+        "Swelling indicates the infection has already been fully cleared",
+        "Lymph nodes shrink during infection, not swell"
+       ],
+       "answer": 1,
+       "explain": "Lymph nodes are activation sites for adaptive immune cells; during an active infection, increased immune cell activity and proliferation there causes the visible swelling often felt during illness."
+      },
+      {
+       "q": "What distinguishes adaptive immunity from innate immunity?",
+       "choices": [
+        "Adaptive immunity is present from birth and non-specific",
+        "Adaptive immunity is slower to activate but highly specific to a particular pathogen, and generates memory cells",
+        "Innate immunity involves B and T cells exclusively",
+        "There is no meaningful distinction"
+       ],
+       "answer": 1,
+       "explain": "Adaptive immunity takes longer to mount than the immediate, generic innate response, but it targets a specific pathogen precisely and leaves behind memory cells for faster future responses."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "The Reproductive Systems",
+     "minutes": 13,
+     "intro": "The male and female reproductive systems are built around a shared underlying goal, producing and delivering gametes, but they accomplish it with strikingly different structures, cycles, and hormonal control.",
+     "sections": [
+      {
+       "heading": "The Male Reproductive System",
+       "body": [
+        "The **testes** produce **sperm** through a process called spermatogenesis and secrete **testosterone**, the primary male sex hormone responsible for the development of male secondary sexual characteristics and sustained sperm production. Sperm mature and are stored in the **epididymis**, then travel through the **vas deferens** during ejaculation, mixing with fluids from the seminal vesicles and prostate gland that nourish sperm and support their motility, together forming semen.",
+        "Sperm production is regulated by a hormonal feedback loop originating in the brain: the hypothalamus and pituitary gland release hormones that stimulate the testes to produce both sperm and testosterone, with rising testosterone levels then feeding back to reduce further release of those brain hormones, keeping testosterone within a relatively stable range."
+       ]
+      },
+      {
+       "heading": "The Female Reproductive System",
+       "body": [
+        "The **ovaries** contain a finite, already-present supply of immature egg cells at birth and release one mature egg roughly every month during **ovulation**, part of the broader **menstrual cycle**, which is coordinated by the rising and falling levels of estrogen and progesterone. A released egg travels through a **fallopian tube**, where fertilization can occur if sperm are present, toward the **uterus**, whose inner lining, the endometrium, thickens each cycle in preparation for a potential pregnancy.",
+        "If fertilization does not occur, hormone levels drop, and the thickened endometrial lining is shed as menstruation, restarting the cycle; if fertilization does occur, the resulting embryo implants into the still-thickened endometrium, and hormone levels are maintained rather than dropping, supporting the beginning of pregnancy."
+       ],
+       "example": {
+        "problem": "A woman's menstrual cycle is being tracked, and hormone testing shows estrogen and progesterone levels dropping sharply on day 28, with no evidence of implantation. What event is expected to occur next, and why?",
+        "steps": [
+         "Recall that a thickened endometrial lining is maintained by sustained estrogen and progesterone levels.",
+         "A sharp drop in these hormone levels, in the absence of implantation, removes the support maintaining that lining.",
+         "Without that hormonal support, the thickened endometrial lining breaks down and is shed."
+        ],
+        "answer": "Menstruation is expected to occur next, since the drop in estrogen and progesterone, without an implanted embryo to maintain them, causes the thickened endometrial lining to break down and be shed."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "testosterone",
+       "def": "The primary male sex hormone, produced by the testes, supporting sperm production and male secondary sexual characteristics."
+      },
+      {
+       "term": "ovulation",
+       "def": "The release of a mature egg from an ovary, typically once per menstrual cycle."
+      },
+      {
+       "term": "endometrium",
+       "def": "The inner lining of the uterus, which thickens each cycle and is shed during menstruation if pregnancy does not occur."
+      },
+      {
+       "term": "fallopian tube",
+       "def": "The tube through which an egg travels from the ovary to the uterus, and the typical site of fertilization."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Where does fertilization of an egg by sperm typically occur?",
+       "choices": [
+        "In the ovary",
+        "In the fallopian tube",
+        "In the uterus",
+        "In the epididymis"
+       ],
+       "answer": 1,
+       "explain": "As an egg travels from the ovary toward the uterus through the fallopian tube, this is the typical site where sperm can meet and fertilize it."
+      },
+      {
+       "q": "What happens to the endometrial lining if fertilization and implantation do not occur during a given cycle?",
+       "choices": [
+        "It continues thickening indefinitely",
+        "It is shed as menstruation, following a drop in estrogen and progesterone levels",
+        "It is immediately reabsorbed without shedding",
+        "It has no relationship to hormone levels"
+       ],
+       "answer": 1,
+       "explain": "Without an implanted embryo to maintain elevated hormone levels, estrogen and progesterone drop, removing the support for the thickened lining, which is then shed as menstruation."
+      },
+      {
+       "q": "What is the primary role of testosterone in the male reproductive system?",
+       "choices": [
+        "Producing eggs",
+        "Supporting sperm production and the development of male secondary sexual characteristics",
+        "Regulating the menstrual cycle",
+        "Thickening the endometrium"
+       ],
+       "answer": 1,
+       "explain": "Testosterone, produced by the testes, is essential for sustaining sperm production and for developing and maintaining male secondary sexual characteristics."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Human Development",
+     "minutes": 12,
+     "intro": "From a single fertilized cell to a fully formed newborn takes about 38 weeks, following a remarkably predictable sequence of developmental milestones that anatomy and physiology can trace stage by stage.",
+     "sections": [
+      {
+       "heading": "Fertilization Through the Embryonic Period",
+       "body": [
+        "**Fertilization**, the fusion of sperm and egg, produces a single-celled **zygote**, which begins dividing rapidly through **cleavage** as it travels down the fallopian tube toward the uterus, without yet increasing in overall size. By about day 6-10, the resulting hollow ball of cells, the blastocyst, implants into the uterine wall, beginning true pregnancy.",
+        "The **embryonic period**, spanning roughly weeks 3 through 8 of development, is the most critical window for organ formation; during this time the three germ layers (ectoderm, mesoderm, endoderm) differentiate into the rudimentary versions of essentially every major organ system, which is exactly why exposure to harmful substances, like alcohol or certain medications, poses the greatest risk of causing structural birth defects specifically during this early embryonic window."
+       ]
+      },
+      {
+       "heading": "The Fetal Period and Birth",
+       "body": [
+        "The **fetal period**, from week 9 until birth, is primarily a time of growth and refinement of the organ systems already established during the embryonic period, rather than new organ formation; body proportions shift dramatically, and organ systems mature toward the point of being able to function outside the womb. Throughout pregnancy, the **placenta**, formed jointly from maternal and fetal tissue, allows nutrient and oxygen exchange and waste removal between mother and fetus without their blood supplies directly mixing.",
+        "Birth is triggered by a hormonally driven positive feedback loop: uterine contractions push the fetus against the cervix, which stimulates the release of the hormone oxytocin, which in turn intensifies contractions further, escalating until delivery occurs, after which the stretching stimulus is removed and the escalating cycle naturally ends."
+       ],
+       "example": {
+        "problem": "A pregnant woman is told that a particular medication carries a higher risk of causing structural birth defects if taken during weeks 3-8 of pregnancy, but a much lower risk if taken after week 20. Explain this difference in terms of developmental biology.",
+        "steps": [
+         "Recall that weeks 3-8 correspond to the embryonic period, when the rudimentary structures of nearly all major organs are actively forming.",
+         "A disruption during this critical window can directly interfere with an organ's initial structural formation, potentially causing a lasting birth defect.",
+         "After week 20 (well into the fetal period), organ systems are already formed and are mainly growing and maturing, making them generally less vulnerable to structural malformation, though not risk-free."
+        ],
+        "answer": "Because weeks 3-8 fall within the embryonic period, when organs are first forming structurally, exposure during this window carries the highest risk of causing structural birth defects; later exposure, during the fetal period of growth and maturation, generally carries a comparatively lower risk of structural malformation."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "zygote",
+       "def": "The single fertilized cell formed by the fusion of sperm and egg."
+      },
+      {
+       "term": "embryonic period",
+       "def": "Roughly weeks 3 through 8 of development, when major organ systems first form."
+      },
+      {
+       "term": "fetal period",
+       "def": "The period from week 9 until birth, characterized by growth and maturation of already-formed organ systems."
+      },
+      {
+       "term": "placenta",
+       "def": "An organ formed from maternal and fetal tissue that allows exchange of nutrients, gases, and waste between mother and fetus."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why is the embryonic period (roughly weeks 3-8) considered the most critical window for avoiding harmful substance exposure during pregnancy?",
+       "choices": [
+        "Because no development occurs during this period",
+        "Because this is when the rudimentary structures of nearly all major organ systems are first forming",
+        "Because the fetus is not yet connected to the placenta at this stage",
+        "Because this period occurs after birth"
+       ],
+       "answer": 1,
+       "explain": "Since major organs are structurally forming for the first time during the embryonic period, a disruption then is more likely to cause a lasting structural birth defect than the same disruption during the later fetal period of growth and maturation."
+      },
+      {
+       "q": "What is the primary function of the placenta during pregnancy?",
+       "choices": [
+        "Producing sperm",
+        "Allowing nutrient, gas, and waste exchange between mother and fetus without their blood supplies directly mixing",
+        "Directly mixing maternal and fetal blood",
+        "Storing the fertilized egg before implantation"
+       ],
+       "answer": 1,
+       "explain": "The placenta serves as the exchange interface between mother and fetus, allowing nutrients and oxygen to pass to the fetus and waste to pass back to the mother, all while keeping the two separate blood supplies from directly mixing."
+      },
+      {
+       "q": "The escalating uterine contractions of labor, intensified by oxytocin release, are an example of what kind of physiological process?",
+       "choices": [
+        "Negative feedback",
+        "Positive feedback, where the response amplifies the original stimulus until birth occurs",
+        "A process unrelated to hormones",
+        "A process that begins during the embryonic period"
+       ],
+       "answer": 1,
+       "explain": "Each contraction stimulates further oxytocin release, escalating contraction strength until delivery, exactly the amplifying pattern that defines positive feedback, distinct from the body's more common negative feedback loops."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

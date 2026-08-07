@@ -1,0 +1,1288 @@
+{
+ "id": "databases",
+ "title": "Databases & SQL",
+ "domain": "cs",
+ "level": "Intro college",
+ "description": "This course teaches you to think in tables and query them with SQL. You will model a real-world domain as entities and relationships, write SELECT queries from simple filters to multi-table joins and aggregations, and design normalized schemas that avoid data anomalies. By the end you can build and query a working relational database end to end.",
+ "outcomes": [
+  "You can model a real-world domain as tables with appropriate primary and foreign keys.",
+  "You can write SQL SELECT queries that filter, sort, and limit results.",
+  "You can combine data from multiple tables using INNER and LEFT joins.",
+  "You can summarize data with GROUP BY, HAVING, and aggregate functions like COUNT, SUM, and AVG.",
+  "You can normalize a schema to reduce redundancy and safely modify data using transactions."
+ ],
+ "units": [
+  {
+   "id": "u1",
+   "title": "Relational Databases and Data Modeling",
+   "summary": "Before writing any SQL, you need to see the world the way a relational database does: as tables of rows and columns, linked together by keys.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "What Is a Database? Tables, Rows, and Columns",
+     "minutes": 10,
+     "intro": "A relational database stores everything in tables, and once you can read a table fluently, the rest of SQL is just learning to ask precise questions of it.",
+     "sections": [
+      {
+       "heading": "Rows, Columns, and Tables",
+       "body": [
+        "A **table** is a grid: each **column** holds one kind of attribute (a title, a price, a date), and each **row** is one complete record. Throughout this course we will use a small library database with a `books` table holding columns `id`, `title`, `author_id`, `year`, and `price`.",
+        "Every column has a declared data type, so the `year` column only ever holds whole numbers and `price` only holds numbers with decimals. This structure is what lets a database enforce consistency that a plain text file cannot."
+       ]
+      },
+      {
+       "heading": "Why Not Just Use a Spreadsheet?",
+       "body": [
+        "A spreadsheet lets anyone type anything into any cell, and it has no way to guarantee two people editing at once do not overwrite each other's changes. A relational database enforces types, constraints, and controlled concurrent access, and it can hold millions of rows while still answering a precise question in milliseconds.",
+        "Databases also let you split information across multiple related tables instead of repeating it everywhere, which is the subject of the next lesson."
+       ],
+       "example": {
+        "problem": "A `books` table has columns id, title, author_id, year, price. Which column uniquely identifies each row, and why can't `title` fill that role safely?",
+        "steps": [
+         "`id` is assigned once per row and never repeats, so no two rows ever share the same id.",
+         "`title` could repeat: two different physical rows could have the same book title (e.g., different editions), so it cannot be trusted to be unique.",
+         "The column designed to be a unique identifier is called the primary key."
+        ],
+        "answer": "The `id` column uniquely identifies each row; `title` is not guaranteed to be unique."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "table",
+       "def": "A grid of rows and columns storing one kind of entity, such as books or members."
+      },
+      {
+       "term": "row",
+       "def": "One complete record in a table; also called a tuple."
+      },
+      {
+       "term": "column",
+       "def": "One attribute shared by every row in a table, such as price or year."
+      },
+      {
+       "term": "relational database",
+       "def": "A database that organizes data into related tables linked by keys."
+      }
+     ],
+     "practice": [
+      {
+       "q": "In a `books` table, what does one row represent?",
+       "choices": [
+        "One column of data shared by all books",
+        "One complete record: a single book",
+        "The entire table",
+        "A single letter of a title"
+       ],
+       "answer": 1,
+       "explain": "A row is one complete record — here, all the attributes of a single book."
+      },
+      {
+       "q": "Why is a relational database generally safer than a shared spreadsheet for important data?",
+       "choices": [
+        "It enforces data types and constraints and manages concurrent access safely",
+        "It cannot store numbers",
+        "It requires no structure at all",
+        "Spreadsheets are always faster for every task"
+       ],
+       "answer": 0,
+       "explain": "Databases enforce declared types and constraints and coordinate simultaneous access, which a spreadsheet does not guarantee."
+      },
+      {
+       "q": "Why can't a book's `title` column reliably serve as its unique identifier?",
+       "choices": [
+        "Titles are always numbers",
+        "Two different rows could share the same title",
+        "Titles cannot be stored in databases",
+        "Every table must have exactly one column"
+       ],
+       "answer": 1,
+       "explain": "Multiple books (different editions or coincidentally same-named books) could share a title, so it cannot guarantee uniqueness the way an id column can."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Entities, Relationships, and Keys",
+     "minutes": 12,
+     "intro": "Splitting information into separate tables only works if you have a reliable way to link rows back together, and that is exactly what primary and foreign keys are for.",
+     "sections": [
+      {
+       "heading": "Entities and Primary Keys",
+       "body": [
+        "An **entity** is a real-world thing worth its own table: in our library, `books`, `authors`, and `members` are all entities. Every table needs a **primary key**, a column (or set of columns) guaranteed to be unique and never null, so any row can be found or referenced exactly.",
+        "By convention we give every table a simple `id` column as its primary key, an auto-incrementing integer that has no meaning beyond identifying the row."
+       ]
+      },
+      {
+       "heading": "Foreign Keys and Relationships",
+       "body": [
+        "A **foreign key** is a column in one table that stores the primary key value of a row in another table, creating a link. The `books` table's `author_id` column is a foreign key pointing at `authors.id`, meaning each book belongs to exactly one author.",
+        "Since one author can write many books, but each book has only one author, this is a **one-to-many relationship**. When two entities can each relate to many of the other (a member borrows many books, and a book is borrowed by many members over time), we use a **junction table**, like `loans`, holding foreign keys to both sides."
+       ],
+       "example": {
+        "problem": "The `books` table has a foreign key `author_id` referencing `authors.id`. Octavia Butler (author id 1) wrote both 'Kindred' and 'Parable of the Sower'. What kind of relationship is this, and which table stores the foreign key?",
+        "steps": [
+         "One author (Octavia Butler) is linked to multiple books, but each book links back to only one author.",
+         "That pattern — one side has many, the other side has one — defines a one-to-many relationship.",
+         "The foreign key lives on the 'many' side: the `books` table stores `author_id`, not the other way around."
+        ],
+        "answer": "One-to-many; the foreign key (`author_id`) is stored in the `books` table."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "entity",
+       "def": "A real-world thing represented by its own table, such as a book or a member."
+      },
+      {
+       "term": "primary key",
+       "def": "A column (or columns) that uniquely identifies every row in a table and cannot be null."
+      },
+      {
+       "term": "foreign key",
+       "def": "A column storing another table's primary key value, creating a link between rows."
+      },
+      {
+       "term": "junction table",
+       "def": "A table used to implement a many-to-many relationship by holding foreign keys to both related tables."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What must always be true of a primary key?",
+       "choices": [
+        "It can repeat across several rows",
+        "It uniquely identifies each row and is never null",
+        "It must always be text",
+        "It must reference another table"
+       ],
+       "answer": 1,
+       "explain": "A primary key's entire purpose is to guarantee every row can be uniquely and reliably identified."
+      },
+      {
+       "q": "In the library database, `books.author_id` references `authors.id`. What is `books.author_id` called?",
+       "choices": [
+        "A primary key",
+        "A foreign key",
+        "A junction table",
+        "An entity"
+       ],
+       "answer": 1,
+       "explain": "A column that stores another table's primary key value to link the two tables is a foreign key."
+      },
+      {
+       "q": "A member can borrow many books, and a book can be borrowed by many different members over time. What is needed to model this?",
+       "choices": [
+        "Nothing extra is needed",
+        "A junction table like `loans` holding foreign keys to both members and books",
+        "Storing every member's name inside the books table",
+        "Making books.id the same as members.id"
+       ],
+       "answer": 1,
+       "explain": "A many-to-many relationship is modeled with a junction table that links both sides via foreign keys."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Designing Your First Schema",
+     "minutes": 12,
+     "intro": "Good schema design starts before you write a single CREATE TABLE statement: it starts with naming the entities in your problem and deciding exactly what each one needs to remember.",
+     "sections": [
+      {
+       "heading": "From Requirements to Tables",
+       "body": [
+        "Start by listing the entities in your domain (Book, Author, Member, Loan), then list each entity's attributes (a Book has a title, a year, a price). Finally, identify relationships between entities and decide which side needs the foreign key.",
+        "For our library: `authors(id, name, country)`, `books(id, title, author_id, year, price)`, `members(id, name, join_date)`, and `loans(id, book_id, member_id, loan_date, return_date)` as the junction table connecting books and members."
+       ]
+      },
+      {
+       "heading": "Choosing Data Types and Constraints",
+       "body": [
+        "Common SQL data types include `INTEGER` for whole numbers, `VARCHAR(n)` for text up to n characters, `DATE` for calendar dates, and `DECIMAL(p,s)` for exact money values like price. Choosing the right type lets the database reject bad data automatically.",
+        "Constraints add rules on top of types: `NOT NULL` forbids missing values, `UNIQUE` forbids duplicates, and `DEFAULT` supplies a value when none is given. A well-designed schema uses these so invalid data is rejected at the database level, not just caught later by application code."
+       ],
+       "example": {
+        "problem": "Design the `loans` table for tracking which member borrowed which book and when it was returned. What columns and types would you use, and which column should allow NULL?",
+        "steps": [
+         "Every loan needs its own primary key: `id INTEGER`.",
+         "It needs two foreign keys: `book_id INTEGER` referencing books, and `member_id INTEGER` referencing members.",
+         "It needs `loan_date DATE NOT NULL` (always known) and `return_date DATE`, which should allow NULL because a book that hasn't been returned yet has no return date."
+        ],
+        "answer": "loans(id, book_id, member_id, loan_date NOT NULL, return_date) — return_date is the nullable column, since an unreturned book has none yet."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "schema",
+       "def": "The overall design of a database's tables, columns, types, and relationships."
+      },
+      {
+       "term": "data type",
+       "def": "A rule declaring what kind of value a column may hold, such as INTEGER or DATE."
+      },
+      {
+       "term": "constraint",
+       "def": "A rule enforced by the database, such as NOT NULL or UNIQUE, that restricts what data is valid."
+      },
+      {
+       "term": "ERD",
+       "def": "Entity-relationship diagram: a visual map of entities, attributes, and relationships in a schema."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why should the `return_date` column in a `loans` table allow NULL?",
+       "choices": [
+        "Because dates are never useful",
+        "Because a book that hasn't been returned yet has no return date to record",
+        "Because NULL is required by every column",
+        "Because loan_date is also always NULL"
+       ],
+       "answer": 1,
+       "explain": "A loan that is still active simply has no return date yet, so the column must be allowed to hold no value."
+      },
+      {
+       "q": "Which SQL data type best fits a book's exact price, like $12.99?",
+       "choices": [
+        "VARCHAR",
+        "DATE",
+        "DECIMAL",
+        "BOOLEAN"
+       ],
+       "answer": 2,
+       "explain": "DECIMAL stores exact fixed-point numbers, ideal for money values where rounding errors are unacceptable."
+      },
+      {
+       "q": "What does a NOT NULL constraint on a column enforce?",
+       "choices": [
+        "The column must always contain zero",
+        "Every row must supply a value for that column",
+        "The column must be a foreign key",
+        "The table can have no rows"
+       ],
+       "answer": 1,
+       "explain": "NOT NULL forbids missing values, forcing every row to provide something for that column."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "title": "Querying with SQL: SELECT Basics",
+   "summary": "SELECT is the workhorse of SQL. This unit covers picking columns, filtering rows, sorting results, and handling missing (NULL) data.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "SELECT, FROM, and WHERE",
+     "minutes": 10,
+     "intro": "Every SQL query starts by answering two questions: which columns do you want, and from which table — and WHERE lets you narrow that down to only the rows that matter.",
+     "sections": [
+      {
+       "heading": "The Anatomy of a Query",
+       "body": [
+        "`SELECT title, price FROM books;` asks for exactly two columns from every row in `books`. Using `SELECT * FROM books;` requests every column, which is convenient for exploring a table but wasteful in real applications once a table gets wide.",
+        "SQL keywords like SELECT and FROM are conventionally written in uppercase, though SQL itself is not case-sensitive about them; this is purely a readability convention that keeps a query easy to scan."
+       ]
+      },
+      {
+       "heading": "Filtering Rows with WHERE",
+       "body": [
+        "`WHERE` filters which rows are returned, using comparisons like `=`, `<`, `>`, `<=`, `>=`, and `<>` (not equal). `SELECT title FROM books WHERE year > 1990;` returns only books published after 1990.",
+        "WHERE is evaluated per row before the results are returned, so it can reference any column in the table, not just the ones listed in SELECT."
+       ],
+       "example": {
+        "problem": "Using the books table — Kindred $12.99, Parable of the Sower $14.99, Norwegian Wood $13.50, Kafka on the Shore $15.00, Americanah $16.99 — write a query for titles priced under $15, and give the result.",
+        "steps": [
+         "The query is: SELECT title FROM books WHERE price < 15;",
+         "Check each book: Kindred 12.99 < 15 ✓, Parable 14.99 < 15 ✓, Norwegian Wood 13.50 < 15 ✓, Kafka 15.00 is not < 15 ✗, Americanah 16.99 ✗.",
+         "Three titles qualify."
+        ],
+        "answer": "Kindred, Parable of the Sower, Norwegian Wood."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "SELECT",
+       "def": "The SQL clause that specifies which columns to return."
+      },
+      {
+       "term": "FROM",
+       "def": "The SQL clause that specifies which table a query reads from."
+      },
+      {
+       "term": "WHERE",
+       "def": "The SQL clause that filters rows based on a condition."
+      },
+      {
+       "term": "wildcard (*)",
+       "def": "A shorthand in SELECT * meaning 'every column'."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does `SELECT * FROM books;` return?",
+       "choices": [
+        "Only the id column",
+        "Every column of every row in books",
+        "Nothing, since * is invalid",
+        "Only rows where price is a whole number"
+       ],
+       "answer": 1,
+       "explain": "The * wildcard requests all columns, so every column of every row in the table is returned."
+      },
+      {
+       "q": "Which clause would you add to return only books published after the year 2000?",
+       "choices": [
+        "ORDER BY year > 2000",
+        "SELECT year > 2000",
+        "WHERE year > 2000",
+        "FROM year > 2000"
+       ],
+       "answer": 2,
+       "explain": "WHERE filters rows based on a condition, and `year > 2000` is exactly that condition."
+      },
+      {
+       "q": "Using the books priced at 12.99, 14.99, 13.50, 15.00, and 16.99, how many are strictly less than $14?",
+       "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+       ],
+       "answer": 1,
+       "explain": "Only Kindred at $12.99 is strictly under $14; 13.50, 14.99, 15.00, and 16.99 are all $14 or higher."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Sorting, Limiting, and Filtering with Logic",
+     "minutes": 12,
+     "intro": "Raw results in whatever order the database happens to store them are rarely useful; ORDER BY and LIMIT let you shape a query into exactly the ranked, trimmed list you actually need.",
+     "sections": [
+      {
+       "heading": "ORDER BY and LIMIT",
+       "body": [
+        "`ORDER BY column ASC` sorts ascending (the default), and `ORDER BY column DESC` sorts descending. `LIMIT n` caps the result to the first n rows after sorting, which is how you build a 'top 5' or 'most recent 10' query.",
+        "`ORDER BY` and `LIMIT` are applied after `WHERE` has already filtered the rows, so you can combine all three: filter first, then sort, then trim to a count."
+       ]
+      },
+      {
+       "heading": "Combining Conditions with AND, OR, NOT",
+       "body": [
+        "Multiple conditions combine with `AND` (both must be true), `OR` (at least one must be true), and `NOT` (negates a condition). `WHERE price > 13 AND year > 1990` only matches rows satisfying both.",
+        "Parentheses matter once you mix AND and OR, since AND binds tighter: `WHERE year > 2000 OR (price < 13 AND year < 1990)` groups the AND condition together explicitly rather than leaving it to operator precedence."
+       ],
+       "example": {
+        "problem": "Using the same five books, write a query for the two most expensive titles, and give the result.",
+        "steps": [
+         "Query: SELECT title, price FROM books ORDER BY price DESC LIMIT 2;",
+         "Sorted by price descending: Americanah 16.99, Kafka on the Shore 15.00, Parable of the Sower 14.99, Norwegian Wood 13.50, Kindred 12.99.",
+         "Taking the top 2 after sorting gives the two most expensive titles."
+        ],
+        "answer": "Americanah ($16.99) and Kafka on the Shore ($15.00)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "ORDER BY",
+       "def": "The SQL clause that sorts query results by one or more columns."
+      },
+      {
+       "term": "ASC / DESC",
+       "def": "Sort direction: ascending (default) or descending."
+      },
+      {
+       "term": "LIMIT",
+       "def": "The SQL clause that caps how many rows a query returns."
+      },
+      {
+       "term": "AND / OR / NOT",
+       "def": "Boolean operators used to combine or negate conditions in a WHERE clause."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which clause would return only the first 3 rows of a sorted result?",
+       "choices": [
+        "LIMIT 3",
+        "WHERE 3",
+        "ORDER 3",
+        "FROM 3"
+       ],
+       "answer": 0,
+       "explain": "LIMIT caps the number of rows returned, commonly used together with ORDER BY."
+      },
+      {
+       "q": "`WHERE price > 13 AND year > 1990` matches a book priced $13.50 from 1987. Does it match?",
+       "choices": [
+        "Yes, because price > 13 is true",
+        "No, because year > 1990 is false and AND requires both conditions true",
+        "Yes, because OR is implied",
+        "Cannot be determined"
+       ],
+       "answer": 1,
+       "explain": "AND requires every condition to be true; since 1987 is not > 1990, the row is excluded even though the price condition passes."
+      },
+      {
+       "q": "To list books from cheapest to most expensive, which clause do you use?",
+       "choices": [
+        "ORDER BY price DESC",
+        "ORDER BY price ASC",
+        "LIMIT price",
+        "WHERE price ASC"
+       ],
+       "answer": 1,
+       "explain": "ASC (ascending, the default) sorts from smallest to largest, listing cheapest first."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Pattern Matching and NULL Values",
+     "minutes": 10,
+     "intro": "Not every search is an exact match, and not every fact is known — LIKE handles fuzzy text searches, while NULL represents data that simply isn't there yet.",
+     "sections": [
+      {
+       "heading": "LIKE and Wildcards",
+       "body": [
+        "`LIKE` matches text patterns using two wildcards: `%` matches any number of characters (including zero), and `_` matches exactly one character. `WHERE title LIKE '%Wood%'` matches any title containing 'Wood' anywhere.",
+        "`WHERE title LIKE 'K%'` matches titles starting with K, useful for prefix searches, while `WHERE title LIKE '%e'` matches titles ending in 'e'."
+       ]
+      },
+      {
+       "heading": "NULL: The Absence of a Value",
+       "body": [
+        "`NULL` means 'no value recorded,' not zero or an empty string. Because NULL represents unknown, comparing it with `=` never returns true, even `NULL = NULL`; you must use `IS NULL` or `IS NOT NULL` instead.",
+        "In our `loans` table, an unreturned book has `return_date` set to NULL. `WHERE return_date IS NULL` finds every currently outstanding loan; `WHERE return_date IS NOT NULL` finds every loan that has already been closed out."
+       ],
+       "example": {
+        "problem": "The loans table has: loan 1 (Kindred, Mia, returned 2024-05-15), loan 2 (Norwegian Wood, Mia, return_date NULL), loan 3 (Parable of the Sower, Noah, returned 2024-06-20), loan 4 (Americanah, Ava, return_date NULL). Which loans are still outstanding?",
+        "steps": [
+         "Query: SELECT id FROM loans WHERE return_date IS NULL;",
+         "Loan 1 has a return date, so it's excluded. Loan 3 has a return date, so it's excluded.",
+         "Loans 2 and 4 both have return_date = NULL, so both are outstanding."
+        ],
+        "answer": "Loans 2 and 4 are outstanding (Norwegian Wood and Americanah)."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "LIKE",
+       "def": "A SQL operator that matches text against a pattern containing wildcards."
+      },
+      {
+       "term": "% wildcard",
+       "def": "In a LIKE pattern, matches any sequence of characters, including none."
+      },
+      {
+       "term": "NULL",
+       "def": "A special marker meaning a column's value is unknown or missing, distinct from zero or empty text."
+      },
+      {
+       "term": "IS NULL",
+       "def": "The correct way to test for NULL, since NULL is never equal to anything, even itself."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which pattern would match the title 'Kafka on the Shore' using LIKE?",
+       "choices": [
+        "'%Shore'",
+        "'Shore%'",
+        "'_Shore'",
+        "'Shore_'"
+       ],
+       "answer": 0,
+       "explain": "'%Shore' matches any text ending in 'Shore', which fits 'Kafka on the Shore'."
+      },
+      {
+       "q": "Why does `WHERE return_date = NULL` fail to find rows with a NULL return_date?",
+       "choices": [
+        "NULL cannot appear in a WHERE clause at all",
+        "= comparisons with NULL never evaluate to true; IS NULL must be used instead",
+        "return_date can never actually be NULL",
+        "= only works on text columns"
+       ],
+       "answer": 1,
+       "explain": "NULL represents unknown, so any equality comparison involving it is never true; SQL requires IS NULL to test for it."
+      },
+      {
+       "q": "What does the `_` wildcard match in a LIKE pattern?",
+       "choices": [
+        "Zero or more characters",
+        "Exactly one character",
+        "Only digits",
+        "Nothing; it is not a valid wildcard"
+       ],
+       "answer": 1,
+       "explain": "Unlike %, the underscore wildcard matches exactly one character in that position."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "title": "Combining Tables: Joins",
+   "summary": "A normalized schema splits data across tables, so joins are how you put it back together into the combined view an application actually needs.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "INNER JOIN",
+     "minutes": 12,
+     "intro": "Splitting books and authors into separate tables was good design, but eventually you need a single result showing each book next to its author's name — that's exactly what a JOIN does.",
+     "sections": [
+      {
+       "heading": "Why We Need Joins",
+       "body": [
+        "Because `books` only stores `author_id`, a raw `SELECT * FROM books` shows you a number, not an author's name. A **JOIN** combines rows from two tables based on a matching condition, letting a query pull columns from both at once.",
+        "This is the direct payoff of normalization from unit 1: keeping author details in one place means every join always reflects the current, single source of truth for that author."
+       ]
+      },
+      {
+       "heading": "The INNER JOIN Syntax and Result",
+       "body": [
+        "`SELECT books.title, authors.name FROM books INNER JOIN authors ON books.author_id = authors.id;` matches every book row to the author row whose id equals its author_id. `INNER JOIN` only returns rows where a match exists on both sides.",
+        "The `ON` clause defines the matching condition; get it wrong (or omit it) and you risk a **cross join**, pairing every row with every other row, producing a nonsensical, enormous result."
+       ],
+       "example": {
+        "problem": "Join books to authors on books.author_id = authors.id for our five books and three authors. List each title with its author's name.",
+        "steps": [
+         "Kindred (author_id 1) matches Octavia Butler. Parable of the Sower (author_id 1) also matches Octavia Butler.",
+         "Norwegian Wood (author_id 2) and Kafka on the Shore (author_id 2) both match Haruki Murakami.",
+         "Americanah (author_id 3) matches Chimamanda Ngozi Adichie."
+        ],
+        "answer": "Kindred–Butler, Parable of the Sower–Butler, Norwegian Wood–Murakami, Kafka on the Shore–Murakami, Americanah–Adichie."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "JOIN",
+       "def": "A SQL operation that combines rows from two or more tables based on a related column."
+      },
+      {
+       "term": "INNER JOIN",
+       "def": "A join that returns only rows with a matching value in both tables."
+      },
+      {
+       "term": "ON clause",
+       "def": "The part of a JOIN that specifies which columns must match between the two tables."
+      },
+      {
+       "term": "cross join",
+       "def": "A join with no matching condition, pairing every row of one table with every row of the other."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does `INNER JOIN` require for a row to appear in the result?",
+       "choices": [
+        "Nothing; all rows from both tables always appear",
+        "A matching value must exist in both joined tables",
+        "The tables must have identical column names",
+        "Only the left table needs a value"
+       ],
+       "answer": 1,
+       "explain": "INNER JOIN only keeps rows where the join condition finds a match on both sides."
+      },
+      {
+       "q": "In `books INNER JOIN authors ON books.author_id = authors.id`, what does the ON clause specify?",
+       "choices": [
+        "How to sort the results",
+        "The condition used to match rows between the two tables",
+        "Which columns to display",
+        "How many rows to return"
+       ],
+       "answer": 1,
+       "explain": "The ON clause defines exactly which columns must be equal for two rows to be paired together."
+      },
+      {
+       "q": "How many books does the join return for Haruki Murakami (author_id 2), given Norwegian Wood and Kafka on the Shore share that author_id?",
+       "choices": [
+        "0",
+        "1",
+        "2",
+        "5"
+       ],
+       "answer": 2,
+       "explain": "Both books share author_id 2, so the join produces two matching rows, one per book, each paired with Murakami's name."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "LEFT and RIGHT JOIN",
+     "minutes": 12,
+     "intro": "INNER JOIN quietly drops anything without a match, which is a problem the moment you need to know about members who have never borrowed a single book.",
+     "sections": [
+      {
+       "heading": "LEFT JOIN: Keep Everything on the Left",
+       "body": [
+        "`LEFT JOIN` keeps every row from the left (first-named) table, filling in NULL for any right-table columns when no match exists. `SELECT members.name, loans.id FROM members LEFT JOIN loans ON members.id = loans.member_id;` still lists a member with zero loans, just with a NULL loan id.",
+        "This is exactly the tool for 'find everything, plus whatever related data exists (if any)' questions, which an INNER JOIN cannot answer since it would silently drop unmatched members."
+       ]
+      },
+      {
+       "heading": "RIGHT JOIN and Choosing a Direction",
+       "body": [
+        "`RIGHT JOIN` is the mirror image: it keeps every row from the right table instead, filling NULLs on the left where no match exists. In practice, most people write every join as a LEFT JOIN and simply reorder the tables, since a RIGHT JOIN can always be rewritten as an equivalent LEFT JOIN.",
+        "Choosing LEFT vs RIGHT is really just choosing which table's rows you refuse to lose, so read the question first: 'every member, even ones with no loans' means members must be the LEFT side."
+       ],
+       "example": {
+        "problem": "Members: Mia (loans 1 and 2), Noah (loan 3), Ava (loan 4), Liam (no loans). Run `SELECT members.name, loans.id FROM members LEFT JOIN loans ON members.id = loans.member_id;`. What does the result include for Liam?",
+        "steps": [
+         "LEFT JOIN keeps every row from members regardless of a match.",
+         "Mia produces two result rows (one per loan), Noah and Ava each produce one.",
+         "Liam has no matching loans row, so LEFT JOIN still includes Liam, with loans.id shown as NULL."
+        ],
+        "answer": "Liam still appears, paired with a NULL loan id, since LEFT JOIN never drops rows from the left table."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "LEFT JOIN",
+       "def": "A join that keeps all rows from the left table, using NULL for unmatched right-table columns."
+      },
+      {
+       "term": "RIGHT JOIN",
+       "def": "A join that keeps all rows from the right table, using NULL for unmatched left-table columns."
+      },
+      {
+       "term": "unmatched row",
+       "def": "A row from the preserved side of a LEFT or RIGHT JOIN that has no corresponding match on the other side."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Which join would list every member, including those who have never borrowed a book?",
+       "choices": [
+        "INNER JOIN",
+        "LEFT JOIN with members as the left table",
+        "A join is never needed for this",
+        "RIGHT JOIN with loans as the left table"
+       ],
+       "answer": 1,
+       "explain": "LEFT JOIN preserves every row of the left table, so listing members LEFT JOIN loans keeps members with zero loans too."
+      },
+      {
+       "q": "In `members LEFT JOIN loans`, what value appears for loans.id when a member has no loans?",
+       "choices": [
+        "0",
+        "An empty string",
+        "NULL",
+        "The member's own id"
+       ],
+       "answer": 2,
+       "explain": "When no matching row exists on the right side, LEFT JOIN fills those columns with NULL rather than omitting the row."
+      },
+      {
+       "q": "Why do most SQL writers prefer LEFT JOIN over RIGHT JOIN in practice?",
+       "choices": [
+        "RIGHT JOIN is not valid SQL",
+        "Any RIGHT JOIN can be rewritten as an equivalent LEFT JOIN by swapping table order, which most people find easier to read",
+        "LEFT JOIN never returns NULL values",
+        "RIGHT JOIN only works with INNER JOIN"
+       ],
+       "answer": 1,
+       "explain": "Since RIGHT JOIN is just LEFT JOIN with the tables swapped, many teams standardize on LEFT JOIN for consistency and readability."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Multi-table Joins and Self Joins",
+     "minutes": 12,
+     "intro": "Real questions rarely involve just two tables, and sometimes the most useful join is a table joined to itself.",
+     "sections": [
+      {
+       "heading": "Joining Three or More Tables",
+       "body": [
+        "Joins chain together: `SELECT members.name, books.title, loans.loan_date FROM loans JOIN members ON loans.member_id = members.id JOIN books ON loans.book_id = books.id;` pulls one combined row per loan, showing who borrowed what and when, by joining loans to both members and books.",
+        "Each additional JOIN adds one more ON condition; as long as every table shares a key with something already in the chain, you can join as many tables as the question requires."
+       ]
+      },
+      {
+       "heading": "Self Joins: Joining a Table to Itself",
+       "body": [
+        "A **self join** joins a table to a second copy of itself, using table aliases to tell the copies apart, useful whenever rows need to be compared to other rows in the same table. `SELECT a.title, b.title FROM books a JOIN books b ON a.author_id = b.author_id AND a.id < b.id;` finds pairs of books by the same author.",
+        "The condition `a.id < b.id` is a common trick to avoid listing every pair twice (once as A-B and once as B-A) and to avoid matching a book with itself."
+       ],
+       "example": {
+        "problem": "Using the self join above on our five books (Butler wrote books 1 and 2; Murakami wrote books 3 and 4; Adichie wrote book 5 alone), what pairs does the query return?",
+        "steps": [
+         "For author_id 1 (Butler): books 1 and 2 satisfy a.id < b.id, giving the pair (Kindred, Parable of the Sower).",
+         "For author_id 2 (Murakami): books 3 and 4 give the pair (Norwegian Wood, Kafka on the Shore).",
+         "For author_id 3 (Adichie): only book 5 exists, so there is no second book to pair it with — no pair is produced."
+        ],
+        "answer": "(Kindred, Parable of the Sower) and (Norwegian Wood, Kafka on the Shore); Americanah produces no pair."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "multi-table join",
+       "def": "A query joining three or more tables together in a chain of ON conditions."
+      },
+      {
+       "term": "self join",
+       "def": "A join between a table and a second reference to itself, used to compare rows within one table."
+      },
+      {
+       "term": "table alias",
+       "def": "A temporary name given to a table in a query, required to distinguish two copies in a self join."
+      }
+     ],
+     "practice": [
+      {
+       "q": "Why does a self join require table aliases?",
+       "choices": [
+        "Aliases are never actually required",
+        "To distinguish the two references to the same table in the query",
+        "Aliases make the query run faster",
+        "Because SQL forbids using a table name twice for any reason"
+       ],
+       "answer": 1,
+       "explain": "Without aliases, the query engine could not tell which reference to the same table name a given column belongs to."
+      },
+      {
+       "q": "In a self join with condition `a.id < b.id`, what problem does this condition prevent?",
+       "choices": [
+        "It prevents the query from running at all",
+        "It prevents each pair from appearing twice and prevents a book from being paired with itself",
+        "It sorts the results alphabetically",
+        "It removes all NULL values"
+       ],
+       "answer": 1,
+       "explain": "Without this inequality, every pair would appear both as (A,B) and (B,A), and every book would also pair with itself."
+      },
+      {
+       "q": "To list who borrowed what and when, joining loans, members, and books, how many ON conditions are typically needed?",
+       "choices": [
+        "Zero",
+        "One",
+        "Two",
+        "Three or more, one per pair of tables joined"
+       ],
+       "answer": 2,
+       "explain": "Joining three tables in a chain (loans-members, loans-books) needs two ON conditions, one for each additional table added."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "title": "Aggregation and Grouping",
+   "summary": "Individual rows are rarely the point — usually you want a summary: a count, a total, an average. This unit covers aggregate functions, GROUP BY, and subqueries.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Aggregate Functions",
+     "minutes": 10,
+     "intro": "Aggregate functions collapse many rows into a single summary number, and they are how a database answers 'how many' and 'how much' questions directly.",
+     "sections": [
+      {
+       "heading": "COUNT, SUM, AVG, MIN, MAX",
+       "body": [
+        "`COUNT(*)` counts rows, `SUM(column)` adds a numeric column, `AVG(column)` averages it, and `MIN`/`MAX` find the smallest and largest value. All five ignore NULL values in the column they operate on (except COUNT(*), which counts rows regardless).",
+        "These functions operate across the whole result set by default, collapsing potentially many rows down to a single output row, one line, one answer."
+       ]
+      },
+      {
+       "heading": "Aggregating Without Grouping",
+       "body": [
+        "`SELECT COUNT(*), AVG(price), MAX(price) FROM books;` returns exactly one row summarizing the entire table: how many books, their average price, and the priciest one. This is the simplest form of aggregation, before GROUP BY splits the summary into subgroups in the next lesson.",
+        "Mixing a plain column with an aggregate function in the same SELECT (without GROUP BY) is usually an error, since SQL cannot decide which individual row's value to show alongside a summary number."
+       ],
+       "example": {
+        "problem": "Using the five book prices — 12.99, 14.99, 13.50, 15.00, 16.99 — find COUNT(*), AVG(price), and MAX(price).",
+        "steps": [
+         "COUNT(*) = 5, since there are five rows.",
+         "Sum: 12.99 + 14.99 + 13.50 + 15.00 + 16.99 = 73.47. AVG = 73.47 / 5 = 14.694, rounding to 14.69.",
+         "MAX(price) = 16.99, the largest of the five values."
+        ],
+        "answer": "COUNT(*) = 5, AVG(price) ≈ $14.69, MAX(price) = $16.99."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "aggregate function",
+       "def": "A function like COUNT, SUM, or AVG that computes a single summary value from many rows."
+      },
+      {
+       "term": "COUNT(*)",
+       "def": "An aggregate function returning the number of rows in a result set."
+      },
+      {
+       "term": "AVG",
+       "def": "An aggregate function returning the mean of a numeric column, ignoring NULLs."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does `SELECT COUNT(*) FROM books;` return, given the books table has 5 rows?",
+       "choices": [
+        "1",
+        "5",
+        "The average price",
+        "0"
+       ],
+       "answer": 1,
+       "explain": "COUNT(*) simply counts how many rows are in the result set, which is 5 here."
+      },
+      {
+       "q": "Given prices 12.99, 14.99, 13.50, 15.00, and 16.99, what is MIN(price)?",
+       "choices": [
+        "12.99",
+        "16.99",
+        "14.69",
+        "15.00"
+       ],
+       "answer": 0,
+       "explain": "12.99 is the smallest of the five listed prices."
+      },
+      {
+       "q": "Why is `SELECT title, COUNT(*) FROM books;` (without GROUP BY) generally invalid?",
+       "choices": [
+        "COUNT can never be used in a SELECT",
+        "SQL cannot decide which single title to display alongside one aggregated count for the whole table",
+        "title is not a valid column name",
+        "SELECT statements cannot contain commas"
+       ],
+       "answer": 1,
+       "explain": "Mixing an ungrouped column with an aggregate produces an ambiguous result: one count, but many possible titles, without GROUP BY to resolve it."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "GROUP BY and HAVING",
+     "minutes": 12,
+     "intro": "GROUP BY is what turns 'how many books total' into 'how many books per author,' splitting one big summary into many small ones.",
+     "sections": [
+      {
+       "heading": "Grouping Rows That Share a Value",
+       "body": [
+        "`GROUP BY` collects rows sharing the same value in a column into buckets, then applies aggregate functions separately within each bucket. `SELECT author_id, COUNT(*) FROM books GROUP BY author_id;` returns one row per distinct author_id, each with its own book count.",
+        "Every column in the SELECT list must be either the grouped column or wrapped in an aggregate function, since otherwise SQL would again face the ambiguity problem from the previous lesson, now per group instead of globally."
+       ]
+      },
+      {
+       "heading": "Filtering Groups with HAVING",
+       "body": [
+        "`WHERE` filters individual rows before grouping happens; `HAVING` filters entire groups after aggregation. `SELECT author_id, COUNT(*) FROM books GROUP BY author_id HAVING COUNT(*) > 1;` keeps only authors with more than one book.",
+        "A common mistake is trying to write `WHERE COUNT(*) > 1`, which fails because WHERE runs before COUNT(*) has even been computed; HAVING exists specifically to filter on the result of an aggregate."
+       ],
+       "example": {
+        "problem": "Group the books by author_id (Butler=1 has 2 books, Murakami=2 has 2 books, Adichie=3 has 1 book), then apply HAVING COUNT(*) > 1. Which authors remain?",
+        "steps": [
+         "Grouping produces three buckets: author_id 1 with count 2, author_id 2 with count 2, author_id 3 with count 1.",
+         "HAVING COUNT(*) > 1 keeps only buckets whose count exceeds 1.",
+         "Author_id 1 (count 2) and author_id 2 (count 2) pass; author_id 3 (count 1) is filtered out."
+        ],
+        "answer": "Octavia Butler and Haruki Murakami remain, each with 2 books; Adichie is excluded."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "GROUP BY",
+       "def": "The SQL clause that collects rows sharing a value into groups before aggregation."
+      },
+      {
+       "term": "HAVING",
+       "def": "The SQL clause that filters groups after aggregation, unlike WHERE which filters rows before."
+      },
+      {
+       "term": "grouped column",
+       "def": "The column named in GROUP BY, which each row in the result corresponds to one distinct value of."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the key difference between WHERE and HAVING?",
+       "choices": [
+        "They are exact synonyms",
+        "WHERE filters rows before grouping; HAVING filters groups after aggregation",
+        "HAVING can only be used with SELECT *",
+        "WHERE can only be used with GROUP BY"
+       ],
+       "answer": 1,
+       "explain": "WHERE operates on individual rows before any grouping; HAVING operates on the aggregated results of each group."
+      },
+      {
+       "q": "`SELECT author_id, COUNT(*) FROM books GROUP BY author_id;` — how many result rows are there if books have author_ids 1, 1, 2, 2, 3?",
+       "choices": [
+        "5",
+        "1",
+        "3",
+        "2"
+       ],
+       "answer": 2,
+       "explain": "There are 3 distinct author_id values (1, 2, 3), so GROUP BY produces exactly 3 result rows, one per group."
+      },
+      {
+       "q": "Why does `WHERE COUNT(*) > 1` fail in most SQL databases?",
+       "choices": [
+        "COUNT(*) is not a valid function",
+        "WHERE runs before aggregation, so COUNT(*) has no computed value yet at that stage",
+        "It should say COUNT(1) instead",
+        "GROUP BY is required before any WHERE clause"
+       ],
+       "answer": 1,
+       "explain": "WHERE filters rows prior to aggregation, so it cannot reference an aggregate result that doesn't exist until after grouping; HAVING must be used instead."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Subqueries",
+     "minutes": 12,
+     "intro": "Sometimes a single query needs an answer from another query first, like 'above average' or 'never borrowed' — a subquery lets you nest one query inside another to get it.",
+     "sections": [
+      {
+       "heading": "A Query Inside a Query",
+       "body": [
+        "A **subquery** is a complete SELECT statement nested inside another query, usually in parentheses. `SELECT title, price FROM books WHERE price > (SELECT AVG(price) FROM books);` first computes the average price, then uses that single number to filter the outer query.",
+        "This lets you compare rows to a value that itself depends on the data, like an average or a maximum, without hardcoding a number that would go stale as data changes."
+       ]
+      },
+      {
+       "heading": "Subqueries with IN and NOT IN",
+       "body": [
+        "When a subquery returns a list of values rather than one number, use `IN` or `NOT IN` to compare against the whole list. `SELECT title FROM books WHERE id NOT IN (SELECT book_id FROM loans);` finds every book that has never appeared in the loans table at all.",
+        "Subqueries can appear in WHERE (as shown), in SELECT for a computed column, or in FROM as a temporary named table — the WHERE form shown here is the most common starting point."
+       ],
+       "example": {
+        "problem": "Using our five book prices (12.99, 14.99, 13.50, 15.00, 16.99, average ≈14.69), which titles does `WHERE price > (SELECT AVG(price) FROM books)` return?",
+        "steps": [
+         "The subquery computes AVG(price) ≈ 14.69 first.",
+         "Compare each price to 14.69: Kindred 12.99 (no), Parable 14.99 (yes), Norwegian Wood 13.50 (no), Kafka 15.00 (yes), Americanah 16.99 (yes).",
+         "Three books exceed the average price."
+        ],
+        "answer": "Parable of the Sower, Kafka on the Shore, and Americanah are above the average price."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "subquery",
+       "def": "A SELECT statement nested inside another query, used to supply a computed value or list."
+      },
+      {
+       "term": "IN",
+       "def": "An operator testing whether a value matches any value in a list or subquery result."
+      },
+      {
+       "term": "NOT IN",
+       "def": "An operator testing whether a value matches none of the values in a list or subquery result."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does the subquery `(SELECT AVG(price) FROM books)` compute before the outer query runs?",
+       "choices": [
+        "A list of every book title",
+        "A single number: the average price across all books",
+        "The most expensive book's title",
+        "Nothing; subqueries do not execute separately"
+       ],
+       "answer": 1,
+       "explain": "This subquery returns one value, the average price, which the outer query then compares each row's price against."
+      },
+      {
+       "q": "Which operator would you use to filter for books whose id appears in a subquery's list of results?",
+       "choices": [
+        "IN",
+        "AVG",
+        "GROUP BY",
+        "HAVING"
+       ],
+       "answer": 0,
+       "explain": "IN checks whether a value matches any value returned by a subquery's list of results."
+      },
+      {
+       "q": "`WHERE id NOT IN (SELECT book_id FROM loans)` finds which books?",
+       "choices": [
+        "Books that have been borrowed at least once",
+        "Books that have never appeared in the loans table",
+        "All books, regardless of loan history",
+        "Only books priced above average"
+       ],
+       "answer": 1,
+       "explain": "NOT IN excludes any book id that shows up in the loans subquery, leaving only books that were never loaned out."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "title": "Design, Normalization, and Data Integrity",
+   "summary": "Good schemas don't just happen — normalization removes redundancy on purpose, and constraints and transactions keep the data trustworthy as it changes.",
+   "lessons": [
+    {
+     "id": "l1",
+     "title": "Normalization: 1NF, 2NF, 3NF",
+     "minutes": 12,
+     "intro": "Normalization is the discipline of splitting data so each fact is stored in exactly one place, and it exists to prevent the exact bugs that happen when the same fact is copied in several rows.",
+     "sections": [
+      {
+       "heading": "The Problem: Redundancy and Anomalies",
+       "body": [
+        "Imagine one flat `books_flat` table storing title, price, author_name, and author_country together in every row. Octavia Butler's country ('USA') would then be repeated on both her rows (Kindred and Parable of the Sower). If someone updates only one of those rows with a typo, the two rows now disagree about the same real-world fact.",
+        "This is called an **update anomaly**: because the same fact is stored redundantly, updates can make the data internally inconsistent. Normalization fixes this by storing each fact exactly once and referencing it via a foreign key."
+       ]
+      },
+      {
+       "heading": "1NF, 2NF, and 3NF, Step by Step",
+       "body": [
+        "**First normal form (1NF)** requires every column to hold a single, atomic value (no comma-separated lists crammed into one cell) and every row to be uniquely identifiable. **Second normal form (2NF)** additionally requires that every non-key column depend on the whole primary key, not just part of it (only relevant for tables with multi-column keys).",
+        "**Third normal form (3NF)** further requires that non-key columns depend only on the primary key, not on each other. Storing `author_country` directly in `books` violates 3NF, since country depends on the author, not directly on the book — splitting it into a separate `authors` table fixes exactly this."
+       ],
+       "example": {
+        "problem": "A flat `books_flat` table stores author_country alongside every book. If Octavia Butler's country is entered as 'USA' for Kindred but accidentally 'U.S.A.' for Parable of the Sower, what normal form is violated, and how does splitting into books + authors fix it?",
+        "steps": [
+         "author_country depends on the author, not on the specific book, which is a transitive dependency — a 3NF violation.",
+         "Because the fact is duplicated, the two rows can drift apart and disagree, exactly the update anomaly normalization prevents.",
+         "Moving country into a single row in an `authors` table means it is stored once; every book simply references author_id, so the fact can never disagree with itself."
+        ],
+        "answer": "It violates 3NF (a transitive dependency); splitting into books + authors stores the country once, eliminating the possibility of disagreement."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "normalization",
+       "def": "The process of organizing tables to minimize redundant data and prevent update anomalies."
+      },
+      {
+       "term": "1NF",
+       "def": "First normal form: every column holds a single atomic value and rows are uniquely identifiable."
+      },
+      {
+       "term": "3NF",
+       "def": "Third normal form: non-key columns depend only on the primary key, not on other non-key columns."
+      },
+      {
+       "term": "update anomaly",
+       "def": "An inconsistency that arises when a duplicated fact is updated in only some of its copies."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is an update anomaly?",
+       "choices": [
+        "A syntax error in a SQL query",
+        "An inconsistency that arises when a fact stored redundantly is updated in only some of its copies",
+        "A missing primary key",
+        "A column with the wrong data type"
+       ],
+       "answer": 1,
+       "explain": "When the same fact is duplicated across rows, updating it in only one place leaves the copies disagreeing — the defining symptom of an update anomaly."
+      },
+      {
+       "q": "Storing an author's country directly inside every book row, instead of in a separate authors table, violates which normal form?",
+       "choices": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "None; this is good design"
+       ],
+       "answer": 2,
+       "explain": "Country depends on the author, not on the book itself, which is a transitive dependency and a 3NF violation."
+      },
+      {
+       "q": "What does First Normal Form (1NF) require?",
+       "choices": [
+        "Every table must have exactly one column",
+        "Every column holds a single atomic value and rows are uniquely identifiable",
+        "Every column must be a foreign key",
+        "Tables cannot have more than 5 rows"
+       ],
+       "answer": 1,
+       "explain": "1NF forbids cramming multiple values into one cell and requires rows to be distinguishable from one another."
+      }
+     ]
+    },
+    {
+     "id": "l2",
+     "title": "Constraints and Referential Integrity",
+     "minutes": 10,
+     "intro": "A schema is only as trustworthy as the constraints backing it up — without them, nothing stops a foreign key from pointing at a row that was deleted last week.",
+     "sections": [
+      {
+       "heading": "PRIMARY KEY, UNIQUE, and NOT NULL",
+       "body": [
+        "`PRIMARY KEY` combines uniqueness and NOT NULL into one constraint, marking the column that identifies each row. `UNIQUE` enforces no-duplicates on a column that isn't the primary key, like ensuring no two members share an email address.",
+        "These constraints are checked automatically on every INSERT and UPDATE, rejecting the operation immediately if it would violate the rule, rather than allowing bad data to slip in silently."
+       ]
+      },
+      {
+       "heading": "FOREIGN KEY and Referential Integrity",
+       "body": [
+        "A `FOREIGN KEY` constraint enforces **referential integrity**: it guarantees that a value like `books.author_id` must match an existing row in `authors.id`, so a book can never point to an author that doesn't exist. It also governs what happens on deletion.",
+        "By default, deleting a referenced row while it is still pointed to is rejected outright. Adding `ON DELETE CASCADE` instead automatically deletes the dependent rows too, while `ON DELETE SET NULL` clears the foreign key column instead of deleting anything."
+       ],
+       "example": {
+        "problem": "You try to DELETE the author row for Octavia Butler (id 1) while books.author_id = 1 still exists on two books, and no ON DELETE option was specified. What happens?",
+        "steps": [
+         "The foreign key constraint checks whether any row still references author id 1.",
+         "Two books (Kindred, Parable of the Sower) still reference it.",
+         "Without CASCADE or SET NULL specified, the default behavior rejects the DELETE with a foreign key constraint violation."
+        ],
+        "answer": "The DELETE is rejected — a foreign key constraint violation, since dependent book rows still reference that author."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "referential integrity",
+       "def": "The guarantee that a foreign key value always matches an existing row in the referenced table."
+      },
+      {
+       "term": "UNIQUE constraint",
+       "def": "A rule forbidding duplicate values in a column, without requiring it to be the primary key."
+      },
+      {
+       "term": "ON DELETE CASCADE",
+       "def": "A foreign key option that automatically deletes dependent rows when the referenced row is deleted."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What does a FOREIGN KEY constraint guarantee?",
+       "choices": [
+        "The column must be text",
+        "The referencing value must match an existing row in the referenced table",
+        "The column can never be updated",
+        "Every table must have exactly one foreign key"
+       ],
+       "answer": 1,
+       "explain": "Referential integrity means a foreign key value can never point to a row that doesn't actually exist in the other table."
+      },
+      {
+       "q": "By default, what happens if you try to delete a row that other rows still reference via a foreign key?",
+       "choices": [
+        "It succeeds silently and leaves broken references",
+        "The DELETE is rejected as a constraint violation",
+        "The referencing rows are automatically updated",
+        "Nothing; foreign keys do not affect DELETE"
+       ],
+       "answer": 1,
+       "explain": "Without an ON DELETE option, the database protects referential integrity by refusing the delete outright."
+      },
+      {
+       "q": "What does ON DELETE CASCADE do?",
+       "choices": [
+        "Prevents any row from ever being deleted",
+        "Automatically deletes dependent rows when the referenced row is deleted",
+        "Converts the foreign key to NULL",
+        "Requires manual confirmation for every delete"
+       ],
+       "answer": 1,
+       "explain": "CASCADE tells the database to automatically remove dependent rows along with the referenced row, keeping integrity without a manual cleanup step."
+      }
+     ]
+    },
+    {
+     "id": "l3",
+     "title": "Modifying Data: INSERT, UPDATE, DELETE, and Transactions",
+     "minutes": 12,
+     "intro": "Reading data is only half of SQL — INSERT, UPDATE, and DELETE change it, and transactions make sure that when several changes must happen together, they either all succeed or none do.",
+     "sections": [
+      {
+       "heading": "INSERT, UPDATE, DELETE",
+       "body": [
+        "`INSERT INTO members (name, join_date) VALUES ('Liam', '2024-05-01');` adds a new row. `UPDATE loans SET return_date = '2024-08-03' WHERE id = 2;` changes existing rows matching the WHERE clause. `DELETE FROM loans WHERE id = 2;` removes matching rows entirely.",
+        "UPDATE and DELETE without a WHERE clause apply to every row in the table, which is one of the most common and costly mistakes in SQL — always double-check the WHERE clause before running either statement."
+       ]
+      },
+      {
+       "heading": "Transactions and ACID",
+       "body": [
+        "A **transaction** groups multiple statements so they succeed or fail as one unit: `BEGIN;` starts it, `COMMIT;` saves all changes permanently, and `ROLLBACK;` undoes everything since BEGIN if something goes wrong partway through.",
+        "This guarantees **atomicity**, one letter of the **ACID** properties (Atomicity, Consistency, Isolation, Durability) that reliable databases promise, ensuring a half-finished operation can never leave the data in a broken, inconsistent state."
+       ],
+       "example": {
+        "problem": "A librarian must record that Mia returns 'Norwegian Wood' (loan id 2) today and mark the book available again, and these two updates must both happen or neither should. Write the transaction.",
+        "steps": [
+         "BEGIN; starts the transaction.",
+         "UPDATE loans SET return_date = '2024-08-03' WHERE id = 2; records the return.",
+         "UPDATE books SET available = TRUE WHERE id = 3; marks Norwegian Wood available again.",
+         "COMMIT; saves both changes together — if either statement had failed, ROLLBACK; would undo both instead."
+        ],
+        "answer": "BEGIN; two UPDATE statements; COMMIT; — wrapping both changes in one transaction ensures they succeed or fail together."
+       }
+      }
+     ],
+     "keyTerms": [
+      {
+       "term": "INSERT",
+       "def": "The SQL statement that adds a new row to a table."
+      },
+      {
+       "term": "UPDATE",
+       "def": "The SQL statement that modifies existing rows matching a WHERE clause."
+      },
+      {
+       "term": "transaction",
+       "def": "A group of statements executed as a single all-or-nothing unit."
+      },
+      {
+       "term": "ACID",
+       "def": "Atomicity, Consistency, Isolation, Durability — the properties that guarantee reliable database transactions."
+      }
+     ],
+     "practice": [
+      {
+       "q": "What is the danger of running `UPDATE loans SET return_date = '2024-08-03';` with no WHERE clause?",
+       "choices": [
+        "Nothing happens at all",
+        "It sets return_date for every single row in the table, not just the intended one",
+        "It only affects the first row",
+        "It deletes the entire table"
+       ],
+       "answer": 1,
+       "explain": "Without a WHERE clause, UPDATE (like DELETE) applies to every row in the table, a common and costly mistake."
+      },
+      {
+       "q": "What does COMMIT do at the end of a transaction?",
+       "choices": [
+        "Undoes all changes made since BEGIN",
+        "Permanently saves all changes made since BEGIN",
+        "Deletes the table",
+        "Starts a new transaction automatically"
+       ],
+       "answer": 1,
+       "explain": "COMMIT finalizes and saves every change made during the transaction, making it permanent."
+      },
+      {
+       "q": "Which ACID property guarantees that a multi-step transaction either fully completes or has no effect at all?",
+       "choices": [
+        "Consistency",
+        "Isolation",
+        "Atomicity",
+        "Durability"
+       ],
+       "answer": 2,
+       "explain": "Atomicity is the all-or-nothing guarantee: partial completion is never left in place if any step fails."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
