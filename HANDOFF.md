@@ -14,9 +14,10 @@ kind has to come from the owner directly.
 Paste this into a fresh session, along with a clone of this repository.
 
 > You are taking over the XPLabs website. The repository is `levicobra/Levi_Public`.
-> The source is the `sites/` directory. It is **three separate origins**, each a
+> The source is the `sites/` directory. It is **four separate origins**, each a
 > deployable root: `sites/www` → `xplabs.us`, `sites/game` → `game.xplabs.us`,
-> `sites/learn` → `learn.xplabs.us`. Each needs its own Cloudflare Pages project.
+> `sites/learn` → `learn.xplabs.us`, `sites/mil` → `mil.xplabs.us`. Each needs its
+> own Cloudflare Pages project.
 >
 > Everything is on `main`; there is no work sitting on another branch.
 >
@@ -31,9 +32,12 @@ Paste this into a fresh session, along with a clone of this repository.
 > before assuming the code is wrong — and if the fix is to loosen the policy,
 > that is a signal the addition does not belong here.
 >
-> Live areas: four pages on `xplabs.us`, a games catalog on `game.xplabs.us`, and
-> a self-contained offline learning app on `learn.xplabs.us`. Two further private
-> subdomains (`levi.` and `colby.`, section 5) do not exist yet.
+> Live areas: `xplabs.us` is a company hub plus engineering, about and invest
+> pages; a games catalog on `game.xplabs.us`; a self-contained offline learning
+> app on `learn.xplabs.us`; a benefits directory on `mil.xplabs.us`. The hub
+> carries no detail about the games, the subject list or the benefits categories
+> — that lives on each origin, and a second copy on the hub only drifts. Two
+> further private subdomains (`levi.` and `colby.`, section 5) do not exist yet.
 > There is no build step, no package manager, and no framework. Every page is a
 > single HTML file with inline CSS, and must load with zero external network
 > requests. Do not introduce a bundler, a CSS framework, a web font, or an npm
@@ -64,7 +68,7 @@ extra — but each is a **separate Cloudflare Pages project**.
 
 | Origin | Source | What it is | Status |
 |---|---|---|---|
-| `xplabs.us` | `sites/www` | Hub, engineering, personal | Built |
+| `xplabs.us` | `sites/www` | Company hub, engineering, about, invest | Built |
 | `game.xplabs.us` | `sites/game` | Games catalog — all four titles, equal depth | Built |
 | `learn.xplabs.us` | `sites/learn` | XP Education — 106 subjects, 14 domains | Built |
 | `mil.xplabs.us` | `sites/mil` | Military benefits — 279 resources, 13 categories | Built |
@@ -91,7 +95,7 @@ them.
 
 ```
 HANDOFF.md                        this file
-DEPLOY.md                         how the three origins get published
+DEPLOY.md                         how the four origins get published
 README.md                         GitHub profile-facing summary
 archive/                          not deployed — nothing here is served
   servestuff-webflow-mirror/      the Webflow site this replaced
@@ -107,11 +111,12 @@ subdomain-starter/                PIN gate for colby.xplabs.us
                                   (copy into its own private repo; not deployed)
 sites/
   www/                            -> xplabs.us
-    index.html                    hub
+    index.html                    HUB ONLY — no game/subject/benefit detail
     engineering/index.html        how things are built, consulting
-    personal/index.html
+    about/index.html              Levi Colby (was personal/)
+    invest/index.html             investor contact — carries no figures
     _headers                      CSP, HSTS, cache policy
-    _redirects                    301s the old /military-benefits/ path to mil.
+    _redirects                    301s /military-benefits/ -> mil., /personal/ -> /about/
     favicon-32.png  favicon.ico  apple-touch-icon.png
     og.jpg  robots.txt  sitemap.xml
   mil/                            -> mil.xplabs.us
@@ -139,9 +144,9 @@ sites/
     og.jpg  robots.txt  sitemap.xml
 ```
 
-Each of `www`, `game` and `learn` is a Cloudflare Pages project whose **build
-output directory** is that folder, with an empty build command. One repository,
-three projects. `DEPLOY.md` has the settings.
+Each of `www`, `game`, `learn` and `mil` is a Cloudflare Pages project whose
+**build output directory** is that folder, with an empty build command. One
+repository, four projects. `DEPLOY.md` has the settings.
 
 **`_headers` is part of the deployable root and must stay there.** It is where
 the Content-Security-Policy lives. The policy is close to pure `'self'` with
@@ -453,7 +458,8 @@ Do not guess at any of them.
 | 1 | **Platform claim for The Last Station.** `README.md` used to say iOS, Nintendo Switch and Switch 2; the game's own design documentation says Unreal Engine 5 mobile, Android live and iOS pending, with Switch appearing nowhere. The README now matches the design docs rather than repeating an unverified console claim. **If the console launch is real, the games catalog needs updating too — not just the README.** | A factual claim on a public marketing page, with two sources disagreeing. Only the owner knows which is true. |
 | 2 | **Space Glyph naming.** Its release checklist requires professional trademark and marketplace clearance before substantial marketing spend. The title currently appears on the public catalog. | Legal/commercial judgement, not a technical one. |
 | 3 | **Hearth & Hunt link.** The card says "Live build" but links nowhere, because the Roblox URL is not recorded anywhere in this repository. | Must not be invented. |
-| 4 | **Scope of `/personal/`.** Currently a short honest stub. | It is a page about a person, written from repository contents. It needs his voice. |
+| 4 | **Scope of `/about/`.** Currently a short honest stub. | It is a page about a person, written from repository contents. It needs his voice. |
+| 4b | **Everything on `/invest/` that is a number.** The page states no stage, raise size, valuation, revenue or projection, on purpose. | Figures shown to investors are representations. They belong in materials sent to a named person, not on an open page that goes stale and cannot be withdrawn. |
 | 5 | **Where XP Education sits.** It is currently presented as a peer of the games rather than a project under them. A 106-subject offline school may eventually deserve its own domain. | Brand and strategy decision. |
 | 6 | **Missing benefits content.** The directory has no coverage of disability claims, the PACT Act, DD-214 records, food assistance, PCS/moving, burial benefits, or hearing and vision. | These are real gaps in a public resource. Adding entries is a content decision the owner owns. |
 
@@ -592,7 +598,7 @@ outside `main`.
 
 ### Verified
 
-- Three origins each rendering standalone; zero horizontal overflow at 320, 360,
+- Four origins each rendering standalone; zero horizontal overflow at 320, 360,
   768, 1440 and 2560 on every page; zero console errors; zero failed requests.
 - Every `href`, `src`, manifest icon and image meta tag across all three roots
   resolved against the files that actually ship — 60 references, all resolve.

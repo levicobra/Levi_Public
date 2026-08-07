@@ -75,13 +75,14 @@ link was a dead end and every check passed.
 
 ```sh
 for u in https://xplabs.us/ https://xplabs.us/engineering/ \
-         https://xplabs.us/personal/ https://mil.xplabs.us/ \
+         https://xplabs.us/about/ https://xplabs.us/invest/ \
+         https://mil.xplabs.us/ \
          https://game.xplabs.us/ https://learn.xplabs.us/; do
   printf '%s  ' "$(curl -s -o /dev/null -w '%{http_code}' "$u")"; echo "$u"
 done
 ```
 
-All six must be 200. Then check the things a status code cannot tell you:
+All seven must be 200. Then check the things a status code cannot tell you:
 
 ```sh
 # The headers actually applied

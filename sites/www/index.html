@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>XPLabs</title>
-<meta name="description" content="XPLabs builds games. Four titles in development or live across Unreal Engine, native iOS and Roblox: The Last Station, Space Glyph, Life XP, Hearth &amp; Hunt.">
+<meta name="description" content="XPLabs is a consulting studio in Honolulu. Game development and technical consulting, plus a free offline school and a free benefits directory for the military community.">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#17171B">
 <link rel="icon" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://xplabs.us/">
 <meta property="og:title" content="XPLabs">
-<meta property="og:description" content="Four games across Unreal Engine, native iOS and Roblox.">
+<meta property="og:description" content="A consulting studio in Honolulu. Games, engineering, and two free public resources.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xplabs.us/">
 <meta property="og:image" content="https://xplabs.us/og.jpg">
@@ -20,13 +20,13 @@
 /* =====================================================================
    XPLABS — site root
 
+   This page is a HUB. It says what the company is and points at the five
+   places the actual work lives. Detail belongs on those origins, not here:
+   if you find yourself describing a game, a subject list, or a benefits
+   category on this page, it belongs on game., learn., or mil. instead.
+
    TO EDIT TEXT: search for the words you want to change.
    TO CHANGE COLOURS: edit :root below.
-
-   COLOUR RULE (important): each game owns one colour. Three of them are
-   dark enough for white type. MUSTARD IS NOT — that slab uses dark type
-   instead. Mustard must never be used as text on the bone background;
-   it only ever works as a ground.
    ===================================================================== */
 :root{
   --ink:#17171B;         /* 15.0:1 on bone */
@@ -34,11 +34,8 @@
   --bone:#F0EBE0;
   --bone-2:#E6E0D2;
 
-  /* game grounds */
   --teal:#0B6155;        /* white type — 7.4:1  */
-  --ultra:#20338C;       /* white type — 11.0:1 */
   --rust:#A63423;        /* white type — 6.7:1  */
-  --mustard:#C98A06;     /* DARK type  — 6.1:1  */
 
   --display:"Arial Black","Arial Bold",Impact,"Helvetica Neue",Arial,sans-serif;
   --text:Georgia,"Iowan Old Style",Charter,"Times New Roman",serif;
@@ -50,7 +47,6 @@
   --s-1: clamp(1.25rem, 1.14rem + 0.48vw, 1.5rem);
   --s-2: clamp(1.5rem,  1.3rem  + 0.9vw,  2rem);
   --s-3: clamp(1.875rem,1.5rem  + 1.7vw,  2.75rem);
-  --s-4: clamp(2.25rem, 1.6rem  + 2.9vw,  4rem);
   --s-5: clamp(2.75rem, 1.5rem  + 5.6vw,  6.5rem);    /* hero only        */
   --s-min: 0.8125rem;                                 /* 13px labels      */
 
@@ -77,7 +73,6 @@ a{color:inherit}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:.6rem;top:.6rem;z-index:99;background:var(--ink);color:var(--bone);padding:.7rem 1rem}
 :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.slab :focus-visible{outline-color:#fff}
 
 /* ---------- masthead ---------- */
 .top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
@@ -85,110 +80,47 @@ a{color:inherit}
 .logo{font-family:var(--display);font-size:var(--s-1);letter-spacing:-.02em;text-decoration:none}
 .top nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--ui);font-size:var(--s-min)}
 .top nav a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
-.top nav a:hover{border-bottom-color:var(--ink)}
+.top nav a:hover,.top nav a[aria-current]{border-bottom-color:var(--ink)}
 
 /* ---------- hero ---------- */
-.hero{padding-block:clamp(2.5rem,7vw,5.5rem) clamp(2rem,5vw,4rem)}
+.hero{padding-block:clamp(2.5rem,7vw,5.5rem) clamp(1.75rem,4vw,3rem)}
 .hero h1{font-size:var(--s-5)}
 .hero h1 em{font-style:normal;color:var(--rust)}
-.hero__sub{font-size:var(--s-1);max-width:34ch;margin-top:1.4rem;line-height:1.45}
+.hero__sub{font-size:var(--s-1);max-width:40ch;margin-top:1.4rem;line-height:1.45}
 .hero__facts{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin-top:1.75rem;
   font-family:var(--ui);font-size:var(--s-min);color:var(--ink-2)}
 .hero__facts b{color:var(--ink);font-weight:700}
 
-/* ---------- full-bleed colour plate ----------
-   margin-left calc(50% - 50vw) + matching padding pulls the slab to the
-   viewport edge from inside the centred wrapper, at every width. */
-.slab{
-  margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
-  padding-left:calc(50vw - 50% + var(--gutter));padding-right:calc(50vw - 50% + var(--gutter));
-  padding-block:clamp(2.25rem,5vw,4rem);
-  color:#fff;
-}
-.slab--teal{background:var(--teal)}
-.slab--ultra{background:var(--ultra)}
-.slab--rust{background:var(--rust)}
-.slab--mustard{background:var(--mustard);color:var(--ink)}   /* the exception */
-.slab__in{max-width:var(--wrap);margin-inline:auto}
-
-.g__label{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;opacity:.82;margin-bottom:.5rem}
-.g__name{font-size:var(--s-3)}
-.slab--teal .g__name{font-size:var(--s-4)}    /* flagship reads bigger at every width */
-.g__kind{font-family:var(--ui);font-size:var(--s-min);margin-top:.5rem;opacity:.88}
-.g__body{margin-top:1.1rem;max-width:52ch;line-height:1.6}
-.g__body a{text-decoration:underline;text-underline-offset:2px}
-.g__body + .g__body{margin-top:.8rem}
-.g__go{display:inline-block;margin-top:1.4rem;font-family:var(--ui);font-size:var(--s-min);
-  font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
-  border-bottom:3px solid currentColor;padding-bottom:3px}
-
-/* specs — a real list, wraps instead of colliding at 320px */
-.g__specs{display:flex;flex-wrap:wrap;gap:.4rem .5rem;margin-top:1.4rem;
-  font-family:var(--ui);font-size:var(--s-min)}
-.g__specs li{border:2px solid currentColor;padding:.3rem .6rem;white-space:nowrap}
-
-/* ---------- games: four equal cards ---------- */
-.games{padding-block:clamp(2rem,5vw,3.5rem) 0}
-.sec{font-size:var(--s-2);margin-bottom:1.25rem}
-.gamegrid{display:grid;gap:.9rem}
-@media (min-width:760px){.gamegrid{grid-template-columns:repeat(2,1fr)}}
-.gcard{display:flex;flex-direction:column;gap:.35rem;height:100%;
-  padding:clamp(1.15rem,2.5vw,1.6rem);text-decoration:none;color:#fff;
-  transition:transform .13s}
-.gcard:hover{transform:translateY(-2px)}
-.gcard--teal{background:var(--teal)}
-.gcard--ultra{background:var(--ultra)}
-.gcard--mustard{background:var(--mustard);color:var(--ink)}   /* light ground -> dark type */
-.gcard--slate{background:var(--rust)}
-.gcard__label{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;opacity:.85}
-.gcard__name{font-family:var(--display);font-size:var(--s-2);line-height:.98;letter-spacing:-.012em}
-.gcard__kind{font-family:var(--ui);font-size:var(--s-min);opacity:.88}
-.gcard__body{margin-top:.5rem;line-height:1.55;flex:1}
-.gcard__go{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.06em;
-  text-transform:uppercase;margin-top:.9rem}
-.gcard:hover .gcard__go{text-decoration:underline;text-underline-offset:3px}
-.games__more{margin-top:1rem;font-family:var(--ui);font-size:var(--s-min)}
-.games__more a{font-weight:700}
-
-/* the flagship gets art and a second column; the others deliberately do not */
-.g--lead{display:grid;gap:clamp(1.5rem,3vw,2.5rem)}
-@media (min-width:900px){.g--lead{grid-template-columns:1.15fr .85fr;align-items:center}}
-.g--lead figure{margin:0}
-.g--lead img{width:100%;border:3px solid rgba(255,255,255,.28)}
-.g--lead figcaption{font-family:var(--ui);font-size:var(--s-min);opacity:.8;margin-top:.5rem}
-
-/* the education plate's second column: a real count per domain, not decoration */
-.domains__t{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;opacity:.82;margin-bottom:.7rem}
-.domains ul{columns:2;column-gap:1.5rem;font-family:var(--ui);font-size:var(--s-min);line-height:1.85}
-.domains li{break-inside:avoid}
-.domains b{display:inline-block;min-width:1.9em;font-variant-numeric:tabular-nums;font-weight:700}
-@media (max-width:520px){.domains ul{columns:1}}
-
-/* the closing slab sets its prose in two columns so it fills the plate
-   instead of leaving half of it empty */
-.duo{columns:2;column-gap:clamp(2rem,4vw,3.5rem);margin-top:1.1rem}
-.duo p{break-inside:avoid;margin:0;max-width:none}
-.duo p + p{margin-top:.8rem}
-@media (max-width:820px){.duo{columns:1}}
-
-/* the two middle games share a row on wide screens — breaks the 4x parallel rhythm */
-.pair{display:grid;gap:clamp(2rem,4vw,3.5rem)}
-@media (min-width:960px){.pair{grid-template-columns:1fr 1fr}}
-
-/* ---------- directories ---------- */
-.dirs{padding-block:clamp(2.5rem,6vw,4.5rem)}
+/* ---------- the five places the work lives ----------
+   One row per property. The blurb is one sentence on purpose — anything
+   longer is detail, and detail belongs on the property's own origin. */
+.dirs{padding-block:clamp(1.5rem,4vw,2.5rem) clamp(2.5rem,6vw,4.5rem)}
 .dirs h2{font-size:var(--s-2);margin-bottom:1.5rem}
 .dir{display:block;text-decoration:none;border-top:3px solid var(--ink);padding-block:1.15rem}
 .dir:last-of-type{border-bottom:3px solid var(--ink)}
 .dir__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem}
 .dir__n{font-family:var(--display);font-size:var(--s-2);letter-spacing:-.012em}
+.dir__tag{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink-2)}
 .dir__arrow{font-family:var(--ui);font-size:var(--s-min);font-weight:700;margin-left:auto}
-.dir__b{color:var(--ink-2);max-width:56ch;margin-top:.35rem}
+.dir__b{color:var(--ink-2);max-width:58ch;margin-top:.35rem}
 .dir:hover{background:var(--bone-2)}
 .dir:hover .dir__n{color:var(--rust)}
+
+/* ---------- invest strip ---------- */
+.invest{
+  margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+  padding-left:calc(50vw - 50% + var(--gutter));padding-right:calc(50vw - 50% + var(--gutter));
+  padding-block:clamp(2rem,4.5vw,3rem);
+  background:var(--teal);color:#fff;
+}
+.invest__in{max-width:var(--wrap);margin-inline:auto}
+.invest h2{font-size:var(--s-3)}
+.invest p{margin-top:.9rem;max-width:54ch;line-height:1.6}
+.invest__go{display:inline-block;margin-top:1.3rem;font-family:var(--ui);font-size:var(--s-min);
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
+  border-bottom:3px solid currentColor;padding-bottom:3px}
+.invest :focus-visible{outline-color:#fff}
 
 /* ---------- footer ---------- */
 .foot{background:var(--ink);color:var(--bone);padding-block:2.5rem 3rem}
@@ -213,134 +145,75 @@ a{color:inherit}
     <a href="https://learn.xplabs.us/">Education</a>
     <a href="/engineering/">Engineering</a>
     <a href="https://mil.xplabs.us/">Benefits</a>
-    <a href="/personal/">Personal</a>
+    <a href="/about/">About</a>
+    <a href="/invest/">Invest</a>
   </nav>
 </header>
 
 <main id="main">
 
 <section class="wrap hero">
-  <h1>XPLabs builds games.<br><em>And a free school.</em></h1>
-  <p class="hero__sub">A survivors game in Unreal Engine, a puzzle-defense campaign in Swift,
-  an offline life simulator, a live Roblox world — and 106 subjects that work with no
-  connection at all.</p>
+  <h1>XPLabs is a studio<br>in <em>Honolulu</em>.</h1>
+  <p class="hero__sub">Consulting and product development — game design, engineering, and
+  shipping small things properly. Two of the things we build are free and always will be.</p>
   <p class="hero__facts">
-    <span><b>4</b> games</span>
-    <span><b>106</b> subjects</span>
-    <span><b>0</b> accounts, ads or trackers</span>
+    <span>Founded <b>2026</b></span>
+    <span><b>Honolulu, HI</b></span>
+    <span><b>0</b> accounts, ads or trackers, anywhere</span>
   </p>
 </section>
 
-<!-- ===== GAMES — all four treated the same. Detail lives on /games/. ===== -->
-<section class="wrap games" id="games">
-  <h2 class="sec">Games</h2>
-  <ul class="gamegrid">
+<!-- ===== The five properties. One line each. Detail lives on each origin. ===== -->
+<section class="wrap dirs">
+  <h2>Where the work is</h2>
 
-    <li><a class="gcard gcard--teal" href="https://game.xplabs.us/#the-last-station">
-      <span class="gcard__label">In development</span>
-      <span class="gcard__name">The Last Station</span>
-      <span class="gcard__kind">Unreal Engine 5 &middot; mobile</span>
-      <span class="gcard__body">A survivors game built for one thumb. You steer; your cards fire
-      on tap. All the depth is in the loadout.</span>
-      <span class="gcard__go">Read more &rarr;</span>
-    </a></li>
+  <a class="dir" href="https://game.xplabs.us/">
+    <span class="dir__row"><span class="dir__n">Games</span>
+      <span class="dir__tag">game.xplabs.us</span>
+      <span class="dir__arrow">Open &rarr;</span></span>
+    <span class="dir__b">Four titles across Unreal Engine, native iOS and Roblox.</span>
+  </a>
 
-    <li><a class="gcard gcard--ultra" href="https://game.xplabs.us/#space-glyph">
-      <span class="gcard__label">Release prep</span>
-      <span class="gcard__name">Space Glyph</span>
-      <span class="gcard__kind">Swift 6 &middot; iPhone</span>
-      <span class="gcard__body">Puzzle defense where matching and shooting are the same act.
-      100 missions, four sectors, no ads or loot boxes.</span>
-      <span class="gcard__go">Read more &rarr;</span>
-    </a></li>
+  <a class="dir" href="https://learn.xplabs.us/">
+    <span class="dir__row"><span class="dir__n">Education</span>
+      <span class="dir__tag">learn.xplabs.us</span>
+      <span class="dir__arrow">Open &rarr;</span></span>
+    <span class="dir__b">A free school that works with no connection. No account, no paywall.</span>
+  </a>
 
-    <li><a class="gcard gcard--mustard" href="https://game.xplabs.us/#life-xp">
-      <span class="gcard__label">Playable</span>
-      <span class="gcard__name">Life XP</span>
-      <span class="gcard__kind">SwiftUI &middot; SceneKit &middot; iPhone</span>
-      <span class="gcard__body">An offline life simulator with a deterministic hour-by-hour
-      economy. Walk the town, enter any building, use what is there.</span>
-      <span class="gcard__go">Read more &rarr;</span>
-    </a></li>
+  <a class="dir" href="/engineering/">
+    <span class="dir__row"><span class="dir__n">Engineering</span>
+      <span class="dir__tag">Consulting</span>
+      <span class="dir__arrow">Read &rarr;</span></span>
+    <span class="dir__b">How this work gets built, and what XPLabs takes on for clients.</span>
+  </a>
 
-    <li><a class="gcard gcard--slate" href="https://game.xplabs.us/#hearth-and-hunt">
-      <span class="gcard__label">Live build</span>
-      <span class="gcard__name">Hearth &amp; Hunt</span>
-      <span class="gcard__kind">Roblox &middot; PvPvE</span>
-      <span class="gcard__body">Keepers grow the homestead, Hunters go out and fight. Fifteen
-      minutes, ending in the Grand Bloom.</span>
-      <span class="gcard__go">Read more &rarr;</span>
-    </a></li>
+  <a class="dir" href="https://mil.xplabs.us/">
+    <span class="dir__row"><span class="dir__n">Military benefits</span>
+      <span class="dir__tag">mil.xplabs.us</span>
+      <span class="dir__arrow">Open &rarr;</span></span>
+    <span class="dir__b">A free directory for service members, veterans and their families.</span>
+  </a>
 
-  </ul>
-  <p class="games__more"><a href="https://game.xplabs.us/">Full catalog, with what each is built on &rarr;</a></p>
+  <a class="dir" href="/about/">
+    <span class="dir__row"><span class="dir__n">About</span>
+      <span class="dir__tag">Who runs it</span>
+      <span class="dir__arrow">Read &rarr;</span></span>
+    <span class="dir__b">Background on Levi Colby and how XPLabs came to exist.</span>
+  </a>
 </section>
 
-<!-- ===== XP EDUCATION — rust. Not a game, so not a game slab. ===== -->
 <div class="wrap">
-  <section class="slab slab--rust">
-    <div class="slab__in g--lead">
-      <div>
-        <p class="g__label">Free &middot; no account</p>
-        <h2 class="g__name">XP Education</h2>
-        <p class="g__kind">Offline learning platform &middot; installs as an app</p>
-        <p class="g__body">A whole school that works with no connection. Visit once and the
-        entire library — 106 subjects across 14 domains, from K–8 reading and arithmetic through
-        college calculus, chemistry, accounting and Japanese — lives on your device. Real
-        lessons, worked examples, key terms and practice questions, not link lists.</p>
-        <p class="g__body">College courses follow the scope and sequence of
-        <a href="https://openstax.org" rel="noopener">OpenStax</a> open textbooks and link to
-        the full free book. Progress is stored on your device. There are no accounts, no
-        tracking and no paywall, and there is nothing to buy.</p>
-        <ul class="g__specs">
-          <li>106 subjects</li><li>14 domains</li><li>Works offline</li>
-        </ul>
-        <a class="g__go" href="https://learn.xplabs.us/">Start learning &rarr;</a>
-      </div>
-      <div class="domains">
-        <p class="domains__t">What is in it</p>
-        <ul>
-          <li><b>13</b> Mathematics</li>
-          <li><b>11</b> Business</li>
-          <li><b>10</b> Physical science</li>
-          <li><b>8</b> Life science</li>
-          <li><b>8</b> Computer science</li>
-          <li><b>8</b> Social science</li>
-          <li><b>7</b> Languages</li>
-          <li><b>6</b> K&ndash;8 foundations</li>
-          <li><b>6</b> Engineering &amp; trades</li>
-          <li><b>6</b> History</li>
-          <li><b>6</b> Humanities</li>
-          <li><b>6</b> Health</li>
-          <li><b>6</b> Arts</li>
-          <li><b>5</b> Study skills</li>
-        </ul>
-      </div>
+  <section class="invest">
+    <div class="invest__in">
+      <h2>XPLabs is raising.</h2>
+      <p>We are talking to investors. If you back small studios early, there is a
+      short page with the contact route.</p>
+      <a class="invest__go" href="/invest/">Investor contact &rarr;</a>
     </div>
   </section>
 </div>
 
-<section class="wrap dirs">
-  <h2>Also here</h2>
-
-  <a class="dir" href="/engineering/">
-    <span class="dir__row"><span class="dir__n">Engineering</span><span class="dir__arrow">Read &rarr;</span></span>
-    <span class="dir__b">Game design and technical work — how these get built, and what a small
-    team with an AI-augmented pipeline can actually ship.</span>
-  </a>
-
-  <a class="dir" href="https://mil.xplabs.us/">
-    <span class="dir__row"><span class="dir__n">Military benefits</span><span class="dir__arrow">Open the directory &rarr;</span></span>
-    <span class="dir__b">A free directory of 279 programs, benefits and discounts for service
-    members, veterans and their families. No signup, no ads.</span>
-  </a>
-
-  <a class="dir" href="/personal/">
-    <span class="dir__row"><span class="dir__n">Personal</span><span class="dir__arrow">More &rarr;</span></span>
-    <span class="dir__b">Background, writing, and everything that does not belong under a company
-    heading.</span>
-  </a>
-</section>
 </main>
 
 <footer class="foot">
@@ -351,9 +224,8 @@ a{color:inherit}
       Email <a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a>.</p>
     </div>
     <div>
-      <h2>Hiring</h2>
-      <p>Looking for a remote lead developer, Unreal Engine, royalty-based contract.
-      <a href="/engineering/#hiring">Details</a>.</p>
+      <h2>Investors</h2>
+      <p>XPLabs is raising. <a href="/invest/">Get in touch</a>.</p>
     </div>
   </div>
   <div class="wrap foot__meta">© 2026 XPLabs LLC · Honolulu, HI</div>

@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Engineering — XPLabs</title>
-<meta name="description" content="How XPLabs builds across Unreal Engine, Swift, Roblox and dependency-free static web — plus game design and defense technology consulting.">
+<title>Levi Colby — XPLabs</title>
+<meta name="description" content="Founder of XPLabs. Games, a free offline learning platform, and a military benefits directory.">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#17171B">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="canonical" href="https://xplabs.us/engineering/">
-<meta property="og:title" content="Engineering — XPLabs">
-<meta property="og:description" content="How XPLabs builds across Unreal Engine, Swift, Roblox and dependency-free static web — plus game design and defense technology consulting.">
+<link rel="canonical" href="https://xplabs.us/about/">
+<meta property="og:title" content="Levi Colby — XPLabs">
+<meta property="og:description" content="Founder of XPLabs. Games, a free offline learning platform, and a military benefits directory.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://xplabs.us/engineering/">
+<meta property="og:url" content="https://xplabs.us/about/">
 <meta property="og:image" content="https://xplabs.us/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -92,78 +92,40 @@ a{color:inherit}
   <nav aria-label="Primary">
     <a href="https://game.xplabs.us/">Games</a>
     <a href="https://learn.xplabs.us/">Education</a>
-    <a href="/engineering/" aria-current="page">Engineering</a>
+    <a href="/engineering/">Engineering</a>
     <a href="https://mil.xplabs.us/">Benefits</a>
-    <a href="/about/">About</a>
+    <a href="/about/" aria-current="page">About</a>
     <a href="/invest/">Invest</a>
   </nav>
 </header>
 <main id="main">
 <section class="wrap head">
-  <h1>Engineering</h1>
-  <p class="lede">Four games, an offline school and a public benefits directory &mdash; built and
-  shipped by a small team across five different stacks.</p>
+  <h1>Levi Colby</h1>
+  <p class="lede">Founder of XPLabs. I build games, and I build free things that should exist.</p>
 </section>
-
-<div class="wrap">
-  <section class="slab slab--teal">
-    <div class="slab__in">
-      <h2 style="font-size:var(--s-3)">What gets used</h2>
-      <div class="body" style="margin-top:1rem;max-width:56ch">
-        <p>Each project uses whatever actually suits it rather than one house stack. That is a
-        deliberate choice: a survivors game and a benefits directory have nothing in common, and
-        pretending otherwise costs more than it saves.</p>
-      </div>
-      <div class="stack">
-        <div class="item"><b>Unreal Engine 5 &middot; C++</b><span>The Last Station. Mobile-first,
-        forward renderer, small handcrafted zones, async-only backend.</span></div>
-        <div class="item"><b>Swift 6 &middot; SpriteKit</b><span>Space Glyph. Deterministic game
-        engine with its own test suite, StoreKit 2, on-device analytics only.</span></div>
-        <div class="item"><b>SwiftUI &middot; SceneKit</b><span>Life XP. A pure simulation core
-        that does not depend on the UI layer, so saves survive a rewrite of the front end.</span></div>
-        <div class="item"><b>Roblox &middot; Luau</b><span>Hearth &amp; Hunt. Server-authoritative,
-        versioned player profiles, validation on the server side.</span></div>
-        <div class="item"><b>Static HTML &middot; no build</b><span>XP Education and this site.
-        No framework, no npm, no build step &mdash; nothing that can rot between releases.</span></div>
-        <div class="item"><b>AI-augmented pipeline</b><span>Used throughout, with human review
-        gates. It is how a team this size ships across five stacks at once.</span></div>
-      </div>
-    </div>
-  </section>
-</div>
 
 <section class="wrap sec">
-  <h2>How it is built</h2>
   <div class="body">
-    <p>Everything ships behind an automated test suite and a versioned build that lands on a real
-    device. Content and code are separated so a designer can change a card, a lesson or a
-    resource without touching a line of logic.</p>
-    <p>The web work is deliberately dependency-free. XP Education serves 106 subjects as plain
-    files with a service worker; this site is hand-written HTML. Neither has a package manager,
-    a bundler, or a version that can drift. That is a maintenance decision, not a technical
-    limitation &mdash; the hard part of a small project is not building it, it is opening it again
-    six months later.</p>
+    <p>XPLabs is a small studio with four titles in progress &mdash; a mobile survivors game in
+    Unreal Engine, a puzzle-defense campaign and a life simulator on iPhone, and a live Roblox
+    world. The engineering side of that is on the <a href="/engineering/">engineering page</a>,
+    and the games themselves are in the <a href="https://game.xplabs.us/">catalog</a>.</p>
+    <p>Two of the projects are not games and are not for sale.
+    <a href="https://learn.xplabs.us/">XP Education</a> is a free offline learning platform: 106 subjects from
+    K&ndash;8 through college, that work with no connection, no account and no tracking. The
+    <a href="https://mil.xplabs.us/">military benefits directory</a> pulls hundreds of scattered
+    programs for service members, veterans and their families into one place, with a crisis line
+    at the top and no signup anywhere.</p>
+    <p>Both exist for the same reason: the information is real, it is genuinely hard to find, and
+    nobody was going to be paid to fix that.</p>
   </div>
-</section>
-
-<hr class="rule">
-
-<section class="wrap sec" id="consulting">
-  <h2>Consulting</h2>
-  <div class="body">
-    <p><strong>Game design and development.</strong> Open to contract work: systems and economy
-    design, prototyping, mobile performance, shipping to the App Store and Roblox, and setting up
-    AI-augmented pipelines that a small team can actually maintain.</p>
-    <p><strong>Defense and government technology.</strong> Background in the military community,
-    and the tooling above transfers &mdash; deterministic simulation, offline-first software for
-    places with no connectivity, and training and education systems. This is described as
-    capability, not availability: there is no contract vehicle, no registration, and no active
-    engagement to point at yet.</p>
-  </div>
-  <p class="note">If you want to talk about either, email is the fastest route. Rates and
-  availability depend on the work &mdash; ask.</p>
-  <p class="links"><a href="mailto:xp.labs.3d@gmail.com?subject=Consulting">Get in touch</a>
-    <a href="https://game.xplabs.us/">See the work</a></p>
+  <p class="links">
+    <a href="https://www.linkedin.com/in/levicolby/" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/levicobra" rel="noopener">GitHub</a>
+    <a href="mailto:xp.labs.3d@gmail.com">Email</a>
+  </p>
+  <p class="note">More here later &mdash; writing, and the projects that do not fit under a company
+  heading.</p>
 </section>
 </main>
 <footer class="foot">

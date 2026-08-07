@@ -1,8 +1,11 @@
 # Levi Colby
 
-Founder of **XPLabs**, an independent studio in Honolulu. Four games in
-development, a free offline learning platform, and a free benefits directory for
-the military community.
+Founder of **XPLabs**, a consulting studio in Honolulu — game design and
+engineering for clients, four games of its own in development, plus a free
+offline learning platform and a free benefits directory for the military
+community.
+
+XPLabs is raising; see [xplabs.us/invest](https://xplabs.us/invest/).
 
 - 📍 Honolulu, Hawaii
 - 💼 [LinkedIn](https://www.linkedin.com/in/levicolby/)
@@ -61,13 +64,19 @@ is in the repo.
 
 ## This repository
 
-The sites above are built here as three static roots, one per origin:
+The sites above are built here as four static roots, one per origin:
 
 ```
-sites/www/     → xplabs.us
+sites/www/     → xplabs.us        company hub, engineering, about, invest
 sites/game/    → game.xplabs.us
 sites/learn/   → learn.xplabs.us
+sites/mil/     → mil.xplabs.us
 ```
+
+`xplabs.us` is a hub. It says what the company is and points at the four places
+the work lives; it deliberately carries no detail about the games, the subject
+list or the benefits categories. That detail belongs on each origin, and putting
+a second copy on the hub means maintaining two that drift apart.
 
 No build step, no package manager, no framework, and no external requests. See
 [`DEPLOY.md`](DEPLOY.md) for how they are published and
