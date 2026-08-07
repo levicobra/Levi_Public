@@ -3,232 +3,273 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>XPLabs</title>
-<meta name="description" content="XPLabs is a consulting studio in Honolulu. Game development and technical consulting, plus a free offline school and a free benefits directory for the military community.">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#17171B">
-<link rel="icon" href="favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>XPLabs — consulting studio, Honolulu</title>
+<meta name="description" content="XPLabs is a consulting studio in Honolulu. Game design and software engineering across Unreal Engine, Swift, Roblox and dependency-free web — plus two free public resources.">
+<meta name="theme-color" content="#07090A">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://xplabs.us/">
-<meta property="og:title" content="XPLabs">
-<meta property="og:description" content="A consulting studio in Honolulu. Games, engineering, and two free public resources.">
+<meta property="og:title" content="XPLabs — consulting studio, Honolulu">
+<meta property="og:description" content="Game design and software engineering across four stacks. Plus two free public resources.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xplabs.us/">
 <meta property="og:image" content="https://xplabs.us/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+
 <style>
 /* =====================================================================
-   XPLABS — site root
+   XPLabs — site root (the hub)
 
-   This page is a HUB. It says what the company is and points at the five
-   places the actual work lives. Detail belongs on those origins, not here:
-   if you find yourself describing a game, a subject list, or a benefits
-   category on this page, it belongs on game., learn., or mil. instead.
+   HOUSE SYSTEM. These tokens are shared with play.xplabs.us and with the
+   other pages on this origin. If you change a colour or a type step here,
+   change it in every file that carries this same :root block, or the
+   estate drifts apart one page at a time.
+
+   THIS PAGE IS A HUB. It says what the company is and indexes the places
+   the work lives. It carries no game descriptions, no subject lists, no
+   benefit categories. If you catch yourself describing a title here, that
+   text belongs on play.xplabs.us — a second copy is a second thing to
+   keep true, and it is always the copy on the front page that goes stale.
 
    TO EDIT TEXT: search for the words you want to change.
    TO CHANGE COLOURS: edit :root below.
    ===================================================================== */
-:root{
-  --ink:#17171B;         /* 15.0:1 on bone */
-  --ink-2:#4E4E56;       /* 7.4:1 on bone  */
-  --bone:#F0EBE0;
-  --bone-2:#E6E0D2;
-
-  --teal:#0B6155;        /* white type — 7.4:1  */
-  --rust:#A63423;        /* white type — 6.7:1  */
-
-  --display:"Arial Black","Arial Bold",Impact,"Helvetica Neue",Arial,sans-serif;
-  --text:Georgia,"Iowan Old Style",Charter,"Times New Roman",serif;
-  --ui:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-
-  /* ONE modular scale, ratio 1.25, fluid between 360 and 1400.
-     Every size on the page comes from here. */
-  --s-0: 1.0625rem;                                   /* 17px body        */
-  --s-1: clamp(1.25rem, 1.14rem + 0.48vw, 1.5rem);
-  --s-2: clamp(1.5rem,  1.3rem  + 0.9vw,  2rem);
-  --s-3: clamp(1.875rem,1.5rem  + 1.7vw,  2.75rem);
-  --s-5: clamp(2.75rem, 1.5rem  + 5.6vw,  6.5rem);    /* hero only        */
-  --s-min: 0.8125rem;                                 /* 13px labels      */
-
-  --wrap:72rem;
-  --gutter: clamp(1.15rem, 4vw, 3rem);
+:root {
+  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;
+  --line:#1E2527; --line-soft:#161C1D;
+  --paper:#E9EFEC;      /* 16.3:1 on --ink */
+  --muted:#9BA8A3;      /*  7.9:1 on --ink */
+  --muted-dim:#7E8B86;  /*  5.4:1 on --ink — labels only, never body text */
+  --signal:#3DE38A;     /* 11.4:1 on --ink */
+  --amber:#F5A524;      /*  9.6:1 on --ink */
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --t-micro:0.6875rem; --t-small:0.8125rem; --t-body:1.0625rem;
+  --t-lead: clamp(1.125rem, 1.02rem + 0.42vw, 1.375rem);
+  --t-h3:   clamp(1.1875rem, 1.12rem + 0.3vw, 1.4375rem);
+  --t-h2:   clamp(2.0625rem, 1.55rem + 2.35vw, 3.375rem);
+  --gap:1.5rem; --section-y: clamp(4rem, 7vw, 7rem);
+  --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1180px;
+  --radius:3px; --header-h:60px;
 }
 *,*::before,*::after{box-sizing:border-box}
-[hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:var(--bone);color:var(--ink);
-  font-family:var(--text);font-size:var(--s-0);line-height:1.6;
-  overflow-x:clip;-webkit-font-smoothing:antialiased;
+  margin:0; background:var(--ink); color:var(--paper);
+  font-family:var(--sans); font-size:var(--t-body); line-height:1.62;
+  -webkit-font-smoothing:antialiased; overflow-x:clip;
 }
 img{max-width:100%;height:auto;display:block}
 p{margin:0}
 ul{list-style:none;margin:0;padding:0}
-h1,h2,h3{margin:0;font-family:var(--display);font-weight:900;line-height:.94;
-  /* Arial Black is already tightly fitted — it needs LESS negative tracking,
-     not more. One value, applied everywhere. */
-  letter-spacing:-.012em;text-wrap:balance}
 a{color:inherit}
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:.6rem;top:.6rem;z-index:99;background:var(--ink);color:var(--bone);padding:.7rem 1rem}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.skip:focus{left:var(--gutter);top:.5rem;z-index:99;background:var(--signal);color:#04140C;padding:.6rem 1rem;border-radius:var(--radius)}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
 
-/* ---------- masthead ---------- */
-.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
-  gap:.5rem 1rem;padding-block:1.1rem;border-bottom:3px solid var(--ink)}
-.logo{font-family:var(--display);font-size:var(--s-1);letter-spacing:-.02em;text-decoration:none}
-.top nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--ui);font-size:var(--s-min)}
-.top nav a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
-.top nav a:hover,.top nav a[aria-current]{border-bottom-color:var(--ink)}
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(7,9,10,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--header-h)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;font-weight:600}
+.nav-links{display:none;gap:1.75rem}
+@media (min-width:820px){.nav-links{display:flex}}
+.nav-links a{font-size:.9375rem;color:var(--muted);text-decoration:none;transition:color .16s}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--paper)}
+.tick{display:inline-flex;align-items:flex-end;gap:2px;height:11px}
+.tick i{width:2px;background:var(--signal);border-radius:1px;display:block}
+.tick i:nth-child(1){height:35%}.tick i:nth-child(2){height:65%}
+.tick i:nth-child(3){height:100%}.tick i:nth-child(4){height:50%}
 
-/* ---------- hero ---------- */
-.hero{padding-block:clamp(2.5rem,7vw,5.5rem) clamp(1.75rem,4vw,3rem)}
-.hero h1{font-size:var(--s-5)}
-.hero h1 em{font-style:normal;color:var(--rust)}
-.hero__sub{font-size:var(--s-1);max-width:40ch;margin-top:1.4rem;line-height:1.45}
-.hero__facts{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin-top:1.75rem;
-  font-family:var(--ui);font-size:var(--s-min);color:var(--ink-2)}
-.hero__facts b{color:var(--ink);font-weight:700}
+/* ---------- page head ---------- */
+.page-head{padding-block:calc(var(--section-y) * .85) calc(var(--section-y) * .5)}
+.eyebrow{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin:0 0 1.25rem}
+h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25rem;max-width:19ch;text-wrap:balance}
+.lead{font-size:var(--t-lead);color:var(--muted);max-width:60ch;margin:0}
+.lead + .lead{margin-top:1rem}
+.lead strong{color:var(--paper);font-weight:600}
 
-/* ---------- the five places the work lives ----------
-   One row per property. The blurb is one sentence on purpose — anything
-   longer is detail, and detail belongs on the property's own origin. */
-.dirs{padding-block:clamp(1.5rem,4vw,2.5rem) clamp(2.5rem,6vw,4.5rem)}
-.dirs h2{font-size:var(--s-2);margin-bottom:1.5rem}
-.dir{display:block;text-decoration:none;border-top:3px solid var(--ink);padding-block:1.15rem}
-.dir:last-of-type{border-bottom:3px solid var(--ink)}
-.dir__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem}
-.dir__n{font-family:var(--display);font-size:var(--s-2);letter-spacing:-.012em}
-.dir__tag{font-family:var(--ui);font-size:var(--s-min);font-weight:700;letter-spacing:.09em;
-  text-transform:uppercase;color:var(--ink-2)}
-.dir__arrow{font-family:var(--ui);font-size:var(--s-min);font-weight:700;margin-left:auto}
-.dir__b{color:var(--ink-2);max-width:58ch;margin-top:.35rem}
-.dir:hover{background:var(--bone-2)}
-.dir:hover .dir__n{color:var(--rust)}
+/* ---------- section scaffolding ---------- */
+.sec{padding-bottom:var(--section-y)}
+.sec-label{display:flex;align-items:baseline;gap:.9rem;font-family:var(--mono);font-size:var(--t-micro);
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted-dim);
+  padding-bottom:.9rem;margin-bottom:1.5rem;border-bottom:1px solid var(--line-soft)}
+.sec-label span:last-child{margin-left:auto}
+
+/* ---------- the index of origins ----------
+   One row per property. The description is one sentence on purpose. */
+.index{display:grid;gap:1rem}
+@media (min-width:760px){.index{grid-template-columns:repeat(2,1fr)}}
+.node{
+  display:grid;gap:.55rem;align-content:start;
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
+  padding:clamp(1.25rem,2.6vw,1.75rem);
+  text-decoration:none;transition:border-color .16s,background .16s;
+}
+.node:hover{border-color:var(--signal);background:var(--surface-2)}
+.node__top{display:flex;align-items:center;gap:.7rem;font-family:var(--mono);
+  font-size:var(--t-micro);letter-spacing:.16em;text-transform:uppercase;color:var(--muted-dim)}
+.node__host{margin-left:auto;color:var(--amber);text-transform:none;letter-spacing:.04em}
+.node__name{font-size:var(--t-h3);letter-spacing:-.014em;margin:0}
+.node__body{color:var(--muted);margin:0;font-size:.9688rem}
+.node__go{font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--signal);margin-top:.35rem}
+.node:hover .node__go{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- capability grid ---------- */
+.caps{display:grid;gap:0;border:1px solid var(--line-soft);border-radius:var(--radius);
+  background:var(--ink-2);overflow:hidden}
+@media (min-width:700px){.caps{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.caps{grid-template-columns:repeat(3,1fr)}}
+.cap{padding:1.15rem 1.25rem;border-bottom:1px solid var(--line-soft);border-right:1px solid var(--line-soft)}
+.cap b{display:block;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--signal);margin-bottom:.45rem;font-weight:600}
+.cap span{display:block;color:var(--muted);font-size:.9375rem;line-height:1.55}
 
 /* ---------- invest strip ---------- */
-.invest{
-  margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
-  padding-left:calc(50vw - 50% + var(--gutter));padding-right:calc(50vw - 50% + var(--gutter));
-  padding-block:clamp(2rem,4.5vw,3rem);
-  background:var(--teal);color:#fff;
-}
-.invest__in{max-width:var(--wrap);margin-inline:auto}
-.invest h2{font-size:var(--s-3)}
-.invest p{margin-top:.9rem;max-width:54ch;line-height:1.6}
-.invest__go{display:inline-block;margin-top:1.3rem;font-family:var(--ui);font-size:var(--s-min);
-  font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;
-  border-bottom:3px solid currentColor;padding-bottom:3px}
-.invest :focus-visible{outline-color:#fff}
+.strip{border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:var(--radius);
+  background:var(--surface);padding:clamp(1.5rem,3.2vw,2.25rem);
+  display:grid;gap:1rem}
+@media (min-width:820px){.strip{grid-template-columns:1fr auto;align-items:center;gap:2.5rem}}
+.strip h2{font-size:var(--t-h3);margin:0 0 .5rem;letter-spacing:-.014em}
+.strip p{color:var(--muted);margin:0;max-width:56ch;font-size:.9688rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;justify-self:start;white-space:nowrap;
+  font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;color:#04140C;background:var(--signal);
+  padding:.7rem 1.1rem;border-radius:var(--radius);transition:opacity .16s}
+.btn:hover{opacity:.86}
 
 /* ---------- footer ---------- */
-.foot{background:var(--ink);color:var(--bone);padding-block:2.5rem 3rem}
-.foot__grid{display:grid;gap:1.5rem}
-@media (min-width:720px){.foot__grid{grid-template-columns:1.3fr 1fr}}
-.foot h2{font-size:var(--s-1)}
-.foot p{margin-top:.5rem;color:#C9C4B8}
-.foot a{color:var(--bone)}
-.foot__meta{margin-top:2rem;padding-top:1rem;border-top:1px solid #3A3A42;
-  font-family:var(--ui);font-size:var(--s-min);color:#9A958A}
+.site-footer{border-top:1px solid var(--line-soft);padding-block:2.5rem;color:var(--muted-dim);font-size:var(--t-small)}
+.site-footer a{color:var(--muted);text-decoration:none}
+.site-footer a:hover{color:var(--paper)}
+.foot-row{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:baseline}
 
-@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
 </style>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="wrap top">
-  <a class="logo" href="/">XPLABS</a>
-  <nav aria-label="Primary">
-    <a href="https://game.xplabs.us/">Games</a>
-    <a href="https://learn.xplabs.us/">Education</a>
-    <a href="/engineering/">Engineering</a>
-    <a href="https://mil.xplabs.us/">Benefits</a>
-    <a href="/about/">About</a>
-    <a href="/invest/">Invest</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="/">
+      <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      XPLabs
+    </a>
+    <div class="nav-links">
+      <a href="https://play.xplabs.us/">Games</a>
+      <a href="https://learn.xplabs.us/">Education</a>
+      <a href="/engineering/">Engineering</a>
+      <a href="https://mil.xplabs.us/">Benefits</a>
+      <a href="/about/">About</a>
+      <a href="/invest/">Invest</a>
+    </div>
   </nav>
 </header>
 
 <main id="main">
 
-<section class="wrap hero">
-  <h1>XPLabs is a studio<br>in <em>Honolulu</em>.</h1>
-  <p class="hero__sub">Consulting and product development — game design, engineering, and
-  shipping small things properly. Two of the things we build are free and always will be.</p>
-  <p class="hero__facts">
-    <span>Founded <b>2026</b></span>
-    <span><b>Honolulu, HI</b></span>
-    <span><b>0</b> accounts, ads or trackers, anywhere</span>
+<section class="wrap page-head">
+  <p class="eyebrow">
+    <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    XPLabs LLC · Honolulu, Hawaii
   </p>
+  <h1>A consulting studio that ships.</h1>
+  <p class="lead">XPLabs takes on game design and software engineering for clients, and builds
+  its own titles across four stacks &mdash; <strong>Unreal Engine, Swift, Roblox and
+  dependency-free web</strong>.</p>
+  <p class="lead">Two of the things we run are free, carry no accounts, no ads and no trackers,
+  and always will. They are not marketing for something else. They are the clearest evidence of
+  what this studio can build and finish.</p>
 </section>
 
-<!-- ===== The five properties. One line each. Detail lives on each origin. ===== -->
-<section class="wrap dirs">
-  <h2>Where the work is</h2>
+<!-- ===== The index. One line each. Detail lives on each origin. ===== -->
+<section class="wrap sec">
+  <p class="sec-label"><span>Index</span><span>05 destinations</span></p>
 
-  <a class="dir" href="https://game.xplabs.us/">
-    <span class="dir__row"><span class="dir__n">Games</span>
-      <span class="dir__tag">game.xplabs.us</span>
-      <span class="dir__arrow">Open &rarr;</span></span>
-    <span class="dir__b">Four titles across Unreal Engine, native iOS and Roblox.</span>
-  </a>
+  <div class="index">
 
-  <a class="dir" href="https://learn.xplabs.us/">
-    <span class="dir__row"><span class="dir__n">Education</span>
-      <span class="dir__tag">learn.xplabs.us</span>
-      <span class="dir__arrow">Open &rarr;</span></span>
-    <span class="dir__b">A free school that works with no connection. No account, no paywall.</span>
-  </a>
+    <a class="node" href="https://play.xplabs.us/">
+      <span class="node__top"><span>01</span><span class="node__host">play.xplabs.us</span></span>
+      <span class="node__name">Games</span>
+      <span class="node__body">Four titles across Unreal Engine, native iOS and Roblox.</span>
+      <span class="node__go">Open catalog &rarr;</span>
+    </a>
 
-  <a class="dir" href="/engineering/">
-    <span class="dir__row"><span class="dir__n">Engineering</span>
-      <span class="dir__tag">Consulting</span>
-      <span class="dir__arrow">Read &rarr;</span></span>
-    <span class="dir__b">How this work gets built, and what XPLabs takes on for clients.</span>
-  </a>
+    <a class="node" href="https://learn.xplabs.us/">
+      <span class="node__top"><span>02</span><span class="node__host">learn.xplabs.us</span></span>
+      <span class="node__name">Education</span>
+      <span class="node__body">A free school that works with no connection. No account, no paywall.</span>
+      <span class="node__go">Start learning &rarr;</span>
+    </a>
 
-  <a class="dir" href="https://mil.xplabs.us/">
-    <span class="dir__row"><span class="dir__n">Military benefits</span>
-      <span class="dir__tag">mil.xplabs.us</span>
-      <span class="dir__arrow">Open &rarr;</span></span>
-    <span class="dir__b">A free directory for service members, veterans and their families.</span>
-  </a>
+    <a class="node" href="/engineering/">
+      <span class="node__top"><span>03</span><span class="node__host">Consulting</span></span>
+      <span class="node__name">Engineering</span>
+      <span class="node__body">What XPLabs takes on for clients, and how the work gets built.</span>
+      <span class="node__go">Read &rarr;</span>
+    </a>
 
-  <a class="dir" href="/about/">
-    <span class="dir__row"><span class="dir__n">About</span>
-      <span class="dir__tag">Who runs it</span>
-      <span class="dir__arrow">Read &rarr;</span></span>
-    <span class="dir__b">Background on Levi Colby and how XPLabs came to exist.</span>
-  </a>
+    <a class="node" href="https://mil.xplabs.us/">
+      <span class="node__top"><span>04</span><span class="node__host">mil.xplabs.us</span></span>
+      <span class="node__name">Military benefits</span>
+      <span class="node__body">A free directory for service members, veterans and their families.</span>
+      <span class="node__go">Open directory &rarr;</span>
+    </a>
+
+    <a class="node" href="/about/">
+      <span class="node__top"><span>05</span><span class="node__host">Who runs it</span></span>
+      <span class="node__name">About</span>
+      <span class="node__body">Levi Colby, and how XPLabs came to exist.</span>
+      <span class="node__go">Read &rarr;</span>
+    </a>
+
+  </div>
 </section>
 
-<div class="wrap">
-  <section class="invest">
-    <div class="invest__in">
+<!-- ===== What the studio actually does ===== -->
+<section class="wrap sec">
+  <p class="sec-label"><span>Capability</span><span>What we take on</span></p>
+  <div class="caps">
+    <div class="cap"><b>Game development</b><span>Unreal Engine 5 on mobile, native Swift on
+      iPhone, and server-authoritative Roblox.</span></div>
+    <div class="cap"><b>Simulation systems</b><span>Deterministic, reproducible engines with
+      their own test suites, independent of the UI layer.</span></div>
+    <div class="cap"><b>Web without a stack</b><span>Sites with no build step, no package
+      manager and no external requests &mdash; nothing that rots between releases.</span></div>
+    <div class="cap"><b>AI-augmented delivery</b><span>Used throughout, with human review gates.
+      It is how a team this size ships across four stacks at once.</span></div>
+    <div class="cap"><b>Offline-first products</b><span>Applications that install once and keep
+      working with no connection and no account.</span></div>
+    <div class="cap"><b>Public-interest work</b><span>Free resources built to the same standard
+      as the commercial work, because that is the point of them.</span></div>
+  </div>
+</section>
+
+<!-- ===== Invest ===== -->
+<section class="wrap sec">
+  <div class="strip">
+    <div>
       <h2>XPLabs is raising.</h2>
-      <p>We are talking to investors. If you back small studios early, there is a
-      short page with the contact route.</p>
-      <a class="invest__go" href="/invest/">Investor contact &rarr;</a>
+      <p>We are talking to investors who back small studios early. Stage, raise size and
+      traction are shared directly rather than posted publicly.</p>
     </div>
-  </section>
-</div>
+    <a class="btn" href="/invest/">Investor contact &rarr;</a>
+  </div>
+</section>
 
 </main>
 
-<footer class="foot">
-  <div class="wrap foot__grid">
-    <div>
-      <h2>Work with XPLabs</h2>
-      <p>Open to contract and collaboration on game design and development.
-      Email <a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a>.</p>
-    </div>
-    <div>
-      <h2>Investors</h2>
-      <p>XPLabs is raising. <a href="/invest/">Get in touch</a>.</p>
-    </div>
+<footer class="site-footer">
+  <div class="wrap foot-row">
+    <span>© 2026 XPLabs LLC · Honolulu, HI</span>
+    <span><a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a></span>
   </div>
-  <div class="wrap foot__meta">© 2026 XPLabs LLC · Honolulu, HI</div>
 </footer>
 
 </body>

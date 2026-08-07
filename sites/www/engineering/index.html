@@ -4,174 +4,253 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Engineering — XPLabs</title>
-<meta name="description" content="How XPLabs builds across Unreal Engine, Swift, Roblox and dependency-free static web — plus game design and defense technology consulting.">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#17171B">
+<meta name="description" content="How XPLabs builds across Unreal Engine, Swift, Roblox and dependency-free static web — and the consulting work the studio takes on.">
+<meta name="theme-color" content="#07090A">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://xplabs.us/engineering/">
 <meta property="og:title" content="Engineering — XPLabs">
-<meta property="og:description" content="How XPLabs builds across Unreal Engine, Swift, Roblox and dependency-free static web — plus game design and defense technology consulting.">
+<meta property="og:description" content="Four stacks, no house framework, and consulting work the studio takes on.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xplabs.us/engineering/">
 <meta property="og:image" content="https://xplabs.us/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+
 <style>
-/* Tokens match the site root. Change a colour here and change it there too. */
-:root{
-  --ink:#17171B; --ink-2:#4E4E56; --bone:#F0EBE0; --bone-2:#E6E0D2;
-  --teal:#0B6155; --ultra:#20338C; --rust:#A63423; --mustard:#C98A06;
-  --display:"Arial Black","Arial Bold",Impact,"Helvetica Neue",Arial,sans-serif;
-  --text:Georgia,"Iowan Old Style",Charter,"Times New Roman",serif;
-  --ui:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --s-0:1.0625rem;
-  --s-1:clamp(1.25rem,1.14rem + 0.48vw,1.5rem);
-  --s-2:clamp(1.5rem,1.3rem + 0.9vw,2rem);
-  --s-3:clamp(1.875rem,1.5rem + 1.7vw,2.75rem);
-  --s-4:clamp(2.25rem,1.6rem + 2.9vw,4rem);
-  --s-min:0.8125rem;
-  --wrap:72rem; --gutter:clamp(1.15rem,4vw,3rem);
+/* =====================================================================
+   XPLabs — Engineering
+
+   This page is the consulting pitch and the technical record. It is the
+   one page an investor or a prospective client will read closely, so
+   every claim on it has to be one you could be asked to demonstrate.
+
+   The "Defense and government" block is written as CAPABILITY, not
+   availability, and says so out loud. Do not quietly upgrade that
+   language — there is no contract vehicle, no registration and no active
+   engagement, and implying otherwise is the kind of thing that ends a
+   conversation badly.
+
+   HOUSE SYSTEM: the :root block is shared across this origin and
+   play.xplabs.us. Change it in one file and change it in all of them.
+   ===================================================================== */
+:root {
+  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;
+  --line:#1E2527; --line-soft:#161C1D;
+  --paper:#E9EFEC; --muted:#9BA8A3; --muted-dim:#7E8B86;
+  --signal:#3DE38A; --amber:#F5A524;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --t-micro:0.6875rem; --t-small:0.8125rem; --t-body:1.0625rem;
+  --t-lead: clamp(1.125rem, 1.02rem + 0.42vw, 1.375rem);
+  --t-h3:   clamp(1.1875rem, 1.12rem + 0.3vw, 1.4375rem);
+  --t-h2:   clamp(2.0625rem, 1.55rem + 2.35vw, 3.375rem);
+  --gap:1.5rem; --section-y: clamp(4rem, 7vw, 7rem);
+  --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1180px;
+  --radius:3px; --header-h:60px;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--text);
-  font-size:var(--s-0);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+body{
+  margin:0; background:var(--ink); color:var(--paper);
+  font-family:var(--sans); font-size:var(--t-body); line-height:1.62;
+  -webkit-font-smoothing:antialiased; overflow-x:clip;
+}
+img{max-width:100%;height:auto;display:block}
 p{margin:0}
 ul{list-style:none;margin:0;padding:0}
-h1,h2,h3{margin:0;font-family:var(--display);font-weight:900;line-height:.98;
-  letter-spacing:-.012em;text-wrap:balance}
 a{color:inherit}
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:.6rem;top:.6rem;z-index:99;background:var(--ink);color:var(--bone);padding:.7rem 1rem}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.slab :focus-visible{outline-color:#fff}
-.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
-  gap:.5rem 1rem;padding-block:1.1rem;border-bottom:3px solid var(--ink)}
-.logo{font-family:var(--display);font-size:var(--s-1);letter-spacing:-.02em;text-decoration:none}
-.top nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--ui);font-size:var(--s-min)}
-.top nav a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
-.top nav a:hover,.top nav a[aria-current]{border-bottom-color:var(--ink)}
-.head{padding-block:clamp(2.25rem,6vw,4rem) clamp(1.5rem,3vw,2.5rem)}
-.head h1{font-size:var(--s-4)}
-.head .lede{font-size:var(--s-1);max-width:44ch;margin-top:1.1rem;line-height:1.45}
-.slab{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
-  padding-left:calc(50vw - 50% + var(--gutter));padding-right:calc(50vw - 50% + var(--gutter));
-  padding-block:clamp(2rem,4.5vw,3.25rem);color:#fff}
-.slab--teal{background:var(--teal)}
-.slab--ultra{background:var(--ultra)}
-.slab--rust{background:var(--rust)}
-.slab__in{max-width:var(--wrap);margin-inline:auto}
-.sec{padding-block:clamp(2rem,5vw,3.5rem)}
-.sec h2{font-size:var(--s-2);margin-bottom:1rem}
-.body{max-width:58ch}
-.body p + p{margin-top:.9rem}
-.body a{text-decoration:underline;text-underline-offset:2px}
-.rule{border:0;border-top:3px solid var(--ink);margin:0}
-.stack{display:grid;gap:.75rem;margin-top:1.25rem}
-@media (min-width:700px){.stack{grid-template-columns:repeat(2,1fr)}}
-.item{border-top:2px solid currentColor;padding-top:.7rem}
-.item b{display:block;font-family:var(--ui);font-size:var(--s-min);font-weight:700;
-  letter-spacing:.08em;text-transform:uppercase;margin-bottom:.3rem}
-.item span{display:block;font-size:.9375rem;line-height:1.5;opacity:.92}
-.note{font-family:var(--ui);font-size:var(--s-min);color:var(--ink-2);margin-top:1.25rem;max-width:60ch}
-.links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem;font-family:var(--ui);font-size:var(--s-min)}
-.links a{border:2px solid var(--ink);padding:.45rem .8rem;text-decoration:none;font-weight:700}
-.links a:hover{background:var(--ink);color:var(--bone)}
-.foot{background:var(--ink);color:var(--bone);padding-block:2.25rem 2.75rem;margin-top:2rem}
-.foot a{color:var(--bone)}
-.foot__meta{margin-top:1.25rem;padding-top:1rem;border-top:1px solid #3A3A42;
-  font-family:var(--ui);font-size:var(--s-min);color:#9A958A}
-@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+.skip:focus{left:var(--gutter);top:.5rem;z-index:99;background:var(--signal);color:#04140C;padding:.6rem 1rem;border-radius:var(--radius)}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+.site-header{position:sticky;top:0;z-index:40;background:rgba(7,9,10,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--header-h)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;font-weight:600}
+.nav-links{display:none;gap:1.75rem}
+@media (min-width:820px){.nav-links{display:flex}}
+.nav-links a{font-size:.9375rem;color:var(--muted);text-decoration:none;transition:color .16s}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--paper)}
+.tick{display:inline-flex;align-items:flex-end;gap:2px;height:11px}
+.tick i{width:2px;background:var(--signal);border-radius:1px;display:block}
+.tick i:nth-child(1){height:35%}.tick i:nth-child(2){height:65%}
+.tick i:nth-child(3){height:100%}.tick i:nth-child(4){height:50%}
+
+.page-head{padding-block:calc(var(--section-y) * .85) calc(var(--section-y) * .5)}
+.eyebrow{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin:0 0 1.25rem}
+h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25rem;max-width:17ch;text-wrap:balance}
+.lead{font-size:var(--t-lead);color:var(--muted);max-width:60ch;margin:0}
+.lead strong{color:var(--paper);font-weight:600}
+
+.sec{padding-bottom:var(--section-y)}
+.sec-label{display:flex;align-items:baseline;gap:.9rem;font-family:var(--mono);font-size:var(--t-micro);
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted-dim);
+  padding-bottom:.9rem;margin-bottom:1.5rem;border-bottom:1px solid var(--line-soft)}
+.sec-label span:last-child{margin-left:auto}
+
+/* stack rows — the technical record, read as a table */
+.stack{display:grid;gap:0;border:1px solid var(--line-soft);border-radius:var(--radius);
+  background:var(--ink-2);overflow:hidden}
+.row{display:grid;gap:.35rem 1.5rem;padding:1.15rem 1.25rem;border-bottom:1px solid var(--line-soft)}
+@media (min-width:820px){.row{grid-template-columns:230px 1fr;align-items:baseline}}
+.row:last-child{border-bottom:0}
+.row b{font-family:var(--mono);font-size:var(--t-small);letter-spacing:.06em;
+  color:var(--amber);font-weight:600}
+.row span{color:var(--muted);font-size:.9688rem;line-height:1.6}
+.row span strong{color:var(--paper);font-weight:600}
+
+.prose{color:var(--muted);max-width:62ch}
+.prose p + p{margin-top:1rem}
+.prose strong{color:var(--paper);font-weight:600}
+.prose a{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .16s}
+.prose a:hover{border-bottom-color:var(--signal)}
+
+.offer{display:grid;gap:1rem}
+@media (min-width:900px){.offer{grid-template-columns:repeat(2,1fr)}}
+.card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
+  padding:clamp(1.25rem,2.6vw,1.75rem)}
+.card h3{font-size:var(--t-h3);margin:0 0 .6rem;letter-spacing:-.014em}
+.card p{color:var(--muted);font-size:.9688rem;margin:0}
+.card p + p{margin-top:.8rem}
+.card--caveat{border-left:3px solid var(--amber)}
+.flag{display:inline-block;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--amber);margin-bottom:.6rem}
+
+.contact{border:1px solid var(--line);border-left:3px solid var(--signal);border-radius:var(--radius);
+  background:var(--surface);padding:clamp(1.5rem,3.2vw,2.25rem);margin-top:1.5rem}
+.contact h2{font-size:var(--t-h3);margin:0 0 .6rem;letter-spacing:-.014em}
+.contact p{color:var(--muted);margin:0 0 1.15rem;max-width:58ch;font-size:.9688rem}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;color:#04140C;background:var(--signal);
+  padding:.7rem 1.1rem;border-radius:var(--radius);transition:opacity .16s}
+.btn:hover{opacity:.86}
+.btn--ghost{background:transparent;color:var(--paper);border:1px solid var(--line)}
+.btn--ghost:hover{border-color:var(--signal);opacity:1}
+
+.site-footer{border-top:1px solid var(--line-soft);padding-block:2.5rem;color:var(--muted-dim);font-size:var(--t-small)}
+.site-footer a{color:var(--muted);text-decoration:none}
+.site-footer a:hover{color:var(--paper)}
+.foot-row{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:baseline}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
 </style>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
-<header class="wrap top">
-  <a class="logo" href="/">XPLABS</a>
-  <nav aria-label="Primary">
-    <a href="https://game.xplabs.us/">Games</a>
-    <a href="https://learn.xplabs.us/">Education</a>
-    <a href="/engineering/" aria-current="page">Engineering</a>
-    <a href="https://mil.xplabs.us/">Benefits</a>
-    <a href="/about/">About</a>
-    <a href="/invest/">Invest</a>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="/">
+      <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      XPLabs
+    </a>
+    <div class="nav-links">
+      <a href="https://play.xplabs.us/">Games</a>
+      <a href="https://learn.xplabs.us/">Education</a>
+      <a href="/engineering/" aria-current="page">Engineering</a>
+      <a href="https://mil.xplabs.us/">Benefits</a>
+      <a href="/about/">About</a>
+      <a href="/invest/">Invest</a>
+    </div>
   </nav>
 </header>
-<main id="main">
-<section class="wrap head">
-  <h1>Engineering</h1>
-  <p class="lede">Four games, an offline school and a public benefits directory &mdash; built and
-  shipped by a small team across five different stacks.</p>
-</section>
 
-<div class="wrap">
-  <section class="slab slab--teal">
-    <div class="slab__in">
-      <h2 style="font-size:var(--s-3)">What gets used</h2>
-      <div class="body" style="margin-top:1rem;max-width:56ch">
-        <p>Each project uses whatever actually suits it rather than one house stack. That is a
-        deliberate choice: a survivors game and a benefits directory have nothing in common, and
-        pretending otherwise costs more than it saves.</p>
-      </div>
-      <div class="stack">
-        <div class="item"><b>Unreal Engine 5 &middot; C++</b><span>The Last Station. Mobile-first,
-        forward renderer, small handcrafted zones, async-only backend.</span></div>
-        <div class="item"><b>Swift 6 &middot; SpriteKit</b><span>Space Glyph. Deterministic game
-        engine with its own test suite, StoreKit 2, on-device analytics only.</span></div>
-        <div class="item"><b>SwiftUI &middot; SceneKit</b><span>Life XP. A pure simulation core
-        that does not depend on the UI layer, so saves survive a rewrite of the front end.</span></div>
-        <div class="item"><b>Roblox &middot; Luau</b><span>Hearth &amp; Hunt. Server-authoritative,
-        versioned player profiles, validation on the server side.</span></div>
-        <div class="item"><b>Static HTML &middot; no build</b><span>XP Education and this site.
-        No framework, no npm, no build step &mdash; nothing that can rot between releases.</span></div>
-        <div class="item"><b>AI-augmented pipeline</b><span>Used throughout, with human review
-        gates. It is how a team this size ships across five stacks at once.</span></div>
-      </div>
-    </div>
-  </section>
-</div>
+<main id="main">
+
+<section class="wrap page-head">
+  <p class="eyebrow">
+    <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    Consulting · technical record
+  </p>
+  <h1>Four stacks. No house framework.</h1>
+  <p class="lead">Each project uses what actually suits it rather than one studio stack. A
+  survivors game and a benefits directory have nothing in common, and
+  <strong>pretending otherwise costs more than it saves</strong>.</p>
+</section>
 
 <section class="wrap sec">
-  <h2>How it is built</h2>
-  <div class="body">
+  <p class="sec-label"><span>Stack</span><span>What gets used, and where</span></p>
+  <div class="stack">
+    <div class="row"><b>Unreal Engine 5 · C++</b><span>Mobile-first, forward renderer, small
+      handcrafted zones, async-only backend.</span></div>
+    <div class="row"><b>Swift 6 · SpriteKit</b><span>A deterministic game engine with its own
+      test suite, StoreKit 2, and on-device analytics only.</span></div>
+    <div class="row"><b>SwiftUI · SceneKit</b><span>A pure simulation core that does not depend
+      on the UI layer, so <strong>saves survive a rewrite of the front end</strong>.</span></div>
+    <div class="row"><b>Roblox · Luau</b><span>Server-authoritative, versioned player profiles,
+      validation on the server side.</span></div>
+    <div class="row"><b>Static HTML · no build</b><span>This site and XP Education. No framework,
+      no npm, no build step &mdash; nothing that can rot between releases.</span></div>
+    <div class="row"><b>AI-augmented pipeline</b><span>Used throughout, with human review gates.
+      It is how a team this size ships across four stacks at once.</span></div>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <p class="sec-label"><span>Method</span><span>How it is built</span></p>
+  <div class="prose">
     <p>Everything ships behind an automated test suite and a versioned build that lands on a real
-    device. Content and code are separated so a designer can change a card, a lesson or a
+    device. Content and code are separated, so a designer can change a card, a lesson or a
     resource without touching a line of logic.</p>
     <p>The web work is deliberately dependency-free. XP Education serves 106 subjects as plain
-    files with a service worker; this site is hand-written HTML. Neither has a package manager,
-    a bundler, or a version that can drift. That is a maintenance decision, not a technical
-    limitation &mdash; the hard part of a small project is not building it, it is opening it again
-    six months later.</p>
+    files with a service worker; this site is hand-written HTML. Neither has a package manager, a
+    bundler, or a version that can drift. <strong>That is a maintenance decision, not a technical
+    limitation</strong> &mdash; the hard part of a small project is not building it, it is opening
+    it again six months later.</p>
+    <p>You can check all of this rather than take it on trust: the
+    <a href="https://play.xplabs.us/">catalog</a> documents every title at equal depth, and both
+    free products are live and inspectable.</p>
   </div>
 </section>
-
-<hr class="rule">
 
 <section class="wrap sec" id="consulting">
-  <h2>Consulting</h2>
-  <div class="body">
-    <p><strong>Game design and development.</strong> Open to contract work: systems and economy
-    design, prototyping, mobile performance, shipping to the App Store and Roblox, and setting up
-    AI-augmented pipelines that a small team can actually maintain.</p>
-    <p><strong>Defense and government technology.</strong> Background in the military community,
-    and the tooling above transfers &mdash; deterministic simulation, offline-first software for
-    places with no connectivity, and training and education systems. This is described as
-    capability, not availability: there is no contract vehicle, no registration, and no active
-    engagement to point at yet.</p>
+  <p class="sec-label"><span>Consulting</span><span>What the studio takes on</span></p>
+  <div class="offer">
+
+    <div class="card">
+      <h3>Game design and development</h3>
+      <p>Systems and economy design, prototyping, mobile performance, shipping to the App Store
+      and Roblox, and setting up AI-augmented pipelines a small team can actually maintain.</p>
+      <p>Rates and availability depend on the work &mdash; ask.</p>
+    </div>
+
+    <div class="card card--caveat">
+      <span class="flag">Capability, not availability</span>
+      <h3>Defense and government technology</h3>
+      <p>Background in the military community, and the tooling above transfers: deterministic
+      simulation, offline-first software for places with no connectivity, and training and
+      education systems.</p>
+      <p>Stated plainly &mdash; there is <strong>no contract vehicle, no registration, and no
+      active engagement</strong> to point at yet. This is what the studio can do, not what it has
+      already been contracted to do.</p>
+    </div>
+
   </div>
-  <p class="note">If you want to talk about either, email is the fastest route. Rates and
-  availability depend on the work &mdash; ask.</p>
-  <p class="links"><a href="mailto:xp.labs.3d@gmail.com?subject=Consulting">Get in touch</a>
-    <a href="https://game.xplabs.us/">See the work</a></p>
+
+  <div class="contact">
+    <h2>Talk to us</h2>
+    <p>Email is the fastest route for either. A sentence about the problem is enough to start.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:xp.labs.3d@gmail.com?subject=Consulting">Get in touch &rarr;</a>
+      <a class="btn btn--ghost" href="https://play.xplabs.us/">See the work</a>
+    </div>
+  </div>
 </section>
+
 </main>
-<footer class="foot">
-  <div class="wrap">
-    <p><strong>XPLabs LLC</strong> &mdash; games, an offline school, and a free benefits directory.</p>
-    <p style="margin-top:.4rem"><a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a></p>
-    <div class="foot__meta">&copy; 2026 XPLabs LLC &middot; Honolulu, HI</div>
+
+<footer class="site-footer">
+  <div class="wrap foot-row">
+    <span>© 2026 XPLabs LLC · Honolulu, HI</span>
+    <span><a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a></span>
   </div>
 </footer>
+
 </body>
 </html>

@@ -29,7 +29,7 @@ choose `levicobra/Levi_Public`, then set:
 | Project name | Production branch | Framework preset | Build command | Build output directory |
 |---|---|---|---|---|
 | `xplabs-www` | `main` | None | *(leave empty)* | `sites/www` |
-| `xplabs-game` | `main` | None | *(leave empty)* | `sites/game` |
+| `xplabs-play` | `main` | None | *(leave empty)* | `sites/play` |
 | `xplabs-learn` | `main` | None | *(leave empty)* | `sites/learn` |
 | `xplabs-mil` | `main` | None | *(leave empty)* | `sites/mil` |
 
@@ -56,7 +56,7 @@ Per project: **Custom domains → Set up a custom domain**.
 | Project | Domain |
 |---|---|
 | `xplabs-www` | `xplabs.us` |
-| `xplabs-game` | `game.xplabs.us` |
+| `xplabs-play` | `play.xplabs.us` |
 | `xplabs-learn` | `learn.xplabs.us` |
 | `xplabs-mil` | `mil.xplabs.us` |
 
@@ -77,7 +77,7 @@ link was a dead end and every check passed.
 for u in https://xplabs.us/ https://xplabs.us/engineering/ \
          https://xplabs.us/about/ https://xplabs.us/invest/ \
          https://mil.xplabs.us/ \
-         https://game.xplabs.us/ https://learn.xplabs.us/; do
+         https://play.xplabs.us/ https://learn.xplabs.us/; do
   printf '%s  ' "$(curl -s -o /dev/null -w '%{http_code}' "$u")"; echo "$u"
 done
 ```
@@ -96,7 +96,7 @@ curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' \
   https://xplabs.us/military-benefits/          # expect 301 -> https://mil.xplabs.us/
 
 # The share images exist, since a missing one is invisible until someone posts a link
-for u in https://xplabs.us/og.jpg https://game.xplabs.us/og.jpg \
+for u in https://xplabs.us/og.jpg https://play.xplabs.us/og.jpg \
          https://learn.xplabs.us/og.jpg https://mil.xplabs.us/og.jpg; do
   printf '%s  ' "$(curl -s -o /dev/null -w '%{http_code}' "$u")"; echo "$u"
 done

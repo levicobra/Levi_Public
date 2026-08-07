@@ -15,7 +15,7 @@ Paste this into a fresh session, along with a clone of this repository.
 
 > You are taking over the XPLabs website. The repository is `levicobra/Levi_Public`.
 > The source is the `sites/` directory. It is **four separate origins**, each a
-> deployable root: `sites/www` → `xplabs.us`, `sites/game` → `game.xplabs.us`,
+> deployable root: `sites/www` → `xplabs.us`, `sites/play` → `play.xplabs.us`,
 > `sites/learn` → `learn.xplabs.us`, `sites/mil` → `mil.xplabs.us`. Each needs its
 > own Cloudflare Pages project.
 >
@@ -33,7 +33,7 @@ Paste this into a fresh session, along with a clone of this repository.
 > that is a signal the addition does not belong here.
 >
 > Live areas: `xplabs.us` is a company hub plus engineering, about and invest
-> pages; a games catalog on `game.xplabs.us`; a self-contained offline learning
+> pages; a games catalog on `play.xplabs.us`; a self-contained offline learning
 > app on `learn.xplabs.us`; a benefits directory on `mil.xplabs.us`. The hub
 > carries no detail about the games, the subject list or the benefits categories
 > — that lives on each origin, and a second copy on the hub only drifts. Two
@@ -69,7 +69,7 @@ extra — but each is a **separate Cloudflare Pages project**.
 | Origin | Source | What it is | Status |
 |---|---|---|---|
 | `xplabs.us` | `sites/www` | Company hub, engineering, about, invest | Built |
-| `game.xplabs.us` | `sites/game` | Games catalog — all four titles, equal depth | Built |
+| `play.xplabs.us` | `sites/play` | Games catalog — all four titles, equal depth | Built |
 | `learn.xplabs.us` | `sites/learn` | XP Education — 106 subjects, 14 domains | Built |
 | `mil.xplabs.us` | `sites/mil` | Military benefits — 279 resources, 13 categories | Built |
 | `levi.xplabs.us` | — | Private personal dashboard (section 5) | **Not built** |
@@ -80,7 +80,7 @@ own origin now; `sites/www/_redirects` 301s the old path so existing links and
 anything already in print still land.
 
 **Cross-origin links must be absolute.** Within an origin they stay relative; a
-link from `xplabs.us` to the catalog is `https://game.xplabs.us/`, not `/games/`.
+link from `xplabs.us` to the catalog is `https://play.xplabs.us/`, not `/games/`.
 The nav on every page follows this rule — if you add a page, match it.
 
 The four games are **The Last Station** (Unreal Engine 5, mobile),
@@ -129,7 +129,7 @@ sites/
     _headers
     favicon.svg  favicon-32.png  favicon.ico  apple-touch-icon.png
     og.jpg  robots.txt  sitemap.xml
-  game/                           -> game.xplabs.us
+  play/                          -> play.xplabs.us
     index.html                    catalog — all four titles
     game-art/                     WebP, production
     _headers
@@ -144,7 +144,7 @@ sites/
     og.jpg  robots.txt  sitemap.xml
 ```
 
-Each of `www`, `game`, `learn` and `mil` is a Cloudflare Pages project whose
+Each of `www`, `play`, `learn` and `mil` is a Cloudflare Pages project whose
 **build output directory** is that folder, with an empty build command. One
 repository, four projects. `DEPLOY.md` has the settings.
 
@@ -156,7 +156,7 @@ signal something was added that does not belong here.
 
 **Nothing outside `sites/` is deployed.** Pages uploads the whole output
 directory, so anything placed inside one of those three folders is published,
-whatever the documentation says about it. Art masters lived in `sites/game/` for
+whatever the documentation says about it. Art masters lived in `sites/play/` for
 a while, described as "not deployed"; they would have shipped.
 
 ---
@@ -538,7 +538,7 @@ Each of these cost real time. They are recorded so they cost nobody else.
   allowance — including your ability to deploy a fix.
 - **A comment saying "not deployed" does not stop a file being deployed.** Pages
   uploads the entire build output directory. 7.2 MB of full-resolution art
-  masters sat inside `sites/game/` labelled "(not deployed)" and would have been
+  masters sat inside `sites/play/` labelled "(not deployed)" and would have been
   published on the first deploy. If it must not ship, it cannot live under
   `sites/`.
 - **`SameSite=Strict` drops the cookie on arrival from an external link.** A

@@ -13,28 +13,28 @@ XPLabs is raising; see [xplabs.us/invest](https://xplabs.us/invest/).
 
 ---
 
-## Games — [game.xplabs.us](https://game.xplabs.us/)
+## Games — [play.xplabs.us](https://play.xplabs.us/)
 
 Four titles, four different engines, deliberately.
 
-**[The Last Station](https://game.xplabs.us/#the-last-station)** — mobile
+**[The Last Station](https://play.xplabs.us/#the-last-station)** — mobile
 survivors, Unreal Engine 5. Free-to-play, built for one thumb: you only steer,
 equipped cards fire on tap, aim is automatic. The depth is in the loadout — five
 part cards across Power, Weapons, Sensors, Jammers and Drones, plus five stat
 medallions.
 
-**[Space Glyph](https://game.xplabs.us/#space-glyph)** — puzzle defense,
+**[Space Glyph](https://play.xplabs.us/#space-glyph)** — puzzle defense,
 Swift 6, iPhone. Matching and shooting are the same act. Your first match locks
 the board and starts a short Match Phase; every follow-up match refills the
 timer, so the whole formation resolves together and a good chain is something
 you extend under pressure.
 
-**[Life XP](https://game.xplabs.us/#life-xp)** — life simulation, SceneKit,
+**[Life XP](https://play.xplabs.us/#life-xp)** — life simulation, SceneKit,
 iPhone. An offline third-person simulator. Walk a small 3D town and step through
 the door of any building into a full-screen interior where you use the station
 that belongs there.
 
-**[Hearth & Hunt](https://game.xplabs.us/#hearth-and-hunt)** — PvPvE, Roblox.
+**[Hearth & Hunt](https://play.xplabs.us/#hearth-and-hunt)** — PvPvE, Roblox.
 Server-authoritative, built so two-player teams who want something relaxed and
 solo players who want something competitive can share a match. Keepers stay home
 and grow the homestead; Hunters go out and contest objectives.
@@ -68,7 +68,7 @@ The sites above are built here as four static roots, one per origin:
 
 ```
 sites/www/     → xplabs.us        company hub, engineering, about, invest
-sites/game/    → game.xplabs.us
+sites/play/    → play.xplabs.us
 sites/learn/   → learn.xplabs.us
 sites/mil/     → mil.xplabs.us
 ```

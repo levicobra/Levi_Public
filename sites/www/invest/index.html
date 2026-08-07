@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Invest — XPLabs</title>
-<meta name="description" content="XPLabs is raising. Contact route for investors interested in a small Honolulu studio building games and free public resources.">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#17171B">
+<meta name="description" content="XPLabs is raising. Contact route for investors who back small studios early. Stage, raise size and traction are shared directly rather than posted publicly.">
+<meta name="theme-color" content="#07090A">
+<meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://xplabs.us/invest/">
@@ -16,148 +16,225 @@
 <meta property="og:url" content="https://xplabs.us/invest/">
 <meta property="og:image" content="https://xplabs.us/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+
 <style>
-/* ---------------------------------------------------------------------
-   INVEST — deliberately a contact page, not a pitch.
+/* =====================================================================
+   XPLabs — Invest
 
-   Nothing on this page states a raise size, a valuation, a stage, a
-   revenue figure, a user count or a projection. That is not an oversight.
-   Numbers put in front of investors are representations, and they belong
-   in a deck sent to a named person, not on an open web page where they go
-   stale and cannot be withdrawn. If you add figures here later, make sure
-   they are true on the day you add them AND that you will remember to
-   update them when they are not.
+   THIS IS A CONTACT PAGE, NOT A PITCH. Nothing here states a stage, a
+   raise size, a valuation, a revenue figure, a user count or a projection,
+   and that is deliberate.
 
-   Tokens match the site root. Change a colour here and change it there too.
-   --------------------------------------------------------------------- */
-:root{
-  --ink:#17171B; --ink-2:#4E4E56; --bone:#F0EBE0; --bone-2:#E6E0D2;
-  --teal:#0B6155; --rust:#A63423;
-  --display:"Arial Black","Arial Bold",Impact,"Helvetica Neue",Arial,sans-serif;
-  --text:Georgia,"Iowan Old Style",Charter,"Times New Roman",serif;
-  --ui:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --s-0:1.0625rem;
-  --s-1:clamp(1.25rem,1.14rem + 0.48vw,1.5rem);
-  --s-2:clamp(1.5rem,1.3rem + 0.9vw,2rem);
-  --s-3:clamp(1.875rem,1.5rem + 1.7vw,2.75rem);
-  --s-4:clamp(2.25rem,1.6rem + 2.9vw,4rem);
-  --s-min:0.8125rem;
-  --wrap:72rem; --gutter:clamp(1.15rem,4vw,3rem);
+   Numbers put in front of investors are representations. They belong in
+   materials sent to a named person on a known date, not on an open page
+   that goes stale silently and cannot be withdrawn once it is screenshotted
+   or indexed. If you add figures here later, they must be true on the day
+   you add them AND you must have a plan for updating them when they are
+   not. "We'll remember" is not that plan.
+
+   HOUSE SYSTEM: the :root block is shared across this origin and
+   play.xplabs.us. Change it in one file and change it in all of them.
+   ===================================================================== */
+:root {
+  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;
+  --line:#1E2527; --line-soft:#161C1D;
+  --paper:#E9EFEC; --muted:#9BA8A3; --muted-dim:#7E8B86;
+  --signal:#3DE38A; --amber:#F5A524;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --t-micro:0.6875rem; --t-small:0.8125rem; --t-body:1.0625rem;
+  --t-lead: clamp(1.125rem, 1.02rem + 0.42vw, 1.375rem);
+  --t-h3:   clamp(1.1875rem, 1.12rem + 0.3vw, 1.4375rem);
+  --t-h2:   clamp(2.0625rem, 1.55rem + 2.35vw, 3.375rem);
+  --gap:1.5rem; --section-y: clamp(4rem, 7vw, 7rem);
+  --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1180px;
+  --radius:3px; --header-h:60px;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--text);
-  font-size:var(--s-0);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+body{
+  margin:0; background:var(--ink); color:var(--paper);
+  font-family:var(--sans); font-size:var(--t-body); line-height:1.62;
+  -webkit-font-smoothing:antialiased; overflow-x:clip;
+}
+img{max-width:100%;height:auto;display:block}
 p{margin:0}
 ul{list-style:none;margin:0;padding:0}
-h1,h2,h3{margin:0;font-family:var(--display);font-weight:900;line-height:.98;
-  letter-spacing:-.012em;text-wrap:balance}
 a{color:inherit}
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:.6rem;top:.6rem;z-index:99;background:var(--ink);color:var(--bone);padding:.7rem 1rem}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.slab :focus-visible{outline-color:#fff}
-.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
-  gap:.5rem 1rem;padding-block:1.1rem;border-bottom:3px solid var(--ink)}
-.logo{font-family:var(--display);font-size:var(--s-1);letter-spacing:-.02em;text-decoration:none}
-.top nav{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--ui);font-size:var(--s-min)}
-.top nav a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
-.top nav a:hover,.top nav a[aria-current]{border-bottom-color:var(--ink)}
-.head{padding-block:clamp(2.25rem,6vw,4rem) clamp(1.5rem,3vw,2.5rem)}
-.head h1{font-size:var(--s-4)}
-.head .lede{font-size:var(--s-1);max-width:46ch;margin-top:1.1rem;line-height:1.45}
-.slab{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
-  padding-left:calc(50vw - 50% + var(--gutter));padding-right:calc(50vw - 50% + var(--gutter));
-  padding-block:clamp(2rem,4.5vw,3.25rem);color:#fff}
-.slab--teal{background:var(--teal)}
-.slab__in{max-width:var(--wrap);margin-inline:auto}
-.sec{padding-block:clamp(2rem,5vw,3.5rem)}
-.sec h2{font-size:var(--s-2);margin-bottom:1rem}
-.body{max-width:58ch}
-.body p + p{margin-top:.9rem}
-.body a{text-decoration:underline;text-underline-offset:2px}
-.rule{border:0;border-top:3px solid var(--ink);margin:0}
-.stack{display:grid;gap:.75rem;margin-top:1.25rem}
-@media (min-width:700px){.stack{grid-template-columns:repeat(2,1fr)}}
-.item{border-top:2px solid currentColor;padding-top:.7rem}
-.item b{display:block;font-family:var(--ui);font-size:var(--s-min);font-weight:700;
-  letter-spacing:.08em;text-transform:uppercase;margin-bottom:.3rem}
-.item span{display:block;font-size:.9375rem;line-height:1.5;opacity:.92}
-.note{font-family:var(--ui);font-size:var(--s-min);color:var(--ink-2);margin-top:1.25rem;max-width:60ch}
-.links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem;font-family:var(--ui);font-size:var(--s-min)}
-.links a{border:2px solid var(--ink);padding:.45rem .8rem;text-decoration:none;font-weight:700}
-.links a:hover{background:var(--ink);color:var(--bone)}
-.foot{background:var(--ink);color:var(--bone);padding-block:2.25rem 2.75rem;margin-top:2rem}
-.foot a{color:var(--bone)}
-.foot__meta{margin-top:1.25rem;padding-top:1rem;border-top:1px solid #3A3A42;
-  font-family:var(--ui);font-size:var(--s-min);color:#9A958A}
-@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+.skip:focus{left:var(--gutter);top:.5rem;z-index:99;background:var(--signal);color:#04140C;padding:.6rem 1rem;border-radius:var(--radius)}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+
+.site-header{position:sticky;top:0;z-index:40;background:rgba(7,9,10,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--header-h)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;font-weight:600}
+.nav-links{display:none;gap:1.75rem}
+@media (min-width:820px){.nav-links{display:flex}}
+.nav-links a{font-size:.9375rem;color:var(--muted);text-decoration:none;transition:color .16s}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--paper)}
+.tick{display:inline-flex;align-items:flex-end;gap:2px;height:11px}
+.tick i{width:2px;background:var(--signal);border-radius:1px;display:block}
+.tick i:nth-child(1){height:35%}.tick i:nth-child(2){height:65%}
+.tick i:nth-child(3){height:100%}.tick i:nth-child(4){height:50%}
+
+.page-head{padding-block:calc(var(--section-y) * .85) calc(var(--section-y) * .5)}
+.eyebrow{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin:0 0 1.25rem}
+h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25rem;max-width:17ch;text-wrap:balance}
+.lead{font-size:var(--t-lead);color:var(--muted);max-width:58ch;margin:0}
+.lead strong{color:var(--paper);font-weight:600}
+
+.sec{padding-bottom:var(--section-y)}
+.sec-label{display:flex;align-items:baseline;gap:.9rem;font-family:var(--mono);font-size:var(--t-micro);
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted-dim);
+  padding-bottom:.9rem;margin-bottom:1.5rem;border-bottom:1px solid var(--line-soft)}
+.sec-label span:last-child{margin-left:auto}
+
+/* two-column: prose beside a fact panel */
+.split{display:grid;gap:1.5rem}
+@media (min-width:900px){.split{grid-template-columns:1fr 320px;gap:2.5rem;align-items:start}}
+.prose{color:var(--muted);max-width:60ch}
+.prose p + p{margin-top:1rem}
+.prose strong{color:var(--paper);font-weight:600}
+.prose a{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .16s}
+.prose a:hover{border-bottom-color:var(--signal)}
+
+.spec{border:1px solid var(--line-soft);border-radius:var(--radius);background:var(--ink-2);align-self:start}
+.spec dl{margin:0;display:grid;grid-template-columns:auto 1fr}
+.spec dt,.spec dd{margin:0;padding:.6rem .9rem;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.08em;border-bottom:1px solid var(--line-soft)}
+.spec dt{color:var(--muted-dim);text-transform:uppercase;white-space:nowrap}
+.spec dd{color:var(--paper);text-align:right}
+.spec dl>:nth-last-child(1),.spec dl>:nth-last-child(2){border-bottom:0}
+
+.caps{display:grid;gap:0;border:1px solid var(--line-soft);border-radius:var(--radius);
+  background:var(--ink-2);overflow:hidden}
+@media (min-width:760px){.caps{grid-template-columns:repeat(2,1fr)}}
+.cap{padding:1.15rem 1.25rem;border-bottom:1px solid var(--line-soft);border-right:1px solid var(--line-soft)}
+.cap b{display:block;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--signal);margin-bottom:.45rem;font-weight:600}
+.cap span{display:block;color:var(--muted);font-size:.9375rem;line-height:1.55}
+.cap a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--line)}
+.cap a:hover{border-bottom-color:var(--signal)}
+
+.contact{border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:var(--radius);
+  background:var(--surface);padding:clamp(1.5rem,3.2vw,2.25rem)}
+.contact h2{font-size:var(--t-h3);margin:0 0 .75rem;letter-spacing:-.014em}
+.contact p{color:var(--muted);margin:0 0 1rem;max-width:58ch;font-size:.9688rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;color:#04140C;background:var(--signal);
+  padding:.7rem 1.1rem;border-radius:var(--radius);transition:opacity .16s}
+.btn:hover{opacity:.86}
+.legal{font-family:var(--mono);font-size:var(--t-micro);color:var(--muted-dim);
+  line-height:1.7;margin-top:1.5rem;max-width:70ch}
+
+.site-footer{border-top:1px solid var(--line-soft);padding-block:2.5rem;color:var(--muted-dim);font-size:var(--t-small)}
+.site-footer a{color:var(--muted);text-decoration:none}
+.site-footer a:hover{color:var(--paper)}
+.foot-row{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:baseline}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
 </style>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
-<header class="wrap top">
-  <a class="logo" href="/">XPLABS</a>
-  <nav aria-label="Primary">
-    <a href="https://game.xplabs.us/">Games</a>
-    <a href="https://learn.xplabs.us/">Education</a>
-    <a href="/engineering/">Engineering</a>
-    <a href="https://mil.xplabs.us/">Benefits</a>
-    <a href="/about/">About</a>
-    <a href="/invest/" aria-current="page">Invest</a>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="/">
+      <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      XPLabs
+    </a>
+    <div class="nav-links">
+      <a href="https://play.xplabs.us/">Games</a>
+      <a href="https://learn.xplabs.us/">Education</a>
+      <a href="/engineering/">Engineering</a>
+      <a href="https://mil.xplabs.us/">Benefits</a>
+      <a href="/about/">About</a>
+      <a href="/invest/" aria-current="page">Invest</a>
+    </div>
   </nav>
 </header>
+
 <main id="main">
 
-<section class="wrap head">
-  <h1>Invest</h1>
-  <p class="lede">XPLabs is raising, and is talking to investors who back small studios
-  early.</p>
+<section class="wrap page-head">
+  <p class="eyebrow">
+    <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    Open · early stage
+  </p>
+  <h1>XPLabs is raising.</h1>
+  <p class="lead">We are talking to investors who back small studios early &mdash; before the
+  catalog is finished and while the engineering is still the asset.</p>
 </section>
 
-<div class="wrap">
-  <section class="slab slab--teal">
-    <div class="slab__in">
-      <h2 style="font-size:var(--s-3)">What you would be backing</h2>
-      <div class="body" style="margin-top:1rem;max-width:56ch">
-        <p>A consulting studio in Honolulu that ships across five stacks &mdash; Unreal Engine,
-        Swift, Roblox and dependency-free static web &mdash; with an AI-augmented pipeline and
-        human review gates.</p>
-        <p>Alongside the commercial work, XPLabs publishes two things that are free and carry no
-        accounts, ads or trackers: an offline learning platform and a benefits directory for the
-        military community. They are not loss leaders with a paywall behind them. They are the
-        clearest evidence of what the studio can build and ship.</p>
-      </div>
-      <div class="stack">
-        <div class="item"><b>Games</b><span>Four titles in development or live.
-        <a href="https://game.xplabs.us/" style="color:inherit">See the catalog</a>.</span></div>
-        <div class="item"><b>Engineering</b><span>How the work gets built.
-        <a href="/engineering/" style="color:inherit">Read the detail</a>.</span></div>
-      </div>
+<section class="wrap sec">
+  <p class="sec-label"><span>Position</span><span>What you would be backing</span></p>
+  <div class="split">
+    <div class="prose">
+      <p>A consulting studio in Honolulu that ships across four stacks &mdash; Unreal Engine 5 on
+      mobile, native Swift on iPhone, server-authoritative Roblox, and web with no build step at
+      all. Client engineering funds the studio; the studio builds its own catalog.</p>
+      <p>Alongside that, XPLabs runs two free public products: an offline learning platform and a
+      benefits directory for the military community. Neither carries accounts, ads or trackers,
+      and neither has a paywall behind it. <strong>They are not loss leaders.</strong> They are
+      finished, maintained software that anyone can inspect &mdash; which makes them the most
+      honest due diligence available on whether this studio can actually deliver.</p>
+      <p>The pipeline is AI-augmented with human review gates. That is not a slogan here; it is
+      the specific reason a team this size ships across four stacks at once, and it is the part
+      most worth asking hard questions about.</p>
     </div>
-  </section>
-</div>
+    <div class="spec">
+      <dl>
+        <dt>Entity</dt><dd>XPLabs LLC</dd>
+        <dt>Based</dt><dd>Honolulu, HI</dd>
+        <dt>Sector</dt><dd>Games · software</dd>
+        <dt>Titles</dt><dd>4</dd>
+        <dt>Free products</dt><dd>2</dd>
+        <dt>Status</dt><dd>Raising</dd>
+      </dl>
+    </div>
+  </div>
+</section>
 
 <section class="wrap sec">
-  <h2>Getting the details</h2>
-  <div class="body">
-    <p>Stage, raise size, use of funds and current traction are shared directly rather than
-    posted here &mdash; figures on an open page go stale and cannot be taken back.</p>
-    <p>Send a short note about the kind of company you invest in and what stage you come in at,
-    and you will get the current materials back.</p>
+  <p class="sec-label"><span>Evidence</span><span>Look before you ask</span></p>
+  <div class="caps">
+    <div class="cap"><b>Games</b><span>Four titles, four stacks, each documented at equal depth.
+      <a href="https://play.xplabs.us/">play.xplabs.us</a></span></div>
+    <div class="cap"><b>Engineering</b><span>How the work is built, tested and shipped.
+      <a href="/engineering/">xplabs.us/engineering</a></span></div>
+    <div class="cap"><b>Education</b><span>A full offline learning platform, free and finished.
+      <a href="https://learn.xplabs.us/">learn.xplabs.us</a></span></div>
+    <div class="cap"><b>Benefits</b><span>A maintained public directory with its own link auditor.
+      <a href="https://mil.xplabs.us/">mil.xplabs.us</a></span></div>
   </div>
-  <p class="links"><a href="mailto:xp.labs.3d@gmail.com?subject=Investor%20enquiry">Email XPLabs</a></p>
-  <p class="note">XPLabs LLC, Honolulu, Hawaii. Nothing on this page is an offer to sell or a
-  solicitation to buy securities.</p>
+</section>
+
+<section class="wrap sec">
+  <div class="contact">
+    <h2>Getting the numbers</h2>
+    <p>Stage, raise size, use of funds and current traction are shared directly, not posted
+    here. Figures on an open page go stale quietly and cannot be taken back once they are
+    screenshotted or indexed &mdash; so they go to a named person on a known date instead.</p>
+    <p>Send a short note about what you invest in and the stage you come in at, and you will get
+    the current materials back.</p>
+    <a class="btn" href="mailto:xp.labs.3d@gmail.com?subject=Investor%20enquiry">Email XPLabs &rarr;</a>
+    <p class="legal">XPLabs LLC, Honolulu, Hawaii. Nothing on this page is an offer to sell or a
+    solicitation of an offer to buy securities, and nothing here should be relied on as a
+    representation about the company's financial condition or prospects.</p>
+  </div>
 </section>
 
 </main>
 
-<footer class="foot">
-  <div class="wrap">
-    <p>XPLabs &mdash; <a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a></p>
-    <div class="foot__meta">© 2026 XPLabs LLC · Honolulu, HI</div>
+<footer class="site-footer">
+  <div class="wrap foot-row">
+    <span>© 2026 XPLabs LLC · Honolulu, HI</span>
+    <span><a href="mailto:xp.labs.3d@gmail.com">xp.labs.3d@gmail.com</a></span>
   </div>
 </footer>
 
