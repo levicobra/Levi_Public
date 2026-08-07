@@ -34,12 +34,16 @@ PLAY_REWRITE = [
     ('src="/logo.png"', 'src="/logo.png"'),
 ]
 
-# page path -> the top-level nav label that should carry aria-current
+# page path -> what should carry aria-current in the header.
+#   'Label'        marks the top-level <a> with that text
+#   'menu:<id>'    marks the menu BUTTON controlling that panel, for pages whose
+#                  nav entry is a dropdown rather than a link
+#   None           marks nothing
 TARGETS = {
     'sites/www/about/index.html':        'About',
     'sites/www/invest/index.html':       'Invest',
     'sites/www/consulting/index.html':   None,
-    'sites/www/initiatives/index.html':  'Public Initiatives',
+    'sites/www/initiatives/index.html':  'menu:menu-initiatives',
     'sites/play/index.html':             None,
 }
 
@@ -81,13 +85,20 @@ print()
 
 
 def set_current(markup, label):
-    """Put aria-current="page" on exactly one top-level nav link."""
+    """Put aria-current="page" on exactly one header element."""
     markup = markup.replace(' aria-current="page"', '')
     if not label:
         return markup
-    pat = re.compile(r'(<a href="[^"]*">)(' + re.escape(label) + r')(</a>)')
-    out, n = pat.subn(lambda m: m.group(1)[:-1] + ' aria-current="page">' + m.group(2) + m.group(3),
-                      markup, count=1)
+
+    if label.startswith('menu:'):
+        panel_id = label.split(':', 1)[1]
+        pat = re.compile(r'(<button class="menu__btn"[^>]*aria-controls="' + re.escape(panel_id) + r'")')
+        out, n = pat.subn(lambda m: m.group(1) + ' aria-current="page"', markup, count=1)
+    else:
+        pat = re.compile(r'(<a href="[^"]*">)(' + re.escape(label) + r')(</a>)')
+        out, n = pat.subn(lambda m: m.group(1)[:-1] + ' aria-current="page">' + m.group(2) + m.group(3),
+                          markup, count=1)
+
     if n != 1:
         sys.exit('FATAL: could not set aria-current for %r' % label)
     return out
