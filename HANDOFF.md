@@ -184,51 +184,90 @@ Two workable options:
 - **Cloudflare Access** (Zero Trust) — email one-time-PIN. No password to
   manage, per-person revocation, and non-technical people can use it without
   being issued credentials. Better when more than one person needs in.
-- **HTTP Basic Auth via Pages middleware** — one shared username and password,
-  held as Cloudflare **secrets**, never in the repository. Simpler, and enough
-  for a single user or a family who will all use the same password.
+- **A PIN gate via Pages middleware** — one shared access code, held as a
+  Cloudflare **secret**, never in the repository. Simpler, and enough for a
+  single user or a family who will all use the same code. This is what is
+  implemented in `subdomain-starter/`.
 
-Three traps, in order of how badly they bite:
+Basic Auth was the earlier choice here and was replaced. The browser credential
+box reads like an error to anyone non-technical, cannot be styled or explained,
+and offers no way to sign out.
 
-1. **Cloudflare Pages has an "Enable access policy" toggle in project settings.
+Four traps, in order of how badly they bite:
+
+1. **The gate must cover the data, not just the pages.** This is the one that
+   actually loses the archive. Gate `/index.html` and leave `/data/tree.json`
+   and `/media/*` open and the entire dataset is readable by anyone who guesses
+   a URL — the pages are protected and the thing they display is not.
+2. **Cloudflare Pages has an "Enable access policy" toggle in project settings.
    It protects preview deployments only — not your production custom domain.**
    Cloudflare's own documentation says so plainly. Flip it, see a login screen
    on a preview URL, assume you are protected, and the real subdomain is open to
    the world. You must create a Zero Trust Access application against the custom
    domain itself.
-2. **Whatever gates the site does not gate the repository.** A public repo with
+3. **Whatever gates the site does not gate the repository.** A public repo with
    the generated pages in it is readable by anyone regardless of any password.
    Both repositories must be private.
-3. **Fail closed.** If the credentials or configuration are missing, serve an
+4. **Fail closed.** If the credentials or configuration are missing, serve an
    error. Never fall through to serving the content.
 
-Verify the gate before sharing any link:
+Verify the gate before sharing any link — and verify the *data*, not the front
+page, because trap 1 is invisible from the front page:
 
 ```sh
-curl -sI https://<subdomain>.xplabs.us | head -1        # expect 401
-curl -sI -u 'USER:PASS' https://<subdomain>.xplabs.us | head -1   # expect 200
+curl -s https://<subdomain>.xplabs.us/ | grep -c 'Access code'   # expect 1
+curl -s -o /dev/null -w '%{http_code}\n' https://<subdomain>.xplabs.us/data/tree.json   # expect 401
+curl -s -o /dev/null -w '%{http_code}\n' https://<subdomain>.xplabs.us/media/any.jpg    # expect 401
 ```
 
-If the first command returns 200, the gate is not active. Stop.
+If a data or media URL returns 200 without a cookie, the gate is not covering
+it. Stop.
 
 ### `levi.xplabs.us` — personal dashboard
 
-A private dashboard for the owner's own use. Single user, so Basic Auth is
-sufficient.
+A private dashboard for the owner's own use. Single user, so the same PIN gate
+in `subdomain-starter/` is sufficient — with its own separate access code and
+cookie secret, so that sharing the family code never exposes the dashboard.
 
-**Open questions to answer before building:**
+**What it contains** — specified by the owner:
 
-- What does it show? Candidates from this project alone: game build and release
-  status, XP Education content coverage, benefits-directory link rot, domain
-  expiry, open decisions. None of that is settled.
-- Where does the data come from — manual entry, a file committed to its repo, or
-  live APIs? This decides whether it can stay static.
-- Does it need to work offline, as XP Education does?
+- A **calendar**, with events he can add, edit and delete, including **repeating
+  events**.
+- To the right of the calendar, **upcoming events**, colour-coded by imminence
+  and priority.
+- Above that list, a **task list**. Any event can have a task assigned to it.
+- A second page with **three subpages — Personal, Work, XPLabs.** Each is its own
+  view and shows the tasks assigned under its label.
+- An **important documents** page that accepts uploaded files.
 
-**Recommended starting point.** Static, no build step, matching the conventions
-in section 6, rendering from a committed JSON file. Add live data sources only
-when a specific one proves necessary. A dashboard that renders from a file
-cannot break at 2am; one that depends on five APIs can.
+It "must be encrypted well."
+
+**What that requirement actually decides.** This is the one architectural fork,
+and it should be settled before any code is written, because retrofitting is a
+data migration rather than an edit:
+
+- **Zero-knowledge** — the browser encrypts with a key derived from a passphrase
+  that never leaves the device; the server stores ciphertext it cannot read.
+  Strongest, and it means a breach of the host yields nothing. Costs: no
+  server-side search or recurrence expansion, no password reset (a forgotten
+  passphrase is unrecoverable data loss), and document upload has to encrypt
+  client-side before it goes anywhere.
+- **Server-side encryption at rest** — encrypted in storage, decrypted by the
+  Worker to serve. Far easier to build and to live with; recoverable. But
+  anything that compromises the Worker or its secrets reads everything.
+
+Pick deliberately. The phrase "encrypted well" reads as the first, and the first
+is the one whose costs surface late — a passphrase lost in year two takes the
+archive with it.
+
+**Storage.** This is not a static site — it takes writes. Events, tasks and
+document metadata belong in **D1**; uploaded files belong in **R2**, served only
+through the gated Worker. Do not put documents in the repository.
+
+**Recurrence.** Store the rule, not the instances. Materializing every occurrence
+of a repeating event makes "edit this one" and "edit all future" nearly
+impossible to get right later. RFC 5545 `RRULE` is the well-trodden path, with an
+exception list for occurrences that were individually changed or deleted.
 
 ### `colby.xplabs.us` — family ancestry tree
 
@@ -241,31 +280,53 @@ people. That combination is the answer key to most bank security questions, and
 those relatives did not consent to publication. A public genealogy site is
 indexed and scraped within days.
 
+**The owner has decided the site shows the full tree, with no redacted or
+privatized version.** It is family-only, behind an access code. That decision
+was made explicitly and with the privacy consequence stated; do not quietly
+reintroduce a "hide living people" mode as though it were an oversight.
+
+What that decision moves rather than removes: **the access code is now the only
+thing protecting living relatives' data.** There is no second layer behind it.
+That raises the bar on the gate itself, in two specific ways:
+
+- **The code has to be long.** Four digits is ten thousand guesses. Ten or more
+  characters. It is typed once per device per month, so length costs the family
+  almost nothing and is the only real defence against a distributed guesser.
+- **The gate has to cover every route** — trap 1 above. With no redaction, an
+  ungated `tree.json` is not a partial leak, it is the whole archive.
+
 So, three requirements that are not negotiable:
 
-1. **The site is gated.** Family only. Basic Auth is the right fit — one password
-   the owner can text to relatives, no accounts for anyone to create.
-2. **The repository is private.** Non-negotiable for the reason in trap 2 above.
-3. **Living people are privatized.** Standard genealogy practice: suppress detail
-   for anyone living, or born within roughly the last 100 years with no recorded
-   death. Names may remain; dates, places and personal detail are withheld. Most
-   genealogy software can privatize on export, and `Ged2Site` does it by default.
-
-**The raw GEDCOM must never be committed** — not even to a private repo. Gitignore
-`*.ged`, `*.gedcom`, `*.ftm`, `*.gramps` and any `raw/` or `originals/` directory.
-The published pages are a privatized derivative; the source stays on the owner's
-machine.
+1. **The site is gated on every route** — HTML, JSON and media alike. Family
+   only. One access code the owner can text to relatives, no accounts for
+   anyone to create.
+2. **The repository is private.** Non-negotiable for the reason in trap 3 above.
+3. **The raw GEDCOM is never committed** — not even to a private repo. Gitignore
+   `*.ged`, `*.gedcom`, `*.ftm`, `*.gramps` and any `raw/` or `originals/`
+   directory. The published pages are a derivative; the source stays on the
+   owner's machine.
 
 Add `X-Robots-Tag: noindex, nofollow, noarchive` and `Cache-Control: no-store` to
 every response as defence in depth, so that if the gate is ever misconfigured the
 damage is bounded.
 
-A working Basic Auth middleware for Cloudflare Pages — constant-time comparison,
-fail-closed behaviour, and those headers — is kept in **`subdomain-starter/`** in
-this repository, together with a `.gitignore` template that blocks raw GEDCOM
-files. Copy it into each subdomain's own private repo. It lives here so it does
-not get lost, not because it belongs to the public site; nothing in it is
-deployed as part of `xplabs.us`.
+A working PIN-gate middleware for Cloudflare Pages — covering every route,
+constant-time comparison, signed 30-day sessions, KV-backed lockout, fail-closed
+behaviour and those headers — is kept in **`subdomain-starter/`** in this
+repository, with a 63-check test suite that runs on plain Node and a `.gitignore`
+template that blocks raw GEDCOM files. Copy it into each subdomain's own private
+repo. It lives here so it does not get lost, not because it belongs to the public
+site; nothing in it is deployed as part of `xplabs.us`.
+
+**Two deployment blockers specific to this repo**, both discovered by reading it:
+
+- Its `.gitattributes` routes `*.jpg`, `*.pdf`, `*.rmtree` and `*.zip` through
+  **Git LFS**, and Cloudflare Pages builds do not fetch LFS objects. Every image
+  would deploy as a pointer file.
+- Roughly **1.5 GB of media** against a 25 MiB per-file Pages limit and a
+  20-minute build timeout. The media has to move to **R2**, served through the
+  same gated Worker — not straight from a public bucket, or it bypasses the gate
+  entirely.
 
 ---
 

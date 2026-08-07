@@ -1,6 +1,7 @@
 # Raw genealogy data must never be committed, even to a private repo.
 # A GEDCOM contains full names, birthdates, and birthplaces for LIVING people.
-# The published site shows a privatized version; these are the raw sources.
+# The published site is a generated derivative behind an access code; these are
+# the raw sources and they stay on your own machine.
 *.ged
 *.gedcom
 *.GED
@@ -13,6 +14,13 @@
 # Scans and family photos - keep the originals off the repo, they are large
 # and often contain document images with sensitive detail.
 /originals/
+
+# Bulk media belongs in R2, served through the gated Worker - not in the repo.
+# Cloudflare Pages caps files at 25 MiB and does not fetch Git LFS objects, so
+# LFS-tracked images deploy as pointer files and every photo renders broken.
+/media/
+/scans/
+*.lfs
 
 .DS_Store
 Thumbs.db
