@@ -8,11 +8,12 @@
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#14202E">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://xplabs.us/military-benefits/">
+<link rel="canonical" href="https://mil.xplabs.us/">
 <meta property="og:title" content="Military Benefits &amp; Resources">
 <meta property="og:description" content="A free directory of benefits and programs for service members, veterans and their families.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://xplabs.us/military-benefits/">
+<meta property="og:url" content="https://mil.xplabs.us/">
+<meta property="og:image" content="https://mil.xplabs.us/og.jpg">
 <script>document.documentElement.className="js";</script>
 <style>
 /* ===================================================================
@@ -176,15 +177,17 @@ a{color:var(--accent)}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- Site navigation. This page is part of xplabs.us, not a standalone tool. -->
+<!-- Site navigation. This origin is mil.xplabs.us, so every link out of it is
+     absolute — a root-relative href here would resolve against this origin and
+     dead-end. Only the Benefits link stays relative, because it is this page. -->
 <div class="sitebar"><div class="wrap sitebar__in">
-  <a class="sitebar__logo" href="/">XPLABS</a>
+  <a class="sitebar__logo" href="https://xplabs.us/">XPLABS</a>
   <nav aria-label="Site">
     <a href="https://game.xplabs.us/">Games</a>
     <a href="https://learn.xplabs.us/">Education</a>
-    <a href="/engineering/">Engineering</a>
-    <a href="/military-benefits/" aria-current="page">Benefits</a>
-    <a href="/personal/">Personal</a>
+    <a href="https://xplabs.us/engineering/">Engineering</a>
+    <a href="/" aria-current="page">Benefits</a>
+    <a href="https://xplabs.us/personal/">Personal</a>
   </nav>
 </div></div>
 

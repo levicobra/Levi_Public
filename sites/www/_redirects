@@ -1,0 +1,11 @@
+# Cloudflare Pages reads this file. Max 2100 static rules, 100 dynamic.
+#
+# The benefits directory moved to its own origin, mil.xplabs.us. These two
+# rules are not optional cleanup — the old path is in the README, in printed
+# handouts, and in whatever anyone has already bookmarked or linked. 301 so
+# search engines transfer the ranking rather than treating it as a new page.
+#
+# The bare path needs its own rule: /military-benefits/* matches the trailing
+# slash and anything deeper, but not /military-benefits on its own.
+/military-benefits      https://mil.xplabs.us/          301
+/military-benefits/*    https://mil.xplabs.us/:splat    301

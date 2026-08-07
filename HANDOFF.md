@@ -59,16 +59,21 @@ Paste this into a fresh session, along with a clone of this repository.
 XPLabs LLC is an independent studio. The site is its hub and hosts two free
 public resources.
 
-Five origins, all on the one domain. Subdomains are free, so this costs nothing
+Six origins, all on the one domain. Subdomains are free, so this costs nothing
 extra — but each is a **separate Cloudflare Pages project**.
 
 | Origin | Source | What it is | Status |
 |---|---|---|---|
-| `xplabs.us` | `sites/www` | Hub, engineering, personal, military benefits | Built |
+| `xplabs.us` | `sites/www` | Hub, engineering, personal | Built |
 | `game.xplabs.us` | `sites/game` | Games catalog — all four titles, equal depth | Built |
 | `learn.xplabs.us` | `sites/learn` | XP Education — 106 subjects, 14 domains | Built |
+| `mil.xplabs.us` | `sites/mil` | Military benefits — 279 resources, 13 categories | Built |
 | `levi.xplabs.us` | — | Private personal dashboard (section 5) | **Not built** |
 | `colby.xplabs.us` | — | Private family ancestry tree (section 5) | **Not built** |
+
+The benefits directory used to live at `xplabs.us/military-benefits/`. It is its
+own origin now; `sites/www/_redirects` 301s the old path so existing links and
+anything already in print still land.
 
 **Cross-origin links must be absolute.** Within an origin they stay relative; a
 link from `xplabs.us` to the catalog is `https://game.xplabs.us/`, not `/games/`.
@@ -103,16 +108,21 @@ subdomain-starter/                PIN gate for colby.xplabs.us
 sites/
   www/                            -> xplabs.us
     index.html                    hub
-    engineering/index.html        how things are built, consulting, open role
+    engineering/index.html        how things are built, consulting
     personal/index.html
-    military-benefits/
-      index.html                  GENERATED — do not hand-edit
-      directory_template.html     edit this
-      gen_directory.py            then run this
-      data.json                   the 279 resources
-      linkcheck.py                link rot auditor
     _headers                      CSP, HSTS, cache policy
+    _redirects                    301s the old /military-benefits/ path to mil.
     favicon-32.png  favicon.ico  apple-touch-icon.png
+    og.jpg  robots.txt  sitemap.xml
+  mil/                            -> mil.xplabs.us
+    index.html                    GENERATED — do not hand-edit
+    directory_template.html       edit this
+    gen_directory.py              then run this
+    data.json                     the 279 resources
+    linkcheck.py                  link rot auditor
+    LINK-AUDIT.md                 what the last run found
+    _headers
+    favicon.svg  favicon-32.png  favicon.ico  apple-touch-icon.png
     og.jpg  robots.txt  sitemap.xml
   game/                           -> game.xplabs.us
     index.html                    catalog — all four titles
@@ -152,7 +162,7 @@ Most pages are plain HTML you edit directly. Two are not.
 
 ### Military benefits
 
-`military-benefits/index.html` is **generated**. Editing it directly will be
+`sites/mil/index.html` is **generated**. Editing it directly will be
 overwritten. The real sources are:
 
 - `directory_template.html` — layout, styles, and the search implementation
@@ -160,7 +170,7 @@ overwritten. The real sources are:
 - `gen_directory.py` — combines them
 
 ```sh
-cd sites/www/military-benefits && python3 gen_directory.py
+cd sites/mil && python3 gen_directory.py
 ```
 
 The search is not a substring filter. It scores each result: a whole word in the

@@ -1,6 +1,6 @@
 # Deploying xplabs.us
 
-Three public origins, three Cloudflare Pages projects, one GitHub repository.
+Four public origins, four Cloudflare Pages projects, one GitHub repository.
 No build step anywhere — every site is plain files, so Pages just publishes a
 directory.
 
@@ -21,7 +21,7 @@ nobody is around to run a command.
 
 ---
 
-## 1. Create the three projects
+## 1. Create the four projects
 
 For each row below: **Workers & Pages → Create → Pages → Connect to Git**,
 choose `levicobra/Levi_Public`, then set:
@@ -31,13 +31,19 @@ choose `levicobra/Levi_Public`, then set:
 | `xplabs-www` | `main` | None | *(leave empty)* | `sites/www` |
 | `xplabs-game` | `main` | None | *(leave empty)* | `sites/game` |
 | `xplabs-learn` | `main` | None | *(leave empty)* | `sites/learn` |
+| `xplabs-mil` | `main` | None | *(leave empty)* | `sites/mil` |
 
-All three point at the same repository and differ only in the output directory.
+All four point at the same repository and differ only in the output directory.
+
+**Create Pages projects, not Workers.** The dashboard pushes Workers first; the
+Pages flow is a separate tab. A Workers project built from the default template
+answers every path with `Hello world` at 200, `_headers` is ignored, and no
+`pages.dev` hostname is issued. If there is no `pages.dev` URL, it is not Pages.
 
 **Leave the build command genuinely empty.** If you let it default to something
 like `npm run build`, the deploy fails — there is no `package.json`, by design.
 
-Each project gets a `<name>.pages.dev` URL immediately. Check all three render
+Each project gets a `<name>.pages.dev` URL immediately. Check all four render
 before touching DNS; a broken site on `pages.dev` is a broken site on the real
 domain, and it is much easier to diagnose before the domain is involved.
 
@@ -52,6 +58,7 @@ Per project: **Custom domains → Set up a custom domain**.
 | `xplabs-www` | `xplabs.us` |
 | `xplabs-game` | `game.xplabs.us` |
 | `xplabs-learn` | `learn.xplabs.us` |
+| `xplabs-mil` | `mil.xplabs.us` |
 
 Because the zone is in the same account, Cloudflare writes the DNS records
 itself. Nothing to add by hand.
@@ -68,7 +75,7 @@ link was a dead end and every check passed.
 
 ```sh
 for u in https://xplabs.us/ https://xplabs.us/engineering/ \
-         https://xplabs.us/personal/ https://xplabs.us/military-benefits/ \
+         https://xplabs.us/personal/ https://mil.xplabs.us/ \
          https://game.xplabs.us/ https://learn.xplabs.us/; do
   printf '%s  ' "$(curl -s -o /dev/null -w '%{http_code}' "$u")"; echo "$u"
 done
@@ -83,8 +90,13 @@ curl -sI https://xplabs.us/ | grep -i 'content-security-policy\|strict-transport
 # The service worker is not being cached — if it is, learn can never update
 curl -sI https://learn.xplabs.us/sw.js | grep -i cache-control   # expect no-store
 
+# The old benefits path still lands, since it is in print and in bookmarks
+curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' \
+  https://xplabs.us/military-benefits/          # expect 301 -> https://mil.xplabs.us/
+
 # The share images exist, since a missing one is invisible until someone posts a link
-for u in https://xplabs.us/og.jpg https://game.xplabs.us/og.jpg https://learn.xplabs.us/og.jpg; do
+for u in https://xplabs.us/og.jpg https://game.xplabs.us/og.jpg \
+         https://learn.xplabs.us/og.jpg https://mil.xplabs.us/og.jpg; do
   printf '%s  ' "$(curl -s -o /dev/null -w '%{http_code}' "$u")"; echo "$u"
 done
 ```
@@ -100,7 +112,7 @@ every URL and still be broken.
 - **Set a billing notification on the account.** Everything here is inside the
   free tier by two or more orders of magnitude, but a notification is what turns
   a surprise into a warning.
-- **Re-run the link audit periodically.** `sites/www/military-benefits/linkcheck.py`.
+- **Re-run the link audit periodically.** `sites/mil/linkcheck.py`.
   38 links were dead when this started; they will rot again.
 - **The domain expires 2027-05-14.** Confirm auto-renew is on now that the
   registrar is Cloudflare, and that a payment method is attached.

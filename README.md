@@ -47,7 +47,7 @@ textbooks (CC BY 4.0) and link to the full free books.
 Installable as a PWA: visit once and the library lives on your device. No
 account, no tracking, no paywall, and no external requests of any kind.
 
-## Military benefits — [xplabs.us/military-benefits](https://xplabs.us/military-benefits/)
+## Military benefits — [mil.xplabs.us](https://mil.xplabs.us/)
 
 A free, no-signup directory pulling scattered benefits and discounts into one
 place. **279 resources across 13 categories** — education and GI Bill, health and
