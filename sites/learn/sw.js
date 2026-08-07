@@ -8,7 +8,7 @@
 'use strict';
 
 /* @VERSION */
-const VERSION = 'xped-35af5a7d5fda';
+const VERSION = 'xped-415d8b76a38b';
 /* @END-VERSION */
 
 /* @PRECACHE */
@@ -139,9 +139,21 @@ self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
     // Chunked addAll so one flaky request doesn't abort the whole install.
+    //
+    // The chunking alone did NOT achieve that: cache.addAll() rejects if any
+    // one URL in the batch fails, and without this try/catch that rejection
+    // propagated out of waitUntil and failed the whole install. The comment
+    // claimed resilience the code did not have. Now a bad chunk costs us those
+    // twenty files — they get fetched on demand later by the fetch handler —
+    // instead of costing us the entire offline library.
     const chunk = 20;
     for (let i = 0; i < PRECACHE.length; i += chunk) {
-      await cache.addAll(PRECACHE.slice(i, i + chunk));
+      try {
+        await cache.addAll(PRECACHE.slice(i, i + chunk));
+      } catch (err) {
+        // Deliberately swallowed. An incomplete cache still works; a failed
+        // install leaves the previous worker in charge indefinitely.
+      }
     }
     await self.skipWaiting();
   })());
@@ -162,31 +174,50 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(req.url);
   if (url.origin !== location.origin) return;
 
-  event.respondWith((async () => {
-    const cache = await caches.open(CACHE);
-
-    // Navigations: serve the cached shell, refresh it in the background.
-    if (req.mode === 'navigate') {
-      const cached = await cache.match('index.html');
-      if (cached) {
-        event.waitUntil(fetch('index.html').then(res => {
-          if (res && res.ok) cache.put('index.html', res);
-        }).catch(() => {}));
-        return cached;
-      }
-      try { return await fetch(req); }
-      catch { return new Response('Offline and not yet cached.', { status: 503 }); }
-    }
-
-    // Everything else: cache-first, fill the cache on miss.
-    const cached = await cache.match(req);
-    if (cached) return cached;
-    try {
-      const res = await fetch(req);
-      if (res && res.ok) cache.put(req, res.clone());
-      return res;
-    } catch (err) {
-      return new Response('Offline and not yet cached.', { status: 503 });
-    }
-  })());
+  // THE WHOLE BODY IS WRAPPED. This is the important part.
+  //
+  // If the promise handed to respondWith() rejects for ANY reason, the browser
+  // does not fall back to the network — it shows a bare network error, the
+  // "site can't be reached / ERR_FAILED" page, with nothing in it to explain
+  // why. And because the worker stays installed, it happens on every
+  // navigation from then on and looks exactly like the site being down.
+  //
+  // caches.open() can reject on its own under storage pressure or when the
+  // profile's storage is in a bad state, and that path is not otherwise
+  // covered. So: nothing in here is allowed to escape. Worst case we go to
+  // the network like a page with no service worker at all, which is a slow
+  // site rather than a broken one.
+  event.respondWith(handle(req, event).catch(() => fetch(req)));
 });
+
+async function handle(req, event) {
+  const cache = await caches.open(CACHE);
+
+  // Navigations: serve the cached shell, refresh it in the background.
+  if (req.mode === 'navigate') {
+    const cached = await cache.match('index.html');
+    if (cached) {
+      event.waitUntil(fetch('index.html').then(res => {
+        if (res && res.ok) return cache.put('index.html', res);
+      }).catch(() => {}));
+      return cached;
+    }
+    try { return await fetch(req); }
+    catch { return new Response('Offline and not yet cached.', { status: 503 }); }
+  }
+
+  // Everything else: cache-first, fill the cache on miss.
+  const cached = await cache.match(req);
+  if (cached) return cached;
+  try {
+    const res = await fetch(req);
+    // Only full, basic responses are cacheable. Putting a 206 or an opaque
+    // response makes cache.put throw, which used to surface as a rejection.
+    if (res && res.ok && res.status === 200 && res.type === 'basic') {
+      event.waitUntil(cache.put(req, res.clone()).catch(() => {}));
+    }
+    return res;
+  } catch (err) {
+    return new Response('Offline and not yet cached.', { status: 503 });
+  }
+}
