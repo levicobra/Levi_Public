@@ -1,65 +1,74 @@
 # Levi Colby
 
-Founder of **XPLabs Games**, an independent studio in Honolulu building sharply
-scoped games with strong worlds and replayable systems. I also build free public
-resources for the military community.
+Founder of **XPLabs**, an independent studio in Honolulu. Four games in
+development, a free offline learning platform, and a free benefits directory for
+the military community.
 
-- 🎮 **XPLabs Games** — studio founder, shipping our debut title
-- 🪖 **ServeStuff** — a free benefits directory for service members, veterans, and families
 - 📍 Honolulu, Hawaii
-
----
-
-## Projects
-
-### The Last Station — XPLabs Games
-
-Our debut title. A dark science-fiction deck-building survival game: assemble
-tactical loadouts from salvaged tech, push into hostile territory, and get out.
-Campaign missions, expeditions, ranked play, and squadron multiplayer.
-
-Built in Unreal Engine with an AI-augmented production pipeline, which lets a
-small team work at a scale that would normally need a much bigger one.
-
-**Launching on iOS, Nintendo Switch, and Switch 2.**
-
-🔗 [xplabs-games-dead-air.levicolby.chatgpt.site](https://xplabs-games-dead-air.levicolby.chatgpt.site)
-
-### XP Education — free offline learning platform
-
-A free learning platform that works fully offline. 100+ subjects across 14
-domains — K–8 foundations through college math, science, history, business,
-languages, trades, arts, and test prep — with real lessons, worked examples,
-and practice questions. College courses are aligned to
-[OpenStax](https://openstax.org) open textbooks (CC BY 4.0) and link to the
-full free books.
-
-Built as an installable PWA: visit once and the entire library lives on your
-device. No account, no tracking, no paywall.
-
-🔗 `xplabs.us/education/`
-
-### ServeStuff — military benefits directory
-
-A free, no-signup hub that pulls scattered military benefits and discounts into
-one place. Thirteen categories covering education and GI Bill programs, health
-and mental-health resources, housing, career and apprenticeship programs,
-family and childcare support, travel, and more — each entry a plain description
-and a direct link.
-
-No account, no paywall, no upsell. It exists because this information is real
-and genuinely hard to find in one place.
-
-🔗 [servestuff.webflow.io](https://servestuff.webflow.io/)
-
----
-
-## Elsewhere
-
 - 💼 [LinkedIn](https://www.linkedin.com/in/levicolby/)
-- 🌐 XPLabs — `XPLabs.us` <!-- swap to the live link once the domain is pointed -->
+- 🌐 [xplabs.us](https://xplabs.us/)
 
-<!--
-  Add a contact email here only if you're happy for it to be scraped by bots.
-  A LinkedIn link alone is a perfectly normal way to be reachable.
--->
+---
+
+## Games — [game.xplabs.us](https://game.xplabs.us/)
+
+Four titles, four different engines, deliberately.
+
+**[The Last Station](https://game.xplabs.us/#the-last-station)** — mobile
+survivors, Unreal Engine 5. Free-to-play, built for one thumb: you only steer,
+equipped cards fire on tap, aim is automatic. The depth is in the loadout — five
+part cards across Power, Weapons, Sensors, Jammers and Drones, plus five stat
+medallions.
+
+**[Space Glyph](https://game.xplabs.us/#space-glyph)** — puzzle defense,
+Swift 6, iPhone. Matching and shooting are the same act. Your first match locks
+the board and starts a short Match Phase; every follow-up match refills the
+timer, so the whole formation resolves together and a good chain is something
+you extend under pressure.
+
+**[Life XP](https://game.xplabs.us/#life-xp)** — life simulation, SceneKit,
+iPhone. An offline third-person simulator. Walk a small 3D town and step through
+the door of any building into a full-screen interior where you use the station
+that belongs there.
+
+**[Hearth & Hunt](https://game.xplabs.us/#hearth-and-hunt)** — PvPvE, Roblox.
+Server-authoritative, built so two-player teams who want something relaxed and
+solo players who want something competitive can share a match. Keepers stay home
+and grow the homestead; Hunters go out and contest objectives.
+
+## XP Education — [learn.xplabs.us](https://learn.xplabs.us/)
+
+A free learning platform that works fully offline. **106 subjects across 14
+domains** — K–8 foundations through college math, science, history, business,
+languages, trades and arts — with real lessons, worked examples and practice
+questions. College courses align to [OpenStax](https://openstax.org) open
+textbooks (CC BY 4.0) and link to the full free books.
+
+Installable as a PWA: visit once and the library lives on your device. No
+account, no tracking, no paywall, and no external requests of any kind.
+
+## Military benefits — [xplabs.us/military-benefits](https://xplabs.us/military-benefits/)
+
+A free, no-signup directory pulling scattered benefits and discounts into one
+place. **279 resources across 13 categories** — education and GI Bill, health and
+mental health, housing, careers and apprenticeships, family and childcare,
+travel and more. Each entry is a plain description and a direct link.
+
+Every link is checked and repaired rather than assumed; the auditor that does it
+is in the repo.
+
+---
+
+## This repository
+
+The sites above are built here as three static roots, one per origin:
+
+```
+sites/www/     → xplabs.us
+sites/game/    → game.xplabs.us
+sites/learn/   → learn.xplabs.us
+```
+
+No build step, no package manager, no framework, and no external requests. See
+[`DEPLOY.md`](DEPLOY.md) for how they are published and
+[`HANDOFF.md`](HANDOFF.md) for how they are put together and why.
