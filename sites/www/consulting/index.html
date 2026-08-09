@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Palantir &amp; government consulting — XPLabs</title>
-<meta name="description" content="Palantir Foundry, Gotham and AIP development from Honolulu, plus government contract consulting, custom software and AI implementation — and the technical record of how the work actually gets built.">
+<meta name="description" content="Palantir platform development from Honolulu: data consolidation, common operational picture (COP) creation, visualization and ontology work across Foundry, Gotham and AIP — plus government contract consulting and AI implementation.">
 <meta name="theme-color" content="#07090A">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://xplabs.us/consulting/">
 <meta property="og:title" content="Palantir &amp; government consulting — XPLabs">
-<meta property="og:description" content="Palantir Foundry, Gotham and AIP development from Honolulu — one time zone from INDOPACOM. Plus government consulting, custom software and AI.">
+<meta property="og:description" content="Palantir platform development from Honolulu — data consolidation, COP creation and visualization across Foundry, Gotham and AIP. One time zone from INDOPACOM.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xplabs.us/consulting/">
 <meta property="og:image" content="https://xplabs.us/consulting/og.jpg?v=2">
@@ -165,6 +165,8 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 .card ul{margin-top:.9rem;display:grid;gap:.4rem}
 .card li{color:var(--muted);font-size:.9375rem;padding-left:1rem;position:relative}
 .card li::before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;background:var(--signal)}
+@media (min-width:760px){.card--platform ul{grid-template-columns:repeat(2,1fr);column-gap:1.75rem}}
+@media (min-width:1040px){.card--platform ul{grid-template-columns:repeat(3,1fr)}}
 
 /* stack rows — the technical record, read as a table */
 .stack{display:grid;gap:0;border:1px solid var(--line-soft);border-radius:var(--radius);
@@ -278,45 +280,29 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 
 <section class="wrap sec">
   <p class="sec-label"><span>Palantir</span><span>Foundry · Gotham · AIP</span></p>
-  <div class="offer">
-
-    <div class="card">
-      <h3>Foundry development</h3>
-      <p>The ontology is the product. Objects, links and actions modelled so the data reads the
-      way the mission talks about it — not the way the source system happened to store it.</p>
-      <ul>
-        <li>Ontology design: objects, links, action types</li>
-        <li>Pipeline Builder and code repositories (PySpark, TypeScript)</li>
-        <li>Incremental transforms, data health checks, branch and merge</li>
-        <li>Workshop applications an operator can run a shift from</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>AIP with review gates</h3>
-      <p>The same rule as every other model we put into production: a result a human has not
-      signed off on is not an answer, it is a suggestion. AIP Logic and agents are built to that
-      standard or they do not ship.</p>
-      <ul>
-        <li>AIP Logic functions bound to ontology actions</li>
-        <li>Agents scoped to a task, not to the whole estate</li>
-        <li>Evaluation sets before deployment, not after</li>
-        <li>Write-back that records who approved it</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Gotham &amp; integration</h3>
-      <p>Getting real sources into the platform and keeping them there: the unglamorous half of
-      every deployment, and the half that decides whether anyone still trusts it in month six.</p>
-      <ul>
-        <li>Entity resolution and link analysis workflows</li>
-        <li>Data connection, sync health, schedule design</li>
-        <li>Permissioning and markings that survive an audit</li>
-        <li>Handover documentation for the team that inherits it</li>
-      </ul>
-    </div>
-
+  <div class="card card--platform">
+    <h3>Palantir platform development</h3>
+    <p>Foundry, Gotham and AIP are not three engagements. They are one job at different
+    layers: get the real sources in, model what they actually mean, put a picture in front of
+    the people who have to act on it, and leave it trustworthy for whoever inherits it.</p>
+    <p><strong>Data consolidation is where it starts and where most of it is won.</strong> A
+    dozen systems that disagree about what a unit, a vessel or a person is do not become a
+    common picture by being put on the same screen — they become one by being resolved into a
+    single model that the mission's own vocabulary fits.</p>
+    <ul>
+      <li>Data consolidation: disparate, disagreeing sources into one governed model</li>
+      <li>Common operational picture (COP): built, maintained, and kept current under load</li>
+      <li>Visualization: Workshop applications, map and timeline views, operator dashboards</li>
+      <li>Ontology design: objects, links, action types the mission already has words for</li>
+      <li>Entity resolution and link analysis across sources that never agreed on an identifier</li>
+      <li>Pipeline Builder and code repositories (PySpark, TypeScript)</li>
+      <li>Incremental transforms, data health checks, branch and merge</li>
+      <li>AIP Logic and agents bound to ontology actions, behind human review gates</li>
+      <li>Data connection, sync health and schedule design</li>
+      <li>Permissioning and markings that survive an audit</li>
+      <li>Write-back that records who approved it</li>
+      <li>Handover documentation for the team that inherits it</li>
+    </ul>
   </div>
 
   <div class="prose">
