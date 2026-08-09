@@ -36,7 +36,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HOME = 'https://xplabs.us/'
 LINKS = {
     'games': ('https://play.xplabs.us/', 'Games', 'Four titles, four stacks'),
-    'consulting': ('https://xplabs.us/consulting/', 'Consulting', 'Palantir · government · AI'),
+    'consulting': ('https://xplabs.us/consulting/', 'Consulting', 'Consulting · engineering · Palantir'),
     'initiatives': ('https://xplabs.us/initiatives/', 'Public Initiatives', 'Free education and benefits'),
     'mil': ('https://mil.xplabs.us/', 'Military Personnel', 'Benefits, programs, discounts'),
     'learn': ('https://learn.xplabs.us/', 'Opensource Education', '106 subjects, works offline'),
