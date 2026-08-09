@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Consulting — XPLabs</title>
-<meta name="description" content="XPLabs consulting: government contract consulting, custom software, and AI implementation — plus the technical record of how the work actually gets built.">
+<title>Palantir &amp; government consulting — XPLabs</title>
+<meta name="description" content="Palantir Foundry, Gotham and AIP development from Honolulu, plus government contract consulting, custom software and AI implementation — and the technical record of how the work actually gets built.">
 <meta name="theme-color" content="#07090A">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://xplabs.us/consulting/">
-<meta property="og:title" content="Consulting — XPLabs">
-<meta property="og:description" content="Government contract consulting, custom software, and AI implementation.">
+<meta property="og:title" content="Palantir &amp; government consulting — XPLabs">
+<meta property="og:description" content="Palantir Foundry, Gotham and AIP development from Honolulu — one time zone from INDOPACOM. Plus government consulting, custom software and AI.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xplabs.us/consulting/">
-<meta property="og:image" content="https://xplabs.us/og.jpg?v=2">
+<meta property="og:image" content="https://xplabs.us/consulting/og.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="XP Labs — government contract consulting, software and AI. xplabs.us">
+<meta property="og:image:alt" content="XP Labs — Palantir Foundry, Gotham and AIP development, government consulting and AI. xplabs.us/consulting">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xplabs.us/og.jpg?v=2">
+<meta name="twitter:image" content="https://xplabs.us/consulting/og.jpg?v=2">
 
 <style>
 /* =====================================================================
@@ -80,10 +80,6 @@ a{color:inherit}
 .skip:focus{left:var(--gutter);top:.5rem;z-index:99;background:var(--signal);color:#04140C;padding:.6rem 1rem;border-radius:var(--radius)}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
 
-/* ===== NAV — shared block. Sync with tools/sync_nav.py. ================
-   Below 900px the links live in a panel behind the Menu button. The
-   previous header simply set display:none at that width, which left every
-   phone with no navigation at all except the logo. */
 /* ===== NAV — shared block. Sync with tools/sync_nav.py. ================
    Below 900px the links live in a panel behind the Menu button. The
    previous header simply set display:none at that width, which left every
@@ -245,7 +241,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
         </button>
         <div class="menu__panel" id="menu-businesses" hidden>
           <a href="https://play.xplabs.us/"><b>Games</b><span>Four titles, four stacks</span></a>
-          <a href="/consulting/"><b>Consulting</b><span>Government · software · AI</span></a>
+          <a href="/consulting/"><b>Consulting</b><span>Palantir · government · AI</span></a>
           <a href="/initiatives/"><b>Public Initiatives</b><span>Free education and benefits</span></a>
         </div>
       </div>
@@ -274,14 +270,77 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
     <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     Consulting · Honolulu, Hawaii
   </p>
-  <h1>Government, software, AI.</h1>
-  <p class="lead">XPLabs takes on public-sector consulting, custom software, and AI
-  implementation — with a bias toward systems that
+  <h1>Palantir, government, AI.</h1>
+  <p class="lead">XPLabs builds on <strong>Palantir Foundry, Gotham and AIP</strong>, and takes on
+  public-sector consulting, custom software and AI implementation — with a bias toward systems that
   <strong>still work when nobody is watching them</strong>.</p>
 </section>
 
 <section class="wrap sec">
-  <p class="sec-label"><span>Services</span><span>Three things we do</span></p>
+  <p class="sec-label"><span>Palantir</span><span>Foundry · Gotham · AIP</span></p>
+  <div class="offer">
+
+    <div class="card">
+      <h3>Foundry development</h3>
+      <p>The ontology is the product. Objects, links and actions modelled so the data reads the
+      way the mission talks about it — not the way the source system happened to store it.</p>
+      <ul>
+        <li>Ontology design: objects, links, action types</li>
+        <li>Pipeline Builder and code repositories (PySpark, TypeScript)</li>
+        <li>Incremental transforms, data health checks, branch and merge</li>
+        <li>Workshop applications an operator can run a shift from</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>AIP with review gates</h3>
+      <p>The same rule as every other model we put into production: a result a human has not
+      signed off on is not an answer, it is a suggestion. AIP Logic and agents are built to that
+      standard or they do not ship.</p>
+      <ul>
+        <li>AIP Logic functions bound to ontology actions</li>
+        <li>Agents scoped to a task, not to the whole estate</li>
+        <li>Evaluation sets before deployment, not after</li>
+        <li>Write-back that records who approved it</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Gotham &amp; integration</h3>
+      <p>Getting real sources into the platform and keeping them there: the unglamorous half of
+      every deployment, and the half that decides whether anyone still trusts it in month six.</p>
+      <ul>
+        <li>Entity resolution and link analysis workflows</li>
+        <li>Data connection, sync health, schedule design</li>
+        <li>Permissioning and markings that survive an audit</li>
+        <li>Handover documentation for the team that inherits it</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="prose">
+    <p>Palantir work is <strong>forward-deployed by nature</strong>: the useful version is built
+    next to the people who will use it, in the platform, against their real data — not specified
+    in a document and handed over. That is the same delivery model the rest of this page argues
+    for, which is why it is the platform work XPLabs takes on.</p>
+    <p>Honolulu is a deliberate part of this. XPLabs sits in the same time zone as
+    <strong>INDOPACOM, Pacific Fleet and U.S. Army Pacific</strong> — the Indo-Pacific commands
+    are a workday away rather than six hours behind, which matters for the kind of embedded work
+    that only functions when you are reachable during the user's shift.</p>
+  </div>
+
+  <div class="status">
+    <span class="flag">Capability, not past performance</span>
+    <p>To be explicit, because it would be easy to read this section the other way: XPLabs has
+    <strong>no Palantir engagement, no partner status and no platform certification</strong> to
+    point at. What is above is what we build and how — the same standard the
+    <a href="#status">status note below</a> holds the rest of the public-sector side to.</p>
+  </div>
+</section>
+
+<section class="wrap sec">
+  <p class="sec-label"><span>Services</span><span>And the rest of the work</span></p>
   <div class="offer">
 
     <div class="card">
@@ -324,7 +383,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
   </div>
 </section>
 
-<section class="wrap sec">
+<section class="wrap sec" id="status">
   <p class="sec-label"><span>Status</span><span>Read this before you ask</span></p>
   <div class="status">
     <span class="flag">Capability, not past performance</span>
