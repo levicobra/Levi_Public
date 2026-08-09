@@ -130,8 +130,17 @@ for rel, current in TARGETS.items():
         header = rewrite_for_play(header)
         footer = rewrite_for_play(footer)
 
-    # --- CSS: replace everything from .site-header through the tick rules ---
-    css_start = page.find('.site-header{position:sticky')
+    # --- CSS: replace everything from the nav banner through the tick rules ---
+    # NAV_CSS is grabbed from the source starting at its comment banner, so the
+    # region replaced here has to start at the banner too. Anchoring on
+    # `.site-header{` instead left the page's existing banner sitting above the
+    # freshly inserted one, and every run added another copy — the pages had
+    # accumulated three. Starting at the first banner also cleans up the ones
+    # already there, because everything from it to the tick anchor is replaced.
+    css_start = page.find('/* ===== NAV — shared block.')
+    if css_start < 0:
+        # A page written before the banner existed: fall back to the rule.
+        css_start = page.find('.site-header{position:sticky')
     if css_start < 0:
         sys.exit('FATAL: no header CSS anchor in %s' % rel)
     tail_anchor = '.tick i:nth-child(3){height:100%}.tick i:nth-child(4){height:50%}'
