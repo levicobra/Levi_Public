@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Military Benefits &amp; Resources</title>
+<meta name="description" content="That page doesn't exist.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#14202E">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<style>
+/* ===================================================================
+   mil.xplabs.us — 404
+
+   Cloudflare Pages serves this file for any URL on this origin that
+   does not exist. It renders at arbitrary paths, so every asset
+   reference is ABSOLUTE (/logo.png, /favicon.svg).
+
+   Self-contained: no JavaScript, no external requests. Palette and
+   type match the directory (directory_template.html). The crisis line
+   stays at the top of every view on this origin — including this one.
+   That is a safety feature, not decoration. Do not remove it.
+
+   TO EDIT TEXT: search for the words you want to change.
+   =================================================================== */
+:root{
+  --ink:#14202E;        /* headings and link names        15.8:1 on paper */
+  --ink-2:#4A5A6B;      /* supporting text                 6.8:1 on paper */
+  --paper:#FBFAF7;      /* page background                                */
+  --paper-2:#F0ECE4;    /* alternate band                                 */
+  --edge:#7E8790;       /* structural borders              3.5:1 on paper */
+  --edge-soft:#DCD6CA;  /* decorative hairlines only                      */
+  --accent:#12556F;     /* links and interactive           7.9:1 on paper */
+  --accent-wash:#E7F0F4;
+  --crisis:#9E1B13;     /* EMERGENCY ONLY - never decorative              */
+  --crisis-paper:#FFF4F2;
+
+  --serif: "Iowan Old Style","Charter","Bitstream Charter",Georgia,"Times New Roman",serif;
+  --sans: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+
+  --wrap:74rem;
+  --gutter: clamp(1rem,4vw,2.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:1.0625rem;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  min-height:100dvh;display:flex;flex-direction:column;
+}
+h1{margin:0;line-height:1.15;letter-spacing:-.012em;text-wrap:balance}
+p{margin:0}
+a{color:var(--accent)}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter);width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* ---------- Site bar ---------- */
+.sitebar{background:var(--ink);color:#EDEAE4;font-family:var(--sans);font-size:.8125rem}
+.sitebar__in{display:flex;align-items:center;padding-block:.55rem}
+.sitebar__logo{display:inline-flex;align-items:center}
+.sitebar__logo img{height:17px;width:auto;display:block}
+
+/* ---------- Crisis. Always first. Never behind a tap. ---------- */
+.crisis{background:var(--crisis-paper);border-bottom:3px solid var(--crisis)}
+.crisis__in{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1.5rem;
+  padding-block:.7rem}
+.crisis__t{font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--crisis);flex:none}
+.crisis__d{font-size:1.0625rem;color:var(--ink)}
+.crisis__d b{white-space:nowrap}
+.crisis__d a{color:var(--crisis);font-weight:600}
+
+/* ---------- Message ---------- */
+main{flex:1 1 auto;padding-block:clamp(2rem,6vw,4rem) 3rem}
+main h1{font-size:clamp(1.75rem,1.2rem+2.4vw,2.75rem)}
+.lede{font-size:1.125rem;color:var(--ink-2);max-width:54ch;margin-top:.6rem}
+.kicker{font-family:var(--sans);font-size:.8125rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-2);margin-bottom:.5rem}
+.back{display:inline-block;font-family:var(--sans);font-size:.9375rem;
+  border:2px solid var(--edge);background:#fff;color:var(--ink);
+  padding:.55rem .9rem;text-decoration:none;margin-top:1.5rem}
+.back:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-wash)}
+
+/* ---------- Footer ---------- */
+.foot{background:var(--paper-2);border-top:3px solid var(--ink);
+  padding-block:1.5rem;font-family:var(--sans);font-size:.9375rem}
+.foot p{color:var(--ink-2);max-width:62ch}
+.foot strong{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<div class="sitebar">
+  <div class="wrap sitebar__in">
+    <a class="sitebar__logo" href="https://xplabs.us/" aria-label="XPLabs home">
+      <img src="/logo.png" alt="XP Labs" width="440" height="107">
+    </a>
+  </div>
+</div>
+
+<!-- Crisis line — reachable in zero taps, on every view, this one included. -->
+<div class="crisis">
+  <div class="wrap crisis__in">
+    <span class="crisis__t">In crisis?</span>
+    <p class="crisis__d">Veterans Crisis Line &mdash; dial <b><a href="tel:988">988</a> then press 1</b>,
+      text <b><a href="sms:838255">838255</a></b>.</p>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="kicker">Error 404 &middot; Page not found</p>
+  <h1>That page doesn't exist.</h1>
+  <p class="lede">Nothing has moved. Every resource in the directory &mdash; all
+  categories, all programs &mdash; is on the home page, searchable and browsable.</p>
+  <a class="back" href="/">&larr; Back to the directory</a>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>This site is not affiliated with or endorsed by the U.S. Department of Defense,
+    the Department of Veterans Affairs, or any government agency.</strong></p>
+  </div>
+</footer>
+
+</body>
+</html>

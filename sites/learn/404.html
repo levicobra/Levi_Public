@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found — XP Education</title>
+<meta name="description" content="That page doesn't exist.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F2EA">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+
+<style>
+/* =========================================================================
+   learn.xplabs.us — 404
+
+   Cloudflare Pages serves this file for any URL on this origin that does
+   not exist. (Returning visitors mostly never see it: the service worker
+   answers navigations from the cached app shell. This page is for first
+   visits to a mistyped or stale URL.)
+
+   Self-contained on purpose: no JavaScript, no external requests, and its
+   own small copy of the design tokens from css/app.css — warm paper light
+   theme, dark via prefers-color-scheme since the app's saved theme setting
+   needs JavaScript to read. Asset paths are ABSOLUTE (/icons/icon.svg),
+   because this page renders at arbitrary URLs.
+
+   TO EDIT TEXT: search for the words you want to change.
+   ========================================================================= */
+:root{
+  --ink:#F5F2EA;          /* page — warm paper, not clinical white */
+  --surface:#FFFFFF;      /* card */
+  --line:#E1DACA;
+  --paper:#161B17;        /* text */
+  --muted:#57604F;
+  --signal:#0A7643;
+  --signal-ink:#FFFFFF;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --r:14px; --r-pill:999px;
+  --shadow-1:0 1px 2px rgba(60,52,32,.06), 0 10px 24px -18px rgba(60,52,32,.35);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#07090A;
+    --surface:#0E1314;
+    --line:#212A2B;
+    --paper:#E9EFEC;
+    --muted:#9BA8A3;
+    --signal:#3DE38A;
+    --signal-ink:#04140C;
+    --shadow-1:0 1px 2px rgba(0,0,0,.35), 0 8px 24px -14px rgba(0,0,0,.7);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--ink); color:var(--paper);
+  font-family:var(--sans); font-size:1.0625rem; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  min-height:100dvh; display:grid; place-items:center;
+  padding:clamp(1.15rem,4vw,2.75rem);
+}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow-1);
+  max-width:26rem; width:100%;
+  padding:clamp(1.5rem,5vw,2.5rem);
+  text-align:center;
+}
+.brand{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1.25rem}
+.brand img{width:36px;height:36px;display:block}
+.brand b{font-size:1.0625rem;letter-spacing:-.01em}
+h1{font-size:clamp(1.375rem,1.22rem+.7vw,1.75rem);line-height:1.2;letter-spacing:-.015em;margin:0 0 .6rem;text-wrap:balance}
+p{margin:0 0 1.5rem;color:var(--muted)}
+.home{
+  display:inline-block; text-decoration:none;
+  font-weight:600; font-size:.9375rem;
+  color:var(--signal-ink); background:var(--signal);
+  padding:.7rem 1.35rem; border-radius:var(--r-pill);
+  transition:opacity .16s;
+}
+.home:hover{opacity:.88}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+
+<main class="card">
+  <span class="brand">
+    <img src="/icons/icon.svg" alt="" width="36" height="36">
+    <b>XP Education</b>
+  </span>
+  <h1>That page doesn't exist.</h1>
+  <p>No worries — every subject and lesson is on the home page,
+  free and working offline, same as always.</p>
+  <a class="home" href="/">Back to XP Education</a>
+</main>
+
+</body>
+</html>

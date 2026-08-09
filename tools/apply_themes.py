@@ -77,15 +77,24 @@ for rel, (name, accent, contrast, surface, surface2, why) in THEMES.items():
         % (name, why, contrast, accent, contrast)
     )
 
+    tinted = SURFACE_LINE.replace('--surface:#0E1213', '--surface:%s' % surface) \
+                         .replace('--surface-2:#141A1B', '--surface-2:%s' % surface2)
+
     if BRAND_LINE in page:
         page = page.replace(BRAND_LINE, theme_block + '\n  --amber:#F5A524;', 1)
     elif BRAND_LINE_COMMENTED in page:
         page = page.replace(BRAND_LINE_COMMENTED, theme_block, 1)
+    elif theme_block in page and tinted in page:
+        # The file already carries exactly what this script writes — a
+        # previous run themed it. Skip it so re-running is always safe.
+        # A file matching NEITHER the brand strings nor our own output
+        # still falls through to the FATAL below: that means the tokens
+        # were edited by hand, and guessing would overwrite that work.
+        print('  %-22s %s  already themed, skipping' % (name, rel))
+        continue
     else:
         sys.exit('FATAL: no recognisable --signal declaration in %s' % rel)
 
-    tinted = SURFACE_LINE.replace('--surface:#0E1213', '--surface:%s' % surface) \
-                         .replace('--surface-2:#141A1B', '--surface-2:%s' % surface2)
     if SURFACE_LINE not in page:
         sys.exit('FATAL: no recognisable surface declaration in %s' % rel)
     page = page.replace(SURFACE_LINE, tinted, 1)
