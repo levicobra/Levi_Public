@@ -29,8 +29,12 @@ def build_search_index():
                 entries.append({"t": l["title"], "u": u["id"], "l": l["id"], "k": terms})
         out["subjects"].append({"id": data["id"], "entries": entries})
     path = ROOT / "content" / "search-index.json"
+    # newline="\n" keeps the bytes identical whatever platform runs this.
+    # Without it, Windows writes CRLF — and since content_hash() below hashes
+    # this very file, that alone changes VERSION and re-downloads the whole
+    # precache for every visitor.
     path.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n",
-                    encoding="utf-8")
+                    encoding="utf-8", newline="\n")
     n = sum(len(s["entries"]) for s in out["subjects"])
     print(f"search-index.json: {len(out['subjects'])} subjects, {n} lessons")
 
@@ -78,7 +82,7 @@ def inject_sw(files):
     src = re.sub(r"/\* @PRECACHE \*/.*?/\* @END-PRECACHE \*/",
                  f"/* @PRECACHE */\nconst PRECACHE = [\n{listing},\n];\n/* @END-PRECACHE */",
                  src, flags=re.S)
-    sw.write_text(src, encoding="utf-8")
+    sw.write_text(src, encoding="utf-8", newline="\n")
     total = sum((ROOT / f).stat().st_size for f in files if f != "./")
     print(f"sw.js: {len(files)} precached files, {total / 1048576:.2f} MB, version {version}")
 

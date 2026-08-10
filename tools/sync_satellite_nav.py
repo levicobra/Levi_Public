@@ -218,14 +218,39 @@ def replace_block(page, start_marker, end_marker, new, label):
     return page[:i] + new + page[j + len(end_marker):]
 
 
-def install(page, current, start_marker, end_marker, label):
-    page = replace_block(page, start_marker, end_marker, header(current), label)
-    # CSS goes immediately before </head>; the script immediately before </body>.
-    if '.xpl-header{' not in page:
+# Once this script has run on a page, the page contains the header below, not
+# the legacy markup it replaced. Re-runs must therefore recognise the script's
+# OWN output — the first version looked only for the legacy markers, destroyed
+# them on its first run, and so failed on every run after that.
+INSTALLED_HEADER_START = '<header class="xpl-header">'
+INSTALLED_HEADER_END = '</header>'
+# The generated <style> and <script> blocks are found by the comment each one
+# opens with (the first line of CSS / SCRIPT above). Matching on the comment
+# keeps this from ever touching the page's own styles or scripts.
+INSTALLED_CSS_START = CSS[:CSS.index(' by tools/')]
+INSTALLED_SCRIPT_START = SCRIPT[:SCRIPT.index(' — see tools/')]
+
+
+def install(page, current, legacy_start, legacy_end, label):
+    if INSTALLED_HEADER_START in page:
+        # Normal case: refresh the header this script installed last time.
+        page = replace_block(page, INSTALLED_HEADER_START, INSTALLED_HEADER_END,
+                             header(current), '%s (installed header)' % label)
+    else:
+        # First run on a page that still carries its original markup.
+        page = replace_block(page, legacy_start, legacy_end, header(current), label)
+    # Refresh the generated CSS and behaviour script in place, so an edit to
+    # either constant above actually reaches the pages. On first install the
+    # CSS goes immediately before </head> and the script before </body>.
+    if INSTALLED_CSS_START in page:
+        page = replace_block(page, INSTALLED_CSS_START, '</style>', CSS,
+                             '%s generated header CSS' % label)
+    else:
         page = page.replace('</head>', CSS + '\n</head>', 1)
-    if 'xpl-header' not in page.split('</body>')[0].rsplit('<script>', 1)[-1]:
-        pass
-    if 'querySelector(\'.xpl-header\')' not in page:
+    if INSTALLED_SCRIPT_START in page:
+        page = replace_block(page, INSTALLED_SCRIPT_START, '</script>', SCRIPT,
+                             '%s generated header script' % label)
+    else:
         page = page.replace('</body>', SCRIPT + '\n</body>', 1)
     return page
 
