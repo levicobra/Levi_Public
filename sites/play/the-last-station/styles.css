@@ -1,26 +1,30 @@
 /* =====================================================================
-   Life XP — public routes (marketing, support, privacy)
+   The Last Station — public routes (marketing, privacy, terms, support)
 
-   HOUSE SYSTEM. The :root tokens are copied from the Space Glyph bundle
-   so the two games sit inside one estate rather than beside each other.
-   The accent is the violet Games theme from play.xplabs.us, not the
-   corporate green, and not the app's own in-game green — the origin sets
-   the theme, the product does not.
+   HOUSE SYSTEM. The :root tokens below are the shared XPLabs estate set,
+   identical to the Space Glyph and Life XP bundles, so the three titles
+   sit inside one estate rather than beside each other. The accent is the
+   violet Games theme from play.xplabs.us, not the corporate green and not
+   the game's own phosphor green — the origin sets the theme, the product
+   does not.
 
-   This file deliberately does NOT replicate the estate's shared nav.
-   That nav is JavaScript-driven and synced from the site repo by
-   tools/sync_nav.py, which does not reach this app repo. A copy here
-   would drift silently and the drift would land on a legally-required
-   page. The header below is a static, no-JS reduction.
+   Do not delete the :root block. The Life XP bundle shipped without it and
+   every var() on its privacy policy silently fell back to the UA default:
+   serif type, no gutters, no heading scale, on a legally-required page.
+   Nothing errors and nothing warns — the page just quietly stops being
+   designed. If you fork this file, fork the tokens with it.
 
-   THERE IS NO JAVASCRIPT ON THESE PAGES, and there must not be. Unlike
-   Space Glyph, Life XP does carry an advertising SDK *in the app* — but
-   these pages carry no scripts, cookies, pixels, external fonts, or
-   remote images, and the privacy policy says so. Adding any would break
-   a published claim.
+   This file deliberately does NOT replicate the estate's shared nav. That
+   nav is JavaScript-driven and synced by tools/sync_nav.py. A copy here
+   would drift silently and the drift would land on a page Apple reads
+   during review. The header below is a static, no-JS reduction.
 
-   Paths are absolute from /life-xp/, so the bundle deploys to any origin
-   without edits.
+   THERE IS NO JAVASCRIPT ON THESE PAGES, and there must not be. The
+   privacy policy states these pages carry no scripts, cookies, pixels,
+   external fonts, or remote images. Adding any breaks a published claim.
+
+   Paths are absolute from /the-last-station/, so the bundle deploys to any
+   origin without edits.
    ===================================================================== */
 
 :root {
