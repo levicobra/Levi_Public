@@ -86,6 +86,8 @@ out = (TPL
   .replace("__TOTAL__", str(tot))
   .replace("__NCATS__", str(len(cats))))
 p=f"{HERE}/index.html"
-open(p,"w",encoding="utf-8").write(out)
+# newline="\n" so a run on Windows emits the same bytes as a run anywhere
+# else — without it every line comes out CRLF and the whole file diffs.
+open(p,"w",encoding="utf-8",newline="\n").write(out)
 print(f"wrote {p}  ({len(out)/1024:.1f} KB)")
 print(f"  {tot} links, {len(cats)} categories")

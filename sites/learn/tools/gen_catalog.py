@@ -347,7 +347,9 @@ if __name__ == "__main__":
     root = pathlib.Path(__file__).resolve().parent.parent
     out = root / "content" / "catalog.json"
     catalog = build()
-    out.write_text(json.dumps(catalog, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    # newline="\n": catalog.json is precached and content-hashed by
+    # build_index.py, so its bytes must not depend on the platform.
+    out.write_text(json.dumps(catalog, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
     n_domains = len(catalog["domains"])
     n_subjects = sum(len(d["subjects"]) for d in catalog["domains"])
     print(f"Wrote {out} — {n_domains} domains, {n_subjects} subjects")
