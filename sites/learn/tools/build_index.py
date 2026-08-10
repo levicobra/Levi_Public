@@ -36,7 +36,17 @@ def build_search_index():
 
 
 def precache_files():
-    files = ["./", "index.html", "css/app.css", "js/app.js",
+    # NOTE index.html IS DELIBERATELY ABSENT, and putting it back breaks the
+    # site on every returning visitor.
+    #
+    # Cloudflare Pages answers /index.html with a 308 to /. Precaching it
+    # therefore stores a response whose `redirected` flag is true. A
+    # navigation request has redirect mode "manual", and handing it a
+    # redirected response is a network error — so the FIRST visit worked, the
+    # worker installed, and every visit after that failed with ERR_FAILED.
+    # "./" is the same page without the redirect, and it is what sw.js serves
+    # navigations from.
+    files = ["./", "css/app.css", "js/app.js",
              "manifest.webmanifest", "icons/icon.svg",
              "icons/icon-192.png", "icons/icon-512.png",
              "icons/icon-maskable-512.png",

@@ -8,13 +8,12 @@
 'use strict';
 
 /* @VERSION */
-const VERSION = 'xped-1636cc7760c6';
+const VERSION = 'xped-bee5180372b2';
 /* @END-VERSION */
 
 /* @PRECACHE */
 const PRECACHE = [
   './',
-  'index.html',
   'css/app.css',
   'js/app.js',
   'manifest.webmanifest',
@@ -234,17 +233,40 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(handle(req, event).catch(() => fetch(req)));
 });
 
+/** A copy of a response with the `redirected` flag cleared, so it can legally
+    answer a navigation. The body is read in full first; these are app-shell
+    sized, not media. */
+async function stripRedirect(res) {
+  const body = await res.blob();
+  return new Response(body, {
+    status: res.status,
+    statusText: res.statusText,
+    headers: res.headers,
+  });
+}
+
 async function handle(req, event) {
   const cache = await caches.open(CACHE);
 
   // Navigations: serve the cached shell, refresh it in the background.
+  //
+  // THE SHELL IS KEYED ON './', NOT 'index.html'. Cloudflare Pages 308s
+  // /index.html to /, so anything cached under that name is a REDIRECTED
+  // response — and returning one of those to a navigation (whose redirect
+  // mode is "manual") is a network error, not a page. That is what broke the
+  // site for every returning visitor while a fresh one saw it work.
   if (req.mode === 'navigate') {
-    const cached = await cache.match('index.html');
+    const cached = await cache.match('./');
     if (cached) {
-      event.waitUntil(fetch('index.html').then(res => {
-        if (res && res.ok) return cache.put('index.html', res);
+      event.waitUntil(fetch('./').then(res => {
+        if (res && res.ok && !res.redirected) return cache.put('./', res);
       }).catch(() => {}));
-      return cached;
+      // Belt and braces: if a redirected response ever reaches the cache
+      // again, strip the flag by rebuilding the response rather than handing
+      // the browser something it will refuse. A slow page beats a dead one,
+      // and this is the failure the outer catch in the listener CANNOT see —
+      // handle() resolves fine and the error happens afterwards.
+      return cached.redirected ? await stripRedirect(cached) : cached;
     }
     try { return await fetch(req); }
     catch { return new Response('Offline and not yet cached.', { status: 503 }); }
