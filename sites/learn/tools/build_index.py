@@ -54,7 +54,10 @@ def precache_files():
              "manifest.webmanifest", "icons/icon.svg",
              "icons/icon-192.png", "icons/icon-512.png",
              "icons/icon-maskable-512.png",
-             "content/catalog.json", "content/search-index.json"]
+             "content/catalog.json", "content/search-index.json",
+             # The downloads shelf's own catalog, so the page listing the big
+             # offline material is itself available offline.
+             "content/downloads.json"]
     for f in sorted((ROOT / "content" / "subjects").glob("*.json")):
         files.append(f"content/subjects/{f.name}")
     # keep only files that actually exist (plus './')

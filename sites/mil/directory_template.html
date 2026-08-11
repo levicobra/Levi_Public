@@ -147,6 +147,26 @@ a{color:var(--accent)}
 .row__h{font-family:var(--sans);font-size:.8125rem;color:var(--ink-2);word-break:break-all}
 .row__cat{font-family:var(--sans);font-size:.75rem;color:var(--gold);font-weight:700;
   text-transform:uppercase;letter-spacing:.05em;width:100%}
+/* What the benefit actually is, in one plain line under the name. */
+.row__b{font-family:var(--sans);font-size:.875rem;color:var(--ink-2);line-height:1.45;width:100%}
+
+/* ---------- 5b. The National Guard map ---------- */
+/* A tile-grid cartogram: 11 columns laid out roughly like the country. It is
+   an enhancement over the <details> list below it, which works without any
+   JavaScript at all. */
+.usmap{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:4px;
+  max-width:37rem;margin:0 0 1.4rem}
+.st{font-family:var(--sans);font-size:.8125rem;font-weight:700;color:var(--ink);
+  background:var(--accent-wash);border:1.5px solid var(--edge);cursor:pointer;
+  aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:0}
+.st:hover,.st:focus-visible{background:var(--accent);color:#fff;border-color:var(--accent)}
+.st.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.state{border-bottom:1px solid var(--edge-soft)}
+.state summary{font-size:1.125rem;padding:.7rem .2rem;cursor:pointer}
+.state summary:hover{color:var(--accent)}
+.state__n{font-family:var(--sans);font-size:.8125rem;color:var(--gold);font-weight:700}
+.state .rows{margin:0 0 .8rem;border-top:0}
+@media (min-width:820px){.state .rows{grid-template-columns:1fr}}
 
 /* result rows that point at a whole category */
 .catrow{display:flex;align-items:baseline;gap:.7rem;width:100%;text-align:left;cursor:pointer;
@@ -291,7 +311,7 @@ a{color:var(--accent)}
   <p class="top__meta">
     <span>__TOTAL__ resources</span>
     <span>__NCATS__ categories</span>
-    <span>Links verified 31 July 2026</span>
+    <span>Links verified 10 August 2026</span>
   </p>
 </header>
 
@@ -347,7 +367,7 @@ __SECTIONS__
   </div>
   <div class="wrap foot__meta">
     Maintained by XPLabs LLC &middot; __TOTAL__ resources across __NCATS__ categories &middot;
-    Links verified 31 July 2026
+    Links verified 10 August 2026
   </div>
 </footer>
 
@@ -473,7 +493,8 @@ function runSearch(){
       out+='<li><a class="row" href="'+esc(l.u)+'" target="_blank" rel="noopener">'+
            '<span class="row__cat">'+esc(c.t)+'</span>'+
            '<span class="row__n">'+esc(l.n)+'</span>'+
-           '<span class="row__h">'+esc(l.h)+'</span></a></li>';
+           '<span class="row__h">'+esc(l.h)+'</span>'+
+           (l.b ? '<span class="row__b">'+esc(l.b)+'</span>' : '')+'</a></li>';
     }
     out+='</ul></div>';
   }
@@ -551,6 +572,30 @@ else show('board');
     closeAll(null); if(!d.matches&&t){setNav(false);t.focus();}
   });
   d.addEventListener('change',function(){setNav(false);closeAll(null);});
+})();
+</script>
+<script>
+/* The National Guard map. The <details> list under it is the real content and
+   works with no JavaScript; the map is the fast way in. Clicking a state
+   opens exactly that state's block and moves focus to it. */
+(function(){
+  var section=document.getElementById('guard-by-state');
+  if(!section) return;
+  section.addEventListener('click', function(ev){
+    var st=ev.target.closest ? ev.target.closest('.st') : null;
+    if(!st) return;
+    var code=st.getAttribute('data-state');
+    var target=document.getElementById('gd-'+code);
+    if(!target) return;
+    var states=section.querySelectorAll('.state');
+    for(var i=0;i<states.length;i++) states[i].open=(states[i]===target);
+    var on=section.querySelectorAll('.st.on');
+    for(i=0;i<on.length;i++) on[i].classList.remove('on');
+    st.classList.add('on');
+    var summary=target.querySelector('summary');
+    if(summary){ summary.setAttribute('tabindex','-1'); summary.focus({preventScroll:true}); }
+    target.scrollIntoView({block:'nearest'});
+  });
 })();
 </script>
 </body>
