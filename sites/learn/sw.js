@@ -8,7 +8,7 @@
 'use strict';
 
 /* @VERSION */
-const VERSION = 'xped-bee5180372b2';
+const VERSION = 'xped-3f91cd3ed5b7';
 /* @END-VERSION */
 
 /* @PRECACHE */
@@ -23,6 +23,7 @@ const PRECACHE = [
   'icons/icon-maskable-512.png',
   'content/catalog.json',
   'content/search-index.json',
+  'content/downloads.json',
   'content/subjects/ai-machine-learning.json',
   'content/subjects/american-government.json',
   'content/subjects/anatomy-physiology.json',

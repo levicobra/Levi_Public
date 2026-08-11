@@ -139,6 +139,7 @@ const routes = [
   { re: /^\/l\/([\w-]+)\/([\w-]+)\/([\w-]+)$/, fn: (m) => renderLesson(m[1], m[2], m[3]) },
   { re: /^\/search$/, fn: renderSearch },
   { re: /^\/library$/, fn: renderLibrary },
+  { re: /^\/downloads$/, fn: renderDownloads },
   { re: /^\/settings$/, fn: renderSettings },
   { re: /^\/about$/, fn: renderAbout },
 ];
@@ -625,6 +626,46 @@ async function renderLibrary() {
       renderLibrary();
     }
   });
+}
+
+/* ---------- the downloads shelf ---------- */
+/* Big reference material that cannot live inside an 8 MB app: full textbook
+   PDFs, offline Wikipedia (Kiwix), survival manuals, maps. This page — the
+   catalog itself — is precached and works offline; the downloads need a
+   connection once, and then live on the device or in the reader app that
+   opens them. Every link is to the official source and was machine-checked
+   when the catalog was built. */
+let downloadsCache = null;
+async function renderDownloads() {
+  if (!downloadsCache) {
+    const res = await fetch('content/downloads.json');
+    if (!res.ok) throw new Error('The downloads catalog could not be loaded.');
+    downloadsCache = await res.json();
+  }
+  const sections = downloadsCache.sections.map((s) => `
+    <section class="dl-section">
+      <h2>${esc(s.title)}</h2>
+      <p class="muted">${esc(s.note)}</p>
+      <ul class="dl-list">
+        ${s.items.map((i) => `
+        <li><a class="dl-item" href="${esc(i.href)}" target="_blank" rel="noopener noreferrer">
+          <span class="dl-name">${esc(i.name)}</span>
+          <span class="dl-src">${esc(i.source)}</span>
+          <span class="dl-note">${esc(i.note)}</span>
+        </a></li>`).join('')}
+      </ul>
+    </section>`).join('');
+
+  view.innerHTML = `
+  <section class="wrap pad-y downloads">
+    <h1>Downloads</h1>
+    <p class="lead">A shelf of real reference material to keep on your own device:
+    full textbooks, all of Wikipedia, survival manuals, and offline maps. Download
+    while you have a connection — after that, none of it needs one.</p>
+    <p class="muted">Every link goes to the official source. This page itself works
+    offline; the downloads are large and live outside this app.</p>
+    ${sections}
+  </section>`;
 }
 
 /* ---------- settings ---------- */

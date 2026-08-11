@@ -1,0 +1,438 @@
+{
+ "note": "The downloads shelf. Regenerate the service worker with tools/build_index.py after editing.",
+ "verified": "2026-08-10",
+ "sections": [
+  {
+   "title": "Offline Wikipedia & reference",
+   "note": "Wikipedia and whole reference libraries as ZIM files, read completely offline in the free Kiwix app. Install Kiwix first, then pick your content.",
+   "items": [
+    {
+     "name": "Kiwix Desktop for Windows (64-bit)",
+     "href": "https://download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64.zip",
+     "note": "Free GPL reader that opens ZIM files with zero internet. Portable ZIP, no installer needed. Get this first, then the content files below. 150 MB (v2.5.1).",
+     "source": "Kiwix"
+    },
+    {
+     "name": "Kiwix for Android (direct APK)",
+     "href": "https://download.kiwix.org/release/kiwix-android/org.kiwix.kiwixmobile.standalone.apk",
+     "note": "Official APK straight from Kiwix - sideload before you leave connectivity. Also on Google Play. Reads ZIM files off the SD card. 225 MB (v3.14.1), free/GPL.",
+     "source": "Kiwix"
+    },
+    {
+     "name": "Kiwix for iPhone and iPad (App Store)",
+     "href": "https://apps.apple.com/us/app/kiwix/id997079563",
+     "note": "Official free Kiwix reader for iOS/iPadOS; same app listing serves macOS. Download ZIM files in-app while online, then read entirely offline. Size varies by device.",
+     "source": "Kiwix"
+    },
+    {
+     "name": "Kiwix all-platform download page (macOS, Linux, browser add-ons)",
+     "href": "https://get.kiwix.org/en/solutions/applications/download-options/",
+     "note": "Every official Kiwix build in one place: macOS DMG (5.9 MB), Linux AppImage (160 MB), Flatpak, kiwix-serve, and Chrome/Firefox/Edge extensions. All free and open source.",
+     "source": "Kiwix"
+    },
+    {
+     "name": "Kiwix Library - browse and download ZIM content packages",
+     "href": "https://browse.library.kiwix.org/",
+     "note": "Official catalog of thousands of free ZIM files: Wikipedia, Stack Exchange, Gutenberg, TED, medical and how-to collections. Filter by language and size. Sizes vary.",
+     "source": "Kiwix"
+    },
+    {
+     "name": "Simple English Wikipedia (with images) - ZIM",
+     "href": "https://download.kiwix.org/zim/wikipedia/wikipedia_en-simple_all_maxi_2026-06.zim",
+     "note": "Best size-to-value pick: plain-language Wikipedia, images included, opens in Kiwix. 3.3 GB (June 2026). A no-pictures version is 944 MB. Text is CC BY-SA.",
+     "source": "Wikimedia / Kiwix"
+    },
+    {
+     "name": "Full English Wikipedia, text only (no images) - ZIM",
+     "href": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_2026-06.zim",
+     "note": "All ~6.9M English articles, images stripped to save space. The reference backbone of an offline library. 49 GB (June 2026), CC BY-SA. Use a download manager.",
+     "source": "Wikimedia / Kiwix"
+    },
+    {
+     "name": "WikiMed - offline medical encyclopedia (MDWiki) - ZIM",
+     "href": "https://download.kiwix.org/zim/other/mdwiki_en_all_maxi_2025-11.zim",
+     "note": "Curated medical reference built from Wikipedia's health articles, images included. Written for use where no doctor or internet is available. 2.1 GB, CC BY-SA.",
+     "source": "MDWiki / Kiwix"
+    },
+    {
+     "name": "WikEM emergency medicine reference - ZIM",
+     "href": "https://download.kiwix.org/zim/other/wikem_en_all_maxi_2026-07.zim",
+     "note": "Point-of-care emergency medicine wiki used by clinicians - fast lookups for acute problems. 357 MB (July 2026). Free download via Kiwix; see WikEM for reuse terms.",
+     "source": "WikEM / Kiwix"
+    },
+    {
+     "name": "Post-disaster survival collection (Zimgit) - ZIM",
+     "href": "https://download.kiwix.org/zim/other/zimgit-post-disaster_en_2024-05.zim",
+     "note": "Purpose-built offline pack for losing power, water, and comms: shelter, sanitation, first aid, repair. Exactly the case this library exists for. 615 MB, free.",
+     "source": "Kiwix (Zimgit)"
+    },
+    {
+     "name": "Essential medical guides (Zimgit Medicine) - ZIM",
+     "href": "https://download.kiwix.org/zim/other/zimgit-medicine_en_2024-08.zim",
+     "note": "Small, high-value first-aid and treatment guides for austere settings. 67 MB - fits on any phone alongside everything else. Free download from Kiwix.",
+     "source": "Kiwix (Zimgit)"
+    },
+    {
+     "name": "Safe drinking water guide (Zimgit Water) - ZIM",
+     "href": "https://download.kiwix.org/zim/other/zimgit-water_en_2024-08.zim",
+     "note": "Finding, filtering, and disinfecting water when the tap fails. Only 20 MB, so there is no reason not to carry it. Free download from Kiwix.",
+     "source": "Kiwix (Zimgit)"
+    },
+    {
+     "name": "Food preparation and preservation (Zimgit) - ZIM",
+     "href": "https://download.kiwix.org/zim/other/zimgit-food-preparation_en_2025-04.zim",
+     "note": "Cooking, canning, and food-storage instructions for no-power situations. 93 MB. Free download from Kiwix; opens in the Kiwix reader.",
+     "source": "Kiwix (Zimgit)"
+    },
+    {
+     "name": "English Wiktionary, text only - ZIM",
+     "href": "https://download.kiwix.org/zim/wiktionary/wiktionary_en_all_nopic_2026-05.zim",
+     "note": "Complete offline dictionary: definitions, etymologies, and translations across languages. Pairs with Wikipedia for homeschool and study. 8.5 GB (May 2026), CC BY-SA.",
+     "source": "Wikimedia / Kiwix"
+    },
+    {
+     "name": "Army Publishing Directorate (armypubs) mirror - ZIM",
+     "href": "https://download.kiwix.org/zim/zimit/armypubs_en_all_2024-06.zim",
+     "note": "Offline snapshot of the Army's public publications site - regulations, field manuals, forms. US federal works, public domain. 7.6 GB (June 2024 crawl).",
+     "source": "US Army / Kiwix"
+    },
+    {
+     "name": "Kiwix PWA - read ZIM files in a browser, no install",
+     "href": "https://pwa.kiwix.org/",
+     "note": "Official Kiwix web app; install once and it works offline, opening ZIM files from your own drive. Useful on locked-down or government computers. Free.",
+     "source": "Kiwix"
+    }
+   ]
+  },
+  {
+   "title": "Survival & preparedness",
+   "note": "Field manuals and preparedness guides from official sources — public domain or officially free. Print or keep on the device you'd actually have with you.",
+   "items": [
+    {
+     "name": "ATP 3-50.21, Survival (US Army, Sept 2018) — full PDF",
+     "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN12086_ATP%203-50x21%20FINAL%20WEB%202.pdf",
+     "note": "Current official Army survival doctrine (supersedes FM 21-76): water, food, fire, shelter, navigation, knots. US federal work, public domain. PDF, 23 MB.",
+     "source": "US Army Publishing Directorate"
+    },
+    {
+     "name": "ATP 4-02.11, Casualty Response, TCCC, and First Aid (Mar 2026)",
+     "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
+     "note": "Army's current first-aid manual for non-medics; replaced TC 4-02.1 (now inactive). Bleeding, airway, hypothermia, evacuation. Public domain. PDF, 12 MB.",
+     "source": "US Army Publishing Directorate"
+    },
+    {
+     "name": "Are You Ready? An In-Depth Guide to Citizen Preparedness",
+     "href": "https://www.ready.gov/sites/default/files/2021-11/are-you-ready-guide.pdf",
+     "note": "FEMA's ~200-page all-hazards household manual: plans, kits, every major disaster type. The single best offline preparedness book. Public domain. PDF, 4 MB.",
+     "source": "FEMA / Ready.gov"
+    },
+    {
+     "name": "Ready.gov Hazard Information Sheets — complete set in one PDF",
+     "href": "https://www.ready.gov/sites/default/files/2025-02/fema_full-suite-hazard-info-sheets.pdf",
+     "note": "All 16 FEMA hazard sheets (flood, tornado, wildfire, power outage, pandemic, tsunami...) bundled as one printable file. Public domain. PDF, 4 MB.",
+     "source": "FEMA / Ready.gov"
+    },
+    {
+     "name": "Thunderstorms, Tornadoes, Lightning — NWS preparedness booklet",
+     "href": "https://www.weather.gov/media/owlie/ttl6-10.pdf",
+     "note": "NOAA/NWS booklet on severe storm science, watches vs. warnings, and shelter decisions. Useful when no radar or phone alerts. Public domain. PDF, 14 MB.",
+     "source": "NOAA National Weather Service"
+    },
+    {
+     "name": "NWS Publications and Brochures library (all safety PDFs)",
+     "href": "https://www.weather.gov/owlie/publication_brochures",
+     "note": "Official index of ~80 NWS safety PDFs: flood, heat, hurricane, lightning, tornado, tsunami, winter, plus Spanish. Download the set before going offline. Size varies.",
+     "source": "NOAA National Weather Service"
+    },
+    {
+     "name": "USDA Complete Guide to Home Canning, 2015 revision (8 PDFs)",
+     "href": "https://nchfp.uga.edu/resources/entry/about-the-usda-guide-to-home-canning-2015-revision",
+     "note": "The authoritative US food-preservation reference, split into 8 downloadable parts. USDA work, public domain; hosted by NCHFP at UGA. Size varies (intro ~0.5 MB).",
+     "source": "USDA / National Center for Home Food Preservation"
+    },
+    {
+     "name": "Making Water Safe During an Emergency (CDC fact sheet)",
+     "href": "https://www.cdc.gov/water-emergency/media/pdfs/make-water-safe-during-emergency-p.pdf",
+     "note": "Printable CDC sheet on boiling, bleach ratios, and filtering when tap water is unsafe. Core offline skill. Public domain. PDF, 0.7 MB.",
+     "source": "CDC"
+    },
+    {
+     "name": "Emergency Disinfection of Drinking Water (EPA)",
+     "href": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+     "note": "EPA's exact unscented-bleach and iodine dosing tables plus cloudy-water procedure. Save the page; it is the number most guides get wrong. Public domain.",
+     "source": "US EPA"
+    },
+    {
+     "name": "Keep Your Food Safe During Emergencies: Power Outages, Floods, Fires",
+     "href": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/emergencies/keep-your-food-safe-during-emergencies",
+     "note": "USDA FSIS rules for fridge/freezer hold times, what to discard, and flood-contaminated food. Public domain; HTML page, save for offline.",
+     "source": "USDA Food Safety and Inspection Service"
+    },
+    {
+     "name": "How to Create and Store an Emergency Water Supply (CDC)",
+     "href": "https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html",
+     "note": "How much water per person per day, container choice, sanitizing, and rotation schedule. Pairs with the CDC treatment sheet. Public domain; HTML page.",
+     "source": "CDC"
+    },
+    {
+     "name": "Emergency Supply Kit Checklist (Ready.gov)",
+     "href": "https://www.ready.gov/sites/default/files/2021-02/ready_checklist.pdf",
+     "note": "One-page printable build-a-kit list — the fastest thing to hand someone before a deployment or storm. Public domain. PDF, 150 KB.",
+     "source": "FEMA / Ready.gov"
+    },
+    {
+     "name": "Family Emergency Communication Plan (fillable card, 2025)",
+     "href": "https://www.ready.gov/sites/default/files/2025-06/family-communication-plan_fillable-card.pdf",
+     "note": "Fillable wallet-card plan for contacts and meeting places — built for families separated by distance or deployment. Public domain. PDF, 625 KB.",
+     "source": "FEMA / Ready.gov"
+    },
+    {
+     "name": "Winter Storms: The Deceptive Killers (NWS preparedness guide)",
+     "href": "https://www.weather.gov/media/owlie/Winter_Storms2008.pdf",
+     "note": "NWS guide to wind chill, hypothermia, vehicle kits, and staying warm without power. Public domain. PDF, 1.6 MB.",
+     "source": "NOAA National Weather Service"
+    },
+    {
+     "name": "FEMA Guide to Emergency Alerts and Warnings",
+     "href": "https://www.ready.gov/sites/default/files/2022-02/fema_guide-for-alerts-and-warnings_2021.pdf.pdf",
+     "note": "Explains WEA, EAS, and NOAA Weather Radio — how warnings still reach you when cell data and internet are down. Public domain. PDF, 1.7 MB.",
+     "source": "FEMA / Ready.gov"
+    }
+   ]
+  },
+  {
+   "title": "Medical & first aid",
+   "note": "Legally free medical references built for use where there is no doctor and no signal.",
+   "items": [
+    {
+     "name": "TCCC Guidelines, 01 May 2026 (current CoTCCC edition)",
+     "href": "https://learning-media.allogy.com/api/v1/pdf/18ccfdfc-a076-47e9-8a34-376efdd81b43/contents",
+     "note": "Verified PDF, first page reads 'TCCC Guidelines 01 May 2026'. Care Under Fire/Tactical Field Care/TACEVAC. US federal work, public domain. 314 KB.",
+     "source": "CoTCCC / Deployed Medicine (DHA-JTS)"
+    },
+    {
+     "name": "ATP 4-02.11 - Casualty Response, Tactical Combat Casualty Care, and First Aid",
+     "href": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
+     "note": "March 2026 Army doctrine, supersedes TC 4-02.1. Bleeding, airway, hypothermia, CBRN, bites/stings, climatic injury. Public domain. 12.7 MB PDF.",
+     "source": "US Army Publishing Directorate"
+    },
+    {
+     "name": "WikiMed: Wikipedia Medicine offline archive (ZIM)",
+     "href": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_medicine_maxi_2026-04.zim",
+     "note": "Not covered by any other item here. ~75k medical articles, reads in Kiwix with no internet. CC BY-SA. 2.2 GB maxi; nopic 822 MB, mini 155 MB also on that server.",
+     "source": "Kiwix"
+    },
+    {
+     "name": "WikEM emergency medicine reference, offline archive (ZIM)",
+     "href": "https://download.kiwix.org/zim/other/wikem_en_all_maxi_2026-07.zim",
+     "note": "Largest open-access emergency medicine reference, packaged for offline Kiwix use. Content licensed CC BY-SA 4.0. 375 MB maxi; nopic build 347 MB.",
+     "source": "Kiwix / WikEM"
+    },
+    {
+     "name": "Joint Trauma System Clinical Practice Guidelines (100+ CPGs)",
+     "href": "https://jts.health.mil/index.cfm/PI_CPGs/cpgs",
+     "note": "DoD trauma CPGs as free PDFs, plus complete A-H / I-Z zip bundles and a Top 10 Operational Readiness set for bulk offline download. Public domain. Size varies.",
+     "source": "Joint Trauma System (DoD)"
+    },
+    {
+     "name": "MedlinePlus Health Topic XML bulk download",
+     "href": "https://medlineplus.gov/xml.html",
+     "note": "Full English/Spanish consumer health topic set as XML, rebuilt daily. Use the compressed .zip (~4.6 MB; raw XML ~29 MB). US government work, public domain.",
+     "source": "US National Library of Medicine"
+    },
+    {
+     "name": "MSF Clinical Guidelines: Diagnosis and Treatment Manual",
+     "href": "https://medicalguidelines.msf.org/sites/default/files/2026-05/guideline-170-en.pdf",
+     "note": "Field manual for austere settings. Free download from MSF's own site, but all rights reserved: personal offline use only, no redistribution. 6.8 MB PDF.",
+     "source": "Medecins Sans Frontieres"
+    },
+    {
+     "name": "MDWiki Medical Encyclopedia offline archive (ZIM)",
+     "href": "https://download.kiwix.org/zim/other/mdwiki_en_all_maxi_2025-11.zim",
+     "note": "WikiProjectMed-curated healthcare articles, the source behind the WikiMed app. Complements WikiMed rather than duplicating it. CC BY-SA. 2.3 GB.",
+     "source": "Kiwix / WikiProjectMed"
+    }
+   ]
+  },
+  {
+   "title": "Offline maps",
+   "note": "Topographic maps, charts and offline map apps from official and open sources. Download your area before you need it.",
+   "items": [
+    {
+     "name": "Organic Maps — offline OpenStreetMap navigation app",
+     "href": "https://organicmaps.app/",
+     "note": "Offline OSM maps with turn-by-turn nav; no ads, no tracking, no signal needed. Apache 2.0 open source. Download map regions per country/state; size varies.",
+     "source": "Organic Maps"
+    },
+    {
+     "name": "OsmAnd — offline maps, routing, contour lines",
+     "href": "https://osmand.net/",
+     "note": "Offline OSM maps with routing plus contour/hillshade plugins for terrain. Open source, free tier, Android/iOS. Regions downloaded per country/state; size varies.",
+     "source": "OsmAnd"
+    },
+    {
+     "name": "The National Map Downloader — US Topo GeoPDF quads",
+     "href": "https://apps.nationalmap.gov/downloader/",
+     "note": "Free current US Topo maps as layered, georeferenced GeoPDF; full coverage of 50 states, PR, USVI and Alaska. Public domain USGS data; size varies.",
+     "source": "USGS"
+    },
+    {
+     "name": "USGS topoBuilder — custom OnDemand Topo PDF for any area",
+     "href": "https://topobuilder.nationalmap.gov/",
+     "note": "Generate and download a topo PDF centered wherever you choose, not just standard quads. Public domain, free; size varies. JS app — verify in a browser.",
+     "source": "USGS"
+    },
+    {
+     "name": "National Park Service map catalog (1,000+ printable park maps)",
+     "href": "https://www.nps.gov/carto/",
+     "note": "Official NPS maps from Harpers Ferry Center, free as PDF or JPEG for printing before you lose signal. US federal work, public domain; size varies.",
+     "source": "National Park Service"
+    },
+    {
+     "name": "NOAA ENC Chart Downloader — free US nautical charts",
+     "href": "https://www.charts.noaa.gov/ENCs/ENCs.shtml",
+     "note": "Official NOAA electronic navigational charts free by chart, state, region or Coast Guard district. S-57 zips for chart plotters/OpenCPN. All US ENCs = 789 MB.",
+     "source": "NOAA Office of Coast Survey"
+    },
+    {
+     "name": "NOAA Custom Chart — build a printable PDF nautical chart",
+     "href": "https://nauticalcharts.noaa.gov/charts/noaa-custom-charts.html",
+     "note": "Make a paper-style, georeferenced PDF chart for any area from current NOAA ENC data, then print or store it. Free federal data; app at devgis.charttools.noaa.gov/pod.",
+     "source": "NOAA Office of Coast Survey"
+    },
+    {
+     "name": "FAA digital VFR charts — sectionals and TACs (GeoTIFF)",
+     "href": "https://aeronav.faa.gov/visual/",
+     "note": "FAA's own file directory of georeferenced raster VFR charts, 300 dpi GeoTIFF in zips, foldered by 56-day effective date. Public domain; large files, size varies.",
+     "source": "FAA Aeronautical Information Services"
+    },
+    {
+     "name": "FHWA National Highway System maps — PDF, every state",
+     "href": "https://www.fhwa.dot.gov/planning/national_highway_system/nhs_maps/",
+     "note": "Statewide and urban-area highway maps as PDFs for all 50 states, downloadable singly or as one zip per state. US federal work, public domain; size varies.",
+     "source": "US DOT / FHWA"
+    },
+    {
+     "name": "Geofabrik OpenStreetMap extracts (.osm.pbf) by country and state",
+     "href": "https://download.geofabrik.de/",
+     "note": "Daily OSM data extracts by continent, country and US state for offline map apps and self-hosted routing. ODbL 1.0, free download server; size varies by region.",
+     "source": "Geofabrik / OpenStreetMap"
+    },
+    {
+     "name": "US Forest Service maps and Motor Vehicle Use Maps",
+     "href": "https://www.fs.usda.gov/visit/maps",
+     "note": "Free digital forest maps and MVUMs to download and print for national forests and grasslands. US federal work; some printed visitor maps are sold separately.",
+     "source": "US Forest Service"
+    },
+    {
+     "name": "Natural Earth — public domain world basemap data",
+     "href": "https://www.naturalearthdata.com/downloads/",
+     "note": "Free vector and raster world map data at 1:10m, 1:50m and 1:110m for offline GIS or printing. Public domain terms. Quick start kit 219 MB; all vectors 576 MB.",
+     "source": "Natural Earth / NACIS"
+    }
+   ]
+  },
+  {
+   "title": "Full textbooks (PDF)",
+   "note": "Complete, legally free college textbooks — download the PDF once and it is yours. Most pair with subjects taught on this site.",
+   "items": [
+    {
+     "name": "OpenStax — full catalog of free college textbooks (PDF download hub)",
+     "href": "https://openstax.org/subjects",
+     "note": "OpenStax's whole catalog: 100+ peer-reviewed college texts, each book page has a Download-a-PDF button. Bulk-download before you lose signal. CC licensed; books run 30-450 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Biology 2e",
+     "href": "https://openstax.org/details/books/biology-2e",
+     "note": "Full majors-level biology textbook, 1,500+ pages with figures. Official page with PDF download. CC BY-NC-SA 4.0. PDF is 383 MB — large, plan storage.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Chemistry 2e",
+     "href": "https://openstax.org/details/books/chemistry-2e",
+     "note": "Complete general-chemistry course text with worked examples and answer keys. Official page, free PDF download. CC BY-NC-SA 4.0. PDF 208 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax College Physics 2e",
+     "href": "https://openstax.org/details/books/college-physics-2e",
+     "note": "Algebra-based intro physics, full text plus problem sets — no calculus prerequisite. Official page, PDF download. CC BY-NC-SA 4.0. PDF 251 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax U.S. History",
+     "href": "https://openstax.org/details/books/us-history",
+     "note": "Complete US survey history, pre-Columbian to present. Solid offline civics and PME study text. Official page, PDF download. CC BY-NC-SA 4.0. PDF 130 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Psychology 2e",
+     "href": "https://openstax.org/details/books/psychology-2e",
+     "note": "Full intro psychology text and one of the smaller OpenStax PDFs — a good first download when drive space is tight. CC BY-NC-SA 4.0. PDF 55 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Anatomy and Physiology 2e",
+     "href": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+     "note": "Two-semester A&P with full illustration set; useful for medic, EMT and nursing prep offline. CC BY-NC-SA 4.0. Largest here at 454 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax College Algebra 2e",
+     "href": "https://openstax.org/details/books/college-algebra-2e",
+     "note": "Full college algebra with practice problems and answer keys. Core math for CLEP/DSST and college prep without a connection. CC BY-NC-SA 4.0. PDF 80 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Calculus Volume 1",
+     "href": "https://openstax.org/details/books/calculus-volume-1",
+     "note": "Limits, derivatives and integrals; first of three volumes, vols 2 and 3 link from the same site. CC BY-NC-SA 4.0. PDF 50 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Prealgebra 2e",
+     "href": "https://openstax.org/details/books/prealgebra-2e",
+     "note": "Arithmetic through introductory algebra — the right starting point for brushing up or teaching kids offline. CC BY-NC-SA 4.0. PDF 60 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Concepts of Biology",
+     "href": "https://openstax.org/details/books/concepts-biology",
+     "note": "Non-majors biology survey; the lighter alternative to Biology 2e if storage is tight. Official page, PDF download. CC BY-NC-SA 4.0. PDF 177 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Astronomy 2e",
+     "href": "https://openstax.org/details/books/astronomy-2e",
+     "note": "Full introductory astronomy text; pairs well with offline star charts for night-sky and celestial-navigation learning. CC BY-NC-SA 4.0. PDF 155 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "OpenStax Introduction to Sociology 3e",
+     "href": "https://openstax.org/details/books/introduction-sociology-3e",
+     "note": "Full intro sociology text and the smallest book on this list — fits easily alongside the bigger science PDFs. CC BY-NC-SA 4.0. PDF 46 MB.",
+     "source": "OpenStax"
+    },
+    {
+     "name": "LibreTexts Mathematics Bookshelves",
+     "href": "https://math.libretexts.org/Bookshelves",
+     "note": "LibreTexts math library: arithmetic through calculus, linear algebra, differential equations. Each book offers Download Full Book (PDF). CC licenses vary by title; size varies.",
+     "source": "LibreTexts"
+    },
+    {
+     "name": "LibreTexts Chemistry Bookshelves",
+     "href": "https://chem.libretexts.org/Bookshelves",
+     "note": "LibreTexts chemistry library: intro/GOB, general, organic, analytical, physical, biological. Per-book full-PDF download. CC licenses vary by title; size varies.",
+     "source": "LibreTexts"
+    },
+    {
+     "name": "Open Textbook Library",
+     "href": "https://open.umn.edu/opentextbooks",
+     "note": "Univ. of Minnesota's index of 1,866 openly licensed textbooks across all subjects, with faculty peer reviews. Most offer direct PDF download. Licenses and sizes vary by book.",
+     "source": "Open Textbook Library (U. of Minnesota)"
+    }
+   ]
+  }
+ ]
+}
