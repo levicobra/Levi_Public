@@ -70,7 +70,8 @@
           <li><strong>Settings</strong> — audio, control, and accessibility choices. Stored on your
           device. We never receive it.</li>
           <li><strong>In-app purchase records</strong> — held by Apple against your Apple Account.
-          We receive only a receipt confirming that a purchase is valid.</li>
+          StoreKit verifies Apple's signed transaction on your device, and the game keeps a local
+          transaction record so it cannot grant the same purchase twice. We do not receive it.</li>
           <li><strong>Crash and performance data</strong> — collected by Apple only if you opted in
           under <em>Settings → Privacy &amp; Security → Analytics</em>, and shared with us
           aggregated and anonymised, through Apple.</li>
@@ -81,9 +82,10 @@
         <h2 id="purchases">3. In-app purchases</h2>
         <p>
           When you buy Cores or a bundle, Apple processes the payment. We never see your card
-          number, billing address, or Apple Account credentials. To confirm a purchase is genuine
-          and deliver what you paid for, the app sends the cryptographic receipt Apple issued to
-          our verification service. That receipt identifies the <em>transaction</em>, not you.
+          number, billing address, or Apple Account credentials. StoreKit cryptographically
+          verifies Apple's signed transaction on your device before the game delivers it. The
+          signed transaction and its identifier stay in the game's local save as a delivery and
+          restore record; the app does not send them to an XPLabs server.
         </p>
       </section>
 
@@ -147,10 +149,10 @@
       <section aria-labelledby="retention">
         <h2 id="retention">8. Retention and security</h2>
         <p>
-          Purchase receipts are retained only as long as needed to validate entitlements and meet
-          tax and accounting obligations. They are transmitted over TLS and stored encrypted at
-          rest. No system is perfectly secure, but there is very little here to protect: we hold no
-          names, no addresses, and no payment credentials.
+          Apple retains App Store purchase records under its own policies. The game retains its
+          signed transaction records only in the local save on your device, where they prevent
+          duplicate delivery and support entitlement restoration. The app does not transmit those
+          records to us. We hold no names, addresses, payment credentials, or game-save backup.
         </p>
       </section>
 
