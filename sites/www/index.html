@@ -223,6 +223,110 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
 }
+
+/* =====================================================================
+   FRONT PAGE — rebuilt 19 Aug 2026.
+
+   The old front page was a specification: numbered entries 01-04, a
+   capability list, terse fragments. It read like a document about a
+   company. This one is built to be WALKED, not read:
+
+     1. one sentence saying what this is
+     2. two doors — the paid work, and the free work
+     3. the four places, as things you can go to
+     4. what we take on, in plain words
+     5. one way to get in touch
+
+   Nothing here is narrower than one column on a phone, and every card is
+   a whole clickable target rather than a paragraph with a link at the
+   end of it.
+   ===================================================================== */
+
+.fp-hero{padding:clamp(3rem,7vw,5.5rem) 0 clamp(2rem,4vw,3rem)}
+.fp-hero__eyebrow{
+  font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted-dim);margin-bottom:1rem;
+}
+.fp-hero h1{
+  font-size:clamp(2.25rem,1.6rem + 3vw,4rem);line-height:1.08;
+  letter-spacing:-.02em;margin:0 0 1.1rem;max-width:16ch;font-weight:700;
+}
+.fp-hero__lead{font-size:var(--t-lead);color:var(--muted);max-width:56ch;margin:0 0 2rem}
+.fp-hero__lead strong{color:var(--paper);font-weight:600}
+
+/* The two doors. Everything on this site is one of these two things, and
+   saying so once at the top is what stops the rest needing explanation. */
+.fp-doors{display:grid;gap:var(--gap);grid-template-columns:1fr;padding-bottom:clamp(3rem,6vw,5rem)}
+@media (min-width:760px){.fp-doors{grid-template-columns:1fr 1fr}}
+.fp-door{
+  display:block;text-decoration:none;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(1.5rem,3vw,2.25rem);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.fp-door:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(60,50,30,.10);border-color:var(--signal)}
+.fp-door__tag{
+  display:inline-block;font-family:var(--mono);font-size:var(--t-micro);
+  letter-spacing:.12em;text-transform:uppercase;color:var(--signal);
+  margin-bottom:.85rem;
+}
+.fp-door h2{font-size:var(--t-h3);margin:0 0 .5rem;font-weight:700}
+.fp-door p{color:var(--muted);margin:0 0 1rem}
+.fp-door__go{font-weight:600;color:var(--signal)}
+
+/* The four places. One card, one destination, whole card clickable. */
+.fp-section{padding:clamp(3rem,6vw,5rem) 0;border-top:1px solid var(--line-soft)}
+.fp-section__head{margin-bottom:clamp(1.5rem,3vw,2.5rem);max-width:60ch}
+.fp-section__head h2{font-size:var(--t-h2);line-height:1.1;letter-spacing:-.02em;margin:0 0 .6rem;font-weight:700}
+.fp-section__head p{color:var(--muted);font-size:var(--t-lead);margin:0}
+
+.fp-places{display:grid;gap:var(--gap);grid-template-columns:1fr}
+@media (min-width:640px){.fp-places{grid-template-columns:1fr 1fr}}
+.fp-place{
+  display:flex;flex-direction:column;gap:.5rem;text-decoration:none;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:clamp(1.35rem,2.5vw,1.9rem);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.fp-place:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(60,50,30,.10);border-color:var(--signal)}
+.fp-place__top{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.fp-place h3{font-size:var(--t-h3);margin:0;font-weight:700}
+.fp-place__free{
+  flex:none;font-family:var(--mono);font-size:var(--t-micro);letter-spacing:.1em;
+  text-transform:uppercase;color:var(--signal);
+  border:1px solid var(--signal);border-radius:999px;padding:.2rem .6rem;
+}
+.fp-place p{color:var(--muted);margin:0}
+.fp-place__where{font-family:var(--mono);font-size:var(--t-small);color:var(--muted-dim);margin-top:auto;padding-top:.75rem}
+
+/* What we take on — plain rows, no numbering, no jargon. */
+.fp-doing{display:grid;gap:1.5rem 2.5rem;grid-template-columns:1fr}
+@media (min-width:700px){.fp-doing{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.fp-doing{grid-template-columns:1fr 1fr 1fr}}
+.fp-doing div h3{font-size:1.0625rem;margin:0 0 .3rem;font-weight:700}
+.fp-doing div p{color:var(--muted);margin:0;font-size:var(--t-small)}
+
+/* The closing band. */
+.fp-close{
+  background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(1.75rem,4vw,3rem);margin-bottom:clamp(3rem,6vw,5rem);
+  display:grid;gap:1.25rem;
+}
+@media (min-width:760px){.fp-close{grid-template-columns:1fr auto;align-items:center}}
+.fp-close h2{font-size:var(--t-h3);margin:0 0 .4rem;font-weight:700}
+.fp-close p{color:var(--muted);margin:0;max-width:52ch}
+.fp-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.fp-btn{
+  display:inline-block;text-decoration:none;font-weight:600;
+  padding:.8rem 1.4rem;border-radius:999px;border:1px solid var(--signal);
+}
+.fp-btn--solid{background:var(--signal);color:#FFFFFF}
+.fp-btn--ghost{color:var(--signal);background:transparent}
+.fp-btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:reduce){
+  .fp-door,.fp-place,.fp-btn{transition:none}
+  .fp-door:hover,.fp-place:hover,.fp-btn:hover{transform:none}
+}
 </style>
 </head>
 <body>
@@ -241,19 +345,32 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
     </button>
 
     <div class="nav-links" id="primary-nav">
-      <!-- FLAT ON PURPOSE. This used to be two dropdown menus, which hid the
-           four places the work actually lives behind a click and listed
-           "Public Initiatives" in BOTH of them. Seven plain links need no
-           JavaScript, no hover, and no guessing about which menu a thing is
-           filed under. -->
       <a href="/" aria-current="page">Home</a>
-      <a href="/consulting/">Consulting</a>
-      <a href="https://play.xplabs.us/">Games</a>
-      <a href="https://learn.xplabs.us/">Education</a>
-      <a href="https://mil.xplabs.us/">Military</a>
-      <a href="/initiatives/">Free stuff</a>
+
+      <div class="menu">
+        <button class="menu__btn" type="button" aria-expanded="false" aria-controls="menu-businesses">
+          XPLabs Businesses <span class="menu__caret" aria-hidden="true"></span>
+        </button>
+        <div class="menu__panel" id="menu-businesses" hidden>
+          <a href="https://play.xplabs.us/"><b>Games</b><span>Four titles, four stacks</span></a>
+          <a href="/consulting/"><b>Consulting</b><span>Consulting · engineering · Palantir</span></a>
+          <a href="/initiatives/"><b>Public Initiatives</b><span>Free education and benefits</span></a>
+        </div>
+      </div>
+
       <a href="/about/">About</a>
       <a href="/invest/">Invest</a>
+
+      <div class="menu">
+        <button class="menu__btn" type="button" aria-expanded="false" aria-controls="menu-initiatives">
+          Public Initiatives <span class="menu__caret" aria-hidden="true"></span>
+        </button>
+        <div class="menu__panel menu__panel--right" id="menu-initiatives" hidden>
+          <a href="https://mil.xplabs.us/"><b>Military Personnel</b><span>Benefits, programs, discounts</span></a>
+          <a href="https://learn.xplabs.us/"><b>Opensource Education</b><span>106 subjects, works offline</span></a>
+          <a href="/initiatives/"><b>Overview</b><span>Both initiatives, side by side</span></a>
+        </div>
+      </div>
     </div>
   
   </nav>
@@ -261,95 +378,121 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 
 <main id="main">
 
-<section class="wrap page-head">
-  <p class="eyebrow">
-    <span class="tick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-    XPLabs LLC · Honolulu, Hawaii
-  </p>
-  <h1>Government, software, AI.</h1>
-  <p class="lead">XPLabs is a consulting studio in Honolulu. We take on
-  <strong>government contract consulting, custom software, and AI implementation</strong> —
-  and we build our own products across four stacks.</p>
-  <p class="lead">Two of the things we run are free, carry no accounts, no ads and no trackers,
-  and always will. They are not marketing for something else. They are the clearest evidence of
-  what this studio can build and finish.</p>
-</section>
-
-<!-- ===== The businesses. One line each; detail lives on each page. ===== -->
-<section class="wrap sec">
-  <p class="sec-label"><span>XPLabs Businesses</span><span>What we sell</span></p>
-  <div class="index">
-
-    <a class="node" href="/consulting/">
-      <span class="node__top"><span>01</span><span class="node__host">xplabs.us/consulting</span></span>
-      <span class="node__name">Consulting</span>
-      <span class="node__body">Palantir Foundry, Gotham and AIP development, government contract
-      consulting, and AI implementation that survives contact with a real organisation.</span>
-      <span class="node__go">What we take on &rarr;</span>
-    </a>
-
-    <a class="node" href="https://play.xplabs.us/">
-      <span class="node__top"><span>02</span><span class="node__host">play.xplabs.us</span></span>
-      <span class="node__name">Games</span>
-      <span class="node__body">Four titles across Unreal Engine, native iOS and Roblox.</span>
-      <span class="node__go">Open catalog &rarr;</span>
-    </a>
-
-  </div>
-</section>
-
-<!-- ===== The free half. ===== -->
-<section class="wrap sec">
-  <p class="sec-label"><span>Public Initiatives</span><span>Free, and staying that way</span></p>
-  <div class="index">
-
-    <a class="node" href="https://learn.xplabs.us/">
-      <span class="node__top"><span>03</span><span class="node__host">learn.xplabs.us</span></span>
-      <span class="node__name">Education</span>
-      <span class="node__body">A free school that works with no connection. No account, no paywall.</span>
-      <span class="node__go">Start learning &rarr;</span>
-    </a>
-
-    <a class="node" href="https://mil.xplabs.us/">
-      <span class="node__top"><span>04</span><span class="node__host">mil.xplabs.us</span></span>
-      <span class="node__name">Military Freebies</span>
-      <span class="node__body">A free directory for service members, veterans and their families.</span>
-      <span class="node__go">Open directory &rarr;</span>
-    </a>
-
-  </div>
-</section>
-
-<!-- ===== What the studio actually does ===== -->
-<section class="wrap sec">
-  <p class="sec-label"><span>Capability</span><span>What we take on</span></p>
-  <div class="caps">
-    <div class="cap"><b>Government consulting</b><span>Requirements, technical evaluation and
-      delivery for public-sector work.</span></div>
-    <div class="cap"><b>AI implementation</b><span>Putting models into real workflows behind
-      human review gates, rather than demos that never ship.</span></div>
-    <div class="cap"><b>Custom software</b><span>Built to be maintained by whoever inherits it,
-      not only by whoever wrote it.</span></div>
-    <div class="cap"><b>Simulation systems</b><span>Deterministic, reproducible engines with
-      their own test suites, independent of the UI layer.</span></div>
-    <div class="cap"><b>Offline-first products</b><span>Applications that install once and keep
-      working with no connection and no account.</span></div>
-    <div class="cap"><b>Game development</b><span>Unreal Engine 5 on mobile, native Swift on
-      iPhone, and server-authoritative Roblox.</span></div>
-  </div>
-</section>
-
-<!-- ===== Invest ===== -->
-<section class="wrap sec">
-  <div class="strip">
-    <div>
-      <h2>XPLabs is raising.</h2>
-      <p>We are talking to investors who back small studios early. Stage, raise size and
-      traction are shared directly rather than posted publicly.</p>
+  <section class="wrap fp-hero">
+    <p class="fp-hero__eyebrow">XPLabs LLC · Honolulu, Hawaii</p>
+    <h1>We build software, and give half of it away.</h1>
+    <p class="fp-hero__lead">
+      XPLabs is a small studio in Honolulu. We take on <strong>government consulting,
+      custom software and AI work</strong> — and we run two public services that are
+      free, have no accounts and no ads, and always will.
+    </p>
+    <div class="fp-actions">
+      <a class="fp-btn fp-btn--solid" href="/consulting/">Work with us</a>
+      <a class="fp-btn fp-btn--ghost" href="/initiatives/">See the free things</a>
     </div>
-    <a class="btn" href="/invest/">Investor contact &rarr;</a>
-  </div>
-</section>
+  </section>
+
+  <section class="wrap fp-doors">
+    <a class="fp-door" href="/consulting/">
+      <span class="fp-door__tag">What we sell</span>
+      <h2>Consulting and software</h2>
+      <p>
+        Palantir Foundry, Gotham and AIP work, government contracting, and AI put
+        into real workflows rather than demos. Built so whoever inherits it can
+        keep it running.
+      </p>
+      <span class="fp-door__go">What we take on &rarr;</span>
+    </a>
+    <a class="fp-door" href="/initiatives/">
+      <span class="fp-door__tag">What we give away</span>
+      <h2>Free for everyone</h2>
+      <p>
+        A whole school that works with no internet, and a benefits directory for the
+        military community. No sign-up, no ads, no trackers, nothing to buy — and
+        that is not a trial period.
+      </p>
+      <span class="fp-door__go">Both, side by side &rarr;</span>
+    </a>
+  </section>
+
+  <section class="wrap fp-section">
+    <div class="fp-section__head">
+      <h2>Four places to go</h2>
+      <p>Everything we have made lives in one of these. Each is a whole site of its own.</p>
+    </div>
+    <div class="fp-places">
+      <a class="fp-place" href="/consulting/">
+        <span class="fp-place__top"><h3>Consulting</h3></span>
+        <p>Government contracts, Palantir development, AI implementation and custom software.</p>
+        <span class="fp-place__where">xplabs.us/consulting</span>
+      </a>
+      <a class="fp-place" href="https://play.xplabs.us/">
+        <span class="fp-place__top"><h3>Games</h3></span>
+        <p>Four titles across Unreal Engine, native iPhone and Roblox.</p>
+        <span class="fp-place__where">play.xplabs.us</span>
+      </a>
+      <a class="fp-place" href="https://learn.xplabs.us/">
+        <span class="fp-place__top"><h3>Education</h3><span class="fp-place__free">Free</span></span>
+        <p>106 subjects, from early reading to college calculus. Visit once and it keeps working with no connection at all.</p>
+        <span class="fp-place__where">learn.xplabs.us</span>
+      </a>
+      <a class="fp-place" href="https://mil.xplabs.us/">
+        <span class="fp-place__top"><h3>Military benefits</h3><span class="fp-place__free">Free</span></span>
+        <p>Hundreds of checked benefits, state-by-state National Guard programs, and the discounts nobody tells you about.</p>
+        <span class="fp-place__where">mil.xplabs.us</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="wrap fp-section">
+    <div class="fp-section__head">
+      <h2>What we take on</h2>
+      <p>If your problem looks like one of these, we have done it before.</p>
+    </div>
+    <div class="fp-doing">
+      <div>
+        <h3>Government consulting</h3>
+        <p>Requirements, technical evaluation and delivery for public-sector work.</p>
+      </div>
+      <div>
+        <h3>AI that actually ships</h3>
+        <p>Models put into real workflows behind human review, not demos that never leave the slide deck.</p>
+      </div>
+      <div>
+        <h3>Custom software</h3>
+        <p>Written to be maintained by whoever inherits it, not only by whoever wrote it.</p>
+      </div>
+      <div>
+        <h3>Simulation systems</h3>
+        <p>Engines that give the same answer twice, with their own tests, independent of the screen.</p>
+      </div>
+      <div>
+        <h3>Offline-first products</h3>
+        <p>Installs once and keeps working with no connection and no account. Both free sites prove it.</p>
+      </div>
+      <div>
+        <h3>Game development</h3>
+        <p>Unreal Engine 5 on mobile, native Swift on iPhone, and server-authoritative Roblox.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="fp-close">
+      <div>
+        <h2>Talk to us</h2>
+        <p>
+          Work, questions, or investment — it reaches the same inbox, and a person
+          reads it. XPLabs is also raising; stage and traction are shared directly
+          rather than posted here.
+        </p>
+      </div>
+      <div class="fp-actions">
+        <a class="fp-btn fp-btn--solid" href="mailto:xp.labs.3d@gmail.com">Email us</a>
+        <a class="fp-btn fp-btn--ghost" href="/invest/">Investors</a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
