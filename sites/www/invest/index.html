@@ -229,19 +229,32 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
     </button>
 
     <div class="nav-links" id="primary-nav">
-      <!-- FLAT ON PURPOSE. This used to be two dropdown menus, which hid the
-           four places the work actually lives behind a click and listed
-           "Public Initiatives" in BOTH of them. Seven plain links need no
-           JavaScript, no hover, and no guessing about which menu a thing is
-           filed under. -->
       <a href="/">Home</a>
-      <a href="/consulting/">Consulting</a>
-      <a href="https://play.xplabs.us/">Games</a>
-      <a href="https://learn.xplabs.us/">Education</a>
-      <a href="https://mil.xplabs.us/">Military</a>
-      <a href="/initiatives/">Free stuff</a>
+
+      <div class="menu">
+        <button class="menu__btn" type="button" aria-expanded="false" aria-controls="menu-businesses">
+          XPLabs Businesses <span class="menu__caret" aria-hidden="true"></span>
+        </button>
+        <div class="menu__panel" id="menu-businesses" hidden>
+          <a href="https://play.xplabs.us/"><b>Games</b><span>Four titles, four stacks</span></a>
+          <a href="/consulting/"><b>Consulting</b><span>Consulting · engineering · Palantir</span></a>
+          <a href="/initiatives/"><b>Public Initiatives</b><span>Free education and benefits</span></a>
+        </div>
+      </div>
+
       <a href="/about/">About</a>
       <a href="/invest/" aria-current="page">Invest</a>
+
+      <div class="menu">
+        <button class="menu__btn" type="button" aria-expanded="false" aria-controls="menu-initiatives">
+          Public Initiatives <span class="menu__caret" aria-hidden="true"></span>
+        </button>
+        <div class="menu__panel menu__panel--right" id="menu-initiatives" hidden>
+          <a href="https://mil.xplabs.us/"><b>Military Personnel</b><span>Benefits, programs, discounts</span></a>
+          <a href="https://learn.xplabs.us/"><b>Opensource Education</b><span>106 subjects, works offline</span></a>
+          <a href="/initiatives/"><b>Overview</b><span>Both initiatives, side by side</span></a>
+        </div>
+      </div>
     </div>
   
   </nav>
