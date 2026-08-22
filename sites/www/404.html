@@ -6,7 +6,7 @@
 <title>Page not found — XPLabs</title>
 <meta name="description" content="That page doesn't exist.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#FBF8F3">
+<meta name="theme-color" content="#07090A">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -27,12 +27,12 @@
    TO EDIT TEXT: search for the words you want to change.
    ===================================================================== */
 :root {
-  --ink:#FBF8F3; --ink-2:#F3EEE5; --surface:#FFFFFF;
-  --line:#E2DACB; --line-soft:#EDE7DC;
-  --paper:#22201C;      /* 16.3:1 on --ink */
-  --muted:#5C574E;      /*  7.9:1 on --ink */
-  --muted-dim:#6E685D;  /*  5.4:1 on --ink — labels only */
-  --signal:#1F6F2B;     /*  6.8:1 on --ink — sampled from the logo */
+  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213;
+  --line:#1E2527; --line-soft:#161C1D;
+  --paper:#E9EFEC;      /* 16.3:1 on --ink */
+  --muted:#9BA8A3;      /*  7.9:1 on --ink */
+  --muted-dim:#7E8B86;  /*  5.4:1 on --ink — labels only */
+  --signal:#3FAC33;     /*  6.8:1 on --ink — sampled from the logo */
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --t-micro:0.6875rem; --t-small:0.8125rem;
@@ -40,6 +40,12 @@
   --t-h2:   clamp(2.0625rem, 1.55rem + 2.35vw, 3.375rem);
   --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1180px;
   --radius:3px; --header-h:60px;
+  /* Header and dropdown chrome. These sit in the SHARED nav CSS, which
+     tools/sync_nav.py copies to every page, so they are tokens here rather
+     than literals there — the one light page (initiatives) sets its own. */
+  --header-bg:rgba(7,9,10,.94);
+  --panel-shadow:0 14px 34px rgba(0,0,0,.55);
+  --on-signal:#04140C;  /* text on a --signal button */
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -55,7 +61,7 @@ a{color:inherit}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter);width:100%}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
 
-.site-header{background:rgba(251,248,243,.92);border-bottom:1px solid var(--line-soft)}
+.site-header{background:var(--header-bg);border-bottom:1px solid var(--line-soft)}
 .nav{display:flex;align-items:center;min-height:var(--header-h)}
 .brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}
 .brand__logo{height:21px;width:auto;display:block}
@@ -70,7 +76,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 .lead{font-size:var(--t-lead);color:var(--muted);max-width:60ch;margin:0 0 2rem}
 .btn{display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;
   font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;
-  text-decoration:none;color:#FFFFFF;background:var(--signal);
+  text-decoration:none;color:var(--on-signal);background:var(--signal);
   padding:.7rem 1.1rem;border-radius:var(--radius);transition:opacity .16s}
 .btn:hover{opacity:.86}
 

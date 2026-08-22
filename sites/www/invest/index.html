@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Invest — XPLabs</title>
 <meta name="description" content="XPLabs is raising. Contact route for investors who back small studios early. Stage, raise size and traction are shared directly rather than posted publicly.">
-<meta name="theme-color" content="#FBF8F3">
+<meta name="theme-color" content="#07090A">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -40,37 +40,25 @@
    play.xplabs.us. Change it in one file and change it in all of them.
    ===================================================================== */
 :root {
-  /* WARM PAPER, not a dark IDE. The owner asked for something that does not
-     feel like software: a light, printed page that is obvious to walk
-     around. Every value below is contrast-checked against --ink.
-
-     MIND THE NAMES. In this stylesheet --ink has always been the PAGE
-     BACKGROUND and --paper the TEXT, which reads backwards but is what all
-     five pages already assume: --ink appears only ever as a background and
-     --paper only ever as a colour. Turning the site light was therefore a
-     straight swap of those two values, not an edit to fifty rules. Renaming
-     them would be five files of churn for no gain — so they keep their
-     names and this note explains them. */
-  --ink:#FBF8F3;        /* THE PAGE BACKGROUND (the name is historical) */
-  --ink-2:#F3EEE5;      /* tinted background band */
-  --surface:#FFFFFF;    /* cards */
-  --surface-2:#F3EEE5;  /* tinted bands and panels */
-  --line:#E2DACB;       /* borders */
-  --line-soft:#EDE7DC;  /* hairlines */
-  --paper:#22201C;      /* THE TEXT — 14.6:1 on --ink */
-  --muted:#5C574E;      /*  6.4:1 on --paper — safe for body text */
-  --muted-dim:#6E685D;  /*  5.1:1 on --paper — labels */
-  --signal:#1F6F2B;     /*  5.6:1 on --paper — the logo green, for light */
-  --amber:#8A5A00;      /*  5.9:1 on --paper */
-  --sans: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;
+  --line:#1E2527; --line-soft:#161C1D;
+  --paper:#E9EFEC; --muted:#9BA8A3; --muted-dim:#7E8B86;
+  --signal:#3FAC33; --amber:#F5A524;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-  --t-micro:0.75rem; --t-small:0.875rem; --t-body:1.125rem;
-  --t-lead: clamp(1.1875rem, 1.06rem + 0.5vw, 1.5rem);
-  --t-h3:   clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
-  --t-h2:   clamp(2rem, 1.5rem + 2.2vw, 3rem);
-  --gap:1.5rem; --section-y: clamp(3.5rem, 6vw, 6rem);
-  --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1140px;
-  --radius:14px; --header-h:64px;
+  --t-micro:0.6875rem; --t-small:0.8125rem; --t-body:1.0625rem;
+  --t-lead: clamp(1.125rem, 1.02rem + 0.42vw, 1.375rem);
+  --t-h3:   clamp(1.1875rem, 1.12rem + 0.3vw, 1.4375rem);
+  --t-h2:   clamp(2.0625rem, 1.55rem + 2.35vw, 3.375rem);
+  --gap:1.5rem; --section-y: clamp(4rem, 7vw, 7rem);
+  --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1180px;
+  --radius:3px; --header-h:60px;
+  /* Header and dropdown chrome. These sit in the SHARED nav CSS, which
+     tools/sync_nav.py copies to every page, so they are tokens here rather
+     than literals there — the one light page (initiatives) sets its own. */
+  --header-bg:rgba(7,9,10,.94);
+  --panel-shadow:0 14px 34px rgba(0,0,0,.55);
+  --on-signal:#04140C;  /* text on a --signal button */
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -85,14 +73,14 @@ ul{list-style:none;margin:0;padding:0}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:var(--gutter);top:.5rem;z-index:99;background:var(--signal);color:#FFFFFF;padding:.6rem 1rem;border-radius:var(--radius)}
+.skip:focus{left:var(--gutter);top:.5rem;z-index:99;background:var(--signal);color:var(--on-signal);padding:.6rem 1rem;border-radius:var(--radius)}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
 
 /* ===== NAV — shared block. Sync with tools/sync_nav.py. ================
    Below 900px the links live in a panel behind the Menu button. The
    previous header simply set display:none at that width, which left every
    phone with no navigation at all except the logo. */
-.site-header{position:sticky;top:0;z-index:40;background:rgba(251,248,243,.92);backdrop-filter:blur(12px) saturate(1.1);border-bottom:1px solid var(--line-soft)}
+.site-header{position:sticky;top:0;z-index:40;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--header-h)}
 .brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}
 /* The logo is a fixed-ratio bitmap (440x107). Set height only and let width
@@ -139,7 +127,7 @@ a{color:inherit}
   .nav-links > a,.menu__btn{padding:0;border-top:0;width:auto;font-size:.9375rem}
   .menu__panel{position:absolute;top:calc(100% + 1.05rem);left:-1.1rem;min-width:272px;
     background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-    padding:.35rem 1.1rem .6rem;box-shadow:0 14px 34px rgba(60,50,30,.10)}
+    padding:.35rem 1.1rem .6rem;box-shadow:var(--panel-shadow)}
   /* The rightmost menu opens leftward, or its panel runs off the viewport
      on narrow desktop windows. */
   .menu__panel--right{left:auto;right:-1.1rem}
@@ -197,7 +185,7 @@ h1{font-size:var(--t-h2);line-height:1.04;letter-spacing:-.032em;margin:0 0 1.25
 .contact p{color:var(--muted);margin:0 0 1rem;max-width:58ch;font-size:.9688rem}
 .btn{display:inline-flex;align-items:center;gap:.5rem;
   font-family:var(--mono);font-size:var(--t-small);letter-spacing:.08em;text-transform:uppercase;
-  text-decoration:none;color:#FFFFFF;background:var(--signal);
+  text-decoration:none;color:var(--on-signal);background:var(--signal);
   padding:.7rem 1.1rem;border-radius:var(--radius);transition:opacity .16s}
 .btn:hover{opacity:.86}
 .legal{font-family:var(--mono);font-size:var(--t-micro);color:var(--muted-dim);
