@@ -460,8 +460,17 @@ These are the rules the site is built on. Each exists for a reason.
    |---|---|---|
    | Hub, About, Invest | `#3FAC33` brand green | 6.80:1 |
    | Consulting | `#4DA3FF` azure | 7.60:1 |
-   | Public Initiatives | `#2FD4B6` aqua | 10.65:1 |
+   | Public Initiatives | **light page** — `#0B6B60` teal on warm paper `#FBF8F3` | 6.0:1 |
    | Games | `#A98BFF` violet | 7.43:1 |
+
+   Public Initiatives is the one deliberate exception to the dark theme
+   (owner's request, 21 Aug 2026): it is a lighter, educational page and
+   keeps its own light palette in its own `:root`. The shared nav CSS reads
+   its header colour and dropdown shadow from `--header-bg` /
+   `--panel-shadow` so `sync_nav.py` can copy it safely. Note the sync and
+   theme tools are Python, which is not installed on the owner's machine —
+   Node is, so a one-off Node script with the same assertions is the
+   fallback.
 
    `--amber #F5A524` deliberately does **not** vary — it is the constant
    metadata colour, and holding one thing steady is part of what makes four

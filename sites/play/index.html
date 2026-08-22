@@ -49,6 +49,12 @@
   --gap:1.5rem; --section-y: clamp(4rem, 7vw, 7rem);
   --gutter: clamp(1.25rem, 4vw, 3rem); --maxw:1180px;
   --radius:3px; --header-h:60px;
+  /* Header and dropdown chrome. These sit in the SHARED nav CSS, which
+     tools/sync_nav.py copies to every page, so they are tokens here rather
+     than literals there — the one light page (initiatives) sets its own. */
+  --header-bg:rgba(7,9,10,.94);
+  --panel-shadow:0 14px 34px rgba(0,0,0,.55);
+  --on-signal:#04140C;  /* text on a --signal button */
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -61,7 +67,7 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
 .skip{position:absolute;left:-9999px}
-.skip:focus{left:var(--gutter);top:0.5rem;z-index:99;background:var(--signal);color:#04140C;padding:.6rem 1rem;border-radius:var(--radius)}
+.skip:focus{left:var(--gutter);top:0.5rem;z-index:99;background:var(--signal);color:var(--on-signal);padding:.6rem 1rem;border-radius:var(--radius)}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
 
 /* ---------- header ---------- */
@@ -69,7 +75,7 @@ a{color:inherit}
    Below 900px the links live in a panel behind the Menu button. The
    previous header simply set display:none at that width, which left every
    phone with no navigation at all except the logo. */
-.site-header{position:sticky;top:0;z-index:40;background:rgba(7,9,10,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.site-header{position:sticky;top:0;z-index:40;background:var(--header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--header-h)}
 .brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}
 /* The logo is a fixed-ratio bitmap (440x107). Set height only and let width
@@ -116,7 +122,7 @@ a{color:inherit}
   .nav-links > a,.menu__btn{padding:0;border-top:0;width:auto;font-size:.9375rem}
   .menu__panel{position:absolute;top:calc(100% + 1.05rem);left:-1.1rem;min-width:272px;
     background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-    padding:.35rem 1.1rem .6rem;box-shadow:0 14px 34px rgba(0,0,0,.55)}
+    padding:.35rem 1.1rem .6rem;box-shadow:var(--panel-shadow)}
   /* The rightmost menu opens leftward, or its panel runs off the viewport
      on narrow desktop windows. */
   .menu__panel--right{left:auto;right:-1.1rem}

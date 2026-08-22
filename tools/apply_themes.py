@@ -35,11 +35,12 @@ THEMES = {
         'Consulting', '#4DA3FF', '7.60:1', '#0D1218', '#131A22',
         'Azure. Reads institutional rather than startup, which is the register\n'
         '   a public-sector or enterprise buyer is reading this page in.'),
-    'sites/www/initiatives/index.html': (
-        'Public Initiatives', '#2FD4B6', '10.65:1', '#0C1414', '#121C1B',
-        'Aqua. Civic and open rather than commercial; it should not look like\n'
-        '   the pages that are selling something.'),
 }
+
+# sites/www/initiatives/index.html is NOT in the map on purpose. Since
+# 21 Aug 2026 it is the estate's one LIGHT page (warm paper, teal accent
+# #0B6B60 at 6.0:1), by the owner's request, and its tokens are maintained
+# by hand in the file. Adding it back here would repaint it dark.
 
 # The hub, about and invest keep the brand green: green IS XPLabs corporate.
 BRAND_LINE = '  --signal:#3FAC33; --amber:#F5A524;'
