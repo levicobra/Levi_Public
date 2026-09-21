@@ -68,6 +68,9 @@ def content_hash(files):
     h = hashlib.sha256()
     for f in files:
         if f == "./":
+            # Hash the root HTML without precaching its redirecting file URL.
+            h.update(f.encode())
+            h.update((ROOT / "index.html").read_bytes())
             continue
         h.update(f.encode())
         h.update((ROOT / f).read_bytes())

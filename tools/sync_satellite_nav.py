@@ -7,23 +7,9 @@ Run from the repository root:
     cd sites/mil && python gen_directory.py     # mil's index is generated
     cd sites/learn && python tools/build_index.py
 
-WHY THIS IS A SEPARATE SCRIPT FROM sync_nav.py
-sync_nav.py copies the header out of sites/www/index.html verbatim. That header
-leans on the house design tokens (--ink, --signal, --paper, --mono …) which only
-exist on xplabs.us and play.xplabs.us. learn and mil are light-background sites
-with their own, different palettes, so the copied CSS would reference variables
-that are undefined there and the header would render unstyled.
-
-So the satellite header below is SELF-CONTAINED: every colour and size is a
-literal, and every class carries an `xpl-` prefix. The prefix is not decoration
-— sites/learn/css/app.css already defines `.brand`, and an unprefixed header
-would have inherited it.
-
-The markup, the link set and the behaviour are otherwise identical to the house
-header, including both dropdowns, so the estate reads the same from any origin.
-
-If you change the navigation, change it in THREE places and re-run both scripts:
-sites/www/index.html (the source for www + play), and LINKS below.
+The company header is independent. This generator maintains the self-contained
+learn/mil shell so a company redesign cannot alter their layout. Update LINKS
+here for satellite links, then rebuild the two generated outputs.
 """
 import io
 import os
@@ -36,7 +22,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HOME = 'https://xplabs.us/'
 LINKS = {
     'games': ('https://play.xplabs.us/', 'Games', 'Four titles, four stacks'),
-    'consulting': ('https://xplabs.us/consulting/', 'Consulting', 'Consulting · engineering · Palantir'),
+    'consulting': ('https://xplabs.us/consulting/', 'Consulting', 'RF · additive manufacturing · software'),
     'initiatives': ('https://xplabs.us/initiatives/', 'Public Initiatives', 'Free education and benefits'),
     'mil': ('https://mil.xplabs.us/', 'Military Personnel', 'Benefits, programs, discounts'),
     'learn': ('https://learn.xplabs.us/', 'Opensource Education', '106 subjects, works offline'),

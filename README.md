@@ -1,15 +1,18 @@
-# Levi Colby
+# XP Labs
 
-Founder of **XPLabs**, a consulting studio in Honolulu — game design and
-engineering for clients, four games of its own in development, plus a free
-offline learning platform and a free benefits directory for the military
-community.
+RF engineering and additive manufacturing for Hawaiʻi, with focused software
+that connects devices, data, and workflows. Based in Honolulu and founded by
+Levi Colby. Contact: [levi@xplabs.us](mailto:levi@xplabs.us).
 
-XPLabs is raising; see [xplabs.us/invest](https://xplabs.us/invest/).
+- [Company](https://xplabs.us/)
+- [RF engineering](https://xplabs.us/rf/)
+- [Additive manufacturing](https://xplabs.us/additive-manufacturing/)
+- [Supporting software](https://xplabs.us/software/)
 
-- 📍 Honolulu, Hawaii
-- 💼 [LinkedIn](https://www.linkedin.com/in/levicolby/)
-- 🌐 [xplabs.us](https://xplabs.us/)
+The company website is deliberately separate from the game catalog and public
+community resources below. RF work is at prototype stage; manufacturing scope,
+materials, process, and availability are confirmed per project. The website does
+not claim fielded equipment, certified production, or government past performance.
 
 ---
 
@@ -73,10 +76,12 @@ sites/learn/   → learn.xplabs.us
 sites/mil/     → mil.xplabs.us
 ```
 
-`xplabs.us` is a hub. It says what the company is and points at the four places
-the work lives; it deliberately carries no detail about the games, the subject
-list or the benefits categories. That detail belongs on each origin, and putting
-a second copy on the hub means maintaining two that drift apart.
+`sites/www` is the RF and additive-manufacturing company website. Its shared
+styles and behavior live in `sites/www/assets/site.css` and `site.js`.
+To change company navigation or the footer, edit `sites/www/index.html`, then run
+`python3 tools/sync_nav.py`. Each service page is ordinary editable HTML.
+Satellite sites retain their existing design and content; company navigation is
+no longer copied into the games site.
 
 No build step, no package manager, no framework, and no external requests. See
 [`DEPLOY.md`](DEPLOY.md) for how they are published and

@@ -1,23 +1,8 @@
 #!/usr/bin/env python3
-"""Give each property its own accent while keeping one shared skeleton.
+"""Maintain satellite accent palettes.
 
-Run from the repository root:
-
-    python tools/apply_themes.py
-
-The estate reads as one company because the layout, type scale, spacing and
-navigation are identical everywhere. What distinguishes a property is its
-ACCENT — the colour of links, buttons, the logo tick, focus rings, card hover
-borders and the section rules. Changing anything else per property would make
-these look like four different companies rather than four parts of one.
-
---amber deliberately does NOT vary. It is the estate's constant "metadata"
-colour (hostnames, spec labels, the invest rule), and holding it steady is
-part of what keeps the properties recognisable as siblings.
-
-Contrast was measured against --ink #07090A. Every accent below clears 4.5:1,
-which matters because these are used on 11px monospace labels. If you swap a
-colour, measure it — do not eyeball it.
+The company website uses sites/www/assets/site.css and is not processed here.
+Run from the repository root: python3 tools/apply_themes.py.
 """
 import io
 import os
@@ -31,18 +16,8 @@ THEMES = {
         'Games', '#A98BFF', '7.43:1', '#101016', '#17161F',
         'Violet. The most playful hue in the set, and the furthest from the\n'
         '   corporate green — a catalog should not look like a capabilities deck.'),
-    'sites/www/consulting/index.html': (
-        'Consulting', '#4DA3FF', '7.60:1', '#0D1218', '#131A22',
-        'Azure. Reads institutional rather than startup, which is the register\n'
-        '   a public-sector or enterprise buyer is reading this page in.'),
 }
 
-# sites/www/initiatives/index.html is NOT in the map on purpose. Since
-# 21 Aug 2026 it is the estate's one LIGHT page (warm paper, teal accent
-# #0B6B60 at 6.0:1), by the owner's request, and its tokens are maintained
-# by hand in the file. Adding it back here would repaint it dark.
-
-# The hub, about and invest keep the brand green: green IS XPLabs corporate.
 BRAND_LINE = '  --signal:#3FAC33; --amber:#F5A524;'
 BRAND_LINE_COMMENTED = '  --signal:#3FAC33;     /*  6.8:1 on --ink — sampled from the logo */'
 SURFACE_LINE = '  --ink:#07090A; --ink-2:#0A0D0E; --surface:#0E1213; --surface-2:#141A1B;'
@@ -105,4 +80,4 @@ for rel, (name, accent, contrast, surface, surface2, why) in THEMES.items():
         changed += 1
         print('  %-22s %s  accent %s (%s)' % (name, rel, accent, contrast))
 
-print('\n%d themed. Hub, About and Invest keep the brand green.' % changed)
+print('\n%d satellite pages themed. Company styles stay in sites/www/assets/site.css.' % changed)
