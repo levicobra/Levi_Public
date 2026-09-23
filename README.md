@@ -1,7 +1,7 @@
 # XP Labs
 
-RF engineering and additive manufacturing for Hawaiʻi, with focused software
-that connects devices, data, and workflows. Based in Honolulu and founded by
+Additive manufacturing for Hawaiʻi’s homes, businesses, makers, and industries,
+with RF engineering and supporting software. Based in Honolulu and founded by
 Levi Colby. Contact: [levi@xplabs.us](mailto:levi@xplabs.us).
 
 - [Company](https://xplabs.us/)

@@ -128,33 +128,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
 }
 .brand {
   display:flex;
+  flex:none;
   align-items:center;
-  gap:13px;
-  text-decoration:none;
-  font-weight:750;
-  font-size:20px;
-  letter-spacing:.015em;
-  line-height:1
+  text-decoration:none
 }
-.brand-mark {
-  display:flex;
-  font-size:44px;
-  letter-spacing:-.2em;
-  line-height:1;
-  font-weight:800;
-  transform:translateY(-3px);
-  padding-right:9px
-}
-.brand-mark span {
-  color:var(--orange);
-  margin-left:2px
-}
-.brand-place {
+.brand__logo {
   display:block;
-  font:8px var(--mono);
-  letter-spacing:.15em;
-  margin-top:9px;
-  white-space:nowrap
+  width:176px;
+  height:auto
 }
 .nav-links {
   display:flex;
@@ -1021,15 +1002,6 @@ details>p {
   .nav {
     gap:18px
   }
-  .brand {
-    font-size:18px
-  }
-  .brand-mark {
-    font-size:37px
-  }
-  .brand-place {
-    font-size:7px
-  }
   .nav-links .nav-contact {
     padding:11px 12px;
     gap:14px
@@ -1067,19 +1039,11 @@ details>p {
   }
 }
 @media(max-width:900px) {
+  .brand__logo { width:150px; }
   .nav {
     min-height:78px;
     flex-wrap:wrap;
     padding-block:18px
-  }
-  .brand {
-    font-size:19px
-  }
-  .brand-place {
-    font-size:7px
-  }
-  .brand-mark {
-    font-size:39px
   }
   .js .nav-toggle {
     display:flex
