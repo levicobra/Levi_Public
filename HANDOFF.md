@@ -1,3 +1,13 @@
+> Current company-site direction (2026-09-22): additive manufacturing for the full
+> range of Hawaiʻi’s needs, with RF engineering and supporting software. Keep the
+> original XP Labs wordmark and icons; use the existing dark wordmark on light backgrounds.
+> `sites/www` now has an independent cream/forest/orange design, service pages,
+> local CSS/JS, and original vector illustrations. This supersedes the older
+> company-as-games-hub and shared www/play palette descriptions below.
+> `tools/sync_nav.py` syncs only the company HTML shell; satellite layouts stay
+> independent. `tools/apply_themes.py` preserves the redesigned company site.
+> All factual-claims, privacy, accessibility, and verification rules still apply.
+
 # XPLabs website — handoff
 
 Everything a new developer or AI assistant needs to pick this project up.
