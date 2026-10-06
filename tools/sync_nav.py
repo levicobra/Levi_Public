@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sync the company header and footer from sites/www/index.html.
 
-The company site has an independent RF/manufacturing design as of September 2026.
+The company site has an independent additive-manufacturing design as of October 2026.
 Satellite sites retain their own navigation and local runtime assets.
 Run from any directory; a second run is a no-op.
 """
