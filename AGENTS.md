@@ -1,12 +1,14 @@
 # XP Labs public websites
 
-Follow `../CLAUDE.md` for workspace sync, scoped release authority, and owner communication. Preserve unrelated edits and stage only task-owned files.
+Follow the owner's current project routing for workspace sync, scoped release authority, and owner communication. Read `../CLAUDE.md` when it exists in the routed workspace; an isolated checkout may not contain it. Do not invent missing instructions or bypass unresolved authority. Preserve unrelated edits and stage only task-owned files.
 
 - Four public deployable roots: `sites/www`, `sites/play`, `sites/learn`, and `sites/mil`. Private dashboard and genealogy data never belong here; everything within a deployed root is public.
-- Read `HANDOFF.md` before substantial site work, especially its constraints and verification sections. Its older status and private-site setup claims are historical; current code and verified deployments take precedence.
+- Read the current standards at the top of `HANDOFF.md` and `docs/website-guide.md` before substantial site work. Historical handoff sections remain useful for constraints and failure modes, but old themes, service offerings, counts, deployment status, and private-site setup claims are not current instructions.
+- The company offering is additive manufacturing only, in a dark charcoal/green theme. Do not reintroduce RF, software, or AI consulting offerings. Aeroponics towers are the first featured project, currently concept stage; concept imagery is not proof of a finished product or tested performance.
+- Keep distinct themes: dark violet games, warm editorial education with domain colors and saved dark mode, navy/teal military resources with crisis-only red, and light teal company community resources. Keep the original XP Labs wordmarks and icons.
 - Keep plain editable files, local runtime assets, strict CSP, and zero external runtime requests. No app framework or bundler. Maintain accessibility and zero document overflow from 320px through desktop widths.
-- Edit generated navigation/content at its source and run the existing generator. Any change under `sites/learn/` requires rebuilding its index and service-worker content version.
-- Preserve crisis-resource visibility, factual capability disclaimers, and the figure-free invest page. Do not invent product launch claims, owner biography, or missing product URLs.
+- Edit generated navigation/content at its source and run the existing generator. `tools/sync_nav.py` affects company pages only; `tools/sync_satellite_nav.py` owns learn/mil navigation. Game pages use their independent layout and `sites/play/assets/games.css`. Any change under `sites/learn/` requires rebuilding its index and service-worker content version; new runtime assets also require an explicit precache entry.
+- Preserve crisis-resource visibility, factual capability disclaimers, source/license attributions, and the figure-free invest page. Do not invent product launch claims, owner biography, missing product URLs, blanket open-source licensing, or registered charity status. A visual redesign does not certify every external benefits link as current.
 - Complete relevant tests and browser checks before publishing. Pushing `main` deploys all four Pages projects; unfinished risky work goes on a branch. Use the authorized commit, push, PR, merge, and live verification workflow without repeating approval.
 
 Task guidance is discoverable under `.agents/skills/`: `xplabs-public-content`, `xplabs-public-mobile`, and `xplabs-public-release`. Load the relevant skill and conditional references instead of every project document.

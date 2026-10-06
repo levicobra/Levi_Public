@@ -1,125 +1,142 @@
-# Deploying xplabs.us
+# Publishing XP Labs websites
 
-Four public origins, four Cloudflare Pages projects, one GitHub repository.
-No build step anywhere — every site is plain files, so Pages just publishes a
-directory.
+The four public websites use existing Git-connected Cloudflare Pages projects.
+They publish plain files from `levicobra/Levi_Public` on `main`; no production
+build command, package installation, or manual upload is required. Prepare and
+test changes on a branch, then use the authorized pull-request and merge workflow.
+A merge to `main` can deploy all four origins, so review the complete release.
 
-**Connect the repo to Cloudflare rather than uploading anything by hand.** Once
-it is connected, every push to `main` deploys itself, and there is no API token
-to create, store, or leak. That is also the only route that keeps working when
-nobody is around to run a command.
+This is the October 6, 2026 operating procedure. New site creation, domain
+migration, and private-site configuration are not part of a routine release.
+Start with [the maintenance guide](docs/website-guide.md) for editing and preview.
 
----
+## Existing public projects
 
-## Before you start
-
-- `xplabs.us` must be an active zone in the same Cloudflare account. If the
-  registrar transfer is still in flight, the zone can be added and the sites
-  built now; only the custom-domain step at the end needs the zone live.
-- The work must be on `main`. Pages deploys a branch, and pointing production
-  at a feature branch is a trap you will forget about.
-
----
-
-## 1. Create the four projects
-
-For each row below: **Workers & Pages → Create → Pages → Connect to Git**,
-choose `levicobra/Levi_Public`, then set:
-
-| Project name | Production branch | Framework preset | Build command | Build output directory |
+| Project | Production branch | Build command | Output directory | Public origin |
 |---|---|---|---|---|
-| `xplabs-www` | `main` | None | *(leave empty)* | `sites/www` |
-| `xplabs-play` | `main` | None | *(leave empty)* | `sites/play` |
-| `xplabs-learn` | `main` | None | *(leave empty)* | `sites/learn` |
-| `xplabs-mil` | `main` | None | *(leave empty)* | `sites/mil` |
+| `xplabs-www` | `main` | Empty | `sites/www` | [xplabs.us](https://xplabs.us/) |
+| `xplabs-play` | `main` | Empty | `sites/play` | [play.xplabs.us](https://play.xplabs.us/) |
+| `xplabs-learn` | `main` | Empty | `sites/learn` | [learn.xplabs.us](https://learn.xplabs.us/) |
+| `xplabs-mil` | `main` | Empty | `sites/mil` | [mil.xplabs.us](https://mil.xplabs.us/) |
 
-All four point at the same repository and differ only in the output directory.
+All four use the same public repository, with no framework preset. Retain these
+projects and domains. Do not replace them with a Worker, Direct Upload project,
+or Sites deployment for an ordinary edit. Do not change DNS or manufacture a new
+custom-domain verification process when the existing origin is already working.
 
-**Create Pages projects, not Workers.** The dashboard pushes Workers first; the
-Pages flow is a separate tab. A Workers project built from the default template
-answers every path with `Hello world` at 200, `_headers` is ignored, and no
-`pages.dev` hostname is issued. If there is no `pages.dev` URL, it is not Pages.
+## Prepare the release
 
-**Leave the build command genuinely empty.** If you let it default to something
-like `npm run build`, the deploy fails — there is no `package.json`, by design.
+1. Confirm the current owner task, host, checkout ownership, Git remote, branch,
+   and working-tree status. Follow current project routing and applicable workspace
+   instructions. Preserve other work and stage only the intended release files.
+2. Edit the maintained sources, not generated copies. Run the relevant generators
+   listed below and inspect their diffs. No generator is required for documentation
+   outside the deployed roots.
+3. Preview affected origins using `python tools/preview_sites.py`. This local
+   loopback server applies each site's security headers and redirect rules; it
+   does not publish or alter site files.
+4. Complete responsive, accessibility, offline, CSP, asset, link, and behavioral
+   checks in the maintenance guide. Record actual results and any untested cases.
+5. Commit and push the task branch, create or update its PR, review available
+   checks, then merge the scoped change when ready. Standing release authority
+   covers this workflow without repeating approval. Stop for genuinely missing
+   authority or a materially different destructive operation.
 
-Each project gets a `<name>.pages.dev` URL immediately. Check all four render
-before touching DNS; a broken site on `pages.dev` is a broken site on the real
-domain, and it is much easier to diagnose before the domain is involved.
-
----
-
-## 2. Attach the custom domains
-
-Per project: **Custom domains → Set up a custom domain**.
-
-| Project | Domain |
-|---|---|
-| `xplabs-www` | `xplabs.us` |
-| `xplabs-play` | `play.xplabs.us` |
-| `xplabs-learn` | `learn.xplabs.us` |
-| `xplabs-mil` | `mil.xplabs.us` |
-
-Because the zone is in the same account, Cloudflare writes the DNS records
-itself. Nothing to add by hand.
-
-If you also want `www.xplabs.us`, add it to `xplabs-www` as a second custom
-domain — do not point it at a different project.
-
----
-
-## 3. Verify
-
-Not "does it return 200." This project has already shipped a page where every
-link was a dead end and every check passed.
+Run only the commands relevant to the edited sources, from the repository root:
 
 ```sh
-for u in https://xplabs.us/ https://xplabs.us/consulting/ \
-         https://xplabs.us/initiatives/ \
-         https://xplabs.us/about/ https://xplabs.us/invest/ \
-         https://mil.xplabs.us/ \
-         https://play.xplabs.us/ https://learn.xplabs.us/; do
-  printf '%s  ' "$(curl -s -o /dev/null -w '%{http_code}' "$u")"; echo "$u"
-done
+# Company header and footer only
+python tools/sync_nav.py
+
+# Shared education and military navigation, then both generated outputs
+python tools/sync_satellite_nav.py
+python sites/mil/gen_directory.py
+python sites/learn/tools/validate_content.py
+python sites/learn/tools/build_index.py
+
+# Basic change hygiene
+git diff --check
 ```
 
-All seven must be 200. Then check the things a status code cannot tell you:
+For military-only changes, run its generator. For any education change, run its
+validator and index/cache generator. If a generator reports an error, stop that
+release and fix the cause; do not commit a partial or stale generated output.
 
-```sh
-# The headers actually applied
-curl -sI https://xplabs.us/ | grep -i 'content-security-policy\|strict-transport'
+## Verify the deployed release
 
-# The service worker is not being cached — if it is, learn can never update
-curl -sI https://learn.xplabs.us/sw.js | grep -i cache-control   # expect no-store
+Check the Pages deployment outcome and deployed commit for all four projects,
+then use the affected real origins. Keep deployment metadata and feature
+verification separate: neither a green build nor an HTTP 200 proves that search,
+navigation, or offline lessons work.
 
-# The old benefits path still lands, since it is in print and in bookmarks
-curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' \
-  https://xplabs.us/military-benefits/          # expect 301 -> https://mil.xplabs.us/
+For the October redesign, the main paths are:
 
-# The share images exist, since a missing one is invisible until someone posts a link
-for u in https://xplabs.us/og.jpg https://play.xplabs.us/og.jpg \
-         https://learn.xplabs.us/og.jpg https://mil.xplabs.us/og.jpg; do
-  printf '%s  ' "$(curl -s -o /dev/null -w '%{http_code}' "$u")"; echo "$u"
-done
-```
+- [Company](https://xplabs.us/)
+- [Manufacturing](https://xplabs.us/additive-manufacturing/)
+- [Aeroponics](https://xplabs.us/projects/aeroponics/)
+- [Free community resources](https://xplabs.us/initiatives/)
+- [About](https://xplabs.us/about/)
+- [Investors](https://xplabs.us/invest/)
+- [Games](https://play.xplabs.us/) and the four individual game pages
+- [Education](https://learn.xplabs.us/)
+- [Military resources](https://mil.xplabs.us/)
 
-And open `learn.xplabs.us` in a browser, click into a subject, then a lesson.
-The education site is a JavaScript app; it is the one that can return 200 on
-every URL and still be broken.
+Verify these release properties:
 
----
+- The changed content and images are visible, the real CSP is present, and browser
+  consoles/network logs show no page errors, blocked assets, external runtime
+  requests, or edge-injected analytics.
+- The military searches `rent`, `dental`, `suicide`, and an unmatched term behave
+  sensibly. Crisis phone/text/chat access remains visible. A 320 × 800 viewport
+  reaches the search input without scrolling past a tall introductory panel.
+- Education works through home → domain → subject → lesson. After its offline
+  library finishes saving, a cached lesson works with the network disabled.
+  A returning online client receives the new service worker/cache version.
+- `https://learn.xplabs.us/sw.js` still returns a `Cache-Control` policy containing
+  `no-store`. Do not apply a long cache lifetime to it.
+- Main `/rf/`, `/software/`, `/consulting/`, and `/engineering/` URLs redirect
+  to `/additive-manufacturing/`. The old `/military-benefits/` path redirects to
+  `https://mil.xplabs.us/`. Confirm bare paths and slash paths.
+- Every changed image/meta-image URL resolves to an image, not a cached HTML 404.
+  Share metadata uses the intended page title, canonical URL, and local image.
 
-## 4. After it is live
+Use the full width matrix for material layout/navigation changes: 320, 360, 768,
+1440, and 2560 pixels. Require zero horizontal document overflow, exactly one
+`h1`, useful image alternatives and explicit dimensions, keyboard focus,
+usable touch controls, and the actual user interaction. Save the release's PR,
+commit, affected URLs, and concrete checks; do not present historic evidence as
+a fresh verification.
 
-- **Set a billing notification on the account.** Everything here is inside the
-  free tier by two or more orders of magnitude, but a notification is what turns
-  a surprise into a warning.
-- **Re-run the link audit periodically.** `sites/mil/linkcheck.py`.
-  38 links were dead when this started; they will rot again.
-- **The domain expires 2027-05-14.** Confirm auto-renew is on now that the
-  registrar is Cloudflare, and that a payment method is attached.
+## Recover from a stale or broken release
 
----
+Inspect the deployment log and output directory before changing infrastructure.
+All projects retain their last good deployment if a new deployment fails. A
+changed build setting takes effect only on a subsequent deployment.
+
+If one image remains an old 404 after its file is present, confirm the exact
+path and content type, then use the existing authorized tooling for an exact-URL
+cache purge when needed. Do not use a broad purge to conceal a missing file.
+
+For a code regression, revert the scoped release commit through the normal Git
+and PR workflow, keeping related generated files together. Verify the resulting
+deployment. Do not reset shared history or discard unrelated working changes.
+
+## Ongoing public maintenance
+
+Keep the domain renewal and account billing settings current through the existing
+account. Recheck live settings rather than relying on old expiry dates or cost
+estimates in historical notes.
+
+External benefits links and program terms change independently of this website.
+Keep an explicit audit date and inspect redirects and provider identity, not just
+status codes. The legacy `sites/mil/linkcheck.py` still contains old scratchpad
+paths and disables TLS verification; it needs a scoped repair/review before use
+as a current auditor. The October visual redesign does not certify all outbound
+links or reset their last-audit date.
+
+The private-site notes below are preserved for historical context. They do not
+authorize public-site work to change private infrastructure; route private
+projects to their own current instructions.
 
 ## The two private subdomains
 
