@@ -278,12 +278,21 @@ body{font-family:var(--sans)}
 .foot{margin-top:3rem;padding-block:2.5rem;font-size:.87rem}
 .foot p{line-height:1.8}.foot a{text-underline-offset:3px}
 @media(min-width:900px){.top__layout{grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr);gap:4.5rem}}
+/* Search is the primary task. The explanatory desktop sidebar is optional;
+   never put it between a narrow-screen visitor and the resource search. */
+@media(max-width:899px){.top__guide{display:none}}
 @media(max-width:599px){
   /* The 11-column map would create tiny touch targets on a phone.
      The same state programs remain available in the accessible details list. */
   .usmap{display:none}
-  .top h1{font-size:2.8rem}.top__guide{padding:1.3rem}
-  .top__meta{font-size:.68rem}.top__meta span{padding:.3rem .5rem}
+  .top{padding-block:1rem 1.15rem}
+  .top__layout{display:block}
+  .top__eyebrow,.top__lede-detail,.quick-links{display:none}
+  .top h1{font-size:2rem;line-height:1.05;max-width:none;letter-spacing:-.035em}
+  .top__lede{font-size:.85rem;line-height:1.5;margin-top:.6rem}
+  .top__meta{font-size:.68rem;gap:.8rem;margin-top:.65rem}
+  .top__meta span{padding:0;border:0;border-radius:0}
+  .top__meta span:last-child{display:none}
   .board__head{display:block}.board__head p{margin-top:.5rem}
   .tile{min-height:9rem}.search__box{padding-left:.65rem}#q{font-size:.9rem}
   .search__hint{font-size:.72rem}.quick-link{font-size:.75rem}
@@ -400,8 +409,8 @@ body{font-family:var(--sans)}
     <div>
       <p class="top__eyebrow">Military benefits &amp; resources · Free community directory</p>
       <h1>You served.<br><em>Find your support.</em></h1>
-      <p class="top__lede">A clearer starting point for service members, veterans and families.
-      Find benefits, practical help and everyday discounts, without a signup or a sales pitch.</p>
+      <p class="top__lede">Free resources for service members, veterans and families.<span class="top__lede-detail">
+      Find benefits, practical help and everyday discounts, without a signup or a sales pitch.</span></p>
       <p class="top__meta"><span>__TOTAL__ resources</span><span>__NCATS__ categories</span><span>No account needed</span></p>
       <nav class="quick-links" aria-label="Common resource needs">
         <a class="quick-link" href="#housing" data-cat="housing">Housing <span aria-hidden="true">↗</span></a>
