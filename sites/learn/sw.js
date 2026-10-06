@@ -8,14 +8,14 @@
 'use strict';
 
 /* @VERSION */
-const VERSION = 'xped-242f9ab07b16';
+const VERSION = 'xped-1424ba957984';
 /* @END-VERSION */
 
 /* @PRECACHE */
 const PRECACHE = [
   './',
-  'css/app.css',
-  'js/app.js',
+  'css/app.css?v=3b5e2a1c4d76',
+  'js/app.js?v=bbb886410e13',
   'logo.png',
   'manifest.webmanifest',
   'icons/icon.svg',

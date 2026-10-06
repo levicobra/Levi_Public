@@ -143,7 +143,11 @@ regenerate its catalog. Do not run catalog generation merely for a style edit.
 Stop if validation fails, fix the reported subject or schema error, then rebuild.
 
 The index builder refreshes both search data and the service-worker content
-version. New local runtime images or other files must also be listed in
+version. It also places matching content-hash query versions on the CSS and
+JavaScript URLs in the HTML and offline precache, so stale CDN entries cannot
+pin returning readers to an old interface. Do not hand-edit those query values.
+Regression checks run with `python sites/learn/tools/test_build_index.py`.
+New local runtime images or other files must also be listed in
 `precache_files()` inside `tools/build_index.py`; placing them in the folder is
 not enough. The root cache entry is `./`, not `/index.html`, which production
 redirects. Keep `sw.js` configured as `no-store` in `_headers`.

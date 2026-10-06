@@ -15,6 +15,43 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+APP_ASSETS = ("css/app.css", "js/app.js")
+
+
+def source_path(url):
+    """Resolve a cache URL to its source file without its version query."""
+    return ROOT / ("index.html" if url == "./" else url.split("?", 1)[0])
+
+
+def source_bytes(url):
+    path = source_path(url)
+    data = path.read_bytes()
+    if path.suffix in {".html", ".css", ".js", ".json", ".svg", ".webmanifest"}:
+        # Git may check out CRLF on Windows, while Pages serves LF from Git.
+        data = data.replace(b"\r\n", b"\n")
+    return data
+
+
+def asset_url(path):
+    digest = hashlib.sha256(source_bytes(path)).hexdigest()[:12]
+    return f"{path}?v={digest}"
+
+
+def update_shell_assets():
+    """Keep HTML and offline cache keys on the same content-addressed URLs.
+
+    Reloading a service-worker request bypasses the browser HTTP cache, but not
+    necessarily a stale CDN edge entry. A changed asset must get a new URL.
+    """
+    path = ROOT / "index.html"
+    source = path.read_text(encoding="utf-8")
+    for asset in APP_ASSETS:
+        pattern = r'(href|src)="' + re.escape(asset) + r'(?:\?[^\"]*)?"'
+        source, count = re.subn(
+            pattern, lambda match: f'{match[1]}="{asset_url(asset)}"', source)
+        if count != 1:
+            raise ValueError(f"Expected one shell reference to {asset}, found {count}")
+    path.write_text(source, encoding="utf-8", newline="\n")
 
 
 def build_search_index():
@@ -50,7 +87,7 @@ def precache_files():
     # worker installed, and every visit after that failed with ERR_FAILED.
     # "./" is the same page without the redirect, and it is what sw.js serves
     # navigations from.
-    files = ["./", "css/app.css", "js/app.js", "logo.png",
+    files = ["./", *(asset_url(asset) for asset in APP_ASSETS), "logo.png",
              "manifest.webmanifest", "icons/icon.svg",
              "icons/icon-192.png", "icons/icon-512.png",
              "icons/icon-maskable-512.png",
@@ -61,19 +98,14 @@ def precache_files():
     for f in sorted((ROOT / "content" / "subjects").glob("*.json")):
         files.append(f"content/subjects/{f.name}")
     # keep only files that actually exist (plus './')
-    return [f for f in files if f == "./" or (ROOT / f).exists()]
+    return [f for f in files if source_path(f).exists()]
 
 
 def content_hash(files):
     h = hashlib.sha256()
     for f in files:
-        if f == "./":
-            # Hash the root HTML without precaching its redirecting file URL.
-            h.update(f.encode())
-            h.update((ROOT / "index.html").read_bytes())
-            continue
         h.update(f.encode())
-        h.update((ROOT / f).read_bytes())
+        h.update(source_bytes(f))
     return h.hexdigest()[:12]
 
 
@@ -89,10 +121,11 @@ def inject_sw(files):
                  f"/* @PRECACHE */\nconst PRECACHE = [\n{listing},\n];\n/* @END-PRECACHE */",
                  src, flags=re.S)
     sw.write_text(src, encoding="utf-8", newline="\n")
-    total = sum((ROOT / f).stat().st_size for f in files if f != "./")
+    total = sum(source_path(f).stat().st_size for f in files if f != "./")
     print(f"sw.js: {len(files)} precached files, {total / 1048576:.2f} MB, version {version}")
 
 
 if __name__ == "__main__":
     build_search_index()
+    update_shell_assets()
     inject_sw(precache_files())
