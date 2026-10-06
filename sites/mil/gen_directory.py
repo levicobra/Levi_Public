@@ -170,7 +170,7 @@ out = (TPL
   .replace("__SECTIONS__", "\n".join(section(c) for c in cats) + "\n" + guard_section())
   .replace("__DATA__", json.dumps(payload, separators=(",",":")))
   .replace("__TOTAL__", str(tot + guard_total))
-  .replace("__NCATS__", str(len(cats))))
+  .replace("__NCATS__", str(len(cats) + bool(guard["states"]))))
 p=f"{HERE}/index.html"
 # newline="\n" so a run on Windows emits the same bytes as a run anywhere
 # else — without it every line comes out CRLF and the whole file diffs.

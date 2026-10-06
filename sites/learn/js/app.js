@@ -204,46 +204,64 @@ function renderHome() {
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">Free · Open · Works offline</p>
-        <h1>Learn anything.<span class="h1-soft">No internet required.</span></h1>
-        <p class="lead">${nSubjects} subjects from kindergarten to college — real lessons,
-        worked examples, and practice, built on OpenStax and open educational resources.
-        Visit once and the whole library lives on your device.</p>
+        <p class="eyebrow">A public library for your curiosity</p>
+        <h1>A little curiosity.<span class="h1-soft">A world to learn.</span></h1>
+        <p class="lead">Start with a question. Leave with something you understand.
+        Explore ${nSubjects} subjects, from your first fractions to college physics,
+        with lessons, examples and practice you can take offline.</p>
         <div class="hero-row">
-          <a class="btn btn-primary" href="#/search">Find a topic</a>
-          <a class="btn" href="#/library">Offline library</a>
+          <a class="btn btn-primary" href="#/search">Find your next subject <span aria-hidden="true">↗</span></a>
+          <a class="btn" href="#/library">Take the library offline</a>
         </div>
-        <p class="hero-note">No account, no tracking, no cost. Your progress stays on your device.</p>
+        <p class="hero-note">Always free. No account. No tracking. Just a place to learn.</p>
       </div>
-      <div class="hero-panel">
-        <p class="hero-panel-head"><span>Your progress</span><span>${catalog.domains.length} domains</span></p>
+      <aside class="hero-panel" aria-label="Your learning notebook">
+        <div class="notebook-cover">
+          <p class="kicker">Your learning notebook</p>
+          <p class="notebook-title">One lesson<br>at a time.</p>
+          <p>Pick up a skill. Follow a question.<br>Make a little progress today.</p>
+        </div>
         <div class="stats-row" aria-label="Your progress">
           <div class="stat"><span class="stat-num">${done}</span><span class="stat-label">Lessons</span></div>
-          <div class="stat"><span class="stat-num">${st}</span><span class="stat-label">Streak</span></div>
-          <div class="stat"><span class="stat-num">${nSubjects}</span><span class="stat-label">Subjects</span></div>
+          <div class="stat"><span class="stat-num">${st}</span><span class="stat-label">Day streak</span></div>
+          <div class="stat"><span class="stat-num">${nSubjects}</span><span class="stat-label">To explore</span></div>
         </div>
         ${resumeCard}
         <div class="hero-panel-foot">
-          <span class="kicker">Popular starts</span>
+          <span class="kicker">A few places to begin</span>
           <a class="pill-link" href="#/d/k8">K–8 Foundations</a>
           <a class="pill-link" href="#/d/math">Mathematics</a>
-          <a class="pill-link" href="#/d/cs">Computer Science</a>
+          <a class="pill-link" href="#/d/engineering">Engineering &amp; Trades</a>
           <a class="pill-link" href="#/d/languages">Languages</a>
         </div>
-      </div>
+      </aside>
     </div>
   </section>
+  <div class="library-promise wrap" aria-label="About the library">
+    <p><strong>${nSubjects} subjects</strong><span>From foundations to college</span></p>
+    <p><strong>Made to keep</strong><span>Save lessons for offline learning</span></p>
+    <p><strong>Your own pace</strong><span>Progress stays on your device</span></p>
+  </div>
   <section class="wrap domains-section">
-    <h2 class="sec-label">Browse by domain</h2>
+    <div class="library-heading"><div><p class="kicker">The collections</p>
+      <h2>Where will you start?</h2></div>
+      <p>${catalog.domains.length} fields of study.<br>There is no wrong first chapter.</p></div>
     <div class="domain-grid">
       ${catalog.domains.map(d => `
         <a class="domain-card" href="#/d/${d.id}" style="--accent:${esc(d.accent)}">
+          <span class="domain-card-index" aria-hidden="true">${String(catalog.domains.indexOf(d) + 1).padStart(2, '0')}</span>
           <span class="domain-card-title">${esc(d.title)}</span>
           <span class="domain-card-tag">${esc(d.tagline)}</span>
           <span class="domain-card-count">${d.subjects.length} subjects</span>
         </a>`).join('')}
     </div>
-  </section>`;
+  </section>
+  <section class="wrap learning-invitation"><div>
+    <p class="kicker">Learning belongs to everyone</p>
+    <h2>A library without a checkout date.</h2>
+    <p>Original lessons and open educational resources, with source attribution.
+    Start online, check your offline library, then keep learning wherever life takes you.</p>
+    </div><a class="btn" href="#/about">How this library works <span aria-hidden="true">↗</span></a></section>`;
 }
 
 function renderDomain(id) {
