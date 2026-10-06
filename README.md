@@ -1,88 +1,69 @@
 # XP Labs
 
-Additive manufacturing for Hawaiʻi’s homes, businesses, makers, and industries,
-with RF engineering and supporting software. Based in Honolulu and founded by
-Levi Colby. Contact: [levi@xplabs.us](mailto:levi@xplabs.us).
+Additive manufacturing for Hawaiʻi’s homes, businesses, makers, and industries.
+Based in Honolulu and founded by Levi Colby. Contact
+[levi@xplabs.us](mailto:levi@xplabs.us).
 
-- [Company](https://xplabs.us/)
-- [RF engineering](https://xplabs.us/rf/)
-- [Additive manufacturing](https://xplabs.us/additive-manufacturing/)
-- [Supporting software](https://xplabs.us/software/)
+The [company website](https://xplabs.us/) focuses on
+[custom parts, prototypes, tools, and small runs](https://xplabs.us/additive-manufacturing/).
+Its first featured project is [aeroponics towers](https://xplabs.us/projects/aeroponics/),
+currently a concept rather than a product offered for sale. Materials, process,
+dimensions, quantity, suitability, and availability are confirmed per project.
 
-The company website is deliberately separate from the game catalog and public
-community resources below. RF work is at prototype stage; manufacturing scope,
-materials, process, and availability are confirmed per project. The website does
-not claim fielded equipment, certified production, or government past performance.
+## Games
 
----
+[XP Labs Games](https://play.xplabs.us/) has its own dark violet identity and
+dedicated pages for four titles:
 
-## Games — [play.xplabs.us](https://play.xplabs.us/)
+- [The Last Station](https://play.xplabs.us/the-last-station/) — a mobile survival game about a dying offshore station.
+- [Space Glyph](https://play.xplabs.us/space-glyph/) — matching, aiming, and puzzle defense.
+- [Life XP](https://play.xplabs.us/life-xp/) — a life simulation in a walkable town.
+- [Hearth & Hunt](https://play.xplabs.us/hearth-and-hunt/) — building and exploration on Roblox.
 
-Four titles, four different engines, deliberately.
+Promotional concept artwork is identified as such; it is not presented as
+gameplay. Platform and release links belong to each game’s verified current
+public information, not assumptions based on artwork.
 
-**[The Last Station](https://play.xplabs.us/#the-last-station)** — mobile
-survivors, Unreal Engine 5. Free-to-play, built for one thumb: you only steer,
-equipped cards fire on tap, aim is automatic. The depth is in the loadout — five
-part cards across Power, Weapons, Sensors, Jammers and Drones, plus five stat
-medallions.
+## Free community resources
 
-**[Space Glyph](https://play.xplabs.us/#space-glyph)** — puzzle defense,
-Swift 6, iPhone. Matching and shooting are the same act. Your first match locks
-the board and starts a short Match Phase; every follow-up match refills the
-timer, so the whole formation resolves together and a good chain is something
-you extend under pressure.
+[XP Education](https://learn.xplabs.us/) is a warm, editorial learning library:
+106 subjects, 1,613 lessons, and 14 domains, from K–8 foundations through college
+and practical skills. The library includes lessons, worked examples, and practice.
+OpenStax-aligned material retains its source and CC BY attribution. Open it online
+and confirm the offline library has finished saving before relying on it without
+a connection. Progress stays on the reader’s device.
 
-**[Life XP](https://play.xplabs.us/#life-xp)** — life simulation, SceneKit,
-iPhone. An offline third-person simulator. Walk a small 3D town and step through
-the door of any building into a full-screen interior where you use the station
-that belongs there.
+[Military resources](https://mil.xplabs.us/) is an independent directory for
+service members, veterans, and families. It contains 671 resources: 479 in the
+main directory and 192 National Guard programs. The board offers 15 choices:
+14 main categories plus National Guard by state. Crisis access stays prominent;
+program eligibility and current terms must be confirmed with the provider.
 
-**[Hearth & Hunt](https://play.xplabs.us/#hearth-and-hunt)** — PvPvE, Roblox.
-Server-authoritative, built so two-player teams who want something relaxed and
-solo players who want something competitive can share a match. Keepers stay home
-and grow the homestead; Hunters go out and contest objectives.
+Both resources are free to use, with no account, paywall, or tracking. They are
+community projects, not a claim of registered charity status. The website source
+is public; public visibility alone does not grant an open-source license. Check
+the license of each material before reuse.
 
-## XP Education — [learn.xplabs.us](https://learn.xplabs.us/)
+## Maintaining the websites
 
-A free learning platform that works fully offline. **106 subjects across 14
-domains** — K–8 foundations through college math, science, history, business,
-languages, trades and arts — with real lessons, worked examples and practice
-questions. College courses align to [OpenStax](https://openstax.org) open
-textbooks (CC BY 4.0) and link to the full free books.
+Start with [the website maintenance guide](docs/website-guide.md). It explains
+where to edit each page, how to refresh generated content, how to keep the four
+themes distinct, and what to check before publishing.
 
-Installable as a PWA: visit once and the library lives on your device. No
-account, no tracking, no paywall, and no external requests of any kind.
+| Public origin | Editable root | Visual direction |
+|---|---|---|
+| [xplabs.us](https://xplabs.us/) | `sites/www` | Dark charcoal and green manufacturing; light teal community page |
+| [play.xplabs.us](https://play.xplabs.us/) | `sites/play` | Dark violet game studio and individual game pages |
+| [learn.xplabs.us](https://learn.xplabs.us/) | `sites/learn` | Warm paper library, domain colors, optional dark mode |
+| [mil.xplabs.us](https://mil.xplabs.us/) | `sites/mil` | Navy and teal directory; red reserved for crisis access |
 
-## Military benefits — [mil.xplabs.us](https://mil.xplabs.us/)
+These are plain HTML, CSS, and JavaScript with local runtime assets. There is no
+framework, package installation, or production bundler. Maintained Python
+generators update navigation, the military directory, and education’s search
+index and offline cache version before release.
 
-A free, no-signup directory pulling scattered benefits and discounts into one
-place. **279 resources across 13 categories** — education and GI Bill, health and
-mental health, housing, careers and apprenticeships, family and childcare,
-travel and more. Each entry is a plain description and a direct link.
-
-Every link is checked and repaired rather than assumed; the auditor that does it
-is in the repo.
-
----
-
-## This repository
-
-The sites above are built here as four static roots, one per origin:
-
-```
-sites/www/     → xplabs.us        hub, consulting, initiatives, invest, about
-sites/play/    → play.xplabs.us
-sites/learn/   → learn.xplabs.us
-sites/mil/     → mil.xplabs.us
-```
-
-`sites/www` is the RF and additive-manufacturing company website. Its shared
-styles and behavior live in `sites/www/assets/site.css` and `site.js`.
-To change company navigation or the footer, edit `sites/www/index.html`, then run
-`python3 tools/sync_nav.py`. Each service page is ordinary editable HTML.
-Satellite sites retain their existing design and content; company navigation is
-no longer copied into the games site.
-
-No build step, no package manager, no framework, and no external requests. See
-[`DEPLOY.md`](DEPLOY.md) for how they are published and
-[`HANDOFF.md`](HANDOFF.md) for how they are put together and why.
+The existing four Git-connected Cloudflare Pages projects publish from `main`.
+See [deployment instructions](DEPLOY.md), [agent instructions](AGENTS.md), and
+the current standards at the top of [the historical handoff](HANDOFF.md).
+Private dashboards, genealogy records, credentials, and private game source
+never belong in these deployed roots.

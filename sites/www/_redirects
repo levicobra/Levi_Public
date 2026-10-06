@@ -15,7 +15,12 @@
 /personal               /about/                         301
 /personal/*             /about/:splat                   301
 
-# /engineering/ became /consulting/ when the page was refocused on
-# government, software and AI work. It was the most-linked internal page.
-/engineering            /consulting/                    301
-/engineering/*          /consulting/:splat              301
+# Retired service URLs now lead to the manufacturing-only company offering.
+/engineering            /additive-manufacturing/         301
+/engineering/*          /additive-manufacturing/         301
+/consulting             /additive-manufacturing/         301
+/consulting/*           /additive-manufacturing/         301
+/rf                     /additive-manufacturing/         301
+/rf/*                   /additive-manufacturing/         301
+/software               /additive-manufacturing/         301
+/software/*             /additive-manufacturing/         301

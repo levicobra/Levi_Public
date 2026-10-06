@@ -12,7 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # path -> (name, accent, contrast, surface, surface-2, why this colour)
 THEMES = {
-    'sites/play/index.html': (
+    'sites/play/assets/games.css': (
         'Games', '#A98BFF', '7.43:1', '#101016', '#17161F',
         'Violet. The most playful hue in the set, and the furthest from the\n'
         '   corporate green — a catalog should not look like a capabilities deck.'),

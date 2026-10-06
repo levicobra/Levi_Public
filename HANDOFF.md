@@ -1,4 +1,46 @@
-> Current company-site direction (2026-09-22): additive manufacturing for the full
+# Current website standards
+
+The owner’s October 6, 2026 direction supersedes the service offerings, themes,
+navigation scope, counts, and setup status in the historical handoff below.
+Use [the website maintenance guide](docs/website-guide.md) for current editing
+and publishing instructions and [DEPLOY.md](DEPLOY.md) for the existing hosting.
+
+- `sites/www` is an additive-manufacturing-only company website in dark charcoal
+  and green. RF, software, and AI consulting are retired offerings. Legacy service
+  paths redirect to `/additive-manufacturing/`; do not restore their old pages.
+- Aeroponics towers are Project 01 at `/projects/aeroponics/`. Keep their concept
+  status clear. The tower and printed-parts illustrations are not photographs of
+  completed customer work, tested products, or proof of performance.
+- `sites/play` keeps a distinct dark violet theme and four game detail pages.
+  New Space Glyph, Life XP, and Hearth & Hunt illustrations are promotional
+  concepts, not gameplay screenshots. Verify release links and platform claims
+  from each project before changing them.
+- `sites/learn` keeps warm paper, domain colors, reader settings, and offline
+  lessons. Its content currently has 106 subjects, 1,613 lessons, and 14 domains.
+- `sites/mil` keeps navy/teal, immediate crisis access, and red used only for
+  crisis information. It has 479 main resources plus 192 Guard resources, with
+  15 board choices including the Guard collection. Link-audit dates remain
+  independent of the date of a visual redesign.
+- `/initiatives/` and the main site's community section remain light teal.
+  Describe the resources as free community projects, not a registered charity.
+  Public source is not a blanket open-source license; preserve material-specific
+  source and license attribution.
+- `tools/sync_nav.py` owns only the company shell. `tools/sync_satellite_nav.py`
+  owns learn/mil navigation. Game layout is independent. After a learn change,
+  run its validator and index/cache generator; never hand-edit cache markers.
+- Keep plain editable files, local runtime assets, strict CSP, accessibility,
+  responsive layouts, factual limits, and the figure-free investor page. The
+  four existing Git-connected Cloudflare Pages projects publish from `main`.
+  Routine releases do not create new hosting or change private-site access.
+
+The old “not deployed,” shared company/game palette, cream company theme,
+consulting-service, and private-setup passages below are history, not tasks to
+repeat. Apply their still-relevant safety and verification lessons without
+reviving superseded offerings or treating old checks as current release evidence.
+
+## Historical direction from September 2026
+
+> Superseded company-site direction (2026-09-22): additive manufacturing for the full
 > range of Hawaiʻi’s needs, with RF engineering and supporting software. Keep the
 > original XP Labs wordmark and icons; use the existing dark wordmark on light backgrounds.
 > `sites/www` now has an independent cream/forest/orange design, service pages,

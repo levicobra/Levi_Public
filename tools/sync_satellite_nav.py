@@ -21,11 +21,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # One definition of the estate's navigation, in link order.
 HOME = 'https://xplabs.us/'
 LINKS = {
-    'games': ('https://play.xplabs.us/', 'Games', 'Four titles, four stacks'),
-    'consulting': ('https://xplabs.us/consulting/', 'Consulting', 'RF · additive manufacturing · software'),
-    'initiatives': ('https://xplabs.us/initiatives/', 'Public Initiatives', 'Free education and benefits'),
-    'mil': ('https://mil.xplabs.us/', 'Military Personnel', 'Benefits, programs, discounts'),
-    'learn': ('https://learn.xplabs.us/', 'Opensource Education', '106 subjects, works offline'),
+    'games': ('https://play.xplabs.us/', 'Games', 'Explore the XP Labs games'),
+    'manufacturing': ('https://xplabs.us/additive-manufacturing/', 'Manufacturing', 'Useful things, made layer by layer'),
+    'initiatives': ('https://xplabs.us/initiatives/', 'Free community resources', 'Open learning and military resources'),
+    'mil': ('https://mil.xplabs.us/', 'Military resources', 'Benefits, programs, discounts'),
+    'learn': ('https://learn.xplabs.us/', 'XP Education', '106 subjects, available offline'),
     'about': ('https://xplabs.us/about/', 'About', ''),
     'invest': ('https://xplabs.us/invest/', 'Invest', ''),
 }
@@ -36,7 +36,7 @@ CSS = """<style>
    header carries literal values rather than design tokens it cannot see. Every
    class is xpl- prefixed because this page's own stylesheet already uses some
    of these names. */
-.xpl-header{position:sticky;top:0;z-index:9000;background:#07090A;color:#E9EFEC;
+.xpl-header{position:relative;z-index:9000;background:#07090A;color:#E9EFEC;
   border-bottom:1px solid #161C1D;
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .xpl-bar{max-width:1180px;margin-inline:auto;padding-inline:clamp(1.25rem,4vw,3rem);
@@ -44,9 +44,9 @@ CSS = """<style>
 .xpl-brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}
 .xpl-brand img{height:19px;width:auto;display:block}
 .xpl-toggle{display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;
-  background:none;border:1px solid #1E2527;border-radius:3px;color:#E9EFEC;
+  background:none;border:1px solid #69756F;border-radius:3px;color:#E9EFEC;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.6875rem;
-  letter-spacing:.14em;text-transform:uppercase;padding:.45rem .65rem}
+  letter-spacing:.14em;text-transform:uppercase;padding:.65rem .75rem;min-height:44px}
 .xpl-toggle i{display:block;width:14px;height:2px;background:#3FAC33;margin:2px 0}
 .xpl-links{display:none;position:absolute;left:0;right:0;top:100%;
   flex-direction:column;align-items:stretch;background:#0A0D0E;
@@ -157,11 +157,11 @@ def header(current):
         '      <a href="%s">Home</a>' % HOME,
         '      <div class="xpl-menu">',
         '        <button class="xpl-mbtn" type="button" aria-expanded="false" aria-controls="xpl-biz">',
-        '          XPLabs Businesses <span class="xpl-caret" aria-hidden="true"></span>',
+        '          Explore XP Labs <span class="xpl-caret" aria-hidden="true"></span>',
         '        </button>',
         '        <div class="xpl-panel xpl-panel--left" id="xpl-biz" hidden>',
         panel_item('games'),
-        panel_item('consulting'),
+        panel_item('manufacturing'),
         panel_item('initiatives'),
         '        </div>',
         '      </div>',
@@ -170,7 +170,7 @@ def header(current):
         '      <div class="xpl-menu">',
         '        <button class="xpl-mbtn" type="button" aria-expanded="false"'
         ' aria-controls="xpl-init" aria-current="page">',
-        '          Public Initiatives <span class="xpl-caret" aria-hidden="true"></span>',
+        '          Free resources <span class="xpl-caret" aria-hidden="true"></span>',
         '        </button>',
         '        <div class="xpl-panel xpl-panel--right" id="xpl-init" hidden>',
         panel_item('mil'),

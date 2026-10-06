@@ -2,7 +2,7 @@
 
 A free learning platform that works fully offline. 106 subjects across 14
 domains — K–8 foundations through college courses — served as a static,
-dependency-free PWA at `xplabs.us/education/`.
+dependency-free PWA at `https://learn.xplabs.us/`.
 
 ## How it works
 
@@ -25,6 +25,18 @@ dependency-free PWA at `xplabs.us/education/`.
   analytics.
 
 ## Content pipeline
+
+The home page uses a warm, editorial library theme; subject-domain colors stay
+defined in `content/catalog.json`, with its maintained source in
+`tools/gen_catalog.py`. Home-page layout lives in `renderHome()` in `js/app.js`;
+the October 2026 visual layer is section 20 of `css/app.css`. Keep the dark-theme
+setting, reader text sizes, progress data and the existing lesson routes intact.
+
+The shared XP Labs navigation is generated from `../../tools/sync_satellite_nav.py`.
+Run that script after editing its links, then rebuild this app's index below.
+New local runtime assets must also be added to `precache_files()` in
+`tools/build_index.py`; copying an image into the folder alone does not make it
+available offline.
 
 ```
 tools/gen_catalog.py        # source of truth for domains/subjects → content/catalog.json

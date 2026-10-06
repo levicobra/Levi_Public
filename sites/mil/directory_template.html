@@ -198,6 +198,106 @@ a{color:var(--accent)}
 
 .js .nojs-only{display:none}
 @media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+
+/* ---------- 7. Field guide edition — October 2026 ----------
+   Navy and teal orient the directory; red remains exclusive to crisis access.
+   The resource list and all its fallback HTML remain generated below. */
+html{scroll-padding-top:8rem}
+body{font-family:var(--sans)}
+.skip:focus{z-index:10000}
+.crisis{border-bottom:1px solid var(--crisis);border-left:6px solid var(--crisis)}
+.crisis__in{padding-block:.9rem;gap:.35rem 1.25rem}
+.crisis__t{font-size:.72rem}
+.crisis__d{font-family:var(--sans);font-size:.94rem;line-height:1.65}
+.crisis__d a{padding-block:.25rem;text-underline-offset:3px}
+.crisis__note{font-size:.75rem;line-height:1.6}
+.top{padding-block:clamp(2.3rem,5vw,4.5rem) 2.5rem}
+.top__layout{display:grid;gap:2rem;align-items:center}
+.top__eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;
+  font-size:.69rem;font-weight:700;color:var(--accent);margin-bottom:1.1rem}
+.top h1{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4.7rem);font-weight:500;
+  line-height:1.03;letter-spacing:-.045em;max-width:13ch}
+.top h1 em{color:var(--accent);font-weight:400}
+.top__lede{font-family:var(--sans);font-size:1rem;line-height:1.75;max-width:51ch;margin-top:1.2rem}
+.top__meta{margin-top:1.3rem;gap:.5rem;font-size:.73rem}
+.top__meta span{padding:.4rem .65rem;border:1px solid var(--edge);border-radius:3px}
+.top__guide{background:var(--ink);color:var(--paper);padding:1.6rem;border-radius:3px;
+  box-shadow:7px 7px 0 var(--paper-2)}
+.top__guide h2{font-family:var(--serif);font-size:1.8rem;font-weight:500;margin-bottom:1.35rem}
+.top__guide ol{margin:0;padding:0;list-style:none;display:grid;gap:1rem;counter-reset:guide}
+.top__guide li{counter-increment:guide;display:grid;grid-template-columns:1.5rem 1fr;gap:.7rem;
+  border-top:1px solid #687988;padding-top:1rem;font-size:.84rem;line-height:1.65;color:#D4DFE5}
+.top__guide li::before{content:counter(guide,decimal-leading-zero);font-size:.68rem;
+  font-weight:700;color:#D9BD70;padding-top:.15rem}
+.top__guide strong{display:block;color:var(--paper);font-size:.9rem}
+/* #D4DFE5 / #14202E = 12.14:1; #687988 / #14202E = 3.67:1;
+   gold step labels #D9BD70 / #14202E = 8.99:1. */
+.search{padding-block:1rem;background:var(--paper);border-block:1px solid var(--edge);
+  box-shadow:0 5px 12px rgba(20,32,46,.04)}
+.search__label{display:block;font-size:.7rem;font-weight:750;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:.55rem;color:var(--accent)}
+.search__box{border:1px solid var(--edge);border-radius:3px;padding:.2rem .25rem .2rem 1rem}
+#q{font-family:var(--sans);font-size:1rem;padding:.85rem 0}
+#clear{min-height:44px;min-width:50px;font-weight:650}
+.search__hint{font-size:.76rem;line-height:1.6;margin-top:.5rem;min-height:1.2em}
+.quick-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.35rem}
+.quick-link{display:inline-flex;align-items:center;gap:.8rem;min-height:44px;
+  border:1px solid var(--edge);border-radius:3px;padding:.5rem .8rem;font-size:.8rem;
+  font-weight:650;text-decoration:none;color:var(--accent);background:#fff}
+.quick-link:hover{background:var(--accent-wash);border-color:var(--accent)}
+.board{padding-block:2.5rem 1rem}
+.board__head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1.5rem}
+.board__head h2{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.5rem);font-weight:500}
+.board__head p{font-size:.8rem;color:var(--ink-2)}
+.board__grid{gap:1rem}
+.board__grid li{display:flex;min-width:0}
+.tile{border:1px solid var(--edge);border-top:4px solid var(--accent);border-radius:3px;
+  padding:1.2rem;min-height:10.7rem;gap:.7rem 1rem;align-content:start;position:relative}
+.tile__n{font-family:var(--serif);font-size:1.32rem;font-weight:500;line-height:1.2}
+.tile__c{font-size:.8rem;font-weight:700;background:var(--paper-2);padding:.2rem .45rem;border-radius:2px}
+.tile__b{font-size:.8rem;line-height:1.7;margin-top:.1rem;padding-right:1rem}
+.tile::after{content:'↗';position:absolute;bottom:.7rem;right:.8rem;font-size:1rem;color:var(--accent)}
+.tile:hover{background:var(--accent-wash);border-color:var(--accent)}
+.cat__head{padding-block:.75rem;margin-bottom:1.1rem}
+.cat__head h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3vw,2.5rem)}
+.cat__blurb{line-height:1.7}
+.rows{column-gap:1.25rem}
+.rows>li{min-width:0}
+.row{padding:1.1rem .7rem;min-height:72px;gap:.3rem .8rem}
+.row__n{font-family:var(--sans);font-size:.94rem;font-weight:650;line-height:1.5}
+.row__h{font-size:.72rem}.row__b{font-size:.82rem;line-height:1.65}
+.row:hover .row__n{text-underline-offset:3px}
+.back{border:1px solid var(--edge);border-radius:3px;min-height:44px;font-size:.85rem}
+.catrow{border-width:1px;border-radius:3px;flex-wrap:wrap;font-size:.94rem;min-height:48px}
+.catrow span{font-size:.75rem}
+.empty{padding:2rem 0;line-height:1.75}
+.empty h2{font-family:var(--serif);font-size:1.7rem;font-weight:500}
+.crisis-result{padding:1.3rem;background:var(--crisis-paper);border-left:4px solid var(--crisis);max-width:none}
+.crisis-result h2,.crisis-result a{color:var(--crisis)}
+.state summary{font-family:var(--sans);font-size:.95rem;min-height:48px}
+.foot{margin-top:3rem;padding-block:2.5rem;font-size:.87rem}
+.foot p{line-height:1.8}.foot a{text-underline-offset:3px}
+@media(min-width:900px){.top__layout{grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr);gap:4.5rem}}
+/* Search is the primary task. The explanatory desktop sidebar is optional;
+   never put it between a narrow-screen visitor and the resource search. */
+@media(max-width:899px){.top__guide{display:none}}
+@media(max-width:599px){
+  /* The 11-column map would create tiny touch targets on a phone.
+     The same state programs remain available in the accessible details list. */
+  .usmap{display:none}
+  .top{padding-block:1rem 1.15rem}
+  .top__layout{display:block}
+  .top__eyebrow,.top__lede-detail,.quick-links{display:none}
+  .top h1{font-size:2rem;line-height:1.05;max-width:none;letter-spacing:-.035em}
+  .top__lede{font-size:.85rem;line-height:1.5;margin-top:.6rem}
+  .top__meta{font-size:.68rem;gap:.8rem;margin-top:.65rem}
+  .top__meta span{padding:0;border:0;border-radius:0}
+  .top__meta span:last-child{display:none}
+  .board__head{display:block}.board__head p{margin-top:.5rem}
+  .tile{min-height:9rem}.search__box{padding-left:.65rem}#q{font-size:.9rem}
+  .search__hint{font-size:.72rem}.quick-link{font-size:.75rem}
+  .crisis__in{padding-inline:.8rem}.crisis__d{font-size:.86rem}
+}
 </style>
 <style>
 /* XPLabs estate header. Generated by tools/sync_satellite_nav.py — do not edit
@@ -205,7 +305,7 @@ a{color:var(--accent)}
    header carries literal values rather than design tokens it cannot see. Every
    class is xpl- prefixed because this page's own stylesheet already uses some
    of these names. */
-.xpl-header{position:sticky;top:0;z-index:9000;background:#07090A;color:#E9EFEC;
+.xpl-header{position:relative;z-index:9000;background:#07090A;color:#E9EFEC;
   border-bottom:1px solid #161C1D;
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .xpl-bar{max-width:1180px;margin-inline:auto;padding-inline:clamp(1.25rem,4vw,3rem);
@@ -213,9 +313,9 @@ a{color:var(--accent)}
 .xpl-brand{display:inline-flex;align-items:center;text-decoration:none;flex:none}
 .xpl-brand img{height:19px;width:auto;display:block}
 .xpl-toggle{display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;
-  background:none;border:1px solid #1E2527;border-radius:3px;color:#E9EFEC;
+  background:none;border:1px solid #69756F;border-radius:3px;color:#E9EFEC;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.6875rem;
-  letter-spacing:.14em;text-transform:uppercase;padding:.45rem .65rem}
+  letter-spacing:.14em;text-transform:uppercase;padding:.65rem .75rem;min-height:44px}
 .xpl-toggle i{display:block;width:14px;height:2px;background:#3FAC33;margin:2px 0}
 .xpl-links{display:none;position:absolute;left:0;right:0;top:100%;
   flex-direction:column;align-items:stretch;background:#0A0D0E;
@@ -270,23 +370,23 @@ a{color:var(--accent)}
       <a href="https://xplabs.us/">Home</a>
       <div class="xpl-menu">
         <button class="xpl-mbtn" type="button" aria-expanded="false" aria-controls="xpl-biz">
-          XPLabs Businesses <span class="xpl-caret" aria-hidden="true"></span>
+          Explore XP Labs <span class="xpl-caret" aria-hidden="true"></span>
         </button>
         <div class="xpl-panel xpl-panel--left" id="xpl-biz" hidden>
-          <a href="https://play.xplabs.us/"><b>Games</b><span>Four titles, four stacks</span></a>
-          <a href="https://xplabs.us/consulting/"><b>Consulting</b><span>RF · additive manufacturing · software</span></a>
-          <a href="https://xplabs.us/initiatives/"><b>Public Initiatives</b><span>Free education and benefits</span></a>
+          <a href="https://play.xplabs.us/"><b>Games</b><span>Explore the XP Labs games</span></a>
+          <a href="https://xplabs.us/additive-manufacturing/"><b>Manufacturing</b><span>Useful things, made layer by layer</span></a>
+          <a href="https://xplabs.us/initiatives/"><b>Free community resources</b><span>Open learning and military resources</span></a>
         </div>
       </div>
       <a href="https://xplabs.us/about/">About</a>
       <a href="https://xplabs.us/invest/">Invest</a>
       <div class="xpl-menu">
         <button class="xpl-mbtn" type="button" aria-expanded="false" aria-controls="xpl-init" aria-current="page">
-          Public Initiatives <span class="xpl-caret" aria-hidden="true"></span>
+          Free resources <span class="xpl-caret" aria-hidden="true"></span>
         </button>
         <div class="xpl-panel xpl-panel--right" id="xpl-init" hidden>
-          <a href="/" aria-current="page"><b>Military Personnel</b><span>Benefits, programs, discounts</span></a>
-          <a href="https://learn.xplabs.us/"><b>Opensource Education</b><span>106 subjects, works offline</span></a>
+          <a href="/" aria-current="page"><b>Military resources</b><span>Benefits, programs, discounts</span></a>
+          <a href="https://learn.xplabs.us/"><b>XP Education</b><span>106 subjects, available offline</span></a>
         </div>
       </div>
     </div>
@@ -305,18 +405,34 @@ a{color:var(--accent)}
 </div>
 
 <header class="wrap top">
-  <h1>Military Benefits &amp; Resources</h1>
-  <p class="top__lede">A free directory of programs, benefits and discounts for active-duty
-  service members, veterans, and their families. No signup, no ads, nothing to buy.</p>
-  <p class="top__meta">
-    <span>__TOTAL__ resources</span>
-    <span>__NCATS__ categories</span>
-    <span>Links verified 10 August 2026</span>
-  </p>
+  <div class="top__layout">
+    <div>
+      <p class="top__eyebrow">Military benefits &amp; resources · Free community directory</p>
+      <h1>You served.<br><em>Find your support.</em></h1>
+      <p class="top__lede">Free resources for service members, veterans and families.<span class="top__lede-detail">
+      Find benefits, practical help and everyday discounts, without a signup or a sales pitch.</span></p>
+      <p class="top__meta"><span>__TOTAL__ resources</span><span>__NCATS__ categories</span><span>No account needed</span></p>
+      <nav class="quick-links" aria-label="Common resource needs">
+        <a class="quick-link" href="#housing" data-cat="housing">Housing <span aria-hidden="true">↗</span></a>
+        <a class="quick-link" href="#health" data-cat="health">Health &amp; wellness <span aria-hidden="true">↗</span></a>
+        <a class="quick-link" href="#education" data-cat="education">Education <span aria-hidden="true">↗</span></a>
+        <a class="quick-link" href="#guard-by-state" data-cat="guard-by-state">National Guard <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <aside class="top__guide" aria-label="How to use this directory">
+      <h2>A place to start.<br>A path to the source.</h2>
+      <ol>
+        <li><span><strong>Find what you need</strong>Search a topic or choose a category.</span></li>
+        <li><span><strong>Go straight to the provider</strong>Every resource links to its own website.</span></li>
+        <li><span><strong>Confirm your eligibility</strong>Programs and requirements change. Check with the provider before relying on a benefit.</span></li>
+      </ol>
+    </aside>
+  </div>
 </header>
 
 <div class="search">
   <div class="wrap">
+    <label class="search__label" for="q">What can we help you find?</label>
     <div class="search__box">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
       <input id="q" type="search" autocomplete="off" spellcheck="false"
@@ -335,13 +451,14 @@ a{color:var(--accent)}
 
   <!-- Category board (default view) -->
   <div class="board" id="board">
+    <div class="board__head"><h2>Support for every next step.</h2><p>Browse __NCATS__ categories of resources.</p></div>
     <ul class="board__grid">
 __TILES__
     </ul>
   </div>
 
   <!-- Search results render here -->
-  <div id="results" hidden></div>
+  <div id="results" aria-live="polite" hidden></div>
 
   <!-- Every category, always in the HTML so the page works without JavaScript -->
   <div id="all">
@@ -367,7 +484,7 @@ __SECTIONS__
   </div>
   <div class="wrap foot__meta">
     Maintained by XPLabs LLC &middot; __TOTAL__ resources across __NCATS__ categories &middot;
-    Links verified 10 August 2026
+    Last recorded link audit: 10 August 2026 · Verify current details with each provider
   </div>
 </footer>
 
@@ -471,8 +588,8 @@ function runSearch(){
 
   var out='';
   if(isCrisis(terms)){
-    out+='<div class="empty"><h2>If you are in crisis, call now</h2>'+
-      '<p>Veterans Crisis Line &mdash; dial <b>988 then press 1</b>, text <b>838255</b>, or '+
+    out+='<div class="empty crisis-result"><h2>If you are in crisis, call now</h2>'+
+      '<p>Veterans Crisis Line &mdash; dial <b><a href="tel:988">988</a> then press 1</b>, text <b><a href="sms:838255">838255</a></b>, or '+
       '<a href="https://www.veteranscrisisline.net/get-help-now/chat/" target="_blank" rel="noopener">chat online</a>. '+
       'Free, confidential, 24/7.</p>'+
       '<p>This directory does not list crisis services, so the line above is the fastest route to a person.</p></div>';
@@ -518,7 +635,7 @@ clear.addEventListener('click', function(){ q.value=''; runSearch(); q.focus(); 
 allbtn.addEventListener('click', openBoard);
 document.addEventListener('click', function(ev){
   var b=ev.target.closest ? ev.target.closest('[data-cat]') : null;
-  if(b){ q.value=''; clear.classList.remove('on'); openCat(b.getAttribute('data-cat')); }
+  if(b){ ev.preventDefault(); q.value=''; clear.classList.remove('on'); openCat(b.getAttribute('data-cat')); }
 });
 window.addEventListener('popstate', function(ev){
   if(ev.state && ev.state.cat) openCat(ev.state.cat,false); else show('board');

@@ -50,7 +50,7 @@ def precache_files():
     # worker installed, and every visit after that failed with ERR_FAILED.
     # "./" is the same page without the redirect, and it is what sw.js serves
     # navigations from.
-    files = ["./", "css/app.css", "js/app.js",
+    files = ["./", "css/app.css", "js/app.js", "logo.png",
              "manifest.webmanifest", "icons/icon.svg",
              "icons/icon-192.png", "icons/icon-512.png",
              "icons/icon-maskable-512.png",
