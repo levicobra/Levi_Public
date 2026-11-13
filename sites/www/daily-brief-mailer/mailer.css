@@ -1,0 +1,14 @@
+/* Scoped utility pages; retain the company shell and palette. */
+.mailer-document{max-width:900px;padding-top:clamp(32px,5vw,72px);padding-bottom:72px}
+.mailer-document h1{font-size:clamp(32px,5vw,58px);line-height:1.1;letter-spacing:-.035em;margin:16px 0 24px;overflow-wrap:anywhere}
+.mailer-document h2{font-size:clamp(25px,3vw,33px);line-height:1.25;letter-spacing:-.025em;margin-bottom:16px}
+.mailer-document section{margin-top:38px;padding-top:28px;border-top:1px solid var(--line-soft)}
+.mailer-document p{max-width:70ch}
+.mailer-document .mailer-lead{font-size:clamp(18px,2.2vw,22px);line-height:1.6;color:var(--paper)}
+.mailer-app-name,.mailer-updated{color:var(--muted)}
+.mailer-nav{display:flex;gap:10px 22px;flex-wrap:wrap;margin:24px 0 32px}
+.mailer-nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--signal)}
+.mailer-nav a[aria-current=page]{font-weight:700;text-decoration-thickness:3px}
+.mailer-document a:focus-visible{outline:3px solid var(--signal);outline-offset:4px;border-radius:2px}
+.mailer-document code{overflow-wrap:anywhere;color:var(--signal);font-size:.94em}
+.mailer-updated{margin-top:40px!important;font-size:14px}
